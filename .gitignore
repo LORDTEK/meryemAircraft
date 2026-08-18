@@ -1,0 +1,31 @@
+# İşletim sistemi
+.DS_Store
+Thumbs.db
+
+# Geçici / yedek dosyalar
+*~
+*.tmp
+*.bak
+.~lock.*#
+
+# LaTeX ara çıktıları
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# Ofis geçici dosyaları
+~$*.docx
+~$*.pptx
+~$*.xlsx
+
+# Büyük ham medya (gerekirse LFS ile eklenir)
+video/ham/
+*.mp4
+*.mov
+*.prproj
