@@ -153,6 +153,7 @@ Unsurların tek tek ataları vardır; yenilik **bileşimdedir**:
 | N55 | Kaçış: **sabit disk yüklemesi.** Disk alanı ağırlıkla (L³) büyütülürse ölçekleme bedavadır. Mimaride çift eklemek serbest olduğu için bu mümkündür |
 | N56 | Konumlandırma: rakip diğer hava araçları değil, **havalimanı altyapısıdır** |
 | N62 | Yük oranı boyutla büyüyor (%4 → %25 mertebesi); sabit maliyetler küçülmediği için. N53'ün veri desteği |
+| N75 | Yuvarlanma kanatçığı: **boy %120 kök veter, yükseklik 2→6 cm.** Gücü boydan gelir. İç kısmı pervane izinde (hover), dış kısmı dışında (seyir) |
 | N73 | **Rakipten fazla yük taşımak gerekmiyor.** Benzer yükü daha uzağa taşımak, mimarinin üstünlüğünü daha temiz ispatlar — ölçüm tartışmasına da kapalıdır |
 
 ---
@@ -163,7 +164,7 @@ Unsurların tek tek ataları vardır; yenilik **bileşimdedir**:
 |---|---|---|
 | ~~A-KÜTLE~~ | **KAPANDI** → N66: 50 kg / 1000 kg | |
 | ~~A-ENERJİ~~ | **KAPANDI** → N63: seri hibrit | |
-| **A-KANATÇIK** | Kanatçık yükseklikleri (%2 ve %10 veter) doğru mu? | Yuvarlanma gereksiniminden türetilmedi |
+| ~~A-KANATÇIK~~ | **KAPANDI** → N75: boy %120, yükseklik 2→6 cm | |
 | N40 | Hover'da istikamet otoritesi yeterli mi? | N43 açığı sıfırdan "küçük ama gerçek"e taşıdı; yeterlilik sayıyla belirlenecek |
 | N44 | ⚠️ N1 ile N43 birbirini törpüler | Disk büyüdükçe iz zayıflar (q = T/A) |
 | N15 | Tam tork dengesi hangi noktada kurulacak? | Hover mu, seyir mi |
@@ -258,7 +259,40 @@ daha küçük itkiyle ve **çok daha az güçle** ($P\propto T^{3/2}$) üretmeyi
 Dikme boyunu üçe katlamak, gereken gücü beşte bire indiriyor.
 Dikmeler aynı zamanda iniş yapısıdır — uzaması duruş tabanını da genişletir.
 
-### 11.4 Kütle bütçesi taslağı (N67)
+### 11.4 Yuvarlanma kanatçığı (N75)
+
+| | Değer |
+|---|---:|
+| Boy (45° kolu) | **%120 kök veter** = 1,17 m |
+| Dış uç konumu | yarı-açıklığın **%68**'i |
+| Yükseklik | 2 cm (iç) → **6 cm** (dış) |
+| Yuvarlanma momenti | ≈46 N·m |
+| Yuvarlanma hızı | **≈20–25 °/s** (30° yatışa 1,2–1,5 s) |
+
+**Kural: kanatçığın gücü boyundan gelir, yüksekliğinden değil.**
+
+| Boy | Yuvarlanma hızı | | Yükseklik (boy %60'ta) | Yuvarlanma hızı |
+|---:|---:|---|---:|---:|
+| %60 | 7,6 °/s | | 5 cm | 3,8 °/s |
+| %100 | 20,8 °/s | | 10 cm | 7,6 °/s |
+| %120 | 28,9 °/s | | 20 cm | 12,0 °/s |
+
+Moment kola göre ölçeklenir; yükseklik artışının getirisi doyuma girer.
+
+**Tek organ, iki iş.** Ana pervane izi yarı-açıklığın yalnızca **%27–39**'unu kaplıyor
+(iz yarıçapı 0,67 m → daralarak 0,47 m; yarı-açıklık 1,72 m). Kanatçığın **iç kısmı**
+iz içinde kalır ve hover'da istikamet sağlar (N43); **dış kısmı** izin dışındadır ve
+seyirde yuvarlanma üretir. Uzatmak hover işlevini bozmaz.
+
+**Yükseklik neden 10 cm değil 6 cm:** Kanatçık dışa uzadıkça yerel veter incelir
+(dış uçta 0,47 m). Orada 10 cm, yerel veterin %21'i olurdu — spoiler değil hava freni.
+6 cm ile %13'te kalıyor.
+
+⚠️ Mertebe tahmini. Sönümleme katsayısı ve kanatçık etkinliği literatür değerleriyle
+alındı, bu geometri için hesaplanmadı. Kesin sayı CFD ya da rüzgâr tüneli ister.
+Ancak boy–yükseklik oransal farkı o kadar büyük ki katsayı seçimi sonucu değiştirmiyor.
+
+### 11.5 Kütle bütçesi taslağı (N67)
 
 | Kalem | % MTOW | 50 kg'da |
 |---|---:|---:|
@@ -272,15 +306,15 @@ Dikmeler aynı zamanda iniş yapısıdır — uzaması duruş tabanını da geni
 ⚠️ **Hedef, bulgu değil.** Yapı oranı %30 varsayıldı. Kâğıt uçaklar tipik olarak
 %20–40 hafif çıkar; o pay bu tabloda henüz ödenmedi.
 
-### 11.5 3B model parametreleri
+### 11.6 3B model parametreleri
 
 ```
-GOVDE07
+GOVDE08
 kok=0.97  hk0=45  hk1=35  fk=25  kirp=67
 tc0=25    tc1=12  kamb=6  refl=3
 pcap=1.34 parl=8  pkf=4   pkr=3   ucap=0.20
 dikme=300 cikinti=5  kalinlik=4
-kbas=15   kboy=60 kh0=2   kh1=10  kac=100
+kbas=15   kboy=120 kh0=2  kh1=6   kac=100
 mtow=50
 ```
 
@@ -288,7 +322,7 @@ Model: https://claude.ai/code/artifact/8a4abc4f-83e8-42ce-8894-c84331d6615a
 
 **Bu geometri artık sabittir.** Kütleden türetilmiştir, keyfî değildir.
 
-### 11.6 Rakip MTOW tablosu
+### 11.7 Rakip MTOW tablosu
 
 | Araç | MTOW | Faydalı yük | Yük oranı |
 |---|---:|---:|---:|
