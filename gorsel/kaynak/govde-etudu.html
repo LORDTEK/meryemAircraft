@@ -361,8 +361,8 @@ button:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
         <input type="range" id="flapStart" min="2" max="60" step="1" value="15">
       </div>
       <div class="ctl">
-        <div class="ctl-head"><span class="ctl-label">Boy (45° kolu)</span><span class="ref">N43</span><span class="val" id="v_flapLen"></span></div>
-        <input type="range" id="flapLen" min="10" max="80" step="1" value="60">
+        <div class="ctl-head"><span class="ctl-label">Boy — 45° kolu</span><span class="ref">N43</span><span class="val" id="v_flapLen"></span></div>
+        <input type="range" id="flapLen" min="10" max="200" step="1" value="120">
       </div>
       <div class="ctl">
         <div class="ctl-head"><span class="ctl-label">Yükseklik — ön uç</span><span class="ref">N43</span><span class="val" id="v_flapH0"></span></div>
@@ -370,7 +370,7 @@ button:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
       </div>
       <div class="ctl">
         <div class="ctl-head"><span class="ctl-label">Yükseklik — arka uç</span><span class="ref">N43</span><span class="val" id="v_flapH1"></span></div>
-        <input type="range" id="flapH1" min="0" max="40" step="0.5" value="10">
+        <input type="range" id="flapH1" min="0" max="40" step="0.5" value="6">
       </div>
       <div class="ctl">
         <div class="ctl-head"><span class="ctl-label">Açılma seviyesi</span><span class="ref">N43</span><span class="val" id="v_flapDeploy"></span></div>
@@ -473,7 +473,7 @@ button:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
 var P={rootChord:0.97,sweepRoot:45,sweepTip:35,sweepTE:25,crop:67,tcRoot:25,tcTip:12,camber:6,reflex:3,
        propD:1.34,propGap:8,bladesF:4,bladesR:3,propD2:0.20,
        tipPost:300,tipStub:5,tipTube:4,
-       flapStart:15,flapLen:60,flapH0:2,flapH1:10,flapDeploy:100,
+       flapStart:15,flapLen:120,flapH0:2,flapH1:6,flapDeploy:100,
        mass:50};
 var IDS=Object.keys(P);
 var show={stations:true,grid:true,solid:true,prop:true,disc:true,frame:true,stand:false,flap:true};
@@ -1263,14 +1263,14 @@ var DEFAULTS={rootChord:0.97,sweepRoot:45,sweepTip:35,sweepTE:25,crop:67,
               tcRoot:25,tcTip:12,camber:6,reflex:3,
               propD:1.34,propGap:8,bladesF:4,bladesR:3,propD2:0.20,
               tipPost:300,tipStub:5,tipTube:4,
-              flapStart:15,flapLen:60,flapH0:2,flapH1:10,flapDeploy:100,
+              flapStart:15,flapLen:120,flapH0:2,flapH1:6,flapDeploy:100,
               mass:50};
 
 function dumpText(){
   var parts=IDS.map(function(id){return KEY[id]+"="+P[id].toFixed(DEC[id]);});
   var geo="b="+M.span.toFixed(2)+" S="+M.area.toFixed(2)+" AR="+M.ar.toFixed(2)+
           " Adisk="+PR.area.toFixed(2)+" np="+PR.count;
-  return "GOVDE07 "+parts.join(" ")+"  |  "+geo;
+  return "GOVDE08 "+parts.join(" ")+"  |  "+geo;
 }
 function refreshDump(){document.getElementById("dump").value=dumpText();}
 
