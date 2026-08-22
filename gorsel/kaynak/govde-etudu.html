@@ -318,11 +318,11 @@ button:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
       <h2>Pervaneler</h2>
       <div class="ctl">
         <div class="ctl-head"><span class="ctl-label">Disk çapı</span><span class="ref">N1</span><span class="val" id="v_propD"></span></div>
-        <input type="range" id="propD" min="0.2" max="9" step="0.02" value="1.34">
+        <input type="range" id="propD" min="0.2" max="9" step="0.02" value="1.20">
       </div>
       <div class="ctl">
         <div class="ctl-head"><span class="ctl-label">Uç pervaneleri — çap</span><span class="ref">N32</span><span class="val" id="v_propD2"></span></div>
-        <input type="range" id="propD2" min="0" max="6" step="0.02" value="0.20">
+        <input type="range" id="propD2" min="0" max="6" step="0.01" value="0.20">
       </div>
       <div class="ctl">
         <div class="ctl-head"><span class="ctl-label">Eksenel aralık</span><span class="ref">N18</span><span class="val" id="v_propGap"></span></div>
@@ -376,6 +376,18 @@ button:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
         <div class="ctl-head"><span class="ctl-label">Açılma seviyesi</span><span class="ref">N43</span><span class="val" id="v_flapDeploy"></span></div>
         <input type="range" id="flapDeploy" min="0" max="100" step="1" value="100">
       </div>
+    </div>
+
+    <div class="block">
+      <h2>Hat</h2>
+      <div class="btnrow">
+        <button id="hHafif" aria-pressed="true">Hafif · 50 kg</button>
+        <button id="hAgir" aria-pressed="false">Ağır · 1000 kg</button>
+      </div>
+      <p class="sub" style="max-width:none;font-size:11.5px;margin-top:10px">
+        Aynı mimari, <strong>20 kat kütle</strong>. Şekil birebir aynı; yalnızca
+        uzunluk ölçeği 3,35 kat. Disk yüklemesi her iki hatta da ≈44 kg/m².
+      </p>
     </div>
 
     <div class="block">
@@ -471,7 +483,7 @@ button:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
 
 /* ============ parameters ============ */
 var P={rootChord:0.97,sweepRoot:45,sweepTip:35,sweepTE:25,crop:67,tcRoot:25,tcTip:12,camber:6,reflex:3,
-       propD:1.34,propGap:8,bladesF:4,bladesR:3,propD2:0.20,
+       propD:1.20,propGap:8,bladesF:4,bladesR:3,propD2:0.20,
        tipPost:300,tipStub:5,tipTube:4,
        flapStart:15,flapLen:120,flapH0:2,flapH1:6,flapDeploy:100,
        mass:50};
@@ -1220,6 +1232,25 @@ viewMode("vIso",-0.62,0.42,"Serbest görünüm");
   });
 });
 
+var HATLAR={
+  hafif:{rootChord:0.97,propD:1.20,propD2:0.20,mass:50},
+  agir :{rootChord:3.25,propD:5.40,propD2:0.67,mass:1000}
+};
+function hatUygula(ad){
+  var h=HATLAR[ad];
+  Object.keys(h).forEach(function(id){
+    P[id]=h[id];
+    var el=document.getElementById(id);
+    if(el){el.value=h[id];}
+    var out=document.getElementById("v_"+id);
+    if(out)out.textContent=P[id].toFixed(DEC[id])+UNITS[id];
+  });
+  press("hHafif",ad==="hafif"); press("hAgir",ad==="agir");
+  rebuild(false);
+}
+document.getElementById("hHafif").addEventListener("click",function(){hatUygula("hafif");});
+document.getElementById("hAgir").addEventListener("click",function(){hatUygula("agir");});
+
 document.getElementById("tStand").addEventListener("click",function(){
   show.stand=!show.stand;
   press("tStand",show.stand);
@@ -1261,7 +1292,7 @@ var KEY={rootChord:"kok",sweepRoot:"hk0",sweepTip:"hk1",sweepTE:"fk",crop:"kirp"
          mass:"mtow"};
 var DEFAULTS={rootChord:0.97,sweepRoot:45,sweepTip:35,sweepTE:25,crop:67,
               tcRoot:25,tcTip:12,camber:6,reflex:3,
-              propD:1.34,propGap:8,bladesF:4,bladesR:3,propD2:0.20,
+              propD:1.20,propGap:8,bladesF:4,bladesR:3,propD2:0.20,
               tipPost:300,tipStub:5,tipTube:4,
               flapStart:15,flapLen:120,flapH0:2,flapH1:6,flapDeploy:100,
               mass:50};
@@ -1270,7 +1301,7 @@ function dumpText(){
   var parts=IDS.map(function(id){return KEY[id]+"="+P[id].toFixed(DEC[id]);});
   var geo="b="+M.span.toFixed(2)+" S="+M.area.toFixed(2)+" AR="+M.ar.toFixed(2)+
           " Adisk="+PR.area.toFixed(2)+" np="+PR.count;
-  return "GOVDE08 "+parts.join(" ")+"  |  "+geo;
+  return "GOVDE09 "+parts.join(" ")+"  |  "+geo;
 }
 function refreshDump(){document.getElementById("dump").value=dumpText();}
 

@@ -1,6 +1,6 @@
 # meryemAircraft — Tasarım Künyesi
 
-**Durum:** Taslak 02 · Anlatım tamamlandı · **Boyutlandırma yapıldı** · Referans geometri sabit
+**Durum:** Taslak 04 · Anlatım tamamlandı · **Boyutlandırma yapıldı** · Referans geometri sabit
 **Kapsam:** Bu belge projenin tek doğruluk kaynağıdır. Makale, patent tarifnamesi,
 görsel, sunum ve video buradan türetilir.
 **Gizlilik:** Yayımlanmamıştır. Patent başvurusu öncesi kamuya açıklanmamalıdır.
@@ -92,7 +92,8 @@ Unsurların tek tek ataları vardır; yenilik **bileşimdedir**:
 | N32 | Ön dikmelerin üst ve alt uçlarında **dört çift daha**. Toplam **beş çift** |
 | N17 | Enerji türü açık: elektrik veya içten yanmalı. İçten yanmalıysa **her çift için bir motor** |
 | N36 | Koaksiyel çift **net açısal momentumu da siler** → geçişte jiroskopik moment doğmaz. Kuyruğa oturanların klasik sorunu bu yolla düşer |
-| N15 | ⚠️ Sabit geometri, tam tork dengesini **tek bir çalışma noktasında** verir |
+| N15 | Sabit geometri, tam tork dengesini tek bir noktada verir → **N76: o nokta SEYİRDİR** |
+| N76 | **Tork dengesinin tasarım noktası seyirdir.** Hover kısa ve taktiktir (yalnız pist gereksinimini kaldırır); seyir uzun ve stratejiktir. Kusursuzluk seyirde aranır. Sonuç: hover'da küçük bir artık tork kalır, N43 kanatçığı bunu trimler |
 | N63 | İtki mimarisi: **seri hibrit.** İçten yanmalı motor **enerji kaynağıdır**, doğrudan tahrik değil. Yakıt → motor → jeneratör → elektrikli rotorlar. Karşıt dönüş dişli kutusu hiç doğmaz (XB-35 riski) |
 | N64 | Motor **seyir gücüne** göre boyutlandırılır; hover tepesi küçük pil tamponundan karşılanır (≈%3 MTOW, her iki hatta da) |
 | N65 | Her iki hat **aynı mimariyi** kullanır. Farklı mimari, ölçek tezini çürütür |
@@ -153,6 +154,7 @@ Unsurların tek tek ataları vardır; yenilik **bileşimdedir**:
 | N55 | Kaçış: **sabit disk yüklemesi.** Disk alanı ağırlıkla (L³) büyütülürse ölçekleme bedavadır. Mimaride çift eklemek serbest olduğu için bu mümkündür |
 | N56 | Konumlandırma: rakip diğer hava araçları değil, **havalimanı altyapısıdır** |
 | N62 | Yük oranı boyutla büyüyor (%4 → %25 mertebesi); sabit maliyetler küçülmediği için. N53'ün veri desteği |
+| N77 | Ana disk çapı **1,20 m** (1,34'ten). Bedeli: askı gücü +%12, disk yüklemesi +%25. Seyir önceliği gereği kabul edildi. Ağır hat da aynı çizgide **5,40 m**'ye çekildi |
 | N75 | Yuvarlanma kanatçığı: **boy %120 kök veter, yükseklik 2→6 cm.** Gücü boydan gelir. İç kısmı pervane izinde (hover), dış kısmı dışında (seyir) |
 | N73 | **Rakipten fazla yük taşımak gerekmiyor.** Benzer yükü daha uzağa taşımak, mimarinin üstünlüğünü daha temiz ispatlar — ölçüm tartışmasına da kapalıdır |
 
@@ -164,7 +166,9 @@ Unsurların tek tek ataları vardır; yenilik **bileşimdedir**:
 |---|---|---|
 | ~~A-KÜTLE~~ | **KAPANDI** → N66: 50 kg / 1000 kg | |
 | ~~A-ENERJİ~~ | **KAPANDI** → N63: seri hibrit | |
-| ~~A-KANATÇIK~~ | **KAPANDI** → N75: boy %120, yükseklik 2→6 cm | |
+| ~~A-KANATÇIK~~ | **KAPANDI** → N75 | |
+| ~~N15~~ | **KAPANDI** → N76: tasarım noktası seyir | |
+| N4 | Ok açıları transonik literatürden ödünç | Tasarımcı gözle onayladı; makalede **"seçilmiştir"** diye sunulacak, "türetilmiştir" diye değil |
 | N40 | Hover'da istikamet otoritesi yeterli mi? | N43 açığı sıfırdan "küçük ama gerçek"e taşıdı; yeterlilik sayıyla belirlenecek |
 | N44 | ⚠️ N1 ile N43 birbirini törpüler | Disk büyüdükçe iz zayıflar (q = T/A) |
 | N15 | Tam tork dengesi hangi noktada kurulacak? | Hover mu, seyir mi |
@@ -212,16 +216,39 @@ yönlendirebilir. Vekile ilk sorulacaklardan biri budur.
 | | **Hafif hat** | **Ağır hat** |
 |---|---:|---:|
 | MTOW | **50 kg** | **1000 kg** |
-| Ana disk çapı | 1,34 m | 6,00 m |
-| Disk yüklemesi | 35,4 kg/m² | 35,4 kg/m² |
-| Askı gücü | 9,7 kW | 194,6 kW |
-| Seyir gücü | 1,8 kW | 40,9 kW |
-| Motor (seyre göre) | 2,6 kW | 57,2 kW |
-| Pil tamponu | 1,8 kg (%3,6) | 34,3 kg (%3,4) |
-| **Ölçek** | **1×** | **20×** |
+| Ana disk çapı | **1,20 m** | **5,40 m** |
+| Disk yüklemesi | 44,2 kg/m² | 43,7 kg/m² |
+| Askı gücü | 10,9 kW | 216,2 kW |
+| Seyir gücü | 1,8 kW | 38,8 kW |
+| Motor (seyre göre) | 2,6 kW | 54,3 kW |
+| Pil tamponu | 1,8 kg (%3,6) | 40 kg (%4,0) |
+| Kök veter | 0,97 m | 3,25 m |
+| Açıklık | 3,45 m | 11,55 m |
+| Kanat alanı | 1,98 m² | 22,24 m² |
+| Uç pervanesi | 0,20 m | 0,67 m |
+| Dikme boyu | 0,71 m | 2,38 m |
+| **Geçiş süresi** | **2 s** | **4 s** |
+| **Ölçek** | **1×** | **20×** (uzunlukta 3,35×) |
 
 İki nokta da **aynı disk yüklemesi çizgisinde** — N55'in gereği. Pil oranları da eşit.
 Mimarinin iki uçta aynı oranlarla çalıştığının sayısal kanıtı.
+
+### 11.1b Geçiş süresi ölçek-değişmez değildir (N78)
+
+Ağır hatta uç pervaneleri, geometrik olarak ölçeklendiğinde 2 saniyelik geçişi
+yapamaz — gereken güç askı gücünü aşar:
+
+| Geçiş süresi | 4 pervane toplam | Askı gücünün %'si | İrtifa kaybı |
+|---:|---:|---:|---:|
+| 2 s | 221,5 kW | **%102** | 8 m |
+| 3 s | 65,6 kW | %30 | 18 m |
+| **4 s** | **27,7 kW** | **%13** | **31 m** |
+| 5 s | 14,2 kW | %7 | 49 m |
+
+**Kural: büyük araç daha yavaş döner.** Gereken moment $M=I\alpha$ ile, $I\propto mL^2$
+olduğundan ölçekle hızla büyür. Ağır hat **4 saniyede** döner, 31 m irtifa kaybeder —
+1000 kg'lık bir araç için kabul edilebilir. Bu, N54'ün ($P\propto L^{3,5}$) geçiş
+tarafındaki karşılığıdır.
 
 ### 11.2 Hafif hat geometrisi (N71)
 
@@ -247,7 +274,7 @@ Kanat, hızlı yunuslama tamamlanmadan devralıyor. N41 bu araçta rahat çalı�
 
 | | Değer |
 |---|---:|
-| Ana pervane çapı | 1,34 m |
+| Ana pervane çapı | **1,20 m** |
 | Uç pervanesi çapı | **0,20 m** |
 | Dikme boyu | **uç veterinin %300'ü** = 0,71 m (her yön) |
 | Dikey ayrım (üst–alt) | 1,43 m |
@@ -309,10 +336,10 @@ Ancak boy–yükseklik oransal farkı o kadar büyük ki katsayı seçimi sonucu
 ### 11.6 3B model parametreleri
 
 ```
-GOVDE08
+GOVDE09
 kok=0.97  hk0=45  hk1=35  fk=25  kirp=67
 tc0=25    tc1=12  kamb=6  refl=3
-pcap=1.34 parl=8  pkf=4   pkr=3   ucap=0.20
+pcap=1.20 parl=8  pkf=4   pkr=3   ucap=0.20
 dikme=300 cikinti=5  kalinlik=4
 kbas=15   kboy=120 kh0=2  kh1=6   kac=100
 mtow=50
