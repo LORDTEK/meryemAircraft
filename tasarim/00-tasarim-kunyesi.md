@@ -1,6 +1,6 @@
 # meryemAircraft — Tasarım Künyesi
 
-**Durum:** Taslak 01 · Anlatım aşaması tamamlandı, hesap aşaması başlamadı
+**Durum:** Taslak 02 · Anlatım tamamlandı · **Boyutlandırma yapıldı** · Referans geometri sabit
 **Kapsam:** Bu belge projenin tek doğruluk kaynağıdır. Makale, patent tarifnamesi,
 görsel, sunum ve video buradan türetilir.
 **Gizlilik:** Yayımlanmamıştır. Patent başvurusu öncesi kamuya açıklanmamalıdır.
@@ -72,6 +72,7 @@ Unsurların tek tek ataları vardır; yenilik **bileşimdedir**:
 | N24 | N22'nin asıl işlevi: **düşük hızda uç tutukluğu ve yunuslama-yukarı önlenmesi**. N8 ile doğrudan bağlantılıdır |
 | N7 | Ok açısı iki iş görür: aerodinamik verim + kuyruksuz yunuslama moment kolu |
 | N27 | **Kırpma, planformun baskın kaldıracıdır** |
+| N70 | **En-boy oranı = 6.** Sınırlayanlar: yapı (kök eğilme momenti), uç tutukluğu (N24), düşük Reynolds. Aynı AR ağır hatta da uygulanır |
 
 > **Tarihsel dayanak:** Hilal kanat (Handley Page Victor, Lachmann/Lee) aynı üçlü
 > dağılımı kullanmıştır: kökten uca 48,5° → 37,5° → 26,75°, veter ve kalınlık
@@ -92,6 +93,10 @@ Unsurların tek tek ataları vardır; yenilik **bileşimdedir**:
 | N17 | Enerji türü açık: elektrik veya içten yanmalı. İçten yanmalıysa **her çift için bir motor** |
 | N36 | Koaksiyel çift **net açısal momentumu da siler** → geçişte jiroskopik moment doğmaz. Kuyruğa oturanların klasik sorunu bu yolla düşer |
 | N15 | ⚠️ Sabit geometri, tam tork dengesini **tek bir çalışma noktasında** verir |
+| N63 | İtki mimarisi: **seri hibrit.** İçten yanmalı motor **enerji kaynağıdır**, doğrudan tahrik değil. Yakıt → motor → jeneratör → elektrikli rotorlar. Karşıt dönüş dişli kutusu hiç doğmaz (XB-35 riski) |
+| N64 | Motor **seyir gücüne** göre boyutlandırılır; hover tepesi küçük pil tamponundan karşılanır (≈%3 MTOW, her iki hatta da) |
+| N65 | Her iki hat **aynı mimariyi** kullanır. Farklı mimari, ölçek tezini çürütür |
+| N69 | Kumanda pervaneleri hover gücünün **%15'inden azını** ister. Kumanda, mimarinin en ucuz bileşeni |
 
 ### 5.3 Yapı
 
@@ -147,6 +152,8 @@ Unsurların tek tek ataları vardır; yenilik **bileşimdedir**:
 | N54 | Ölçekleme sınırı **askı gücündedir**: P_gerekli/P_mevcut ∝ L^0,5 |
 | N55 | Kaçış: **sabit disk yüklemesi.** Disk alanı ağırlıkla (L³) büyütülürse ölçekleme bedavadır. Mimaride çift eklemek serbest olduğu için bu mümkündür |
 | N56 | Konumlandırma: rakip diğer hava araçları değil, **havalimanı altyapısıdır** |
+| N62 | Yük oranı boyutla büyüyor (%4 → %25 mertebesi); sabit maliyetler küçülmediği için. N53'ün veri desteği |
+| N73 | **Rakipten fazla yük taşımak gerekmiyor.** Benzer yükü daha uzağa taşımak, mimarinin üstünlüğünü daha temiz ispatlar — ölçüm tartışmasına da kapalıdır |
 
 ---
 
@@ -154,8 +161,9 @@ Unsurların tek tek ataları vardır; yenilik **bileşimdedir**:
 
 | Kod | Soru | Neden tıkıyor |
 |---|---|---|
-| **A-KÜTLE** | MTOW ve faydalı yük oranı nedir? | Disk yüklemesi, askı gücü, yapı, enerji — hepsi buna bağlı |
-| **A-ENERJİ** | Elektrik mi, içten yanmalı mı? | Tam yüklü hover, bataryanın en zorlandığı durum. Mimariyi değiştirir |
+| ~~A-KÜTLE~~ | **KAPANDI** → N66: 50 kg / 1000 kg | |
+| ~~A-ENERJİ~~ | **KAPANDI** → N63: seri hibrit | |
+| **A-KANATÇIK** | Kanatçık yükseklikleri (%2 ve %10 veter) doğru mu? | Yuvarlanma gereksiniminden türetilmedi |
 | N40 | Hover'da istikamet otoritesi yeterli mi? | N43 açığı sıfırdan "küçük ama gerçek"e taşıdı; yeterlilik sayıyla belirlenecek |
 | N44 | ⚠️ N1 ile N43 birbirini törpüler | Disk büyüdükçe iz zayıflar (q = T/A) |
 | N15 | Tam tork dengesi hangi noktada kurulacak? | Hover mu, seyir mi |
@@ -179,6 +187,7 @@ Unsurların tek tek ataları vardır; yenilik **bileşimdedir**:
 | N58 | Hedef **ürün değil mimaridir.** Rakip şirket ismi üzerinden kurgu yapılmaz; "yendik" cümlesi metinde geçmez |
 | N59 | Referans tasarım bir **varlık kanıtıdır**, rakiplerin bandına bilerek yerleştirilir. Ölçek, sessiz üstünlük olarak sonda gösterilir |
 | N60 | Karşılaştırma grafiği ayrı sayfa; referans tasarımın sayıları çıkınca kurulur |
+| N61 | Referans tasarım **iki boyutta**: hafif hattın en hafifi (50 kg), ağır hattın en ağırı (1000 kg). Ölçek oranı **20:1** |
 
 **Ödemesiz süre haritası** (yayımdan önce başvuru şart):
 
@@ -195,26 +204,108 @@ yönlendirebilir. Vekile ilk sorulacaklardan biri budur.
 
 ---
 
-## 11. Referans model — 3B parametreler
+## 11. Referans tasarım — sayılar
 
-Etkileşimli model: değişken ok açılı kanat-gövde + beş pervane çifti + uç iskeletleri
-+ orta omurga + yuvarlanma kanatçığı.
+### 11.1 İki tasarım noktası (N66)
+
+| | **Hafif hat** | **Ağır hat** |
+|---|---:|---:|
+| MTOW | **50 kg** | **1000 kg** |
+| Ana disk çapı | 1,34 m | 6,00 m |
+| Disk yüklemesi | 35,4 kg/m² | 35,4 kg/m² |
+| Askı gücü | 9,7 kW | 194,6 kW |
+| Seyir gücü | 1,8 kW | 40,9 kW |
+| Motor (seyre göre) | 2,6 kW | 57,2 kW |
+| Pil tamponu | 1,8 kg (%3,6) | 34,3 kg (%3,4) |
+| **Ölçek** | **1×** | **20×** |
+
+İki nokta da **aynı disk yüklemesi çizgisinde** — N55'in gereği. Pil oranları da eşit.
+Mimarinin iki uçta aynı oranlarla çalıştığının sayısal kanıtı.
+
+### 11.2 Hafif hat geometrisi (N71)
+
+| | Değer |
+|---|---:|
+| Kök veter | 0,97 m |
+| Uç veter | 0,238 m (sivrilme 0,245) |
+| Açıklık | 3,45 m |
+| Kanat alanı | 1,98 m² |
+| En-boy oranı | 6,00 |
+| Kırpma | %67 |
+| Kanat yüklemesi | 25,3 kg/m² |
+| Tutukluk hızı | 20,1 m/s (72 km/sa) |
+| Seyir hızı | 30 m/s (108 km/sa) |
+| L/D (seyir) | 12,7 |
+
+**Geçiş kontrolü:** 60° eğimde yatay ivme 1,73 g → tutukluk hızına **1,2 s**'de ulaşılıyor.
+Kanat, hızlı yunuslama tamamlanmadan devralıyor. N41 bu araçta rahat çalışıyor.
+
+**Menzil:** 8 kg yakıtla ≈ **2 140 km / 19,8 saat.**
+
+### 11.3 Pervane yerleşimi (N72, N74)
+
+| | Değer |
+|---|---:|
+| Ana pervane çapı | 1,34 m |
+| Uç pervanesi çapı | **0,20 m** |
+| Dikme boyu | **uç veterinin %300'ü** = 0,71 m (her yön) |
+| Dikey ayrım (üst–alt) | 1,43 m |
+| Uç pervanesi itkisi (2 s geçiş) | 16,2 N (1,65 kgf) her biri |
+| Uç pervanesi gücü | 335 W her biri · **4 toplam 1,34 kW** (hover'ın %14'ü) |
+
+**Neden uzun dikme:** Kumanda momenti $M = 2\,T\,L_p$. Kolu uzatmak, aynı momenti
+daha küçük itkiyle ve **çok daha az güçle** ($P\propto T^{3/2}$) üretmeyi sağlar.
+Dikme boyunu üçe katlamak, gereken gücü beşte bire indiriyor.
+Dikmeler aynı zamanda iniş yapısıdır — uzaması duruş tabanını da genişletir.
+
+### 11.4 Kütle bütçesi taslağı (N67)
+
+| Kalem | % MTOW | 50 kg'da |
+|---|---:|---:|
+| Yapı | 30 | 15,0 kg |
+| İtki zinciri | 16 | 8,0 kg |
+| Pil tamponu | 4 | 2,0 kg |
+| Aviyonik + kumanda | 8 | 4,0 kg |
+| Yakıt | 16 | 8,0 kg |
+| **Faydalı yük** | **26** | **13,0 kg** |
+
+⚠️ **Hedef, bulgu değil.** Yapı oranı %30 varsayıldı. Kâğıt uçaklar tipik olarak
+%20–40 hafif çıkar; o pay bu tabloda henüz ödenmedi.
+
+### 11.5 3B model parametreleri
 
 ```
-GOVDE05
-kok=4.0  hk0=45.0  hk1=35.0  fk=25.0  kirp=50
-tc0=25.0 tc1=12.0  kamb=6.0  refl=3.0
-pcap=4.0 parl=8.0  pkf=4  pkr=3  ucap=0.5
-dikme=100  cikinti=5  kalinlik=4.0
-kbas=15  kboy=55  kh0=2  kh1=10  kac=100
-
-→ b=10,63 m · S=29,02 m² · AR=3,89 · A_disk(ana)=12,57 m²
+GOVDE07
+kok=0.97  hk0=45  hk1=35  fk=25  kirp=67
+tc0=25    tc1=12  kamb=6  refl=3
+pcap=1.34 parl=8  pkf=4   pkr=3   ucap=0.20
+dikme=300 cikinti=5  kalinlik=4
+kbas=15   kboy=60 kh0=2   kh1=10  kac=100
+mtow=50
 ```
 
-**Bu değerler görsel çalışma taslağıdır, tasarım kararı değildir.** Sayılar, kütle ve
-enerji kararı verildikten sonra kendi uçuş rejimimize göre yeniden türetilecektir.
+Model: https://claude.ai/code/artifact/8a4abc4f-83e8-42ce-8894-c84331d6615a
 
----
+**Bu geometri artık sabittir.** Kütleden türetilmiştir, keyfî değildir.
+
+### 11.6 Rakip MTOW tablosu
+
+| Araç | MTOW | Faydalı yük | Yük oranı |
+|---|---:|---:|---:|
+| HAVELSAN BAHA | 28 kg | — | — |
+| Textron Aerosonde Mk 4.7 VTOL | 45,4 kg | 9,1 kg | %20,0 |
+| **Baykar KALKAN DİHA** | **75 kg** | ~3 kg (dahilî) | %4,0 |
+| HAVELSAN BULUT | yayımlanmamış | 5 kg | — |
+| Elroy Air Chaparral | 865 kg | 136 / 227 kg | %15,7 / %26,2 |
+| Sabrewing Rhaegal-A | 1 400 kg | 360–450 kg | %25,7–32,1 |
+| Pipistrel Nuuva V300 | 1 700 kg | 408 kg | %24,0 |
+
+⚠️ Üretici tanıtımlarından. Faydalı yük tanımları tutarsız; boş ağırlıklar
+yayımlanmıyor. Makalede her satırın kaynağı ve tanımı yazılmalı.
+
+**Ortak nokta:** Bu sınıfın tamamı içten yanmalı motoru **doğrudan bir kaldırma
+rotoruna bağlamamış** — hepsi jeneratör ya da ayrık elektrikli kaldırma kullanıyor.
+N63'ün sektörel doğrulaması.
 
 ## 12. Sözlük
 

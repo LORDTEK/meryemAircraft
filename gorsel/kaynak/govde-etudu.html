@@ -1,0 +1,1303 @@
+<title>Gövde Etüdü</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+
+<style>
+:root{
+  --ground:#E6EAEC;
+  --panel:#F4F7F8;
+  --panel-2:#EDF1F3;
+  --ink:#121A20;
+  --muted:#5D6B76;
+  --faint:#8A97A1;
+  --line:#C9D2D8;
+  --line-soft:#DAE1E6;
+  --accent:#0E6E7D;
+  --accent-soft:#DCEDEF;
+  --focus:#0E6E7D;
+  --grid-3d:#B9C4CC;
+  --wire-3d:#7C8B96;
+  --model-r:0.78; --model-g:0.71; --model-b:0.60;
+  --amb:0.34;
+  --rim-r:0.55; --rim-g:0.72; --rim-b:0.78;
+  --canvas-top:#DDE3E7;
+  --canvas-bot:#C9D2D8;
+  --alert:#9A3412;
+  --alert-bg:#FBEBDF;
+  --alert-line:#E8B48D;
+  --prop-r:0.30; --prop-g:0.36; --prop-b:0.40;
+  --frame-r:0.52; --frame-g:0.56; --frame-b:0.60;
+  --flap-r:0.09; --flap-g:0.44; --flap-b:0.49;
+  --disc-3d:#0E6E7D;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#0D1318;
+    --panel:#141C23;
+    --panel-2:#1A242C;
+    --ink:#DCE5EB;
+    --muted:#8B99A4;
+    --faint:#63727D;
+    --line:#243039;
+    --line-soft:#1D262E;
+    --accent:#3FB6C6;
+    --accent-soft:#12333A;
+    --focus:#3FB6C6;
+    --grid-3d:#28353E;
+    --wire-3d:#5A6E7A;
+    --model-r:0.70; --model-g:0.63; --model-b:0.52;
+    --amb:0.22;
+    --rim-r:0.25; --rim-g:0.62; --rim-b:0.70;
+    --canvas-top:#131B21;
+    --canvas-bot:#080C10;
+    --alert:#F0A87A;
+    --alert-bg:#2E1B10;
+    --alert-line:#5C3620;
+    --prop-r:0.26; --prop-g:0.31; --prop-b:0.35;
+    --frame-r:0.44; --frame-g:0.48; --frame-b:0.52;
+  --flap-r:0.20; --flap-g:0.62; --flap-b:0.68;
+    --flap-r:0.20; --flap-g:0.62; --flap-b:0.68;
+    --disc-3d:#3FB6C6;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0D1318;
+  --panel:#141C23;
+  --panel-2:#1A242C;
+  --ink:#DCE5EB;
+  --muted:#8B99A4;
+  --faint:#63727D;
+  --line:#243039;
+  --line-soft:#1D262E;
+  --accent:#3FB6C6;
+  --accent-soft:#12333A;
+  --focus:#3FB6C6;
+  --grid-3d:#28353E;
+  --wire-3d:#5A6E7A;
+  --model-r:0.70; --model-g:0.63; --model-b:0.52;
+  --amb:0.22;
+  --rim-r:0.25; --rim-g:0.62; --rim-b:0.70;
+  --canvas-top:#131B21;
+  --canvas-bot:#080C10;
+  --alert:#F0A87A;
+  --alert-bg:#2E1B10;
+  --alert-line:#5C3620;
+  --prop-r:0.26; --prop-g:0.31; --prop-b:0.35;
+  --frame-r:0.44; --frame-g:0.48; --frame-b:0.52;
+  --disc-3d:#3FB6C6;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--ground);
+  color:var(--ink);
+  font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-size:14px;
+  line-height:1.5;
+  overflow:hidden;
+}
+.app{
+  display:grid;
+  grid-template-columns:330px 1fr;
+  height:100vh;
+  height:100dvh;
+  width:100%;
+}
+.rail{
+  background:var(--panel);
+  border-right:1px solid var(--line);
+  overflow-y:auto;
+  overflow-x:hidden;
+  display:flex;
+  flex-direction:column;
+  gap:0;
+}
+.stage{position:relative;min-width:0;overflow:hidden}
+canvas{display:block;width:100%;height:100%;touch-action:none;cursor:grab}
+canvas:active{cursor:grabbing}
+
+/* ---- rail blocks ---- */
+.block{padding:18px 20px;border-bottom:1px solid var(--line-soft)}
+.titleblock{padding:22px 20px 18px}
+h1{
+  font-family:"IBM Plex Mono","SFMono-Regular",Consolas,monospace;
+  font-size:15px;font-weight:600;margin:0;
+  letter-spacing:.14em;text-transform:uppercase;
+  text-wrap:balance;
+}
+.sub{margin:6px 0 0;color:var(--muted);font-size:12.5px;max-width:34ch}
+.proj{
+  display:inline-block;margin-top:12px;
+  font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+  letter-spacing:.1em;text-transform:uppercase;
+  color:var(--accent);background:var(--accent-soft);
+  border-radius:2px;padding:3px 7px;
+}
+h2{
+  font-family:"IBM Plex Mono",monospace;
+  font-size:10.5px;font-weight:600;margin:0 0 14px;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--faint);
+  display:flex;align-items:center;gap:9px;
+}
+h2::after{content:"";flex:1;height:1px;background:var(--line-soft)}
+
+/* ---- sliders ---- */
+.ctl{display:flex;flex-direction:column;gap:5px;margin-bottom:15px}
+.ctl:last-child{margin-bottom:0}
+.ctl-head{display:flex;align-items:baseline;gap:8px}
+.ctl-label{flex:1;font-size:12.5px;color:var(--ink)}
+.ref{
+  font-family:"IBM Plex Mono",monospace;font-size:9.5px;
+  color:var(--faint);border:1px solid var(--line);
+  border-radius:2px;padding:1px 4px;letter-spacing:.04em;
+}
+.val{
+  font-family:"IBM Plex Mono",monospace;font-size:12.5px;font-weight:500;
+  color:var(--accent);font-variant-numeric:tabular-nums;
+  min-width:58px;text-align:right;
+}
+input[type=range]{
+  -webkit-appearance:none;appearance:none;width:100%;height:18px;
+  background:transparent;margin:0;cursor:pointer;
+}
+input[type=range]::-webkit-slider-runnable-track{
+  height:2px;background:var(--line);border-radius:1px;
+}
+input[type=range]::-moz-range-track{height:2px;background:var(--line);border-radius:1px}
+input[type=range]::-webkit-slider-thumb{
+  -webkit-appearance:none;appearance:none;
+  width:13px;height:13px;border-radius:50%;
+  background:var(--accent);border:2px solid var(--panel);
+  margin-top:-5.5px;
+}
+input[type=range]::-moz-range-thumb{
+  width:13px;height:13px;border-radius:50%;border:2px solid var(--panel);
+  background:var(--accent);
+}
+input[type=range]:focus-visible{outline:2px solid var(--focus);outline-offset:4px;border-radius:3px}
+
+/* ---- buttons ---- */
+.btnrow{display:flex;flex-wrap:wrap;gap:6px}
+button{
+  font-family:"IBM Plex Mono",monospace;font-size:10.5px;font-weight:500;
+  letter-spacing:.08em;text-transform:uppercase;
+  color:var(--muted);background:var(--panel-2);
+  border:1px solid var(--line);border-radius:2px;
+  padding:6px 10px;cursor:pointer;
+}
+button:hover{color:var(--ink);border-color:var(--muted)}
+button[aria-pressed="true"]{
+  color:var(--accent);background:var(--accent-soft);border-color:var(--accent);
+}
+button:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+
+/* ---- metrics ---- */
+.metrics{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line-soft)}
+.metric{background:var(--panel);padding:11px 12px}
+.metric dt{
+  font-family:"IBM Plex Mono",monospace;font-size:9.5px;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin:0;
+}
+.metric dd{
+  margin:3px 0 0;font-family:"IBM Plex Mono",monospace;
+  font-size:16px;font-weight:500;color:var(--ink);
+  font-variant-numeric:tabular-nums;
+}
+.metric dd span{font-size:10.5px;color:var(--muted);font-weight:400;margin-left:2px}
+
+/* ---- stage overlays ---- */
+.viewtag{
+  position:absolute;top:14px;left:16px;
+  font-family:"IBM Plex Mono",monospace;font-size:10px;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--faint);
+  pointer-events:none;
+}
+.hint{
+  position:absolute;bottom:14px;left:16px;
+  font-family:"IBM Plex Mono",monospace;font-size:10px;
+  letter-spacing:.06em;color:var(--faint);pointer-events:none;
+}
+.scalebar{
+  position:absolute;bottom:14px;right:16px;
+  font-family:"IBM Plex Mono",monospace;font-size:10px;
+  letter-spacing:.06em;color:var(--faint);
+  display:flex;align-items:center;gap:8px;pointer-events:none;
+}
+.scalebar i{display:block;width:64px;height:1px;background:var(--faint);position:relative}
+.scalebar i::before,.scalebar i::after{
+  content:"";position:absolute;top:-3px;width:1px;height:7px;background:var(--faint);
+}
+.scalebar i::before{left:0}
+.scalebar i::after{right:0}
+.warn{
+  position:absolute;top:14px;right:16px;
+  font-family:"IBM Plex Mono",monospace;font-size:10px;
+  letter-spacing:.06em;color:var(--alert);background:var(--alert-bg);
+  border:1px solid var(--alert-line);border-radius:2px;padding:4px 8px;
+  max-width:min(46vw,260px);
+  display:none;
+}
+.warn.on{display:block}
+
+/* ---- export ---- */
+.export{display:flex;flex-direction:column;gap:8px}
+.export input{
+  width:100%;font-family:"IBM Plex Mono",monospace;font-size:11px;
+  color:var(--ink);background:var(--panel-2);
+  border:1px solid var(--line);border-radius:2px;padding:8px 9px;
+}
+.export input:focus-visible{outline:2px solid var(--focus);outline-offset:1px}
+.copied{color:var(--accent);font-size:11.5px;min-height:1.2em}
+
+@media (max-width:900px){
+  body{overflow:auto}
+  .app{display:flex;flex-direction:column-reverse;height:auto}
+  .stage{height:56vh;min-height:320px;border-bottom:1px solid var(--line)}
+  .rail{border-right:none;overflow-y:visible}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important}
+}
+</style>
+
+<div class="app">
+  <aside class="rail">
+    <div class="titleblock">
+      <h1>Gövde Etüdü</h1>
+      <p class="sub">Kanat-gövde formunun parametrik modeli. Sayılar ile şekil aynı kaynaktan üretilir.</p>
+      <span class="proj">meryemAircraft · taslak 01</span>
+    </div>
+
+    <div class="block">
+      <h2>Planform</h2>
+      <div class="ctl">
+        <div class="ctl-head"><span class="ctl-label">Kök veter</span><span class="ref">N6</span><span class="val" id="v_rootChord"></span></div>
+        <input type="range" id="rootChord" min="0.3" max="10" step="0.01" value="0.97">
+      </div>
+      <div class="ctl">
+        <div class="ctl-head"><span class="ctl-label">HK ok açısı — burun</span><span class="ref">N22</span><span class="val" id="v_sweepRoot"></span></div>
+        <input type="range" id="sweepRoot" min="20" max="60" step="0.5" value="45">
+      </div>
+      <div class="ctl">
+        <div class="ctl-head"><span class="ctl-label">HK ok açısı — uç</span><span class="ref">N22</span><span class="val" id="v_sweepTip"></span></div>
+        <input type="range" id="sweepTip" min="5" max="45" step="0.5" value="35">
+      </div>
+      <div class="ctl">
+        <div class="ctl-head"><span class="ctl-label">Firar kenarı ok açısı</span><span class="ref">N22</span><span class="val" id="v_sweepTE"></span></div>
+        <input type="range" id="sweepTE" min="-10" max="30" step="0.5" value="25">
+      </div>
+      <div class="ctl">
+        <div class="ctl-head"><span class="ctl-label">Kırpma — birleşmenin oranı</span><span class="ref">N22</span><span class="val" id="v_crop"></span></div>
+        <input type="range" id="crop" min="35" max="98" step="0.5" value="67">
+      </div>
+    </div>
+
+    <div class="block">
+      <h2>Kesit</h2>
+      <div class="ctl">
+        <div class="ctl-head"><span class="ctl-label">Kalınlık oranı — kök</span><span class="ref">N20</span><span class="val" id="v_tcRoot"></span></div>
+        <input type="range" id="tcRoot" min="8" max="26" step="0.5" value="25">
+      </div>
+      <div class="ctl">
+        <div class="ctl-head"><span class="ctl-label">Kalınlık oranı — uç</span><span class="ref">N20</span><span class="val" id="v_tcTip"></span></div>
+        <input type="range" id="tcTip" min="4" max="16" step="0.5" value="12">
+      </div>
+      <div class="ctl">
+        <div class="ctl-head"><span class="ctl-label">Kambur</span><span class="ref">N19</span><span class="val" id="v_camber"></span></div>
+        <input type="range" id="camber" min="0" max="6" step="0.1" value="6">
+      </div>
+      <div class="ctl">
+        <div class="ctl-head"><span class="ctl-label">Refleks — firar kenarı</span><span class="ref">N19</span><span class="val" id="v_reflex"></span></div>
+        <input type="range" id="reflex" min="0" max="4" step="0.1" value="3">
+      </div>
+    </div>
+
+    <div class="block">
+      <h2>Pervaneler</h2>
+      <div class="ctl">
+        <div class="ctl-head"><span class="ctl-label">Disk çapı</span><span class="ref">N1</span><span class="val" id="v_propD"></span></div>
+        <input type="range" id="propD" min="0.2" max="9" step="0.02" value="1.34">
+      </div>
+      <div class="ctl">
+        <div class="ctl-head"><span class="ctl-label">Uç pervaneleri — çap</span><span class="ref">N32</span><span class="val" id="v_propD2"></span></div>
+        <input type="range" id="propD2" min="0" max="6" step="0.02" value="0.20">
+      </div>
+      <div class="ctl">
+        <div class="ctl-head"><span class="ctl-label">Eksenel aralık</span><span class="ref">N18</span><span class="val" id="v_propGap"></span></div>
+        <input type="range" id="propGap" min="2" max="30" step="0.5" value="8">
+      </div>
+      <div class="ctl">
+        <div class="ctl-head"><span class="ctl-label">Ön rotor kanat sayısı</span><span class="ref">N18</span><span class="val" id="v_bladesF"></span></div>
+        <input type="range" id="bladesF" min="2" max="8" step="1" value="4">
+      </div>
+      <div class="ctl">
+        <div class="ctl-head"><span class="ctl-label">Arka rotor kanat sayısı</span><span class="ref">N18</span><span class="val" id="v_bladesR"></span></div>
+        <input type="range" id="bladesR" min="2" max="8" step="1" value="3">
+      </div>
+    </div>
+
+    <div class="block">
+      <h2>Uç iskeleti</h2>
+      <div class="ctl">
+        <div class="ctl-head"><span class="ctl-label">Dikme boyu — her yön</span><span class="ref">N28</span><span class="val" id="v_tipPost"></span></div>
+        <input type="range" id="tipPost" min="20" max="400" step="5" value="300">
+      </div>
+      <div class="ctl">
+        <div class="ctl-head"><span class="ctl-label">Geri çıkıntı boyu</span><span class="ref">N28</span><span class="val" id="v_tipStub"></span></div>
+        <input type="range" id="tipStub" min="5" max="100" step="1" value="5">
+      </div>
+      <div class="ctl">
+        <div class="ctl-head"><span class="ctl-label">Çubuk kalınlığı</span><span class="ref">N28</span><span class="val" id="v_tipTube"></span></div>
+        <input type="range" id="tipTube" min="2" max="20" step="0.5" value="4">
+      </div>
+    </div>
+
+    <div class="block">
+      <h2>Yuvarlanma kanatçığı</h2>
+      <div class="ctl">
+        <div class="ctl-head"><span class="ctl-label">Başlangıç — burundan</span><span class="ref">N43</span><span class="val" id="v_flapStart"></span></div>
+        <input type="range" id="flapStart" min="2" max="60" step="1" value="15">
+      </div>
+      <div class="ctl">
+        <div class="ctl-head"><span class="ctl-label">Boy (45° kolu)</span><span class="ref">N43</span><span class="val" id="v_flapLen"></span></div>
+        <input type="range" id="flapLen" min="10" max="80" step="1" value="60">
+      </div>
+      <div class="ctl">
+        <div class="ctl-head"><span class="ctl-label">Yükseklik — ön uç</span><span class="ref">N43</span><span class="val" id="v_flapH0"></span></div>
+        <input type="range" id="flapH0" min="0" max="20" step="0.5" value="2">
+      </div>
+      <div class="ctl">
+        <div class="ctl-head"><span class="ctl-label">Yükseklik — arka uç</span><span class="ref">N43</span><span class="val" id="v_flapH1"></span></div>
+        <input type="range" id="flapH1" min="0" max="40" step="0.5" value="10">
+      </div>
+      <div class="ctl">
+        <div class="ctl-head"><span class="ctl-label">Açılma seviyesi</span><span class="ref">N43</span><span class="val" id="v_flapDeploy"></span></div>
+        <input type="range" id="flapDeploy" min="0" max="100" step="1" value="100">
+      </div>
+    </div>
+
+    <div class="block">
+      <h2>Kütle</h2>
+      <div class="ctl">
+        <div class="ctl-head"><span class="ctl-label">Azami kalkış ağırlığı</span><span class="ref">N66</span><span class="val" id="v_mass"></span></div>
+        <input type="range" id="mass" min="5" max="1200" step="1" value="50">
+      </div>
+      <p class="sub" style="max-width:none;font-size:11.5px;margin-top:2px">
+        Disk yüklemesi, askı gücü ve tutukluk hızı bu değerden türetilir.
+        Askı: verim katsayısı 0,75 ve %25 profil payı. Tutukluk: C<sub>Lmaks</sub> = 1,0.
+      </p>
+    </div>
+
+    <div class="block">
+      <h2>Görünüm</h2>
+      <div class="btnrow" style="margin-bottom:10px">
+        <button id="vTop" aria-pressed="false">Üst</button>
+        <button id="vSide" aria-pressed="false">Yan</button>
+        <button id="vFront" aria-pressed="false">Ön</button>
+        <button id="vIso" aria-pressed="true">Serbest</button>
+      </div>
+      <div class="btnrow">
+        <button id="tStations" aria-pressed="true">İstasyon çizgileri</button>
+        <button id="tGrid" aria-pressed="true">Izgara</button>
+        <button id="tSolid" aria-pressed="true">Yüzey</button>
+        <button id="tProp" aria-pressed="true">Pervane</button>
+        <button id="tDisc" aria-pressed="true">Disk izi</button>
+        <button id="tFrame" aria-pressed="true">Uç iskeleti</button>
+        <button id="tStand" aria-pressed="false">Dik duruş</button>
+        <button id="tFlap" aria-pressed="true">Kanatçık</button>
+      </div>
+    </div>
+
+    <dl class="metrics" id="metrics">
+      <div class="metric"><dt>Açıklık · N5</dt><dd id="m_span">—</dd></div>
+      <div class="metric"><dt>En-boy oranı · N5</dt><dd id="m_ar">—</dd></div>
+      <div class="metric"><dt>Alan</dt><dd id="m_area">—</dd></div>
+      <div class="metric"><dt>MAC</dt><dd id="m_mac">—</dd></div>
+      <div class="metric"><dt>Uç veter</dt><dd id="m_tipc">—</dd></div>
+      <div class="metric"><dt>Teorik birleşme</dt><dd id="m_conv">—</dd></div>
+      <div class="metric"><dt>Toplam disk · N1</dt><dd id="m_disc">—</dd></div>
+      <div class="metric"><dt>Pervane çifti</dt><dd id="m_np">—</dd></div>
+      <div class="metric"><dt>Uç çubuğu</dt><dd id="m_bar">—</dd></div>
+      <div class="metric"><dt>Dikme (toplam)</dt><dd id="m_post">—</dd></div>
+      <div class="metric"><dt>Orta omurga</dt><dd id="m_keel">—</dd></div>
+      <div class="metric"><dt>Duruş tabanı</dt><dd id="m_base">—</dd></div>
+      <div class="metric"><dt>Kanat yüklemesi</dt><dd id="m_ws">—</dd></div>
+      <div class="metric"><dt>Disk yüklemesi · N55</dt><dd id="m_dl">—</dd></div>
+      <div class="metric"><dt>Askı gücü · N48</dt><dd id="m_ph">—</dd></div>
+      <div class="metric"><dt>Tutukluk hızı</dt><dd id="m_vs">—</dd></div>
+    </dl>
+
+    <div class="block">
+      <h2>Değerleri aktar</h2>
+      <div class="export">
+        <input id="dump" readonly aria-label="Parametre dizisi" value="">
+        <div class="btnrow">
+          <button id="copyBtn">Kopyala</button>
+          <button id="resetBtn">Varsayılana dön</button>
+        </div>
+        <span class="copied" id="copied"></span>
+      </div>
+      <p class="sub" style="max-width:none;font-size:12px;margin-top:10px">
+        Beğendiğin ayarı kopyalayıp sohbete yapıştır — aynı şekli birebir kurarım.
+        Kopyalama çalışmazsa satırı elle seçip alabilirsin.
+      </p>
+    </div>
+
+    <div class="block" style="border-bottom:none">
+      <h2>Kayıt</h2>
+      <p class="sub" style="max-width:none;font-size:12px">
+        Ok açısı hücum kenarından ölçülür. Kırpma, hücum ve firar kenarlarının
+        teorik olarak birleştiği açıklığın yüzdesidir. Kalınlık, kambur ve refleks
+        yerel vetere oranla verilmiştir. Sayılar D aşamasında kendi uçuş rejimimize
+        göre yeniden türetilecektir.
+      </p>
+    </div>
+  </aside>
+
+  <div class="stage">
+    <canvas id="gl"></canvas>
+    <span class="viewtag" id="viewtag">Serbest görünüm</span>
+    <span class="hint">Sürükle: döndür · Tekerlek: yakınlaş</span>
+    <div class="scalebar"><i></i><span id="scaleval">—</span></div>
+    <div class="warn" id="warn">Kenarlar birleşmiyor — firar kenarı açısını düşür</div>
+  </div>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+/* ============ parameters ============ */
+var P={rootChord:0.97,sweepRoot:45,sweepTip:35,sweepTE:25,crop:67,tcRoot:25,tcTip:12,camber:6,reflex:3,
+       propD:1.34,propGap:8,bladesF:4,bladesR:3,propD2:0.20,
+       tipPost:300,tipStub:5,tipTube:4,
+       flapStart:15,flapLen:60,flapH0:2,flapH1:10,flapDeploy:100,
+       mass:50};
+var IDS=Object.keys(P);
+var show={stations:true,grid:true,solid:true,prop:true,disc:true,frame:true,stand:false,flap:true};
+
+/* ============ geometry ============ */
+var D2R=Math.PI/180;
+
+function leSweepAt(y,bRef,p){
+  var t=bRef>0?Math.min(y/bRef,1):1;
+  return (p.sweepRoot+(p.sweepTip-p.sweepRoot)*t)*D2R;
+}
+
+// march outboard, return {conv, ok}
+function findConvergence(p){
+  var bRef=p.rootChord*3, ok=true;
+  for(var it=0;it<10;it++){
+    var step=p.rootChord/400, y=0, xLE=0, conv=-1;
+    var limit=p.rootChord*60;
+    while(y<limit){
+      var s=leSweepAt(y,bRef,p);
+      xLE+=Math.tan(s)*step;
+      y+=step;
+      var xTE=p.rootChord+y*Math.tan(p.sweepTE*D2R);
+      if(xTE-xLE<=0){conv=y;break;}
+    }
+    if(conv<0){ok=false;conv=p.rootChord*14;}
+    else ok=true;
+    bRef=conv;
+  }
+  return {conv:bRef,ok:ok};
+}
+
+// station data along half-span
+function stations(p,n){
+  var c=findConvergence(p);
+  var half=c.conv*(p.crop/100);
+  var bRef=c.conv;
+  // integrate LE with fine steps, sample at n stations
+  var fine=4000, step=half/fine, xLE=0, y=0;
+  var xs=new Float64Array(fine+1); xs[0]=0;
+  for(var i=1;i<=fine;i++){
+    var s=leSweepAt(y+step*0.5,bRef,p);
+    xLE+=Math.tan(s)*step; y+=step; xs[i]=xLE;
+  }
+  var out=[];
+  for(var k=0;k<n;k++){
+    var f=k/(n-1);
+    var idx=f*fine, i0=Math.floor(idx), i1=Math.min(i0+1,fine), fr=idx-i0;
+    var yy=f*half;
+    var le=xs[i0]*(1-fr)+xs[i1]*fr;
+    var te=p.rootChord+yy*Math.tan(p.sweepTE*D2R);
+    var ch=Math.max(te-le,1e-4);
+    var tc=(p.tcRoot+(p.tcTip-p.tcRoot)*f)/100;
+    out.push({y:yy,le:le,chord:ch,tc:tc});
+  }
+  return {st:out,half:half,conv:c.conv,ok:c.ok};
+}
+
+function thick(x,t){
+  var sx=Math.sqrt(Math.max(x,0));
+  return 5*t*(0.2969*sx-0.1260*x-0.3516*x*x+0.2843*x*x*x-0.1015*x*x*x*x);
+}
+function camberLine(x,m,r){
+  return m*4*x*(1-x)+r*Math.pow(x,4);
+}
+
+var NS=61;   // stations per half
+var NA=71;   // points around airfoil (odd)
+
+function buildMesh(p){
+  var g=stations(p,NS);
+  var st=g.st;
+  var m=p.camber/100, r=p.reflex/100;
+  var half=(NA-1)/2;
+
+  // cosine chordwise spacing
+  var xs=[];
+  for(var j=0;j<=half;j++){
+    var b=Math.PI*j/half;
+    xs.push(0.5*(1-Math.cos(b)));
+  }
+
+  // build full span: -half .. +half
+  var rows=[];
+  for(var side=-1;side<=1;side+=2){
+    for(var i=(side<0?NS-1:1);(side<0?i>=0:i<NS);i+=(side<0?-1:1)){
+      rows.push({s:st[i],sign:side});
+    }
+  }
+  // note: this duplicates i=0 only once (skipped on +side start at 1)
+
+  var verts=[],idx=[];
+  var rowLen=NA;
+  for(var ri=0;ri<rows.length;ri++){
+    var s=rows[ri].s, sg=rows[ri].sign;
+    var yy=s.y*sg;
+    // upper LE->TE then lower TE->LE
+    for(var j=0;j<=half;j++){
+      var x=xs[j];
+      var zc=camberLine(x,m,r), yt=thick(x,s.tc);
+      verts.push(yy, (zc+yt)*s.chord, -(s.le+x*s.chord));
+    }
+    for(var j2=half-1;j2>=0;j2--){
+      var x2=xs[j2];
+      var zc2=camberLine(x2,m,r), yt2=thick(x2,s.tc);
+      verts.push(yy, (zc2-yt2)*s.chord, -(s.le+x2*s.chord));
+    }
+  }
+  var nRows=rows.length;
+  for(var a=0;a<nRows-1;a++){
+    for(var b2=0;b2<rowLen;b2++){
+      var b3=(b2+1)%rowLen;
+      var v0=a*rowLen+b2, v1=a*rowLen+b3, v2=(a+1)*rowLen+b2, v3=(a+1)*rowLen+b3;
+      idx.push(v0,v2,v1, v1,v2,v3);
+    }
+  }
+  // tip caps (fan around row 0 and last row)
+  function cap(rowIndex,flip){
+    var base=rowIndex*rowLen;
+    for(var t=1;t<rowLen-1;t++){
+      if(flip) idx.push(base,base+t+1,base+t);
+      else idx.push(base,base+t,base+t+1);
+    }
+  }
+  cap(0,false); cap(nRows-1,true);
+
+  var pos=new Float32Array(verts);
+  var nrm=new Float32Array(pos.length);
+  for(var f=0;f<idx.length;f+=3){
+    var i0=idx[f]*3,i1=idx[f+1]*3,i2=idx[f+2]*3;
+    var ax=pos[i1]-pos[i0],ay=pos[i1+1]-pos[i0+1],az=pos[i1+2]-pos[i0+2];
+    var bx=pos[i2]-pos[i0],by=pos[i2+1]-pos[i0+1],bz=pos[i2+2]-pos[i0+2];
+    var nx=ay*bz-az*by, ny=az*bx-ax*bz, nz=ax*by-ay*bx;
+    nrm[i0]+=nx;nrm[i0+1]+=ny;nrm[i0+2]+=nz;
+    nrm[i1]+=nx;nrm[i1+1]+=ny;nrm[i1+2]+=nz;
+    nrm[i2]+=nx;nrm[i2+1]+=ny;nrm[i2+2]+=nz;
+  }
+  for(var q=0;q<nrm.length;q+=3){
+    var L=Math.hypot(nrm[q],nrm[q+1],nrm[q+2])||1;
+    nrm[q]/=L;nrm[q+1]/=L;nrm[q+2]/=L;
+  }
+
+  // station outline lines (every 6th station, both sides) + centreline
+  var lines=[];
+  for(var ri2=0;ri2<nRows;ri2+=6){
+    var base2=ri2*rowLen;
+    for(var w=0;w<rowLen;w++){
+      var w2=(w+1)%rowLen;
+      lines.push(pos[(base2+w)*3],pos[(base2+w)*3+1],pos[(base2+w)*3+2]);
+      lines.push(pos[(base2+w2)*3],pos[(base2+w2)*3+1],pos[(base2+w2)*3+2]);
+    }
+  }
+  // leading & trailing edge highlight
+  for(var ri3=0;ri3<nRows-1;ri3++){
+    var A=ri3*rowLen, B=(ri3+1)*rowLen;
+    lines.push(pos[A*3],pos[A*3+1],pos[A*3+2], pos[B*3],pos[B*3+1],pos[B*3+2]);
+    var teA=A+half, teB=B+half;
+    lines.push(pos[teA*3],pos[teA*3+1],pos[teA*3+2], pos[teB*3],pos[teB*3+1],pos[teB*3+2]);
+  }
+
+  // metrics
+  var area=0,c2=0;
+  for(var s1=0;s1<NS-1;s1++){
+    var dy=st[s1+1].y-st[s1].y;
+    var cm=(st[s1].chord+st[s1+1].chord)/2;
+    area+=cm*dy; c2+=cm*cm*dy;
+  }
+  area*=2;
+  var span=g.half*2;
+  var mac=area>0?(2*c2)/area:0;
+
+  return {
+    pos:pos,nrm:nrm,idx:new Uint32Array(idx),lines:new Float32Array(lines),
+    span:span,area:area,ar:area>0?span*span/area:0,mac:mac,
+    tipChord:st[NS-1].chord,tipLE:st[NS-1].le,conv:g.conv,ok:g.ok,st:st,
+    zMin:-(st[NS-1].le+st[NS-1].chord),
+    rootChord:p.rootChord
+  };
+}
+
+/* ============ propeller pair ============ */
+function accumNormals(pos,idx){
+  var nrm=new Float32Array(pos.length);
+  for(var f=0;f<idx.length;f+=3){
+    var i0=idx[f]*3,i1=idx[f+1]*3,i2=idx[f+2]*3;
+    var ax=pos[i1]-pos[i0],ay=pos[i1+1]-pos[i0+1],az=pos[i1+2]-pos[i0+2];
+    var bx=pos[i2]-pos[i0],by=pos[i2+1]-pos[i0+1],bz=pos[i2+2]-pos[i0+2];
+    var nx=ay*bz-az*by,ny=az*bx-ax*bz,nz=ax*by-ay*bx;
+    nrm[i0]+=nx;nrm[i0+1]+=ny;nrm[i0+2]+=nz;
+    nrm[i1]+=nx;nrm[i1+1]+=ny;nrm[i1+2]+=nz;
+    nrm[i2]+=nx;nrm[i2+1]+=ny;nrm[i2+2]+=nz;
+  }
+  for(var q=0;q<nrm.length;q+=3){
+    var L=Math.hypot(nrm[q],nrm[q+1],nrm[q+2])||1;
+    nrm[q]/=L;nrm[q+1]/=L;nrm[q+2]/=L;
+  }
+  return nrm;
+}
+
+function propPlacements(p,mesh){
+  var out=[{D:p.propD,x:0,y:0,z:0,main:true}];
+  if(mesh&&p.propD2>0.05){
+    var ct=mesh.tipChord, half=mesh.span/2, le=mesh.tipLE;
+    var Lp=ct*(p.tipPost/100), rad=ct*(p.tipTube/100)/2;
+    [-1,1].forEach(function(sd){
+      var X=sd*(half+rad*0.6);
+      out.push({D:p.propD2,x:X,y: Lp,z:-le,main:false});
+      out.push({D:p.propD2,x:X,y:-Lp,z:-le,main:false});
+    });
+  }
+  return out;
+}
+
+function buildProps(p,mesh){
+  var verts=[],idx=[],disc=[],mainTip=0,area=0;
+  function push(x,y,z){verts.push(x,y,z);return verts.length/3-1;}
+
+  propPlacements(p,mesh).forEach(function(pl){
+    var D=pl.D, R=D/2, ox=pl.x, oy=pl.y, oz=pl.z;
+    var gap=D*(p.propGap/100), zR=oz+D*0.05, zF=zR+gap;
+    var rH=Math.max(0.085*D,0.02);
+    area+=Math.PI*R*R;
+
+    function rotor(zPlane,nB,sign){
+      var NR=14, PD=0.70, cMax=R*0.22*(3/nB);
+      for(var b=0;b<nB;b++){
+        var phi=2*Math.PI*b/nB+(sign>0?0:Math.PI/(2*nB));
+        var cs=Math.cos(phi), sn=Math.sin(phi), ring=[];
+        for(var i=0;i<=NR;i++){
+          var f=i/NR, r=rH+(R-rH)*f, rn=Math.max(r/R,1e-3);
+          var ch=cMax*Math.pow(Math.sin(Math.PI*Math.min(rn,0.999)),0.45);
+          if(i===NR)ch=cMax*0.07;
+          var th=sign*Math.atan(PD/(Math.PI*Math.max(rn,0.13)));
+          var ct2=Math.cos(th), stv=Math.sin(th);
+          var tk=Math.max(ch*0.13,0.002), quad=[];
+          for(var q=0;q<4;q++){
+            var a=(q===1||q===2)?ch/2:-ch/2, t=(q<2)?tk/2:-tk/2;
+            var A=a*ct2-t*stv;
+            quad.push(push(ox+r*cs-sn*A, oy+r*sn+cs*A, zPlane+a*stv+t*ct2));
+          }
+          ring.push(quad);
+        }
+        for(var i2=0;i2<NR;i2++){
+          var Aq=ring[i2],Bq=ring[i2+1];
+          for(var e=0;e<4;e++){
+            var e2=(e+1)%4;
+            idx.push(Aq[e],Bq[e],Aq[e2], Aq[e2],Bq[e],Bq[e2]);
+          }
+        }
+        var r0=ring[0], rN=ring[NR];
+        idx.push(r0[0],r0[2],r0[1], r0[0],r0[3],r0[2]);
+        idx.push(rN[0],rN[1],rN[2], rN[0],rN[2],rN[3]);
+      }
+    }
+    rotor(zF,Math.round(p.bladesF),1);
+    rotor(zR,Math.round(p.bladesR),-1);
+
+    var zTip=zF+D*0.17, NSEG=24, NRING=14, base=verts.length/3;
+    if(pl.main)mainTip=zTip;
+    for(var i3=0;i3<=NRING;i3++){
+      var z=oz+(i3/NRING)*(zTip-oz), rr;
+      if(z<=zF)rr=rH;
+      else{var u=(z-zF)/(zTip-zF); rr=rH*Math.sqrt(Math.max(0,1-u*u));}
+      for(var j=0;j<NSEG;j++){
+        var a2=2*Math.PI*j/NSEG;
+        push(ox+rr*Math.cos(a2), oy+rr*Math.sin(a2), z);
+      }
+    }
+    for(var i5=0;i5<NRING;i5++)for(var j2=0;j2<NSEG;j2++){
+      var j3=(j2+1)%NSEG;
+      var v0=base+i5*NSEG+j2,v1=base+i5*NSEG+j3,
+          v2=base+(i5+1)*NSEG+j2,v3=base+(i5+1)*NSEG+j3;
+      idx.push(v0,v2,v1, v1,v2,v3);
+    }
+
+    [zR,zF].forEach(function(zz){
+      var NC=72;
+      for(var k=0;k<NC;k++){
+        var a3=2*Math.PI*k/NC,a4=2*Math.PI*(k+1)/NC;
+        disc.push(ox+R*Math.cos(a3),oy+R*Math.sin(a3),zz,
+                  ox+R*Math.cos(a4),oy+R*Math.sin(a4),zz);
+      }
+    });
+  });
+
+  var pos=new Float32Array(verts);
+  return {pos:pos,nrm:accumNormals(pos,idx),idx:new Uint32Array(idx),
+          disc:new Float32Array(disc),area:area,zTip:mainTip,
+          count:propPlacements(p,mesh).length};
+}
+
+/* ============ yuvarlanma kanatciklari ============ */
+function buildFlaps(p,mesh){
+  var empty={pos:new Float32Array(0),nrm:new Float32Array(0),idx:new Uint32Array(0),
+             h0:0,h1:0,len:0,on:false};
+  if(p.flapDeploy<0.5||p.flapH1<=0)return empty;
+  var rc=p.rootChord, half=mesh.span/2, ns=mesh.st.length;
+  var zA0=rc*(p.flapStart/100), L=rc*(p.flapLen/100);
+  var dep=p.flapDeploy/100, h0=(p.flapH0/100)*dep, h1=(p.flapH1/100)*dep;
+  var m=p.camber/100, r=p.reflex/100;
+  var N=30, th=Math.max(0.006,h1*0.09);
+  var verts=[],idx=[];
+  function push(x,y,z){verts.push(x,y,z);return verts.length/3-1;}
+
+  [-1,1].forEach(function(sd){
+    var ring=[],ok=[];
+    for(var i=0;i<=N;i++){
+      var u=i/N, xs=sd*u*L, zA=zA0+u*L, zg=-zA;
+      var f=Math.min(Math.abs(xs)/half,1), q=f*(ns-1);
+      var i0=Math.floor(q), i1=Math.min(i0+1,ns-1), fr=q-i0;
+      var le=mesh.st[i0].le*(1-fr)+mesh.st[i1].le*fr;
+      var ch=mesh.st[i0].chord*(1-fr)+mesh.st[i1].chord*fr;
+      var tc=mesh.st[i0].tc*(1-fr)+mesh.st[i1].tc*fr;
+      var t=(zA-le)/ch;
+      if(!(t>=0.02&&t<=0.98)){ok.push(false);ring.push(null);continue;}
+      var yTop=(camberLine(t,m,r)-thick(t,tc))*ch;
+      var h=h0+(h1-h0)*u;
+      var dxs=sd*L, dzg=-L, dl=Math.hypot(dxs,dzg);
+      var hx=(-dzg/dl)*th/2, hz=(dxs/dl)*th/2;
+      ring.push([push(xs+hx,yTop,zg+hz), push(xs-hx,yTop,zg-hz),
+                 push(xs-hx,yTop-h,zg-hz), push(xs+hx,yTop-h,zg+hz)]);
+      ok.push(true);
+    }
+    for(var i2=0;i2<N;i2++){
+      if(!ok[i2]||!ok[i2+1])continue;
+      var A=ring[i2],B=ring[i2+1];
+      for(var e=0;e<4;e++){var e2=(e+1)%4;
+        idx.push(A[e],B[e],A[e2], A[e2],B[e],B[e2]);}
+    }
+    var first=-1,last=-1;
+    for(var k=0;k<=N;k++){if(ok[k]){if(first<0)first=k;last=k;}}
+    if(first>=0){
+      var Q=ring[first]; idx.push(Q[0],Q[2],Q[1], Q[0],Q[3],Q[2]);
+      var R2=ring[last]; idx.push(R2[0],R2[1],R2[2], R2[0],R2[2],R2[3]);
+    }
+  });
+
+  var pos=new Float32Array(verts);
+  return {pos:pos,nrm:accumNormals(pos,idx),idx:new Uint32Array(idx),
+          h0:h0,h1:h1,len:L*Math.SQRT2,on:idx.length>0};
+}
+
+/* ============ tip frame ============ */
+function tubeMesh(segs){
+  var verts=[],idx=[],NSEG=12;
+  segs.forEach(function(sg){
+    var a=sg.a,b=sg.b,r=sg.r;
+    var dx=b[0]-a[0],dy=b[1]-a[1],dz=b[2]-a[2];
+    var L=Math.hypot(dx,dy,dz); if(L<1e-6)return;
+    var ux=dx/L,uy=dy/L,uz=dz/L;
+    var px=Math.abs(ux)<0.9?1:0, py=Math.abs(ux)<0.9?0:1, pz=0;
+    var d=px*ux+py*uy+pz*uz;
+    var e1x=px-d*ux,e1y=py-d*uy,e1z=pz-d*uz;
+    var e1L=Math.hypot(e1x,e1y,e1z)||1; e1x/=e1L;e1y/=e1L;e1z/=e1L;
+    var e2x=uy*e1z-uz*e1y,e2y=uz*e1x-ux*e1z,e2z=ux*e1y-uy*e1x;
+    var base=verts.length/3;
+    for(var k=0;k<2;k++){
+      var o=k?b:a;
+      for(var j=0;j<NSEG;j++){
+        var t=2*Math.PI*j/NSEG,cc=Math.cos(t)*r,ss=Math.sin(t)*r;
+        verts.push(o[0]+e1x*cc+e2x*ss, o[1]+e1y*cc+e2y*ss, o[2]+e1z*cc+e2z*ss);
+      }
+    }
+    for(var j2=0;j2<NSEG;j2++){
+      var j3=(j2+1)%NSEG;
+      idx.push(base+j2,base+NSEG+j2,base+j3, base+j3,base+NSEG+j2,base+NSEG+j3);
+    }
+    var ca=verts.length/3; verts.push(a[0],a[1],a[2]);
+    var cb=verts.length/3; verts.push(b[0],b[1],b[2]);
+    for(var j4=0;j4<NSEG;j4++){
+      var j5=(j4+1)%NSEG;
+      idx.push(ca,base+j5,base+j4);
+      idx.push(cb,base+NSEG+j4,base+NSEG+j5);
+    }
+  });
+  var pos=new Float32Array(verts);
+  return {pos:pos,nrm:accumNormals(pos,idx),idx:new Uint32Array(idx)};
+}
+
+function buildTipFrame(p,mesh){
+  var ct=mesh.tipChord, half=mesh.span/2, le=mesh.tipLE;
+  var Lp=ct*(p.tipPost/100), Ls=ct*(p.tipStub/100), rad=ct*(p.tipTube/100)/2;
+  var refl=p.reflex/100;
+  var zLE=-le, zTE=-(le+ct), yLE=0, yTE=refl*ct;
+  var zGround=zTE-Ls;
+  var segs=[];
+  [-1,1].forEach(function(sd){
+    var X=sd*(half+rad*0.6);
+    segs.push({a:[X,yLE,zLE],       b:[X,yTE,zTE],        r:rad}); // uc cubugu
+    segs.push({a:[X,yLE-Lp,zLE],    b:[X,yLE+Lp,zLE],     r:rad}); // on dikme
+    segs.push({a:[X,yTE-Lp,zTE],    b:[X,yTE+Lp,zTE],     r:rad}); // arka dikme
+    segs.push({a:[X,yTE+Lp,zTE],    b:[X,yTE+Lp,zTE-Ls],  r:rad}); // ust geri cikinti
+    segs.push({a:[X,yTE-Lp,zTE],    b:[X,yTE-Lp,zTE-Ls],  r:rad}); // alt geri cikinti
+  });
+  // orta omurga: kok firar kenarindan geriye, uc cikintilariyla ayni hizada biter
+  var yKeel=refl*p.rootChord;
+  var zKeelStart=-p.rootChord;
+  var keelLen=Math.max(zKeelStart-zGround,0);
+  if(keelLen>1e-4)
+    segs.push({a:[0,yKeel,zKeelStart], b:[0,yKeel,zGround], r:rad});
+
+  var m=tubeMesh(segs);
+  m.bar=ct; m.post=2*Lp; m.stub=Ls;
+  m.yTop=yTE+Lp; m.yBot=yTE-Lp; m.zBack=zGround;
+  m.keel=keelLen; m.keelOk=keelLen>1e-4;
+  m.baseW=2*(half+rad*0.6); m.baseH=2*Lp;
+  return m;
+}
+
+/* ============ matrices ============ */
+function persp(fov,asp,n,f){
+  var t=1/Math.tan(fov/2);
+  return new Float32Array([t/asp,0,0,0, 0,t,0,0, 0,0,(f+n)/(n-f),-1, 0,0,2*f*n/(n-f),0]);
+}
+function lookAt(e,c,u){
+  var z=[e[0]-c[0],e[1]-c[1],e[2]-c[2]];
+  var zl=Math.hypot(z[0],z[1],z[2])||1; z=[z[0]/zl,z[1]/zl,z[2]/zl];
+  var x=[u[1]*z[2]-u[2]*z[1],u[2]*z[0]-u[0]*z[2],u[0]*z[1]-u[1]*z[0]];
+  var xl=Math.hypot(x[0],x[1],x[2])||1; x=[x[0]/xl,x[1]/xl,x[2]/xl];
+  var y=[z[1]*x[2]-z[2]*x[1],z[2]*x[0]-z[0]*x[2],z[0]*x[1]-z[1]*x[0]];
+  return new Float32Array([
+    x[0],y[0],z[0],0, x[1],y[1],z[1],0, x[2],y[2],z[2],0,
+    -(x[0]*e[0]+x[1]*e[1]+x[2]*e[2]),
+    -(y[0]*e[0]+y[1]*e[1]+y[2]*e[2]),
+    -(z[0]*e[0]+z[1]*e[1]+z[2]*e[2]),1]);
+}
+
+/* ============ gl setup ============ */
+var cv=document.getElementById("gl");
+var gl=cv.getContext("webgl",{antialias:true,alpha:false});
+if(!gl){document.querySelector(".stage").innerHTML='<p style="padding:24px">Bu tarayıcı WebGL desteklemiyor.</p>';return;}
+
+function sh(t,src){var s=gl.createShader(t);gl.shaderSource(s,src);gl.compileShader(s);return s;}
+function prog(v,f){
+  var p=gl.createProgram();
+  gl.attachShader(p,sh(gl.VERTEX_SHADER,v));
+  gl.attachShader(p,sh(gl.FRAGMENT_SHADER,f));
+  gl.linkProgram(p);return p;
+}
+
+var pSolid=prog(
+ "attribute vec3 aPos;attribute vec3 aNrm;uniform mat4 uP,uV,uM;varying vec3 vN;varying vec3 vW;"+
+ "void main(){vec4 w=uM*vec4(aPos,1.0);vW=w.xyz;vN=mat3(uM)*aNrm;gl_Position=uP*uV*w;}",
+ "precision highp float;varying vec3 vN;varying vec3 vW;"+
+ "uniform vec3 uBase,uRim,uEye;uniform float uAmb;"+
+ "void main(){vec3 N=normalize(vN);"+
+ "float d=max(dot(N,normalize(vec3(0.42,0.80,0.43))),0.0);"+
+ "float d2=max(dot(N,normalize(vec3(-0.55,-0.15,-0.62))),0.0)*0.28;"+
+ "vec3 V=normalize(uEye-vW);float rim=pow(1.0-max(dot(N,V),0.0),3.0);"+
+ "vec3 c=uBase*(uAmb+d*0.86+d2)+uRim*rim*0.40;"+
+ "gl_FragColor=vec4(pow(c,vec3(0.4545)),1.0);}");
+
+var pLine=prog(
+ "attribute vec3 aPos;uniform mat4 uP,uV,uM;void main(){gl_Position=uP*uV*uM*vec4(aPos,1.0);}",
+ "precision mediump float;uniform vec3 uCol;uniform float uA;"+
+ "void main(){gl_FragColor=vec4(uCol,uA);}");
+
+var bPos=gl.createBuffer(),bNrm=gl.createBuffer(),bIdx=gl.createBuffer(),
+    bLine=gl.createBuffer(),bGrid=gl.createBuffer(),
+    bPPos=gl.createBuffer(),bPNrm=gl.createBuffer(),bPIdx=gl.createBuffer(),bDisc=gl.createBuffer(),
+    bFPos=gl.createBuffer(),bFNrm=gl.createBuffer(),bFIdx=gl.createBuffer(),
+    bKPos=gl.createBuffer(),bKNrm=gl.createBuffer(),bKIdx=gl.createBuffer();
+var extUint=gl.getExtension("OES_element_index_uint");
+var MI=new Float32Array([1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,1]);
+var MSTAND=new Float32Array([1,0,0,0, 0,0,-1,0, 0,1,0,0, 0,0,0,1]);
+function modelMat(){return show.stand?MSTAND:MI;}
+var M=null,PR=null,FR=null,FL=null,nIdx=0,nLine=0,nGrid=0,nPIdx=0,nDisc=0,nFIdx=0,nKIdx=0;
+
+function css(n){return getComputedStyle(document.documentElement).getPropertyValue(n).trim();}
+function num(n){return parseFloat(css(n))||0;}
+function hex(n){
+  var h=css(n).replace("#","");
+  if(h.length===3)h=h[0]+h[0]+h[1]+h[1]+h[2]+h[2];
+  return [parseInt(h.substr(0,2),16)/255,parseInt(h.substr(2,2),16)/255,parseInt(h.substr(4,2),16)/255];
+}
+
+function buildGrid(span,floorY){
+  var ext=Math.max(span*0.85,2), stepG=ext/8, v=[];
+  var yFloor=(floorY!==undefined)?floorY:-Math.max(span*0.16,0.4);
+  for(var i=-8;i<=8;i++){
+    var t=i*stepG;
+    v.push(t,yFloor,-ext, t,yFloor,ext);
+    v.push(-ext,yFloor,t, ext,yFloor,t);
+  }
+  gl.bindBuffer(gl.ARRAY_BUFFER,bGrid);
+  gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(v),gl.STATIC_DRAW);
+  nGrid=v.length/3;
+}
+
+/* ============ camera ============ */
+var cam={az:-0.62,el:0.42,r:12,tx:0,ty:0,tz:0},camT=null;
+
+function fit(){
+  var zmax=PR?PR.zTip:0;
+  var zmin=FR?Math.min(M.zMin,FR.zBack):M.zMin;
+  var vert=FR?(FR.yTop-FR.yBot):0;
+  var R=Math.max(M.span*0.62,(zmax-zmin)*0.62,vert*0.62,0.5);
+  cam.r=R/Math.tan(0.35)*1.5;
+  cam.tz=(zmin+zmax)/2; cam.ty=0; cam.tx=0;
+}
+
+function rebuild(keepCam){
+  M=buildMesh(P);
+  gl.bindBuffer(gl.ARRAY_BUFFER,bPos);gl.bufferData(gl.ARRAY_BUFFER,M.pos,gl.STATIC_DRAW);
+  gl.bindBuffer(gl.ARRAY_BUFFER,bNrm);gl.bufferData(gl.ARRAY_BUFFER,M.nrm,gl.STATIC_DRAW);
+  gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,bIdx);
+  gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,extUint?M.idx:new Uint16Array(M.idx),gl.STATIC_DRAW);
+  nIdx=M.idx.length;
+  gl.bindBuffer(gl.ARRAY_BUFFER,bLine);gl.bufferData(gl.ARRAY_BUFFER,M.lines,gl.STATIC_DRAW);
+  nLine=M.lines.length/3;
+  PR=buildProps(P,M);
+  gl.bindBuffer(gl.ARRAY_BUFFER,bPPos);gl.bufferData(gl.ARRAY_BUFFER,PR.pos,gl.STATIC_DRAW);
+  gl.bindBuffer(gl.ARRAY_BUFFER,bPNrm);gl.bufferData(gl.ARRAY_BUFFER,PR.nrm,gl.STATIC_DRAW);
+  gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,bPIdx);
+  gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,extUint?PR.idx:new Uint16Array(PR.idx),gl.STATIC_DRAW);
+  nPIdx=PR.idx.length;
+  gl.bindBuffer(gl.ARRAY_BUFFER,bDisc);gl.bufferData(gl.ARRAY_BUFFER,PR.disc,gl.STATIC_DRAW);
+  nDisc=PR.disc.length/3;
+  FR=buildTipFrame(P,M);
+  gl.bindBuffer(gl.ARRAY_BUFFER,bFPos);gl.bufferData(gl.ARRAY_BUFFER,FR.pos,gl.STATIC_DRAW);
+  gl.bindBuffer(gl.ARRAY_BUFFER,bFNrm);gl.bufferData(gl.ARRAY_BUFFER,FR.nrm,gl.STATIC_DRAW);
+  gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,bFIdx);
+  gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,extUint?FR.idx:new Uint16Array(FR.idx),gl.STATIC_DRAW);
+  nFIdx=FR.idx.length;
+  FL=buildFlaps(P,M);
+  nKIdx=FL.idx.length;
+  if(nKIdx){
+    gl.bindBuffer(gl.ARRAY_BUFFER,bKPos);gl.bufferData(gl.ARRAY_BUFFER,FL.pos,gl.STATIC_DRAW);
+    gl.bindBuffer(gl.ARRAY_BUFFER,bKNrm);gl.bufferData(gl.ARRAY_BUFFER,FL.nrm,gl.STATIC_DRAW);
+    gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,bKIdx);
+    gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,extUint?FL.idx:new Uint16Array(FL.idx),gl.STATIC_DRAW);
+  }
+  buildGrid(Math.max(M.span,P.propD*1.2), show.stand?FR.zBack:undefined);
+  if(!keepCam)fit();
+  // metrics
+  var f1=function(x,u){return x.toFixed(2)+'<span>'+u+'</span>';};
+  document.getElementById("m_span").innerHTML=f1(M.span,"m");
+  document.getElementById("m_ar").innerHTML=M.ar.toFixed(2);
+  document.getElementById("m_area").innerHTML=f1(M.area,"m²");
+  document.getElementById("m_mac").innerHTML=f1(M.mac,"m");
+  document.getElementById("m_tipc").innerHTML=f1(M.tipChord,"m");
+  document.getElementById("m_conv").innerHTML=f1(M.conv,"m");
+  document.getElementById("m_disc").innerHTML=f1(PR.area,"m²");
+  document.getElementById("m_np").innerHTML=PR.count;
+  document.getElementById("m_bar").innerHTML=f1(FR.bar,"m");
+  document.getElementById("m_post").innerHTML=f1(FR.post,"m");
+  document.getElementById("m_keel").innerHTML=FR.keelOk?f1(FR.keel,"m"):"<span>yok</span>";
+  document.getElementById("m_base").innerHTML=FR.baseW.toFixed(1)+"<span>×</span>"+FR.baseH.toFixed(1)+"<span>m</span>";
+  var Wn=P.mass*9.81, rhoA=1.225;
+  var ws=M.area>0?P.mass/M.area:0;
+  var dl=PR.area>0?P.mass/PR.area:0;
+  var vi=PR.area>0?Math.sqrt(Wn/(2*rhoA*PR.area)):0;
+  var ph=Wn*vi/0.75*1.25/1000;
+  var vs=M.area>0?Math.sqrt(2*Wn/(rhoA*M.area)):0;
+  document.getElementById("m_ws").innerHTML=ws.toFixed(1)+'<span>kg/m²</span>';
+  document.getElementById("m_dl").innerHTML=dl.toFixed(1)+'<span>kg/m²</span>';
+  document.getElementById("m_ph").innerHTML=ph.toFixed(1)+'<span>kW</span>';
+  document.getElementById("m_vs").innerHTML=vs.toFixed(1)+'<span>m/s</span>';
+
+  var warns=[];
+  if(!M.ok)warns.push("Kenarlar birleşmiyor — firar kenarı açısını düşür");
+  if(P.propD2>FR.post&&P.propD2>0.05)
+    warns.push("Uç pervaneleri çakışıyor — çap "+FR.post.toFixed(2)+" m altında olmalı");
+  if(!FR.keelOk)warns.push("Orta omurga çizilemiyor — kök firar kenarı uç çerçevesinin gerisinde");
+  if(P.flapDeploy>0.5&&P.flapH1>0&&!FL.on)
+    warns.push("Kanatçık gövde dışına taşıyor — başlangıç ya da boy değerini küçült");
+  var wEl=document.getElementById("warn");
+  wEl.innerHTML=warns.join("<br>");
+  wEl.className=warns.length?"warn on":"warn";
+  document.getElementById("scaleval").textContent=(M.span/4).toFixed(1)+" m";
+  if(document.getElementById("dump"))refreshDump();
+}
+
+/* ============ draw ============ */
+function draw(){
+  var dpr=Math.min(window.devicePixelRatio||1,2);
+  var w=cv.clientWidth,h=cv.clientHeight;
+  if(cv.width!==w*dpr||cv.height!==h*dpr){cv.width=w*dpr;cv.height=h*dpr;}
+  gl.viewport(0,0,cv.width,cv.height);
+
+  var bg=hex("--canvas-bot");
+  gl.clearColor(bg[0],bg[1],bg[2],1);
+  gl.enable(gl.DEPTH_TEST);
+  gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);
+
+  var Pm=persp(0.70,w/h,0.05,4000);
+  var ce=Math.cos(cam.el),se=Math.sin(cam.el);
+  var eye=[cam.tx+cam.r*ce*Math.sin(cam.az), cam.ty+cam.r*se, cam.tz+cam.r*ce*Math.cos(cam.az)];
+  var Vm=lookAt(eye,[cam.tx,cam.ty,cam.tz],[0,1,0]);
+
+  if(show.grid&&nGrid){
+    gl.useProgram(pLine);
+    gl.uniformMatrix4fv(gl.getUniformLocation(pLine,"uP"),false,Pm);
+    gl.uniformMatrix4fv(gl.getUniformLocation(pLine,"uV"),false,Vm);
+    gl.uniformMatrix4fv(gl.getUniformLocation(pLine,"uM"),false,MI);
+    var gc=hex("--grid-3d");
+    gl.uniform3f(gl.getUniformLocation(pLine,"uCol"),gc[0],gc[1],gc[2]);
+    gl.uniform1f(gl.getUniformLocation(pLine,"uA"),1.0);
+    var la=gl.getAttribLocation(pLine,"aPos");
+    gl.bindBuffer(gl.ARRAY_BUFFER,bGrid);
+    gl.enableVertexAttribArray(la);gl.vertexAttribPointer(la,3,gl.FLOAT,false,0,0);
+    gl.drawArrays(gl.LINES,0,nGrid);
+  }
+
+  if(show.solid){
+    gl.useProgram(pSolid);
+    gl.uniformMatrix4fv(gl.getUniformLocation(pSolid,"uP"),false,Pm);
+    gl.uniformMatrix4fv(gl.getUniformLocation(pSolid,"uV"),false,Vm);
+    gl.uniformMatrix4fv(gl.getUniformLocation(pSolid,"uM"),false,modelMat());
+    gl.uniform3f(gl.getUniformLocation(pSolid,"uBase"),num("--model-r"),num("--model-g"),num("--model-b"));
+    var rc=[num("--rim-r"),num("--rim-g"),num("--rim-b")];
+    gl.uniform3f(gl.getUniformLocation(pSolid,"uRim"),rc[0],rc[1],rc[2]);
+    gl.uniform1f(gl.getUniformLocation(pSolid,"uAmb"),num("--amb"));
+    gl.uniform3f(gl.getUniformLocation(pSolid,"uEye"),eye[0],eye[1],eye[2]);
+    var ap=gl.getAttribLocation(pSolid,"aPos"),an=gl.getAttribLocation(pSolid,"aNrm");
+    gl.bindBuffer(gl.ARRAY_BUFFER,bPos);gl.enableVertexAttribArray(ap);gl.vertexAttribPointer(ap,3,gl.FLOAT,false,0,0);
+    gl.bindBuffer(gl.ARRAY_BUFFER,bNrm);gl.enableVertexAttribArray(an);gl.vertexAttribPointer(an,3,gl.FLOAT,false,0,0);
+    gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,bIdx);
+    gl.drawElements(gl.TRIANGLES,nIdx,extUint?gl.UNSIGNED_INT:gl.UNSIGNED_SHORT,0);
+  }
+
+  if(show.prop&&nPIdx){
+    gl.useProgram(pSolid);
+    gl.uniformMatrix4fv(gl.getUniformLocation(pSolid,"uP"),false,Pm);
+    gl.uniformMatrix4fv(gl.getUniformLocation(pSolid,"uV"),false,Vm);
+    gl.uniformMatrix4fv(gl.getUniformLocation(pSolid,"uM"),false,modelMat());
+    gl.uniform3f(gl.getUniformLocation(pSolid,"uBase"),num("--prop-r"),num("--prop-g"),num("--prop-b"));
+    gl.uniform3f(gl.getUniformLocation(pSolid,"uRim"),num("--rim-r"),num("--rim-g"),num("--rim-b"));
+    gl.uniform1f(gl.getUniformLocation(pSolid,"uAmb"),num("--amb")+0.10);
+    gl.uniform3f(gl.getUniformLocation(pSolid,"uEye"),eye[0],eye[1],eye[2]);
+    var pp=gl.getAttribLocation(pSolid,"aPos"),pn=gl.getAttribLocation(pSolid,"aNrm");
+    gl.bindBuffer(gl.ARRAY_BUFFER,bPPos);gl.enableVertexAttribArray(pp);gl.vertexAttribPointer(pp,3,gl.FLOAT,false,0,0);
+    gl.bindBuffer(gl.ARRAY_BUFFER,bPNrm);gl.enableVertexAttribArray(pn);gl.vertexAttribPointer(pn,3,gl.FLOAT,false,0,0);
+    gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,bPIdx);
+    gl.drawElements(gl.TRIANGLES,nPIdx,extUint?gl.UNSIGNED_INT:gl.UNSIGNED_SHORT,0);
+  }
+
+  if(show.frame&&nFIdx){
+    gl.useProgram(pSolid);
+    gl.uniformMatrix4fv(gl.getUniformLocation(pSolid,"uP"),false,Pm);
+    gl.uniformMatrix4fv(gl.getUniformLocation(pSolid,"uV"),false,Vm);
+    gl.uniformMatrix4fv(gl.getUniformLocation(pSolid,"uM"),false,modelMat());
+    gl.uniform3f(gl.getUniformLocation(pSolid,"uBase"),num("--frame-r"),num("--frame-g"),num("--frame-b"));
+    gl.uniform3f(gl.getUniformLocation(pSolid,"uRim"),num("--rim-r"),num("--rim-g"),num("--rim-b"));
+    gl.uniform1f(gl.getUniformLocation(pSolid,"uAmb"),num("--amb")+0.06);
+    gl.uniform3f(gl.getUniformLocation(pSolid,"uEye"),eye[0],eye[1],eye[2]);
+    var fp=gl.getAttribLocation(pSolid,"aPos"),fn=gl.getAttribLocation(pSolid,"aNrm");
+    gl.bindBuffer(gl.ARRAY_BUFFER,bFPos);gl.enableVertexAttribArray(fp);gl.vertexAttribPointer(fp,3,gl.FLOAT,false,0,0);
+    gl.bindBuffer(gl.ARRAY_BUFFER,bFNrm);gl.enableVertexAttribArray(fn);gl.vertexAttribPointer(fn,3,gl.FLOAT,false,0,0);
+    gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,bFIdx);
+    gl.drawElements(gl.TRIANGLES,nFIdx,extUint?gl.UNSIGNED_INT:gl.UNSIGNED_SHORT,0);
+  }
+
+  if(show.flap&&nKIdx){
+    gl.useProgram(pSolid);
+    gl.uniformMatrix4fv(gl.getUniformLocation(pSolid,"uP"),false,Pm);
+    gl.uniformMatrix4fv(gl.getUniformLocation(pSolid,"uV"),false,Vm);
+    gl.uniformMatrix4fv(gl.getUniformLocation(pSolid,"uM"),false,modelMat());
+    gl.uniform3f(gl.getUniformLocation(pSolid,"uBase"),num("--flap-r"),num("--flap-g"),num("--flap-b"));
+    gl.uniform3f(gl.getUniformLocation(pSolid,"uRim"),num("--rim-r"),num("--rim-g"),num("--rim-b"));
+    gl.uniform1f(gl.getUniformLocation(pSolid,"uAmb"),num("--amb")+0.14);
+    gl.uniform3f(gl.getUniformLocation(pSolid,"uEye"),eye[0],eye[1],eye[2]);
+    var kp=gl.getAttribLocation(pSolid,"aPos"),kn=gl.getAttribLocation(pSolid,"aNrm");
+    gl.bindBuffer(gl.ARRAY_BUFFER,bKPos);gl.enableVertexAttribArray(kp);gl.vertexAttribPointer(kp,3,gl.FLOAT,false,0,0);
+    gl.bindBuffer(gl.ARRAY_BUFFER,bKNrm);gl.enableVertexAttribArray(kn);gl.vertexAttribPointer(kn,3,gl.FLOAT,false,0,0);
+    gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,bKIdx);
+    gl.drawElements(gl.TRIANGLES,nKIdx,extUint?gl.UNSIGNED_INT:gl.UNSIGNED_SHORT,0);
+  }
+
+  if(show.disc&&nDisc){
+    gl.useProgram(pLine);
+    gl.uniformMatrix4fv(gl.getUniformLocation(pLine,"uP"),false,Pm);
+    gl.uniformMatrix4fv(gl.getUniformLocation(pLine,"uV"),false,Vm);
+    gl.uniformMatrix4fv(gl.getUniformLocation(pLine,"uM"),false,modelMat());
+    var dc=hex("--disc-3d");
+    gl.uniform3f(gl.getUniformLocation(pLine,"uCol"),dc[0],dc[1],dc[2]);
+    gl.uniform1f(gl.getUniformLocation(pLine,"uA"),1.0);
+    var ld=gl.getAttribLocation(pLine,"aPos");
+    gl.bindBuffer(gl.ARRAY_BUFFER,bDisc);
+    gl.enableVertexAttribArray(ld);gl.vertexAttribPointer(ld,3,gl.FLOAT,false,0,0);
+    gl.drawArrays(gl.LINES,0,nDisc);
+  }
+
+  if(show.stations&&nLine){
+    gl.useProgram(pLine);
+    gl.uniformMatrix4fv(gl.getUniformLocation(pLine,"uP"),false,Pm);
+    gl.uniformMatrix4fv(gl.getUniformLocation(pLine,"uV"),false,Vm);
+    gl.uniformMatrix4fv(gl.getUniformLocation(pLine,"uM"),false,modelMat());
+    var wc=hex("--wire-3d");
+    gl.uniform3f(gl.getUniformLocation(pLine,"uCol"),wc[0],wc[1],wc[2]);
+    gl.uniform1f(gl.getUniformLocation(pLine,"uA"),1.0);
+    var la2=gl.getAttribLocation(pLine,"aPos");
+    gl.bindBuffer(gl.ARRAY_BUFFER,bLine);
+    gl.enableVertexAttribArray(la2);gl.vertexAttribPointer(la2,3,gl.FLOAT,false,0,0);
+    gl.drawArrays(gl.LINES,0,nLine);
+  }
+
+  if(camT){
+    cam.az+=(camT.az-cam.az)*0.18;
+    cam.el+=(camT.el-cam.el)*0.18;
+    if(Math.abs(camT.az-cam.az)<0.001&&Math.abs(camT.el-cam.el)<0.001){
+      cam.az=camT.az;cam.el=camT.el;camT=null;
+    }
+  }
+  requestAnimationFrame(draw);
+}
+
+/* ============ interaction ============ */
+var drag=false,lx=0,ly=0;
+cv.addEventListener("pointerdown",function(e){drag=true;lx=e.clientX;ly=e.clientY;camT=null;cv.setPointerCapture(e.pointerId);});
+cv.addEventListener("pointermove",function(e){
+  if(!drag)return;
+  cam.az-=(e.clientX-lx)*0.008;
+  cam.el=Math.max(-1.45,Math.min(1.45,cam.el+(e.clientY-ly)*0.006));
+  lx=e.clientX;ly=e.clientY;
+  setTag("Serbest görünüm");
+});
+cv.addEventListener("pointerup",function(e){drag=false;});
+cv.addEventListener("pointercancel",function(){drag=false;});
+cv.addEventListener("wheel",function(e){
+  e.preventDefault();
+  cam.r=Math.max(0.6,Math.min(4000,cam.r*(1+Math.sign(e.deltaY)*0.09)));
+},{passive:false});
+
+function setTag(t){document.getElementById("viewtag").textContent=t;}
+function press(id,on){document.getElementById(id).setAttribute("aria-pressed",on?"true":"false");}
+function viewMode(id,az,el,label){
+  document.getElementById(id).addEventListener("click",function(){
+    camT={az:az,el:el};
+    ["vTop","vSide","vFront","vIso"].forEach(function(b){press(b,b===id);});
+    setTag(label);
+  });
+}
+viewMode("vTop",0,1.4499,"Üst görünüm — planform");
+viewMode("vSide",Math.PI/2,0,"Yan görünüm — kesit");
+viewMode("vFront",0,0,"Ön görünüm");
+viewMode("vIso",-0.62,0.42,"Serbest görünüm");
+
+[["tStations","stations"],["tGrid","grid"],["tSolid","solid"],
+ ["tProp","prop"],["tDisc","disc"],["tFrame","frame"],["tFlap","flap"]].forEach(function(pair){
+  document.getElementById(pair[0]).addEventListener("click",function(){
+    show[pair[1]]=!show[pair[1]];
+    press(pair[0],show[pair[1]]);
+  });
+});
+
+document.getElementById("tStand").addEventListener("click",function(){
+  show.stand=!show.stand;
+  press("tStand",show.stand);
+  rebuild(false);
+  setTag(show.stand?"Dik duruş — yere basan yüzey":"Serbest görünüm");
+  if(show.stand){camT={az:-0.62,el:0.18};}
+});
+
+/* ============ sliders ============ */
+var UNITS={rootChord:" m",sweepRoot:"°",sweepTip:"°",sweepTE:"°",crop:" %",
+           tcRoot:" %",tcTip:" %",camber:" %",reflex:" %",
+           propD:" m",propGap:" %",bladesF:"",bladesR:"",
+           tipPost:" %",tipStub:" %",tipTube:" %",propD2:" m",
+           flapStart:" %",flapLen:" %",flapH0:" cm",flapH1:" cm",flapDeploy:" %",
+           mass:" kg"};
+var DEC={rootChord:1,sweepRoot:1,sweepTip:1,sweepTE:1,crop:0,tcRoot:1,tcTip:1,camber:1,reflex:1,
+         propD:1,propGap:1,bladesF:0,bladesR:0,
+         tipPost:0,tipStub:0,tipTube:1,propD2:1,
+         flapStart:0,flapLen:0,flapH0:1,flapH1:1,flapDeploy:0,
+         mass:0};
+
+IDS.forEach(function(id){
+  var el=document.getElementById(id),out=document.getElementById("v_"+id);
+  function upd(rebuildMesh){
+    P[id]=parseFloat(el.value);
+    out.textContent=P[id].toFixed(DEC[id])+UNITS[id];
+    if(rebuildMesh)rebuild(true);
+  }
+  el.addEventListener("input",function(){upd(true);});
+  upd(false);
+});
+
+/* ============ export ============ */
+var KEY={rootChord:"kok",sweepRoot:"hk0",sweepTip:"hk1",sweepTE:"fk",crop:"kirp",
+         tcRoot:"tc0",tcTip:"tc1",camber:"kamb",reflex:"refl",
+         propD:"pcap",propGap:"parl",bladesF:"pkf",bladesR:"pkr",
+         tipPost:"dikme",tipStub:"cikinti",tipTube:"kalinlik",propD2:"ucap",
+         flapStart:"kbas",flapLen:"kboy",flapH0:"kh0",flapH1:"kh1",flapDeploy:"kac",
+         mass:"mtow"};
+var DEFAULTS={rootChord:0.97,sweepRoot:45,sweepTip:35,sweepTE:25,crop:67,
+              tcRoot:25,tcTip:12,camber:6,reflex:3,
+              propD:1.34,propGap:8,bladesF:4,bladesR:3,propD2:0.20,
+              tipPost:300,tipStub:5,tipTube:4,
+              flapStart:15,flapLen:60,flapH0:2,flapH1:10,flapDeploy:100,
+              mass:50};
+
+function dumpText(){
+  var parts=IDS.map(function(id){return KEY[id]+"="+P[id].toFixed(DEC[id]);});
+  var geo="b="+M.span.toFixed(2)+" S="+M.area.toFixed(2)+" AR="+M.ar.toFixed(2)+
+          " Adisk="+PR.area.toFixed(2)+" np="+PR.count;
+  return "GOVDE07 "+parts.join(" ")+"  |  "+geo;
+}
+function refreshDump(){document.getElementById("dump").value=dumpText();}
+
+document.getElementById("copyBtn").addEventListener("click",function(){
+  var f=document.getElementById("dump"), note=document.getElementById("copied");
+  f.select(); f.setSelectionRange(0,f.value.length);
+  var done=false;
+  try{
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText(f.value); done=true;
+    }else if(document.execCommand){ done=document.execCommand("copy"); }
+  }catch(e){ done=false; }
+  note.textContent=done?"Kopyalandı — sohbete yapıştır.":"Kopyalanamadı, satırı elle seç.";
+  setTimeout(function(){note.textContent="";},4000);
+});
+
+document.getElementById("resetBtn").addEventListener("click",function(){
+  IDS.forEach(function(id){
+    P[id]=DEFAULTS[id];
+    var el=document.getElementById(id);
+    el.value=DEFAULTS[id];
+    document.getElementById("v_"+id).textContent=P[id].toFixed(DEC[id])+UNITS[id];
+  });
+  rebuild(false);
+});
+
+rebuild(false);
+draw();
+})();
+</script>
