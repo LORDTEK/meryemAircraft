@@ -174,6 +174,8 @@ Unsurların tek tek ataları vardır; yenilik **bileşimdedir**:
 | N93 | ✅ **GEÇİŞE TIRMANARAK GİRİLİR — durağan hover'dan değil.** Araç geçiş irtifasına zaten tırmanarak varıyor; durup hover'a geçmek, bedeli ödenmiş dikey momentumu **çöpe atmaktır.** Giriş tırmanış hızı $w_0$, dönüş boyunca harcanacak bir **rezervdir** |
 | N94 | **$w_0 = 5$ m/s irtifa kaybını pratikte sıfırlıyor**, $w_0 = 8$ m/s her koşulda sıfırlıyor. Bedeli yok denecek kadar az: T/W=1,2'de dikey ivme $(T/W-1)g = 1{,}96$ m/s², yani 5 m/s'ye **2,6 saniyede** ve **6,4 m** tırmanışta ulaşılıyor. Kinetik enerji 625 J — 103 kWh yakıtın yanında ölçülemez |
 | N95 | **Uç pervaneleri KÜÇÜK kalır — 0,20 m.** Gerekçe tasarımcıdan: seyirde olumsuz etki istenmiyor, kumandayı garanti etsin ve bir miktar marj bıraksın yeter. N88'in yeniden boyutlandırması bu yönde çözüldü: geçiş artık boyutlandıran durum değil, hover'da bozucu bastırma öyle — ve o durum mevcut 16,2 N ile **~4 kat marjla** karşılanıyor (mertebe tahmini) |
+| N96 | ✅ **BAHA doğrulandı: VTOL'dür.** Üretici föyü: "Runway Independent VTOL Mission Capability", dikey kalkış/iniş. 28 kg MTOW / 2 kg yük = **%7,1**. Tamamen elektrikli → menzil karşılaştırmasına **kapalı** |
+| N97 | 🎯 **Rüzgâr sınırı bulundu — N79'u destekliyor.** BAHA föyü: **kalkış/iniş 15 kts (7,7 m/s), seyir 25 kts (12,9 m/s).** Yani sahadaki bir VTOL İHA'nın **yayımlanmış** kalkış/iniş rüzgâr sınırı, seyir sınırından düşüktür. "Yer rüzgârı işletme sınırı vardır" bu sınıfta **olağandır**, kuyruğa oturana özgü bir zayıflık değil. Bölüm 8.9'a girecek |
 
 ---
 
@@ -447,7 +449,7 @@ Model: https://claude.ai/code/artifact/8a4abc4f-83e8-42ce-8894-c84331d6615a
 
 | Araç | MTOW | Faydalı yük | Yük oranı |
 |---|---:|---:|---:|
-| HAVELSAN BAHA | 28 kg | — | — |
+| **HAVELSAN BAHA** (üretici föyü, doğrulandı) | **28 kg** | **2 kg** | **%7,1** |
 | Textron Aerosonde Mk 4.7 VTOL | 45,4 kg | 9,1 kg | %20,0 |
 | **Baykar KALKAN DİHA** | **75 kg** | ~3 kg (dahilî) | %4,0 |
 | HAVELSAN BULUT | yayımlanmamış | 5 kg | — |
@@ -457,6 +459,16 @@ Model: https://claude.ai/code/artifact/8a4abc4f-83e8-42ce-8894-c84331d6615a
 
 ⚠️ Üretici tanıtımlarından. Faydalı yük tanımları tutarsız; boş ağırlıklar
 yayımlanmıyor. Makalede her satırın kaynağı ve tanımı yazılmalı.
+
+**BAHA — üretici föyünden doğrulandı (N96):** sabit kanat, **dikey kalkış/iniş
+yapıyor** (açık iş kapandı). MTOW 28 kg, faydalı yük 2 kg, açıklık 4 m, boy 2,1 m,
+seyir 75–80 km/sa, **havada kalış 2 saate kadar**, tavan 10 000 ft, veri bağı 50 km.
+İtki ve VTOL sistemi **elektrik motoru**.
+
+⚠️ **BAHA ile menzil karşılaştırması YAPILMAYACAK.** Araç **tamamen elektrikli**;
+2 saatlik havada kalışı **pil sınırıdır, mimari sınır değil.** Bizim seri hibrit
+15,7 saatimizi onun 2 saatine karşı koymak, mimarileri değil **enerji kaynaklarını**
+karşılaştırmak olur — Bölüm 6.5'te reddettiğimiz kategori hatasının aynısı.
 
 **Ortak nokta:** Bu sınıfın tamamı içten yanmalı motoru **doğrudan bir kaldırma
 rotoruna bağlamamış** — hepsi jeneratör ya da ayrık elektrikli kaldırma kullanıyor.

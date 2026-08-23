@@ -167,7 +167,7 @@ reference designs in a real field, not to rank them.
 
 | Aircraft | MTOW | Payload | Payload fraction |
 |---|---:|---:|---:|
-| HAVELSAN BAHA | 28 kg | — | — |
+| HAVELSAN BAHA | 28 kg | 2 kg | 7.1 % |
 | Textron Aerosonde Mk 4.7 VTOL | 45.4 kg | 9.1 kg | 20.0 % |
 | Baykar KALKAN | 75 kg | ~3 kg internal | 4.0 % |
 | HAVELSAN BULUT | not published | 5 kg | — |
@@ -177,7 +177,7 @@ reference designs in a real field, not to rank them.
 
 *[⚠️ Hepsi üretici tanıtımlarından. Faydalı yük tanımları tutarsız — kimi dahilî,
 kimi harici, kimi ikisi. Boş ağırlıklar yayımlanmıyor. Yayına gitmeden her satıra
-kaynak ve tanım eklenecek. HAVELSAN BAHA'nın VTOL olup olmadığı **doğrulanmadı**.]*
+kaynak ve tanım eklenecek. ✅ BAHA'nın VTOL olduğu üretici föyünden **doğrulandı** (N96).]*
 
 Three statements can be made about this table and a fourth cannot.
 
@@ -197,6 +197,14 @@ in this table describe aircraft that exist and fly. Placing a calculation beside
 measurement and declaring a winner would be a category error, and the comparison is
 offered only to show that the reference designs fall inside the field rather than
 outside it.
+
+A further caution applies to any comparison of endurance or range across this table.
+Several of these aircraft are fully electric, and for those the endurance figure is set
+by battery specific energy rather than by configuration. The lightest entry, for
+instance, is an all-electric fixed-wing VTOL quoting up to two hours of endurance;
+setting the fuel-burning reference design of Section 6.2 against that number would
+compare energy sources, not architectures, and would say nothing about the argument of
+this paper.
 
 What can properly be compared, once these aircraft have been built and flown, is range
 at similar payload — not payload at similar range. A configuration that carries a

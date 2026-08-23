@@ -139,7 +139,10 @@ so that
 Every term on the right is a property of the configuration, not of the workmanship. A
 vehicle with a disc loading of 100 N m⁻², a cruise lift-to-drag ratio of 15 and a
 cruise speed of 30 m s⁻¹ needs roughly four times as much power to hover as to cruise;
-raising the disc loading raises the ratio as its square root. The power system is
+raising the disc loading raises the ratio as its square root. The prediction is
+borne out in flight: a carbon-fibre tail-sitter reported in the literature measures its
+level-flight power consumption at one fifth of its hover power, which is the same ratio
+this expression gives for an aircraft of that class. The power system is
 therefore sized by a condition that holds for a minute and is then carried, unused, for
 an hour.
 
