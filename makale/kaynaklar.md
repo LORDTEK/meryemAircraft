@@ -157,13 +157,43 @@ doğrulanamadı** — o iddia VFS 2025 bildirisine (K6) aitti ve okunmadı.
 Configurations** · Okunmadı. İddia: serbest akışa hizalı kilit açısı sürüklemeyi
 en aza indirir. **Doğrulanana kadar makalede kullanılmayacak.**
 
-### [K7] Kumanda yüzeysiz kuyruğa oturanlar · durum: **C**
-- **Full Attitude Control of a VTOL tailsitter UAV**, IEEE, 2016
-- **Full Attitude Control of an Efficient Quadrotor Tail-sitter VTOL UAV with
-  Flexible Modes**, arXiv:1903.06393, 2019
+### [K7] Xu, Gu, Qing, Lin, Zhang 2019 · durum: **A** ⭐
+**Full Attitude Control of an Efficient Quadrotor Tail-sitter VTOL UAV with
+Flexible Modes** · arXiv:1903.06393
 
-⚠️ Bölüm 4.4'ün dayandığı kaynak. **Başvurudan önce
-okunmalı.** arXiv olanı ücretsiz.
+**Doğrulanan alıntı (özet):**
+> *"This control system is working in all flight modes **without any control surfaces
+> but motor differential thrusts**."*
+
+**Doğrulanan alıntı (§II.A):**
+> *"In the latest version, there is **no aileron and elevator** which means servos are
+> no longer needed. The control moments are produced by the **propeller differential
+> thrusts only**."*
+
+**Araç (Tablo I):** yamuk kanat, **MH-115** profil, açıklık **0,90 m**, sivrilme 0,48,
+**ok açısı 7,3°**, kök veter 0,20 m, **dört tek rotor** (APC 9×6E), elektrikli.
+
+**Kumanda yüzeysizliğin gerekçeleri (bizim Bölüm 4.4'ü destekler):**
+1. Servo ve ilgili yapı toplam ağırlığın **≈%5**'i; kaldırılması ölü ağırlığı azaltır
+2. Kumanda yüzeyi **tutukluk açısının üstünde otoritesini yitirir**; rotor etkinliği
+   hücum açısından **çok az** etkilenir
+3. Servo, dişli kutusundan gelen doğrusalsızlık ve ek dinamik getirir → kumanda
+   bant genişliğini sınırlar
+
+**Uçuş testi bulgusu (Bölüm 3.4'ü doğruluyor):**
+> *"the power consumption at level flight is **five times less** than that of in
+> hovering"*
+
+Bizim $P_{hover}/P_{cruise}$ türetimimiz bu sınıf için ~4–5 veriyor. **Ölçülmüş
+teyit.**
+
+🎯 **En kritik bulgu — mimari çatallık:** araç dört **tek** rotor kullanıyor ve
+yuvarlanmayı **diferansiyel tepki torkundan** alıyor. Bizim koaksiyel çiftimiz o
+torku tasarım gereği sıfırlıyor. **Onların yuvarlanma aktüatörü, bizim bilerek yok
+ettiğimiz şeydir.**
+
+⚠️ **Full Attitude Control of a VTOL tailsitter UAV**, IEEE 2016 — **hâlâ okunmadı**
+(ücretli). Aynı grubun önceki çalışması; o sürümde kumanda yüzeyi vardı.
 
 ### [K8] Kuyruğa oturanın seyir üstünlüğü yerleşik kabuldür · durum: C
 Makale bunu keşif gibi sunmaz; **türetimini** sunar (Bölüm 3.6).
@@ -175,6 +205,35 @@ Makale bunu keşif gibi sunmaz; **türetimini** sunar (Bölüm 3.6).
 | # | Kaynak | Durum | Neden |
 |---|---|---|---|
 | 1 | **K1 Bacchini & Cestino** | C | Bölüm 3.3 + 5.2'nin yükü. E-posta beklemede |
-| 2 | **K7 arXiv:1903.06393** | C | Bölüm 4.4'ün dayanağı. **Ücretsiz** |
-| 3 | K7 IEEE 2016 | C | Aynı. Ücretli |
-| 4 | K6 VFS 2025 | C | Kilit açısı iddiası |
+| 2 | ~~K7 arXiv:1903.06393~~ | ✅ **A** | Okundu. Bölüm 4.4'ün mimari çatallık savı buna dayanıyor |
+| 3 | K7 IEEE 2016 | C | Aynı grubun eski sürümü. Ücretli. Düşük öncelik |
+| 4 | K6 VFS 2025 | C | Kilit açısı iddiası. Makaleden zaten çıkarıldı |
+
+---
+
+## 4. Rakip verisi
+
+### [K9] HAVELSAN BAHA üretici föyü · durum: **A** (üretici belgesi)
+
+| | Değer |
+|---|---:|
+| MTOW | 28 kg (yük dâhil) |
+| Faydalı yük | 2 kg → **%7,1** |
+| Açıklık / boy | 4,0 m / 2,1 m |
+| Seyir hızı | 75–80 km/sa (40–43 kts) |
+| Havada kalış | **2 saate kadar** |
+| Tavan / işletme irtifası | 10 000 ft / 8 000 ft |
+| Veri bağı | 50 km (opsiyonel 80 km) |
+| İtki **ve** VTOL | **Elektrik motoru** |
+| **Rüzgâr sınırı** | **kalkış/iniş 15 kts · seyir 25 kts** |
+
+✅ **VTOL olduğu doğrulandı** — "Runway Independent VTOL Mission Capability".
+Açık iş kapandı.
+
+🎯 **Rüzgâr sınırı satırı N79'un dayanağıdır.** Sahadaki bir VTOL İHA'nın
+**yayımlanmış** kalkış/iniş rüzgâr sınırı seyir sınırından düşük. Yer rüzgârı
+işletme sınırı bu sınıfta olağandır. Bölüm 8.9'a girdi.
+
+⚠️ **Menzil/havada kalış karşılaştırmasına kapalı:** araç tamamen elektrikli,
+2 saat **pil sınırıdır**. Bizim hibrit 15,7 saatimizle karşılaştırmak enerji
+kaynaklarını karşılaştırmak olur, mimarileri değil.
