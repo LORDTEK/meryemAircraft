@@ -40,7 +40,7 @@ Hafif ve ağır hattın çerçeveleme yarıçapları **3,399** oranında çıkı
 Beklenen uzunluk ölçeği **3,35**. Bu, iki hattın gerçekten aynı geometriden
 ölçeklendiğinin bağımsız kontrolüdür.
 
-## Üretilmiş şekiller — **12/12 tamam**
+## Üretilmiş şekiller — **12/12 TAMAM**
 
 | # | Dosya | Üreten |
 |---|---|---|
@@ -51,21 +51,26 @@ Beklenen uzunluk ölçeği **3,35**. Bu, iki hattın gerçekten aynı geometride
 | 5 | `sekil05-serbest-gorunus.png` | `mkfig.py` (3B) |
 | 6 | `sekil06-dagilimlar.png/.svg` | `mkfig06.py` |
 | 7 | `sekil07-moment-kollari.png/.svg` | `mkfig07.py` |
+| 8 | `sekil08-kanatcik-iz.png/.svg` | `mkfig08.py` |
 | 9 | `sekil09-ucus-profili.png` | `mkfig09.py` (3B + döndürme) |
 | 10a | `sekil10a-gecis-donus-suresi.png/.svg` | `mkplot.py` |
 | 10b | `sekil10b-tirmanarak-giris.png/.svg` | `mkplot.py` |
 | 11 | `sekil11-iki-olcek.png` | `mkfig.py` (3B) |
 | 12 | `sekil12-menzil-LD.png/.svg` | `mkfig12.py` |
 
-⚠️ **Şekil 8** (kanatçık ve ana pervane izi) iskelette vardı, **üretilmedi.**
-Ana pervane izinin yarı-açıklıktaki kapsamını (%27–39) göstermesi gerekiyor;
-model bu izi çizmiyor, üstüne elle bindirmek gerekir. Açık iş.
+**Şekil 8** planformu modelin ok açısı yasalarından yeniden kurar, iz sınırını
+ve şeridi üzerine bindirir. Model izi çizmediği için bu şekil tamamen Python'da
+üretilir; geometri yasaları `mkfig06.py` ile aynıdır.
 
 ## Yöntem notları
 
 **Şekil 9'daki döndürme geometrik olarak doğrudur:** yunuslama ekseni yan görünüş
 düzlemine dik olduğu için, yan görünüş silüetini döndürmek aracı gerçekten
 döndürmekle aynı sonucu verir.
+
+**Şekil 8'in ürettiği yeni sayı:** şerit, boyunun **%45,6**'sında iz sınırını
+kesiyor (yarı-açıklığın %30,7'sinde). Yani iç %46 hover'da, dış %54 seyirde
+çalışıyor. Bu sayı künyede yoktu; şekil üretilirken çıktı.
 
 **Şekil 6 geometriyi bağımsız doğruladı:** modelin yasaları Python'da yeniden
 kurulunca açıklık 3,453 m, alan 1,9785 m², AR 6,026 çıktı — künyeyle örtüşüyor.
