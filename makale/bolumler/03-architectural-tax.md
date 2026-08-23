@@ -51,24 +51,56 @@ modest dead-mass fraction becomes a large payload penalty.
 ## 3.3 Bill 2 — drag
 
 The second payment is aerodynamic and is charged only to those architectures that
-leave hover hardware exposed in forward flight. Rotors stopped in the airstream, their
-booms, and the wake interference between them and the wing all add drag in the regime
-where the aircraft spends nearly all of its time.
+leave hover hardware exposed in forward flight. Rotors stopped in the airstream, the
+booms that carry them, and the interference between their wakes and the wing all add
+drag in the regime where the aircraft spends nearly all of its time.
 
-Published measurements on hybrid VTOL configurations put this cost in a range worth
-quoting: rotor-wake interference has been reported to increase drag by twenty to forty
-percent in the hybrid regime; retracting or shrouding the lift propellers has been
-reported to recover on the order of thirty-eight percent of parasite drag; and at the
-upper end of cruise speed the rotor-attributable drag can exceed the form drag of the
-wing itself.
+The cleanest available measurement of this bill is a controlled comparison within a
+single aircraft. In wind-tunnel testing of an eVTOL lift-plus-cruise model with its
+lift propellers extended and then retracted, retraction reduced parasite drag by
+thirty-eight percent. Translated into mission terms by the same authors, an aircraft
+fitted with a retraction system could cruise twenty-one percent faster at equal range,
+or fly thirteen percent further at equal speed.
 
-*[⚠️ Bu üç sayı ikincil kaynaklardan geldi. Makale son hâline gelmeden birinci elden
-okunacak ve tam atıfla verilecek. Okunamazsa sayılar çıkarılıp niteliksel ifadeye
-dönülecek — doğrulanmamış sayı vermektense az söylemek yeğdir.]*
+That last pair of numbers is the one this paper relies on, for three reasons. The
+comparison holds the wing, the Reynolds number, the mass and the mission fixed and
+varies only whether the hover hardware is in the airstream, so nothing else can be
+credited with the difference. It isolates the bill rather than bounding it. And it is
+reported in the currency the aircraft exists to earn: range.
+
+Thirteen percent of range is therefore a lower bound on Bill 2 for this architecture —
+a lower bound, because retraction does not remove the hover hardware, it only hides it.
+The mass stays on board, and the retraction mechanism is itself new mass and a new
+failure mode, which is to say that the drag bill was not paid off but transferred. This
+is the first instance of the pattern that Section 3.5 generalises.
+
+A second and independent measurement bounds the interference component. Wind-tunnel
+characterisation of a QuadPlane uncrewed aircraft found that rotor-wake interference
+increases drag by twenty to forty percent in the hybrid regime relative to fixed-wing
+mode, with the highest lift and lowest drag consistently recorded in fixed-wing mode,
+and reported a minimum parasite drag coefficient of 0.0397 with the VTOL rotors and
+booms installed.
+
+These two results measure different things and should not be added. The first concerns
+parasite drag with the rotors stopped, which is the cruise condition; the second
+concerns interference drag with the rotors turning, which is the transition and hybrid
+condition. They agree only in the sense that both find the penalty to be a
+double-digit percentage rather than a rounding error.
+
+A third observation completes the picture by showing what it costs to keep the penalty
+small. Analyses of stopped and stopping rotors report that the drag depends strongly on
+the azimuth at which the blades come to rest, and that a freestream-aligned lock angle
+is required to minimise drag and load asymmetry. Achieving that alignment reliably
+requires an indexing mechanism — which, once again, is mass.
+
+*[Kaynaklar makale/kaynaklar.md dosyasında K1–K5. ⚠️ Hepsi doğrulama seviyesi C:
+arama motoru özetinden alındı, tam metin okunmadı. Yayıma gitmeden önce en az
+B seviyesine çıkarılacak. K1 (Bacchini & Cestino 2021) mutlaka birinci elden
+okunmalı — argümanın yükünü o taşıyor.]*
 
 The important property of this bill is not its size but where it is charged. It is
 charged per unit time in cruise, so it grows with exactly the quantity the aircraft
-exists to maximise — range.
+exists to maximise.
 
 ## 3.4 Bill 3 — power system sizing
 
