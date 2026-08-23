@@ -80,3 +80,18 @@ estimates from stated assumptions, and its mass budget is a target rather than a
 finding. Section 8 states these limitations explicitly.
 
 *[Son paragraf — makale yapısı özeti — bölümler yazıldıktan sonra eklenecek.]*
+
+---
+
+The remainder of the paper is organised as follows. Section 2 reviews seventy years of
+attempts to merge the two configuration families, and argues that most of them ended for
+reasons external to the configuration — including one, the pilot workload of a vertical
+descent, that does not exist in an uncrewed aircraft. Section 3 sets out the
+architectural tax in its three currencies, shows that architectural remedies transfer it
+rather than remove it, and derives the condition under which it would not be charged.
+Section 4 describes the proposed configuration, which is built to satisfy that condition.
+Section 5 audits the claim bill by bill and states what the configuration does pay.
+Section 6 sizes two reference designs twenty times apart in mass and examines how the
+proportions scale. Section 7 treats the flight profile and the transition manoeuvre,
+including a result that contradicts a common assumption about how quickly a tail-sitter
+should rotate. Section 8 states the limitations, and Section 9 concludes.
