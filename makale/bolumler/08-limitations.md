@@ -111,8 +111,12 @@ the actuator response needed to achieve it have not been analysed.
 No claim is made that the aircraft resists tipping in arbitrary ground wind. The stance
 base is a design parameter that can be widened without altering the configuration, and
 the reference geometry represents one point on that trade rather than a limit. Operating
-limits in ground wind are an operational matter, as they are for aircraft generally, and
-have not been computed here.
+limits in ground wind are an operational matter, and published data for this class shows
+that such limits are ordinary rather than exceptional: a fielded fixed-wing VTOL
+uncrewed aircraft in the same mass range quotes a wind limit of 15 knots for take-off
+and landing against 25 knots in cruise. A lower ground-wind limit than cruise limit is
+the normal condition for VTOL aircraft, not a defect peculiar to tail-sitters. The
+specific limits for this configuration have not been computed here.
 
 ## 8.10 Vertical descent
 

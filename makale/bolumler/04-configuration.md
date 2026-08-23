@@ -137,8 +137,27 @@ residual reaction torque, which the counter-rotating arrangement of Section 4.3 
 deliberately reduced to nearly zero. The two design decisions oppose one another, and
 the opposition is real rather than apparent.
 
-This is the same limitation that constrained the tail-sitters of the 1950s and that
-contemporary tail-sitters resolve by placing elevons in the propeller wash. The
+This is the same limitation that constrains every tail-sitter, and it is worth being
+precise about how others resolve it, because the resolution here is not a variation on
+theirs but a consequence of a different decision made earlier.
+
+Contemporary tail-sitters resolve it in one of two ways. Some place elevons in the
+propeller wash, which is a control surface by any definition. Others — including a
+carbon-fibre quadrotor tail-sitter that achieves full attitude control in every flight
+mode with no control surfaces at all — carry four separate single-rotation propellers
+and take their rolling moment from the *differential reaction torque* between them.
+That is the same mechanism a multirotor uses for yaw, appearing as roll once the
+airframe is rotated into wing-borne flight.
+
+The second solution is unavailable here, and unavailable by construction. The coaxial
+counter-rotating arrangement of Section 4.3 exists precisely to cancel reaction torque,
+and it cancels the roll actuator along with it. The two decisions are not merely in
+tension, as noted above; they are mutually exclusive. A tail-sitter cannot both null its
+reaction torque and use that torque to roll.
+
+This is the fork at which the present configuration departs from its nearest relatives,
+and it is why the strip is not an accessory. It is the element that makes the
+combination possible. The
 resolution adopted here is different in kind. A single strip on the lower surface,
 inclined at forty-five degrees, deploys on or off — it is not a proportional control
 surface. For the light reference design it runs one hundred and twenty percent of the
