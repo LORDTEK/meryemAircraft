@@ -31,11 +31,14 @@ the published figures of aircraft that exist.
 
 ## 8.3 Geometry chosen rather than derived
 
-The sweep distribution — approximately forty degrees at the nose decreasing to twenty at
-the outboard trailing station — was selected from a band reported favourable in the
-transonic-transport literature. The present aircraft is subsonic. The band has not been
-re-derived for this flight regime, and the values are therefore design choices supported
-by precedent rather than results.
+The sweep distribution — 45° at the root falling to 38.3° at the tip on the leading edge,
+with the trailing edge constant at 25° — was selected from a 20°–40° band reported
+favourable in the transonic-transport literature. The present aircraft is subsonic. The
+band has not been re-derived for this flight regime, and the values are therefore design
+choices supported by precedent rather than results. The realised sweep variation is
+under seven degrees, which is smaller than the crescent-wing precedent of Section 2.3
+would suggest; the planform inherits the *principle* of a coupled sweep–chord–thickness
+distribution, not the magnitude of the original.
 
 The taper distribution has likewise not been optimised, and the aerofoil sections are
 described by thickness, camber and reflex distributions rather than by specific
