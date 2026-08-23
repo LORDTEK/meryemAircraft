@@ -67,43 +67,97 @@ aktarılabilir, sayılar aktarılamaz.
 
 ## 2. Fatura 2 — sürükleme
 
-### [K1] Bacchini, Cestino, Van Magill & Verstraete 2021 · durum: **C** ⚠️
-**Impact of lift propeller drag on the performance of eVTOL lift+cruise aircraft**
-*Aerospace Science and Technology* **109** (2021), s. 1–11 · DOI: 10.1016/j.ast.2020.106429
+### [K1] Bacchini 2020 · durum: **A** ⭐ · **doktora tezi, açık erişim**
+**Electric VTOL preliminary design and wind tunnel tests**
+Doktora tezi, Politecnico di Torino, Havacılık Mühendisliği, 32. devre, Mart 2020.
+Danışmanlar: Giulio Romeo, Enrico Cestino. **CC BY-NC-ND 4.0.**
+`iris.polito.it` üzerinden serbest.
 
-⚠️ **Atıf düzeltildi.** Daha önce "Bacchini & Cestino" diye kaydedilmişti; gerçek
-yazar listesi **dört kişi**: Alessandro Bacchini, Enrico Cestino, Benjamin Van Magill,
-Dries Verstraete. Makalede tam liste kullanılacak.
+> ⚠️ **Dergi makalesi (AST 109:106429, 2021) hâlâ okunmadı.** Sayılar **tezden**
+> alınmıştır ve **teze atıf yapılacaktır.** İkisi aynı çalışmadan doğuyor ama
+> okumadığımız metne atıf yapmayız.
 
-| Bulgu | Değer |
+#### Deney
+
+Tek gövde, dört yapılandırma, rüzgâr tüneli. Model: **Mini Talon** İHA
+(+ Krossblade **SkyProwler** gövdesiyle ikinci model). 10–30 m/s.
+
+| Model | Yapılandırma |
+|---|---|
+| Mini Talon 1 | temiz uçak (VTOL donanımı yok) |
+| Mini Talon 2 | geri çekme sistemli — pervaneler açık / çekilmiş |
+| Mini Talon 3 | **standart quadplane** — pervaneler dik / akışa paralel / pervanesiz / motorsuz |
+
+#### 🎯 Bulgu 1 — L/D merdiveni (Mini Talon 3, azami L/D)
+
+| Yapılandırma | Azami L/D |
 |---|---:|
-| Pervaneleri içeri çekmenin parazit sürüklemeye etkisi | −%38 |
-| Aynı menzilde seyir hızı kazancı | +%21 |
-| Aynı hızda menzil kazancı | **+%13** |
+| Motorsuz (≈temiz uçak) | **≈17** |
+| Motorlu, pervaneler **akışa paralel** | **≈13** |
+| Motorlu, pervaneler **akışa dik** | **≈9** |
 
-**Neden önemli:** mimari-içi kontrollü karşılaştırma (aynı uçak, tek değişken),
-ve sonucu menzil cinsinden veriyor.
+**Bu tablo Fatura 2'nin en temiz ifadesidir.** Tek uçak, tek tünel, tek oturum.
+VTOL donanımını takmak L/D'nin **%24'ünü** götürüyor (17→13). Pervaneyi akışa
+hizalayamamak **%31 daha** götürüyor (13→9).
 
-🔴 **HÂLÂ C SEVİYESİNDE.** Bölüm 3.3 ve 5.2'nin yükünü bu taşıyor.
+SkyProwler: çekilmiş **≈11**, açık **≈8**.
 
-**Erişim durumu (2026-08-23):**
-`alessandro.bacchini@polito.it` adresine gönderilen e-posta **geri döndü** (550,
-adres yok). Sebebi bulundu: **Bacchini akademiden ayrılmış** — Kasım 2020'den beri
-Thales Alenia Space'te sistem mühendisi. Politecnico adresi doğal olarak kapatılmış.
+#### Bulgu 2 — sürükleme azaltma (Tablo 35)
 
-**Erişim yolları, öncelik sırasıyla:**
+| Karşılaştırma | Azalma |
+|---|---:|
+| Mini Talon 2, açık → çekilmiş | 63% |
+| **Mini Talon 3 (standart quadplane) → Mini Talon 2 çekilmiş** | **34%** |
+| SkyProwler, açık → çekilmiş | **30%** |
 
-| # | Yol | Adres | Not |
-|---|---|---|---|
-| **1** | **Doktora tezi — AÇIK ERİŞİM** | `iris.polito.it/retrieve/e384c432-46e5-d4b2-e053-9f05fe0a1d67/conv_doctoral_dissertation_alessandro_bacchini.pdf` | 🎯 **En iyi ihtimal.** Tez eVTOL tasarımı üzerine; rüzgâr tüneli çalışmasının aynısını içermesi çok muhtemel. **Ücretsiz, e-posta gerekmiyor** |
-| 2 | IRIS kayıt sayfası | `iris.polito.it/handle/11583/2859251` | Kabul edilmiş sürüm (post-print) iliştirilmiş olabilir |
-| 3 | ResearchGate "Request full-text" | ilgili yayın sayfası | İstek **dört yazara birden** gider |
-| 4 | E-posta: **Cestino** | `enrico.cestino@polito.it` | Polito'da **hâlâ görevde**, doçent. DIMEAS sayfası kullanıcı adını doğruluyor |
-| 5 | E-posta: **Verstraete** | Sydney Üniversitesi, `@sydney.edu.au` | Profesör, görevde. Tam adres doğrulanmadı |
+⚠️ **Yazarın kendi uyarısı:** %63 doğru karşılaştırma **değildir** — aracı kendisiyle
+kıyaslıyor. Doğru kıyas standart quadplane'e karşıdır: **%34.** Bu dürüstlüğü
+makalede anmaya değer.
 
-⚠️ Tez indirilirse **tezden atıf yapılır**, dergi makalesinden değil — okumadığımız
-bir metne atıf yapmayız. İkisi de verilebilir ama sayıların kaynağı okunan metin
-olarak gösterilir.
+#### 🎯 Bulgu 3 — bedel motorlarda, pervane kanadında değil
+
+> *"The difference between propellers parallel to the airflow and without propellers
+> is **modest**. The drag produced by the **motors is significant**."*
+
+Yani ceza esas olarak **motorlar ve taşıyıcı kollardan** geliyor. Pervaneyi
+serbest bırakmak ya da yelpazelemek bunu **çözmez** — kütle zaten gemide.
+
+#### Bulgu 4 — kilit açısı iddiası doğrulandı
+
+> *"their takeoff propellers **must be free to rotate and to align to the airflow**"*
+
+Bölüm 5.2'den doğrulanamadığı için çıkardığım iddia **geri geldi**, üstelik
+ölçümle: dik %9, paralel %13.
+
+#### 🎯 Bulgu 5 — **devredilebilirlik tezimizin deneysel kanıtı**
+
+Kitty Hawk Cora verisine %30 sürükleme azaltma + **%5 sistem kütlesi** uygulanınca:
+
+| | Değer |
+|---|---:|
+| Azami menzil | 119 km → **121 km** (+%1,7) |
+| Azami menzil hızı | **+5 m/s** |
+| 80 km'lik görev | **10 m/s daha hızlı** uçulabiliyor |
+| Gözetleme İHA'sı için fayda | **sınırlı** (havada kalış düşük hızda azamileşir, orada sürükleme azaltma az etkili) |
+
+🎯 **Bu, Bölüm 3.5'in tam olarak iddia ettiği şeydir.** Sürüklemenin %30'u
+kaldırıldı, karşılığında kütlenin %5'i ödendi, menzil kazancı **%1,7**'de kaldı.
+**Fatura ödenmedi, devredildi.** Elimizdeki en güçlü deneysel destek bu.
+
+#### Ölçekleme uyarısı (§5.4.3)
+
+Sürükleme azaltması model ölçekten tam ölçeğe **sabit** varsayılmış; yazar bunu
+"muhafazakâr" sayıyor.
+
+#### ⛔ Çıkarılan sayılar
+
+| Arama motorundan gelen | Tezde bulunan |
+|---|---|
+| "%38 parazit sürükleme azalması" | **Yok.** Tezde 63 / 34 / 30 var |
+| "aynı hızda **+%13 menzil**" | **Yok.** Tezde 119→121 km = **+%1,7** |
+| "aynı menzilde +%21 hız" | Tezde **+5 m/s** ve "80 km görev 10 m/s daha hızlı" |
+
+**Üçüncü kez:** arama motoru sentezi sayı için kullanılamaz.
 
 ### [K2] Wind Tunnel Testing of a QuadPlane UAS · durum: **A**
 arXiv:2301.12316
