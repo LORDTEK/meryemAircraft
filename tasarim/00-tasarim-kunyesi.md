@@ -164,6 +164,13 @@ Unsurların tek tek ataları vardır; yenilik **bileşimdedir**:
 | N83 | ⚠️ **UÇ İSKELETLERİ KAPORTALANMAK ZORUNDA.** Yuvarlak boru bırakılırsa dikmeler tek başına seyir sürüklemesinin **%70–93**'ünü üretir — araç uçmaz. Kaportalı kesitle (C_D≈0,15) pay **%12**'ye, iyi kaportayla **%6,5**'e iner. Bu bir tercih değil, **tasarım zorunluluğudur** |
 | N84 | **KARAR: dikmeler kaportalanır.** Sabit kaporta, gövde eksenine hizalı, hareketli parça yok. Tasarım $C_D=0{,}15$ (iyimser 0,08 **kullanılmıyor**). Kaporta veteri ≈ 4×çap. Geçişte kaporta bir süre yüksek hücum açısında kalır; 2 sn ve düşük $q$ olduğu için kabul edildi |
 | N85 | ⚠️ **MENZİL AŞAĞI REVİZE EDİLDİ: 2 140 km → 1 695 km** (19,8 sa → 15,7 sa). Eski sayı %22,2'lik toplam zincir verimi gerektiriyordu; bu ≈%35 motor verimi demek — küçük benzinli motorda gerçekçi değil. Yeni sayı **açık zincirle** verildi: 0,28×0,90×0,95×0,92×0,80 = **0,176** |
+| N86 | 🔴 **DÜZELTME — "İRTİFA KAYBI ∝ $t_r^2$" YANLIŞTI.** Nokta-kütle benzetimi tersini veriyor: **yavaş dönüş DAHA AZ irtifa kaybettirir.** Sebep: dikey destek $T\cos\theta + L$'dir. Yavaş dönerken $\cos\theta$ yüksek kalır ve $L$ bu sürede birikir; hızlı dönerken $\cos\theta$, $L$ daha doğmadan çöker ve araç düşer. Eski model dönüş boyunca aracı **desteksiz** sayıyordu — o varsayım yanlış |
+| N87 | **Sonuç: geçişte takas YOK.** Kumanda gücü $\propto 1/t_r^2$ (yavaş = ucuz) ve irtifa kaybı da $t_r$ ile azalıyor. **İki kısıt da aynı yönü gösteriyor: yavaş dön.** $t_r$ aşağıdan sınırlıdır, yukarıdan değil. Üst sınırı belirleyen şey irtifa değil; yakıt, yatay kayma ve taktik maruziyet |
+| N88 | ⚠️ **Uç pervanelerinin boyutlandırma durumu değişti.** 16,2 N sayısı 2 sn'lik geçişten türetilmişti. Geçiş artık yavaş yapılacaksa boyutlandıran durum **geçiş değil, hover'da bozucu bastırmadır.** Yeniden boyutlandırma **açık iş** — bu oturumda yapılmadı |
+| N89 | **T/W belirleyici parametredir.** T/W=1,1'de araç $t_r$ ne olursa olsun ~10 m kaybediyor; T/W=1,3'te 3 sn'de kayıp sıfırlanıyor. Tasarım varsayımı **T/W = 1,2** |
+| N90 | **Winglet: yeni parça EKLENMEYECEK — istasyon zaten dolu.** Uç iskeletleri kanat ucunda, düzleme dik, her yön 0,71 m. $h/b = 0{,}41$; klasik winglet $h/b \approx 0{,}05$–$0{,}10$. **Dikmeler zaten herhangi bir winglet'ten 4–8 kat büyük bir uç yüzeyi.** Karar: N84 kaportası **simetrik dikme kesiti yerine profil (taşıyan) kesit** olarak yapılır. Ek parça yok, ek kütle yok, hareketli parça yok. Seyirde indiklenmiş sürükleme toplam sürüklemenin **%33,7**'si — kazanç için gerçek bir havuz var |
+| N91 | ⚠️ **N90'ın kazancı SAYIYA DÖKÜLMEDİ.** Uç yüzeyi klasik winglet bandının çok dışında olduğu için ders kitabı formülleri geçerli değil; panel yöntemi ya da CFD ister. Mertebe: indiklenmişin %6'sı geri gelirse menzil +%2 (+34 km), %20 gelirse +%6,7 (+114 km). **Makalede sayı verilmeyecek**, yalnız mekanizma anlatılacak |
+| N92 | ⚠️ N90'ın bedeli: taşıyan uç yüzeyi **kök eğilme momentini** artırır ve seyirde **yön kararlılığını** yükseltir. İkincisi, uç pervanelerinin yönelme komutu için daha fazla moment üretmesi demektir. Açık iş |
 
 ---
 
@@ -240,7 +247,40 @@ yönlendirebilir. Vekile ilk sorulacaklardan biri budur.
 İki nokta da **aynı disk yüklemesi çizgisinde** — N55'in gereği. Pil oranları da eşit.
 Mimarinin iki uçta aynı oranlarla çalıştığının sayısal kanıtı.
 
-### 11.1b Geçiş süresi ölçek-değişmez değildir (N78)
+### 11.1c Geçiş benzetimi (N86–N89) — **11.1b'nin yerine geçer**
+
+2 serbestlik dereceli nokta-kütle benzetimi. $\theta$ (gövde ekseninin dikeyden
+açısı) $t_r$ sürede 0→90° kinematik olarak sürülüyor; itki gövde ekseninde,
+taşıma hıza dik, sürükleme hıza ters. $C_L=C_{L\alpha}\alpha$ tutukluğa kadar,
+sonrası düz levha. Seyir hızına ulaşınca gaz sürüklemeye iniyor.
+
+**İrtifa kaybı (m) — hafif hat, 50 kg:**
+
+| $t_r$ | T/W=1,1 | **T/W=1,2** | T/W=1,3 | T/W=1,5 |
+|---:|---:|---:|---:|---:|
+| 0,5 s | −15,9 | −13,5 | −11,5 | −8,3 |
+| 1 s | −14,0 | −11,3 | −8,8 | −3,0 |
+| 2 s | −10,5 | **−6,6** | −1,6 | 0 |
+| 3 s | −9,9 | **−0,3** | 0 | 0 |
+| 4 s | −1,8 | **0** | 0 | 0 |
+
+**İrtifa kaybı (m) — ağır hat, 1000 kg:**
+
+| $t_r$ | T/W=1,1 | **T/W=1,2** | T/W=1,3 | T/W=1,5 |
+|---:|---:|---:|---:|---:|
+| 1 s | −26,6 | −22,1 | −18,2 | −11,5 |
+| 2 s | −21,8 | −16,0 | −6,8 | −0,2 |
+| 3 s | −17,0 | −6,3 | −0,6 | 0 |
+| 4 s | −17,7 | **−0,6** | 0 | 0 |
+| 5 s | −5,0 | **0** | 0 | 0 |
+
+**Monoton.** Optimum yok, doyum var. Eski 11.1b tablosundaki "2 sn → 8 m,
+4 sn → 31 m" sayıları **kullanılmayacak.**
+
+⚠️ Benzetim **dönme dinamiğini modellemiyor** — $\theta$ kinematik sürülüyor.
+Uç pervanesi itkisi bu benzetimden çıkmaz (N88).
+
+### 11.1b Geçiş süresi ölçek-değişmez değildir (N78) — ⚠️ **KISMEN GEÇERSİZ, bkz. 11.1c**
 
 Ağır hatta uç pervaneleri, geometrik olarak ölçeklendiğinde 2 saniyelik geçişi
 yapamaz — gereken güç askı gücünü aşar:
