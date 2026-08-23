@@ -133,14 +133,52 @@ within three seconds. The reference designs assume T/W = 1.2, at which the light
 completes the manoeuvre in three seconds for a loss under one metre and the heavy design
 in five seconds for no loss.
 
+### Entering the rotation while climbing
+
+The tables above assume the aircraft rotates from a stationary hover. It does not have
+to, and it should not. The aircraft reaches transition altitude by climbing, which means
+it arrives there with an upward velocity that has already been paid for. Stopping to
+hover before rotating discards that velocity deliberately.
+
+Carrying it into the manoeuvre instead converts it into a reserve. Repeating the
+simulation with an entry climb rate w₀:
+
+**Light reference design, T/W = 1.2. Altitude loss, metres:**
+
+| t_r | w₀ = 0 | w₀ = 2 m/s | w₀ = 5 m/s | w₀ = 8 m/s |
+|---:|---:|---:|---:|---:|
+| 1 s | −14.2 | −10.3 | −0.4 | **0** |
+| 2 s | −9.1 | −0.4 | **0** | **0** |
+| 3 s | −0.8 | **0** | **0** | **0** |
+| 4 s | **0** | **0** | **0** | **0** |
+
+A five-metre-per-second entry climb removes the altitude loss at every rotation time
+that is otherwise sensible, and the heavy design behaves the same way. The cost of
+acquiring that climb rate is negligible: at T/W = 1.2 the vertical acceleration is
+(T/W − 1)g = 1.96 m s⁻², so five metres per second is reached in 2.6 s over 6.4 m of
+climb, and the kinetic energy involved is 625 J against a fuel energy of 103 kWh.
+
+**The reference profile is therefore to enter the rotation at 5 m s⁻¹ of climb and
+rotate over three seconds, for no altitude loss at all.** The manoeuvre that the
+literature treats as the tail-sitter's characteristic hazard becomes, in this
+configuration, a manoeuvre with no altitude penalty — not because of any device, but
+because the aircraft is not asked to stop first.
+
 *[⚠️ Sınırlar açıkça: benzetim nokta-kütledir ve **dönme dinamiğini modellemez** —
 $\\theta$ kinematik olarak sürülür. Dolayısıyla gereken uç pervanesi itkisi bu
 benzetimden ÇIKMAZ. Kanat aerodinamiği basit bir modeldir; girdaplı ayrılma,
 gecikmeli tutukluk ve iz etkileri yoktur. Bölüm 8'e girecek. Künye N86–N89.]*
 
-*[⚠️ N88: uç pervanelerinin 16,2 N'luk boyutu **2 saniyelik geçişten** türetilmişti.
-Geçiş artık yavaş yapılıyorsa boyutlandıran durum geçiş değil, **hover'da bozucu
-bastırmadır.** Yeniden boyutlandırma yapılmadı — Bölüm 8'de açık iş olarak yazılacak.]*
+With the transition no longer demanding a rapid rotation, it is no longer the case that
+sizes the tip propellers. The sizing case becomes disturbance rejection in hover, which
+an order-of-magnitude estimate places well inside the existing capability: a five-metre-
+per-second gust normal to the planform produces a moment of the order of 5 N·m, against
+a tip-pair capability of 16 N·m at the reference geometry. The tip propellers are
+therefore kept small — 0.20 m — deliberately, so that they contribute as little as
+possible to cruise drag while retaining margin on the case that actually sizes them.
+
+*[⚠️ Bu bir mertebe tahminidir; bozucu spektrumu ve kapalı çevrim gereksinimi
+hesaplanmadı. Bölüm 8'e girecek. Künye N88/N95.]*
 
 *[Şekil 10: irtifa kaybı, $t_r$ ve T/W'ye göre.]*
 
