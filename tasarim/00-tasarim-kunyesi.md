@@ -157,6 +157,11 @@ Unsurların tek tek ataları vardır; yenilik **bileşimdedir**:
 | N77 | Ana disk çapı **1,20 m** (1,34'ten). Bedeli: askı gücü +%12, disk yüklemesi +%25. Seyir önceliği gereği kabul edildi. Ağır hat da aynı çizgide **5,40 m**'ye çekildi |
 | N75 | Yuvarlanma kanatçığı: **boy %120 kök veter, yükseklik 2→6 cm.** Gücü boydan gelir. İç kısmı pervane izinde (hover), dış kısmı dışında (seyir) |
 | N73 | **Rakipten fazla yük taşımak gerekmiyor.** Benzer yükü daha uzağa taşımak, mimarinin üstünlüğünü daha temiz ispatlar — ölçüm tartışmasına da kapalıdır |
+| N79 | **Yan rüzgârda devrilmezlik iddiası YOKTUR.** Tasarımcının konumu: gerekli takas yapıldı, araç şartların getirdiği ölçüde dayanım gösterir. Yolcu uçakları da sınır dışında iniş/kalkış iptal eder. Bu bir **sınır**, mimarinin anahtar meselesi değil |
+| N80 | **Duruş tabanı, tasarım değiştirilmeden genişletilebilir.** Ayaklar dışa ötelenir. Aynı öteleme kumanda momenti kolunu da uzatır ($M=2TL$) → **tek değişken, iki kazanç.** Tasarımcı bunu uygulamıyor; **kullanıcıya bırakılan bir serbestlik** olarak kayda geçti |
+| N81 | **Yenilik iddiası: bileşim.** Kanat-gövde bizim değil, VTOL bizim değil, sürükleme faturasının ölçümü bizim değil. Yeni olan: **taktik kullanım avantajını, seyir verimini koruyarak tek araçta birleştiren doğru bileşim.** Makale bu çerçeveden yazılır |
+| N82 | **Makale yeniliği ile patent yeniliği ayrı testlerdir.** Makalede bileşim yeniliği meşrudur ve olağandır. Patentte bileşim istemi **aşikârlık** testine girer. İstem, N81'in çerçevesiyle değil, **somut ayrışma unsurlarıyla** yazılır |
+| N83 | ⚠️ **UÇ İSKELETLERİ KAPORTALANMAK ZORUNDA.** Yuvarlak boru bırakılırsa dikmeler tek başına seyir sürüklemesinin **%70–93**'ünü üretir — araç uçmaz. Kaportalı kesitle (C_D≈0,15) pay **%12**'ye, iyi kaportayla **%6,5**'e iner. Bu bir tercih değil, **tasarım zorunluluğudur** |
 
 ---
 
@@ -332,6 +337,30 @@ Ancak boy–yükseklik oransal farkı o kadar büyük ki katsayı seçimi sonucu
 
 ⚠️ **Hedef, bulgu değil.** Yapı oranı %30 varsayıldı. Kâğıt uçaklar tipik olarak
 %20–40 hafif çıkar; o pay bu tabloda henüz ödenmedi.
+
+### 11.5b Uç iskeleti sürüklemesi — N83
+
+Hafif hat, seyir: $q = 551$ Pa, toplam seyir sürüklemesi $D = W/(L/D) = 38{,}6$ N.
+Dikmeler: 2 uç × 2 yön × 0,71 m = **2,84 m** toplam açıkta uzunluk, akışa **dik**.
+
+| Dikme kesiti | $C_D$ | $d=15$ mm | $d=20$ mm | $d=25$ mm |
+|---|---:|---:|---:|---:|
+| Yuvarlak boru | 1,15 | %70 | **%93** | %117 |
+| Kaportalı dikme | 0,15 | %9,1 | **%12,2** | %15,2 |
+| İyi kaportalı | 0,08 | %4,9 | **%6,5** | %8,1 |
+
+*(Toplam seyir sürüklemesinin yüzdesi. $Re \approx 3$–$5\times10^4$, kritik altı.)*
+
+**Sonuç:** yuvarlak boru seçilirse araç uçmaz — dikmeler kanadın tamamı kadar
+sürükleme üretir. **Kaportalama zorunludur.** Kaportalıyken bedel gerçek ama
+ödenebilir: seyir sürüklemesinin ~%12'si.
+
+**Ölçek-değişmezlik:** dikme ön alanı $\propto L^2$, kanat alanı da $\propto L^2$.
+Geometrik ölçeklemede ve eşit seyir dinamik basıncında **bu oran korunur** — ağır
+hatta da ~%12. Fatura ölçekle büyümüyor.
+
+⚠️ $C_D$ değerleri literatür mertebeleridir; bu kesit için hesaplanmadı. Dikme
+kesiti henüz seçilmedi. **Açık iş.**
 
 ### 11.6 3B model parametreleri
 

@@ -189,6 +189,13 @@ arm, and carrying the landing loads — and is charged to the mass budget once.
 
 *[Şekil 7: pervane yerleşimi ve moment kolları. Beş temas noktası burada gösterilecek.]*
 
-*[⚠️ Yan rüzgârda devrilme kararlılığı sayıya dökülmedi. Duruş tabanı genişliği,
-ağırlık merkezi yüksekliği ve yanal alan biliniyor; hesap yapılabilir. Bölüm 8'e
-girmeden önce yapılmalı, yoksa hakem sorar.]*
+The stance base is a design parameter, not a constraint imposed by the configuration.
+Moving the frame ends further outboard widens it without altering the planform, the
+propulsion, or the control architecture — and because the same displacement lengthens
+the control moment arm of Section 4.4, the two benefits arrive together from one
+change. The reference geometry given here is one point on that trade; an operator with
+a stronger ground-wind requirement can take another without redesigning the aircraft.
+
+*[N79/N80. Devrilmezlik iddiası yok — Bölüm 8'de sınır olarak yazılacak, burada
+değil. Yolcu uçakları da sınır dışında iniş/kalkış iptal eder; bu mimarinin
+anahtar meselesi değil.]*
