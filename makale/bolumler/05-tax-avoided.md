@@ -37,6 +37,11 @@ incurred here — not reduced, not mitigated, but absent, because the hardware t
 causes them does not exist in this configuration. Nor is there a retraction mechanism,
 so the transfer of Bill 2 into Bill 1 identified in Section 3.3 does not occur either.
 
+It is worth noting what this avoidance also spares. Where lift rotors are retained,
+keeping their drag small depends on stopping them at a favourable azimuth, which needs
+an indexing mechanism; where they are stowed, it needs a retraction mechanism. Both are
+mass, and both are failure modes. A configuration with no rotor to stop needs neither.
+
 The word "mostly" in this heading is deliberate. The configuration does place hardware
 in the cruise airstream: the four tip frames and the four control propellers they
 carry. That is a real payment against Bill 2, and quantifying it produced the single
