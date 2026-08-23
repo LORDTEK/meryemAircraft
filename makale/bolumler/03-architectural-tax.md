@@ -48,6 +48,24 @@ so a mass increment raises the hover power requirement faster than proportionall
 which raises installed power, which raises mass. This is the mechanism by which a
 modest dead-mass fraction becomes a large payload penalty.
 
+This bill is not hypothetical, and it has been identified independently. In a NASA study
+that sized four VTOL architectures against a common mission with a common set of tools,
+the lift-plus-cruise concepts came out as the heaviest of the vehicles examined, and the
+authors are explicit about the cause:
+
+> *"The weight of the Lift+Cruise concepts is heavier in general than for the other
+> vehicles. This is not driven by the cruise power draw, as the L/D_e of the Lift+Cruise
+> is indeed higher than the other vehicles. Hover power is higher, but the most likely
+> targets for reducing vehicle weight are the extra empty weight items on board in hover
+> (wing and propeller)."*
+
+The finding is worth reading carefully, because it separates the two things this paper
+is at pains to separate. The lift-plus-cruise vehicle is *aerodynamically better* than
+the alternatives it was compared against — its cruise efficiency is higher, and the
+study says so. It is nevertheless the heaviest, and the reason given is the hardware it
+carries in order to hover. That is Bill 1, stated by an independent source in its own
+terms: not a failure of engineering, but the cost of an architecture.
+
 ## 3.3 Bill 2 — drag
 
 The second payment is aerodynamic and is charged only to those architectures that
@@ -74,29 +92,30 @@ The mass stays on board, and the retraction mechanism is itself new mass and a n
 failure mode, which is to say that the drag bill was not paid off but transferred. This
 is the first instance of the pattern that Section 3.5 generalises.
 
-A second and independent measurement bounds the interference component. Wind-tunnel
-characterisation of a QuadPlane uncrewed aircraft found that rotor-wake interference
-increases drag by twenty to forty percent in the hybrid regime relative to fixed-wing
-mode, with the highest lift and lowest drag consistently recorded in fixed-wing mode,
-and reported a minimum parasite drag coefficient of 0.0397 with the VTOL rotors and
-booms installed.
+Two further measurements support the direction of this result without being combined
+with it. Wind-tunnel characterisation of a QuadPlane uncrewed aircraft found that the
+highest lift and the least drag occurred in fixed-wing mode at both cruise airspeeds,
+that drag in the hybrid regime exceeded drag in either pure mode because of adverse flow
+interactions, and — a point that matters for how such aircraft are designed — that a
+simulation model assuming negligible interaction between the rotors and the structure
+"always predicts higher lift and lower drag than were experimentally observed." The
+interference is real, and the tools most likely to be used at the concept stage
+understate it.
 
-These two results measure different things and should not be added. The first concerns
-parasite drag with the rotors stopped, which is the cruise condition; the second
-concerns interference drag with the rotors turning, which is the transition and hybrid
-condition. They agree only in the sense that both find the penalty to be a
-double-digit percentage rather than a rounding error.
+Separately, a wind-tunnel study of twenty-six stationary lift propellers held edge-on to
+the flow found that their drag scales with frontal area and with the square of airspeed,
+that blade pitch adds to it, and that the hover powertrain components "added a
+significant amount of aerodynamic drag during forward flight" in the absence of a
+mechanism to stow them.
 
-A third observation completes the picture by showing what it costs to keep the penalty
-small. Analyses of stopped and stopping rotors report that the drag depends strongly on
-the azimuth at which the blades come to rest, and that a freestream-aligned lock angle
-is required to minimise drag and load asymmetry. Achieving that alignment reliably
-requires an indexing mechanism — which, once again, is mass.
+*[⚠️ Bu paragraf 2026-08-23'te düzeltildi. Önceki taslak iki sayı içeriyordu —
+"%20–40 girişim sürüklemesi" ve "C_D0 = 0,0397" — ve **ikisi de kaynakta yoktu**;
+arama motoru özetinden gelmişlerdi. Tam metinler okununca çıkarıldılar. 0,0397
+aslında bir yunuslama momenti eğimidir (C_Mα). Ayrıntı: kaynaklar.md §0.]*
 
-*[Kaynaklar makale/kaynaklar.md dosyasında K1–K5. ⚠️ Hepsi doğrulama seviyesi C:
-arama motoru özetinden alındı, tam metin okunmadı. Yayıma gitmeden önce en az
-B seviyesine çıkarılacak. K1 (Bacchini & Cestino 2021) mutlaka birinci elden
-okunmalı — argümanın yükünü o taşıyor.]*
+*[⚠️ K1 (Bacchini & Cestino 2021) **hâlâ birinci elden okunmadı** — ScienceDirect
+ücretli. Bu bölümün ve Bölüm 5.2'nin yükünü o taşıyor. Erişilemezse %38/%13
+sayıları çıkarılıp niteliksel ifadeye dönülecek.]*
 
 The important property of this bill is not its size but where it is charged. It is
 charged per unit time in cruise, so it grows with exactly the quantity the aircraft
