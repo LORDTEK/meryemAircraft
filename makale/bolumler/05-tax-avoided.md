@@ -31,10 +31,9 @@ percent.
 
 In cruise there is no stopped rotor in the airstream, because there is no rotor that
 stops. The nose pair is the cruise propulsor and runs at its design condition
-throughout. The thirty-eight percent parasite-drag penalty measured on an exposed
-lift-propeller installation, and the thirteen percent of range it costs, are not
-incurred here — not reduced, not mitigated, but absent, because the hardware that
-causes them does not exist in this configuration. Nor is there a retraction mechanism,
+throughout. The quarter of lift-to-drag ratio that Section 3.3 reports as the measured cost of
+installing hover hardware is not incurred here — not reduced, not mitigated, but absent,
+because the hardware that causes it does not exist in this configuration. Nor is there a retraction mechanism,
 so the transfer of Bill 2 into Bill 1 identified in Section 3.3 does not occur either.
 
 It is worth noting what this avoidance also spares. Where lift rotors are retained,

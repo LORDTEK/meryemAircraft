@@ -74,23 +74,42 @@ booms that carry them, and the interference between their wakes and the wing all
 drag in the regime where the aircraft spends nearly all of its time.
 
 The cleanest available measurement of this bill is a controlled comparison within a
-single aircraft. In wind-tunnel testing of an eVTOL lift-plus-cruise model with its
-lift propellers extended and then retracted, retraction reduced parasite drag by
-thirty-eight percent. Translated into mission terms by the same authors, an aircraft
-fitted with a retraction system could cruise twenty-one percent faster at equal range,
-or fly thirteen percent further at equal speed.
+single aircraft. In a doctoral study, one uncrewed airframe was tested in a wind tunnel
+in four configurations: clean, with the vertical-lift motors and their supporting beams
+installed and the propellers left free to align with the flow, with the same hardware but
+the propellers held perpendicular to the flow, and with the propellers retracted into the
+fuselage. The maximum lift-to-drag ratios measured were:
 
-That last pair of numbers is the one this paper relies on, for three reasons. The
-comparison holds the wing, the Reynolds number, the mass and the mission fixed and
-varies only whether the hover hardware is in the airstream, so nothing else can be
-credited with the difference. It isolates the bill rather than bounding it. And it is
-reported in the currency the aircraft exists to earn: range.
+| Configuration | Maximum L/D |
+|---|---:|
+| Clean airframe, no hover hardware | ≈ 17 |
+| Hover hardware installed, propellers aligned with the flow | ≈ 13 |
+| Hover hardware installed, propellers perpendicular to the flow | ≈ 9 |
 
-Thirteen percent of range is therefore a lower bound on Bill 2 for this architecture —
-a lower bound, because retraction does not remove the hover hardware, it only hides it.
-The mass stays on board, and the retraction mechanism is itself new mass and a new
-failure mode, which is to say that the drag bill was not paid off but transferred. This
-is the first instance of the pattern that Section 3.5 generalises.
+Two numbers follow, and both are measured rather than estimated. Installing the hover
+hardware costs about a quarter of the aircraft's lift-to-drag ratio. Failing to let the
+propellers align with the flow costs about a third of what remains. A second model
+built on a different airframe reproduced the pattern, at L/D ≈ 11 with the propellers
+retracted against ≈ 8 with them exposed.
+
+Expressed as drag rather than efficiency, retracting the propellers reduced drag by 34 %
+relative to the standard quadplane configuration on one model and by 30 % on the other.
+The author of that study is careful about which comparison is legitimate: measuring the
+retracted aircraft against *itself* with the propellers deployed gives 63 %, and he
+explicitly rejects that figure in favour of the comparison against a conventional
+quadplane. The caution is worth adopting.
+
+A third finding from the same tests matters more than either number, because it
+constrains what can be done about the penalty. The drag is not dominated by the
+propeller blades:
+
+> *"The difference between propellers parallel to the airflow and without propellers is
+> modest. The drag produced by the motors is significant."*
+
+The bill is charged mainly by the motors and the beams that carry them — hardware that
+cannot be feathered, folded or aligned away, because its cost is its presence.
+
+*[Kaynak: Bacchini 2020 doktora tezi, birinci elden okundu. kaynaklar.md K1.]*
 
 Two further measurements support the direction of this result without being combined
 with it. Wind-tunnel characterisation of a QuadPlane uncrewed aircraft found that the
@@ -98,9 +117,7 @@ highest lift and the least drag occurred in fixed-wing mode at both cruise airsp
 that drag in the hybrid regime exceeded drag in either pure mode because of adverse flow
 interactions, and — a point that matters for how such aircraft are designed — that a
 simulation model assuming negligible interaction between the rotors and the structure
-"always predicts higher lift and lower drag than were experimentally observed." The
-interference is real, and the tools most likely to be used at the concept stage
-understate it.
+"always predicts higher lift and lower drag than were experimentally observed."
 
 Separately, a wind-tunnel study of twenty-six stationary lift propellers held edge-on to
 the flow found that their drag scales with frontal area and with the square of airspeed,
@@ -108,14 +125,10 @@ that blade pitch adds to it, and that the hover powertrain components "added a
 significant amount of aerodynamic drag during forward flight" in the absence of a
 mechanism to stow them.
 
-*[⚠️ Bu paragraf 2026-08-23'te düzeltildi. Önceki taslak iki sayı içeriyordu —
-"%20–40 girişim sürüklemesi" ve "C_D0 = 0,0397" — ve **ikisi de kaynakta yoktu**;
-arama motoru özetinden gelmişlerdi. Tam metinler okununca çıkarıldılar. 0,0397
-aslında bir yunuslama momenti eğimidir (C_Mα). Ayrıntı: kaynaklar.md §0.]*
-
-*[⚠️ K1 (Bacchini & Cestino 2021) **hâlâ birinci elden okunmadı** — ScienceDirect
-ücretli. Bu bölümün ve Bölüm 5.2'nin yükünü o taşıyor. Erişilemezse %38/%13
-sayıları çıkarılıp niteliksel ifadeye dönülecek.]*
+*[⚠️ 2026-08-23'te iki kez düzeltildi. İlk taslakta "%20–40 girişim sürüklemesi" ve
+"C_D0 = 0,0397" vardı — ikisi de kaynakta yoktu. İkinci taslakta "%38 parazit
+azalması" ve "+%13 menzil" vardı — onlar da tezde yoktu. Şimdiki bütün sayılar
+**birinci elden okunmuş** tezden. Ayrıntı: kaynaklar.md §0 ve K1.]*
 
 The important property of this bill is not its size but where it is charged. It is
 charged per unit time in cruise, so it grows with exactly the quantity the aircraft
@@ -165,6 +178,24 @@ architectural move reduces one and increases another.
 
 *[Tablo 1 buradan üretilecek.]*
 
+The table is not only an argument. One of its rows has been measured. In the study
+cited in Section 3.3, the retraction system that removed thirty percent of the drag was
+then costed: applied to a passenger eVTOL of known characteristics, with the retraction
+mechanism assessed at five percent of vehicle mass, the maximum range rose from 119 km
+to 121 km — an improvement of under two percent. The drag was genuinely removed and the
+range barely moved, because the mechanism that removed it was itself carried.
+
+That is the transfer in Table 1, observed rather than asserted: Bill 2 was paid off by
+borrowing from Bill 1, and the balance was very nearly unchanged. What did improve was
+speed — the airspeed for maximum range rose by 5 m s⁻¹, and an 80 km mission could be
+flown 10 m s⁻¹ faster — which is a real operational gain, and one worth having, but it
+is not a reduction of the tax. It is a change in the currency in which the tax is
+returned.
+
+The same study notes that for a surveillance aircraft, whose endurance is maximised at
+low airspeed where the drag reduction is least effective, even that gain largely
+disappears.
+
 Read as a whole, the table says something stronger than any of its rows. There is a
 conserved quantity here: the cost of providing a vertical capability to a wing-borne
 aircraft. Architectures do not remove that cost; they choose the currency in which to
@@ -197,7 +228,13 @@ also, precisely, the configuration described in Section 4.
 
 ## 3.7 Why the market looks the way it does
 
-One observable consequence supports the argument. Hybrid VTOL aircraft occupy a narrow
+One observable consequence supports the argument, and it has been stated independently.
+Surveying the field, the study cited above concludes that multirotors are efficient in
+hover and suited to short-range missions, that vectored-thrust aircraft are efficient in
+cruise and suited to long-range missions, and that "lift plus cruise eVTOLs are a
+compromise, but they are slowed down by the drag of the lift propellers."
+
+ Hybrid VTOL aircraft occupy a narrow
 band of the mission space. Below it, where range requirements are short, a multirotor
 is cheaper and simpler and pays none of these bills because it never claimed cruise
 efficiency. Above it, where range requirements are long, a runway-launched fixed-wing
