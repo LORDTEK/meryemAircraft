@@ -171,6 +171,9 @@ Unsurların tek tek ataları vardır; yenilik **bileşimdedir**:
 | N90 | **Winglet: yeni parça EKLENMEYECEK — istasyon zaten dolu.** Uç iskeletleri kanat ucunda, düzleme dik, her yön 0,71 m. $h/b = 0{,}41$; klasik winglet $h/b \approx 0{,}05$–$0{,}10$. **Dikmeler zaten herhangi bir winglet'ten 4–8 kat büyük bir uç yüzeyi.** Karar: N84 kaportası **simetrik dikme kesiti yerine profil (taşıyan) kesit** olarak yapılır. Ek parça yok, ek kütle yok, hareketli parça yok. Seyirde indiklenmiş sürükleme toplam sürüklemenin **%33,7**'si — kazanç için gerçek bir havuz var |
 | N91 | ⚠️ **N90'ın kazancı SAYIYA DÖKÜLMEDİ.** Uç yüzeyi klasik winglet bandının çok dışında olduğu için ders kitabı formülleri geçerli değil; panel yöntemi ya da CFD ister. Mertebe: indiklenmişin %6'sı geri gelirse menzil +%2 (+34 km), %20 gelirse +%6,7 (+114 km). **Makalede sayı verilmeyecek**, yalnız mekanizma anlatılacak |
 | N92 | ⚠️ N90'ın bedeli: taşıyan uç yüzeyi **kök eğilme momentini** artırır ve seyirde **yön kararlılığını** yükseltir. İkincisi, uç pervanelerinin yönelme komutu için daha fazla moment üretmesi demektir. Açık iş |
+| N93 | ✅ **GEÇİŞE TIRMANARAK GİRİLİR — durağan hover'dan değil.** Araç geçiş irtifasına zaten tırmanarak varıyor; durup hover'a geçmek, bedeli ödenmiş dikey momentumu **çöpe atmaktır.** Giriş tırmanış hızı $w_0$, dönüş boyunca harcanacak bir **rezervdir** |
+| N94 | **$w_0 = 5$ m/s irtifa kaybını pratikte sıfırlıyor**, $w_0 = 8$ m/s her koşulda sıfırlıyor. Bedeli yok denecek kadar az: T/W=1,2'de dikey ivme $(T/W-1)g = 1{,}96$ m/s², yani 5 m/s'ye **2,6 saniyede** ve **6,4 m** tırmanışta ulaşılıyor. Kinetik enerji 625 J — 103 kWh yakıtın yanında ölçülemez |
+| N95 | **Uç pervaneleri KÜÇÜK kalır — 0,20 m.** Gerekçe tasarımcıdan: seyirde olumsuz etki istenmiyor, kumandayı garanti etsin ve bir miktar marj bıraksın yeter. N88'in yeniden boyutlandırması bu yönde çözüldü: geçiş artık boyutlandıran durum değil, hover'da bozucu bastırma öyle — ve o durum mevcut 16,2 N ile **~4 kat marjla** karşılanıyor (mertebe tahmini) |
 
 ---
 
@@ -274,7 +277,20 @@ sonrası düz levha. Seyir hızına ulaşınca gaz sürüklemeye iniyor.
 | 4 s | −17,7 | **−0,6** | 0 | 0 |
 | 5 s | −5,0 | **0** | 0 | 0 |
 
-**Monoton.** Optimum yok, doyum var. Eski 11.1b tablosundaki "2 sn → 8 m,
+**Monoton.** Optimum yok, doyum var.
+
+**İrtifa kaybı (m), geçişe TIRMANARAK girildiğinde — hafif hat, T/W=1,2 (N93/N94):**
+
+| $t_r$ | $w_0=0$ | $w_0=2$ m/s | $w_0=5$ m/s | $w_0=8$ m/s |
+|---:|---:|---:|---:|---:|
+| 1 s | −14,2 | −10,3 | −0,4 | **0** |
+| 2 s | −9,1 | −0,4 | **0** | **0** |
+| 3 s | −0,8 | **0** | **0** | **0** |
+| 4 s | **0** | **0** | **0** | **0** |
+
+Ağır hatta da aynı: $w_0=5$ m/s, $t_r\ge2$ s için kayıp sıfır.
+
+**Tasarım profili: $w_0 = 5$ m/s ile girilir, $t_r = 3$ s'de dönülür, irtifa kaybı sıfır.** Eski 11.1b tablosundaki "2 sn → 8 m,
 4 sn → 31 m" sayıları **kullanılmayacak.**
 
 ⚠️ Benzetim **dönme dinamiğini modellemiyor** — $\theta$ kinematik sürülüyor.
