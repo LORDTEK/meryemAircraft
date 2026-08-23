@@ -67,9 +67,13 @@ aktarılabilir, sayılar aktarılamaz.
 
 ## 2. Fatura 2 — sürükleme
 
-### [K1] Bacchini & Cestino 2021 · durum: **C** ⚠️ · **hâlâ en kritik eksik**
+### [K1] Bacchini, Cestino, Van Magill & Verstraete 2021 · durum: **C** ⚠️
 **Impact of lift propeller drag on the performance of eVTOL lift+cruise aircraft**
-*Aerospace Science and Technology* 109:106429 · DOI: 10.1016/j.ast.2020.106429
+*Aerospace Science and Technology* **109** (2021), s. 1–11 · DOI: 10.1016/j.ast.2020.106429
+
+⚠️ **Atıf düzeltildi.** Daha önce "Bacchini & Cestino" diye kaydedilmişti; gerçek
+yazar listesi **dört kişi**: Alessandro Bacchini, Enrico Cestino, Benjamin Van Magill,
+Dries Verstraete. Makalede tam liste kullanılacak.
 
 | Bulgu | Değer |
 |---|---:|
@@ -80,9 +84,26 @@ aktarılabilir, sayılar aktarılamaz.
 **Neden önemli:** mimari-içi kontrollü karşılaştırma (aynı uçak, tek değişken),
 ve sonucu menzil cinsinden veriyor.
 
-🔴 **HÂLÂ C SEVİYESİNDE.** ScienceDirect ücretli; tasarımcı e-posta ile istedi.
-**Bölüm 3.3 ve 5.2'nin yükünü bu taşıyor. Gelmezse o paragraflar niteliksele
-çevrilmeli.**
+🔴 **HÂLÂ C SEVİYESİNDE.** Bölüm 3.3 ve 5.2'nin yükünü bu taşıyor.
+
+**Erişim durumu (2026-08-23):**
+`alessandro.bacchini@polito.it` adresine gönderilen e-posta **geri döndü** (550,
+adres yok). Sebebi bulundu: **Bacchini akademiden ayrılmış** — Kasım 2020'den beri
+Thales Alenia Space'te sistem mühendisi. Politecnico adresi doğal olarak kapatılmış.
+
+**Erişim yolları, öncelik sırasıyla:**
+
+| # | Yol | Adres | Not |
+|---|---|---|---|
+| **1** | **Doktora tezi — AÇIK ERİŞİM** | `iris.polito.it/retrieve/e384c432-46e5-d4b2-e053-9f05fe0a1d67/conv_doctoral_dissertation_alessandro_bacchini.pdf` | 🎯 **En iyi ihtimal.** Tez eVTOL tasarımı üzerine; rüzgâr tüneli çalışmasının aynısını içermesi çok muhtemel. **Ücretsiz, e-posta gerekmiyor** |
+| 2 | IRIS kayıt sayfası | `iris.polito.it/handle/11583/2859251` | Kabul edilmiş sürüm (post-print) iliştirilmiş olabilir |
+| 3 | ResearchGate "Request full-text" | ilgili yayın sayfası | İstek **dört yazara birden** gider |
+| 4 | E-posta: **Cestino** | `enrico.cestino@polito.it` | Polito'da **hâlâ görevde**, doçent. DIMEAS sayfası kullanıcı adını doğruluyor |
+| 5 | E-posta: **Verstraete** | Sydney Üniversitesi, `@sydney.edu.au` | Profesör, görevde. Tam adres doğrulanmadı |
+
+⚠️ Tez indirilirse **tezden atıf yapılır**, dergi makalesinden değil — okumadığımız
+bir metne atıf yapmayız. İkisi de verilebilir ama sayıların kaynağı okunan metin
+olarak gösterilir.
 
 ### [K2] Wind Tunnel Testing of a QuadPlane UAS · durum: **A**
 arXiv:2301.12316
@@ -204,7 +225,7 @@ Makale bunu keşif gibi sunmaz; **türetimini** sunar (Bölüm 3.6).
 
 | # | Kaynak | Durum | Neden |
 |---|---|---|---|
-| 1 | **K1 Bacchini & Cestino** | C | Bölüm 3.3 + 5.2'nin yükü. E-posta beklemede |
+| 1 | **K1 Bacchini ve ark.** | C | Bölüm 3.3 + 5.2'nin yükü. **Yol 1: doktora tezi, açık erişim** |
 | 2 | ~~K7 arXiv:1903.06393~~ | ✅ **A** | Okundu. Bölüm 4.4'ün mimari çatallık savı buna dayanıyor |
 | 3 | K7 IEEE 2016 | C | Aynı grubun eski sürümü. Ücretli. Düşük öncelik |
 | 4 | K6 VFS 2025 | C | Kilit açısı iddiası. Makaleden zaten çıkarıldı |
