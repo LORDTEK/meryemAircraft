@@ -162,6 +162,8 @@ Unsurların tek tek ataları vardır; yenilik **bileşimdedir**:
 | N81 | **Yenilik iddiası: bileşim.** Kanat-gövde bizim değil, VTOL bizim değil, sürükleme faturasının ölçümü bizim değil. Yeni olan: **taktik kullanım avantajını, seyir verimini koruyarak tek araçta birleştiren doğru bileşim.** Makale bu çerçeveden yazılır |
 | N82 | **Makale yeniliği ile patent yeniliği ayrı testlerdir.** Makalede bileşim yeniliği meşrudur ve olağandır. Patentte bileşim istemi **aşikârlık** testine girer. İstem, N81'in çerçevesiyle değil, **somut ayrışma unsurlarıyla** yazılır |
 | N83 | ⚠️ **UÇ İSKELETLERİ KAPORTALANMAK ZORUNDA.** Yuvarlak boru bırakılırsa dikmeler tek başına seyir sürüklemesinin **%70–93**'ünü üretir — araç uçmaz. Kaportalı kesitle (C_D≈0,15) pay **%12**'ye, iyi kaportayla **%6,5**'e iner. Bu bir tercih değil, **tasarım zorunluluğudur** |
+| N84 | **KARAR: dikmeler kaportalanır.** Sabit kaporta, gövde eksenine hizalı, hareketli parça yok. Tasarım $C_D=0{,}15$ (iyimser 0,08 **kullanılmıyor**). Kaporta veteri ≈ 4×çap. Geçişte kaporta bir süre yüksek hücum açısında kalır; 2 sn ve düşük $q$ olduğu için kabul edildi |
+| N85 | ⚠️ **MENZİL AŞAĞI REVİZE EDİLDİ: 2 140 km → 1 695 km** (19,8 sa → 15,7 sa). Eski sayı %22,2'lik toplam zincir verimi gerektiriyordu; bu ≈%35 motor verimi demek — küçük benzinli motorda gerçekçi değil. Yeni sayı **açık zincirle** verildi: 0,28×0,90×0,95×0,92×0,80 = **0,176** |
 
 ---
 
@@ -273,7 +275,14 @@ tarafındaki karşılığıdır.
 **Geçiş kontrolü:** 60° eğimde yatay ivme 1,73 g → tutukluk hızına **1,2 s**'de ulaşılıyor.
 Kanat, hızlı yunuslama tamamlanmadan devralıyor. N41 bu araçta rahat çalışıyor.
 
-**Menzil:** 8 kg yakıtla ≈ **2 140 km / 19,8 saat.**
+**Menzil (N85, revize):** 8 kg yakıtla **≈ 1 695 km / 15,7 saat.**
+
+Zincir açıkça: içten yanmalı 0,28 × jeneratör 0,90 × güç elektroniği 0,95 ×
+elektrik motoru 0,92 × pervane 0,80 = **0,176**. Benzin 12,9 kWh/kg.
+Faydalı itki gücü $D\cdot V = 38{,}6 \times 30 = 1{,}16$ kW.
+
+⚠️ Eski 2 140 km sayısı %22,2 zincir verimi varsayıyordu (≈%35 motor verimi).
+Küçük benzinli motorda gerçekçi değil. **Kullanılmayacak.**
 
 ### 11.3 Pervane yerleşimi (N72, N74)
 
