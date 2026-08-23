@@ -25,16 +25,25 @@ produced by propellers alone.
 
 ## 4.2 Planform
 
-The planform is a blended-wing body whose sweep angle varies continuously along the
-span: approximately forty degrees at the nose, decreasing to approximately twenty
-degrees at the trailing outboard station. Chord and thickness vary with it, as one
-distribution rather than three independent ones, in the manner described in Section 2.3.
+The planform is a blended-wing body whose leading-edge sweep varies continuously along
+the span while the trailing edge is held at a constant angle. The sweep law is linear in
+span, running from 45° at the root towards 35° at the span station where leading and
+trailing edges would converge; the wing is cropped at 67 % of that station, so the sweep
+actually realised runs from **45° at the root to 38.3° at the tip**. The trailing edge is
+constant at **25°**. Thickness runs from 25 % of chord at the root to 12 % at the tip, and
+the chord from 0.970 m to 0.236 m — a taper ratio of 0.244. These are one distribution
+rather than four independent ones, in the manner described in Section 2.3.
 
-These values were chosen, not derived. They sit inside the band reported favourable in
-the transonic-transport literature from which the crescent-wing idea comes, and the
-present aircraft is subsonic, so that band does not transfer on its own authority. The
-choice is stated here as a design decision and is listed again in Section 8 among the
-limitations.
+The realised sweep variation is therefore modest — under seven degrees — and this should
+be stated plainly rather than dressed up. The crescent character of the planform comes
+from the curvature of the leading edge and from the divergence between leading and
+trailing edge angles, not from a large change in sweep across the span.
+
+These values were chosen, not derived. The 20°–40° band from which they started was
+reported favourable in the transonic-transport literature from which the crescent-wing
+idea comes, and the present aircraft is subsonic, so that band does not transfer on its
+own authority. The choice is stated here as a design decision and is listed again in
+Section 8 among the limitations.
 
 Sweep does two jobs in this aircraft, and the second is the reason it is not a free
 parameter. The first is the conventional one. The second is that the aircraft is
@@ -49,10 +58,11 @@ For a tailless aircraft this matters more than usual, because a tip stall on a s
 planform moves the centre of pressure forward and pitches the aircraft further into the
 stall, and there is no tail with which to argue.
 
-The reference geometry for the light design point is a root chord of 0.97 m, a tip
-chord of 0.238 m, a span of 3.45 m, a wing area of 1.98 m² and an aspect ratio of 6.0,
+The reference geometry for the light design point is a root chord of 0.970 m, a tip
+chord of 0.236 m, a span of 3.453 m, a wing area of 1.979 m² and an aspect ratio of 6.03,
 giving a wing loading of 25.3 kg m⁻² and a stall speed of 20.1 m s⁻¹ against a cruise
-speed of 30 m s⁻¹.
+speed of 30 m s⁻¹. These follow from the sweep and crop laws above rather than being
+specified independently; Figure 6 gives the distributions.
 
 *[Şekil 6: ok açısı ve kalınlık dağılımı. Bölüm 6.2'de bu sayılar tekrar verilecek —
 tekrar kasıtlı, bölüm bağımsız okunabilsin.]*
