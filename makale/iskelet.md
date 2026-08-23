@@ -1,5 +1,10 @@
 # Makale İskeleti — v1
 
+**Başlık (karar verildi):**
+> Eliminating the Cruise-Efficiency Penalty of Hybrid VTOL:
+> The meryemAircraft Tail-Sitting Blended-Wing-Body Configuration
+> with Propeller-Only Control
+
 **Dil:** İngilizce · **Durum:** yapı onayı bekliyor · **Kural:** makale ⊆ patent başvurusu
 
 **Merkez tez (N58):**
@@ -201,5 +206,9 @@ ve iki ölçekte sayıya döküldü.
 ## Karar bekleyen üç şey
 
 1. **Hedef mecra.** Yapıyı, uzunluğu ve biçimi belirler.
-2. **Başlık.** Mimariyi işaret etmeli, aracı değil.
+2. ~~**Başlık.**~~ **KAPANDI** — yukarıya yazıldı.
 3. **Yazar ve kurum satırı.** Bağımsız mucit olarak mı, bir bağlantı üzerinden mi.
+
+**Teşekkür bölümü kuralı (değişmez):** yapay zekâ araçlarından yararlanıldığı
+**genel bir ifadeyle** belirtilir. Marka, model, firma adı geçmez. Yazar satırında
+yapay zekâ yer almaz.
