@@ -75,6 +75,19 @@ yayımı ertelenebilir. **Bu durumda makale yayım planı da etkilenir.**
 | Japonya | 12 ay (şartlı) |
 | Çin | 6 ay (dar) |
 
+## PDF üretiminde yakalanan hatalar (kayıt)
+
+Bu hatalar **gözle bakılarak** bulundu; metin çıkarımı hiçbirini yakalamamıştı.
+Ders: PDF üretildikten sonra her sayfa görüntü olarak açılıp bakılmalıdır.
+
+| Hata | Sebep | Çözüm |
+|---|---|---|
+| Özette "Şekil 1" satırının altı boş | Şekil metin olarak anılmış, gömülmemiş | Şekil 1 özete gömüldü |
+| Resimlerde "Şekil N" iki kere | Başlık hem PNG'ye gömülü hem PDF'te | PNG'ler başlıksız yeniden üretildi |
+| Şekil 4'te **13 numarası görünmüyor** | matplotlib etiketleri eksen sınırlarını genişletmiyor → kırpılıyor | Etiket konumları görünmez nokta olarak autoscale'e dâhil edildi + etiket kanat dışına taşındı |
+| Resimler sayfada küçük | Çizim alanında geniş beyaz boşluk | PNG'ler otomatik kırpıldı |
+| "Şekillerdeki referans numaraları" başlığı tablosundan ayrı sayfada | Sayfa sonu denetimi yok | `page-break-after: avoid` |
+
 ## Yapılacaklar
 
 - [x] ~~Resimleri çizgi resim olarak üret~~

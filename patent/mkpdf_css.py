@@ -4,7 +4,10 @@ body { font-family: 'DejaVu Serif','Times New Roman',serif; font-size: 11.5pt;
        line-height: 1.75; color: #000; margin:0; }
 h1 { font-size: 13pt; text-align:center; margin: 0 0 14mm 0; letter-spacing:.4px; }
 h2 { font-size: 11.5pt; margin: 9mm 0 3mm 0; text-transform: uppercase; letter-spacing:.6px; }
-h3 { font-size: 11.5pt; margin: 6mm 0 2mm 0; font-style: italic; font-weight: normal; }
+h3 { font-size: 11.5pt; margin: 6mm 0 2mm 0; font-style: italic; font-weight: normal;
+     page-break-after: avoid; break-after: avoid; }
+h2 { page-break-after: avoid; break-after: avoid; }
+table { page-break-inside: avoid; break-inside: avoid; }
 p  { margin: 0 0 2.6mm 0; text-align: justify; }
 .pn { display:inline-block; width:16mm; color:#000; }
 .f  { font-family:'DejaVu Sans Mono',monospace; font-size:10.5pt; text-align:center;
@@ -19,6 +22,7 @@ li.sub { margin-bottom: 2mm; text-align: justify; }
 .center { text-align:center; }
 .fig { page-break-after: always; text-align:center; }
 .fig:last-child { page-break-after: auto; }
-.fig img { max-width: 165mm; max-height: 225mm; }
+.fig .holder { height: 222mm; display:flex; align-items:center; justify-content:center; }
+.fig img { max-width: 172mm; max-height: 218mm; }
 .fig .cap { font-size: 12pt; font-weight:bold; text-align:left; margin-bottom:6mm; }
 """
