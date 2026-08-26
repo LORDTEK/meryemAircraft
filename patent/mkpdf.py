@@ -51,15 +51,7 @@ ist="".join(f"<li>{E(t)}</li>" for t in ISTEM)
 ISTEM_HTML=page(f"<h1>İSTEMLER</h1><ol class='claims'>{ist}</ol>","İstemler")
 
 # ---------- OZET ----------
-OZ=("Buluş, gövdesi (1) kanat-gövde biçiminde olan, boyuna ekseni dikey konumda yere oturan bir "
-"insansız hava aracı ile ilgilidir. Aracın tüm itki gücü, gövdenin (1) burun ucundaki tek bir "
-"koaksiyel karşıt dönüşlü pervane çifti (2) tarafından üretilir; bu çift dikey uçuşta ve seyirde "
-"gövdeye göre aynı yönelimde çalışır ve itki organı açıklığa dağıtılmamıştır. Kanat uçlarındaki "
-"iskeletlerin (3) uçlarına yerleştirilen dört koaksiyel çift (4) yalnızca yönelim momenti üretir. "
-"Gövdenin (1) alt yüzeyinde, arkaya ve dışa açılı uzanan, açık ve kapalı iki konumu bulunan bir "
-"yuvarlanma şeridi (5) yer alır; şeridin iç kısmı burun pervanesinin izi (13) içinde kaldığından "
-"hava hızı sıfır iken de moment üretir, dış kısmı ise izin dışında kalarak seyirde çalışır. Böylece "
-"araç, hareketli kumanda yüzeyi taşımaksızın her uçuş rejiminde yuvarlanma kumandası elde eder.")
+OZ=('Buluş, dikey kalkış ve iniş yapabilen, seyir uçuşunu kanat üzerinde gerçekleştiren insansız hava araçları ile ilgilidir. Koaksiyel karşıt dönüşlü pervane çiftleriyle donatılmış, kuyruğa oturan hava araçlarında itki vektörleri gövde eksenine paralel olduğundan yuvarlanma momenti üretilemez; tepki torku da koaksiyel düzenleme nedeniyle ortadan kalktığından, bilinen diferansiyel tork çözümü de uygulanamaz. Buluşta, gövdenin (1) alt yüzeyinde arkaya ve dışa açılı uzanan, açık ve kapalı olmak üzere iki konumu bulunan bir yuvarlanma şeridi (5) yer alır. Şeridin iç kısmı, aracın tüm itkisini üreten burun koaksiyel pervane çiftinin (2) izi (13) içinde kaldığından hava hızı sıfır iken de moment üretir; dış kısmı ise izin dışında kalarak seyir uçuşunda çalışır. Böylece araç, hareketli kumanda yüzeyi taşımaksızın her uçuş rejiminde yuvarlanma kumandası elde eder. Buluş, pist gerektirmeyen gözetleme, kargo taşıma ve arama-kurtarma görevlerinde kullanılır.')
 _b1=base64.b64encode(open(f"{RES}/sekil-1.png","rb").read()).decode()
 OZET_HTML=page(f"<h1>ÖZET</h1><p>{E(OZ)}</p>"
   f"<p class='center' style='margin-top:9mm;margin-bottom:3mm'><b>Yayımlanacak şekil: Şekil 1</b></p>"
