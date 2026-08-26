@@ -18,19 +18,34 @@ makale, Avrupa patent hakkını tümüyle yok eder.
 
 | Belge | Dosya | Durum |
 |---|---|---|
-| Tarifname | `01-tarifname.md` | taslak |
-| İstemler | `02-istemler.md` | taslak |
-| Özet | `03-ozet.md` | taslak |
-| Resimler | `gorsel/cikti/` → **yeniden çizilecek** | ⏳ |
+| Tarifname | `pdf/01-tarifname.pdf` — 8 sayfa | ✅ hazır |
+| İstemler | `pdf/02-istemler.pdf` — 3 sayfa, 17 istem | ✅ hazır |
+| Özet | `pdf/03-ozet.pdf` — 1 sayfa, 127 kelime | ✅ hazır |
+| Resimler | `pdf/04-resimler.pdf` — 5 sayfa | ✅ hazır |
 | Başvuru formu | EPATS üzerinden çevrimiçi | — |
 
-## ⚠️ Resimler yeniden çizilmeli
+**Kaynak metinler:** `01-tarifname.md`, `02-istemler.md`, `03-ozet.md`
+(çalışma notlarıyla birlikte). PDF'ler bu notlardan **arındırılmış** temiz
+sürümlerdir; içerik `tarifname_icerik.py` içinde tutulur, `mkpdf.py` ile
+üretilir.
 
-TÜRKPATENT teknik resim ister: **siyah-beyaz çizgi resim**, gölgesiz, taramasız,
-renksiz; her unsur **referans numarasıyla** işaretli. Makale için ürettiğimiz
-gölgeli renderlar **kabul edilmez.**
+## Başvuru türü
 
-Gerekli resimler:
+**Patent Başvurusu** seçilecek — faydalı model değil. Gerekçe: istem 17 bir
+**yöntem istemidir** ve faydalı modelde korunmaz; ayrıca 20 yıl / 10 yıl farkı
+ve yurt dışı başvuruları için daha sağlam temel. İşlemler sırasında faydalı
+modele dönüşüm mümkündür — araştırma raporu olumsuz gelirse rota değiştirilebilir.
+
+## ⚠️ 12 aylık araştırma süresi
+
+**Araştırma talebi ve ücreti başvuru tarihinden itibaren 12 ay içinde**
+yapılmalıdır. Yapılmazsa başvuru **geri çekilmiş sayılır.** Kaçırılması en kolay
+ve en pahalı süre budur.
+
+## Resimler — üretildi
+
+Beşi de **siyah-beyaz çizgi resim** olarak sıfırdan çizildi (makale renderları
+dönüştürülmedi). Üretici betik: `gorsel/uretim/patent-resimleri.py`
 
 | Şekil | İçerik |
 |---|---|
@@ -40,15 +55,15 @@ Gerekli resimler:
 | Şekil 4 | **Alttan görünüş** — yuvarlanma şeridi (5) ve pervane izi (13) |
 | Şekil 5 | Güç akış şeması — seri hibrit |
 
-## Millî güvenlik uyarısı
+## Millî güvenlik — bilgi notu (düzeltildi)
 
-SMK gereği, millî güvenlik bakımından önem taşıyan buluşlarda TÜRKPATENT
-başvuruyu **Millî Savunma Bakanlığı'na** yönlendirebilir; bu durumda başvuru
-gizli tutulabilir ve yayımı ertelenebilir. İnsansız hava aracı konusu bu
-kapsama girebilir. **Makale yayım planı buna bağlıdır** — başvuru gizlilik
-kararı alırsa makale yayımı da engellenebilir.
+⚠️ **Bu sorulacak bir şey değildir.** Daha önce "başvuru öncesi sorulacak ilk
+soru" diye yazmıştım; yanlıştı. Kurum, başvuruları millî güvenlik yönünden
+**kendisi değerlendirir** ve gerekirse Millî Savunma Bakanlığı'na yönlendirir.
+Başvuru sahibi olarak yapılacak bir işlem yoktur.
 
-Bu, başvuru öncesi TÜRKPATENT'e sorulması gereken **ilk** sorudur.
+Bilinmesi gereken tek şey: böyle bir karar çıkarsa başvuru gizli tutulabilir ve
+yayımı ertelenebilir. **Bu durumda makale yayım planı da etkilenir.**
 
 ## Ödemesiz süre haritası — hatırlatma
 
@@ -62,7 +77,7 @@ Bu, başvuru öncesi TÜRKPATENT'e sorulması gereken **ilk** sorudur.
 
 ## Yapılacaklar
 
-- [ ] TÜRKPATENT'e millî güvenlik yönlendirmesi sorusu
-- [ ] Resimleri çizgi resim olarak yeniden üret
+- [x] ~~Resimleri çizgi resim olarak üret~~
+- [x] ~~PDF'leri hazırla~~
 - [ ] IEEE 2016 (Xu grubunun eski çalışması) okunmalı — istem daraltması gerekebilir
 - [ ] Ücret tarifesi kontrol (araştırma talebi dâhil)
