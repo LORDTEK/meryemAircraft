@@ -110,6 +110,15 @@ def ref(ax,txt,xy,xytext):
                 arrowprops=dict(arrowstyle="-",color=K,lw=0.9,shrinkA=2,shrinkB=2))
 
 
+from PIL import Image as _I, ImageChops as _IC
+def _trim(p,pad=26):
+    im=_I.open(p).convert("RGB"); bg=im.getpixel((1,1))
+    d=_IC.difference(im,_I.new("RGB",im.size,bg)).convert("L")
+    bb=d.point(lambda x:255 if x>8 else 0).getbbox()
+    if not bb: return
+    l,t2,r,b=bb
+    im.crop((max(0,l-pad),max(0,t2-pad),min(im.width,r+pad),min(im.height,b+pad))).save(p)
+
 AZ,EL=-0.62,1.00
 def PP(az,el):
     return lambda p: proj([p],az,el)[0]
@@ -119,12 +128,16 @@ def sekil(no,az,el,show,refs,figsize=(9.2,7.4),extra=None):
     draw(ax,az,el,show=show)
     P=PP(az,el)
     if extra: extra(ax,P)
+    lab=[]
     for txt,tgt,off in refs:
-        p=P(tgt); ref(ax,txt,p,(p[0]+off[0],p[1]+off[1]))
-    ax.set_title(f"Şekil {no}",loc="left",fontsize=15,fontweight="bold",pad=8)
+        p=P(tgt); q=(p[0]+off[0],p[1]+off[1]); ref(ax,txt,p,q); lab.append(q)
+    if lab:   # etiketleri autoscale'e dahil et
+        ax.plot([a for a,_ in lab],[b for _,b in lab],linestyle="none",marker="o",
+                markersize=0.1,alpha=0.0)
     ax.margins(0.16)
     fig.savefig(f"{OUT}/sekil-{no}.png",dpi=300,bbox_inches="tight")
     fig.savefig(f"{OUT}/sekil-{no}.svg",bbox_inches="tight"); plt.close(fig)
+    _trim(f"{OUT}/sekil-{no}.png")
     print("  Sekil",no)
 
 FULL=("body","mainprop","frames","tipprops","strip")
@@ -172,7 +185,7 @@ sekil(4,0.0,-(math.pi/2-1e-4),FULL,[
  ("1",(1.05,0,-1.05),(0.50,0.26)),
  ("2",(0.42,0,0.0),(0.34,-0.40)),
  ("5",(0.75,-0.02,-(rc*0.15+0.75)),(0.40,0.26)),
- ("13",(-0.575,0,-1.05),(-0.72,-0.16)),
+ ("13",(-0.526,0,-0.70),(-1.62,0.46)),
  ("6",(0,yKeel,(zKeelS+zGround)/2),(0.44,0.12)),
 ],extra=izler)
 print("Sekil 1-4 tamam")
@@ -209,7 +222,10 @@ for yy in (1.52,-0.72):
                 arrowprops=dict(arrowstyle="-|>",color=K,lw=LW,mutation_scale=17))
 ax.text(6.95,-2.68,"(askı tepesi)",ha="center",fontsize=10,style="italic")
 ax.set_xlim(-0.6,15.1); ax.set_ylim(-3.2,2.4); ax.set_aspect("equal"); ax.axis("off")
-ax.set_title("Şekil 5",loc="left",fontsize=15,fontweight="bold",pad=8)
 fig.savefig(OUT+"/sekil-5.png",dpi=300,bbox_inches="tight")
+_trimlater=True
 fig.savefig(OUT+"/sekil-5.svg",bbox_inches="tight"); plt.close(fig)
 print("  Sekil 5")
+
+_trim(OUT+"/sekil-5.png")
+print("kirpma tamam")

@@ -60,14 +60,17 @@ OZ=("Buluş, gövdesi (1) kanat-gövde biçiminde olan, boyuna ekseni dikey konu
 "yuvarlanma şeridi (5) yer alır; şeridin iç kısmı burun pervanesinin izi (13) içinde kaldığından "
 "hava hızı sıfır iken de moment üretir, dış kısmı ise izin dışında kalarak seyirde çalışır. Böylece "
 "araç, hareketli kumanda yüzeyi taşımaksızın her uçuş rejiminde yuvarlanma kumandası elde eder.")
-OZET_HTML=page(f"<h1>ÖZET</h1><p>{E(OZ)}</p><p class='center' style='margin-top:8mm'><b>Şekil 1</b></p>","Özet")
+_b1=base64.b64encode(open(f"{RES}/sekil-1.png","rb").read()).decode()
+OZET_HTML=page(f"<h1>ÖZET</h1><p>{E(OZ)}</p>"
+  f"<p class='center' style='margin-top:9mm;margin-bottom:3mm'><b>Yayımlanacak şekil: Şekil 1</b></p>"
+  f"<div class='center'><img src='data:image/png;base64,{_b1}' style='max-width:132mm'></div>","Özet")
 
 # ---------- RESIMLER ----------
 figs=[]
 for i in range(1,6):
     b=base64.b64encode(open(f"{RES}/sekil-{i}.png","rb").read()).decode()
     figs.append(f"<div class='fig'><div class='cap'>Şekil {i}</div>"
-                f"<img src='data:image/png;base64,{b}'></div>")
+                f"<div class='holder'><img src='data:image/png;base64,{b}'></div></div>")
 RES_HTML=page("".join(figs),"Resimler")
 
 async def main():
