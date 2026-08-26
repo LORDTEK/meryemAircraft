@@ -4,7 +4,33 @@
 > kayıtlarından türetilmiş **taslaklardır.**
 > Hukuki geçerlilik denetimi yapılmamıştır.
 
-## Sıra (N57) — değişmez
+## ✅ DURUM: BAŞVURU YAPILDI
+
+**Tarih:** 2026-08-26 (tasarımcı beyanı)
+
+Bu, projede bir eşiktir. Sonuçları:
+
+- **Makale artık yayımlanabilir.** N57'nin sırası tamamlandı. Başvuru tarihi
+  sabitlendiği için, bundan sonraki kendi yayımımız kendi başvurumuzun
+  yeniliğini bozmaz.
+- **Yurt dışı için 12 aylık rüçhan süresi başladı.** Bu süre içinde yapılacak
+  başvurular Türkiye başvuru tarihinden yararlanır — Avrupa dâhil.
+- **Araştırma talebi süresi işliyor** (başvuruyla birlikte talep edilmediyse
+  12 ay). Kaçırılırsa başvuru geri çekilmiş sayılır.
+
+### Sıradaki iş (dinlenildikten sonra)
+
+Makalenin nereye konacağı konuşulacak: arXiv, Zenodo, SSRN ya da doğrudan
+dergi. Karar verilmedi, acele yok.
+
+⚠️ Makale yayımlanmadan önce yapılacak son kontroller:
+- Teşekkür bölümü (genel ifade, marka/model adı yok)
+- Conflicts of Interest: **bekleyen patent başvurusu beyan edilecek**
+- Kaynak defterindeki `C` seviyesindeki kayıtlar (IEEE 2016, VFS 2025)
+
+---
+
+## Sıra (N57) — tamamlandı
 
 ```
 prior-art taraması → başvuru ve makale birlikte yazılır → BAŞVURU → yayım
