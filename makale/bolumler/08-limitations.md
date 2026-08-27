@@ -107,7 +107,11 @@ the actuator response needed to achieve it have not been analysed.
 
 ## 8.9 Ground handling and crosswind
 
-No claim is made that the aircraft resists tipping in arbitrary ground wind. The stance
+No claim is made that the aircraft resists tipping in arbitrary ground wind, and the
+historical record gives a specific reason not to make one: the contemporary assessment of
+the XFY-1 quoted in Section 2.2 records "tip-over tendencies noted when on ground in
+gusty air" [1]. This is a property of standing an aircraft on its tail and it is
+inherited here. The stance
 base is a design parameter that can be widened without altering the configuration, and
 the reference geometry represents one point on that trade rather than a limit. Operating
 limits in ground wind are an operational matter, and published data for this class shows
