@@ -16,21 +16,21 @@ The idea that a transport aircraft should carry its payload inside a lifting sur
 rather than inside a cylinder is as old as the transport aircraft itself. Burnelli's
 lifting-fuselage designs, flown in a succession of prototypes from the 1920s to the
 1940s, placed cabin and cargo inside a thick aerofoil-shaped centre body that
-contributed lift instead of only drag. The aircraft flew, and flight testing did not
-report an aerodynamic deficiency that would have disqualified the layout. They never
-entered series production, and the reasons usually offered are procurement and
-commercial, not aerodynamic.
+contributed lift instead of only drag. The aircraft flew, repeatedly and over two
+decades. They never entered series production. The reasons for that are outside the
+scope of this paper and are disputed; what matters here is only that the layout was
+flown rather than merely proposed, and was not abandoned at the drawing board.
 
 The Northrop XB-35 carried the same idea to its limit: a bomber with no fuselage and
 no tail at all. Its programme is often cited as evidence that the flying wing was
-premature. The record is more specific than that. The XB-35's persistent failures were
-in its power transmission — the contra-rotating propeller gearboxes, drive shafts and
-governors — and the aircraft was eventually flown with single-rotation propellers at a
-measurable performance cost. The wing was not the part that failed. This distinction
-is directly relevant to the present work, and Section 4.3 returns to it: the
-configuration proposed here uses counter-rotating propellers but never builds a
-contra-rotating gearbox, because each rotor of a pair is driven by its own electric
-machine.
+premature. Whatever weight that reading deserves, the aircraft's best-documented
+difficulties lay in its power transmission rather than in its aerodynamics: the
+contra-rotating propellers were driven through remote gearboxes and long extension
+shafts, and were eventually changed to single-rotation units. The distinction between an
+airframe and the machinery installed in it matters for the present work, and Section 4.3
+returns to it — the configuration proposed here uses counter-rotating propellers but
+never builds a contra-rotating gearbox, because each rotor of a pair is driven by its own
+electric machine on a common axis.
 
 Vought's V-173 and XF5U pursued the opposite extreme of the same intuition — a wing of
 very low aspect ratio with large propellers at the tips, intended to work against the
@@ -124,17 +124,18 @@ reasons and by a different argument, does the aircraft proposed here.*
 
 ## 2.3 Distributing sweep along the span
 
-The proposed planform varies its sweep angle continuously from root to tip. The
-principle is not new. The crescent wing of the Handley Page Victor distributed sweep,
-chord and thickness together across the span, in panels of decreasing sweep outboard,
-so that the critical Mach number stayed approximately constant along the wing instead
-of being set by its most vulnerable station.
+The proposed planform varies its leading-edge sweep continuously from root to tip while
+holding the trailing edge at a constant angle. The principle of treating sweep, chord and
+thickness as one coupled distribution rather than three independent choices is not new;
+the crescent wing of the Handley Page Victor is its best-known expression, its sweep
+decreasing outboard so that the wing was not governed by its most vulnerable station.
 
-The present aircraft is subsonic by design and does not inherit the Victor's transonic
-motivation. What it inherits is the structural idea: sweep, chord and thickness are one
-distribution, not three independent choices. Section 4.2 states the sweep values used
-here, and Section 8 states plainly that they were chosen rather than derived.
-
+The present aircraft is subsonic and does not inherit the transonic motivation that
+produced that planform. What it takes is the structural idea alone, and it takes it in a
+much reduced form: as Section 4.2 records, the sweep variation actually realised here is
+under seven degrees. No claim of descent from the crescent wing is made, and none is
+needed. Section 4.2 states the values used, and Section 8 states plainly that they were
+chosen rather than derived.
 ## 2.4 The contemporary hybrids
 
 The problem did not go away when the prototypes did. Since roughly 2010 a large family
