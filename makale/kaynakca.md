@@ -8,34 +8,51 @@ gerekirse yazar-yıl biçimine çevrilir.
 
 ---
 
-## Birinci elden okunanlar — sayısal iddiaların dayanağı
+## Birinci elden okunanlar — sayısal ve tarihsel iddiaların dayanağı
 
-**[1]** Bacchini, A. *Electric VTOL preliminary design and wind tunnel tests.*
+**[1]** Anderson, S. B. *Historical Overview of V/STOL Aircraft Technology.*
+NASA TM-81280, NASA Ames Research Center, Mart 1981.
+→ *Bölüm 2.2 (XFY-1 ve Ryan X-13 birinci elden değerlendirmeleri; "testing curtailed
+because of engine and gearbox reliability problems"), Bölüm 2.5, Bölüm 8.9
+(devrilme eğilimi).*
+⭐ Belgenin kendi ifadesi: *"Most of the information presented herein was obtained from
+first-hand flight-test experience by the author."*
+
+**[2]** Nelms, W. P.; Anderson, S. B. *V/STOL Concepts in the United States — Past,
+Present, and Future.* NASA TM-85938, NASA Ames Research Center, Nisan 1984.
+Rapor no. A-9695.
+→ *Bölüm 2.2 (XFV-1 yalnızca irtifada geçiş yaptı; XFY-1'in altı geçişi ve iptal
+gerekçesi; pilotun omzunun üstünden bakması; STOL yokluğunun başlıca eksiklik
+sayılması; iniş takımından kurtulmanın boş ağırlık oranını iyileştirmesi;
+XFY-1'in geçişe tırmanarak girmesi), Bölüm 3.2 (X-19A: gücü planform uçlarına
+taşımanın yapısal ağırlık bedeli), Bölüm 4.5.*
+
+**[3]** Bacchini, A. *Electric VTOL preliminary design and wind tunnel tests.*
 Doktora tezi, Politecnico di Torino, Aerospace Engineering, 32. devre, Mart 2020.
 Danışmanlar: G. Romeo, E. Cestino. CC BY-NC-ND 4.0.
-→ *Bölüm 3.3 (L/D merdiveni 17/13/9; %34 ve %30 sürükleme azalması; motor
-kaynaklı sürüklemenin baskınlığı), Bölüm 3.5 (119→121 km devir örneği),
-Bölüm 3.7 (üç aile), Şekil 12 (pil hattı parametreleri).*
+→ *Bölüm 3.3 (L/D merdiveni 17/13/9; %34 ve %30 sürükleme azalması; motor kaynaklı
+sürüklemenin baskınlığı), Bölüm 3.5 (119→121 km devir örneği), Bölüm 3.7,
+Şekil 12.*
 
-**[2]** Mathur, A.; Atkins, E. *Wind Tunnel Testing and Aerodynamic
+**[4]** Mathur, A.; Atkins, E. *Wind Tunnel Testing and Aerodynamic
 Characterization of a QuadPlane Uncrewed Aircraft System.* arXiv:2301.12316, 2023.
 → *Bölüm 3.3 (düz uçuş kipinde en yüksek taşıma ve en düşük sürükleme; ideal
 modellerin girişimi hafife alması).*
 
-**[3]** Sahwee, Z.; Mohd Kamal, N. L.; Abdul Hamid, S.; Norhashim, N.; Lotta, N.;
+**[5]** Sahwee, Z.; Mohd Kamal, N. L.; Abdul Hamid, S.; Norhashim, N.; Lotta, N.;
 Mohd Asri, M. H. *Drag Assessment of Vertical Lift Propeller in Forward Flight for
 Electric Fixed-Wing VTOL Unmanned Aerial Vehicle.* IOP Conf. Ser.: Mater. Sci. Eng.
 **705**, 012007, 2019. doi:10.1088/1757-899X/705/1/012007
 → *Bölüm 3.3 (duran pervane sürüklemesi ön alan ve V² ile; en küçük çap + en
 düşük hatve en az sürükleme), Bölüm 4.4 (uç pervanelerini küçük tutma gerekçesi).*
 
-**[4]** Silva, C.; Johnson, W.; Antcliff, K. R.; Patterson, M. D. *VTOL Urban Air
+**[6]** Silva, C.; Johnson, W.; Antcliff, K. R.; Patterson, M. D. *VTOL Urban Air
 Mobility Concept Vehicles for Technology Development.* AIAA 2018-3847, 2018.
 doi:10.2514/6.2018-3847
 → *Bölüm 3.2 (lift+cruise en ağır olan; sebebi seyir gücü değil hover için
 taşınan boş ağırlık), Bölüm 6.4 (disk alanını rotor sayısıyla büyütme).*
 
-**[5]** Xu, W.; Gu, H.; Qing, Y.; Lin, J.; Zhang, F. *Full Attitude Control of an
+**[7]** Xu, W.; Gu, H.; Qing, Y.; Lin, J.; Zhang, F. *Full Attitude Control of an
 Efficient Quadrotor Tail-sitter VTOL UAV with Flexible Modes.* arXiv:1903.06393, 2019.
 → *Bölüm 2.4 ve 4.4 (kumanda yüzeysiz kuyruğa oturan; yuvarlanmanın diferansiyel
 tepki torkundan alınması), Bölüm 3.4 (seyir gücünün askı gücünün beşte biri
@@ -45,7 +62,7 @@ olduğunun uçuş testiyle ölçümü).*
 
 ## Üretici verisi — Bölüm 6.5 tablosu ve Bölüm 8.9
 
-**[6]** HAVELSAN. *BAHA — Sub-Cloud Autonomous UAV.* Üretici ürün föyü.
+**[8]** HAVELSAN. *BAHA — Sub-Cloud Autonomous UAV.* Üretici ürün föyü.
 → *Bölüm 6.5 (28 kg / 2 kg), Bölüm 8.9 (rüzgâr sınırı: kalkış-iniş 15 kts,
 seyir 25 kts).*
 
@@ -58,40 +75,31 @@ kaynakları için bunu ister.
 
 ---
 
-## ⚠️ KARAR BEKLİYOR — Bölüm 2'nin tarihsel atıfları
+## ✅ Bölüm 2'nin tarihsel atıfları — ÇÖZÜLDÜ
 
-Bölüm 2 belirli tarihsel iddialar içeriyor ve bunların **hiçbiri birinci elden
-kaynağa dayanmıyor.** En ağır basanlar:
+Karar (c) uygulandı: birincil kaynaklar arandı ve **bulundu.**
 
-| İddia | Nerede | Durum |
-|---|---|---|
-| XFY-1 tam çevrimi tamamladı; programı bitiren şey **pilot yüküydü** | 2.2 | Bu, bölümün **bel kemiği**. İkincil kaynaklarda tutarlı biçimde geçiyor ama birincil rapor okunmadı |
-| XB-35'in arızaları **güç aktarma organlarındaydı**, kanatta değil | 2.1 | İkincil kaynak |
-| XFV-1'in motoru teslim edilmedi; tam dikey kalkış hiç yapılmadı | 2.2 | İkincil kaynak |
-| Burnelli uçakları uçtu, aerodinamik kusur bildirilmedi | 2.1 | İkincil kaynak |
-| Victor'un hilal kanadı kritik Mach'ı açıklık boyunca sabit tutmak için | 2.3 | İkincil kaynak |
+| İddia | Durum |
+|---|---|
+| XFY-1 altı geçiş tamamladı | ✅ [1], [2] — **iki bağımsız NASA belgesi** |
+| Programı bitiren şey **motor ve dişli kutusu güvenilirliği** | ✅ [1], [2] — ikisi de aynı ifadeyle. **Önceki taslağımız yanlıştı, düzeltildi** |
+| Pilot omzunun üstünden ve aşağı bakıyordu | ✅ [2] birebir |
+| Yerde yan rüzgârda devrilme eğilimi | ✅ [1], [2] |
+| XFV-1 yalnızca irtifada geçiş yaptı, dikey kalkış yapmadı | ✅ [2] birebir |
+| Konfigürasyonun kendisi olumlu değerlendirildi | ✅ [1] |
+| İniş takımından kurtulmak boş ağırlık oranını iyileştirdi | ✅ [2] |
+| Gücü planform uçlarına taşımanın yapısal bedeli | ✅ [2] (X-19A) |
 
-**Erişilebilir ikincil kaynak örneği:** *Historic Aircraft — The Tail-sitters,
-Part II: Convair*, Naval History Magazine (U.S. Naval Institute), Cilt 27, Sayı 4,
-Ağustos 2013.
+**Kalan ikincil iddialar** — Bölüm 2.1 ve 2.3, düşük yük taşıyorlar:
 
-### Üç seçenek
+| İddia | Durum |
+|---|---|
+| XB-35'in arızaları aktarma organlarındaydı | İkincil. Birincil teknik rapor bulunamadı |
+| Burnelli uçakları uçtu, aerodinamik kusur bildirilmedi | İkincil |
+| Victor'un hilal kanadı kritik Mach'ı sabit tutmak için | İkincil |
 
-**(a) İkincil kaynakları atıfla ver** ve Bölüm 2'nin başına bir cümle koy:
-*"Bu bölümdeki tarihsel anlatım ikincil literatüre dayanmaktadır."* — Dürüst,
-hızlı, bir konfigürasyon makalesinin arka plan bölümü için genellikle yeterli.
-
-**(b) İddiaları yumuşat** — "program pilot yükü nedeniyle iptal edildi" yerine
-"pilot yükü iptal gerekçeleri arasında sayılmıştır". Zayıflar ama atıf gerektirmez.
-
-**(c) Birincil kaynakları bul** — NASA/NACA teknik raporları, donanma programı
-belgeleri. En sağlamı, en yavaşı.
-
-**Önerim: (a).** Bölüm 2 makalenin kanıt yükünü taşımıyor; asıl argüman Bölüm
-3'te ve o tamamen birinci elden kaynaklara dayanıyor. Arka planı dürüstçe
-etiketlemek yeterli.
-
----
+Bunlar için (b) uygulanacak: iddialar, atıf gerektirmeyecek biçimde yumuşatılacak.
+Üçü de argümanın yükünü taşımıyor — bel kemiği artık [1] ve [2]'ye oturuyor.
 
 ## Okunmadığı için listede olmayanlar
 
