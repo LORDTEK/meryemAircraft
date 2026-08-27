@@ -49,53 +49,78 @@ thrust line at the ground, it needs no separate lift system, no tilting mechanis
 no second propulsion group — the same propeller that cruises also hovers. Two American
 prototypes flew this idea in 1954.
 
-The Lockheed XFV-1 never completed the cycle it was built for. Its intended engine was
-not delivered, and the aircraft flew with a lower-powered substitute and a temporary
-conventional undercarriage; it made transitions in flight but never a full vertical
-take-off. It was cancelled with the question it was built to answer still unanswered.
+The Lockheed XFV-1 never completed the cycle it was built for. Two contemporary NASA
+reviews of United States V/STOL development record what it did instead: its "highly
+tapered, straight-wing design made the transition to vertical flight only at altitude,
+using a jury-rigged, landing-gear cradle for conventional takeoff and landings" [1,2].
+It was cancelled with the question it was built to answer still unanswered.
 
-The Convair XFY-1 did answer it. It first flew vertically in August 1954 and made six
-transitions to conventional flight from November of that year. The concept was
-demonstrated.
+The Convair XFY-1 did answer it. It flew vertically in August 1954, and "six transitions
+to conventional flight were successfully completed" [2]. The concept was demonstrated.
 
-What the aircraft was actually like to fly is recorded in a NASA review of V/STOL
-technology whose author states that most of its content came from first-hand flight-test
-experience [1]. Its assessment of the XFY-1 is worth reading in full, because it is more
-interesting than the summary usually given. The configuration itself is judged
-favourably — "good configuration arrangement for low- and high-speed compatibility",
-with a high-speed potential of about 500 mph. What is judged poorly is everything
-surrounding it: "poor mechanical control system features including low actuator response
-rate"; "difficult to hover precisely over a spot"; "tip-over tendencies noted when on
-ground in gusty air"; "gust sensitivity bothersome to pilot during takeoff and landing
-phases"; and, on the manoeuvre this paper cares about most, "precision of flightpath
-control in landing approach poor because of unusual spatial orientation situation".
+What the aircraft was like to fly, and why the programme stopped, are recorded in the
+same two reviews — one of which states that most of its content came from the author's
+first-hand flight-test experience [1]. Their assessment is more interesting than the
+account usually given.
 
-The same entry records "very high pilot workload during low-speed operation", and then
-states the reason the programme stopped: **"testing curtailed because of engine and
-gearbox reliability problems."**
+The configuration itself is judged favourably: "good configuration arrangement for low-
+and high-speed compatibility", with a high-speed potential of about 500 mph [1]. What is
+judged poorly is the machinery and the cockpit around it — "poor mechanical control
+system features including low actuator response rate"; "difficult to hover precisely over
+a spot"; "tip-over tendencies noted when on ground in gusty air"; "gust sensitivity
+bothersome to pilot during takeoff and landing phases" [1]. Of the landing itself, the
+second review is explicit about the cause: the pilot skill required was driven by "the
+unusual spatial orientation where the pilot looked over his shoulder and down", by "the
+sensitivity to atmospheric turbulence", and by "reduced control power near touchdown"
+[2]. The precision of flightpath control these concepts offered "was, needless to say,
+less than desired" [2].
 
-That last sentence deserves emphasis, because it corrects the account usually given —
-including an earlier draft of this paper. The XFY-1 was not stopped by the pilot
-workload. The workload was real, separately documented, and severe; but what curtailed
-the testing was mechanical reliability in the engine and the gearbox. The tail-sitter of
-1954 shares its cause of death with the XB-35 and the XFV-1: **the powerplant and its
-transmission, not the configuration.**
+And then the reason the programme ended, stated the same way in both documents:
 
-The pilot workload matters for a different reason. It is the one item on that list that
-an uncrewed aircraft removes outright. "Unusual spatial orientation" is a statement
-about a human being in a cockpit; a vehicle whose attitude reference is an inertial
-measurement unit and whose height above ground is a sensor reading does not have an
-unusual spatial orientation, because it has no orientation to be disoriented in. Of the
-difficulties the XFY-1 recorded, that one simply does not transfer.
+> "Six transitions to conventional flight were successfully completed **before testing
+> was curtailed because of engine and gear-box reliability problems**." [2]
 
-The others do transfer, and this paper does not pretend otherwise. Tip-over tendencies
-in gusty ground wind, difficulty in holding a precise hover, and gust sensitivity during
-take-off and landing are properties of standing an aircraft on its tail, not properties
-of having a pilot. Section 8 treats them as inherited rather than solved.
+That sentence corrects the account usually given — including an earlier draft of this
+paper. The XFY-1 was not stopped by the pilot workload. The workload was real,
+separately documented and severe, but what curtailed the testing was mechanical
+reliability in the engine and the gearbox. The tail-sitter of 1954 therefore shares its
+cause of death with the XB-35 and with the XFV-1's undelivered engine: **the powerplant
+and its transmission, not the configuration.**
 
-*A similar assessment of another tail-sitter in the same review — the Ryan X-13 — reaches
-the same place from a different direction: "precision of flight-path control poor due in
-part to pilot visibility limitations in vertical hover mode."*
+Two further findings from these reviews bear directly on the present work, and both cut
+against the usual summary.
+
+The first is what NASA identifies as the *foremost* deficiency of the tail-sitter
+concept — not the landing, but the absence of a short take-off option: "foremost among
+the deficiencies was the lack of STOL operational capability which could improve the
+poor payload and range capabilities of these aircraft" [2]. That criticism is aimed at
+an aircraft whose payload and range were poor for other reasons, and it does not
+transfer automatically to a configuration designed for cruise efficiency; but it is the
+judgement of the reviewers and it is recorded here rather than omitted.
+
+The second is a positive finding that is rarely quoted: "dispensing with a conventional
+landing gear improved the empty weight fraction for these VATOL aircraft" [2]. Standing
+on the tail removed a mass item rather than adding one. Section 4.5 returns to this,
+because the present configuration takes the same benefit further — its landing structure
+is also its control moment arm.
+
+Finally, the pilot workload matters for a reason that has nothing to do with blame. It
+is the one item on the list that an uncrewed aircraft removes outright. "Unusual spatial
+orientation where the pilot looked over his shoulder and down" is a statement about a
+human being in a cockpit. A vehicle whose attitude comes from an inertial measurement
+unit and whose height above ground is a sensor reading has no unusual spatial
+orientation, because it has no orientation to be disoriented in.
+
+The rest of the list does transfer, and this paper does not pretend otherwise. Tip-over
+tendencies in gusty ground wind, difficulty holding a precise hover, sensitivity to
+turbulence and reduced control power near touchdown are properties of standing an
+aircraft on its tail, not of having a pilot. Section 8 treats them as inherited.
+
+*One further detail from the record is worth noting because Section 7 arrives at the
+same place from theory. The XFY-1's return transition was flown as "a zoom climb... to
+achieve a vertical attitude for the descent and to reduce airspeed (altitude gain of
+about 3,000 ft)" [2]. The 1954 aircraft climbed into its transition. So, for different
+reasons and by a different argument, does the aircraft proposed here.*
 
 ## 2.3 Distributing sweep along the span
 
@@ -139,11 +164,12 @@ predecessors, and which Section 4.4 addresses rather than avoids.
 
 What the history does show is that the concept was never given a fair verdict under
 present-day conditions. The programmes of the 1950s were closed by engine deliveries, by
-jet-era procurement priorities, and — in the one case where a contemporary NASA
-assessment records the reason directly — by engine and gearbox reliability. Not one of
-them was closed because the configuration failed to fly. The human pilot, whose
-difficulties are the best-documented part of the record, is the one constraint that an
-uncrewed aircraft removes entirely. What is available now that was not available then —
+jet-era procurement priorities, and — in the case where two contemporary NASA reviews
+record the reason directly and identically — by engine and gearbox reliability [1,2]. Not
+one of them was closed because the configuration failed to fly; one of the reviews rates
+the configuration itself favourably while condemning the machinery around it [1]. The
+human pilot, whose difficulties are the best-documented part of the record, is the single
+constraint that an uncrewed aircraft removes entirely. What is available now that was not available then —
 electric drive on each rotor, sensor-based attitude reference, and enough onboard
 computation that stability need not come from the airframe alone — removes exactly the
 obstacles that stopped it.

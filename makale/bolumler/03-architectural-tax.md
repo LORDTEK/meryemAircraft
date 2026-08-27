@@ -59,6 +59,19 @@ authors are explicit about the cause:
 > targets for reducing vehicle weight are the extra empty weight items on board in hover
 > (wing and propeller)."*
 
+A second NASA review of United States V/STOL development states the structural half of
+the same bill as a general principle, drawn from the failure of a tilt-prop aircraft
+whose propeller separated in flight after a gearbox mounting fatigued: "this exemplified
+an inherent deficiency of this VTOL (lift) arrangement: **to safely transmit power to the
+extremities of the planform, very strong (and fatigue-resistant) structures must be
+incorporated with an obvious weight penalty**" [2].
+
+Distributing lift or thrust across the span is therefore not only a matter of carrying
+rotors and mounts. It obliges the structure that reaches them to be strong enough to
+transmit power to the planform extremities and fatigue-resistant enough to keep doing
+so. That obligation is charged to mass, and it is charged whether or not the distributed
+propulsors are running.
+
 The finding is worth reading carefully, because it separates the two things this paper
 is at pains to separate. The lift-plus-cruise vehicle is *aerodynamically better* than
 the alternatives it was compared against — its cruise efficiency is higher, and the

@@ -197,6 +197,13 @@ compromise its hover function; one device serves two regimes.
 
 The tip frames are not added for the propellers. They are the landing structure.
 
+This inverts a cost into a saving, and the inversion has precedent. Reviewing the
+tail-sitters of the 1950s, NASA noted that "dispensing with a conventional landing gear
+improved the empty weight fraction for these VATOL aircraft", while adding that some form
+of gear was still required on the tail surfaces [2]. The present configuration takes the
+same benefit and extends it: the structure that meets the ground is also the structure
+that carries the control propellers and sets their moment arm.
+
 The aircraft rests on five points: the four lower ends of the tip frames and a single
 keel that runs aft along the centreline from the nose propeller to the trailing edge.
 Because the aircraft stands on its tail, these five points are what it stands on, and
