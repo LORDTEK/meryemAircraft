@@ -30,8 +30,6 @@ lower-surface strip provides roll.
 **Landing.** The reverse of transition, followed by a vertical descent onto the five
 contact points. Section 7.5 notes what is and is not analysed here.
 
-*[Şekil 9: beş aşama.]*
-
 ## 7.2 Why the transition begins in the easiest condition
 
 A common objection to tail-sitter transition is that the aircraft must fight the
@@ -48,9 +46,6 @@ The consequence is that the difficult part of the transition is not its beginnin
 its middle, where the airspeed has grown enough for aerodynamic moments to matter but
 the wing is not yet carrying the weight. The control authority requirement is set
 there, not at the start.
-
-*[⚠️ Bu, önceki bir yanlışın düzeltilmiş hâlidir: geçişin başında rüzgâr gülü
-etkisiyle direnç oluştuğu düşünülmüştü. $q\\to0$ olduğu için oluşmuyor.]*
 
 ## 7.3 The thrust singularity that is never reached
 
@@ -164,10 +159,7 @@ literature treats as the tail-sitter's characteristic hazard becomes, in this
 configuration, a manoeuvre with no altitude penalty — not because of any device, but
 because the aircraft is not asked to stop first.
 
-*[⚠️ Sınırlar açıkça: benzetim nokta-kütledir ve **dönme dinamiğini modellemez** —
-$\\theta$ kinematik olarak sürülür. Dolayısıyla gereken uç pervanesi itkisi bu
-benzetimden ÇIKMAZ. Kanat aerodinamiği basit bir modeldir; girdaplı ayrılma,
-gecikmeli tutukluk ve iz etkileri yoktur. Bölüm 8'e girecek. Künye N86–N89.]*
+The limits of this simulation should be stated where its results are used. It is a point-mass model in which the body angle is driven kinematically, so it does not represent rotational dynamics and the tip-propeller thrust required to produce the rotation does not follow from it. The aerodynamic model is a linear lift curve to stall with a flat-plate relation beyond it; dynamic stall, separation hysteresis and propeller-wake effects on the wing are absent.
 
 With the transition no longer demanding a rapid rotation, it is no longer the case that
 sizes the tip propellers. The sizing case becomes disturbance rejection in hover, which
@@ -177,10 +169,7 @@ a tip-pair capability of 16 N·m at the reference geometry. The tip propellers a
 therefore kept small — 0.20 m — deliberately, so that they contribute as little as
 possible to cruise drag while retaining margin on the case that actually sizes them.
 
-*[⚠️ Bu bir mertebe tahminidir; bozucu spektrumu ve kapalı çevrim gereksinimi
-hesaplanmadı. Bölüm 8'e girecek. Künye N88/N95.]*
-
-*[Şekil 10: irtifa kaybı, $t_r$ ve T/W'ye göre.]*
+This is an order-of-magnitude check against a single gust condition. The disturbance spectrum and the closed-loop bandwidth required to reject it have not been analysed.
 
 ## 7.5 Landing
 

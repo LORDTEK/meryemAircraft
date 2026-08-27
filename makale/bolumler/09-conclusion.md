@@ -50,8 +50,3 @@ that would test them, none of which requires an experiment. The configuration is
 described in enough detail for another group to attempt any of them independently, and
 that is the outcome this paper is written to invite.
 
-*[⚠️ Son paragrafın son cümlesi bilinçli. Bir konfigürasyon makalesinin en güçlü
-savunması, "beni çürütün, işte nasıl" diyebilmesidir. Hakem bunu görür.]*
-
-*[Not: Bölüm 1'in sonuna eklenecek "makalenin yapısı" paragrafı artık yazılabilir —
-tüm bölümler mevcut.]*

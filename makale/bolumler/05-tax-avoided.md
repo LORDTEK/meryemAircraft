@@ -68,8 +68,7 @@ One property of this cost is worth noting. The frame frontal area scales with th
 square of length, and so does the wing area, so under geometric scaling at equal cruise
 dynamic pressure the fraction is preserved. This bill does not grow with the aircraft.
 
-*[⚠️ C_D değerleri literatür mertebeleridir; bu kesit için hesaplanmadı ve kesit
-henüz seçilmedi. Bölüm 8'e girecek. Künye §11.5b, N83.]*
+The drag coefficients used here are representative values for circular and faired sections at the relevant Reynolds number, and the frame cross-section has not yet been selected. The requirement to fair the frames is robust to that choice — the difference between a circular tube and a faired strut is not a matter of coefficient precision — but the twelve-percent figure is an estimate.
 
 ## 5.3 Bill 3 — power system sizing: not paid
 
@@ -111,14 +110,16 @@ retracted is a surface discontinuity; when deployed it is a drag device by const
 but it is deployed only while a roll is being commanded.
 
 **The transition manoeuvre.** The aircraft must rotate through ninety degrees, and the
-rotation costs altitude and control power. Section 7 treats this in full. It is a real
-operational cost and it is not scale-invariant: the light design rotates in 2 s losing
-8 m, while the heavy design requires 4 s and loses 31 m.
+rotation costs time, horizontal displacement and control power. Section 7 treats it in
+full and shows that the altitude cost, which is the one usually assumed to dominate, can
+be brought to zero: rotating slowly and entering the rotation while still climbing
+removes it entirely at both design points. What remains is not free — the manoeuvre
+occupies seconds during which the aircraft is neither hovering nor cruising — but it is
+smaller than the literature on tail-sitters would suggest, and it is the one payment on
+this list that gets *cheaper* the less it is hurried.
 
 Set against the bills of Section 3, the ledger is favourable but not empty. The
 configuration does not escape physics; it declines a particular trade. What it pays
 instead is smaller, and — this is the part that matters for scaling — it does not grow
 faster than the aircraft.
 
-*[Tablo 1 buradan üretilecek: üç fatura, dört mimari (lift+cruise, tilt, katlanır
-rotor, bu çalışma), her hücrede ödenme biçimi.]*
