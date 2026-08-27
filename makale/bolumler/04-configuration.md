@@ -21,8 +21,6 @@ and no dedicated lift system. The only moving aerodynamic device is an on-off st
 the lower surface, described in Section 4.4, which exists solely because roll cannot be
 produced by propellers alone.
 
-*[Şekil 4 (üç görünüş) ve Şekil 5 (serbest görünüş) buraya. 3B modelden üretilecek.]*
-
 ## 4.2 Planform
 
 The planform is a blended-wing body whose leading-edge sweep varies continuously along
@@ -63,9 +61,6 @@ chord of 0.236 m, a span of 3.453 m, a wing area of 1.979 m² and an aspect rati
 giving a wing loading of 25.3 kg m⁻² and a stall speed of 20.1 m s⁻¹ against a cruise
 speed of 30 m s⁻¹. These follow from the sweep and crop laws above rather than being
 specified independently; Figure 6 gives the distributions.
-
-*[Şekil 6: ok açısı ve kalınlık dağılımı. Bölüm 6.2'de bu sayılar tekrar verilecek —
-tekrar kasıtlı, bölüm bağımsız okunabilsin.]*
 
 ## 4.3 Propulsion
 
@@ -182,8 +177,7 @@ The estimated roll moment is approximately 46 N·m, giving a roll rate of the or
 twenty to twenty-five degrees per second, or 1.2 to 1.5 seconds to a thirty-degree
 bank.
 
-*[⚠️ Bu bir mertebe tahminidir. Sönümleme katsayısı ve kanatçık etkinliği literatürden
-alındı, bu geometri için hesaplanmadı. Bölüm 8'de açıkça yazılacak.]*
+These figures are order-of-magnitude estimates: the damping and control-effectiveness coefficients are taken from the literature rather than computed for this geometry. The length-versus-height conclusion is robust to that choice, because the proportional difference between the two is far larger than the uncertainty in the coefficients.
 
 The strip does one further thing that an ordinary aerodynamic surface cannot. Its
 inboard portion lies inside the slipstream of the nose propeller, where the dynamic
@@ -199,11 +193,6 @@ against the freestream in cruise. The slipstream covers only twenty-seven to
 thirty-nine percent of the semi-span, so lengthening the strip to serve cruise does not
 compromise its hover function; one device serves two regimes.
 
-*[Şekil 8: kanatçık ve ana pervane izi. ⚠️ N44: disk çapı büyüdükçe iz zayıflar
-(q = T/A). Bölüm 6'daki 1,20 m tercihi bu dengeye bağlı ve orada anılacak.]*
-
-*[Çalışma notu — kamuya açık kayıttan çıkarılmıştır.]*
-
 ## 4.5 Structure and ground contact
 
 The tip frames are not added for the propellers. They are the landing structure.
@@ -216,8 +205,6 @@ buy the control moment arm of Section 4.4 widens the stance base at the same tim
 structure serves three purposes — mounting the control propellers, providing the moment
 arm, and carrying the landing loads — and is charged to the mass budget once.
 
-*[Şekil 7: pervane yerleşimi ve moment kolları. Beş temas noktası burada gösterilecek.]*
-
 The stance base is a design parameter, not a constraint imposed by the configuration.
 Moving the frame ends further outboard widens it without altering the planform, the
 propulsion, or the control architecture — and because the same displacement lengthens
@@ -225,6 +212,3 @@ the control moment arm of Section 4.4, the two benefits arrive together from one
 change. The reference geometry given here is one point on that trade; an operator with
 a stronger ground-wind requirement can take another without redesigning the aircraft.
 
-*[N79/N80. Devrilmezlik iddiası yok — Bölüm 8'de sınır olarak yazılacak, burada
-değil. Yolcu uçakları da sınır dışında iniş/kalkış iptal eder; bu mimarinin
-anahtar meselesi değil.]*

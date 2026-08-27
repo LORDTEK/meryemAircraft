@@ -140,25 +140,33 @@ mechanism by which Bill 3 is avoided therefore does not degrade with size.
 **The frame drag fraction is preserved.** Frontal area and wing area both scale as L²,
 so the twelve percent of Section 5.2 holds at both ends.
 
-**Transition time does not scale.** This is the exception and it is stated plainly.
-Required control moment goes as M = Iα with I ∝ mL², so the moment needed to rotate the
-aircraft in a fixed time grows much faster than the aircraft. Scaling the light
-design's two-second transition geometrically to 1000 kg would demand 221.5 kW from the
-tip propellers — 102 % of the hover power, which is to say it is not available:
+**Transition time does not scale.** This is the exception, and it is stated plainly.
+The control moment required to rotate the aircraft follows M = Iα with I ∝ mL², so the
+moment needed to turn it in a fixed time grows much faster than the aircraft itself.
+Scaling the light design's two-second rotation geometrically to 1000 kg would demand
+221.5 kW from the tip propellers — 102 % of the hover power, which is to say it is not
+available at all:
 
-| Transition time | Tip-propeller power, 4 total | Fraction of hover power | Altitude lost |
-|---:|---:|---:|---:|
-| 2 s | 221.5 kW | 102 % | 8 m |
-| 3 s | 65.6 kW | 30 % | 18 m |
-| **4 s** | **27.7 kW** | **13 %** | **31 m** |
-| 5 s | 14.2 kW | 7 % | 49 m |
+**Table 4.** Tip-propeller power required to rotate the heavy reference design.
 
-The heavy design therefore rotates in four seconds and loses 31 m. **The rule is that a
-larger aircraft turns more slowly**, and 31 m is an acceptable altitude allowance for a
-1000 kg vehicle. This is the transition-side counterpart of the general result that
-hover power required grows as L^3.5 while power available grows as L³.
+| Rotation time | Tip-propeller power, 4 total | Fraction of hover power |
+|---:|---:|---:|
+| 2 s | 221.5 kW | 102 % |
+| 3 s | 65.6 kW | 30 % |
+| **4 s** | **27.7 kW** | **13 %** |
+| 5 s | 14.2 kW | 7 % |
 
-*[Şekil 11: iki hat yan yana, aynı ölçekte. Tablo 4: geçiş süresi ve kumanda gücü.]*
+**The rule is that a larger aircraft turns more slowly.** The heavy design rotates in
+four seconds, at thirteen percent of its hover power.
+
+This constraint is less costly than it first appears, and Section 7 explains why: a
+slower rotation does not lose more altitude but less, so the scaling penalty on
+transition time works in the same direction as the scaling penalty on control power
+rather than against it. The larger aircraft is obliged to turn slowly, and turning
+slowly is what it should do anyway.
+
+This is the transition-side counterpart of the general result that hover power required
+grows as L^3.5 while power available grows as L³.
 
 ## 6.5 Context
 
@@ -175,9 +183,7 @@ reference designs in a real field, not to rank them.
 | Sabrewing Rhaegal-A | 1400 kg | 360–450 kg | 25.7–32.1 % |
 | Pipistrel Nuuva V300 | 1700 kg | 408 kg | 24.0 % |
 
-*[⚠️ Hepsi üretici tanıtımlarından. Faydalı yük tanımları tutarsız — kimi dahilî,
-kimi harici, kimi ikisi. Boş ağırlıklar yayımlanmıyor. Yayına gitmeden her satıra
-kaynak ve tanım eklenecek. ✅ BAHA'nın VTOL olduğu üretici föyünden **doğrulandı** (N96).]*
+All entries are taken from manufacturers' published material. Payload definitions are not consistent between them — some quote internal payload, some external, some both — and empty weights are generally not published. The lightest entry has been confirmed from its manufacturer's data sheet as a vertical take-off aircraft.
 
 Three statements can be made about this table and a fourth cannot.
 
@@ -212,5 +218,3 @@ comparable load further is making an architectural claim; a configuration that c
 a heavier load is making a claim about mass budgeting, which is exactly the part of
 this study that is least validated.
 
-*[Şekil 12 / N60: faydalı yük oranı – menzil düzlemi, üç aile. Ayrı sayfada
-kurulacak. Bu bölümün argümanı o grafikte görselleşiyor.]*

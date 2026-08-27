@@ -109,8 +109,6 @@ propeller blades:
 The bill is charged mainly by the motors and the beams that carry them — hardware that
 cannot be feathered, folded or aligned away, because its cost is its presence.
 
-*[Kaynak: Bacchini 2020 doktora tezi, birinci elden okundu. kaynaklar.md K1.]*
-
 Two further measurements support the direction of this result without being combined
 with it. Wind-tunnel characterisation of a QuadPlane uncrewed aircraft found that the
 highest lift and the least drag occurred in fixed-wing mode at both cruise airspeeds,
@@ -124,11 +122,6 @@ the flow found that their drag scales with frontal area and with the square of a
 that blade pitch adds to it, and that the hover powertrain components "added a
 significant amount of aerodynamic drag during forward flight" in the absence of a
 mechanism to stow them.
-
-*[⚠️ 2026-08-23'te iki kez düzeltildi. İlk taslakta "%20–40 girişim sürüklemesi" ve
-"C_D0 = 0,0397" vardı — ikisi de kaynakta yoktu. İkinci taslakta "%38 parazit
-azalması" ve "+%13 menzil" vardı — onlar da tezde yoktu. Şimdiki bütün sayılar
-**birinci elden okunmuş** tezden. Ayrıntı: kaynaklar.md §0 ve K1.]*
 
 The important property of this bill is not its size but where it is charged. It is
 charged per unit time in cruise, so it grows with exactly the quantity the aircraft
@@ -168,6 +161,8 @@ two is chosen, the extra installed capacity is mass, which returns to Bill 1.
 The three bills are not independent problems with three independent fixes. Each known
 architectural move reduces one and increases another.
 
+**Table 1.** Architectural moves and the bills they transfer.
+
 | Move | Bill it attacks | Bill it creates |
 |---|---|---|
 | Distributed electric lift rotors | 3 — the cruise engine no longer sizes to hover | 1 and 2 — many rotors and mounts, permanently carried and exposed |
@@ -175,8 +170,6 @@ architectural move reduces one and increases another.
 | Tilt-rotor, tilt-wing, tilt-nacelle | 1 — one propulsion group serves both regimes | mechanical complexity, gyroscopic coupling during rotation, and a transition control problem |
 | Higher disc loading, smaller rotors | 1 and 2 — smaller, lighter, cleaner rotors | 3 — hover power rises with √(DL) |
 | Lower disc loading, larger rotors | 3 — hover power falls | 1 and 2 — larger structure, larger exposed area |
-
-*[Tablo 1 buradan üretilecek.]*
 
 The table is not only an argument. One of its rows has been measured. In the study
 cited in Section 3.3, the retraction system that removed thirty percent of the drag was
@@ -196,16 +189,19 @@ The same study notes that for a surveillance aircraft, whose endurance is maximi
 low airspeed where the drag reduction is least effective, even that gain largely
 disappears.
 
-Read as a whole, the table says something stronger than any of its rows. There is a
-conserved quantity here: the cost of providing a vertical capability to a wing-borne
-aircraft. Architectures do not remove that cost; they choose the currency in which to
-pay it. This is why seventy years of engineering effort has improved hybrid VTOL
-aircraft considerably without ever producing one whose cruise efficiency matches a
-comparable fixed-wing aircraft.
+Read as a whole, the table describes a pattern rather than a law. Across every move
+listed, the cost of giving a wing-borne aircraft a vertical capability behaves as though
+it were conserved: architectures do not remove that cost, they choose the currency in
+which to pay it.
 
-*[⚠️ "Korunumlu nicelik" ifadesi mecazdır, fiziksel bir korunum yasası değildir.
-Hakemin ilk saldıracağı cümle budur. Ya "gözlem" diye yumuşatılacak ya da tabloyla
-sınırlandırılacak. Bölüm 8'de de tekrar anılmalı.]*
+It should be said plainly that nothing in physics requires this. No conservation
+principle is being invoked, and an architecture that reduced all three bills at once
+would be a genuine contribution rather than a contradiction. The claim here is
+empirical and bounded: among the architectures surveyed, none does, and Section 3.3
+supplies a measured instance of the transfer rather than an assumed one. This is why
+seventy years of engineering effort has improved hybrid VTOL aircraft considerably
+without producing one whose cruise efficiency matches a comparable fixed-wing
+aircraft.
 
 ## 3.6 The condition for a zero bill
 
@@ -245,5 +241,3 @@ much cruise efficiency the architecture had to surrender.
 An architecture that surrenders less does not merely perform better inside the band. It
 widens the band.
 
-*[N60: faydalı yük oranı – menzil düzleminde üç aile. Şekil 12. Referans tasarım
-sayıları kesinleştiğinde ayrı sayfada kurulacak.]*

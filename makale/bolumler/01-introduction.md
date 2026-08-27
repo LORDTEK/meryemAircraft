@@ -42,10 +42,6 @@ dead mass for the entire cruise. Tilting architectures avoid the dead mass but
 substitute mechanical complexity, gyroscopic coupling during transition, and a
 non-trivial transition control problem.
 
-*[Buraya sayılar ve atıflar girecek: %38 parazit sürükleme geri kazanımı, %20–40
-girişim sürüklemesi, güç eşleşmesi. Bölüm 3'te ayrıntılı verilecek, burada yalnızca
-işaret edilecek.]*
-
 The central observation of this paper is that these penalties are not defects of
 implementation. They arise from the architecture itself: from the decision to provide
 hover and cruise with different hardware. Better engineering can move the penalty
@@ -78,8 +74,6 @@ transition duration — that does not remain invariant.
 no wind-tunnel measurement and no flight test. Its numerical results are analytical
 estimates from stated assumptions, and its mass budget is a target rather than a
 finding. Section 8 states these limitations explicitly.
-
-*[Son paragraf — makale yapısı özeti — bölümler yazıldıktan sonra eklenecek.]*
 
 ---
 

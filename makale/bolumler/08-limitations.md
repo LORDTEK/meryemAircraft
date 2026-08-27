@@ -84,10 +84,6 @@ entering the rotation while climbing removes the loss entirely — depends on th
 the vertical support term rather than on the details of the aerodynamic model, and is
 robust. The specific altitude figures are not.
 
-*[⚠️ Bu, çalışmanın kendi kaydını düzelttiği yerdir: "irtifa kaybı $\\propto t_r^2$"
-kabulü yanlış çıktı. Makalede bunu bir düzeltme olarak açıkça yazmak, gizlemekten
-hem daha dürüst hem daha güçlü. Künye N86.]*
-
 ## 8.7 The tip-surface benefit is not quantified
 
 The tip frames extend perpendicular to the planform by 0.41 of the semi-span, which is
@@ -134,12 +130,20 @@ it bears directly on the landing phase.
 The novelty claimed in this paper is a combination, and the elements of that combination
 individually have antecedents. Blended-wing bodies, tail-sitters, coaxial
 counter-rotating pairs, series-hybrid powertrains and attitude control by differential
-thrust have all appeared before, separately and in various partial groupings. The survey
-supporting Section 2 was conducted from secondary sources; primary claim texts and full
-papers were not read.
+thrust have all appeared before, separately and in various partial groupings. In
+particular, full attitude control of a tail-sitter with no control surfaces at all has
+been demonstrated and published; that aircraft differs from the present configuration in
+its planform, in distributing thrust across the span, and — decisively — in taking its
+rolling moment from the differential reaction torque that the coaxial arrangement here
+removes by design.
 
-*[⚠️ Bu paragraf yayına gitmeden önce **kaynaklar birinci elden okunarak**
-güncellenmelidir. Şu anda tüm kayıtlar C seviyesinde (kaynaklar.md).]*
+The literature underpinning Sections 2 and 3 was read at first hand where the sources
+could be obtained. Four were: the doctoral study from which the drag measurements of
+Section 3.3 are taken, the QuadPlane wind-tunnel characterisation, the stationary-lift-
+propeller drag study, and the concept-vehicle sizing study quoted in Section 3.2. Two
+were not obtained and are therefore not relied upon for any numerical claim in this
+paper. No patent claim text was read in the original; the prior-art position stated here
+is that of an author survey, not of a professional search.
 
 ## 8.12 What would change these conclusions
 

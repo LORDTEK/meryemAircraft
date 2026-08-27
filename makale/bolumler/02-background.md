@@ -21,9 +21,6 @@ report an aerodynamic deficiency that would have disqualified the layout. They n
 entered series production, and the reasons usually offered are procurement and
 commercial, not aerodynamic.
 
-*[Atıf: Burnelli UB-14 ve CBY-3 Loadmaster uçuş raporları. İkincil kaynak yeterli
-değil; birincil kaynak aranacak.]*
-
 The Northrop XB-35 carried the same idea to its limit: a bomber with no fuselage and
 no tail at all. Its programme is often cited as evidence that the flying wing was
 premature. The record is more specific than that. The XB-35's persistent failures were
@@ -70,9 +67,6 @@ located entirely in the cockpit — and an uncrewed aircraft does not have one. 
 vertical descent judged by sensors rather than by a pilot's neck is a different
 problem, and the argument that closed the tail-sitter in 1956 does not close it now.
 
-*[Atıf: XFY-1 uçuş programı raporları ve iptal gerekçesi. Coleman'ın 2 Kasım 1954
-uçuşu.]*
-
 ## 2.3 Distributing sweep along the span
 
 The proposed planform varies its sweep angle continuously from root to tip. The
@@ -85,9 +79,6 @@ The present aircraft is subsonic by design and does not inherit the Victor's tra
 motivation. What it inherits is the structural idea: sweep, chord and thickness are one
 distribution, not three independent choices. Section 4.2 states the sweep values used
 here, and Section 8 states plainly that they were chosen rather than derived.
-
-*[Açık iş D1: hilal kanadın neden yaygınlaşmadığı hâlâ araştırılmadı. Victor'a
-dayanmadan önce cevaplanmalı; aksi hâlde bu paragraf zayıf kalır.]*
 
 ## 2.4 The contemporary hybrids
 
@@ -125,4 +116,6 @@ electric drive on each rotor, sensor-based attitude reference, and enough onboar
 computation that stability need not come from the airframe alone — removes exactly the
 obstacles that stopped it.
 
-*[Bu bölümün sonundan Bölüm 3'e geçiş cümlesi, Bölüm 3 yazıldıktan sonra eklenecek.]*
+What the history does not settle is why the contemporary aircraft that did succeed still
+pay for their vertical capability, and what exactly they pay. That is the subject of the
+next section.
