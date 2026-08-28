@@ -28,8 +28,12 @@ def F(sz, b=False):
 
 INK, MUT, ACC = (28, 32, 36), (110, 120, 128), (47, 111, 143)
 
-# Zenodo surum DOI'si. Kayit sayfasindaki DOI alaniyla dogrulanmali.
-DOI = "doi.org/10.5281/zenodo.22144195"
+# Zenodo iki DOI verir:
+#   surum DOI'si  10.5281/zenodo.22144195 -> yalnizca v1'i sabitler
+#   kavram DOI'si 10.5281/zenodo.22144194 -> hep en son surume gider
+# Ikinci surum planlandigi icin disariya verilen KAVRAM DOI'sidir.
+DOI = "doi.org/10.5281/zenodo.22144194"
+YAZARLAR = "Meryem Gülmen · Berke Gülmen · Ömer Gülmen"
 W = H = 1200
 KENAR = 76
 
@@ -71,7 +75,7 @@ def kart(dosya, ust, alt, etiketler, yan):
 
     fa = F(30)
     alt_satirlar = sar(d, alt, fa, W - 2 * KENAR)
-    alt_h = len(alt_satirlar) * 43 + 30 + 32
+    alt_h = len(alt_satirlar) * 43 + 30 + 62   # iki satirlik kunye
     alt_bas = H - KENAR - alt_h
 
     # --- iki duruş, AYNI olcekte ---
@@ -103,9 +107,9 @@ def kart(dosya, ust, alt, etiketler, yan):
     y = alt_bas
     for s in alt_satirlar:
         d.text((KENAR, y), s, font=fa, fill=(51, 57, 63)); y += 43
-    d.text((KENAR, y + 12),
-           "Gülmen · Gülmen · Gülmen   ·   " + DOI,
-           font=F(23), fill=MUT)
+    fk = F(23)
+    d.text((KENAR, y + 14), YAZARLAR, font=fk, fill=(51, 57, 63))
+    d.text((KENAR, y + 44), DOI, font=fk, fill=MUT)
 
     tuval.save(os.path.join(GOR, dosya))
     print("yazildi:", dosya)

@@ -183,6 +183,7 @@ Unsurların tek tek ataları vardır; yenilik **bileşimdedir**:
 | N102 | ✅ **Askı gücü kütleyle DOĞRUSAL büyüyor.** 10,9 → 216,2 kW, yani ×19,8; kütle ×20. Klasik $L^{3,5}$ değil. Sebebi disk yükünün sabit tutulması: $P \propto W^{1,5}/\sqrt{A}$ ve $A \propto W$ ise $P \propto W$. Kare-küp yasası bu araçta **yalnızca dönüş (Tablo 4) tarafında** tam ödeniyor. Bölüm 6.4'ün kapanışı buna göre yeniden yazıldı |
 | N103 | ✅ **Doğrulama betiği yazıldı** — `makale/uretim/dogrula.py`. Makalenin her başlık sayısını, makalenin kendi denklemleriyle bağımsız hesaplayıp metinle karşılaştırıyor: 33 kontrol + geçiş tablolarının 52 hücresi. Bayat sayı bir daha sessizce kalamaz |
 | N104 | ✅ **Başvuru numarası kayda geçti: 2026/014570** (26.08.2026). Rüçhan bu tarihten işler; yurt dışı için son gün **26.08.2027.** Evrak numarası iç takip kaydıdır, dışarıya verilmez |
+| N105 | ✅ **Zenodo yayımlandı, 28.08.2026.** İki DOI var: **kavram DOI'si 10.5281/zenodo.22144194** hep en son sürüme gider, **sürüm DOI'si 10.5281/zenodo.22144195** yalnızca v1'i sabitler. İkinci sürüm (panel yöntemi verileriyle) planlandığı için **dışarıya verilen kavram DOI'sidir**; sürüm DOI'si yalnız "bu tam sürüm" denmesi gereken yerde kullanılır. Lisans CC BY 4.0 |
 
 ---
 
