@@ -29,6 +29,8 @@ koşulu sağlayan bir konfigürasyon önerir.
 
 | | |
 |---|---|
+| DOI | [10.5281/zenodo.22144194](https://doi.org/10.5281/zenodo.22144194) — her zaman en son sürüme gider |
+| Bu sürüm (v1) | [10.5281/zenodo.22144195](https://doi.org/10.5281/zenodo.22144195) |
 | PDF | [`makale/pdf/meryemAircraft-makale.pdf`](makale/pdf/meryemAircraft-makale.pdf) — 44 sayfa, 12 şekil |
 | Tek dosya kaynak | [`makale/makale.md`](makale/makale.md) |
 | Bölüm bölüm | [`makale/bolumler/`](makale/bolumler/) |
