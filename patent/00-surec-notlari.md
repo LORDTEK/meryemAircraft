@@ -1,8 +1,8 @@
 # Başvuru süreci — notlar
 
-> ⚠️ **Ben patent vekili değilim.** Bu klasördeki metinler, künyedeki tasarım
-> kayıtlarından türetilmiş **taslaklardır.**
-> Hukuki geçerlilik denetimi yapılmamıştır.
+> ⚠️ **Patent vekili tarafından hazırlanmamıştır.** Bu klasördeki metinler,
+> tasarım künyesindeki kayıtlardan türetilmiş **taslaklardır.** Hukuki geçerlilik
+> denetimi yapılmamıştır.
 
 ## ✅ DURUM: BAŞVURU YAPILDI
 
