@@ -99,4 +99,5 @@ tırmanış hızının dönüş süresince dikey momentum rezervi olarak kullan�
 
 ## Not
 
-İstemlerin yazım gerekçeleri ve önceki teknik değerlendirmesi, kamuya açık kayıttan çıkarılmıştır; kayıt yazarlarda durmaktadır.
+İstemlerin yazım gerekçeleri ve önceki teknik değerlendirmesi, kamuya açık
+kayıttan çıkarılmıştır; kayıt yazarlarda durmaktadır.

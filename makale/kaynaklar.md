@@ -265,7 +265,7 @@ teyit.**
 🎯 **En kritik bulgu — mimari çatallık:** araç dört **tek** rotor kullanıyor ve
 yuvarlanmayı **diferansiyel tepki torkundan** alıyor. Bizim koaksiyel çiftimiz o
 torku tasarım gereği sıfırlıyor. **Onların yuvarlanma aktüatörü, bizim bilerek yok
-ettiğimiz şeydir.**
+ettiğimiz şeydir.** Makalede Bölüm 4.4 bunu "mimari çatallık" olarak veriyor.
 
 ⚠️ **Full Attitude Control of a VTOL tailsitter UAV**, IEEE 2016 — **hâlâ okunmadı**
 (ücretli). Aynı grubun önceki çalışması; o sürümde kumanda yüzeyi vardı.
