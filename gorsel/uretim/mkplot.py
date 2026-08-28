@@ -1,5 +1,5 @@
 import sys, math, os
-sys.path.insert(0,"/tmp/claude-0/-home-user-meryemAircraft/dec69a2c-0837-54ea-ab5a-1b131a81b67f/scratchpad")
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import matplotlib; matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 exec(open(S+"/gecis2.py").read().split("def tirmanis_hizi")[0]) if False else None

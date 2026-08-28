@@ -1,7 +1,6 @@
 import matplotlib; matplotlib.use("Agg")
 import matplotlib.pyplot as plt, numpy as np, math
 from matplotlib.patches import Polygon as MPoly
-S="/tmp/claude-0/-home-user-meryemAircraft/dec69a2c-0837-54ea-ab5a-1b131a81b67f/scratchpad"
 OUT="/home/user/meryemAircraft/patent/resimler"
 import os; os.makedirs(OUT,exist_ok=True)
 D2R=math.pi/180

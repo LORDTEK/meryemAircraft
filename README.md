@@ -68,6 +68,8 @@ somut karşılığıdır.
 | `makale/uretim/dogrula.py` | **Makalenin her başlık sayısını, makalenin kendi denklemleriyle bağımsız hesaplayıp metinle karşılaştırır** |
 | `gorsel/uretim/gecis2.py` | Geçiş benzetimi — iki serbestlik dereceli nokta kütle |
 | `gorsel/uretim/mkfig*.py` | On iki şeklin üreticileri |
+| `gorsel/uretim/figlib.py` | 3B modeli başsız Chromium'da açar, kamerayı sürer, görüntü alır |
+| `gorsel/uretim/mklinkedin.py` | Paylaşım kartı |
 
 `dogrula.py` şu an **38 kontrol** ve geçiş tablolarının **52 hücresini** sınıyor;
 sapma yok. Betik, derleme sırasında iki tablonun bayat kaldığını ve bir yerde
@@ -75,6 +77,11 @@ momentin itkiyle karıştırıldığını yakaladı.
 
 **Bağımlılıklar:** `python3`, `matplotlib`, `pillow`, `markdown`, `playwright`
 (başsız Chromium — üç boyutlu şekiller ve PDF için).
+
+Betikler bulundukları yerden çalışır; depo dışında bir yola ihtiyaç duymazlar.
+Üç boyutlu şekiller `gorsel/kaynak/govde-etudu.html` modelinden üretilir:
+`figlib.py` modelin bir **kopyasına** render kancası enjekte eder, kaynak dosya
+değiştirilmez. Chromium başka bir yerdeyse `CHROME_PATH` ile gösterilebilir.
 
 ## Kaynak kullanımı
 

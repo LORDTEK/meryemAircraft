@@ -5,7 +5,7 @@ Sekiller metinde ilk atif aldiklari paragrafin hemen ardina yerlestirilir.
 Turkce calisma notlari (*Taslak...*, [koseli parantez icindekiler]) ayiklanir.
 Cikti: makale/makale.md  ve  makale/pdf/meryemAircraft-makale.pdf
 """
-import os, re, sys, base64, glob
+import os, re, sys, base64, glob, tempfile
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from kapaklar import FIGS
 
@@ -278,7 +278,7 @@ HTML = ("<!doctype html><html lang='en'><head><meta charset='utf-8'>"
         "<title>meryemAircraft</title><style>%s</style></head><body>%s</body></html>"
         % (CSS, GOVDE_HTML))
 
-tmp = "/tmp/claude-0/-home-user-meryemAircraft/dec69a2c-0837-54ea-ab5a-1b131a81b67f/scratchpad/makale.html"
+tmp = os.path.join(tempfile.gettempdir(), "meryemAircraft-makale.html")
 os.makedirs(os.path.dirname(tmp), exist_ok=True)
 open(tmp, "w").write(HTML)
 

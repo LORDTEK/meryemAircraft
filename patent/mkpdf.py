@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*-
 import asyncio, sys, os, base64, html
-sys.path.insert(0,"/tmp/claude-0/-home-user-meryemAircraft/dec69a2c-0837-54ea-ab5a-1b131a81b67f/scratchpad")
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from playwright.async_api import async_playwright
 from mkpdf_css import CSS
 from tarifname_icerik import TARIFNAME, BASLIK
-S="/tmp/claude-0/-home-user-meryemAircraft/dec69a2c-0837-54ea-ab5a-1b131a81b67f/scratchpad"
 OUT="/home/user/meryemAircraft/patent/pdf"; os.makedirs(OUT,exist_ok=True)
 RES="/home/user/meryemAircraft/patent/resimler"
 CHROME="/opt/pw-browsers/chromium-1194/chrome-linux/chrome"
