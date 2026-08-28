@@ -27,6 +27,9 @@ def F(sz, b=False):
 
 
 INK, MUT, ACC = (28, 32, 36), (110, 120, 128), (47, 111, 143)
+
+# Zenodo surum DOI'si. Kayit sayfasindaki DOI alaniyla dogrulanmali.
+DOI = "doi.org/10.5281/zenodo.22144195"
 W = H = 1200
 KENAR = 76
 
@@ -101,7 +104,7 @@ def kart(dosya, ust, alt, etiketler, yan):
     for s in alt_satirlar:
         d.text((KENAR, y), s, font=fa, fill=(51, 57, 63)); y += 43
     d.text((KENAR, y + 12),
-           "Gülmen · Gülmen · Gülmen   ·   zenodo.org/records/22144195",
+           "Gülmen · Gülmen · Gülmen   ·   " + DOI,
            font=F(23), fill=MUT)
 
     tuval.save(os.path.join(GOR, dosya))

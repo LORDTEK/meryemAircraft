@@ -6,7 +6,18 @@
 
 ## ✅ DURUM: BAŞVURU YAPILDI
 
-**Tarih:** 2026-08-26 (tasarımcı beyanı)
+| | |
+|---|---|
+| **Başvuru numarası** | **2026/014570** |
+| Evrak numarası | 2026-GE-595375 |
+| Evrak tarihi | 26.08.2026 20:28:22 |
+
+**Rüçhan tarihi bu başvurunun tarihidir.** Yurt dışı başvuruları için 12 aylık
+süre bu tarihten işler: **26.08.2027**.
+
+⚠️ Dışarıya verilecek tek numara **başvuru numarasıdır (2026/014570).** Evrak
+numarası ve evrak tarihi TÜRKPATENT'in iç evrak takip kayıtlarıdır; yayında,
+makalede ya da sosyal medyada paylaşılmaz.
 
 Bu, projede bir eşiktir. Sonuçları:
 
