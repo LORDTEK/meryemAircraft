@@ -30,6 +30,9 @@ lower-surface strip provides roll.
 **Landing.** The reverse of transition, followed by a vertical descent onto the five
 contact points. Section 7.5 notes what is and is not analysed here.
 
+Figure 9 shows the five phases in sequence. Nothing on the aircraft rotates relative to
+the aircraft at any point in it.
+
 ## 7.2 Why the transition begins in the easiest condition
 
 A common objection to tail-sitter transition is that the aircraft must fight the
@@ -84,25 +87,28 @@ is linear to stall and a flat-plate relation beyond it; and thrust is reduced to
 drag value once cruise speed is reached. Altitude loss is reported as the lowest point
 of the trajectory relative to the entry altitude.
 
+The result is plotted in Figure 10a for both reference designs and four thrust-to-weight
+ratios; the tables below give the same values.
+
 **Light reference design, 50 kg. Altitude loss, metres:**
 
 | t_r | T/W = 1.1 | **T/W = 1.2** | T/W = 1.3 | T/W = 1.5 |
 |---:|---:|---:|---:|---:|
-| 0.5 s | −15.9 | −13.5 | −11.5 | −8.3 |
-| 1 s | −14.0 | −11.3 | −8.8 | −3.0 |
-| 2 s | −10.5 | **−6.6** | −1.6 | 0 |
-| 3 s | −9.9 | **−0.3** | 0 | 0 |
-| 4 s | −1.8 | **0** | 0 | 0 |
+| 0.5 s | −19.1 | −16.6 | −14.5 | −11.0 |
+| 1 s | −17.1 | −14.2 | −11.6 | −3.5 |
+| 2 s | −13.2 | **−9.1** | −2.1 | 0 |
+| 3 s | −9.9 | **−0.8** | 0 | 0 |
+| 4 s | −2.2 | **0** | 0 | 0 |
 
 **Heavy reference design, 1000 kg. Altitude loss, metres:**
 
 | t_r | T/W = 1.1 | **T/W = 1.2** | T/W = 1.3 | T/W = 1.5 |
 |---:|---:|---:|---:|---:|
-| 1 s | −26.6 | −22.1 | −18.2 | −11.5 |
-| 2 s | −21.8 | −16.0 | −6.8 | −0.2 |
-| 3 s | −17.0 | −6.3 | −0.6 | 0 |
-| 4 s | −17.7 | **−0.6** | 0 | 0 |
-| 5 s | −5.0 | **0** | 0 | 0 |
+| 1 s | −32.2 | −27.4 | −23.3 | −16.0 |
+| 2 s | −27.0 | −20.9 | −7.7 | −1.0 |
+| 3 s | −21.8 | **−7.2** | −1.4 | 0 |
+| 4 s | −17.7 | **−1.4** | 0 | 0 |
+| 5 s | −5.8 | **0** | 0 | 0 |
 
 The relationship is monotonic in the direction opposite to the one usually assumed. It
 is frequently supposed that a tail-sitter should rotate as quickly as possible, on the
@@ -122,11 +128,11 @@ between two competing penalties, because there are not two competing penalties. 
 transition time is bounded from below, not from above, and its upper bound is set by
 fuel, horizontal displacement and operational exposure rather than by flight mechanics.
 
-Thrust-to-weight ratio is the dominant parameter. At T/W = 1.1 the aircraft loses
-roughly ten metres regardless of how it is flown; at T/W = 1.3 the loss reaches zero
-within three seconds. The reference designs assume T/W = 1.2, at which the light design
-completes the manoeuvre in three seconds for a loss under one metre and the heavy design
-in five seconds for no loss.
+Thrust-to-weight ratio is the dominant parameter. At T/W = 1.1 the loss stays in double
+figures until the rotation is stretched beyond three seconds; at T/W = 1.3 the light
+design reaches zero within three seconds and the heavy design within four. The reference
+designs assume T/W = 1.2, at which the light design completes the manoeuvre in three
+seconds for a loss under one metre and the heavy design in five seconds for no loss.
 
 ### Entering the rotation while climbing
 
@@ -138,7 +144,7 @@ hover before rotating discards that velocity deliberately.
 Carrying it into the manoeuvre instead converts it into a reserve. Repeating the
 simulation with an entry climb rate w₀:
 
-**Light reference design, T/W = 1.2. Altitude loss, metres:**
+**Light reference design, T/W = 1.2. Altitude loss, metres:** (plotted in Figure 10b)
 
 | t_r | w₀ = 0 | w₀ = 2 m/s | w₀ = 5 m/s | w₀ = 8 m/s |
 |---:|---:|---:|---:|---:|
@@ -154,7 +160,8 @@ acquiring that climb rate is negligible: at T/W = 1.2 the vertical acceleration 
 climb, and the kinetic energy involved is 625 J against a fuel energy of 103 kWh.
 
 **The reference profile is therefore to enter the rotation at 5 m s⁻¹ of climb and
-rotate over three seconds, for no altitude loss at all.** The manoeuvre that the
+rotate over the times given in Section 6 — two seconds for the light design, four for
+the heavy — for no altitude loss at all.** The manoeuvre that the
 literature treats as the tail-sitter's characteristic hazard becomes, in this
 configuration, a manoeuvre with no altitude penalty — not because of any device, but
 because the aircraft is not asked to stop first.
@@ -165,7 +172,8 @@ With the transition no longer demanding a rapid rotation, it is no longer the ca
 sizes the tip propellers. The sizing case becomes disturbance rejection in hover, which
 an order-of-magnitude estimate places well inside the existing capability: a five-metre-
 per-second gust normal to the planform produces a moment of the order of 5 N·m, against
-a tip-pair capability of 16 N·m at the reference geometry. The tip propellers are
+a capability of M = 2 T L = 23 N·m from the tip pairs at the reference geometry — a
+margin of roughly four. The tip propellers are
 therefore kept small — 0.20 m — deliberately, so that they contribute as little as
 possible to cruise drag while retaining margin on the case that actually sizes them.
 

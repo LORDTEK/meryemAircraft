@@ -19,7 +19,8 @@ generator, and the generator supplies electric machines at the rotors.
 The aircraft has no elevons, no rudder, no tilting mechanism, no retraction mechanism
 and no dedicated lift system. The only moving aerodynamic device is an on-off strip on
 the lower surface, described in Section 4.4, which exists solely because roll cannot be
-produced by propellers alone.
+produced by propellers alone. Figure 4 gives three orthogonal views of the light
+reference design and Figure 5 a general view of the same geometry.
 
 ## 4.2 Planform
 
@@ -97,7 +98,8 @@ The energy path is a series hybrid: fuel → internal-combustion engine → gene
 electric machines. The engine is not mechanically connected to any rotor; it is an
 energy source. This decoupling is what allows the engine to be sized for cruise rather
 than for hover. For the light reference design the continuous cruise requirement is
-1.8 kW and the engine is sized at 2.6 kW, while the hover requirement is 10.9 kW; the
+1.8 kW at the engine shaft — 1.6 kW at the electric machines — and the engine is sized at
+2.6 kW, while the hover requirement is 10.9 kW at the rotor; the
 difference is supplied for the duration of the vertical phase by a battery buffer of
 1.8 kg, which is 3.6 percent of the maximum take-off mass. Section 5 returns to this,
 because it is the mechanism by which Bill 3 is not paid.
@@ -112,8 +114,9 @@ is 0.20 m in diameter and produces 16.2 N during the transition manoeuvre, drawi
 
 The tip pairs sit at the ends of rigid frames that extend from each wing tip
 perpendicular to the planform, above and below, by three hundred percent of the local
-tip chord — 0.71 m in each direction, giving a vertical separation of 1.43 m between
-the upper and lower pairs. The frames are long on purpose. The control moment is
+tip chord — 0.71 m in each direction, giving a vertical separation of 1.42 m between
+the upper and lower pairs. Figure 7 gives the placement and the resulting moment
+arms. The frames are long on purpose. The control moment is
 M = 2 T L, so lengthening the arm buys the same moment with less thrust; and because
 propeller power goes as thrust to the three-halves power, tripling the arm reduces the
 power required for a given moment to roughly one fifth. The frames are structure that
@@ -166,7 +169,7 @@ combination possible. The
 resolution adopted here is different in kind. A single strip on the lower surface,
 inclined at forty-five degrees, deploys on or off — it is not a proportional control
 surface. For the light reference design it runs one hundred and twenty percent of the
-root chord in length, reaching outboard to sixty-eight percent of the semi-span, and
+root chord in length, reaching outboard to sixty-seven percent of the semi-span, and
 stands 2 cm high at its inboard end and 6 cm at its outboard end.
 
 Its authority comes from its length, not its height. The moment scales with the moment
@@ -191,7 +194,9 @@ moment while the aircraft is standing still, which an aerodynamic surface outsid
 slipstream cannot. Its outboard portion lies beyond the slipstream, where it works
 against the freestream in cruise. The slipstream covers only twenty-seven to
 thirty-nine percent of the semi-span, so lengthening the strip to serve cruise does not
-compromise its hover function; one device serves two regimes.
+compromise its hover function; one device serves two regimes. Figure 8 shows the strip
+against the slipstream boundary: the inboard 46 % of its length lies inside, the
+outboard 54 % outside.
 
 ## 4.5 Structure and ground contact
 

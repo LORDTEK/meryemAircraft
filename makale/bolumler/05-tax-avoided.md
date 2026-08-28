@@ -77,12 +77,13 @@ system to be sized by the hover condition. Because the engine drives a generator
 than a rotor, it supplies average power, not peak power, and the peak is supplied from
 a buffer.
 
-For the light reference design the numbers are as follows. Cruise requires 1.8 kW
-continuously, and the engine is sized at 2.6 kW. Hover requires 10.9 kW — 4.2 times the
-engine's rating. The difference is drawn for the duration of the vertical phase from a
-1.8 kg battery, which is 3.6 percent of the maximum take-off mass. The heavy reference
-design sits on the same line: 38.8 kW cruise, 54.3 kW engine, 216.2 kW hover, 40 kg of
-battery at 4.0 percent of MTOW.
+For the light reference design the numbers are as follows. Cruise draws 1.6 kW at the
+electric machines, which is 1.8 kW at the engine shaft once the generator and power
+electronics are accounted for, and the engine is sized at 2.6 kW. Hover requires 10.9 kW
+at the rotor — 4.2 times the engine's rating. The difference is drawn for the duration of
+the vertical phase from a 1.8 kg battery, which is 3.6 percent of the maximum take-off
+mass. The heavy reference design sits on the same line: 38.1 kW electrical in cruise,
+54.3 kW engine, 216.2 kW hover, 40 kg of battery at 4.0 percent of MTOW.
 
 An aircraft of this class whose powerplant had to be sized for hover would carry an
 engine rated above 10.9 kW instead of 2.6 kW. The mass difference is not recovered

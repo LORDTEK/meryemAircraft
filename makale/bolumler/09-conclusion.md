@@ -26,12 +26,15 @@ position. There are no elevons, no rudder, no tilting mechanism, no retraction m
 and no dedicated lift system.
 
 The configuration was sized at 50 kg and at 1000 kg using the same equations and the
-same architecture, twenty times apart in mass. The proportions hold across that range:
+same architecture, twenty times apart in mass. Three properties hold across that range:
 disc loading is constant by design, the energy buffer that decouples the engine from the
 hover peak stays under four percent of take-off mass at both points, and the drag
 fraction charged to the tip frames is preserved because frontal area and wing area scale
-together. One quantity does not scale, and it is reported rather than smoothed: the
-larger aircraft must rotate more slowly.
+together. Holding the disc loading is what keeps hover power growing linearly with mass
+instead of as the classical L^3.5. Two quantities do not scale, and both are reported
+rather than smoothed: the larger aircraft must rotate more slowly, and its propeller
+grows faster than its span, so the heavy design is not the light design seen from further
+away.
 
 Two results emerged during the study that changed it. The tip frames, if left as
 circular tubing, would produce nearly as much drag as the entire rest of the aircraft;

@@ -29,14 +29,14 @@ def dim(x0,y0,x1,y1,txt,off=0.0,c=INK,ha="center",va="center",fs=10.5):
             bbox=dict(fc="white",ec="none",pad=1.6))
 dim(-b2,-1.30,b2,-1.30,"span  $b$ = 3.453 m",0.0)
 dim(b2+0.30,0,b2+0.30,L,"$L_p$ = 0.71 m",0.0,MUT)
-dim(b2+0.72,-L,b2+0.72,L,"1.43 m",0.0,MUT)
+dim(b2+0.72,-L,b2+0.72,L,f"{2*L:.2f} m",0.0,MUT)
 ax.annotate("",xy=(Dm/2,0.80),xytext=(-Dm/2,0.80),
             arrowprops=dict(arrowstyle="<->",color=A,lw=1.2))
 ax.text(0,0.87,"$D$ = 1.20 m",ha="center",fontsize=10.5,color=A,
         bbox=dict(fc="white",ec="none",pad=1.6))
 ax.text(-b2-0.34,L,"$d$ = 0.20 m",ha="right",va="center",fontsize=10.5,color=R)
 # etiketler
-ax.text(0,-0.44,"thrust pair\n(all propulsion)",ha="center",va="top",fontsize=10.5,color=A,linespacing=1.4)
+ax.text(0,-0.68,"thrust pair\n(all propulsion)",ha="center",va="top",fontsize=10.5,color=A,linespacing=1.4)
 ax.text(-b2-0.34,-L,"control\npairs",ha="right",va="center",fontsize=10.5,color=R,linespacing=1.4)
 # ---- moment blogu: diyagramin ALTINDA ----
 ax.axhline(-1.62,xmin=0.03,xmax=0.97,color=GR,lw=0.9)

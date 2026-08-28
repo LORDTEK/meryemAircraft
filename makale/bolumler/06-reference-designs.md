@@ -64,7 +64,7 @@ optimistic.
 |---|---:|
 | Maximum take-off mass | 50 kg |
 | Root chord | 0.97 m |
-| Tip chord | 0.238 m |
+| Tip chord | 0.236 m |
 | Span | 3.45 m |
 | Wing area | 1.98 m² |
 | Aspect ratio | 6.00 |
@@ -87,10 +87,9 @@ optimistic.
 
 The mass budget behind this is a target and not a finding: 30 % structure, 16 %
 propulsion chain, 4 % battery, 8 % avionics and control, 16 % fuel, leaving 26 % —
-13 kg — for payload. Paper aircraft are habitually twenty to forty percent lighter than
-the ones that get built, and that margin has not been paid in this table. Section 8
-repeats this warning, because it is the single most likely place for these numbers to
-be wrong.
+13 kg — for payload. Paper aircraft are habitually lighter than the ones that get
+built, and that margin has not been paid in this table. Section 8 repeats this warning,
+because it is the single most likely place for these numbers to be wrong.
 
 ## 6.3 Heavy reference design — 1000 kg
 
@@ -123,16 +122,40 @@ architecture was changed to obtain this.
 
 ## 6.4 Scale behaviour
 
-Three properties of the scaling are worth separating, because two of them are
-favourable and one is not.
+Five properties of the scaling are worth separating, because three of them are
+favourable and two are not. Figure 11 shows the two designs at a common scale, and it
+shows the second of the unfavourable ones directly.
 
 **Disc loading is held constant.** The two designs sit at 44.2 and 43.7 kg m⁻². This is
 not a coincidence of sizing but the rule that governs it. Hover power per unit weight
 is √(DL/2ρ), so holding disc loading constant holds the specific hover power constant,
-and the aircraft can grow without the hover condition running away. Holding it constant
-requires disc area to grow as L³ rather than L², which for a fixed number of propellers
-is impossible — but this architecture may add coaxial pairs, and adding a pair is
-architecturally free because every pair is already torque-balanced on its own.
+and the aircraft can grow without the hover condition running away. The effect is direct:
+hover power rises from 10.9 kW to 216.2 kW, a factor of 19.8 against a mass factor of 20.
+Hover power grows *linearly* with mass rather than as the L^3.5 of the classical result,
+and that is the whole benefit of fixing the disc loading.
+
+Constant disc loading means disc area must grow in proportion to weight. For a
+geometrically similar aircraft, whose mass grows as L³, that is a demand for disc area to
+grow as L³ rather than as L² — which for a fixed number of propellers is impossible. This
+architecture has two ways out of that, and it uses both. It may add coaxial pairs, and
+adding a pair is architecturally free because every pair is already torque-balanced on
+its own; and, as the next paragraph records, it does not hold geometric similarity.
+
+**The propeller grows faster than the airframe.** This is the second exception, and it
+is visible in Figure 11 rather than hidden in it. Wing loading is not held constant: it
+rises from 25.3 to 45.0 kg m⁻², so wing area grows by a factor of 11.2 and span by 3.35
+— more than the 2.71 that geometric similarity at constant density would give, but well
+short of the 4.50 by which the main propeller must grow to hold the disc loading. The ratio of
+propeller diameter to span therefore rises from 0.35 to 0.47. The heavy design is not the
+light design photographed from further away; its propeller occupies almost half its span.
+
+Nothing in the argument of this paper fails because of that, since the propeller is the
+nose of the aircraft rather than an appendage on it, and disc loading — the quantity the
+hover power depends on — is what is being held. But the claim that the configuration
+keeps its proportions across the range should be read as applying to the four quantities
+named here and not to every dimension, and a design much heavier than 1000 kg would reach
+the point where a single nose pair can no longer hold the disc loading and a second pair
+must be added.
 
 **The buffer fraction is preserved.** 3.6 % of MTOW at 50 kg and 4.0 % at 1000 kg. The
 mechanism by which Bill 3 is avoided therefore does not degrade with size.
@@ -165,8 +188,11 @@ transition time works in the same direction as the scaling penalty on control po
 rather than against it. The larger aircraft is obliged to turn slowly, and turning
 slowly is what it should do anyway.
 
-This is the transition-side counterpart of the general result that hover power required
-grows as L^3.5 while power available grows as L³.
+The classical objection to scaling a VTOL aircraft up is that hover power required grows
+as L^3.5 while power available grows as L³. Fixing the disc loading is what removes that
+objection on the hover side, as the first item above shows. It does not remove it on the
+transition side, and Table 4 is where it reappears: the rotation is the one place in this
+aircraft where the square–cube relation is still paid in full.
 
 ## 6.5 Context
 
@@ -175,15 +201,15 @@ reference designs in a real field, not to rank them.
 
 | Aircraft | MTOW | Payload | Payload fraction |
 |---|---:|---:|---:|
-| HAVELSAN BAHA | 28 kg | 2 kg | 7.1 % |
-| Textron Aerosonde Mk 4.7 VTOL | 45.4 kg | 9.1 kg | 20.0 % |
-| Baykar KALKAN | 75 kg | ~3 kg internal | 4.0 % |
-| HAVELSAN BULUT | not published | 5 kg | — |
-| Elroy Air Chaparral | 865 kg | 136 / 227 kg | 15.7 / 26.2 % |
-| Sabrewing Rhaegal-A | 1400 kg | 360–450 kg | 25.7–32.1 % |
-| Pipistrel Nuuva V300 | 1700 kg | 408 kg | 24.0 % |
+| HAVELSAN BAHA [8] | 28 kg | 2 kg | 7.1 % |
+| Textron Aerosonde Mk 4.7 VTOL [9] | 45.4 kg | 9.1 kg | 20.0 % |
+| Baykar KALKAN [10] | 75 kg | ~3 kg internal | 4.0 % |
+| HAVELSAN BULUT [11] | not published | 5 kg | — |
+| Elroy Air Chaparral [12] | 865 kg | 136 / 227 kg | 15.7 / 26.2 % |
+| Sabrewing Rhaegal-A [13] | 1400 kg | 360–450 kg | 25.7–32.1 % |
+| Pipistrel Nuuva V300 [14] | 1700 kg | 408 kg | 24.0 % |
 
-All entries are taken from manufacturers' published material. Payload definitions are not consistent between them — some quote internal payload, some external, some both — and empty weights are generally not published. The lightest entry has been confirmed from its manufacturer's data sheet as a vertical take-off aircraft.
+All entries are taken from manufacturers' published material. Payload definitions are not consistent between them — some quote internal payload, some external, some both — and empty weights are generally not published. The lightest entry has been confirmed from its manufacturer's data sheet as a vertical take-off aircraft [8].
 
 Three statements can be made about this table and a fourth cannot.
 

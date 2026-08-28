@@ -44,7 +44,7 @@ for v,lab,dx,dy in ((12.7,"this study\n50 kg",-1.9,1.34),(14.0,"this study\n1000
                     arrowprops=dict(arrowstyle="-",color="#12303F",lw=0.9,shrinkB=8))
 axs[1].set_xlabel("Cruise lift-to-drag ratio  L/D",labelpad=8)
 fig.text(0.115,0.128,
- "Filled markers — L/D measured in wind-tunnel tests of a single airframe in four configurations.\n"
+ "Filled markers — L/D measured in wind-tunnel tests of one airframe in three of the four configurations tested.\n"
  "Open markers — L/D calculated for the reference designs of this study; not measured.\n"
  "Each line gives range for one fixed energy system: the markers locate L/D values only, and are\n"
  "not claims about the range of the aircraft those measurements came from.",

@@ -43,7 +43,7 @@ plt.rcParams.update({"font.family":"DejaVu Sans","font.size":11,
  "axes.edgecolor":"#3A4046","axes.labelcolor":"#1C2024","text.color":"#1C2024",
  "xtick.color":"#3A4046","ytick.color":"#3A4046","axes.linewidth":0.9,
  "figure.facecolor":"white","axes.facecolor":"white","savefig.facecolor":"white"})
-fig,axs=plt.subplots(1,3,figsize=(12.4,4.0))
+fig,axs=plt.subplots(1,3,figsize=(9.2,3.3))
 A,B,Cc="#2F6F8F","#B03A2E","#6E7C87"
 axs[0].plot(f,lam,lw=2.4,color=A,label="leading edge")
 axs[0].plot(f,np.full_like(f,P['sweepTE']),lw=2.4,color=B,ls="--",label="trailing edge")
@@ -57,12 +57,12 @@ axs[1].plot(f,tc,lw=2.4,color=A)
 axs[1].set_ylabel("Thickness / chord  (%)"); axs[1].set_ylim(0,30)
 axs[1].set_title("(b)  Thickness distribution",loc="left",fontsize=12,fontweight="bold",pad=10)
 axs[1].annotate("25 %",xy=(0.02,25),xytext=(0.06,26.4),fontsize=10,color=A)
-axs[1].annotate("12 %",xy=(1,12),xytext=(0.76,13.6),fontsize=10,color=A)
+axs[1].annotate("12 %",xy=(1,12),xytext=(0.70,8.4),fontsize=10,color=A)
 axs[2].plot(f,ch,lw=2.4,color=A)
 axs[2].set_ylabel("Chord  (m)"); axs[2].set_ylim(0,1.1)
 axs[2].set_title("(c)  Chord distribution",loc="left",fontsize=12,fontweight="bold",pad=10)
-axs[2].annotate(f"{ch[0]:.2f} m",xy=(0.02,ch[0]),xytext=(0.06,ch[0]-0.13),fontsize=10,color=A)
-axs[2].annotate(f"{ch[-1]:.3f} m",xy=(1,ch[-1]),xytext=(0.62,ch[-1]+0.10),fontsize=10,color=A)
+axs[2].annotate(f"{ch[0]:.2f} m",xy=(0.02,ch[0]),xytext=(0.22,0.885),fontsize=10,color=A)
+axs[2].annotate(f"{ch[-1]:.3f} m",xy=(1,ch[-1]),xytext=(0.56,ch[-1]-0.11),fontsize=10,color=A)
 for ax in axs:
     ax.set_xlabel("Semi-span station  $y/(b/2)$")
     ax.grid(True,lw=0.5,color="#E9ECEE"); ax.set_axisbelow(True); ax.set_xlim(0,1)
