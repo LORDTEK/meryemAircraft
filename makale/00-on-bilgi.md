@@ -11,8 +11,10 @@ Tail-Sitting Blended-Wing-Body Configuration with Propeller-Only Control**
 
 ## Authors
 
-*[Yazar satırı tasarımcı tarafından doldurulacak — iki yazar. Kurum bağlantısı
-varsa eklenecek, yoksa "Independent researcher" yazılır.]*
+Meryem Gülmen, Berke Gülmen, Ömer Gülmen
+
+*[Kurum bağlantısı verilecekse eklenir; verilmezse dergiler "Independent
+researcher" yazar. Sorumlu yazar ve e-posta, dergi seçildiğinde eklenecek.]*
 
 ---
 
@@ -73,23 +75,20 @@ MDPI'ın yapay zekâ beyan zorunluluğunu da karşılar.]*
 
 ### Conflicts of Interest
 
-*[⚠️ **Buraya dikkat.** Yayın anında bekleyen bir patent başvurusu varsa, bu
-**beyan edilmesi gereken bir çıkar ilişkisidir.** Dergiler bunu ister ve
-beyan edilmemesi sonradan sorun çıkarır. Önerilen metin:*
-
 > The authors have filed a patent application covering the aircraft configuration
 > described in this paper.
 
-*Başvuru henüz yapılmadıysa yayın tarihine göre güncellenecek. **Sıra kuralı
-değişmedi: başvuru → yayım.**]*
+*Durum: başvuru **yapıldı**. Metin buna göre yazıldı — "yapılacaktır" değil,
+"yapılmıştır". Dergi başvuru numarası isterse eklenir.*
 
 ### Data Availability
 
-*[Öneri: 3B geometri parametreleri ve boyutlandırma denklemleri makalenin içinde
-zaten tam veriliyor (Bölüm 4, 6). "All data supporting the reported results are
-contained within the article." demek yeterli. Geçiş benzetimi kodu istenirse
-ek dosya olarak verilebilir — Bölüm 8.12'deki "başkası denesin" davetini
-somutlaştırır.]*
+> All data supporting the reported results are contained within the article. The
+> parametric geometry model, the figure-generation scripts and the transition
+> simulation are openly available at the repository cited in the acknowledgements.
+
+*Bölüm 8.12'deki "başka bir grup bunu bağımsız deneyebilir" davetinin somut
+karşılığı. Depo bağlantısı yayın öncesi eklenecek.*
 
 ### Funding
 

@@ -18,7 +18,9 @@ air.
 Rotary-wing and multirotor aircraft remove that requirement entirely. They take off
 and land vertically, hover, and operate from confined sites. Their limit is the
 converse: without a wing, every second of flight is paid for with installed power, so
-range and endurance remain modest and degrade further as the vehicle grows.
+range and endurance remain modest and degrade further as the vehicle grows. Figure 1
+places the two families against the two capabilities and marks the corner that neither
+occupies.
 
 The demand to combine the two has been continuous and expensive. Tail-sitting
 prototypes were flown in the 1950s, vectored-thrust and tilt-wing aircraft in the
@@ -66,9 +68,10 @@ and their supporting frames — is reported and quantified rather than omitted.
 as an architectural rather than an implementation property, and supports that statement
 with published figures; (ii) describes a configuration in which the penalty does not
 arise; (iii) sizes two reference designs, at 50 kg and 1000 kg maximum take-off weight,
-from first principles; and (iv) shows that the configuration retains the same
-proportions across that twenty-fold mass range, and identifies the one parameter —
-transition duration — that does not remain invariant.
+from first principles; and (iv) shows which properties of the configuration are
+preserved across that twenty-fold mass range — disc loading, energy-buffer mass fraction
+and tip-frame drag fraction — and identifies the two that are not: transition duration,
+and the ratio of propeller diameter to span.
 
 **Scope.** This is a configuration study. It contains no computational fluid dynamics,
 no wind-tunnel measurement and no flight test. Its numerical results are analytical
@@ -78,9 +81,11 @@ finding. Section 8 states these limitations explicitly.
 ---
 
 The remainder of the paper is organised as follows. Section 2 reviews seventy years of
-attempts to merge the two configuration families, and argues that most of them ended for
-reasons external to the configuration — including one, the pilot workload of a vertical
-descent, that does not exist in an uncrewed aircraft. Section 3 sets out the
+attempts to merge the two configuration families and argues, on the evidence of two
+contemporary NASA reviews, that they ended for reasons external to the configuration —
+principally engine and transmission reliability — while the one difficulty those reviews
+document most fully, the workload of a pilot flying a vertical descent, is also the one
+that an uncrewed aircraft removes outright. Section 3 sets out the
 architectural tax in its three currencies, shows that architectural remedies transfer it
 rather than remove it, and derives the condition under which it would not be charged.
 Section 4 describes the proposed configuration, which is built to satisfy that condition.

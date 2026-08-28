@@ -105,6 +105,10 @@ propellers align with the flow costs about a third of what remains. A second mod
 built on a different airframe reproduced the pattern, at L/D ≈ 11 with the propellers
 retracted against ≈ 8 with them exposed.
 
+Because range is linear in lift-to-drag ratio for a fixed energy system, this ladder
+translates directly into range; Figure 12 carries it onto the range axis for both a
+battery-electric and a fuel-burning energy system.
+
 Expressed as drag rather than efficiency, retracting the propellers reduced drag by 34 %
 relative to the standard quadplane configuration on one model and by 30 % on the other.
 The author of that study is careful about which comparison is legitimate: measuring the
@@ -172,7 +176,8 @@ two is chosen, the extra installed capacity is mass, which returns to Bill 1.
 ## 3.5 The bills are one quantity in three currencies
 
 The three bills are not independent problems with three independent fixes. Each known
-architectural move reduces one and increases another.
+architectural move reduces one and increases another. Figure 3 shows the three bills and
+the moves that convert one into another; Table 1 lists the same moves in full.
 
 **Table 1.** Architectural moves and the bills they transfer.
 

@@ -20,8 +20,8 @@ assumed. Nothing in Sections 4 to 7 has been measured.
 
 The reference designs are sized from an assumed mass breakdown — 30 % structure, 16 %
 propulsion chain, 4 % battery, 8 % avionics, 16 % fuel, 26 % payload. Paper aircraft are
-habitually twenty to forty percent lighter than the aircraft that eventually get built,
-and that margin has not been paid anywhere in this study. The payload fraction is the
+habitually lighter than the aircraft that eventually get built, and no allowance for that
+margin has been made anywhere in this study. The payload fraction is the
 number most exposed to it, because payload is the residual: it absorbs the entire error
 of every other line.
 
@@ -117,7 +117,7 @@ the reference geometry represents one point on that trade rather than a limit. O
 limits in ground wind are an operational matter, and published data for this class shows
 that such limits are ordinary rather than exceptional: a fielded fixed-wing VTOL
 uncrewed aircraft in the same mass range quotes a wind limit of 15 knots for take-off
-and landing against 25 knots in cruise. A lower ground-wind limit than cruise limit is
+and landing against 25 knots in cruise [8]. A lower ground-wind limit than cruise limit is
 the normal condition for VTOL aircraft, not a defect peculiar to tail-sitters. The
 specific limits for this configuration have not been computed here.
 
@@ -142,12 +142,17 @@ rolling moment from the differential reaction torque that the coaxial arrangemen
 removes by design.
 
 The literature underpinning Sections 2 and 3 was read at first hand where the sources
-could be obtained. Four were: the doctoral study from which the drag measurements of
-Section 3.3 are taken, the QuadPlane wind-tunnel characterisation, the stationary-lift-
-propeller drag study, and the concept-vehicle sizing study quoted in Section 3.2. Two
-were not obtained and are therefore not relied upon for any numerical claim in this
-paper. No patent claim text was read in the original; the prior-art position stated here
-is that of an author survey, not of a professional search.
+could be obtained. Seven were: the two NASA reviews of United States V/STOL development
+on which Section 2.2 rests [1,2], the doctoral study from which the drag measurements of
+Section 3.3 are taken [3], the QuadPlane wind-tunnel characterisation [4], the
+stationary-lift-propeller drag study [5], the concept-vehicle sizing study quoted in
+Section 3.2 [6], and the tail-sitter flight-test paper cited in Sections 3.4 and 4.4 [7].
+Three further sources were sought and not obtained — the journal version of [3], an
+earlier conference paper by the authors of [7], and a 2025 forum paper on stopped-rotor
+drag — and none of them is relied upon for any claim here; where a claim had rested on
+the last of these, it was removed rather than retained on a summary. No patent claim text
+was read in the original; the prior-art position stated here is that of an author survey,
+not of a professional search.
 
 ## 8.12 What would change these conclusions
 

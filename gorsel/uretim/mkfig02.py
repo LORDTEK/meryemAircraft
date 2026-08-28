@@ -11,7 +11,7 @@ OL=[(1934,"Burnelli lifting fuselage","flew; no production orders",+1,1.00,-0.6)
     (1947,"Vought XF5U","completed, never flown;\njet era arrived",-1,1.02,+1.8),
     (1952,"Handley Page Victor","crescent wing, in service",+1,1.00,+2.6),
     (1954,"Lockheed XFV-1","intended engine\nnever delivered",-1,0.62,+2.6),
-    (1955,"Convair XFY-1","full cycle achieved;\nended by pilot workload",+1,0.34,+4.6),
+    (1954,"Convair XFY-1","full cycle achieved;\nended by engine and\ngearbox reliability",+1,0.34,+4.6),
     (2012,"hybrid VTOL UAS","lift+cruise and tilt,\nin service",-1,0.70,0.0)]
 fig,(axL,axR)=plt.subplots(1,2,figsize=(14.0,6.4),sharey=True,
                            gridspec_kw={"width_ratios":[3.05,1.0],"wspace":0.045})
@@ -42,8 +42,9 @@ for ax,xx in ((axL,1962),(axR,2005)):
 fig.suptitle("Seventy years of attempts to merge the two families",x=0.055,y=0.975,
              ha="left",fontsize=13.5,fontweight="bold")
 fig.text(0.055,0.045,"Marked in red: the one programme that completed the full cycle — vertical take-off, "
-         "transition, cruise, transition, vertical landing —\nand was ended by a constraint located "
-         "entirely in the cockpit.",fontsize=9.7,color=MUT,linespacing=1.7)
+         "transition, cruise, transition, vertical landing.\nTwo contemporary NASA reviews record that its "
+         "testing was curtailed by engine and gear-box reliability, not by the configuration.",
+         fontsize=9.7,color=MUT,linespacing=1.7)
 fig.subplots_adjust(top=0.90,bottom=0.155,left=0.03,right=0.985)
 fig.savefig(OUT+"/sekil02-zaman-cizelgesi.png",dpi=300)
 fig.savefig(OUT+"/sekil02-zaman-cizelgesi.svg"); print("Sekil 2 yenilendi")

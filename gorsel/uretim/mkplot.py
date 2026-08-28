@@ -12,7 +12,7 @@ plt.rcParams.update({"font.family":"DejaVu Sans","font.size":11,
  "figure.facecolor":"white","axes.facecolor":"white","savefig.facecolor":"white"})
 C={1.1:"#B9C2C9",1.2:"#6E7C87",1.3:"#2F6F8F",1.5:"#12303F"}
 
-fig,axs=plt.subplots(1,2,figsize=(11,4.4))
+fig,axs=plt.subplots(1,2,figsize=(9.2,3.9))
 for ax,(ad,m,Sw,Vcr,trs) in zip(axs,[("(a)  50 kg",50,1.98,30.0,[0.5,0.75,1,1.5,2,2.5,3,3.5,4,5]),
                                      ("(b)  1000 kg",1000,22.24,40.0,[1,1.5,2,2.5,3,3.5,4,4.5,5,6])]):
     for Tw in (1.1,1.2,1.3,1.5):

@@ -8,7 +8,8 @@ The configuration proposed in this paper is new, but the problem it addresses is
 and neither are several of its ingredients. This section reviews the attempts that
 preceded it. The purpose is not to establish priority but to establish two things: that
 the need has been pursued continuously for seventy years, and that the pursuit was
-rarely abandoned because the aerodynamics failed.
+rarely abandoned because the aerodynamics failed. Figure 2 places the programmes
+discussed below on a single timeline, with the recorded reason each one stopped.
 
 ## 2.1 Removing the fuselage
 

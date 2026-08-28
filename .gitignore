@@ -29,3 +29,5 @@ video/ham/
 *.mp4
 *.mov
 *.prproj
+__pycache__/
+*.pyc
