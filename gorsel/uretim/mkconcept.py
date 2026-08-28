@@ -28,37 +28,11 @@ ax.set_title("Two configuration families and the limit of each",loc="left",
 fig.tight_layout(); fig.savefig(OUT+"/sekil01-iki-aile.png",dpi=300,bbox_inches="tight")
 fig.savefig(OUT+"/sekil01-iki-aile.svg",bbox_inches="tight"); print("Sekil 1")
 
-# ================= SEKIL 2 : zaman cizelgesi =================
-OL=[(1934,"Burnelli\nlifting fuselage","flew; no production\norders",1),
-    (1942,"Vought V-173","≈190 flights",-1),
-    (1946,"Northrop XB-35","gearboxes, not the wing",1),
-    (1947,"Vought XF5U","completed, never flown\njet era",-1),
-    (1952,"Handley Page Victor","crescent wing\nin service",1),
-    (1954,"Lockheed XFV-1","engine never delivered",-1),
-    (1954.9,"Convair XFY-1","full transition achieved\nended by pilot workload",1),
-    (2010,"hybrid VTOL UAS","lift+cruise and tilt\nin service",-1)]
-fig,ax=plt.subplots(figsize=(13.2,5.4))
-ax.set_xlim(1928,2028); ax.set_ylim(-1.25,1.25); ax.axis("off")
-ax.plot([1930,2026],[0,0],color=INK,lw=2)
-for yr in (1940,1960,1980,2000,2020):
-    ax.plot([yr],[0],"|",ms=12,color=INK,mew=1.6)
-    ax.text(yr,-0.10,str(yr),ha="center",va="top",fontsize=10.5,color=MUT)
-for x,t,s,side in OL:
-    col=R if "XFY" in t else A
-    ax.plot([x],[0],"o",ms=9,color=col,zorder=4)
-    y0=0.16*side; y1=(0.52 if side>0 else -0.46)
-    ax.plot([x,x],[y0,y1],color=GR,lw=1.4,zorder=1)
-    va="bottom" if side>0 else "top"
-    ax.text(x,y1+(0.05*side),t,ha="center",va=va,fontsize=10.8,fontweight="bold",
-            color=col,linespacing=1.35)
-    ax.text(x,y1+(0.33*side) if side>0 else y1-0.30,s,ha="center",va=va,
-            fontsize=9.4,color=MUT,linespacing=1.4)
-ax.set_title("Seventy years of attempts to merge the two families",loc="left",
-             fontsize=13,fontweight="bold",pad=6)
-ax.text(1930,-1.16,"Marked in red: the one programme that completed the full cycle and was ended "
-        "by a constraint located in the cockpit.",fontsize=9.6,color=MUT)
-fig.tight_layout(); fig.savefig(OUT+"/sekil02-zaman-cizelgesi.png",dpi=300,bbox_inches="tight")
-fig.savefig(OUT+"/sekil02-zaman-cizelgesi.svg",bbox_inches="tight"); print("Sekil 2")
+# Sekil 2 buradan cikarildi: mkfig02.py'nin uretti�i surumun ESKISIYDI ve
+# NASA TM-81280 / TM-85938 ile curutulen "pilot workload" iddiasini tasiyordu.
+# Ayni dosyaya iki betik yazinca, calistirma sirasina gore dogru sekil sessizce
+# eziliyordu. Sekil 2'nin tek ureticisi mkfig02.py'dir.
+
 
 # ================= SEKIL 3 : uc fatura =================
 fig,ax=plt.subplots(figsize=(9.0,8.4))
