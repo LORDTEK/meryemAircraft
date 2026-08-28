@@ -182,6 +182,7 @@ Unsurların tek tek ataları vardır; yenilik **bileşimdedir**:
 | N101 | 🔴 **YENİ BULGU — pervane, gövdeden hızlı büyüyor.** Disk yükü sabit tutulunca disk alanı kütleyle orantılı büyümek zorunda (×20), yani pervane çapı ×4,50. Ama kanat yükü 25,3 → 45,0 kg/m² yükseldiği için açıklık yalnızca ×3,35 büyüyor. Sonuç: **çap/açıklık oranı 0,35'ten 0,47'ye çıkıyor.** Ağır hat, hafif hattın uzaktan çekilmiş fotoğrafı değildir — ve bu **Şekil 11'de çıplak gözle görülüyor.** "Oranlar korunuyor" iddiası bu yüzden dört büyüklükle sınırlandırıldı; ölçeklenmeyen büyüklük artık **iki** (geçiş süresi + bu). Giriş, Bölüm 6.4, Bölüm 9 ve Şekil 11 başlığı düzeltildi |
 | N102 | ✅ **Askı gücü kütleyle DOĞRUSAL büyüyor.** 10,9 → 216,2 kW, yani ×19,8; kütle ×20. Klasik $L^{3,5}$ değil. Sebebi disk yükünün sabit tutulması: $P \propto W^{1,5}/\sqrt{A}$ ve $A \propto W$ ise $P \propto W$. Kare-küp yasası bu araçta **yalnızca dönüş (Tablo 4) tarafında** tam ödeniyor. Bölüm 6.4'ün kapanışı buna göre yeniden yazıldı |
 | N103 | ✅ **Doğrulama betiği yazıldı** — `makale/uretim/dogrula.py`. Makalenin her başlık sayısını, makalenin kendi denklemleriyle bağımsız hesaplayıp metinle karşılaştırıyor: 33 kontrol + geçiş tablolarının 52 hücresi. Bayat sayı bir daha sessizce kalamaz |
+| N104 | ✅ **Başvuru numarası kayda geçti: 2026/014570** (26.08.2026). Rüçhan bu tarihten işler; yurt dışı için son gün **26.08.2027.** Evrak numarası iç takip kaydıdır, dışarıya verilmez |
 
 ---
 
