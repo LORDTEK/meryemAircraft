@@ -189,6 +189,12 @@ Unsurların tek tek ataları vardır; yenilik **bileşimdedir**:
 | N108 | 🔴 **`gecis2.py` kaldırma eğrisi eğimini %18 fazla varsayıyor:** 2π/(1+2/AR) = 4,72 /rad, VLM 3,87 /rad. Yön kötü tarafa — benzetim kaldırmanın gerçekte olduğundan hızlı toparlandığını sanıyor |
 | N109 | ✅ **Ama Bölüm 7.4 buna dayanıyor.** İki eğimle de tablolar üretildi (`aero/duyarlilik.py`): yayımlanmış değerlerde en çok **1,2 m** değişiyor, ve **referans profillerin ikisi de (hafif 2 s, ağır 4 s, w₀=5) her iki eğimde de sıfır irtifa kaybı** veriyor. Sav sağlam |
 | N110 | **Sırada `C_D0`.** Hâlâ varsayım (0,0248). Bileşen bileşen kurulacak: kanat kesitleri (NeuralFoil şerit), kaportalı uç iskeletleri, pervane göbekleri. Menzil doğrudan buna bağlı — ikinci sürümün asıl işi |
+| N111 | ✅ **C_D0 bileşen bileşen kuruldu** (`aero/cd0.py`). Kanat/gövde şerit yöntemiyle, kesit katsayıları NeuralFoil'den **sıfır kaldırmada**. İki yüzey senaryosu: serbest geçiş (temiz, iyimser) ve tetikli geçiş (üretilmiş yüzey, gerçekçi). Hafif hat: **C_D0 = 0,0133 – 0,0241** |
+| N112 | ✅ **Çerçeve terimi bağımsız doğrulandı.** Kurulum 0,00431 veriyor; makalenin 5.2'sinde ayrı yoldan hesaplanmış 0,0043 ile örtüşüyor. Ağır hatta da aynı değer → 6.4'ün "çerçeve payı ölçekle korunur" savı doğrulandı |
+| N113 | ✅ **Varsayılan 0,0248 kötümserdi.** Hesaplanan aralığın en üstünde ya da biraz üzerinde. Hesap varsayımı çürütmüyor, **sınırlıyor** |
+| N114 | 🔴 **TUTARSIZLIK: azami L/D ile seyir L/D'si karışmış.** Makalenin `0,5√(πARe/C_D0)` bağıntısı **azami** L/D'yi verir; o da C_L = 0,632'de, yani **25,3 m/s**'de olur. Seyir hızı 30 m/s belirlendiği için oradaki gerçek L/D **12,03**, 12,74 değil → menzil **%5,6 fazla**. İkinci sürümde ya seyir hızı azami noktaya çekilmeli ya da menzil gerçek seyir L/D'siyle hesaplanmalı |
+| N115 | ✅ **İki hata ters yönde, birbirini götürüyor.** C_D0 fazla varsayılmış (menzili düşürür), L/D azami alınmış (menzili yükseltir). Yayımlanan **1 695 km**, hesaplanan **1 634 – 2 317 km** aralığının alt ucuna yakın. Ağır hat: yayımlanan 1 868 km, hesap 1 801 – 2 425 km. **Yayımlanmış sayılar kötümser tarafta kalıyor** |
+| N116 | ⚠️ **Kurulumun en zayıf halkası:** şerit yöntemi kök kesitini %25 kalınlığında iki boyutlu bir profil gibi ele alıyor. Kanat-gövde merkez gövdesinde akış iki boyutlu değil, ve kanat terimi toplamın en büyük parçası. Baskın belirsizlik burada. Ayrıca kesitler simetrik alındı, ok açısı düzeltmesi yok, girişim yalnız %10 payda |
 
 ---
 
