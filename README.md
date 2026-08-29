@@ -30,18 +30,19 @@ koşulu sağlayan bir konfigürasyon önerir.
 | | |
 |---|---|
 | DOI | [10.5281/zenodo.22144194](https://doi.org/10.5281/zenodo.22144194) — her zaman en son sürüme gider |
-| Yayımlanmış v1 | [10.5281/zenodo.22144195](https://doi.org/10.5281/zenodo.22144195) |
+| Yayımlanmış sürüm (v1) | [10.5281/zenodo.22144195](https://doi.org/10.5281/zenodo.22144195) |
 | PDF | [`makale/pdf/meryemAircraft-makale.pdf`](makale/pdf/meryemAircraft-makale.pdf) — 44 sayfa, 12 şekil |
 | Tek dosya kaynak | [`makale/makale.md`](makale/makale.md) |
 | Bölüm bölüm | [`makale/bolumler/`](makale/bolumler/) |
 | Kaynakça | [`makale/kaynakca-en.md`](makale/kaynakca-en.md) |
 
-> ⚠️ **Bu depodaki kaynak artık v1'den ileridedir.** Zenodo'daki v1 (Ağustos 2026)
-> menzili azami L/D ile hesaplıyordu; oysa seyir hızı ayrı belirlenmişti ve orada
-> L/D daha düşüktür. Yöntem düzeltildi, sayılar seyir noktasından yeniden hesaplandı:
-> hafif hat **1 695 → 1 598 km**, ağır hat **1 868 → 1 814 km**. Gerekçesi ve
-> hesabı [`aero/README.md`](aero/README.md) içinde. Yayımlanmış v1 değişmez; bu
-> düzeltme v2 ile Zenodo'ya gidecek.
+> **v2 hazır, Zenodo'ya yüklenmeyi bekliyor.** v1'e göre değişenler:
+> menzil yöntemi düzeltildi (azami L/D yerine seyir noktası poları — hafif hat
+> **1 695 → 1 598 km**, ağır hat **1 868 → 1 814 km**); **Bölüm 6.6** eklendi:
+> girdap-kafes ve şerit hesabı, varsayılan iki katsayıyı değiştirmeden
+> **sınırlıyor**; geçiş sonucunun kaldırma eğrisi eğimindeki %18'lik hataya
+> dayandığı gösterildi; hacim kapanışı yapıldı. Hesaplar
+> [`aero/`](aero/) altında. **Yayımlanmış v1 değişmez.**
 >
 > ⚠️ **Çalışma analitiktir.** Rüzgâr tüneli, hesaplamalı akışkanlar dinamiği ya da
 > uçuş denemesi verisi **yoktur**; sayılar, belirtilen varsayımlardan türetilmiş
@@ -79,13 +80,16 @@ somut karşılığıdır.
 | `gorsel/uretim/mkfig*.py` | On iki şeklin üreticileri |
 | `gorsel/uretim/figlib.py` | 3B modeli başsız Chromium'da açar, kamerayı sürer, görüntü alır |
 | `gorsel/uretim/mklinkedin.py` | Paylaşım kartı |
+| `aero/vlm.py` · `aero/cd0.py` | Girdap-kafes ve `C_D0` kurulumu — Bölüm 6.6 |
+| `aero/duyarlilik.py` · `aero/hacim.py` | Eğim duyarlılığı ve hacim kapanışı |
 
-`dogrula.py` şu an **38 kontrol** ve geçiş tablolarının **52 hücresini** sınıyor;
+`dogrula.py` şu an **40 kontrol** ve geçiş tablolarının **52 hücresini** sınıyor;
 sapma yok. Betik, derleme sırasında iki tablonun bayat kaldığını ve bir yerde
 momentin itkiyle karıştırıldığını yakaladı.
 
 **Bağımlılıklar:** `python3`, `matplotlib`, `pillow`, `markdown`, `playwright`
-(başsız Chromium — üç boyutlu şekiller ve PDF için).
+(başsız Chromium — üç boyutlu şekiller ve PDF için); `aero/` için ayrıca
+`aerosandbox` ve `neuralfoil`.
 
 Betikler bulundukları yerden çalışır; depo dışında bir yola ihtiyaç duymazlar.
 Üç boyutlu şekiller `gorsel/kaynak/govde-etudu.html` modelinden üretilir:

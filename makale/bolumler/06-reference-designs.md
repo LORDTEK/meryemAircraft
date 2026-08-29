@@ -67,11 +67,12 @@ give.
 M = 2 T L = I α, with the transition manoeuvre as the sizing case.
 
 **Assumptions carried throughout:** sea-level density; no compressibility; span
-efficiency e assumed rather than computed; C_D0 assumed at 0.0248 for the light
-design, which is generous for a clean blended-wing body and is intended to absorb the
-tip-frame contribution of Section 5.2 — that contribution is 0.0043, or seventeen
-percent of the assumed C_D0, so the assumption is self-consistent rather than
-optimistic.
+efficiency e assumed at 0.85; C_D0 assumed at 0.0248 for the light design, which is
+generous for a clean blended-wing body and is intended to absorb the tip-frame
+contribution of Section 5.2 — that contribution is 0.0043, or seventeen percent of the
+assumed C_D0, so the assumption is self-consistent rather than optimistic. Both
+coefficients remain assumptions in what follows. Section 6.6 does not replace them; it
+bounds them by independent calculation, which is a weaker but more honest claim.
 
 ## 6.2 Light reference design — 50 kg
 
@@ -259,3 +260,55 @@ comparable load further is making an architectural claim; a configuration that c
 a heavier load is making a claim about mass budgeting, which is exactly the part of
 this study that is least validated.
 
+## 6.6 Independent checks on the two assumed coefficients
+
+The two coefficients that carry the most weight in Section 6 — span efficiency and
+zero-lift drag — were assumed rather than derived. They remain assumed. What follows
+does not replace them with computed values; it asks a narrower question that can be
+answered honestly: **are the assumed values inside the range that a calculation gives,
+and on which side?**
+
+**Span efficiency.** A vortex-lattice solution of the planform of Section 4.2 [15] gives
+an inviscid span efficiency of 0.99. That is not the same quantity as the 0.85 used here.
+The vortex-lattice figure counts only the departure of the induced drag from the
+elliptic ideal; the 0.85 is an Oswald-type efficiency that also carries the viscous
+drag due to lift, which for a clean wing runs at roughly 85 to 90 percent of the
+inviscid value. The two are consistent. Reporting the calculation as an improvement on
+the assumption would be a category error, and it is not claimed.
+
+The same solution gives a lift-curve slope of 3.87 rad⁻¹ against the 4.72 rad⁻¹ that
+the transition simulation of Section 7.4 assumes — eighteen percent lower, and in the
+unfavourable direction. Section 8.6 reports what that does to the transition results.
+
+**Zero-lift drag.** A strip calculation over the span, taking section drag coefficients
+at zero lift from a physics-informed aerofoil model [16] and adding the tip frames and the propeller hubs, gives:
+
+| Contribution | Light design |
+|---|---:|
+| Wing and body, clean surface | 0.0073 |
+| Wing and body, transition tripped near the leading edge | 0.0129 |
+| Tip frames, faired | 0.0043 |
+| Tip-propeller hubs | 0.0015 – 0.0020 |
+| **Total** | **0.0131 – 0.0210** |
+
+The frame term reproduces the 0.0043 of Section 5.2, which was reached by a different
+route, and it comes out the same for the heavy design — an independent confirmation of
+the scale invariance claimed in Section 6.4. The hub term is bounded by hardware rather
+than guessed: each tip rotor must deliver about 0.83 kgf on a 0.20 m propeller, which
+places it in the standard 22 mm stator class whose outer cans measure roughly 28 mm.
+
+**The assumed 0.0248 lies above the whole of that range.** The assumption is therefore
+conservative in every scenario considered, not merely in the pessimistic one. Because
+range is linear in lift-to-drag ratio, the reference designs of Sections 6.2 and 6.3
+would gain rather than lose if the calculation were adopted — which is the reason it is
+not adopted. An assumption that is declared and shown to be conservative is a smaller
+target than a calculation whose weakest link, discussed in Section 8.4, is the
+treatment of a twenty-five percent thick centre body as a two-dimensional section.
+
+**Internal volume.** One closure that the mass budget does not address is whether the
+payload fits. The body's gross internal volume follows from the thickness distribution:
+185 litres for the light design. Taking rather more than half of that as usable and
+subtracting fuel, buffer, powerplant and avionics leaves about 80 litres for 13 kg of
+payload, which requires a mean density of only 0.16 kg per litre. The configuration is
+mass-limited rather than volume-limited, and the choice of mission therefore constrains
+the structure and the load paths rather than the internal arrangement.
