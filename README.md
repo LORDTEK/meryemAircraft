@@ -29,20 +29,21 @@ koşulu sağlayan bir konfigürasyon önerir.
 
 | | |
 |---|---|
-| DOI | [10.5281/zenodo.22144194](https://doi.org/10.5281/zenodo.22144194) — her zaman en son sürüme gider |
-| Yayımlanmış sürüm (v1) | [10.5281/zenodo.22144195](https://doi.org/10.5281/zenodo.22144195) |
-| PDF | [`makale/pdf/meryemAircraft-makale.pdf`](makale/pdf/meryemAircraft-makale.pdf) — 44 sayfa, 12 şekil |
+| DOI | [10.5281/zenodo.22144194](https://doi.org/10.5281/zenodo.22144194) — her zaman en son sürüme gider, şu an **v2** |
+| İlk sürüm (v1) | [10.5281/zenodo.22144195](https://doi.org/10.5281/zenodo.22144195) — değişmez |
+| PDF | [`makale/pdf/meryemAircraft-makale.pdf`](makale/pdf/meryemAircraft-makale.pdf) — 46 sayfa, 12 şekil |
 | Tek dosya kaynak | [`makale/makale.md`](makale/makale.md) |
 | Bölüm bölüm | [`makale/bolumler/`](makale/bolumler/) |
 | Kaynakça | [`makale/kaynakca-en.md`](makale/kaynakca-en.md) |
 
-> **v2 hazır, Zenodo'ya yüklenmeyi bekliyor.** v1'e göre değişenler:
+> **v2 yayımlandı (2026-08-29).** v1'e göre değişenler:
 > menzil yöntemi düzeltildi (azami L/D yerine seyir noktası poları — hafif hat
 > **1 695 → 1 598 km**, ağır hat **1 868 → 1 814 km**); **Bölüm 6.6** eklendi:
 > girdap-kafes ve şerit hesabı, varsayılan iki katsayıyı değiştirmeden
 > **sınırlıyor**; geçiş sonucunun kaldırma eğrisi eğimindeki %18'lik hataya
-> dayandığı gösterildi; hacim kapanışı yapıldı. Hesaplar
-> [`aero/`](aero/) altında. **Yayımlanmış v1 değişmez.**
+> dayanmadığı gösterildi; hacim kapanışı yapıldı. Hesaplar
+> [`aero/`](aero/) altında. **Yayımlanmış v1 değişmez**, kendi DOI'siyle
+> erişilebilir durumdadır.
 >
 > ⚠️ **Çalışma analitiktir.** Rüzgâr tüneli, hesaplamalı akışkanlar dinamiği ya da
 > uçuş denemesi verisi **yoktur**; sayılar, belirtilen varsayımlardan türetilmiş
@@ -61,6 +62,7 @@ gorsel/     On iki şekil
   kaynak/     Parametrik geometri modeli
   uretim/     Şekilleri ve geçiş benzetimini üreten betikler
   cikti/      Yayına hazır png / svg
+aero/       Bağımsız aerodinamik hesap — girdap-kafes, C_D0, hacim (Bölüm 6.6)
 patent/     Türkiye patent başvurusunun metinleri ve çizimleri
 tasarim/    Tasarım künyesi — her kararın, verildiği andaki gerekçesiyle kaydı
 kaynakca/   Okunan literatürün kaydı
