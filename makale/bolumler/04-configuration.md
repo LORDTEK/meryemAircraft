@@ -98,7 +98,7 @@ The energy path is a series hybrid: fuel → internal-combustion engine → gene
 electric machines. The engine is not mechanically connected to any rotor; it is an
 energy source. This decoupling is what allows the engine to be sized for cruise rather
 than for hover. For the light reference design the continuous cruise requirement is
-1.8 kW at the engine shaft — 1.6 kW at the electric machines — and the engine is sized at
+1.9 kW at the engine shaft — 1.7 kW at the electric machines — and the engine is sized at
 2.6 kW, while the hover requirement is 10.9 kW at the rotor; the
 difference is supplied for the duration of the vertical phase by a battery buffer of
 1.8 kg, which is 3.6 percent of the maximum take-off mass. Section 5 returns to this,

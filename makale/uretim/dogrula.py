@@ -33,16 +33,16 @@ ESTAR = 12.9 * 3.6e6  # J/kg, yakit
 
 TASARIM = [
     # ad,        m,     S,      b,     Dana,  Dic,  Lp,    V,   LD,  yakit_pay
-    ("hafif",    50.0,  1.9785, 3.453, 1.20,  0.20, 0.71,  30., 12.7, 0.16),
-    ("agir",   1000.0, 22.24,  11.55, 5.40,  0.67, 2.38,  40., 14.0, 0.16),
+    ("hafif",    50.0,  1.9785, 3.453, 1.20,  0.20, 0.71,  30., 12.0, 0.16),
+    ("agir",   1000.0, 22.24,  11.55, 5.40,  0.67, 2.38,  40., 13.6, 0.16),
 ]
 
 BEKLENEN = {
  "hafif": dict(AR=6.00, kanat_yuku=25.3, disk_yuku=44.2, hover=10.9e3,
-               seyir_elek=1.6e3, motor_mil=1.8e3, menzil=1695e3, dayanim=15.7,
+               seyir_elek=1.7e3, motor_mil=1.9e3, menzil=1598e3, dayanim=14.8,
                q_iz=433., Vstall=20.1),
  "agir":  dict(AR=6.00, kanat_yuku=45.0, disk_yuku=43.7, hover=216.2e3,
-               seyir_elek=38.1e3, motor_mil=44.5e3, menzil=1868e3, dayanim=13.0),
+               seyir_elek=39.2e3, motor_mil=45.8e3, menzil=1814e3, dayanim=12.6),
 }
 
 for ad, m, S, b, Dana, Dic, Lp, V, LD, yakit in TASARIM:
@@ -67,6 +67,13 @@ for ad, m, S, b, Dana, Dic, Lp, V, LD, yakit in TASARIM:
     # metinde iki anlamli haneye yuvarli — tolerans buna gore
     esit(f"{ad}: seyir elektrik gucu", P_elek, B["seyir_elek"], tol=0.03, birim="W")
     esit(f"{ad}: seyir motor mil gucu", P_motor, B["motor_mil"], tol=0.03, birim="W")
+
+    # L/D, AZAMI degil, SEYIR NOKTASINDA olculur (6.1). Formulden geri
+    # cikarilan C_D0 ile polar yeniden kurulup metindeki L/D sinaniyor.
+    CL = W / (0.5 * RHO * V ** 2 * S)
+    cd0 = math.pi * B["AR"] * 0.85 / (4 * {"hafif": 12.70, "agir": 14.00}[ad] ** 2)
+    esit(f"{ad}: seyir noktasinda L/D = C_L/C_D",
+         CL / (cd0 + CL ** 2 / (math.pi * B["AR"] * 0.85)), LD, tol=0.01)
 
     # menzil — R = (m_f/m) E* eta (L/D) / g
     R = yakit * ESTAR * ETA * LD / g

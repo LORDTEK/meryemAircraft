@@ -9,7 +9,7 @@ def egim(frac,Estar,eta): return frac*Estar*eta/g/1000.0
 Sa=egim(0.33,157*3600,0.75*0.60); Sb=egim(0.16,12.9*3.6e6,0.176)
 print(f"pil {Sa:.2f} km/birim  ·  hibrit {Sb:.1f} km/birim")
 print(f"  dogrulama pil    L/D 13.5 -> {Sa*13.5:.0f} km   (tez: Cora tabani 119 km)")
-print(f"  dogrulama hibrit L/D 12.7 -> {Sb*12.7:.0f} km   (Bolum 6.2: 1695 km)")
+print(f"  dogrulama hibrit L/D 12.0 -> {Sb*12.0:.0f} km   (Bolum 6.2: 1598 km)")
 
 OLC=[(9.0,"propellers\nperpendicular"),(13.0,"hover hardware installed,\npropellers aligned"),
      (17.0,"clean airframe,\nno hover hardware")]
@@ -37,7 +37,7 @@ for v,lab in OLC:
 axs[0].text(15.0,Sa*17.9,"−24 % of L/D",fontsize=10,color="#B03A2E",ha="center",fontweight="bold")
 axs[1].text(15.0,Sb*17.9,"= −24 % of range",fontsize=10,color="#B03A2E",ha="center",fontweight="bold")
 # bizim tasarimlar SADECE hibrit panelde
-for v,lab,dx,dy in ((12.7,"this study\n50 kg",-1.9,1.34),(14.0,"this study\n1000 kg",2.9,0.72)):
+for v,lab,dx,dy in ((12.0,"this study\n50 kg",-1.9,1.34),(13.6,"this study\n1000 kg",2.9,0.72)):
     axs[1].plot([v],[Sb*v],"o",ms=9.5,mfc="white",mec="#12303F",mew=2.2,zorder=6)
     axs[1].annotate(lab,xy=(v,Sb*v),xytext=(v+dx,Sb*19.6*dy*0.72),ha="center",
                     fontsize=9.3,color="#12303F",linespacing=1.35,

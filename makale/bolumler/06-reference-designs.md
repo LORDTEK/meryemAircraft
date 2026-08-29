@@ -25,10 +25,25 @@ in this section can be checked by hand.
 with the disc loading DL = T/A as the governing parameter. Figure of merit is applied
 to obtain shaft power.
 
-**Cruise.** Lift equals weight, drag follows from the polar, and the lift-to-drag ratio
-is estimated from aspect ratio and zero-lift drag:
+**Cruise.** Lift equals weight, which fixes the lift coefficient at the chosen cruise
+speed; drag then follows from the polar, and the lift-to-drag ratio is the ratio of the
+two at that point:
 
-    L/D ≈ 0.5 √(π · AR · e / C_D0)
+    C_L = W / (q S),   q = ½ ρ V²
+
+    C_D = C_D0 + C_L² / (π · AR · e)
+
+    L/D = C_L / C_D
+
+This is evaluated **at the cruise condition**, not at the aircraft's best point. The
+familiar expression L/D_max = 0.5 √(π·AR·e/C_D0) gives the *maximum* lift-to-drag ratio,
+which occurs at one particular lift coefficient and therefore at one particular speed —
+25.3 m s⁻¹ for the light design, only 1.26 times its stall speed. Cruising there would
+leave too little margin, so both reference designs cruise at 1.49 times stall instead
+and accept the lift-to-drag ratio that this condition gives. Using the maximum value
+while specifying a different cruise speed would overstate the range, and an earlier
+version of this paper did exactly that; the figures below are computed at the cruise
+point.
 
 **Range.** The series-hybrid chain is stated explicitly rather than folded into a
 single efficiency, because the result is sensitive to it and a reader should be able to
@@ -75,14 +90,14 @@ optimistic.
 | Frame post length | 0.71 m each direction |
 | Stall speed | 20.1 m s⁻¹ |
 | Cruise speed | 30 m s⁻¹ (108 km h⁻¹) |
-| Cruise L/D | 12.7 |
+| Cruise L/D | 12.0 |
 | Hover power | 10.9 kW |
-| Cruise power, electrical | 1.6 kW |
+| Cruise power, electrical | 1.7 kW |
 | Engine rating | 2.6 kW |
 | Battery buffer | 1.8 kg (3.6 % MTOW) |
 | Fuel | 8 kg |
-| **Endurance** | **15.7 h** |
-| **Range** | **1 695 km** |
+| **Endurance** | **14.8 h** |
+| **Range** | **1 598 km** |
 | Transition time | 2 s |
 
 The mass budget behind this is a target and not a finding: 30 % structure, 16 %
@@ -105,20 +120,20 @@ because it is the single most likely place for these numbers to be wrong.
 | Tip propeller diameter | 0.67 m |
 | Frame post length | 2.38 m each direction |
 | Cruise speed | 40 m s⁻¹ (144 km h⁻¹) |
-| Cruise L/D | 14.0 |
+| Cruise L/D | 13.6 |
 | Hover power | 216.2 kW |
-| Cruise power, electrical | 38.1 kW |
+| Cruise power, electrical | 39.2 kW |
 | Engine rating | 54.3 kW |
 | Battery buffer | 40 kg (4.0 % MTOW) |
 | Fuel | 160 kg |
-| **Endurance** | **13.0 h** |
-| **Range** | **1 868 km** |
+| **Endurance** | **12.6 h** |
+| **Range** | **1 814 km** |
 | Transition time | 4 s |
 
-The heavy design has a slightly longer range than the light one despite a shorter
-endurance. Both effects come from the same source: the larger aircraft cruises faster
-and, at a higher Reynolds number, achieves a better lift-to-drag ratio. Nothing in the
-architecture was changed to obtain this.
+The heavy design has a longer range than the light one despite a shorter endurance.
+Both effects come from the same source: the larger aircraft cruises faster and, at a
+higher Reynolds number, achieves a lower zero-lift drag coefficient and therefore a
+better lift-to-drag ratio. Nothing in the architecture was changed to obtain this.
 
 ## 6.4 Scale behaviour
 
