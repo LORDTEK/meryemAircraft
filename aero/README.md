@@ -118,8 +118,12 @@ için iki hata ters yönde çalışıyor ve büyük ölçüde birbirini götür�
 Yayımlanmış 1 695 km, hesaplanan aralığın **alt ucuna yakın** duruyor. Ağır
 hatta da aynı: yayımlanan 1 868 km'ye karşı 1 801 – 2 425 km.
 
-İkinci sürümde formül düzeltilmeli: ya seyir hızı azami L/D noktasına
-çekilmeli, ya da menzil gerçek seyir L/D'siyle hesaplanmalı.
+**Düzeltildi (v2).** İki seçenek vardı: seyir hızını azami L/D noktasına
+çekmek (25,3 m/s), ya da menzili gerçek seyir L/D'siyle hesaplamak. Birincisi
+tutunma hızının yalnızca 1,26 katına iner — geçiş için fazla dar bir pay.
+Bu yüzden ikincisi seçildi: seyir hızı 30 m/s'de kaldı, menzil seyir noktası
+polarından hesaplandı. Yayımlanan değerler **1 598 km** (hafif) ve
+**1 814 km** (ağır).
 
 ## Bu kurulumun sınırları
 
