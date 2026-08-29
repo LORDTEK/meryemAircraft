@@ -161,8 +161,11 @@ Yani gerçekçi kovan çapı **28 mm**, montaj ve kaporta payıyla en fazla 32 m
 **Varsayılan 0,0248 artık hesaplanan aralığın tamamının üstünde.** Yani varsayım
 tek bir senaryoda değil, her senaryoda kötümser.
 
-Göbekler kaportalanırsa (uç iskeletleri zaten kaportalanmak zorunda, aynı imalat
-adımı) terim 0,0007'ye iner — ama bu bir tasarım kararı, henüz alınmadı.
+Göbek **kaportalanmıyor** ve bu bilinçli bir karar. Kullanılan C_D = 0,6, çıplak
+silindir (0,9) ile kaportalı nacelle (0,2) arasında orta bir değerdir; pervane
+somununun doğal spinner etkisini ve koaksiyel çiftte arkadaki motorun öndekinin
+izinde kalmasını hesaba katar. Kaportalamanın kazancı `C_D0`'da yalnızca **0,0010**,
+L/D'de %0,5'ten az — sonucu değiştirmediği için tasarımı bağlamıyoruz.
 
 ## Hacim kapanışı — `hacim.py`
 
