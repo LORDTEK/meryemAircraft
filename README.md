@@ -30,12 +30,19 @@ koşulu sağlayan bir konfigürasyon önerir.
 | | |
 |---|---|
 | DOI | [10.5281/zenodo.22144194](https://doi.org/10.5281/zenodo.22144194) — her zaman en son sürüme gider |
-| Bu sürüm (v1) | [10.5281/zenodo.22144195](https://doi.org/10.5281/zenodo.22144195) |
+| Yayımlanmış v1 | [10.5281/zenodo.22144195](https://doi.org/10.5281/zenodo.22144195) |
 | PDF | [`makale/pdf/meryemAircraft-makale.pdf`](makale/pdf/meryemAircraft-makale.pdf) — 44 sayfa, 12 şekil |
 | Tek dosya kaynak | [`makale/makale.md`](makale/makale.md) |
 | Bölüm bölüm | [`makale/bolumler/`](makale/bolumler/) |
 | Kaynakça | [`makale/kaynakca-en.md`](makale/kaynakca-en.md) |
 
+> ⚠️ **Bu depodaki kaynak artık v1'den ileridedir.** Zenodo'daki v1 (Ağustos 2026)
+> menzili azami L/D ile hesaplıyordu; oysa seyir hızı ayrı belirlenmişti ve orada
+> L/D daha düşüktür. Yöntem düzeltildi, sayılar seyir noktasından yeniden hesaplandı:
+> hafif hat **1 695 → 1 598 km**, ağır hat **1 868 → 1 814 km**. Gerekçesi ve
+> hesabı [`aero/README.md`](aero/README.md) içinde. Yayımlanmış v1 değişmez; bu
+> düzeltme v2 ile Zenodo'ya gidecek.
+>
 > ⚠️ **Çalışma analitiktir.** Rüzgâr tüneli, hesaplamalı akışkanlar dinamiği ya da
 > uçuş denemesi verisi **yoktur**; sayılar, belirtilen varsayımlardan türetilmiş
 > analitik kestirimlerdir ve kütle bütçesi bir hedeftir, bulgu değil. Makalenin
