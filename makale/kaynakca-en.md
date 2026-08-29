@@ -33,3 +33,9 @@
 13. Sabrewing Aircraft Company. *Rhaegal-A.* Manufacturer product sheet.
     Accessed 27 August 2026.
 14. Pipistrel. *Nuuva V300.* Manufacturer product sheet. Accessed 27 August 2026.
+15. Sharpe, P. D. *AeroSandbox: A Differentiable Framework for Aircraft Design
+    Optimization.* S.M. thesis, Massachusetts Institute of Technology, 2021.
+    Software: https://github.com/peterdsharpe/AeroSandbox
+16. Sharpe, P. D. *NeuralFoil: An airfoil aerodynamics analysis tool using
+    physics-informed machine learning.* 2023.
+    Software: https://github.com/peterdsharpe/NeuralFoil

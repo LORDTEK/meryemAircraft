@@ -2,7 +2,7 @@
 
 Meryem Gülmen, Berke Gülmen, Ömer Gülmen
 
-**Abstract.** Hybrid vertical take-off and landing (VTOL) aircraft combine runway independence with wing-borne cruise, but purchase that combination at a cost to cruise efficiency. This paper argues the cost is architectural rather than a defect of implementation. It is charged in three currencies — the mass of hover hardware carried through cruise, the drag of hover hardware exposed in cruise, and a power system sized by a condition that holds for roughly two percent of the flight — and every known architectural remedy reduces one currency by increasing another. Stating the cost this way makes its escape condition explicit: it is charged whenever hover and cruise are served by hardware that is not the same hardware, in the same orientation, doing the same job. A configuration satisfying that condition is proposed — an uncrewed tail-sitting blended-wing body in which one coaxial counter-rotating pair at the nose produces all thrust in both regimes, four small coaxial pairs at the wing tips produce attitude moments only, and a deployable strip in the nose-propeller slipstream supplies the rolling moment that body-axis-parallel thrust vectors cannot generate. The aircraft carries no elevons, rudder, tilting mechanism, retraction mechanism or dedicated lift system. Two reference designs are sized twenty times apart in mass, at 50 kg and 1000 kg, from identical equations; disc loading, energy-buffer mass fraction and tip-frame drag fraction are preserved across that range. Two findings changed the study: the tip frames must be faired, as circular tubing would produce nearly as much drag as the rest of the aircraft; and transition altitude loss falls with rotation time rather than rising with it, so entering the rotation while climbing removes it. The study is analytical: no wind-tunnel, computational or flight validation is presented, and the mass budget is a target.
+**Abstract.** Hybrid vertical take-off and landing (VTOL) aircraft combine runway independence with wing-borne cruise, but purchase that combination at a cost to cruise efficiency. This paper argues the cost is architectural rather than a defect of implementation. It is charged in three currencies — the mass of hover hardware carried through cruise, its drag when exposed in cruise, and a power system sized by a condition holding for roughly two percent of the flight — and every known remedy reduces one currency by increasing another. Stating the cost this way makes its escape condition explicit: it is charged whenever hover and cruise are served by hardware that is not the same hardware, in the same orientation, doing the same job. A configuration satisfying that condition is proposed — an uncrewed tail-sitting blended-wing body in which one coaxial counter-rotating pair at the nose produces all thrust in both regimes, four small coaxial pairs at the wing tips produce attitude moments only, and a deployable strip in the nose-propeller slipstream supplies the rolling moment that body-axis-parallel thrust vectors cannot generate. The aircraft has no control surfaces, no tilting or retraction mechanism and no dedicated lift system. Two reference designs are sized twenty times apart in mass, at 50 kg and 1000 kg, from identical equations, with the governing fractions preserved across that range. Two findings changed the study: the tip frames must be faired, and transition altitude loss falls with rotation time rather than rising with it. The study is analytical, with no wind-tunnel or flight validation, and the mass budget is a target. The two aerodynamic coefficients that carry the most weight are not replaced by computation but bounded by it.
 
 **Keywords:** vertical take-off and landing; tail-sitter; blended wing body; uncrewed aerial vehicle; series hybrid propulsion; cruise efficiency; aircraft configuration design
 
@@ -959,11 +959,12 @@ give.
 M = 2 T L = I α, with the transition manoeuvre as the sizing case.
 
 **Assumptions carried throughout:** sea-level density; no compressibility; span
-efficiency e assumed rather than computed; C_D0 assumed at 0.0248 for the light
-design, which is generous for a clean blended-wing body and is intended to absorb the
-tip-frame contribution of Section 5.2 — that contribution is 0.0043, or seventeen
-percent of the assumed C_D0, so the assumption is self-consistent rather than
-optimistic.
+efficiency e assumed at 0.85; C_D0 assumed at 0.0248 for the light design, which is
+generous for a clean blended-wing body and is intended to absorb the tip-frame
+contribution of Section 5.2 — that contribution is 0.0043, or seventeen percent of the
+assumed C_D0, so the assumption is self-consistent rather than optimistic. Both
+coefficients remain assumptions in what follows. Section 6.6 does not replace them; it
+bounds them by independent calculation, which is a weaker but more honest claim.
 
 ## 6.2 Light reference design — 50 kg
 
@@ -1152,6 +1153,59 @@ at similar payload — not payload at similar range. A configuration that carrie
 comparable load further is making an architectural claim; a configuration that carries
 a heavier load is making a claim about mass budgeting, which is exactly the part of
 this study that is least validated.
+
+## 6.6 Independent checks on the two assumed coefficients
+
+The two coefficients that carry the most weight in Section 6 — span efficiency and
+zero-lift drag — were assumed rather than derived. They remain assumed. What follows
+does not replace them with computed values; it asks a narrower question that can be
+answered honestly: **are the assumed values inside the range that a calculation gives,
+and on which side?**
+
+**Span efficiency.** A vortex-lattice solution of the planform of Section 4.2 [15] gives
+an inviscid span efficiency of 0.99. That is not the same quantity as the 0.85 used here.
+The vortex-lattice figure counts only the departure of the induced drag from the
+elliptic ideal; the 0.85 is an Oswald-type efficiency that also carries the viscous
+drag due to lift, which for a clean wing runs at roughly 85 to 90 percent of the
+inviscid value. The two are consistent. Reporting the calculation as an improvement on
+the assumption would be a category error, and it is not claimed.
+
+The same solution gives a lift-curve slope of 3.87 rad⁻¹ against the 4.72 rad⁻¹ that
+the transition simulation of Section 7.4 assumes — eighteen percent lower, and in the
+unfavourable direction. Section 8.6 reports what that does to the transition results.
+
+**Zero-lift drag.** A strip calculation over the span, taking section drag coefficients
+at zero lift from a physics-informed aerofoil model [16] and adding the tip frames and the propeller hubs, gives:
+
+| Contribution | Light design |
+|---|---:|
+| Wing and body, clean surface | 0.0073 |
+| Wing and body, transition tripped near the leading edge | 0.0129 |
+| Tip frames, faired | 0.0043 |
+| Tip-propeller hubs | 0.0015 – 0.0020 |
+| **Total** | **0.0131 – 0.0210** |
+
+The frame term reproduces the 0.0043 of Section 5.2, which was reached by a different
+route, and it comes out the same for the heavy design — an independent confirmation of
+the scale invariance claimed in Section 6.4. The hub term is bounded by hardware rather
+than guessed: each tip rotor must deliver about 0.83 kgf on a 0.20 m propeller, which
+places it in the standard 22 mm stator class whose outer cans measure roughly 28 mm.
+
+**The assumed 0.0248 lies above the whole of that range.** The assumption is therefore
+conservative in every scenario considered, not merely in the pessimistic one. Because
+range is linear in lift-to-drag ratio, the reference designs of Sections 6.2 and 6.3
+would gain rather than lose if the calculation were adopted — which is the reason it is
+not adopted. An assumption that is declared and shown to be conservative is a smaller
+target than a calculation whose weakest link, discussed in Section 8.4, is the
+treatment of a twenty-five percent thick centre body as a two-dimensional section.
+
+**Internal volume.** One closure that the mass budget does not address is whether the
+payload fits. The body's gross internal volume follows from the thickness distribution:
+185 litres for the light design. Taking rather more than half of that as usable and
+subtracting fuel, buffer, powerplant and avionics leaves about 80 litres for 13 kg of
+payload, which requires a mean density of only 0.16 kg per litre. The configuration is
+mass-limited rather than volume-limited, and the choice of mission therefore constrains
+the structure and the load paths rather than the internal arrangement.
 
 # 7. Flight profile and transition
 
@@ -1406,9 +1460,17 @@ Several results depend on coefficients that were not computed for this geometry:
   selected.** The conclusion that the frames must be faired is robust — the difference
   between C_D = 1.15 and C_D = 0.15 is not a matter of coefficient precision — but the
   twelve-percent figure is an estimate.
-- The **zero-lift drag coefficient** of 0.0248 is assumed rather than built up
-  component by component.
-- **Span efficiency** is assumed at 0.85.
+- The **zero-lift drag coefficient** of 0.0248 is assumed rather than adopted from a
+  build-up. Section 6.6 reports a component build-up that brackets it at 0.0131 to
+  0.0210, so the assumed value is conservative; but the build-up has a weak link, and it
+  is the largest term in it. Its strip method treats the root section as a
+  two-dimensional aerofoil of twenty-five percent thickness, and the flow over the centre
+  body of a blended-wing body is not two-dimensional. The build-up is therefore reported
+  as a bound on the assumption rather than as a replacement for it.
+- **Span efficiency** is assumed at 0.85. A vortex-lattice solution gives an inviscid
+  span efficiency of 0.99 for this planform, which is consistent with the assumed
+  Oswald-type value once the viscous drag due to lift is allowed for, but does not
+  measure the same quantity and is not offered as a correction to it.
 
 ## 8.5 Torque balance holds at one point only
 
@@ -1431,6 +1493,15 @@ The qualitative conclusion — that a slower rotation loses less altitude, and t
 entering the rotation while climbing removes the loss entirely — depends on the sign of
 the vertical support term rather than on the details of the aerodynamic model, and is
 robust. The specific altitude figures are not.
+
+That robustness has since been tested rather than asserted. The simulation takes its
+lift-curve slope from the thin-aerofoil expression, 4.72 rad⁻¹; the vortex-lattice
+solution of Section 6.6 gives 3.87 rad⁻¹ for this planform — eighteen percent lower, and
+in the direction that would make the aircraft fall further. Repeating both tables with
+the lower value moves no published entry by more than 1.2 m, and the two reference
+profiles — two seconds for the light design, four for the heavy, entered at 5 m s⁻¹ of
+climb — still lose no altitude at either slope. The conclusion of Section 7.4 survives an
+eighteen-percent error in the coefficient it rests on.
 
 ## 8.7 The tip-surface benefit is not quantified
 
@@ -1507,14 +1578,17 @@ not of a professional search.
 The results of this paper would be most efficiently attacked in four places, and they
 are listed so that they can be:
 
-1. **A component drag build-up** replacing the assumed C_D0, which would move the
-   lift-to-drag ratio and therefore every range figure in Section 6.
+1. **A three-dimensional solution for the centre body.** Section 6.6 reports a component
+   build-up that bounds the assumed C_D0, but its strip method cannot model the flow over
+   a twenty-five percent thick blended centre body, and that is where most of the
+   remaining uncertainty sits.
 2. **A structural mass estimate** for the airframe and the tip frames, which would test
    the payload fraction — the weakest number in the study.
 3. **A six-degree-of-freedom transition simulation** with rotational dynamics, which
    would size the tip propellers properly rather than by order of magnitude.
 4. **A panel-method analysis of the tip surfaces**, which would either convert Section
-   8.7 into a quantified benefit or remove it.
+   8.7 into a quantified benefit or remove it. The vortex-lattice solution of Section 6.6
+   covers the planform but not the tip surfaces, which remain unquantified.
 
 None of these requires an experiment. All four are within reach of a follow-on study,
 and the configuration is described in enough detail in Section 4 and Section 6 for
@@ -1576,11 +1650,12 @@ that is the outcome this paper is written to invite.
 **Funding.** This research received no external funding.
 
 **Conflicts of interest.** The authors have filed a patent application covering the aircraft configuration
-described in this paper.
+described in this paper (Türkpatent application 2026/014570).
 
 **Data availability.** All data supporting the reported results are contained within the article. The
 parametric geometry model, the figure-generation scripts and the transition
-simulation are openly available at the repository cited in the acknowledgements.
+simulation, together with the aerodynamic calculations of Section 6.6, are openly
+available at https://github.com/LORDTEK/meryemAircraft
 
 **Acknowledgements.** Artificial-intelligence tools were used during the preparation of this work, for
 literature searching, numerical checking and language editing. All design decisions,
@@ -1622,3 +1697,9 @@ the authors accept full responsibility for the content.
 13. Sabrewing Aircraft Company. *Rhaegal-A.* Manufacturer product sheet.
     Accessed 27 August 2026.
 14. Pipistrel. *Nuuva V300.* Manufacturer product sheet. Accessed 27 August 2026.
+15. Sharpe, P. D. *AeroSandbox: A Differentiable Framework for Aircraft Design
+    Optimization.* S.M. thesis, Massachusetts Institute of Technology, 2021.
+    Software: https://github.com/peterdsharpe/AeroSandbox
+16. Sharpe, P. D. *NeuralFoil: An airfoil aerodynamics analysis tool using
+    physics-informed machine learning.* 2023.
+    Software: https://github.com/peterdsharpe/NeuralFoil
