@@ -184,6 +184,11 @@ Unsurların tek tek ataları vardır; yenilik **bileşimdedir**:
 | N103 | ✅ **Doğrulama betiği yazıldı** — `makale/uretim/dogrula.py`. Makalenin her başlık sayısını, makalenin kendi denklemleriyle bağımsız hesaplayıp metinle karşılaştırıyor: 33 kontrol + geçiş tablolarının 52 hücresi. Bayat sayı bir daha sessizce kalamaz |
 | N104 | ✅ **Başvuru numarası kayda geçti: 2026/014570** (26.08.2026). Rüçhan bu tarihten işler; yurt dışı için son gün **26.08.2027.** Evrak numarası iç takip kaydıdır, dışarıya verilmez |
 | N105 | ✅ **Zenodo yayımlandı, 28.08.2026.** İki DOI var: **kavram DOI'si 10.5281/zenodo.22144194** hep en son sürüme gider, **sürüm DOI'si 10.5281/zenodo.22144195** yalnızca v1'i sabitler. İkinci sürüm (panel yöntemi verileriyle) planlandığı için **dışarıya verilen kavram DOI'sidir**; sürüm DOI'si yalnız "bu tam sürüm" denmesi gereken yerde kullanılır. Lisans CC BY 4.0 |
+| N106 | ✅ **Girdap-kafes çözümü başladı** (`aero/`). AeroSandbox VLM; kendi çözücümüz değil. Önce AR=6 dikdörtgen kanatta yakınsama sınaması: kaba kafeste **e > 1** çıkıyordu (fiziksel değil), 40 şeritten sonra oturuyor. Kendi planformumuzda 78 şerit kullanıldı |
+| N107 | ⚠️ **e = 0,85 varsayımı DOĞRULANDI, çürütülmedi.** VLM 0,995 veriyor ama o **ağdasız** açıklık verimi; makaledeki 0,85 ağdalı kaldırma sürüklemesini de içeren Oswald tipi katsayı. 0,995 × ~0,86 ≈ 0,85. İkisini karşılaştırıp "varsayımımız kötümsermiş" demek **kategori hatası olurdu** |
+| N108 | 🔴 **`gecis2.py` kaldırma eğrisi eğimini %18 fazla varsayıyor:** 2π/(1+2/AR) = 4,72 /rad, VLM 3,87 /rad. Yön kötü tarafa — benzetim kaldırmanın gerçekte olduğundan hızlı toparlandığını sanıyor |
+| N109 | ✅ **Ama Bölüm 7.4 buna dayanıyor.** İki eğimle de tablolar üretildi (`aero/duyarlilik.py`): yayımlanmış değerlerde en çok **1,2 m** değişiyor, ve **referans profillerin ikisi de (hafif 2 s, ağır 4 s, w₀=5) her iki eğimde de sıfır irtifa kaybı** veriyor. Sav sağlam |
+| N110 | **Sırada `C_D0`.** Hâlâ varsayım (0,0248). Bileşen bileşen kurulacak: kanat kesitleri (NeuralFoil şerit), kaportalı uç iskeletleri, pervane göbekleri. Menzil doğrudan buna bağlı — ikinci sürümün asıl işi |
 
 ---
 
