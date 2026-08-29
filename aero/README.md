@@ -135,4 +135,48 @@ Bunlar hesabın zayıf yerleri; sıraları önem sırasıdır.
 3. **Ok açısı düzeltmesi yok.** Şeritler serbest akışa dik alındı; basit ok
    açısı kuramı kesit üzerindeki etkin hızı düşürürdü.
 4. **Girişim ve bağlantı sürüklemesi** yalnızca %10'luk artık payı içinde.
-5. **Göbek ölçüleri seçilmedi**; 30–50 mm aralığı bir sınır, ölçüm değil.
+5. ~~**Göbek ölçüleri seçilmedi**~~ — **çözüldü, aşağıya bakınız.**
+
+### 6. Göbek ölçüsü piyasadan bağlandı
+
+Her uç rotoru 8 inç pervanede **0,83 kgf** ve **168 W** vermeli. Bu, 22 mm
+statorlu standart sınıfın tam ortası. Piyasadaki karşılıkları:
+
+| motor | dış kovan çapı | ağırlık | not |
+|---|---:|---:|---|
+| T-Motor MT2216 (V2) | **27,8 mm** | 75 g | 22×16 stator, 8–10 inç pervane sınıfı |
+| 2212 920 KV (yaygın) | 28 mm | 60 g | 9 inç pervanede ~0,5 kgf — bizim için **küçük kalır** |
+
+Yani gerçekçi kovan çapı **28 mm**, montaj ve kaporta payıyla en fazla 32 mm.
+Önceki 50 mm üst sınırı gereksiz kötümserdi. Bu, göbek terimini
+**0,0048'den 0,0015 – 0,0020'ye** indiriyor ve `C_D0` aralığını daraltıyor:
+
+| hal | C_D0 | seyirde L/D | menzil |
+|---|---:|---:|---:|
+| iyimser (temiz yüzey, 28 mm) | 0,0131 | 17,53 | 2 337 km |
+| orta (tetikli, 28 mm) | 0,0187 | 14,41 | 1 920 km |
+| kötümser (tetikli, 32 mm, +%10) | 0,0210 | 13,39 | 1 785 km |
+| **makale (varsayım 0,0248)** | 0,0248 | **12,0** | **1 598 km** |
+
+**Varsayılan 0,0248 artık hesaplanan aralığın tamamının üstünde.** Yani varsayım
+tek bir senaryoda değil, her senaryoda kötümser.
+
+Göbekler kaportalanırsa (uç iskeletleri zaten kaportalanmak zorunda, aynı imalat
+adımı) terim 0,0007'ye iner — ama bu bir tasarım kararı, henüz alınmadı.
+
+## Hacim kapanışı — `hacim.py`
+
+Kanat-gövde yükü gövdenin **içinde** taşır, dolayısıyla görev seçiminden önce
+sorulması gereken şey şudur: yük zaten sığıyor mu?
+
+| | brut | kullanılabilir (~%55) | yüksüz dolum | yüke kalan |
+|---|---:|---:|---:|---:|
+| hafif, 50 kg | 185 L | 102 L | 21 L | **81 L** |
+| ağır, 1000 kg | 6 936 L | 3 815 L | 768 L | **3 047 L** |
+
+13 kg yükün 81 litreye sığması için yoğunluğunun yalnızca **0,16 kg/L** olması
+yeterli. Su 1,0 · elektronik ~0,8 · köpük kargo ~0,3 kg/L — **hepsi sığar.**
+
+**Konfigürasyon hacim değil kütle sınırlı.** Görev seçimi iç hacmi zorlamıyor;
+yapıyı ve yük yollarını etkiliyor, o da kütle bütçesidir — makalenin 8.2'de
+zaten "en çok yanılma ihtimali olan yer" dediği kalem.

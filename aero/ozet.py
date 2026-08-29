@@ -26,9 +26,9 @@ def hat(ad, olcek, hiz, kutle, LD_makale, menzil_makale):
     gobek = [C.UC_GOBEK_CD * C.UC_GOBEK_SAYISI * math.pi * ((d * olcek) / 2) ** 2 / S
              for d in C.UC_GOBEK_CAP]
 
-    hal = [("iyimser  (temiz yuzey, kucuk gobek)", ks + cer + gobek[0]),
-           ("orta     (tetikli, kucuk gobek)",     kt + cer + gobek[0]),
-           ("kotumser (tetikli, buyuk gobek, +%10)", (kt + cer + gobek[1]) * 1.10)]
+    hal = [("iyimser  (temiz yuzey, 28 mm gobek)", ks + cer + gobek[0]),
+           ("orta     (tetikli, 28 mm gobek)",     kt + cer + gobek[0]),
+           ("kotumser (tetikli, 32 mm gobek, +%10)", (kt + cer + gobek[1]) * 1.10)]
 
     W = kutle * G
     q = 0.5 * RHO * hiz ** 2
@@ -49,11 +49,9 @@ def hat(ad, olcek, hiz, kutle, LD_makale, menzil_makale):
 
 
 if __name__ == "__main__":
-    hat("HAFIF HAT", 1.0, 30.0, 50, 12.7, 1695)
-    hat("AGIR HAT", C.AGIR_OLCEK, C.AGIR_V, 1000, 14.0, 1868)
+    hat("HAFIF HAT", 1.0, 30.0, 50, 12.0, 1598)
+    hat("AGIR HAT", C.AGIR_OLCEK, C.AGIR_V, 1000, 13.6, 1814)
     print(f"\n{'='*66}")
-    print("Makalenin L/D formulu 0.5*sqrt(pi*AR*e/C_D0) AZAMI L/D'yi verir.")
-    print("Hafif hatta azami L/D, C_L = 0.632'de yani 25.3 m/s'de olusur;")
-    print("seyir hizi 30 m/s olarak belirlendigi icin oradaki gercek L/D 12.03'tur.")
-    print("Yani makale menzili %5.6 fazla hesaplamis. Ayni anda C_D0'i da")
-    print("fazla varsaydigi icin iki hata birbirini buyuk olcude goturuyor.")
+    print("MAKALE satiri, duzeltilmis yontemle (seyir noktasi polari) hesaplanmis")
+    print("degerleri gosterir. Varsayilan C_D0 = 0.0248, hesaplanan araligin")
+    print("TAMAMININ ustunde; yani varsayim her senaryoda kotumser.")
