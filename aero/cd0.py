@@ -41,8 +41,12 @@ CERCEVE_UZUNLUK = 4 * 0.71    # dort dikme, her biri 0.71 m
 CERCEVE_KALINLIK = 0.020
 CERCEVE_CD = 0.15             # kaportali kesit
 
-# --- uc pervaneleri: gobek + baglanti. Olculer secilmedi. ---
-UC_GOBEK_CAP = (0.030, 0.050)  # alt ve ust sinir
+# --- uc pervaneleri: gobek + baglanti ---
+# Piyasa taramasi (2026-08): her uc rotoru 8 inc pervanede ~0,83 kgf ve ~168 W
+# vermeli. Bu, standart 22 mm statorlu sinifin tam ortasi. T-Motor MT2216'nin
+# dis kovan capi 27,8 mm, agirligi 75 g; ayni sinifin 2212 surumu 28 mm.
+# Alt sinir bu olcu, ust sinir montaj/kaporta payiyla 32 mm.
+UC_GOBEK_CAP = (0.028, 0.032)
 UC_GOBEK_SAYISI = 8            # dort cift, her ciftte iki gobek
 UC_GOBEK_CD = 0.6              # kisa donel cisim, on alan uzerinden
 
