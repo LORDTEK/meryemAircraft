@@ -32,6 +32,25 @@ HEDEF = [1.50, 1.00, 0.667, 0.40]
 NF, NN, NW = 384, 144, 96
 KOK = "/tmp/yplus"
 
+# MODEL SECIMI -- sonradan eklendi, ve burada ozel bir anlami var.
+#
+# Yukaridaki gerekce SST'ye OZGU bir mekanizmaya dayaniyor:
+# omegaWallFunction'in harmanlamasi ve omega ~ 6 nu/(beta1 y^2)'nin
+# y -> 0'da iraksamasi. SA'da omega denklemi YOKTUR. Dolayisiyla ongoru
+# su: SA ile y+ duyarliligi cok daha kucuk olmali.
+#
+# Bu ongoru bos degil, elimizde destegi var: B ailesi SST ile SALINIMLI
+# yakinsamisti (0,008494 / 0,007804 / 0,007691 / 0,007750), SA ile ise
+# TEKDUZE (0,009848 / 0,008983 / 0,008416 / 0,008234). Yani betigin
+# cikis noktasi olan salinim, SST'ye ozgu gorunuyor.
+#
+# Makaleye giden belirsizlik butcesi SA'nin duyarliligidir; SST kosusu
+# ise kusurun karakterizasyonuna aittir. Ikisi de kosulur.
+#     python3 cfd/naca/yplus.py [model]
+MODEL = sys.argv[1] if len(sys.argv) > 1 else "kOmegaSST"
+if MODEL != "kOmegaSST":
+    KOK = KOK + "-" + MODEL
+
 if __name__ == "__main__":
     with Kilit(KOK):
         yol = os.path.join(KOK, "sonuc.json")
@@ -43,7 +62,7 @@ if __name__ == "__main__":
             vaka = os.path.join(KOK, "y%03d" % round(yp * 100))
             bilgi = kur(vaka, kod="0012", Re=6e6, alfa=0.0, yplus=yp,
                         n_profil=NF, n_normal=NN, n_iz=NW,
-                        adim=3000, yaz_araligi=1500)
+                        adim=3000, yaz_araligi=1500, model=MODEL)
             print("[y+ %.3f] %d hucre -- cozuluyor" % (yp, bilgi["hucre"]),
                   flush=True)
             subprocess.run([os.path.join(BURA, "kos.sh"), vaka, "4"],
