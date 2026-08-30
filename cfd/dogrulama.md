@@ -256,31 +256,87 @@ yazılı:
 - Düz levhada da ~0,88 çıkarsa kusur kurulumun kendisindedir ve basınç
   gradyanından bağımsızdır.
 
-## Elenen açıklama: duvar işlemi
+Sonuç aşağıda: **(b) çıktı.**
+
+## Duvar işlemi — ELENMEDİ, tersine en büyük kaldıraç çıktı
 
 `naca/sst_kurulum.py`, SST'ye özgü duvar koşullarını tek tek değiştiriyor.
 
-| varyant | C_D | değişim |
+| varyant | C_D | tabana göre |
 |---|---:|---:|
 | taban (mevcut kurulum) | 0,007691 | — |
 | ω duvar fonksiyonu harmanlamasız | 0,007685 | −%0,08 |
 | ν_t duvarda `calculated` | çözülemedi | — |
 | k duvarda `kLowReWallFunction` | 0,007691 | %0,00 |
-| ω duvarda ders kitabı 6ν/(β₁y²) | (koşuyor) | |
+| **ω duvarda yüze fixedValue 6ν/(β₁d₁²)** | **0,008704** | **+%13,2** |
 
-İlk hücrede ω zaten tam olarak 6ν/(β₁y²)'ye eşit (ölçüldü: 6,713e5'e
-karşı 6,713e5), yani duvar fonksiyonu doğru değeri koyuyor. Harmanlama ve
-k koşulu sonucu değiştirmiyor.
+**Bu satırı önce yanlış yazdım.** İlk dört varyant sonuç değiştirmeyince
+"duvar işlemi elendi" diye kaydetmiştim; beşincisi henüz koşuyordu.
+Beşincisi geldiğinde C_D %13 değişti. Doğrusu şudur: duvar ω koşulu bu
+kurulumda **ölçülen en büyük tek kaldıraçtır** — ve referansla aramızdaki
+%5'ten iki buçuk kat büyüktür.
+
+Yön de anlamlı. Duvar fonksiyonu ile 0,00769 (bandın %6 altında), yüze
+konan sabit değerle 0,00870 (bandın %6 üstünde). Referans bandı
+(0,00808–0,00821) tam **ikisinin arasında**.
+
+Beşinci varyantın neden bu kadar oynattığı da açık: 6ν/(β₁d₁²) formülü
+ilk hücre *merkezindeki* ω'yı verir; onu duvar *yüzüne* koymak, gerçek
+ω'nın çok daha büyük olduğu bir yere küçük bir değer koymaktır. ω az →
+ν_t fazla → sürtünme fazla. Yani bu varyant "ders kitabı koşulu" değil,
+ω'nın duvarda eksik belirtilmesidir; betikteki o adlandırma yanlıştı.
+
+Ne kadar eksik olduğunu söyleyecek birinci elden bir kaynağım yok, o
+yüzden bir çarpan iddia etmiyorum. Bunun yerine aralık taranıyor
+(`levha/omega_duvar.py`).
+
+## Düz levha: 0,88 basınç gradyanının fiziği DEĞİL
+
+`levha/duzlevha.py`, sıfır basınç gradyanlı düz levha. Neden gerekliydi:
+x/c = 0,5'te basınç gradyanı ters yönlüdür ve SST tam da orada ν_t'yi
+bilerek kısar (a₁ sınırlayıcısı), yani 0,88 modelin doğru davranışı da
+olabilirdi. Beklenti önceden yazılmıştı.
+
+Ölçülen (x = 1 m, Re_x = 5×10⁶, log tabakasının ortası):
+
+| | C_f | ν_t/(κ u_τ y) | k⁺/3,333 | ω/ω_denge |
+|---|---:|---:|---:|---:|
+| Spalart–Allmaras | 0,002727 | **0,969** | — | — |
+| k-ω SST | 0,002622 | **0,859** | 0,958 | 1,111 |
+
+Sıfır gradyan varsayımı ayrıca ölçüldü: levha boyunca dCp/dx = −0,0034.
+Profilde aynı istasyondaki gradyan bunun ~150 katıdır.
+
+SA log yasasının üzerinde (u⁺ − log = +0,09, düz) ve oran 0,97 — yani
+**ölçüm makinesi doğru çalışıyor**, bu ölçümün iç denetimi budur. SST ise
+sıfır gradyanda da 0,86. Profildeki 0,88 ile aynı.
+
+Yani beklentideki (b) şıkkı çıktı: **kusur basınç gradyanından bağımsız,
+kurulumun kendisindedir.** Ve yine ω'da: k %4 düşük, ω %11 fazla,
+0,958/1,111 = 0,863 — ölçülen 0,859 ile tutarlı.
+
+## Geometri: payı %0,3, açıklamıyor
+
+`naca/tmr_geo.py`, TMR'ın kendi %11,894 kalınlıklı profiliyle iki modeli
+koşuyor (bizimki kapalı firar kenarlı %12).
+
+| model | %12 profil | TMR profili | değişim | referans bandı | durum |
+|---|---:|---:|---:|---|---|
+| k-ω SST | 0,00769 | 0,00767 | −%0,30 | 0,00808–0,00821 | dışında |
+| Spalart–Allmaras | 0,00842 | 0,00839 | −%0,38 | 0,00812–0,00838 | dışında (kıl payı) |
+
+Beklenti "ikisi de düşmeli" idi; düştüler, ama %1 değil %0,3. Geometri
+ortak yanlılığın küçük bir parçası; SST'deki açığı açıklamıyor. SA ise
+TMR profiliyle bandın üst sınırına (0,00838) 0,00839 ile değiyor.
 
 ## Sırada
 
-- **Düz levha** (`levha/duzlevha.py`): sıfır basınç gradyanında log
-  tabakası dengesi. Yukarıdaki 0,88'in model kusuru mu yoksa ters
-  gradyanın fiziği mi olduğunu ayıran sınama. Beklenti önceden yazılı.
-- **Geometri** (`naca/tmr_geo.py`): TMR'ın kendi %11,894 profiliyle iki
-  model. Bizimki %12, yani ~%0,9 daha kalın; bu ortak bir yanlılık üretir
-  ve kaldırılmadan modele özgü kusur doğru ölçülemez. Beklenti önceden
-  yazılı.
+- **Duvar ω taraması** (`levha/omega_duvar.py`): düz levhada iki onlu
+  aralıkta duvar ω koşulu, yanında serbest akış ve ağ. Hedef **kesin ve
+  dışarıdan ölçüm gerektirmiyor**: modelin kendi kapanış şartı
+  ν_t = κu_τy. Beklenti önceden yazılı — oran 1,00'i kesiyorsa duvar
+  işlemi bu açığı yönetiyordur; altı varyant da 0,86'da kalıyorsa kusur
+  OpenFOAM'ın uygulamasındadır ve kaynağından okunmadan düzeltilemez.
 
 ### Elde olmayan kaynak
 

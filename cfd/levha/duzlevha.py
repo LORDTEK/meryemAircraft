@@ -99,11 +99,14 @@ def ag(dizin):
     return r
 
 
-def alanlar(dizin, model):
+def alanlar(dizin, model, om_carpan=1.0, duvar_omega=None, y1=None):
+    """duvar_omega=None  -> omegaWallFunction
+       duvar_omega=c     -> duvarda fixedValue, c * 6 nu / (beta1 d1^2)
+                            (d1 = ilk hucre merkezinin duvara uzakligi)"""
     # Serbest akis: mu_t/mu = 1. serbest.py'de bu degerin 1000 kat
     # araliginda sonucu %0,003 degistirdigi olculdu.
-    om = U0 / (0.1 * H) * 10.0
-    k0 = NU * om
+    om = U0 / (0.1 * H) * 10.0 * om_carpan
+    k0 = NU * om / om_carpan
     sst = model == "kOmegaSST"
 
     def yaz(ad, sinif, boyut, ic, duvar, giris_tip="fixedValue"):
@@ -133,10 +136,16 @@ def alanlar(dizin, model):
         yaz("k", "volScalarField", "[0 2 -2 0 0 0 0]", "%g" % k0,
             "        type            fixedValue;\n"
             "        value           uniform 1e-14;\n")
-        yaz("omega", "volScalarField", "[0 0 -1 0 0 0 0]", "%g" % om,
-            "        type            omegaWallFunction;\n"
-            "        blended         true;\n"
-            "        value           uniform %g;\n" % om)
+        if duvar_omega is None:
+            dk = ("        type            omegaWallFunction;\n"
+                  "        blended         true;\n"
+                  "        value           uniform %g;\n" % om)
+        else:
+            d1 = 0.5 * (y1 or Y1)
+            ow = duvar_omega * 6.0 * NU / (0.075 * d1 * d1)
+            dk = ("        type            fixedValue;\n"
+                  "        value           uniform %.10g;\n" % ow)
+        yaz("omega", "volScalarField", "[0 0 -1 0 0 0 0]", "%g" % om, dk)
     else:
         yaz("nuTilda", "volScalarField", "[0 2 -1 0 0 0 0]", "%g" % (3 * NU),
             "        type            fixedValue;\n"
@@ -149,7 +158,7 @@ def alanlar(dizin, model):
 def sistem(dizin, model, adim):
     _y(os.path.join(dizin, "constant", "transportProperties"), "dictionary",
        "transportProperties",
-       "transportModel  Newtonian;\nnu              [0 2 -1 0 0 0 0] %g;\n" % NU)
+       "transportModel  Newtonian;\nnu              %.12g;\n" % NU)
     _y(os.path.join(dizin, "constant", "turbulenceProperties"), "dictionary",
        "turbulenceProperties",
        "simulationType  RAS;\n\nRAS\n{\n    RASModel        %s;\n"
@@ -195,12 +204,22 @@ def sistem(dizin, model, adim):
        "coeffs\n{\n    n (4 1 1);\n    order xyz;\n}\n")
 
 
-def kur(dizin, model, adim=4000):
-    for d in ("0", "system", "constant"):
-        os.makedirs(os.path.join(dizin, d), exist_ok=True)
-    r = ag(dizin)
-    alanlar(dizin, model)
-    sistem(dizin, model, adim)
+def kur(dizin, model, adim=4000, om_carpan=1.0, duvar_omega=None,
+        ny=None, y1=None):
+    global NY, Y1
+    eski = (NY, Y1)
+    if ny:
+        NY = ny
+    if y1:
+        Y1 = y1
+    try:
+        for d in ("0", "system", "constant"):
+            os.makedirs(os.path.join(dizin, d), exist_ok=True)
+        r = ag(dizin)
+        alanlar(dizin, model, om_carpan, duvar_omega, Y1)
+        sistem(dizin, model, adim)
+    finally:
+        NY, Y1 = eski
     return r
 
 

@@ -48,6 +48,7 @@ def _alan(vaka, z, ad, vektor=False):
 
 
 def profil(vaka, x_hedef=0.5, ust=True, n=60, zaman=None):
+    """ust=None: yuzey ayrimi yapilmaz (duz levha gibi tek yuzeyli vaka)."""
     """Verilen x/c'ye en yakin duvar yuzunden disariya profil.
 
     Doner: (u_tau, nu, [nokta, ...]) -- her nokta bir sozluk:
@@ -68,7 +69,7 @@ def profil(vaka, x_hedef=0.5, ust=True, n=60, zaman=None):
     for k in range(y["n"]):
         fi = y["bas"] + k
         S, C = ag.yuz_alan(fi)
-        if (C[1] > 0) != ust:
+        if ust is not None and (C[1] > 0) != ust:
             continue
         d = abs(C[0] - x_hedef)
         if d < ed:
