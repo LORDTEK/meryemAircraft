@@ -25,11 +25,20 @@ PY
 checkMesh > log.checkMesh 2>&1 || true
 grep -E "Max aspect|non-orthogonality|skewness|negative" log.checkMesh | sed 's/^/  /'
 
+# Cozucu controlDict'ten OKUNUR, varsayilmaz. Onceden simpleFoam sabit
+# yazilmisti; zamana bagli bir vaka kurulunca (pimpleFoam, backward ddt,
+# PIMPLE sozlugu) yine simpleFoam calisti, iraksadi ve SIGFPE verdi.
+# Belirti yanilticiydi -- yigin izi "pimpleFoam cokmus" gibi degil,
+# "/usr/bin/simpleFoam" diyordu.
+UYG=$(sed -n 's/^ *application *\([A-Za-z]*\);.*/\1/p' system/controlDict | head -1)
+UYG=${UYG:-simpleFoam}
+echo "  cozucu: $UYG"
+
 if [ "$CEK" -gt 1 ]; then
   decomposePar > log.decomposePar 2>&1
-  mpirun --allow-run-as-root -np "$CEK" simpleFoam -parallel > log.simpleFoam 2>&1
+  mpirun --allow-run-as-root -np "$CEK" "$UYG" -parallel > log.$UYG 2>&1
   reconstructPar > log.reconstructPar 2>&1
 else
-  simpleFoam > log.simpleFoam 2>&1
+  "$UYG" > log.$UYG 2>&1
 fi
-tail -3 log.simpleFoam
+tail -3 log.$UYG
