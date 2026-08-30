@@ -203,8 +203,31 @@ düzeltme tam beklendiği gibi ölçeklendi — y+ 1,97'de %4,14, y+ 0,64'te
 çözümde, hesapta değil. Böylece kayma gerilmesi kestiriminin kendisi de
 doğrulanmış oldu: y+ < 1'de mertebe seçimi sonucu değiştirmiyor.
 
-Dürüst ifade: **C_D en ince üç ağda 0,00769 – 0,00781 bandında**, yani
-yaklaşık ±%0,8. Bu bir GCI değildir.
+### Salınımın yarısı yakınsama farkıydı
+
+Farklı çözünürlükteki ağlar aynı yineleme sayısında **aynı ölçüde
+yakınsamaz**: daha çok hücreli ağ aynı adımda daha geride kalır. 3 000
+yinelemede B3'ün Ux kalıntısı 6,2×10⁻⁷, B4'ünki 8,3×10⁻⁷. Dolayısıyla
+"hepsi 3 000'de" diye karşılaştırmak, ağ farkının üstüne yakınsama
+farkını bindirir.
+
+`kalinti.py` ikisini ayırıyor — C_D'yi eşit **kalıntı düzeyinde**
+karşılaştırıyor:
+
+| B3 → B4 farkı | |
+|---|---:|
+| aynı yineleme sayısında (3 000) | +0,77 % |
+| eşit kalıntıda (1,5×10⁻⁶) | +0,34 % |
+| eşit kalıntıda (1,2×10⁻⁶) | +0,40 % |
+
+Salınımın yaklaşık yarısı yakınsama farkındanmış. Ama yarısı **kalıyor**:
+eşit kalıntıda bile ardışık farkların işareti değişiyor, yani salınım
+gerçek.
+
+Dürüst ifade: **eşit yakınsamada en ince iki ağ C_D = 0,00769 – 0,00772
+veriyor**, yani ±%0,2; ardışık üç seviye ise tekdüze olmadığı için resmî
+bir mertebe ve GCI **verilemez**. Bu bir GCI değildir ve öyle
+sunulmayacaktır.
 
 ## Alan boyutu: 20 veter yeterli
 
