@@ -282,6 +282,39 @@ Sürüklemeye etkisi ölçüldü: **≤ %0,01.** Çünkü y+ ≈ 1'de ilk hücre
 fark yok. Hata gerçekti ama sonucu değiştirmiyordu — ve bu, varsayımla
 değil ölçümle söyleniyor.
 
+## Belirsizlik bütçesi — sayısal taraf sıkı, fizik modeli değil
+
+Bu, 1. basamağın asıl çıktısı. Aynı ağ, aynı akış, aynı şemalar; yalnızca
+türbülans modeli değişiyor:
+
+| model | C_D | basınç | viskoz |
+|---|---:|---:|---:|
+| k-ω SST | 0,007691 | 0,001292 | 0,006399 |
+| Spalart-Allmaras | 0,008416 | 0,001397 | 0,007019 |
+| **fark** | **+9,43 %** | +8,18 % | +9,69 % |
+
+Yanına bütün sayısal belirsizlikleri koyunca:
+
+| kaynak | belirsizlik |
+|---|---:|
+| ağ çözünürlüğü (eşit yakınsamada) | ±0,2 – 0,4 % |
+| alan boyutu (20 veter) | 0,1 % |
+| yineleme yakınsaması | ~0,1 % |
+| duvar gradyanı mertebesi (y+ < 1) | 0,03 % |
+| **türbülans modeli** | **9,4 %** |
+
+Ağ bağımsızlığı için harcanan onca çabanın karşılığı ±%0,4 iken, model
+seçimi tek başına yirmi katını oynatıyor. İkinci makale için doğrudan
+bir sonuç: **ağ yakınsaması ne kadar iyi olursa olsun, tek bir türbülans
+modeliyle verilen bir C_D0'ın belirsizliği %10 mertebesindedir.**
+
+Ve bu bir **alt sınırdır**. Merkez gövde %25 kalınlığındadır; oradaki ters
+basınç gradyanı bu ince simetrik profildekinden çok daha şiddetli olacak
+ve model duyarlılığı büyüyecektir.
+
+Hangi modelin doğru olduğunu bu tablo **söylemez** — onu ancak deney
+söyler. `kaynak-gerekli.md`'deki iki dosya tam bunun için duruyor.
+
 ## Bir yan bulgu: NeuralFoil'in geçiş sınırı
 
 `cd0.py` NeuralFoil'e dayanıyor. Kalınlık çalışması için onu `xtr = 0`
