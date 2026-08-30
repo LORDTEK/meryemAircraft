@@ -66,6 +66,7 @@ sys.path.insert(0, BURA)
 sys.path.insert(0, os.path.join(BURA, "..", "ortak"))
 from kur import kur                                    # noqa: E402
 from kuvvet import hesapla                             # noqa: E402
+from kilit import Kilit                                # noqa: E402
 
 KALINLIK = [12, 18, 25]
 RE = 2.0e6            # aracin KOK veterindeki Reynolds sayisi
@@ -101,55 +102,56 @@ def neuralfoil(kal, Re, xtr):
 
 
 if __name__ == "__main__":
-    os.makedirs(KOK, exist_ok=True)
-    yol = os.path.join(KOK, "sonuc.json")
-    cikti = json.load(open(yol)) if os.path.exists(yol) else []
-    yapilan = {d["kalinlik"] for d in cikti}
+    with Kilit(KOK):
+        os.makedirs(KOK, exist_ok=True)
+        yol = os.path.join(KOK, "sonuc.json")
+        cikti = json.load(open(yol)) if os.path.exists(yol) else []
+        yapilan = {d["kalinlik"] for d in cikti}
 
-    for kal in KALINLIK:
-        if kal in yapilan:
-            continue
-        kod = "00%02d" % kal
-        vaka = os.path.join(KOK, kod)
-        bilgi = kur(vaka, kod=kod, Re=RE, alfa=0.0, yplus=1.0,
-                    n_profil=256, n_normal=96, n_iz=64, R=50.0, Xiz=50.0,
-                    adim=4000, yaz_araligi=2000)
-        print("[%s] %d hucre -- cozuluyor" % (kod, bilgi["hucre"]), flush=True)
-        subprocess.run([os.path.join(BURA, "kos.sh"), vaka, "4"],
-                       check=True, stdout=subprocess.DEVNULL)
-        r = hesapla(vaka, alfa=0.0, mertebe=2)
-        nf0 = nf_sifira(kal, RE)
-        nf5 = neuralfoil(kal, RE, 0.05)
-        nfs = neuralfoil(kal, RE, None)
-        print("   RANS C_D=%.6f (basinc %.6f  viskoz %.6f)  y+ %.2f  C_L=%+.1e"
-              % (r["CD"], r["CD_basinc"], r["CD_viskoz"], r["yplus_ort"],
-                 r["CL"]), flush=True)
-        print("   NF xtr->0 disdeger. %.6f   -> RANS/NF = %.3f"
-              % (nf0, r["CD"] / nf0), flush=True)
-        print("   NF xtr=0,05         %.6f   -> RANS/NF = %.3f  (cd0.py)"
-              % (nf5, r["CD"] / nf5), flush=True)
-        print("   NeuralFoil serbest  %.6f" % nfs, flush=True)
-        cikti.append(dict(kalinlik=kal, hucre=bilgi["hucre"], CD=r["CD"],
-                          CD_b=r["CD_basinc"], CD_v=r["CD_viskoz"],
-                          CL=r["CL"], yp=r["yplus_ort"],
-                          nf_xtr0=nf0, nf_xtr5=nf5, nf_serbest=nfs))
-        json.dump(cikti, open(yol, "w"), indent=1)
+        for kal in KALINLIK:
+            if kal in yapilan:
+                continue
+            kod = "00%02d" % kal
+            vaka = os.path.join(KOK, kod)
+            bilgi = kur(vaka, kod=kod, Re=RE, alfa=0.0, yplus=1.0,
+                        n_profil=256, n_normal=96, n_iz=64, R=50.0, Xiz=50.0,
+                        adim=4000, yaz_araligi=2000)
+            print("[%s] %d hucre -- cozuluyor" % (kod, bilgi["hucre"]), flush=True)
+            subprocess.run([os.path.join(BURA, "kos.sh"), vaka, "4"],
+                           check=True, stdout=subprocess.DEVNULL)
+            r = hesapla(vaka, alfa=0.0, mertebe=2)
+            nf0 = nf_sifira(kal, RE)
+            nf5 = neuralfoil(kal, RE, 0.05)
+            nfs = neuralfoil(kal, RE, None)
+            print("   RANS C_D=%.6f (basinc %.6f  viskoz %.6f)  y+ %.2f  C_L=%+.1e"
+                  % (r["CD"], r["CD_basinc"], r["CD_viskoz"], r["yplus_ort"],
+                     r["CL"]), flush=True)
+            print("   NF xtr->0 disdeger. %.6f   -> RANS/NF = %.3f"
+                  % (nf0, r["CD"] / nf0), flush=True)
+            print("   NF xtr=0,05         %.6f   -> RANS/NF = %.3f  (cd0.py)"
+                  % (nf5, r["CD"] / nf5), flush=True)
+            print("   NeuralFoil serbest  %.6f" % nfs, flush=True)
+            cikti.append(dict(kalinlik=kal, hucre=bilgi["hucre"], CD=r["CD"],
+                              CD_b=r["CD_basinc"], CD_v=r["CD_viskoz"],
+                              CL=r["CL"], yp=r["yplus_ort"],
+                              nf_xtr0=nf0, nf_xtr5=nf5, nf_serbest=nfs))
+            json.dump(cikti, open(yol, "w"), indent=1)
 
-    print()
-    print("  t/c    RANS      NF(xtr->0)  oran    NF(xtr=,05)  oran")
-    d = sorted(cikti, key=lambda x: x["kalinlik"])
-    for v in d:
-        print("  %2d%%   %.6f  %.6f   %.3f   %.6f   %.3f"
-              % (v["kalinlik"], v["CD"], v["nf_xtr0"],
-                 v["CD"] / v["nf_xtr0"], v["nf_xtr5"],
-                 v["CD"] / v["nf_xtr5"]))
-    if len(d) >= 2:
         print()
-        print("  ORANLARIN ORANI -- gecis uyusmazligina dayanikli olcu")
-        for ref, ad in (("nf_xtr0", "xtr->0"), ("nf_xtr5", "xtr=0,05")):
-            t = (d[-1]["CD"] / d[-1][ref]) / (d[0]["CD"] / d[0][ref])
-            print("    %-9s  (%d%% orani) / (%d%% orani) = %.3f"
-                  % (ad, d[-1]["kalinlik"], d[0]["kalinlik"], t))
-        print("    1'e yakin  -> kalinlik serit kurami icin sorun degil")
-        print("    1'den buyuk -> kalinlik arttikca serit kurami sapiyor")
-    print("bitti")
+        print("  t/c    RANS      NF(xtr->0)  oran    NF(xtr=,05)  oran")
+        d = sorted(cikti, key=lambda x: x["kalinlik"])
+        for v in d:
+            print("  %2d%%   %.6f  %.6f   %.3f   %.6f   %.3f"
+                  % (v["kalinlik"], v["CD"], v["nf_xtr0"],
+                     v["CD"] / v["nf_xtr0"], v["nf_xtr5"],
+                     v["CD"] / v["nf_xtr5"]))
+        if len(d) >= 2:
+            print()
+            print("  ORANLARIN ORANI -- gecis uyusmazligina dayanikli olcu")
+            for ref, ad in (("nf_xtr0", "xtr->0"), ("nf_xtr5", "xtr=0,05")):
+                t = (d[-1]["CD"] / d[-1][ref]) / (d[0]["CD"] / d[0][ref])
+                print("    %-9s  (%d%% orani) / (%d%% orani) = %.3f"
+                      % (ad, d[-1]["kalinlik"], d[0]["kalinlik"], t))
+            print("    1'e yakin  -> kalinlik serit kurami icin sorun degil")
+            print("    1'den buyuk -> kalinlik arttikca serit kurami sapiyor")
+        print("bitti")
