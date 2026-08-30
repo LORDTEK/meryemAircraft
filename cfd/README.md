@@ -44,6 +44,13 @@ Doğrulama önce gelir. Sıra bilinçli:
 
 Şu an **1. basamaktayız.**
 
+1. basamağın bir sonucu 3. basamağı bağlıyor: türbülans modeli seçimi
+   C_D'yi %9,4 oynatıyor, bütün sayısal belirsizliklerin yirmi katı.
+   Dolayısıyla üç boyutlu koşu **tek modelle yapılmayacak** — iki modelle
+   birden yapılacak ve sonuç bir sayı değil bir bant olarak verilecek.
+   Ağ bağımsızlığına ne kadar emek verilirse verilsin, tek modelli bir
+   C_D0 zaten %10 belirsizlik taşır.
+
 ## Araçlar ve iki engel
 
 Çözücü: **OpenFOAM v1912** (Ubuntu paketi), `simpleFoam`, k-ω SST, sınır
