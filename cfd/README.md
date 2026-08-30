@@ -206,6 +206,59 @@ doğrulanmış oldu: y+ < 1'de mertebe seçimi sonucu değiştirmiyor.
 Dürüst ifade: **C_D en ince üç ağda 0,00769 – 0,00781 bandında**, yani
 yaklaşık ±%0,8. Bu bir GCI değildir.
 
+## Alan boyutu: 20 veter yeterli
+
+Büyüme oranı sabit tutularak (yakın alan değişmiyor, dışarıya yalnızca
+katman ekleniyor) 20 → 200 vetere toplam etki **−%0,14**; adımlar
+küçülerek yakınsıyor. Ağ belirsizliğinin bir mertebe altında, dolayısıyla
+**20 veter yeterlidir** ve daha büyük alana geçmenin karşılığı yok.
+
+Etki tamamen basınç sürüklemesinde; viskoz kısım dört alanda da
+0,006397 – 0,006399 arasında sabit.
+
+## Momentum dengesi ne ölçüyor — beklediğimden başka bir şey
+
+Bu sınama, bağımsız bir doğrulama olsun diye kondu. Üç ayrı hatası
+çıktı ve üçü de **eğilimin yanlış yönde olmasıyla** yakalandı:
+
+1. `(2/3)k` terimi iki kez sayılıyordu — OpenFOAM'ın sıkıştırılamaz RAS
+   çözücüsünde türbülans kinetik enerjisinin normal gerilme katkısı
+   basıncın içindedir. Belirti: fark **alan büyüdükçe artıyordu**
+   (%2,94 → %6,87), oysa büyük alan dengeyi iyileştirmeli.
+2. Kütle akısı `U·S`'den alınıyordu; çıkışta U sıfır-gradyan olduğu için
+   bu, çözücünün koruduğu `phi`'yi yeniden üretmez. `phi`'ye geçilince
+   kapalı yüzeydeki net kütle akısı 1×10⁻⁴ → 3×10⁻⁸.
+3. Sınır alanı hiç okunmuyordu (ayrıştırma hatası, aşağıda).
+
+Üçü düzeltilince geriye kalan fark bir **yöntem hatası değil, çözüm
+yakınsamasının ölçüsü** çıktı:
+
+| yineleme | B3 farkı |
+|---:|---:|
+| 500 | +13,00 % |
+| 1 500 | +7,36 % |
+| 2 500 | +3,32 % |
+| 3 000 | **+2,23 %** |
+
+Tekdüze düşüyor ve 3 000'de hâlâ düşmekte. Bunun pratik önemi büyük:
+**duvar integrali bu evrilmeye çok daha az duyarlı** (B4'te 500
+yinelemede 2,9×10⁻⁶). Yani C_D yakınsamış *görünürken* çözüm hâlâ
+evriliyor olabilir — ve bunu ancak momentum dengesi gösteriyor. Büyük bir
+fark, önce yineleme sayısını sorgulatmalı; ağı ya da yöntemi değil.
+
+## Bir ayrıştırma hatası: sınır değerleri hiç okunmuyordu
+
+`foamoku.Alan`'daki düzenli ifade `boundaryField` kelimesinin **kendisini**
+eşleştiriyor, gövdesi bütün yamaları kapsadığı için `findall` bir tek onu
+buluyordu. Sonuç: yama sözlüğü yalnızca `boundaryField` anahtarını
+taşıyor, her `yama_degeri` çağrısı `None` dönüyor ve bütün sınır değerleri
+**sessizce komşu hücre değerine düşüyordu.**
+
+Sürüklemeye etkisi ölçüldü: **≤ %0,01.** Çünkü y+ ≈ 1'de ilk hücrenin
+`nut`'u zaten neredeyse sıfırdır, yani `ν + ν_t,hücre` ile `ν` arasında
+fark yok. Hata gerçekti ama sonucu değiştirmiyordu — ve bu, varsayımla
+değil ölçümle söyleniyor.
+
 ## Bir yan bulgu: NeuralFoil'in geçiş sınırı
 
 `cd0.py` NeuralFoil'e dayanıyor. Kalınlık çalışması için onu `xtr = 0`
