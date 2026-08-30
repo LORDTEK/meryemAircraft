@@ -47,21 +47,38 @@ def _alan(vaka, z, ad, vektor=False):
     return Alan(vaka, z, ad, vektor=vektor)
 
 
+_BELLEK = {}
+
+
+def yukle(vaka, zaman=None):
+    """Ag ve alanlari bir kez okur, sonraki cagrilar icin saklar.
+
+    Ayni vakada cok sayida istasyonda profil cikarmak gerekiyor (Re_theta
+    esleme aramasi gibi); agi her seferinde yeniden okumak bunu
+    kullanilamaz kiliyordu.
+    """
+    z = zaman or son_zaman(vaka)
+    anahtar = (os.path.abspath(vaka), z)
+    if anahtar not in _BELLEK:
+        ag = Ag(vaka)
+        _BELLEK[anahtar] = dict(
+            ag=ag, z=z, nu=nu_oku(vaka), merkez=ag.hucre_merkez(),
+            U=Alan(vaka, z, "U", vektor=True), nut=_alan(vaka, z, "nut"),
+            k=_alan(vaka, z, "k"), omega=_alan(vaka, z, "omega"))
+    return _BELLEK[anahtar]
+
+
 def profil(vaka, x_hedef=0.5, ust=True, n=60, zaman=None):
-    """ust=None: yuzey ayrimi yapilmaz (duz levha gibi tek yuzeyli vaka)."""
     """Verilen x/c'ye en yakin duvar yuzunden disariya profil.
+
+    ust=None: yuzey ayrimi yapilmaz (duz levha gibi tek yuzeyli vaka).
 
     Doner: (u_tau, nu, [nokta, ...]) -- her nokta bir sozluk:
         y, u_t  ve varsa  k, omega, nut
     """
-    ag = Ag(vaka)
-    z = zaman or son_zaman(vaka)
-    nu = nu_oku(vaka)
-    U = Alan(vaka, z, "U", vektor=True)
-    nut = _alan(vaka, z, "nut")
-    k_a = _alan(vaka, z, "k")
-    om_a = _alan(vaka, z, "omega")
-    merkez = ag.hucre_merkez()
+    b = yukle(vaka, zaman)
+    ag, nu, U, merkez = b["ag"], b["nu"], b["U"], b["merkez"]
+    nut, k_a, om_a = b["nut"], b["k"], b["omega"]
     y = ag.yama["duvar"]
 
     # hedefe en yakin duvar yuzu
