@@ -25,6 +25,10 @@ KAYNAK = {
     "levha_model": "/tmp/levha_model/sonuc.json",
     "levha_omega": "/tmp/levha_omega/sonuc.json",
     "levha_sema": "/tmp/levha_sema/sonuc.json",
+    "A-SA": "/tmp/tarama-A-SA/sonuc.json",
+    "alan-SA": "/tmp/alan2-SpalartAllmaras/sonuc.json",
+    "kalinlik-SA": "/tmp/kalinlik-SpalartAllmaras/sonuc.json",
+    "yplus": "/tmp/yplus/sonuc.json",
 }
 
 
@@ -63,8 +67,8 @@ def ag_ailesi(harf, md=False):
                   "basınç", "viskoz"], s, md)
 
 
-def alan_tablo(md=False):
-    d = yukle("alan")
+def alan_tablo(md=False, ad="alan"):
+    d = yukle(ad)
     if not d:
         return None
     d = sorted(d, key=lambda x: x["R"])
@@ -88,8 +92,8 @@ def model_tablo(md=False):
     return tablo(["model", "C_D", "basınç", "viskoz", "y+"], s, md)
 
 
-def kalinlik_tablo(md=False):
-    d = yukle("kalinlik")
+def kalinlik_tablo(md=False, ad="kalinlik"):
+    d = yukle(ad)
     if not d:
         return None
     d = sorted(d, key=lambda x: x["kalinlik"])
@@ -158,7 +162,13 @@ BOLUM = [("A ailesi — sabit duvar aralığı (y+ = 1), yalnızca hücre sayıs
          #     Anlamli olan varyantlar arasindaki karsilastirmadir.
          ("Düz levha — model ayırt edici", levha_model_tablo),
          ("Düz levha — duvar ω koşulu, serbest akış ve ağ", levha_omega_tablo),
-         ("Düz levha — ayrışım şemaları", levha_sema_tablo)]
+         ("Düz levha — ayrışım şemaları", levha_sema_tablo),
+         # --- makaleye gidecek sayilar: SA ile
+         ("A ailesi, **Spalart–Allmaras** ile", lambda m: ag_ailesi("A-SA", m)),
+         ("Alan boyutu, **Spalart–Allmaras** ile",
+          lambda m: alan_tablo(m, "alan-SA")),
+         ("Kalınlık, **Spalart–Allmaras** ile — 2. basamağın çıktısı",
+          lambda m: kalinlik_tablo(m, "kalinlik-SA"))]
 
 
 if __name__ == "__main__":
