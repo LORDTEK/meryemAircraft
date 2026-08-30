@@ -71,6 +71,13 @@ SEKIL = {
     "7.4cp": dict(sayfa=44, x=(-0.040075, 1.0), y=(1.2, -0.6),
                   cerceve=(627.959101, 6748.032909, 387.948041, 4671.985599),
                   en_az=100, tx_kod=("110.854", "291.629"), model="SA"),
+    # Sekil 7.6: ayni duzen, ayni cerceveler ve ayni tik yapisi, SST modeli
+    "7.6cf": dict(sayfa=46, x=(-0.040075, 1.0), y=(0.0, 0.008),
+                  cerceve=(718.066890, 6838.019847, 387.952902, 4672.048055),
+                  en_az=100, tx_kod=("311.103", "291.629"), model="SST"),
+    "7.6cp": dict(sayfa=46, x=(-0.040075, 1.0), y=(1.2, -0.6),
+                  cerceve=(627.959101, 6748.032909, 387.948041, 4671.985599),
+                  en_az=100, tx_kod=("110.854", "291.629"), model="SST"),
 }
 # Alt grafikleri ayiran, yolun kendi transform matrisindeki oteleme
 ALT = {"110.854": "SA", "311.103": "SST", "210.979": "SST-V"}
