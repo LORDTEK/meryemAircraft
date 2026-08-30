@@ -51,7 +51,29 @@ Bize iki şey verir: (a) yerleşik iki çözücünün aynı vakada ne verdiği,
 
 Sayfaların HTML'i ya da PDF çıktısı yeterli.
 
-## 3. İsteğe bağlı — ikinci bağımsız deney
+## 3. Kalın kesit verisi — YENİ, ve artık öncelikli
+
+Bu, çalışma sırasında ortaya çıktı. Kök kesitimiz %25 kalınlığında ve
+orada **kararlı RANS yakınsamıyor**: akış kararsız, firar kenarı ayrılması
+salınıyor (`cfd/README.md`, 2. basamak). Zamana bağlı çözüme geçildi ama
+onu doğrulayacak deney verisi yok.
+
+> Eastman N. Jacobs, Kenneth E. Ward, Robert M. Pinkerton, *The
+> Characteristics of 78 Related Airfoil Sections from Tests in the
+> Variable-Density Wind Tunnel*, NACA Report 460, 1933.
+
+https://ntrs.nasa.gov/citations/19930091108
+
+NACA 0006'dan **0025'e** kadar simetrik kesitlerin C_D verisini içerir —
+yani tam olarak bizim kalınlık taramamızın kapsadığı aralık. Bir uyarı:
+değişken yoğunluklu tünelin türbülans düzeyi yüksekti ve sonuçlar
+"etkin Reynolds sayısı" düzeltmesiyle verilir; bu düzeltmenin nasıl
+uygulandığı raporun kendisinde yazılıdır ve birinci elden okunması gerekir.
+
+Bu dosya şunu çözer: **kalınlıkla C_D'nin nasıl arttığı ölçülmüş mü, ve
+bizim %12 → %18 → %25 eğilimimiz ona uyuyor mu?**
+
+## 4. İsteğe bağlı — ikinci bağımsız deney
 
 > N. Gregory, C. L. O'Reilly, *Low-Speed Aerodynamic Characteristics of NACA
 > 0012 Aerofoil Section, including the Effects of Upper-Surface Roughness
