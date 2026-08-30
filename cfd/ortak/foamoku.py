@@ -225,10 +225,36 @@ class Alan:
         j = m.index("boundaryField")
         self.ic = self._coz(m[i:j])
         self.yama = {}
-        g, _, _ = _liste(m[j:], 0) if False else (m[j:], 0, 0)
-        for ym, govde in re.findall(r"(\w+)\s*\n?\s*\{((?:[^{}]|\{[^{}]*\})*)\}",
-                                    m[j:]):
-            self.yama[ym] = self._coz(govde)
+        # boundaryField'in GOVDESI once ayiklanir, sonra yamalar onun
+        # ICINDE aranir.
+        #
+        # Onceki bicim dogrudan m[j:] uzerinde "(\w+)\s*\{...\}" ariyordu ve
+        # ilk eslesen sey 'boundaryField' kelimesinin KENDISIYDI; govdesi
+        # butun yamalari kapsadigi icin findall bir tek onu buluyor, geriye
+        # bir sey kalmiyordu. Sonuc: self.yama yalnizca 'boundaryField'
+        # anahtarini tasiyor, her yama_degeri cagrisi None donuyor ve butun
+        # sinir degerleri sessizce komsu HUCRE degerine dusuyordu. Duvarda
+        # nut icin bu, gercek deger (sifir) yerine ilk hucrenin nut'unu
+        # kullanmak demekti; nu_eff fazla, viskoz surukleme fazla cikiyordu.
+        govde = self._blok(m, j)
+        for ym, ic in re.findall(
+                r"([A-Za-z_][\w]*)\s*\n?\s*\{((?:[^{}]|\{[^{}]*\})*)\}", govde):
+            self.yama[ym] = self._coz(ic)
+
+    @staticmethod
+    def _blok(metin, bas):
+        """bas'tan sonraki ilk { ... } blogunun ICINI, parantez sayarak."""
+        i = metin.index("{", bas)
+        derinlik, j = 0, i
+        while j < len(metin):
+            if metin[j] == "{":
+                derinlik += 1
+            elif metin[j] == "}":
+                derinlik -= 1
+                if derinlik == 0:
+                    return metin[i + 1:j]
+            j += 1
+        return metin[i + 1:]
 
     def _coz(self, metin):
         """uniform tek deger ya da nonuniform liste."""

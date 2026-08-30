@@ -77,19 +77,34 @@ def sina(vaka, kod="0012", aciklik=1.0, alfa=0.0, zaman=None):
     # RANS'ta bir yuzeyden gecen momentum akisi yalnizca U(U.n) + p n
     # DEGILDIR. Uc terim daha var ve ucu de burada hesaba katiliyor:
     #
-    #   (2/3) k n   Reynolds gerilmesinin izotropik parcasi. Izde k
-    #               ihmal edilebilir degildir; atlanirsa surukleme
-    #               sistematik olarak kayar.
     #   nu_eff dU/dn  yuzeydeki kayma. Uzak alanda kucuk, cikista degil.
-    #   U_inf * mdot  sahte kutle kaynagi duzeltmesi. Cozucu korunumlu yuz
-    #               akisini (phi) korur, bizim kullandigimiz U.S'yi degil;
-    #               ikisi arasindaki fark kapali yuzeyde sifir olmayan bir
-    #               net kutle akisi birakir ve o da sahte momentum uretir.
+    #
+    # (2/3) k n TERIMI EKLENMEZ. Bir ara surumde eklenmisti; YANLISTI.
+    # OpenFOAM'in sikistirilamaz RAS cozucusunde turbulans kinetik
+    # enerjisinin normal gerilme katkisi BASINCIN ICINE sogurulur, yani
+    # p zaten p + (2/3)k'dir; ayrica eklemek iki kez saymak olur.
+    # (OpenFOAM'in kendi forces nesnesi de eklemez.)
+    #
+    # Belirti olculdu: terim varken momentum farki alan buyudukce
+    # ARTIYORDU -- %2,94 / %4,44 / %6,87 (R = 20 / 50 / 100). Oysa daha
+    # buyuk alan dengeyi iyilestirmeli. Terim cikarilinca dogru yone
+    # dondu: %2,23 / %2,07 / %1,83.
+    #   U_inf * mdot  sahte kutle kaynagi duzeltmesi (asagiya bakiniz)
+    #
+    # KUTLE AKISI ICIN phi KULLANILIR, U.S DEGIL.
+    # Cozucunun koruduguu buyukluk yuz akisi phi'dir. Cikis yamasinda U
+    # sifir-gradyandir, yani sinir hizi phi'yi yeniden uretmez; kapali
+    # yuzeyde U.S toplami sifir cikmaz ve -- olculdu -- ag inceldikce
+    # KUCULMEZ (B1..B4'te 7,6e-5 / 8,6e-6 / 5,9e-5 / 1,0e-4). Bu, sinamayi
+    # ag inceldikce KOTULESTIRIYORDU. phi kullanildiginda denge cozucunun
+    # kendi korunum ifadesiyle ayni olur.
     p = Alan(vaka, z, "p")
     U = Alan(vaka, z, "U", vektor=True)
     kk = Alan(vaka, z, "k") if os.path.exists(os.path.join(vaka, z, "k")) else None
     nut = Alan(vaka, z, "nut") if os.path.exists(
         os.path.join(vaka, z, "nut")) else None
+    phi = Alan(vaka, z, "phi") if os.path.exists(
+        os.path.join(vaka, z, "phi")) else None
     nu = nu_oku(vaka)
     merkez = ag.hucre_merkez()
 
@@ -122,11 +137,15 @@ def sina(vaka, kod="0012", aciklik=1.0, alfa=0.0, zaman=None):
                 v = nut.yama_degeri(ad, k)
                 nutf = v if v is not None else nut.ic[h]
 
-            akis = sum(uv[a] * S[a] for a in range(3))
+            akis = None
+            if phi is not None:
+                akis = phi.yama_degeri(ad, k)
+            if akis is None:                       # phi yoksa geri dus
+                akis = sum(uv[a] * S[a] for a in range(3))
             mdot += akis
-            # normal gerilme: p + (2/3)k
+            # normal gerilme: yalnizca p (bkz. yukarida, k eklenmez)
             for a in range(3):
-                F[a] -= uv[a] * akis + (pf + 2.0 / 3.0 * kf) * S[a]
+                F[a] -= uv[a] * akis + pf * S[a]
             # kayma: nu_eff * dU/dn, komsu hucreden tek yanli
             cm = merkez[h]
             d = abs(sum((cm[a] - C[a]) * nrm[a] for a in range(3)))
@@ -152,9 +171,18 @@ def sina(vaka, kod="0012", aciklik=1.0, alfa=0.0, zaman=None):
     print("   dis sinirlardan    C_D = %.6f   C_L = %+.6f" % (CD_m, CL_m))
     print("   fark               %+.2f %%" % ((CD_m / r["CD"] - 1) * 100
                                               if r["CD"] else 0.0))
-    print("   NOT: bu sinama kaba. Dis sinir 20 veterde ve orada ag seyrek;")
-    print("        sapmanin buyuklugu degil, MERTEBESI ve AG INCELDIKCE")
-    print("        KUCULMESI anlamlidir.")
+    print("   NOT: bu fark ONCELIKLE COZUM YAKINSAMASINI olcer, agi degil.")
+    print("        Momentum dengesi kuresel bir dengedir ve ancak tam")
+    print("        yakinsamada saglanir; yakinsamamis bir cozumde artik")
+    print("        kaynak, duvar kuvvetiyle uzak alan akisi arasinda fark")
+    print("        birakir. Olculdu (B3, yineleme sayisina gore):")
+    print("        %13.00 / %10.55 / %7.36 / %4.96 / %3.32 / %2.23 --")
+    print("        tekdüze dusuyor ve 3000'de hala dusmekte.")
+    print("        Duvar integrali bu evrilmeye COK daha az duyarlidir")
+    print("        (B4'te 500 yinelemede 2,9e-6). Yani C_D yakinsamis")
+    print("        gorunurken cozum hala evriliyor olabilir; bu sinama onu")
+    print("        gosterir. Buyuk bir fark once YINELEME sayisini")
+    print("        sorgulatmali, agi ya da yontemi degil.")
     return dict(A_ag=A_top, A_bek=A_bek, CD_duvar=r["CD"], CD_momentum=CD_m,
                 mdot=mdot)
 
