@@ -875,6 +875,43 @@ elde olan veriyle doğrulandı.
 Yani B ailesindeki salınım da, y+ duyarlılığı da SST kusurunun
 belirtileri arasına giriyor.
 
+## SST'nin y⁺ ile ıraksaması — kusurun en keskin belirtisi
+
+`naca/yplus.py`: ağ topolojisi **sabit** (384×144×96, 82 944 hücre),
+yalnızca duvar aralığı değişiyor.
+
+| y⁺ ölçülen | C_D (SST) | artış |
+|---:|---:|---:|
+| 1,44 | 0,007614 | — |
+| 0,96 | 0,007649 | +0,000035 |
+| 0,64 | 0,007750 | +0,000101 |
+| 0,39 | 0,007880 | +0,000130 |
+
+Çözümlenmiş sınır tabakasında (y⁺ < 1,5) sonucun duvar aralığından
+**bağımsız olması gerekir.** Değil: aralık boyunca %3,50 kayıyor. Daha
+kötüsü, **artışlar hızlanıyor** — yani y⁺ → 0'da bir değere yakınsamıyor,
+ıraksıyor. Bu kurulumun y⁺-yakınsamış bir cevabı yok.
+
+Mekanizma zaten adlandırılmıştı: duvarda ω ~ 6ν/(β₁y²) ve bu, y → 0'da
+ıraksar. Ayrık işlem bunu taşıyamıyor.
+
+Bu bulgu üç şeyi birden açıklıyor:
+
+1. **B ailesindeki salınım.** B'de her aralık birlikte inceliyor, yani
+   y⁺ de değişiyor; A'da duvar aralığı sabit. SST'nin y⁺ duyarlılığı
+   B'yi salındırıyor, A'yı bırakıyor.
+2. **Neden tek bir "SST C_D'miz" yok.** 0,00761 ile 0,00788 arasında
+   herhangi bir değer, yalnızca duvar aralığı seçilerek elde edilebilir.
+   Referans bandı (0,00808–0,00821) bu aralığın hemen üstünde.
+3. **Neden ağ yakınsaması SST ile resmî olarak ölçülemedi.** Richardson
+   tek bir h ölçüsü varsayar; burada ikinci ve bağımsız bir ölçek
+   (duvar aralığı) sonucu sürüklüyor.
+
+Aynı tarama SA ile de koşuluyor. Öngörü önceden yazılı ve mekanizmadan
+çıkıyor: **SA'da ω denklemi yoktur**, dolayısıyla duyarlılık çok daha
+küçük olmalı. Elde olan veri bunu şimdiden destekliyor — A4 ile B4 aynı
+hücre sayısında, tek fark duvar aralığı: SA'da −%0,22, SST'de +%1,33.
+
 ## Sırada
 
 - **3-B gövde** (ikinci makalenin 3. adımı): birincil model SA ile.
