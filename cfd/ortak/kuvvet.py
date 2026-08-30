@@ -39,7 +39,18 @@ def nu_oku(vaka):
     return float(re.search(r"nu\s+([-+0-9.eE]+)", m).group(1))
 
 
-def hesapla(vaka, yama="duvar", alfa=0.0, Uinf=1.0, Aref=1.0, zaman=None):
+def hesapla(vaka, yama="duvar", alfa=0.0, Uinf=1.0, Aref=1.0, zaman=None,
+            mertebe=1):
+    """mertebe=1  duvar gradyani tek hucreden: dU/dn = U_t1 / d1
+       mertebe=2  ilk IKI hucreden, duvarda sifir sartiyla parabol:
+                  U_t(d) = a d + b d^2  ->  dU/dn = a
+
+    Neden onemli: birinci mertebe kestirim, viskoz alt tabakadaki hafif
+    bukumu gormez ve gradyani EKSIK verir; hata d ile orantilidir. Ag
+    inceldikce bu hata kuculdugu icin, viskoz suruklemede ag yakinsamasi
+    gibi gorunen bir egilim aslinda KESTIRIMIN yakinsamasi olabilir.
+    Ikinci mertebe bunu ayirt eder.
+    """
     ag = Ag(vaka)
     z = zaman or son_zaman(vaka)
     nu = nu_oku(vaka)
@@ -87,7 +98,20 @@ def hesapla(vaka, yama="duvar", alfa=0.0, Uinf=1.0, Aref=1.0, zaman=None):
                 nut_w = v
         nueff = nu + nut_w
 
-        tau = nueff * ut / d
+        egim = ut / d                                  # birinci mertebe
+        if mertebe >= 2 and ut > 0:
+            h2 = ag.karsi_hucre(fi, h)
+            if h2 is not None:
+                cm2 = merkez[h2]
+                d2 = abs((cm2[0] - C[0]) * nx + (cm2[1] - C[1]) * ny
+                         + (cm2[2] - C[2]) * nz)
+                u2 = U.ic[h2]
+                # AYNI teget yonune izdusum; yoksa isaret kayar
+                ut2 = (u2[0] * tx + u2[1] * ty + u2[2] * tz) / ut
+                payda = d * d2 * (d2 - d)
+                if abs(payda) > 0:
+                    egim = (ut * d2 ** 2 - ut2 * d ** 2) / payda
+        tau = nueff * egim
         if ut > 0:
             for a, t in zip(range(3), (tx, ty, tz)):
                 Fv[a] += tau * A * t / ut
