@@ -434,6 +434,49 @@ terimi. `levha/model_ayirt.py` bunu ayırıyor — aynı ağ, aynı şemalar,
 aynı sınır koşulları, tek fark model: düz kOmega (Wilcox), ki onda
 harmanlama ve çapraz yayılım **yoktur**. Beklenti önceden yazılı.
 
+## Model ayırt edici: kusur SST'ye özgü değil, ω ailesinde ortak
+
+`levha/model_ayirt.py` — aynı ağ, aynı şemalar, aynı sınır koşulları,
+tek fark model:
+
+| model | C_f | ν_t/(κu_τy) | k⁺/3,333 | ω/ω_denge |
+|---|---:|---:|---:|---:|
+| Spalart–Allmaras | 0,002727 | **0,969** | — | — |
+| kOmega (Wilcox) | 0,002760 | **0,881** | 0,959 | 1,089 |
+| kOmegaSST | 0,002622 | **0,859** | 0,957 | 1,113 |
+
+Düz k-ω'da F₁ harmanlaması ve çapraz yayılım **yoktur**, yine de açık
+var. Önceden yazılan beklentinin (b) şıkkı: kusur SST'ye özgü makinede
+değil, ω ailesinde ortak. (SST biraz daha kötü, 0,859'a karşı 0,881 —
+ama asıl açık ikisinde de var.)
+
+Bu koşu ayrıca bir yeniden üretim denetimidir: kOmegaSST bağımsız bir
+dizinde, ayrı bir koşuda yine 0,859 verdi.
+
+### Sıradaki şüpheli: kendi şema seçimimiz
+
+ω ailesi ile SA arasında kurulumumuzda **gerçek bir asimetri** var ve bu
+bizim kendi seçimimiz:
+
+```
+grad(U)        cellLimited Gauss linear 1
+grad(k)        cellLimited Gauss linear 1
+grad(omega)    cellLimited Gauss linear 1
+grad(nuTilda)  — listede YOK, default'a düşüyor: Gauss linear
+```
+
+SA'nın türbülans değişkeninin gradyanı sınırlandırılmamış, iki ω
+modelininki sınırlandırılmış. ω duvar yakınında y⁻² gibi davranır;
+gerilmiş ağda hücre sınırlayıcısı orada ısırabilir. `levha/sema.py` beş
+varyantla bunu sınıyor; beklenti önceden yazılı:
+
+- **(a)** Bir varyant oranı ~1,00'e taşırsa kusur bizim şema
+  seçimimizdir. Düzeltilir ve düzeltilmesi meşrudur — şema bir *ayrışım
+  seçimidir*, uydurulmuş bir model sabiti değil. O durumda **bütün NACA
+  sonuçları düzeltilmiş şemayla yeniden koşulur**; eski sayılar kalmaz.
+- **(b)** Hiçbiri taşımazsa şema da elenir. Geriye OpenFOAM'ın ω denklemi
+  uygulaması kalır; kaynağından okunmadan düzeltilemez, **rapor edilir**.
+
 ## Sırada
 
 - **Duvar ω taraması** (`levha/omega_duvar.py`): düz levhada iki onlu
