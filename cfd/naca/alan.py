@@ -23,6 +23,16 @@ from kilit import Kilit                                # noqa: E402
 BOYUT = [20.0, 50.0, 100.0, 200.0]
 KOK = "/tmp/alan2"
 
+# MODEL SECIMI -- sonradan eklendi. Bu calisma kur()'un varsayilaniyla,
+# yani kOmegaSST ile kosulmustu. Sonradan olculdu ki SST kurulumumuz
+# yuzey surtunmesini referans kodlarin 5-7 yuzde altinda veriyor, SA ise
+# iki bagimsiz kodla profil duzeyinde cakisiyor (bkz. dogrulama.md).
+# Yani makaleye gidecek sayilar SA ile uretilmelidir. Kullanim:
+#     python3 <betik> [model]
+MODEL = sys.argv[1] if len(sys.argv) > 1 else "kOmegaSST"
+if MODEL != "kOmegaSST":
+    KOK = KOK + "-" + MODEL
+
 # Alan buyurken n_normal SABIT tutulursa dis hucreler de gerilir ve olculen
 # sey saf alan boyutu olmaz -- alan boyutu ARTI bozulan uzak alan
 # cozunurlugu olur. Ilk kosuda bu yapildi ve fark her katlamada ~1e-5 ile
@@ -62,7 +72,7 @@ if __name__ == "__main__":
             vaka = os.path.join(KOK, "R%d" % R)
             bilgi = kur(vaka, kod="0012", Re=6e6, alfa=0.0, yplus=1.0,
                         n_profil=256, n_normal=nn, n_iz=64, R=R, Xiz=R,
-                        adim=3000, yaz_araligi=1500)
+                        adim=3000, yaz_araligi=1500, model=MODEL)
             print("[R=%g] n_normal=%d  %d hucre  (buyume orani %.4f) -- cozuluyor"
                   % (R, nn, bilgi["hucre"], buyume_orani(R, dy, nn)), flush=True)
             subprocess.run([os.path.join(BURA, "kos.sh"), vaka, "4"],
