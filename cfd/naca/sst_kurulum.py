@@ -21,6 +21,11 @@ Denenen degiskenler:
   omega_ham    omegaWallFunction blended false
   nut_hesap    nut duvarda 'calculated' (modele birakilir, sifirlanmaz)
   k_dusukRe    k duvarda kLowReWallFunction
+  omega_kitap  duvar fonksiyonu HIC kullanilmaz: omega duvarda yuz yuz
+               fixedValue olarak 6 nu / (beta1 y^2) verilir. y, o yuzun
+               komsu hucre merkezinin duvara dik uzakligidir. Bu, cozumlenmis
+               sinir tabakasi icin ders kitabi kosuludur ve OpenFOAM'in
+               harmanlama makinesini tamamen devre disi birakir.
 
 BEKLENTI ONCEDEN: bir degisken C_D'yi 0,0081 bandina tasiyorsa kusur
 odur. Hicbiri tasimazsa kusur bu dordusunde degildir ve siradaki supheli,
@@ -54,6 +59,40 @@ def duzenle(vaka, hangi):
                       "        type            calculated;\n"
                       "        value           uniform 0;\n", 1)
         open(p, "w").write(s)
+    elif hangi == "omega_kitap":
+        # omega_duvar = 6 nu / (beta1 y^2),  beta1 = 0.075
+        import math
+        sys.path.insert(0, os.path.join(BURA, "..", "ortak"))
+        from foamoku import Ag                       # noqa: E402
+        from kuvvet import nu_oku                    # noqa: E402
+        # Ag, cevrilmis polyMesh'i ister; bu yuzden once cevrim yapilir.
+        alt = subprocess.run(["bash", "-c",
+                              ". /usr/share/openfoam/etc/bashrc >/dev/null 2>&1; "
+                              "cd %s && rm -rf constant/polyMesh && "
+                              "gmshToFoam ag.msh > /dev/null 2>&1" % vaka])
+        ag = Ag(vaka)
+        nu = nu_oku(vaka)
+        merkez = ag.hucre_merkez()
+        y = ag.yama["duvar"]
+        deger = []
+        for k2 in range(y["n"]):
+            fi = y["bas"] + k2
+            S, C = ag.yuz_alan(fi)
+            A = math.sqrt(sum(v * v for v in S))
+            n = [S[a] / A for a in range(3)]
+            cm = merkez[ag.sahip[fi]]
+            d = abs(sum((cm[a] - C[a]) * n[a] for a in range(3)))
+            deger.append(6.0 * nu / (0.075 * d * d))
+        p = os.path.join(vaka, "0", "omega")
+        s2 = open(p).read()
+        yeni = ("        type            fixedValue;\n"
+                "        value           nonuniform List<scalar>\n%d\n(\n%s\n);\n"
+                % (len(deger), "\n".join("%.10g" % v for v in deger)))
+        s2 = re.sub(r"        type            omegaWallFunction;\n"
+                    r"        blended         true;\n"
+                    r"        value           uniform [-+0-9.eE]+;\n",
+                    yeni, s2, count=1)
+        open(p, "w").write(s2)
     elif hangi == "k_dusukRe":
         p = os.path.join(vaka, "0", "k")
         s = open(p).read()
@@ -64,7 +103,7 @@ def duzenle(vaka, hangi):
         open(p, "w").write(s)
 
 
-VARYANT = ["taban", "omega_ham", "nut_hesap", "k_dusukRe"]
+VARYANT = ["taban", "omega_ham", "nut_hesap", "k_dusukRe", "omega_kitap"]
 
 if __name__ == "__main__":
     with Kilit(KOK):
