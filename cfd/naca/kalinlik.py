@@ -230,13 +230,42 @@ if __name__ == "__main__":
                   % (v["kalinlik"], v["CD"], v["nf_xtr0"],
                      v["CD"] / v["nf_xtr0"], v["nf_xtr5"],
                      v["CD"] / v["nf_xtr5"]))
-        if len(d) >= 2:
+        # ORANLARIN ORANI yalnizca GECERLI satirlardan hesaplanir.
+        #
+        # Neden: bu sayi calismanin manseti ve dogrudan makaleye gider.
+        # Once mekanik olarak en kalin ve en ince satirdan hesaplaniyordu;
+        # %25 satiri kararsizlik yuzunden GECERSIZ oldugu halde sayiya
+        # giriyordu (olculdu: 4000 adimda C_L = +2,6e-2, 16000 adimda
+        # -2,7e-2 -- isaret degistiriyor, C_D %2,7 oynuyor). Yani sayi,
+        # salinimin rastgele iki anindan uretilmis olurdu.
+        #
+        # Olcut C_L'dir: simetrik profil, sifir hucum acisi, C_L sifir
+        # OLMAK ZORUNDA. Esik surukemenin %1'i alindi; gecerli satirlar
+        # bunun cok altinda kaliyor (%12: 7e-7, %18: 2e-8), gecersiz
+        # olan cok ustunde (%25: 3e-2).
+        gecerli = [v for v in d if abs(v["CL"]) < 0.01 * v["CD"]]
+        atilan = [v for v in d if v not in gecerli]
+        if atilan:
+            print()
+            for v in atilan:
+                print("  UYARI: %d%% satiri GECERSIZ -- C_L = %+.1e "
+                      "(simetrik profilde sifir olmali, esik %.1e). "
+                      "Kararli cozum degil; URANS gerekir (gecici.py)."
+                      % (v["kalinlik"], v["CL"], 0.01 * v["CD"]))
+        if len(gecerli) >= 2:
             print()
             print("  ORANLARIN ORANI -- gecis uyusmazligina dayanikli olcu")
+            print("  (yalnizca gecerli satirlardan: %s)"
+                  % ", ".join("%d%%" % v["kalinlik"] for v in gecerli))
             for ref, ad in (("nf_xtr0", "xtr->0"), ("nf_xtr5", "xtr=0,05")):
-                t = (d[-1]["CD"] / d[-1][ref]) / (d[0]["CD"] / d[0][ref])
+                t = ((gecerli[-1]["CD"] / gecerli[-1][ref])
+                     / (gecerli[0]["CD"] / gecerli[0][ref]))
                 print("    %-9s  (%d%% orani) / (%d%% orani) = %.3f"
-                      % (ad, d[-1]["kalinlik"], d[0]["kalinlik"], t))
+                      % (ad, gecerli[-1]["kalinlik"], gecerli[0]["kalinlik"], t))
             print("    1'e yakin  -> kalinlik serit kurami icin sorun degil")
             print("    1'den buyuk -> kalinlik arttikca serit kurami sapiyor")
+        else:
+            print()
+            print("  ORANLARIN ORANI hesaplanmadi: gecerli satir sayisi %d "
+                  "(en az 2 gerekir)." % len(gecerli))
         print("bitti")
