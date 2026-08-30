@@ -148,6 +148,34 @@ yazılmaz.**
 
 Bütün katsayılar ikinci mertebe duvar gradyanıyla hesaplanmıştır.
 
+### Hangi modele güveniyoruz — ve neden
+
+**Birincil model Spalart–Allmaras.** Bu bir tercih değil, ölçümün
+sonucudur. SA kurulumumuz iki bağımsız vakada, iki bağımsız referans
+kodla (Overflow ve Cfl3d), **profil düzeyinde** doğrulandı:
+
+| vaka | ölçülen | sonuç |
+|---|---|---|
+| sıfır gradyanlı düz levha, Re_θ = 10⁴ | u⁺(y⁺) | ±0,06 u⁺ içinde |
+| NACA 0012, Re = 6×10⁶, α = 0 | üst yüzey C_f | yüzlerin %91'i iki kodun **arasında**, azami sapma %0,36 |
+
+İki referans kod kendi aralarında ortalama %2,33 ayrılıyor — yani
+SA'mız onlara, onların birbirine olduğundan daha yakın.
+
+**k-ω SST kurulumumuzda ölçülmüş bir kusur var** ve nedeni
+bulunamamıştır: aynı ağda C_f yüzlerin %0'ında iki kodun arasında,
+azami sapma %7,6. Serbest akış, ağ, duvar koşulu, şemalar, geometri,
+yakınsama ve modelin kendi kaynağı tek tek elendi. Kusur ayarla
+kapatılmadı; SST sonuçları **işaretlenerek** raporlanır.
+
+Bunun bir sonucu: model belirsizliği bizim iki koşumuzun farkından
+kestirilemez. Onun yerine referans literatürdeki yerleşik kod farkı
+kullanılır (NAS-2016-01, α = 0: SA ortalama 0,00819, SST ortalama
+0,00812 — %0,9).
+
+Ayrıntı, eleme sırası ve iki kendi hatamın düzeltmesi için:
+[`dogrulama.md`](dogrulama.md).
+
 ### Kuvvet hesabının sınanması
 
 `kuvvet.py` yük taşıyor (OpenFOAM'ın kendi aracı çalışmıyor), o yüzden
