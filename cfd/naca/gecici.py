@@ -119,7 +119,7 @@ if __name__ == "__main__":
         d = json.load(open(yol)) if os.path.exists(yol) else {}
 
         if asama == "kesif":
-            vaka = kos("kesif", T=0.5, dt0=2e-4, dyaz=0.005)
+            vaka = kos("kesif", T=0.2, dt0=1e-4, dyaz=0.002)
             g = gecmis(vaka)
             for v in g[::max(1, len(g) // 25)]:
                 print("   t=%.4f  C_D=%.6f  C_L=%+.5f" % v, flush=True)

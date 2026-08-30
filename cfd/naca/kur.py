@@ -135,12 +135,16 @@ def kur(dizin, kod="0012", Re=6e6, alfa=0.0, yplus=1.0,
            "writeControl    adjustableRunTime;\nwriteInterval   %.10g;\n"
            "purgeWrite      0;\nwriteFormat     ascii;\nwritePrecision  10;\n"
            "runTimeModifiable false;\n"
-           # Zaman adimi Courant ile ayarlaniyor. PIMPLE ortuk oldugu icin
-           # Co > 1 calisir; sinir dogrulukla ilgilidir, kararlilikla degil.
-           # Salinim periyodunu cozmek icin periyot basina ~100 adim
-           # hedeflenir, maxDeltaT bunu garanti eder.
-           "adjustTimeStep  yes;\nmaxCo           5;\nmaxDeltaT       %.10g;\n"
-           % (T, dt0, dyaz, dt0 * 4))
+           # ZAMAN ADIMI SABIT. Courant tabanli uyarlama duvar cozumlu
+           # bir agda kullanissizdir: olculdu, uyarlanan adim 4,6e-7'ye
+           # cokuyor (ortalama Courant 1,2e-6, en fazla 3,69 -- yani sinir
+           # tek bir minik hucrenin elinde) ve 0,5 saniyeye ulasmak bir
+           # milyon adim alirdi. PIMPLE ortuk oldugu icin buyuk yerel
+           # Courant sayilari kararliligi bozmaz; sinir dogruluktur ve o da
+           # SALINIM PERIYODUNU cozmekle ilgilidir, tek bir sinir tabakasi
+           # hucresini degil. Adim periyoda gore secilir.
+           "adjustTimeStep  no;\n"
+           % (T, dt0, dyaz))
     else:
         _y(os.path.join(dizin, "system", "controlDict"), "dictionary", "controlDict",
        "application     simpleFoam;\nstartFrom       startTime;\n"
