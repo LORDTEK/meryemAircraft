@@ -321,9 +321,20 @@ class CAgi:
             bol = 2.0 if 0 < i < NI - 1 else 1.0
             adim.append(math.hypot(b[0] - a[0], b[1] - a[1]) / bol)
 
+        # Sinir YALNIZCA iz kesiginde uygulanir, profil yuzeyinde ASLA.
+        # Varlik sebebi iz kesigidir: orada i adimi cikisa dogru 2,8 vetere
+        # cikarken dy sabit kalirsa en-boy orani 300 000'i asar. Profilde
+        # boyle bir sey yok ve sinirin oraya da uygulanmasi, kaba aglarda
+        # duvar araligini y+ hedefinin USTUNE cikariyordu -- olculdu: A1'de
+        # 18, A2'de 10, B1'de 2 yuzde devreye giriyordu, ki bu o aglari
+        # "y+ hedefli" olmaktan cikarir ve inceltme ailesini bozar.
+        # Belirtisi olculen y+ ust degerlerindeydi: A1'de 2,26 ve B1'de
+        # 3,29, oysa digerlerinde ~1,4.
+        prof = set(range(self.NW, self.NW + self.NF + 1))
         f = []
         for i in range(NI):
-            dyi = max(self.dy, adim[i] / self.en_boy)
+            dyi = self.dy if i in prof else max(self.dy,
+                                                adim[i] / self.en_boy)
             c = _geometrik(self.NJ, dyi, mesafe[i])
             f.append([v / mesafe[i] for v in c])
 

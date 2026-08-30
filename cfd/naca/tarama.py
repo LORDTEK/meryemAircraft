@@ -71,7 +71,7 @@ def yurut(harf, kok):
                        check=True, stdout=subprocess.DEVNULL)
         gecmis = []
         for z in zamanlar(vaka):
-            r = hesapla(vaka, alfa=0.0, zaman=z)
+            r = hesapla(vaka, alfa=0.0, zaman=z, mertebe=2)
             gecmis.append(dict(zaman=z, CD=r["CD"], CL=r["CL"],
                                CD_b=r["CD_basinc"], CD_v=r["CD_viskoz"],
                                yp_ort=r["yplus_ort"], yp_max=r["yplus_max"]))
