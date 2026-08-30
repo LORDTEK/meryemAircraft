@@ -508,6 +508,80 @@ Bu sayı artık bir kusur ölçüsü değil, yalnızca bir işarettir.
 Betiklerdeki "HEDEF 1,000 — modelin kendi kapanış şartı" satırları da bu
 çekinceyle düzeltildi.
 
+## Şema taraması: o da elendi
+
+`levha/sema.py`, beş varyant, hepsi kOmegaSST:
+
+| varyant | C_f | ν_t/(κu_τy) |
+|---|---:|---:|
+| taban | 0,002622 | 0,859 |
+| türbülans gradyanları sınırsız | 0,002620 | 0,859 |
+| U gradyanı sınırsız | 0,002622 | 0,859 |
+| bütün gradyanlar sınırsız | 0,002621 | 0,859 |
+| k/ω taşınımı sınırsız merkezi | 0,002621 | 0,859 |
+
+Hücre sınırlayıcısı hipotezi (SA'nın `grad(nuTilda)`'sı sınırsız, ω
+modellerininki değil) **çürüdü**: sınırlayıcıyı tamamen kaldırmak hiçbir
+şeyi değiştirmiyor.
+
+## Eşleştirme yordamının denetimi
+
+Re_θ eşleştirmesi kendi hesabımıza dayanıyor, o yüzden ayrıca
+denetlendi. Şekil faktörü H = δ*/θ:
+
+| model | x | Re_θ | δ* | θ | **H** |
+|---|---:|---:|---:|---:|---:|
+| SA | 1,305 | 10052 | 2,640e−3 | 2,010e−3 | **1,313** |
+| SST | 1,372 | 9911 | 2,620e−3 | 1,982e−3 | **1,322** |
+
+Re_θ ≈ 10⁴'te türbülanslı sınır tabakası için beklenen aralıkta. Ayrıca
+duyarlılık: Re_θ'da %5 hata C_f'i %0,9, u⁺'ı ~0,12 kaydırır. Ölçülen
+kayma 0,53. Yani eşleştirme hatası bunu açıklayamaz.
+
+## Nerede kaldık — açık ve dürüst durum
+
+**Kurulan (sağlam):**
+
+- **Boru hattımız doğrulandı.** SA'mız, aynı vakada iki bağımsız
+  referans kodla profil boyunca ±0,06 u⁺ içinde. Bu; ağ üreticisini,
+  şemaları, çözücü kurulumunu, u_τ çıkarımını ve kuvvet integralini
+  birlikte doğrular — hepsi SST ile ortaktır.
+- **SST kurulumumuzda gerçek bir uyuşmazlık var:** +0,53 u⁺, her y⁺'ta,
+  eşleştirilmiş Re_θ'da. C_f'te modeller arası fark bizde %4,1–4,8,
+  referansta %0,2–0,7.
+
+**Elenen (ölçülerek, tahminle değil):** serbest akış türbülansı (1000
+kat), ağ (üç kademe profilde, iki kademe levhada), duvar ω koşulu (iki
+onlu), k duvar koşulu, a₁ sınırlayıcısı, SST'ye özgü makine (kOmega da
+etkileniyor), ayrışım şemaları (beş varyant), geometri (%0,3), eşleştirme
+yordamı (H denetimi).
+
+**Kaynaktan okunan:** koştuğum ikilinin tam kaynağı çekildi. kOmega ve
+kOmegaSST ders kitabı biçiminde, katsayılar standart ve log tabakası
+bağıntısını κ ≈ 0,41 ile sağlıyor. Uygulamada gözle görülür bir
+anormallik yok.
+
+**Bulunamayan:** uyuşmazlığın nedeni. Bunu bulamadım. Ayarla bandın
+içine girmeyi denemedim ve denemeyeceğim; öyle bir sayı doğrulama
+olmazdı.
+
+**Sınanmayı bekleyen tek madde:** yakınsama. Koşular `residualControl`
+hedefine inmiyor, 4000 adımda kalıntılar 1e-6 civarında düzleşiyor.
+16 000 adımlık denetim kuyrukta.
+
+## Bunun makaleye etkisi
+
+1. **Birincil model SA olacak.** Doğrulanan o. Bu bir tercih değil,
+   ölçümün sonucu.
+2. **SST sonuçları rapor edilecek ama işaretlenecek**, ve bilinen
+   yanlılığıyla birlikte verilecek.
+3. **Model belirsizliği kendi iki koşumuzdan kestirilemez.** Plan
+   "3-B gövde iki modelle koşulsun, fark belirsizlik olsun" idi; bu
+   artık geçersiz, çünkü bizim SST/SA farkımız modelin değil
+   kurulumumuzun farkını taşıyor. Model belirsizliği için referans
+   literatürdeki yerleşik kod farkı kullanılacak (NAS-2016-01, alfa = 0:
+   SA ortalama 0,00819, SST ortalama 0,00812 — %0,9).
+
 ## Sıradaki şüpheli: kendi şema seçimimiz
 
 ω ailesi ile SA arasında kurulumumuzda **gerçek bir asimetri** var ve bu
