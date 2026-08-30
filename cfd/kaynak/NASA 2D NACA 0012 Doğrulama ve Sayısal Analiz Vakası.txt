@@ -1,0 +1,71 @@
+1. Genel Amaç
+Bu vaka, türbülans modellerinin sayısal analizini (yakınsama özellikleri, doğruluk derecesinin etkisi vb.) yapmak için tasarlanmıştır. CFL3D ve FUN3D gibi doğrulanmış kodlarla elde edilen "Modeling Reference Result" (MRR) seviyeleri ile kendi çözücünüzün ağ yakınsama davranışını karşılaştırmak için kullanılır.
+2. Geometri Tanımı (Kritik)
+Orijinal NACA 0012 formülü, kuyruk ucunda (trailing edge) tam kapanma (keskin uç) sağlamadığı için hafifçe ölçeklendirilmiştir. Kiriş uzunluğu (chord) c = 1 olacak şekilde ayarlanmış doğru formül şudur:
+y = ± 0.594689181 * [0.298222773*√x - 0.127125232*x - 0.357907906*x² + 0.291984971*x³ - 0.105174606*x⁴]
+(Not: Bu geometri, orijinalin %12'lik kalınlığı yerine kiriş uzunluğuna göre %11.894 maksimum kalınlığa sahip ölçeklenmiş bir kopyasıdır.)
+3. Akış Koşulları
+Mach Sayısı (M): 0.15 (temel olarak sıkıştırılamaz koşullar)
+Reynolds Sayısı (Re): 6.000.000 (kiriş uzunluğuna göre)
+Hücum Açısı (α): 0°, 10° ve 15°
+Referans Sıcaklık (Tref): 540 R
+Prandtl Sayıları: Pr = 0.72, Türbülans Prandtl (Prt) = 0.9
+Isı Kapasite Oranı (γ): 1.4
+Viskozite: Sutherland Yasası kullanılarak hesaplanmalıdır. (CFL3D ve FUN3D için boyutsuz kodlarda bu yasanın uygulanmasına dair özel notlar TMR sitesinde mevcuttur).
+4. Ağ (Grid) ve Sınır Koşulları Önerileri
+Sağlanan referans ağ aileleri, kuyruk ucundaki eksenel aralığın yakınsamaya etkisini test etmek için son derece ince (extremely fine) seviyelerde tasarlanmıştır.
+Uzak Alan (Farfield): Sınır, profilin yaklaşık 500 kiriş (500c) uzağında konumlandırılmalıdır.
+Düzeltme: Bu kadar büyük bir uzak alan sınırı için bile, "Noktasal Girdap (Point Vortex)" sınır koşulu düzeltmesinin uygulanması önerilir (Thomas and Salas, AIAA Journal 1986). Bu, özellikle sürükleme (drag) ve kaldırma (lift) katsayılarında hassas karşılaştırmalar için gereklidir.
+Duvar koşulu: Adyabatik (viscous adiabatic wall).
+5. Karşılaştırılacak Büyüklükler (Quantities of Interest)
+Kendi çözücünüzün sonuçlarını aşağıdakiler için ağ seviyelerine (grid levels) göre karşılaştırmalısınız:
+Kaldırma Katsayısı (
+C
+L
+C 
+L
+​
+ )
+Sürükleme Katsayısı (
+C
+D
+C 
+D
+​
+ )
+Moment Katsayısı (
+C
+M
+C 
+M
+​
+ )
+Yüzey Basınç Katsayısı (
+C
+p
+C 
+p
+​
+ ) vs. 
+x
+/
+c
+x/c
+Yüzey Sürtünme Katsayısı (
+C
+f
+C 
+f
+​
+ ) vs. 
+x
+/
+c
+x/c
+6. Beklenen Referans (What to Expect)
+Spalart-Allmaras (SA) Modeli için bu vaka, MRR Seviye 4 (en yüksek güven seviyesi) olarak sınıflandırılmıştır. Bu, farklı ağ seviyelerinde (örneğin; coarse, medium, fine, extra-fine) yapılacak bir Richardson Ekstrapolasyonu veya yakınsama analizi ile kodunuzun beklenen 1. veya 2. derece doğruluk davranışını göstermesi gerektiği anlamına gelir.
+7. Kaynaklar ve İndirilebilir Veriler
+Çevrimdışı çalışma için TMR sitesinden şu dosyalar ayrıca indirilmelidir:
+NACA 0012 yüzey noktaları dosyası (n0012points_superbig_clust_fix.dat)
+İlgili yapısal (structured) ve yapısal olmayan (unstructured) ağ aileleri (Grids linki üzerinden).
+Deneysel karşılaştırma verileri (Ladson, Gregory & O'Reilly, Abbott ve von Doenhoff verileri).
