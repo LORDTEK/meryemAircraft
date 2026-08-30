@@ -19,10 +19,18 @@ import json, math, os, re, sys
 
 
 def kalinti_gecmisi(vaka, alan="Ux"):
-    """{yineleme: ilk kalinti} -- log.simpleFoam'dan."""
+    """{yineleme: ilk kalinti} -- cozucu log'undan.
+
+    Log adi cozucuye gore degisir (kos.sh artik uygulamayi controlDict'ten
+    okuyor), o yuzden sabit ad aranmaz.
+    """
     d, n = {}, 0
-    yol = os.path.join(vaka, "log.simpleFoam")
-    if not os.path.exists(yol):
+    yol = None
+    for a in ("log.simpleFoam", "log.pimpleFoam"):
+        if os.path.exists(os.path.join(vaka, a)):
+            yol = os.path.join(vaka, a)
+            break
+    if yol is None:
         return d
     for satir in open(yol):
         if satir.startswith("Time = "):

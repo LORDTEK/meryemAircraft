@@ -182,20 +182,34 @@ def kur(dizin, kod="0012", Re=6e6, alfa=0.0, yplus=1.0,
        "snGradSchemes   { default corrected; }\n"
        "wallDist        { method meshWave; }\n")
 
-    cozucu = (
-        "solvers\n{\n"
-        "    p\n    {\n        solver          GAMG;\n"
-        "        smoother        GaussSeidel;\n        tolerance       1e-9;\n"
-        "        relTol          0.01;\n    }\n"
-        "    \"(U|k|omega|nuTilda)\"\n    {\n        solver          smoothSolver;\n"
-        "        smoother        symGaussSeidel;\n        tolerance       1e-10;\n"
-        "        relTol          0.01;\n        nSweeps         2;\n    }\n}\n\n")
+    P_COZ = ("        solver          GAMG;\n"
+             "        smoother        GaussSeidel;\n"
+             "        tolerance       1e-9;\n")
+    U_COZ = ("        solver          smoothSolver;\n"
+             "        smoother        symGaussSeidel;\n"
+             "        tolerance       1e-10;\n"
+             "        nSweeps         2;\n")
+
+    cozucu = ("solvers\n{\n"
+              "    p\n    {\n" + P_COZ + "        relTol          0.01;\n    }\n"
+              "    \"(U|k|omega|nuTilda)\"\n    {\n" + U_COZ +
+              "        relTol          0.01;\n    }\n")
 
     if gecici:
-        # PIMPLE: her zaman adiminda dis duzeltmelerle denge kurulur, bu
-        # yuzden denklemler gevsetilmez (gevsetme kararli cozumde yakinsamayi
-        # hizlandirmak icindir; zamana bagli cozumde zaman adiminin kendisi
-        # o isi gorur ve gevsetme zaman dogrulugunu bozar).
+        # PIMPLE son dis duzeltmede "Final" cozucu girdilerini arar ve
+        # onlarsiz calismaz. Final adimda relTol = 0 verilir: o adim zaman
+        # adiminin sonucunu belirledigi icin bagil degil MUTLAK toleransa
+        # kadar cozulur.
+        cozucu += ("    pFinal\n    {\n" + P_COZ +
+                   "        relTol          0;\n    }\n"
+                   "    \"(U|k|omega|nuTilda)Final\"\n    {\n" + U_COZ +
+                   "        relTol          0;\n    }\n")
+    cozucu += "}\n\n"
+
+    if gecici:
+        # Zamana bagli cozumde denklemler GEVSETILMEZ. Gevsetme, kararli
+        # cozumde yakinsamayi hizlandirmak icindir; burada o isi zaman
+        # adiminin kendisi gorur ve gevsetme zaman dogrulugunu bozar.
         cozucu += ("PIMPLE\n{\n    nOuterCorrectors 3;\n"
                    "    nCorrectors     1;\n"
                    "    nNonOrthogonalCorrectors 1;\n"
