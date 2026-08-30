@@ -102,6 +102,17 @@ MODEL = sys.argv[1] if len(sys.argv) > 1 else "kOmegaSST"
 if MODEL != "kOmegaSST":
     KOK = KOK + "-" + MODEL
 
+# ADIM -- sonradan eklendi. 4000 adimda %18 kesiti YAKINSAMIYORDU ve bu
+# olculdu, varsayilmadi: Uy kalintisi 2,98e-3'te (%12'de 2,31e-5) ve C_L
+# +1,1e-3 (%12'de +6,4e-7; simetrik profilde sifir olmali). Kalintilar
+# hala DUSUYORDU (son %10'da oran 0,63), yani akis kararsiz degil,
+# yalnizca adim yetmemis. Ikisi ayri seydir ve karistirilmamalidir:
+# %25'te kalinti YUKSELIYOR, orasi gercekten kararsiz (bkz. gecici.py).
+#     python3 cfd/naca/kalinlik.py [model] [adim]
+ADIM = int(sys.argv[2]) if len(sys.argv) > 2 else 4000
+if ADIM != 4000:
+    KOK = KOK + "-%d" % ADIM
+
 
 def nf_sifira(kal, Re, ornek=(0.03, 0.05, 0.10, 0.20)):
     """NeuralFoil'in xtr -> 0 degerini, YALNIZCA guvenilir bolgeden
@@ -119,6 +130,30 @@ def nf_sifira(kal, Re, ornek=(0.03, 0.05, 0.10, 0.20)):
     sxx = sum((a - mx) ** 2 for a in x)
     egim = sxy / sxx
     return my - egim * mx
+
+
+def son_kalintilar(vaka, pay=0.1):
+    """log.simpleFoam'dan son kalintilar ve son %10'daki egilim.
+
+    Neden kayda geciyor: bir satirin guvenilir olup olmadigi C_D'ye
+    bakarak anlasilmaz. Simetrik profilde C_L'nin sifirdan uzaklasmasi
+    ve Uy kalintisinin buyuk kalmasi, o satirin YAKINSAMADIGINI soyler.
+    Bu kanit tabloyla birlikte saklanir ki okuyan kendi karar verebilsin.
+    """
+    import re
+    p = os.path.join(vaka, "log.simpleFoam")
+    if not os.path.exists(p):
+        return None
+    m = open(p).read()
+    out = dict(yakinsadi="SIMPLE solution converged" in m)
+    for ad in ("Ux", "Uy", "p", "nuTilda", "k", "omega"):
+        v = [float(x) for x in re.findall(
+            r"Solving for %s, Initial residual = ([0-9.e+-]+)" % ad, m)]
+        if not v:
+            continue
+        n = len(v)
+        out[ad] = dict(son=v[-1], oran=v[-1] / v[int(n * (1 - pay))])
+    return out
 
 
 def neuralfoil(kal, Re, xtr):
@@ -145,11 +180,12 @@ if __name__ == "__main__":
             vaka = os.path.join(KOK, kod)
             bilgi = kur(vaka, kod=kod, Re=RE, alfa=0.0, yplus=1.0,
                         n_profil=256, n_normal=96, n_iz=64, R=50.0, Xiz=50.0,
-                        adim=4000, yaz_araligi=2000, model=MODEL)
+                        adim=ADIM, yaz_araligi=ADIM // 2, model=MODEL)
             print("[%s] %d hucre -- cozuluyor" % (kod, bilgi["hucre"]), flush=True)
             subprocess.run([os.path.join(BURA, "kos.sh"), vaka, "4"],
                            check=True, stdout=subprocess.DEVNULL)
             r = hesapla(vaka, alfa=0.0, mertebe=2)
+            kal_son = son_kalintilar(vaka)
             nf0 = nf_sifira(kal, RE)
             nf5 = neuralfoil(kal, RE, 0.05)
             nfs = neuralfoil(kal, RE, None)
@@ -164,6 +200,7 @@ if __name__ == "__main__":
             cikti.append(dict(kalinlik=kal, hucre=bilgi["hucre"], CD=r["CD"],
                               CD_b=r["CD_basinc"], CD_v=r["CD_viskoz"],
                               CL=r["CL"], yp=r["yplus_ort"],
+                              kalinti=kal_son,
                               nf_xtr0=nf0, nf_xtr5=nf5, nf_serbest=nfs))
             json.dump(cikti, open(yol, "w"), indent=1)
 
