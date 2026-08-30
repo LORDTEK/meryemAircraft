@@ -44,12 +44,12 @@ Doğrulama önce gelir. Sıra bilinçli:
 
 Şu an **1. basamaktayız.**
 
-1. basamağın bir sonucu 3. basamağı bağlıyor: türbülans modeli seçimi
-   C_D'yi %9,4 oynatıyor, bütün sayısal belirsizliklerin yirmi katı.
-   Dolayısıyla üç boyutlu koşu **tek modelle yapılmayacak** — iki modelle
-   birden yapılacak ve sonuç bir sayı değil bir bant olarak verilecek.
-   Ağ bağımsızlığına ne kadar emek verilirse verilsin, tek modelli bir
-   C_D0 zaten %10 belirsizlik taşır.
+1. basamak deneyle ve sekiz yerleşik kodla karşılaştırıldı; sonuç
+   `dogrulama.md`'de. Kısaca: Spalart-Allmaras kurulumumuz referans bandın
+   üst ucunda (+%2,8), k-ω SST kurulumumuz ise her yerleşik kodun %5
+   altında. Yerleşik kodlarda iki model arasındaki fark yalnızca %0,9
+   olduğu için bu, model duyarlılığı değil **bizim SST kurulumumuzda bir
+   kusurdur** ve 3. basamağa geçmeden kapatılması gerekir.
 
 ## Araçlar ve iki engel
 
@@ -318,18 +318,58 @@ Sürüklemeye etkisi ölçüldü: **≤ %0,01.** Çünkü y+ ≈ 1'de ilk hücre
 fark yok. Hata gerçekti ama sonucu değiştirmiyordu — ve bu, varsayımla
 değil ölçümle söyleniyor.
 
-## Belirsizlik bütçesi — sayısal taraf sıkı, fizik modeli değil
+## ⚠️ GERİ ÇEKİLDİ — "türbülans modeli baskın belirsizliktir"
 
-Bu, 1. basamağın asıl çıktısı. Aynı ağ, aynı akış, aynı şemalar; yalnızca
-türbülans modeli değişiyor:
+Bu bölüm önce şunu söylüyordu: aynı ağda k-ω SST ile Spalart-Allmaras
+arasında %9,4 fark var, bu bütün sayısal belirsizliklerin yirmi katı,
+dolayısıyla baskın belirsizlik türbülans modelidir.
 
-| model | C_D | basınç | viskoz |
+**Yanlıştı.** Referans veri geldiğinde çürüdü.
+
+`NAS-2016-01` (Jespersen, Pulliam, Childs, NASA Ames) sekiz yerleşik kodun
+aynı vakadaki değerlerini veriyor. α = 0°, Re = 6×10⁶, M = 0,15:
+
+| kod | SA | SST |
+|---|---:|---:|
+| CFL3D | 0,00819 | 0,00809 |
+| FUN3D | 0,00812 | 0,00808 |
+| NTS | 0,00813 | 0,00809 |
+| Joe | 0,00812 | — |
+| SUMB | 0,00813 | — |
+| TURNS | 0,00830 | — |
+| GGNS | 0,00817 | — |
+| Overflow | 0,00838 | 0,00821 |
+| **ortalama** | **0,00819** | **0,00812** |
+
+Yerleşik kodlarda iki model arasındaki fark **%0,9**. Bizde %9,4.
+
+| | bizim | referans ortalaması | fark |
 |---|---:|---:|---:|
-| k-ω SST | 0,007691 | 0,001292 | 0,006399 |
-| Spalart-Allmaras | 0,008416 | 0,001397 | 0,007019 |
-| **fark** | **+9,43 %** | +8,18 % | +9,69 % |
+| Spalart-Allmaras | 0,00842 | 0,00819 | **+2,8 %** |
+| k-ω SST | 0,00769 | 0,00812 | **−5,3 %** |
 
-Yanına bütün sayısal belirsizlikleri koyunca:
+Yani SA'mız referans bandının üst ucunda oturuyor; **SST'miz her yerleşik
+kodun %5 altında.** Ölçtüğümüz %9,4 model duyarlılığı değil, SST
+kurulumumuzdaki bir kusurdu.
+
+Çözünürlük değil: Overflow'un kendi SST ağ yakınsaması 57 921 hücrede
+0,00826, 919 809 hücrede 0,00817 veriyor (NAS-2016-01, Tablo 7.5). Bizim
+82 944 hücredeki değerimiz 0,00765.
+
+**Bulunan aday sebep.** Aynı raporun 13. sayfası referans uygulamayı
+yazıyor: SST için serbest akışta (μt/μ)∞ = **0,001**. Biz **1,0**
+kullanmışız — bin kat büyük. `k` doğruydu (%0,1 şiddet, referansın
+%0,088–0,104'üyle uyumlu), ama ω∞ = k/ν_t olduğu için bizimki 9,
+referansınki 9000. Bu değişken **SA'da yoktur** — SA'nın oturup SST'nin
+oturmamasının nedeni bu olabilir. `naca/serbest.py` bu tek değişkeni
+tarıyor; beklenti betiğin başında **önceden** yazılı.
+
+**Bu neden burada duruyor.** Yanlış bölümü silmek yerine geri çekilmiş
+olarak bırakıyorum: sonucun nasıl kurulduğu, nasıl çürütüldüğü ve neyle
+çürütüldüğü kaydın parçasıdır. Bir sayının yanlış olduğunu göstermek, onu
+hiç yazmamış gibi davranmaktan daha çok bilgi taşır.
+
+Bu arada geriye kalan sayısal belirsizlikler değişmedi ve hâlâ küçük:
 
 | kaynak | belirsizlik |
 |---|---:|
@@ -337,60 +377,8 @@ Yanına bütün sayısal belirsizlikleri koyunca:
 | alan boyutu (20 veter) | 0,1 % |
 | yineleme yakınsaması | ~0,1 % |
 | duvar gradyanı mertebesi (y+ < 1) | 0,03 % |
-| **türbülans modeli** | **9,4 %** |
 
-Ağ bağımsızlığı için harcanan onca çabanın karşılığı ±%0,4 iken, model
-seçimi tek başına yirmi katını oynatıyor. İkinci makale için doğrudan
-bir sonuç: **ağ yakınsaması ne kadar iyi olursa olsun, tek bir türbülans
-modeliyle verilen bir C_D0'ın belirsizliği %10 mertebesindedir.**
-
-Ve bu bir **alt sınırdır**. Merkez gövde %25 kalınlığındadır; oradaki ters
-basınç gradyanı bu ince simetrik profildekinden çok daha şiddetli olacak
-ve model duyarlılığı büyüyecektir.
-
-Hangi modelin doğru olduğunu bu tablo **söylemez** — onu ancak deney
-söyler. `kaynak-gerekli.md`'deki iki dosya tam bunun için duruyor.
-
-## 2. basamak: kalınlık — ve %25'te çıkan asıl sorun
-
-| t/c | RANS | NF (xtr→0) | oran | durum |
-|---:|---:|---:|---:|---|
-| %12 | 0,009137 | 0,010113 | 0,903 | yakınsadı, yapışık |
-| %18 | 0,010573 | 0,011813 | 0,895 | yakınsadı, firar kenarında ~%1 |
-| %25 | ~~0,012408~~ | 0,014146 | ~~0,877~~ | **geçersiz — yakınsamadı** |
-
-%12 → %18 arasında oranların oranı **0,991**: kalınlık, RANS ile
-NeuralFoil arasında bir ayrışma üretmiyor.
-
-Ama **%25 satırı geri çekilmiştir.** Kararlı RANS orada yakınsamıyor ve
-üç ayrı belirti aynı şeyi söylüyor:
-
-- **C_L = +0,048.** Simetrik profil, sıfır hücum açısı: C_L sıfır olmak
-  zorunda. %12'de −4×10⁻⁶, %18'de +5×10⁻⁶, %25'te +5×10⁻².
-- **Ux kalıntısı düşmüyor, yükseliyor:** 1,4×10⁻⁵ → 1,6×10⁻⁴.
-- **Ayrılma bölgesi taraf değiştiriyor:** t = 2000'de 18 üst / 7 alt yüz,
-  t = 4000'de 0 üst / 21 alt (`ortak/ayrilma.py`).
-
-Yani akış kararlı değil; firar kenarı ayrılması salınıyor ve kararlı
-çözücü onu kovalıyor.
-
-**Bunun projeye bakan yüzü, sayının kendisinden önemli.** Kök kesitimiz
-%25'tir. Demek ki orada hem kararlı RANS hem de XFOIL/NeuralFoil — ki o
-da kararlı, yapışık ya da ılımlı ayrılmış akış varsayar — rahat
-bölgelerinin dışında çalışıyor. `cd0.py`'nin en zayıf halkası
-sandığımızdan farklı bir yerde: sorun yalnızca "gövde iki boyutlu
-değildir" değil, **o kalınlıkta akışın kararlı olmamasıdır.**
-
-Doğru işlem zamana bağlı çözüm (URANS) ve zaman ortalamasıdır.
-
-### Ayrılma ölçütünde bir hata
-
-İlk yazdığım ölçüt yüzey teğet yönünü komşu yüz merkezlerinden alıyordu.
-C-ağında `i` indeksi alt yüzeyde firardan hücuma doğru ilerler, yani o
-yön akışın tersidir — ve alt yüzeyin **tamamı** "ters akıyor" çıkıyordu.
-Belirti açıktı: NACA 0012 için %50 ayrılma, hepsi alt yüzeyde. Ölçüt
-serbest akış yönüne bağlandı; şimdi 0012'de %0, 0018'de %1 veriyor.
-
+Doğrulamanın tamamı için `dogrulama.md`.
 
 ## Bir yan bulgu: NeuralFoil'in geçiş sınırı
 

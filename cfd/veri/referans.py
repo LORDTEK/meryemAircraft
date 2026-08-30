@@ -98,3 +98,46 @@ if __name__ == "__main__":
         print("  dosya : %s" % d["dosya"])
         print()
     print(GEOMETRI_NOTU)
+
+
+# ------------------------------------------------- kod-kod referans degerleri
+
+KOD_KOD = dict(
+    kaynak=("Jespersen, D. C., Pulliam, T. H., Childs, M. L., "
+            "'Turbulence Modeling Resource Validation Results', "
+            "NAS Technical Report NAS-2016-01, NASA Ames"),
+    dosya="cfd/kaynak/NAS_Technical_Report_NAS-2016-01.pdf, Tablo 7.1 ve 7.2",
+    kosul="M = 0.15, Re = 6.0e6, alfa = 0, 897 x 257 ag",
+    yontem="PDF'in metin katmanindan dogrudan okundu (tarama/olcum yok).",
+    SA={"Cfl3d": 0.00819, "Fun3d": 0.00812, "Nts": 0.00813, "Joe": 0.00812,
+        "Sumb": 0.00813, "Turns": 0.00830, "Ggns": 0.00817,
+        "Overflow": 0.00838},
+    SST={"Cfl3d": 0.00809, "Fun3d": 0.00808, "Nts": 0.00809,
+         "Overflow": 0.00821},
+    # Overflow'un kendi ag yakinsamasi, SST, alfa = 0 (Tablo 7.5)
+    SST_ag={3729: 0.00951145, 14625: 0.00846612, 57921: 0.00826384,
+            230529: 0.00820820, 919809: 0.00816992},
+    SA_ag={3729: 0.00978291, 14625: 0.00878727, 57921: 0.00841582,
+           230529: 0.00838221, 919809: 0.00820996},
+    not_=(
+        "BU TABLO BIR ONCEKI SONUCUMUZU CURUTTU. Yerlesik kodlarda SA ile "
+        "SST arasindaki fark alfa = 0'da yalnizca %0,9 (ortalama 0,00819 ve "
+        "0,00812). Bizde %9,4 cikmisti ve bunu 'baskin belirsizlik turbulans "
+        "modelidir' diye yazmistik. Yanlisti: bizim SA'miz referans bandinin "
+        "ust ucunda, ama SST'miz her yerlesik kodun %5 altinda. Sorun model "
+        "duyarliligi degil, bizim SST kurulumumuz."),
+)
+
+SST_SERBEST_AKIS = dict(
+    kaynak="NAS-2016-01, basili sayfa 13",
+    dosya="cfd/kaynak/NAS_Technical_Report_NAS-2016-01.pdf",
+    mutinf=0.001,
+    xkinf_formul="XKINF = 1.5 * (FSTI/100)^2",
+    not_=(
+        "Referans uygulama SST icin serbest akista (mu_t/mu)_inf = 0,001 "
+        "aliyor. Biz 1,0 kullanmisiz -- bin kat buyuk. k dogruydu (%0,1 "
+        "siddet, referansin %0,088 - %0,104'uyle uyumlu) ama omega_inf = "
+        "k / nu_t oldugu icin bizimki 9, referansinki 9000. Bu degisken "
+        "SA'da YOKTUR; SA'nin oturup SST'nin oturmamasinin nedeni olabilir. "
+        "cfd/naca/serbest.py bunu tariyor."),
+)
