@@ -42,14 +42,35 @@ Doğrulama önce gelir. Sıra bilinçli:
    şerit kuramının şüpheli olduğu kalınlıkta **ne kadar ayrıştığını** ölçer.
 3. **Üç boyutlu merkez gövde** — asıl soru. 1 ve 2'nin verdiği güven payıyla.
 
-Şu an **1. basamaktayız.**
+Şu an **2. basamağın sonundayız.**
 
-1. basamak deneyle ve sekiz yerleşik kodla karşılaştırıldı; sonuç
-   `dogrulama.md`'de. Kısaca: Spalart-Allmaras kurulumumuz referans bandın
-   üst ucunda (+%2,8), k-ω SST kurulumumuz ise her yerleşik kodun %5
-   altında. Yerleşik kodlarda iki model arasındaki fark yalnızca %0,9
-   olduğu için bu, model duyarlılığı değil **bizim SST kurulumumuzda bir
-   kusurdur** ve 3. basamağa geçmeden kapatılması gerekir.
+**1. basamak kapandı.** Deneyle, sekiz yerleşik kodla ve — asıl önemlisi —
+iki bağımsız kodla *profil düzeyinde* karşılaştırıldı. Sonuç
+`dogrulama.md`'de; özeti "Hangi modele güveniyoruz" bölümünde. Kısaca:
+Spalart–Allmaras kurulumumuz doğrulandı, k-ω SST kurulumumuzda ölçülmüş
+ama nedeni bulunamamış bir kusur var. Bu yüzden birincil model SA.
+
+**2. basamak koşuluyor** ve şimdiden ilk makalenin kendi uyarısını
+ölçümle destekliyor. İlk makale (`makale/bolumler/08-limitations.md`)
+şunu söylüyordu:
+
+> "Its strip method treats the root section as a two-dimensional aerofoil
+> of twenty-five percent thickness, and the flow over the centre body of
+> a blended-wing body is not two-dimensional."
+
+Ölçtüğümüz şey bunu doğruluyor ve **bir adım öteye taşıyor**: %25
+kalınlıkta sorun yalnızca üç boyutluluk değil. O kesitte akış, *iki
+boyutta bile* kararlı değildir — firar kenarı ayrılması iki yüzey
+arasında taraf değiştiriyor (t=2000'de 23 yüz hepsi üstte, t=4000'de
+8 üst / 20 alt), C_L simetrik profilde +2,6×10⁻² çıkıyor ve hız
+kalıntıları düşmek yerine yükseliyor. Yani şerit kuramının dayandığı
+XFOIL/NeuralFoil de, kararlı RANS da o kalınlıkta kendi geçerlilik
+bölgelerinin dışında çalışıyor. Bu, ilk makalenin iddiasını zayıflatmaz —
+güçlendirir, çünkü zayıf halkanın *nerede ve neden* koptuğunu adlandırır.
+
+Karşılaştırma için, aynı ölçütle: %12'de hiç ayrılma yok; %18'de yalnızca
+firar kenarı noktasında, simetrik ve durgun. Kırılma %18 ile %25
+arasında.
 
 ## Araçlar ve iki engel
 
