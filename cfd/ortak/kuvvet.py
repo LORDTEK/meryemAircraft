@@ -35,8 +35,15 @@ import re                                          # noqa: E402
 
 
 def nu_oku(vaka):
+    # nu iki bicimde yazilabilir ve ikisi de gecerlidir:
+    #     nu  1.6667e-07;
+    #     nu  [0 2 -1 0 0 0 0] 1.6667e-07;
+    # Boyut listesi varsa atlanir; okunacak olan son sayidir.
     m = _govde(os.path.join(vaka, "constant", "transportProperties"))
-    return float(re.search(r"nu\s+([-+0-9.eE]+)", m).group(1))
+    e = re.search(r"\bnu\b\s*(?:\[[^\]]*\])?\s*([-+0-9.eE]+)\s*;", m)
+    if e is None:
+        raise RuntimeError("transportProperties icinde nu okunamadi: " + vaka)
+    return float(e.group(1))
 
 
 def hesapla(vaka, yama="duvar", alfa=0.0, Uinf=1.0, Aref=1.0, zaman=None,

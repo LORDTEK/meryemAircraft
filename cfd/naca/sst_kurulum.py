@@ -23,9 +23,16 @@ Denenen degiskenler:
   k_dusukRe    k duvarda kLowReWallFunction
   omega_kitap  duvar fonksiyonu HIC kullanilmaz: omega duvarda yuz yuz
                fixedValue olarak 6 nu / (beta1 y^2) verilir. y, o yuzun
-               komsu hucre merkezinin duvara dik uzakligidir. Bu, cozumlenmis
-               sinir tabakasi icin ders kitabi kosuludur ve OpenFOAM'in
-               harmanlama makinesini tamamen devre disi birakir.
+               komsu hucre merkezinin duvara dik uzakligidir.
+
+               SONRADAN DUZELTME -- bu varyanti "ders kitabi kosulu" diye
+               adlandirmistim, YANLIS. 6 nu/(beta1 y^2) ilk hucre
+               MERKEZINDEKI omega'yi verir; onu duvar YUZUNE koymak,
+               gercek omega'nin cok daha buyuk oldugu bir yere kucuk bir
+               deger koymaktir. Yani bu, omega'nin duvarda eksik
+               belirtilmesidir. Olculdu: C_D %13 artiyor. Dogru carpani
+               soyleyecek birinci elden kaynagim olmadigi icin bir deger
+               iddia etmiyorum; aralik levha/omega_duvar.py'de taraniyor.
 
 BEKLENTI ONCEDEN: bir degisken C_D'yi 0,0081 bandina tasiyorsa kusur
 odur. Hicbiri tasimazsa kusur bu dordusunde degildir ve siradaki supheli,
