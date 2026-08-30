@@ -9,6 +9,61 @@ Kaynaklar `cfd/kaynak/` altındadır ve depoya girmiştir. Sayılar
 `cfd/veri/referans.py`'de, her birinin yanında nereden ve **nasıl**
 okunduğu yazılı olarak durur.
 
+## ÖZET — şu anki durum
+
+Bu dosya kronolojik yazıldı: hipotezler kurulduğu sırayla, çürütülenler
+çürütüldüğü yerde duruyor. Okuyanın 750 satır izlemesi gerekmesin diye
+varılan yer burada:
+
+**Doğrulanan.** Spalart–Allmaras kurulumumuz iki bağımsız vakada, iki
+bağımsız referans kodla (Overflow, Cfl3d), **profil düzeyinde**
+doğrulandı:
+
+| vaka | ölçülen | sonuç |
+|---|---|---|
+| sıfır gradyanlı düz levha, Re_θ = 10⁴ | u⁺(y⁺) | ±0,06 u⁺ içinde |
+| NACA 0012, Re = 6×10⁶, α = 0 | üst yüzey C_f | 91 yüzün %91'i iki kodun **arasında**, azami sapma %0,36 |
+
+Karşılaştırma için: iki referans kod kendi aralarında ortalama %2,33
+ayrılıyor. Ayrıca SA'nın ağ yakınsama yörüngesi Overflow'unkini izliyor
+(en ince ağlarda %0,3).
+
+Bu, ağı, şemaları, çözücü kurulumunu, u_τ çıkarımını ve kuvvet
+integralini birlikte doğrular — hepsi SST ile ortaktır.
+
+**Doğrulanmayan.** k-ω SST kurulumumuzda **gerçek ve ölçülmüş bir kusur**
+var. Aynı ağda, aynı boru hattıyla:
+
+| | kodlar arasında kalan yüz | azami sapma |
+|---|---:|---:|
+| bizim SA | %91 | %0,36 |
+| bizim SST | **%0** | **%7,6** |
+
+Düz levhada da aynı imza: +0,53 u⁺ kayma, her y⁺'ta.
+
+**Elenenler** (tahminle değil, ölçülerek): serbest akış türbülansı (1000
+kat), ağ (profilde üç, levhada iki kademe), duvar ω koşulu (iki onlu),
+k duvar koşulu, a₁ sınırlayıcısı, SST'ye özgü makine (düz kOmega da
+etkileniyor), ayrışım şemaları (beş varyant), geometri (%0,3),
+Re_θ eşleştirme yordamı (şekil faktörü denetimi), yakınsama
+(4× uzun koşu, altı basamağa kadar aynı).
+
+**Kaynaktan okunan.** Koştuğumuz ikilinin tam kaynağı çekildi
+(`apt-get source openfoam`). kOmega ve kOmegaSST ders kitabı biçiminde;
+katsayılar standart ve log tabakası bağıntısını κ ≈ 0,41 ile sağlıyor.
+
+**Bulunamayan: nedeni.** Ayarla referans bandına girmek denenmedi ve
+denenmeyecek.
+
+**Makaleye etkisi.** Birincil model SA. SST işaretlenerek raporlanacak.
+Model belirsizliği kendi iki koşumuzdan kestirilemez; referans
+literatürdeki yerleşik kod farkı kullanılacak (%0,9).
+
+**İki düzeltme yapıldı** ve ikisi de aşağıda duruyor: (1) "hedef 1,000"
+iddiasını fazla güçlü kurmuştum; (2) Şekil 4.1'in eksenini yanlış
+kalibre etmiştim. İkisi de kendi denetimlerimle yakalandı, ikisi de
+ilgili sayıları düzeltti.
+
 ## Referans değerler
 
 | kaynak | koşul | C_D,0 |
@@ -707,7 +762,14 @@ işleme. Ayrılan tek şey türbülans modeli. Açık firar kenarına doğru
 azalıyor (hücum kenarında %7,6, x/c = 0,7'de %4,9) — düz levhadaki
 u⁺ kaymasının işaretiyle ve büyüklüğüyle tutarlı.
 
-## Sıradaki şüpheli: kendi şema seçimimiz
+## ~~Sıradaki şüpheli: kendi şema seçimimiz~~ — ÇÜRÜTÜLDÜ
+
+> Bu bölüm bir hipotez kurarken yazıldı ve **sınandı, çürüdü.**
+> Sonucu yukarıdaki "Şema taraması: o da elendi" bölümünde:
+> beş varyantın beşi de 0,859 veriyor, sınırlayıcıyı tamamen
+> kaldırmak hiçbir şeyi değiştirmiyor. Silmiyorum, çünkü
+> beklenti önceden yazılmıştı ve çürütülmüş bir hipotez de
+> kayıttır. Aşağısı o zamanki metindir.
 
 ω ailesi ile SA arasında kurulumumuzda **gerçek bir asimetri** var ve bu
 bizim kendi seçimimiz:
@@ -731,14 +793,41 @@ varyantla bunu sınıyor; beklenti önceden yazılı:
 - **(b)** Hiçbiri taşımazsa şema da elenir. Geriye OpenFOAM'ın ω denklemi
   uygulaması kalır; kaynağından okunmadan düzeltilemez, **rapor edilir**.
 
+## Yakınsama da elendi — son açık madde
+
+Koşular `residualControl` hedefine (1e-8) inmiyor; 4000 adımda
+kalıntılar düzleşip endTime'a çarpıyor, "SIMPLE solution converged"
+iletisi hiç çıkmıyor. Referans rapor kendi koşularında kalıntıların
+13 mertebe düştüğünü söylüyor, bizimki ~6.
+
+Bunun sonucu etkilemediğini *düşünmek* için gerekçem vardı (SA aynı
+kalıntı seviyesinde referansla çakışıyor) ama gerekçe kanıt değil.
+İki ölçüm yapıldı.
+
+**Kalıntı geçmişi.** Son %10'da hiç hareket yok:
+
+| değişken | 1/8'de | sonda | son %10'da oran |
+|---|---:|---:|---:|
+| SA, Ux | 1,37e−5 | 6,34e−9 | 1,000 |
+| SA, nuTilda | 1,46e−5 | 2,70e−6 | 0,992 |
+| SST, k | 7,44e−6 | 1,38e−6 | 0,977 |
+| SST, ω | 1,96e−8 | 4,25e−9 | 1,000 |
+
+Kalıntılar %25'te platoya oturmuş ve orada duruyor. Bu bir plato, süren
+bir yakınsama değil.
+
+**Dört kat uzun koşu.** `levha/duzlevha.py uzun`, 16 000 adım:
+
+| model | 4 000 adım | 16 000 adım |
+|---|---|---|
+| SA | C_f = 0,002727 ; ν_t/(κu_τy) = 0,969 | C_f = 0,002727 ; 0,969 |
+| SST | C_f = 0,002622 ; 0,859 | C_f = 0,002622 ; 0,859 |
+
+**Altı basamağa kadar aynı.** Yakınsama elendi.
+
 ## Sırada
 
-- **Duvar ω taraması** (`levha/omega_duvar.py`): düz levhada iki onlu
-  aralıkta duvar ω koşulu, yanında serbest akış ve ağ. Hedef **kesin ve
-  dışarıdan ölçüm gerektirmiyor**: modelin kendi kapanış şartı
-  ν_t = κu_τy. Beklenti önceden yazılı — oran 1,00'i kesiyorsa duvar
-  işlemi bu açığı yönetiyordur; altı varyant da 0,86'da kalıyorsa kusur
-  OpenFOAM'ın uygulamasındadır ve kaynağından okunmadan düzeltilemez.
+- **3-B gövde** (ikinci makalenin 3. adımı): birincil model SA ile.
 
 ### Elde olmayan kaynak
 
