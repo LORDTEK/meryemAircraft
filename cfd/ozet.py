@@ -20,6 +20,11 @@ KAYNAK = {
     "alan": "/tmp/alan2/sonuc.json",
     "model": "/tmp/model/sonuc.json",
     "kalinlik": "/tmp/kalinlik/sonuc.json",
+    "B-SA": "/tmp/tarama-B-SA/sonuc.json",
+    "tmrgeo": "/tmp/tmrgeo/sonuc.json",
+    "levha_model": "/tmp/levha_model/sonuc.json",
+    "levha_omega": "/tmp/levha_omega/sonuc.json",
+    "levha_sema": "/tmp/levha_sema/sonuc.json",
 }
 
 
@@ -95,13 +100,65 @@ def kalinlik_tablo(md=False):
                   "NF (xtr=0,05)", "oran"], s, md)
 
 
+def tmrgeo_tablo(md=False):
+    d = yukle("tmrgeo")
+    if not d:
+        return None
+    s = [[v["model"], "%.6f" % v["onceki"], "%.6f" % v["CD"],
+          "%+.2f" % ((v["CD"] / v["onceki"] - 1) * 100)] for v in d]
+    return tablo(["model", "%12 kapalı", "TMR %11,894", "değişim %"], s, md)
+
+
+def _levha(ad, anahtar, basliklar, md=False):
+    d = yukle(ad)
+    if not d:
+        return None
+    s = []
+    for v in d:
+        if "oran" not in v:
+            s.append([v.get(anahtar, "?"), "(koşulamadı)", "", "", ""])
+            continue
+        s.append([v[anahtar], "%.6f" % v["Cf"], "%.3f" % v["oran"],
+                  "%.3f" % v["kp"] if v.get("kp") else "-",
+                  "%.3f" % v["om"] if v.get("om") else "-"])
+    return tablo(basliklar, s, md)
+
+
+def levha_model_tablo(md=False):
+    return _levha("levha_model", "model",
+                  ["model", "C_f", "ν_t/(κu_τy)", "k+/3,333", "ω/ω_denge"], md)
+
+
+def levha_omega_tablo(md=False):
+    return _levha("levha_omega", "ad",
+                  ["varyant", "C_f", "ν_t/(κu_τy)", "k+/3,333", "ω/ω_denge"], md)
+
+
+def levha_sema_tablo(md=False):
+    return _levha("levha_sema", "ad",
+                  ["varyant", "C_f", "ν_t/(κu_τy)", "k+/3,333", "ω/ω_denge"], md)
+
+
 BOLUM = [("A ailesi — sabit duvar aralığı (y+ = 1), yalnızca hücre sayısı ölçekleniyor",
           lambda m: ag_ailesi("A", m)),
          ("B ailesi — düzgün inceltme, bütün aralıklar birlikte",
           lambda m: ag_ailesi("B", m)),
          ("Alan boyutu — büyüme oranı sabit tutularak", alan_tablo),
          ("Türbülans modeli", model_tablo),
-         ("Kalınlık — RANS ile NeuralFoil (2. basamak)", kalinlik_tablo)]
+         ("Kalınlık — RANS ile NeuralFoil (2. basamak)", kalinlik_tablo),
+         # --- makalenin birincil modeli SA; ag yakinsamasi onun icin de
+         #     olculmeliydi ve olculdu (bkz. dogrulama.md)
+         ("B ailesi, **Spalart–Allmaras** ile — makalenin birincil modeli",
+          lambda m: ag_ailesi("B-SA", m)),
+         ("Geometri — TMR'ın %11,894 profiliyle", tmrgeo_tablo),
+         # --- duz levha: SST acigini yalitma calismalari.
+         #     Oran hedefi 1,000 ama DENGE halindeki log tabakasi icin
+         #     kesindir; gelisen sinir tabakasinda mutlak sapma bir kusur
+         #     olcusu DEGIL, isarettir (bkz. dogrulama.md "DUZELTME").
+         #     Anlamli olan varyantlar arasindaki karsilastirmadir.
+         ("Düz levha — model ayırt edici", levha_model_tablo),
+         ("Düz levha — duvar ω koşulu, serbest akış ve ağ", levha_omega_tablo),
+         ("Düz levha — ayrışım şemaları", levha_sema_tablo)]
 
 
 if __name__ == "__main__":
