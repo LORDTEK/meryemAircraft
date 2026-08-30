@@ -91,6 +91,24 @@ def yaz(sonuc):
         print("  %-4s %8d %10.6f %10.6f %10.6f %8.2f"
               % (s["ad"], s["hucre"], g["CD"], g["CD_b"], g["CD_v"], g["yp_ort"]))
 
+    # Richardson yalnizca DUZGUN INCELTILMIS ailede anlamlidir. Duvar
+    # araligi seviyeler boyunca sabit tutulmussa tek bir h olcusu yoktur
+    # ve gozlenen mertebe anlam tasimaz -- hesaplanmasi degil, yapilmamasi
+    # gerekir.
+    yp = {s.get("yplus_hedef") for s in sonuc}
+    if len(yp) == 1 and None not in yp:
+        print()
+        print("  RICHARDSON UYGULANMADI.")
+        print("  Bu ailede ilk hucre yuksekligi butun seviyelerde ayni")
+        print("  (y+ hedefi %.3f); yalnizca hucre SAYILARI olcekleniyor."
+              % list(yp)[0])
+        print("  Richardson tek bir h olcusunun varligini varsayar; duvara")
+        print("  dik aralik olceklenmediginde boyle bir h yoktur ve")
+        print("  'gozlenen mertebe' anlamsiz cikar. Bu aile bir DUYARLILIK")
+        print("  taramasidir: yuzey ve iz cozunurlugunun etkisini, sinir")
+        print("  tabakasi cozunurlugu sabitken ayirir.")
+        return
+
     r = coz(sonuc, "CD")
     if not r:
         return

@@ -1,10 +1,22 @@
 # -*- coding: utf-8 -*-
-"""Ag bagimsizligi taramasi: ayni akis, dort cozunurlukte.
+"""Ag taramasi -- IKI AYRI AILE, ayri sorular.
 
-Her seviyede alanlar araliklarla yazilir, katsayilar her yazilmis zamanda
-yeniden hesaplanir. Boylece hem AG yakinsamasi hem de COZUM yakinsamasi
-ayni kosudan okunur -- fonksiyon nesneleri calismadigi icin katsayi
-gecmisini baska turlu almanin yolu yok.
+A ailesi -- SABIT DUVAR ARALIGI
+    Hucre sayilari 1.5 oraniyla buyur, ilk hucre yuksekligi y+ = 1'de
+    SABIT kalir. Olctugu sey: yuzey ve iz cozunurlugune duyarlilik,
+    sinir tabakasi cozunurlugu sabitken.
+
+    Bu aileye Richardson UYGULANMAZ. Richardson tek bir h olcusunun
+    varligini varsayar; burada duvara dik aralik olceklenmedigi icin
+    boyle bir h yoktur ve "gozlenen mertebe" anlamsiz cikar.
+
+B ailesi -- DUZGUN INCELTME
+    Butun araliklar birlikte olceklenir: hucre sayilari r ile carpilir,
+    ilk hucre yuksekligi r'ye BOLUNUR. Dolayisiyla y+ seviyeyle degisir
+    (2.25 / 1.5 / 1.0 / 0.67). Richardson'un istedigi budur ve gozlenen
+    mertebe ancak bu ailede anlam tasir.
+
+Iki aile ayri ayri kaydedilir; karistirilmaz.
 """
 import os, sys, subprocess, json
 
@@ -13,12 +25,20 @@ sys.path.insert(0, BURA)
 sys.path.insert(0, os.path.join(BURA, "..", "ortak"))
 from kur import kur                                    # noqa: E402
 from kuvvet import hesapla                             # noqa: E402
-from foamoku import Ag                                 # noqa: E402
 
-SEVIYE = [("S1", 128, 48, 32), ("S2", 192, 72, 48),
-          ("S3", 256, 96, 64), ("S4", 384, 144, 96)]
 ADIM, YAZ = 3000, 500
-KOK = "/tmp/tarama"
+
+# (ad, n_profil, n_normal, n_iz, yplus)
+AILE = {
+    "A": [("A1", 128, 48, 32, 1.0),
+          ("A2", 192, 72, 48, 1.0),
+          ("A3", 256, 96, 64, 1.0),
+          ("A4", 384, 144, 96, 1.0)],
+    "B": [("B1", 114, 43, 28, 2.25),
+          ("B2", 171, 64, 43, 1.50),
+          ("B3", 256, 96, 64, 1.00),
+          ("B4", 384, 144, 96, 0.667)],
+}
 
 
 def zamanlar(vaka):
@@ -33,15 +53,20 @@ def zamanlar(vaka):
     return [a for _, a in sorted(z)]
 
 
-if __name__ == "__main__":
-    os.makedirs(KOK, exist_ok=True)
-    cikti = []
-    for ad, nf, nn, nw in SEVIYE:
-        vaka = os.path.join(KOK, ad)
-        bilgi = kur(vaka, kod="0012", Re=6e6, alfa=0.0,
+def yurut(harf, kok):
+    os.makedirs(kok, exist_ok=True)
+    yol = os.path.join(kok, "sonuc.json")
+    cikti = json.load(open(yol)) if os.path.exists(yol) else []
+    yapilan = {d["ad"] for d in cikti}
+    for ad, nf, nn, nw, yp in AILE[harf]:
+        if ad in yapilan:
+            continue
+        vaka = os.path.join(kok, ad)
+        bilgi = kur(vaka, kod="0012", Re=6e6, alfa=0.0, yplus=yp,
                     n_profil=nf, n_normal=nn, n_iz=nw,
                     adim=ADIM, yaz_araligi=YAZ)
-        print("[%s] %d hucre -- cozuluyor" % (ad, bilgi["hucre"]), flush=True)
+        print("[%s] %d hucre  y+hedef %.3f -- cozuluyor"
+              % (ad, bilgi["hucre"], yp), flush=True)
         subprocess.run([os.path.join(BURA, "kos.sh"), vaka, "4"],
                        check=True, stdout=subprocess.DEVNULL)
         gecmis = []
@@ -50,10 +75,17 @@ if __name__ == "__main__":
             gecmis.append(dict(zaman=z, CD=r["CD"], CL=r["CL"],
                                CD_b=r["CD_basinc"], CD_v=r["CD_viskoz"],
                                yp_ort=r["yplus_ort"], yp_max=r["yplus_max"]))
-            print("   t=%-6s CD=%.6f  CL=%+.2e  y+ %.2f/%.2f"
-                  % (z, r["CD"], r["CL"], r["yplus_ort"], r["yplus_max"]),
-                  flush=True)
+        g = gecmis[-1]
+        print("   CD=%.6f  CL=%+.2e  y+ %.2f/%.2f  (son iki yazim farki %+.2e)"
+              % (g["CD"], g["CL"], g["yp_ort"], g["yp_max"],
+                 g["CD"] - gecmis[-2]["CD"] if len(gecmis) > 1 else 0.0),
+              flush=True)
         cikti.append(dict(ad=ad, hucre=bilgi["hucre"], NI=bilgi["NI"],
-                          NJ=bilgi["NJ"], gecmis=gecmis))
-        json.dump(cikti, open(os.path.join(KOK, "sonuc.json"), "w"), indent=1)
-    print("bitti")
+                          NJ=bilgi["NJ"], yplus_hedef=yp, gecmis=gecmis))
+        json.dump(cikti, open(yol, "w"), indent=1)
+    print("%s ailesi bitti" % harf)
+
+
+if __name__ == "__main__":
+    harf = sys.argv[1] if len(sys.argv) > 1 else "A"
+    yurut(harf, sys.argv[2] if len(sys.argv) > 2 else "/tmp/tarama-" + harf)
