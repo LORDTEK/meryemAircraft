@@ -52,10 +52,31 @@ def naca4(kod, x, kapali=True):
     """4 haneli simetrik NACA profilinin yari kalinligi.
 
     kapali=True son katsayiyi -0.1036 yapar: firar kenari sifir kalinlikta
-    kapanir. Ruzgar tuneli modelleri ve turbulans modeli kaynaklari bu
-    surumu kullanir. -0.1015 gercek NACA tanimidir ve firar kenarini
-    %0.25 veter acik birakir.
+    kapanir, azami kalinlik veterin %t'si olur. -0.1015 gercek NACA
+    tanimidir ve firar kenarini %0.25 veter acik birakir.
+
+    kapali="tmr" ise NASA Turbulence Modeling Resource'un dogrulama
+    vakasinda kullandigi profil verilir. O profil, ACIK firar kenarli
+    gercek formulden x = 1.008930411365'e kadar bir profil uretip
+    (firar kenari orada sivridir) sonucu 1.008930411365 ile
+    OLCEKLEYEREK elde edilir; azami kalinligi veterin %11.894'udur,
+    %12'si degil. Katsayilar kaynaktan alinmistir:
+
+        y = +- 0.594689181 [ 0.298222773 sqrt(x) - 0.127125232 x
+              - 0.357907906 x^2 + 0.291984971 x^3 - 0.105174606 x^4 ]
+
+    Kaynak: cfd/kaynak/2D NACA 0012 Airfoil Validation Case.pdf, sayfa 1
+    (birinci elden okundu). Yalnizca 0012 icin tanimlidir.
     """
+    if kapali == "tmr":
+        if kod != "0012":
+            raise ValueError("tmr profili yalnizca 0012 icin tanimli")
+        x = max(x, 0.0)
+        return 0.594689181 * (0.298222773 * math.sqrt(x)
+                              - 0.127125232 * x
+                              - 0.357907906 * x ** 2
+                              + 0.291984971 * x ** 3
+                              - 0.105174606 * x ** 4)
     t = int(kod[-2:]) / 100.0
     c4 = -0.1036 if kapali else -0.1015
     return 5 * t * (0.2969 * math.sqrt(max(x, 0.0)) - 0.1260 * x
