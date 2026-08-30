@@ -156,13 +156,24 @@ class CAgi:
                  R=20.0, Xiz=20.0, kalinlik=1.0, kapali=True,
                  n_profil=256, n_normal=96, n_iz=64,
                  fk_hucre=2e-4, hk_hucre=2e-4, iz_cikis=1.0, dis_hucre=1.5,
-                 n_sigma=0.01, fk_pencere=0.02, gecis=0.3, en_boy=5000.0):
+                 n_sigma=None, fk_pencere=None, gecis=0.3, en_boy=5000.0):
         self.kod, self.Re, self.kapali = kod, Re, kapali
         self.R, self.Xiz, self.kalinlik = R, Xiz, kalinlik
         self.NF, self.NJ, self.NW = n_profil, n_normal, n_iz
         self.fk, self.hk = fk_hucre, hk_hucre
         self.iz_cikis, self.dis_hucre = iz_cikis, dis_hucre
-        self.n_sigma, self.fk_pencere = n_sigma, fk_pencere
+        # Firar kenarindaki normal sicramasi, yuzey egimiyle buyur: kapali
+        # NACA 00xx'te firar acisi %12'de 8,3 derece, %30'da 20 derecedir.
+        # Sabit bir yumusatma penceresi kalin kesitlerde yetmez -- olculdu:
+        # 0030 ve 0035, pencere 0,02'de sirasiyla 38 ve 138 ters hucre
+        # veriyor, 0,04'te sifir. Bu yuzden pencere firar egimiyle
+        # olcekleniyor. Taban 0,02'dir ve %12'de tam o degere oturur, yani
+        # daha once uretilmis 0012 aglari DEGISMEZ.
+        eg = abs(naca4(kod, 1.0, kapali) - naca4(kod, 0.999, kapali)) / 0.001
+        eg0 = 0.1454                      # 0012'nin firar egimi
+        self.fk_pencere = fk_pencere if fk_pencere is not None else \
+            0.02 * max(1.0, eg / eg0)
+        self.n_sigma = n_sigma if n_sigma is not None else self.fk_pencere / 2
         self.gecis, self.en_boy = gecis, en_boy
         self.dy = ilk_hucre_yuksekligi(Re, yplus)
         self.xc = 0.25                       # dis cemberin merkezi
