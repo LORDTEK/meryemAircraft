@@ -28,7 +28,7 @@ grep -E "Max aspect|non-orthogonality|skewness|negative" log.checkMesh | sed 's/
 if [ "$CEK" -gt 1 ]; then
   decomposePar > log.decomposePar 2>&1
   mpirun --allow-run-as-root -np "$CEK" simpleFoam -parallel > log.simpleFoam 2>&1
-  reconstructPar -latestTime > log.reconstructPar 2>&1
+  reconstructPar > log.reconstructPar 2>&1
 else
   simpleFoam > log.simpleFoam 2>&1
 fi
