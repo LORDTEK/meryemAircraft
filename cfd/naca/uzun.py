@@ -23,7 +23,12 @@ from kur import kur                                    # noqa: E402
 from kuvvet import hesapla                             # noqa: E402
 from kilit import Kilit                                # noqa: E402
 
-SEVIYE = [("B3u", 256, 96, 64, 1.000), ("B4u", 384, 144, 96, 0.667)]
+# Yalnizca B3u. B4u (82 944 hucre) dort saatten uzun surerdi ve
+# katkisi sinirli: salinimin buyuklugu zaten esit-kalinti
+# karsilastirmasindan biliniyor (kalinti.py, +%0,4). B3u tek
+# basina asil soruyu -- momentum dengesi tam yakinsamada sifira
+# gidiyor mu -- cevaplar.
+SEVIYE = [("B3u", 256, 96, 64, 1.000)]
 ADIM, YAZ = 20000, 2500
 KOK = "/tmp/uzun"
 

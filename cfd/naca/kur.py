@@ -45,8 +45,16 @@ def _alan(yol, nesne, boyut, ic, disalan, duvar, cikis):
 def kur(dizin, kod="0012", Re=6e6, alfa=0.0, yplus=1.0,
         n_profil=256, n_normal=96, n_iz=64, R=20.0, Xiz=20.0,
         siddet=0.001, nut_orani=1.0, adim=3000, kapali=True,
-        yaz_araligi=None, model="kOmegaSST"):
-    """Vakayi kurar; ag .msh olarak birakilir, cevrimi kos.sh yapar."""
+        yaz_araligi=None, model="kOmegaSST", gecici=None):
+    """Vakayi kurar; ag .msh olarak birakilir, cevrimi kos.sh yapar.
+
+    gecici=None            kararli cozum, simpleFoam
+    gecici=(T, dt0, dyaz)  zamana bagli cozum, pimpleFoam: T saniyeye kadar,
+                           dt0 baslangic adimi, dyaz saniyede bir yazim.
+                           Kalin kesitte akis kararli olmadigi icin (bkz.
+                           kalinlik.py) kararli cozucu yakinsamaz; dogru
+                           islem budur.
+    """
     if os.path.isdir(dizin):
         shutil.rmtree(dizin)
     for a in ("0", "system", "constant"):
@@ -117,7 +125,24 @@ def kur(dizin, kod="0012", Re=6e6, alfa=0.0, yplus=1.0,
        "    turbulence      on;\n    printCoeffs     on;\n}\n" % model)
 
     # --- system/
-    _y(os.path.join(dizin, "system", "controlDict"), "dictionary", "controlDict",
+    if gecici:
+        T, dt0, dyaz = gecici
+        _y(os.path.join(dizin, "system", "controlDict"), "dictionary",
+           "controlDict",
+           "application     pimpleFoam;\nstartFrom       startTime;\n"
+           "startTime       0;\nstopAt          endTime;\n"
+           "endTime         %.10g;\ndeltaT          %.10g;\n"
+           "writeControl    adjustableRunTime;\nwriteInterval   %.10g;\n"
+           "purgeWrite      0;\nwriteFormat     ascii;\nwritePrecision  10;\n"
+           "runTimeModifiable false;\n"
+           # Zaman adimi Courant ile ayarlaniyor. PIMPLE ortuk oldugu icin
+           # Co > 1 calisir; sinir dogrulukla ilgilidir, kararlilikla degil.
+           # Salinim periyodunu cozmek icin periyot basina ~100 adim
+           # hedeflenir, maxDeltaT bunu garanti eder.
+           "adjustTimeStep  yes;\nmaxCo           5;\nmaxDeltaT       %.10g;\n"
+           % (T, dt0, dyaz, dt0 * 4))
+    else:
+        _y(os.path.join(dizin, "system", "controlDict"), "dictionary", "controlDict",
        "application     simpleFoam;\nstartFrom       startTime;\n"
        "startTime       0;\nstopAt          endTime;\nendTime         %d;\n"
        "deltaT          1;\nwriteControl    timeStep;\nwriteInterval   %d;\n"
@@ -136,7 +161,9 @@ def kur(dizin, kod="0012", Re=6e6, alfa=0.0, yplus=1.0,
 
 
     _y(os.path.join(dizin, "system", "fvSchemes"), "dictionary", "fvSchemes",
-       "ddtSchemes      { default steadyState; }\n\n"
+       ("ddtSchemes      { default backward; }\n\n" if gecici else
+        "ddtSchemes      { default steadyState; }\n\n") +
+       
        "gradSchemes\n{\n    default         Gauss linear;\n"
        "    limited         cellLimited Gauss linear 1;\n"
        "    grad(U)         $limited;\n    grad(k)         $limited;\n"
@@ -155,20 +182,38 @@ def kur(dizin, kod="0012", Re=6e6, alfa=0.0, yplus=1.0,
        "snGradSchemes   { default corrected; }\n"
        "wallDist        { method meshWave; }\n")
 
+    cozucu = (
+        "solvers\n{\n"
+        "    p\n    {\n        solver          GAMG;\n"
+        "        smoother        GaussSeidel;\n        tolerance       1e-9;\n"
+        "        relTol          0.01;\n    }\n"
+        "    \"(U|k|omega|nuTilda)\"\n    {\n        solver          smoothSolver;\n"
+        "        smoother        symGaussSeidel;\n        tolerance       1e-10;\n"
+        "        relTol          0.01;\n        nSweeps         2;\n    }\n}\n\n")
+
+    if gecici:
+        # PIMPLE: her zaman adiminda dis duzeltmelerle denge kurulur, bu
+        # yuzden denklemler gevsetilmez (gevsetme kararli cozumde yakinsamayi
+        # hizlandirmak icindir; zamana bagli cozumde zaman adiminin kendisi
+        # o isi gorur ve gevsetme zaman dogrulugunu bozar).
+        cozucu += ("PIMPLE\n{\n    nOuterCorrectors 3;\n"
+                   "    nCorrectors     1;\n"
+                   "    nNonOrthogonalCorrectors 1;\n"
+                   "    turbOnFinalIterOnly false;\n}\n\n"
+                   "relaxationFactors\n{\n    equations\n    {\n"
+                   "        \".*\"            1;\n    }\n}\n")
+    else:
+        cozucu += ("SIMPLE\n{\n    nNonOrthogonalCorrectors 2;\n"
+                   "    consistent      yes;\n"
+                   "    residualControl\n    {\n        p               1e-7;\n"
+                   "        U               1e-8;\n"
+                   "        \"(k|omega|nuTilda)\" 1e-8;\n    }\n}\n\n"
+                   "relaxationFactors\n{\n    equations\n    {\n"
+                   "        U               0.9;\n"
+                   "        \"(k|omega|nuTilda)\" 0.7;\n    }\n}\n")
+
     _y(os.path.join(dizin, "system", "fvSolution"), "dictionary", "fvSolution",
-       "solvers\n{\n"
-       "    p\n    {\n        solver          GAMG;\n"
-       "        smoother        GaussSeidel;\n        tolerance       1e-9;\n"
-       "        relTol          0.01;\n    }\n"
-       "    \"(U|k|omega|nuTilda)\"\n    {\n        solver          smoothSolver;\n"
-       "        smoother        symGaussSeidel;\n        tolerance       1e-10;\n"
-       "        relTol          0.01;\n        nSweeps         2;\n    }\n}\n\n"
-       "SIMPLE\n{\n    nNonOrthogonalCorrectors 2;\n"
-       "    consistent      yes;\n"
-       "    residualControl\n    {\n        p               1e-7;\n"
-       "        U               1e-8;\n        \"(k|omega|nuTilda)\" 1e-8;\n    }\n}\n\n"
-       "relaxationFactors\n{\n    equations\n    {\n"
-       "        U               0.9;\n        \"(k|omega|nuTilda)\" 0.7;\n    }\n}\n")
+       cozucu)
 
     _y(os.path.join(dizin, "system", "decomposeParDict"), "dictionary",
        "decomposeParDict",
