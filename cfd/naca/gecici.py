@@ -170,7 +170,31 @@ if __name__ == "__main__":
             T = d.get("kesif", {}).get("periyot")
             if not T:
                 raise SystemExit("once kesif asamasi kosulmali")
-            vaka = kos("uretim", T=20 * T, dt0=T / 400, dyaz=T / 20)
+            # ZAMAN ADIMI ve CEVRIM SAYISI -- once dt0 = T/400 idi,
+            # UST SINIR YOKTU. Bu, olculen periyoda gore IRAKSAYAN bir
+            # kosu uretebilirdi:
+            #
+            #   kur.py "adjustTimeStep no" yaziyor, yani adim sabittir.
+            #   Bu vakada olculmustu (varsayilmadi): dt = 5e-4 IRAKSIYOR,
+            #   dt = 1e-4 kararli. Periyot 0,04 s'den buyukse T/400 >
+            #   1e-4 olur ve kosu coker. Kesif asamasindaki iki tahmin de
+            #   (0,08 s ve 0,4 s) bu esigin ustunde.
+            #
+            # Bu yuzden dt ust sinirlanir. Bedeli adim sayisidir: cevrim
+            # sayisi 20'de tutulursa toplam adim periyotla dogru orantili
+            # buyur. Butce 60 000 adim; asilirsa cevrim sayisi azaltilir
+            # ama 10'un altina INMEZ -- ortalama TAM SAYIDA cevrim
+            # uzerinden alindigi surece gecerlidir, 10 cevrim de yeterli
+            # bir orneklemedir.
+            DT_UST, BUTCE, CEV_TABAN = 1e-4, 60000, 10
+            dt = min(T / 400.0, DT_UST)
+            cev = 20
+            while cev > CEV_TABAN and cev * T / dt > BUTCE:
+                cev -= 1
+            print("  uretim: dt = %.2e (T/400 = %.2e, ust sinir %.0e), "
+                  "%d cevrim, %d zaman adimi"
+                  % (dt, T / 400.0, DT_UST, cev, int(cev * T / dt)), flush=True)
+            vaka = kos("uretim", T=cev * T, dt0=dt, dyaz=T / 20)
             g = gecmis(vaka)
             o = ortala(g, T)
             print("\n  ZAMAN ORTALAMASI (%d ornek, t = %.3f .. %.3f)"
