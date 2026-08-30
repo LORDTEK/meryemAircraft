@@ -7,12 +7,22 @@ baglanir. Ikinci elden aktarim, ozet ya da yapay zeka ciktisi KULLANILMAZ.
 
 Kaynaklar `cfd/kaynak/` altinda durur ve depoya girmistir.
 
-OKUMA YONTEMI
-Kaynak PDF'lerin metin katmani yoktur (taranmis). Degerler, sayfalar 300
-dpi'da goruntuye cevrilip grafiklerin IZGARA CIZGILERI tespit edilerek ve
-isaretcilerin piksel agirlik merkezi olculerek okunmustur. Kalibrasyon her
-seferinde bilinen izgara degerleriyle capraz dogrulanmistir; asagida her
-degerin yaninda o dogrulama da yazilidir.
+OKUMA YONTEMLERI -- her degerin yaninda hangisi kullanildigi yazilidir.
+
+1. Metin katmani. En iyisi; olcum yok, okuma var. (NAS-2016-01'in
+   tablolari boyle okundu.)
+
+2. Vektor cikarimi. PDF'teki sekil vektor grafikse egrinin dugum
+   noktalari dosyanin icinde SAYI olarak durur; sayfa SVG'ye cevrilip
+   yollar dogrudan okunur (veri/nas_sekil.py). Okunan sey cizimin kendi
+   verisidir, goz olcusu degil. (NAS-2016-01 Sekil 4.1 ve 4.2 boyle
+   okundu.)
+
+3. Raster sayisallastirma. Kaynak taranmis goruntuyse baska yol yok:
+   sayfa 300 dpi'da goruntuye cevrilir, grafigin IZGARA CIZGILERI tespit
+   edilir, isaretcilerin piksel agirlik merkezi olculur. Kalibrasyon her
+   seferinde bilinen izgara degerleriyle CAPRAZ DOGRULANIR ve dogrulama
+   asagida degerin yaninda yazilidir. (Ladson ve McCroskey boyle okundu.)
 """
 
 LADSON_CD0 = dict(
@@ -140,4 +150,54 @@ SST_SERBEST_AKIS = dict(
         "k / nu_t oldugu icin bizimki 9, referansinki 9000. Bu degisken "
         "SA'da YOKTUR; SA'nin oturup SST'nin oturmamasinin nedeni olabilir. "
         "cfd/naca/serbest.py bunu tariyor."),
+)
+
+
+DUZ_LEVHA = dict(
+    kaynak=("Jespersen, D. C., Pulliam, T. H., Childs, M. L., "
+            "NAS Technical Report NAS-2016-01, Bolum 4, "
+            "'2D Zero Pressure Gradient Flat Plate'"),
+    dosya="cfd/kaynak/NAS_Technical_Report_NAS-2016-01.pdf, Sekil 4.1 ve 4.2",
+    kosul="M = 0.2, Re = 5.0e6 (birim uzunluk uzerinden)",
+    yontem=(
+        "Vektor cikarimi (yontem 2). Sekiller vektor grafik; sayfa "
+        "pdftocairo ile SVG'ye cevrilip egri yollari okundu. Kod: "
+        "veri/nas_sekil.py, karsilastirma: levha/karsilastir.py.\n"
+        "KALIBRASYON DENETIMI -- varsayilmadi, sinandi: Sekil 4.2'nin "
+        "ucuncu egrisi Coles'in ortalama hiz profilidir ve log tabakasinda "
+        "u+ = (1/kappa) ln y+ + B'ye oturmak zorundadir. Cikarilan egri "
+        "buna y+ = 100-300 arasinda 0,05'ten iyi uyuyor (y+ 100'de +0,006, "
+        "200'de +0,021, 300'de +0,048). Denetim basarisizsa "
+        "levha/karsilastir.py calismayi durdurur."),
+    # Re_theta tanimi kaynagin kendi metninden: integralin ust siniri
+    # u = %99,5 U_inf noktasidir (basili sayfa 17).
+    re_theta_tanimi="momentum kalinligi, ust sinir u = %99,5 U_inf",
+    # Sekil 4.1'den okunan C_f degerleri
+    Cf_Overflow={"SA": {5000: 0.002907, 7000: 0.002730, 9000: 0.002611,
+                        11000: 0.002520},
+                 "SST": {5000: 0.002900, 7000: 0.002719, 9000: 0.002600,
+                         11000: 0.002511}},
+    Cf_Cfl3d={"SA": {5000: 0.002902, 7000: 0.002726, 9000: 0.002609,
+                     11000: 0.002523},
+              "SST": {5000: 0.002891, 7000: 0.002711, 9000: 0.002594,
+                      11000: 0.002507}},
+    # Sekil 4.2'den okunan u+ degerleri, Re_theta = 10000
+    up_Overflow={"SA": {30: 13.289, 100: 16.371, 300: 19.054, 800: 22.080},
+                 "SST": {30: 12.643, 100: 16.213, 300: 19.024, 800: 21.912}},
+    not_=(
+        "BU, CALISMADAKI EN GUCLU DOGRULAMA ADIMI, cunku karsilastirilan "
+        "sey toplam bir katsayi degil PROFILIN KENDISI ve iki bagimsiz kod "
+        "var.\n"
+        "Sonuc: bizim SA'miz iki kodla da +-0,06 u+ icinde cakisiyor -- "
+        "ag, semalar, u_tau cikarimi ve kuvvet makinesi dogrulandi (hepsi "
+        "SST ile ORTAK). Bizim SST'miz her y+'ta duzgun +0,53 u+ kaymis.\n"
+        "C_f'te modeller ARASI fark: referansta -%0,2 ... -%0,7, bizde "
+        "-%4,1 ... -%4,8.\n"
+        "SINIR -- kaldirilmadi: referans M = 0,2, bizimki sikistirilamaz; "
+        "ayrica bizim ust sinirimiz H = 1 m'de kayma kosullu ve levha "
+        "boyunca dCp/dx = -0,0034 olculdu. Bu iki fark IKI MODELI DE ayni "
+        "yonde etkiler (olculdu: SA +%1,5->+%2,6, SST -%2,9->-%1,5, ikisi "
+        "de Re_theta ile ~%1,2 artiyor). Bu yuzden MUTLAK C_f farklari "
+        "modelin dogrulamasi olarak okunmamalidir; anlamli olan modeller "
+        "arasindaki farktir."),
 )

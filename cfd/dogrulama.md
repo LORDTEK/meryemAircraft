@@ -401,6 +401,39 @@ Bu yüzden **mutlak C_f farkları modelin doğrulaması olarak okunmamalıdır**
 anlamlı olan iki model ARASINDAKİ fark, çünkü ortak bileşen ikisinde de
 aynıdır. O fark referansta %0,4, bizde %4,5.
 
+## Duvar ω taraması: beklentinin (b) şıkkı çıktı
+
+`levha/omega_duvar.py`, düz levhada duvar ω koşulunu iki onlu bir aralıkta
+tarıyor, yanında serbest akış ve ağ. Hedef **kesin ve dışarıdan ölçüm
+gerektirmiyor**: modelin kendi kapanış şartı ν_t = κu_τy = 1,000.
+
+| varyant | C_f | ν_t/(κu_τy) | k⁺/3,333 | ω/ω_denge |
+|---|---:|---:|---:|---:|
+| taban (duvar fonksiyonu) | 0,002622 | 0,859 | 0,957 | 1,113 |
+| serbest akış ÷100 | 0,002625 | 0,859 | 0,957 | 1,113 |
+| ağ ince (y₁ yarı, 192 hücre) | 0,002661 | 0,859 | 0,958 | 1,116 |
+| duvarda 1× 6ν/(β₁d₁²) | 0,002714 | 0,866 | 0,958 | 1,107 |
+| duvarda 10× | 0,002630 | 0,860 | 0,957 | 1,113 |
+| duvarda 100× | 0,002576 | 0,856 | 0,956 | 1,116 |
+
+Duvar ω koşulu iki onluda değişirken C_f **%5,4** yayılıyor — ama
+**oran 0,856–0,866'da duruyor.** Serbest akış ve ağ da bu vakada ayrıca
+elendi.
+
+Yani duvar işlemi C_f'i oynatıyor, log tabakası dengesizliğini
+**düzeltmiyor**. Önceden yazılan beklentinin (b) şıkkı: kusur bu üç
+değişkende değil.
+
+**a₁ sınırlayıcısı da elenmiş durumda**, ve bu ayrı bir koşu
+gerektirmedi: ölçülen k ve ω'dan k/ω = 0,957/1,113 = 0,860 çıkıyor ve bu
+ölçülen ν_t oranının kendisi. Yani ν_t gerçekten k/ω'ya eşit —
+sınırlayıcı devrede değil.
+
+Geriye SST'ye özgü makine kalıyor: F₁ harmanlaması ve çapraz yayılım
+terimi. `levha/model_ayirt.py` bunu ayırıyor — aynı ağ, aynı şemalar,
+aynı sınır koşulları, tek fark model: düz kOmega (Wilcox), ki onda
+harmanlama ve çapraz yayılım **yoktur**. Beklenti önceden yazılı.
+
 ## Sırada
 
 - **Duvar ω taraması** (`levha/omega_duvar.py`): düz levhada iki onlu
