@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-"""Sinir tabakasi profilini duvar degiskenlerinde cikarir: u+ , y+.
+"""Sinir tabakasi profilini duvar degiskenlerinde cikarir: u+ , y+ ve
+logaritmik tabakanin turbulans dengesi.
 
 Neden: SST kurulumumuzun C_D'si referans kodlarin %5 altinda. Sebep
 arayisinda serbest akis elendi. Bu sinama DISARIDAN HICBIR VERI
@@ -13,6 +14,19 @@ kucuk oldugu anlamina gelir -- ve C_f = 2 (u_tau/U)^2 oldugu icin dogrudan
 dusuk surtunme demektir. Yani kayma varsa, dusuk C_D'nin nedeni sinir
 tabakasinin yapisindadir, kuvvet integralinde ya da agda degil.
 
+Ikinci sinama (log_denge) kaymanin HANGI denklemden geldigini sorar.
+Denge halindeki logaritmik tabakada k-omega ailesinin uc bagintisi
+kesindir -- model sabitlerinden cikar, olcume dayanmaz:
+
+    nu_t   = kappa u_tau y            (uretim = yitim, karisim uzunlugu)
+    k      = u_tau^2 / sqrt(beta*)    beta* = 0.09  ->  k+ = 3.333
+    omega  = u_tau / (sqrt(beta*) kappa y)
+
+Ucu birbirine bagli (nu_t = k/omega ozdesligi), yani ikisi saglanip biri
+saglanmiyorsa okuma hatasi vardir. Ucu de sapiyorsa model o bolgede
+denge halinde degildir. Hangisinin saptigi, kusurun k denkleminde mi
+omega denkleminde mi oldugunu soyler.
+
 Profil, duvardan disariya hucre hucre yurunerek cikarilir (Ag.karsi_hucre).
 Yapisal C-agi oldugu icin bu yurume duvara dik dogrultuyu izler.
 """
@@ -23,20 +37,29 @@ sys.path.insert(0, BURA)
 from foamoku import Ag, Alan, son_zaman        # noqa: E402
 from kuvvet import nu_oku                      # noqa: E402
 
-KAPPA, B = 0.41, 5.0
+KAPPA, B, BETA_YILDIZ = 0.41, 5.0, 0.09
+
+
+def _alan(vaka, z, ad, vektor=False):
+    """Varsa alani okur, yoksa None doner (SA'da k ve omega yoktur)."""
+    if not os.path.exists(os.path.join(vaka, z, ad)):
+        return None
+    return Alan(vaka, z, ad, vektor=vektor)
 
 
 def profil(vaka, x_hedef=0.5, ust=True, n=60, zaman=None):
     """Verilen x/c'ye en yakin duvar yuzunden disariya profil.
 
-    Doner: (u_tau, nu, [(y, u_t), ...])
+    Doner: (u_tau, nu, [nokta, ...]) -- her nokta bir sozluk:
+        y, u_t  ve varsa  k, omega, nut
     """
     ag = Ag(vaka)
     z = zaman or son_zaman(vaka)
     nu = nu_oku(vaka)
     U = Alan(vaka, z, "U", vektor=True)
-    nut = Alan(vaka, z, "nut") if os.path.exists(
-        os.path.join(vaka, z, "nut")) else None
+    nut = _alan(vaka, z, "nut")
+    k_a = _alan(vaka, z, "k")
+    om_a = _alan(vaka, z, "omega")
     merkez = ag.hucre_merkez()
     y = ag.yama["duvar"]
 
@@ -78,8 +101,11 @@ def profil(vaka, x_hedef=0.5, ust=True, n=60, zaman=None):
         cm = merkez[hucre]
         yy = abs(sum((cm[a] - C[a]) * nrm[a] for a in range(3)))
         uu = U.ic[hucre]
-        ut = sum(uu[a] * teget[a] for a in range(3))
-        nokta.append((yy, ut))
+        d = dict(y=yy, u_t=sum(uu[a] * teget[a] for a in range(3)))
+        for ad, alan in (("nut", nut), ("k", k_a), ("omega", om_a)):
+            if alan is not None:
+                d[ad] = alan.ic[hucre]
+        nokta.append(d)
         h2 = ag.karsi_hucre(onceki, hucre)
         if h2 is None:
             break
@@ -102,22 +128,53 @@ def yaz(vaka, ad, x_hedef=0.5):
     print("  %s   x/c = %.2f   u_tau/U = %.5f   C_f = %.6f"
           % (ad, x_hedef, u_tau, 2 * u_tau ** 2))
     print("      y+        u+      log yasasi   fark")
-    for yy, ut in p:
-        yp = yy * u_tau / nu
-        up = ut / u_tau
-        if yp < 0.3 or yp > 3000:
-            continue
-        log = (1 / KAPPA) * math.log(yp) + B
+    for d in p:
+        yp = d["y"] * u_tau / nu
+        up = d["u_t"] / u_tau
         if 30 <= yp <= 1000:
+            log = (1 / KAPPA) * math.log(yp) + B
             print("  %9.2f %9.3f %9.3f    %+.3f" % (yp, up, log, up - log))
     return u_tau, nu, p
 
 
-if __name__ == "__main__":
-    x = float(sys.argv[-1]) if len(sys.argv) > 2 and \
-        sys.argv[-1].replace(".", "").isdigit() else 0.5
-    for v in sys.argv[1:]:
-        if v.replace(".", "").isdigit():
+def log_denge(vaka, ad, x_hedef=0.5):
+    """Log tabakasinda k-omega denge bagintilarindan sapma.
+
+    Oran 1'e ne kadar yakinsa o denklem o kadar dengededir. Sapan
+    baginti, kusurun hangi denklemde oldugunu gosterir.
+    """
+    u_tau, nu, p = profil(vaka, x_hedef)
+    if "k" not in p[0]:
+        print("  %s: k/omega alani yok (SA) -- yalnizca nu_t sinanir" % ad)
+    print("  %s   u_tau/U = %.5f" % (ad, u_tau))
+    print("      y+     nu_t/(k.u.y)   k+/3.333   omega/omega_denge")
+    kd = 1.0 / math.sqrt(BETA_YILDIZ)              # k+ denge degeri = 3.3333
+    for d in p:
+        yp = d["y"] * u_tau / nu
+        if not 30 <= yp <= 1000:
             continue
-        yaz(v, os.path.basename(v), x)
+        s = ["%9.2f" % yp]
+        s.append("%12.3f" % (d["nut"] / (KAPPA * u_tau * d["y"]))
+                 if "nut" in d else "%12s" % "-")
+        s.append("%11.3f" % ((d["k"] / u_tau ** 2) / kd)
+                 if "k" in d else "%11s" % "-")
+        if "omega" in d:
+            od = u_tau / (math.sqrt(BETA_YILDIZ) * KAPPA * d["y"])
+            s.append("%17.3f" % (d["omega"] / od))
+        else:
+            s.append("%17s" % "-")
+        print("  " + "".join(s))
+    return u_tau, p
+
+
+if __name__ == "__main__":
+    arg = sys.argv[1:]
+    denge = "-denge" in arg
+    arg = [a for a in arg if a != "-denge"]
+    x = 0.5
+    if arg and arg[-1].replace(".", "").isdigit():
+        x = float(arg[-1])
+        arg = arg[:-1]
+    for v in arg:
+        (log_denge if denge else yaz)(v, os.path.basename(v), x)
         print()

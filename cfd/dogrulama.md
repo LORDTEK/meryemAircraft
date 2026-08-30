@@ -158,7 +158,7 @@ Bu, kendi fizik argümanımın öngördüğü sonuçtu — yüksek serbest akı�
 viskozitesi sürüklemeyi artırır, azaltmaz. Hipotez yine de kuruldu ve
 sınandı, çünkü argüman yanılabilirdi. Bir açıklama sınıfı temizce elendi.
 
-## Farkın yeri
+## Farkın yeri — sınır tabakasının kendi yapısı
 
 Toplam C_D farkın nerede olduğunu söylemez; `ortak/cf.py` söylüyor.
 SST/SA sürtünme oranı:
@@ -170,14 +170,123 @@ SST/SA sürtünme oranı:
 Açık ön bölgede yoğunlaşıyor ama **laminer bir bölge değil**: laminer
 olsaydı C_f beş kat düşerdi, burada en fazla %11.
 
+Farkın *nerede* olduğu bulundu; sıra *neyin* farklı olduğunda.
+
+`ortak/duvaryasasi.py` sınır tabakası profilini duvar değişkenlerinde
+çıkarıyor. Bu sınamanın **dışarıdan hiçbir veriye ihtiyacı yok**: referansı
+fiziğin kendisi.
+
+    logaritmik tabaka   u⁺ = (1/κ) ln y⁺ + B ,  κ = 0,41 , B = 5,0
+
+x/c = 0,5'te, aynı ağda, aynı şemalarda, aynı kuvvet integraliyle:
+
+| y⁺ | u⁺ (SA) | u⁺ (SST) | SA − log | SST − log |
+|---:|---:|---:|---:|---:|
+| 30 | 13,132 | 13,531 | −0,164 | **+0,236** |
+| 50 | 14,421 | 15,238 | −0,120 | **+0,697** |
+| 120 | 16,583 | 17,847 | −0,094 | **+1,170** |
+| 200 | 17,924 | 19,313 | +0,001 | **+1,390** |
+
+SA log yasasının üzerinde oturuyor. SST **yukarı kaymış**: aynı y⁺'ta daha
+büyük u⁺, yani daha küçük u_τ, yani C_f = 2(u_τ/U)² doğrudan düşük.
+u_τ/U: SA 0,04062, SST 0,03879.
+
+Bunun anlamı: açık kuvvet integralinde ya da ağda değil, sınır tabakasının
+kendi yapısında.
+
+### Hangi denklemde?
+
+Denge halindeki logaritmik tabakada k-ω ailesinin üç bağıntısı, modelin
+kendi sabitlerinden çıkar — ölçüme dayanmaz:
+
+    ν_t = κ u_τ y       k = u_τ²/√β*  (k⁺ = 3,333)      ω = u_τ/(√β* κ y)
+
+Üçü birbirine bağlı (ν_t = k/ω), yani ikisi tutup biri tutmuyorsa okuma
+hatası vardır. Ölçülen (x/c = 0,5, log tabakasının ortası, y⁺ ≈ 155):
+
+| büyüklük | SST | SA |
+|---|---:|---:|
+| ν_t/(κ u_τ y) | **0,880** | 0,984 |
+| k⁺ / 3,333 | 1,029 | — |
+| ω / ω_denge | **1,170** | — |
+
+Üçü kendi içinde tutarlı: 1,029 / 1,170 = 0,879. Yani **k doğru, ω ~%17
+fazla**, ν_t bu yüzden ~%12 eksik. Kusur ω denklemindedir, k denkleminde
+değil.
+
+### Bu bir sayısal artık değil
+
+Aynı ölçüm ağ ailesinin üç kademesinde:
+
+| ağ | hücre | ilk hücre y⁺ | azami ν_t/(κ u_τ y) | ω/ω_denge |
+|---|---:|---:|---:|---:|
+| B2 | 16 448 | 1,54 | 0,880 | 1,188 |
+| B3 | 36 864 | 1,04 | 0,880 | 1,173 |
+| B4 | 82 944 | 0,70 | 0,882 | 1,163 |
+
+Oran inceltmeyle **kıpırdamıyor**. Viskoz alt tabakadaki ω bozunumu
+düzeliyor (5. hücrede asimptotun 2,90 → 2,49 → 1,82 katı) ama log
+tabakasındaki denge sapması 0,88'de duruyor. Ayrışım hatası değil.
+
+C_D'nin kendisi de aynı şeyi söylüyor — ağ inceltmesi salınımlı ve
+referansa doğru **gitmiyor**:
+
+| ağ | A ailesi C_D | B ailesi C_D |
+|---|---:|---:|
+| 1 | 0,008127 | 0,008494 |
+| 2 | 0,007775 | 0,007804 |
+| 3 | 0,007691 | 0,007691 |
+| 4 | 0,007649 | 0,007750 |
+
+### Ama bu henüz kusur KANITI değil
+
+Dürüst olmak gerekirse burada durmak yanlış olur. x/c = 0,5'te basınç
+gradyanı **ters** yönlüdür ve SST tam da ters gradyanda ν_t'yi bilerek
+kısar — a₁ sınırlayıcısı bunun için vardır. Yani 0,88 modelin doğru
+davranışı da olabilir; SA'nın 0,98 vermesi SA'nın karışım uzunluğunun
+doğrudan κu_τy üzerine kurulu olmasından da gelebilir.
+
+İki olasılığı ayırmanın yolu, basınç gradyanının **sıfır** olduğu bir
+akışta aynı ölçümü yapmaktır: `levha/duzlevha.py`. Beklenti önceden
+yazılı:
+
+- Düz levhada oran ~1,00 çıkarsa kurulumumuz doğrudur, profildeki 0,88
+  ters gradyanın fiziğidir, ve referans kodlarla aramızdaki %5 başka
+  yerde aranmalıdır.
+- Düz levhada da ~0,88 çıkarsa kusur kurulumun kendisindedir ve basınç
+  gradyanından bağımsızdır.
+
+## Elenen açıklama: duvar işlemi
+
+`naca/sst_kurulum.py`, SST'ye özgü duvar koşullarını tek tek değiştiriyor.
+
+| varyant | C_D | değişim |
+|---|---:|---:|
+| taban (mevcut kurulum) | 0,007691 | — |
+| ω duvar fonksiyonu harmanlamasız | 0,007685 | −%0,08 |
+| ν_t duvarda `calculated` | çözülemedi | — |
+| k duvarda `kLowReWallFunction` | 0,007691 | %0,00 |
+| ω duvarda ders kitabı 6ν/(β₁y²) | (koşuyor) | |
+
+İlk hücrede ω zaten tam olarak 6ν/(β₁y²)'ye eşit (ölçüldü: 6,713e5'e
+karşı 6,713e5), yani duvar fonksiyonu doğru değeri koyuyor. Harmanlama ve
+k koşulu sonucu değiştirmiyor.
+
 ## Sırada
 
-- **Duvar işlemi taraması** (`naca/sst_kurulum.py`): beş varyant, biri
-  OpenFOAM'ın duvar fonksiyonunu tamamen devre dışı bırakıp ω'yı duvarda
-  yüz yüz 6ν/(β₁y²) veriyor — çözümlenmiş sınır tabakası için ders kitabı
-  koşulu.
+- **Düz levha** (`levha/duzlevha.py`): sıfır basınç gradyanında log
+  tabakası dengesi. Yukarıdaki 0,88'in model kusuru mu yoksa ters
+  gradyanın fiziği mi olduğunu ayıran sınama. Beklenti önceden yazılı.
 - **Geometri** (`naca/tmr_geo.py`): TMR'ın kendi %11,894 profiliyle iki
   model. Bizimki %12, yani ~%0,9 daha kalın; bu ortak bir yanlılık üretir
-  ve kaldırılmadan modele özgü kusur doğru ölçülemez.
+  ve kaldırılmadan modele özgü kusur doğru ölçülemez. Beklenti önceden
+  yazılı.
 
-Her iki betikte de beklenti **önceden** yazılı.
+### Elde olmayan kaynak
+
+`turbmodels.larc.nasa.gov/naca0012numerics_val_sa.html` sayfası indirildi
+(`kaynak/naca0012_val.html`) ama dosyada yalnızca NASA sitesinin gezinme
+menüsü var — sayısal veri yok, sayfa içeriği sonradan yükleniyor olmalı.
+`kaynak/` altındaki üç "Print To PDF" dosyası da salt görüntü; metin
+katmanı taşımıyorlar. Yani bu üç dosyadan hiçbir sayı okunamadı ve
+hiçbiri bir sayısal iddianın dayanağı değildir.
