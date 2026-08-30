@@ -94,3 +94,90 @@ Ayrıca McCroskey'nin kendi raporu (NASA TM 100019, 1987,
 `ntrs.nasa.gov/citations/19880002254`) çok sayıda NACA 0012 deneyini
 eleştirel olarak karşılaştırıyor; en iyi uyum eğrisinin nasıl kurulduğunu
 birinci elden okumak için o gerekir.
+
+
+---
+
+# Kod-kod karşılaştırması ve açılan sorun
+
+Kaynaklar arasında **NAS-2016-01** (Jespersen, Pulliam, Childs, NASA Ames)
+sekiz yerleşik kodun aynı vakadaki değerlerini veriyor. Bu, deneyden ayrı
+ve ondan daha keskin bir sınama: aynı denklemleri çözen kodlar birbirine ne
+kadar yakın?
+
+α = 0°, Re = 6×10⁶, M = 0,15 (NAS-2016-01, Tablo 7.1 ve 7.2):
+
+| kod | SA | SST |
+|---|---:|---:|
+| CFL3D | 0,00819 | 0,00809 |
+| FUN3D | 0,00812 | 0,00808 |
+| NTS | 0,00813 | 0,00809 |
+| Joe | 0,00812 | — |
+| SUMB | 0,00813 | — |
+| TURNS | 0,00830 | — |
+| GGNS | 0,00817 | — |
+| Overflow | 0,00838 | 0,00821 |
+| **ortalama** | **0,00819** | **0,00812** |
+| yayılım | %3,2 | %1,6 |
+
+| | bizim | referans aralığı | konum |
+|---|---:|---|---|
+| Spalart-Allmaras | 0,00842 | 0,00812 – 0,00838 | **sekizinin de üstünde** (+%2,8) |
+| k-ω SST | 0,00769 | 0,00808 – 0,00821 | **dördünün de altında** (−%5,3) |
+
+İki kurulumumuz da bandın dışında ve **ters yönlerde**. Aralarındaki
+yayılım %9,5; referansların SA–SST farkı %0,9.
+
+Çözünürlük değil: Overflow'un kendi SST ağ yakınsaması 57 921 hücrede
+0,00826, 919 809 hücrede 0,00817 (Tablo 7.5). Bizim 82 944 hücredeki
+değerimiz 0,00765.
+
+## Elenen açıklama: serbest akış türbülansı
+
+İlk aday, referansın SST için (μt/μ)∞ = 0,001 kullanması, bizimse 1,0
+kullanmamızdı — bin kat fark. **Çürütüldü:**
+
+| μt/μ | ω∞ | C_D |
+|---:|---:|---:|
+| 1 | 9 | 0,00769073 |
+| 0,1 | 90 | 0,00769062 |
+| 0,01 | 900 | 0,00769053 |
+| **0,001** | **9000** | **0,00769060** |
+
+Bin katlık aralıkta toplam değişim **%0,0027**. Referansın kendi değeriyle
+koştuğumuzda da aynı sonuç çıkıyor.
+
+Duyarsızlığın fiziksel sebebi de ölçüldü: ω serbest akışta bozunuyor ve
+ω(x) = ω₀/(1+βω₀x) **doyuma** gidiyor. 20 veterlik alanda doyum değeri
+1/(0,0828×20) = 0,604 — ω∞ ne olursa olsun. Profilin 1 veter önünde
+ölçülen değerler 0,64 ve 0,75. Yani gelen türbülansı serbest akış değeri
+değil **alan boyutu** belirliyor. Referans kodlar 500 veter kullanıyor;
+orada doyum 0,024.
+
+Bu, kendi fizik argümanımın öngördüğü sonuçtu — yüksek serbest akış
+viskozitesi sürüklemeyi artırır, azaltmaz. Hipotez yine de kuruldu ve
+sınandı, çünkü argüman yanılabilirdi. Bir açıklama sınıfı temizce elendi.
+
+## Farkın yeri
+
+Toplam C_D farkın nerede olduğunu söylemez; `ortak/cf.py` söylüyor.
+SST/SA sürtünme oranı:
+
+| x/c | 0,02 | 0,10 | 0,30 | 0,51 | 0,98 |
+|---|---:|---:|---:|---:|---:|
+| C_f(SST)/C_f(SA) | 0,963 | **0,890** | 0,901 | 0,912 | 0,957 |
+
+Açık ön bölgede yoğunlaşıyor ama **laminer bir bölge değil**: laminer
+olsaydı C_f beş kat düşerdi, burada en fazla %11.
+
+## Sırada
+
+- **Duvar işlemi taraması** (`naca/sst_kurulum.py`): beş varyant, biri
+  OpenFOAM'ın duvar fonksiyonunu tamamen devre dışı bırakıp ω'yı duvarda
+  yüz yüz 6ν/(β₁y²) veriyor — çözümlenmiş sınır tabakası için ders kitabı
+  koşulu.
+- **Geometri** (`naca/tmr_geo.py`): TMR'ın kendi %11,894 profiliyle iki
+  model. Bizimki %12, yani ~%0,9 daha kalın; bu ortak bir yanlılık üretir
+  ve kaldırılmadan modele özgü kusur doğru ölçülemez.
+
+Her iki betikte de beklenti **önceden** yazılı.
