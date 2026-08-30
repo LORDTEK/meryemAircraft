@@ -51,6 +51,26 @@ Bu yuzden karsilastirma iki referansla yapiliyor:
                               dogrusal geri atim; tamamen turbulansliya
                               en yakin savunulabilir NeuralFoil degeri
 
+UYARI -- %25 SATIRI GECERSIZDIR (olculdu, varsayilmadi):
+
+Kararli RANS %25 kesitinde YAKINSAMIYOR. Uc ayri belirti ayni seyi
+soyluyor:
+  - C_L = +0,048. Simetrik profil, sifir hucum acisi: C_L sifir olmak
+    zorunda. %12'de -4e-6, %18'de +5e-6, %25'te +5e-2.
+  - Ux kalintisi dusmuyor, YUKSELIYOR: 1,4e-5 -> 1,6e-4.
+  - Firar kenarindaki ayrilma bolgesi iki yuzey arasinda TARAF
+    DEGISTIRIYOR: t = 2000'de 18 ust / 7 alt, t = 4000'de 0 ust / 21 alt.
+    (ortak/ayrilma.py)
+
+Yani %25'te akis kararli degil; firar kenari ayrilmasi salintili ve
+kararli cozucu onu kovaliyor. C_D = 0,012408 kararli bir cozum DEGILDIR
+ve oran olarak kullanilamaz.
+
+Bunun projeye bakan yuzu daha onemli: kok kesitimiz %25'tir. Demek ki
+orada hem kararli RANS hem de XFOIL/NeuralFoil (ki o da kararli, yapisik
+ya da ilimli ayrilmis akis varsayar) rahat bolgelerinin disinda
+calisiyor. Dogru islem zamana bagli cozum (URANS) ve zaman ortalamasidir.
+
 ASIL OLCU: ORANLARIN ORANI.
 Gecis islemindeki uyusmazlik her kalinlikta AYNI yonde ve yaklasik ayni
 buyuklukte oldugu icin, RANS/NF oraninin KALINLIKLA nasil degistigi bu

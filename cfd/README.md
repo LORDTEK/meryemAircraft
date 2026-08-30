@@ -322,6 +322,47 @@ ve model duyarlılığı büyüyecektir.
 Hangi modelin doğru olduğunu bu tablo **söylemez** — onu ancak deney
 söyler. `kaynak-gerekli.md`'deki iki dosya tam bunun için duruyor.
 
+## 2. basamak: kalınlık — ve %25'te çıkan asıl sorun
+
+| t/c | RANS | NF (xtr→0) | oran | durum |
+|---:|---:|---:|---:|---|
+| %12 | 0,009137 | 0,010113 | 0,903 | yakınsadı, yapışık |
+| %18 | 0,010573 | 0,011813 | 0,895 | yakınsadı, firar kenarında ~%1 |
+| %25 | ~~0,012408~~ | 0,014146 | ~~0,877~~ | **geçersiz — yakınsamadı** |
+
+%12 → %18 arasında oranların oranı **0,991**: kalınlık, RANS ile
+NeuralFoil arasında bir ayrışma üretmiyor.
+
+Ama **%25 satırı geri çekilmiştir.** Kararlı RANS orada yakınsamıyor ve
+üç ayrı belirti aynı şeyi söylüyor:
+
+- **C_L = +0,048.** Simetrik profil, sıfır hücum açısı: C_L sıfır olmak
+  zorunda. %12'de −4×10⁻⁶, %18'de +5×10⁻⁶, %25'te +5×10⁻².
+- **Ux kalıntısı düşmüyor, yükseliyor:** 1,4×10⁻⁵ → 1,6×10⁻⁴.
+- **Ayrılma bölgesi taraf değiştiriyor:** t = 2000'de 18 üst / 7 alt yüz,
+  t = 4000'de 0 üst / 21 alt (`ortak/ayrilma.py`).
+
+Yani akış kararlı değil; firar kenarı ayrılması salınıyor ve kararlı
+çözücü onu kovalıyor.
+
+**Bunun projeye bakan yüzü, sayının kendisinden önemli.** Kök kesitimiz
+%25'tir. Demek ki orada hem kararlı RANS hem de XFOIL/NeuralFoil — ki o
+da kararlı, yapışık ya da ılımlı ayrılmış akış varsayar — rahat
+bölgelerinin dışında çalışıyor. `cd0.py`'nin en zayıf halkası
+sandığımızdan farklı bir yerde: sorun yalnızca "gövde iki boyutlu
+değildir" değil, **o kalınlıkta akışın kararlı olmamasıdır.**
+
+Doğru işlem zamana bağlı çözüm (URANS) ve zaman ortalamasıdır.
+
+### Ayrılma ölçütünde bir hata
+
+İlk yazdığım ölçüt yüzey teğet yönünü komşu yüz merkezlerinden alıyordu.
+C-ağında `i` indeksi alt yüzeyde firardan hücuma doğru ilerler, yani o
+yön akışın tersidir — ve alt yüzeyin **tamamı** "ters akıyor" çıkıyordu.
+Belirti açıktı: NACA 0012 için %50 ayrılma, hepsi alt yüzeyde. Ölçüt
+serbest akış yönüne bağlandı; şimdi 0012'de %0, 0018'de %1 veriyor.
+
+
 ## Bir yan bulgu: NeuralFoil'in geçiş sınırı
 
 `cd0.py` NeuralFoil'e dayanıyor. Kalınlık çalışması için onu `xtr = 0`
