@@ -677,6 +677,36 @@ referans kodla, profil düzeyinde doğrulanmıştır — düz levhada u⁺
 (±0,06), profilde C_f (kodlar arası farkın içinde). Makalenin birincil
 modeli olarak SA'yı kullanmak bu ölçümlere dayanıyor.
 
+## Aynı ölçüm, SST için: açık profilde de aynı
+
+Şekil 7.6 aynı düzende SST modelinin C_f dağılımını veriyor. Aynı
+kalibrasyon denetimi geçti (azami Cp = 1,0058, konum x/c = 0).
+
+| x/c | bizim SST (B4) | Overflow SST | Cfl3d SST | fark |
+|---:|---:|---:|---:|---:|
+| 0,050 | 0,005473 | 0,005921 | 0,005761 | **−%7,6** |
+| 0,100 | 0,004923 | 0,005311 | 0,005159 | **−%7,3** |
+| 0,201 | 0,004228 | 0,004512 | 0,004426 | **−%6,3** |
+| 0,296 | 0,003781 | 0,004007 | 0,003935 | **−%5,6** |
+| 0,506 | 0,003079 | 0,003261 | 0,003201 | **−%5,6** |
+| 0,705 | 0,002575 | 0,002708 | 0,002657 | **−%4,9** |
+| 0,902 | 0,001937 | 0,002047 | 0,002004 | **−%5,4** |
+
+**91 duvar yüzünün sıfırı** iki referans kodun arasında. Karşılaştırma
+için aynı ağda SA'mız **%91'inde** arada.
+
+Yan yana koyunca resim şu:
+
+| | ağ | kodlar arasında kalan yüz | azami sapma |
+|---|---|---:|---:|
+| bizim SA | B4 (82 944) | %91 | %0,36 |
+| bizim SST | B4 (82 944) | %0 | %7,6 |
+
+Aynı ağ, aynı şemalar, aynı çözücü, aynı kuvvet integrali, aynı sonradan
+işleme. Ayrılan tek şey türbülans modeli. Açık firar kenarına doğru
+azalıyor (hücum kenarında %7,6, x/c = 0,7'de %4,9) — düz levhadaki
+u⁺ kaymasının işaretiyle ve büyüklüğüyle tutarlı.
+
 ## Sıradaki şüpheli: kendi şema seçimimiz
 
 ω ailesi ile SA arasında kurulumumuzda **gerçek bir asimetri** var ve bu
