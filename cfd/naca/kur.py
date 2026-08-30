@@ -45,7 +45,7 @@ def _alan(yol, nesne, boyut, ic, disalan, duvar, cikis):
 def kur(dizin, kod="0012", Re=6e6, alfa=0.0, yplus=1.0,
         n_profil=256, n_normal=96, n_iz=64, R=20.0, Xiz=20.0,
         siddet=0.001, nut_orani=1.0, adim=3000, kapali=True,
-        yaz_araligi=None):
+        yaz_araligi=None, model="kOmegaSST"):
     """Vakayi kurar; ag .msh olarak birakilir, cevrimi kos.sh yapar."""
     if os.path.isdir(dizin):
         shutil.rmtree(dizin)
@@ -88,6 +88,18 @@ def kur(dizin, kod="0012", Re=6e6, alfa=0.0, yplus=1.0,
           "        blended         true;\n"
           "        value           uniform %.10g;\n" % omega,
           "        type            zeroGradient;\n")
+    if model == "SpalartAllmaras":
+        # SA'nin tasidigi degisken nuTilda'dir. Serbest akis degeri, yerlesik
+        # secim olan 3*nu: sinir tabakasi disinda nut'u ihmal edilebilir
+        # birakir ama modelin uyanmasina yetecek kadar buyuktur.
+        _alan(os.path.join(dizin, "0", "nuTilda"), "nuTilda",
+              "[0 2 -1 0 0 0 0]", "%.10g" % (3 * nu),
+              "        type            freestream;\n"
+              "        freestreamValue uniform %.10g;\n" % (3 * nu),
+              "        type            fixedValue;\n"
+              "        value           uniform 0;\n",
+              "        type            zeroGradient;\n")
+
     _alan(os.path.join(dizin, "0", "nut"), "nut", "[0 2 -1 0 0 0 0]", "0",
           "        type            freestream;\n"
           "        freestreamValue uniform 0;\n",
@@ -101,8 +113,8 @@ def kur(dizin, kod="0012", Re=6e6, alfa=0.0, yplus=1.0,
        "transportModel  Newtonian;\nnu              %.12g;\n" % nu)
     _y(os.path.join(dizin, "constant", "turbulenceProperties"),
        "dictionary", "turbulenceProperties",
-       "simulationType  RAS;\n\nRAS\n{\n    RASModel        kOmegaSST;\n"
-       "    turbulence      on;\n    printCoeffs     on;\n}\n")
+       "simulationType  RAS;\n\nRAS\n{\n    RASModel        %s;\n"
+       "    turbulence      on;\n    printCoeffs     on;\n}\n" % model)
 
     # --- system/
     _y(os.path.join(dizin, "system", "controlDict"), "dictionary", "controlDict",
@@ -136,6 +148,7 @@ def kur(dizin, kod="0012", Re=6e6, alfa=0.0, yplus=1.0,
        "    div(phi,U)      bounded Gauss linearUpwind limited;\n"
        "    div(phi,k)      bounded Gauss limitedLinear 1;\n"
        "    div(phi,omega)  bounded Gauss limitedLinear 1;\n"
+       "    div(phi,nuTilda) bounded Gauss limitedLinear 1;\n"
        "    div((nuEff*dev2(T(grad(U))))) Gauss linear;\n}\n\n"
        "laplacianSchemes { default Gauss linear corrected; }\n"
        "interpolationSchemes { default linear; }\n"
@@ -147,15 +160,15 @@ def kur(dizin, kod="0012", Re=6e6, alfa=0.0, yplus=1.0,
        "    p\n    {\n        solver          GAMG;\n"
        "        smoother        GaussSeidel;\n        tolerance       1e-9;\n"
        "        relTol          0.01;\n    }\n"
-       "    \"(U|k|omega)\"\n    {\n        solver          smoothSolver;\n"
+       "    \"(U|k|omega|nuTilda)\"\n    {\n        solver          smoothSolver;\n"
        "        smoother        symGaussSeidel;\n        tolerance       1e-10;\n"
        "        relTol          0.01;\n        nSweeps         2;\n    }\n}\n\n"
        "SIMPLE\n{\n    nNonOrthogonalCorrectors 2;\n"
        "    consistent      yes;\n"
        "    residualControl\n    {\n        p               1e-7;\n"
-       "        U               1e-8;\n        \"(k|omega)\"     1e-8;\n    }\n}\n\n"
+       "        U               1e-8;\n        \"(k|omega|nuTilda)\" 1e-8;\n    }\n}\n\n"
        "relaxationFactors\n{\n    equations\n    {\n"
-       "        U               0.9;\n        \"(k|omega)\"     0.7;\n    }\n}\n")
+       "        U               0.9;\n        \"(k|omega|nuTilda)\" 0.7;\n    }\n}\n")
 
     _y(os.path.join(dizin, "system", "decomposeParDict"), "dictionary",
        "decomposeParDict",
@@ -165,5 +178,5 @@ def kur(dizin, kod="0012", Re=6e6, alfa=0.0, yplus=1.0,
        "numberOfSubdomains 4;\nmethod          hierarchical;\n\n"
        "coeffs\n{\n    n               (2 2 1);\n    order           xyz;\n}\n")
 
-    bilgi.update(Re=Re, alfa=alfa, nu=nu, k=k, omega=omega)
+    bilgi.update(Re=Re, alfa=alfa, nu=nu, k=k, omega=omega, model=model)
     return bilgi
