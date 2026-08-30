@@ -89,10 +89,20 @@ class Ag:
                 self.yama[ad] = dict(bas=int(sf.group(1)), n=int(nf.group(1)),
                                      tur=tp.group(1) if tp else "patch")
         self.n_hucre = max(self.sahip) + 1
+        self._yuz_ob = {}          # yuz alan/merkez onbellegi
+        self._merkez = None        # hucre merkezleri onbellegi
 
     def yuz_alan(self, fi):
         """Yuzun alan vektoru ve merkezi. Ucgen yelpazesiyle; duzlemsel
-        olmayan yuzlerde de dogru sonuc verir."""
+        olmayan yuzlerde de dogru sonuc verir.
+
+        Sonuc onbellege alinir: hem kuvvet hesabi hem hucre merkezleri ayni
+        yuzleri defalarca ister. Iki boyutta onemsiz, uc boyutlu vakada
+        belirleyici olur.
+        """
+        h = self._yuz_ob.get(fi)
+        if h is not None:
+            return h
         p = [self.nokta[k] for k in self.yuz[fi]]
         n = len(p)
         ox = sum(q[0] for q in p) / n
@@ -119,12 +129,20 @@ class Ag:
             Cx, Cy, Cz = Cx / A, Cy / A, Cz / A
         else:
             Cx, Cy, Cz = ox, oy, oz
-        return (Sx, Sy, Sz), (Cx, Cy, Cz)
+        h = ((Sx, Sy, Sz), (Cx, Cy, Cz))
+        self._yuz_ob[fi] = h
+        return h
 
     def hucre_merkez(self):
         """Hucre merkezleri: yuz merkezlerinin alanla agirlikli ortalamasi.
-        Bu bir yaklasimdir (gercek hacim merkezi degil) ama duvara komsu
-        hucrenin merkezini bulmak icin yeterli ve tutarlidir."""
+
+        Dikdortgen hucrede bu TAM sonucu verir (duvardan uzaklik h/2);
+        bizim duvara komsu hucrelerimiz dik ve dikdortgene cok yakin
+        oldugu icin yaklasim orada keskindir. Bir kez hesaplanip
+        onbellege alinir.
+        """
+        if self._merkez is not None:
+            return self._merkez
         top = [[0.0, 0.0, 0.0, 0.0] for _ in range(self.n_hucre)]
         for fi in range(len(self.yuz)):
             S, C = self.yuz_alan(fi)
@@ -135,8 +153,9 @@ class Ag:
                     continue
                 t = top[h]
                 t[0] += m * C[0]; t[1] += m * C[1]; t[2] += m * C[2]; t[3] += m
-        return [(t[0] / t[3], t[1] / t[3], t[2] / t[3]) if t[3] else (0, 0, 0)
-                for t in top]
+        self._merkez = [(t[0] / t[3], t[1] / t[3], t[2] / t[3]) if t[3]
+                        else (0.0, 0.0, 0.0) for t in top]
+        return self._merkez
 
 
 def son_zaman(vaka):
