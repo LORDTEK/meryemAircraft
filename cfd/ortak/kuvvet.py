@@ -110,12 +110,23 @@ def hesapla(vaka, yama="duvar", alfa=0.0, Uinf=1.0, Aref=1.0, zaman=None,
                 ut2 = (u2[0] * tx + u2[1] * ty + u2[2] * tz) / ut
                 payda = d * d2 * (d2 - d)
                 if abs(payda) > 0:
-                    egim = (ut * d2 ** 2 - ut2 * d ** 2) / payda
+                    e2 = (ut * d2 ** 2 - ut2 * d ** 2) / payda
+                    # Ayrilmis ya da ters akista ut2 negatif olabilir ve
+                    # parabol uydurmasi anlamsiz bir egim verir. Ikinci
+                    # mertebe yalnizca birinci mertebeden MAKUL bir bantta
+                    # kaldiginda kullanilir; disina cikarsa birinci mertebe
+                    # korunur. Bu, duzgun akista hicbir sey degistirmez
+                    # (fark y+ < 1'de binde birler mertebesinde) ama
+                    # ayrilma bolgesinde sacma deger uretilmesini onler.
+                    if 0.5 * egim <= e2 <= 2.0 * egim:
+                        egim = e2
         tau = nueff * egim
         if ut > 0:
             for a, t in zip(range(3), (tx, ty, tz)):
                 Fv[a] += tau * A * t / ut
-        yp.append(d * math.sqrt(tau) / nu)
+        # y+ icin MUTLAK deger: ayrilma bolgesinde tau isaret
+        # degistirir, u_tau ise buyukluktur.
+        yp.append(d * math.sqrt(abs(tau)) / nu)
 
     a = math.radians(alfa)
     sur = (math.cos(a), math.sin(a), 0.0)
