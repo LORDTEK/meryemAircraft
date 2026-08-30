@@ -231,12 +231,20 @@ KOS = (". /usr/share/openfoam/etc/bashrc >/dev/null 2>&1; cd %s && "
        "reconstructPar -latestTime > recon.log 2>&1")
 
 if __name__ == "__main__":
-    with Kilit(KOK):
+    # "uzun" argumani: yakinsama denetimi. Taban kosu 4000 adimda
+    # kalintilar 1e-6 civarinda duzlesip residualControl hedefine (1e-8)
+    # inmiyor. SA ayni kalinti seviyesinde referans kodlarla +-0,06 u+
+    # icinde cakistigi icin bunun sonucu etkilemedigi dusunulebilir --
+    # ama VARSAYMAK yerine dort kat uzun kosulup olcum tekrarlanir.
+    uzun = "uzun" in sys.argv
+    kok = KOK + ("_uzun" if uzun else "")
+    with Kilit(kok):
         for model in ("SpalartAllmaras", "kOmegaSST"):
-            vaka = os.path.join(KOK, model)
-            r = kur(vaka, model)
-            print("[%s] ag %dx%d, buyume orani %.4f -- cozuluyor"
-                  % (model, NX0 + NX1, NY, r), flush=True)
+            vaka = os.path.join(kok, model)
+            r = kur(vaka, model, adim=16000 if uzun else 4000)
+            print("[%s] ag %dx%d, buyume orani %.4f, %d adim -- cozuluyor"
+                  % (model, NX0 + NX1, NY, r, 16000 if uzun else 4000),
+                  flush=True)
             s = subprocess.run(["bash", "-c", KOS % vaka])
             if s.returncode != 0:
                 print("   KOSULAMADI (%d); coz.log sonu:" % s.returncode)
