@@ -33,6 +33,15 @@ from kilit import Kilit                                # noqa: E402
 KOD, RE = "0025", 2.0e6
 KOK = "/tmp/gecici"
 
+# MODEL SECIMI -- sonradan eklendi. Makaleye gidecek sayilar SA ile
+# uretilir: SST kurulumumuz yuzey surtunmesini referans kodlarin 5-7
+# yuzde altinda veriyor, SA ise iki bagimsiz kodla profil duzeyinde
+# cakisiyor (bkz. dogrulama.md). Kullanim:
+#     python3 cfd/naca/gecici.py [kesif|uretim] [model]
+MODEL = sys.argv[2] if len(sys.argv) > 2 else "kOmegaSST"
+if MODEL != "kOmegaSST":
+    KOK = KOK + "-" + MODEL
+
 
 def zamanlar(vaka):
     z = []
@@ -82,7 +91,7 @@ def kos(ad, T, dt0, dyaz):
     vaka = os.path.join(KOK, ad)
     bilgi = kur(vaka, kod=KOD, Re=RE, alfa=0.0, yplus=1.0,
                 n_profil=256, n_normal=96, n_iz=64, R=50.0, Xiz=50.0,
-                gecici=(T, dt0, dyaz))
+                gecici=(T, dt0, dyaz), model=MODEL)
     print("[%s] %d hucre  T=%g s  dt0=%g  yazim %g s"
           % (ad, bilgi["hucre"], T, dt0, dyaz), flush=True)
     subprocess.run([os.path.join(BURA, "kos.sh"), vaka, "4"],
