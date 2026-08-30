@@ -107,7 +107,8 @@ def alanlar(dizin, model, om_carpan=1.0, duvar_omega=None, y1=None):
     # araliginda sonucu %0,003 degistirdigi olculdu.
     om = U0 / (0.1 * H) * 10.0 * om_carpan
     k0 = NU * om / om_carpan
-    sst = model == "kOmegaSST"
+    # k-omega ailesinin hepsi (kOmega, kOmegaSST, ...) k ve omega ister
+    sst = model.startswith("kOmega")
 
     def yaz(ad, sinif, boyut, ic, duvar, giris_tip="fixedValue"):
         _y(os.path.join(dizin, "0", ad), sinif, ad,
