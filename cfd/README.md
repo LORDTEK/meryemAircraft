@@ -164,6 +164,35 @@ kendisi de sınandı — `kuvvet_sina.py`:
 C_L'in sıfır çıkması bir sonuç değil **kontroldür**: ağ simetrisini,
 çözücüyü ve kuvvet integralini aynı anda sınar.
 
+## Denetimin asimetrisi ve kapatılması
+
+Bu çalışmada bulunan hataların çoğu, **bir eğilim yanlış yönde göründüğü
+için bakıldığında** bulundu: momentum dengesindeki üç hata, %25 kesitinin
+yakınsamaması, ayrılma ölçütündeki işaret hatası. Hepsi gerçek hataydı ve
+bağımsız olarak doğrulandı — ama hepsine, sonuç tuhaf göründüğü için
+bakıldı.
+
+Bu tek yönlü bir taramadır ve sakattır: hoşa gitmeyen sonuçlarda hata
+bulma olasılığı, hoşa gidenlerdekinden yüksek olur. Kabul edilen sonuçlar
+denetlenmemiş kalır.
+
+`denetim.py` o asimetriyi kapatıyor — eşikleri **önceden** yazılmış aynı
+batarya, her vakaya, sonuç ne olursa olsun:
+
+| vaka | C_L | kalıntı (son/ilk) | ayrılma |
+|---|---:|---:|---:|
+| A1–A4 | ≤ 1,2×10⁻⁵ | 0,60 – 0,97 | 0 % |
+| B1–B4 | ≤ 2,3×10⁻⁵ | 0,82 – 0,96 | 0 % |
+| R20–R200 | ≤ 4,9×10⁻⁶ | 0,60 – 0,66 | 0 % |
+| kOmegaSST / SA | ≤ 2,1×10⁻⁶ | 0,60 / 0,80 | 0 % |
+| %12 / %18 | ≤ 5,4×10⁻⁶ | 0,70 / 0,68 | 0 % / 1,0 % simetrik |
+| **%25** | **4,8×10⁻²** | **2,89 ↑** | **11,2 %, 0/21 dengesiz** |
+
+Kabul edilen sonuçların hepsi, reddedileni mahkûm eden aynı bataryadan
+geçti. Tek işaretlenen vaka, zaten geri çekilmiş olan. Bu, tek yönlü
+taramanın bu sefer yanlış bir kabule yol açmadığını **gösterir** —
+iddia etmez.
+
 ## Üç kez yanılan şey, çözüm değil sınamanın kendisiydi
 
 Bu kayda geçiyor çünkü üçü de aynı biçimde yakalandı — sayıya değil,
