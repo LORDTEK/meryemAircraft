@@ -20,7 +20,8 @@ BURA = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(BURA, "..", "ortak"))
 sys.path.insert(0, os.path.join(BURA, "..", "veri"))
 from duvaryasasi import profil                           # noqa: E402
-from nas_sekil import egriler, deger, kalibrasyon_denetimi  # noqa: E402
+from nas_sekil import (egriler, deger, kalibrasyon_denetimi,   # noqa: E402
+                       eksen_denetimi)
 
 KOK = "/tmp/levha"
 MODEL = (("SpalartAllmaras", "SA"), ("kOmegaSST", "SST"))
@@ -53,10 +54,14 @@ def istasyon(vaka, hedef, a=0.15, b=1.95):
 
 
 if __name__ == "__main__":
+    sac, _ = eksen_denetimi("4.1")
+    if sac is None or sac > 0.05:
+        sys.exit("Sekil 4.1 eksen denetimi gecersiz (sacilim %s)" % sac)
     kotu = kalibrasyon_denetimi()
     if kotu:
         sys.exit("sekil kalibrasyonu gecersiz: %s" % kotu)
-    print("Sekil kalibrasyonu gecerli (Coles egrisi log yasasina oturuyor).")
+    print("Eksen denetimi gecerli (Sekil 4.1 etiket sacilimi %.4f)." % sac)
+    print("Kalibrasyon denetimi gecerli (Coles egrisi log yasasina oturuyor).")
 
     s41, s42 = egriler("4.1"), egriler("4.2")
 

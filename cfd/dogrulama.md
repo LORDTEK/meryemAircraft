@@ -374,20 +374,23 @@ için daha küçük u_τ, dolayısıyla düşük sürtünme.
 
 | Re_θ | bizim SA | bizim SST | **bizim SST/SA** | ref. SST/SA (Overflow) | ref. SST/SA (Cfl3d) |
 |---:|---:|---:|---:|---:|---:|
-| 5000 | 0,002954 | 0,002827 | **−%4,30** | −%0,22 | −%0,36 |
-| 7000 | 0,002796 | 0,002669 | **−%4,54** | −%0,40 | −%0,53 |
-| 9000 | 0,002679 | 0,002550 | **−%4,82** | −%0,43 | −%0,57 |
-| 11000 | 0,002588 | 0,002481 | **−%4,13** | −%0,36 | −%0,67 |
+| 5000 | 0,002954 | 0,002827 | **−%4,30** | −%0,21 | −%0,35 |
+| 7000 | 0,002796 | 0,002669 | **−%4,54** | −%0,26 | −%0,53 |
+| 9000 | 0,002679 | 0,002550 | **−%4,82** | −%0,43 | −%0,55 |
+| 11000 | 0,002588 | 0,002481 | **−%4,13** | −%0,45 | −%0,78 |
 
-Referansta iki model düz levhada **birbirinden %0,2–0,7 ayrılıyor.**
+Referansta iki model düz levhada **birbirinden %0,2–0,8 ayrılıyor.**
 Bizde **%4,1–4,8.** Profildeki 9,4'lük ayrılmayla aynı yönde ve aynı
 cinsten.
 
+Mutlak değerlerde (düzeltilmiş eksenle) SA'mız referansın %1,0–1,3
+üstünde, SST'miz %2,7–3,3 altında.
+
 ### Mutlak C_f'teki kayma bize ait, modele değil
 
-Mutlak değerlerde SA'mız referansın %1,5–2,6 üstünde, SST'miz %1,5–2,9
-altında. İkisi de Re_θ ile **aynı yönde** kayıyor (SA +1,5→+2,6, SST
-−2,9→−1,5; ikisi de ~%1,2 artıyor). Ortak bileşen ikisini birden
+Mutlak değerlerde SA'mız referansın %1,0–1,3 üstünde, SST'miz %2,7–3,3
+altında. İkisi de Re_θ ile **aynı yönde** kayıyor (SA +1,03→+1,30, SST
+−3,33→−2,65; ikisi de ~%0,4–0,7 artıyor). Ortak bileşen ikisini birden
 etkileyen iki kurulum farkından geliyor ve dürüstlük gereği
 kaldırılmamıştır:
 
@@ -399,7 +402,7 @@ kaldırılmamıştır:
 
 Bu yüzden **mutlak C_f farkları modelin doğrulaması olarak okunmamalıdır**;
 anlamlı olan iki model ARASINDAKİ fark, çünkü ortak bileşen ikisinde de
-aynıdır. O fark referansta %0,4, bizde %4,5.
+aynıdır. O fark referansta %0,2–0,8, bizde %4,1–4,8.
 
 ## Duvar ω taraması: beklentinin (b) şıkkı çıktı
 
@@ -581,6 +584,40 @@ hedefine inmiyor, 4000 adımda kalıntılar 1e-6 civarında düzleşiyor.
    kurulumumuzun farkını taşıyor. Model belirsizliği için referans
    literatürdeki yerleşik kod farkı kullanılacak (NAS-2016-01, alfa = 0:
    SA ortalama 0,00819, SST ortalama 0,00812 — %0,9).
+
+## DÜZELTME 2: Şekil 4.1'in eksenini yanlış kalibre etmişim
+
+Şekil 4.1'in (C_f – Re_θ) x eksenini **çerçeve kenarlarından** 4000–12000
+diye almıştım. Yanlıştı: eksen **4000–13000.**
+
+Nasıl yakalandı: eksende 19 tik var, yani 18 aralık. Aralık 4000–12000
+olsaydı 2000'lik etiketler tam sayı tike düşmezdi (4,5 tik); 4000–13000
+olduğunda tam 4 tike düşüyor. Şüphelenip **etiket gliflerinin sayfa
+üzerindeki konumlarını** okudum:
+
+| varsayım | artıkların saçılımı |
+|---|---:|
+| çerçeve sağı = 12000 | 6,495 (artıklar +1,13'ten +19,50'ye açılıyor) |
+| **çerçeve sağı = 13000** | **0,009** (artıklar +1,12'de sabit) |
+
+Doğru kalibrasyonda artıklar sabit olmak zorunda — o sabit, glifin sol
+kenarı ile metnin merkezi arasındaki yanlılıktır. Yelpaze gibi açılması
+kalibrasyonun yanlış olduğunun kanıtıdır.
+
+Bu denetim artık `veri/nas_sekil.py` içinde `eksen_denetimi()` olarak
+duruyor ve `levha/karsilastir.py` saçılım 0,05'i aşarsa **çalışmayı
+durduruyor**. Kaynağı: çerçeve kenarı her şekilde eksen ucuna denk
+düşmüyor — 4.1 ve 4.2'de düşüyor, Şekil 7.4'te düşmüyor (orada
+çerçevenin sol kenarı x/c = −0,040).
+
+**Neyi değiştirdi:** yukarıdaki C_f tablosunun mutlak değerleri. SA'mızın
+sapması %1,5–2,6'dan **%1,0–1,3'e** indi (ve Re_θ ile eğilimi düzleşti),
+SST'mizinki %1,5–2,9'dan **%2,7–3,3'e** çıktı.
+
+**Neyi değiştirmedi:** u⁺ profili karşılaştırmasını (Şekil 4.2'nin
+kalibrasyonu tiklerle ve log yasasıyla iki kez doğrulanmıştı) ve
+modeller arası farkı (o kendi koşularımızdan geliyor). Yani asıl kanıt
+etkilenmedi; ama yayımladığım bir sayı tablosu yanlıştı ve düzeltildi.
 
 ## Sıradaki şüpheli: kendi şema seçimimiz
 

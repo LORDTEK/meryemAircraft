@@ -17,12 +17,27 @@ duruyor. Sayfa pdftocairo ile SVG'ye cevriliyor ve egri yollari dogrudan
 okunuyor. Bu, sekli goz ile okumaktan (raster sayisallastirma) niteliksel
 olarak farklidir: okunan sey cizimin kendi verisidir.
 
-KALIBRASYON DENETIMI. Sayfa koordinatindan eksen degerine gecis
-VARSAYILMAZ, sinanir: Sekil 4.2'de ucuncu egri Coles'in ortalama hiz
-profilidir ve logaritmik tabakada u+ = (1/kappa) ln y+ + B'ye oturmak
-zorundadir. Cikarilan egri bu bagintiya y+ = 100-300 arasinda 0,05'ten
-iyi uyuyor. Uymasaydi kalibrasyon yanlis olurdu ve okuma
-kullanilmazdi -- denetim dogrudan bunun icin var.
+KALIBRASYON DENETIMI -- IKI KATMANLI. Sayfa koordinatindan eksen
+degerine gecis VARSAYILMAZ, sinanir.
+
+1. Eksen denetimi (eksen_denetimi). Eksen etiketlerinin sayfa uzerindeki
+   konumlari okunur ve varsayilan eksen araligiyla DOGRUSAL olup
+   olmadigina bakilir. Dogruysa artiklar sabit cikar (glif sol kenari
+   yanliligi); yanlissa yelpaze gibi acilir.
+
+   BU DENETIM BIR HATA YAKALADI. Sekil 4.1'in x eksenini once cerceve
+   kenarlarindan 4000-12000 diye almistim; etiketler ise 4000-13000
+   diyor (artiklar 12000'de +1,13'ten +19,50'ye aciliyor, 13000'de
+   +1,12'de sabit, sacilim 0,009). Cerceve kenari her sekilde eksen
+   ucuna denk DUSMUYOR: 4.1 ve 4.2'de dusuyor, 7.4'te dusmuyor
+   (orada cercevenin sol kenari x/c = -0,040).
+
+2. Fizik denetimi. Sekil 4.2'de ucuncu egri Coles'in ortalama hiz
+   profilidir ve logaritmik tabakada u+ = (1/kappa) ln y+ + B'ye
+   oturmak zorundadir; cikarilan egri buna y+ = 100-300 arasinda
+   0,05'ten iyi uyuyor. Sekil 7.4'te Cp egrisinin azami degeri M = 0,15
+   icin durma basincidir; cikarilan egri 1,0058 veriyor, kuramsal
+   1 + M^2/4 = 1,0056.
 
 SINIR. Bizim vakamiz sikistirilamaz, referansinki M = 0,2. Bu fark
 kaldirilmadi; C_f karsilastirmasinda akilda tutulmalidir.
@@ -34,12 +49,28 @@ PDF = os.path.join(BURA, "..", "kaynak", "NAS_Technical_Report_NAS-2016-01.pdf")
 
 # Sekil -> (PDF sayfasi, cerceve dikdortgeni [yol koordinati], eksen degerleri)
 SEKIL = {
-    "4.1": dict(sayfa=20, x=(4000.0, 12000.0), y=(0.0020, 0.0040),
+    # DIKKAT: x ust ucu 13000, 12000 DEGIL -- eksen etiketlerinden
+    # dogrulandi (bkz. eksen_denetimi ve modul basligi).
+    "4.1": dict(sayfa=20, x=(4000.0, 13000.0), y=(0.0020, 0.0040),
                 cerceve=(818.007504, 6938.001312, 468.030374, 4751.997163),
-                en_az=40),
+                en_az=40,
+                # (deger, sayfa_x) ciftleri, SST alt grafigi
+                etiket=dict(eksen="x", tx=(311.103, 0.027054),
+                            nokta=[(4000, 332.1), (6000, 368.9), (8000, 405.7),
+                                   (10000, 442.5), (12000, 479.3)])),
     "4.2": dict(sayfa=21, x=(-1.0, 4.0), y=(0.0, 30.0),
                 cerceve=(518.017188, 6637.970776, 548.069151, 4831.967268),
                 en_az=200),
+    # NACA0012, alfa = 0, SA modeli. Ust satirin SAG grafigi: ust yuzeyde
+    # C_f. Bu sekilde cerceve kenari eksen ucuna denk DUSMEZ; kalibrasyon
+    # tik isaretlerinden yapildi (x/c=0 -> 863.7, x/c=1 -> 6748.0 iken
+    # cerceve 627.96 - 6748.03, yani sol kenar x/c = -0.0401).
+    "7.4cf": dict(sayfa=44, x=(-0.040075, 1.0), y=(0.0, 0.008),
+                  cerceve=(718.066890, 6838.019847, 387.952902, 4672.048055),
+                  en_az=100, tx_kod=("311.103", "291.629")),
+    "7.4cp": dict(sayfa=44, x=(-0.040075, 1.0), y=(1.2, -0.6),
+                  cerceve=(627.959101, 6748.032909, 387.948041, 4671.985599),
+                  en_az=100, tx_kod=("110.854", "291.629")),
 }
 # Alt grafikleri ayiran, yolun kendi transform matrisindeki oteleme
 ALT = {"110.854": "SA", "311.103": "SST", "210.979": "SST-V"}
@@ -86,6 +117,28 @@ def deger(egri, x):
     return min(egri, key=lambda t: abs(t[0] - x))[1]
 
 
+def eksen_denetimi(sekil="4.1"):
+    """Eksen etiketlerinin konumlari varsayilan aralikla dogrusal mi?
+
+    Dogruysa artiklar SABIT cikar (glif sol kenari yanliligi). Yanlissa
+    yelpaze gibi acilir. Doner: (sacilim, artiklar).
+    """
+    t = SEKIL[sekil]
+    e = t.get("etiket")
+    if e is None:
+        return None, None
+    tx0, olcek = e["tx"]
+    cx0, cx1 = t["cerceve"][0], t["cerceve"][1]
+    xa, xb = t["x"]
+    artik = []
+    for deger, sayfa_x in e["nokta"]:
+        px = cx0 + (deger - xa) / (xb - xa) * (cx1 - cx0)
+        artik.append(tx0 + olcek * px - sayfa_x)
+    ort = sum(artik) / len(artik)
+    sac = (sum((a - ort) ** 2 for a in artik) / len(artik)) ** 0.5
+    return sac, artik
+
+
 def kalibrasyon_denetimi():
     """Coles egrisi log yasasina oturuyor mu? Oturmuyorsa okuma gecersiz."""
     c = egriler("4.2")[("SST", "kuram")]
@@ -98,6 +151,11 @@ def kalibrasyon_denetimi():
 
 
 if __name__ == "__main__":
+    sac, artik = eksen_denetimi("4.1")
+    print("EKSEN DENETIMI  (Sekil 4.1, x ekseni etiket konumlari)")
+    print("   artiklar: %s" % " ".join("%+.2f" % a for a in artik))
+    print("   sacilim %.4f -> %s" % (sac, "gecerli" if sac < 0.05 else "GECERSIZ"))
+    print()
     kotu = kalibrasyon_denetimi()
     print("KALIBRASYON DENETIMI  (Coles egrisi ile log yasasi)")
     c = egriler("4.2")[("SST", "kuram")]
