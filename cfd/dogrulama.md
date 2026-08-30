@@ -453,7 +453,62 @@ ama asıl açık ikisinde de var.)
 Bu koşu ayrıca bir yeniden üretim denetimidir: kOmegaSST bağımsız bir
 dizinde, ayrı bir koşuda yine 0,859 verdi.
 
-### Sıradaki şüpheli: kendi şema seçimimiz
+### DÜZELTME: "hedef 1,000" iddiasını fazla güçlü kurmuşum
+
+Yukarıda ν_t = κu_τy'yi "modelin kendi kapanış şartı, dışarıdan ölçüm
+gerektirmez" diye yazdım ve 0,86'yı bu hedefe göre bir **kusur ölçüsü**
+gibi kullandım. **Bu fazla güçlü bir iddiaydı.**
+
+Bağıntı, **denge halindeki** logaritmik tabakada kesindir. Düz levhanın
+sınır tabakası ise akış yönünde **gelişmektedir**: k ve ω'nın taşınım
+terimleri sıfır değildir, dolayısıyla doğru kurulmuş bir iki denklemli
+model de sonlu Re_θ'da 1,000'i tam tutturmak zorunda değildir. SA'nın
+0,97 vermesi bunu çürütmez: SA'nın ν_t'si doğrudan duvar uzaklığı
+üzerine kuruludur, yani onda oran neredeyse tanım gereği 1'e yakın
+çıkar. Bu, SA'nın bir özelliğidir; k-ω için 1,000'in doğru hedef
+olduğunun kanıtı değildir.
+
+**Kaynağı birinci elden okudum.** Koştuğum ikilinin tam kaynağı Ubuntu
+arşivinden çekildi (`apt-get source openfoam`, 1912.200626-2build3):
+
+- `kOmega`: β* = 0,09, β = 0,072, γ = 0,52, σ_k = σ_ω = 0,5;
+  ν_t = k/ω (sınırlayıcı yok); ω üretimi γ·S², k üretimi ν_t·S².
+  Ders kitabı Wilcox biçimi.
+- `kOmegaSST`: β₁ = 0,075, γ₁ = 5/9, σ_ω1 = 0,5; β₂ = 0,0828,
+  γ₂ = 0,44, σ_ω2 = 0,856; a₁ = 0,31, b₁ = 1, c₁ = 10.
+
+Üç katsayı takımı da log tabakası bağıntısını sağlıyor:
+
+| dal | β | γ | σ_ω | ima edilen κ |
+|---|---:|---:|---:|---:|
+| SST iç | 0,0750 | 0,5556 | 0,500 | 0,4082 |
+| SST dış | 0,0828 | 0,4400 | 0,856 | 0,4102 |
+| kOmega | 0,0720 | 0,5200 | 0,500 | 0,4099 |
+
+Yani katsayılarda kusur yok ve bu, yukarıdaki düzeltmeyle uyumlu.
+
+### Geriye ne kalıyor — ayakta kalan ve düşen
+
+**Düşen:** 0,86'nın 1,00'den sapmasını "%14 model hatası" diye okumak.
+Bu sayı artık bir kusur ölçüsü değil, yalnızca bir işarettir.
+
+**Ayakta kalan ikisi:**
+
+1. **Profil karşılaştırması** (`levha/karsilastir.py`). SA'mız iki
+   bağımsız referans kodla ±0,06 u⁺ içinde, SST'miz +0,53 u⁺ kaymış —
+   aynı vaka, aynı model, eşleştirilmiş Re_θ. Bu **varsayımsızdır** ve
+   asıl kanıt budur. SST'deki uyuşmazlık gerçektir.
+
+2. **Oranın varyantlara duyarsızlığı.** Serbest akış, ağ, duvar ω
+   koşulu (iki onlu), şemalar ve model değişirken oran 0,856–0,881
+   arasında kalıyor. Bu bir *karşılaştırmadır*, mutlak bir hedefe
+   dayanmaz, dolayısıyla düzeltmeden etkilenmez: o değişkenlerin hiçbiri
+   SST/SA farkını üretmiyor.
+
+Betiklerdeki "HEDEF 1,000 — modelin kendi kapanış şartı" satırları da bu
+çekinceyle düzeltildi.
+
+## Sıradaki şüpheli: kendi şema seçimimiz
 
 ω ailesi ile SA arasında kurulumumuzda **gerçek bir asimetri** var ve bu
 bizim kendi seçimimiz:

@@ -112,4 +112,10 @@ if __name__ == "__main__":
                 print("  %-16s %.6f    %.3f        %.3f      %.3f"
                       % (d["ad"], d["Cf"], d["oran"], d["kp"], d["om"]))
         print("  HEDEF: nu_t/(kappa u_tau y) = 1,000  (modelin kendi kapanis sarti)")
+        print("""  NOT -- 1,000 hedefi DENGE halindeki log tabakasi icin kesindir.
+  Duz levhanin sinir tabakasi akis yonunde gelistigi icin dogru
+  kurulmus bir iki denklemli model de bunu tam tutturmak zorunda
+  degildir; bkz. dogrulama.md, 'DUZELTME' bolumu. Bu yuzden mutlak
+  sapma bir kusur olcusu DEGIL, isarettir. Anlamli olan varyantlar
+  arasindaki KARSILASTIRMADIR.""")
         print("  SA ayni vakada 0,969 veriyor -- olcumun ic denetimi.")

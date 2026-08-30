@@ -80,3 +80,9 @@ if __name__ == "__main__":
                          "%.3f" % d["kp"] if d["kp"] else "  -  ",
                          "%.3f" % d["om"] if d["om"] else "  -  "))
         print("  HEDEF 1,000 -- modelin kendi kapanis sarti, disaridan olcum yok.")
+        print("""  NOT -- 1,000 hedefi DENGE halindeki log tabakasi icin kesindir.
+  Duz levhanin sinir tabakasi akis yonunde gelistigi icin dogru
+  kurulmus bir iki denklemli model de bunu tam tutturmak zorunda
+  degildir; bkz. dogrulama.md, 'DUZELTME' bolumu. Bu yuzden mutlak
+  sapma bir kusur olcusu DEGIL, isarettir. Anlamli olan varyantlar
+  arasindaki KARSILASTIRMADIR.""")
