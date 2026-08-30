@@ -92,6 +92,16 @@ KALINLIK = [12, 18, 25]
 RE = 2.0e6            # aracin KOK veterindeki Reynolds sayisi
 KOK = "/tmp/kalinlik"
 
+# MODEL SECIMI -- sonradan eklendi. Bu calisma kur()'un varsayilaniyla,
+# yani kOmegaSST ile kosulmustu. Sonradan olculdu ki SST kurulumumuz
+# yuzey surtunmesini referans kodlarin 5-7 yuzde altinda veriyor, SA ise
+# iki bagimsiz kodla profil duzeyinde cakisiyor (bkz. dogrulama.md).
+# Yani makaleye gidecek sayilar SA ile uretilmelidir. Kullanim:
+#     python3 <betik> [model]
+MODEL = sys.argv[1] if len(sys.argv) > 1 else "kOmegaSST"
+if MODEL != "kOmegaSST":
+    KOK = KOK + "-" + MODEL
+
 
 def nf_sifira(kal, Re, ornek=(0.03, 0.05, 0.10, 0.20)):
     """NeuralFoil'in xtr -> 0 degerini, YALNIZCA guvenilir bolgeden
@@ -135,7 +145,7 @@ if __name__ == "__main__":
             vaka = os.path.join(KOK, kod)
             bilgi = kur(vaka, kod=kod, Re=RE, alfa=0.0, yplus=1.0,
                         n_profil=256, n_normal=96, n_iz=64, R=50.0, Xiz=50.0,
-                        adim=4000, yaz_araligi=2000)
+                        adim=4000, yaz_araligi=2000, model=MODEL)
             print("[%s] %d hucre -- cozuluyor" % (kod, bilgi["hucre"]), flush=True)
             subprocess.run([os.path.join(BURA, "kos.sh"), vaka, "4"],
                            check=True, stdout=subprocess.DEVNULL)
