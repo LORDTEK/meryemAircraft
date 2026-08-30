@@ -54,7 +54,19 @@ Bu yuzden karsilastirma iki referansla yapiliyor:
 UYARI -- %25 SATIRI GECERSIZDIR (olculdu, varsayilmadi):
 
 Kararli RANS %25 kesitinde YAKINSAMIYOR. Uc ayri belirti ayni seyi
-soyluyor:
+soyluyor. Asagidaki sayilar ILK kosudan (kOmegaSST); ayni teshis SA ile
+de yapildi ve ayni cikti -- yani bu, modele degil AKISA ait:
+
+  SA ile olculen (makaleye giden kosu):
+    C_L = +2,6e-2   (%12'de +6,4e-7, %18'de +1,1e-3)
+    Ux kalintisi  1,28e-4 -> 1,59e-4  YUKSELIYOR
+    Uy kalintisi  9,62e-3 -> 1,19e-2  YUKSELIYOR
+    Ayrilma TARAF DEGISTIRIYOR: t=2000'de 23 yuz, HEPSI ustte;
+    t=4000'de 28 yuz, 8 ust / 20 alt.
+    Karsilastirma: %12'de hic ayrilma yok; %18'de yalnizca firar kenari
+    noktasinda 1 ust + 1 alt, yani simetrik ve durgun.
+
+  kOmegaSST ile olculen (ilk kosu):
   - C_L = +0,048. Simetrik profil, sifir hucum acisi: C_L sifir olmak
     zorunda. %12'de -4e-6, %18'de +5e-6, %25'te +5e-2.
   - Ux kalintisi dusmuyor, YUKSELIYOR: 1,4e-5 -> 1,6e-4.
@@ -63,8 +75,14 @@ soyluyor:
     (ortak/ayrilma.py)
 
 Yani %25'te akis kararli degil; firar kenari ayrilmasi salintili ve
-kararli cozucu onu kovaliyor. C_D = 0,012408 kararli bir cozum DEGILDIR
-ve oran olarak kullanilamaz.
+kararli cozucu onu kovaliyor. Kararli C_D (SST'de 0,012408, SA'da
+0,013920) kararli bir cozum DEGILDIR ve oran olarak kullanilamaz.
+
+%18 AYRI BIR DURUMDUR ve karistirilmamalidir. Orada ayrilma yalnizca
+firar kenari noktasindadir, simetriktir ve iki yazim arasinda
+degismiyor; kalintilar da hala DUSUYOR (son %10'da oran 0,63). Yani
+akis kararli, sadece 4000 adim yetmemis. Bu yuzden %18 icin dogru islem
+URANS degil, DAHA UZUN kosudur (ADIM parametresi).
 
 Bunun projeye bakan yuzu daha onemli: kok kesitimiz %25'tir. Demek ki
 orada hem kararli RANS hem de XFOIL/NeuralFoil (ki o da kararli, yapisik
