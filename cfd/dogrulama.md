@@ -825,6 +825,56 @@ bir yakınsama değil.
 
 **Altı basamağa kadar aynı.** Yakınsama elendi.
 
+## SA ile ağ yakınsaması artık RESMÎ olarak ölçülebiliyor
+
+SST ile bu mümkün değildi: B ailesi salınımlıydı (en ince ağda C_D
+0,007691'den 0,007750'ye **yükseliyordu**) ve Richardson sahte bir
+p = 8,95 ile %0,02'lik anlamsız bir GCI veriyordu. SA ile iki aile de
+tekdüze:
+
+| ağ | hücre | SA C_D | SST C_D |
+|---|---:|---:|---:|
+| B1 | 7 310 | 0,009848 | 0,008494 |
+| B2 | 16 448 | 0,008983 | 0,007804 |
+| B3 | 36 864 | 0,008416 | 0,007691 |
+| B4 | 82 944 | **0,008234** | 0,007750 ← yükseldi |
+
+Richardson (B2, B3, B4), inceltme oranı r ≈ 1,50:
+
+- gözlenen mertebe **p = 2,82**
+- h → 0 kestirimi **C_D = 0,008149**
+- en ince ağın **GCI = %1,29**
+
+p, şemaların resmî mertebesinin (2) üzerinde. Bu tek başına iyi haber
+değildir — asimptotik bölgeye tam girilmemiş ya da hataların rastlantısal
+olarak birbirini götürüyor olması da p'yi şişirir. Bu yüzden ihtiyatlı
+değer de veriliyor: **p = 2 alınırsa GCI = %2,21.**
+
+    C_D = 0,008234  ±%1,29 (gözlenen p)   ±%2,21 (ihtiyatlı, p = 2)
+
+Richardson kestirimi 0,008149; Overflow'un en ince ağı (919 809 hücre)
+0,00821 veriyor — aralarında **%0,74.** İkisi de aynı yönden, aşağıdan
+yaklaşıyor.
+
+### y+ duyarlılığı da modele bağlı çıktı
+
+A4 ile B4 aynı hücre sayısında (82 944) ve aynı topolojide; tek fark
+duvar aralığı:
+
+| model | A4 (y⁺≈1,0) | B4 (y⁺≈0,65) | fark |
+|---|---:|---:|---:|
+| **SA** | 0,008252 | 0,008234 | **−%0,22** |
+| SST | 0,007649 | 0,007750 | **+%1,33** |
+
+SA'nın duyarlılığı SST'nin **altıda biri**. Bu, `yplus.py`'nin kendi
+gerekçesinin öngördüğü sonuçtur: oradaki mekanizma
+`omegaWallFunction`'ın harmanlaması ve ω ~ 6ν/(β₁y²)'nin y → 0'da
+ıraksamasıdır; **SA'da ω denklemi yoktur.** Öngörü önce yazıldı, sonra
+elde olan veriyle doğrulandı.
+
+Yani B ailesindeki salınım da, y+ duyarlılığı da SST kusurunun
+belirtileri arasına giriyor.
+
 ## Sırada
 
 - **3-B gövde** (ikinci makalenin 3. adımı): birincil model SA ile.
