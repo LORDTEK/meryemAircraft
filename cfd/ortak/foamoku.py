@@ -91,6 +91,48 @@ class Ag:
         self.n_hucre = max(self.sahip) + 1
         self._yuz_ob = {}          # yuz alan/merkez onbellegi
         self._merkez = None        # hucre merkezleri onbellegi
+        self._hucre_yuz = None     # hucre -> yuzler haritasi
+
+    def hucre_yuzleri(self):
+        """Her hucrenin yuz listesi. Duvardan ikinci hucreye yurumek icin
+        gerekiyor (ikinci mertebeden duvar gradyani)."""
+        if self._hucre_yuz is not None:
+            return self._hucre_yuz
+        h = [[] for _ in range(self.n_hucre)]
+        for fi, c in enumerate(self.sahip):
+            h[c].append(fi)
+        for fi, c in enumerate(self.komsu):
+            h[c].append(fi)
+        self._hucre_yuz = h
+        return h
+
+    def karsi_hucre(self, fi, h):
+        """h hucresinde, fi yuzunun KARSISINDAKI ic yuzun obur hucresi.
+
+        Yapisal bir hucrede karsi yuz, normali fi'nin normaline en yakin
+        olarak TERS olan yuzdur. Yapisal olmayan agda bu tanim gevser; bu
+        yuzden yalnizca duvara komsu tabakada, ki orada ag yapisaldir.
+        """
+        S0, _ = self.yuz_alan(fi)
+        A0 = (S0[0]**2 + S0[1]**2 + S0[2]**2) ** 0.5
+        if A0 <= 0:
+            return None
+        n0 = [S0[a] / A0 for a in range(3)]
+        en_iyi, en_hucre = 0.0, None
+        for g in self.hucre_yuzleri()[h]:
+            if g == fi or g >= len(self.komsu):
+                continue                      # sinir yuzu ya da kendisi
+            S, _ = self.yuz_alan(g)
+            A = (S[0]**2 + S[1]**2 + S[2]**2) ** 0.5
+            if A <= 0:
+                continue
+            # g yuzunun DISA bakan normali, h acisindan
+            isaret = 1.0 if self.sahip[g] == h else -1.0
+            nk = sum(isaret * S[a] / A * n0[a] for a in range(3))
+            if -nk > en_iyi:
+                en_iyi = -nk
+                en_hucre = self.komsu[g] if self.sahip[g] == h else self.sahip[g]
+        return en_hucre if en_iyi > 0.7 else None
 
     def yuz_alan(self, fi):
         """Yuzun alan vektoru ve merkezi. Ucgen yelpazesiyle; duzlemsel

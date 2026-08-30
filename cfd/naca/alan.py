@@ -1,0 +1,48 @@
+# -*- coding: utf-8 -*-
+"""Alan boyutu duyarliligi: dis sinir ne kadar uzakta olmali?
+
+B ailesinde ag yakinsamasi salinimli cikti ve salinim viskoz kisimda.
+Duvar gradyani kestiriminin bundan sorumlu OLMADIGI gosterildi (ikinci
+mertebeye gecince en ince iki agda degisim %0,1'in altinda). Geriye, ag
+inceldikce KUCULMEYEN bir hata kaynagi kaliyor: dis sinir sabit 20
+veterde tutuldu.
+
+Bu betik ayni cozunurlukte alani buyutuyor. Hucre sayisi degismez,
+yalnizca hucreler disariya dogru daha cok gerilir; boylece olculen sey
+yalnizca alan boyutudur.
+"""
+import os, sys, subprocess, json
+
+BURA = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, BURA)
+sys.path.insert(0, os.path.join(BURA, "..", "ortak"))
+from kur import kur                                    # noqa: E402
+from kuvvet import hesapla                             # noqa: E402
+
+BOYUT = [20.0, 50.0, 100.0, 200.0]
+KOK = "/tmp/alan"
+
+if __name__ == "__main__":
+    os.makedirs(KOK, exist_ok=True)
+    yol = os.path.join(KOK, "sonuc.json")
+    cikti = json.load(open(yol)) if os.path.exists(yol) else []
+    yapilan = {d["R"] for d in cikti}
+    for R in BOYUT:
+        if R in yapilan:
+            continue
+        vaka = os.path.join(KOK, "R%d" % R)
+        bilgi = kur(vaka, kod="0012", Re=6e6, alfa=0.0, yplus=1.0,
+                    n_profil=256, n_normal=96, n_iz=64, R=R, Xiz=R,
+                    adim=3000, yaz_araligi=1500)
+        print("[R=%g] %d hucre -- cozuluyor" % (R, bilgi["hucre"]), flush=True)
+        subprocess.run([os.path.join(BURA, "kos.sh"), vaka, "4"],
+                       check=True, stdout=subprocess.DEVNULL)
+        r = hesapla(vaka, alfa=0.0, mertebe=2)
+        print("   C_D=%.6f  basinc=%.6f  viskoz=%.6f  C_L=%+.2e  y+ %.2f"
+              % (r["CD"], r["CD_basinc"], r["CD_viskoz"], r["CL"],
+                 r["yplus_ort"]), flush=True)
+        cikti.append(dict(R=R, hucre=bilgi["hucre"], CD=r["CD"],
+                          CD_b=r["CD_basinc"], CD_v=r["CD_viskoz"],
+                          CL=r["CL"], yp=r["yplus_ort"]))
+        json.dump(cikti, open(yol, "w"), indent=1)
+    print("bitti")
