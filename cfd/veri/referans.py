@@ -173,14 +173,18 @@ DUZ_LEVHA = dict(
     # u = %99,5 U_inf noktasidir (basili sayfa 17).
     re_theta_tanimi="momentum kalinligi, ust sinir u = %99,5 U_inf",
     # Sekil 4.1'den okunan C_f degerleri
-    Cf_Overflow={"SA": {5000: 0.002907, 7000: 0.002730, 9000: 0.002611,
-                        11000: 0.002520},
-                 "SST": {5000: 0.002900, 7000: 0.002719, 9000: 0.002600,
-                         11000: 0.002511}},
-    Cf_Cfl3d={"SA": {5000: 0.002902, 7000: 0.002726, 9000: 0.002609,
-                     11000: 0.002523},
-              "SST": {5000: 0.002891, 7000: 0.002711, 9000: 0.002594,
-                      11000: 0.002507}},
+    # DUZELTILDI: x ekseni 4000-13000, 4000-12000 degil. Ilk okumada
+    # cerceve kenarindan 12000 varsaymistim; eksen etiketlerinin konumu
+    # 13000 diyor (artik sacilimi 0,009'a karsi 6,495). Bkz.
+    # nas_sekil.eksen_denetimi ve dogrulama.md "DUZELTME 2".
+    Cf_Overflow={"SA": {5000: 0.002920, 7000: 0.002754, 9000: 0.002641,
+                        11000: 0.002554},
+                 "SST": {5000: 0.002914, 7000: 0.002747, 9000: 0.002630,
+                         11000: 0.002543}},
+    Cf_Cfl3d={"SA": {5000: 0.002916, 7000: 0.002753, 9000: 0.002638,
+                     11000: 0.002555},
+              "SST": {5000: 0.002905, 7000: 0.002739, 9000: 0.002623,
+                      11000: 0.002535}},
     # Sekil 4.2'den okunan u+ degerleri, Re_theta = 10000
     up_Overflow={"SA": {30: 13.289, 100: 16.371, 300: 19.054, 800: 22.080},
                  "SST": {30: 12.643, 100: 16.213, 300: 19.024, 800: 21.912}},
@@ -191,13 +195,13 @@ DUZ_LEVHA = dict(
         "Sonuc: bizim SA'miz iki kodla da +-0,06 u+ icinde cakisiyor -- "
         "ag, semalar, u_tau cikarimi ve kuvvet makinesi dogrulandi (hepsi "
         "SST ile ORTAK). Bizim SST'miz her y+'ta duzgun +0,53 u+ kaymis.\n"
-        "C_f'te modeller ARASI fark: referansta -%0,2 ... -%0,7, bizde "
+        "C_f'te modeller ARASI fark: referansta -%0,2 ... -%0,8, bizde "
         "-%4,1 ... -%4,8.\n"
         "SINIR -- kaldirilmadi: referans M = 0,2, bizimki sikistirilamaz; "
         "ayrica bizim ust sinirimiz H = 1 m'de kayma kosullu ve levha "
         "boyunca dCp/dx = -0,0034 olculdu. Bu iki fark IKI MODELI DE ayni "
-        "yonde etkiler (olculdu: SA +%1,5->+%2,6, SST -%2,9->-%1,5, ikisi "
-        "de Re_theta ile ~%1,2 artiyor). Bu yuzden MUTLAK C_f farklari "
+        "yonde etkiler (olculdu: SA +%1,03->+%1,30, SST -%3,33->-%2,65, "
+        "ikisi de Re_theta ile artiyor). Bu yuzden MUTLAK C_f farklari "
         "modelin dogrulamasi olarak okunmamalidir; anlamli olan modeller "
         "arasindaki farktir."),
 )
