@@ -63,10 +63,23 @@ if __name__ == "__main__":
             kur(vaka, kod="0012", Re=6e6, alfa=0.0, yplus=1.0,
                 n_profil=256, n_normal=113, n_iz=64, R=200.0, Xiz=200.0,
                 adim=3000, yaz_araligi=1500, model="SpalartAllmaras")
-            # nuTilda serbest akis degerini degistir
+            # nuTilda serbest akis degerini degistir.
+            #
+            # Metin degistirme kirilgandir: aranan dizge ("5e-07") cok
+            # genel ve dosya bicimi degisirse sessizce yanlis yere ya da
+            # hic yazmayabilir. Bu yuzden ADET DOGRULANIYOR: dosyada tam
+            # iki yerde gecmeli (internalField ve freestreamValue; duvar
+            # degeri 0, boyutlar ayri). Iki degilse durulur.
             p = os.path.join(vaka, "0", "nuTilda")
-            s = open(p).read().replace("%.10g" % (3 * NU), "%.10g" % (c * NU))
-            open(p, "w").write(s)
+            metin = open(p).read()
+            hedef = "%.10g" % (3 * NU)
+            adet = metin.count(hedef)
+            if adet != 2:
+                raise RuntimeError(
+                    "0/nuTilda icinde %r %d kez gecti, 2 bekleniyordu -- "
+                    "dosya bicimi degismis olabilir, degistirme guvenli "
+                    "degil" % (hedef, adet))
+            open(p, "w").write(metin.replace(hedef, "%.10g" % (c * NU)))
             print("[nuTilda_inf = %g nu] cozuluyor" % c, flush=True)
             subprocess.run([os.path.join(BURA, "kos.sh"), vaka, "4"],
                            check=True, stdout=subprocess.DEVNULL)
