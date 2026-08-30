@@ -53,7 +53,18 @@ def zamanlar(vaka):
     return [a for _, a in sorted(z)]
 
 
-def yurut(harf, kok):
+def yurut(harf, kok, model="kOmegaSST"):
+    """model: hangi turbulans modeliyle taranacagi.
+
+    ONEMLI -- bu parametre sonradan eklendi. Ilk ag taramasi kur()'un
+    varsayilaniyla, yani kOmegaSST ile yapilmisti. Sonradan olculdu ki
+    bizim omega ailesi kurulumumuz logaritmik tabakada denge degerinin
+    %12-14 altinda kaliyor (levha/model_ayirt.py), SA ise iki bagimsiz
+    referans kodla +-0,06 u+ icinde cakisiyor (levha/karsilastir.py).
+    Yani makalede guvenilecek model SA; ama SA'nin AG YAKINSAMASI hic
+    olculmemisti. Bu, kendi surecimdeki bir asimetriydi: yakinsamayi
+    yanli cikan model icin olcup guvenecegim model icin olcmemistim.
+    """
     os.makedirs(kok, exist_ok=True)
     yol = os.path.join(kok, "sonuc.json")
     cikti = json.load(open(yol)) if os.path.exists(yol) else []
@@ -64,7 +75,7 @@ def yurut(harf, kok):
         vaka = os.path.join(kok, ad)
         bilgi = kur(vaka, kod="0012", Re=6e6, alfa=0.0, yplus=yp,
                     n_profil=nf, n_normal=nn, n_iz=nw,
-                    adim=ADIM, yaz_araligi=YAZ)
+                    adim=ADIM, yaz_araligi=YAZ, model=model)
         print("[%s] %d hucre  y+hedef %.3f -- cozuluyor"
               % (ad, bilgi["hucre"], yp), flush=True)
         subprocess.run([os.path.join(BURA, "kos.sh"), vaka, "4"],
@@ -87,5 +98,8 @@ def yurut(harf, kok):
 
 
 if __name__ == "__main__":
+    # kullanim:  tarama.py <A|B> [kok] [model]
     harf = sys.argv[1] if len(sys.argv) > 1 else "A"
-    yurut(harf, sys.argv[2] if len(sys.argv) > 2 else "/tmp/tarama-" + harf)
+    model = sys.argv[3] if len(sys.argv) > 3 else "kOmegaSST"
+    kok = sys.argv[2] if len(sys.argv) > 2 else "/tmp/tarama-" + harf
+    yurut(harf, kok, model)
