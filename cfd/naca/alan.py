@@ -18,6 +18,7 @@ sys.path.insert(0, BURA)
 sys.path.insert(0, os.path.join(BURA, "..", "ortak"))
 from kur import kur                                    # noqa: E402
 from kuvvet import hesapla                             # noqa: E402
+from kilit import Kilit                                # noqa: E402
 
 BOYUT = [20.0, 50.0, 100.0, 200.0]
 KOK = "/tmp/alan2"
@@ -46,31 +47,32 @@ def buyume_orani(R, dy, n):
     return (lo + hi) / 2
 
 if __name__ == "__main__":
-    os.makedirs(KOK, exist_ok=True)
-    yol = os.path.join(KOK, "sonuc.json")
-    cikti = json.load(open(yol)) if os.path.exists(yol) else []
-    yapilan = {d["R"] for d in cikti}
-    from cagi import ilk_hucre_yuksekligi
-    dy = ilk_hucre_yuksekligi(6e6, 1.0)
-    r0 = buyume_orani(20.0, dy, 96)            # olcut: R = 20, 96 katman
-    for R in BOYUT:
-        if R in yapilan:
-            continue
-        nn = n_normal_sec(R, dy, r0)
-        vaka = os.path.join(KOK, "R%d" % R)
-        bilgi = kur(vaka, kod="0012", Re=6e6, alfa=0.0, yplus=1.0,
-                    n_profil=256, n_normal=nn, n_iz=64, R=R, Xiz=R,
-                    adim=3000, yaz_araligi=1500)
-        print("[R=%g] n_normal=%d  %d hucre  (buyume orani %.4f) -- cozuluyor"
-              % (R, nn, bilgi["hucre"], buyume_orani(R, dy, nn)), flush=True)
-        subprocess.run([os.path.join(BURA, "kos.sh"), vaka, "4"],
-                       check=True, stdout=subprocess.DEVNULL)
-        r = hesapla(vaka, alfa=0.0, mertebe=2)
-        print("   C_D=%.6f  basinc=%.6f  viskoz=%.6f  C_L=%+.2e  y+ %.2f"
-              % (r["CD"], r["CD_basinc"], r["CD_viskoz"], r["CL"],
-                 r["yplus_ort"]), flush=True)
-        cikti.append(dict(R=R, n_normal=nn, hucre=bilgi["hucre"], CD=r["CD"],
-                          CD_b=r["CD_basinc"], CD_v=r["CD_viskoz"],
-                          CL=r["CL"], yp=r["yplus_ort"]))
-        json.dump(cikti, open(yol, "w"), indent=1)
-    print("bitti")
+    with Kilit(KOK):
+        os.makedirs(KOK, exist_ok=True)
+        yol = os.path.join(KOK, "sonuc.json")
+        cikti = json.load(open(yol)) if os.path.exists(yol) else []
+        yapilan = {d["R"] for d in cikti}
+        from cagi import ilk_hucre_yuksekligi
+        dy = ilk_hucre_yuksekligi(6e6, 1.0)
+        r0 = buyume_orani(20.0, dy, 96)            # olcut: R = 20, 96 katman
+        for R in BOYUT:
+            if R in yapilan:
+                continue
+            nn = n_normal_sec(R, dy, r0)
+            vaka = os.path.join(KOK, "R%d" % R)
+            bilgi = kur(vaka, kod="0012", Re=6e6, alfa=0.0, yplus=1.0,
+                        n_profil=256, n_normal=nn, n_iz=64, R=R, Xiz=R,
+                        adim=3000, yaz_araligi=1500)
+            print("[R=%g] n_normal=%d  %d hucre  (buyume orani %.4f) -- cozuluyor"
+                  % (R, nn, bilgi["hucre"], buyume_orani(R, dy, nn)), flush=True)
+            subprocess.run([os.path.join(BURA, "kos.sh"), vaka, "4"],
+                           check=True, stdout=subprocess.DEVNULL)
+            r = hesapla(vaka, alfa=0.0, mertebe=2)
+            print("   C_D=%.6f  basinc=%.6f  viskoz=%.6f  C_L=%+.2e  y+ %.2f"
+                  % (r["CD"], r["CD_basinc"], r["CD_viskoz"], r["CL"],
+                     r["yplus_ort"]), flush=True)
+            cikti.append(dict(R=R, n_normal=nn, hucre=bilgi["hucre"], CD=r["CD"],
+                              CD_b=r["CD_basinc"], CD_v=r["CD_viskoz"],
+                              CL=r["CL"], yp=r["yplus_ort"]))
+            json.dump(cikti, open(yol, "w"), indent=1)
+        print("bitti")
