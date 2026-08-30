@@ -128,7 +128,33 @@ if __name__ == "__main__":
         d = json.load(open(yol)) if os.path.exists(yol) else {}
 
         if asama == "kesif":
-            vaka = kos("kesif", T=0.2, dt0=1e-4, dyaz=0.002)
+            # KESIF SURESI -- once T = 0,2 s secilmisti; UZATILDI.
+            #
+            # periyot() ilk ucte birlik gecis suresini atar ve en az uc
+            # sifir gecisi ister, yani kullanilabilir pencerede ~1,5
+            # periyot bulunmali. T = 0,2 s'te bu pencere 0,133 s; periyot
+            # bundan uzunsa olcum BASARISIZ olur ve uretim asamasi hic
+            # kosamaz.
+            #
+            # Periyodun ne olacagi ONCEDEN BILINMIYOR ve iki isaret ters
+            # yone cekiyor:
+            #   - Ayrilma bolgesi cok kucuk (x/c 0,985-1,000, yani
+            #     veterin son %1,5'i). Bu olcekten dokulme hizli olur;
+            #     St ~ 0,2 ile periyot ~ 0,08 s.
+            #   - Ama kararli cozucude ayrilma iki yazim arasinda TARAF
+            #     DEGISTIRIYOR (23 yuz hepsi ustte -> 8 ust / 20 alt).
+            #     Bu, yavas ve buyuk olcekli bir kip isareti.
+            #
+            # Ikisi arasinda secim yapacak olcum yok. Bu yuzden kesif
+            # suresi bir veter gecis suresine (T = 1 s, U = 1 m/s,
+            # c = 1 m) cikariliyor: kullanilabilir pencere 0,667 s,
+            # yani ~0,44 s'ye kadar periyot yakalanir. Ornekleme aralligi
+            # degismedi (0,002 s), yani hizli kip de kacmaz.
+            #
+            # Bu bir TAHMINE dayali secim degil, tahminin YANLIS
+            # olabilecegini kabul eden bir secim: iki tahminin de icini
+            # kapsayan pencere alindi.
+            vaka = kos("kesif", T=1.0, dt0=1e-4, dyaz=0.002)
             g = gecmis(vaka)
             for v in g[::max(1, len(g) // 25)]:
                 print("   t=%.4f  C_D=%.6f  C_L=%+.5f" % v, flush=True)
