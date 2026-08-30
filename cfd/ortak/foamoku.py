@@ -117,7 +117,13 @@ class Ag:
         A0 = (S0[0]**2 + S0[1]**2 + S0[2]**2) ** 0.5
         if A0 <= 0:
             return None
-        n0 = [S0[a] / A0 for a in range(3)]
+        # fi'nin normali h hucresinden DISARI bakacak sekilde yonlendirilir.
+        # Sinir yuzunde alan vektoru zaten disari bakar (sahip = h). Ic
+        # yuzde ise sahipten komsuya bakar, yani h komsuysa ters cevrilmeli.
+        # Bu duzeltme olmadan duvardan disariya yurume ikinci adimda
+        # duruyordu (olculdu: profil iki noktada kesiliyordu).
+        isaret0 = 1.0 if self.sahip[fi] == h else -1.0
+        n0 = [isaret0 * S0[a] / A0 for a in range(3)]
         en_iyi, en_hucre = 0.0, None
         for g in self.hucre_yuzleri()[h]:
             if g == fi or g >= len(self.komsu):
