@@ -329,6 +329,78 @@ Beklenti "ikisi de düşmeli" idi; düştüler, ama %1 değil %0,3. Geometri
 ortak yanlılığın küçük bir parçası; SST'deki açığı açıklamıyor. SA ise
 TMR profiliyle bandın üst sınırına (0,00838) 0,00839 ile değiyor.
 
+## Düz levhanın birinci elden referansı bulundu — en güçlü doğrulama
+
+NAS-2016-01'in **4. bölümü** tam da kurduğum vaka: *2D Zero Pressure
+Gradient Flat Plate*, M = 0,2, **Re = 5.000.000** birim uzunluk üzerinden.
+Bizimki de Re = 1/(2×10⁻⁷) = 5×10⁶. Bölüm iki bağımsız kodun (Overflow ve
+Cfl3d) sonuçlarını veriyor, üstelik ilgilendiği büyüklükler bizim
+ölçtüklerimizin aynısı: C_f'in Re_θ'ya karşı değişimi ve Re_θ = 10000'de
+u⁺ profili. Re_θ tanımını da veriyor (integralin üst sınırı u = %99,5 U∞);
+kendi Re_θ'mızı o tanımla hesapladık.
+
+**Okuma yöntemi.** Şekillerde sayısal tablo yok — ama PDF'teki şekiller
+vektör grafik, yani eğrilerin düğüm noktaları dosyanın içinde sayı olarak
+duruyor. Sayfa SVG'ye çevrilip eğri yolları doğrudan okundu
+(`veri/nas_sekil.py`). Bu, şekli gözle okumaktan (raster
+sayısallaştırma) niteliksel olarak farklıdır: okunan şey çizimin kendi
+verisidir.
+
+**Kalibrasyon varsayılmadı, sınandı.** Şekil 4.2'de üçüncü eğri Coles'in
+ortalama hız profili ve logaritmik tabakada u⁺ = (1/κ)ln y⁺ + B'ye
+oturmak zorunda. Çıkarılan eğri bu bağıntıya y⁺ = 100–300 arasında
+**0,05'ten iyi** uyuyor. Uymasaydı okuma geçersiz olurdu; denetim
+doğrudan bunun için var ve `karsilastir.py` denetim başarısızsa çalışmayı
+durduruyor.
+
+### u⁺ profili, Re_θ = 10000'de eşleştirilmiş
+
+| y⁺ | bizim SA | Overflow | Cfl3d | fark | | bizim SST | Overflow | Cfl3d | fark |
+|---:|---:|---:|---:|---:|---|---:|---:|---:|---:|
+| 30 | 13,235 | 13,289 | 13,204 | **−0,054** | | 13,134 | 12,643 | 12,656 | **+0,491** |
+| 100 | 16,371 | 16,371 | 16,368 | **−0,000** | | 16,708 | 16,213 | 16,230 | **+0,495** |
+| 200 | 18,001 | 18,030 | 18,026 | **−0,029** | | 18,521 | 17,957 | 17,974 | **+0,565** |
+| 300 | 19,036 | 19,054 | 19,050 | **−0,018** | | 19,608 | 19,024 | 19,118 | **+0,584** |
+| 500 | 20,567 | 20,567 | 20,567 | **−0,000** | | 21,129 | 20,597 | 20,614 | **+0,532** |
+| 800 | 22,021 | 22,080 | 22,076 | **−0,059** | | 22,492 | 21,912 | 21,930 | **+0,579** |
+
+**Bizim SA'mız iki bağımsız referans kodla ±0,06 u⁺ içinde çakışıyor.**
+Bu, ağın, şemaların, u_τ çıkarımının ve kuvvet makinesinin doğrulanmasıdır
+— hepsi SST ile ortak. **Bizim SST'miz ise her y⁺'ta düzgün olarak
++0,53 u⁺ kaymış.** Eğim aynı (κ doğru), eklenen sabit farklı: aynı hız
+için daha küçük u_τ, dolayısıyla düşük sürtünme.
+
+### C_f, Re_θ'ya karşı
+
+| Re_θ | bizim SA | bizim SST | **bizim SST/SA** | ref. SST/SA (Overflow) | ref. SST/SA (Cfl3d) |
+|---:|---:|---:|---:|---:|---:|
+| 5000 | 0,002954 | 0,002827 | **−%4,30** | −%0,22 | −%0,36 |
+| 7000 | 0,002796 | 0,002669 | **−%4,54** | −%0,40 | −%0,53 |
+| 9000 | 0,002679 | 0,002550 | **−%4,82** | −%0,43 | −%0,57 |
+| 11000 | 0,002588 | 0,002481 | **−%4,13** | −%0,36 | −%0,67 |
+
+Referansta iki model düz levhada **birbirinden %0,2–0,7 ayrılıyor.**
+Bizde **%4,1–4,8.** Profildeki 9,4'lük ayrılmayla aynı yönde ve aynı
+cinsten.
+
+### Mutlak C_f'teki kayma bize ait, modele değil
+
+Mutlak değerlerde SA'mız referansın %1,5–2,6 üstünde, SST'miz %1,5–2,9
+altında. İkisi de Re_θ ile **aynı yönde** kayıyor (SA +1,5→+2,6, SST
+−2,9→−1,5; ikisi de ~%1,2 artıyor). Ortak bileşen ikisini birden
+etkileyen iki kurulum farkından geliyor ve dürüstlük gereği
+kaldırılmamıştır:
+
+- **Sıkıştırılabilirlik**: referans M = 0,2, bizimki sıkıştırılamaz.
+- **Kapatma**: üst sınırımız H = 1 m'de kayma koşulu; levha boyunca
+  dCp/dx = −0,0034 ölçüldü. Hafif elverişli gradyan sınır tabakasının
+  iz bileşenini kısar, C_f'i biraz yükseltir, ve etkisi δ büyüdükçe
+  büyür — ölçülen ortak eğilimin işareti ve gidişi bununla uyumlu.
+
+Bu yüzden **mutlak C_f farkları modelin doğrulaması olarak okunmamalıdır**;
+anlamlı olan iki model ARASINDAKİ fark, çünkü ortak bileşen ikisinde de
+aynıdır. O fark referansta %0,4, bizde %4,5.
+
 ## Sırada
 
 - **Duvar ω taraması** (`levha/omega_duvar.py`): düz levhada iki onlu
