@@ -67,10 +67,10 @@ SEKIL = {
     # cerceve 627.96 - 6748.03, yani sol kenar x/c = -0.0401).
     "7.4cf": dict(sayfa=44, x=(-0.040075, 1.0), y=(0.0, 0.008),
                   cerceve=(718.066890, 6838.019847, 387.952902, 4672.048055),
-                  en_az=100, tx_kod=("311.103", "291.629")),
+                  en_az=100, tx_kod=("311.103", "291.629"), model="SA"),
     "7.4cp": dict(sayfa=44, x=(-0.040075, 1.0), y=(1.2, -0.6),
                   cerceve=(627.959101, 6748.032909, 387.948041, 4671.985599),
-                  en_az=100, tx_kod=("110.854", "291.629")),
+                  en_az=100, tx_kod=("110.854", "291.629"), model="SA"),
 }
 # Alt grafikleri ayiran, yolun kendi transform matrisindeki oteleme
 ALT = {"110.854": "SA", "311.103": "SST", "210.979": "SST-V"}
@@ -98,9 +98,21 @@ def egriler(sekil):
         tr = re.search(r'transform="matrix\(([^)]*)\)"', a)
         if not d or not tr or d.group(1).count("L") < t["en_az"]:
             continue
-        model = ALT.get(tr.group(1).split(",")[4].strip()[:7])
-        if model is None:
-            continue
+        p = tr.group(1).split(",")
+        tx, ty = p[4].strip()[:7], p[5].strip()[:7]
+        if "tx_kod" in t:
+            # Bazi sayfalarda (orn. 44) UC alt grafik satiri ayni
+            # x-otelemesini paylasir; alt grafigi ayirt etmek icin
+            # y-otelemesi de gerekir. Bunu atlamak yanlis alt grafigi
+            # okumaya yol acar -- fizik denetimi bunu yakaladi
+            # (azami Cp 1,0722 cikti, 1,0056 olmaliydi).
+            if (tx, ty) != tuple(x[:7] for x in t["tx_kod"]):
+                continue
+            model = t.get("model", "SA")
+        else:
+            model = ALT.get(tx)
+            if model is None:
+                continue
         # Renk kodu: yesil = kuram (Coles / Karman-Schoenherr),
         # kirmizi kesikli = Cfl3d, siyah duz = Overflow.
         kod = ("kuram" if "0%, 100%, 0%" in a else

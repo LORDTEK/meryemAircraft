@@ -205,3 +205,38 @@ DUZ_LEVHA = dict(
         "modelin dogrulamasi olarak okunmamalidir; anlamli olan modeller "
         "arasindaki farktir."),
 )
+
+
+PROFIL_CF = dict(
+    kaynak="NAS-2016-01, Sekil 7.4 (NACA0012, Cp ve C_f, SA modeli)",
+    dosya="cfd/kaynak/NAS_Technical_Report_NAS-2016-01.pdf, PDF sayfa 44",
+    kosul="M = 0.15, Re = 6.0e6, alfa = 0, 897 x 257 ag, ust yuzey",
+    yontem=(
+        "Vektor cikarimi (yontem 2), veri/nas_sekil.py anahtar '7.4cf'.\n"
+        "DIKKAT: bu sayfada UC hucum acisi satiri AYNI x-otelemesini "
+        "paylasiyor; alt grafik ancak (x,y) oteleme ciftiyle ayirt edilir. "
+        "Ilk denemede bunu atlayip yanlis alt grafigi okudum ve fizik "
+        "denetimi yakaladi (azami Cp 1,0722 cikti).\n"
+        "Eksen ucu cerceve kenarina denk DUSMUYOR; kalibrasyon tik "
+        "isaretlerinden yapildi: x/c = 0 -> yol 863,7 ; x/c = 1 -> 6748,0 "
+        "iken cerceve 627,96 - 6748,03, yani sol kenar x/c = -0,0401.\n"
+        "FIZIK DENETIMI: ayni sayfadaki Cp egrisinin azami degeri 1,0058 "
+        "ve konumu x/c = 0. M = 0,15 icin kuramsal durma basinci "
+        "1 + M^2/4 = 1,0056, konumu hucum kenari. Hem deger hem konum "
+        "tutuyor."),
+    # x/c -> (Overflow, Cfl3d)
+    Cf_ust={0.050: (0.005899, 0.005768), 0.100: (0.005318, 0.005248),
+            0.201: (0.004573, 0.004487), 0.296: (0.004064, 0.003990),
+            0.506: (0.003306, 0.003245), 0.705: (0.002744, 0.002688),
+            0.902: (0.002079, 0.001996)},
+    not_=(
+        "Bizim SA'mizin en ince agi (B4, 82944 hucre) bu yedi istasyonun "
+        "YEDISINDE de iki referans kodun ARASINDA. Yogun orneklemeyle "
+        "x/c 0,03-0,95 arasi 91 duvar yuzunun 83'u (%91) arada; disarida "
+        "kalanlarin azami sapmasi %0,36. Overflow ile Cfl3d kendi "
+        "aralarinda ortalama %2,33, azami %4,18 ayriliyor -- yani "
+        "SA'miz onlara, onlarin birbirine oldugundan daha yakin.\n"
+        "Kaldirilmayan cekinceler: referans agi 230529 hucre bizimki "
+        "82944; referans geometrisi TMR'in %11,894'u, bizimki kapali "
+        "firar kenarli %12."),
+)

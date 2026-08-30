@@ -619,6 +619,64 @@ kalibrasyonu tiklerle ve log yasasıyla iki kez doğrulanmıştı) ve
 modeller arası farkı (o kendi koşularımızdan geliyor). Yani asıl kanıt
 etkilenmedi; ama yayımladığım bir sayı tablosu yanlıştı ve düzeltildi.
 
+## SA ağ yakınsaması ve profil üzerinde C_f — asıl vakada doğrulama
+
+Ağ taraması SST ile yapılmıştı; makalede güveneceğimiz model SA olduğu
+için B ailesi SA ile yeniden koşuldu.
+
+| ağ | hücre | y⁺ort | bizim C_D | | Overflow SA (hücre) | C_D |
+|---|---:|---:|---:|---|---:|---:|
+| B1 | 7 310 | 2,11 | 0,009848 | | 3 729 | 0,00978 |
+| B2 | 16 448 | 1,43 | 0,008983 | | 14 625 | 0,00879 |
+| B3 | 36 864 | 0,97 | 0,008416 | | 57 921 | 0,00842 |
+| B4 | 82 944 | 0,66 | **0,008234** | | 919 809 | **0,00821** |
+
+İki yakınsama yörüngesi birbirini izliyor. Bizim en ince ağımız 0,008234,
+Overflow'un en incesi 0,00821 — **%0,3.** İkisi de hâlâ inceltmeyle
+düşüyor (bizde B3→B4 %2,2, Overflow'da 230k→920k %2,0), yani ikisi de
+tam yakınsamış değil; bu ortak davranış da anlamlı.
+
+Hücre sayıları kodlar ve ağ topolojileri arasında birebir
+karşılaştırılamaz; tablo bir eşleştirme değil, iki eğrinin yan yana
+konmasıdır.
+
+### Profil düzeyinde: yüzey sürtünmesi dağılımı
+
+`veri/nas_sekil.py` Şekil 7.4'ten SA modeli için üst yüzeydeki C_f
+dağılımını çıkarıyor. Kalibrasyon iki kez sınandı: Cp eğrisinin azami
+değeri **1,0058** ve konumu **x/c = 0** — M = 0,15 için kuramsal durma
+basıncı 1 + M²/4 = 1,0056, konumu hücum kenarı.
+
+| x/c | bizim (B4) | Overflow | Cfl3d |
+|---:|---:|---:|---:|
+| 0,050 | 0,005846 | 0,005899 | 0,005768 |
+| 0,100 | 0,005297 | 0,005318 | 0,005248 |
+| 0,201 | 0,004540 | 0,004573 | 0,004487 |
+| 0,296 | 0,004046 | 0,004064 | 0,003990 |
+| 0,506 | 0,003274 | 0,003306 | 0,003245 |
+| 0,705 | 0,002721 | 0,002744 | 0,002688 |
+| 0,902 | 0,002018 | 0,002079 | 0,001996 |
+
+Yedi istasyonun **yedisinde de bizim değerimiz iki referans kodun
+arasında.** Yoğun örneklemeyle: x/c 0,03–0,95 arasındaki **91 duvar
+yüzünün 83'ünde (%91)** arada; dışarıda kaldığı yerlerde sapma en fazla
+**%0,36.** Karşılaştırma için: Overflow ile Cfl3d kendi aralarında
+ortalama **%2,33**, en fazla %4,18 ayrılıyor.
+
+Yani SA'mız, iki yerleşik kodun kendi aralarındaki farktan **daha yakın**
+duruyor onlara.
+
+Çekinceler, kaldırılmadı: referans ağı 897×257 (230 529 hücre), bizimki
+82 944; bizim geometrimiz kapalı firar kenarlı %12, referansınki TMR'ın
+%11,894'ü. Daha kaba TMR-geometrisi koşusu (36 864 hücre) yüzlerin
+%55'inde arada kalıyor — yani kuşatma ince ağın özelliği, beklendiği
+gibi.
+
+**Bunun anlamı:** SA kurulumumuz artık iki bağımsız vakada, iki bağımsız
+referans kodla, profil düzeyinde doğrulanmıştır — düz levhada u⁺
+(±0,06), profilde C_f (kodlar arası farkın içinde). Makalenin birincil
+modeli olarak SA'yı kullanmak bu ölçümlere dayanıyor.
+
 ## Sıradaki şüpheli: kendi şema seçimimiz
 
 ω ailesi ile SA arasında kurulumumuzda **gerçek bir asimetri** var ve bu
