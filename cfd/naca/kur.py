@@ -204,7 +204,29 @@ def kur(dizin, kod="0012", Re=6e6, alfa=0.0, yplus=1.0,
         # onlarsiz calismaz. Final adimda relTol = 0 verilir: o adim zaman
         # adiminin sonucunu belirledigi icin bagil degil MUTLAK toleransa
         # kadar cozulur.
-        cozucu += ("    pFinal\n    {\n" + P_COZ +
+        # pFinal'in TOLERANSI GEVSETILDI -- olculdu, varsayilmadi.
+        #
+        # Once pFinal, P_COZ'un tolerance 1e-9'unu relTol 0 ile
+        # kullaniyordu. O deger BU AGDA ERISILEMIYOR: GAMG her
+        # cagrisinda 1000 yinelemeye (varsayilan ust sinira) carpip
+        # ~3e-8'de birakiyordu. Yani "mutlak toleransa kadar cozuldu"
+        # degil, "1000 yinelemede pes etti" oluyordu -- ve bu sessizdi,
+        # cunku cozucu hata vermez.
+        #
+        # Bedeli olculdu: nNonOrthogonalCorrectors 1 ve nOuterCorrectors
+        # 3 ile pFinal zaman adimi basina UC kez cagriliyor, yani ~3000
+        # bosa GAMG yinelemesi. Adim maliyeti 2,95 s; ayni agda kararli
+        # cozucunun yineleme maliyeti 0,135 s. Keşif kosusu 8,2 saat,
+        # uretim 13-49 saat cikiyordu.
+        #
+        # Yeni deger 1e-7: cozucunun fiilen ulastigi ~3e-8'in ustunde,
+        # yani erisilebilir; ve ilk kalintinin (~1e-5) iki mertebe
+        # altinda, yani zaman dogrulugu icin yeterli. relTol 0 KORUNDU --
+        # amac son adimda bagil degil mutlak bir esige inmekti, sorun
+        # esigin degeriydi.
+        P_SON = P_COZ.replace("tolerance       1e-9;",
+                              "tolerance       1e-7;")
+        cozucu += ("    pFinal\n    {\n" + P_SON +
                    "        relTol          0;\n    }\n"
                    "    \"(U|k|omega|nuTilda)Final\"\n    {\n" + U_COZ +
                    "        relTol          0;\n    }\n")
