@@ -907,10 +907,41 @@ Bu bulgu üç şeyi birden açıklıyor:
    tek bir h ölçüsü varsayar; burada ikinci ve bağımsız bir ölçek
    (duvar aralığı) sonucu sürüklüyor.
 
-Aynı tarama SA ile de koşuluyor. Öngörü önceden yazılı ve mekanizmadan
-çıkıyor: **SA'da ω denklemi yoktur**, dolayısıyla duyarlılık çok daha
-küçük olmalı. Elde olan veri bunu şimdiden destekliyor — A4 ile B4 aynı
-hücre sayısında, tek fark duvar aralığı: SA'da −%0,22, SST'de +%1,33.
+### Aynı tarama SA ile: öngörüm ham haliyle YANLIŞTI, düzeltilmiş haliyle doğru
+
+Öngörüyü "SA'da ω denklemi yoktur, dolayısıyla **duyarlılık çok daha
+küçük olmalı**" diye yazmıştım. Ölçüm:
+
+| y⁺ | SA C_D | birim y⁺ eğimi | | SST C_D | birim y⁺ eğimi |
+|---:|---:|---:|---|---:|---:|
+| 1,5 | 0,008657 | — | | 0,007614 | — |
+| 1,0 | 0,008252 | **−7,71e−4** | | 0,007649 | +7,27e−5 |
+| 0,65 | 0,008234 | −5,55e−5 | | 0,007750 | +3,20e−4 |
+| 0,4 | 0,008211 | −8,65e−5 | | 0,007880 | **+5,09e−4** |
+
+y⁺ 1,5 → 1,0 aralığında SA'nın duyarlılığı SST'nin **on katı**. Yani
+öngörü, yazıldığı haliyle yanlış. Duyarlılığın *büyüklüğü* üzerine
+kurmakla hata etmişim.
+
+Doğru ayrım büyüklükte değil **gidişte**:
+
+- **SA'nın eğimi çöküyor**: −7,71e−4 → −5,55e−5 → −8,65e−5. İlk adımdan
+  sonra bir mertebe düşüyor ve orada kalıyor. Yani y⁺ = 1,5 sınır
+  tabakasını henüz çözmüyor; 1'in altında çözüm oturuyor. **Yakınsama.**
+- **SST'nin eğimi büyüyor**: +7,27e−5 → +3,20e−4 → +5,09e−4, yedi kat.
+  Duvara yaklaştıkça çözüm daha hızlı kayıyor. **Iraksama.**
+
+Çözümlenmiş bölgede (y⁺ ≤ 1) yayılım: **SA %0,50, SST %3,02.** Altı kat
+fark — ama asıl olan, SA'nın bir değere gitmesi, SST'nin gitmemesi.
+
+SA'nın y⁺ ≤ 1'deki üç noktasından doğrusal dışdeğerleme
+C_D(y⁺→0) = 0,008186 veriyor; üretim seçimimiz olan y⁺ ≈ 1 buna göre
+**+%0,81.** SST için böyle bir dışdeğerleme savunulamaz, çünkü eğim
+büyüyor.
+
+Pratik sonuç: SA için y⁺ ≈ 1 seçimi ölçülmüş bir dayanağa sahip ve
+duvar çözünürlüğü belirsizliği **%0,8**. SST için "seçilmiş y⁺" diye bir
+şey yoktur — hangi y⁺ seçilirse ona karşılık bir cevap çıkar.
 
 ## Sırada
 
