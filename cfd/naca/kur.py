@@ -204,28 +204,36 @@ def kur(dizin, kod="0012", Re=6e6, alfa=0.0, yplus=1.0,
         # onlarsiz calismaz. Final adimda relTol = 0 verilir: o adim zaman
         # adiminin sonucunu belirledigi icin bagil degil MUTLAK toleransa
         # kadar cozulur.
-        # pFinal'in TOLERANSI GEVSETILDI -- olculdu, varsayilmadi.
+        # pFinal COZUCUSU DEGISTIRILDI -- olculdu, varsayilmadi.
         #
-        # Once pFinal, P_COZ'un tolerance 1e-9'unu relTol 0 ile
-        # kullaniyordu. O deger BU AGDA ERISILEMIYOR: GAMG her
-        # cagrisinda 1000 yinelemeye (varsayilan ust sinira) carpip
-        # ~3e-8'de birakiyordu. Yani "mutlak toleransa kadar cozuldu"
-        # degil, "1000 yinelemede pes etti" oluyordu -- ve bu sessizdi,
-        # cunku cozucu hata vermez.
+        # Once GAMG + tolerance 1e-9 + relTol 0 idi. O deger bu agda
+        # ERISILEMIYOR: GAMG her cagrisinda 1000 yinelemeye (varsayilan
+        # ust sinira) carpip ~3e-8'de birakiyordu. "Mutlak toleransa
+        # kadar cozuldu" degil, "1000 yinelemede pes etti" -- ve bu
+        # sessizdi, cunku cozucu hata vermez.
         #
-        # Bedeli olculdu: nNonOrthogonalCorrectors 1 ve nOuterCorrectors
-        # 3 ile pFinal zaman adimi basina UC kez cagriliyor, yani ~3000
-        # bosa GAMG yinelemesi. Adim maliyeti 2,95 s; ayni agda kararli
-        # cozucunun yineleme maliyeti 0,135 s. Keşif kosusu 8,2 saat,
-        # uretim 13-49 saat cikiyordu.
+        # Nedeni ag: azami en-boy orani 5000 (y+ ~ 1 duvar hucreleri),
+        # azami dik-olmayanlik 61 derece. GAMG bu bilesimde tikaniyor.
+        # Ilk basinc cozumu (relTol 0,01) 6-36 yinelemede bitiyor;
+        # tikanan, dik-olmayanlik duzeltmesindeki pFinal.
         #
-        # Yeni deger 1e-7: cozucunun fiilen ulastigi ~3e-8'in ustunde,
-        # yani erisilebilir; ve ilk kalintinin (~1e-5) iki mertebe
-        # altinda, yani zaman dogrulugu icin yeterli. relTol 0 KORUNDU --
-        # amac son adimda bagil degil mutlak bir esige inmekti, sorun
-        # esigin degeriydi.
-        P_SON = P_COZ.replace("tolerance       1e-9;",
-                              "tolerance       1e-7;")
+        # Uc varyant AYNI baslangictan 80 zaman adimi kosuldu:
+        #
+        #   GAMG   tol 1e-7   1,765 s/adim   ort 329 yineleme (azami 1000)
+        #   GAMG   tol 1e-6   0,368 s/adim   ort  68
+        #   PCG+DIC tol 1e-7  0,257 s/adim   ort 183
+        #
+        # Ucu de AYNI COZUMU verdi: C_D farklari 2e-9 ve 5e-9, yani
+        # %0,00001 ve %0,00003. Yedi anlamli basamaga kadar ayni.
+        # Dolayisiyla secim maliyetle ilgili, dogrulukla degil.
+        #
+        # PCG+DIC secildi: en hizlisi VE sikı toleransi koruyor, yani
+        # gevsetmeye gerek birakmiyor. Tolerans 1e-7'de tutuldu; 1e-9'a
+        # inmek olculebilir bir sey kazandirmiyor (cozum zaten ayni) ama
+        # maliyet ekliyor.
+        P_SON = ("        solver          PCG;\n"
+                 "        preconditioner  DIC;\n"
+                 "        tolerance       1e-7;\n")
         cozucu += ("    pFinal\n    {\n" + P_SON +
                    "        relTol          0;\n    }\n"
                    "    \"(U|k|omega|nuTilda)Final\"\n    {\n" + U_COZ +
