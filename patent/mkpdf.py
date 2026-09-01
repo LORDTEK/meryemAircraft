@@ -10,7 +10,24 @@ CHROME="/opt/pw-browsers/chromium-1194/chrome-linux/chrome"
 E=html.escape
 
 def page(inner,title):
-    return f"<!doctype html><html lang='tr'><head><meta charset='utf-8'><title>{E(title)}</title><style>{CSS}</style></head><body>{inner}</body></html>"
+    return f"<!doctype html><html lang='tr'><head><meta charset='utf-8'><title>{E(title)}</title><style>{CSS}</style></head><body><div class='gov'>{inner}</div></body></html>"
+
+
+def belge(*bolumler):
+    """Bolumleri TEK belgede birlestirir; her biri yeni sayfada baslar.
+
+    Neden: TURKPATENT sekli inceleme bildirimi (2026/014570) "Tarifname,
+    Istemler ve Ozet bolumlerinde birbirini takip eden sayfa
+    numaralandirmasi" istiyor. Bolumler ayri ayri basildiginda numaralar
+    her seferinde 1'den basliyordu (8/8, 3/3, Ozet'te hic yok). Cozum:
+    uc bolum tek belge olarak dizilir, sayfa numaralari surekli akar,
+    sonra page_ranges ile ayri dosyalara BOLUNUR -- numaralar bolunurken
+    korunur.
+    """
+    ic = "<div class='bolum'>" + "</div><div class='bolum yeni'>".join(bolumler) + "</div>"
+    return ("<!doctype html><html lang='tr'><head><meta charset='utf-8'>"
+            "<title>Basvuru</title><style>" + CSS + "</style></head>"
+            "<body><div class='gov'>" + ic + "</div></body></html>")
 
 # ---------- TARIFNAME ----------
 n=0; parts=[f"<h1>{E(BASLIK)}</h1>"]
@@ -24,7 +41,8 @@ for kind,val in TARIFNAME:
     else:
         n+=1
         parts.append(f"<p><span class='pn'>[{n:04d}]</span>{E(val)}</p>")
-TARIF_HTML=page("".join(parts),"Tarifname")
+TARIF_IC="".join(parts)
+TARIF_HTML=page(TARIF_IC,"Tarifname")
 
 # ---------- ISTEMLER ----------
 ISTEM=[
@@ -47,14 +65,22 @@ ISTEM=[
 "Önceki istemlerden herhangi birine uygun bir hava aracının çalıştırılmasına ilişkin yöntem olup, özelliği; dikey uçuştan yatay uçuşa geçişin, aracın tırmanışı kesilmeden başlatılması ve giriş anındaki tırmanış hızının dönüş süresince dikey momentum rezervi olarak kullanılmasıdır.",
 ]
 ist="".join(f"<li>{E(t)}</li>" for t in ISTEM)
-ISTEM_HTML=page(f"<h1>İSTEMLER</h1><ol class='claims'>{ist}</ol>","İstemler")
+ISTEM_IC=f"<h1>İSTEMLER</h1><ol class='claims'>{ist}</ol>"
+ISTEM_HTML=page(ISTEM_IC,"İstemler")
 
 # ---------- OZET ----------
 OZ=('Buluş, dikey kalkış ve iniş yapabilen, seyir uçuşunu kanat üzerinde gerçekleştiren insansız hava araçları ile ilgilidir. Koaksiyel karşıt dönüşlü pervane çiftleriyle donatılmış, kuyruğa oturan hava araçlarında itki vektörleri gövde eksenine paralel olduğundan yuvarlanma momenti üretilemez; tepki torku da koaksiyel düzenleme nedeniyle ortadan kalktığından, bilinen diferansiyel tork çözümü de uygulanamaz. Buluşta, gövdenin (1) alt yüzeyinde arkaya ve dışa açılı uzanan, açık ve kapalı olmak üzere iki konumu bulunan bir yuvarlanma şeridi (5) yer alır. Şeridin iç kısmı, aracın tüm itkisini üreten burun koaksiyel pervane çiftinin (2) izi (13) içinde kaldığından hava hızı sıfır iken de moment üretir; dış kısmı ise izin dışında kalarak seyir uçuşunda çalışır. Böylece araç, hareketli kumanda yüzeyi taşımaksızın her uçuş rejiminde yuvarlanma kumandası elde eder. Buluş, pist gerektirmeyen gözetleme, kargo taşıma ve arama-kurtarma görevlerinde kullanılır.')
-_b1=base64.b64encode(open(f"{RES}/sekil-1.png","rb").read()).decode()
-OZET_HTML=page(f"<h1>ÖZET</h1><p>{E(OZ)}</p>"
-  f"<p class='center' style='margin-top:9mm;margin-bottom:3mm'><b>Yayımlanacak şekil: Şekil 1</b></p>"
-  f"<div class='center'><img src='data:image/png;base64,{_b1}' style='max-width:132mm'></div>","Özet")
+# Sekli inceleme bildirimi (2026/014570) uc sey istedi, ucu de burada:
+#  - "Tarifname bolumunde bulunan bulus basligi, Ozet bolumune eklenmeli
+#     ve AYNI olmalidir."  -> baslik ayni BASLIK degiskeninden geliyor,
+#                             yani ayni olmasi kod tarafindan garanti.
+#  - "Ozet bolumunde bulunan sekil cikartilmalidir."  -> gomulu PNG
+#                                                       kaldirildi.
+#  - "'Yayimlanacak sekil: Sekil 1' ibaresindeki 'Yayimlanacak sekil:'
+#     kismi cikartilmalidir."  -> yalnizca "Şekil 1" kaldi.
+OZET_IC=("<h1>" + E(BASLIK) + "</h1><h2 class='center'>ÖZET</h2><p>" + E(OZ) +
+         "</p><p class='center' style='margin-top:9mm'><b>Şekil 1</b></p>")
+OZET_HTML=page(OZET_IC,"Özet")
 
 # ---------- RESIMLER ----------
 figs=[]
@@ -64,23 +90,183 @@ for i in range(1,6):
                 f"<div class='holder'><img src='data:image/png;base64,{b}'></div></div>")
 RES_HTML=page("".join(figs),"Resimler")
 
+# SATIR NUMARALANDIRMA -- tarayicida degil, URETILEN PDF UZERINDE.
+#
+# Ilk deneme satir kutularini tarayicida olcup mutlak konumlu div'lerle
+# numara koyuyordu. IKI kez yanlis cikti ve ikisi de olculerek bulundu:
+#
+#  1) Tarayici, gorunum alani genisliginde (1280 px) diziyordu; PDF ise
+#     A4 baski alaninda (165 mm). Satir sonlari farkli oluyordu.
+#     Duzeltildi: govde genisligi 165 mm'ye sabitlendi (mkpdf_css).
+#  2) Bu duzeltmeden sonra 1. sayfa tuttu ama 5. ve 8. sayfalar kaydi.
+#     Nedeni: basliklardaki "break-after: avoid" kurallari sayfalama
+#     sirasinda icerigi asagi itiyor, mutlak konumlu numaralar ise
+#     belge koordinatinda kaliyor -- ikisi desenkron oluyor.
+#
+# Tahmin etmeyi birakip OLCULEN veriye gecildi: PDF uretilir, sonra
+# pdftotext -bbox-layout ile HER SAYFADAKI GERCEK satir kutulari okunur
+# ve numaralar reportlab ile o konumlara damgalanir. Boylece tarayicinin
+# dizgisini tahmin etmeye gerek kalmaz.
+SATIR_HER = 5          # her kacinci satir numaralanacak
+SATIR_SAYFA_BASI = True  # True: her sayfada 5,10,15... (PCT Kural 11.8
+                         #       "sets of five" uygulamasi)
+                         # False: bolum boyunca surekli 5,10,15...
+
+
+def satir_kutulari(pdf_yolu):
+    """Her sayfadaki gercek satir kutulari: [[(yMin,yMax),...], ...]
+
+    pdftotext -bbox-layout, PDF puntosu cinsinden ve sol-UST kokenli
+    koordinat verir. Alt bilgi (sayfa numarasi) icerik alaninin disinda
+    kaldigi icin ayiklanir -- yoksa satir sayilir.
+    """
+    import subprocess, re as _re, tempfile as _tf, os as _os
+    g = _tf.mktemp(suffix=".xhtml")
+    subprocess.run(["pdftotext", "-bbox-layout", pdf_yolu, g], check=True)
+    metin = open(g, encoding="utf-8").read()
+    _os.unlink(g)
+    sayfalar = []
+    for sayfa in _re.findall(r"<page width=\"([\d.]+)\" height=\"([\d.]+)\">(.*?)</page>",
+                             metin, _re.S):
+        gen, yuk, ic = float(sayfa[0]), float(sayfa[1]), sayfa[2]
+        alt_sinir = yuk - 56.7          # 20 mm alt kenar boslugu
+        satir = []
+        for m in _re.finditer(r"<line xMin=\"([\d.]+)\" yMin=\"([\d.]+)\" "
+                              r"xMax=\"([\d.]+)\" yMax=\"([\d.]+)\"", ic):
+            y0, y1 = float(m.group(2)), float(m.group(4))
+            if y0 >= alt_sinir:
+                continue                 # alt bilgi satiri
+            satir.append((y0, y1))
+        satir.sort()
+        # AYNI GORSEL SATIRDAKI kutulari birlestir. Tablolarda her hucre
+        # ayri bir <line> olarak gelir; birlestirilmezse bir tablo satiri
+        # iki-uc satir sayilir ve numaralar kayar. Olculdu: referans
+        # numaralari tablosunda "10" 7. satira dusuyordu.
+        birlesik = []
+        for (y0, y1) in satir:
+            if birlesik and y0 < birlesik[-1][1] - 2.0:
+                birlesik[-1] = (birlesik[-1][0], max(birlesik[-1][1], y1))
+            else:
+                birlesik.append((y0, y1))
+        sayfalar.append(dict(gen=gen, yuk=yuk, satir=birlesik))
+    return sayfalar
+
+
+def satir_numarala(giris, cikis, her=SATIR_HER, sayfa_basi=SATIR_SAYFA_BASI,
+                   sol=None):
+    """Uretilmis PDF'e satir numaralarini damgalar."""
+    from pypdf import PdfReader, PdfWriter
+    from reportlab.pdfgen import canvas as _cv
+    import io
+    sayfalar = satir_kutulari(giris)
+    oku = PdfReader(giris)
+    yaz = PdfWriter()
+    n = 0
+    for i, sf in enumerate(sayfalar):
+        if sayfa_basi:
+            n = 0
+        tampon = io.BytesIO()
+        c = _cv.Canvas(tampon, pagesize=(sf["gen"], sf["yuk"]))
+        c.setFont("Helvetica", 9)
+        x = sol if sol is not None else 70.9      # 25 mm kenar boslugu
+        for (y0, y1) in sf["satir"]:
+            n += 1
+            if n % her:
+                continue
+            # reportlab kokeni sol-ALT; pdftotext sol-UST verir.
+            c.drawRightString(x, sf["yuk"] - y1 + 2.0, str(n))
+        c.save()
+        tampon.seek(0)
+        ust = PdfReader(tampon).pages[0]
+        sayfa = oku.pages[i]
+        sayfa.merge_page(ust)
+        yaz.add_page(sayfa)
+    with open(cikis, "wb") as f:
+        yaz.write(f)
+
+
+def pdf_bol(giris, parcalar):
+    """parcalar: [(cikti_yolu, ilk, son)] -- 1 tabanli, kapali aralik."""
+    from pypdf import PdfReader, PdfWriter
+    oku = PdfReader(giris)
+    for yol_, a, b in parcalar:
+        yaz = PdfWriter()
+        for k in range(a - 1, b):
+            yaz.add_page(oku.pages[k])
+        with open(yol_, "wb") as f:
+            yaz.write(f)
+
+
+def pdf_sayfa(yol):
+    """Bir PDF'in sayfa sayisi (pdfinfo)."""
+    import subprocess
+    c = subprocess.run(["pdfinfo", yol], capture_output=True, text=True)
+    for satir in c.stdout.splitlines():
+        if satir.startswith("Pages:"):
+            return int(satir.split()[1])
+    raise RuntimeError("sayfa sayisi okunamadi: " + yol)
+
+
 async def main():
+    import tempfile
+    MARJ = {"top": "25mm", "bottom": "20mm", "left": "25mm", "right": "20mm"}
+    ALT = ("<div style='width:100%;font-size:9pt;font-family:serif;"
+           "text-align:center;color:#000;padding-top:4mm'>"
+           "<span class='pageNumber'></span> / <span class='totalPages'></span></div>")
     async with async_playwright() as pw:
-        b=await pw.chromium.launch(executable_path=CHROME,args=["--no-sandbox"])
-        pg=await b.new_page()
-        for name,htm,ft in (("01-tarifname",TARIF_HTML,True),("02-istemler",ISTEM_HTML,True),
-                            ("03-ozet",OZET_HTML,False),("04-resimler",RES_HTML,True)):
-            await pg.set_content(htm,wait_until="load")
+        b = await pw.chromium.launch(executable_path=CHROME, args=["--no-sandbox"])
+        pg = await b.new_page()
+
+        async def bas(htm, cikti, araliklar=None, altbilgi=True):
+            await pg.set_content(htm, wait_until="load")
             await pg.emulate_media(media="print")
-            opts=dict(path=f"{OUT}/{name}.pdf",format="A4",print_background=True,
-                      margin={"top":"25mm","bottom":"20mm","left":"25mm","right":"20mm"})
-            if ft:
-                opts.update(display_header_footer=True,
-                    header_template="<div></div>",
-                    footer_template="<div style='width:100%;font-size:9pt;font-family:serif;"
-                                    "text-align:center;color:#000;padding-top:4mm'>"
-                                    "<span class='pageNumber'></span> / <span class='totalPages'></span></div>")
-            await pg.pdf(**opts)
-            print("  ->",name+".pdf")
+            o = dict(path=cikti, format="A4", print_background=True, margin=MARJ)
+            if araliklar:
+                o["page_ranges"] = araliklar
+            if altbilgi:
+                o.update(display_header_footer=True,
+                         header_template="<div></div>", footer_template=ALT)
+            await pg.pdf(**o)
+
+        # 1) Her bolumun KENDI sayfa sayisi olculur. Bolumler birlesik
+        #    belgede yeni sayfada basladigi icin toplam, bolum bolum
+        #    sayilarin toplamina esittir; sinirlar buradan cikar.
+        gec = tempfile.mkdtemp()
+        say = []
+        for ad, htm in (("t", TARIF_HTML), ("i", ISTEM_HTML), ("o", OZET_HTML)):
+            p = os.path.join(gec, ad + ".pdf")
+            await bas(htm, p, altbilgi=False)
+            say.append(pdf_sayfa(p))
+        n1, n2, n3 = say
+        print("  sayfa: tarifname %d, istemler %d, ozet %d  (toplam %d)"
+              % (n1, n2, n3, n1 + n2 + n3))
+
+        # 2) Uc bolum TEK belge olarak basilir -> sayfa numaralari
+        #    surekli akar. Once satir numarasiz basilir, sonra gercek
+        #    satir kutulari olculup numaralar damgalanir, en son
+        #    parcalara bolunur.
+        BIRLESIK = belge(TARIF_IC, ISTEM_IC, OZET_IC)
+        ham = os.path.join(gec, "birlesik-ham.pdf")
+        await bas(BIRLESIK, ham)
+        num = os.path.join(gec, "birlesik.pdf")
+        satir_numarala(ham, num)
+        pdf_bol(num, [("%s/01-tarifname.pdf" % OUT, 1, n1),
+                      ("%s/02-istemler.pdf" % OUT, n1 + 1, n1 + n2),
+                      ("%s/03-ozet.pdf" % OUT, n1 + n2 + 1, n1 + n2 + n3)])
+        print("  -> 01-tarifname.pdf (1-%d), 02-istemler.pdf (%d-%d), "
+              "03-ozet.pdf (%d-%d)"
+              % (n1, n1 + 1, n1 + n2, n1 + n2 + 1, n1 + n2 + n3))
+
+        # 3) Resimler ayri: bildirimde adi gecmiyor, satir numarasi da
+        #    istenmiyor; kendi numaralandirmasiyla basiliyor.
+        await pg.set_content(RES_HTML, wait_until="load")
+        await pg.emulate_media(media="print")
+        await pg.pdf(path=OUT + "/04-resimler.pdf", format="A4",
+                     print_background=True, margin=MARJ,
+                     display_header_footer=True,
+                     header_template="<div></div>", footer_template=ALT)
+        print("  -> 04-resimler.pdf")
         await b.close()
+
+
 asyncio.run(main())

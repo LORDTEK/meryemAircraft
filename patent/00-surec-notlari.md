@@ -131,3 +131,49 @@ Ders: PDF üretildikten sonra her sayfa görüntü olarak açılıp bakılmalıd
 - [x] ~~PDF'leri hazırla~~
 - [ ] IEEE 2016 (Xu grubunun eski çalışması) okunmalı — istem daraltması gerekebilir
 - [ ] Ücret tarifesi kontrol (araştırma talebi dâhil)
+
+---
+
+## Şekli inceleme yanıtı — 2026/014570 (bildirim 31.08.2026)
+
+TÜRKPATENT şekli inceleme bildirimi dört eksik saydı. Dördü de giderildi
+ve her biri **ölçülerek** doğrulandı (üretildi demek düzeldi demek
+değil). Yanıt için son tarih: bildirimden itibaren iki ay.
+
+| # | İstenen | Yapılan | Doğrulama |
+|---|---|---|---|
+| 1 | Tarifname → İstemler → Özet'te birbirini takip eden sayfa numarası | Üç bölüm tek belge olarak dizilip `page_ranges` ile bölündü | 1/12…8/12, 9/12…11/12, 12/12 |
+| 2 | Üç bölümde satır numaralandırması | Üretilen PDF'ten gerçek satır kutuları okunup damgalandı | 315 satır denetlendi, 58 numaralı, **hata 0** |
+| 3 | Buluş başlığı Özet'e eklenmeli, aynı olmalı | Aynı `BASLIK` değişkeninden geliyor | İki PDF'in başlığı **birebir aynı** |
+| 4 | Özet'teki şekil ve "Yayımlanacak şekil:" ibaresi çıkarılmalı | Gömülü PNG kaldırıldı, ibare "Şekil 1"e indirildi | Gömülü görüntü **0**, "Yayımlanacak" **0** |
+
+**Kapsam aşımı yok.** Tarifname ve İstemler metin kaynakları
+(`tarifname_icerik.py`, `01-tarifname.md`, `02-istemler.md`)
+değiştirilmedi — `git diff` boş. Özet'teki iki değişiklik (başlık
+eklenmesi, şeklin çıkarılması) bildirimin kendi talebidir.
+
+### Satır numaralandırmada iki hata yaptım, ikisi de ölçümle bulundu
+
+1. Satır kutularını **tarayıcıda** ölçüyordum (1280 px genişlik), PDF
+   ise A4 baskı alanında (165 mm) diziliyordu — satır sonları farklıydı.
+   Düzeltme: gövde genişliği 165 mm'ye sabitlendi.
+2. Bu düzelttikten sonra 1. sayfa tuttu ama 5. ve 8. sayfalar kaydı.
+   Nedeni: başlıklardaki `break-after: avoid` sayfalama sırasında
+   içeriği itiyor, mutlak konumlu numaralar yerinde kalıyordu.
+
+Tahmin etmeyi bırakıp **üretilen PDF'ten** ölçmeye geçildi:
+`pdftotext -bbox-layout` ile her sayfadaki gerçek satır kutuları okunup
+numaralar `reportlab` ile oraya damgalanıyor. Tablo hücreleri ayrı
+`<line>` geldiği için aynı görsel satırdakiler birleştiriliyor.
+
+### ÇÖZÜLMEMİŞ: numaralandırma düzeni doğrulanamadı
+
+Bildirimin işaret ettiği **Patent-Faydalı Model Başvuru Kılavuzu'na
+erişemedim** (ağ vekili 403 döndürüyor). Bu yüzden şu seçim
+**doğrulanmamıştır**: numaralar **her sayfada** 5, 10, 15… diye
+başlıyor (PCT Kural 11.8'in "sets of five" uygulaması). Alternatif,
+bölüm boyunca sürekli numaralandırmadır.
+
+Değiştirmek tek satır: `mkpdf.py` içinde `SATIR_SAYFA_BASI = False`.
+
+**Kılavuz indirilip bakılmadan gönderilmemelidir.**
