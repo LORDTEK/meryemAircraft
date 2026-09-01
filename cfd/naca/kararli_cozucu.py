@@ -45,7 +45,16 @@ from kuvvet import hesapla                             # noqa: E402
 from kilit import Kilit                                # noqa: E402
 
 KOK = "/tmp/kararli_cozucu"
-ADIM = 4000
+# ADIM ve varyantlar -- ortam kisiti yuzunden daraltildi.
+#
+# Bu ortamda konteyner, oturum bosa dustugunde yeniden basliyor ve kosan
+# her sey oluyor (bu oturumda UC kez oldu). Yani hesap, tek bir etkin
+# adimin icinde bitmeli. 36864 hucrede yineleme maliyeti 0,1345 s
+# olculdu, yani 3000 yineleme ~400 s: bir adima sigar.
+#
+# GAMG varyanti YENIDEN KOSULMUYOR cunku ayni vaka kalinlik
+# calismasinda zaten GAMG ile kosuldu ve degerleri kayitli (asagida).
+ADIM = 3000
 # Ayni vakanin GAMG ile verdigi degerler (olculdu)
 GAMG_4000 = dict(CD=0.013920, CL=+2.6e-2)
 URANS_GIDIS = 0.01357          # URANS'in gevsedigi deger (ustel disdegerleme)
@@ -66,8 +75,7 @@ def kalintilar(vaka):
     return out
 
 
-VARYANT = [("gamg", None),
-           ("pcg_dic", ("        solver          GAMG;\n"
+VARYANT = [("pcg_dic", ("        solver          GAMG;\n"
                         "        smoother        GaussSeidel;\n",
                         "        solver          PCG;\n"
                         "        preconditioner  DIC;\n"))]
