@@ -943,6 +943,79 @@ Pratik sonuç: SA için y⁺ ≈ 1 seçimi ölçülmüş bir dayanağa sahip ve
 duvar çözünürlüğü belirsizliği **%0,8**. SST için "seçilmiş y⁺" diye bir
 şey yoktur — hangi y⁺ seçilirse ona karşılık bir cevap çıkar.
 
+## %25 kesiti: URANS sonucu, ve İKİ yanlış iddiamın düzeltmesi
+
+Bu satır için iki kez yanlış şey söyledim. İkisi de burada duruyor.
+
+**Yanlış 1 (kararlı çözücüye bakarak):** *"Akış kararsız; firar kenarı
+ayrılması iki yüzey arasında taraf değiştiriyor."* Belirtiler gerçekti
+(C_L ±2,6×10⁻², kalıntılar yükseliyor, ayrılma t=2000'de 23 yüz hepsi
+üstte, t=4000'de 8 üst/20 alt) ama **yorum yanlıştı**: bunlar akışın
+değil, SIMPLE çözücüsünün ürettiği asimetrilerdi.
+
+**Yanlış 2 (URANS'ın ilk yarısına bakarak):** *"Akış kararlı; C_L üstel
+sönümleniyor, C_D 0,01357'ye oturuyor."* Bu da erkendi — o sırada
+salınımın yalnızca ilk yarım çevrimini görmüştüm.
+
+**Doğrusu (t = 1,86'ya, yani 1,9 veter geçiş süresine kadar koşuldu):**
+
+| büyüklük | ölçülen |
+|---|---|
+| C_L | \|C_L\| ≤ 3,5×10⁻⁷ boyunca — **simetrik, dökülme yok** |
+| C_D bandı | 0,013720 (t=0,60) … 0,014014 (t=1,09) |
+| zaman ortalaması, t = 0,60–1,85 | **C_D = 0,013872** |
+| salınım genliği | **±%1,06** |
+
+Yani akış **simetriktir ve dökülmez**, ama kararlı da değildir: C_D
+yavaş, simetrik bir kipte ±%1 salınıyor (ayrılma bölgesi nefes alıyor).
+t = 1,86'da hâlâ tam oturmamıştı; daha uzun koşmak bu satırın
+belirsizliğini ağ belirsizliğinin (%1,3) altına indirmezdi, o yüzden
+pencere ortalaması ve bandı **olduğu gibi** raporlanıyor.
+
+Kararlı çözücünün aynı vakada verdikleri, karşılaştırma için:
+
+| | C_D | zaman ortalamasına göre |
+|---|---:|---:|
+| kararlı, 4000 adım | 0,013920 | +%0,34 |
+| kararlı, 16000 adım | 0,013542 | **−%2,38** |
+
+Uzun koşmak **daha kötü** yaptı — savrulduğunun ayrı bir kanıtı.
+
+### Kararlı çözücü neden başarısız? Basınç lineer çözücüsü DEĞİL
+
+Hipotez kurulmuştu: aynı ağda GAMG basınç denkleminde tıkanıyor (en-boy
+oranı 5000, dik-olmayanlık 61°), belki SIMPLE her adımda tutarsız bir
+basınç alanıyla ilerliyor. Sınandı ve **çürüdü**:
+
+| çözücü | C_D | C_L | Ux kalıntısı | p kalıntısı |
+|---|---:|---:|---|---|
+| GAMG | 0,013920 | +2,6e−2 | yükseliyor | — |
+| PCG+DIC | 0,013892 | +1,99e−2 | yükseliyor (1,27) | **düşüyor** (0,065) |
+
+Basınç kalıntısı artık düzgün düşüyor — lineer çözücü işini yapıyor — ve
+başarısızlık yine de sürüyor. Demek ki sorun momentum/türbülans
+eşleşmesinde. Nedeni bulunamadı; **rapor ediliyor, gizlenmiyor.**
+
+### Kalınlık çalışmasının sonucu
+
+| t/c | C_D | NF (xtr→0) | oran |
+|---|---:|---:|---:|
+| %12 | 0,009933 | 0,010113 | 0,982 |
+| %18 | 0,011460 | 0,011813 | 0,970 |
+| %25 | 0,013872 ±%1,06 | 0,014146 | 0,981 |
+
+**Oranların oranı** — geçiş uyuşmazlığına dayanıklı ölçü:
+
+| | değer |
+|---|---:|
+| (%18 oranı)/(%12 oranı) | 0,988 |
+| **(%25 oranı)/(%12 oranı)** | **0,998** |
+
+**İki boyutta, %12 ile %25 arasında şerit kuramı kalınlıkla
+ayrışmıyor.** Oran 1'den ayırt edilemiyor. Bu, 2. basamağın cevabıdır:
+kök kesitindeki belirsizlik kalınlıktan değil, **üç boyutluluktan**
+gelmelidir — ve onu 3. basamak ölçecek.
+
 ## Sırada
 
 - **3-B gövde** (ikinci makalenin 3. adımı): birincil model SA ile.
