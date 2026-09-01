@@ -46,6 +46,23 @@ def nu_oku(vaka):
     return float(e.group(1))
 
 
+
+_AG_BELLEK = {}
+
+
+def ag_oku(vaka):
+    """Agi bir kez okur ve saklar.
+
+    Neden: zamana bagli bir kosunun kuvvet gecmisini cikarmak icin
+    hesapla() her yazilmis zaman icin cagriliyor ve her cagride agi
+    bastan okuyordu. 600 yazimli bir kosuda bu, dakikalar suruyor ve
+    olcumu pratikte imkansiz kiliyordu. Ag zaman icinde degismez.
+    """
+    a = os.path.abspath(vaka)
+    if a not in _AG_BELLEK:
+        _AG_BELLEK[a] = (Ag(vaka), nu_oku(vaka))
+    return _AG_BELLEK[a]
+
 def hesapla(vaka, yama="duvar", alfa=0.0, Uinf=1.0, Aref=1.0, zaman=None,
             mertebe=1):
     """mertebe=1  duvar gradyani tek hucreden: dU/dn = U_t1 / d1
@@ -58,9 +75,8 @@ def hesapla(vaka, yama="duvar", alfa=0.0, Uinf=1.0, Aref=1.0, zaman=None,
     gibi gorunen bir egilim aslinda KESTIRIMIN yakinsamasi olabilir.
     Ikinci mertebe bunu ayirt eder.
     """
-    ag = Ag(vaka)
+    ag, nu = ag_oku(vaka)
     z = zaman or son_zaman(vaka)
-    nu = nu_oku(vaka)
     p = Alan(vaka, z, "p")
     U = Alan(vaka, z, "U", vektor=True)
     nut = Alan(vaka, z, "nut") if os.path.exists(

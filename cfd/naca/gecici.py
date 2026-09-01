@@ -64,14 +64,48 @@ def gecmis(vaka):
     return out
 
 
-def periyot(g, alan=2):
-    """C_L'nin (ya da C_D'nin) sifir gecislerinden periyot kestirimi.
+def salinim_alani(g):
+    """Periyodu HANGI isaretten olcecegimizi VERIYE bakarak secer.
+
+    Neden gerekli: periyot() varsayilan olarak C_L'yi kullaniyordu ve bu,
+    bu vaka icin YANLIS SECIMDI. %25 kesitindeki salinim SIMETRIKTIR --
+    ayrilma bolgesi nefes aliyor, taraf degistirmiyor -- dolayisiyla C_L
+    -1,2e-7'de sabit kaliyor (gurultu duzeyi) ve C_D +-%1 salini yor.
+    C_L'den periyot olcmeye calismak gurultu olcmek olurdu.
+
+    Olcut, genligin ORTAK bir olcege gore buyuklugudur: C_D'nin
+    ortalamasi. Isaretin KENDI ortalamasina bolmek YANLISTIR ve bu bir
+    kez denendi -- simetrik profilde C_L'nin ortalamasi sifira yakin
+    oldugu icin oran patliyor ve gurultu "en buyuk salinim" gibi
+    gorunuyordu (olculdu: C_L icin 1,36, C_D icin 0,02; secim C_L'ye
+    gitti ve yanlisti). Sifira bolmenin kilik degistirmis hali.
+    """
+    n0 = len(g) // 3
+    d = g[n0:]
+    olcek = abs(sum(x[1] for x in d) / len(d))       # ortalama C_D
+    if olcek < 1e-12:
+        return 1, 0.0
+    en_iyi, sec = -1.0, 1
+    for alan in (1, 2):
+        v = [x[alan] for x in d]
+        bagil = (max(v) - min(v)) / olcek
+        if bagil > en_iyi:
+            en_iyi, sec = bagil, alan
+    return sec, en_iyi
+
+
+def periyot(g, alan=None):
+    """C_D'nin (ya da C_L'nin) ortalamayi kesislerinden periyot kestirimi.
+
+    alan=None ise isaret salinim_alani() ile VERIDEN secilir.
 
     Ortalamadan sapmanin isaret degistirdigi yerler bulunur; ardisik iki
     gecis yarim periyottur. Ilk ucte birlik gecis suresi atilir.
     """
     if len(g) < 8:
         return None
+    if alan is None:
+        alan, _ = salinim_alani(g)
     n0 = len(g) // 3
     d = g[n0:]
     ort = sum(v[alan] for v in d) / len(d)
