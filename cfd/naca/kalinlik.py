@@ -51,43 +51,38 @@ Bu yuzden karsilastirma iki referansla yapiliyor:
                               dogrusal geri atim; tamamen turbulansliya
                               en yakin savunulabilir NeuralFoil degeri
 
-UYARI -- %25 SATIRI GECERSIZDIR (olculdu, varsayilmadi):
+%25 SATIRI KARARLI COZUMLE ALINAMAZ (olculdu, varsayilmadi) --
+ama nedeni, ilk yazdigimdan BASKA cikti. Ikisi de kayitta:
 
-Kararli RANS %25 kesitinde YAKINSAMIYOR. Uc ayri belirti ayni seyi
-soyluyor. Asagidaki sayilar ILK kosudan (kOmegaSST); ayni teshis SA ile
-de yapildi ve ayni cikti -- yani bu, modele degil AKISA ait:
+  YANLIS 1 (kararli cozucuye bakarak): "akis kararsiz, firar kenari
+  ayrilmasi taraf degistiriyor". Belirtiler gercekti: C_L simetrik
+  profilde +-2,6e-2, hiz kalintilari yukseliyor, ayrilma t=2000'de 23
+  yuz hepsi ustte, t=4000'de 8 ust / 20 alt. Ama yorum yanlisti --
+  bunlar akisin degil, SIMPLE cozucusunun urettigi asimetrilerdi.
 
-  SA ile olculen (makaleye giden kosu):
-    C_L = +2,6e-2   (%12'de +6,4e-7, %18'de +1,1e-3)
-    Ux kalintisi  1,28e-4 -> 1,59e-4  YUKSELIYOR
-    Uy kalintisi  9,62e-3 -> 1,19e-2  YUKSELIYOR
-    Ayrilma TARAF DEGISTIRIYOR: t=2000'de 23 yuz, HEPSI ustte;
-    t=4000'de 28 yuz, 8 ust / 20 alt.
-    Karsilastirma: %12'de hic ayrilma yok; %18'de yalnizca firar kenari
-    noktasinda 1 ust + 1 alt, yani simetrik ve durgun.
+  YANLIS 2 (URANS'in ilk yarisina bakarak): "akis kararli, C_D
+  0,01357'ye oturuyor". Bu da erkendi: salinimin yalnizca ilk yarim
+  cevrimi gorulmustu.
 
-  kOmegaSST ile olculen (ilk kosu):
-  - C_L = +0,048. Simetrik profil, sifir hucum acisi: C_L sifir olmak
-    zorunda. %12'de -4e-6, %18'de +5e-6, %25'te +5e-2.
-  - Ux kalintisi dusmuyor, YUKSELIYOR: 1,4e-5 -> 1,6e-4.
-  - Firar kenarindaki ayrilma bolgesi iki yuzey arasinda TARAF
-    DEGISTIRIYOR: t = 2000'de 18 ust / 7 alt, t = 4000'de 0 ust / 21 alt.
-    (ortak/ayrilma.py)
+  DOGRUSU (URANS t = 1,86'ya, yani 1,9 veter gecis suresine kadar):
+      |C_L| <= 3,5e-7 boyunca  -> SIMETRIK, dokulme YOK
+      C_D bandi 0,013720 (t=0,60) ... 0,014014 (t=1,09)
+      zaman ortalamasi t = 0,60-1,85 :  C_D = 0,013872
+      salinim genligi +-%1,06
+  Akis simetrik ve dokulmuyor, ama kararli da degil: ayrilma bolgesi
+  yavas ve simetrik bir kipte nefes aliyor. t = 1,86'da hala tam
+  oturmamisti; daha uzun kosmak bu satirin belirsizligini ag
+  belirsizliginin (%1,3) altina indirmezdi, o yuzden pencere ortalamasi
+  ve bandi oldugu gibi raporlaniyor.
 
-Yani %25'te akis kararli degil; firar kenari ayrilmasi salintili ve
-kararli cozucu onu kovaliyor. Kararli C_D (SST'de 0,012408, SA'da
-0,013920) kararli bir cozum DEGILDIR ve oran olarak kullanilamaz.
+  Kararli cozucunun ayni vakada verdikleri: 4000 adimda 0,013920
+  (+%0,34), 16000 adimda 0,013542 (-%2,38). Uzun kosmak DAHA KOTU
+  yapti -- savruldugunun ayri bir kaniti.
 
-%18 AYRI BIR DURUMDUR ve karistirilmamalidir. Orada ayrilma yalnizca
-firar kenari noktasindadir, simetriktir ve iki yazim arasinda
-degismiyor; kalintilar da hala DUSUYOR (son %10'da oran 0,63). Yani
-akis kararli, sadece 4000 adim yetmemis. Bu yuzden %18 icin dogru islem
-URANS degil, DAHA UZUN kosudur (ADIM parametresi).
-
-Bunun projeye bakan yuzu daha onemli: kok kesitimiz %25'tir. Demek ki
-orada hem kararli RANS hem de XFOIL/NeuralFoil (ki o da kararli, yapisik
-ya da ilimli ayrilmis akis varsayar) rahat bolgelerinin disinda
-calisiyor. Dogru islem zamana bagli cozum (URANS) ve zaman ortalamasidir.
+  Basarisizligin nedeni basinc lineer cozucusu DEGIL: PCG+DIC ile
+  basinc kalintisi duzgun dusuyor (oran 0,065) ama C_L yine +1,99e-2 ve
+  hiz kalintilari yine yukseliyor (naca/kararli_cozucu.py). Neden
+  bulunamadi; rapor ediliyor.
 
 ASIL OLCU: ORANLARIN ORANI.
 Gecis islemindeki uyusmazlik her kalinlikta AYNI yonde ve yaklasik ayni

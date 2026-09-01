@@ -58,19 +58,27 @@ ama nedeni bulunamamış bir kusur var. Bu yüzden birincil model SA.
 > of twenty-five percent thickness, and the flow over the centre body of
 > a blended-wing body is not two-dimensional."
 
-Ölçtüğümüz şey bunu doğruluyor ve **bir adım öteye taşıyor**: %25
-kalınlıkta sorun yalnızca üç boyutluluk değil. O kesitte akış, *iki
-boyutta bile* kararlı değildir — firar kenarı ayrılması iki yüzey
-arasında taraf değiştiriyor (t=2000'de 23 yüz hepsi üstte, t=4000'de
-8 üst / 20 alt), C_L simetrik profilde +2,6×10⁻² çıkıyor ve hız
-kalıntıları düşmek yerine yükseliyor. Yani şerit kuramının dayandığı
-XFOIL/NeuralFoil de, kararlı RANS da o kalınlıkta kendi geçerlilik
-bölgelerinin dışında çalışıyor. Bu, ilk makalenin iddiasını zayıflatmaz —
-güçlendirir, çünkü zayıf halkanın *nerede ve neden* koptuğunu adlandırır.
+**Bu paragrafın ilk hâli yanlıştı ve düzeltildi.** Önce şöyle
+yazmıştım: *"%25'te akış iki boyutta bile kararlı değildir — ayrılma iki
+yüzey arasında taraf değiştiriyor."* Belirtiler gerçekti ama kaynağı
+yanlış teşhis etmiştim: o taraf değiştirme **akışın değil, kararlı
+çözücünün** ürettiği bir asimetriydi. Zamana bağlı çözüm bunu gösterdi.
 
-Karşılaştırma için, aynı ölçütle: %12'de hiç ayrılma yok; %18'de yalnızca
-firar kenarı noktasında, simetrik ve durgun. Kırılma %18 ile %25
-arasında.
+Ölçülen (URANS, t = 1,86'ya kadar): %25 kesitinde akış **simetriktir ve
+dökülmez** (|C_L| ≤ 3,5×10⁻⁷), ama kararlı da değildir — C_D yavaş,
+simetrik bir kipte **±%1,06** salınıyor. Zaman ortalaması
+C_D = 0,013872.
+
+Ve asıl sonuç şu: **kalınlık, iki boyutta şerit kuramını bozmuyor.**
+Oranların oranı (%25 / %12) = 0,998 — 1'den ayırt edilemiyor. Demek ki
+kök kesitindeki belirsizlik kalınlıktan değil, **üç boyutluluktan**
+gelmelidir. Bu, ilk makalenin iddiasını zayıflatmaz; tersine, zayıf
+halkanın *hangi* mekanizmadan koptuğunu daraltır ve 3. basamağın neyi
+ölçmesi gerektiğini söyler.
+
+Yan bulgu, kendi başına kayda değer: kararlı RANS bu kesitte
+yakınsamıyor ve nedeni basınç lineer çözücüsü değil (sınandı,
+çürütüldü). Bu, çözücünün bir sınırıdır ve rapor edilmiştir.
 
 ## Araçlar ve iki engel
 
