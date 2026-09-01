@@ -200,6 +200,14 @@ def kur(dizin, kod="0012", Re=6e6, alfa=0.0, yplus=1.0,
               "        relTol          0.01;\n    }\n")
 
     if gecici:
+        # Zamana bagli dalda ANA p de PCG+DIC (yukaridaki gerekce).
+        cozucu = cozucu.replace(
+            "    p\n    {\n" + P_COZ,
+            "    p\n    {\n"
+            "        solver          PCG;\n"
+            "        preconditioner  DIC;\n"
+            "        tolerance       1e-9;\n", 1)
+
         # PIMPLE son dis duzeltmede "Final" cozucu girdilerini arar ve
         # onlarsiz calismaz. Final adimda relTol = 0 verilir: o adim zaman
         # adiminin sonucunu belirledigi icin bagil degil MUTLAK toleransa
@@ -231,6 +239,23 @@ def kur(dizin, kod="0012", Re=6e6, alfa=0.0, yplus=1.0,
         # gevsetmeye gerek birakmiyor. Tolerans 1e-7'de tutuldu; 1e-9'a
         # inmek olculebilir bir sey kazandirmiyor (cozum zaten ayni) ama
         # maliyet ekliyor.
+        # ... VE ANA p COZUCUSU DE. Ilk duzeltmede yalnizca pFinal
+        # degistirilmisti; kiyas t ~ 0,03'te yapilmisti ve ORASI TEMSILI
+        # DEGILDI. O anda kalintilar buyuk (ilk kalinti ~2,6e-4) ve
+        # GAMG'nin p cozumu 6-36 yinelemede bitiyordu. Akis oturdukca ilk
+        # kalinti 9e-6'ya dustu; relTol 0,01 yine iki mertebe indirme
+        # istiyor ve GAMG bunu bu agda yapamiyor -- olculdu: 662, 471,
+        # 1000 yineleme. Sonuc: adim maliyeti 2,3 s'e cikti, yani
+        # duzeltmeden onceki 2,9 s'e geri donmustu.
+        #
+        # Ders: bir hiz kiyasi, kosunun TEMSILI bir aninda alinmali.
+        # Gecici rejimin basi, yakinsamis rejimi temsil etmiyor.
+        #
+        # Bu degisiklik YALNIZCA zamana bagli dala uygulaniyor. Kararli
+        # dal dokunulmadan birakildi: butun dogrulanmis 2-B sonuclari
+        # onunla uretildi ve lineer cozucunun yakinsamis cozumu
+        # degistirmedigi olculmus olsa da (yedi anlamli basamak),
+        # gereksiz yere degistirmiyorum.
         P_SON = ("        solver          PCG;\n"
                  "        preconditioner  DIC;\n"
                  "        tolerance       1e-7;\n")
