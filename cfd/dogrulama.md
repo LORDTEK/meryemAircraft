@@ -1694,3 +1694,63 @@ kıymık olması ve azami en-boy oranının 145 825 çıkması.** Varsayılan
 tam yumuşatmada bırakıldı; `taban_lam` ölçülmüş kayıt olarak kodda.
 
 2-B doğrulama zinciri bu turda da bit bit korundu.
+
+### "Taban ile izi ayrı ayrı yürütmek" — YAPILMADAN ÇÜRÜTÜLDÜ (02.09.2026)
+
+Öneri şuydu: tabanın ışınsal yönünü izinkinden ayrı bir alan olarak kur.
+Uygulamadan önce iki şey ölçüldü ve öneri **düştü**.
+
+**1. Ham normaller zaten doğru.** "Merkezi fark 90°'lik köşede bozuk
+normal veriyor" diye düşünmüştüm; ölçüm çürüttü:
+
+| i | konum | ham normal |
+|---|---|---|
+| 63 | iz | (0,000, −1,000) |
+| 64 | **köşe** | (+0,619, −0,786) ≈ açıortay |
+| 65, 66 | taban | (+1,000, 0,000) |
+
+Alan zaten segment segment doğru. Ayrı kurmanın kazandıracağı bir şey yok.
+
+**2. Asıl engel geometrik, alan değil.** Doğru ve ayrı normallerle iki
+ışının kesiştiği yer hesaplandı:
+
+    iz ışını    : (1,000200, 0) yönünde (0, −1)
+    taban ışını : (1,000000, −1,575e−4) yönünde (+1, 0)
+    kesişim     : (1,000200, −1,575e−4)
+    duvardan uzaklık **1,575e−4** ; ilk hücre yüksekliği **5,348e−4**
+
+**Işınlar ilk hücrenin içinde kesişiyor.** Yani kütleşen firar kenarının
+tabanı, akış yönünde yürüdüğünde tam da iz kesiğinin bulunduğu bölgeye
+giriyor. Bu bir yumuşatma sorunu değil; C-ağında iz kesiği taban orta
+noktasından başladığı sürece **tabanın dik yürümesine yer yok**.
+
+Dolayısıyla yumuşatma bir "geçici çözüm" değil, çatışmayı önleyen **tek**
+mekanizma: tabanı yana (∓y) yürütüyor. Bedeli, ölçülen kıymık hücreler ve
+azami en-boy oranı 145 825.
+
+**Bunu aşmanın yolu** tabanın etrafına küçük bir O-blok koyup C-kesiğini
+onun akış aşağısından başlatmaktır — yani yine topoloji değişikliği.
+
+### Taban hâlâ gerekli mi? — evet, ölçüldü
+
+Taban, kapağın firar kenarındaki çökmesini önlemek için eklenmişti; kapak
+artık O-H ve hiçbir yerde çökmüyor. O hâlde sivri firar kenarına dönmek
+mümkün mü diye ölçüldü:
+
+| yapılandırma | negatif | azami dikey olm. | çarpıklık | başarısız denetim |
+|---|---|---|---|---|
+| sivri FK + O-H kapak | 149 | 180° | 162,2 | 5 |
+| **kut FK (taban) + O-H kapak** | **0** | **89,7°** | **2,48** | **1** |
+
+Taban hâlâ gerekli — kapak için değil, **halka ağının kendisi** için.
+
+### Şu anki en iyi yapılandırma (ölçülen)
+
+kut firar kenarı (NB=8) + tam yumuşatma + O-H kelebek kapak, y⁺=60,
+dy sabit, mutlak uzak alan:
+
+**0 negatif hücre · 0 yanlış yönlü yüz · azami dikey olmayanlık 89,7° ·
+çarpıklık 2,48 · azami en-boy oranı 145 825 · 1,67 M altı yüzlü hücre**
+
+`checkMesh`'te başarısız olan tek denetim en-boy oranı. Doğrulanmış 2-B ağ
+da o denetimde başarısız (5000).
