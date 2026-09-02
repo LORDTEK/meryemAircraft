@@ -53,7 +53,8 @@ class KanatAgi:
     """istasyon: (z, x_hucum, veter, t/c) dizisi -- kokten uca."""
 
     def __init__(self, istasyon, Re=6e6, yplus=1.0, R=20.0, Xiz=20.0,
-                 n_profil=256, n_normal=96, n_iz=64, veter_ref=1.0):
+                 n_profil=256, n_normal=96, n_iz=64, veter_ref=1.0,
+                 dy_sabit=True):
         if len(istasyon) < 2:
             raise ValueError("en az iki istasyon gerekir")
         z = [s[0] for s in istasyon]
@@ -64,6 +65,27 @@ class KanatAgi:
         self.R, self.Xiz = R, Xiz
         self.NF, self.NJ, self.NW = n_profil, n_normal, n_iz
         self.veter_ref = veter_ref
+        # dy_sabit: duvar araligi butun istasyonlarda AYNI (mutlak) tutulur.
+        #
+        # Neden gerekli. Ilk surumde dy yerel vetere gore olcekleniyordu
+        # (y+ her istasyonda 1 olsun diye). Duz kanatta sorun yoktu -- butun
+        # veterler esit. Gercek planformda veter 0,97'den 0,236'ya iniyor,
+        # yani dy dort kat degisiyor; ustelik ok acisi yuzunden istasyonlar
+        # arasi YANAL kayma 0,13 civarinda, ki bu duvar hucresinin
+        # yuksekliginin ~15 000 kati. Radyal dagilimdaki kucuk uyumsuzluk o
+        # kaldiracla buyuyup hucreyi KATLIYOR.
+        #
+        # Olculdu: dy olceklenince 520 704 hucrenin 6351'i negatif hacimli
+        # cikti; hepsi duvara en yakin 14 katmanda (j = 0..13), profilin
+        # orta bolgesinde (i = 101..250) ve aciklikta tekduze dagilmis --
+        # yani tam da hucrenin ince oldugu yerde.
+        #
+        # Sabit dy, EN KUCUK vetere gore secilir: boylece y+ hedefi butun
+        # aciklik boyunca asilmaz (kokte y+ daha da kucuk olur, ki bu
+        # zararsizdir).
+        self.dy_sabit = dy_sabit
+        self._dy_ort = ilk_hucre_yuksekligi(
+            Re, yplus, min(s[2] for s in self.istasyon))
 
     # ---- duzlemler
     def duzlemler(self):
@@ -71,17 +93,34 @@ class KanatAgi:
 
         Doner: (duzlem_listesi, NI, NJ). duzlem[k][i][j] = (x, y).
         """
+        # Veter dagilimi BIR KEZ, en KALIN kesitten uretilir ve butun
+        # istasyonlara aynen verilir. Boylece i cizgileri her istasyonda
+        # ayni x'te durur (gercek loft cizgisi). En kalin kesit secildi
+        # cunku yay uzunlugu orada en buyuktur; ince kesitlerde ayni x
+        # dagilimi daha da seyrek kalir, tersi olsaydi sikisirdi.
+        en_kalin = max(s[3] for s in self.istasyon)
+        oncu = CAgi(kod=en_kalin, Re=self.Re, yplus=self.yplus,
+                    R=self.R, Xiz=self.Xiz, n_profil=self.NF,
+                    n_normal=self.NJ, n_iz=self.NW)
+        dagilim = oncu.veter_dagilimi()
+
         duzlem, NI, NJ = [], None, None
         for (z, xle, veter, tc) in self.istasyon:
             # Uzak alan ve iz MUTLAK; CAgi birim veterde calistigi icin
             # yerel vetere bolunerek veriliyor.
-            ag = CAgi(kod=naca_kodu(tc), Re=self.Re, yplus=self.yplus,
+            # Kalinlik KESIRLI geciriliyor (naca_kodu ile yuvarlanmiyor):
+            # gercek planformda t/c kokten uca surekli degisir, tam
+            # yuzdeye yuvarlamak istasyonlar arasinda basamak birakirdi.
+            ag = CAgi(kod=tc, Re=self.Re, yplus=self.yplus,
                       R=self.R / veter, Xiz=self.Xiz / veter,
-                      n_profil=self.NF, n_normal=self.NJ, n_iz=self.NW)
+                      n_profil=self.NF, n_normal=self.NJ, n_iz=self.NW,
+                      profil_x=dagilim)
             # Duvar araligi YEREL veterle: y+ yerel Reynolds'a baglidir.
             # CAgi'nin kendi hesabi birim veter varsayar, o yuzden
             # olcekleme sonrasi dogru cikacak degerle degistiriliyor.
-            ag.dy = ilk_hucre_yuksekligi(self.Re, self.yplus, veter) / veter
+            # CAgi birim veterde calisir; mutlak dy'yi ona bolerek veriyoruz.
+            ag.dy = (self._dy_ort if self.dy_sabit
+                     else ilk_hucre_yuksekligi(self.Re, self.yplus, veter)) / veter
             P, ni, nj = ag.uret()
             if NI is None:
                 NI, NJ = ni, nj

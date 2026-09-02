@@ -77,7 +77,13 @@ def naca4(kod, x, kapali=True):
                               - 0.357907906 * x ** 2
                               + 0.291984971 * x ** 3
                               - 0.105174606 * x ** 4)
-    t = int(kod[-2:]) / 100.0
+    # kod bir DIZGE ("0012") ya da dogrudan t/c degeri (0.2338) olabilir.
+    #
+    # Gercek planformda kalinlik kokten uca SUREKLI degisiyor (%25 -> %12);
+    # dort haneli koda cevirmek onu tam yuzdeye yuvarlar ve istasyonlar
+    # arasinda basamak birakir. Kesirli deger bunu onler. Dizge yolu
+    # DEGISMEDI: dogrulanmis butun vakalar ("0012" vb.) aynen calisir.
+    t = int(kod[-2:]) / 100.0 if isinstance(kod, str) else float(kod)
     c4 = -0.1036 if kapali else -0.1015
     return 5 * t * (0.2969 * math.sqrt(max(x, 0.0)) - 0.1260 * x
                     - 0.3516 * x ** 2 + 0.2843 * x ** 3 + c4 * x ** 4)
@@ -177,7 +183,8 @@ class CAgi:
                  R=20.0, Xiz=20.0, kalinlik=1.0, kapali=True,
                  n_profil=256, n_normal=96, n_iz=64,
                  fk_hucre=2e-4, hk_hucre=2e-4, iz_cikis=1.0, dis_hucre=1.5,
-                 n_sigma=None, fk_pencere=None, gecis=0.3, en_boy=5000.0):
+                 n_sigma=None, fk_pencere=None, gecis=0.3, en_boy=5000.0,
+                 profil_x=None):
         self.kod, self.Re, self.kapali = kod, Re, kapali
         self.R, self.Xiz, self.kalinlik = R, Xiz, kalinlik
         self.NF, self.NJ, self.NW = n_profil, n_normal, n_iz
@@ -196,6 +203,20 @@ class CAgi:
             0.02 * max(1.0, eg / eg0)
         self.n_sigma = n_sigma if n_sigma is not None else self.fk_pencere / 2
         self.gecis, self.en_boy = gecis, en_boy
+        # profil_x: (x, isaret) ciftlerinden olusan SABIT veter dagilimi.
+        #
+        # Varsayilan (None) davranis DEGISMEDI: noktalar kesitin kendi yay
+        # uzunluguna gore dagitilir. Bu iki boyutta dogrudur, ama uc boyutta
+        # kalinlik aciklik boyunca degistiginde yay uzunlugu da degisir ve
+        # i'nci nokta her istasyonda BASKA bir x'e duser -- i cizgileri
+        # gercek loft cizgisi olmaktan cikar. Duvar hucresi 9e-6 inceliginde
+        # oldugu icin bu kayma hucreleri KATLAR.
+        #
+        # Olculdu: yalnizca kalinligi degistiren bir kanatta 3582 negatif
+        # hacimli hucre; yalnizca ok acisi ya da yalnizca sivrilme
+        # degistiginde SIFIR. Yani kusuru doguran kalinlik degil, kalinliga
+        # bagli DAGILIMDI.
+        self.profil_x = profil_x
         self.dy = ilk_hucre_yuksekligi(Re, yplus)
         self.xc = 0.25                       # dis cemberin merkezi
 
@@ -208,11 +229,27 @@ class CAgi:
         ust = [(x, naca4(self.kod, x, self.kapali)) for x in ince]
         ham = alt + ust[1:]                  # HK bir kez
         _, L = _uzunluk(ham)
+        if self.profil_x is not None:
+            # Verilen veter dagilimi aynen kullanilir; kesit yalnizca
+            # kalinligi belirler. Boylece i cizgileri butun istasyonlarda
+            # ayni x'te durur ve loft duzgun olur.
+            p = [(x, isaret * naca4(self.kod, x, self.kapali))
+                 for (x, isaret) in self.profil_x]
+            return p, L
         yarim = self.NF // 2
         d1 = _iki_uclu(yarim, self.fk / L, self.hk / L, 0.5)          # FK->HK
         d2 = _iki_uclu(self.NF - yarim, self.fk / L, self.hk / L, 0.5)
         hedef = d1[:-1] + [1.0 - v for v in reversed(d2)]
         return _ornekle(ham, hedef), L
+
+    def veter_dagilimi(self):
+        """Bu kesitin urettigi (x, isaret) dagilimi -- baska istasyonlara
+        AYNEN verilmek uzere. isaret alt yuzeyde -1, ust yuzeyde +1."""
+        p, _ = self._profil_egrisi()
+        cik = []
+        for k, (x, y) in enumerate(p):
+            cik.append((x, -1.0 if k < len(p) // 2 else 1.0))
+        return cik
 
     def ic_egri(self):
         """NI = 2*NW + NF + 1 nokta.
