@@ -63,54 +63,7 @@ def kur3b(dizin, ag, kok="symmetryPlane", uc="symmetryPlane", **kw):
     return bilgi
 
 
-KOS = """#!/bin/bash
-# Uc boyutlu vakayi cevirip cozer.  kullanim: kos3b.sh <vaka> [cekirdek]
-set -e
-VAKA="$1"; CEK="${2:-4}"
-. /usr/share/openfoam/etc/bashrc >/dev/null 2>&1
-cd "$VAKA"
-rm -rf constant/polyMesh processor* log.*
-gmshToFoam ag.msh > log.gmshToFoam 2>&1
-
-# gmshToFoam her yamayi 'patch' yapar. Duvarin 'wall' olmasi turbulans
-# modelinin duvar mesafesi ve duvar islemleri icin sarttir. kok/uc'un
-# tipini vakayi kuran belirler; burada 0/U'daki tipten OKUNUR, varsayilmaz.
-python3 - <<'PY2'
-import re, io
-tip = "symmetryPlane"
-s0 = io.open("0/U").read()
-m = re.search(r"\n    kok\n    \{\n\s*type\s+([A-Za-z]+);", s0)
-if m:
-    tip = m.group(1)
-p = "constant/polyMesh/boundary"
-s = io.open(p).read()
-s = re.sub(r"(\n    duvar\n    \{\n\s*)type\s+patch;",
-           r"\1type            wall;", s)
-for a in ("kok", "uc"):
-    s = re.sub(r"(\n    %s\n    \{\n\s*)type\s+patch;" % a,
-               r"\1type            %s;" % tip, s)
-io.open(p, "w").write(s)
-print("  kok/uc tipi: %s" % tip)
-PY2
-
-checkMesh > log.checkMesh 2>&1 || true
-grep -E "Max aspect|non-orthogonality|skewness|negative|Mesh OK|FAILED" log.checkMesh | sed 's/^/  /'
-
-UYG=$(sed -n 's/^ *application *\\([A-Za-z]*\\);.*/\\1/p' system/controlDict | head -1)
-UYG=${UYG:-simpleFoam}
-echo "  cozucu: $UYG"
-if [ "$CEK" -gt 1 ]; then
-  decomposePar > log.decomposePar 2>&1
-  mpirun --allow-run-as-root -np "$CEK" "$UYG" -parallel > log.$UYG 2>&1
-  reconstructPar > log.reconstructPar 2>&1
-else
-  "$UYG" > log.$UYG 2>&1
-fi
-tail -3 log.$UYG
-"""
-
-if __name__ == "__main__":
-    p = os.path.join(BURA, "kos3b.sh")
-    open(p, "w").write(KOS)
-    os.chmod(p, 0o755)
-    print("yazildi:", p)
+# kos3b.sh ELDEN yazilan ayri bir dosyadir; buradan URETILMEZ. Onceki
+# surumde bir dizge olarak burada tutuluyordu ve gomulu Python'un duzenli
+# ifadelerindeki kacislar dizge cozumlemesinde yenerek betigi bozuyordu.
+# Kaba agda yapilan hizli deneme yakaladi.

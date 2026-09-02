@@ -1,5 +1,11 @@
 #!/bin/bash
 # Uc boyutlu vakayi cevirip cozer.  kullanim: kos3b.sh <vaka> [cekirdek]
+#
+# Bu dosya ELDEN yazilir. Onceki surumde kur3b.py icinde bir Python dizgesi
+# olarak tutuluyordu ve gomulu Python'un duzenli ifadelerindeki \n kacislari
+# dizge cozumlemesinde yenip betigi bozuyordu (SyntaxError: unterminated
+# string literal). Uretilen betikte kacis katmani ikiye ciktigi icin boyle
+# oldu; katman kaldirildi.
 set -e
 VAKA="$1"; CEK="${2:-4}"
 . /usr/share/openfoam/etc/bashrc >/dev/null 2>&1
@@ -8,31 +14,21 @@ rm -rf constant/polyMesh processor* log.*
 gmshToFoam ag.msh > log.gmshToFoam 2>&1
 
 # gmshToFoam her yamayi 'patch' yapar. Duvarin 'wall' olmasi turbulans
-# modelinin duvar mesafesi ve duvar islemleri icin sarttir. kok/uc'un
-# tipini vakayi kuran belirler; burada 0/U'daki tipten OKUNUR, varsayilmaz.
+# modelinin duvar mesafesi ve duvar islemleri icin sarttir. kok/uc'un tipi
+# 0/U'dan OKUNUR, varsayilmaz -- vakayi kuran karar verir.
 python3 - <<'PY2'
 import re, io
 tip = "symmetryPlane"
-s0 = io.open("0/U").read()
-m = re.search(r"
-    kok
-    \{
-\s*type\s+([A-Za-z]+);", s0)
+m = re.search(r"\n    kok\n    \{\n\s*type\s+([A-Za-z]+);", io.open("0/U").read())
 if m:
     tip = m.group(1)
 p = "constant/polyMesh/boundary"
 s = io.open(p).read()
-s = re.sub(r"(
-    duvar
-    \{
-\s*)type\s+patch;",
-           r"type            wall;", s)
+s = re.sub(r"(\n    duvar\n    \{\n\s*)type\s+patch;",
+           r"\1type            wall;", s)
 for a in ("kok", "uc"):
-    s = re.sub(r"(
-    %s
-    \{
-\s*)type\s+patch;" % a,
-               r"type            %s;" % tip, s)
+    s = re.sub(r"(\n    %s\n    \{\n\s*)type\s+patch;" % a,
+               r"\1type            %s;" % tip, s)
 io.open(p, "w").write(s)
 print("  kok/uc tipi: %s" % tip)
 PY2
