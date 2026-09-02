@@ -54,7 +54,8 @@ class KanatAgi:
 
     def __init__(self, istasyon, Re=6e6, yplus=1.0, R=20.0, Xiz=20.0,
                  n_profil=256, n_normal=96, n_iz=64, veter_ref=1.0,
-                 dy_sabit=True, normal="kesit"):
+                 dy_sabit=True, normal="kesit",
+                 uc_uzanim=0.0, n_uc=0, n_kapak=16):
         if len(istasyon) < 2:
             raise ValueError("en az iki istasyon gerekir")
         z = [s[0] for s in istasyon]
@@ -95,6 +96,47 @@ class KanatAgi:
         # Uzak alan merkezi ve cikis duzlemi MUTLAK: kok kesitinin ceyrek
         # veterinden ve kok firar kenarindan olculuyor, butun istasyonlarda
         # ayni.
+        # --- UC KAPAGI (duz kapak) ---
+        #
+        # Kanat ucta biter ama AKIS bitmez: uctan disarida da akiskan var
+        # ve profil deligi orada KAPANMALIDIR. Tek bloklu C-agi yiginı bu
+        # topoloji degisimini ifade edemez, o yuzden ikinci bir blok
+        # ekleniyor:
+        #
+        #   - Uc duzleminden disariya n_uc istasyon daha (hepsi UC KESITI
+        #     geometrisiyle; orada kanat yok, profil cizgisi artik duvar
+        #     degil IC cizgidir).
+        #   - Profil kesitini dolduran bir IC BLOK (H-agi): alt yuzeydeki
+        #     m'inci nokta ile ust yuzeydeki NF-m'inci nokta AYNI x'te
+        #     oldugu icin (olculdu: 65 indeksin 65'i) ikisi arasi duzgun
+        #     bolunebiliyor.
+        #   - Bu ic blogun UC DUZLEMINDEKI tabani KAPAK DUVARIDIR.
+        #
+        # Hucum ve firar kenarinda alt ile ust ayni noktaya dustugu icin
+        # oradaki hucreler HEXA degil PRIZMA olarak yazilir; tekrar eden
+        # dugumle hexa yazmak sifir alanli yuz uretirdi.
+        self.n_kapak = n_kapak
+        self.kw = len(self.istasyon)          # kanat istasyonu sayisi
+        if uc_uzanim > 0 and n_uc > 0:
+            zt, xt, ct, tt = self.istasyon[-1]
+            d0 = self.istasyon[-1][0] - self.istasyon[-2][0]
+            # ilk adim kanadin son adimina esit, sonra geometrik buyume
+            # Buyume orani IKIYE BOLEREK cozuluyor. Onceki surum r'yi
+            # 0,01'lik adimlarla ariyordu ve yakinsamiyordu: istenen 20
+            # uzanim icin 7,68 uretti.
+            lo, hi = 1.0, 3.0
+            for _ in range(200):
+                r = (lo + hi) / 2
+                if sum(d0 * r ** i for i in range(n_uc)) < uc_uzanim:
+                    lo = r
+                else:
+                    hi = r
+            r = (lo + hi) / 2
+            zz = zt
+            for i in range(n_uc):
+                zz += d0 * r ** i
+                self.istasyon.append((zz, xt, ct, tt))
+
         z0, x0, c0, _t0 = self.istasyon[0]
         self._xc_abs = x0 + 0.25 * c0
         self._cikis_abs = x0 + c0 + Xiz
@@ -270,7 +312,7 @@ class KanatAgi:
         no = [[[dn(*duzlem[k][i][j]) for j in range(NJ)]
                for i in range(NI)] for k in range(NK)]
 
-        hexler = []
+        hexler, prizmalar = [], []
         yuzler = {"duvar": [], "disalan": [], "cikis": [], "kok": [], "uc": []}
         prof_bas, prof_son = self.NW, self.NW + self.NF
 
@@ -282,7 +324,8 @@ class KanatAgi:
                     e = no[k + 1][i][j];     f = no[k + 1][i + 1][j]
                     g = no[k + 1][i + 1][j + 1]; h = no[k + 1][i][j + 1]
                     hexler.append((a, b, c, d, e, f, g, h))
-                    if j == 0 and prof_bas <= i < prof_son:
+                    if (j == 0 and prof_bas <= i < prof_son
+                            and k < self.kw - 1):
                         yuzler["duvar"].append((a, b, f, e))
                     if j == NJ - 2:
                         yuzler["disalan"].append((d, c, g, h))
@@ -295,6 +338,48 @@ class KanatAgi:
                     if k == NK - 2:
                         yuzler["uc"].append((e, f, g, h))
 
+        # --- IC BLOK (uc kapagi) ---
+        # k = kw-1 .. NK-1 arasinda profil kesitini doldurur; kw-1
+        # duzlemindeki tabani KAPAK DUVARIDIR.
+        if self.kw < NK:
+            M = self.NF // 2
+            NC = self.n_kapak
+            kap = {}
+            for k in range(self.kw - 1, NK):
+                for m in range(M + 1):
+                    L = duzlem[k][prof_bas + m][0]
+                    U = duzlem[k][prof_son - m][0]
+                    for q in range(NC + 1):
+                        t = q / float(NC)
+                        kap[(k, m, q)] = dn(*[L[c] + t * (U[c] - L[c])
+                                              for c in range(3)])
+            for k in range(self.kw - 1, NK - 1):
+                for m in range(M):
+                    for q in range(NC):
+                        # SARIM YONU: once +q (alttan uste), sonra +m (firar
+                        # kenarindan hucum kenarina). Ilk surumde tersiydi --
+                        # (+m)x(+q) ekseni -z'ye bakiyordu, oysa hucrenin
+                        # "ustu" +k = +z. Butun kapak hucreleri SOL ELLI
+                        # cikiyor ve hacimleri negatif oluyordu (olculdu:
+                        # 462 hucre, carpiklik 3,9e15).
+                        a = kap[(k, m, q)];         b = kap[(k, m, q + 1)]
+                        c = kap[(k, m + 1, q + 1)]; d = kap[(k, m + 1, q)]
+                        e = kap[(k + 1, m, q)];     f = kap[(k + 1, m, q + 1)]
+                        g = kap[(k + 1, m + 1, q + 1)]; h = kap[(k + 1, m + 1, q)]
+                        if a == b:            # firar kenari ucu (m=0) capraz
+                            prizmalar.append((a, c, d, e, g, h))
+                            taban, ust = (a, c, d), (e, g, h)
+                        elif c == d:          # hucum kenari ucu (m=M)
+                            prizmalar.append((a, b, c, e, f, g))
+                            taban, ust = (a, b, c), (e, f, g)
+                        else:
+                            hexler.append((a, b, c, d, e, f, g, h))
+                            taban, ust = (a, b, c, d), (e, f, g, h)
+                        if k == self.kw - 1:
+                            yuzler["duvar"].append(taban)   # KAPAK DUVARI
+                        if k == NK - 2:
+                            yuzler["uc"].append(ust)
+
         ad = ["duvar", "disalan", "cikis", "kok", "uc"]
         L = ["$MeshFormat", "2.2 0 8", "$EndMeshFormat",
              "$PhysicalNames", str(len(ad) + 1)]
@@ -306,20 +391,28 @@ class KanatAgi:
         for i, (x, y, zz) in enumerate(sira):
             L.append("%d %.10g %.10g %.10g" % (i + 1, x, y, zz))
         L += ["$EndNodes", "$Elements",
-              str(len(hexler) + sum(len(v) for v in yuzler.values()))]
+              str(len(hexler) + len(prizmalar)
+                  + sum(len(v) for v in yuzler.values()))]
         e = 0
         for i, a in enumerate(ad):
             for yz in yuzler[a]:
                 e += 1
-                L.append("%d 3 2 %d %d %s" % (e, i + 1, i + 1,
-                                              " ".join(map(str, yz))))
+                # gmsh: 3 = dortgen, 2 = ucgen
+                L.append("%d %d 2 %d %d %s" % (e, 3 if len(yz) == 4 else 2,
+                                               i + 1, i + 1,
+                                               " ".join(map(str, yz))))
         for hx in hexler:
             e += 1
             L.append("%d 5 2 %d %d %s" % (e, len(ad) + 1, len(ad) + 1,
                                           " ".join(map(str, hx))))
+        for pz in prizmalar:                       # gmsh: 6 = prizma
+            e += 1
+            L.append("%d 6 2 %d %d %s" % (e, len(ad) + 1, len(ad) + 1,
+                                          " ".join(map(str, pz))))
         L += ["$EndElements", ""]
         open(yol, "w").write("\n".join(L))
-        return dict(dugum=len(sira), hucre=len(hexler),
+        return dict(dugum=len(sira), hucre=len(hexler) + len(prizmalar),
+                    hexa=len(hexler), prizma=len(prizmalar),
                     NI=NI, NJ=NJ, NK=NK,
                     duvar=len(yuzler["duvar"]))
 
