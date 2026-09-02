@@ -1028,3 +1028,94 @@ menüsü var — sayısal veri yok, sayfa içeriği sonradan yükleniyor olmalı
 `kaynak/` altındaki üç "Print To PDF" dosyası da salt görüntü; metin
 katmanı taşımıyorlar. Yani bu üç dosyadan hiçbir sayı okunamadı ve
 hiçbiri bir sayısal iddianın dayanağı değildir.
+
+---
+
+## R=200 alan anomalisi — kapandı (02.09.2026)
+
+2-B'de açık kalan son maddeydi. İki ayrı ölçümle kapandı; biri **hipotezi
+çürüttü**, öteki **anomaliyi ayrıştırdı**.
+
+### Hipotez ÇÜRÜTÜLDÜ
+
+Yazılı hipotez şuydu: SA'nın taşıdığı nuTilda'nın yok olma terimi
+~(nuTilda/d)² biçimindedir; alan büyüdükçe d büyür, yok olma zayıflar,
+girişten gelen nuTilda daha az bozunarak sınır tabakasına ulaşır ve daha
+büyük girdap viskozitesi daha yüksek sürükleme verir.
+
+**Birinci ölçüm — duyarlılık var ve yönü uyuyor** (`sa_serbest.py`,
+R=200, üç serbest akış değeri):
+
+| nuTilda∞ | C_D | yerleşiğe göre |
+|---|---|---|
+| 3ν | 0,008432 | — |
+| 0,3ν | 0,008396 | −0,43% |
+| 0,03ν | 0,008372 | −0,72% |
+
+Düşüş tekdüze ve yönü hipotezle uyumlu. Büyüklük de yeterli görünüyordu:
+açıklanması gereken %0,31 için bir onluk nuTilda değişimi %0,43 veriyor.
+
+**İkinci ölçüm — mekanizma yok** (`nutilda_ulasan.py`). Hipotez, R=200'de
+profile *ulaşan* nuTilda'nın R=100'dekinden büyük olmasını gerektirir.
+Durma çizgisi üzerinde, hücum kenarının önünde ölçüldü:
+
+| x | nuTilda (R=100) | nuTilda (R=200) | oran |
+|---|---|---|---|
+| −0,50 | 5,000007e−07 | 5,000010e−07 | 1,0000 |
+| −0,20 | 5,000035e−07 | 5,000044e−07 | 1,0000 |
+| −0,10 | 5,000065e−07 | 5,000085e−07 | 1,0000 |
+| −0,05 | 5,000140e−07 | 5,000177e−07 | 1,0000 |
+| −0,02 | 5,000218e−07 | 5,000318e−07 | 1,0000 |
+
+Serbest akış değeri 3ν = 5,0e−07. **nuTilda hiç bozunmuyor** — ne
+R=100'de ne R=200'de. Nicel denetim %0,31'i açıklamak için ~5 kat oran
+istiyordu; ölçülen **1,0000**. Üç mertebe eksik.
+
+Yani hipotezin (b) şıkkı gerçekleşti: **hipotez yanlıştır.** Serbest akış
+nuTilda'sının C_D'yi etkilediği doğru, ama bu etki *sınır koşulunun
+değerinden* geliyor, yol boyunca bozunmadan değil — bozunma yok. Alan
+boyutu bu değeri değiştirmiyor.
+
+### Anomali AYRIŞTIRILDI
+
+Asıl sebep başka yerdeydi ve tarama tasarımının kendisindeydi. `alan.py`,
+büyüme oranını sabit tutmak için `n_normal`'ı her R için yeniden seçiyordu:
+
+    R=20 → 96 katman, R=50 → 103, R=100 → 108, R=200 → 113
+
+Yani R=100'den R=200'e geçerken **iki şey birden** değişti. Ayrıldı
+(`alan_ayristir.py`):
+
+| vaka | C_D |
+|---|---|
+| R=100, n=108 | 0,008406 |
+| R=100, n=113 | 0,008388 |
+| R=200, n=113 | 0,008432 |
+
+| etki | değer |
+|---|---|
+| saf alan (n=113 sabit, R 100→200) | **+0,52%** |
+| uzak alan çözünürlüğü (R=100, n 108→113) | **−0,21%** |
+| toplam | **+0,31%** |
+
+Taramanın R=100→R=200 için ölçtüğü değer de **+0,31%**. Aritmetik
+kapanıyor: gözlenen "anomali", zıt işaretli iki etkinin toplamıdır.
+
+### Yöntem bulgusu
+
+Bu ağ ailesinde **alan boyutu ile uzak alan çözünürlüğü bağımsız
+değiştirilemez.** R'yi büyütüp hem `n_normal`'ı hem büyüme oranını sabit
+tutmak mümkün değildir; biri sabitlenirse öteki kayar. Dolayısıyla "saf
+alan taraması" diye bir şey yoktur ve `alan.py`'nin büyüme oranını
+sabitleme önlemi bir karıştırıcıyı diğeriyle değiştirmiştir. Sonucu
+geçersiz kılmaz ama **ne ölçüldüğünü** değiştirir ve makalede böyle
+yazılmalıdır.
+
+Büyüklük bağlamı: hem toplam (%0,31) hem saf alan etkisi (%0,52), ağ
+belirsizliği olarak ölçülen **GCI %1,29**'un altındadır.
+
+### Tekrarlanabilirlik
+
+İki yerleşik değer sıfırdan yeniden kurulup yeniden çözüldü ve birebir
+çıktı: R=200/n=113 → **0,008432**; R=100/n=108 → **0,008406**. Yukarıdaki
+farklar kurulum gürültüsü değildir.
