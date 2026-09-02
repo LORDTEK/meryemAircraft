@@ -1119,3 +1119,54 @@ belirsizliği olarak ölçülen **GCI %1,29**'un altındadır.
 İki yerleşik değer sıfırdan yeniden kurulup yeniden çözüldü ve birebir
 çıktı: R=200/n=113 → **0,008432**; R=100/n=108 → **0,008406**. Yukarıdaki
 farklar kurulum gürültüsü değildir.
+
+---
+
+## 3-B ağ üreteci — sınama (02.09.2026, sürüyor)
+
+Üreteç yeni koddur; üzerine kanat kurup sonuç üretmeden önce kendisi
+sınanıyor. Sınama: sabit kesitli, ok açısız, sivrilmesiz kanat, iki ucunda
+da `symmetryPlane`. Akış açıklık boyunca değişmez — problem **fiziksel
+olarak iki boyutludur** ve doğrulanmış 2-B sonucunu yeniden üretmelidir.
+
+İki kurulum arasındaki **tek fark ağdır**: alan dosyaları, şemalar, çözücü
+ayarları ve türbülans kurulumu ikisine de `naca/kur.py`'den aynı şekilde
+geliyor (`kur3b.py`).
+
+| vaka | hücre | C_D | 2-B'ye göre | C_L |
+|---|---|---|---|---|
+| 2-B (`empty`) | 43 392 | 0,008388 | — | −4,04e−07 |
+| 3-B nk=2 (`symmetryPlane`) | 43 392 | 0,008409 | **+0,249%** | −1,33e−07 |
+| 3-B nk=3 | 86 784 | 0,008409 | **+0,249%** | — |
+| 3-B nk=5 | 173 568 | *koşuyor* | | |
+
+### Beklenti (b) tuttu: açıklık çözünürlüğü etkisiz
+
+nk 2→3'te açıklık yönündeki hücre sayısı ikiye katlandı ve C_D **altı
+basamakta değişmedi**.
+
+Bu aynı zamanda bir ayırt etme veriyor. nk=2'de açıklık yönündeki tek
+hücre 0,1 genişliğinde ve ağın azami en-boy oranı **11 304**; nk=5'te aynı
+oran **4999**'a, yani iki boyutlu ağın değerine iniyor. Buna rağmen nk=2
+ile nk=3 birebir aynı. Demek ki +0,249%, açıklık çözünürlüğünün ya da
+en-boy oranının artefaktı **değil**.
+
+### Kalan aday: `empty` ile `symmetryPlane` farkı
+
+`empty` boyutu tamamen kaldırır; `symmetryPlane` onu tutar ve z yüzlerini
+ayrıklaştırmaya dâhil eder. Akış açıklıkta değişmediği için fizik aynı
+olmalı, ama ayrıklaştırma aynı değil — bu, **sabit bir kayma** üretir.
+Ölçülen de sabit bir kayma. Beklenti (a) "binde birkaç" diyordu; binde 2,5
+bunun içinde ama kenarında.
+
+Sıradaki adım, bu kaymanın kaynağını doğrudan ölçmek: aday, SA'nın merkezî
+değişkeni olan **duvar uzaklığı** alanının iki formülasyonda farklı
+hesaplanması. Kayma bir kez ölçülüp anlaşıldıktan sonra, 3-B sonuçları
+2-B'ye bu bilinen kaymayla bağlanabilir.
+
+### Ağ yığmanın kendisi bozulma katmıyor (ayrı kontrol)
+
+Aynı ayarlarla (96×48×24, R=20) kurulan 2-B ve 3-B ağların `checkMesh`
+çıktıları **on basamak birebir**: azami dikey olmayanlık 74,97839532,
+azami çarpıklık 0,3463110026. Açıklık yönünde yığma, ağa hiçbir ek bozulma
+katmıyor.
