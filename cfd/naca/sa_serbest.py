@@ -62,7 +62,12 @@ if __name__ == "__main__":
             vaka = os.path.join(KOK, "c%g" % c)
             kur(vaka, kod="0012", Re=6e6, alfa=0.0, yplus=1.0,
                 n_profil=256, n_normal=113, n_iz=64, R=200.0, Xiz=200.0,
-                adim=3000, yaz_araligi=1500, model="SpalartAllmaras")
+                adim=3000, yaz_araligi=250, model="SpalartAllmaras")
+            # yaz_araligi 1500 -> 250: konteyner uc kez yeniden basladi
+            # ve her seferinde o ana kadarki is kayboldu. Yazim araligi
+            # cozumu DEGISTIRMEZ, yalnizca diske ne siklikta kaydedildigini
+            # belirler; sik yazim, yeniden baslamada devam.sh'in en fazla
+            # 250 adim geriden basmasini saglar.
             # nuTilda serbest akis degerini degistir.
             #
             # Metin degistirme kirilgandir: aranan dizge ("5e-07") cok
