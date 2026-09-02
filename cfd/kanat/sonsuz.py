@@ -51,10 +51,19 @@ from kilit import Kilit                               # noqa: E402
 KOK = "/tmp/kanat_sonsuz"
 AG = dict(n_profil=256, n_normal=113, n_iz=64, R=100.0, Xiz=100.0)
 ORTAK = dict(kod="0012", Re=6e6, alfa=0.0, yplus=1.0,
-             adim=3000, yaz_araligi=1500, model="SpalartAllmaras", **AG)
+             adim=3000, yaz_araligi=250, model="SpalartAllmaras", **AG)
 ACIKLIK = 0.1                 # veter cinsinden; symmetryPlane oldugu icin
                               # deger onemsiz -- akis aciklikta degismiyor
 NK = [2, 3, 5]                # dilim sayisi taramasi
+
+
+def son_adim(vaka):
+    """Ayristirilmis vakada son yazilan zaman; yoksa None."""
+    d = os.path.join(vaka, "processor0")
+    if not os.path.isdir(d):
+        return None
+    z = [int(a) for a in os.listdir(d) if a.isdigit()]
+    return max(z) if z else None
 
 
 def kos(vaka, cek=4):
@@ -72,9 +81,16 @@ if __name__ == "__main__":
         # --- iki boyutlu referans, AYNI kod yolundan yeniden uretiliyor
         if "2b" not in yapilan:
             v = os.path.join(KOK, "2b")
-            kur2b(v, **ORTAK)
-            subprocess.run([os.path.join(BURA, "..", "naca", "kos.sh"), v, "4"],
-                           check=True)
+            # Yarim kalmis vakayi SURDUR, sifirdan kurma. Konteyner bosta
+            # kalinca komple geri aliniyor; kur() dizini sildigi icin her
+            # kesinti butun ilerlemeyi yok ediyordu (sa_serbest'te olculdu).
+            if son_adim(v) is None:
+                kur2b(v, **ORTAK)
+                subprocess.run([os.path.join(BURA, "..", "naca", "kos.sh"),
+                                v, "4"], check=True)
+            else:
+                subprocess.run([os.path.join(BURA, "..", "naca", "devam.sh"),
+                                v, "3000", "4"], check=True)
             r = hesapla(v, alfa=0.0, mertebe=2)
             cikti.append(dict(ad="2b", nk=0, **{k: r[k] for k in
                               ("CD", "CL", "CD_viskoz", "CD_basinc")}))
@@ -87,11 +103,17 @@ if __name__ == "__main__":
             if ad in yapilan:
                 continue
             v = os.path.join(KOK, ad)
-            ag = duz_kanat(ACIKLIK, nk, kod="0012", Re=6e6, yplus=1.0, **AG)
-            b = kur3b(v, ag, **ORTAK)
-            print("  %s: %d hucre (%dx%dx%d)"
-                  % (ad, b["hucre"], b["NI"], b["NJ"], b["NK"]), flush=True)
-            kos(v)
+            if son_adim(v) is None:
+                ag = duz_kanat(ACIKLIK, nk, kod="0012", Re=6e6, yplus=1.0, **AG)
+                b = kur3b(v, ag, **ORTAK)
+                print("  %s: %d hucre (%dx%dx%d)"
+                      % (ad, b["hucre"], b["NI"], b["NJ"], b["NK"]), flush=True)
+                kos(v)
+            else:
+                print("  %s: %d. adimdan surduruluyor" % (ad, son_adim(v)),
+                      flush=True)
+                subprocess.run([os.path.join(BURA, "..", "naca", "devam.sh"),
+                                v, "3000", "4"], check=True)
             r = hesapla(v, alfa=0.0, mertebe=2)
             # Uc boyutta kuvvet, aciklik boyunca butun duvar yuzlerinden
             # toplanir; iki boyutluyla karsilastirmak icin acikliga bolunur.
