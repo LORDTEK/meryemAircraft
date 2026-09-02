@@ -30,7 +30,10 @@ def belge(*bolumler):
             "<body><div class='gov'>" + ic + "</div></body></html>")
 
 # ---------- TARIFNAME ----------
-n=0; parts=[f"<h1>{E(BASLIK)}</h1>"]
+# Kilavuz (Patent kilavuz 2022, s.13): "Tarifnamenin en basina
+# 'TARIFNAME', bunun altina da 'Bulus Basligi' yazilmalidir."
+# s.18'deki sema da ayni sirayi gosteriyor: once TARIFNAME, altinda baslik.
+n=0; parts=[f"<h2 class='unsur'>TARİFNAME</h2><h1>{E(BASLIK)}</h1>"]
 for kind,val in TARIFNAME:
     if kind=="h2":  parts.append(f"<h2>{E(val)}</h2>")
     elif kind=="h3":parts.append(f"<h3>{E(val)}</h3>")
@@ -65,7 +68,9 @@ ISTEM=[
 "Önceki istemlerden herhangi birine uygun bir hava aracının çalıştırılmasına ilişkin yöntem olup, özelliği; dikey uçuştan yatay uçuşa geçişin, aracın tırmanışı kesilmeden başlatılması ve giriş anındaki tırmanış hızının dönüş süresince dikey momentum rezervi olarak kullanılmasıdır.",
 ]
 ist="".join(f"<li>{E(t)}</li>" for t in ISTEM)
-ISTEM_IC=f"<h1>İSTEMLER</h1><ol class='claims'>{ist}</ol>"
+# Kilavuz (s.13): "Istem sayfasinin basina SADECE 'ISTEMLER' ifadesi
+#  yazilmalidir." -> baslik tekrarlanmiyor.
+ISTEM_IC=f"<h2 class='unsur'>İSTEMLER</h2><ol class='claims'>{ist}</ol>"
 ISTEM_HTML=page(ISTEM_IC,"İstemler")
 
 # ---------- OZET ----------
@@ -78,7 +83,10 @@ OZ=('Buluş, dikey kalkış ve iniş yapabilen, seyir uçuşunu kanat üzerinde 
 #                                                       kaldirildi.
 #  - "'Yayimlanacak sekil: Sekil 1' ibaresindeki 'Yayimlanacak sekil:'
 #     kismi cikartilmalidir."  -> yalnizca "Şekil 1" kaldi.
-OZET_IC=("<h1>" + E(BASLIK) + "</h1><h2 class='center'>ÖZET</h2><p>" + E(OZ) +
+# Kilavuz (s.15): "Ozetin en basina 'OZET', bunun altina da bulus
+#  basligi yazilmalidir." -> sira OZET, sonra baslik. Ilk surumde
+#  tersiydi; kilavuz okununca duzeltildi.
+OZET_IC=("<h2 class='unsur'>ÖZET</h2><h1>" + E(BASLIK) + "</h1><p>" + E(OZ) +
          "</p><p class='center' style='margin-top:9mm'><b>Şekil 1</b></p>")
 OZET_HTML=page(OZET_IC,"Özet")
 
@@ -168,7 +176,13 @@ def satir_numarala(giris, cikis, her=SATIR_HER, sayfa_basi=SATIR_SAYFA_BASI,
         tampon = io.BytesIO()
         c = _cv.Canvas(tampon, pagesize=(sf["gen"], sf["yuk"]))
         c.setFont("Helvetica", 9)
-        x = sol if sol is not None else 70.9      # 25 mm kenar boslugu
+        # Numaralar SAGA yaslanir; bu x, numaranin SAG kenari.
+        # 31 mm secildi: iki haneli numara ~27.8 mm'de basliyor, yani
+        # kilavuzun (s.18) 2,5 cm asgari sol marjinin SAGINDA kaliyor;
+        # metin ise 34 mm'de basladigi icin arada 3 mm bosluk var.
+        # Ilk surumde 25 mm idi -- numaralar marjin ICINE tasiyordu
+        # (olculdu: 21,5 mm). Kilavuz okununca duzeltildi.
+        x = sol if sol is not None else 87.9      # 31 mm
         for (y0, y1) in sf["satir"]:
             n += 1
             if n % her:
@@ -210,9 +224,27 @@ def pdf_sayfa(yol):
 async def main():
     import tempfile
     MARJ = {"top": "25mm", "bottom": "20mm", "left": "25mm", "right": "20mm"}
+    # Sayfa numarasi bicimi -- kilavuz s.15 ve s.18:
+    #
+    #   "Resim sayfalarinin numaralandirilmasi, DIGERLERINDEN FARKLI
+    #    olmalidir. Bu numaralandirma, 'ilgili sayfanin numarasi / toplam
+    #    resim sayfasi sayisi' seklinde olmalidir."
+    #
+    # Yani "n / toplam" bicimi RESIM sayfalarina ait; tarifname/istem/ozet
+    # sayfalari ondan farkli, yani DUZ ARDISIK numara tasimali. s.18'deki
+    # sema da bunu gosteriyor: metin sayfasinda altta ortada yalniz "1",
+    # resim sayfasinda ustte "1/3".
+    #
+    # Ilk surumde metin sayfalari da "1 / 12" bicimindeydi -- ikisi ayni
+    # oluyordu; kilavuz okununca duzeltildi.
     ALT = ("<div style='width:100%;font-size:9pt;font-family:serif;"
            "text-align:center;color:#000;padding-top:4mm'>"
-           "<span class='pageNumber'></span> / <span class='totalPages'></span></div>")
+           "<span class='pageNumber'></span></div>")
+    # Resim sayfalari: "n/toplam", sema uyarinca sayfanin USTUNDE.
+    RES_UST = ("<div style='width:100%;font-size:9pt;font-family:serif;"
+               "text-align:right;color:#000;padding:6mm 20mm 0 0'>"
+               "<span class='pageNumber'></span>/"
+               "<span class='totalPages'></span></div>")
     async with async_playwright() as pw:
         b = await pw.chromium.launch(executable_path=CHROME, args=["--no-sandbox"])
         pg = await b.new_page()
@@ -264,7 +296,7 @@ async def main():
         await pg.pdf(path=OUT + "/04-resimler.pdf", format="A4",
                      print_background=True, margin=MARJ,
                      display_header_footer=True,
-                     header_template="<div></div>", footer_template=ALT)
+                     header_template=RES_UST, footer_template="<div></div>")
         print("  -> 04-resimler.pdf")
         await b.close()
 

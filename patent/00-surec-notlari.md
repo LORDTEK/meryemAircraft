@@ -177,3 +177,94 @@ bölüm boyunca sürekli numaralandırmadır.
 Değiştirmek tek satır: `mkpdf.py` içinde `SATIR_SAYFA_BASI = False`.
 
 **Kılavuz indirilip bakılmadan gönderilmemelidir.**
+
+---
+
+## Kılavuz denetimi (02.09.2026)
+
+Başvuru sahibi, TÜRKPATENT **Patent/Faydalı Model Başvuru Kılavuzu**'nu
+(`kaynakca/7178ed2b-...pdf`, "Patent kılavuz 2022", 48 s.) repoya koydu.
+Şekli inceleme bildirimine verilen cevap, kılavuza karşı **birinci elden**
+denetlendi. Bildirimde adı geçmeyen **dört uygunsuzluk daha** çıktı.
+
+Belirleyici kaynak, kılavuzun **s.18**'indeki kenar marjı şeması: tarifname
+ve resim sayfalarının nasıl görünmesi gerektiğini tek çizimde gösteriyor.
+
+### Bildirimin dört maddesi — durum değişmedi, hepsi karşılanıyor
+
+Sayfa numaralarının sürekliliği, satır numaralandırması, Özet'e başlık
+eklenmesi, Özet'ten şeklin çıkarılması: dördü de yerinde.
+
+### Kılavuzdan çıkan, bildirimde olmayan dört düzeltme
+
+**1. Satır numarası aralığı — DEĞİŞİKLİK YOK, doğrulandı.**
+> s.15: "Her bir sayfanın satırları, her beş satırda bir; beş ve beşin
+> katları olacak şekilde numaralandırılmalıdır."
+
+"Her bir sayfanın" ifadesi, numaralandırmanın **her sayfada yeniden**
+başladığını söylüyor. s.18 şeması da bunu gösteriyor (tek sayfada
+5…35). Kodda `SATIR_SAYFA_BASI = True` zaten böyleydi. Cevap gönderilmeden
+önce açık bırakılan tek soru buydu; kılavuz onu kapattı.
+
+**2. "TARİFNAME" başlığı eksikti — EKLENDİ.**
+> s.13: "Tarifnamenin en başına 'TARİFNAME', bunun altına da 'Buluş
+> Başlığı' yazılmalıdır."
+
+Belge doğrudan buluş başlığıyla başlıyordu. s.18 şemasında ilk satır
+"TARİFNAME", altındaki buluş başlığı; ilk satır numarası (5) "Teknik
+Alan"a düşüyor. Üretilen belgede de öyle: TARİFNAME=1, başlık=2-4,
+TEKNİK ALAN=5.
+
+**3. Özette sıra tersti — DÜZELTİLDİ.**
+> s.15: "Özetin en başına 'ÖZET', bunun altına da buluş başlığı
+> yazılmalıdır."
+
+Bildirime cevapta başlık **üstte**, "ÖZET" **altta** konmuştu. Kılavuz
+bunun tersini istiyor. Sıra çevrildi. (Başlığın tarifnamedekiyle aynı
+olma şartı zaten kodla garanti — ikisi de tek `BASLIK` değişkeninden.)
+
+**4. Sayfa numarası biçimi yanlıştı — DÜZELTİLDİ.**
+> s.15: "Resim sayfalarının numaralandırılması, **diğerlerinden farklı**
+> olmalıdır. Bu numaralandırma, 'ilgili sayfanın numarası / toplam resim
+> sayfası sayısı' şeklinde olmalıdır."
+
+"n/toplam" biçimi **resim sayfalarına ait**. Metin sayfaları ondan farklı,
+yani düz ardışık numara taşımalı. Bizde ikisi de "n / toplam" idi. s.18
+şeması açık: metin sayfasında altta ortada yalnız "1", resim sayfasında
+üstte "1/3". Ayrıldı: metin 1…12, resim 1/5…5/5 (üstte, sağda).
+
+**5. Satır numaraları sol marja taşıyordu — DÜZELTİLDİ.**
+Ölçüldü: numaraların sol kenarı kâğıt kenarından **21,5 mm**'deydi;
+kılavuzun (s.18) asgari sol marjı **2,5 cm**. Numaralar sağa kaydırıldı
+(sağ kenarları 31 mm); iki haneli numara 27,8 mm'de başlıyor, metin
+34 mm'de. Yeni ölçüm: 27,5 mm. Hem kılavuzun asgari marjına hem PCT
+Kural 11.8'in "marjın sağında" şartına uyuyor.
+
+### Değişiklik gerekmediği ölçülerek doğrulananlar
+
+| Şart (kılavuz) | Bizde | Sonuç |
+|---|---|---|
+| Sol marj 2,5–4 cm | 27,5 mm | ✔ |
+| Sağ marj 2–3 cm | 20,1 mm | ✔ |
+| Üst 2–4 cm / alt 2 cm | 25 / 20 mm | ✔ |
+| Satır arası 1,5 | 20,25 pt ölçüldü (Word 1,5 ≈ 19,8 pt) | ✔ |
+| "İstem sayfasının başına SADECE 'İSTEMLER'" | başlık tekrarlanmıyor | ✔ |
+| Her unsur yeni sayfada | `break-before: page` | ✔ |
+| Resimde çerçeve/renk/gölge yok, yazı yok | yalnız referans no + "Şekil n" | ✔ |
+| Bültende yayımlanacak resim ilk sayfada | Şekil 1 ilk sayfada | ✔ |
+
+### Doğrulama
+
+`denetle.py` üretilen PDF'leri ölçerek denetliyor (görsel kontrol değil):
+
+- sayfa numaraları: `['1'…'12']`, tarifname→istemler→özet sırasında sürekli
+- resim sayfaları: `['1/5'…'5/5']`, üstte, metinden farklı biçimde
+- satır numaraları: **316 satır, 59 numaralı, 0 hata** (5'in katlarında var,
+  diğerlerinde yok — ikisi de denetleniyor)
+- başlık tarifname ile özette birebir aynı
+- özette gömülü resim yok, "Yayımlanacak" geçmiyor
+- marjlar sınırlar içinde
+
+**Kapsam aşımı yok.** `tarifname_icerik.py`, `01-tarifname.md`,
+`02-istemler.md`, `03-ozet.md` üzerinde `git diff` boş; 17 istemin hepsi
+yerinde. Değişenlerin tamamı dizgi (`mkpdf.py`, `mkpdf_css.py`).

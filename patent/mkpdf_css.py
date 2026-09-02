@@ -40,6 +40,14 @@ li.sub { margin-bottom: 2mm; text-align: justify; }
    icinde. Bu yuzden sayfa kenar boslugu (25 mm) DEGISTIRILMEDI; metin
    9 mm iceri alindi ve numaralar o oluga kondu. */
 .gov { position: relative; padding-left: 9mm; }
+
+/* Unsur basligi: TARIFNAME / ISTEMLER / OZET. Kilavuz (s.13 ve s.15)
+   bu ifadenin sayfanin EN BASINA, bulus basliginin ise ONUN ALTINA
+   yazilmasini istiyor; s.18'deki sema da ayni sirayi gosteriyor.
+   Ilk surumde baslik ustte, unsur adi altta idi -- ters cevrildi. */
+.unsur { text-align: center; font-size: 12pt; font-weight: bold;
+         letter-spacing: 1.2px; margin: 0 0 7mm 0; break-after: avoid; }
+.unsur + h1 { margin-top: 0; }
 .satirno { position: absolute; left: 0; width: 6mm; text-align: right;
            font-size: 9pt; line-height: 1; color: #000; }
 .fig { page-break-after: always; text-align:center; }
