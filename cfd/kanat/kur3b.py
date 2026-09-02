@@ -26,7 +26,16 @@ sys.path.insert(0, BURA)
 from kur import kur as kur2b                          # noqa: E402
 
 
-def kur3b(dizin, ag, kok="symmetryPlane", uc="serbest", duvar_fonk=True, **kw):
+P_GAMG_DICGS = ("    p\n    {\n"
+                "        solver          GAMG;\n"
+                "        smoother        DICGaussSeidel;\n"
+                "        tolerance       1e-9;\n"
+                "        relTol          0.01;\n"
+                "    }\n")
+
+
+def kur3b(dizin, ag, kok="symmetryPlane", uc="serbest", duvar_fonk=True,
+          p_cozucu=P_GAMG_DICGS, **kw):
     """ag: KanatAgi ornegi. kw, naca/kur.py'nin kur()'una gecer."""
     kw.setdefault("kod", "0012")
     bilgi2 = kur2b(dizin, **kw)
@@ -96,7 +105,32 @@ def kur3b(dizin, ag, kok="symmetryPlane", uc="serbest", duvar_fonk=True, **kw):
     if n == 0:
         raise RuntimeError("0/ bos -- kur2b calismamis olabilir")
 
-    # 3) 2B'ye ozgu sema kalintisi kalmadigini dogrula
+    # 3) BASINC COZUCUSU -- uc boyutta olculerek secildi
+    #
+    # Iki boyutlu vaka GAMG + GaussSeidel kullaniyor ve orada sorun yok.
+    # Uc boyutlu agda ayni ayar COKUYOR: basinc cozumu adim basina 206
+    # iterasyon yapiyor (saglikli agda 5-20). Sebep, agin azami en-boy
+    # oraninin 145 825 olmasi -- GAMG'nin yuz alanina dayali topaklamasi
+    # (agglomeration) bu anizotropide ise yaramiyor.
+    #
+    # Ince agda (1,67 M hucre, 4 cekirdek) olculdu:
+    #
+    #   GAMG GaussSeidel      38,3 s/adim   p-iter 206
+    #   GAMG DICGaussSeidel   17,6 s/adim   p-iter  38
+    #   PCG  + DIC            12,3 s/adim   p-iter 185
+    #
+    # Bu degisiklik YALNIZCA uc boyutlu vakaya uygulanir; naca/kur.py'ye
+    # dokunulmaz, boylece dogrulanmis iki boyutlu zincir bit bit korunur.
+    if p_cozucu:
+        yol = os.path.join(dizin, "system", "fvSolution")
+        s = open(yol).read()
+        blok = re.search(r"    p\n    \{.*?\n    \}\n", s, re.S)
+        if not blok:
+            raise RuntimeError("fvSolution icinde p blogu bulunamadi")
+        s = s[:blok.start()] + p_cozucu + s[blok.end():]
+        open(yol, "w").write(s)
+
+    # 4) 2B'ye ozgu sema kalintisi kalmadigini dogrula
     for ad in ("fvSchemes", "fvSolution", "controlDict"):
         s = open(os.path.join(dizin, "system", ad)).read()
         if "empty" in s:
