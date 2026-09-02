@@ -1209,3 +1209,50 @@ Aynı ayarlarla (96×48×24, R=20) kurulan 2-B ve 3-B ağların `checkMesh`
 azami çarpıklık 0,3463110026. Açıklık yönünde yığma, ağa ek bozulma
 katmıyor. nk=5'te azami en-boy oranı da 2-B'nin değerine (4999,999887)
 iniyor.
+
+---
+
+## VLM çapraz denetimi — kurulum ve bulunan kusur (02.09.2026)
+
+3-B CFD'nin karşılaştırılacağı bağımsız araç `aero/vlm.py` (AeroSandbox
+girdap-kafes). Kullanmadan önce **kendisi denetlendi** ve bir kusur çıktı.
+
+### Çözünürlük yakınsamamıştı — ve bunu fiziği aşarak belli etti
+
+Kodun kullandığı çözünürlük (52 şerit) açıklık verimini **e = 1,0067**
+veriyordu. Düzlemsel bir kanatta e **1'i aşamaz**; eliptik yükleme tam 1
+verir. Yani sonuç yakınsamamıştı ve bu, fiziksel sınırın aşılmasından
+anlaşıldı.
+
+Sebep: yakınsama sınaması **dikdörtgen AR=6 kanatta** yapılmış ve bu
+planforma taşındığı varsayılmıştı. Taşınmıyor.
+
+Gerçek planformda ölçüldü (veter çözünürlüğü 12 sabit, α = 4°):
+
+| şerit | e | CL(4°) |
+|---|---|---|
+| 52 (eski varsayılan) | **1,0067** | 0,27044 |
+| 104 | 0,9890 | 0,26988 |
+| 216 | 0,9845 | 0,26946 |
+| Richardson h→0 (p = 1,98) | **0,9830** | — |
+
+Veter yönü de etkiliyor: 104 şeritte veter 12→24 ile e 0,9890 → 0,9936.
+İki yön birlikte düşünüldüğünde **e ≈ 0,98–0,99**.
+
+`CL_α` ise yakınsamış: 52 şeritte 3,874 /rad, 216 şeritte 3,842 /rad —
+altı kat çözünürlükte %0,8 değişim. Gözlenen mertebe düşük (p = 0,42), o
+yüzden Richardson değeri değil **ölçülen aralık** verilmelidir.
+
+Varsayılan çözünürlük 104 şeride çıkarıldı; `yakinsama()` eklendi.
+
+Makaledeki **0,85 varsayımı** karşısında ölçülen 0,98–0,99, kanadın
+varsayılandan belirgin biçimde verimli olduğunu söylüyor — ama sayının
+kendisi bu yakınsama kaydıyla verilmelidir.
+
+### Kendi hesabımda işaret hatası (düzeltildi)
+
+Richardson'u ilk yazışımda `f_ince − (f_ince − f_orta)/(r^p − 1)` kullandım;
+doğrusu **artı**. Yanlış işaret, extrapolasyonu üç ölçümün de dışına
+düşürdü (e için 0,986, CL için 0,27072) — dizi azalırken sınırın en küçük
+değerin altında olması gerektiğinden yakalandı. Düzeltilmiş değerler
+yukarıdadır.
