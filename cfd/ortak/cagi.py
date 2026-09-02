@@ -248,6 +248,7 @@ class CAgi:
         # NB = 0 iken davranis DEGISMEZ; dogrulanmis iki boyutlu zincir
         # bu yoldan hic gecmez.
         self.NB = firar_taban
+        self.taban_lam = 1.0
         if self.NB > 0:
             self.kapali = False
         self.dy = ilk_hucre_yuksekligi(Re, yplus)
@@ -414,8 +415,40 @@ class CAgi:
             L = math.hypot(sx, sy) or 1.0
             return sx / L, sy / L
 
+        # TABAN noktalari yumusatmanin DISINDA tutulur.
+        #
+        # Tabanin normali belirsiz degildir: taban dikey bir dogru, normali
+        # (1,0). Ama yumusatma penceresi YAY UZUNLUGUYLA olculuyor ve taban
+        # yalnizca 2d ~ 2,5e-3 uzunlugunda; en kucuk pencere bile (0,02)
+        # tabani tamamen yutup yerine izin normalini (0,-+1) koyuyor.
+        #
+        # Olculdu -- yurume yonunun TABANLA yaptigi aci (dik olmali, 90):
+        #   fk_pencere 0,02 -> 18,0 derece
+        #              0,06 -> 13,8
+        #              0,12 -> 12,2
+        #              0,25 -> 11,0
+        # Yani hucre tabana neredeyse PARALEL yuruyordu ve duvara bitisik
+        # hucre x-y duzleminde kiymik cikiyordu; agin azami en-boy orani
+        # (145 817) bu hucrededir.
+        taban_ind = set()
+        if self.NB > 0:
+            taban_ind = set(range(self.NW, self.NW + self.NB + 1)) | set(
+                range(self.NW + self.NB + self.NF,
+                      self.NW + 2 * self.NB + self.NF + 1))
         n = []
         for i in range(NI):
+            if i in taban_ind:
+                # Tabanda KISMI yumusatma. Tamamen kapatmak (lam = 0)
+                # olculdu ve KOTU cikti: 90 derecelik sureksizlik isinsal
+                # cizgileri yeniden kesistiriyor (negatif hucre 0 -> 30,
+                # dikey olmayanlik 89 -> 177). Tamamen acmak ise tabani
+                # tabana paralel yuruyor (aci 11 derece). Ara deger.
+                yx, yy = yumusak(i)
+                lam = self.taban_lam
+                nx = (1 - lam) * ham[i][0] + lam * yx
+                ny = (1 - lam) * ham[i][1] + lam * yy
+                L = math.hypot(nx, ny) or 1.0
+                n.append((nx / L, ny / L)); continue
             uz = min(abs(yay[i] - f) for f in fk_yay)
             lam = math.exp(-0.5 * (uz / tau) ** 2)
             if lam < 1e-3:

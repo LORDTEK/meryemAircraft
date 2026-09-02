@@ -1636,3 +1636,61 @@ birebir aynı oranı verdi (145825,5104). Nereden geldiği bulunamadı.
 
 Karşılaştırma: kapaksız ağ 5000, doğrulanmış 2-B ağ 4999,99989. Kapaklı
 ağ hâlâ 30 kat yukarıda ve `checkMesh`'te tek başarısız denetim bu.
+
+### 5,8e−6 nereden geliyor — bulundu (02.09.2026)
+
+**Önce bir düzeltme: 5,8e−6 diye bir uzunluk yok.** Onu
+`en-boy = Δz / en_kısa_kenar` varsayarak geri hesaplamıştım. OpenFOAM'ın
+tanımı bu değil: `checkMesh`'in en-boy oranı, hücrenin yüz alan
+vektörlerinin **yönlere göre toplamlarının** max/min oranıdır
+(Σ|Sf_x|, Σ|Sf_y|, Σ|Sf_z|).
+
+**Azami en-boy oranlı hücre kapakta değil, halka ağında.** Her hücrenin
+oranı doğru formülle hesaplandı:
+
+| blok | azami en-boy |
+|---|---|
+| halka ağı | **145 817** (i=64, j=0) |
+| uç kapağı | 127 433 |
+| checkMesh | 145 825 |
+
+i=64 = NW, yani **firar kenarı taban orta noktası** — iz kesiğinin
+başladığı yer; j=0 = iç eğriye bitişik ilk hücre; en büyük açıklık
+adımının olduğu uç uzanımı istasyonunda.
+
+**Neden bu kadar kötü.** Hücrenin boyutları 3,72e−5 (taban boyunca) ×
+1,26e−4 (yürüme) × 0,841 (açıklık). Dik bir kutu olsa oran 22 588
+olurdu; 145 817 çıkmasının sebebi hücrenin **x-y düzleminde kıymık**
+olması: yürüme yönü (+2,5e−5, −1,24e−4), yani neredeyse tabana paralel.
+
+Ölçüldü — yürüme yönünün tabanla yaptığı açı (dik olmalı, 90°):
+
+| fk_pencere | 18,0° | 13,8° | 12,2° | 11,0° |
+|---|---|---|---|---|
+| | 0,02 | 0,06 | 0,12 | 0,25 |
+
+**Kök sebep:** firar kenarı yumuşatma penceresi yay uzunluğuyla ölçülüyor;
+taban yalnızca 2δ ≈ 2,5e−3 uzunluğunda, yani **en küçük pencere bile
+tabanı tamamen yutuyor** ve tabanın kendi normali (1,0) yerine izin
+normalini (0,∓1) koyuyor.
+
+### Düzeltme denendi — ÖDÜNLEŞME keskin çıktı
+
+Taban noktaları yumuşatmanın dışına alındı: iç noktalar **tam 90°**'ye
+oturdu (uçlar 38°/43°, orada taban gerçekten izle ve yüzeyle buluşuyor).
+Ama ağ **kötüleşti** — 90°'lik süreksizlik ışınsal çizgileri yeniden
+kesiştiriyor. Kısmi yumuşatma da denendi:
+
+| taban yumuşatma | negatif hücre | azami dikey olmayanlık | çarpıklık |
+|---|---|---|---|
+| **1,0 (tam)** | **0** | **89,7°** | **2,48** |
+| 0,9 | 40 | 180° | 98,4 |
+| 0,75 | 141 | 180° | 892,6 |
+| 0,5 | 28 | 180,0° | 65,0 |
+| 0 (yok) | 30 | 177,5° | 28,6 |
+
+Tam yumuşatma tek çalışan seçenek. **Bedeli, tabana bitişik hücrelerin
+kıymık olması ve azami en-boy oranının 145 825 çıkması.** Varsayılan
+tam yumuşatmada bırakıldı; `taban_lam` ölçülmüş kayıt olarak kodda.
+
+2-B doğrulama zinciri bu turda da bit bit korundu.
