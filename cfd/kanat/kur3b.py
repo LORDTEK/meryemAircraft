@@ -35,7 +35,7 @@ P_GAMG_DICGS = ("    p\n    {\n"
 
 
 def kur3b(dizin, ag, kok="symmetryPlane", uc="serbest", duvar_fonk=True,
-          p_cozucu=P_GAMG_DICGS, **kw):
+          p_cozucu=P_GAMG_DICGS, sinirli_duzeltme="0.33", **kw):
     """ag: KanatAgi ornegi. kw, naca/kur.py'nin kur()'una gecer."""
     kw.setdefault("kod", "0012")
     bilgi2 = kur2b(dizin, **kw)
@@ -130,7 +130,37 @@ def kur3b(dizin, ag, kok="symmetryPlane", uc="serbest", duvar_fonk=True,
         s = s[:blok.start()] + p_cozucu + s[blok.end():]
         open(yol, "w").write(s)
 
-    # 4) 2B'ye ozgu sema kalintisi kalmadigini dogrula
+    # 4) DIKEY OLMAYANLIK DUZELTMESI SINIRLANIR
+    #
+    # Iki boyutlu vaka "corrected" kullaniyor ve orada dogru: o agin azami
+    # dikey olmayanligi 74,97 derece, ortalamasi 12,94. Uc boyutlu agda
+    # azami 89,69 ve AGIR DIKEY OLMAYAN (>70) yuz sayisi 389 137. Aci
+    # 90'a yaklastikca acik (explicit) duzeltme terimi buyuyor ve cozum
+    # iraksiyor.
+    #
+    # Olculdu: "corrected" ile kosu 8. adima kadar duzgun gidiyor, 9.
+    # adimda basinc cozumu 1000 iterasyona vuruyor, 10. adimda baslangic
+    # artigi 0,99998 (basinc alani cokuyor), 11. adimda kayan nokta
+    # hatasiyla patliyor. "limited 0.33" ile 40 adim kararli ve Ux artigi
+    # 6,0e-5'e kadar duzenli iniyor.
+    #
+    # Bu da yalnizca uc boyutlu vakaya uygulanir.
+    if sinirli_duzeltme:
+        yol = os.path.join(dizin, "system", "fvSchemes")
+        s = open(yol).read()
+        for eski_s, yeni_s in (
+                ("laplacianSchemes { default Gauss linear corrected; }",
+                 "laplacianSchemes { default Gauss linear limited %s; }"
+                 % sinirli_duzeltme),
+                ("snGradSchemes   { default corrected; }",
+                 "snGradSchemes   { default limited %s; }" % sinirli_duzeltme)):
+            if s.count(eski_s) != 1:
+                raise RuntimeError("fvSchemes icinde %r %d kez gecti, 1 "
+                                   "bekleniyordu" % (eski_s, s.count(eski_s)))
+            s = s.replace(eski_s, yeni_s)
+        open(yol, "w").write(s)
+
+    # 5) 2B'ye ozgu sema kalintisi kalmadigini dogrula
     for ad in ("fvSchemes", "fvSolution", "controlDict"):
         s = open(os.path.join(dizin, "system", ad)).read()
         if "empty" in s:

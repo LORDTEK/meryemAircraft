@@ -1848,3 +1848,32 @@ Kök yaması `symmetryPlane` ise OpenFOAM ağı **`checkMesh`'ten önce**
 reddediyor ve ters yüz oranını doğrudan veriyor: bildirdiği ortalama
 normal büyüklüğü `(N−2f)/N`. Kaba ağda 0,988938 → 130 ters yüz; elle
 sayınca da 130 çıktı.
+
+### Iraksama: dikey olmayanlık düzeltmesi sınırlandı (02.09.2026)
+
+İlk üretim koşusu **11. adımda kayan nokta hatasıyla patladı**. Artıkların
+gidişi ıraksamayı net gösteriyor:
+
+| adım | Ux artığı | p iterasyonu | p başlangıç artığı |
+|---|---|---|---|
+| 8 | 0,618 | 27 → 3 → 1 | 7,6e−8 |
+| 9 | 0,570 | **1000** (azami) | 1,5e−3 |
+| 10 | **0,899** (yükseliyor) | **1000** | **0,99998** |
+| 11 | — | — | patladı |
+
+Sebep şemadaydı. İki boyutlu vaka `corrected` kullanıyor ve orada doğru:
+
+| | azami dikey olmayanlık | ortalama | ağır dikey olmayan yüz |
+|---|---|---|---|
+| doğrulanmış 2-B ağ | 74,97° | 12,94° | — |
+| 3-B ağ | **89,69°** | 27,24° | **389 137** |
+
+Açı 90°'ye yaklaştıkça açık (explicit) düzeltme terimi büyüyor ve çözüm
+ıraksıyor. `limited 0.33` ile **40 adım kararlı**, Ux artığı 6,0e−5'e
+kadar düzenli iniyor.
+
+Yan kazanç: kararlı şemalarla basınç da çok daha iyi yakınsıyor —
+**9,7 s/adım** (çözücü karşılaştırmasındaki 17,6 s/adım, ıraksamaya giden
+şemalarla ölçülmüştü).
+
+Değişiklik yalnızca `kur3b.py`'de; 2-B zinciri korundu.
