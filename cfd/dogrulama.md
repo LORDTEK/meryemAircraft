@@ -1391,3 +1391,75 @@ Hâlâ `Mesh OK` değil — 29 negatif hücre çözümü engeller.
 | iz/hücum kenarı aralıklarını mutlaklaştırma | kötüleşti (15→75) |
 | açıklık istasyonunu artırma | etkisiz |
 | uca doğru sıklaştırma | kötüleşti (29→211) |
+
+---
+
+## Uç kapanışı — karar verildi ve kuruldu (02.09.2026)
+
+### Karar: düz uç kapağı
+
+- Uç veteri **sıfır değil** (0,2364). Sivri ya da yuvarlatılmış uç, olmayan
+  bir geometri uydurmak olurdu.
+- Düz kapak sonlu kanat için yerleşik işlemdir; ONERA M6 doğrulama vakası
+  bunu kullanır — ileride dış veriyle karşılaştırma yolu açık kalır.
+- VLM çapraz denetimi (CL_α, e) ancak gerçek sonlu kanatta anlamlıdır;
+  uca simetri düzlemi koymak sonsuz kanat modellemek olurdu.
+
+**Kapsam dışı, açıkça:** patentteki **uç iskeletleri** (parça 3, planform
+düzlemine dik yukarı ve aşağı uzanan) modellenmiyor. Uç akışını esaslı
+biçimde değiştirirler. Bu ilk 3-B vaka "uç iskeletsiz kanat"tır.
+
+### Topolojinin gerektirdiği
+
+Uçtan **dışarıda** da akış vardır ve profil deliği orada kapanmalıdır. Tek
+bloklu C-ağı yığını bu topoloji değişimini ifade edemez. Eklenen:
+
+1. Uç düzleminden dışarı `n_uc` istasyon (hepsi uç kesiti geometrisiyle;
+   orada profil çizgisi artık duvar değil **iç** çizgidir).
+2. Profil kesitini dolduran bir **iç blok** (H-ağı). Alt yüzeydeki m'inci
+   nokta ile üst yüzeydeki NF−m'inci nokta aynı x'te (ölçüldü: 65
+   indeksin 65'i), dolayısıyla ikisi arası düzgün bölünebiliyor.
+3. Bu iç bloğun **uç düzlemindeki tabanı kapak duvarıdır**.
+4. Hücum ve firar kenarında alt ile üst aynı noktaya düştüğü için oradaki
+   hücreler **prizma** olarak yazılıyor (tekrar eden düğümle hexa yazmak
+   sıfır alanlı yüz üretirdi).
+
+`gmshToFoam` topolojiyi kabul etti: 1 065 600 hexa + 384 prizma, 6 yama.
+
+### Bu turda bulunan iki gerçek kusur
+
+**(1) Kıymık istasyon.** `gercek_istasyonlar` ince listeyi dilimleyip son
+istasyonu ayrıca ekliyordu; bölme tam gelmediğinde en sonda **8 kat ince**
+bir aralık kalıyordu (0,0173'e karşı 0,142) — ve tam **uçta**. Ara
+değerlemeyle giderildi (Δz oranı 8,2 → 1,00). *Temel ağdaki 29 negatif
+hücreyi değiştirmedi*, yani kusurların sebebi bu değilmiş; düzeltme yine
+de doğru.
+
+**(2) Kapak bloğunun sarım yönü tersti.** Sarım `+m` sonra `+q` idi;
+(+m)×(+q) ekseni −z'ye bakıyor, oysa hücrenin üstü +k = +z. Bütün kapak
+hücreleri **sol elli** çıkıyordu.
+
+| | negatif hücre | çarpıklık |
+|---|---|---|
+| ters sarım | 462 | 3,9e15 |
+| **düzeltilmiş** | **101** | 162 |
+
+### Kalan kusur — yeri kesin, sebebi yapısal
+
+Kapaklı ağ 101 negatif hücre veriyor; kapaksız temel 29. Fazladan 72
+hücre **kapak çözünürlüğünden tamamen bağımsız** (n_kapak = 4, 8, 16, 32 →
+hepsi 101), yani kapak H-ağının içinde değil.
+
+Yerleri çıkarıldı: **x ≈ 1,78** (uç kesitinin firar kenarı 1,775),
+z ortanca 2,2–2,7, %95'i 13,8–18,8 — yani **uç firar kenarından dışarı
+uzanan iz kesiği çizgisi boyunca**.
+
+Sebep yapısal: orada üç şey aynı çizgide buluşuyor — kapağın **çöken firar
+kenarı** (kapalı FK olduğu için nokta), **iz kesiği** (üst ve alt düğümler
+birleşik) ve halka bloğu. Tekil bir çok-blok eklemi. Kapalı firar kenarı
+korunduğu sürece herhangi bir iç ağ orada çökmek zorunda.
+
+Bunu aşmak topoloji kararı gerektirir (uçta C→C-O ya da H-O geçişi, ya da
+firar kenarını açık bırakıp iz kesiğini ona göre kurmak). **Uydurma
+yapılmadı; ağ geçerli değil, geçerli olmadığı yazılıyor ve gerçek planform
+hesabı koşulmuyor.**

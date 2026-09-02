@@ -52,11 +52,29 @@ def gercek_istasyonlar(n=24, sikistir=False):
     """
     ince, yari, birlesme = istasyonlar(n=max(400, 20 * n))
     if not sikistir:
-        adim = max(1, (len(ince) - 1) // n)
-        se = ince[::adim]
-        if se[-1] is not ince[-1]:
-            se.append(ince[-1])
-        return [(y, x, c, tc) for (y, x, c, tc, _o) in se], yari
+        # TEKDUZE aralikli istasyonlar, ARA DEGERLEME ile.
+        #
+        # Onceki surum ince listeyi dilimliyor (ince[::adim]) ve son
+        # istasyonu ayrica ekliyordu. Bolme tam gelmediginde bu, en sonda
+        # KIYMIK bir aralik biraktiriyordu: olculdu, son adim 0,0173 iken
+        # otekiler 0,142 -- sekiz kat ince, ve tam UCTA. Kusurlarin hepsinin
+        # uc bolgesinde toplanmasi buna baglı olabilir.
+        y = [q[0] for q in ince]
+        cik = []
+        for i in range(n + 1):
+            h = y[-1] * i / n
+            j = min(range(len(y) - 1), key=lambda k: abs(y[k] - h)) \
+                if False else 0
+            # ikili arama yerine dogrusal tarama yeterli (ince ~400 nokta)
+            j = 0
+            while j < len(y) - 2 and y[j + 1] < h:
+                j += 1
+            t = 0.0 if y[j + 1] == y[j] else (h - y[j]) / (y[j + 1] - y[j])
+            cik.append(tuple(ince[j][m] + t * (ince[j + 1][m] - ince[j][m])
+                             for m in range(4)))
+        cik[0] = tuple(ince[0][:4])
+        cik[-1] = tuple(ince[-1][:4])
+        return cik, yari
 
     # s(z) = toplam dz/c
     y = [q[0] for q in ince]
