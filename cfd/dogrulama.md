@@ -1463,3 +1463,49 @@ Bunu aşmak topoloji kararı gerektirir (uçta C→C-O ya da H-O geçişi, ya da
 firar kenarını açık bırakıp iz kesiğini ona göre kurmak). **Uydurma
 yapılmadı; ağ geçerli değil, geçerli olmadığı yazılıyor ve gerçek planform
 hesabı koşulmuyor.**
+
+### Açık firar kenarı denendi — ölçüldü, İŞE YARAMADI (02.09.2026)
+
+Kapağın çöken firar kenarı ile iz kesiğinin aynı çizgide buluşmasını
+çözmek için firar kenarı açık bırakıldı.
+
+**Fikir topolojik olarak doğru ve değişiklik küçük.** Açık firar
+kenarında profilin ilk noktası (1,−δ), son noktası (1,+δ) ve **ayrıdır**;
+kapak bloğunun m=0 kenarı artık çökmez. İz kesiği zaten (1+fk, 0)'dan
+başlıyordu ve orada birleşmeye devam eder — C-ağı kapalı kalır, sivri
+nokta yalnızca (1,0)'dan (1+fk,0)'a kayar. Ölçüldü: **prizma sayısı
+384 → 192**, yani firar kenarı çökmesi gerçekten kalktı.
+
+Ama toplam kötüleşti:
+
+| yapılandırma | kapaksız negatif | kapaklı negatif | şiddetli yüz |
+|---|---|---|---|
+| **kapalı FK** | **29** | **101** | **13 837** |
+| açık FK, fk = 2e−4 | 104 | 234 | 22 711 |
+| açık FK, fk = δ | 70 | 176 | 79 881 |
+
+**Neden.** İz kesiğinin ilk hücresi 2e−4 veter (kapalı, sivri firar
+kenarı için seçilmişti); açık firar kenarının yarı kalınlığı δ ise t/c
+0,12'de 1,26e−3, 0,25'te 2,6e−3. Profilin ilk noktası (1,−δ) ile ondan
+önceki iz noktası (1+fk, 0) arasındaki kenar **6 ilâ 13 kat dik** çıkıyor
+ve oradaki hücre aşırı çarpık oluyor. `fk` δ'ya eşitlenip kenar ~45°'ye
+getirildi: negatifler düzeldi (104 → 70) ama bu sefer iz dağılımı
+kabalaşıp şiddetli yüzler patladı (13 672 → 71 429).
+
+İki gereksinim çelişiyor: `fk` küçük olmalı (iz çözünürlüğü için) ve δ
+kadar olmalı (firar kenarı köşesi için).
+
+**Doğrusu ne olurdu.** Firar kenarı tabanının profile DÂHİL edilmesi:
+iç eğri, iz kesiğinin taban orta noktasından başlayıp tabanın alt yarısı
+→ alt yüzey → hücum kenarı → üst yüzey → tabanın üst yarısı → iz kesiği
+diye kurulmalı. Bu, doğrulanmış iki boyutlu üretecin iç eğri kuruluşunu
+ve `profil_x` gösterimini değiştirmeyi gerektirir — yani 2-B doğrulama
+zincirini yeniden koşmayı. Yapılmadı.
+
+Varsayılan **kapalı**ya geri alındı; seçenek ölçülmüş kayıt olarak kodda.
+
+### Uç kapanışının şu anki durumu
+
+En iyi ölçülen: kapalı FK + düz uç kapağı → **101 negatif hücre**
+(kapaksız temel 29). `Mesh OK` değil. Gerçek planform hesabı hâlâ
+koşulmuyor.
