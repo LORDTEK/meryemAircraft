@@ -38,7 +38,8 @@ import sys
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)),
                                 "..", "ortak"))
-from cagi import CAgi, ilk_hucre_yuksekligi          # noqa: E402
+from cagi import CAgi, ilk_hucre_yuksekligi
+from cagi import naca4 as _naca4          # noqa: E402
 
 
 def naca_kodu(tc):
@@ -55,7 +56,7 @@ class KanatAgi:
     def __init__(self, istasyon, Re=6e6, yplus=1.0, R=20.0, Xiz=20.0,
                  n_profil=256, n_normal=96, n_iz=64, veter_ref=1.0,
                  dy_sabit=True, normal="kesit",
-                 uc_uzanim=0.0, n_uc=0, n_kapak=16):
+                 uc_uzanim=0.0, n_uc=0, n_kapak=16, kapali=True):
         if len(istasyon) < 2:
             raise ValueError("en az iki istasyon gerekir")
         z = [s[0] for s in istasyon]
@@ -115,6 +116,39 @@ class KanatAgi:
         # Hucum ve firar kenarinda alt ile ust ayni noktaya dustugu icin
         # oradaki hucreler HEXA degil PRIZMA olarak yazilir; tekrar eden
         # dugumle hexa yazmak sifir alanli yuz uretirdi.
+        # kapali: firar kenari kapali (sivri) mi acik (kut) mu.
+        #
+        # DENENDI VE OLCULDU: acik firar kenari BU YAPIDA ISE YARAMIYOR.
+        #
+        #                        kapaksiz negatif  kapakli negatif  siddetli
+        #   kapali FK                   29               101         13 837
+        #   acik FK, fk = 2e-4         104               234         22 711
+        #   acik FK, fk = d             70               176         79 881
+        #
+        # Varsayilan bu yuzden KAPALI. Secenek kodda olculmus bir kayit
+        # olarak duruyor.
+        #
+        # Fikir sudur ve topolojik olarak dogrudur: kapali firar
+        # kenarinda profilin ilk ve son noktasi AYNI noktadir, dolayisiyla
+        # uc kapagini dolduran ic blogun m=0 kenari da oraya COKER -- ve o
+        # nokta ayni zamanda iz kesiginin baslangicidir. Uc sey (kapagin
+        # coken kenari, iz kesigi, halka blogu) tek bir cizgide bulusur ve
+        # tekil bir eklem olusur. Olculdu: kusurlar tam orada, x ~ 1,78
+        # (uc firar kenari 1,775), z = 2,2..18,8.
+        #
+        # Acik firar kenarinda profilin ilk noktasi (1,-d), son noktasi
+        # (1,+d) ve AYRIdir; kapak blogunun m=0 kenari cokmez. Iz kesigi
+        # zaten (1+fk, 0)'dan basliyordu ve orada birlesmeye devam eder --
+        # yani C-agi kapali kalir, sivri nokta yalnizca (1,0)'dan
+        # (1+fk,0)'a kayar (fk = 2e-4 veter).
+        #
+        # -0.1015 gercek NACA katsayisidir; uc kesitinde (t/c = 0,12) firar
+        # kenari kalinligi veterin %0,25'i, mutlak 5,96e-4.
+        #
+        # IKI BOYUTLU dogrulama zinciri ETKILENMEZ: CAgi'nin kendi
+        # varsayilani kapali=True olarak KALDI, burasi yalnizca uc boyutlu
+        # yiginin secimidir.
+        self.kapali = kapali
         self.n_kapak = n_kapak
         self.kw = len(self.istasyon)          # kanat istasyonu sayisi
         if uc_uzanim > 0 and n_uc > 0:
@@ -179,7 +213,22 @@ class KanatAgi:
             ag = CAgi(kod=tc, Re=self.Re, yplus=self.yplus,
                       R=self.R / veter, Xiz=self.Xiz / veter,
                       n_profil=self.NF, n_normal=self.NJ, n_iz=self.NW,
-                      profil_x=self._dagilim())
+                      kapali=self.kapali, profil_x=self._dagilim(),
+                      # ACIK firar kenarinda iz kesiginin ILK hucresi,
+                      # firar kenarinin yari kalinligina uymalidir.
+                      #
+                      # Yerlesik deger 2e-4 veterdir ve kapali (sivri) firar
+                      # kenari icin secilmisti. Acik firar kenarinda profilin
+                      # ilk noktasi (1, -d), ondan onceki iz noktasi ise
+                      # (1+fk, 0); aradaki kenar fk uzunlugunda ve d
+                      # yuksekligindedir. d/fk orani t/c = 0,12'de 6,3 ,
+                      # 0,25'te 13 -- yani kenar alti ila on uc kat DIK
+                      # cikiyor ve oradaki hucre asiri carpik oluyor.
+                      # Olculdu: kapaksiz agda negatif hucre 29'dan 104'e
+                      # ciktı. fk, d'ye esitlenerek kenar ~45 dereceye
+                      # getiriliyor.
+                      fk_hucre=(_naca4(tc, 1.0, False) if not self.kapali
+                                else 2e-4))
             ag.dy = (self._dy_ort if self.dy_sabit
                      else ilk_hucre_yuksekligi(self.Re, self.yplus, veter)) / veter
             # UZAK ALAN SABIT TUTULUR -- kanatla birlikte ok acisi yapmaz.
@@ -288,7 +337,7 @@ class KanatAgi:
             en_kalin = max(s[3] for s in self.istasyon)
             oncu = CAgi(kod=en_kalin, Re=self.Re, yplus=self.yplus,
                         R=self.R, Xiz=self.Xiz, n_profil=self.NF,
-                        n_normal=self.NJ, n_iz=self.NW)
+                        n_normal=self.NJ, n_iz=self.NW, kapali=self.kapali)
             self._dag = oncu.veter_dagilimi()
         return self._dag
 
