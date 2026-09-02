@@ -56,7 +56,7 @@ class KanatAgi:
     def __init__(self, istasyon, Re=6e6, yplus=1.0, R=20.0, Xiz=20.0,
                  n_profil=256, n_normal=96, n_iz=64, veter_ref=1.0,
                  dy_sabit=True, normal="kesit",
-                 uc_uzanim=0.0, n_uc=0, n_kapak=16, kapali=True):
+                 uc_uzanim=0.0, n_uc=0, n_kapak=16, kapali=True, firar_taban=0):
         if len(istasyon) < 2:
             raise ValueError("en az iki istasyon gerekir")
         z = [s[0] for s in istasyon]
@@ -149,7 +149,12 @@ class KanatAgi:
         # varsayilani kapali=True olarak KALDI, burasi yalnizca uc boyutlu
         # yiginin secimidir.
         self.kapali = kapali
-        self.n_kapak = n_kapak
+        # firar_taban (NB) > 0 ise firar kenari KUT ve tabani ic egriye
+        # dahil; iz kesigi tabanin orta noktasindan baslar (bkz. cagi.py).
+        # Kapak blogunun kalinlik yonu o zaman tabanin bolunmesiyle
+        # ORTUSMELIDIR, yani NC = 2*NB.
+        self.NB = firar_taban
+        self.n_kapak = 2 * firar_taban if firar_taban > 0 else n_kapak
         self.kw = len(self.istasyon)          # kanat istasyonu sayisi
         if uc_uzanim > 0 and n_uc > 0:
             zt, xt, ct, tt = self.istasyon[-1]
@@ -214,21 +219,7 @@ class KanatAgi:
                       R=self.R / veter, Xiz=self.Xiz / veter,
                       n_profil=self.NF, n_normal=self.NJ, n_iz=self.NW,
                       kapali=self.kapali, profil_x=self._dagilim(),
-                      # ACIK firar kenarinda iz kesiginin ILK hucresi,
-                      # firar kenarinin yari kalinligina uymalidir.
-                      #
-                      # Yerlesik deger 2e-4 veterdir ve kapali (sivri) firar
-                      # kenari icin secilmisti. Acik firar kenarinda profilin
-                      # ilk noktasi (1, -d), ondan onceki iz noktasi ise
-                      # (1+fk, 0); aradaki kenar fk uzunlugunda ve d
-                      # yuksekligindedir. d/fk orani t/c = 0,12'de 6,3 ,
-                      # 0,25'te 13 -- yani kenar alti ila on uc kat DIK
-                      # cikiyor ve oradaki hucre asiri carpik oluyor.
-                      # Olculdu: kapaksiz agda negatif hucre 29'dan 104'e
-                      # ciktı. fk, d'ye esitlenerek kenar ~45 dereceye
-                      # getiriliyor.
-                      fk_hucre=(_naca4(tc, 1.0, False) if not self.kapali
-                                else 2e-4))
+                      firar_taban=self.NB)
             ag.dy = (self._dy_ort if self.dy_sabit
                      else ilk_hucre_yuksekligi(self.Re, self.yplus, veter)) / veter
             # UZAK ALAN SABIT TUTULUR -- kanatla birlikte ok acisi yapmaz.
@@ -363,7 +354,8 @@ class KanatAgi:
 
         hexler, prizmalar = [], []
         yuzler = {"duvar": [], "disalan": [], "cikis": [], "kok": [], "uc": []}
-        prof_bas, prof_son = self.NW, self.NW + self.NF
+        prof_bas = self.NW
+        prof_son = self.NW + self.NF + 2 * self.NB
 
         for k in range(NK - 1):
             for i in range(NI - 1):
@@ -396,8 +388,9 @@ class KanatAgi:
             kap = {}
             for k in range(self.kw - 1, NK):
                 for m in range(M + 1):
-                    L = duzlem[k][prof_bas + m][0]
-                    U = duzlem[k][prof_son - m][0]
+                    # Taban varsa yuzey NB kadar iceride basliyor.
+                    L = duzlem[k][prof_bas + self.NB + m][0]
+                    U = duzlem[k][prof_bas + self.NB + self.NF - m][0]
                     for q in range(NC + 1):
                         t = q / float(NC)
                         kap[(k, m, q)] = dn(*[L[c] + t * (U[c] - L[c])

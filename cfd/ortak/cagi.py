@@ -184,7 +184,7 @@ class CAgi:
                  n_profil=256, n_normal=96, n_iz=64,
                  fk_hucre=2e-4, hk_hucre=2e-4, iz_cikis=1.0, dis_hucre=1.5,
                  n_sigma=None, fk_pencere=None, gecis=0.3, en_boy=5000.0,
-                 profil_x=None):
+                 profil_x=None, firar_taban=0):
         self.kod, self.Re, self.kapali = kod, Re, kapali
         self.R, self.Xiz, self.kalinlik = R, Xiz, kalinlik
         self.NF, self.NJ, self.NW = n_profil, n_normal, n_iz
@@ -199,8 +199,22 @@ class CAgi:
         # daha once uretilmis 0012 aglari DEGISMEZ.
         eg = abs(naca4(kod, 1.0, kapali) - naca4(kod, 0.999, kapali)) / 0.001
         eg0 = 0.1454                      # 0012'nin firar egimi
-        self.fk_pencere = fk_pencere if fk_pencere is not None else \
-            0.02 * max(1.0, eg / eg0)
+        # KUT firar kenarinda pencere COK daha genis olmali.
+        #
+        # Taban DIKEY bir cizgidir; normali yatay (+x). Iz kesiginin normali
+        # ise (0, -+1). Yani taban/iz ekleminde normal alaninda 90 DERECELIK
+        # sicrama var -- sivri firar kenarindaki 8-20 derecelik sicrama icin
+        # boyutlanmis 0,02'lik pencere bunu tasiyamiyor.
+        #
+        # Olculdu (gercek planform, kapaksiz, y+=60, NB=8):
+        #   fk_pencere 0,02 -> 306 negatif hucre, azami dikey olmayanlik 175
+        #              0,06 ->  83                                      170
+        #              0,12 ->   5                                      157
+        #              0,25 ->   0                                       89
+        # Sicrama kalinliktan bagimsiz olarak 90 derece oldugu icin pencere
+        # de kalinliga gore olceklenmiyor, sabit.
+        self.fk_pencere = fk_pencere if fk_pencere is not None else (
+            0.25 if firar_taban > 0 else 0.02 * max(1.0, eg / eg0))
         self.n_sigma = n_sigma if n_sigma is not None else self.fk_pencere / 2
         self.gecis, self.en_boy = gecis, en_boy
         # profil_x: (x, isaret) ciftlerinden olusan SABIT veter dagilimi.
@@ -217,6 +231,25 @@ class CAgi:
         # degistiginde SIFIR. Yani kusuru doguran kalinlik degil, kalinliga
         # bagli DAGILIMDI.
         self.profil_x = profil_x
+        # firar_taban (NB): KUT firar kenarinin TABANI ic egriye dahil
+        # edilir ve iz kesigi tabanin ORTA NOKTASINDAN baslar.
+        #
+        # Neden. Sivri firar kenarinda profilin ilk ve son noktasi ayni
+        # noktadir; uc kapagini dolduran ic blok da oraya coker ve orasi
+        # ayni zamanda iz kesiginin baslangicidir -- tekil bir eklem.
+        # Tabani ic egriye katmadan firar kenarini acmak ise iz kesiginin
+        # ilk hucresini 6-13 kat dik birakiyor (olculdu). Dogrusu tabani
+        # yuzeyin PARCASI saymaktir:
+        #
+        #   iz (cikis -> (1,0)) | taban alt yarisi (1,0)->(1,-d)
+        #   | alt yuzey | HK | ust yuzey | taban ust yarisi (1,+d)->(1,0)
+        #   | iz ((1,0) -> cikis)
+        #
+        # NB = 0 iken davranis DEGISMEZ; dogrulanmis iki boyutlu zincir
+        # bu yoldan hic gecmez.
+        self.NB = firar_taban
+        if self.NB > 0:
+            self.kapali = False
         self.dy = ilk_hucre_yuksekligi(Re, yplus)
         self.xc = 0.25                       # dis cemberin merkezi
 
@@ -251,19 +284,43 @@ class CAgi:
             cik.append((x, -1.0 if k < len(p) // 2 else 1.0))
         return cik
 
-    def ic_egri(self):
-        """NI = 2*NW + NF + 1 nokta.
+    def taban_yarilari(self):
+        """Kut firar kenari tabaninin alt ve ust yarisi.
 
-        indeks  0 .. NW-1        alt iz  (cikistan FK'ya, FK haric)
-        indeks  NW .. NW+NF      profil  (FK -> HK -> FK)
-        indeks  NW+NF+1 .. NI-1  ust iz  (FK haric, cikisa)
+        alt: (1,0) -> (1,-d)   ust: (1,+d) -> (1,0)   ikisi de NB+1 nokta.
+        Bolunme TEKDUZEDIR; uc kapagini dolduran ic blok da tekduze
+        boldugu icin dugumler kendiliginden ortusur.
+        """
+        d = naca4(self.kod, 1.0, self.kapali)
+        NB = self.NB
+        alt = [(1.0, -d * i / NB) for i in range(NB + 1)]
+        ust = [(1.0, d * (1.0 - i / NB)) for i in range(NB + 1)]
+        return alt, ust
+
+    def ic_egri(self):
+        """NI = 2*NW + NF + 2*NB + 1 nokta.
+
+        indeks  0 .. NW-1                alt iz (cikistan FK'ya, FK haric)
+        indeks  NW .. NW+NB              taban alt yarisi (1,0) -> (1,-d)
+        indeks  NW+NB .. NW+NB+NF        yuzey (alt FK -> HK -> ust FK)
+        indeks  NW+NB+NF .. NW+2NB+NF    taban ust yarisi (1,+d) -> (1,0)
+        indeks  NW+2NB+NF+1 .. NI-1      ust iz (cikisa)
+
+        NB = 0 iken eski duzene (2*NW+NF+1) birebir indirgenir.
         """
         X, NW = self.Xiz, self.NW
         prof, _ = self._profil_egrisi()
         c = _geometrik(NW, self.fk, X)                 # NW+1 deger, 0 dahil
         iz_ust = [(1.0 + v, 0.0) for v in c]           # FK -> cikis
         iz_alt = [(1.0 + v, 0.0) for v in reversed(c)]  # cikis -> FK
-        return iz_alt[:-1] + prof + iz_ust[1:]
+        if self.NB <= 0:
+            return iz_alt[:-1] + prof + iz_ust[1:]
+        alt, ust = self.taban_yarilari()
+        return iz_alt[:-1] + alt + prof[1:] + ust[1:] + iz_ust[1:]
+
+    def profil_araligi(self):
+        """Duvar olan i araligi: [bas, son). Taban da duvardir."""
+        return self.NW, self.NW + self.NF + 2 * self.NB
 
     def dis_egri(self, ic):
         """Ic egriyle ayni sayida nokta.
@@ -464,7 +521,7 @@ class CAgi:
         hexler, yuzler = [], {"duvar": [], "disalan": [], "cikis": [],
                               "on": [], "arka": []}
         NW, NF = self.NW, self.NF
-        prof_bas, prof_son = NW, NW + NF              # profil i araligi
+        prof_bas, prof_son = self.profil_araligi()    # taban dahil
 
         for i in range(NI - 1):
             for j in range(NJ - 1):

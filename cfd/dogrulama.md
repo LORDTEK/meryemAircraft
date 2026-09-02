@@ -1509,3 +1509,74 @@ Varsayılan **kapalı**ya geri alındı; seçenek ölçülmüş kayıt olarak ko
 En iyi ölçülen: kapalı FK + düz uç kapağı → **101 negatif hücre**
 (kapaksız temel 29). `Mesh OK` değil. Gerçek planform hesabı hâlâ
 koşulmuyor.
+
+---
+
+## Firar kenarı tabanı iç eğriye dâhil edildi — TAM SÜRÜM (02.09.2026)
+
+Ucuz sürüm (tabanı iz başlangıcına köşegenle bağlamak) ölçümde
+kötüleşmişti. Tam sürüm yapıldı: **taban yüzeyin parçası**, iz kesiği
+tabanın **orta noktasından** başlıyor.
+
+    iz (çıkış → (1,0)) │ taban alt yarısı (1,0)→(1,−δ) │ alt yüzey │ HK
+    │ üst yüzey │ taban üst yarısı (1,+δ)→(1,0) │ iz ((1,0) → çıkış)
+
+`NI = 2·NW + NF + 2·NB + 1`; duvar aralığı `[NW, NW+NF+2·NB)` — taban da
+duvardır. NB=0'da eski düzene birebir indirgenir.
+
+### 2-B doğrulama zinciri — BOZULMADI, ölçüldü
+
+Kapalı firar kenarı yolu **bit bit korundu**. Üç ağın sha-256'sı refaktör
+öncesi ve sonrası aynı:
+
+| ağ | sha |
+|---|---|
+| doğrulanmış (256×113×64, R=100) | `aa46cad9946c17dd` |
+| kaba (96×48×24, R=20) | `8176443ab45a51d6` |
+| kalın (NACA 0025) | `f5dfc932d0adf5a0` |
+
+CFD de yeniden koşuldu: **C_D = 0,008388** (refaktör öncesi 0,008388),
+C_L −4,05e−07 (önce −4,04e−07; fark 1,3e−9, yakınsama gürültüsü).
+`checkMesh` değerleri de birebir: azami en-boy 4999,999887, dikey
+olmayanlık 74,97225877, çarpıklık 0,4135672945.
+
+### Asıl bulgu: yumuşatma penceresi
+
+Taban eklenince ağ ÖNCE kötüleşti (kapaksız negatif 29 → 210). Sebep
+ölçüldü: taban **dikey** bir çizgi, normali yatay (+x); iz kesiğinin
+normali (0,∓1). Yani taban/iz ekleminde normal alanında **90°'lik
+sıçrama** var. Koddaki yumuşatma penceresi sivri firar kenarının 8–20°'lik
+sıçraması için boyutlanmıştı (0,02).
+
+| fk_pencere | negatif hücre | azami dikey olmayanlık |
+|---|---|---|
+| 0,02 (yerleşik) | 306 | 175,2° |
+| 0,06 | 83 | 169,9° |
+| 0,12 | 5 | 157,3° |
+| **0,25** | **0** | **89,0°** |
+
+Sıçrama kalınlıktan bağımsız olarak 90° olduğu için pencere de kalınlığa
+göre ölçeklenmiyor; `firar_taban > 0` iken sabit 0,25.
+
+### Sonuç: gerçek planform ağı artık 2-B ile aynı kalitede
+
+| | 2-B doğrulanmış | gerçek planform (kapaksız) | kapaklı |
+|---|---|---|---|
+| negatif hücre | 0 | **0** | **0** |
+| yanlış yönlü yüz | 0 | **0** | **0** |
+| azami dikey olmayanlık | 74,97° | 89,0° | 89,8° |
+| ortalama dikey olmayanlık | 12,94° | 20,8° | 20,8° |
+| azami çarpıklık | 0,414 | 2,48 | 2,48 |
+| azami en-boy oranı | 4999,99989 | **5000,00045** | 1,33e9 |
+
+Kapaksız ağ, doğrulanmış 2-B ağın **aynı kalitesinde**. `checkMesh`'te tek
+başarısız denetim en-boy oranı ve o, doğrulanmış 2-B ağda da başarısız
+(5000) — yani bu ağ ailesinin kabul edilmiş düzeyi.
+
+### Kalan tek sorun: kapak bloğunun hücum kenarı
+
+Kapaklı ağın azami en-boy oranı **1,33e9**. Kaynağı kapak H-ağının hücum
+kenarındaki çöken kenarıdır (orada kesit kalınlığı sıfıra gider). Kapaksız
+ağda bu yok (5000). Çözümü kapakta **O-ağı** kullanmaktır: kesit sınırını
+izleyen bir halka artı hücum kenarına değmeyen küçük bir H çekirdek.
+Yapılmadı.
