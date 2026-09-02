@@ -54,7 +54,7 @@ class KanatAgi:
 
     def __init__(self, istasyon, Re=6e6, yplus=1.0, R=20.0, Xiz=20.0,
                  n_profil=256, n_normal=96, n_iz=64, veter_ref=1.0,
-                 dy_sabit=False, normal="kesit"):
+                 dy_sabit=True, normal="kesit"):
         if len(istasyon) < 2:
             raise ValueError("en az iki istasyon gerekir")
         z = [s[0] for s in istasyon]
@@ -92,6 +92,12 @@ class KanatAgi:
         #   "ortak" -> butun istasyonlarda AYNI (ortalama) 2-B normal
         # Uc secenek de olculdu; sonuclar dogrulama.md'de.
         self.normal = normal
+        # Uzak alan merkezi ve cikis duzlemi MUTLAK: kok kesitinin ceyrek
+        # veterinden ve kok firar kenarindan olculuyor, butun istasyonlarda
+        # ayni.
+        z0, x0, c0, _t0 = self.istasyon[0]
+        self._xc_abs = x0 + 0.25 * c0
+        self._cikis_abs = x0 + c0 + Xiz
         self._dy_ort = ilk_hucre_yuksekligi(
             Re, yplus, min(s[2] for s in self.istasyon))
 
@@ -134,6 +140,22 @@ class KanatAgi:
                       profil_x=self._dagilim())
             ag.dy = (self._dy_ort if self.dy_sabit
                      else ilk_hucre_yuksekligi(self.Re, self.yplus, veter)) / veter
+            # UZAK ALAN SABIT TUTULUR -- kanatla birlikte ok acisi yapmaz.
+            #
+            # CAgi dis cemberi birim veterde 0,25'te merkezler; olcekleyince
+            # merkez xle + 0,25c'ye gider, yani uzak sinir da kanadi izler.
+            # Istasyonlar arasi kayma boylece 0,13 oluyordu, aciklik adimi
+            # ise 0,144 -- neredeyse esit. Uzak alandaki aciklik yuzleri o
+            # yuzden 42 dereceye varan egimle duruyor ve dikey olmayanligi
+            # yukari cekiyordu.
+            #
+            # Olculdu: siddetli dikey olmayan yuzlerin %98'i ACIKLIK yuzu ve
+            # veter ortasindan ortanca uzakligi 29 veter -- yani kanadin
+            # yaninda degil, uzak alanda. Merkez mutlaklastirildi.
+            ag.xc = (self._xc_abs - xle) / veter
+            # Cikis duzlemi de mutlak: (xle + veter) + Xiz olacak yerde
+            # sabit bir x'te dursun.
+            ag.Xiz = (self._cikis_abs - (xle + veter)) / veter
             p = ag.parcalar()
             if NI is None:
                 NI, NJ = p["NI"], len(p["f"][0])

@@ -1335,3 +1335,59 @@ Denenip **ölçümle elenen** hipotezler:
 
 Dördü de yanlış çıktı ve dördü de kayda geçti. **Gerçek planform hesabı
 koşulmayacak** — bozuk ağdan sayı üretilmez.
+
+### Şiddetli yüzler nerede — çıkarıldı (02.09.2026)
+
+`checkMesh`'in yazdığı yüz kümeleri (`nonOrthoFaces`, `skewFaces`,
+`wrongOrientedFaces`) polyMesh'ten okunup her yüzün **merkezi ve normali**
+hesaplandı. Sonuç iki ayrı problem gösterdi.
+
+**(A) Şiddetli dikey olmayanlığın %98'i AÇIKLIK yüzü ve UZAK ALANDA.**
+Veter ortasından ortanca uzaklık **29 veter**, x ortancası −11, %95'i 62
+verete kadar. Kanadın yanında değil.
+
+**(B) Negatif hücreler ve yanlış yönlü yüzler DÜZLEM İÇİ ve UÇTA.**
+x ∈ [1,56 – 1,77], z ∈ [1,22 – 1,65]. Yarı açıklık 1,73, uç veteri
+1,54'ten 1,78'e. Yani hepsi **açıklığın dış %25'inde, kanadın üstünde**.
+
+#### (A) çözüldü — iki etki bağımsızmış
+
+(A)'nın sebebi radyal dağılımın istasyonlar arasında uyuşmaması: `dy`
+vetere göre ölçeklendiğinde kökte 8,6e−6, uçta 2,1e−6'dan başlayıp ikisi
+de 100'e ulaşıyor, dolayısıyla **aynı j farklı yarıçapa** düşüyor.
+
+| yapılandırma | negatif | şiddetli yüz |
+|---|---|---|
+| dy ölçekli, y⁺=60 | 24 | 112 228 |
+| **dy sabit, y⁺=60** | 29 | **7 274** |
+
+**15 kat düşüş.** Bu, önceki "dy_sabit kötüleştirdi" kaydımı düzeltiyor:
+onu y⁺=1'de ölçmüştüm, orada duvar çarpıklığı her şeyi bastırıyordu. İki
+etki bağımsız — y⁺ duvarı, `dy_sabit` orta/uzak alanı düzeltiyor.
+
+Uzak alan merkezini mutlaklaştırmak ayrıca denendi; tek başına %6 kazandırdı
+(119 650 → 112 228), kalıcı olarak açık bırakıldı.
+
+#### (B) çözülemedi
+
+Uçta veter 0,236, kökte 0,97; açıklık adımı sabit olduğu için Δz/c oranı
+0,15'ten 0,61'e çıkıyor ve son iki istasyon arasında veter %26 değişiyor.
+İstasyonları uca doğru sıklaştırmak denendi: Δz/c gerçekten sabitlendi
+(0,272–0,280) ama **kötüleşti** — negatif hücre 29 → 211. Muhtemelen Δz/c'yi
+sabitlemek kök tarafında Δz'yi büyütüp kusuru oraya taşıyor.
+
+#### Ölçülen en iyi yapılandırma
+
+`dy_sabit=True`, mutlak uzak alan, tekdüze istasyon, y⁺=60:
+**29 negatif hücre, 10 329 şiddetli yüz (%0,6), azami 155,8°.**
+Hâlâ `Mesh OK` değil — 29 negatif hücre çözümü engeller.
+
+#### Ölçümle elenen hipotezler (toplam beş)
+
+| hipotez | sonuç |
+|---|---|
+| sabit duvar aralığı (y⁺=1'de) | kötüleşti — ama y⁺=60'ta 15 kat İYİLEŞTİRDİ |
+| 3-B yüzey normali boyunca yürüme | kötüleşti (çarpıklık 44→120) |
+| iz/hücum kenarı aralıklarını mutlaklaştırma | kötüleşti (15→75) |
+| açıklık istasyonunu artırma | etkisiz |
+| uca doğru sıklaştırma | kötüleşti (29→211) |

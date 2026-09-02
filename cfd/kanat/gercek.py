@@ -27,13 +27,54 @@ from kanatagi import KanatAgi, naca_kodu                # noqa: E402
 from planform import istasyonlar                        # noqa: E402
 
 
-def gercek_istasyonlar(n=24):
+def gercek_istasyonlar(n=24, sikistir=False):
     """planform.py'den (z, x_hucum, veter, t/c) dizisi.
 
     planform y'yi aciklik yonu sayar; ag z'yi aciklik yonu kullanir.
+
+    sikistir=True ise istasyonlar UCA DOGRU SIKLASTIRILIR. Neden: veter
+    kokte 0,97, ucta 0,236. Aciklik adimi sabit tutulursa Dz/c orani
+    0,15'ten 0,61'e cikar ve son iki istasyon arasinda veter %26 degisir --
+    ag orada tasiyamaz.
+
+    Olculdu (checkMesh, y+=60, dy sabit): tekduze istasyonla kalan butun
+    kusurlar aciklığın DIS %25'inde toplaniyordu; z araligi [1,22 - 1,65],
+    yari aciklik 1,73. Sikistirma bunu hedefler.
+
+    Yontem: istasyonlar, Dz/c orani sabit kalacak sekilde yerlestirilir --
+    yani s(z) = INTEGRAL dz/c(z) degiskeninde esit araliklarla.
+
+    SONUC: ISE YARAMADI. Dz/c gercekten sabitlendi (0,272-0,280; oncesi
+    0,071-0,492) ama checkMesh kotulesti: negatif hucre 29 -> 211 (n=12),
+    53 (n=20). Sebebi muhtemelen sudur: Dz/c'yi sabitlemek KOK tarafinda
+    Dz'yi buyutuyor (0,142 -> 0,264) ve kusuru oraya tasiyor. Varsayilan
+    False; secenek olculmus bir kayit olarak duruyor.
     """
-    ist, yari, birlesme = istasyonlar(n=n)
-    return [(y, x, c, tc) for (y, x, c, tc, _ok) in ist], yari
+    ince, yari, birlesme = istasyonlar(n=max(400, 20 * n))
+    if not sikistir:
+        adim = max(1, (len(ince) - 1) // n)
+        se = ince[::adim]
+        if se[-1] is not ince[-1]:
+            se.append(ince[-1])
+        return [(y, x, c, tc) for (y, x, c, tc, _o) in se], yari
+
+    # s(z) = toplam dz/c
+    y = [q[0] for q in ince]
+    c = [q[2] for q in ince]
+    s = [0.0]
+    for k in range(1, len(y)):
+        s.append(s[-1] + (y[k] - y[k - 1]) * 2.0 / (c[k] + c[k - 1]))
+    hedef = [s[-1] * i / n for i in range(n + 1)]
+    cik, j = [], 0
+    for h in hedef:
+        while j < len(s) - 2 and s[j + 1] < h:
+            j += 1
+        t = 0.0 if s[j + 1] == s[j] else (h - s[j]) / (s[j + 1] - s[j])
+        q = [ince[j][m] + t * (ince[j + 1][m] - ince[j][m]) for m in range(4)]
+        cik.append(tuple(q))
+    cik[0] = tuple(ince[0][:4])
+    cik[-1] = tuple(ince[-1][:4])
+    return cik, yari
 
 
 if __name__ == "__main__":
