@@ -155,6 +155,7 @@ class KanatAgi:
         # ORTUSMELIDIR, yani NC = 2*NB.
         self.NB = firar_taban
         self.n_kapak = 2 * firar_taban if firar_taban > 0 else n_kapak
+        self.n_halka, self.buzme = 24, 0.75   # olculen en iyi
         self.kw = len(self.istasyon)          # kanat istasyonu sayisi
         if uc_uzanim > 0 and n_uc > 0:
             zt, xt, ct, tt = self.istasyon[-1]
@@ -379,48 +380,72 @@ class KanatAgi:
                     if k == NK - 2:
                         yuzler["uc"].append((e, f, g, h))
 
-        # --- IC BLOK (uc kapagi) ---
-        # k = kw-1 .. NK-1 arasinda profil kesitini doldurur; kw-1
-        # duzlemindeki tabani KAPAK DUVARIDIR.
+        # --- IC BLOK (uc kapagi): HALKA + KELEBEK CEKIRDEK (O-H) ---
+        #
+        # Onceki surum duz bir H-agi kullaniyordu ve hucum kenarinda
+        # COKUYORDU: orada kesit kalinligi sifira gittigi icin butun
+        # kalinlik cizgileri tek noktada bulusuyor. Olculdu: kapagin
+        # duzlem ici en-boy orani her yerde <= 8 idi, ama o tek coken
+        # kenar yuzunden agin AZAMI en-boy orani 1,33e9 cikiyordu.
+        #
+        # Yerine kapak.py'deki halka + Coons cekirdek geldi. Iki boyutta
+        # olculdu (uc kesiti, 272 sinir noktasi):
+        #   halka=6,  buzme=0,55  azami en-boy 597,2
+        #   halka=24, buzme=0,75  azami en-boy  61,3   <- secilen
+        # Isaret butun hucrelerde tutarli, COKEN hucre YOK.
         if self.kw < NK:
-            M = self.NF // 2
-            NC = self.n_kapak
+            from kapak import kapak_agi
             kap = {}
+            hucre_sablon = None
             for k in range(self.kw - 1, NK):
-                for m in range(M + 1):
-                    # Taban varsa yuzey NB kadar iceride basliyor.
-                    L = duzlem[k][prof_bas + self.NB + m][0]
-                    U = duzlem[k][prof_bas + self.NB + self.NF - m][0]
-                    for q in range(NC + 1):
-                        t = q / float(NC)
-                        kap[(k, m, q)] = dn(*[L[c] + t * (U[c] - L[c])
-                                              for c in range(3)])
+                ham = [duzlem[k][i][0] for i in range(prof_bas, prof_son)]
+                # Kapak DUZLEMSELDIR: butun sinir noktalari ayni z'de
+                # olmali. normal="kesit" bunu saglar; degilse durulur.
+                zk = ham[0][2]
+                if max(abs(q3[2] - zk) for q3 in ham) > 1e-12:
+                    raise RuntimeError(
+                        "kapak sinirI duzlemsel degil (z sacilmasi %.3e) -- "
+                        "3-B yurume ile kapak birlikte kullanilamaz"
+                        % max(abs(q3[2] - zk) for q3 in ham))
+                sinir = [(q3[0], q3[1]) for q3 in ham]
+                kat, G, q = kapak_agi(sinir, n_halka=self.n_halka,
+                                      buzme=self.buzme)
+                NP = len(sinir)
+                for r, katman in enumerate(kat):
+                    for pp in range(NP):
+                        kap[(k, "h", r, pp)] = dn(katman[pp][0],
+                                                  katman[pp][1], zk)
+                for ii in range(len(G)):
+                    for jj in range(len(G[0])):
+                        kap[(k, "c", ii, jj)] = dn(G[ii][jj][0],
+                                                   G[ii][jj][1], zk)
+                if hucre_sablon is None:
+                    hucre_sablon = (NP, len(kat), len(G), len(G[0]))
+            NP, NKAT, NG1, NG2 = hucre_sablon
             for k in range(self.kw - 1, NK - 1):
-                for m in range(M):
-                    for q in range(NC):
-                        # SARIM YONU: once +q (alttan uste), sonra +m (firar
-                        # kenarindan hucum kenarina). Ilk surumde tersiydi --
-                        # (+m)x(+q) ekseni -z'ye bakiyordu, oysa hucrenin
-                        # "ustu" +k = +z. Butun kapak hucreleri SOL ELLI
-                        # cikiyor ve hacimleri negatif oluyordu (olculdu:
-                        # 462 hucre, carpiklik 3,9e15).
-                        a = kap[(k, m, q)];         b = kap[(k, m, q + 1)]
-                        c = kap[(k, m + 1, q + 1)]; d = kap[(k, m + 1, q)]
-                        e = kap[(k + 1, m, q)];     f = kap[(k + 1, m, q + 1)]
-                        g = kap[(k + 1, m + 1, q + 1)]; h = kap[(k + 1, m + 1, q)]
-                        if a == b:            # firar kenari ucu (m=0) capraz
-                            prizmalar.append((a, c, d, e, g, h))
-                            taban, ust = (a, c, d), (e, g, h)
-                        elif c == d:          # hucum kenari ucu (m=M)
-                            prizmalar.append((a, b, c, e, f, g))
-                            taban, ust = (a, b, c), (e, f, g)
-                        else:
-                            hexler.append((a, b, c, d, e, f, g, h))
-                            taban, ust = (a, b, c, d), (e, f, g, h)
-                        if k == self.kw - 1:
-                            yuzler["duvar"].append(taban)   # KAPAK DUVARI
-                        if k == NK - 2:
-                            yuzler["uc"].append(ust)
+                dortlu = []
+                for r in range(NKAT - 1):
+                    for pp in range(NP):
+                        p2 = (pp + 1) % NP
+                        # Sarim TERS cevriliyor: kapak.py'nin urettigi ilmek
+                        # saat yonunde (olculdu: butun alanlar negatif),
+                        # hucrenin ustu ise +k = +z.
+                        dortlu.append((("h", r, pp), ("h", r + 1, pp),
+                                       ("h", r + 1, p2), ("h", r, p2)))
+                for ii in range(NG1 - 1):
+                    for jj in range(NG2 - 1):
+                        dortlu.append((("c", ii, jj), ("c", ii, jj + 1),
+                                       ("c", ii + 1, jj + 1), ("c", ii + 1, jj)))
+                for d4 in dortlu:
+                    alt4 = tuple(kap[(k,) + t] for t in d4)
+                    ust4 = tuple(kap[(k + 1,) + t] for t in d4)
+                    if len(set(alt4)) < 4 or len(set(ust4)) < 4:
+                        continue                  # cokmus -> atlanir (olmamali)
+                    hexler.append(alt4 + ust4)
+                    if k == self.kw - 1:
+                        yuzler["duvar"].append(alt4)     # KAPAK DUVARI
+                    if k == NK - 2:
+                        yuzler["uc"].append(ust4)
 
         ad = ["duvar", "disalan", "cikis", "kok", "uc"]
         L = ["$MeshFormat", "2.2 0 8", "$EndMeshFormat",

@@ -1580,3 +1580,59 @@ kenarındaki çöken kenarıdır (orada kesit kalınlığı sıfıra gider). Kap
 ağda bu yok (5000). Çözümü kapakta **O-ağı** kullanmaktır: kesit sınırını
 izleyen bir halka artı hücum kenarına değmeyen küçük bir H çekirdek.
 Yapılmadı.
+
+---
+
+## Uç kapağı: O-H kelebek çekirdek (02.09.2026)
+
+Düz H-ağı hücum kenarında çöküyordu. Ölçüm önce bir şeyi netleştirdi:
+kapağın **düzlem içi en-boy oranı her yerde ≤ 8** — yani kapak aslında
+iyiydi, 1,33e9'un tamamı **tek çöken kenardan** (192 prizma) geliyordu.
+
+Yerine `cfd/kanat/kapak.py`: **halka + Coons çekirdek**.
+- Halka: sınırdan içeri NR katman; sivri hücum kenarını soğurur.
+- Çekirdek: halkanın iç ilmeğinde tek Coons yaması. İç ilmek, sınırın
+  Laplace yumuşatmasıyla küt hâle getirilmiş ve merkeze doğru büzülmüş
+  hâlidir; dört köşe eşit yay uzunluğunda seçildiğinden karşılıklı
+  kenarlar aynı nokta sayısına sahip ve **hiçbir yerde çökme yok**.
+
+İki boyutta parametre taraması (uç kesiti, 272 sınır noktası):
+
+| halka | büzme | işaret tutarlı | ortanca | azami en-boy |
+|---|---|---|---|---|
+| 6 | 0,55 | evet | 1,83 | 597,2 |
+| 6 | 0,75 | evet | 1,79 | 245,3 |
+| 24 | 0,55 | evet | 2,40 | 149,3 |
+| **24** | **0,75** | **evet** | **2,14** | **61,3** |
+
+### 3-B sonuç
+
+| | önce (H kapak) | **sonra (O-H kapak)** |
+|---|---|---|
+| prizma | 384 | **0** |
+| negatif hücre | 0 | **0** |
+| yanlış yönlü yüz | 0 | **0** |
+| azami dikey olmayanlık | 89,8° | **89,7°** |
+| azami çarpıklık | 2,48 | **2,48** |
+| azami en-boy oranı | **1,33e9** | **1,46e5** |
+
+Çöken kenar gitti, en-boy oranı **9000 kat** düzeldi. Ağ artık tümüyle
+altı yüzlü (1,2–1,9 M hücre, prizma yok).
+
+### Kalan: en-boy oranı hâlâ yüksek
+
+Azami en-boy oranı, açıklık adımıyla **tam orantılı** ölçüldü
+(AR/Δz = 1,73e5; üç farklı uzanımda da aynı):
+
+| uç uzanımı | azami Δz | azami en-boy |
+|---|---|---|
+| 20 çevre, 12 istasyon | 5,81 | 1,01e6 |
+| 20 çevre, 24 istasyon | 2,45 | 4,24e5 |
+| 8 çevre, 20 istasyon | 0,84 | 1,46e5 |
+
+Yani kapaktaki en küçük düzlem içi boyut 5,8e−6 ve azami oran onu bölen
+açıklık adımı belirliyor. Kaynağı **halka değil**: `n_halka` 6 ile 12
+birebir aynı oranı verdi (145825,5104). Nereden geldiği bulunamadı.
+
+Karşılaştırma: kapaksız ağ 5000, doğrulanmış 2-B ağ 4999,99989. Kapaklı
+ağ hâlâ 30 kat yukarıda ve `checkMesh`'te tek başarısız denetim bu.
