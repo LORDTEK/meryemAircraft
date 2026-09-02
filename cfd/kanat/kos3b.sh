@@ -18,19 +18,28 @@ gmshToFoam ag.msh > log.gmshToFoam 2>&1
 # 0/U'dan OKUNUR, varsayilmaz -- vakayi kuran karar verir.
 python3 - <<'PY2'
 import re, io
+U = io.open("0/U").read()
 tip = "symmetryPlane"
-m = re.search(r"\n    kok\n    \{\n\s*type\s+([A-Za-z]+);", io.open("0/U").read())
+m = re.search(r"\n    kok\n    \{\n\s*type\s+([A-Za-z]+);", U)
 if m:
     tip = m.group(1)
+# UC AYRI. Onceden kok ile ayni tipe cevriliyordu; yanlisti. Kanat ucta
+# bitmiyor, uc duzleminden disariya akis var ve o duzlem serbest akisa
+# aciliyor -- 0/U'da "(disalan|uc)" olarak disalan ile ayni kosulu aliyor.
+# symmetryPlane yapmak orada akisi duzleme TEYELLER, yani uc girdabini
+# yapay olarak bastirirdi. Serbest akis yamasi 'patch' KALMALIDIR.
+uc_serbest = '"(disalan|uc)"' in U
 p = "constant/polyMesh/boundary"
 s = io.open(p).read()
 s = re.sub(r"(\n    duvar\n    \{\n\s*)type\s+patch;",
            r"\1type            wall;", s)
-for a in ("kok", "uc"):
-    s = re.sub(r"(\n    %s\n    \{\n\s*)type\s+patch;" % a,
+s = re.sub(r"(\n    kok\n    \{\n\s*)type\s+patch;",
+           r"\1type            %s;" % tip, s)
+if not uc_serbest:
+    s = re.sub(r"(\n    uc\n    \{\n\s*)type\s+patch;",
                r"\1type            %s;" % tip, s)
 io.open(p, "w").write(s)
-print("  kok/uc tipi: %s" % tip)
+print("  kok tipi: %s   uc: %s" % (tip, "serbest akis (patch)" if uc_serbest else tip))
 PY2
 
 checkMesh > log.checkMesh 2>&1 || true
