@@ -268,3 +268,30 @@ Kural 11.8'in "marjın sağında" şartına uyuyor.
 **Kapsam aşımı yok.** `tarifname_icerik.py`, `01-tarifname.md`,
 `02-istemler.md`, `03-ozet.md` üzerinde `git diff` boş; 17 istemin hepsi
 yerinde. Değişenlerin tamamı dizgi (`mkpdf.py`, `mkpdf_css.py`).
+
+---
+
+## Şekli eksiklikler GİDERİLDİ — Kurum bildirimi (02.09.2026)
+
+TÜRKPATENT, 02/09/2026 tarihli bildirimle şekli eksikliklerin giderildiğini
+tespit etti (SMK m.95/3, Yönetmelik m.96/1). Başvuru 2026/014570 şekli
+incelemeyi geçti.
+
+**Sırada ne var**
+
+- **Araştırma raporu.** Araştırma talebi başvuruyla birlikte yapılmış ve
+  ücreti ödenmiş; Kurum raporu düzenleyip gönderecek (SMK m.96/2,
+  Yönetmelik m.97/3). Ayrıca bir işlem gerekmiyor.
+- **Yayım.** Başvuru tarihinden (26/08/2026) itibaren **18 ay** dolunca
+  Bültende yayımlanır → **26/02/2028**. Erken yayım talebiyle öne
+  çekilebilir.
+- **Yıllık ücretler.** Üçüncü yıldan başlayarak her yıl vadesinde. Vade
+  günü başvuru tarihine denk gelen ay ve gün: **26 Ağustos**. İlk vade
+  **26/08/2028**. Ödenmezse ek ücretle altı ay daha (26/02/2029'a kadar);
+  o da kaçırılırsa **başvuru geçersiz** olur.
+
+**Makale yayım planına etkisi.** Daha önce not edilen ödemesiz süre
+haritası şimdi bağlayıcı hâle geliyor: Avrupa'da (EPC) kendi yayımına
+tolerans **yoktur**. Başvuru 26/02/2028'de yayımlanacak; makalenin ondan
+önce yayımlanması EPC yolunu kapatır. Makale bu tarihten sonraya
+planlanmalı ya da EPC'den bilinçli olarak vazgeçilmelidir.
