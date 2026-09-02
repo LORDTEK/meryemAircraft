@@ -1256,3 +1256,82 @@ doğrusu **artı**. Yanlış işaret, extrapolasyonu üç ölçümün de dışı
 düşürdü (e için 0,986, CL için 0,27072) — dizi azalırken sınırın en küçük
 değerin altında olması gerektiğinden yakalandı. Düzeltilmiş değerler
 yukarıdadır.
+
+---
+
+## Gerçek planform ağı — 3-B normal boyunca yürüme UYGULANDI, İŞE YARAMADI (02.09.2026)
+
+### İstenen yapıldı, ölçüldü, tutmadı
+
+Kesit düzlemi yerine lofte edilmiş yüzeyin gerçek 3-B normali boyunca
+yürüme uygulandı. `checkMesh` ile ölçüldü:
+
+| yürüme doğrultusu | negatif hücre | azami dikey olmayanlık | çarpıklık |
+|---|---|---|---|
+| kesit düzlemi (2-B normal) | 35 890 | 180,0° | 43,8 |
+| **gerçek 3-B yüzey normali** | **36 047** | 180,0° | **120,5** |
+| bütün istasyonlarda ortak normal | 35 893 | 179,9° | 147,2 |
+
+**Yürüme doğrultusu baskın etken değil.** Üçü de aynı mertebede kötü.
+3-B normal çarpıklığı üç kat artırdı: eğim yalnızca profil bölgesinde ve
+yalnızca iç istasyonlarda verildiği için iz kesiği ekleminde ve kök/uç
+düzlemlerinde sıçrıyor. Varsayılan `kesit`e geri alındı; seçenek kodda
+kayıt olarak duruyor.
+
+Düz kanat regresyonu korundu: sabit kesitte 3-B normal 2-B'ye indirgeniyor,
+z hiç kaymıyor.
+
+### Vekil ölçütüm yanıltmıştı — düzeltme
+
+Önceki ayrıştırmayı kendi tetrahedral hacim işlevimle yapmıştım.
+`checkMesh` ile tekrarlandı; **sıralama doğru, büyüklükler yanlıştı**:
+
+| değişen | benim vekil ölçütüm | checkMesh |
+|---|---|---|
+| düz | 0 | 0 |
+| ok açısı | 0 | 0 |
+| sivrilme | 0 | 15 |
+| kalınlık | 3582 | **25 294** |
+| gerçek planform | 3398 | 24 185 |
+
+Sonuç aynı — kusuru doğuran kalınlık değişimi — ama ölçüt artık doğru.
+
+### Mekanizma kuruldu ve ÖNGÖRÜ TUTTU
+
+Duvar yüzünün çarpıklığı ≈ |∂²y/∂x∂z|·Δx·Δz = 1,57e−4; duvar hücresi
+y⁺=1'de 8,9e−6. Oran **17,6** — yüz, hücrenin kendi yüksekliğinin 18 katı
+kadar çarpık. Hücre bu durumda kaçınılmaz olarak bozulur, **yürüme
+doğrultusundan bağımsız olarak** (üç seçeneğin de aynı çıkması bundan).
+
+Koşmadan önce yazılan öngörü: duvar aralığı ~59 kat büyütülürse (y⁺≈60)
+çarpıklık hücre yüksekliğinin 0,3'üne iner ve negatif hücreler kaybolmalı.
+
+| y⁺ | negatif hücre |
+|---|---|
+| 1 | 24 185 |
+| 10 | 902 |
+| 30 | 27 |
+| 60 | **22** |
+| 120 | 22 |
+
+Üç mertebe düştü. **Mekanizma doğrulandı.**
+
+### Kalan kusur — AÇIKLANAMADI
+
+22'de plato yapıyor, sıfırlanmıyor. Ayrıca y⁺=60'ta bile yüzlerin **%23'ü**
+70°'yi aşıyor ve azami dikey olmayanlık 155,7°'de çakılı. İstasyon sayısı
+13→25→49 yapıldığında bu **hiç değişmiyor** (şiddetli yüz oranı sabit) —
+yani açıklık çözünürlüğü değil.
+
+Denenip **ölçümle elenen** hipotezler:
+
+| hipotez | sonuç |
+|---|---|
+| duvar aralığını bütün istasyonlarda sabitlemek | KÖTÜLEŞTİ (6351→11 283) |
+| veter dağılımını tek kesitten üretmek | kısmen iyileştirdi (28 325→24 185) |
+| 3-B yüzey normali boyunca yürümek | KÖTÜLEŞTİ (çarpıklık 44→120) |
+| iz/hücum kenarı aralıklarını mutlaklaştırmak | KÖTÜLEŞTİ (sivrilme 15→75) |
+| açıklık istasyonunu artırmak | ETKİSİZ |
+
+Dördü de yanlış çıktı ve dördü de kayda geçti. **Gerçek planform hesabı
+koşulmayacak** — bozuk ağdan sayı üretilmez.

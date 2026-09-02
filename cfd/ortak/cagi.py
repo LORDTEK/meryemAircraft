@@ -302,7 +302,15 @@ class CAgi:
         return d
 
     # ---- yurume
-    def uret(self):
+    def parcalar(self):
+        """Yurumeden ONCEKI parcalar: ic egri, dis egri, duvar normali,
+        isinsal dagilim ve mesafe.
+
+        uret() bunlari kullanip KESIT DUZLEMINDE yurur. Uc boyutlu yigin
+        (kanat/kanatagi.py) ayni parcalari alip GERCEK 3-B yuzey normali
+        boyunca yurur; ikisi de ayni geometriden beslendigi icin iki
+        boyutlu davranis degismez.
+        """
         ic = self.ic_egri()
         NI = len(ic)
         dis = self.dis_egri(ic)
@@ -412,6 +420,12 @@ class CAgi:
         # normal yonunde 5 vetere varan yer degistirme uretiyordu. Sonuc,
         # duvardan cok uzakta bile normal alanindaki kucuk degisimlere asiri
         # duyarliydi ve orada hucreleri ters cevirebiliyordu.
+        return dict(ic=ic, dis=dis, n=n, f=f, mesafe=mesafe, NI=NI)
+
+    def uret(self):
+        pr = self.parcalar()
+        ic, dis, n, f = pr["ic"], pr["dis"], pr["n"], pr["f"]
+        mesafe, NI = pr["mesafe"], pr["NI"]
         gec = self.gecis
         P = []
         for i in range(NI):

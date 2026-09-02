@@ -54,7 +54,7 @@ class KanatAgi:
 
     def __init__(self, istasyon, Re=6e6, yplus=1.0, R=20.0, Xiz=20.0,
                  n_profil=256, n_normal=96, n_iz=64, veter_ref=1.0,
-                 dy_sabit=True):
+                 dy_sabit=False, normal="kesit"):
         if len(istasyon) < 2:
             raise ValueError("en az iki istasyon gerekir")
         z = [s[0] for s in istasyon]
@@ -84,59 +84,154 @@ class KanatAgi:
         # aciklik boyunca asilmaz (kokte y+ daha da kucuk olur, ki bu
         # zararsizdir).
         self.dy_sabit = dy_sabit
+        self.gecis = 0.3
+        self._dag = None
+        # normal: duvardan yurumeye hangi dogrultuyla baslanacagi.
+        #   "kesit" -> her istasyonun KENDI 2-B normali (ilk surum)
+        #   "3b"    -> lofte edilmis yuzeyin gercek 3-B normali
+        #   "ortak" -> butun istasyonlarda AYNI (ortalama) 2-B normal
+        # Uc secenek de olculdu; sonuclar dogrulama.md'de.
+        self.normal = normal
         self._dy_ort = ilk_hucre_yuksekligi(
             Re, yplus, min(s[2] for s in self.istasyon))
 
     # ---- duzlemler
     def duzlemler(self):
-        """Her istasyon icin MUTLAK koordinatta (x, y) nokta izgarasi.
+        """Her istasyon icin MUTLAK koordinatta nokta izgarasi.
 
-        Doner: (duzlem_listesi, NI, NJ). duzlem[k][i][j] = (x, y).
+        Doner: (duzlem, NI, NJ). duzlem[k][i][j] = (x, y, z) -- z ARTIK
+        istasyon duzlemine bagli degil; 3-B yurume onu oynatir.
+
+        NEDEN 3-B YURUME. Kesit duzleminde yurumek, kalinlik aciklik
+        boyunca degistiginde bozuk ag veriyordu. Olculdu: yalnizca ok
+        acisi ya da yalnizca sivrilme degistiginde kusur YOK; yalnizca
+        kalinlik degistiginde binlerce bozuk hucre. Sebep, yuzeyin kendi
+        normali dogrultusunda kaymasi: x = 0,3'te komsu istasyonlar arasi
+        kayma 0,0143 iken duvar hucresi 8,9e-6, yani ~1600 kat.
+
+        Bir bozuk hucrenin koseleri incelendiginde goruldu ki hucre
+        GERCEKTE ters degil (ideal paralelyuzlu hacmi pozitif); j yonu
+        vektoru komsu istasyonlar arasinda ~0,6 derece DONUYOR ve hucre
+        o incelikte oldugu icin yuz CARPIK cikiyor. Hacmi negatif yapan
+        bu carpiklik.
+
+        Cozum: duvar bolgesinde yurume, kesit duzlemindeki 2-B normal
+        yerine lofte edilmis yuzeyin GERCEK 3-B normali boyunca baslar.
+        Boylece j cizgileri komsu istasyonlarda ayni yuzeye dik olur ve
+        aralarindaki donme kaybolur.
+
+        Iki yerde 3-B normal KULLANILMAZ ve bunun sebebi var:
+          - iz kesiginde: orada ust ve alt ayni noktada; egilirse ikisi
+            ayrilir ve kesik ic yuz olmaktan cikar.
+          - k = 0 ve k = NK-1 duzlemlerinde: o yamalar symmetryPlane
+            olacak, duz kalmalari gerekir.
         """
-        # Veter dagilimi BIR KEZ, en KALIN kesitten uretilir ve butun
-        # istasyonlara aynen verilir. Boylece i cizgileri her istasyonda
-        # ayni x'te durur (gercek loft cizgisi). En kalin kesit secildi
-        # cunku yay uzunlugu orada en buyuktur; ince kesitlerde ayni x
-        # dagilimi daha da seyrek kalir, tersi olsaydi sikisirdi.
-        en_kalin = max(s[3] for s in self.istasyon)
-        oncu = CAgi(kod=en_kalin, Re=self.Re, yplus=self.yplus,
-                    R=self.R, Xiz=self.Xiz, n_profil=self.NF,
-                    n_normal=self.NJ, n_iz=self.NW)
-        dagilim = oncu.veter_dagilimi()
-
-        duzlem, NI, NJ = [], None, None
+        pr, NI, NJ = [], None, None
         for (z, xle, veter, tc) in self.istasyon:
-            # Uzak alan ve iz MUTLAK; CAgi birim veterde calistigi icin
-            # yerel vetere bolunerek veriliyor.
-            # Kalinlik KESIRLI geciriliyor (naca_kodu ile yuvarlanmiyor):
-            # gercek planformda t/c kokten uca surekli degisir, tam
-            # yuzdeye yuvarlamak istasyonlar arasinda basamak birakirdi.
             ag = CAgi(kod=tc, Re=self.Re, yplus=self.yplus,
                       R=self.R / veter, Xiz=self.Xiz / veter,
                       n_profil=self.NF, n_normal=self.NJ, n_iz=self.NW,
-                      profil_x=dagilim)
-            # Duvar araligi YEREL veterle: y+ yerel Reynolds'a baglidir.
-            # CAgi'nin kendi hesabi birim veter varsayar, o yuzden
-            # olcekleme sonrasi dogru cikacak degerle degistiriliyor.
-            # CAgi birim veterde calisir; mutlak dy'yi ona bolerek veriyoruz.
+                      profil_x=self._dagilim())
             ag.dy = (self._dy_ort if self.dy_sabit
                      else ilk_hucre_yuksekligi(self.Re, self.yplus, veter)) / veter
-            P, ni, nj = ag.uret()
+            p = ag.parcalar()
             if NI is None:
-                NI, NJ = ni, nj
-            elif (ni, nj) != (NI, NJ):
-                raise RuntimeError(
-                    "istasyonlar farkli izgara boyutu verdi: (%d,%d) vs "
-                    "(%d,%d) -- yigilamaz" % (ni, nj, NI, NJ))
-            duzlem.append([[(xle + veter * P[i][j][0], veter * P[i][j][1])
-                            for j in range(nj)] for i in range(ni)])
+                NI, NJ = p["NI"], len(p["f"][0])
+            elif (p["NI"], len(p["f"][0])) != (NI, NJ):
+                raise RuntimeError("istasyonlar farkli izgara boyutu verdi")
+            pr.append((p, z, xle, veter))
+
+        NK = len(pr)
+        # --- mutlak ic ve dis egriler
+        IC = [[(xle + veter * p["ic"][i][0], veter * p["ic"][i][1], z)
+               for i in range(NI)] for (p, z, xle, veter) in pr]
+        DIS = [[(xle + veter * p["dis"][i][0], veter * p["dis"][i][1], z)
+                for i in range(NI)] for (p, z, xle, veter) in pr]
+        N2 = [[(p["n"][i][0], p["n"][i][1], 0.0) for i in range(NI)]
+              for (p, z, xle, veter) in pr]
+
+        # --- 3-B yuzey normali (yalnizca profil araliginda)
+        prof = range(self.NW, self.NW + self.NF + 1)
+        N3 = [[N2[k][i] for i in range(NI)] for k in range(NK)]
+
+        if self.normal == "ortak":
+            # Butun istasyonlarda AYNI dogrultu: j cizgileri birbirine tam
+            # paralel olur, aralarinda donme kalmaz, dolayisiyla yuz
+            # carpikligi da kalmaz. Bedeli, kesit sekli degistikce duvar
+            # dikliginden sapmaktir -- ama sapma sinirlidir ve olculebilir.
+            for i in range(NI):
+                sx = sum(N2[k][i][0] for k in range(NK))
+                sy = sum(N2[k][i][1] for k in range(NK))
+                L = math.hypot(sx, sy) or 1.0
+                for k in range(NK):
+                    N3[k][i] = (sx / L, sy / L, 0.0)
+            return self._yuru(pr, IC, DIS, N3, NI, NJ)
+
+        if self.normal != "3b":
+            return self._yuru(pr, IC, DIS, N3, NI, NJ)
+
+        for k in range(NK):
+            if k == 0 or k == NK - 1:
+                continue                      # kok/uc duz kalir
+            for i in prof:
+                if i == 0 or i == NI - 1:
+                    continue
+                a = IC[k][i - 1]; b = IC[k][i + 1]
+                c = IC[k - 1][i]; d = IC[k + 1][i]
+                t1 = [b[m] - a[m] for m in range(3)]      # veter yonu
+                t2 = [d[m] - c[m] for m in range(3)]      # aciklik yonu
+                v = [t2[1]*t1[2] - t2[2]*t1[1],
+                     t2[2]*t1[0] - t2[0]*t1[2],
+                     t2[0]*t1[1] - t2[1]*t1[0]]
+                L = math.sqrt(sum(q*q for q in v))
+                if L <= 0:
+                    continue
+                v = [q / L for q in v]
+                # Isaret 2-B normalden alinir: disari bakmali.
+                if sum(v[m] * N2[k][i][m] for m in range(3)) < 0:
+                    v = [-q for q in v]
+                N3[k][i] = tuple(v)
+
+        return self._yuru(pr, IC, DIS, N3, NI, NJ)
+
+    def _yuru(self, pr, IC, DIS, N3, NI, NJ):
+        NK = len(pr)
+        gec = self.gecis
+        duzlem = []
+        for k in range(NK):
+            p = pr[k][0]
+            sut_i = []
+            for i in range(NI):
+                d = math.dist(IC[k][i], DIS[k][i])
+                e = [(DIS[k][i][m] - IC[k][i][m]) / d for m in range(3)]
+                n0 = N3[k][i]
+                sut = []
+                for ff in p["f"][i]:
+                    b = ff * (d + gec) / (ff * d + gec)
+                    v = [(1.0 - b) * n0[m] + b * e[m] for m in range(3)]
+                    L = math.sqrt(sum(q*q for q in v)) or 1.0
+                    sut.append(tuple(IC[k][i][m] + d * ff * v[m] / L
+                                     for m in range(3)))
+                sut_i.append(sut)
+            duzlem.append(sut_i)
         return duzlem, NI, NJ
+
+    def _dagilim(self):
+        """Veter dagilimi BIR KEZ, en kalin kesitten uretilir ve butun
+        istasyonlara aynen verilir; boylece i cizgileri her istasyonda ayni
+        x'te durur (gercek loft cizgisi)."""
+        if getattr(self, "_dag", None) is None:
+            en_kalin = max(s[3] for s in self.istasyon)
+            oncu = CAgi(kod=en_kalin, Re=self.Re, yplus=self.yplus,
+                        R=self.R, Xiz=self.Xiz, n_profil=self.NF,
+                        n_normal=self.NJ, n_iz=self.NW)
+            self._dag = oncu.veter_dagilimi()
+        return self._dag
 
     # ---- yazim
     def yaz(self, yol):
         duzlem, NI, NJ = self.duzlemler()
-        z = [s[0] for s in self.istasyon]
-        NK = len(z)
+        NK = len(self.istasyon)
 
         dugum, sira = {}, []
 
@@ -150,8 +245,8 @@ class KanatAgi:
         # no[k][i][j]. Iz kesiginde ust ve alt ayni koordinattadir; koordinat
         # anahtariyla birlestirildikleri icin orada tek dugum olusur ve kesik
         # IC YUZ olur -- iki boyutlu uretecin davranisinin aynisi.
-        no = [[[dn(duzlem[k][i][j][0], duzlem[k][i][j][1], z[k])
-                for j in range(NJ)] for i in range(NI)] for k in range(NK)]
+        no = [[[dn(*duzlem[k][i][j]) for j in range(NJ)]
+               for i in range(NI)] for k in range(NK)]
 
         hexler = []
         yuzler = {"duvar": [], "disalan": [], "cikis": [], "kok": [], "uc": []}
