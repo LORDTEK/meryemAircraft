@@ -26,7 +26,7 @@ sys.path.insert(0, BURA)
 from kur import kur as kur2b                          # noqa: E402
 
 
-def kur3b(dizin, ag, kok="symmetryPlane", uc="symmetryPlane", **kw):
+def kur3b(dizin, ag, kok="symmetryPlane", uc="serbest", duvar_fonk=True, **kw):
     """ag: KanatAgi ornegi. kw, naca/kur.py'nin kur()'una gecer."""
     kw.setdefault("kod", "0012")
     bilgi2 = kur2b(dizin, **kw)
@@ -36,8 +36,6 @@ def kur3b(dizin, ag, kok="symmetryPlane", uc="symmetryPlane", **kw):
 
     # 2) yamalari degistir
     eski = ('    "(on|arka)"\n    {\n        type            empty;\n    }\n')
-    yerine = ('    kok\n    {\n        type            %s;\n    }\n'
-              '    uc\n    {\n        type            %s;\n    }\n' % (kok, uc))
     n = 0
     for ad in sorted(os.listdir(os.path.join(dizin, "0"))):
         p = os.path.join(dizin, "0", ad)
@@ -46,7 +44,54 @@ def kur3b(dizin, ag, kok="symmetryPlane", uc="symmetryPlane", **kw):
         if adet != 1:
             raise RuntimeError("0/%s icinde on|arka blogu %d kez gecti, "
                                "1 bekleniyordu" % (ad, adet))
-        open(p, "w").write(s.replace(eski, yerine))
+        # kok: simetri duzlemi (govde orta duzlemi)
+        s = s.replace(eski, '    kok\n    {\n        type            %s;\n'
+                            '    }\n' % kok)
+        if uc == "serbest":
+            # uc: UZAK SINIR. Kanat orada bitmiyor -- uctan disariya akis
+            # var ve o duzlem serbest akisa aciliyor. Bu yuzden disalan ile
+            # AYNI kosulu alir; ayri bir tip yazmak freestreamValue'yu
+            # eksik birakirdi.
+            if s.count("    disalan\n") != 1:
+                raise RuntimeError("0/%s icinde disalan blogu tek degil" % ad)
+            s = s.replace("    disalan\n", '    "(disalan|uc)"\n')
+        else:
+            s = s.replace("    cikis\n", '    uc\n    {\n'
+                          '        type            %s;\n    }\n'
+                          '    cikis\n' % uc, 1)
+        if duvar_fonk:
+            # y+ ~ 60 icin DUVAR FONKSIYONU.
+            #
+            # Ag y+ = 60'ta kuruldu (y+ = 1'de gercek planform agi
+            # bozuluyor, bkz. dogrulama.md). Dusuk-Re duvar islemi o y+'ta
+            # gecersizdir. nutUSpaldingWallFunction, Spalding yasasina
+            # dayandigi icin y+ ~ 1'den ~300'e kadar SUREKLIDIR; y+ aciklik
+            # boyunca degistigi icin dogru secim budur.
+            n0 = s.count("        type            nutLowReWallFunction;\n")
+            s = s.replace("        type            nutLowReWallFunction;\n",
+                          "        type            nutUSpaldingWallFunction;\n")
+            # k'nin duvar kosulu da DEGISMEK ZORUNDA. Dusuk-Re kurulumunda
+            # duvarda k = 1e-14 cakiliyor; bu, ilk hucre merkezi viskoz alt
+            # tabakadayken dogrudur. y+ = 60'ta ilk hucre merkezi LOG
+            # TABAKASINDA ve orada k ~ u_tau^2/sqrt(beta*) mertebesindedir.
+            # Sifira cakmak turbulans uretimini bastirir ve duvar kayma
+            # gerilmesini -- yani surukleme ve sinir tabakasi davranisini --
+            # yanlis verir. Duvar fonksiyonunun esi kqRWallFunction'dir
+            # (sifir gradyan + deger).
+            if ad == "k":
+                k0 = s.count("        type            fixedValue;\n"
+                             "        value           uniform 1e-14;\n")
+                if k0 != 1:
+                    raise RuntimeError("0/k icinde dusuk-Re duvar kosulu "
+                                       "%d kez gecti, 1 bekleniyordu" % k0)
+                s = s.replace("        type            fixedValue;\n"
+                              "        value           uniform 1e-14;\n",
+                              "        type            kqRWallFunction;\n"
+                              "        value           uniform 1e-14;\n")
+            if ad == "nut" and n0 != 1:
+                raise RuntimeError("0/nut icinde dusuk-Re duvar kosulu "
+                                   "%d kez gecti, 1 bekleniyordu" % n0)
+        open(p, "w").write(s)
         n += 1
     if n == 0:
         raise RuntimeError("0/ bos -- kur2b calismamis olabilir")

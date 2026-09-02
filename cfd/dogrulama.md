@@ -1754,3 +1754,40 @@ dy sabit, mutlak uzak alan:
 
 `checkMesh`'te başarısız olan tek denetim en-boy oranı. Doğrulanmış 2-B ağ
 da o denetimde başarısız (5000).
+
+### Kabalaştırırken n_normal'a dokunulmaz (02.09.2026)
+
+Çözücüyü hızlı denemek için kaba bir ağ kuruldu (`n_profil` 128,
+**`n_normal` 64**, `n_iz` 32, 8 istasyon). OpenFOAM kök yamasını reddetti:
+
+    Symmetry plane 'kok' is not planar.
+    ... average normal (0 0 -0.9761029412)
+
+Ağdan doğrudan okundu: kökün **13 056 yüzünün 156'sı ters yönlü**
+(+z), geri kalanı −z. Oran tam tutuyor: (12900−156)/13056 = **0,976103**
+— OpenFOAM'ın bildirdiği sayının aynısı. Ters yüzler x ∈ [0,019, 0,879],
+y ∈ ±0,117 aralığında, yani **kanat profilinin çevresinde**: kökte duvara
+bitişik hücreler ters dönmüş.
+
+Sebep: `dy` en küçük veterden (uç) sabitleniyor, kök veteri ise en büyük.
+`n_normal = 64` ile 1,26e−4'ten R = 100'e çıkmak ~1,25 büyüme oranı
+gerektiriyor; eğri bölgede ışınsal çizgiler kesişiyor. `n_normal = 113`'te
+oran ~1,13 ve ağ temiz.
+
+**Kural: ağı kabalaştırmak gerekiyorsa `n_profil`, `n_iz` ve istasyon
+sayısı azaltılır; `n_normal` azaltılmaz.** Ayrıca bu, `symmetryPlane`
+yamasının ucuz bir ağ geçerlilik denetimi olduğunu gösteriyor —
+`checkMesh`'ten önce patlıyor.
+
+### Çözücü darboğazı: en-boy oranı KOZMETİK DEĞİL (02.09.2026)
+
+1,67 M hücrelik gerçek planform vakası kuruldu ve koştu — ıraksama yok,
+hata yok. Ama **adım başına ~1 dakika**: 3000 adım = 50 saat.
+
+Sebep loglarda: basınç çözümünde **GAMG adım başına 234–678 iterasyon**
+yapıyor (sağlıklı bir ağda 5–20 olur), üstelik
+`nNonOrthogonalCorrectors 2` ile bu üç kez tekrarlanıyor.
+
+Yani "en-boy oranı 145 825 gerçekten zarar veriyor mu?" sorusunun cevabı
+**evet**: çok ızgarayı (multigrid) çökertiyor. `checkMesh`'in tek
+başarısız denetimi kozmetik bir şikâyet değilmiş.
