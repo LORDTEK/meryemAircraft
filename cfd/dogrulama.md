@@ -1801,3 +1801,50 @@ yapıyor (sağlıklı bir ağda 5–20 olur), üstelik
 Yani "en-boy oranı 145 825 gerçekten zarar veriyor mu?" sorusunun cevabı
 **evet**: çok ızgarayı (multigrid) çökertiyor. `checkMesh`'in tek
 başarısız denetimi kozmetik bir şikâyet değilmiş.
+
+### Basınç çözücüsü ölçüldü (02.09.2026)
+
+1,67 M hücrelik ağda, 4 çekirdek:
+
+| basınç çözücüsü | s/adım | p-iterasyon |
+|---|---|---|
+| GAMG + GaussSeidel (2-B'den gelen) | 38,3 | 206 |
+| **GAMG + DICGaussSeidel** | **17,6** | **38** |
+| PCG + DIC | 12,3 | 185 |
+
+GAMG + DICGaussSeidel seçildi: PCG adım başına biraz daha hızlı görünse
+de iterasyon sayısı beş kat fazla, yani ölçek davranışı kötü. Üretim
+koşusunda p-iterasyonu 37–81 aralığında seyrediyor — ölçüm tutuyor.
+Değişiklik yalnızca `kur3b.py`'de; 2-B zinciri korundu.
+
+### Veter yönünde kabalaştırma dönüşümde bozuluyor — ÇÖZÜLMEDİ
+
+`n_profil` 256→128 ve `n_iz` 64→32 ile kurulan ağ `checkMesh`'te
+**497 negatif hücre, 1681 yanlış yönlü yüz, dikey olmayanlık 179°**
+veriyor. İnce ağ (256/64) aynı kodla tertemiz.
+
+Aranan yerler ve **bulunamadı**:
+
+- **`.msh` dosyasının kendisi geçerli.** Dosyadan okunan 508 096 altıgenin
+  hiçbirinin hacmi negatif değil, çökmüş (tekrarlı düğümlü) hücre yok.
+- İlk açıklamam "5-tet ayrıştırmam OpenFOAM'ınkiyle eşdeğer değil" idi.
+  Bunun üzerine OpenFOAM'ın yordamı (`primitiveMesh::makeCellCentresAndVols`
+  — yüz merkezli üçgen yelpazesi + piramit toplamı) `ortak/agdenetim.py`
+  içinde birebir yazıldı. **O da 0 negatif diyor.** Yani açıklama yanlıştı.
+- **Düğüm birleştirmesi doğru.** Koordinat anahtarıyla birleşen düğümler
+  sayıldı: kaba ağda 693, ince ağda 2145 düğüm ikişer kez birleşiyor —
+  hepsi iz kesiği, yani beklenen. Üçe katlanan tek düğüm yok.
+
+Yani geçerli bir `.msh`, doğru birleştirme, ve buna rağmen `gmshToFoam`
+sonrası bozuk bir polyMesh. **Sebebi bulunamadı.** Şüphe kapak ile halka
+ağının birleştiği arayüzde ama gösterilemedi.
+
+**Pratik sonuç: ağ veter yönünde kabalaştırılmayacak.** Üretim koşusu ince
+ağla (256/64, 1,67 M hücre) yapılıyor.
+
+### Yan bulgu: `symmetryPlane` ucuz bir geçerlilik denetimi
+
+Kök yaması `symmetryPlane` ise OpenFOAM ağı **`checkMesh`'ten önce**
+reddediyor ve ters yüz oranını doğrudan veriyor: bildirdiği ortalama
+normal büyüklüğü `(N−2f)/N`. Kaba ağda 0,988938 → 130 ters yüz; elle
+sayınca da 130 çıktı.
