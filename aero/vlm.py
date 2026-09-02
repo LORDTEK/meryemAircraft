@@ -5,9 +5,28 @@ Amac: makalede VARSAYILAN iki sayiyi hesaplanmisla degistirmek —
   - aciklik verimi  e   (varsayim 0.85)
   - kaldirma egrisi egimi CL_alpha
 
-Cozucu: AeroSandbox VortexLatticeMethod. Dikdortgen AR=6 kanatta yakinsama
-sinamasi yapildi: 40x12 kafeste e = 0.990 (fiziksel ust sinir 1'in altinda),
-daha ince kafeste degisim %0.5'ten kucuk. Ayni cozunurluk burada kullaniliyor.
+Cozucu: AeroSandbox VortexLatticeMethod.
+
+YAKINSAMA -- DUZELTILDI (02.09.2026). Onceki surumde cozunurluk DIKDORTGEN
+AR=6 kanatta sinanmis ve bu planforma tasindigi VARSAYILMISTI. Tasinmiyor.
+Gercek planformda olculdu (veter cozunurlugu 12 sabit, alfa = 4 derece):
+
+    52 serit (eski varsayilan)   e = 1.0067   <- FIZIKSEL SINIRIN USTUNDE
+   104 serit                     e = 0.9890
+   216 serit                     e = 0.9845
+   Richardson h->0 (p = 1.98)    e = 0.9830
+
+Duzlemsel bir kanatta e, 1'i asamaz; eski varsayilan cozunurluk 1.0067
+veriyordu, yani sonuc yakinsamamisti ve bunu asmasindan anlasildi.
+Veter yonu de etkiliyor: 104 seritte veter 12 -> 24 ile e 0.9890 -> 0.9936.
+Iki yon birlikte dusunuldugunde e yaklasik 0.98-0.99 bandindadir.
+
+CL_alpha ise yakinsamis: 52 seritte 3.874 /rad, 216 seritte 3.842 /rad --
+alti kat cozunurlukte %0.8 degisim. Gozlenen mertebe dusuk (p = 0.42), o
+yuzden CL_alpha icin Richardson degeri degil OLCULEN aralik verilmelidir.
+
+Varsayilan cozunurluk 104 serite cikarildi; yakinsama sinamasi icin
+yakinsama() cagrilabilir.
 
 SINIR: profil kesitleri simetrik NACA olarak alindi (yerel t/c ile). Makalenin
 tarif ettigi kamber ve refleks dagilimlari BURADA YOK; dolayisiyla bu kosum
@@ -24,7 +43,7 @@ from planform import istasyonlar, olcuier
 # AeroSandbox'ta spanwise_resolution KESIT CIFTI BASINADIR. Toplam serit
 # sayisi = (KESIT_SAYISI - 1) * SPAN_COZ. Dikdortgen kanattaki yakinsama
 # sinamasi ~40 serit gerektirdigini gosterdi.
-KESIT_SAYISI, SPAN_COZ, VETER_COZ = 14, 4, 12
+KESIT_SAYISI, SPAN_COZ, VETER_COZ = 14, 8, 12   # 104 serit
 
 
 def kanat_kur(kesit=None):
@@ -69,3 +88,22 @@ if __name__ == "__main__":
     egim = np.polyfit(np.deg2rad(A), C, 1)[0]
     print(f"\nCL_alpha = {egim:.3f} /rad = {egim*math.pi/180:.4f} /deg")
     print(f"aciklik verimi e = {np.mean(es):.3f}   (makalede VARSAYILAN: 0.85)")
+
+
+def yakinsama(alfa=4.0, kafes=((14, 4, 12), (14, 8, 12), (28, 8, 12))):
+    """Cozunurluk taramasi. Bu planformda YAPILMALIDIR -- dikdortgen
+    kanattaki sinama buraya tasinmiyor (bkz. modul basi)."""
+    global KESIT_SAYISI
+    o = olcuier()
+    eski = KESIT_SAYISI
+    cik = []
+    try:
+        for ks, sr, cr in kafes:
+            KESIT_SAYISI = ks
+            _o, s = kos(alfalar=(0.0, alfa), sr=sr, cr=cr)
+            CL, CDi = s[1][1], s[1][2]
+            cik.append(dict(serit=(ks - 1) * sr, veter=cr, CL=CL, CDi=CDi,
+                            e=CL ** 2 / (math.pi * o["AR"] * CDi)))
+    finally:
+        KESIT_SAYISI = eski
+    return cik
