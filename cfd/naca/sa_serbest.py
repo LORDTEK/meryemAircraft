@@ -50,6 +50,15 @@ CARPAN = [3.0, 0.3, 0.03]        # nuTilda_inf = carpan * nu
 # Olculen degerler (SA, ayni ag ailesi, yerlesik 3*nu ile)
 REF = {20: 0.008416, 100: 0.008406, 200: 0.008432}
 
+def _son_zaman(vaka):
+    """Ayristirilmis vakada son yazilan zaman adimi; yoksa None."""
+    d = os.path.join(vaka, "processor0")
+    if not os.path.isdir(d):
+        return None
+    z = [int(a) for a in os.listdir(d) if a.isdigit()]
+    return max(z) if z else None
+
+
 if __name__ == "__main__":
     with Kilit(KOK):
         os.makedirs(KOK, exist_ok=True)
@@ -60,6 +69,30 @@ if __name__ == "__main__":
             if c in yapilan:
                 continue
             vaka = os.path.join(KOK, "c%g" % c)
+            # YARIM KALMIS VAKAYI SURDUR, sifirdan kurma.
+            #
+            # Bu konteyner bosta kalinca komple geri aliniyor; kosan her sey
+            # oluyor. Betik once yalnizca "sonuc.json'da var mi" diye
+            # bakiyordu; yarim kalmis bir vaka orada olmadigi icin kur()
+            # cagriliyor, o da dizini SILIYORDU. Olculdu: 3000 adima ulasmis
+            # bir cozum boyle silindi ve bastan baslandi.
+            #
+            # Artik ayristirilmis veri varsa devam.sh ile son yazilan
+            # zamandan surduruluyor. Cozumu degistirmez -- ayni vaka, ayni
+            # ag, ayni ayarlar; yalnizca hesaplanmis adimlar korunur.
+            son = _son_zaman(vaka)
+            if son is not None:
+                print("[nuTilda_inf = %g nu] %d. adimdan surduruluyor"
+                      % (c, son), flush=True)
+                subprocess.run([os.path.join(BURA, "devam.sh"), vaka,
+                                "3000", "4"], check=True)
+                r = hesapla(vaka, alfa=0.0, mertebe=2)
+                print("   C_D=%.6f  (R=200'un yerlesik degeri %.6f, R=100 %.6f)"
+                      % (r["CD"], REF[200], REF[100]), flush=True)
+                cikti.append(dict(carpan=c, CD=r["CD"], CD_v=r["CD_viskoz"],
+                                  CD_b=r["CD_basinc"], CL=r["CL"]))
+                json.dump(cikti, open(yol, "w"), indent=1)
+                continue
             kur(vaka, kod="0012", Re=6e6, alfa=0.0, yplus=1.0,
                 n_profil=256, n_normal=113, n_iz=64, R=200.0, Xiz=200.0,
                 adim=3000, yaz_araligi=250, model="SpalartAllmaras")
