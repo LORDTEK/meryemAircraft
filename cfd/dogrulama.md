@@ -1122,51 +1122,90 @@ farklar kurulum gürültüsü değildir.
 
 ---
 
-## 3-B ağ üreteci — sınama (02.09.2026, sürüyor)
+## 3-B ağ üreteci — sınama (02.09.2026)
 
-Üreteç yeni koddur; üzerine kanat kurup sonuç üretmeden önce kendisi
-sınanıyor. Sınama: sabit kesitli, ok açısız, sivrilmesiz kanat, iki ucunda
-da `symmetryPlane`. Akış açıklık boyunca değişmez — problem **fiziksel
+Üreteç yeni koddur. Üzerine kanat kurup sonuç üretmeden önce kendisi
+sınandı: sabit kesitli, ok açısız, sivrilmesiz kanat, iki ucunda da
+`symmetryPlane`. Akış açıklık boyunca değişmez, yani problem **fiziksel
 olarak iki boyutludur** ve doğrulanmış 2-B sonucunu yeniden üretmelidir.
 
 İki kurulum arasındaki **tek fark ağdır**: alan dosyaları, şemalar, çözücü
 ayarları ve türbülans kurulumu ikisine de `naca/kur.py`'den aynı şekilde
-geliyor (`kur3b.py`).
+geliyor (`kur3b.py`), ayrıştırma da aynı (hierarchical 2 2 1).
 
-| vaka | hücre | C_D | 2-B'ye göre | C_L |
-|---|---|---|---|---|
-| 2-B (`empty`) | 43 392 | 0,008388 | — | −4,04e−07 |
-| 3-B nk=2 (`symmetryPlane`) | 43 392 | 0,008409 | **+0,249%** | −1,33e−07 |
-| 3-B nk=3 | 86 784 | 0,008409 | **+0,249%** | — |
-| 3-B nk=5 | 173 568 | *koşuyor* | | |
+| vaka | hücre | C_D | 2-B'ye göre | C_D viskoz | C_D basınç | C_L |
+|---|---|---|---|---|---|---|
+| 2-B (`empty`) | 43 392 | 0,008388 | — | 0,007010 | 0,001378 | −4,0e−07 |
+| 3-B nk=2 | 43 392 | 0,008409 | +0,249% | +0,298% | **0,000%** | −1,3e−07 |
+| 3-B nk=3 | 86 784 | 0,008409 | +0,252% | +0,302% | −0,000% | −3,5e−07 |
+| 3-B nk=5 | 173 568 | 0,008392 | **+0,050%** | +0,060% | −0,000% | −3,6e−07 |
 
-### Beklenti (b) tuttu: açıklık çözünürlüğü etkisiz
+### Önden yazılan beklentilerin karşılığı
 
-nk 2→3'te açıklık yönündeki hücre sayısı ikiye katlandı ve C_D **altı
-basamakta değişmedi**.
+**(a) "C_D binde birkaçtan fazla sapmamalı" — nk=5'te TUTTU.** Binde 0,5;
+GCI %1,29'un yirmide biri. nk=2 ve nk=3'te binde 2,5 ile sınırın
+kenarında.
 
-Bu aynı zamanda bir ayırt etme veriyor. nk=2'de açıklık yönündeki tek
-hücre 0,1 genişliğinde ve ağın azami en-boy oranı **11 304**; nk=5'te aynı
-oran **4999**'a, yani iki boyutlu ağın değerine iniyor. Buna rağmen nk=2
-ile nk=3 birebir aynı. Demek ki +0,249%, açıklık çözünürlüğünün ya da
-en-boy oranının artefaktı **değil**.
+**(b) "Dilim sayısı sonucu DEĞİŞTİRMEMELİ" — TUTMADI.** nk=2 ve nk=3 aynı
+(+0,25%), nk=5 beşte birine iniyor (+0,05%). Kendi ölçütüme göre açıklık
+yönü çözüme sızıyor. Sızıntı **incelttikçe küçülüyor**, yani formülasyon
+hatası değil ayrıklaştırma hatası; ama sızıyor.
 
-### Kalan aday: `empty` ile `symmetryPlane` farkı
+**(c) "C_L sıfır kalmalı" — TUTTU.** Üçünde de ~1e−07 (Ux ~1,18'e karşı).
 
-`empty` boyutu tamamen kaldırır; `symmetryPlane` onu tutar ve z yüzlerini
-ayrıklaştırmaya dâhil eder. Akış açıklıkta değişmediği için fizik aynı
-olmalı, ama ayrıklaştırma aynı değil — bu, **sabit bir kayma** üretir.
-Ölçülen de sabit bir kayma. Beklenti (a) "binde birkaç" diyordu; binde 2,5
-bunun içinde ama kenarında.
+### DÜZELTME — nk=5'ten önce yazdığım sonuç yanlıştı
 
-Sıradaki adım, bu kaymanın kaynağını doğrudan ölçmek: aday, SA'nın merkezî
-değişkeni olan **duvar uzaklığı** alanının iki formülasyonda farklı
-hesaplanması. Kayma bir kez ölçülüp anlaşıldıktan sonra, 3-B sonuçları
-2-B'ye bu bilinen kaymayla bağlanabilir.
+nk=2 ve nk=3'ün birebir aynı çıkması üzerine şunu yazmıştım: *"+%0,249
+açıklık çözünürlüğünün artefaktı değil; geriye `empty` ile
+`symmetryPlane` arasındaki sabit kayma kalıyor."*
+
+**Yanlıştı.** nk=5 sapmayı beşte birine indirdi; demek ki açıklık
+çözünürlüğüne bağlı. İki noktanın uyuşması bana yayla (plato) gibi
+göründü, oysa üçüncü nokta öyle olmadığını gösterdi. Ders: iki nokta
+yakınsama iddiası için yeterli değil.
+
+### Ne olduğu ölçüldü, sebebi bulunamadı
+
+Ölçerek **elenenler**:
+
+| aday | ölçüm | sonuç |
+|---|---|---|
+| basınç alanı | C_D basınç farkı 0,000% | elendi |
+| duvar uzaklığı | yüz yüze oran 1,00000000 | elendi |
+| girdap viskozitesi alanı | max nut 1,6858e−4 / 1,6860e−4 | elendi |
+| yakınsama | son iki yazım arası sürüklenme üçünde de +0,010% | elendi |
+| açıklık hızı sızması | max\|Uz\| = 8,4e−17 (nk=2), 4,6e−07 (nk=5) | elendi |
+| ikinci mertebeye düşme | 256/256, 512/512, 1024/1024 karşı hücre bulundu | elendi |
+| alan ayrıştırması | üçünde de hierarchical (2 2 1), z'de bölmüyor | elendi |
+
+**Bulunan.** Sapmanın tamamı sürtünmede ve duvara bitişik hücredeki teğet
+hızda. 2-B'de bu hız yüzey boyunca **tekdüze azalıyor**:
+
+    7,79 → 7,42 → 7,30 → 7,19 → 7,06 → 6,94 → 6,81   (×10⁻²)
+
+3-B'de azalmıyor — **testere dişi** var:
+
+    7,79 → 7,68 → 7,31 → 7,43 → 7,30 → 7,17 → 7,03   (nk=2)
+
+Genlik ~%3,3, x ∈ [0,07, 0,13] aralığında, üst ve alt yüzeyde birebir
+simetrik. İntegralde büyük ölçüde **birbirini götürüyor** (net +0,25%) ve
+götürme nk arttıkça iyileşiyor: binde 1'i aşan yüz sayısı 58 → 53 → 16.
+
+Sebebi bulunamadı. Testere dişinin 2-B'de hiç olmayıp 3-B'de çıkması,
+z yüzlerinin ayrıklaştırmaya girmesiyle ilgili olmalı, ama hangi terim
+üzerinden olduğu ölçülmedi. **Uydurma yapılmadı, olduğu gibi yazılıyor.**
+
+### Sonuç: üreteç kullanılabilir, kaydıyla birlikte
+
+nk=5'te 3-B kurulum, doğrulanmış 2-B sonucunu **binde 0,5 içinde** yeniden
+üretiyor — ağ belirsizliğinin (GCI %1,29) yirmide biri. Kanat hesabına bu
+kayıtla geçilebilir; 3-B sonuçları raporlanırken bu artık sapma ve testere
+dişi belirtilmelidir.
 
 ### Ağ yığmanın kendisi bozulma katmıyor (ayrı kontrol)
 
 Aynı ayarlarla (96×48×24, R=20) kurulan 2-B ve 3-B ağların `checkMesh`
 çıktıları **on basamak birebir**: azami dikey olmayanlık 74,97839532,
-azami çarpıklık 0,3463110026. Açıklık yönünde yığma, ağa hiçbir ek bozulma
-katmıyor.
+azami çarpıklık 0,3463110026. Açıklık yönünde yığma, ağa ek bozulma
+katmıyor. nk=5'te azami en-boy oranı da 2-B'nin değerine (4999,999887)
+iniyor.
