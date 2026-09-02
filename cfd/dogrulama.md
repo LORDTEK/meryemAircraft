@@ -1755,7 +1755,7 @@ dy sabit, mutlak uzak alan:
 `checkMesh`'te başarısız olan tek denetim en-boy oranı. Doğrulanmış 2-B ağ
 da o denetimde başarısız (5000).
 
-### Kabalaştırırken n_normal'a dokunulmaz (02.09.2026)
+### Kabalaştırma sınırı: açıklık yönü (02.09.2026)
 
 Çözücüyü hızlı denemek için kaba bir ağ kuruldu (`n_profil` 128,
 **`n_normal` 64**, `n_iz` 32, 8 istasyon). OpenFOAM kök yamasını reddetti:
@@ -1769,15 +1769,25 @@ Ağdan doğrudan okundu: kökün **13 056 yüzünün 156'sı ters yönlü**
 y ∈ ±0,117 aralığında, yani **kanat profilinin çevresinde**: kökte duvara
 bitişik hücreler ters dönmüş.
 
-Sebep: `dy` en küçük veterden (uç) sabitleniyor, kök veteri ise en büyük.
-`n_normal = 64` ile 1,26e−4'ten R = 100'e çıkmak ~1,25 büyüme oranı
-gerektiriyor; eğri bölgede ışınsal çizgiler kesişiyor. `n_normal = 113`'te
-oran ~1,13 ve ağ temiz.
+İlk teşhis `n_normal`'dı — **yanlış çıktı**: 113'e çıkarınca da bozuldu,
+hatta daha kötü (0,955). Üreteçte katman katman sayıldı, sebep **açıklık
+yönü**:
 
-**Kural: ağı kabalaştırmak gerekiyorsa `n_profil`, `n_iz` ve istasyon
-sayısı azaltılır; `n_normal` azaltılmaz.** Ayrıca bu, `symmetryPlane`
-yamasının ucuz bir ağ geçerlilik denetimi olduğunu gösteriyor —
-`checkMesh`'ten önce patlıyor.
+| istasyon katmanı | z aralığı | ters hücre |
+|---|---|---|
+| k=0 | 0,000 → 0,288 | **35** |
+| k=1 | 0,288 → 0,575 | 19 |
+| k=2 | 0,575 → 0,863 | 8 |
+| k=3 | 0,863 → 1,151 | 2 |
+
+Terslik **kökte yoğunlaşıp dışarı doğru sönüyor** — planformun en hızlı
+değiştiği yer orası. 6 istasyonla Δz = 0,288 ve kesitler arası değişim
+hücreleri kesiştiriyor; 12 istasyonda temiz.
+
+**Kural: ağı kabalaştırmak gerekiyorsa `n_profil` ve `n_iz` azaltılır;
+istasyon sayısı 12'nin altına indirilmez.** Ayrıca `symmetryPlane`
+yaması ucuz bir ağ geçerlilik denetimi — `checkMesh`'ten önce patlıyor ve
+ters yüz oranını doğrudan veriyor.
 
 ### Çözücü darboğazı: en-boy oranı KOZMETİK DEĞİL (02.09.2026)
 
