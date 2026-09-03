@@ -1936,3 +1936,76 @@ merkezi Δz/2 = 7,2e−2 uzakta (kanat yüzeyinde 2,7e−4). Oradaki duvar
 fonksiyonu geçerlilik aralığının çok dışında. Kapak duvar alanının
 %0,22'si olduğu için toplam sürüklemeye etkisi küçük, ama **uç bölgesi
 sürtünmesi bu ağda çözülmüş sayılmaz.**
+
+---
+
+## Açı taraması ve CL_α — CFD ile VLM (03.09.2026)
+
+Ağ **aynı**: `kur.py` hücum açısını ağı döndürerek değil serbest akış
+vektörünü döndürerek uyguluyor, dolayısıyla dört açı da bit bit aynı
+polyMesh üzerinde çözüldü. Açılar arası fark ağdan değil akıştan geliyor.
+α = 0, 2, 6 yakınsamış α = 4 alanından başlatıldı (800 adım); α = 4
+kendisi sıfırdan 1500 adım koşmuştu.
+
+| α | CFD C_L | VLM C_L | oran | CFD C_D | y⁺ |
+|---|---|---|---|---|---|
+| 0 | **−0,00000** | 0,00000 | — | 0,01094 | 48,0 |
+| 2 | 0,12598 | 0,13513 | 0,932 | 0,01186 | 48,0 |
+| 4 | 0,25029 | 0,26988 | 0,927 | 0,01461 | 48,0 |
+| 6 | 0,37132 | 0,40391 | 0,919 | 0,01913 | 48,5 |
+
+### CL_α (en küçük kareler)
+
+| | /rad | /derece | sabit | en büyük artık |
+|---|---|---|---|---|
+| **CFD** | **3,5474** | 0,06191 | +0,00115 | 0,00148 |
+| VLM | 3,8574 | 0,06732 | +0,00026 | 0,00033 |
+
+**CFD / VLM = 0,920 (%8,0 düşük).**
+
+### İki bağımsız denetim geçti
+
+**1. Simetri.** Kesitler simetrik NACA 00xx, burulma yok → doğru α = 0'dan
+geçmeli. CFD α = 0'da **C_L = −3e−6**, uydurmanın sabit terimi +0,00115.
+Bu, ayrıca yazılması gerekmeyen bedava bir kurulum denetimiydi ve geçti.
+
+**2. İndirgenmiş sürükleme.** VLM yalnızca CDi verir, CFD'nin toplam C_D'si
+sürtünmeyi de taşır — doğrudan karşılaştırılamazlar. Ama α = 0'daki C_D
+taşımasız sürüklemedir (simetrik kesitte orada indirgenmiş sürükleme
+sıfır), farkı almak taşımaya bağlı kısmı bırakır:
+
+| α | CFD (C_D − C_D0) | VLM CDi | oran |
+|---|---|---|---|
+| 2 | 0,000920 | 0,000976 | 0,943 |
+| 4 | 0,003677 | 0,003890 | 0,945 |
+| 6 | 0,008192 | 0,008709 | 0,941 |
+
+Oran üç açıda da **0,94** — sabit. Taşıma ve sürükleme birbirinden
+bağımsız iki yoldan tutarlı çıkıyor.
+
+### Açıklık verimi — makaledeki 0,85 varsayımı
+
+| α | CFD e (alt sınır) | VLM e |
+|---|---|---|
+| 2 | 0,911 | 0,988 |
+| 4 | 0,900 | 0,989 |
+| 6 | 0,889 | 0,990 |
+
+CFD değeri **alt sınırdır**: (C_D − C_D0) farkı indirgenmiş sürüklemeye ek
+olarak taşımaya bağlı viskoz artışı da taşır, yani gerçek indirgenmiş
+sürükleme bundan küçük ve e bundan büyüktür.
+
+**Makalede varsayılan 0,85, CFD'nin alt sınırının bile altında** — yani
+varsayım güvenli tarafta, gerçekçi olmayan biçimde iyimser değil.
+
+### Yorum
+
+CFD'nin VLM'in %8 altında kalması beklenen yönde: VLM viskoz
+decambering'i, sonlu kalınlığı ve kut firar kenarını görmez. Fark
+açıyla hafifçe büyüyor (0,932 → 0,927 → 0,919), bu da sınır tabakası
+kalınlaştıkça decambering'in artmasıyla tutarlı.
+
+**Uyarı:** α = 4 sıfırdan 1500 adım, diğerleri yakınsamış alandan 800
+adım koştu. Kararlı çözümde sonuç başlangıçtan bağımsızdır ve α = 0'ın
+−3e−6 çıkması bunu destekliyor, ama tam eşdeğerlik için üçünün de
+sıfırdan koşulması gerekirdi.
