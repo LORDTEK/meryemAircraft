@@ -2052,3 +2052,65 @@ Vaka U = 1'e normalize olduğu için eşdeğer uçuş viskozitesi
 ν = ν_hava/V = 1,46e−5/30 = **4,8667e−7**. Ağ aynı ağ; yalnızca ν
 değişiyor. Beklenen y⁺ ≈ 18 (Spalding duvar fonksiyonunun geçerli
 aralığında, ama tampon tabakada — en zayıf olduğu bölge).
+
+---
+
+## 8.12'nin BİRİNCİ SALDIRISI: merkez gövde C_D0 (03.09.2026)
+
+Uçuş Reynolds sayısında (kök veter Re = 1,993e6), α = 0, tekdüze
+başlangıç, 800 adım. Ağ aynı ağ; yalnızca ν değişti (4,8667e−7).
+
+| adım | 600 | 700 | **800** |
+|---|---|---|---|
+| C_D | 0,013333 | 0,013341 | **0,013339** |
+| basınç | 0,003983 | 0,003989 | 0,003987 |
+| viskoz | 0,009350 | 0,009352 | 0,009352 |
+| C_L | +0,004057 | +0,001819 | +0,000893 |
+| y⁺ | 17,9 | 17,9 | 17,9 |
+
+### Kanat/gövde C_D0 — aynı referans alanı, aynı uçuş koşulu
+
+| | C_D0 |
+|---|---|
+| şerit yöntemi, serbest geçiş | 0,00729 |
+| şerit yöntemi, tetikli | 0,01285 |
+| **3-B CFD (tam türbülanslı)** | **0,013339** |
+
+**CFD / şerit(tetikli) = 1,038 (%+3,8).** Şerit yöntemi, üç boyutlu
+çözüme göre %3,8 iyimserdi — yani §6.6'nın tetikli üst sınırı gerçeğe
+çok yakın, ama azıcık altında.
+
+### Toplam C_D0'a etkisi
+
+Kanat/gövde yerine CFD konarak (diğer bileşenler §6.6'dan):
+
+| | değer |
+|---|---|
+| CFD kanat/gövde + uç iskeletleri (0,00431) + büyük göbek (0,00195) | 0,01960 |
+| + %10 artık payı | **0,02156** |
+| **makalede varsayılan** | **0,0248** |
+
+**Varsayım revize değerin %15 üstünde.** Yani §6.2'nin "cömert ve
+kendi içinde tutarlı" ifadesi üç boyutlu çözümle **doğrulanıyor**;
+varsayım güvenli tarafta kalmaya devam ediyor.
+
+### Reynolds düzeltmesi belirleyiciydi
+
+İlk (yanlış) koşu 5,82e6'da 0,01094 vermişti; uçuş Reynolds'unda
+**0,013339** — **%22 fark**. Yanlış Reynolds sayısıyla yapılan
+karşılaştırma şerit yöntemini haksız yere %15 kötü gösterirdi.
+
+### Bu sonucun sınırları
+
+1. **Tam türbülanslı, geçiş modeli yok.** Yalnızca şerit yönteminin
+   *tetikli* sütunuyla karşılaştırılabilir. Serbest geçiş hâli
+   (0,00729) sınanmadı; Re 2e6'da %25 kalınlığında bir gövdede geçiş
+   yerinin nerede olduğu açık soru.
+2. **Tek ağ, ağ yakınsama çalışması yok.** Sayı bir ağa dayanıyor.
+3. **y⁺ = 17,9 tampon tabakada** — duvar fonksiyonunun en zayıf olduğu
+   bölge. `nutUSpaldingWallFunction` orada sürekli olduğu için seçildi,
+   ama düşük-Re çözümü daha güçlü olurdu.
+4. Ağ kalitesi (azami en-boy oranı 145 825, `limited 0.33` gereksinimi)
+   sürüklemeye sayısal difüzyon katıyor.
+5. CFD yalnızca **kanat/gövdeyi** kapsıyor; uç iskeletleri ve göbekler
+   hâlâ §6.6'nın bileşen kestiriminden geliyor.
