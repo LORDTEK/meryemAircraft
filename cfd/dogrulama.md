@@ -2009,3 +2009,46 @@ kalınlaştıkça decambering'in artmasıyla tutarlı.
 adım koştu. Kararlı çözümde sonuç başlangıçtan bağımsızdır ve α = 0'ın
 −3e−6 çıkması bunu destekliyor, ama tam eşdeğerlik için üçünün de
 sıfırdan koşulması gerekirdi.
+
+### Protokol eşdeğerliği ölçüldü (03.09.2026)
+
+Açı taramasında α = 4 sıfırdan 1500 adım, diğer üçü yakınsamış alandan
+800 adım koşmuştu. Eşdeğerliği **varsaymak yerine ölçmek** için α = 4
+tekdüze başlangıçtan 800 adım yeniden koşuldu:
+
+| adım | 600 | 700 | **800** | (1500'den) |
+|---|---|---|---|---|
+| C_L | 0,243935 | 0,250343 | **0,250998** | 0,250288 |
+| C_D | 0,014548 | 0,014648 | 0,014606 | 0,014613 |
+
+Sıfırdan 800 adım ile sıfırdan 1500 adım arasındaki fark **%0,28**.
+800 adımlık protokol yakınsamış sayılır; taramanın dört noktası
+karşılaştırılabilir.
+
+Sıra bilinçliydi: cevabı zaten bilinen açı (α = 4) önce koşuldu, böylece
+"800 adım yeter" ölçülmüş oldu. Tutmasaydı diğer üç açı yanlış bütçeyle
+harcanmayacaktı.
+
+### C_D0 KARŞILAŞTIRMASI YANLIŞ REYNOLDS SAYISINDAYDI
+
+Makalenin 8.12'si birinci saldırı noktası olarak **merkez gövde için üç
+boyutlu çözüm** diyor: §6.6'nın şerit yöntemi %25 kalınlığındaki
+harmanlanmış gövdeyi modelleyemiyor ve kalan belirsizliğin çoğu orada.
+Ağ o gövdeyi içeriyor (kök t/c = 0,250 → uç 0,120), yani hedef doğru.
+
+Ama ilk koşular **uçuş Reynolds sayısında değildi**:
+
+| | kök veter Re |
+|---|---|
+| uçuş (30 m/s, ν = 1,46e−5) | **1,99e6** |
+| ilk CFD koşuları | **5,82e6** |
+
+2,92 kat yüksek. Sürtünme kabaca Re^(−1/7) ile azaldığından viskoz
+bileşen düşük çıkıyor. Dolayısıyla o koşulardan çıkan
+**C_D0 = 0,01094 kullanılamaz** — §6.6'nın şerit toplamıyla (serbest
+0,00729, tetikli 0,01285) aynı koşulda değil.
+
+Vaka U = 1'e normalize olduğu için eşdeğer uçuş viskozitesi
+ν = ν_hava/V = 1,46e−5/30 = **4,8667e−7**. Ağ aynı ağ; yalnızca ν
+değişiyor. Beklenen y⁺ ≈ 18 (Spalding duvar fonksiyonunun geçerli
+aralığında, ama tampon tabakada — en zayıf olduğu bölge).
