@@ -2114,3 +2114,73 @@ karşılaştırma şerit yöntemini haksız yere %15 kötü gösterirdi.
    sürüklemeye sayısal difüzyon katıyor.
 5. CFD yalnızca **kanat/gövdeyi** kapsıyor; uç iskeletleri ve göbekler
    hâlâ §6.6'nın bileşen kestiriminden geliyor.
+
+---
+
+## Uçuş koşulunda tam tarama ve CL_α (03.09.2026)
+
+Kök veter Re = 1,99e6, tekdüze başlangıç, **1500 adım** (bütçe α=4'te
+ölçüldü: 1500. adım 2500'ün %0,08'i içinde).
+
+| α | CFD C_L | VLM C_L | oran | CFD C_D | y⁺ |
+|---|---|---|---|---|---|
+| 0 | 0,000067 | 0,000000 | — | 0,013311 | 17,9 |
+| 2 | 0,118368 | 0,135126 | 0,876 | 0,014188 | 17,9 |
+| 4 | 0,233730 | 0,269884 | 0,866 | 0,016772 | 17,9 |
+| 6 | 0,348805 | 0,403907 | 0,864 | 0,021366 | 18,0 |
+
+**Eğim kararlılığı sınandı:** 1250. adımda 3,3212 /rad, 1500. adımda
+3,3277 /rad — 250 adımda **%0,20**. (Önceki 800 adımlık koşuda 700→800
+arası %1,79 oynuyordu; o bütçe yüksek Re'de ölçülmüştü ve buraya
+taşınmıyordu.)
+
+| | /rad | /derece |
+|---|---|---|
+| **CFD (uçuş Re)** | **3,3277** | 0,05808 |
+| VLM | 3,8574 | 0,06732 |
+| oran | **0,863** | (%−13,7) |
+
+Yüksek Re'de (5,82e6) oran 0,920 idi; uçuş Reynolds'unda açık **%13,7**.
+Daha düşük Re → kalın sınır tabakası → daha çok decambering. Yön doğru.
+
+**Geçiş sonucu bu eğimde de ayakta.** `aero/duyarlilik.py` CFD'nin
+3,328'iyle ve emniyet payı olarak 3,000'le koşuldu: referans profiller
+(hafif t_r = 2 s, ağır t_r = 4 s, w₀ = 5 m/s) **her ikisinde de sıfır
+irtifa kaybı** veriyor. Makalenin 6.6'daki "sonuç %18'lik eğim hatasına
+dayanmıyor" ifadesi, ondan daha düşük olan CFD eğiminde de geçerli.
+
+## ⚠️ AÇIKLIK VERİMİ — ÖNCEKİ SONUÇ GERİ ALINDI
+
+Yüksek (yanlış) Reynolds sayısındaki koşudan "CFD'nin alt sınırı
+0,889–0,911, makalenin 0,85'i onun bile altında, varsayım güvenli
+tarafta" demiştim. **Uçuş Reynolds'unda bu geçerli değil.**
+
+| α | e (toplam artıştan) |
+|---|---|
+| 2 | 0,844 |
+| 4 | 0,834 |
+| 6 | **0,798** |
+
+Üstelik "alt sınır" çerçevem de yanlış yönlüydü: α=0→6 arasında viskoz
+artış **negatif** (−0,000166), yani toplam fark indirgenmiş sürüklemeyi
+şişirmiyor, tersine hafifçe küçültüyor. Basınç artışından hesaplanan
+daha doğru değer α=6'da **0,785**.
+
+**e açıyla düşüyor.** İdeal indirgenmiş sürükleme için sabit olmalıydı;
+düşmesi taşımaya bağlı **basınç** sürüklemesinin büyüdüğünü gösteriyor —
+%25 kalınlığındaki merkez gövdede firar kenarı ayrılması beklenen
+davranış.
+
+### Ve seyir noktası taramanın dışında
+
+Seyir C_L = mg/(½ρV²S) = 50·9,81/(½·1,225·900·1,9785) = **0,4497**.
+CFD eğimiyle bu **α ≈ 7,74°** demek — taradığımız en yüksek açı 6°.
+
+Yani seyir koşulunu **hiç ölçmedik**, ve eğilim olumsuz yönde. Makalenin
+e = 0,85 varsayımı, ölçtüğümüz aralıkta zaten sınırda; seyir noktasında
+daha da düşük olması muhtemel.
+
+**Bu bir uyarı bayrağıdır, kesin bir sonuç değil.** Tek ağ, GCI yok,
+y⁺ 18'de duvar fonksiyonu, geçiş modeli yok, ve e kestirimi indirgenmiş
+sürüklemeyle taşımaya bağlı basınç sürüklemesini ayıramıyor. Doğrulanması
+gereken bir işaret.
