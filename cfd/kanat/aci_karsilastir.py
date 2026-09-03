@@ -55,8 +55,10 @@ def karsilastir(yol, alfa4=None):
     print()
     print("   alfa      CFD C_L      VLM C_L    oran    CFD C_D    y+")
     for a, CL, CD, yp in veri:
-        print("   %4.1f    %9.5f    %9.5f   %5.3f   %8.5f  %5.1f"
-              % (a, CL, vlm[a], CL / vlm[a] if vlm[a] else float("nan"), CD, yp))
+        # alfa=0'da iki deger de sifir; oran anlamsiz, basilmaz.
+        o_s = "  --  " if abs(vlm[a]) < 1e-6 else "%6.3f" % (CL / vlm[a])
+        print("   %4.1f    %9.5f    %9.5f  %s   %8.5f  %5.1f"
+              % (a, CL, vlm[a], o_s, CD, yp))
 
     ar = [math.radians(a) for a, _, _, _ in veri]
     ac, bc, kc = dogru_uydur(ar, [CL for _, CL, _, _ in veri])
@@ -71,6 +73,27 @@ def karsilastir(yol, alfa4=None):
     print()
     print("  Sabit terim denetimi: kesitler simetrik ve burulma yok,")
     print("  sifira yakin olmali.  CFD sabit = %+.5f" % bc)
+
+    # INDIRGENMIS SURUKLEME -- ayri ve BAGIMSIZ bir karsilastirma.
+    #
+    # CFD'nin toplam C_D'si sürtünme + basinc + indirgenmis suruklemeyi
+    # birlikte tasir; VLM ise yalnizca indirgenmis suruklemeyi (CDi)
+    # hesaplar, dogrudan karsilastirilamazlar. Ama alfa=0'daki C_D
+    # tasimasiz suruklemedir (kesitler simetrik oldugu icin orada
+    # indirgenmis surukleme sifir), dolayisiyla FARK alinirsa geriye
+    # tasimaya bagli kisim kalir ve VLM'in CDi'siyle karsilastirilabilir.
+    cd0 = dict((a, CD) for a, _, CD, _ in veri).get(0.0)
+    if cd0 is not None:
+        vcdi = dict((a, CDi) for a, _, CDi in vs)
+        print()
+        print("  Indirgenmis surukleme (C_D - C_D0, tasimasiz surukleme cikarilmis):")
+        print("   alfa    CFD artis    VLM CDi     oran")
+        for a, CL, CD, _ in veri:
+            if a == 0.0:
+                continue
+            d = CD - cd0
+            print("   %4.1f   %9.6f  %9.6f   %6.3f"
+                  % (a, d, vcdi[a], d / vcdi[a] if vcdi[a] else float("nan")))
     return dict(CFD_CL_alfa=ac, VLM_CL_alfa=av, CFD_sabit=bc, veri=veri)
 
 
