@@ -1877,3 +1877,62 @@ Yan kazanç: kararlı şemalarla basınç da çok daha iyi yakınsıyor —
 şemalarla ölçülmüştü).
 
 Değişiklik yalnızca `kur3b.py`'de; 2-B zinciri korundu.
+
+---
+
+## İlk üç boyutlu sonuç — gerçek planform, α = 4° (03.09.2026)
+
+Ağ: 1,67 M altı yüzlü hücre, kut firar kenarı + O-H uç kapağı, y⁺ = 60
+hedefli. Çözüm: k-ω SST, duvar fonksiyonu, klasik SIMPLE (p 0,3 / U 0,7),
+`limited 0,33`, GAMG + DICGaussSeidel. 1500 adım, 5,4 s/adım.
+
+### Yakınsama — artığa değil KUVVETE bakıldı
+
+| adım | 250 | 275 | 300 | 1400 | 1450 | 1500 |
+|---|---|---|---|---|---|---|
+| CL | 0,1204 | 0,1457 | 0,1698 | 0,2507 | 0,2502 | **0,2503** |
+| CD | 0,0143 | 0,0146 | 0,0144 | 0,0146 | 0,0146 | **0,0146** |
+
+300. adımda Ux artığı **2,6e−5** idi — küçük görünüyordu, ama CL o sırada
+0,17 ve hâlâ tırmanıyordu. Yakınsama kararı artığa göre verilseydi sonuç
+**%32 düşük** çıkacaktı. 1450→1500 arasında CL değişimi 5e−5.
+
+### Sonuç
+
+| | CL | CD |
+|---|---|---|
+| **CFD (RANS, α=4°)** | **0,2503** | 0,01461 |
+| VLM (aynı planform) | 0,2699 | CDi 0,00389 |
+| oran | **0,927** | — |
+
+CD ayrışımı: basınç 0,00681, viskoz 0,00780. CL neredeyse tümüyle
+basınçtan (viskoz katkı −8e−6).
+
+CFD'nin VLM'in **%7,3 altında** kalması beklenen yönde: VLM viskoz
+decambering'i, kalınlık etkisini ve uç girdabı ayrıntısını görmez.
+
+### y⁺ raporu düzeltildi — sayıya göre ortalama yanıltıyordu
+
+İlk okuma y⁺ ≈ 11 622 dedi; bu **yanlış bir ortalama**. Duvar yamasının
+ayrışımı:
+
+| | yüz sayısı | alan |
+|---|---|---|
+| kanat yüzeyi | 3 264 | 2,124 m² |
+| uç kapağı | **11 152** | **0,0046 m² (%0,22)** |
+
+Kapak alanın binde ikisi ama yüzlerin dörtte üçü, dolayısıyla yüz
+sayısına göre ortalamayı o belirliyor. `kuvvet.py`'ye **alan ağırlıklı**
+y⁺ eklendi (eski anahtar korundu, 2-B zinciri değişmedi):
+
+- **alan ağırlıklı y⁺ = 48,0** ← anlamlı olan, hedef 60'a yakın
+- yüz sayısına göre = 11 622 ← kapak hakim
+- en fazla = 18 561
+
+### Bilinen sınır: uç kapağında sınır tabakası yok
+
+Kapak bir duvar ama ona **dik yönde** sınır tabakası ağı yok: ilk hücre
+merkezi Δz/2 = 7,2e−2 uzakta (kanat yüzeyinde 2,7e−4). Oradaki duvar
+fonksiyonu geçerlilik aralığının çok dışında. Kapak duvar alanının
+%0,22'si olduğu için toplam sürüklemeye etkisi küçük, ama **uç bölgesi
+sürtünmesi bu ağda çözülmüş sayılmaz.**

@@ -87,6 +87,7 @@ def hesapla(vaka, yama="duvar", alfa=0.0, Uinf=1.0, Aref=1.0, zaman=None,
     Fp = [0.0, 0.0, 0.0]
     Fv = [0.0, 0.0, 0.0]
     yp = []
+    yp_alan = []
 
     for k in range(y["n"]):
         fi = y["bas"] + k
@@ -149,7 +150,19 @@ def hesapla(vaka, yama="duvar", alfa=0.0, Uinf=1.0, Aref=1.0, zaman=None,
                 Fv[a] += tau * A * t / ut
         # y+ icin MUTLAK deger: ayrilma bolgesinde tau isaret
         # degistirir, u_tau ise buyukluktur.
-        yp.append(d * math.sqrt(abs(tau)) / nu)
+        ypf = d * math.sqrt(abs(tau)) / nu
+        yp.append(ypf)
+        # ALAN AGIRLIKLI y+ de tutulur.
+        #
+        # Yuz SAYISINA gore ortalama, yuzler cok farkli boyuttaysa
+        # yaniltir. Uc boyutlu kanatta olculdu: duvar yamasinin 14 416
+        # yuzunun 11 152'si UC KAPAGI ama kapagin alani 0,0046 m2, yani
+        # duvar alaninin binde ikisi. Kapakta duvara dik sinir tabakasi
+        # cozunurlugu yok (ilk hucre merkezi Dz/2 = 7,2e-2 uzakta, kanat
+        # yuzeyinde 2,7e-4), dolayisiyla oradaki y+ binlerde. Sayiya gore
+        # ortalama alinca 11 622 cikiyor ve kanat yuzeyinin gercek y+'i
+        # (~60) gorunmez oluyor.
+        yp_alan.append((ypf, A))
 
     a = math.radians(alfa)
     sur = (math.cos(a), math.sin(a), 0.0)
@@ -166,6 +179,8 @@ def hesapla(vaka, yama="duvar", alfa=0.0, Uinf=1.0, Aref=1.0, zaman=None,
         CD_basinc=bilesen(Fp, sur), CD_viskoz=bilesen(Fv, sur),
         CL_basinc=bilesen(Fp, kal), CL_viskoz=bilesen(Fv, kal),
         yplus_ort=sum(yp) / len(yp) if yp else 0.0,
+        yplus_alan_ort=(sum(v * a for v, a in yp_alan) /
+                        sum(a for _, a in yp_alan)) if yp_alan else 0.0,
         yplus_max=max(yp) if yp else 0.0,
         yuz=len(yp))
 
@@ -179,5 +194,5 @@ if __name__ == "__main__":
           % (r["CL"], r["CL_basinc"], r["CL_viskoz"]))
     print("  C_D = %+.6f   (basinc %+.6f  viskoz %+.6f)"
           % (r["CD"], r["CD_basinc"], r["CD_viskoz"]))
-    print("  y+  : ortalama %.2f   en fazla %.2f"
-          % (r["yplus_ort"], r["yplus_max"]))
+    print("  y+  : alan agirlikli %.2f   yuz sayisina gore %.2f   en fazla %.2f"
+          % (r["yplus_alan_ort"], r["yplus_ort"], r["yplus_max"]))
