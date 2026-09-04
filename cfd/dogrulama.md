@@ -2505,3 +2505,63 @@ ve 24). `ilk_hucre_yuksekligi`'nin dayandığı düz levha bağıntısı bu
 gövdede kayma gerilmesini olduğundan büyük kestiriyor. Duvar
 fonksiyonunun geçerli aralığında kaldığı için sonucu bozmuyor, ama
 tasarım hedefiyle gerçekleşen arasındaki bu fark kayda geçmelidir.
+
+---
+
+## BELİRSİZLİK BÜTÇESİ — C_D0, α = 0, uçuş Re (04.09.2026)
+
+### Duvar aralığı duyarlılığı (aynı ağ: 820 323 hücre, yalnızca dy değişti)
+
+| hedef y⁺ | ölçülen y⁺ | C_D0 | öncekine göre |
+|---|---|---|---|
+| 30 | 20,0 | 0,0134376 | — |
+| 60 | 27,8 | 0,0131476 | −%2,16 |
+| 120 | 43,2 | 0,0127508 | −%3,02 |
+
+Yayılım **%5,4**.
+
+**Doyuma gitmiyor.** ln(y⁺) eksenindeki eğim iki aralıkta neredeyse
+özdeş: −8,806e−04 ve −9,002e−04 (%2 içinde). Düz bir doğru, kıvrılma
+yok — yani **duvar çözünürlüğü bağımsızlığına ULAŞILMADI**.
+
+### Bütçe
+
+| kaynak | büyüklük | ölçüldü mü |
+|---|---|---|
+| iteratif yakınsama | %0,08 | evet (α=4, 1500 vs 2500 adım) |
+| ayrıklaştırma (dy sabit) | < %0,1 | evet (üç ağ, GCI) |
+| **duvar aralığı (y⁺ seçimi)** | **%5,4 ve doymuyor** | evet (üç dy) |
+| türbülans modeli | — | **hayır** (tek model) |
+| geçiş | — | **hayır** (tam türbülanslı) |
+
+**Baskın kalem duvar aralığı — ayrıklaştırmanın ~50 katı.** Ağ
+yakınsaması için harcanan üç koşu, belirsizliğin en küçük kalemini
+ölçmüş oldu.
+
+### Bunun sonuca etkisi
+
+Önceki notta "3-B CFD şerit yönteminin tetikli ucunu doğruluyor
+(0,013339, %+3,8)" demiştim. Bu ifade **çok kesin sunulmuştu**. Doğrusu:
+
+| | C_D0 |
+|---|---|
+| şerit yöntemi, tetikli | 0,01285 |
+| CFD, y⁺ ≈ 43 | 0,012751 (%−0,8) |
+| CFD, y⁺ ≈ 28 | 0,013148 (%+2,3) |
+| CFD, y⁺ ≈ 20 | 0,013438 (%+4,6) |
+
+CFD değerleri şerit kestirimini **kuşatıyor**, doğrulamıyor. Duvar
+fonksiyonuyla elde edilen C_D0 **±%5'ten iyi verilemez** ve eğilim daha
+ince duvar çözünürlüğünde daha yüksek sürükleme gösteriyor.
+
+### Doğru sonraki adım: y⁺ ≈ 1, duvar çözümlü
+
+Aynı rejimde dördüncü bir nokta eğimi üçüncü kez doğrulamaktan öteye
+gitmez. Belirleyici koşu **y⁺ ≈ 1**'dir: orada duvar fonksiyonu viskoz
+alt tabakayı doğrudan çözer ve varsayıma dayanmaz. `-keepOrientation`
+sayesinde o ağ artık kurulabiliyor (0 negatif hücre) — tek bilinen engel
+azami en-boy oranının 859 074'e çıkması.
+
+Kaba bir gösterge olarak ln-doğrusal dış değerleme y⁺ = 1 için
+~0,0161 veriyor (%+22), ama duvar fonksiyonu orada zaten farklı rejimde
+olduğu için bu sayı **kestirim değil, yalnızca eğilimin işareti**.
