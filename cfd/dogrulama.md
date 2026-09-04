@@ -2403,3 +2403,66 @@ ayrılamazdı. Duvar fonksiyonlu çalışmalarda standart yaklaşım budur ama
 `gmshToFoam` kusurunun belirtisiymiş. `-keepOrientation` ile 6 ve 8
 istasyon da temiz geçiyor, bu sayede aile açıklık yönünde de sistematik
 inceltilebiliyor.
+
+---
+
+## AĞ YAKINSAMASI (GCI) — C_D0, α = 0, uçuş Re (04.09.2026)
+
+Üç ağ, tekdüze başlangıç, 1500 adım, dy sabit (duvar işlemi değişmesin
+diye). Hesap `cfd/kanat/gci.py`, Celik ve ark. ASME JFE 130(7), 2008.
+
+| ağ | hücre | **C_D0** | y⁺ | süre |
+|---|---|---|---|---|
+| kaba | 267 643 | 0,0132085 | 33,2 | 1 070 s |
+| orta | 820 323 | 0,0131476 | 27,8 | 3 075 s |
+| **ince** | **2 655 040** | **0,0131530** | 24,1 | 12 255 s |
+
+İnceltme oranları r₂₁ = 1,4792, r₃₂ = 1,4526.
+
+### Yakınsama SALINIMLI — biçimsel mertebe kullanılamaz
+
+    e21 = f2 − f1 = −5,400e−06
+    e32 = f3 − f2 = +6,090e−05     işaretler TERS
+
+İnce değer ortadan **hafifçe yüksek**. Salınımlı yakınsamada (s = −1)
+biçimsel mertebe anlamını yitirir: hesap p = **6,465** veriyor, bu
+fiziksel bir yakınsama mertebesi değil, paydadaki çok küçük e₂₁'in
+ürünü. `gci.py` bu durumu ayrıca uyarıyor.
+
+Dolayısıyla **"GCI₂₁ = %0,004" diye rapor etmek yanıltıcı olur.**
+
+### Muhafazakâr bant
+
+p zorla düşük alınırsa:
+
+| varsayılan p | GCI₂₁ | bant |
+|---|---|---|
+| 1 | %0,107 | 0,013153 ± 0,000014 |
+| 2 | %0,043 | 0,013153 ± 0,000006 |
+| 3 | %0,023 | 0,013153 ± 0,000003 |
+
+### Asıl sonuç: ağ etkisi iteratif gürültünün mertebesinde
+
+| kaynak | büyüklük |
+|---|---|
+| ince–orta ağ farkı | **%0,041** |
+| iteratif belirsizlik (α=4'te 1500 vs 2500 adım) | **%0,075** |
+
+**Ağ farkı, iteratif belirsizlikten küçük.** Yani C_D0 bu ağ ailesinde
+ayrıklaştırmaya karşı doygun; kalan saçılmayı ağ çözünürlüğü değil
+iteratif yakınsama belirliyor. Salınımın sebebi de büyük olasılıkla bu —
+iki etki aynı mertebeye inince işaret rastgeleleşiyor.
+
+**Rapor edilebilir ifade:** C_D0 = **0,01315**, ağ kaynaklı belirsizlik
+**%0,1'den küçük** (en muhafazakâr p = 1 varsayımıyla %0,107).
+
+### Bu sonucun sınırları
+
+1. **dy inceltilmedi** — y⁺ sabit hedefte tutuldu (ölçülen 24–33). Duvar
+   çözünürlüğünün etkisi bu çalışmanın kapsamı dışında; duvar
+   fonksiyonlu çalışmalarda standart ama makalede yazılmalı.
+2. y⁺ ağdan ağa değişiyor (33,2 → 27,8 → 24,1). dy birebir aynı
+   (3,420057e−04, ölçüldü); değişim çözümün kendisinden, kaba ağın farklı
+   duvar kayma gerilmesi tahmin etmesinden geliyor.
+3. Tek büyüklük (C_D0) ve tek açı (α = 0) için yapıldı. Seyir noktası
+   (α = 8) ve CL_α için ayrı bir aile gerekir.
