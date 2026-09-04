@@ -11,6 +11,10 @@ Thumbs.db
 # LaTeX ara çıktıları
 *.aux
 *.log
+# OpenFOAM cozucu ve donusturucu ciktilari: log.simpleFoam, log.gmshToFoam,
+# log.checkMesh... Uzantisiz yazildiklari icin *.log bunlari YAKALAMIYOR;
+# bir denemenin ciktisi depo kokunde kalmisti.
+log.*
 *.out
 *.toc
 *.bbl
