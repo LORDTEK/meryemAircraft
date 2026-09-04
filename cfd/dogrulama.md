@@ -2184,3 +2184,57 @@ daha da düşük olması muhtemel.
 y⁺ 18'de duvar fonksiyonu, geçiş modeli yok, ve e kestirimi indirgenmiş
 sürüklemeyle taşımaya bağlı basınç sürüklemesini ayıramıyor. Doğrulanması
 gereken bir işaret.
+
+## Seyir noktası ölçüldü — ve iki düzeltme birbirini karşılıyor (04.09.2026)
+
+α = 8, uçuş Re, 1500 adım. Yakınsama 1250→1500: **%0,09**.
+
+| | değer |
+|---|---|
+| C_L | **0,460587** (seyir C_L = 0,4497 — tam burada) |
+| C_D | 0,027519 (basınç 0,018463, viskoz 0,009056) |
+| y⁺ | 18,1 |
+
+### Açıklık verimi seyir noktasında
+
+| α | 2 | 4 | 6 | **8 (seyir)** |
+|---|---|---|---|---|
+| e | 0,844 | 0,834 | 0,798 | **0,790** |
+
+Basınç artışından: 0,774. Makalede varsayılan 0,85. Düşüş α=6'dan sonra
+**yatışıyor** (0,798 → 0,790), yani uçurumdan düşmüyor.
+
+### ⚠️ Ama tek başına e'ye bakmak yanıltıyor — bütünleşik etki TERS
+
+Önceki notta e'nin 0,85'in altına inmesini uyarı bayrağı olarak
+kaydetmiştim. Doğru, ama **eksik**: aynı CFD C_D0'ı da düşürüyor ve iki
+düzeltme ters yönde çalışıyor.
+
+| | C_D0 | e | seyir C_D | **seyir L/D** |
+|---|---|---|---|---|
+| makalenin varsayımları | 0,02480 | 0,850 | 0,03737 | **12,03** |
+| **CFD ile revize** | 0,02156 | 0,780 | 0,03526 | **12,76** |
+
+**Revize L/D, makalenin varsayımından %6,0 DAHA İYİ.**
+
+- e düştü (0,85 → 0,78) → L/D'yi aşağı çeker
+- C_D0 düştü (0,0248 → 0,02156) → L/D'yi yukarı çeker
+- **İkincisi birincisini fazlasıyla karşılıyor.**
+
+Yani makalenin seyir başarım iddiaları, her iki düzeltme birlikte
+uygulandığında **muhafazakâr kalıyor**. §6.2'nin "cömert ve kendi içinde
+tutarlı" ifadesi ayakta.
+
+### Fizik tutarlı
+
+α = 8'de C_L, doğrusal eğimin (3,3277 × 8°) **%0,9 altında** — hafif
+doğrusal olmayanlık başlamış. Bu, e'nin düşüşüyle aynı hikâyeyi
+anlatıyor: %25 kalınlığındaki merkez gövdede firar kenarı ayrılması
+büyüyor, ama henüz tutma (stall) yok.
+
+### Bu sonuçların ortak sınırları
+
+Tek ağ (GCI yok) · geçiş modeli yok (tam türbülanslı) · y⁺ ≈ 18'de duvar
+fonksiyonu · e kestirimi indirgenmiş sürüklemeyle taşımaya bağlı basınç
+sürüklemesini ayıramıyor · CFD yalnızca kanat/gövde; uç iskeletleri ve
+göbekler §6.6'nın bileşen kestiriminden geliyor.
