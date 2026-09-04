@@ -35,7 +35,8 @@ P_GAMG_DICGS = ("    p\n    {\n"
 
 
 def kur3b(dizin, ag, kok="symmetryPlane", uc="serbest", duvar_fonk=True,
-          p_cozucu=P_GAMG_DICGS, sinirli_duzeltme="0.33", **kw):
+          p_cozucu=P_GAMG_DICGS, sinirli_duzeltme="0.33",
+          klasik_simple=True, **kw):
     """ag: KanatAgi ornegi. kw, naca/kur.py'nin kur()'una gecer."""
     kw.setdefault("kod", "0012")
     bilgi2 = kur2b(dizin, **kw)
@@ -160,7 +161,38 @@ def kur3b(dizin, ag, kok="symmetryPlane", uc="serbest", duvar_fonk=True,
             s = s.replace(eski_s, yeni_s)
         open(yol, "w").write(s)
 
-    # 5) 2B'ye ozgu sema kalintisi kalmadigini dogrula
+    # 5) GEVSEME -- klasik SIMPLE'a gecilir
+    #
+    # naca/kur.py "consistent yes" (SIMPLEC) + U 0,9 kullaniyor ve iki
+    # boyutta dogru calisiyor. Uc boyutlu agda IRAKSIYOR: kosu 8. adima
+    # kadar duzgun gidiyor, 9. adimda basinc cozumu 1000 iterasyona
+    # vuruyor, 10. adimda baslangic artigi 0,99998 (basinc alani cokuyor),
+    # 11. adimda kayan nokta hatasi.
+    #
+    # Olculdu -- klasik SIMPLE (consistent no) + p 0,3 / U 0,7 ile ayni ag
+    # 1500 adim kararli, Ux artigi 2e-6'ya iniyor.
+    #
+    # BU DUZELTME ONCE YALNIZCA ELLE YAPILMISTI ve kodda degildi; yeni
+    # kurulan uc GCI vakasi eski ayarla kuruldugu icin ucu de patladi
+    # (110/66/75 adim, SIGFPE). Kodlanmasinin sebebi budur.
+    if klasik_simple:
+        yol = os.path.join(dizin, "system", "fvSolution")
+        s = open(yol).read()
+        if s.count("    consistent      yes;") != 1:
+            raise RuntimeError("fvSolution icinde 'consistent yes' tek degil")
+        s = s.replace("    consistent      yes;", "    consistent      no;")
+        blok = re.search(r"relaxationFactors\n\{.*?\n\}\n", s, re.S)
+        if not blok:
+            raise RuntimeError("relaxationFactors blogu bulunamadi")
+        s = s[:blok.start()] + ("relaxationFactors\n{\n    fields\n    {\n"
+                                "        p               0.3;\n    }\n"
+                                "    equations\n    {\n"
+                                "        U               0.7;\n"
+                                '        "(k|omega|nuTilda)" 0.7;\n'
+                                "    }\n}\n") + s[blok.end():]
+        open(yol, "w").write(s)
+
+    # 6) 2B'ye ozgu sema kalintisi kalmadigini dogrula
     for ad in ("fvSchemes", "fvSolution", "controlDict"):
         s = open(os.path.join(dizin, "system", ad)).read()
         if "empty" in s:

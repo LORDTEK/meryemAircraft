@@ -2364,3 +2364,42 @@ birebir aynı (en-boy 145 825,5104, dikey olmayanlık 89,68705839,
 
 Kalan sorun y⁺ = 1'de azami en-boy oranının **859 074**'e çıkması —
 çözücünün bunu kaldırıp kaldırmayacağı ayrı bir soru.
+
+### Elle yapılan düzeltme kodlanmadıysa yapılmamıştır (04.09.2026)
+
+GCI için kurulan üç vaka da **patladı** (110 / 66 / 75 adım, SIGFPE).
+Sebep ağlarda değildi: `limited 0.33` şema düzeltmesi `kur3b.py`'ye
+işlenmişti ama **klasik SIMPLE gevşemesi işlenmemişti** — o düzeltme bir
+tur önce yalnızca çalışma dizininde elle yapılmıştı.
+
+Yeni vakalar dolayısıyla `consistent yes` + U 0,9 ile doğdu, yani daha
+önce 11. adımda patladığı ölçülen yapılandırmayla. Üçü de aynı biçimde
+patladı. Kayıp ≈ 1,4 saat.
+
+Gevşeme artık `kur3b.py`'de, ölçümüyle birlikte (`klasik_simple=True`).
+2-B zinciri korundu (ağ sha `aa46cad9946c17dd`).
+
+### GCI ağ ailesi (04.09.2026)
+
+| düzey | n_profil | n_normal | n_iz | istasyon | hücre | azami en-boy | negatif |
+|---|---|---|---|---|---|---|---|
+| kaba | 116 | 71 | 29 | 8 | 267 643 | 304 969 | 0 |
+| orta | 172 | 107 | 43 | 12 | 820 323 | 229 907 | 0 |
+| ince | 256 | 160 | 64 | 18 | 2 655 040 | 154 702 | 0 |
+
+İnceltme oranları: **r₂₁ = 1,479**, **r₃₂ = 1,453** (GCI için önerilen
+eşik 1,3).
+
+**dy üç ağda da sabit** (y⁺ ≈ 18 hepsinde). Duvar aralığı da inceltilseydi
+y⁺ değişir ve duvar fonksiyonunun çalışma rejimi kayardı; o zaman ölçülen
+fark ayrıklaştırma hatası mı yoksa duvar işleminin değişmesi mi olduğu
+ayrılamazdı. Duvar fonksiyonlu çalışmalarda standart yaklaşım budur ama
+**makalede açıkça yazılmalıdır.**
+
+`n_profil` seçimleri 4'e bölünebilir olmak zorunda: kapak sınır ilmeğinin
+(n_profil + 2·firar_taban) 4'e bölünmesini istiyor.
+
+**Ayrıca "istasyon sayısı 12'nin altına inmez" kuralı GERİ ALINDI** — o da
+`gmshToFoam` kusurunun belirtisiymiş. `-keepOrientation` ile 6 ve 8
+istasyon da temiz geçiyor, bu sayede aile açıklık yönünde de sistematik
+inceltilebiliyor.
