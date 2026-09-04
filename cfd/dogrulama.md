@@ -2466,3 +2466,42 @@ iki etki aynı mertebeye inince işaret rastgeleleşiyor.
    duvar kayma gerilmesi tahmin etmesinden geliyor.
 3. Tek büyüklük (C_D0) ve tek açı (α = 0) için yapıldı. Seyir noktası
    (α = 8) ve CL_α için ayrı bir aile gerekir.
+
+### ⚠️ GCI bandı yalnızca dy SABİTKEN geçerli — bildirilen belirsizlik eksikti
+
+GCI sonucunu "C_D0 = 0,01315, ağ kaynaklı belirsizlik < %0,1" diye
+raporladım. **Bu ifade eksik.** Elimizde aynı büyüklük için iki
+yakınsamış değer var ve aralarındaki fark bandın 14 katı:
+
+| ağ | dy (birim veter) | ölçülen y⁺ | C_D0 |
+|---|---|---|---|
+| üretim (1 669 440 hücre) | 5,348e−04 | 17,9 | **0,013339** |
+| GCI ince (2 655 040 hücre) | 1,447e−03 | 24,1 | **0,013153** |
+
+**Fark %1,41.**
+
+Sebep: GCI ailesi **dy sabit tutularak** kuruldu — bu bilinçliydi ve
+duvar işlemini yalıtmak için doğruydu, ama sonucu okurken şu unutuldu:
+o aile **duvar aralığı duyarlılığını hiç örneklemiyor**. Ölçtüğü şey
+yalnızca ayrıklaştırma hatasıdır.
+
+İki ağın dy'si farklı çünkü biri Re = 6e6, diğeri uçuş Re'si (2,05e6)
+ile kuruldu; `ilk_hucre_yuksekligi` ikisinde farklı sonuç veriyor.
+
+**Düzeltilmiş ifade:**
+
+| belirsizlik kaynağı | büyüklük | ölçüldü mü |
+|---|---|---|
+| ayrıklaştırma (dy sabit) | < %0,1 | evet, üç ağ |
+| **duvar aralığı / y⁺ seçimi** | **~%1,4** | iki nokta, **yetersiz** |
+| iteratif yakınsama | ~%0,08 | evet |
+
+**Baskın belirsizlik ayrıklaştırma değil, duvar aralığı seçimi.** C_D0
+için savunulabilir ifade: **0,0132 ± ~%1,5**, ve bu bandı daraltmak için
+y⁺ duyarlılık çalışması gerekir — yapılan GCI onu kapsamıyor.
+
+Yan bulgu: hedeflenen y⁺ = 60'a **iki ağda da ulaşılmıyor** (ölçülen 18
+ve 24). `ilk_hucre_yuksekligi`'nin dayandığı düz levha bağıntısı bu
+gövdede kayma gerilmesini olduğundan büyük kestiriyor. Duvar
+fonksiyonunun geçerli aralığında kaldığı için sonucu bozmuyor, ama
+tasarım hedefiyle gerçekleşen arasındaki bu fark kayda geçmelidir.
