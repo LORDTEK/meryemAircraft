@@ -2565,3 +2565,47 @@ azami en-boy oranının 859 074'e çıkması.
 Kaba bir gösterge olarak ln-doğrusal dış değerleme y⁺ = 1 için
 ~0,0161 veriyor (%+22), ama duvar fonksiyonu orada zaten farklı rejimde
 olduğu için bu sayı **kestirim değil, yalnızca eğilimin işareti**.
+
+---
+
+## y⁺ ≈ 1 DENENDİ — dört deneme, dördü de çöktü (04.09.2026)
+
+Duvar aralığı duyarlılığı doymadığı için (ln(y⁺)'de düz doğru) belirleyici
+koşu y⁺ ≈ 1'di. Ağ artık kurulabiliyor (`-keepOrientation` sayesinde,
+0 negatif hücre), ama **çözülemedi.**
+
+| # | yapılandırma | azami en-boy | çöküş | kusur |
+|---|---|---|---|---|
+| 1 | y⁺=1, n_uc=13, p0,3/U0,7, limited 0,33 | 1 298 156 | 61 | basınç 1000 iter, artık → 1,0 |
+| 2 | aynı ağ, **p0,2/U0,5, limited 0,25** | 1 298 156 | 154 | aynı; artık 151'de dip yapıp döndü |
+| 3 | **n_uc=40** (en-boy 9 kat düşük), p0,3/U0,7 | 223 806 | 68 | basınç |
+| 4 | n_uc=40 + p0,2/U0,5 + **düşük-Re duvar koşulları** | 223 806 | 6 | **ω patlıyor** |
+
+### Çürütülen iki hipotez
+
+**Anizotropi baskın sebep değil.** En-boy oranını 1,3 M'den 224 k'ya
+(9 kat) düşürmek çöküşü 61'den yalnızca 68'e taşıdı. Aynı ağda gevşemeyi
+kısmak 61'den 154'e taşımıştı — yani gevşeme, anizotropiden daha etkili.
+Uç uzanımına istasyon eklemek (n_uc 13 → 40) en-boy oranını gerçekten
+düşürüyor (ölçüldü: Δz 0,84 → 0,269, oran 1,3 M → 224 k) ama sorunu
+çözmüyor.
+
+**Duvar koşulu ailesi de değil — ve daha kötü yaptı.** y⁺≈1 ağını duvar
+fonksiyonu koşullarıyla koşuyordum (`k` → `kqRWallFunction`, sıfır
+gradyan), ki o koşul y⁺≈30 için doğrudur. Düşük-Re ailesine geçirmek
+(`duvar_fonk=False`) mantıklı görünüyordu ama koşu 6. adımda çöktü ve
+kusur değişti: artık basınç değil **ω**. Duvar omega'sı y = 5,7e−06'da
+ω = 6ν/(β₁y²) ile ~10⁸ mertebesine çıkıyor, denklem negatife düşüp
+sınırlanıyor (`bounding omega, min: −7,24 max: 9,64e+07`).
+
+### Durum
+
+y⁺ ≈ 1 bu kurulumda **çözülemedi**. Kalan aday sebepler ölçülmedi:
+ω denkleminin gevşemesi, ω için farklı ayrıklaştırma, kademeli başlangıç
+(y⁺=20 çözümünden devam), ya da `kOmegaSSTLM` yerine düşük-Re'ye daha
+dayanıklı bir model.
+
+**Bunun sonuca etkisi:** C_D0 için duvar aralığı belirsizliği (%5,4,
+doymuyor) **açık kalıyor**. Elimizdeki en savunulabilir ifade hâlâ
+C_D0 = 0,0132 ± ~%5, ve eğilim daha ince duvar çözünürlüğünde daha
+yüksek sürükleme gösteriyor.
