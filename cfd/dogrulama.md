@@ -2304,3 +2304,63 @@ Makalenin şerit yöntemi zaten köşeliyor: serbest 0,00729, tetikli
 geçiş ucu CFD ile ölçülemedi ve **kalan belirsizlik orada**. Dürüst ifade
 budur; geçiş modelini y⁺ 18'de koşmak, modeli geçerlilik alanının dışında
 kullanmak olurdu ve sayı üretirdi ama bilgi üretmezdi.
+
+---
+
+## ÜRETEÇ DÜZELTİLDİ — kusur üreteçte değil, dönüşümde (04.09.2026)
+
+y⁺ = 1 ağı `checkMesh`'te **31 868 negatif hücre, 99 193 yanlış yönlü
+yüz**, azami dikey olmayanlık **179,96°** veriyordu. Aynı aile: veter
+yönünde kabalaştırma da bozuluyordu. Beş hipotez ölçümle çürütüldü:
+
+| hipotez | ölçüm | sonuç |
+|---|---|---|
+| yürüme kipi (`kesit`/`ortak`/`3b`) | üçü de 0,890/0,890/0,871 | çürüdü |
+| `n_normal` yetersiz | 160/200/240 aynı | çürüdü |
+| açıklık sıklaştırması | %5,5→%3,6→%2,7, f ∝ Δz¹ | yardım eder, çözmez |
+| yüz çarpıklığı > hücre kalınlığı | çarpıklık j=0 ve j=1'de **aynı** (fark/kalınlık = 0,00) | ölçüt yanlıştı |
+| hücre merkezi yanlış tarafta | %0,0 | çürüdü |
+
+### Kusur bulundu: `gmshToFoam`'ın yeniden-yönlendirmesi
+
+`.msh` dosyasının kendisi **geçerli**: 2 271 040 altıgenin hiçbirinin
+hacmi negatif değil (OpenFOAM'ın kendi yordamıyla, `agdenetim.py`).
+
+Tek bir bozuk hücre sonuna kadar izlendi:
+
+- Aynı 8 düğüm, aynı 6 yüz — üretecin şablonuyla `gmshToFoam`'ınki
+  **birebir eşleşiyor (6/6)**.
+- Hacim, `.msh` düğüm sırasıyla **+6,576964e−09**;
+  polyMesh yüzlerinden **−6,576964e−09**.
+
+**Büyüklük aynı, işaret ters.** Yani yüzler doğru kuruluyor, yalnızca
+sahip/komşu yönelimi ters atanıyor. `gmshToFoam` varsayılan olarak
+altıgenleri kendi sezgisiyle yeniden yönlendiriyor ve o sezgi ince
+hücrelerde başarısız oluyor.
+
+### Çözüm: `-keepOrientation`
+
+`kos3b.sh`'e eklendi. y⁺ = 1 ağı:
+
+| | öncesi | **sonrası** |
+|---|---|---|
+| negatif hücre | 31 868 | **0** |
+| yanlış yönlü yüz | 99 193 | **0** |
+| azami dikey olmayanlık | 179,96° | **89,69°** |
+| çarpıklık | 2,72 | 2,72 |
+| başarısız denetim | 5 | **1** (yalnız en-boy oranı) |
+
+**Üretim ağı (y⁺ = 60) etkilenmiyor** — metrikler bayraklı ve bayraksız
+birebir aynı (en-boy 145 825,5104, dikey olmayanlık 89,68705839,
+0 negatif). Mevcut hiçbir sonuç geçersizleşmiyor.
+
+### Açılan iki yol
+
+1. **Geçiş modeli artık mümkün.** y⁺ = 1 ağı geçerli, `kOmegaSSTLM`
+   mevcut.
+2. **Ağ yakınsaması artık mümkün.** Kaba ağ (n_profil 128, n_iz 32,
+   508 096 hücre) uçuş Reynolds'unda geçerli: 0 negatif, dikey
+   olmayanlık 89,61°.
+
+Kalan sorun y⁺ = 1'de azami en-boy oranının **859 074**'e çıkması —
+çözücünün bunu kaldırıp kaldırmayacağı ayrı bir soru.

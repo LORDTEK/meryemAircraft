@@ -11,7 +11,23 @@ VAKA="$1"; CEK="${2:-4}"
 . /usr/share/openfoam/etc/bashrc >/dev/null 2>&1
 cd "$VAKA"
 rm -rf constant/polyMesh processor* log.*
-gmshToFoam ag.msh > log.gmshToFoam 2>&1
+# -keepOrientation ZORUNLU.
+#
+# gmshToFoam varsayilan olarak altigenleri KENDI sezgisiyle yeniden
+# yonlendirir. O sezgi ince hucrelerde basarisiz oluyor: y+ = 1 aginda
+# 31 868 hucreyi negatif, 99 193 yuzu yanlis yonlu yapiyordu ve azami
+# dikey olmayanligi 179,96 dereceye cikariyordu.
+#
+# Kusurun agda OLMADIGI gosterildi: .msh dosyasindaki 2 271 040 altigenin
+# hicbirinin hacmi negatif degil. Ustelik tek bir bozuk hucre incelendi --
+# gmshToFoam'in kurdugu 6 yuz, uretecin sablonuyla BIREBIR ayni (6/6), ama
+# hacim .msh sirasiyla +6,577e-9, polyMesh'ten -6,577e-9. Buyukluk ayni,
+# yalnizca yonelim ters.
+#
+# -keepOrientation ile ayni ag: 0 negatif hucre, 0 yanlis yonlu yuz,
+# azami dikey olmayanlik 89,69. Bu bayrak olmadan y+ = 1 agi -- yani
+# gecis modelinin gerektirdigi ag -- kurulamiyor.
+gmshToFoam -keepOrientation ag.msh > log.gmshToFoam 2>&1
 
 # gmshToFoam her yamayi 'patch' yapar. Duvarin 'wall' olmasi turbulans
 # modelinin duvar mesafesi ve duvar islemleri icin sarttir. kok/uc'un tipi
