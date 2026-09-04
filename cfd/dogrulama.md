@@ -2238,3 +2238,69 @@ Tek ağ (GCI yok) · geçiş modeli yok (tam türbülanslı) · y⁺ ≈ 18'de d
 fonksiyonu · e kestirimi indirgenmiş sürüklemeyle taşımaya bağlı basınç
 sürüklemesini ayıramıyor · CFD yalnızca kanat/gövde; uç iskeletleri ve
 göbekler §6.6'nın bileşen kestiriminden geliyor.
+
+---
+
+## Geçiş modeli DENENDİ — ağ topolojisi engelliyor (04.09.2026)
+
+**Model mevcut.** OpenFOAM v1912'de `kOmegaSSTLM` (Langtry–Menter γ-Reθ)
+ve `kkLOmega` var; çözücüye geçersiz bir ad verdirilerek liste alındı.
+
+**Ama y⁺ ≈ 1 istiyor.** γ-Reθ, laminer alt tabakayı çözemezse geçişi
+tespit edemez. Bizim üretim ağı y⁺ ≈ 18 ve duvar fonksiyonlu.
+
+### y⁺ = 1 ağı kurulamıyor
+
+Uçuş koşulunda y⁺ = 1 için dy = 2,41e−5 (y⁺ = 60'ta 1,45e−3). Kurulan ağ
+`symmetryPlane` denetiminden geçmiyor:
+
+| n_normal | ortalama normal | ters yüz |
+|---|---|---|
+| 160 | 0,8907 | %5,5 |
+| 200 | 0,8896 | %5,5 |
+| 240 | — | (aynı) |
+
+**Normal yönünde nokta artırmak hiçbir şey değiştirmiyor.** Sorun oradaki
+çözünürlük değil.
+
+### Sebep: ince duvar hücresinin AÇIKLIK YÖNÜNDE makaslanması
+
+Ters yüzlerin konumu ölçüldü: **hiçbiri iz bölgesinde değil**
+(x > 0,971'de sıfır), hepsi profil üzerinde (x 0,0015–0,9601, ortanca
+0,4869). Yani bu, firar kenarı/iz kesiği çatışması **değil**.
+
+İlk hücre duvara dik **2,41e−5** kalınlığında, ama açıklık yönünde
+Δz = 0,144 uzanıyor ve o mesafede kesit veteri 0,075 değişiyor. Hücre
+açıklık yönünde şiddetle makaslanıyor — oran **6000:1**. y⁺ = 60'ta aynı
+oran 100:1 ve ağ temiz.
+
+Hipotez açıklık sıklaştırmasıyla sınandı ve **doğrulandı**:
+
+| istasyon | Δz | ters yüz |
+|---|---|---|
+| 12 | 0,1439 | %5,5 |
+| 24 | 0,0719 | %3,6 |
+| 36 | 0,0480 | %2,7 |
+
+Mekanizma doğru. **Ama çare değil:** f ∝ Δz^0,6 gidiyor; %0,1'e inmek
+için yaklaşık **800 kat** istasyon gerekir. Sıklaştırmayla çözülmez.
+
+### Sonuç: geçiş modeli bu ağda koşulamaz
+
+Bu, ağ üretecinin yapısal bir sınırı. Aynı aile:
+
+1. Veter yönünde kabalaştırma dönüşümde bozuluyor (**GCI engelli**)
+2. y⁺ = 1 kurulamıyor (**geçiş modeli engelli**)
+3. Azami en-boy oranı 145 825, `limited 0.33` zorunlu
+
+Üçü de üretecin üç boyutlu duvar-normali yürüyüşünün ürettiği ince,
+makaslanmış hücrelerden geliyor. **Ağ üretecinin yapısal düzeltmesi artık
+tek kritik yol** — hem ağ yakınsaması hem geçiş modeli ona bağlı.
+
+### Bu arada geçiş için söylenebilecek
+
+Makalenin şerit yöntemi zaten köşeliyor: serbest 0,00729, tetikli
+0,01285. **3-B CFD tetikli ucu doğruluyor** (0,013339, %+3,8). Serbest
+geçiş ucu CFD ile ölçülemedi ve **kalan belirsizlik orada**. Dürüst ifade
+budur; geçiş modelini y⁺ 18'de koşmak, modeli geçerlilik alanının dışında
+kullanmak olurdu ve sayı üretirdi ama bilgi üretmezdi.
