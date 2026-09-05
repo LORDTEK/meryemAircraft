@@ -2626,3 +2626,77 @@ SA zaten 2-B doğrulama zincirinde kullanılıyor.
 doymuyor) **açık kalıyor**. Elimizdeki en savunulabilir ifade hâlâ
 C_D0 = 0,0132 ± ~%5, ve eğilim daha ince duvar çözünürlüğünde daha
 yüksek sürükleme gösteriyor.
+
+---
+
+## y⁺ ≈ 1 ÇÖZÜLDÜ — Spalart–Allmaras ile (05.09.2026)
+
+Beş başarısız denemeden sonra **altıncı yol tuttu**: SA tek denklemli,
+ω yok, ve beş çöküşün ikisi ω'dan geliyordu. Aynı ağ (n_uc=40, en-boy
+223 806), düşük-Re duvar işlemi, p 0,2 / U 0,5, `limited 0.25`.
+
+**5000 adım, çökme yok, ölçülen y⁺ = 1,00.**
+
+| adım | C_D | viskoz |
+|---|---|---|
+| 3000 | 0,0153026 | 0,0091111 |
+| 4000 | 0,0150241 | 0,0093413 |
+| **5000** | **0,0147498** | **0,0093429** |
+
+Kuvvetler artıktan çok daha yavaş oturdu: 2000. adımda C_D = 0,0228 ve
+artık 1,6e−05 idi — artığa bakılsaydı sayı **%55 fazla** verilirdi.
+
+### Model etkisi (aynı y⁺, aynı ağ)
+
+| y⁺ | k-ω SST | SA | fark |
+|---|---|---|---|
+| ~20 | 0,0134376 | 0,0145209 | **+%8,1** |
+| ~28 | 0,0131476 | 0,0135049 | +%2,7 |
+| ~43 | 0,0127508 | 0,0132019 | +%3,5 |
+
+Model farkı **sabit değil** (%2,7–8,1) ve tek düze de değil. "Model
+belirsizliği şu kadardır" diye tek sayı verilemez; ortalama ~%5.
+
+### Duvar etkisi — ve doğrusal dış değerleme GEÇERSİZ
+
+SA'nın kendi dizisi, kabadan inceye:
+
+| y⁺ | C_D | öncekine göre |
+|---|---|---|
+| 44,10 | 0,0132019 | — |
+| 28,29 | 0,0135049 | +%2,30 |
+| 20,43 | 0,0145209 | +%7,52 |
+| **1,00** | **0,0147498** | **+%1,58** |
+
+Aralık eğimleri: −6,83e−04, −3,12e−03, −7,59e−05. **Eğim aralık aralık
+değişiyor**, yani SA'nın ln(y⁺) ilişkisi doğrusal değil. (k-ω'nın üç
+noktası doğrusaldı — en büyük artık 2,4e−06; SA'nınki 3,0e−04, **125
+kat**.) Bu yüzden SA'ya doğru uydurup y⁺=1'e uzatmak geçersizdir; öyle
+yapılırsa "ölçüm doğrunun %24 altında" gibi yanıltıcı bir sonuç çıkar.
+
+**Doğru okuma iki uç noktadan:** y⁺ 20,43 → 1,00 arasında C_D yalnızca
+**%1,58** değişiyor. **Eğilim doymuş.**
+
+### Daha önceki dış değerlemenin düzeltmesi
+
+k-ω'nın doğrusal eğiliminden y⁺=1 için **0,0161** öngörmüş ve "kaba bir
+gösterge" demiştim. Duvar çözümlü ölçüm **0,0147498** — dış değerleme
+**%9,2 fazla** tahmin etmiş. Eğilimin işareti doğruydu (daha ince duvar
+→ daha yüksek sürükleme) ama büyüklüğü abartılıydı.
+
+### Belirsizlik bütçesi — güncel
+
+| kaynak | büyüklük | ölçüldü mü |
+|---|---|---|
+| iteratif yakınsama | %0,08 | evet |
+| ayrıklaştırma (dy sabit) | < %0,1 | evet, üç ağ GCI |
+| duvar çözünürlüğü (y⁺ 20 → 1) | **%1,6** | evet, SA duvar çözümlü |
+| duvar çözünürlüğü (y⁺ 43 → 20) | %10 | evet |
+| **türbülans modeli** | **%2,7–8,1** | evet, iki model × üç y⁺ |
+
+Baskın kalem artık **türbülans modeli**. Duvar çözünürlüğü y⁺ ≲ 20'de
+doymuş durumda; asıl duyarlılık y⁺ 20–43 aralığında.
+
+**En savunulabilir C_D0 (kanat/gövde, uçuş Re, tam türbülanslı):**
+**0,0141 ± ~%5**, iki modelin duvar çözümlü/düşük y⁺ değerlerinin
+ortası (SA 0,01475; k-ω y⁺≈20 0,01344).
