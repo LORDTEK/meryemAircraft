@@ -39,9 +39,10 @@ designs are sized twenty times apart in mass, at 50 kg and 1000 kg, from identic
 equations, with the governing fractions preserved across that range. Two findings
 changed the study: the tip frames must be faired, and transition altitude loss falls
 with rotation time rather than rising with it. The study
-is analytical, with no wind-tunnel or flight validation, and the mass budget is a
+is largely analytical, with no wind-tunnel or flight validation, and the mass budget is a
 target. The two aerodynamic coefficients that carry the most weight are not replaced by
-computation but bounded by it.
+computation but bounded by it — the zero-lift drag by a three-dimensional solution
+reported with a measured uncertainty budget.
 
 *[≈270 kelime. MDPI 200 isterse kesilecek ilk yer: konfigürasyon tarifi.]*
 
@@ -83,7 +84,9 @@ MDPI'ın yapay zekâ beyan zorunluluğunu da karşılar.]*
 
 > All data supporting the reported results are contained within the article. The
 > parametric geometry model, the figure-generation scripts and the transition
-> simulation, together with the aerodynamic calculations of Section 6.6, are openly
+> simulation, together with the aerodynamic calculations of Section 6.6 — including the
+> mesh generator, the case setup, the grid-convergence study and the wall-resolution and
+> turbulence-model sensitivity runs behind the computed zero-lift drag — are openly
 > available at https://github.com/LORDTEK/meryemAircraft
 
 *Bölüm 8.12'deki "başka bir grup bunu bağımsız deneyebilir" davetinin somut
