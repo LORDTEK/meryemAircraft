@@ -29,13 +29,34 @@ koşulu sağlayan bir konfigürasyon önerir.
 
 | | |
 |---|---|
-| DOI | [10.5281/zenodo.22144194](https://doi.org/10.5281/zenodo.22144194) — her zaman en son sürüme gider, şu an **v2** |
+| DOI | [10.5281/zenodo.22144194](https://doi.org/10.5281/zenodo.22144194) — her zaman en son sürüme gider, şu an **v3** |
 | İlk sürüm (v1) | [10.5281/zenodo.22144195](https://doi.org/10.5281/zenodo.22144195) — değişmez |
 | PDF | [`makale/pdf/meryemAircraft-makale.pdf`](makale/pdf/meryemAircraft-makale.pdf) — 46 sayfa, 12 şekil |
 | Tek dosya kaynak | [`makale/makale.md`](makale/makale.md) |
 | Bölüm bölüm | [`makale/bolumler/`](makale/bolumler/) |
 | Kaynakça | [`makale/kaynakca-en.md`](makale/kaynakca-en.md) |
 
+> **v3 hazır (2026-09-05).** v2'ye göre değişenler:
+> **8.12'nin birinci maddesi yapıldı** — merkez gövde için üç boyutlu çözüm.
+> Kanat/gövde C_D0 = **0,0141 ± ~%5** (uçuş Reynolds'u, α = 0, tam türbülanslı),
+> şerit yönteminin tetikli değerinin **%9 üstünde ve elverişsiz yönde**; toplam
+> 0,0224'e çıkıyor ve varsayılan **0,0248 hâlâ üstünde** — varsayım
+> geçersizleşmiyor, payı **%17'den %11'e** iniyor. Belirsizlik iddia değil
+> **ölçüm**: ağ yakınsaması üç ağla (0,27–2,66 M hücre, <%0,1), duvar
+> çözünürlüğü y⁺ 43 → 1 dört noktayla, model duyarlılığı iki türbülans
+> modeliyle (%2,7–8,1). **Baskın kalem ağ değil, türbülans modeli.**
+> **Çözülemeyen:** geçiş modeli — duvar çözümlü ağ ile iki denklemli
+> formülasyonu aynı anda isteyen hesap yakınsamadı; temiz yüzey durumu hâlâ
+> şerit kestirimi ve **0,0073 – 0,0141 aralığı artık sıfır taşıma
+> sürüklemesindeki en büyük tek belirsizlik**.
+> Metnin **karakteri değişti** ve buna göre düzeltildi: beş ayrı yerdeki
+> "bu çalışmada CFD yoktur" ifadesi güncellendi, **8.1'in başlığı
+> "No validation" → "No experimental validation"** oldu — hesaplanan bir
+> katsayının doğrulama olmadığı açıkça yazıldı. Kurulum, betikler, ağ
+> yakınsama çalışması ve **yol boyunca çürüyen hipotezlerin ölçümlü kaydı**
+> [`cfd/`](cfd/) altında; ayrıntı [`cfd/dogrulama.md`](cfd/dogrulama.md).
+> **Yayımlanmış v1 ve v2 değişmez.**
+>
 > **v2 yayımlandı (2026-08-29).** v1'e göre değişenler:
 > menzil yöntemi düzeltildi (azami L/D yerine seyir noktası poları — hafif hat
 > **1 695 → 1 598 km**, ağır hat **1 868 → 1 814 km**); **Bölüm 6.6** eklendi:
