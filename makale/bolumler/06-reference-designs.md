@@ -305,6 +305,50 @@ not adopted. An assumption that is declared and shown to be conservative is a sm
 target than a calculation whose weakest link, discussed in Section 8.4, is the
 treatment of a twenty-five percent thick centre body as a two-dimensional section.
 
+**A three-dimensional solution for the centre body.** The weakness just named has since
+been removed. Section 8.12 lists it first among the places these results should be
+attacked, and the calculation it asks for has now been carried out: a structured
+Reynolds-averaged solution over the planform of Section 4.2, at the cruise Reynolds
+number and at zero lift, resolving the wing and blended body as a three-dimensional
+surface rather than as stacked sections. It gives a wing-and-body zero-lift drag of
+
+**0.0141, with a measured uncertainty of about five percent**,
+
+against the 0.0129 of the tripped strip estimate — nine percent higher, and in the
+unfavourable direction. Substituting it for the strip figure raises the total to 0.0224.
+**The assumed 0.0248 still lies above it**, so the conclusion of the previous paragraph
+survives the more expensive calculation; the margin narrows from seventeen percent to
+eleven. The assumption is not replaced here either, for the same reason as before.
+
+The five percent is itself measured rather than asserted:
+
+| Source of uncertainty | Magnitude |
+|---|---:|
+| Iterative convergence | 0.1 % |
+| Spatial discretisation, three grids of 0.27 – 2.66 M cells | < 0.1 % |
+| Wall resolution, y⁺ 20 → 1 | 1.6 % |
+| Wall resolution, y⁺ 43 → 20 | 10 % |
+| Turbulence model, k-ω SST against Spalart–Allmaras | 2.7 – 8.1 % |
+
+The dominant term is the turbulence model, not the grid — which is worth stating plainly,
+because grid convergence is the check a reader expects and it turns out to bound the
+smallest of the five terms. Two further results are recorded because they are easy to get
+wrong in either direction. The forces converge far more slowly than the residuals: at a
+velocity residual of 1.6 × 10⁻⁵ the computed drag was still fifty-five percent above its
+converged value, so a solution stopped on residuals alone would have been badly wrong.
+And the wall-resolution sensitivity saturates rather than continuing: between y⁺ 20 and
+y⁺ 1 the drag moves by 1.6 percent, so the wall-function results are not systematically
+far from the wall-resolved one, and an extrapolation of the coarser trend overstated the
+wall-resolved value by nine percent.
+
+**What this does not settle.** The solution is fully turbulent throughout. It therefore
+speaks to the tripped row of the table above and not to the clean-surface row, and the
+gap between those two rows — 0.0073 against 0.0141 — is now the largest single
+uncertainty in the zero-lift drag. Closing it requires a transition-sensitive model,
+which needs a wall-resolved grid and a two-equation formulation at the same time; that
+combination was attempted and did not converge. The clean-surface bound therefore remains
+where the strip calculation left it.
+
 **Internal volume.** One closure that the mass budget does not address is whether the
 payload fits. The body's gross internal volume follows from the thickness distribution:
 185 litres for the light design. Taking rather more than half of that as usable and
