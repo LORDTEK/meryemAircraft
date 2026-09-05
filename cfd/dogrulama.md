@@ -2568,7 +2568,7 @@ olduğu için bu sayı **kestirim değil, yalnızca eğilimin işareti**.
 
 ---
 
-## y⁺ ≈ 1 DENENDİ — dört deneme, dördü de çöktü (04.09.2026)
+## y⁺ ≈ 1 DENENDİ — beş deneme, beşi de çöktü (04–05.09.2026)
 
 Duvar aralığı duyarlılığı doymadığı için (ln(y⁺)'de düz doğru) belirleyici
 koşu y⁺ ≈ 1'di. Ağ artık kurulabiliyor (`-keepOrientation` sayesinde,
@@ -2580,6 +2580,7 @@ koşu y⁺ ≈ 1'di. Ağ artık kurulabiliyor (`-keepOrientation` sayesinde,
 | 2 | aynı ağ, **p0,2/U0,5, limited 0,25** | 1 298 156 | 154 | aynı; artık 151'de dip yapıp döndü |
 | 3 | **n_uc=40** (en-boy 9 kat düşük), p0,3/U0,7 | 223 806 | 68 | basınç |
 | 4 | n_uc=40 + p0,2/U0,5 + **düşük-Re duvar koşulları** | 223 806 | 6 | **ω patlıyor** |
+| 5 | n_uc=40, **kademeli başlangıç** (ν rampası) | 223 806 | 54 | **ω 3,2e12, k 3,1e7** |
 
 ### Çürütülen iki hipotez
 
@@ -2598,12 +2599,28 @@ kusur değişti: artık basınç değil **ω**. Duvar omega'sı y = 5,7e−06'da
 ω = 6ν/(β₁y²) ile ~10⁸ mertebesine çıkıyor, denklem negatife düşüp
 sınırlanıyor (`bounding omega, min: −7,24 max: 9,64e+07`).
 
+### Beşinci deneme: kademeli başlangıç — yol da tıkalı
+
+Amaç, y⁺≈20'nin yakınsamış çözümünden başlayıp dy'yi kademeli indirmekti.
+**`mapFields` bu kurulumda segfault veriyor** (aynı aileden `forceCoeffs`
+ve `yPlus` da çalışmıyor), yani ağdan ağa eşleme yolu kapalı.
+
+Onun yerine ağ sabit tutulup ν kademelendirildi: küçük ν'de (yüksek Re)
+bu ağ y⁺ ~ 10 gibi davranır diye düşünüldü. **Yön yanlış seçilmişti** —
+ilk kademe (ν'nün %10'u) 54. adımda çöktü ve öncekilerden daha kötü:
+`bounding omega, min −5,28e+09 max 3,20e+12`, `bounding k max 3,09e+07`.
+Yüksek Re'de sınır tabakası inceliyor, gradyanlar sertleşiyor ve ağın dış
+aralığı ona göre değil.
+
 ### Durum
 
-y⁺ ≈ 1 bu kurulumda **çözülemedi**. Kalan aday sebepler ölçülmedi:
-ω denkleminin gevşemesi, ω için farklı ayrıklaştırma, kademeli başlangıç
-(y⁺=20 çözümünden devam), ya da `kOmegaSSTLM` yerine düşük-Re'ye daha
-dayanıklı bir model.
+y⁺ ≈ 1 bu kurulumda **çözülemedi**; beş deneme, iki farklı çökme kipi
+(basınç ve ω), ve denenen her çare ya erteledi ya kötüleştirdi.
+
+Denenmemiş tek YAPISAL olarak farklı yol: **Spalart–Allmaras**. Tek
+denklemli olduğu için ω yok — beş çökmenin ikisinin sebebi ortadan
+kalkar. Ama üçü basınçtandı, onları çözmez; kabaca yarı yarıya bir ihtimal.
+SA zaten 2-B doğrulama zincirinde kullanılıyor.
 
 **Bunun sonuca etkisi:** C_D0 için duvar aralığı belirsizliği (%5,4,
 doymuyor) **açık kalıyor**. Elimizdeki en savunulabilir ifade hâlâ
