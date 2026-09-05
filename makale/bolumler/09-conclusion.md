@@ -46,10 +46,12 @@ so entering the rotation while still climbing, rather than stopping to hover fir
 removes the altitude penalty entirely.
 
 What this paper offers is a configuration and its numbers, not a validated aircraft.
-There is no wind-tunnel data here, no computational fluid dynamics, and no flight test;
-the mass budget is a target that has not paid the margin such budgets usually owe. The
-claims most exposed to that are identified in Section 8, together with the four analyses
-that would test them, none of which requires an experiment. The configuration is
+There is no wind-tunnel data here and no flight test; the mass budget is a target that
+has not paid the margin such budgets usually owe. One of the four analyses that Section 8
+lists as tests of these results has been carried out — a three-dimensional solution for
+the centre body, which narrowed the zero-lift drag without overturning it — and the other
+three have not. The claims most exposed are identified in Section 8, and none of the
+remaining analyses requires an experiment. The configuration is
 described in enough detail for another group to attempt any of them independently, and
 that is the outcome this paper is written to invite.
 

@@ -45,11 +45,23 @@ koşulu sağlayan bir konfigürasyon önerir.
 > [`aero/`](aero/) altında. **Yayımlanmış v1 değişmez**, kendi DOI'siyle
 > erişilebilir durumdadır.
 >
-> ⚠️ **Çalışma analitiktir.** Rüzgâr tüneli, hesaplamalı akışkanlar dinamiği ya da
-> uçuş denemesi verisi **yoktur**; sayılar, belirtilen varsayımlardan türetilmiş
-> analitik kestirimlerdir ve kütle bütçesi bir hedeftir, bulgu değil. Makalenin
-> 8. bölümü bu sınırları tek tek sayar, 8.12 ise bu sonuçları sınayacak dört
-> analizi listeler. Hiçbiri deney gerektirmez.
+> ⚠️ **Çalışma büyük ölçüde analitiktir.** Rüzgâr tüneli ve uçuş denemesi verisi
+> **yoktur**; sayıların çoğu, belirtilen varsayımlardan türetilmiş analitik
+> kestirimlerdir ve kütle bütçesi bir hedeftir, bulgu değil. Makalenin 8. bölümü
+> bu sınırları tek tek sayar, 8.12 ise bu sonuçları sınayacak dört analizi listeler.
+> Hiçbiri deney gerektirmez.
+>
+> **Tek istisna: sıfır taşıma sürüklemesi.** 8.12'nin birinci maddesi —
+> merkez gövde için üç boyutlu çözüm — yapıldı. Kanat/gövde C_D0 = **0,0141**,
+> ölçülmüş belirsizliği **±%5**; ağ yakınsaması üç ağla, duvar çözünürlüğü
+> y⁺ 43'ten 1'e dört noktayla, model duyarlılığı iki türbülans modeliyle
+> sınandı. Sonuç makalenin 0,0248 varsayımını **geçersiz kılmıyor, daraltıyor**
+> (toplam 0,0224, varsayım hâlâ üstünde). Kurulum, betikler ve **yol boyunca
+> neyin çürüdüğünün kaydı** [`cfd/`](cfd/) altında; özellikle
+> [`cfd/dogrulama.md`](cfd/dogrulama.md) her çürütülen hipotezi ölçümüyle
+> birlikte tutar. Çözülemeyen tek şey **geçiş modeli**: duvar çözümlü ağ ile
+> iki denklemli formülasyonu aynı anda isteyen bu hesap yakınsamadı, o yüzden
+> temiz yüzey durumu hâlâ şerit kestirimi.
 
 ---
 

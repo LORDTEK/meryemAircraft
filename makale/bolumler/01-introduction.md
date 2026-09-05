@@ -73,10 +73,12 @@ preserved across that twenty-fold mass range — disc loading, energy-buffer mas
 and tip-frame drag fraction — and identifies the two that are not: transition duration,
 and the ratio of propeller diameter to span.
 
-**Scope.** This is a configuration study. It contains no computational fluid dynamics,
-no wind-tunnel measurement and no flight test. Its numerical results are analytical
-estimates from stated assumptions, and its mass budget is a target rather than a
-finding. Section 8 states these limitations explicitly.
+**Scope.** This is a configuration study. It contains no wind-tunnel measurement and no
+flight test. Its numerical results are analytical estimates from stated assumptions, with
+one exception: the zero-lift drag of the wing and centre body has been computed
+three-dimensionally, and Section 6.6 reports it with a measured uncertainty budget. The
+mass budget is a target rather than a finding. Section 8 states these limitations
+explicitly.
 
 ---
 

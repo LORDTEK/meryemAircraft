@@ -79,10 +79,12 @@ preserved across that twenty-fold mass range — disc loading, energy-buffer mas
 and tip-frame drag fraction — and identifies the two that are not: transition duration,
 and the ratio of propeller diameter to span.
 
-**Scope.** This is a configuration study. It contains no computational fluid dynamics,
-no wind-tunnel measurement and no flight test. Its numerical results are analytical
-estimates from stated assumptions, and its mass budget is a target rather than a
-finding. Section 8 states these limitations explicitly.
+**Scope.** This is a configuration study. It contains no wind-tunnel measurement and no
+flight test. Its numerical results are analytical estimates from stated assumptions, with
+one exception: the zero-lift drag of the wing and centre body has been computed
+three-dimensionally, and Section 6.6 reports it with a measured uncertainty budget. The
+mass budget is a target rather than a finding. Section 8 states these limitations
+explicitly.
 
 The remainder of the paper is organised as follows. Section 2 reviews seventy years of
 attempts to merge the two configuration families and argues, on the evidence of two
@@ -1456,11 +1458,17 @@ This section states what those limits are, in enough detail that a reader can ju
 much weight each result will bear. Several of the items below were discovered during the
 study and changed its results; they are recorded here rather than smoothed away.
 
-## 8.1 No validation
+## 8.1 No experimental validation
 
-There is no computational fluid dynamics in this work, no wind-tunnel testing, and no
-flight testing. Every aerodynamic coefficient is either taken from the literature or
-assumed. Nothing in Sections 4 to 7 has been measured.
+There is no wind-tunnel testing in this work and no flight testing. Nothing in Sections 4
+to 7 has been measured against an experiment.
+
+One coefficient has been computed rather than assumed or taken from the literature: the
+zero-lift drag of the wing and centre body, by a three-dimensional Reynolds-averaged
+solution reported in Section 6.6. That is a calculation, not a validation — it is subject
+to the turbulence-model uncertainty quantified there, which is its largest term, and it
+has not been checked against measurement. Every other aerodynamic coefficient is either
+taken from the literature or assumed.
 
 ## 8.2 The mass budget is a target, not a finding
 
@@ -1506,11 +1514,15 @@ Several results depend on coefficients that were not computed for this geometry:
   twelve-percent figure is an estimate.
 - The **zero-lift drag coefficient** of 0.0248 is assumed rather than adopted from a
   build-up. Section 6.6 reports a component build-up that brackets it at 0.0131 to
-  0.0210, so the assumed value is conservative; but the build-up has a weak link, and it
-  is the largest term in it. Its strip method treats the root section as a
-  two-dimensional aerofoil of twenty-five percent thickness, and the flow over the centre
-  body of a blended-wing body is not two-dimensional. The build-up is therefore reported
-  as a bound on the assumption rather than as a replacement for it.
+  0.0210, so the assumed value is conservative. That build-up had a weak link in its
+  largest term — its strip method treated the root section as a two-dimensional aerofoil
+  of twenty-five percent thickness, and the flow over the centre body of a blended-wing
+  body is not two-dimensional. **That link has since been replaced** by a
+  three-dimensional solution, also reported in Section 6.6, which raises the wing-and-body
+  term to 0.0141 and the total to 0.0224 — still below the assumed value. What remains
+  uncertain is no longer the dimensionality but the transition state: the solution is
+  fully turbulent, and the clean-surface case is still the strip estimate. The build-up
+  is reported as a bound on the assumption rather than as a replacement for it.
 - **Span efficiency** is assumed at 0.85. A vortex-lattice solution gives an inviscid
   span efficiency of 0.99 for this planform, which is consistent with the assumed
   Oswald-type value once the viscous drag due to lift is allowed for, but does not
@@ -1622,10 +1634,18 @@ not of a professional search.
 The results of this paper would be most efficiently attacked in four places, and they
 are listed so that they can be:
 
-1. **A three-dimensional solution for the centre body.** Section 6.6 reports a component
-   build-up that bounds the assumed C_D0, but its strip method cannot model the flow over
-   a twenty-five percent thick blended centre body, and that is where most of the
-   remaining uncertainty sits.
+1. ~~**A three-dimensional solution for the centre body.**~~ **Done.** This was the
+   first place to attack, because the strip method of Section 6.6 could not model the flow
+   over a twenty-five percent thick blended centre body. The solution has since been
+   carried out and is reported in Section 6.6: it gives a wing-and-body C_D0 of 0.0141
+   with a measured uncertainty of about five percent, nine percent above the tripped strip
+   estimate and in the unfavourable direction, and it leaves the assumed 0.0248 still
+   conservative. **What it does not settle** is the transition state — the solution is
+   fully turbulent, so the clean-surface figure of 0.0073 is untested and the gap between
+   it and 0.0141 is now the largest single uncertainty in the zero-lift drag. A
+   transition-sensitive model requires a wall-resolved grid and a two-equation formulation
+   at once; that combination was attempted and did not converge. **This item is therefore
+   narrowed rather than closed**, and what replaces it is stated above.
 2. **A structural mass estimate** for the airframe and the tip frames, which would test
    the payload fraction — the weakest number in the study.
 3. **A six-degree-of-freedom transition simulation** with rotational dynamics, which
@@ -1634,9 +1654,12 @@ are listed so that they can be:
    8.7 into a quantified benefit or remove it. The vortex-lattice solution of Section 6.6
    covers the planform but not the tip surfaces, which remain unquantified.
 
-None of these requires an experiment. All four are within reach of a follow-on study,
-and the configuration is described in enough detail in Section 4 and Section 6 for
-another group to attempt any of them independently.
+None of these requires an experiment. The first has been carried out and its result is
+folded into Section 6.6; the remaining three are within reach of a follow-on study, and
+the configuration is described in enough detail in Section 4 and Section 6 for another
+group to attempt any of them independently. The computational setup, the grid-convergence
+study and the record of what failed along the way are in the repository, so the first
+item can be re-run and checked rather than taken on trust.
 
 # 9. Conclusion
 
@@ -1682,10 +1705,12 @@ so entering the rotation while still climbing, rather than stopping to hover fir
 removes the altitude penalty entirely.
 
 What this paper offers is a configuration and its numbers, not a validated aircraft.
-There is no wind-tunnel data here, no computational fluid dynamics, and no flight test;
-the mass budget is a target that has not paid the margin such budgets usually owe. The
-claims most exposed to that are identified in Section 8, together with the four analyses
-that would test them, none of which requires an experiment. The configuration is
+There is no wind-tunnel data here and no flight test; the mass budget is a target that
+has not paid the margin such budgets usually owe. One of the four analyses that Section 8
+lists as tests of these results has been carried out — a three-dimensional solution for
+the centre body, which narrowed the zero-lift drag without overturning it — and the other
+three have not. The claims most exposed are identified in Section 8, and none of the
+remaining analyses requires an experiment. The configuration is
 described in enough detail for another group to attempt any of them independently, and
 that is the outcome this paper is written to invite.
 
