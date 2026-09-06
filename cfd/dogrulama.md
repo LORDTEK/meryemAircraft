@@ -2629,6 +2629,61 @@ yüksek sürükleme gösteriyor.
 
 ---
 
+## BASINÇ ÇÖZÜCÜSÜ relTol — 15 KAT HIZLANMA (06.09.2026)
+
+Uzun koşu (k-ω SST, y⁺≈1, 5000 adım) sürerken adım süresi **9,5 s'den
+80 s'ye çıktı**. Bu hızla kalan 3138 adım 70 saat edecekti.
+
+### Teşhis
+
+Basınç çözücüsünün iterasyon sayısı izlendi:
+
+| | GAMG iterasyonu |
+|---|---|
+| ~1350. adım | 5–24 |
+| ~1860. adım | 62–72 |
+
+Artık küçüldükçe GAMG aynı 100 katlık indirgemeyi çok daha fazla
+iterasyonda yapıyor. Sebep 89,7 derecelik çarpıklık: yüksek frekanslı
+hata bileşeni düzleyiciyle sönmüyor ve çoklu ağın verimi düşüyor.
+
+Bellek, disk veya CPU sorunu **değildi** — kontrol edildi (15 GB'ın
+9'u boşta, swap yok, dört süreç de `R` durumunda, CPU zamanları
+artıyordu). İlk şüphem yeniden-kurma işimin CPU'yu paylaşması idi; o
+süreç öldürüldükten sonra da yavaşlık sürdü, yani sebep o değildi.
+
+### Çare
+
+`fvSolution`'da `p` için `relTol` 0,01 → **0,05**.
+
+Gerekçe: SIMPLE bir **dış** iterasyon şemasıdır; her dış adımda basınç
+denklemini 100 kat indirgemek gerekmez. Yakınsamış çözüm iç çözücü
+toleransından bağımsızdır ve `residualControl` gerçek denklem artığına
+bakar. Yani bu sayısal bir hızlandırmadır, fizik değişikliği değildir.
+
+### Ölçülen etki
+
+| | önce | sonra |
+|---|---|---|
+| GAMG iterasyonu (p) | 62–72 | **2–5** |
+| adım süresi | ~80 s | **5,3–5,7 s** |
+| tahmini kalan süre | ~70 saat | **~5,3 saat** |
+
+Koşu 1500. adımdan sürdürüldü (1501–1862 arası yeniden hesaplanıyor).
+`runTimeModifiable` da `true` yapıldı ki bundan sonra durdurmadan
+ayar değiştirilebilsin. Eski `fvSolution`
+`system/fvSolution.yedek-relTol001` olarak saklandı.
+
+### Ders
+
+Uzun koşularda **adım süresi de izlenmelidir**, yalnızca artık değil.
+Yavaşlama sessizdir: log akmaya devam eder, süreçler `R` durumundadır,
+hiçbir hata mesajı yoktur. Bu koşuda 80 s/adıma çıkış ancak "iki saat
+sonra ne var ne yok" diye bakılınca fark edildi; fark edilmeseydi
+tahmini 5 saatlik iş 70 saat sürecekti.
+
+---
+
 ## REFERANS ALANI — ŞÜPHELENİLDİ, ÖLÇÜLDÜ, ÇÜRÜTÜLDÜ (06.09.2026)
 
 Bu bölümün ilk hâli "bütün 3-B C_D değerleri %1,05 düşük" diyordu.
