@@ -2629,7 +2629,7 @@ yüksek sürükleme gösteriyor.
 
 ---
 
-## BASINÇ ÇÖZÜCÜSÜ relTol — 15 KAT HIZLANMA (06.09.2026)
+## BASINÇ ÇÖZÜCÜSÜ relTol — HIZLANDIRDI, SONRA ÇÖKERTTİ (06.09.2026)
 
 Uzun koşu (k-ω SST, y⁺≈1, 5000 adım) sürerken adım süresi **9,5 s'den
 80 s'ye çıktı**. Bu hızla kalan 3138 adım 70 saat edecekti.
@@ -2673,6 +2673,64 @@ Koşu 1500. adımdan sürdürüldü (1501–1862 arası yeniden hesaplanıyor).
 `runTimeModifiable` da `true` yapıldı ki bundan sonra durdurmadan
 ayar değiştirilebilsin. Eski `fvSolution`
 `system/fvSolution.yedek-relTol001` olarak saklandı.
+
+### SONUÇ: BU DEĞİŞİKLİK KOŞUYU ÇÖKERTTİ — GERİ ALINDI
+
+`relTol 0.05` ile koşu 1500'den **2135'e kadar tamamen sağlıklı** gitti:
+k_max tekdüze düşüyor (27,6 → 22,8 → 18,3 → 13,4 → 10,7 → 8,8 → 7,3),
+Ux artığı 1,1e−4'ten 4,9e−5'e iniyor, adım 5,6 s.
+
+Sonra **ani patlama**:
+
+| adım | k_max |
+|---|---|
+| 2135 | 7,3 |
+| 2152 | **908,6** |
+| 2161 | **508 452** |
+| 2169 | `SIGFPE` — hız denklemi, `symGaussSeidelSmoother` |
+
+### Tek değişkenli sınama
+
+Adım 2000 diske yazılmıştı (orada k_max = 10,7, sağlıklı). Oradan
+**yalnızca `relTol` 0,01'e döndürülerek** yeniden koşuldu; başka hiçbir
+şey değişmedi.
+
+**Sonuç: 2169 geçildi, koşu sürüyor.** Yani çöküşün sebebi ağ ya da uç
+kapak değil, `relTol` gevşetmesiydi.
+
+Yan gözlem: sıkı çözümle k_max çok daha küçük kalıyor. Aynı adım
+civarında gevşek koşuda 7,3 iken sıkı koşuda 0,0028 ölçüldü — türbülanslı
+sınır tabaka için beklenen k ≈ 0,005 mertebesinde. Yani gevşek basınç
+çözümü yalnızca çökertmiyor, çökmeden önce de **fiziksel olmayan bir k
+alanı** taşıyordu.
+
+### Neden yanılmışım
+
+Gerekçem şuydu: "SIMPLE bir dış iterasyon şemasıdır; yakınsamış çözüm iç
+çözücü toleransından bağımsızdır." Bu **yakınsamış bir çözüm için**
+doğrudur. Ama yakınsama yolundaki bir çözüm için değildir: gevşek basınç
+çözümü süreklilik hatasını her adımda biraz büyütür, hata birikir ve
+89,7°'lik bölgede eşiği aşınca patlar.
+
+Ve daha önemlisi: **15 kat hızlanmayı 3 dakikalık bir ölçümle "çare" ilan
+ettim.** Depoda tam bu dersin bir örneği zaten vardı (`limited 0.33`,
+40 adımlık testten sonra çare ilan edildi, koşu 138'de çöktü). Aynı
+hatayı biçim değiştirerek tekrarladım: bu sefer ölçüm 3 dakika, çöküş
+669 adım sonra geldi.
+
+**Kural: bir kararlılık/hız değişikliği, önceki çöküş noktasının çok
+ötesine koşulmadan çare sayılmaz. Hız ölçümü kararlılık ölçümü değildir.**
+
+### Yavaşlama sorunu ise HÂLÂ AÇIK
+
+`relTol 0.01`'e dönülünce adım süresi 11–24 s (gevşekte 5,6 s idi, ama
+1860 civarında 80 s'ye çıkmıştı). Yavaşlamanın asıl sebebi — artık
+küçüldükçe GAMG'nin 89,7°'lik bölgede verim kaybetmesi — çözülmedi,
+yalnızca ondan kaçınıldı. Denenmemiş seçenekler: PCG + DIC (2-B ölçümde
+GAMG'den hızlıydı: 12,3 s/adım'a karşı 17,6), daha fazla düzleyici
+geçişi, ya da uç kapak topolojisinin düzeltilmesi.
+
+---
 
 ### Ders
 
