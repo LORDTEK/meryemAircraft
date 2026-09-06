@@ -2629,6 +2629,81 @@ yüksek sürükleme gösteriyor.
 
 ---
 
+## DÜZELTME — k-ω SST y⁺ ≈ 1'de ÇÖKMÜYOR (06.09.2026)
+
+Yukarıdaki "beş deneme, beşi de çöktü" tablosu **yeniden üretilemedi.**
+
+`blended false` hipotezini sınamak için bir KONTROL koşusu kuruldu:
+başarılı SA y⁺≈1 vakasının (`/tmp/sa1`) ağı, sınır koşulları, şemaları ve
+gevşetmesi aynen alındı; yalnızca `RASModel` `SpalartAllmaras` →
+`kOmegaSST` yapıldı. Yani yukarıdaki 4. denemenin yapılandırması.
+
+Yapılandırma (tam): n_uc=40 ağı (2 263 560 hücre), `nutLowReWallFunction`,
+`k` duvarda `fixedValue 1e-14`, `omega` duvarda `omegaWallFunction`
+**blended true**, `nNonOrthogonalCorrectors 2`, `consistent no`,
+p 0,2 / U 0,5 / (k|omega) 0,5, `laplacian ... limited 0.25`,
+`snGrad limited 0.25`, tek biçimli başlangıç alanı.
+
+**Kontrol, kaydın erken davranışını BİREBİR üretti:**
+
+| adım | log |
+|---|---|
+| 1 | `bounding omega, min −3 480 005, max 9,6448e+07` |
+| 3 | `bounding omega, min −3,891` |
+| 6 | `bounding omega, min −7,235` ← kayıtta "burada çöktü" yazan yer |
+| 8 | `bounding omega, min −1225,7` |
+
+6. adımdaki −7,235 değeri kaydın yazdığı −7,24 ile aynıdır. Yani
+yapılandırma aynı; sayısal yol aynı. **Ama koşu çökmedi.**
+
+169. adımda hâlâ koşuyordu: kaydın saydığı beş çöküş noktasının (6, 54,
+61, 68, 154) hepsi geçildi. Basınç artığı 1,1e−07, Ux artığı 1,3e−03.
+
+### Ne oldu
+
+Sınırlama olayları erken geçici rejimde yoğunlaşıyor ve k tepe yapıp
+geri iniyor:
+
+`k` tepe değerleri (serbest akım k = 1,5e−06):
+
+| adım aralığı | k_max |
+|---|---|
+| 15–20 | 1,7 → 2,2 |
+| 25–35 | 6,6 → 17,8 |
+| ~50 | 1,2e+03 → 1,0e+04 |
+| ~70 | 14 256 (tepe) |
+| ~165 | 3 058 → 2 584 (iniyor) |
+
+Yani k gerçekten şişiyor — `blended` hipotezinin öngördüğü mekanizma
+ölçüldü — ama şişme **ölümcül değil**; sınırlayıcı tutuyor ve alan geri
+iniyor.
+
+### Bunun anlamı
+
+1. **"k-ω SST bu ağda y⁺≈1'de koşamıyor" önermesi yanlıştır.** Geçiş
+   modeli araştırmasının çıkış noktası buydu.
+2. Dolayısıyla `kOmegaSSTLM` (Langtry–Menter γ-Re_θ) yolu **hiç kod
+   yazmadan açıktır**. Medida modelini uygulama gerekçesi ortadan kalkar.
+3. `blended true/false` sorusu bir ÇÖKME sorusu olmaktan çıkıp bir
+   **model-biçim duyarlılığı** sorusuna dönüşür: iki duvar işlemi aynı
+   C_D0'ı mı veriyor?
+
+### Kaydın kendisi hakkında
+
+Beş denemenin çöktüğü doğruysa, aradaki fark bu koşuda belgelenen
+yapılandırmanın DIŞINDA bir yerdedir. En olası aday `limited` katsayısı:
+1. ve 3. denemeler `limited 0.33`, 2. deneme `limited 0.25` kullanıyordu;
+4. deneme için kayıt bunu YAZMIYOR. Bu koşu `limited 0.25` kullandı.
+Ama 1/3/6. adımlardaki sınırlama değerlerinin birebir aynı olması, en
+azından o adımlara kadar sayısal yolun özdeş olduğunu gösteriyor — bu da
+4. denemenin de aslında 6. adımda çökmediğine işaret eder.
+
+Kesin olarak söylenebilecek olan: **yukarıda belgelenen yapılandırmayla
+k-ω SST y⁺≈1'de 169 adım boyunca çökmedi.** "Beşi de çöktü" cümlesi
+olduğu gibi bırakılmıyor; bu bölüm onu düzeltir.
+
+---
+
 ## y⁺ ≈ 1 ÇÖZÜLDÜ — Spalart–Allmaras ile (05.09.2026)
 
 Beş başarısız denemeden sonra **altıncı yol tuttu**: SA tek denklemli,
