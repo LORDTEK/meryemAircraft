@@ -2629,6 +2629,86 @@ yüksek sürükleme gösteriyor.
 
 ---
 
+## k-ω SST y⁺≈1 KOŞUSU ÇÖKÜYOR — sebep bulundu, çare bulunmadı (06.09.2026)
+
+5000 adımlık koşu iki kez çöktü (2169 ve 2186), `SIGFPE`, hız denklemi.
+Aşağısı teşhisin kaydıdır. **Çare henüz yok.**
+
+### Çürütülen dört hipotez
+
+| hipotez | ölçüm | sonuç |
+|---|---|---|
+| `relTol 0,05` gevşetmesi | iki ayarla da ~aynı yerde patlıyor (2144 / 2165) | **çürütüldü** |
+| uç kapak (89,7° çarpıklık) | patlama z/yarı = 0,458, uçta değil | **çürütüldü** |
+| patlama yerinde kötü ağ | orada azami dikey-olmayanlık **39,29°**, ortalama 26,94° | **çürütüldü** |
+| kesit kalınlığının yuvarlanması | `kanatagi.py:219` kesirli t/c geçiyor, basamak yok | **çürütüldü** |
+
+Ağın gerçekten kötü yüzleri (89,65°) z/yarı = 5,0–5,6'da, x = 1,675,
+y = ±0,005 — yani **iz kesiğinde**, kanattan çok uzakta ve patlamayla
+ilgisiz.
+
+### Patlamanın yeri
+
+| | |
+|---|---|
+| açıklık | z = 0,7900 → z/yarı = **0,458** (ağ istasyonu 11, z = 0,7913) |
+| veter | yerel x/c = **0,11**, üst yüzey |
+| duvardan | ~0,0008 m, yerel sınır tabaka kalınlığının ~%35'i |
+
+Geometride orada kırılma yok: ok açısı 41,968 → 41,935 → 41,901, veter
+ve t/c düzgün değişiyor.
+
+### Mekanizma — adım 2100'de, patlamadan ÖNCE ölçüldü
+
+Patlama noktasındaki duvar-normal sütun:
+
+| duvardan | k | ω | ν_t/ν |
+|---|---|---|---|
+| ilk hücre | 0,475 | 5,29e6 | 0,18 |
+| 0,0008 m | **8,205** | 2,17e4 | **625** |
+| 0,0047 m | 5,793 | 9 409 | **1107** |
+
+k = 8,2 → türbülans şiddeti √(2k/3)/U = **%234**. Türbülanslı sınır
+tabaka için beklenen k ≈ 0,005; yani **1600 kat** fazla.
+
+Ve tamamen yerel. Açıklık bandına göre k_max:
+
+| z/yarı | k_max |
+|---|---|
+| 0,3–0,4 | 2,32 |
+| **0,4–0,5** | **8,21** |
+| 0,5–0,6 | 0,0160 |
+| 0,6–0,7 | 0,0089 |
+| 0,9–1,0 | 0,0584 |
+
+Komşu bantlar fiziksel mertebede (0,0089 ≈ beklenen 0,005). Bir bant
+1000 kat fazla.
+
+**Yani patlama 2150'de başlamıyor.** Adım 2100'de hot spot zaten
+oradaydı ve büyüyordu; 2144–2165 arasında eşiği aşıp taştı. SST'nin
+üretim sınırlayıcısı (P_k ≤ 10 β* k ω) onu tutamıyor.
+
+### Durum
+
+- **SA aynı ağda y⁺≈1'de 5000 adım sorunsuz koştu** (C_D = 0,014750).
+  Tek denklemli olduğu ve k denklemi taşımadığı için bu kaçış kipi onda
+  yok.
+- k-ω SST y⁺≈20–43'te sorunsuz koşuyor; sorun yalnızca y⁺≈1'de.
+- Dolayısıyla 2×2 tablosundaki **k-ω / y⁺=1 hücresi boş kalıyor**.
+
+### Denenmemiş çareler
+
+1. k ve ω gevşetmesini düşürmek (0,5 → 0,3).
+2. `nutLowReWallFunction` yerine `nutUSpaldingWallFunction` (y⁺≈1'de de
+   geçerlidir ve k duvar koşulu değişir).
+3. Üretim sınırlayıcısını sıkmak (`Pk` katsayısı) ya da Kato–Launder.
+4. O istasyonda ağı açıklık yönünde sıklaştırmak.
+
+Hiçbiri denenmedi. Ve bu bölümde iki kez öğrenilen kural geçerli: bir
+çare, önceki çöküş noktasının çok ötesine koşulmadan çare sayılmaz.
+
+---
+
 ## BASINÇ ÇÖZÜCÜSÜ relTol — HIZLANDIRDI, AMA ÇÖKÜŞÜN SEBEBİ DEĞİLDİ (06.09.2026)
 
 Uzun koşu (k-ω SST, y⁺≈1, 5000 adım) sürerken adım süresi **9,5 s'den
