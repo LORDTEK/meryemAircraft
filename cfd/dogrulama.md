@@ -2629,6 +2629,116 @@ yüksek sürükleme gösteriyor.
 
 ---
 
+## kOmegaSSTLM BU KURULUMDA ÇALIŞIYOR — T3A doğrulaması (06.09.2026)
+
+k-ω SST'nin y⁺≈1'de çöktüğü sanıldığı sürece geçiş modeli yolu kapalı
+sayılıyordu. Yukarıdaki düzeltme onu açtı. Açılan yolun ilk sınaması:
+`kOmegaSSTLM` (Langtry–Menter γ-Re_θ) bu OpenFOAM kurulumunda gerçekten
+koşuyor mu?
+
+Bu ciddi bir soruydu: aynı kurulumda `forceCoeffs`, `yPlus`, `postProcess`
+ve `mapFields` **kırık** (OSHA1stream / segfault).
+
+### Yanlış teşhisten dönüş
+
+İlk koşu `FOAM FATAL IO ERROR: error in IOstream "sha1"` ile öldü — tam
+olarak öteki dördünü öldüren hata. "Demek LM de kırık" demek kolaydı.
+Değildi: OpenFOAM'ın kendi T3A eğitim vakası üç `functionObject` içeriyor
+(`wallShearStress`, `wallShearStressGraph`, `kGraph`) ve kırık olan
+onlar. `functions { }` yapılıp yeniden koşuldu:
+
+**SIMPLE solution converged in 269 iterations.** Model çalışıyor.
+
+Ders: bu kurulumda bir aracın çökmesi, onu KULLANAN çözücünün de kırık
+olduğu anlamına gelmiyor. functionObject'ler ayrı ayıklanmalı.
+
+### Doğrulama — ERCOFTAC T3A düz levhası
+
+Vaka OpenFOAM kaynağıyla geliyor ve **deneysel veri de içinde**
+(`tutorials/incompressible/simpleFoam/T3A/validation/exptData/T3A.dat`,
+Savill 1993/1996). U = 5,4 m/s, ν = 1,5e−5, k girişi 0,047633
+(Tu = %3,30), ω girişi 264,63 (ν_t/ν = 12,0), Re_θt girişi 160,99.
+26 820 hücre, levha hücum kenarı x = 0,04 m.
+
+C_f, `cfd/ortak/cf.py` ile elden hesaplandı (functionObject kırık).
+
+| x [m] | Re_x | C_f CFD | C_f deney | fark |
+|---|---|---|---|---|
+| 0,045 | 1,62e4 | 0,005547 | 0,005203 | +6,6% |
+| 0,095 | 3,42e4 | 0,004075 | 0,003723 | +9,5% |
+| 0,195 | 7,02e4 | 0,002937 | 0,002645 | +11,0% |
+| 0,295 | 1,06e5 | 0,002463 | 0,002272 | +8,4% |
+| 0,395 | 1,42e5 | 0,002541 | 0,002098 | **+21,1%** |
+| 0,495 | 1,78e5 | 0,003186 | 0,002209 | **+44,2%** |
+| 0,595 | 2,14e5 | 0,003970 | 0,002703 | **+46,9%** |
+| 0,695 | 2,50e5 | 0,004539 | 0,003801 | +19,4% |
+| 0,795 | 2,86e5 | 0,004588 | 0,004849 | −5,4% |
+| 0,995 | 3,58e5 | 0,004464 | 0,004722 | −5,5% |
+| 1,195 | 4,30e5 | 0,004308 | 0,004418 | −2,5% |
+| 1,395 | 5,02e5 | 0,004189 | 0,004207 | −0,4% |
+| 1,495 | 5,38e5 | 0,004127 | 0,004079 | +1,2% |
+
+### Okuma
+
+**Türbülanslı bölge (x ≥ 0,795): −6,7% … +1,2%.** Hem model hem C_f
+hesabı sağlam; bu bölge zaten geçiş modelinden bağımsız.
+
+**Geçiş bölgesi: %19–47 fazla.** Sebep sapma değil, KAYMA: C_f minimumu
+CFD'de x ≈ 0,30 (Re_x ≈ 1,1e5), deneyde x ≈ 0,395 (Re_x ≈ 1,4e5). Model
+geçişi yaklaşık **%25 ERKEN** tahmin ediyor.
+
+Bu yön önemli: erken geçiş, laminer bölgeyi kısaltır ve sürüklemeyi
+FAZLA verir. Yani bu modelle bulunacak bir C_D0, temiz yüzey değerine
+(0,0073) gerçekte olması gerekenden daha uzak, tam türbülanslı değere
+(0,0141) daha yakın çıkacaktır — muhafazakâr yönde.
+
+### Bu doğrulamanın SINIRLARI
+
+1. **Tek vaka, tek rejim.** T3A Tu = %3,3'tür, yani BYPASS geçiş. Bizim
+   seyir koşulumuz Tu ≪ %1, yani DOĞAL geçiş. Bu koşu doğal geçişi
+   doğrulamaz. Schubauer–Klebanoff veya T3A- gerekir.
+2. **Ağ yakınsaması yok.** Eğitim vakasının varsayılan ağı kullanıldı.
+3. **C_f birinci mertebe duvar gradyanıyla.** Türbülanslı bölgedeki
+   birkaç yüzdelik uyum bunun kabul edilebilir olduğunu gösteriyor ama
+   ölçülmedi.
+
+### Serbest akım çürümesi — kanat vakası için ÖLÇÜLDÜ
+
+Kanat vakasında giriş sınırı 100 veter uzakta. SST'nin serbest akım
+çürümesi (kaynak terimsiz) analitik olarak:
+
+    ω(x) = ω₀ / (1 + β ω₀ x/U),  k(x) = k₀ (1 + β ω₀ x/U)^(−β*/β)
+    β = 0,0828,  β* = 0,09
+
+Mevcut kanat kurulumunun değerleriyle (k₀ = 1,5e−06, ω₀ = 3,0822,
+U = 1, ν = 4,8667e−07, 100 veter):
+
+| | giriş | hücum kenarında |
+|---|---|---|
+| k | 1,5e−06 | 4,25e−08 (çarpan 0,0284) |
+| ω | 3,082 | 0,1162 |
+| Tu | %0,100 | **%0,0168** |
+| ν_t/ν | 1,000 | 0,752 |
+
+Langtry korelasyonuna (λ_θ = 0) sokulunca:
+
+| Tu | Re_θt |
+|---|---|
+| %0,100 | 1137 |
+| %0,0168 | **1938** |
+
+Yani hiçbir şey yapılmazsa geçiş modeli, niyet edilenden **%70 daha
+yüksek** bir geçiş Reynolds sayısıyla çalışır ve geçişi çok geriye atar.
+
+**Çare kurulumda mevcut:** OpenFOAM v1912'nin `kOmegaSST`'si
+`decayControl` taşıyor (`kOmegaSSTBase.C:391`), ω denklemine
+`+ρβω∞²`, k denklemine `+ρβ*ω∞k∞` ekliyor (Spalart–Rumsey ortam kaynak
+terimi). Varsayılanı `false`. Kanat vakasında geçiş modeli koşulacaksa
+`decayControl yes` + `kInf`/`omegaInf` ile serbest akım korunmalıdır.
+Bu, koşu kurulmadan önce karara bağlanması gereken bir kalemdir.
+
+---
+
 ## DÜZELTME — k-ω SST y⁺ ≈ 1'de ÇÖKMÜYOR (06.09.2026)
 
 Yukarıdaki "beş deneme, beşi de çöktü" tablosu **yeniden üretilemedi.**
