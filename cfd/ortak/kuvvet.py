@@ -63,6 +63,29 @@ def ag_oku(vaka):
         _AG_BELLEK[a] = (Ag(vaka), nu_oku(vaka))
     return _AG_BELLEK[a]
 
+def izdusum_alani(vaka, yama="duvar", eksen=1):
+    """Yama'nin PLANFORM (izdusum) alani: sum|Sf_eksen| / 2.
+
+    Ust ve alt yuzey ayni duzleme izdusur, o yuzden ikiye bolunur.
+    eksen=1 (y), cunku UC BOYUTLU agda aciklik z'dir ve planform duzlemi
+    x-z'dir; onun normali y'dir. Iki boyutlu agda ayni ifade veter x
+    span kalinligini verir.
+
+    NEDEN VAR: Aref onceden 1.0 varsayilaniyla birakiliyordu ve HICBIR
+    cagiran onu gecmiyordu. Iki boyutta dogruydu (olculdu: n0012 agi
+    tam 1.000000). UC BOYUTTA DEGILDI -- gercek yari-kanat planformu
+    0.989612 m2, yani butun uc boyutlu C_D degerleri %1,05 DUSUK
+    cikmisti. Bu fonksiyon o hatanin tekrarini engeller.
+    """
+    ag = ag_oku(vaka)[0] if isinstance(ag_oku(vaka), tuple) else ag_oku(vaka)
+    y = ag.yama[yama]
+    t = 0.0
+    for k in range(y["n"]):
+        S, C = ag.yuz_alan(y["bas"] + k)
+        t += abs(S[eksen])
+    return t / 2.0
+
+
 def hesapla(vaka, yama="duvar", alfa=0.0, Uinf=1.0, Aref=1.0, zaman=None,
             mertebe=1):
     """mertebe=1  duvar gradyani tek hucreden: dU/dn = U_t1 / d1
@@ -76,6 +99,8 @@ def hesapla(vaka, yama="duvar", alfa=0.0, Uinf=1.0, Aref=1.0, zaman=None,
     Ikinci mertebe bunu ayirt eder.
     """
     ag, nu = ag_oku(vaka)
+    if Aref == "olc":
+        Aref = izdusum_alani(vaka, yama)
     z = zaman or son_zaman(vaka)
     p = Alan(vaka, z, "p")
     U = Alan(vaka, z, "U", vektor=True)
@@ -174,7 +199,7 @@ def hesapla(vaka, yama="duvar", alfa=0.0, Uinf=1.0, Aref=1.0, zaman=None,
         return sum(V[i] * yon[i] for i in range(3)) / q
 
     return dict(
-        zaman=z,
+        zaman=z, Aref=Aref,
         CL=bilesen(F, kal), CD=bilesen(F, sur),
         CD_basinc=bilesen(Fp, sur), CD_viskoz=bilesen(Fv, sur),
         CL_basinc=bilesen(Fp, kal), CL_viskoz=bilesen(Fv, kal),
@@ -188,8 +213,11 @@ def hesapla(vaka, yama="duvar", alfa=0.0, Uinf=1.0, Aref=1.0, zaman=None,
 if __name__ == "__main__":
     vaka = sys.argv[1]
     alfa = float(sys.argv[2]) if len(sys.argv) > 2 else 0.0
-    r = hesapla(vaka, alfa=alfa)
-    print("zaman %s   yuz %d" % (r["zaman"], r["yuz"]))
+    aref = sys.argv[3] if len(sys.argv) > 3 else "olc"
+    r = hesapla(vaka, alfa=alfa,
+                Aref="olc" if aref == "olc" else float(aref))
+    print("zaman %s   yuz %d   Aref %.6f"
+          % (r["zaman"], r["yuz"], r["Aref"]))
     print("  C_L = %+.5f   (basinc %+.5f  viskoz %+.5f)"
           % (r["CL"], r["CL_basinc"], r["CL_viskoz"]))
     print("  C_D = %+.6f   (basinc %+.6f  viskoz %+.6f)"
