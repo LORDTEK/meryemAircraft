@@ -4,6 +4,13 @@ Bu dizin, çalışma sırasında doğrudan okunan birincil kaynakları tutar.
 Makalenin atıf listesi burada değil, `makale/bolumler/10-references.md`
 dosyasındadır. Buradaki dosyalar okunmak için var, atıf için değil.
 
+**Depoda iki kaynak dizini var, karıştırılmamalı:**
+
+| Dizin | İçerik | Neden ayrı |
+|---|---|---|
+| `cfd/kaynak/` | CFD doğrulama kaynakları (NASA TMR, NAS teknik raporu, NACA 0012 doğrulama vakası) | Sayısal iddialara **dayanak**. `cfd/veri/referans.py` ve `cfd/ortak/cagi.py` bu dosyalara sayfa numarasıyla atıf yapar; taşınırsa kod bozulur. |
+| `kaynakca/` (bu dizin) | Genel okuma kaynakları | Koda gömülü atıf yok. Okunup anlaşılmak için var. |
+
 | Dosya | Kaynak | Neden burada |
 |---|---|---|
 | `Langtry_2006_PhD.pdf` | Langtry, R.B. (2006), *A Correlation-Based Transition Model using Local Variables for Unstructured Parallelized CFD Codes*, doktora tezi, Universität Stuttgart | γ-Re_θ geçiş modelinin birincil kaynağı. Ağ gereksinimleri (y⁺ ≈ 1, normal genişleme oranı 1.1-1.15, sınırlı 2. mertebe upwind) s. 42-43. OpenFOAM'ın `kOmegaSSTLM` modeli bunun uygulamasıdır. |
