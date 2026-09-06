@@ -2629,7 +2629,7 @@ yüksek sürükleme gösteriyor.
 
 ---
 
-## BASINÇ ÇÖZÜCÜSÜ relTol — HIZLANDIRDI, SONRA ÇÖKERTTİ (06.09.2026)
+## BASINÇ ÇÖZÜCÜSÜ relTol — HIZLANDIRDI, AMA ÇÖKÜŞÜN SEBEBİ DEĞİLDİ (06.09.2026)
 
 Uzun koşu (k-ω SST, y⁺≈1, 5000 adım) sürerken adım süresi **9,5 s'den
 80 s'ye çıktı**. Bu hızla kalan 3138 adım 70 saat edecekti.
@@ -2689,37 +2689,70 @@ Sonra **ani patlama**:
 | 2161 | **508 452** |
 | 2169 | `SIGFPE` — hız denklemi, `symGaussSeidelSmoother` |
 
-### Tek değişkenli sınama
+### Tek değişkenli sınama — ve İKİ HATAM
 
-Adım 2000 diske yazılmıştı (orada k_max = 10,7, sağlıklı). Oradan
-**yalnızca `relTol` 0,01'e döndürülerek** yeniden koşuldu; başka hiçbir
-şey değişmedi.
+Adım 2000'den **yalnızca `relTol` 0,01'e döndürülerek** yeniden koşuldu.
 
-**Sonuç: 2169 geçildi, koşu sürüyor.** Yani çöküşün sebebi ağ ya da uç
-kapak değil, `relTol` gevşetmesiydi.
+Koşu 2169'u geçti. Buna bakıp "sebep `relTol`'dü" diye rapor ettim.
+**Yanlıştı.** Koşu 17 adım sonra, **2186'da aynı `SIGFPE` ile çöktü.**
 
-Yan gözlem: sıkı çözümle k_max çok daha küçük kalıyor. Aynı adım
-civarında gevşek koşuda 7,3 iken sıkı koşuda 0,0028 ölçüldü — türbülanslı
-sınır tabaka için beklenen k ≈ 0,005 mertebesinde. Yani gevşek basınç
-çözümü yalnızca çökertmiyor, çökmeden önce de **fiziksel olmayan bir k
-alanı** taşıyordu.
+**Hata 1 — tanılama.** `bounding k, min: X max: Y average: Z` satırında
+son alan **average**'dır. `awk '{print $NF}'` ile ortalamayı okuyup
+"k_max" diye rapor ettim. "2169 geçildi, k_max 1,77" dediğim anda
+gerçek k_max **1 377 609** idi; koşu çoktan patlamıştı, sağlıklı sandım.
+Aynı hata daha önce "k_max 0,0028, fiziksel mertebede" dedirtti — o da
+ortalamaydı.
 
-### Neden yanılmışım
+**Hata 2 — sonuç.** 12 adım geçmeyi kanıt saydım. Bir bölüm önce
+"önceki çöküş noktasının çok ötesine koşulmadan çare sayılmaz" kuralını
+yazmıştım; hemen ardından kendi kuralımı çiğnedim.
 
-Gerekçem şuydu: "SIMPLE bir dış iterasyon şemasıdır; yakınsamış çözüm iç
-çözücü toleransından bağımsızdır." Bu **yakınsamış bir çözüm için**
-doğrudur. Ama yakınsama yolundaki bir çözüm için değildir: gevşek basınç
-çözümü süreklilik hatasını her adımda biraz büyütür, hata birikir ve
-89,7°'lik bölgede eşiği aşınca patlar.
+### Doğru sütunla iki koşunun karşılaştırması
 
-Ve daha önemlisi: **15 kat hızlanmayı 3 dakikalık bir ölçümle "çare" ilan
-ettim.** Depoda tam bu dersin bir örneği zaten vardı (`limited 0.33`,
-40 adımlık testten sonra çare ilan edildi, koşu 138'de çöktü). Aynı
-hatayı biçim değiştirerek tekrarladım: bu sefer ölçüm 3 dakika, çöküş
-669 adım sonra geldi.
+| adım | relTol 0,05 | relTol 0,01 |
+|---|---|---|
+| ~2135 | 7,34 (düşüyor) | 7,31 (düşüyor) |
+| patlama başlangıcı | **2144**: 43,5 | **2165**: 34,8 |
+| | 2149: 609 | 2171: 4 125 |
+| | 2157: 26 303 | 2177: 52 415 |
+| | 2166: 1,0e8 | 2183: 7,0e5 |
+| çöküş | **2169** | **2186** |
+
+İki koşu **aynı şeyi** yapıyor: k_max düzgün düşüyor, sonra ~2140–2165
+arasında aniden patlıyor. Sıkı çözüm patlamayı yalnızca ~20 adım
+geciktiriyor.
+
+**Sonuç: `relTol` çöküşün sebebi DEĞİL.** Kararlılık sorunu içseldir ve
+her iki ayarla da aynı yerde ortaya çıkar. `relTol 0,05` yine de geri
+alındı, çünkü hızlanma faydası kanıtlanmış bir kararlılık bedeliyle
+gelmese de, patlamayı erkene çekiyor.
+
+### AÇIK SORU: gerçek sebep ne
+
+Koşu adım ~2150'ye kadar her ölçüde sağlıklı: k_max tekdüze düşüyor
+(27,6 → 7,3), Ux artığı 1,1e−4'ten 4,9e−5'e iniyor, süreklilik hatası
+1e−10 mertebesinde. Sonra k birkaç adımda yedi mertebe büyüyor ve hız
+denklemi `symGaussSeidelSmoother` içinde `SIGFPE` veriyor.
+
+Bu, yavaş bir kaymanın sonucu değil; ani bir yerel patlama. Sebebi
+bulunmadan bu ağda 5000 adımlık bir koşu tamamlanamaz.
+
+Öncelikli şüpheli **uç kapak** (azami ortogonal-olmama 89,7°) ve orada
+zaten ölçülmüş olan durma noktası k üretimi anomalisi. Adım 2100'ün
+alanı diskte; k'nın en büyük olduğu hücrelerin konumu bu şüpheyi
+doğrulayacak ya da çürütecek.
+
+### Alınan ders
 
 **Kural: bir kararlılık/hız değişikliği, önceki çöküş noktasının çok
-ötesine koşulmadan çare sayılmaz. Hız ölçümü kararlılık ölçümü değildir.**
+ötesine koşulmadan çare sayılmaz. Hız ölçümü kararlılık ölçümü
+değildir.** Bu kural bu bölümde yazıldı ve aynı bölümde iki kez çiğnendi:
+önce 3 dakikalık hız ölçümüyle `relTol` çare ilan edildi, sonra 12
+adımlık geçişle "sebep bulundu" denildi.
+
+**Kural 2: log alanlarını isimle değil, konumla okumak hata üretir.**
+`$NF` ortalamaydı, max sanıldı. Sayısal bir tanı raporlanmadan önce
+hangi alanın okunduğu doğrulanmalıdır.
 
 ### Yavaşlama sorunu ise HÂLÂ AÇIK
 
