@@ -2629,68 +2629,103 @@ yüksek sürükleme gösteriyor.
 
 ---
 
-## REFERANS ALANI HATASI — bütün 3-B C_D değerleri %1,05 düşüktü (06.09.2026)
+## REFERANS ALANI — ŞÜPHELENİLDİ, ÖLÇÜLDÜ, ÇÜRÜTÜLDÜ (06.09.2026)
 
-Dış görüşün "aynı tanım: önceki 0,0141 hangi referans alan, hangi α,
-hangi kuvvet yönüyle alındıysa birebir" maddesi gerçek bir hata buldurdu.
+Bu bölümün ilk hâli "bütün 3-B C_D değerleri %1,05 düşük" diyordu.
+**Yanlıştı ve geri alındı.** Aşağısı hem şüphenin hem çürütmenin kaydıdır.
 
-### Hata
+### Şüphe
 
-`cfd/ortak/kuvvet.py`, `hesapla()` fonksiyonunda `Aref=1.0` varsayılanı
-taşıyor. Depodaki **hiçbir çağıran** bu parametreyi geçmiyor (on iki
-çağrı denetlendi; hepsi `hesapla(vaka, alfa=..., mertebe=...)`).
+Dış görüşün "aynı tanım: önceki 0,0141 hangi referans alanla alındıysa
+birebir" maddesi üzerine bakıldı. `cfd/ortak/kuvvet.py`'nin `hesapla()`
+fonksiyonu `Aref=1.0` varsayılanı taşıyor ve depodaki **hiçbir çağıran**
+bu parametreyi geçmiyor (on iki çağrı denetlendi). Yarı-kanadın gerçek
+planform alanı 1,0 değil. Görünürde sistematik bir hata.
 
-İki boyutta bu **doğru**: ölçüldü, `/tmp/n0012` ağının duvar yamasının
-izdüşüm alanı tam **1,000000** (veter 0…1, span kalınlığı 1). Yani 2-B
-doğrulama zinciri etkilenmemiştir.
+### Ölçüm 1 — gerçek alan
 
-Üç boyutta **yanlış**: ağ yarım modeldir (kök `symmetryPlane`) ve
-yarı-kanadın gerçek planform alanı 1,0 değildir.
-
-### Ölçüm — dolaylı hesaba güvenilmedi, ağdan alındı
-
-Açıklık ağda z yönündedir, dolayısıyla planform düzlemi x–z ve onun
-normali y'dir; izdüşüm alanı Σ|Sf_y| / 2'dir (üst ve alt yüzey aynı
-düzleme düşer).
+Açıklık ağda z, planform düzlemi x–z, normali y; izdüşüm alanı
+Σ|Sf_y| / 2 (üst ve alt yüzey aynı düzleme düşer).
 
 | | |
 |---|---|
 | duvar yamasında yüz | 8977 |
 | ıslak alan | 2,128443 m² |
-| Σ&#124;Sf_y&#124; | 1,979225 |
 | **izdüşüm (planform) alanı** | **0,989612 m²** |
-| `planform.py` yarı-kanat alanı | 0,989250 m² |
-| fark | %0,037 — ağ planformu sadık temsil ediyor |
-| kullanılan Aref | 1,000000 m² |
-| **düzeltme çarpanı** | **1,010497** |
+| `planform.py` yarı-kanat alanı | 0,989250 m² (%0,037 uyum) |
 
-### Düzeltilmiş değerler
+İki boyutlu ağda aynı ölçüm tam **1,000000** veriyor — 2-B zincirde
+`Aref=1.0` doğrudur.
 
-| | eski | düzeltilmiş |
-|---|---|---|
-| 3-B CFD tam türbülanslı (uçuş Re) | 0,013339 | **0,013479** |
-| SA y⁺=1 (5000 adım) | 0,014750 | **0,014905** |
-| k-ω SST y⁺≈20 | 0,013440 | **0,013581** |
-| makalede raporlanan | 0,0141 | **0,014248** |
+### Ölçüm 2 — kayıt hangi alanla üretilmiş
 
-%1,05 ± %5 belirsizlik bütçesinin içindedir, yani sonuçları
-değiştirmiyor. Ama **tanımsal** bir hatadır ve düzeltilmesi gerekir;
-oranlar (CFD/şerit = 1,038 gibi) yeniden hesaplanmalıdır.
+Burada durulup dört ihtimal birden koşuldu (`/tmp/sa1`, 5000. adım):
 
-### Kodda kapatıldı
+| | C_D |
+|---|---|
+| **kayıttaki değer** | **0,0147498** |
+| Aref = 1,0, mertebe 1 | 0,0145915 |
+| Aref = 1,0, mertebe 2 | 0,0146003 |
+| Aref = 0,989612, mertebe 1 | 0,0147447 |
+| Aref = 0,989612, mertebe 2 | 0,0147536 |
 
-`kuvvet.py`'ye `izdusum_alani(vaka, yama, eksen=1)` eklendi ve
-`hesapla(..., Aref="olc")` seçeneği tanımlandı; `__main__` artık
-varsayılan olarak ölçüyor. Varsayılan `Aref=1.0` geriye dönük uyum için
-duruyor ama çıktı artık kullanılan Aref'i **yazdırıyor**, böylece aynı
-hata sessizce tekrarlanamaz.
+Kayıttaki 0,0147498, **ölçülmüş alanla hesaplanan iki değerin tam
+arasında.** Aref = 1,0 ile çıkan değerlerden %1,1 uzakta.
+
+**Sonuç: kayıt zaten doğru alanla üretilmiş. Hata yok.** 3-B C_D
+değerlerinin hiçbiri düzeltilmiyor; 0,0141 olduğu gibi kalıyor.
+
+Bu sayıları üreten betik depoda değil (bir /tmp çalışma betiğiydi) ve
+alanı nasıl geçtiği koddan izlenemiyor — ama sonucu izlenebiliyor ve
+sonuç doğru.
+
+### Yine de kodda kapatıldı
+
+`kuvvet.py`'ye `izdusum_alani(vaka, yama, eksen=1)` eklendi,
+`hesapla(..., Aref="olc")` seçeneği tanımlandı, `__main__` varsayılan
+olarak ölçüyor ve çıktı artık **kullandığı Aref'i yazdırıyor**. Amaç
+bir hatayı düzeltmek değil — çünkü hata yoktu — sözleşmeyi görünür
+kılmak. Bu denetim, sayıları üreten betik kaybolduğu için ancak dolaylı
+yapılabildi; bir daha gerekmesin.
 
 ### Ders
 
-Bir varsayılan parametrenin "hiç geçilmemesi", onun doğru olduğu
-anlamına gelmiyor. İki boyutta doğru olması, üç boyutta da doğru olduğu
-izlenimi verdi ve on iki çağrı boyunca fark edilmedi. Kuvvet katsayısı
-üreten her çıktı, kullandığı referans alanı da yazdırmalıdır.
+Bir varsayılanın hiç geçilmemiş olması hata olduğunu göstermez.
+"Kod böyle yazıyor, öyleyse sonuç yanlıştır" çıkarımı yapıldı ve kayda
+geçirildi; oysa sonucu doğrudan sınamak on dakikalık işti ve şüpheyi
+çürüttü. **Kod okumasıyla varılan sonuç, ölçümle sınanmadan kaydedilmez.**
+
+---
+
+## α = 0 GERÇEKTEN C_L = 0 MI — ölçüldü (06.09.2026)
+
+Dış görüşün en ciddi uyarısı: C_D0 tanımı gereği C_D(C_L = 0)'dır;
+C_D(α = 0) ancak C_L(0) = 0 ise ona eşittir. Kamberli veya burulmalı bir
+BWB'de eşit olmayabilir.
+
+**Geometri bunu zaten sağlıyor:** kesitler simetrik NACA 00xx
+(`kanatagi.naca_kodu` → `"00%02d"`), `planform.istasyonlar` (y, x_hücum,
+veter, t/c, ok) döndürüyor — **burulma açısı yok, kamber yok**.
+
+**Ölçüldü** (SA y⁺=1, 5000 adım, Aref = 0,989612):
+
+| | |
+|---|---|
+| C_L | **−0,02233** (basınç −0,02229, viskoz −0,00004) |
+| C_D | +0,014745 |
+| y⁺ (alan ağırlıklı) | 1,00 |
+
+C_L tam sıfır değil. Kalan −0,022, ağın üst-alt tam simetrik olmamasından
+(uç kapağı O-H kelebek topolojisi, iz kesiği) geliyor olmalı.
+
+**Etkisi hesaplandı:** C_Di = C_L²/(π·AR·e) = 0,02233²/(π·6,026·0,774)
+= **3,4e−05**, yani C_D'nin **%0,23**'ü. C_D(α=0) ile C_D(C_L=0)
+arasındaki fark bu mertebededir — belirsizlik bütçesindeki en küçük
+kalemden bile küçük.
+
+**Sonuç: α taraması gerekmiyor.** Ama bu artık varsayım değil, ölçüm;
+makalede "kesitler simetrik ve burulmasız olduğu için C_D(α=0) = C_D0"
+denirken bu sayıya dayanılabilir.
 
 ---
 
