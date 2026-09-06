@@ -2629,6 +2629,94 @@ yüksek sürükleme gösteriyor.
 
 ---
 
+## DOĞAL GEÇİŞ DOĞRULANAMADI — T3A− ve Schubauer–Klebanoff (06.09.2026)
+
+T3A doğrulaması (aşağıda) modelin çalıştığını gösterdi ama T3A Tu = %3,3,
+yani **bypass** geçiş. Kanadın seyir koşulu Tu ≪ %1, yani **doğal**
+geçiş. Bu bölüm o rejimi denedi ve **başarısız oldu**. Sebebi
+belirlenmiştir ve kaydedilmiştir.
+
+### Kurulum
+
+Langtry (2006) tez, Bölüm 4 tablosu — hücum kenarı değerleri:
+
+| vaka | U (m/s) | Tu (%) | μ_t/μ |
+|---|---|---|---|
+| T3A | 5,4 | 3,3 | 12,0 |
+| T3B | 9,4 | 6,5 | 100,0 |
+| T3A− | 19,8 | 0,874 | 8,72 |
+| Schubauer–Klebanoff | 50,1 | 0,3 | 1,0 |
+
+OpenFOAM'ın T3A eğitim vakasının değerleri (Tu %3,30, ν_t/ν 12,0) bu
+tabloyla birebir uyuştuğu için, aynı ağ ve kurulumla öteki vakalar
+türetildi (`/tmp/kur_t3.py`): yalnızca U, k, ω ve Re_θt değişti,
+ν = 1,5e−5 sabit. Üçü de 1000 adım koştu, çökme yok.
+
+### Sonuç: ikisi de yanlış, ters yönlerde
+
+| vaka | Tu | beklenen | ölçülen |
+|---|---|---|---|
+| T3A | %3,3 | Re_x ≈ 1,4e5 (deney) | 1,16e5 (%25 erken) — kabul edilebilir |
+| T3A− | %0,874 | Re_x ~ 1e6 | ~3e6, alanın en ucunda — **çok geç** |
+| S–K | %0,3 | Re_x ≈ 3e6 (Langtry s.63) | ~2e4'ten itibaren türbülanslı — **çok erken** |
+
+Ters sıralama: S–K'nın Tu'su daha DÜŞÜK, geçişi daha GEÇ olmalıydı.
+
+### Çürütülen hipotez: y⁺ değil
+
+Langtry s.42, y⁺ > 5 olursa geçişin yukarı akışa kaydığını söylüyor.
+Ölçüldü (levha üzerinde x > 0,09 bölgesi):
+
+| vaka | U | ilk hücre d | y⁺ ort | y⁺ max |
+|---|---|---|---|---|
+| T3A | 5,4 | 2,093e−05 | 0,32 | 0,39 |
+| T3A− | 19,8 | 2,093e−05 | 0,58 | 0,93 |
+| S–K | 50,1 | 2,093e−05 | 2,74 | 3,29 |
+
+Üçü de eşiğin altında. **Ağ çözünürlüğü sebep değil.**
+
+### Gerçek sebep: hücum kenarında durma noktası k üretimi
+
+Duvara komşu hücrede, hücum kenarından 0,6 mm sonra, k'nın serbest akım
+değerine oranı:
+
+| vaka | U | k∞ | k(LE+0,6mm) | oran |
+|---|---|---|---|---|
+| T3A | 5,4 | 0,047633 | 0,02055 | **0,43×** |
+| T3A− | 19,8 | 0,044921 | 0,4696 | **10,5×** |
+| S–K | 50,1 | 0,033885 | 2,464 | **72,7×** |
+
+k-ω ailesinin bilinen durma noktası anomalisi (stagnation point anomaly):
+durma bölgesindeki gerinim, üretim terimini sınırsız büyütür. SST'nin
+üretim sınırlayıcısı bunu hafifletir ama yok etmez. Eğitim ağının eliptik
+hücum kenarı U = 5,4 için ayarlanmış; U = 50,1'de aynı geometri 73 katlık
+bir k sıçraması üretiyor ve sınır tabakayı hemen tetikliyor.
+
+T3A−'de sıçrama 10,5× — tetiklemeye yetmiyor, ama vaka bu kez ters uca
+düşüyor: serbest akım çürümesi yüzünden Tu levha boyunca %0,874'ten
+~%0,45'e iniyor, Re_θt 769'dan 1164'e çıkıyor ve geçiş alanın sonuna
+kadar gerçekleşmiyor. Ölçülen: x = 1,63 m'de Re_θt = 1164, ki Blasius'la
+Re_x ≈ 3,1e6 demektir — alanın son ucu.
+
+### Ne öğrenildi
+
+1. **T3A eğitim ağı ölçeklenerek yeniden kullanılamaz.** Langtry her vaka
+   için ayrı ağ kullanmış (tez Şekil 4.4). Doğal geçiş doğrulaması için
+   vakaya özel ağ gerekir; hücum kenarı geometrisi kritiktir.
+2. **Doğal geçiş rejiminde iki etki baskın:** hücum kenarı k üretimi ve
+   serbest akım çürümesi. İkisi de kanat vakasında AYNEN geçerlidir ve
+   ikisi de kontrol edilmeden bir geçiş koşusu anlamlı olmaz.
+3. Bu, geçiş modelini kanada uygulamadan önce kapatılması gereken açık
+   bir kalemdir. `decayControl` ikincisini çözer; birincisi için kanadın
+   hücum kenarı çözünürlüğü ayrıca sınanmalıdır.
+
+### Dürüstlük notu
+
+Bu bölüm bir BAŞARISIZLIK kaydıdır. Model çalışıyor (T3A kanıtladı) ama
+bizim rejimimizde doğrulanmadı. "Geçiş modeli hazır" denemez.
+
+---
+
 ## kOmegaSSTLM BU KURULUMDA ÇALIŞIYOR — T3A doğrulaması (06.09.2026)
 
 k-ω SST'nin y⁺≈1'de çöktüğü sanıldığı sürece geçiş modeli yolu kapalı
