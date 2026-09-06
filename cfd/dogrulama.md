@@ -2629,6 +2629,71 @@ yüksek sürükleme gösteriyor.
 
 ---
 
+## REFERANS ALANI HATASI — bütün 3-B C_D değerleri %1,05 düşüktü (06.09.2026)
+
+Dış görüşün "aynı tanım: önceki 0,0141 hangi referans alan, hangi α,
+hangi kuvvet yönüyle alındıysa birebir" maddesi gerçek bir hata buldurdu.
+
+### Hata
+
+`cfd/ortak/kuvvet.py`, `hesapla()` fonksiyonunda `Aref=1.0` varsayılanı
+taşıyor. Depodaki **hiçbir çağıran** bu parametreyi geçmiyor (on iki
+çağrı denetlendi; hepsi `hesapla(vaka, alfa=..., mertebe=...)`).
+
+İki boyutta bu **doğru**: ölçüldü, `/tmp/n0012` ağının duvar yamasının
+izdüşüm alanı tam **1,000000** (veter 0…1, span kalınlığı 1). Yani 2-B
+doğrulama zinciri etkilenmemiştir.
+
+Üç boyutta **yanlış**: ağ yarım modeldir (kök `symmetryPlane`) ve
+yarı-kanadın gerçek planform alanı 1,0 değildir.
+
+### Ölçüm — dolaylı hesaba güvenilmedi, ağdan alındı
+
+Açıklık ağda z yönündedir, dolayısıyla planform düzlemi x–z ve onun
+normali y'dir; izdüşüm alanı Σ|Sf_y| / 2'dir (üst ve alt yüzey aynı
+düzleme düşer).
+
+| | |
+|---|---|
+| duvar yamasında yüz | 8977 |
+| ıslak alan | 2,128443 m² |
+| Σ&#124;Sf_y&#124; | 1,979225 |
+| **izdüşüm (planform) alanı** | **0,989612 m²** |
+| `planform.py` yarı-kanat alanı | 0,989250 m² |
+| fark | %0,037 — ağ planformu sadık temsil ediyor |
+| kullanılan Aref | 1,000000 m² |
+| **düzeltme çarpanı** | **1,010497** |
+
+### Düzeltilmiş değerler
+
+| | eski | düzeltilmiş |
+|---|---|---|
+| 3-B CFD tam türbülanslı (uçuş Re) | 0,013339 | **0,013479** |
+| SA y⁺=1 (5000 adım) | 0,014750 | **0,014905** |
+| k-ω SST y⁺≈20 | 0,013440 | **0,013581** |
+| makalede raporlanan | 0,0141 | **0,014248** |
+
+%1,05 ± %5 belirsizlik bütçesinin içindedir, yani sonuçları
+değiştirmiyor. Ama **tanımsal** bir hatadır ve düzeltilmesi gerekir;
+oranlar (CFD/şerit = 1,038 gibi) yeniden hesaplanmalıdır.
+
+### Kodda kapatıldı
+
+`kuvvet.py`'ye `izdusum_alani(vaka, yama, eksen=1)` eklendi ve
+`hesapla(..., Aref="olc")` seçeneği tanımlandı; `__main__` artık
+varsayılan olarak ölçüyor. Varsayılan `Aref=1.0` geriye dönük uyum için
+duruyor ama çıktı artık kullanılan Aref'i **yazdırıyor**, böylece aynı
+hata sessizce tekrarlanamaz.
+
+### Ders
+
+Bir varsayılan parametrenin "hiç geçilmemesi", onun doğru olduğu
+anlamına gelmiyor. İki boyutta doğru olması, üç boyutta da doğru olduğu
+izlenimi verdi ve on iki çağrı boyunca fark edilmedi. Kuvvet katsayısı
+üreten her çıktı, kullandığı referans alanı da yazdırmalıdır.
+
+---
+
 ## DOĞAL GEÇİŞ DOĞRULANAMADI — T3A− ve Schubauer–Klebanoff (06.09.2026)
 
 T3A doğrulaması (aşağıda) modelin çalıştığını gösterdi ama T3A Tu = %3,3,
