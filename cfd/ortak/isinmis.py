@@ -60,6 +60,29 @@ def skaler_oku(vaka, zaman, ad):
     return np.full(1, float(m.group(1)))
 
 
+def vektor_oku(vaka, zaman, ad):
+    """Vektor alanin internalField'i (N,3) dizisi olarak."""
+    s = _govde(os.path.join(vaka, zaman, ad))
+    i, j = s.index("internalField"), s.index("boundaryField")
+    blok = s[i:j]
+    m = re.search(r"nonuniform List<vector>\s*\n(\d+)\s*\n\(", blok)
+    if m:
+        g = blok.index("(", m.end() - 1) + 1
+        ham = blok[g:blok.rindex(")")].replace("(", " ").replace(")", " ")
+        return np.fromstring(ham, sep=" ").reshape(-1, 3)
+    m = re.search(r"uniform\s*\(([^)]*)\)", blok)
+    return np.array([[float(x) for x in m.group(1).split()]])
+
+
+def vektor_yaz(kaynak_dosya, hedef_dosya, deger):
+    s = _govde(kaynak_dosya)
+    i, j = s.index("internalField"), s.index("boundaryField")
+    govde = "\n".join("(%.10g %.10g %.10g)" % tuple(v) for v in deger)
+    yeni = ("internalField   nonuniform List<vector>\n%d\n(\n%s\n)\n;\n\n"
+            % (len(deger), govde))
+    io.open(hedef_dosya, "w", encoding="utf-8").write(s[:i] + yeni + s[j:])
+
+
 def ag_oku(vaka):
     """(hucre_merkez, duvar_yuz_merkez). Merkezler YAKLASIKTIR (yuz
     noktalarinin ortalamasi, hucre yuzlerinin ortalamasi) -- duvar
