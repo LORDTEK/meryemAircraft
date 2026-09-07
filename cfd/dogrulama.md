@@ -2629,6 +2629,111 @@ yüksek sürükleme gösteriyor.
 
 ---
 
+## ISINMIS BASLANGIC ÇÖZDÜ — 2×2 tablosu tamamlandı (07.09.2026)
+
+Bir alt bölümdeki yerel k kaçışı, **başlangıç alanı değiştirilerek**
+ortadan kalktı. Koşu 5000 adımı çökmeden tamamladı.
+
+### Yöntem
+
+Aynı ağ, aynı şemalar, aynı sınır koşulları, aynı gevşetme, aynı
+`relTol`. **Tek değişen: başlangıç alanı.** Tek biçimli (k = 1,5e−06,
+ω = 3,08 her yerde) yerine, aynı ağdaki yakınsamış SA çözümünden
+türetilmiş alan (`cfd/ortak/isinmis.py`):
+
+    omega_turb = nut / (sqrt(beta*) kappa^2 y^2)
+    omega      = max(omega_turb, 6 nu/(beta1 y^2), omega_sonsuz)
+    k          = max(nut * omega_turb, k_sonsuz)
+
+Logaritmik tabaka dengesinden çıkar; S (gerinim hızı) hesabı gerekmez.
+Denetim: nut = kappa·u_tau·y konunca k = u_tau²/√β* çıkıyor, yani doğru
+log-tabaka değeri. Duvar mesafesi `scipy` cKDTree ile.
+
+U ve p de SA çözümünün 5000. adımından alındı.
+
+**Bu fiziksel bir dönüşüm değil, sayısal bir sıcak başlangıçtır.** SA
+çözümü SST çözümüne çevrilmiş olmuyor; yalnızca SST'nin kötü geçici
+rejimi atlanıyor. Yakınsamış kararlı çözüm başlangıç koşulundan
+bağımsızdır, ama bu koşuda o bağımsızlık **gösterilemedi** — tek biçimli
+başlangıç zaten çöküyor. Bu, sonucun bilinen sınırıdır.
+
+### Üretilen alanın denetimi
+
+| | üretilen | beklenen |
+|---|---|---|
+| sınır tabaka k (ortanca) | 0,00189 | ~0,005 |
+| sınır tabaka k (%95) | 0,00425 | ~0,005 |
+| genel en büyük k | 0,602 | (çöken koşuda 8,2) |
+| ω ortanca / en büyük | 3,08 / 4,8e6 | serbest akım / viskoz alt tabaka |
+
+### Koşunun gidişi
+
+| adım | k_max (gerçek max) |
+|---|---|
+| 1664 | 0,0258 |
+| 2406 | 0,0253 |
+| 3507 | 0,0229 |
+| 5000 | **0,0197** |
+
+Tekdüze düşerek bitti. `bounding omega` **hiç olmadı** (çöken koşuda
+çoktu). Ux artığı 5000'de 7,14e−07 — çöken koşunun aynı bölgede
+ulaştığının iki mertebe altında. Adım süresi 5,7–7,8 s, kararlı.
+
+bl_A'nın iki kez çöktüğü 2169–2186 bölgesi sorunsuz geçildi.
+
+### Kuvvetler — oturmuş
+
+| adım | C_D | C_L | basınç | viskoz |
+|---|---|---|---|---|
+| 4000 | 0,012588 | −0,00178 | 0,003909 | 0,008679 |
+| 4500 | 0,012559 | +0,00063 | 0,003882 | 0,008677 |
+| **5000** | **0,012532** | +0,00145 | 0,003856 | 0,008676 |
+
+500 adımda %0,22 değişim; viskoz bileşen tamamen sabit. y⁺ = 1,09.
+Kalan sürüklenme basınç bileşeninde ve azalıyor.
+
+### 2×2 TABLOSU — ve beklenmedik sonuç
+
+| | SA | k-ω SST | model farkı |
+|---|---|---|---|
+| y⁺≈20 | 0,0145209 | 0,0134376 | **+8,06%** |
+| y⁺≈1 | 0,0147498 | **0,0125320** | **+17,70%** |
+| **duvar etkisi** | **+1,58%** | **−6,74%** | |
+
+**İki model duvar çözümlendiğinde TERS YÖNLERE gidiyor.** SA'nın
+sürüklemesi %1,6 artıyor, k-ω'nınki %6,7 azalıyor. Model farkı %8'den
+%17,7'ye, iki katına çıkıyor.
+
+### Bunun kayda etkisi
+
+Önceki "en savunulabilir C_D0" şuydu:
+
+> **0,0141 ± ~%5**, iki modelin duvar çözümlü/düşük y⁺ değerlerinin
+> ortası (SA 0,01475; k-ω y⁺≈20 0,01344).
+
+Bu ifade **iki farklı duvar çözünürlüğünü karıştırıyordu** — dış görüşün
+de uyardığı nokta. Artık ikisi de y⁺≈1'de var:
+
+| | değer |
+|---|---|
+| y⁺≈1 orta nokta | **0,013641** |
+| bant | **±%8,13** |
+| eski 0,0141 | yeni orta noktanın %3,4 üstünde |
+
+Yani sayı çok değişmiyor (%3,4) ama **bant %5'ten %8'e genişliyor** ve
+artık aynı duvar çözünürlüğünde iki modelin gerçek farkını temsil ediyor.
+
+### Kalan sınırlar
+
+1. k-ω y⁺=1 çözümü **ancak SA'dan ısınmış başlangıçla** elde edilebildi.
+   Bağımsız (tek biçimli) başlangıç çöküyor. Makalede bu açıkça
+   yazılmalıdır.
+2. C_D hâlâ 500 adımda %0,22 azalıyor; doğrusal dış değerleme en fazla
+   %1 daha düşük bir değer verir.
+3. Üç hücre 5000 adım, bir hücre (k-ω y⁺≈20) daha kısa koşulardan.
+
+---
+
 ## k-ω SST y⁺≈1 KOŞUSU ÇÖKÜYOR — sebep bulundu, çare bulunmadı (06.09.2026)
 
 5000 adımlık koşu iki kez çöktü (2169 ve 2186), `SIGFPE`, hız denklemi.
