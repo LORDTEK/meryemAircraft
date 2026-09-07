@@ -71,7 +71,7 @@ Several results depend on coefficients that were not computed for this geometry:
   of twenty-five percent thickness, and the flow over the centre body of a blended-wing
   body is not two-dimensional. **That link has since been replaced** by a
   three-dimensional solution, also reported in Section 6.6, which raises the wing-and-body
-  term to 0.0141 and the total to 0.0224 — still below the assumed value. What remains
+  term to 0.0136 and the total to 0.0219 — still below the assumed value. What remains
   uncertain is no longer the dimensionality but the transition state: the solution is
   fully turbulent, and the clean-surface case is still the strip estimate. The build-up
   is reported as a bound on the assumption rather than as a replacement for it.
@@ -189,15 +189,19 @@ are listed so that they can be:
 1. ~~**A three-dimensional solution for the centre body.**~~ **Done.** This was the
    first place to attack, because the strip method of Section 6.6 could not model the flow
    over a twenty-five percent thick blended centre body. The solution has since been
-   carried out and is reported in Section 6.6: it gives a wing-and-body C_D0 of 0.0141
-   with a measured uncertainty of about five percent, nine percent above the tripped strip
+   carried out and is reported in Section 6.6: it gives a wing-and-body C_D0 of 0.0136
+   with a measured uncertainty of about eight percent, six percent above the tripped strip
    estimate and in the unfavourable direction, and it leaves the assumed 0.0248 still
-   conservative. **What it does not settle** is the transition state — the solution is
-   fully turbulent, so the clean-surface figure of 0.0073 is untested and the gap between
-   it and 0.0141 is now the largest single uncertainty in the zero-lift drag. A
-   transition-sensitive model requires a wall-resolved grid and a two-equation formulation
-   at once; that combination was attempted and did not converge. **This item is therefore
-   narrowed rather than closed**, and what replaces it is stated above.
+   conservative. The uncertainty is dominated by the turbulence model, and it is larger
+   than first reported because the two models were subsequently paired at the same wall
+   resolution rather than at two different ones. **What it does not settle** is the
+   transition state — the solution is fully turbulent, so the clean-surface figure of
+   0.0073 is untested and the gap between it and 0.0136 is now the largest single
+   uncertainty in the zero-lift drag. A transition-sensitive model requires a wall-resolved
+   grid and a two-equation formulation at once; that combination now converges, but the
+   model could not be validated in the low-turbulence regime the cruise condition sits in.
+   **This item is therefore narrowed rather than closed**, and what replaces it is stated
+   above.
 2. **A structural mass estimate** for the airframe and the tip frames, which would test
    the payload fraction — the weakest number in the study.
 3. **A six-degree-of-freedom transition simulation** with rotational dynamics, which

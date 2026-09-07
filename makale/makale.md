@@ -1208,42 +1208,66 @@ Reynolds-averaged solution over the planform of Section 4.2, at the cruise Reyno
 number and at zero lift, resolving the wing and blended body as a three-dimensional
 surface rather than as stacked sections. It gives a wing-and-body zero-lift drag of
 
-**0.0141, with a measured uncertainty of about five percent**,
+**0.0136, with a measured uncertainty of about eight percent**,
 
-against the 0.0129 of the tripped strip estimate — nine percent higher, and in the
-unfavourable direction. Substituting it for the strip figure raises the total to 0.0224.
+against the 0.0129 of the tripped strip estimate — six percent higher, and in the
+unfavourable direction. Substituting it for the strip figure raises the total to 0.0219.
 **The assumed 0.0248 still lies above it**, so the conclusion of the previous paragraph
 survives the more expensive calculation; the margin narrows from seventeen percent to
-eleven. The assumption is not replaced here either, for the same reason as before.
+thirteen. The assumption is not replaced here either, for the same reason as before.
 
-The five percent is itself measured rather than asserted:
+The figure is the mean of two turbulence models at the same wall resolution, and the
+eight percent is the half-spread between them. Both are measured rather than asserted:
 
 | Source of uncertainty | Magnitude |
 |---|---:|
 | Iterative convergence | 0.1 % |
 | Spatial discretisation, three grids of 0.27 – 2.66 M cells | < 0.1 % |
-| Wall resolution, y⁺ 20 → 1 | 1.6 % |
 | Wall resolution, y⁺ 43 → 20 | 10 % |
-| Turbulence model, k-ω SST against Spalart–Allmaras | 2.7 – 8.1 % |
+| Wall resolution, y⁺ 20 → 1, Spalart–Allmaras | + 1.6 % |
+| Wall resolution, y⁺ 20 → 1, k-ω SST | − 6.7 % |
+| Turbulence model, k-ω SST against Spalart–Allmaras, at y⁺ ≈ 20 | 8.1 % |
+| **Turbulence model, the same pair at y⁺ ≈ 1** | **17.7 %** |
 
 The dominant term is the turbulence model, not the grid — which is worth stating plainly,
 because grid convergence is the check a reader expects and it turns out to bound the
-smallest of the five terms. Two further results are recorded because they are easy to get
-wrong in either direction. The forces converge far more slowly than the residuals: at a
-velocity residual of 1.6 × 10⁻⁵ the computed drag was still fifty-five percent above its
-converged value, so a solution stopped on residuals alone would have been badly wrong.
-And the wall-resolution sensitivity saturates rather than continuing: between y⁺ 20 and
-y⁺ 1 the drag moves by 1.6 percent, so the wall-function results are not systematically
-far from the wall-resolved one, and an extrapolation of the coarser trend overstated the
-wall-resolved value by nine percent.
+smallest of the terms. Three further results are recorded because they are easy to get
+wrong in either direction.
+
+The forces converge far more slowly than the residuals: at a velocity residual of
+1.6 × 10⁻⁵ the computed drag was still fifty-five percent above its converged value, so a
+solution stopped on residuals alone would have been badly wrong.
+
+The wall-resolution sensitivity does not saturate, and it does not even share a sign
+between the two models. Resolving the wall raises the Spalart–Allmaras drag by 1.6
+percent and lowers the k-ω SST drag by 6.7 percent, so the spread between the models
+doubles — from 8.1 percent at y⁺ ≈ 20 to 17.7 percent at y⁺ ≈ 1. An earlier version of
+this section quoted five percent by averaging one model at y⁺ ≈ 1 against the other at
+y⁺ ≈ 20; that mixes two wall resolutions and understates the model-form term. The value
+above pairs them at the same resolution.
+
+The wall-resolved k-ω SST solution required initialisation from the converged
+Spalart–Allmaras field. Started from a uniform field it develops a localised region of
+non-physical turbulent kinetic energy near the leading edge at mid-span, which decays
+over some two thousand iterations without reaching a physical level and then diverges.
+A converged steady solution should not depend on its starting point, and the two
+solutions do agree in every diagnostic examined; but that independence could not be
+demonstrated here, because the independent start does not converge at all. The value is
+reported with that qualification.
 
 **What this does not settle.** The solution is fully turbulent throughout. It therefore
 speaks to the tripped row of the table above and not to the clean-surface row, and the
-gap between those two rows — 0.0073 against 0.0141 — is now the largest single
+gap between those two rows — 0.0073 against 0.0136 — is now the largest single
 uncertainty in the zero-lift drag. Closing it requires a transition-sensitive model,
-which needs a wall-resolved grid and a two-equation formulation at the same time; that
-combination was attempted and did not converge. The clean-surface bound therefore remains
-where the strip calculation left it.
+which needs a wall-resolved grid and a two-equation formulation at the same time. That
+combination now converges, and the Langtry–Menter γ–Reθ model reproduces the ERCOFTAC
+T3A flat plate to within a few percent in the turbulent region while predicting transition
+about twenty-five percent early in Reynolds number. But T3A is a bypass case at three
+percent freestream turbulence, and the present cruise condition is an order of magnitude
+quieter; attempts to validate the model in that regime were not successful, for reasons
+traced to leading-edge turbulence production and freestream decay rather than to the
+model itself. The clean-surface bound therefore remains where the strip calculation left
+it, and no transition-model drag figure is claimed.
 
 **Internal volume.** One closure that the mass budget does not address is whether the
 payload fits. The body's gross internal volume follows from the thickness distribution:
@@ -1519,7 +1543,7 @@ Several results depend on coefficients that were not computed for this geometry:
   of twenty-five percent thickness, and the flow over the centre body of a blended-wing
   body is not two-dimensional. **That link has since been replaced** by a
   three-dimensional solution, also reported in Section 6.6, which raises the wing-and-body
-  term to 0.0141 and the total to 0.0224 — still below the assumed value. What remains
+  term to 0.0136 and the total to 0.0219 — still below the assumed value. What remains
   uncertain is no longer the dimensionality but the transition state: the solution is
   fully turbulent, and the clean-surface case is still the strip estimate. The build-up
   is reported as a bound on the assumption rather than as a replacement for it.
@@ -1637,15 +1661,19 @@ are listed so that they can be:
 1. ~~**A three-dimensional solution for the centre body.**~~ **Done.** This was the
    first place to attack, because the strip method of Section 6.6 could not model the flow
    over a twenty-five percent thick blended centre body. The solution has since been
-   carried out and is reported in Section 6.6: it gives a wing-and-body C_D0 of 0.0141
-   with a measured uncertainty of about five percent, nine percent above the tripped strip
+   carried out and is reported in Section 6.6: it gives a wing-and-body C_D0 of 0.0136
+   with a measured uncertainty of about eight percent, six percent above the tripped strip
    estimate and in the unfavourable direction, and it leaves the assumed 0.0248 still
-   conservative. **What it does not settle** is the transition state — the solution is
-   fully turbulent, so the clean-surface figure of 0.0073 is untested and the gap between
-   it and 0.0141 is now the largest single uncertainty in the zero-lift drag. A
-   transition-sensitive model requires a wall-resolved grid and a two-equation formulation
-   at once; that combination was attempted and did not converge. **This item is therefore
-   narrowed rather than closed**, and what replaces it is stated above.
+   conservative. The uncertainty is dominated by the turbulence model, and it is larger
+   than first reported because the two models were subsequently paired at the same wall
+   resolution rather than at two different ones. **What it does not settle** is the
+   transition state — the solution is fully turbulent, so the clean-surface figure of
+   0.0073 is untested and the gap between it and 0.0136 is now the largest single
+   uncertainty in the zero-lift drag. A transition-sensitive model requires a wall-resolved
+   grid and a two-equation formulation at once; that combination now converges, but the
+   model could not be validated in the low-turbulence regime the cruise condition sits in.
+   **This item is therefore narrowed rather than closed**, and what replaces it is stated
+   above.
 2. **A structural mass estimate** for the airframe and the tip frames, which would test
    the payload fraction — the weakest number in the study.
 3. **A six-degree-of-freedom transition simulation** with rotational dynamics, which
