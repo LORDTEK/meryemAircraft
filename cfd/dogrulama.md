@@ -2629,6 +2629,44 @@ yüksek sürükleme gösteriyor.
 
 ---
 
+## `blended false` — TUR 2'NIN ADIMI, SONUNDA YAPILDI: FARK YOK (07.09.2026)
+
+Tur 2'de tasarlanan tek değişkenli test nihayet koşuldu, ısınmış
+başlangıç üzerinde. `bl_C` ile arasında **tek satır** fark var
+(`0/omega`'da `blended true` → `false`); ağ, şemalar, gevşetme,
+başlangıç alanı, `relTol` — hepsi aynı.
+
+| | `blended true` | `blended false` | fark |
+|---|---|---|---|
+| C_D (5000) | 0,012532 | **0,012530** | **%0,016** |
+| C_D basınç | 0,003856 | 0,003855 | |
+| C_D viskoz | 0,008676 | 0,008676 | aynı |
+| C_L | +0,00145 | +0,00157 | |
+| k_max sonu | 0,01969 | 0,01956 | |
+| Ux artığı | 7,138e−07 | 7,149e−07 | |
+| `bounding omega` | 0 | 0 | |
+
+**Sonuç: y⁺≈1'de, düzgün bir başlangıç alanı varken, `omegaWallFunction`
+`blended` seçeneği sonucu değiştirmiyor.**
+
+### Hipotezin tam kaydı
+
+Bu seçenek, Tur 2'de çöküşün sebebi olarak öne sürülmüştü. Gerekçe
+kaynak koddan okunmuştu ve mekanizması gerçekti: `blended true` modda
+duvar hücresine log-tabaka üretim terimi her zaman ekleniyor, `false`
+modda y⁺ < y⁺_lam iken eklenmiyor, ve terim 1/y ile ölçekleniyor.
+
+Hipotez **iki yönden birden çürüdü**:
+
+1. Çöküşün sebebi değildi — çöküş `blended true` ile de `false` ile de
+   değil, tek biçimli başlangıç alanından geliyordu (bir alt bölüm).
+2. Sonucu da değiştirmiyor — %0,016.
+
+Kaynak kodda gerçek bir mekanizma bulmak, o mekanizmanın gözlenen
+davranışı açıkladığı anlamına gelmiyor. Mekanizma vardı; etkisi yoktu.
+
+---
+
 ## ISINMIS BASLANGIC ÇÖZDÜ — 2×2 tablosu tamamlandı (07.09.2026)
 
 Bir alt bölümdeki yerel k kaçışı, **başlangıç alanı değiştirilerek**
