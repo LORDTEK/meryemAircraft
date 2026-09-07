@@ -223,6 +223,59 @@ def basabas(LD_temiz=13.44, tamponlu_hepsi=True):
     print("  degistirir, menzili degil. Iki olcut ayri okunmalidir.")
 
 
+# --- AGIR HAT (1000 kg) -- modelin BAGIMSIZ sinamasi -------------------
+#
+# Model hafif hatta (50 kg) kalibre edildi. Ayni katsayilarla, HICBIR
+# yeniden ayar yapmadan agir hat bilinebiliyor mu? Bilebiliyorsa model
+# 20 kat kutle araliginda dogrulanmis olur.
+#
+# BULGU: bilebiliyor, ama makalenin motor derecelendirme payi iki
+# tasarimda AYNI DEGIL:
+#     hafif hat  2,6 / 1,7  = 1,529
+#     agir hat  54,3 / 39,2 = 1,385      -> %10,4 fark
+# Hafif hattin payiyla motor %16,9 sapiyor; agir hattin kendi payiyla
+# her sey %3,5 icinde kapaniyor. Yani model dogru, makalede
+# BELIRTILMEMIS bir olcek etkisi (ya da tutarsizlik) var. Buyuk
+# jenerator ve guc elektroniginin daha verimli olmasi fiziksel olarak
+# savunulabilir, ama makale bunu hicbir yerde soylemiyor.
+
+AGIR = dict(V=40.0, kanat_yuklemesi=45.0, disk_yuklemesi=43.7,
+            m_faydali=260.0, motor_pay=54.3 / 39.2, LD_temiz=13.6 * 1.12)
+
+
+def agir_gorev():
+    g = dict(GOREV)
+    g.update({k: v for k, v in AGIR.items() if k != "LD_temiz"})
+    return g
+
+
+def agir_dogrula():
+    g = agir_gorev()
+    r = boyutlandir(mimariler()[0], AGIR["LD_temiz"], g=g)
+    print("AGIR HAT -- hafif hatta kalibre edilmis model, yeniden ayar yok")
+    print("  (tek istisna: motor payi 6.3'un kendi sayilarindan, 1,385)")
+    print("  %-12s %10s %10s %8s" % ("", "model", "makale", "fark"))
+    for ad, h, mk in (("MTOW kg", r["MTOW"], 1000.0), ("L/D", r["LD"], 13.6),
+                      ("P_hover kW", r["P_hover"], 216.2),
+                      ("motor kW", r["motor_kW"], 54.3),
+                      ("menzil km", r["menzil"], 1814.0),
+                      ("f_tahrik", r["f_tahrik"], 0.16)):
+        print("  %-12s %10.3f %10.3f %+7.1f%%" % (ad, h, mk, 100 * (h - mk) / mk))
+
+
+def agir_tablo():
+    g = agir_gorev()
+    print("  %-24s %7s %8s %8s %8s %9s"
+          % ("mimari", "f_bos", "MTOW", "L/D", "P_hov", "menzil"))
+    for m in mimariler():
+        r = boyutlandir(m, AGIR["LD_temiz"], g=g)
+        if r["kapanmadi"]:
+            print("  %-24s %7.3f  KAPANMADI" % (m.ad, r["f_bos"])); continue
+        print("  %-24s %7.3f %8.1f %8.2f %8.1f %9.0f"
+              % (r["mimari"], r["f_bos"], r["MTOW"], r["LD"],
+                 r["P_hover"], r["menzil"]))
+
+
 if __name__ == "__main__":
     print("=" * 78)
     print("DUZEY 1 -- ayni guc sistemi (Bill 3 notrlendi, A'nin aleyhine)")
@@ -238,3 +291,11 @@ if __name__ == "__main__":
     print("BASABAS")
     print("=" * 78)
     basabas()
+    print()
+    print("=" * 78)
+    print("AGIR HAT (1000 kg) -- modelin bagimsiz sinamasi")
+    print("=" * 78)
+    agir_dogrula()
+    print()
+    print("  uc mimari, agir hat:")
+    agir_tablo()
