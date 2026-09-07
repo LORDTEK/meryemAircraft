@@ -3442,3 +3442,77 @@ doymuş durumda; asıl duyarlılık y⁺ 20–43 aralığında.
 **En savunulabilir C_D0 (kanat/gövde, uçuş Re, tam türbülanslı):**
 **0,0141 ± ~%5**, iki modelin duvar çözümlü/düşük y⁺ değerlerinin
 ortası (SA 0,01475; k-ω y⁺≈20 0,01344).
+
+## ⚠️ BAŞLANGIÇ BAĞIMSIZLIĞI GÖSTERİLEMEDİ — ÇÜRÜTÜLDÜ (07.09.2026)
+
+YZ1'in istediği sınama: k-ω SST y⁺≈1 çözümü, **maddi olarak farklı** bir
+başlangıçtan yeniden üretilebiliyor mu? Kararlı (steady) bir çözümün
+başlangıcına bağlı olmaması gerekir; bl_C'nin SA alanından ısıtılarak
+başlatılmış olması, bu bağımlılığı açık bir soru olarak bırakıyordu.
+
+### Kurulum
+
+y⁺≈20 SST çözümü (`/tmp/yp_30/1500`, 820 323 hücre, y⁺ = 19,99,
+C_D = 0,013433) hedef ağa (2 263 560 hücre) taşındı. `mapFields` bu
+kurulumda bozuk olduğu için `cfd/ortak/agesle.py` yazıldı: cKDTree ile
+**en yakın komşu** ataması. Taşınanlar `nut`, `U`, `p`; k ve ω hedef
+ağın **kendi duvar mesafesinden** yeniden kuruldu (`isinmis.py`).
+
+Başlangıç alanları gerçekten farklı:
+
+| | SA-ısınmış (bl_C) | y⁺≈20'den taşınmış (bl_E) | oran |
+|---|---|---|---|
+| ν_t maks | 4431 ν | 409 ν | **10,8×** |
+| sınır tabakası k ortancası | 0,00189 | 0,00155 | 1,22× |
+| k maks (küresel) | 0,602 | 3,528 | **5,9×** |
+
+Vakaların geri kalanı aynı olduğu **doğrulandı**: `polyMesh` aynı inode
+(sabit bağ — birebir aynı ağ), `transportProperties` ve
+`turbulenceProperties` aynı, beş alanın `boundaryField` blokları aynı.
+`system/` içindeki tek fark `startFrom` (`startTime` / `latestTime`) —
+konteyner yeniden başladığında koşuyu sürdürmenin artığı, fizik farkı
+değil.
+
+### Sonuç
+
+| koşu | başlangıç | adım | C_D | basınç | viskoz | son artık |
+|---|---|---|---|---|---|---|
+| bl_C | SA-ısınmış | 5000 | 0,012532 | 0,003856 | 0,008676 | 7,14e−07 |
+| bl_D | bl_C + `blended false` | 5000 | 0,012530 | — | — | — |
+| **bl_E** | **y⁺≈20'den taşınmış** | **5000** | **0,012011** | **0,003362** | **0,008649** | **1,01e−07** |
+
+bl_E çökmedi, tek bir `bounding omega` vermedi, üç koşunun **en iyi
+artığına** ulaştı ve son 500 adımda durağan (4500: 0,012007 → 5000:
+0,012011, %0,03). y⁺ = 1,09.
+
+**bl_E ile bl_C arasında %4,34 fark var.** Fark tamamen **basınçta**:
+
+- basınç: 0,003362 / 0,003856 → **%12,8**
+- viskoz: 0,008649 / 0,008676 → **%0,31**
+
+### Ne anlama geliyor
+
+Viskoz bileşenin binde üç içinde aynı olması, iki koşunun duvar
+çözünürlüğünün ve sınır tabakası davranışının aynı olduğunu gösteriyor.
+Ayrışma basınçta — yani ayrılma/iz bölgesinde. İki iyi yakınsamış,
+durağan çözüm aynı ağ ve aynı model ile farklı basınç dağılımına
+oturuyor.
+
+Bu, kararlı RANS'ın **çoklu çözüme** oturması demektir; olağandışı
+değildir (ayrılmalı akışta bilinen bir durum) ama **sayının tekliğini
+ortadan kaldırır**.
+
+**Kayda geçen:** k-ω SST y⁺≈1 için tek bir C_D verilemez. Ölçülen
+aralık **0,01201–0,01253**. Başlangıç yayılımı (%4,3), model yayılımının
+(%18) altında ama ağ yakınsaması (<%0,1) ve iteratif yakınsamanın
+(%0,08) **50 katı** üzerinde — yani belirsizlik bütçesinde ihmal
+edilemez.
+
+**Sınamanın kendi sınırı:** iki koşu tesadüfen aynı yere gelseydi
+"bağımsızlık gösterildi" derdim; gelmedi, dolayısıyla gösterilemedi.
+Üçüncü bir başlangıcın aralığı genişletmeyeceğinin garantisi yok. Yani
+0,01201–0,01253 **ölçülmüş bir yayılım**, kanıtlanmış bir sınır değil.
+
+**Kural:** *"Isınmış başlangıç çökmeyi çözer; çözümün tekliğini
+garanti etmez. Bir sıcak başlangıçla elde edilen kararlı çözüm, ikinci
+bir bağımsız başlangıçla sınanmadan tek değer olarak yazılamaz."*
