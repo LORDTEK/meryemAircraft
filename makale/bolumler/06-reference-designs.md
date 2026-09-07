@@ -312,22 +312,26 @@ Reynolds-averaged solution over the planform of Section 4.2, at the cruise Reyno
 number and at zero lift, resolving the wing and blended body as a three-dimensional
 surface rather than as stacked sections. It gives a wing-and-body zero-lift drag of
 
-**0.01475 with the Spalart–Allmaras closure and 0.01253 with k-ω SST** — two values
-rather than one, differing by eighteen percent of the lower. No single figure is quoted,
-because nothing in these solutions selects between the two closures.
+**0.01475 with the Spalart–Allmaras closure and 0.01201 – 0.01253 with k-ω SST** — a
+range rather than a single figure, and not for one reason but for two. Nothing in these
+solutions selects between the two closures, so the eighteen percent between them is
+carried openly; and the SST value itself is not unique, because two well-converged
+solutions of the same case from two materially different starting fields settle four
+percent apart. That second finding is set out below, since it bears on how much weight
+any of these numbers will hold.
 
 Against the 0.0129 of the tripped strip estimate, the Spalart–Allmaras value is fifteen
-percent higher and the SST value two percent lower; the strip method is therefore
-bracketed rather than simply beaten. Substituting each in turn raises the total to
-between 0.0208 and 0.0230. **The assumed 0.0248 lies above both**, so the conclusion of
-the previous paragraph survives the more expensive calculation under either closure; the
-margin is nineteen percent on the optimistic value and eight percent on the conservative
-one. The assumption is not replaced here either, for the same reason as before. Where a
-single number is needed downstream, the conservative value is carried.
+percent higher and the SST values between two and seven percent lower; the strip method
+is therefore bracketed rather than simply beaten. Substituting each in turn raises the
+total to between 0.0203 and 0.0230. **The assumed 0.0248 lies above all of them**, so the
+conclusion of the previous paragraph survives the more expensive calculation under either
+closure and under either initialisation; the margin is twenty-two percent on the most
+optimistic value and eight percent on the conservative one. The assumption is not
+replaced here either, for the same reason as before. Where a single number is needed
+downstream, the conservative value is carried.
 
-The eighteen percent is a spread between two model formulations, not a probabilistic
-uncertainty band, and it is reported as such. The remaining terms are measured rather
-than asserted:
+Neither range is a probabilistic uncertainty band, and neither is reported as one. The
+remaining terms are measured rather than asserted:
 
 | Source of uncertainty | Magnitude |
 |---|---:|
@@ -338,13 +342,15 @@ than asserted:
 | Wall resolution, y⁺ 20 → 1, k-ω SST | − 6.7 % |
 | Turbulence-model spread, k-ω SST against Spalart–Allmaras, at y⁺ ≈ 20 | 8 % |
 | **Turbulence-model spread, the same pair at y⁺ ≈ 1** | **18 %** |
+| **Initialisation spread, k-ω SST at y⁺ ≈ 1, two starting fields** | **4.3 %** |
 
 The dominant term is the turbulence model, not the grid — which is worth stating plainly,
 because grid convergence is the check a reader expects and it turns out to bound the
 smallest of the terms. The last two rows are labelled *spread* rather than *uncertainty*
 deliberately: two closures do not sample a distribution, and the interval between them
-carries no claim that the true value lies inside it. Three further results are recorded because they are easy to get
-wrong in either direction.
+carries no claim that the true value lies inside it. The same caution applies to the last
+row, which reports two starting fields and not a population of them. Three further results
+are recorded because they are easy to get wrong in either direction.
 
 The forces converge far more slowly than the residuals: at a velocity residual of
 1.6 × 10⁻⁵ the computed drag was still fifty-five percent above its converged value, so a
@@ -358,18 +364,33 @@ correction is therefore assumed. An earlier version of this section quoted a sin
 with a five percent band, obtained by averaging one model at y⁺ ≈ 1 against the other at
 y⁺ ≈ 20; that mixes two wall resolutions and understates the model-form term.
 
-The wall-resolved k-ω SST solution required initialisation from the converged
-Spalart–Allmaras field. Started from a uniform field it develops a localised region of
-non-physical turbulent kinetic energy near the leading edge at mid-span, which decays
-over some two thousand iterations without reaching a physical level and then diverges.
-A converged steady solution should not depend on its starting point, and the two
-solutions do agree in every diagnostic examined; but that independence could not be
-demonstrated here, because the independent start does not converge at all. The value is
-reported with that qualification.
+**The wall-resolved SST solution is not independent of its starting field.** It cannot be
+started from a uniform field at all: from uniform initial conditions the run develops a
+localised region of non-physical turbulent kinetic energy near the leading edge at
+mid-span, which decays over some two thousand iterations without reaching a physical
+level and then diverges. Two starts that do converge were therefore compared — one warmed
+from the converged Spalart–Allmaras field, one mapped from the converged SST solution at
+y⁺ ≈ 20 on the coarser grid. The two initial fields differ by an order of magnitude in
+peak eddy viscosity and by a factor of six in peak turbulent kinetic energy; the cases
+are otherwise identical, sharing the same grid file, the same transport and turbulence
+properties, and the same boundary conditions. Both ran five thousand iterations without
+bounding, the mapped start reaching the lower velocity residual of the two, 1.0 × 10⁻⁷.
+
+They do not agree. The drag coefficients are 0.01253 and 0.01201, four and three tenths
+of a percent apart, and the difference lies almost entirely in the pressure component:
+0.00386 against 0.00336, thirteen percent, while the viscous components agree to three
+parts in a thousand. Identical viscous drag with divergent pressure drag places the
+disagreement in the separated flow rather than in the boundary layer, which is consistent
+with a steady RANS problem admitting more than one stationary solution — a known
+possibility in separated flow, but one that removes the uniqueness of the number. A
+converged steady solution should not depend on its starting point; here it demonstrably
+does, and the test was run precisely to find out. Both values are therefore reported.
+Nothing shows that a third starting field would fall inside the interval between them, so
+0.01201 – 0.01253 is a measured spread and not a bound.
 
 **What this does not settle.** The solution is fully turbulent throughout. It therefore
 speaks to the tripped row of the table above and not to the clean-surface row, and the
-gap between those two rows — 0.0073 against 0.0125–0.0148 — is now the largest single
+gap between those two rows — 0.0073 against 0.0120–0.0148 — is now the largest single
 uncertainty in the zero-lift drag, larger than the spread between the two closures. Closing it requires a transition-sensitive model,
 which needs a wall-resolved grid and a two-equation formulation at the same time. That
 combination now converges, and the Langtry–Menter γ–Reθ model reproduces the ERCOFTAC

@@ -71,11 +71,14 @@ Several results depend on coefficients that were not computed for this geometry:
   of twenty-five percent thickness, and the flow over the centre body of a blended-wing
   body is not two-dimensional. **That link has since been replaced** by a
   three-dimensional solution, also reported in Section 6.6, which brackets the
-  wing-and-body term between 0.0125 and 0.0148 depending on the turbulence closure, and
-  the total between 0.0208 and 0.0230 — still below the assumed value under either. What remains
-  uncertain is no longer the dimensionality but the transition state: the solution is
-  fully turbulent, and the clean-surface case is still the strip estimate. The build-up
-  is reported as a bound on the assumption rather than as a replacement for it.
+  wing-and-body term between 0.0120 and 0.0148 depending on the turbulence closure and on
+  the starting field, and the total between 0.0203 and 0.0230 — still below the assumed
+  value in every case. What remains uncertain is no longer the dimensionality but, first,
+  the transition state — the solution is fully turbulent, and the clean-surface case is
+  still the strip estimate — and, second, the uniqueness of the solution itself, since the
+  wall-resolved SST case settles four percent apart from two different starting fields.
+  The build-up is reported as a bound on the assumption rather than as a replacement for
+  it.
 - **Span efficiency** is assumed at 0.85. A vortex-lattice solution gives an inviscid
   span efficiency of 0.99 for this planform, which is consistent with the assumed
   Oswald-type value once the viscous drag due to lift is allowed for, but does not
@@ -191,18 +194,23 @@ are listed so that they can be:
    first place to attack, because the strip method of Section 6.6 could not model the flow
    over a twenty-five percent thick blended centre body. The solution has since been
    carried out and is reported in Section 6.6: it gives a wing-and-body C_D0 of 0.01475
-   with the Spalart–Allmaras closure and 0.01253 with k-ω SST — a spread of eighteen
-   percent that nothing in the solutions resolves — and it leaves the assumed 0.0248
-   conservative under either. The dominant term is the turbulence model, and it is larger
-   than first reported because the two models were subsequently paired at the same wall
-   resolution rather than at two different ones. **What it does not settle** is the
-   transition state — the solution is fully turbulent, so the clean-surface figure of
-   0.0073 is untested and the gap between it and 0.0125–0.0148 is now the largest single
-   uncertainty in the zero-lift drag, larger than the spread between the closures. A transition-sensitive model requires a wall-resolved
+   with the Spalart–Allmaras closure and 0.01201 – 0.01253 with k-ω SST — a spread of
+   eighteen percent between the closures that nothing in the solutions resolves — and it
+   leaves the assumed 0.0248 conservative in every case. The dominant term is the
+   turbulence model, and it is larger than first reported because the two models were
+   subsequently paired at the same wall resolution rather than at two different ones.
+   **What it does not settle** is, first, the transition state — the solution is fully
+   turbulent, so the clean-surface figure of 0.0073 is untested and the gap between it and
+   0.0120–0.0148 is now the largest single uncertainty in the zero-lift drag, larger than
+   the spread between the closures. A transition-sensitive model requires a wall-resolved
    grid and a two-equation formulation at once; that combination now converges, but the
    model could not be validated in the low-turbulence regime the cruise condition sits in.
-   **This item is therefore narrowed rather than closed**, and what replaces it is stated
-   above.
+   **Second, and newly opened, is the uniqueness of the wall-resolved solution itself.**
+   That case cannot be started from a uniform field, and the two starts that do converge —
+   one warmed from the Spalart–Allmaras solution, one mapped from the coarser SST solution
+   — settle 4.3 percent apart, entirely in the pressure component. Steady RANS is
+   admitting more than one stationary solution here. **This item is therefore narrowed
+   rather than closed**, and what replaces it is stated above.
 2. **A structural mass estimate** for the airframe and the tip frames, which would test
    the payload fraction — the weakest number in the study.
 3. **A six-degree-of-freedom transition simulation** with rotational dynamics, which
