@@ -312,16 +312,22 @@ Reynolds-averaged solution over the planform of Section 4.2, at the cruise Reyno
 number and at zero lift, resolving the wing and blended body as a three-dimensional
 surface rather than as stacked sections. It gives a wing-and-body zero-lift drag of
 
-**0.0136, with a measured uncertainty of about eight percent**,
+**0.01475 with the Spalart–Allmaras closure and 0.01253 with k-ω SST** — two values
+rather than one, differing by eighteen percent of the lower. No single figure is quoted,
+because nothing in these solutions selects between the two closures.
 
-against the 0.0129 of the tripped strip estimate — six percent higher, and in the
-unfavourable direction. Substituting it for the strip figure raises the total to 0.0219.
-**The assumed 0.0248 still lies above it**, so the conclusion of the previous paragraph
-survives the more expensive calculation; the margin narrows from seventeen percent to
-thirteen. The assumption is not replaced here either, for the same reason as before.
+Against the 0.0129 of the tripped strip estimate, the Spalart–Allmaras value is fifteen
+percent higher and the SST value two percent lower; the strip method is therefore
+bracketed rather than simply beaten. Substituting each in turn raises the total to
+between 0.0208 and 0.0230. **The assumed 0.0248 lies above both**, so the conclusion of
+the previous paragraph survives the more expensive calculation under either closure; the
+margin is nineteen percent on the optimistic value and eight percent on the conservative
+one. The assumption is not replaced here either, for the same reason as before. Where a
+single number is needed downstream, the conservative value is carried.
 
-The figure is the mean of two turbulence models at the same wall resolution, and the
-eight percent is the half-spread between them. Both are measured rather than asserted:
+The eighteen percent is a spread between two model formulations, not a probabilistic
+uncertainty band, and it is reported as such. The remaining terms are measured rather
+than asserted:
 
 | Source of uncertainty | Magnitude |
 |---|---:|
@@ -330,12 +336,14 @@ eight percent is the half-spread between them. Both are measured rather than ass
 | Wall resolution, y⁺ 43 → 20 | 10 % |
 | Wall resolution, y⁺ 20 → 1, Spalart–Allmaras | + 1.6 % |
 | Wall resolution, y⁺ 20 → 1, k-ω SST | − 6.7 % |
-| Turbulence model, k-ω SST against Spalart–Allmaras, at y⁺ ≈ 20 | 8.1 % |
-| **Turbulence model, the same pair at y⁺ ≈ 1** | **17.7 %** |
+| Turbulence-model spread, k-ω SST against Spalart–Allmaras, at y⁺ ≈ 20 | 8 % |
+| **Turbulence-model spread, the same pair at y⁺ ≈ 1** | **18 %** |
 
 The dominant term is the turbulence model, not the grid — which is worth stating plainly,
 because grid convergence is the check a reader expects and it turns out to bound the
-smallest of the terms. Three further results are recorded because they are easy to get
+smallest of the terms. The last two rows are labelled *spread* rather than *uncertainty*
+deliberately: two closures do not sample a distribution, and the interval between them
+carries no claim that the true value lies inside it. Three further results are recorded because they are easy to get
 wrong in either direction.
 
 The forces converge far more slowly than the residuals: at a velocity residual of
@@ -345,10 +353,10 @@ solution stopped on residuals alone would have been badly wrong.
 The wall-resolution sensitivity does not saturate, and it does not even share a sign
 between the two models. Resolving the wall raises the Spalart–Allmaras drag by 1.6
 percent and lowers the k-ω SST drag by 6.7 percent, so the spread between the models
-doubles — from 8.1 percent at y⁺ ≈ 20 to 17.7 percent at y⁺ ≈ 1. An earlier version of
-this section quoted five percent by averaging one model at y⁺ ≈ 1 against the other at
-y⁺ ≈ 20; that mixes two wall resolutions and understates the model-form term. The value
-above pairs them at the same resolution.
+doubles — from 8 percent at y⁺ ≈ 20 to 18 percent at y⁺ ≈ 1. No single wall-resolution
+correction is therefore assumed. An earlier version of this section quoted a single value
+with a five percent band, obtained by averaging one model at y⁺ ≈ 1 against the other at
+y⁺ ≈ 20; that mixes two wall resolutions and understates the model-form term.
 
 The wall-resolved k-ω SST solution required initialisation from the converged
 Spalart–Allmaras field. Started from a uniform field it develops a localised region of
@@ -361,8 +369,8 @@ reported with that qualification.
 
 **What this does not settle.** The solution is fully turbulent throughout. It therefore
 speaks to the tripped row of the table above and not to the clean-surface row, and the
-gap between those two rows — 0.0073 against 0.0136 — is now the largest single
-uncertainty in the zero-lift drag. Closing it requires a transition-sensitive model,
+gap between those two rows — 0.0073 against 0.0125–0.0148 — is now the largest single
+uncertainty in the zero-lift drag, larger than the spread between the two closures. Closing it requires a transition-sensitive model,
 which needs a wall-resolved grid and a two-equation formulation at the same time. That
 combination now converges, and the Langtry–Menter γ–Reθ model reproduces the ERCOFTAC
 T3A flat plate to within a few percent in the turbulent region while predicting transition

@@ -70,8 +70,9 @@ Several results depend on coefficients that were not computed for this geometry:
   largest term — its strip method treated the root section as a two-dimensional aerofoil
   of twenty-five percent thickness, and the flow over the centre body of a blended-wing
   body is not two-dimensional. **That link has since been replaced** by a
-  three-dimensional solution, also reported in Section 6.6, which raises the wing-and-body
-  term to 0.0136 and the total to 0.0219 — still below the assumed value. What remains
+  three-dimensional solution, also reported in Section 6.6, which brackets the
+  wing-and-body term between 0.0125 and 0.0148 depending on the turbulence closure, and
+  the total between 0.0208 and 0.0230 — still below the assumed value under either. What remains
   uncertain is no longer the dimensionality but the transition state: the solution is
   fully turbulent, and the clean-surface case is still the strip estimate. The build-up
   is reported as a bound on the assumption rather than as a replacement for it.
@@ -189,15 +190,15 @@ are listed so that they can be:
 1. ~~**A three-dimensional solution for the centre body.**~~ **Done.** This was the
    first place to attack, because the strip method of Section 6.6 could not model the flow
    over a twenty-five percent thick blended centre body. The solution has since been
-   carried out and is reported in Section 6.6: it gives a wing-and-body C_D0 of 0.0136
-   with a measured uncertainty of about eight percent, six percent above the tripped strip
-   estimate and in the unfavourable direction, and it leaves the assumed 0.0248 still
-   conservative. The uncertainty is dominated by the turbulence model, and it is larger
+   carried out and is reported in Section 6.6: it gives a wing-and-body C_D0 of 0.01475
+   with the Spalart–Allmaras closure and 0.01253 with k-ω SST — a spread of eighteen
+   percent that nothing in the solutions resolves — and it leaves the assumed 0.0248
+   conservative under either. The dominant term is the turbulence model, and it is larger
    than first reported because the two models were subsequently paired at the same wall
    resolution rather than at two different ones. **What it does not settle** is the
    transition state — the solution is fully turbulent, so the clean-surface figure of
-   0.0073 is untested and the gap between it and 0.0136 is now the largest single
-   uncertainty in the zero-lift drag. A transition-sensitive model requires a wall-resolved
+   0.0073 is untested and the gap between it and 0.0125–0.0148 is now the largest single
+   uncertainty in the zero-lift drag, larger than the spread between the closures. A transition-sensitive model requires a wall-resolved
    grid and a two-equation formulation at once; that combination now converges, but the
    model could not be validated in the low-turbulence regime the cruise condition sits in.
    **This item is therefore narrowed rather than closed**, and what replaces it is stated
