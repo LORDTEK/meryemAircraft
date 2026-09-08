@@ -60,7 +60,11 @@ margin was 1.26 on the fastest profile and below unity on a smooth one, so the r
 lengthened to 5.1 s, which costs six percent of hover power instead of thirteen and changes
 no other result. The fourth has not been carried
 out, and the third is a necessary condition only: charging the aerodynamic pitching moment
-through ninety degrees of incidence needs measurements this study does not have. The claims most exposed are identified in Section 8, and none of the
+through ninety degrees of incidence needs measurements this study does not have. What that
+check does supply is a threshold — a pitching-moment coefficient of roughly 0.08 at
+mid-transition airspeed would consume the margin, and the figure falls as the square of
+speed — which turns the gap into a testable requirement and yields a design rule of its
+own: the tail-sitting rotation is a low-dynamic-pressure manoeuvre by necessity. The claims most exposed are identified in Section 8, and none of the
 remaining analyses requires an experiment. The configuration is
 described in enough detail for another group to attempt any of them independently, and
 that is the outcome this paper is written to invite.

@@ -342,9 +342,12 @@ are listed so that they can be:
    margin of 2.08 at the light design point and 1.26 at the heavy one — the latter only on
    the cheapest rotation profile — together with a measured account of how that margin
    narrows with size, and a threshold: the pitching-moment coefficient that would consume
-   the remaining margin is 0.076 for the light design at 15 m s⁻¹, where post-stall values
-   on swept planforms are routinely several times that. **Transition controllability, not
-   the mass budget, is now the largest unresolved item in this study.** What it cannot do is charge the
+   the remaining margin is 0.076 for the light design at 15 m s⁻¹, and falls as the square
+   of airspeed. **Transition controllability, not the mass budget, is now the largest
+   unresolved item in this study**, and the threshold converts it from an open question
+   into a testable acceptance criterion. What it does not do is answer it: a reduced
+   computation would replace the dominant missing term with a less-validated model, which
+   is the one thing that should not be done with a dominant term. What it cannot do is charge the
    aerodynamic pitching moment, which requires moment coefficients through ninety degrees
    of incidence; those are not available for this planform and cannot be produced without
    a wind tunnel or a dedicated computational campaign. **This item is therefore reduced

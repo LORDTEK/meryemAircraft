@@ -494,9 +494,9 @@ coaxial hubs, the power electronics at 20 kW kg⁻¹, the engine mounting with i
 and exhaust, and the power cabling gives 7.60 kg, 15.2 percent.
 
 **Systems, energy and contingency.** Avionics, fuel system, strip actuation, signal harness
-and payload interface total 2.84 kg. There are no control-surface actuators to add, since
-there are no control surfaces; the strip is the only moving aerodynamic device and is
-carried here. Fuel and battery are as sized, 9.80 kg. A contingency of 12 percent of dry
+and payload interface total 2.84 kg. There are no elevon or rudder actuators to add, since
+the aircraft has neither; the strip is its only moving aerodynamic device and its actuation
+is carried here. Fuel and battery are as sized, 9.80 kg. A contingency of 12 percent of dry
 mass — ordinary preliminary-design practice — adds 2.68 kg.
 
 **The battery buffer is specified by power, not by energy, and this has not been stated
