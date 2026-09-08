@@ -177,11 +177,63 @@ Its authority comes from its length, not its height. The moment scales with the 
 arm, whereas the benefit of additional height saturates: at constant length, doubling
 the height from 5 cm to 10 cm roughly doubles the roll rate, while extending the length
 from sixty to one hundred and twenty percent of root chord raises it almost fourfold.
-The estimated roll moment is approximately 46 N·m, giving a roll rate of the order of
-twenty to twenty-five degrees per second, or 1.2 to 1.5 seconds to a thirty-degree
-bank.
+This comparison is robust to how the strip's force is modelled, because the length enters
+both the affected area and the moment arm while the height enters only the first.
 
-These figures are order-of-magnitude estimates: the damping and control-effectiveness coefficients are taken from the literature rather than computed for this geometry. The length-versus-height conclusion is robust to that choice, because the proportional difference between the two is far larger than the uncertainty in the coefficients.
+**What the roll axis costs, and what it is opposed by, are computed here.** The roll axis
+had not been examined with the care given to pitch, and doing so separates a part that can
+be computed for this geometry from a part that cannot. Distributing the component masses of
+Section 6.7 by the same volume-weighted rule used for pitch gives a roll inertia of
+**25.0 kg·m²** — two and a half times the pitch inertia of 9.81 kg·m², because the mass is
+spread along the span rather than along the chord. Roll damping was then computed for this
+planform rather than taken from the literature: imposing the helix-angle twist
+θ(y) = −arctan(p y / V) on a vortex-lattice solution of the actual geometry gives a damping
+coefficient of magnitude **|C_l_p| = 0.358**, linear in roll rate to 0.4 rad s⁻¹ and
+converged to within 1.3 percent over a threefold resolution refinement. At the cruise
+condition this is a damping slope of 77.6 N·m per rad s⁻¹ and a roll time constant of
+**0.32 s**, so the roll response is damping-dominated within a third of a second and the
+steady rate, not the initial acceleration, is what a control moment buys.
+
+**The requirement follows, and it is a requirement rather than a demonstration.** A steady
+roll rate of twenty degrees per second at cruise needs **27.1 N·m**, and twenty-five degrees
+per second needs 33.9 N·m; time to a thirty-degree bank is then about 1.2 s. Whether the
+strip supplies that depends on which mechanism it works by, and the two candidates do not
+agree:
+
+| Mechanism | Rolling moment | Steady roll rate |
+|---|---:|---:|
+| The strip's own force, as a swept fence (C_N = 1.3, an upper bound) | 11.3 N·m | 8.4 ° s⁻¹ |
+| A change in the half-wing's circulation, ΔC_L = 0.10 | 22.4 N·m | 16.6 ° s⁻¹ |
+| the same, ΔC_L = 0.15 | 33.7 N·m | 24.8 ° s⁻¹ |
+| the same, ΔC_L = 0.20 | 44.9 N·m | 33.1 ° s⁻¹ |
+
+The strip's own force cannot produce the twenty to twenty-five degrees per second this
+configuration needs — it falls short by a factor of about three, and an earlier version of
+this paper quoted 46 N·m without saying where it came from. The moment must therefore come
+from the second mechanism: the strip changes the circulation of the half-wing it sits on,
+which is how a Gurney flap or a low fence works, and the affected area is the wing's, not
+the strip's. Twenty degrees per second then asks for **ΔC_L ≈ 0.12** over the strip's span.
+Chordwise fences and Gurney strips of one to two percent chord are reported to deliver 0.1
+to 0.3, so the requirement is a plausible one — but it is a requirement, taken from the
+literature on a different device, and this paper does not compute it for this geometry.
+**Roll authority is therefore sized here and not closed.**
+
+**Hover is the harder case, and for a reason that is structural rather than numerical.** At
+zero airspeed only the inboard part of the strip is loaded, by the slipstream, and the same
+circulation model over the slipstream-washed area gives 6.0 to 12.0 N·m for ΔC_L between
+0.10 and 0.20 — enough for a thirty-degree bank in 1.5 to 2.1 s. But at zero airspeed there
+is no aerodynamic damping at all: the roll axis is a double integrator, so the rate does not
+settle and the strip must be commanded off rather than left on. Roll control in hover is
+consequently a tighter problem than roll control in cruise, which is the reverse of the
+usual situation and is a consequence of this configuration rather than of its numbers.
+
+**Being an on-off device is not, by itself, disqualifying.** Simulating the first-order roll
+dynamics above with a deadband and a finite actuator delay gives a bounded limit cycle: with
+a two-degree deadband and a fifty-millisecond deployment the bank angle oscillates by ±0.2°,
+and at a hundred and fifty milliseconds by ±9.4°. The device is therefore usable if it is
+fast and unusable if it is slow, and the threshold sits in a range where real actuators
+differ. That is a design requirement on the actuator, stated here for the first time. None
+of this is a closed-loop stability analysis, and none of it substitutes for one.
 
 The strip does one further thing that an ordinary aerodynamic surface cannot. Its
 inboard portion lies inside the slipstream of the nose propeller, where the dynamic

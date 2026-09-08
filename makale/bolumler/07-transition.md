@@ -379,7 +379,16 @@ pitch, and it owes that to the sweep, which carries the neutral point aft faster
 carries the volume. All chord-referenced quantities here use the true mean aerodynamic chord,
 0.651 m; an earlier version of this section quoted the margin on the mean aerodynamic chord
 but the trim requirement on the mean geometric chord, 0.573 m, and the two are now on the
-same datum.
+same datum. Because that error was a mismatch of conventions rather than of arithmetic, the
+absence of a second one was checked rather than assumed: the two chains — centre of gravity
+to neutral point to static margin, and centre of gravity to aerodynamic moment to required
+trim coefficient — were tested for a common origin, a common sign convention, independence
+of dynamic pressure, and agreement between the coefficient route and a dimensional route
+that never forms a coefficient at all. All four hold; in particular W(x_np − x_cg) and
+C_L × (static margin) × q S c̄ give the same 39.82 N·m. Re-deriving the margin directly from
+the solver's moment about the centre of gravity, rather than from the neutral point, gives
+12.8 percent against the 12.5 quoted above; the 0.3-point spread is the curvature of the
+fitted lift-moment slope and is smaller than the spread across the centre-of-gravity window.
 
 **Trim is not shown. It is a requirement, and the requirement is quantified.** At the cruise
 lift coefficient of 0.45 the moment to be balanced about the centre of gravity has coefficient
