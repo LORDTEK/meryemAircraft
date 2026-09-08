@@ -44,8 +44,8 @@ designs are sized twenty times apart in mass, at 50 kg and 1000 kg, from identic
 equations, with the governing fractions preserved across that range. Two findings
 changed the study: the tip frames must be faired, and transition altitude loss falls
 with rotation time rather than rising with it. The study
-is largely analytical, with no wind-tunnel or flight validation, and the mass budget is a
-target. The two aerodynamic coefficients that carry the most weight are not replaced by
+is largely analytical, with no wind-tunnel or flight validation; the mass budget is closed
+from components at the light design point and remains open at the heavy one. The two aerodynamic coefficients that carry the most weight are not replaced by
 computation but bounded by it — the zero-lift drag by a three-dimensional solution
 reported with a measured uncertainty budget.
 

@@ -431,3 +431,61 @@ subtracting fuel, buffer, powerplant and avionics leaves about 80 litres for 13 
 payload, which requires a mean density of only 0.16 kg per litre. The configuration is
 mass-limited rather than volume-limited, and the choice of mission therefore constrains
 the structure and the load paths rather than the internal arrangement.
+
+## 6.7 A component build-up of the mass budget
+
+The fractions used in Sections 6.2 and 6.3 are asserted, and Section 8.2 says so. This
+section replaces the assertion for the light design with a build-up from components. The
+rule followed throughout is that no item may be derived from the fraction it is meant to
+test: every line comes either from the geometry and a stress calculation, or from a
+specific quantity — an areal density, a specific power — stated openly and then varied.
+
+**Structure.** The wetted area follows from the planform of Section 4.2 and the NACA 00xx
+thickness distribution: 4.14 m² against 1.98 m² of planform. A carbon–epoxy sandwich shell
+at 1.5 kg m⁻² gives 6.20 kg, with ribs, bulkheads and bonded joints taken at 45 percent of
+the shell. The tip frames are sized by the landing case, since this aircraft lands on
+them: a 3 g vertical arrival, half the weight through one frame, the post treated as a
+cantilever of the stated length, giving 0.95 kg for both frames including fittings.
+Fasteners, adhesive, filler and paint are charged at 10 percent of primary structure and
+access panels at 6 percent. The total is 11.88 kg, 23.8 percent of take-off mass.
+
+The main spar is not a driver and this is worth recording, because a thick blended centre
+body invites the assumption that it must be. At an ultimate load factor of 5.25 the root
+bending moment is 934 N m; carried at 400 MPa over a structural depth of 0.9 times the root
+thickness, the caps require 10.7 mm² of carbon and weigh 41 grams. Structure at this scale
+is minimum-gauge and assembly driven, not strength driven.
+
+**Propulsion.** The nose motor is sized by hover peak power and the engine by cruise,
+which is the configuration's central claim and is visible in the budget as such: 2.73 kg
+of electric machine against 2.60 kg of engine and generator, at 4 kW kg⁻¹ and 1 kW kg⁻¹
+respectively. Adding the tip motors at twelve percent of nose power, the propellers, the
+coaxial hubs, the power electronics at 20 kW kg⁻¹, the engine mounting with its cooling
+and exhaust, and the power cabling gives 7.60 kg, 15.2 percent.
+
+**Systems, energy and contingency.** Avionics, fuel system, strip actuation, signal
+harness and payload interface total 2.84 kg. Fuel and battery are as sized, 9.80 kg. A
+contingency of 12 percent of dry mass — ordinary preliminary-design practice — adds
+2.68 kg.
+
+| Group | Build-up | Assumed in 6.2 |
+|---|---:|---:|
+| Structure | 23.8 % | 30 % |
+| Propulsion chain | 15.2 % | 16 % |
+| Battery buffer | 3.6 % | 4 % |
+| Systems and contingency | 11.0 % | 8 % |
+| Fuel | 16.0 % | 16 % |
+| **Payload, as residual** | **30.4 %** | **26 %** |
+
+The build-up closes with 2.2 kg in hand. Where that margin is thin, and why a build-up
+coming in lighter than its own target should be read as a warning rather than a
+confirmation, is set out in Section 8.2.
+
+**The heavy design is not closed by this exercise.** Shell mass scales as areal density
+times wetted area, so as the square of linear scale, while take-off mass scales as the
+cube; holding areal density constant would make the shell fraction fall as the inverse of
+scale, which is plainly wrong, since skins on larger aircraft are not thinner. Holding the
+fraction constant instead requires areal density to grow linearly with scale. The truth
+lies between, and the exponent has not been measured. Sweeping it shows the 1000 kg design
+closing on its 260 kg payload for exponents below 0.467 — an areal density of
+2.64 kg m⁻² — and failing above. That exponent, not any of the light-design assumptions,
+is the largest open question in the mass budget of this study.
