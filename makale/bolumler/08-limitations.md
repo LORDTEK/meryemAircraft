@@ -147,7 +147,12 @@ roll in cruise, but the trim authority required has not been computed.
 The results of Section 7.4 come from a two-degree-of-freedom point-mass simulation in
 which the body angle is driven kinematically. It therefore does **not** model rotational
 dynamics, and the tip-propeller thrust required to produce the rotation does not follow
-from it. The aerodynamic model is a linear lift curve to stall with a flat-plate relation
+from it. Section 7.6 supplies part of what is missing — the inertia about the rotation
+axis, the peak angular acceleration a finite moment can actually produce, and the resulting
+margin — but only part: the aerodynamic pitching moment through ninety degrees of incidence
+is still absent, and the margins reported there are inertial rather than total. It also
+records that the linear angle ramp used in Section 7.4 cannot be produced by any finite
+moment. The aerodynamic model is a linear lift curve to stall with a flat-plate relation
 beyond it; dynamic stall, separation hysteresis and propeller-wake effects on the wing
 are absent.
 
@@ -322,8 +327,15 @@ are listed so that they can be:
    contain buckling, torsion, local load introduction or aeroelastic sizing, and its tip
    frames were sized for a vertical landing only. **This item is therefore narrowed rather
    than closed**, and what a fuller version of it would have to bound is now specific.
-3. **A six-degree-of-freedom transition simulation** with rotational dynamics, which
-   would size the tip propellers properly rather than by order of magnitude.
+3. **A six-degree-of-freedom transition simulation** with rotational dynamics. **Partly
+   done, and the remainder is blocked on data rather than on effort.** Section 7.6 derives
+   the inertia from the component build-up and shows the tip propellers carry it with a
+   margin of 2.8 at the light design point and 1.69 at the heavy one, together with a
+   scaling law for how that margin narrows with size. What it cannot do is charge the
+   aerodynamic pitching moment, which requires moment coefficients through ninety degrees
+   of incidence; those are not available for this planform and cannot be produced without
+   a wind tunnel or a dedicated computational campaign. **This item is therefore reduced
+   to a specific missing measurement rather than a missing analysis.**
 4. **A panel-method analysis of the tip surfaces**, which would either convert Section
    8.7 into a quantified benefit or remove it. The vortex-lattice solution of Section 6.6
    covers the planform but not the tip surfaces, which remain unquantified.

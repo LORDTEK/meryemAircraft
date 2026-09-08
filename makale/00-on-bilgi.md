@@ -47,7 +47,9 @@ conditionally. Two findings
 changed the study: the tip frames must be faired, and transition altitude loss falls
 with rotation time rather than rising with it. The study
 is largely analytical, with no wind-tunnel or flight validation; a component mass build-up
-closes the light design conditionally and does not close the heavy one. The two aerodynamic coefficients that carry the most weight are not replaced by
+closes the light design conditionally and does not close the heavy one, and the tip
+propellers are shown to carry the aircraft's rotational inertia through the transition
+with margin, though not yet its aerodynamic moment. The two aerodynamic coefficients that carry the most weight are not replaced by
 computation but bounded by it — the zero-lift drag by a three-dimensional solution
 reported with a measured uncertainty budget.
 

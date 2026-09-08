@@ -194,3 +194,63 @@ rotor descending into its own wake can enter the vortex ring state, in which thr
 becomes erratic and increasing power makes matters worse. Whether the descent profile
 of this configuration enters that region, and at what rate of descent, is an open
 question. It is listed in Section 8 rather than answered here.
+
+## 7.6 Whether there is enough authority to rotate
+
+Section 7.4 drives the body angle kinematically. The aircraft does not rotate in that
+simulation; it is *assumed* to rotate, and the moment producing the rotation does not
+appear. Section 8.6 records this. What follows does not remove that limitation — a full
+six-degree-of-freedom treatment would need pitching-moment coefficients through ninety
+degrees of incidence, and no such data exists for this planform — but it closes the part
+of the question that can be closed without them.
+
+**The test is a lower bound.** If the tip propellers cannot rotate the aircraft's inertia,
+they certainly cannot rotate it against aerodynamic moment as well. If they can, the
+aerodynamic margin remains unknown and is reported as unknown.
+
+**Inertia.** The component build-up of Section 6.7 supplies the masses; the planform of
+Section 4.2 supplies where they sit. Distributing the shell and internal structure over the
+planform, the tip frames along their own length, the tip motors and propellers at the ends
+of those frames, and the centre-body items along the root chord gives a moment of inertia
+about the spanwise axis — the axis the transition rotates about — of 7.04 kg m² for the
+light design and 1 918 kg m² for the heavy one, with the centre of gravity at 57 and 58
+percent of root chord respectively.
+
+**The rotation profile matters, and Section 7.4's cannot be produced.** That simulation
+ramps the body angle linearly, which requires zero torque throughout and infinite torque at
+each end. The nearest profile a finite moment can produce brings angular velocity and
+acceleration to zero at both ends, and its peak angular acceleration is 6Δθ/t_r²; a
+bang-bang profile needs 4Δθ/t_r². The stricter of the two is used here.
+
+**Authority.** The frames place the upper and lower pairs 0.71 m from the planform in the
+light design, and differential thrust between them acts about the spanwise axis, as
+Section 4.3 sets out. Taking the transition thrust of Section 4.3:
+
+| | Required | Available | Margin | Shortest rotation |
+|---|---:|---:|---:|---:|
+| Light, t_r = 2 s | 16.6 N m | 46.0 N m | **2.8 ×** | 1.20 s |
+| Heavy, t_r = 4 s | 1 130 N m | 1 905 N m | **1.69 ×** | 3.08 s |
+
+The light design needs 5.84 N per pair to turn its own inertia, thirty-six percent of the
+16.2 N quoted in Section 4.3. That quoted figure is itself worth checking: at 335 W and
+0.20 m diameter it implies a figure of merit of 0.702 with no coaxial interference loss,
+where the hover figure of merit used elsewhere in this paper is 0.599. Recomputing at 0.599
+with a fifteen percent coaxial loss gives 12.4 N and a margin of 2.1 ×. The conclusion does
+not depend on which is right.
+
+**The margin narrows with size, and now has a scaling law.** Available moment grows as
+thrust times arm, so as the cube of linear scale; inertia grows as mass times length
+squared, so as the fifth power; and required acceleration falls as the square of rotation
+time. The margin therefore goes as t_r²/scale², and holding it constant requires rotation
+time to grow *linearly* with scale. Going from 50 kg to 1000 kg is a linear scale factor of
+3.345, so preserving the light design's margin would need 6.7 s rather than the 4 s used —
+which is why the heavy margin is 1.69 rather than 2.8. Section 7.4 already concluded that
+the larger aircraft must rotate more slowly; this is the quantitative form of that
+statement, and it adds to it that the control margin, not only the altitude loss, is what
+tightens.
+
+**What this does not establish.** The centre of pressure travels as the aircraft rotates
+through ninety degrees, and the pitching moment that travel produces is not computed here.
+The margins above are inertial margins and not total control margins. Whether the
+aerodynamic moment consumes them is the question a six-degree-of-freedom simulation would
+answer, and it cannot be answered without moment data this study does not have.

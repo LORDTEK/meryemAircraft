@@ -51,9 +51,13 @@ What this paper offers is a configuration and its numbers, not a validated aircr
 There is no wind-tunnel data here and no flight test. Two of the four analyses that
 Section 8 lists as tests of these results have been carried out — a three-dimensional
 solution for the centre body, which narrowed the zero-lift drag without overturning it,
-and a component build-up of the mass budget, which closes the light design point with
-2.2 kg in hand provided the shell areal density stays at or below 1.78 kg m⁻², and which
-does not close the heavy design at all. The other two have not been carried out. The claims most exposed are identified in Section 8, and none of the
+a component build-up of the mass budget, which closes the light design point with 2.2 kg
+in hand provided the shell areal density stays at or below 1.78 kg m⁻² and does not close
+the heavy design at all, and a rotational-authority check which shows the tip propellers
+carry the aircraft's own inertia through the transition with a margin of 2.8 at 50 kg and
+1.69 at 1000 kg. The fourth has not been carried out, and the third is complete only as far
+as inertia: charging the aerodynamic pitching moment through ninety degrees of incidence
+needs measurements this study does not have. The claims most exposed are identified in Section 8, and none of the
 remaining analyses requires an experiment. The configuration is
 described in enough detail for another group to attempt any of them independently, and
 that is the outcome this paper is written to invite.
