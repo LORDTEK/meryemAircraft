@@ -389,10 +389,22 @@ En büyük tek kalem kabuk (6,20 kg, %12,4); ikincisi iç yapı (2,79 kg).
 varsayımların payı %38–197 arasında; kabuğunki %19. 1,78 kg/m²'nin
 üstünde bir kaplama, 13 kg faydalı yükü kapatmaz.
 
-Belirsizlik payı satırının okunuşu ayrıca önemli: bütçeye **daha 4,5 kg
-sayılmamış kütle** girebilir ve iddia hâlâ ayakta kalır. İlk turda 3,4
-kg'lık kalem kaçırdığım düşünülürse bu, rahat değil ama makul bir
-pay.
+### ⚠️ DÜZELTME (08.09.2026) — pay iki kez sayılmıştı
+
+Önce şöyle yazmıştım: *"bütçeye daha 4,5 kg sayılmamış kütle girebilir."*
+**Yanlış.** Kırılma payı 0,219 × 22,320 = **4,888 kg**, belirsizlik
+satırının **toplamıdır**; bunun 2,678 kg'ı zaten bütçede duruyor. Ek
+olarak kaldırılabilen kütle:
+
+    4,888 − 2,678 = 2,210 kg
+
+Bu da zaten bildirilen **2,2 kg payın kendisi**. İki sayı hiçbir zaman
+bağımsız değildi; aynı payı iki kez saymışım. Bu hatayı dışarıdan bir
+denetim yakaladı.
+
+**Doğru ifade:** bütçe 2,2 kg pay taşıyor, nokta. İlk turda 3,4 kg'lık
+kalem kaçırdığım düşünülürse bu **rahat bir pay değil** — kaçırdığım
+kalemler bir kez daha o büyüklükte çıkarsa iddia düşer.
 
 ### Yapıyı mukavemet belirlemiyor
 

@@ -1762,9 +1762,14 @@ reassurance.** Its structure is 23.8 percent against the 30 assumed. The first p
 same build-up returned a payload fraction of 42.8 percent, and the difference between
 that and the 30.4 reported is seven categories of hardware that the first pass had simply
 omitted. A build-up that has already been found to be missing 3.4 kg of items may still be
-missing more. What that risk costs is quantifiable: the contingency allowance can rise
-from the 12 percent of dry mass used to 22 percent before the payload claim fails, so
-roughly a further 4.5 kg of unaccounted mass is survivable and no more.
+missing more. What that risk costs is quantifiable, and it is exactly the margin already
+stated and not an additional allowance: the contingency line can rise from the 12 percent
+of dry mass used to 22 percent before the payload claim fails, which is 2.68 kg growing to
+4.89 kg — a further 2.2 kg of unaccounted mass, and no more. An earlier version of this
+section quoted 4.5 kg by reading the break-even contingency as if it were additional to
+the budget rather than inclusive of what is already in it. The two figures were never
+independent: the survivable unaccounted mass and the payload margin are the same 2.2 kg,
+counted once.
 
 **Paper aircraft are habitually lighter than the aircraft that eventually get built**, and
 the payload fraction remains the number most exposed to that, because payload is the
