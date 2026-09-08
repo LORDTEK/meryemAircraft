@@ -518,6 +518,15 @@ free parameter, and the requirement is a demanding one.
 | Fuel | 16.0 % | 16 % |
 | **Payload, as residual** | **30.4 %** | **26 %** |
 
+**Where the mass may sit is also constrained, and the constraint was not previously
+stated.** Section 7.6 shows that the configuration is statically stable in pitch only if the
+centre of gravity lies between roughly 80 and 85 percent of root chord — the sweep carries
+the neutral point to 0.859 m from the root leading edge, well aft of the root chord's
+midpoint. The internal volume's own centroid is at 78.3 percent, so an arrangement that
+simply follows the available volume lands close to the requirement; but fuel, payload and
+engine cannot be placed forward for convenience, and the budget above should be read as
+constrained in position as well as in magnitude.
+
 The build-up closes with 2.2 kg in hand — **conditionally, and the conditions are the
 result.** It closes if the average structural areal density is no more than 1.78 kg m⁻²,
 and if everything still outside the model together stays under that same 2.2 kg. Neither is

@@ -40,16 +40,21 @@ G, RHO = 9.81, 1.225
 # Kalem kutleleri kutle.py'nin butcesinden gelir -- burada YENIDEN
 # uydurulmaz. Belirsiz olan yalnizca KONUMLARDIR ve taranir.
 
-KONUM = dict(
-    # x, kok veterinin kesri olarak (kok veter 0,97 m)
-    burun_grubu=-0.08,   # es eksenli cift + gobek: kok hucum kenarinin ONUNDE
-    motor=0.30,          # elektrik makinesi, merkez govde icinde
-    ice=0.45,            # ice tepmeli motor + jenerator
-    yakit=0.50,          # yakit deposu
-    pil=0.35,
-    aviyonik=0.20,
-    faydali=0.40,
-)
+# ⚠️ DUZELTME (08.09.2026). Ilk surum bu kalemleri veter boyunca ELLE
+# yerlestiriyordu ve CG'yi kok veterinin %57'sine koyuyordu. YANLISTI:
+# ic hacmin NEREDE oldugu hic bakilmamisti. Olculdu -- ic hacmin mutlak
+# merkezi kok veterinin %78,3'unde, cunku ok acisi dis kesitleri kok
+# firar kenarinin cok arkasina tasiyor.
+#
+# Artik tasinabilir kalemler IC HACME ORANTILI dagitiliyor: gercek bir
+# tasarimin yapacagi sey budur ve sonucu bambaska.
+#
+#   elle yerlestirme  CG %57    statik marj +%47 MAC (sacma)
+#   hacme orantili    CG %80,2  statik marj +%12,4 MAC (olagan)
+#
+# Burunda SABIT kalanlar tasinamaz: es eksenli pervane cifti, gobegi ve
+# onu dondUren elektrik makinesi burun grubudur.
+BURUN = -0.08          # kok veterinin kesri; burun grubunun konumu
 
 
 def dagilim(r=None, olcek=1.0, n=120):
@@ -96,27 +101,50 @@ def dagilim(r=None, olcek=1.0, n=120):
     m_uc = (K["TAHRIK"]["uc motorlari (8 ad.)"] + K["TAHRIK"]["uc pervaneleri"])
     kal.append((m_uc, x_uc, yari * olcek, post, 0.0))   # z^2 asagida islenir
 
-    # --- burun grubu, motor, ICE, sistemler: merkez govdede -----------
+    # --- burunda SABIT: es eksenli cift, gobegi ve onu donduren makine --
     burun = (K["TAHRIK"]["ana pervane cifti"]
-             + K["TAHRIK"]["es eksenli gobek, mil, yatak"])
-    nokta = [
-        (burun, KONUM["burun_grubu"] * kok),
-        (K["TAHRIK"]["burun motoru (hover tepe)"], KONUM["motor"] * kok),
-        (K["TAHRIK"]["ice tepmeli motor + jenerator"]
-         + K["TAHRIK"]["motor yatagi, sogutma, egzoz"]
-         + K["TAHRIK"]["guc elektronigi"] + K["TAHRIK"]["guc kablosu"],
-         KONUM["ice"] * kok),
-        (K["ENERJI"]["yakit"] + K["SISTEM"]["yakit sistemi (depo, pompa, hat)"],
-         KONUM["yakit"] * kok),
-        (K["ENERJI"]["pil tamponu"], KONUM["pil"] * kok),
-        (sum(K["SISTEM"][k] for k in K["SISTEM"]
-             if k != "yakit sistemi (depo, pompa, hat)"), KONUM["aviyonik"] * kok),
-        (r["kalan"], KONUM["faydali"] * kok),
-        (K["PAY"][list(K["PAY"])[0]], 0.45 * kok),
-    ]
-    for m, x in nokta:
-        kal.append((m, x, 0.0, 0.0, 0.0))
+             + K["TAHRIK"]["es eksenli gobek, mil, yatak"]
+             + K["TAHRIK"]["burun motoru (hover tepe)"])
+    kal.append((burun, BURUN * kok, 0.0, 0.0, 0.0))
+
+    # --- TASINABILIR kalemler: ic hacme ORANTILI dagitilir -------------
+    tasinabilir = (K["TAHRIK"]["ice tepmeli motor + jenerator"]
+                   + K["TAHRIK"]["motor yatagi, sogutma, egzoz"]
+                   + K["TAHRIK"]["guc elektronigi"] + K["TAHRIK"]["guc kablosu"]
+                   + K["ENERJI"]["yakit"] + K["ENERJI"]["pil tamponu"]
+                   + sum(K["SISTEM"].values()) + r["kalan"]
+                   + K["PAY"][list(K["PAY"])[0]])
+    hucre = hacim_hucreleri(olcek, n=n)
+    Vt = sum(h[2] for h in hucre)
+    for x, y, V in hucre:
+        kal.append((tasinabilir * V / Vt, x, y, 0.0, 0.0))
     return kal
+
+
+def hacim_hucreleri(olcek=1.0, n=200, nc=30):
+    """Ic hacmi (x, y, V) hucrelerine bolerek dondurur.
+
+    NACA 00xx yari kalinligi:
+      yt/c = 5 t (0,2969 sqrt(x') - 0,1260 x' - 0,3516 x'^2
+                  + 0,2843 x'^3 - 0,1015 x'^4)
+    Kesit alani bu egrinin iki katinin integralidir."""
+    def yt(xp, tc):
+        return 5 * tc * (0.2969 * math.sqrt(xp) - 0.1260 * xp
+                         - 0.3516 * xp * xp + 0.2843 * xp ** 3
+                         - 0.1015 * xp ** 4)
+    ist, _, _ = istasyonlar(n=n)
+    cik = []
+    for a, b in zip(ist[:-1], ist[1:]):
+        dy = (b[0] - a[0]) * olcek
+        c = 0.5 * (a[2] + b[2]) * olcek
+        tc = 0.5 * (a[3] + b[3])
+        xle = 0.5 * (a[1] + b[1]) * olcek
+        y = 0.5 * (a[0] + b[0]) * olcek
+        for k in range(nc):
+            x0, x1 = k / nc, (k + 1) / nc
+            A = 2 * 0.5 * (yt(x0, tc) + yt(x1, tc)) * (x1 - x0) * c * c
+            cik.append((xle + 0.5 * (x0 + x1) * c, y, 2 * A * dy))
+    return cik
 
 
 def atalet(kal):
