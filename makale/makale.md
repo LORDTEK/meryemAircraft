@@ -79,11 +79,13 @@ reported and quantified in Section 5.4 rather than omitted.
 is the case that instantiates it. Specifically, the paper
 
 1. **states the cruise-efficiency penalty of hybrid VTOL as an architectural property**
-   rather than a defect of implementation, expresses it in three coupled currencies —
+   rather than a defect of implementation, expresses it as three dimensionless charges —
    carried hover mass, exposed cruise drag, and continuous power sized by the hover peak —
-   shows with published figures that the known remedies transfer the penalty between
-   currencies rather than removing it, and derives from that structure an explicit escape
-   condition;
+   shows with published figures that the known remedies transfer the penalty between them
+   rather than removing it, derives from that structure an explicit escape condition, and
+   tests a consequence of the framework against an independent published sizing study: that
+   the architecture with the best cruise efficiency need not be the lightest, which is what
+   that study reports and what a single-metric comparison would not anticipate;
 2. **shows that architectural comparisons are contract-dependent**, which is a
    methodological result independent of any particular aircraft: range computed at a fixed
    fuel fraction is independent of take-off mass, so the mass bill never reaches the range
@@ -556,7 +558,57 @@ proposed here.
 That is a description of a tail-sitter with a buffered series-hybrid powertrain. It is
 also, precisely, the configuration described in Section 4.
 
-## 3.7 Why the market looks the way it does
+## 3.7 The three bills stated formally, and a test of the statement
+
+The argument so far has been verbal. It is worth stating compactly, because the compact form
+makes clear what the framework claims and what it does not.
+
+For an architecture *a* flying a given mission, write the three charges as fractions of the
+quantity each degrades:
+
+$$f_1(a) = \frac{m_\text{hover-only}(a)}{\mathrm{MTOW}}, \qquad
+f_2(a) = 1 - \frac{(L/D)_a}{(L/D)_\text{clean}}, \qquad
+f_3(a) = \frac{P_\text{cont}(a) - P_\text{cruise}}{\sigma_P\,\mathrm{MTOW}}$$
+
+where *m*<sub>hover-only</sub> is the mass that exists solely to hover, (L/D)<sub>clean</sub>
+is the lift-to-drag ratio the airframe would have with no hover hardware exposed,
+*P*<sub>cont</sub> is the continuously installed power, and σ<sub>P</sub> is the specific
+power of the power system. Each is dimensionless, each is zero for an aircraft that does not
+hover, and each is measurable for one that does.
+
+**The claim of Section 3.6 is that these three cannot be minimised independently.** The
+architectural moves available all move mass between them rather than removing it: retracting
+the lift rotors reduces *f*₂ and raises *f*₁ by the retraction mechanism; tilting the
+propulsors reduces *f*₁ and *f*₂ together and introduces a mechanism whose mass and failure
+modes are the price; buffering the hover peak reduces *f*₃ and raises *f*₁ by the buffer.
+Section 3.4 tabulates these transfers. The escape condition is the statement that all three
+vanish simultaneously only when the hover and cruise hardware are the same hardware, in the
+same orientation, doing the same job, with the peak supplied from a buffer.
+
+**A consequence that can be tested against published work.** If the three are genuinely
+separate currencies rather than three names for one quantity, then an architecture may be
+*best* in one and *worst* in another — in particular, the architecture with the highest
+cruise lift-to-drag ratio need not be the lightest. A single-metric comparison would not
+anticipate that. The NASA sizing study quoted in Section 3.2 reports exactly this pattern:
+the lift-plus-cruise concepts are the heaviest of the four examined *while having the highest
+cruise efficiency of the group*, and the authors attribute the weight to hardware carried for
+hover rather than to cruise power. That is *f*₁ dominating while *f*₂ is favourable, which is
+the framework's prediction and not a restatement of it.
+
+The comparison of Section 5.5 reproduces the same pattern independently, on a different set
+of architectures: of the three sized there, the tilting layout has the best cruise
+lift-to-drag ratio — 13.44 against 12.00 — and is nonetheless twenty percent heavier than the
+tail-sitter, because it carries a tilt mechanism that the tail-sitter does not. Best in
+*f*₂, worse in *f*₁. Two independent studies, different architecture sets, the same
+structure.
+
+**What the framework does not claim.** It does not predict the magnitude of any bill for an
+architecture that has not been sized; the fractions above must be computed or measured case
+by case. What it provides is the statement that there are exactly three of them, that they
+are the currencies in which architectural remedies trade, and the condition under which none
+is charged.
+
+## 3.8 Why the market looks the way it does
 
 One observable consequence supports the argument, and it has been stated independently.
 Surveying the field, the study cited above concludes that multirotors are efficient in
