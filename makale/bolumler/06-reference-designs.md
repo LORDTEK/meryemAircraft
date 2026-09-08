@@ -487,10 +487,21 @@ respectively. Adding the tip motors at twelve percent of nose power, the propell
 coaxial hubs, the power electronics at 20 kW kg⁻¹, the engine mounting with its cooling
 and exhaust, and the power cabling gives 7.60 kg, 15.2 percent.
 
-**Systems, energy and contingency.** Avionics, fuel system, strip actuation, signal
-harness and payload interface total 2.84 kg. Fuel and battery are as sized, 9.80 kg. A
-contingency of 12 percent of dry mass — ordinary preliminary-design practice — adds
-2.68 kg.
+**Systems, energy and contingency.** Avionics, fuel system, strip actuation, signal harness
+and payload interface total 2.84 kg. There are no control-surface actuators to add, since
+there are no control surfaces; the strip is the only moving aerodynamic device and is
+carried here. Fuel and battery are as sized, 9.80 kg. A contingency of 12 percent of dry
+mass — ordinary preliminary-design practice — adds 2.68 kg.
+
+**The battery buffer is specified by power, not by energy, and this has not been stated
+before.** It must supply the difference between hover power and engine rating, 8.3 kW at
+the light design point, from 1.8 kg — a specific power of 4.6 kW kg⁻¹, or about 26 C at
+180 Wh kg⁻¹. Energy is not the binding constraint until roughly 140 seconds of hover, well
+beyond the profile of Section 7; below that the buffer is power-limited. The heavy design
+is in the same regime, 4.1 kW kg⁻¹ at 22 C. Cells capable of those discharge rates
+generally carry less energy per kilogram than 180 Wh kg⁻¹, which lowers the crossover
+further. The buffer masses used are therefore a cell-selection requirement rather than a
+free parameter, and the requirement is a demanding one.
 
 | Group | Build-up | Assumed in 6.2 |
 |---|---:|---:|

@@ -56,6 +56,15 @@ the budget rather than inclusive of what is already in it. The two figures were 
 independent: the survivable unaccounted mass and the payload margin are the same 2.2 kg,
 counted once.
 
+The four categories most often missing from a build-up of this kind were checked
+explicitly and are present: propeller blades and coaxial hubs, power electronics sized on
+hover peak rather than on engine rating, fuel containment as distinct from fuel, and
+control actuation — the last being small here only because the configuration has no control
+surfaces to actuate. What is *not* separately modelled is local load introduction: the
+tip-frame roots, the nose motor mount, and the payload, fuel and battery supports are
+carried inside the shell and internal-structure allowances rather than sized. If those load
+paths cost more than the allowances contain, they come out of the same 2.2 kg.
+
 **Paper aircraft are habitually lighter than the aircraft that eventually get built**, and
 the payload fraction remains the number most exposed to that, because payload is the
 residual and absorbs the entire error of every other line. This is still the single most
