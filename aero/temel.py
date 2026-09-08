@@ -79,22 +79,18 @@ F_TAHRIK_SABIT = 0.108
 class Mimari:
     """Bir mimarinin ortaktan FARKLARI. Her alan bir gerekce tasir."""
 
-    def __init__(self, ad, f_tahrik, f_tampon, LD_carpan, motor_hover,
-                 f_ek=0.0, ek_ad="", gerekce=""):
+    def __init__(self, ad, f_tampon, LD_carpan, motor_hover,
+                 f_ek=0.0, ek_ad="", eta_carpan=1.0, f_govde_ek=0.0,
+                 gerekce=""):
         self.ad = ad
-        self.f_tahrik = f_tahrik      # tahrik zinciri kutle kesri
         self.f_tampon = f_tampon      # batarya/tampon kesri
         self.f_ek = f_ek              # mimariye ozgu ek kutle
         self.ek_ad = ek_ad
         self.LD_carpan = LD_carpan    # temiz L/D'ye gore carpan
+        self.eta_carpan = eta_carpan  # seyir itki veriminin carpani
+        self.f_govde_ek = f_govde_ek  # mimariye ozgu YAPISAL ek kesir
         self.motor_hover = motor_hover  # motor hover'a mi boyutlaniyor
         self.gerekce = gerekce
-
-    def f_bos(self):
-        """Yalnizca guce BAGLI OLMAYAN kalemler. Tahrik kutlesi
-        boyutlandir() icinde kurulu guce gore hesaplanir."""
-        return (ORTAK["f_govde"] + ORTAK["f_aviyonik"]
-                + F_TAHRIK_SABIT + self.f_tampon + self.f_ek)
 
 
 def boyutlandir(m, LD_temiz, g=GOREV, tur=60):
@@ -104,16 +100,18 @@ def boyutlandir(m, LD_temiz, g=GOREV, tur=60):
     kutlesine bagli oldugu icin cozum yinelemelidir. Sabit nokta
     aranir; yakinsamazsa mimari kapanmiyor demektir."""
     LD = LD_temiz * m.LD_carpan
+    eta_s = g["eta_seyir"] * m.eta_carpan
+    f_govde = ORTAK["f_govde"] + m.f_govde_ek
     MTOW = g["m_faydali"] / 0.26          # baslangic tahmini
     for _ in range(tur):
         S = MTOW / g["kanat_yuklemesi"]
         A = MTOW / g["disk_yuklemesi"]
         W = MTOW * G
         P_hover = W ** 1.5 / (g["eta_hover"] * math.sqrt(2 * RHO * A))
-        P_seyir = W * g["V"] / LD / g["eta_seyir"]
+        P_seyir = W * g["V"] / LD / eta_s
         P_kurulu = P_hover if m.motor_hover else P_seyir * g["motor_pay"]
         f_tahrik = F_TAHRIK_SABIT + (P_kurulu / 1000.0) / OZGUL_GUC / MTOW
-        f_bos = (ORTAK["f_govde"] + ORTAK["f_aviyonik"] + f_tahrik
+        f_bos = (f_govde + ORTAK["f_aviyonik"] + f_tahrik
                  + m.f_tampon + m.f_ek)
         payda = 1.0 - f_bos - ORTAK["f_yakit"]
         if payda <= 0:
@@ -129,7 +127,7 @@ def boyutlandir(m, LD_temiz, g=GOREV, tur=60):
     return dict(mimari=m.ad, MTOW=MTOW, S=S, A=A, LD=LD,
                 P_hover=P_hover / 1000.0, P_seyir=P_seyir / 1000.0,
                 motor_kW=P_kurulu / 1000.0, m_motor=(P_kurulu / 1000.0) / OZGUL_GUC,
-                menzil=R, faydali_pay=g["m_faydali"] / MTOW,
+                menzil=R, faydali_pay=g["m_faydali"] / MTOW, eta_seyir=eta_s,
                 f_bos=f_bos, f_tahrik=f_tahrik, kapanmadi=False)
 
 
@@ -146,32 +144,41 @@ def boyutlandir(m, LD_temiz, g=GOREV, tur=60):
 # C icin 1,0 alindi (egilen grup seyirde akisa hizali). Bu, TILT'IN
 # LEHINE ve makalenin aleyhine bir secim; kasitlidir.
 
-def mimariler(f_kaldirma_grubu=0.10, f_egme=0.05, tamponlu_hepsi=True):
+def mimariler(f_kaldirma_grubu=0.10, f_egme=0.05, tamponlu_hepsi=True,
+              C_LD=1.00, C_eta=1.00, B_govde_ek=0.00):
     """f_kaldirma_grubu: B'nin ikinci tahrik grubunun MTOW kesri.
        f_egme:           C'nin egme mekanizmasinin MTOW kesri.
-    Ikisi de OLCULMUS DEGIL -- parametredir ve taranir. f_egme'nin
+       C_LD, C_eta:      C'nin seyir L/D ve itki verimi carpanlari.
+       B_govde_ek:       B'nin ek YAPISAL kesri.
+    Hicbiri OLCULMUS DEGIL -- hepsi parametredir ve taranir. f_egme'nin
     varsayilani, 3.5'te alintilanan geri cekme mekanizmasinin %5'inden
-    alinmistir (mertebe capasi, esdegerlik iddiasi degil)."""
+    alinmistir (mertebe capasi, esdegerlik iddiasi degil).
+
+    C_LD = C_eta = 1,00 varsayilani, tilt'in seyirde HICBIR aerodinamik
+    veya itki cezasi odemedigi IDEALLESTIRILMIS UST SINIRDIR. Sonuc
+    olarak degil, sinir olarak okunmalidir; duyarlilik icin
+    duyarlilik_C()."""
     return [
         Mimari("A  kuyruk ustu (makale)",
-               f_tahrik=0.16, f_tampon=0.04, LD_carpan=1.0 / 1.12,
+               f_tampon=0.04, LD_carpan=1.0 / 1.12,
                motor_hover=False,
                gerekce="6.2'nin butcesi; uc cerceveleri seyir suruklemesinin %12'si"),
         Mimari("B  lift + cruise",
-               f_tahrik=0.16, f_tampon=0.04, f_ek=f_kaldirma_grubu,
+               f_tampon=0.04, f_ek=f_kaldirma_grubu,
                ek_ad="ikinci tahrik grubu", LD_carpan=13.0 / 17.0,
+               f_govde_ek=B_govde_ek,
                motor_hover=not tamponlu_hepsi,
-               gerekce="3.3 olcumu: L/D 17 -> 13; ek grup parametre"),
+               gerekce="3.3 olcumu: L/D 17 -> 13; ek grup ve yapisal ek parametre"),
         Mimari("C  tilt",
-               f_tahrik=0.16, f_tampon=0.04, f_ek=f_egme,
-               ek_ad="egme mekanizmasi", LD_carpan=1.0,
+               f_tampon=0.04, f_ek=f_egme,
+               ek_ad="egme mekanizmasi", LD_carpan=C_LD, eta_carpan=C_eta,
                motor_hover=not tamponlu_hepsi,
-               gerekce="seyirde acik hover donanimi yok; mekanizma parametre"),
+               gerekce="IDEALLESTIRILMIS: seyirde sifir tilt cezasi varsayimi"),
     ]
 
 
 def tablo(f_kaldirma_grubu=0.10, f_egme=0.05, tamponlu_hepsi=True,
-          LD_temiz=13.44):
+          LD_temiz=13.44, C_LD=1.00, C_eta=1.00, B_govde_ek=0.00):
     """LD_temiz varsayilani: 6.2'nin L/D 12,0'i, A'nin cerceve cezasi
     geri alinarak temiz govdeye cevrilmis (12,0 x 1,12)."""
     print("gorev: %.0f kg faydali, %.0f m/s, kanat yuklemesi %.1f kg/m2"
@@ -186,7 +193,8 @@ def tablo(f_kaldirma_grubu=0.10, f_egme=0.05, tamponlu_hepsi=True,
     print("  %-24s %7s %7s %8s %8s %9s %7s %8s"
           % ("", "", "kg", "", "kW", "kW", "kg", "km"))
     cik = []
-    for m in mimariler(f_kaldirma_grubu, f_egme, tamponlu_hepsi):
+    for m in mimariler(f_kaldirma_grubu, f_egme, tamponlu_hepsi,
+                       C_LD, C_eta, B_govde_ek):
         r = boyutlandir(m, LD_temiz)
         cik.append(r)
         if r["kapanmadi"]:
@@ -197,6 +205,106 @@ def tablo(f_kaldirma_grubu=0.10, f_egme=0.05, tamponlu_hepsi=True,
               % (r["mimari"], r["f_bos"], r["MTOW"], r["LD"],
                  r["P_hover"], r["motor_kW"], r["m_motor"], r["menzil"]))
     return cik
+
+
+def duyarlilik_C(LD_temiz=13.44, f_egme=0.05):
+    """C'nin menzil ustunlugu HANGI VARSAYIMDAN geliyor?
+
+    Iki bagimsiz denetim de ayni yere isaret etti: C'ye hem temiz L/D
+    (carpan 1,00) hem A'nin seyir itki verimi veriliyor. Ikisi de
+    P_seyir'de CARPILIYOR ve menzil L/D ile dogru orantili; ikisini
+    birden bagislamak tilt'in seyir faturasini tamamen kapatir.
+
+    Fiziksel gerekce (olculmedi, bu yuzden taraniyor):
+      L/D  -- nasel/poyra/boslugu, aktuator cikintisi, girisim
+      eta  -- pal hover'a boyutlanmis (yuksek disk yuku, yanlis burulma)
+              -> seyirde A'nin pervanesinden IYI olmasi beklenmez
+
+    Tablo A'nin menziline gore yuzde farki verir. Isaret degistigi yer,
+    iddianin dayandigi esiktir."""
+    A = boyutlandir(mimariler()[0], LD_temiz)
+    print("A (kuyruk ustu): menzil %.0f km, MTOW %.1f kg, L/D %.2f"
+          % (A["menzil"], A["MTOW"], A["LD"]))
+    print("C'nin A'ya gore menzili (yuzde), egme kesri %.2f" % f_egme)
+    print()
+    etalar = (1.00, 0.95, 0.90, 0.85)
+    print("  %-10s" % "L/D carp." + "".join("  eta x%.2f" % e for e in etalar))
+    for cld in (1.00, 0.96, 0.92, 0.88, 0.85):
+        satir = "  %-10.2f" % cld
+        for ce in etalar:
+            r = boyutlandir(mimariler(f_egme=f_egme, C_LD=cld, C_eta=ce)[2],
+                            LD_temiz)
+            if r["kapanmadi"]:
+                satir += "     KAPAN"; continue
+            satir += "   %+7.1f" % (100 * (r["menzil"] - A["menzil"]) / A["menzil"])
+        print(satir)
+    print()
+    print("  NOT: menzil eta'dan BAGIMSIZ (R = f_yakit E* eta_zincir (L/D)/g).")
+    print("  eta yalnizca kurulu gucu ve dolayisiyla MTOW'u degistirir.")
+    print("  C'nin menzil ustunlugu bu yuzden TEK BASINA L/D carpanindan")
+    print("  gelir; esik carpan ~0,89'dur (A'nin kendi 1/1,12 cezasi).")
+    print()
+    print("  Ayni tarama MTOW icin (kg) -- eta burada etkili:")
+    print("  %-10s" % "L/D carp." + "".join("  eta x%.2f" % e for e in etalar))
+    for cld in (1.00, 0.92, 0.88):
+        satir = "  %-10.2f" % cld
+        for ce in etalar:
+            r = boyutlandir(mimariler(f_egme=f_egme, C_LD=cld, C_eta=ce)[2],
+                            LD_temiz)
+            satir += "   %7.1f" % (r["MTOW"] if not r["kapanmadi"] else float("nan"))
+        print(satir)
+    print("  (A: %.1f kg)" % A["MTOW"])
+
+
+def duyarlilik_B(LD_temiz=13.44, f_kaldirma_grubu=0.10):
+    """B'ye A ile ayni yapisal kesri (%30) vermek B'yi kayiriyor mu?
+
+    Iki denetim de haklı olarak isaret etti: dagitilmis kaldirma
+    kanadi, motor yataklarini ve kablolamayi da agirlastirir; B'nin
+    yapisal kesri A'ninkiyle ayni olmamaliydi. Tarama, bunun sonucun
+    YONUNU degistirip degistirmedigini gosterir."""
+    A = boyutlandir(mimariler()[0], LD_temiz)
+    print("B'nin ek YAPISAL kesri -- A: f_bos %.3f, MTOW %.1f kg, menzil %.0f km"
+          % (A["f_bos"], A["MTOW"], A["menzil"]))
+    print("  %10s %8s %8s %9s %10s" % ("f_govde_ek", "f_bos", "MTOW", "menzil", "faydali"))
+    for fg in (0.00, 0.02, 0.04, 0.06, 0.08):
+        r = boyutlandir(mimariler(f_kaldirma_grubu, B_govde_ek=fg)[1], LD_temiz)
+        if r["kapanmadi"]:
+            print("  %10.2f %8.3f  KAPANMADI" % (fg, r["f_bos"])); continue
+        print("  %10.2f %8.3f %8.1f %9.0f %10.3f"
+              % (fg, r["f_bos"], r["MTOW"], r["menzil"], r["faydali_pay"]))
+    print()
+    print("  Menzil f_govde_ek'ten BAGIMSIZ; ek yapisal kutle yalnizca MTOW'u")
+    print("  ve faydali yuk PAYINI kotulestirir. Yani bu eksiklik gercektir")
+    print("  ama A > B sonucunun YONUNU degistirmez, guclendirir.")
+
+
+def agir_ayarsiz():
+    """Agir hat, HICBIR yeniden ayar olmadan -- motor payi da 1,529.
+
+    agir_dogrula() motor payini 6.3'un kendi sayilarindan (1,385)
+    aliyor; bu, 'tek bir sayi bile degistirilmedi' iddiasiyla celisir.
+    Bu fonksiyon o istisnayi da kaldirir: hafif hattin 1,529'u kullanilir.
+    Ikisinin farki, makalenin belirtilmemis olcek etkisinin buyuklugudur."""
+    g = agir_gorev()
+    g["motor_pay"] = GOREV["motor_pay"]          # 1,53 -- hafif hattin payi
+    r = boyutlandir(mimariler()[0], AGIR["LD_temiz"], g=g)
+    print("AGIR HAT -- TEK BIR SAYI BILE DEGISTIRILMEDI (motor payi 1,53)")
+    print("  %-12s %10s %10s %8s" % ("", "model", "makale", "fark"))
+    for ad, h, mk in (("MTOW kg", r["MTOW"], 1000.0), ("L/D", r["LD"], 13.6),
+                      ("P_hover kW", r["P_hover"], 216.2),
+                      ("motor kW", r["motor_kW"], 54.3),
+                      ("menzil km", r["menzil"], 1814.0),
+                      ("f_tahrik", r["f_tahrik"], 0.16)):
+        print("  %-12s %10.3f %10.3f %+7.1f%%" % (ad, h, mk, 100 * (h - mk) / mk))
+    print()
+    print("  Motor %+.1f%% sapiyor. Sebep makalenin kendi icinde:" %
+          (100 * (r["motor_kW"] - 54.3) / 54.3))
+    print("  hafif hatta 2,6/1,7 = 1,529, agir hatta 54,3/39,2 = 1,385")
+    print("  (yuzde 10,4 fark). Makale bunu HICBIR YERDE gerekcelendirmiyor.")
+    print("  Menzil ve L/D bu istisnadan etkilenmiyor: %+.1f%% ve %+.1f%%."
+          % (100 * (r["menzil"] - 1814.0) / 1814.0,
+             100 * (r["LD"] - 13.6) / 13.6))
 
 
 def basabas(LD_temiz=13.44, tamponlu_hepsi=True):
@@ -283,9 +391,23 @@ if __name__ == "__main__":
     tablo(tamponlu_hepsi=True)
     print()
     print("=" * 78)
-    print("DUZEY 2 -- mimariye ozgu guc sistemi (Bill 3 acik)")
+    print("DUZEY 2 -- KORKULUK, adil karsilastirma DEGIL")
+    print("  (ucunde de motor hover'a boyutlaniyor, tampon yok. Gercek bir")
+    print("   lift+cruise kaldirmayi bataryayla yapar; bu tablo o mimariyi")
+    print("   temsil etmez, yalnizca tamponsuz bir seri hibritin ne")
+    print("   olacagini gosterir.)")
     print("=" * 78)
     tablo(tamponlu_hepsi=False)
+    print()
+    print("=" * 78)
+    print("C'NIN USTUNLUGU HANGI VARSAYIMDAN GELIYOR")
+    print("=" * 78)
+    duyarlilik_C()
+    print()
+    print("=" * 78)
+    print("B'YE ORTAK YAPISAL KESIR VERMEK")
+    print("=" * 78)
+    duyarlilik_B()
     print()
     print("=" * 78)
     print("BASABAS")
@@ -295,6 +417,8 @@ if __name__ == "__main__":
     print("=" * 78)
     print("AGIR HAT (1000 kg) -- modelin bagimsiz sinamasi")
     print("=" * 78)
+    agir_ayarsiz()
+    print()
     agir_dogrula()
     print()
     print("  uc mimari, agir hat:")

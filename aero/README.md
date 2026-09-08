@@ -187,3 +187,100 @@ yeterli. Su 1,0 · elektronik ~0,8 · köpük kargo ~0,3 kg/L — **hepsi sığa
 **Konfigürasyon hacim değil kütle sınırlı.** Görev seçimi iç hacmi zorlamıyor;
 yapıyı ve yük yollarını etkiliyor, o da kütle bütçesidir — makalenin 8.2'de
 zaten "en çok yanılma ihtimali olan yer" dediği kalem.
+
+---
+
+## `temel.py` — karşılaştırmalı temel: dış denetim sonrası düzeltmeler (08.09.2026)
+
+İki bağımsız denetim de aynı yere işaret etti: hesap tutarlı, ama
+**C'ye (tilt) verilen varsayımlar sonucu hesap başlamadan belirliyor.**
+Yapılan düzeltmeler ve **ölçülen** sonuçları:
+
+### 1. C'nin seyir cezası artık parametre ve taranıyor
+
+Önce: `LD_carpan = 1.0` sabit, "tilt'in lehine, kasten" notuyla.
+Şimdi: `C_LD` ve `C_eta` parametre; varsayılan 1,00 **idealleştirilmiş
+üst sınır** olarak etiketli, `duyarlilik_C()` taramayı basıyor.
+
+C'nin A'ya göre menzili (%):
+
+| L/D çarpanı | 1,00 | 0,96 | 0,92 | **0,88** | 0,85 |
+|---|---|---|---|---|---|
+| menzil farkı | +12,0 | +7,5 | +3,0 | **−1,4** | −4,8 |
+
+**Eşik çarpan ≈ 0,89.** Bu, A'nın kendi uç çerçeve cezasının (1/1,12 =
+0,893) neredeyse tam olarak aynısı. Yani ölçülen ifade şudur:
+
+> **Tilt, ancak eğme mekanizması seyirde en az A'nın uç çerçeveleri
+> kadar sürükleme öderse A'nın gerisine düşer.** Bu ölçülmedi;
+> dolayısıyla "A tilt'ten iyidir" denemez.
+
+### 2. η_seyir'in menzile etkisi YOK — denetimin yarısı düzeltildi
+
+YZ5, C'ye A'nın η_seyir'inin de verilmesini "ikinci hediye" olarak
+işaretledi ve "P_seyir'de L/D ile η çarpılıyor, ikisini birden
+bağışlamak Bill 2'yi kapatır" dedi. **Ölçüm bunu yalnızca yarı
+doğruluyor:**
+
+    R = f_yakıt · E* · η_zincir · (L/D) / g        → η_seyir YOK
+
+η_seyir yalnızca P_seyir → P_kurulu → motor kütlesi → MTOW zincirine
+girer. Tarama:
+
+| | η×1,00 | η×0,95 | η×0,90 | η×0,85 |
+|---|---|---|---|---|
+| C'nin menzili | +%12,0 | +%12,0 | +%12,0 | +%12,0 |
+| C'nin MTOW'u (kg) | 60,3 | 61,0 | 61,8 | 62,7 |
+
+Yani η gerçekten bir hediyedir, ama **kütle sütununda**, menzil
+sütununda değil. Menzil üstünlüğünün tamamı L/D çarpanından geliyor.
+Bu, hediyeyi küçültmez — sadece nereye düştüğünü değiştirir; ve
+"iddiayı belirleyen tek serbest parametre L/D çarpanıdır" tespitini
+**güçlendirir**.
+
+### 3. B'nin yapısal kesri artık ayrılabilir
+
+`B_govde_ek` eklendi (`duyarlilik_B()`). Dağıtılmış kaldırmanın yapısal
+cezası:
+
+| f_gövde_ek | 0,00 | 0,02 | 0,04 | 0,06 |
+|---|---|---|---|---|
+| MTOW (kg) | 86,0 | 99,1 | 116,9 | 142,5 |
+| menzil (km) | 1370 | 1370 | 1370 | 1370 |
+
+**Menzil etkilenmiyor**, faydalı yük payı 0,151 → 0,091'e düşüyor.
+Eksiklik gerçek, ama A > B sonucunun yönünü değiştirmiyor, güçlendiriyor.
+
+### 4. Ağır hat: "yeniden ayar yok" iddiası artık gerçekten sınanıyor
+
+`agir_ayarsiz()` eklendi — motor payı da hafif hattın 1,529'unda tutulur:
+
+| | tam ayarsız (1,529) | makalenin payıyla (1,385) | makale |
+|---|---|---|---|
+| MTOW | 1036,8 kg (+%3,7) | 1013,4 kg (+%1,3) | 1000 |
+| motor | 63,5 kW (**+%16,9**) | 56,2 kW (+%3,5) | 54,3 |
+| menzil | 1813 km (−%0,1) | 1813 km (−%0,1) | 1814 |
+| L/D | 13,60 (%0,0) | 13,60 (%0,0) | 13,6 |
+
+Menzil ve L/D istisnadan **etkilenmiyor**; sapma tamamen motor
+derecelendirme payında. Yani ölçek öngörüsü sağlam, tutarsızlık
+makalenin kendi iki tasarımı arasında.
+
+### 5. Düzey 2 "korkuluk" olarak etiketlendi
+
+Gerçek bir lift+cruise kaldırmayı bataryayla yapar; motoru hover'a
+boyutlamaz. Düzey 2 o mimariyi temsil etmiyor, çıktı başlığında böyle
+yazıyor. Adil karşılaştırma Düzey 1'dir.
+
+### 6. Ölü alan kaldırıldı
+
+`Mimari.f_tahrik = 0.16` tanımlıydı ama `boyutlandir()` onu hiç
+kullanmıyordu (tahrik kesri her turda kurulu güçten yeniden
+hesaplanıyor). **Çift sayım yoktu** — YZ1'in şüphesi kontrol edildi ve
+çürütüldü — ama alan yanıltıcıydı; silindi.
+
+### Düzey 1 sayıları değişmedi
+
+Yeniden yapılandırma davranışı korudu: A 50,0 kg / 1600 km, B 86,0 kg /
+1370 km, C 60,3 kg / 1792 km. Değişen, bu sayıların **hangi
+varsayımdan geldiğinin ölçülmüş olması**.

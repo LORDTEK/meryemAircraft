@@ -124,3 +124,102 @@ configuration does not escape physics; it declines a particular trade. What it p
 instead is smaller, and — this is the part that matters for scaling — it does not grow
 faster than the aircraft.
 
+
+## 5.5 A comparative sizing of three architectures
+
+Sections 5.1 to 5.4 argue that a particular configuration declines a particular trade.
+That argument is made against the general statement of the tax in Section 3, not against
+any competing aircraft, and an argument of that shape has a known weakness: it can be
+right about the mechanism and still be wrong about the outcome, because a rival
+architecture may pay the bills and recover more than it pays. The claim is therefore
+tested here by sizing the same mission three ways.
+
+**Method.** One set of equations is used for all three, and they are the equations of
+Section 6.1 — closed-loop mass, hover power from momentum theory, and a Breguet-type
+range:
+
+$$\mathrm{MTOW} = \frac{m_\text{payload}}{1 - f_\text{empty} - f_\text{fuel}}, \qquad
+P_\text{hover} = \frac{W^{3/2}}{\eta_h \sqrt{2\rho A}}, \qquad
+R = \frac{f_\text{fuel}\, E^{*} \eta_\text{chain}}{g}\,\frac{L}{D}$$
+
+The propulsion-chain mass is not a fixed fraction. It is split into a part proportional
+to take-off mass and a part proportional to installed power, because a fixed fraction
+would make the third bill invisible by construction. Installed power depends on take-off
+mass and take-off mass depends on installed power, so the system is closed by fixed-point
+iteration.
+
+**Calibration.** Every coefficient is back-solved from the light reference design of
+Section 6.2 rather than assumed: a hover figure of merit of 0.599 from 10.9 kW at 50 kg,
+a cruise propulsive efficiency of 0.721 from 1.7 kW at L/D 12, an engine rating margin of
+1.53, and a power-independent propulsion fraction of 0.108 given an assumed 1.0 kW kg⁻¹
+for a small engine and generator. The model must then reproduce the design it was
+calibrated from, and it does — take-off mass, propulsion fraction, engine rating,
+lift-to-drag ratio, range and hover power all within 0.1 percent. Run at the heavy design
+point without retuning, it predicts 1 037 kg against 1 000 kg and 1 813 km against
+1 814 km; the one term that does not carry across is the engine rating margin, discussed
+in Section 8.13.
+
+**What differs between the architectures.** Mission, wing loading, disc loading, fuel
+fraction, structural fraction, avionics fraction and energy chain are held identical.
+Only three things change, and each is either a measurement quoted elsewhere in this paper
+or an openly swept parameter:
+
+| | Cruise L/D multiplier | Architecture-specific mass | Source |
+|---|---|---|---|
+| A — tail-sitter | 1 / 1.12 | — | Section 5.2, tip-frame drag |
+| B — lift + cruise | 13 / 17 | second propulsion group, swept | Section 3.3, wind tunnel |
+| C — tilt | 1.00 | tilt mechanism, swept | **assumed, not measured** |
+
+**Result.** With the same buffered series-hybrid power system given to all three — which
+neutralises the third bill, and does so against the proposed configuration:
+
+| | Empty fraction | MTOW | L/D | Hover power | Range |
+|---|---:|---:|---:|---:|---:|
+| A — tail-sitter | 0.580 | 50.0 kg | 12.00 | 10.9 kW | 1 600 km |
+| B — lift + cruise | 0.689 | 86.0 kg | 10.28 | 18.7 kW | 1 370 km |
+| C — tilt | 0.624 | 60.3 kg | 13.44 | 13.1 kW | 1 792 km |
+
+Against lift-plus-cruise the result is unambiguous and it is driven by measurement: the
+same mission closes at seventy-two percent higher take-off mass and fourteen percent
+lower range, and the drag term behind it is a wind-tunnel result, not an assumption.
+Giving the lift-plus-cruise layout the additional structural fraction that distributed
+lift is generally held to require makes its mass worse still — 117 kg at four additional
+points of structure — without changing its range at all, so the comparison as tabulated
+is generous to it rather than the reverse.
+
+**Against tilt the result goes the other way, and the reason must be stated plainly.**
+The tilting layout closes lighter than lift-plus-cruise and cruises twelve percent
+further than the proposed configuration. That outcome is not a finding. It follows from
+the multiplier of 1.00 in the table above, which credits the tilting layout with paying
+no cruise drag at all for its nacelles, pivots, actuators and hover-sized blades. Sweeping
+that multiplier shows exactly how much of the result it carries:
+
+| Tilt cruise-drag multiplier | 1.00 | 0.96 | 0.92 | 0.88 | 0.85 |
+|---|---:|---:|---:|---:|---:|
+| Range relative to the tail-sitter | +12.0 % | +7.5 % | +3.0 % | −1.4 % | −4.8 % |
+
+The sign changes at approximately 0.89 — which is, to two decimal places, the penalty the
+proposed configuration charges itself for its own tip frames, 1/1.12 = 0.893. The
+comparison therefore establishes a conditional and not a ranking: **a tilting layout
+falls behind the proposed configuration only if its mechanism costs at least as much
+cruise drag as the tip frames cost this one.** Whether it does was not measured, and
+nothing here should be read as claiming that it does.
+
+Two smaller points belong with that disclosure. The cruise propulsive efficiency is also
+shared with the tilting layout, which is generous, since a blade pitched for hover is not
+the blade one would choose for cruise; but range in the equation above does not contain
+propulsive efficiency, so the generosity falls entirely on mass — 60.3 kg becomes 62.7 kg
+at a fifteen percent efficiency penalty — and none of it on the range comparison. And a
+second table, in which each architecture is given its own power system with no buffer, is
+not reported as a fair comparison and should not be read as one: a real lift-plus-cruise
+aircraft hovers on batteries rather than on an engine sized for hover, so that table
+describes an unbuffered series hybrid and not the architecture it is labelled with.
+
+**What this comparison does and does not support.** It supports the claim that the
+proposed configuration avoids the mass and drag bills that a separate lift system pays,
+and it supports it with the paper's own measurements rather than by assertion. It does
+not support a claim of superiority over the tilting family, and the paper does not make
+one. The tilting family answers the same escape condition by a different route — the same
+hardware, reused, but reoriented by a mechanism — and the case for the configuration
+proposed here rests on reaching that reuse without the mechanism, together with its
+control and transition consequences, and not on out-cruising it.

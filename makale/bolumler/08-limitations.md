@@ -185,7 +185,43 @@ the last of these, it was removed rather than retained on a summary. No patent c
 was read in the original; the prior-art position stated here is that of an author survey,
 not of a professional search.
 
-## 8.12 What would change these conclusions
+## 8.12 The architecture comparison is conditional on one unmeasured number
+
+The comparative sizing of Section 5.5 settles the case against a separate lift system
+using measurements, and does not settle the case against a tilting mechanism at all. The
+tilting layout is credited there with paying no cruise drag for its nacelles, pivots and
+hover-pitched blades, because no measurement of that penalty was available to charge it
+with; on that credit it cruises twelve percent further than the configuration proposed
+here. The sign of that comparison reverses if the penalty exceeds roughly eleven percent
+of cruise drag, which is what the tip frames of this configuration cost it. The
+comparison is therefore reported as a conditional, and the reader should treat the
+tilting column as an upper bound on that architecture rather than as an estimate of it.
+
+Three further caveats sit under the same model. Wing loading and disc loading are held
+common across the three architectures, which is a controlled comparison and not a
+statement that each is at its own optimum. The structural fraction is likewise common,
+which is generous to the distributed-lift layout, since carrying power to the extremities
+is generally held to carry a structural penalty of its own; charging it makes that layout
+heavier without changing its range, so the direction of the result is unaffected. And the
+second table in that section, which gives each architecture its own unbuffered power
+system, is a bounding case rather than a fair comparison, for the reason given there.
+
+## 8.13 The engine rating margin is not consistent between the two reference designs
+
+The sizing model of Section 5.5, calibrated entirely on the light reference design,
+predicts the heavy one to within four percent in take-off mass and one tenth of a percent
+in range without a single coefficient being changed. One term does not carry across. The
+engine is rated at 2.6 kW against 1.7 kW of cruise electrical power in the light design,
+a margin of 1.53, and at 54.3 kW against 39.2 kW in the heavy one, a margin of 1.385 —
+ten percent apart, and nowhere justified in this paper. Carrying the light margin through
+to the heavy design overstates its engine by seventeen percent while leaving range and
+lift-to-drag ratio untouched. A larger generator and power electronics being relatively
+more efficient is a defensible reason for the difference, but it is a reason supplied
+after the fact; as the two designs stand, the margin is an undeclared choice rather than
+a scaling law, and the scale-invariance claimed in Section 6.4 should be read as holding
+for the mass and range fractions and not for this one.
+
+## 8.14 What would change these conclusions
 
 The results of this paper would be most efficiently attacked in four places, and they
 are listed so that they can be:
