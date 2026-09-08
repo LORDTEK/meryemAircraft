@@ -95,6 +95,108 @@ def tarafsiz_nokta(x_ref=0.0, **kw):
     return o, c_ref, cik, egim, x_np
 
 
+
+# ---------------------------------------------------------------------
+# KONVANSIYON DENETIMI
+# ---------------------------------------------------------------------
+# NEDEN VAR. Bir dis degerlendirme sunu istedi: iki zincir --
+#   (a) CG -> tarafsiz nokta -> statik marj
+#   (b) CG -> aerodinamik moment -> gereken denge C_m
+# ayni referans noktasini, ayni isaret kuralini, ayni q, S ve veteri
+# kullaniyor mu? Referans veter hatasi (MAC / S-b karisimi) tam da bu
+# aileden cikti; ikincisinin OLMADIGINI varsaymak yetmez, GOSTERILMELI.
+#
+# Alti sinama var ve hicbiri "ayni formulu iki kez yazmak" degil:
+# ucu dogrudan cozucuye sorulmus, biri boyutlu yoldan bagimsiz
+# turetilmis.
+
+MTOW_HAFIF, S_HAFIF, V_SEYIR = 50.0, 1.9785, 30.0
+CG_KURAL = 0.802                 # donme.py, hacme orantili yerlestirme
+
+
+def _cm(x_ref, alfa, hiz=30.0):
+    o = olcuier()
+    ucak = asb.Airplane(wings=[kanat_kur()], s_ref=o["alan"],
+                        b_ref=o["aciklik"], c_ref=mac()[0],
+                        xyz_ref=[x_ref, 0.0, 0.0])
+    r = asb.VortexLatticeMethod(
+        airplane=ucak, op_point=asb.OperatingPoint(velocity=hiz, alpha=alfa),
+        spanwise_resolution=SPAN_COZ, chordwise_resolution=VETER_COZ).run()
+    return float(r["CL"]), float(r["Cm"])
+
+
+def konvansiyon_denetimi():
+    """Alti sinama. Her biri (ad, gecti_mi, aciklama) dondurur."""
+    o = olcuier()
+    MAC, x_le = mac()
+    kok = P["kokVeter"]
+    S, b = o["alan"], o["aciklik"]
+    x_cg = CG_KURAL * kok
+    _, _, _, egim, x_np = tarafsiz_nokta(x_ref=0.0)
+    marj = (x_np - x_cg) / MAC
+    sonuc = []
+
+    # 1. BASLANGIC NOKTASI. donme.py x'i kok hucum kenarindan, firara +
+    # olarak sayiyor. vlm.py'nin ilk kesiti xyz_le = [0, 0, 0]. Ayni mi?
+    ist, _, _ = istasyonlar(n=200)
+    ayni = abs(ist[0][1]) < 1e-12
+    sonuc.append(("baslangic noktasi ortak (kok hucum kenari, x=0)", ayni,
+                  "planform ilk istasyon x_le = %.3e" % ist[0][1]))
+
+    # 2. ISARET KURALI. x_ref kok hucum kenarindayken kaldirma HER ZAMAN
+    # referansin arkasinda dogar; dolayisiyla pozitif alfada C_m NEGATIF
+    # (burun asagi) olmali. Cikmazsa isaret kurali ters demektir.
+    _, cm_le = _cm(0.0, 4.0)
+    sonuc.append(("isaret kurali: kok LE'ye gore C_m(alfa>0) < 0", cm_le < 0,
+                  "C_m(4 derece, x_ref=0) = %+.5f" % cm_le))
+
+    # 3. TARAFSIZ NOKTA SINAMASI -- cozucuye dogrudan sorulmus. x_ref'i
+    # hesaplanan x_np'ye koyunca dC_m/dC_L SIFIRLANMALI. Bu, x_np'nin
+    # cikarildigi formulun tersten dogrulanmasidir.
+    CL2, cm2 = _cm(x_np, 2.0)
+    CL6, cm6 = _cm(x_np, 6.0)
+    egim_np = (cm6 - cm2) / (CL6 - CL2)
+    sonuc.append(("x_ref = x_np'de dC_m/dC_L ~ 0", abs(egim_np) < 5e-3,
+                  "dC_m/dC_L = %+.5f (kok LE'de %+.4f idi)" % (egim_np, egim)))
+
+    # 4. MARJ SINAMASI -- yine cozucuye sorulmus. x_ref'i CG'ye koyunca
+    # dC_m/dC_L = -(statik marj) olmali. Marj formulu ile cozucunun
+    # kendi momenti boylece ayni sayida bulusuyor.
+    CLa, cma = _cm(x_cg, 2.0)
+    CLb, cmb = _cm(x_cg, 6.0)
+    egim_cg = (cmb - cma) / (CLb - CLa)
+    sonuc.append(("x_ref = x_cg'de dC_m/dC_L = -marj",
+                  abs(egim_cg + marj) < 5e-3,
+                  "cozucu %+.4f, marj formulu %+.4f" % (egim_cg, -marj)))
+
+    # 5. q BAGIMSIZLIGI. C_m boyutsuz; 20 ve 40 m/s ayni sayiyi vermeli.
+    # Vermezse bir yerde boyutlu bir buyukluk katsayiya sizmis demektir.
+    _, cm20 = _cm(x_cg, 4.0, hiz=20.0)
+    _, cm40 = _cm(x_cg, 4.0, hiz=40.0)
+    sonuc.append(("C_m hiza bagimsiz", abs(cm20 - cm40) < 1e-6,
+                  "20 m/s %+.6f, 40 m/s %+.6f" % (cm20, cm40)))
+
+    # 6. BOYUTLU CAPRAZ SINAMA -- bagimsiz turetme. Katsayi zincirini hic
+    # kullanmadan: seyirde kaldirma agirliga esit, tarafsiz noktada etki
+    # ediyor, CG'ye gore kolu (x_np - x_cg). Cikan MOMENT, katsayidan
+    # geri cevrilen momentle ayni olmali.
+    W = MTOW_HAFIF * 9.81
+    M_boyutlu = W * (x_np - x_cg)                       # N m
+    q = 0.5 * RHO_ * V_SEYIR ** 2
+    CL_seyir = W / (q * S_HAFIF)
+    M_katsayi = CL_seyir * marj * q * S_HAFIF * MAC     # N m
+    sonuc.append(("boyutlu ve katsayi yolu ayni momenti veriyor",
+                  abs(M_boyutlu - M_katsayi) < 1e-6 * max(1.0, abs(M_boyutlu)),
+                  "W(x_np - x_cg) = %.4f N m ; C_L marj q S MAC = %.4f N m"
+                  % (M_boyutlu, M_katsayi)))
+
+    return sonuc, dict(MAC=MAC, x_le=x_le, x_np=x_np, x_cg=x_cg, marj=marj,
+                       CL_seyir=W / (q * S_HAFIF), S=S, b=b, kok=kok)
+
+
+RHO_ = 1.225
+
+
 if __name__ == "__main__":
     kok = P["kokVeter"]
     MAC, x_le = mac()
@@ -136,3 +238,16 @@ if __name__ == "__main__":
     print("  Not: kesitler simetrik; C_m0 bu kosumda sifirdir ve gercek")
     print("  degildir. Bu sonuc KARARLILIGI verir, DENGEYI vermez: yukaridaki")
     print("  'gereken C_m' bir GEREKSINIMDIR, saglandiginin gosterimi degil.")
+    print()
+    print("=" * 74)
+    print("KONVANSIYON DENETIMI -- iki zincir ayni kurallari mi kullaniyor?")
+    print("=" * 74)
+    sinamalar, d = konvansiyon_denetimi()
+    for ad, gecti, aciklama in sinamalar:
+        print("  %s  %s" % ("GECTI " if gecti else "KALDI!", ad))
+        print("          %s" % aciklama)
+    kalan = [a for a, g, _ in sinamalar if not g]
+    print()
+    print("  %d sinama, %d kaldi." % (len(sinamalar), len(kalan)))
+    if kalan:
+        print("  KALANLAR: " + ", ".join(kalan))
