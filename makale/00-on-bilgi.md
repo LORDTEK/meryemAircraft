@@ -54,7 +54,11 @@ pitch stability under a stated packaging rule and sizes the camber moment that t
 without closing it. Roll is treated the same way: the inertia and the damping are computed
 for this planform, the moment needed for a twenty-degree-per-second roll follows from them,
 and the strip's effectiveness in supplying it is stated as a requirement rather than
-demonstrated. Attitude control is therefore sized throughout and closed nowhere. Transition controllability remains the
+demonstrated. Yaw has the strongest authority of the three axes, because differential tip
+thrust acts through the semi-span, but the planform supplies no directional stability at
+all, so the tip-frame fairings must serve as the vertical surfaces as well as the drag
+measure they were introduced as. Attitude control is therefore sized in every axis and
+closed in none. Transition controllability remains the
 principal open requirement and is stated as a threshold a future measurement must meet.
 
 *[≈270 kelime. 200 isteyen dergide kesilecek ilk yer: ikinci paragrafın

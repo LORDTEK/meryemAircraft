@@ -79,7 +79,15 @@ per second at cruise requires 27.1 N·m, the strip's own force supplies about a 
 that, and the remainder must come from the change it makes to the half-wing's circulation —
 a requirement of ΔC_L ≈ 0.12 that published fence and Gurney data make plausible without
 this paper establishing it. Attitude control on this aircraft is therefore sized in every
-axis and closed in none of them, and that is the honest summary of its control case. The outstanding measurement is therefore of ordinary size. The claims
+axis and closed in none of them, and that is the honest summary of its control case. Yaw
+completes the picture and does so more favourably: because differential thrust between the
+left and right tip pairs acts through the semi-span rather than the frame length, yaw is the
+strongest axis the arrangement has, at 2.4 times the pitch moment. What yaw lacks is not
+authority but stability — the planform's weathercock derivative is zero — and the surfaces
+that must supply it are the tip-frame fairings, which the paper had until now treated purely
+as a drag measure. That the same member serves as landing structure, moment arm, propeller
+mount and directional stability surface is the configuration's own argument made once more;
+that none of the four roles has been verified together is its principal limitation. The outstanding measurement is therefore of ordinary size. The claims
 most exposed are identified in Section 8. An earlier version of this section stated that
 none of the remaining analyses required an experiment; that is no longer true, and the
 change is the most important thing this study learned about itself. Transition
