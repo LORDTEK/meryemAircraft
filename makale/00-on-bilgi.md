@@ -33,8 +33,9 @@ proposed — an uncrewed tail-sitting blended-wing body in which one coaxial
 counter-rotating pair at the nose produces all thrust in both regimes, four small coaxial
 pairs at the wing tips produce attitude moments only, and a deployable strip in the
 nose-propeller slipstream supplies the rolling moment that body-axis-parallel thrust
-vectors cannot generate. The aircraft has no control
-surfaces, no tilting or retraction mechanism and no dedicated lift system. Sizing the
+vectors cannot generate. The aircraft has no elevons and no rudder, no tilting or
+retraction mechanism and no dedicated lift system; the strip is its only moving
+aerodynamic device. Sizing the
 same mission three ways, on one set of equations calibrated from the proposed design
 itself, closes it at forty-two percent lower take-off mass and seventeen percent greater
 range than a lift-plus-cruise layout, on measured drag; against a tilting layout the
@@ -49,7 +50,8 @@ with rotation time rather than rising with it. The study
 is largely analytical, with no wind-tunnel or flight validation; a component mass build-up
 closes the light design conditionally and does not close the heavy one, and the tip
 propellers are shown to be able to turn the aircraft's rotational inertia through the
-transition, though not yet its aerodynamic moment. The two aerodynamic coefficients that carry the most weight are not replaced by
+transition but not, on present evidence, its aerodynamic moment, which sets a threshold
+that makes the rotation a low-dynamic-pressure manoeuvre. The two aerodynamic coefficients that carry the most weight are not replaced by
 computation but bounded by it — the zero-lift drag by a three-dimensional solution
 reported with a measured uncertainty budget.
 

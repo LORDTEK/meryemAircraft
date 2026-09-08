@@ -308,16 +308,38 @@ entirely:
 | Light design | 0.172 | 0.076 | 0.043 | 0.019 |
 | Heavy design | 0.186 | 0.083 | 0.047 | 0.021 |
 
-Post-stall pitching-moment coefficients on swept planforms at high incidence are routinely
-of order 0.1 to 0.3. **The aerodynamic term is therefore likely to be the larger of the two
-and possibly much larger, and the inertial margins reported above are not evidence that the
-manoeuvre closes.** They are evidence only that it is not ruled out by inertia. What the
-table above provides is the threshold a future measurement must be compared against, in the
-same spirit as the shell areal density of Section 6.7: the paper does not predict the
-number, it states what value would break the design.
+No configuration-specific value is assumed here, and none is available. Published post-stall
+pitching-moment coefficients for swept planforms are commonly of order 0.1 to 0.3, which is
+quoted only to establish that the thresholds above are not obviously negligible — not as an
+estimate for this aircraft. **The inertial margins reported above are therefore not evidence
+that the manoeuvre closes.** They are evidence only that it is not ruled out by inertia.
+
+**The table has an architectural reading, and it is the more useful one.** The threshold
+falls as the square of airspeed: an aerodynamic moment that is comfortably survivable at
+10 m s⁻¹ consumes the entire margin by 20. The rotation must therefore be performed at low
+dynamic pressure — close to hover, and certainly not at cruise speed. This is not a
+limitation discovered after the fact but a constraint the configuration was already obeying:
+Section 7.2 begins the transition in the hover-like condition for reasons of thrust margin,
+and Section 7.4 finds that a slower rotation entered in a climb is better than a fast one.
+Both of those now have a second justification. Stated as a design rule: **the tail-sitting
+transition is a low-dynamic-pressure manoeuvre by necessity, and any variant of this
+configuration that attempts to rotate at speed requires either a measured C_m(α) or a
+control surface.**
+
+**What a future measurement must show.** The threshold makes the requirement testable
+rather than open-ended, in the same way the shell areal density of Section 6.7 does. The
+paper does not predict the pitching-moment coefficient; it states the value that would
+break the design. A wind-tunnel or high-fidelity computational campaign validating this
+configuration's transition must show that the net opposing pitching-moment coefficient
+through the rotation stays below approximately 0.08 at the mid-transition airspeeds of the
+reference designs, or else that the rotation is confined to airspeeds low enough for the
+threshold it must beat to rise above the measured value. Nothing else in this paper is
+carried by that number, and nothing here should be read as a demonstration of transition
+authority.
 
 This makes transition controllability, not the mass budget, the largest unresolved item in
 this study. Answering it needs pitching-moment coefficients through ninety degrees of
 incidence for this planform, which requires a wind tunnel or a dedicated unsteady
-computational campaign, and neither is within the scope of this paper. Nothing here should
-be read as a demonstration of transition authority.
+computational campaign; a reduced computation would substitute a less-validated model for
+the dominant missing term, which is precisely what should not be done with a dominant term,
+and neither the full campaign nor an experiment is within the scope of this paper.
