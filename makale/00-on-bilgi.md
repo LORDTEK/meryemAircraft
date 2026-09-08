@@ -6,7 +6,7 @@
 
 ## Title
 
-**Eliminating the Cruise-Efficiency Penalty of Hybrid VTOL: The meryemAircraft
+**Reducing the Cruise-Efficiency Penalty of Hybrid VTOL: The meryemAircraft
 Tail-Sitting Blended-Wing-Body Configuration with Propeller-Only Control**
 
 ## Authors
@@ -34,7 +34,12 @@ counter-rotating pair at the nose produces all thrust in both regimes, four smal
 pairs at the wing tips produce attitude moments only, and a deployable strip in the
 nose-propeller slipstream supplies the rolling moment that body-axis-parallel thrust
 vectors cannot generate. The aircraft has no control
-surfaces, no tilting or retraction mechanism and no dedicated lift system. Two reference
+surfaces, no tilting or retraction mechanism and no dedicated lift system. Sizing the
+same mission three ways, on one set of equations calibrated from the proposed design
+itself, closes it at forty-two percent lower take-off mass and seventeen percent greater
+range than a lift-plus-cruise layout, on measured drag; against a tilting layout the
+comparison is conditional on a cruise-drag penalty that was not measured, and no
+superiority over that family is claimed. Two reference
 designs are sized twenty times apart in mass, at 50 kg and 1000 kg, from identical
 equations, with the governing fractions preserved across that range. Two findings
 changed the study: the tip frames must be faired, and transition altitude loss falls

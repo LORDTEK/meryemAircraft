@@ -1,8 +1,8 @@
-# Eliminating the Cruise-Efficiency Penalty of Hybrid VTOL: The meryemAircraft Tail-Sitting Blended-Wing-Body Configuration with Propeller-Only Control
+# Reducing the Cruise-Efficiency Penalty of Hybrid VTOL: The meryemAircraft Tail-Sitting Blended-Wing-Body Configuration with Propeller-Only Control
 
 Meryem Gülmen, Berke Gülmen, Ömer Gülmen
 
-**Abstract.** Hybrid vertical take-off and landing (VTOL) aircraft combine runway independence with wing-borne cruise, but purchase that combination at a cost to cruise efficiency. This paper argues the cost is architectural rather than a defect of implementation. It is charged in three currencies — the mass of hover hardware carried through cruise, its drag when exposed in cruise, and a power system sized by a condition holding for roughly two percent of the flight — and every known remedy reduces one currency by increasing another. Stating the cost this way makes its escape condition explicit: it is charged whenever hover and cruise are served by hardware that is not the same hardware, in the same orientation, doing the same job. A configuration satisfying that condition is proposed — an uncrewed tail-sitting blended-wing body in which one coaxial counter-rotating pair at the nose produces all thrust in both regimes, four small coaxial pairs at the wing tips produce attitude moments only, and a deployable strip in the nose-propeller slipstream supplies the rolling moment that body-axis-parallel thrust vectors cannot generate. The aircraft has no control surfaces, no tilting or retraction mechanism and no dedicated lift system. Two reference designs are sized twenty times apart in mass, at 50 kg and 1000 kg, from identical equations, with the governing fractions preserved across that range. Two findings changed the study: the tip frames must be faired, and transition altitude loss falls with rotation time rather than rising with it. The study is largely analytical, with no wind-tunnel or flight validation, and the mass budget is a target. The two aerodynamic coefficients that carry the most weight are not replaced by computation but bounded by it — the zero-lift drag by a three-dimensional solution reported with a measured uncertainty budget.
+**Abstract.** Hybrid vertical take-off and landing (VTOL) aircraft combine runway independence with wing-borne cruise, but purchase that combination at a cost to cruise efficiency. This paper argues the cost is architectural rather than a defect of implementation. It is charged in three currencies — the mass of hover hardware carried through cruise, its drag when exposed in cruise, and a power system sized by a condition holding for roughly two percent of the flight — and every known remedy reduces one currency by increasing another. Stating the cost this way makes its escape condition explicit: it is charged whenever hover and cruise are served by hardware that is not the same hardware, in the same orientation, doing the same job. A configuration satisfying that condition is proposed — an uncrewed tail-sitting blended-wing body in which one coaxial counter-rotating pair at the nose produces all thrust in both regimes, four small coaxial pairs at the wing tips produce attitude moments only, and a deployable strip in the nose-propeller slipstream supplies the rolling moment that body-axis-parallel thrust vectors cannot generate. The aircraft has no control surfaces, no tilting or retraction mechanism and no dedicated lift system. Sizing the same mission three ways, on one set of equations calibrated from the proposed design itself, closes it at forty-two percent lower take-off mass and seventeen percent greater range than a lift-plus-cruise layout, on measured drag; against a tilting layout the comparison is conditional on a cruise-drag penalty that was not measured, and no superiority over that family is claimed. Two reference designs are sized twenty times apart in mass, at 50 kg and 1000 kg, from identical equations, with the governing fractions preserved across that range. Two findings changed the study: the tip frames must be faired, and transition altitude loss falls with rotation time rather than rising with it. The study is largely analytical, with no wind-tunnel or flight validation, and the mass budget is a target. The two aerodynamic coefficients that carry the most weight are not replaced by computation but bounded by it — the zero-lift drag by a three-dimensional solution reported with a measured uncertainty budget.
 
 **Keywords:** vertical take-off and landing; tail-sitter; blended wing body; uncrewed aerial vehicle; series hybrid propulsion; cruise efficiency; aircraft configuration design
 
@@ -896,6 +896,106 @@ configuration does not escape physics; it declines a particular trade. What it p
 instead is smaller, and — this is the part that matters for scaling — it does not grow
 faster than the aircraft.
 
+
+## 5.5 A comparative sizing of three architectures
+
+Sections 5.1 to 5.4 argue that a particular configuration declines a particular trade.
+That argument is made against the general statement of the tax in Section 3, not against
+any competing aircraft, and an argument of that shape has a known weakness: it can be
+right about the mechanism and still be wrong about the outcome, because a rival
+architecture may pay the bills and recover more than it pays. The claim is therefore
+tested here by sizing the same mission three ways.
+
+**Method.** One set of equations is used for all three, and they are the equations of
+Section 6.1 — closed-loop mass, hover power from momentum theory, and a Breguet-type
+range:
+
+$$\mathrm{MTOW} = \frac{m_\text{payload}}{1 - f_\text{empty} - f_\text{fuel}}, \qquad
+P_\text{hover} = \frac{W^{3/2}}{\eta_h \sqrt{2\rho A}}, \qquad
+R = \frac{f_\text{fuel}\, E^{*} \eta_\text{chain}}{g}\,\frac{L}{D}$$
+
+The propulsion-chain mass is not a fixed fraction. It is split into a part proportional
+to take-off mass and a part proportional to installed power, because a fixed fraction
+would make the third bill invisible by construction. Installed power depends on take-off
+mass and take-off mass depends on installed power, so the system is closed by fixed-point
+iteration.
+
+**Calibration.** Every coefficient is back-solved from the light reference design of
+Section 6.2 rather than assumed: a hover figure of merit of 0.599 from 10.9 kW at 50 kg,
+a cruise propulsive efficiency of 0.721 from 1.7 kW at L/D 12, an engine rating margin of
+1.53, and a power-independent propulsion fraction of 0.108 given an assumed 1.0 kW kg⁻¹
+for a small engine and generator. The model must then reproduce the design it was
+calibrated from, and it does — take-off mass, propulsion fraction, engine rating,
+lift-to-drag ratio, range and hover power all within 0.1 percent. Run at the heavy design
+point without retuning, it predicts 1 037 kg against 1 000 kg and 1 813 km against
+1 814 km; the one term that does not carry across is the engine rating margin, discussed
+in Section 8.13.
+
+**What differs between the architectures.** Mission, wing loading, disc loading, fuel
+fraction, structural fraction, avionics fraction and energy chain are held identical.
+Only three things change, and each is either a measurement quoted elsewhere in this paper
+or an openly swept parameter:
+
+| | Cruise L/D multiplier | Architecture-specific mass | Source |
+|---|---|---|---|
+| A — tail-sitter | 1 / 1.12 | — | Section 5.2, tip-frame drag |
+| B — lift + cruise | 13 / 17 | second propulsion group, swept | Section 3.3, wind tunnel |
+| C — tilt | 1.00 | tilt mechanism, swept | **assumed, not measured** |
+
+**Result.** With the same buffered series-hybrid power system given to all three — which
+neutralises the third bill, and does so against the proposed configuration:
+
+| | Empty fraction | MTOW | L/D | Hover power | Range |
+|---|---:|---:|---:|---:|---:|
+| A — tail-sitter | 0.580 | 50.0 kg | 12.00 | 10.9 kW | 1 600 km |
+| B — lift + cruise | 0.689 | 86.0 kg | 10.28 | 18.7 kW | 1 370 km |
+| C — tilt | 0.624 | 60.3 kg | 13.44 | 13.1 kW | 1 792 km |
+
+Against lift-plus-cruise the result is unambiguous and it is driven by measurement: the
+same mission closes at seventy-two percent higher take-off mass and fourteen percent
+lower range, and the drag term behind it is a wind-tunnel result, not an assumption.
+Giving the lift-plus-cruise layout the additional structural fraction that distributed
+lift is generally held to require makes its mass worse still — 117 kg at four additional
+points of structure — without changing its range at all, so the comparison as tabulated
+is generous to it rather than the reverse.
+
+**Against tilt the result goes the other way, and the reason must be stated plainly.**
+The tilting layout closes lighter than lift-plus-cruise and cruises twelve percent
+further than the proposed configuration. That outcome is not a finding. It follows from
+the multiplier of 1.00 in the table above, which credits the tilting layout with paying
+no cruise drag at all for its nacelles, pivots, actuators and hover-sized blades. Sweeping
+that multiplier shows exactly how much of the result it carries:
+
+| Tilt cruise-drag multiplier | 1.00 | 0.96 | 0.92 | 0.88 | 0.85 |
+|---|---:|---:|---:|---:|---:|
+| Range relative to the tail-sitter | +12.0 % | +7.5 % | +3.0 % | −1.4 % | −4.8 % |
+
+The sign changes at approximately 0.89 — which is, to two decimal places, the penalty the
+proposed configuration charges itself for its own tip frames, 1/1.12 = 0.893. The
+comparison therefore establishes a conditional and not a ranking: **a tilting layout
+falls behind the proposed configuration only if its mechanism costs at least as much
+cruise drag as the tip frames cost this one.** Whether it does was not measured, and
+nothing here should be read as claiming that it does.
+
+Two smaller points belong with that disclosure. The cruise propulsive efficiency is also
+shared with the tilting layout, which is generous, since a blade pitched for hover is not
+the blade one would choose for cruise; but range in the equation above does not contain
+propulsive efficiency, so the generosity falls entirely on mass — 60.3 kg becomes 62.7 kg
+at a fifteen percent efficiency penalty — and none of it on the range comparison. And a
+second table, in which each architecture is given its own power system with no buffer, is
+not reported as a fair comparison and should not be read as one: a real lift-plus-cruise
+aircraft hovers on batteries rather than on an engine sized for hover, so that table
+describes an unbuffered series hybrid and not the architecture it is labelled with.
+
+**What this comparison does and does not support.** It supports the claim that the
+proposed configuration avoids the mass and drag bills that a separate lift system pays,
+and it supports it with the paper's own measurements rather than by assertion. It does
+not support a claim of superiority over the tilting family, and the paper does not make
+one. The tilting family answers the same escape condition by a different route — the same
+hardware, reused, but reoriented by a mechanism — and the case for the configuration
+proposed here rests on reaching that reuse without the mechanism, together with its
+control and transition consequences, and not on out-cruising it.
+
 # 6. Reference designs at two scales
 
 A configuration argument is only as good as its willingness to become a number. This
@@ -1202,7 +1302,7 @@ target than a calculation whose weakest link, discussed in Section 8.4, is the
 treatment of a twenty-five percent thick centre body as a two-dimensional section.
 
 **A three-dimensional solution for the centre body.** The weakness just named has since
-been removed. Section 8.12 lists it first among the places these results should be
+been removed. Section 8.14 lists it first among the places these results should be
 attacked, and the calculation it asks for has now been carried out: a structured
 Reynolds-averaged solution over the planform of Section 4.2, at the cruise Reynolds
 number and at zero lift, resolving the wing and blended body as a three-dimensional
@@ -1686,7 +1786,43 @@ the last of these, it was removed rather than retained on a summary. No patent c
 was read in the original; the prior-art position stated here is that of an author survey,
 not of a professional search.
 
-## 8.12 What would change these conclusions
+## 8.12 The architecture comparison is conditional on one unmeasured number
+
+The comparative sizing of Section 5.5 settles the case against a separate lift system
+using measurements, and does not settle the case against a tilting mechanism at all. The
+tilting layout is credited there with paying no cruise drag for its nacelles, pivots and
+hover-pitched blades, because no measurement of that penalty was available to charge it
+with; on that credit it cruises twelve percent further than the configuration proposed
+here. The sign of that comparison reverses if the penalty exceeds roughly eleven percent
+of cruise drag, which is what the tip frames of this configuration cost it. The
+comparison is therefore reported as a conditional, and the reader should treat the
+tilting column as an upper bound on that architecture rather than as an estimate of it.
+
+Three further caveats sit under the same model. Wing loading and disc loading are held
+common across the three architectures, which is a controlled comparison and not a
+statement that each is at its own optimum. The structural fraction is likewise common,
+which is generous to the distributed-lift layout, since carrying power to the extremities
+is generally held to carry a structural penalty of its own; charging it makes that layout
+heavier without changing its range, so the direction of the result is unaffected. And the
+second table in that section, which gives each architecture its own unbuffered power
+system, is a bounding case rather than a fair comparison, for the reason given there.
+
+## 8.13 The engine rating margin is not consistent between the two reference designs
+
+The sizing model of Section 5.5, calibrated entirely on the light reference design,
+predicts the heavy one to within four percent in take-off mass and one tenth of a percent
+in range without a single coefficient being changed. One term does not carry across. The
+engine is rated at 2.6 kW against 1.7 kW of cruise electrical power in the light design,
+a margin of 1.53, and at 54.3 kW against 39.2 kW in the heavy one, a margin of 1.385 —
+ten percent apart, and nowhere justified in this paper. Carrying the light margin through
+to the heavy design overstates its engine by seventeen percent while leaving range and
+lift-to-drag ratio untouched. A larger generator and power electronics being relatively
+more efficient is a defensible reason for the difference, but it is a reason supplied
+after the fact; as the two designs stand, the margin is an undeclared choice rather than
+a scaling law, and the scale-invariance claimed in Section 6.4 should be read as holding
+for the mass and range fractions and not for this one.
+
+## 8.14 What would change these conclusions
 
 The results of this paper would be most efficiently attacked in four places, and they
 are listed so that they can be:

@@ -1,7 +1,7 @@
 # Makale İskeleti — v1
 
 **Başlık (karar verildi):**
-> Eliminating the Cruise-Efficiency Penalty of Hybrid VTOL:
+> Reducing the Cruise-Efficiency Penalty of Hybrid VTOL:
 > The meryemAircraft Tail-Sitting Blended-Wing-Body Configuration
 > with Propeller-Only Control
 
@@ -110,8 +110,14 @@ donanımı** kullanır.
   tamponundan karşılanır
 - **Ödenen bedel dürüstçe:** kumanda pervanelerinin ölü ağırlığı (askı gücünün
   %15'inden azı), uç iskeletlerinin sürüklemesi, ve geçiş manevrası
+- **5.5 — karşılaştırmalı boyutlandırma (eklendi 08.09.2026):** aynı görev, aynı
+  denklemler, üç mimari (kuyruk üstü / lift+cruise / tilt). Katsayılar 6.2'den geri
+  çözülüyor, model önce 6.2'yi %0,1 içinde yeniden üretiyor. Lift+cruise'a karşı
+  sonuç **ölçüme dayanıyor**; tilt'e karşı sonuç **ölçülmemiş tek bir varsayıma
+  koşullu** ve üstünlük iddia edilmiyor. Koşul 8.12'de, motor payı tutarsızlığı
+  8.13'te.
 
-*Uzunluk:* ~1,5 sayfa. **Makalenin ödeme noktası.**
+*Uzunluk:* ~2,5 sayfa. **Makalenin ödeme noktası.**
 
 ---
 
