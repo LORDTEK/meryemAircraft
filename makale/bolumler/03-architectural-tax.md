@@ -262,8 +262,9 @@ is the lift-to-drag ratio the airframe would have with no hover hardware exposed
 power of the power system. Each is dimensionless, each is zero for an aircraft that does not
 hover, and each is measurable for one that does.
 
-**The claim of Section 3.6 is that these three cannot be minimised independently.** The
-architectural moves available all move mass between them rather than removing it: retracting
+**The claim of Section 3.6 is that the same architectural choice need not minimise all
+three simultaneously.** The architectural moves available typically move cost between them
+rather than removing it: retracting
 the lift rotors reduces *f*₂ and raises *f*₁ by the retraction mechanism; tilting the
 propulsors reduces *f*₁ and *f*₂ together and introduces a mechanism whose mass and failure
 modes are the price; buffering the hover peak reduces *f*₃ and raises *f*₁ by the buffer.
@@ -271,7 +272,7 @@ Section 3.4 tabulates these transfers. The escape condition is the statement tha
 vanish simultaneously only when the hover and cruise hardware are the same hardware, in the
 same orientation, doing the same job, with the peak supplied from a buffer.
 
-**A consequence that can be tested against published work.** If the three are genuinely
+**A consequence that can be checked against published work.** If the three are genuinely
 separate currencies rather than three names for one quantity, then an architecture may be
 *best* in one and *worst* in another — in particular, the architecture with the highest
 cruise lift-to-drag ratio need not be the lightest. A single-metric comparison would not
@@ -287,6 +288,13 @@ lift-to-drag ratio — 13.44 against 12.00 — and is nonetheless twenty percent
 tail-sitter, because it carries a tilt mechanism that the tail-sitter does not. Best in
 *f*₂, worse in *f*₁. Two independent studies, different architecture sets, the same
 structure.
+
+Neither comparison validates the framework. Both are external consistency checks: the NASA
+study was carried out for other purposes and its numbers were not chosen to suit the
+argument here, and a framework that predicted the opposite ordering would be in difficulty
+against them. Corroboration of this kind raises confidence that the three charges are
+separable in practice; it does not establish that they are the only three, and nothing
+short of a broad survey of sized architectures could.
 
 **What the framework does not claim.** It does not predict the magnitude of any bill for an
 architecture that has not been sized; the fractions above must be computed or measured case

@@ -49,12 +49,26 @@ Doğrulanacaklar: AES&T, Journal of Aircraft (JCR vs Scopus çelişkisi
 var), Drones, Aerospace. Ayrıca **Drones'un Aims & Scope sayfasında
 deneysel doğrulama beklentisi** olup olmadığı.
 
-## 5. Dergi kararı — EN SON
+## 5. Dergi kararı — VERİLDİ: **Drones** (MDPI)
 
 Gerekçe: yeniden konumlandırma, hangi derginin doğru olduğunu
-değiştiriyor. Bugün üç değerlendirici üç ayrı dergi söyledi; bu,
-makalenin kimliğinin belirsiz olmasından kaynaklanıyor. Kimlik
-netleşince dergi sorusu da netleşir.
+değiştiriyordu. Konumlandırma öncesinde üç değerlendirici üç ayrı dergi
+söylüyordu; kimlik netleşince üçü de aynı yere geldi:
+
+- YZ1: 🥇 Drones, 🥈 Aerospace Science and Technology, 🥉 Journal of Aircraft
+- YZ5: "İlk gönderim hâlâ Drones. AES&T değil."
+- YZ3: "Dergi kararı: Drones."
+
+**Karar: ilk gönderim Drones'a.** Q1 (Scopus, Aerospace Engineering),
+MDPI, konfigürasyon çalışmalarına açık kapsam.
+
+**Bilinen risk, açıkça kaydediliyor.** Drones'un Aims & Scope sayfası,
+genel kuramsal uçak tasarımı için deneysel doğrulamayı *tavsiye
+ediyor* — zorunlu tutmuyor. Bu çalışmada deney yok. Riski azaltan
+şey, makalenin artık araç değil **çerçeve** merkezli olması: çerçeve
+bağımsız yayımlanmış bir boyutlandırma çalışmasına karşı tutarlılık
+sınamasından geçiyor (§3.7), ve araç bir vaka analizi olarak
+sunuluyor. Risk yine de gerçek; revizyonsuz kabul beklenmiyor.
 
 ## Sonraya bırakılanlar
 

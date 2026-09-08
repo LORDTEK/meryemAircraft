@@ -54,9 +54,11 @@ solution for the centre body, which narrowed the zero-lift drag without overturn
 a component build-up of the mass budget, which closes the light design point with 2.2 kg
 in hand provided the shell areal density stays at or below 1.78 kg m⁻² and does not close
 the heavy design at all, and a rotational check which shows the tip propellers can turn the aircraft's own inertia
-through the transition, with a margin of 2.08 at 50 kg and 2.05 at 1000 kg. That
+through the transition, with a margin of 1.49 at 50 kg and 1.57 at 1000 kg on the cheapest
+rotation profile — and of 0.99 and 1.05 on a smooth one, which is to say that both reference
+rotation times are actuator-limited lower bounds rather than comfortable choices. That
 second figure set the heavy design's rotation time: at the four seconds first used, the
-margin was 1.26 on the fastest profile and below unity on a smooth one, so the rotation was
+margin was below unity on both profiles, so the rotation was
 lengthened to 5.1 s, which costs six percent of hover power instead of thirteen and changes
 no other result. The fourth has not been carried
 out, and the third is a necessary condition only: charging the aerodynamic pitching moment
@@ -65,9 +67,13 @@ check does supply is a threshold, resolved along the trajectory, and resolving i
 question. The aircraft does not reach ninety degrees of incidence: the body rotates through
 ninety, but the relative wind rotates with it, and peak incidence is between seventeen and
 twenty-two degrees. The high-incidence part of the rotation happens at low dynamic pressure,
-where the margin tolerates a coefficient of 0.32 or more; the tight part is the end of the
-rotation, where incidence is small and speed is high, and that is a trim question rather than
-a post-stall one. The outstanding measurement is therefore of ordinary size. The claims
+where the margin tolerates a coefficient of about 0.21 entering in a climb; the tight part
+is the end of the rotation, where incidence is small and speed is high, and that is a trim
+question rather than a post-stall one. The trim question has since been sized rather than
+closed: the configuration is statically stable, with a neutral point at 34 percent of mean
+aerodynamic chord and a margin of 12.5 percent at the assumed centre of gravity, and the
+camber moment needed to trim it at cruise is 0.056, which is at the upper edge of what
+reflexed sections deliver. The outstanding measurement is therefore of ordinary size. The claims
 most exposed are identified in Section 8. An earlier version of this section stated that
 none of the remaining analyses required an experiment; that is no longer true, and the
 change is the most important thing this study learned about itself. Transition
