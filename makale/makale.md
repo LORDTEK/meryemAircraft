@@ -2,7 +2,7 @@
 
 Meryem Gülmen, Berke Gülmen, Ömer Gülmen
 
-**Abstract.** Hybrid vertical take-off and landing (VTOL) aircraft combine runway independence with wing-borne cruise and pay for it in cruise efficiency. This paper treats that cost as architectural rather than as a defect of implementation, and develops it as an accounting framework. The penalty is charged in three coupled currencies — the mass of hover hardware carried through cruise, its drag when exposed in cruise, and a power system sized by a condition holding for some two percent of the flight — and every remedy surveyed here reduces one by raising another. The escape condition is then explicit: the penalty is charged whenever hover and cruise are served by hardware that is not the same hardware, in the same orientation, doing the same job. A second result is methodological: architectural comparisons depend on the sizing contract chosen, and a fixed fuel fraction removes the mass bill from the range column altogether, so three contracts are reported rather than one. meryemAircraft, an uncrewed tail-sitting blended-wing body, satisfies the escape condition and serves as the case study: one coaxial pair at the nose gives all thrust in both regimes, four small pairs at the tips give attitude moments only, and a deployable strip is assigned the roll that body-parallel thrust cannot produce. Against a lift-plus-cruise layout, on wind-tunnel drag, it closes the same mission at forty-two percent lower take-off mass and seventeen percent greater range; against a tilting layout the comparison reverses between contracts and no superiority is claimed. A three-dimensional solution bounds the zero-lift drag with a measured uncertainty budget, and a component mass build-up closes the 50 kg design conditionally and not the 1000 kg one. The study is analytical, with no experimental validation of the configuration. The tip propellers can turn the aircraft's rotational inertia through the transition but not, on present evidence, its aerodynamic moment. Resolving that margin along the trajectory shows the aircraft never reaches ninety degrees of incidence — the relative wind rotates with the body — so the outstanding measurement is the pitching moment to some twenty-two degrees at low dynamic pressure, together with trim at cruise. A vortex-lattice solution establishes static pitch stability under a stated packaging rule and sizes the camber moment that trim requires without closing it. Roll is treated the same way: the inertia and the damping are computed for this planform, the moment needed for a twenty-degree-per-second roll follows from them, and the strip's effectiveness in supplying it is stated as a requirement rather than demonstrated. Attitude control is therefore sized throughout and closed nowhere. Transition controllability remains the principal open requirement and is stated as a threshold a future measurement must meet.
+**Abstract.** Hybrid vertical take-off and landing (VTOL) aircraft combine runway independence with wing-borne cruise and pay for it in cruise efficiency. This paper treats that cost as architectural rather than as a defect of implementation, and develops it as an accounting framework. The penalty is charged in three coupled currencies — the mass of hover hardware carried through cruise, its drag when exposed in cruise, and a power system sized by a condition holding for some two percent of the flight — and every remedy surveyed here reduces one by raising another. The escape condition is then explicit: the penalty is charged whenever hover and cruise are served by hardware that is not the same hardware, in the same orientation, doing the same job. A second result is methodological: architectural comparisons depend on the sizing contract chosen, and a fixed fuel fraction removes the mass bill from the range column altogether, so three contracts are reported rather than one. meryemAircraft, an uncrewed tail-sitting blended-wing body, satisfies the escape condition and serves as the case study: one coaxial pair at the nose gives all thrust in both regimes, four small pairs at the tips give attitude moments only, and a deployable strip is assigned the roll that body-parallel thrust cannot produce. Against a lift-plus-cruise layout, on wind-tunnel drag, it closes the same mission at forty-two percent lower take-off mass and seventeen percent greater range; against a tilting layout the comparison reverses between contracts and no superiority is claimed. A three-dimensional solution bounds the zero-lift drag with a measured uncertainty budget, and a component mass build-up closes the 50 kg design conditionally and not the 1000 kg one. The study is analytical, with no experimental validation of the configuration. The tip propellers can turn the aircraft's rotational inertia through the transition but not, on present evidence, its aerodynamic moment. Resolving that margin along the trajectory shows the aircraft never reaches ninety degrees of incidence — the relative wind rotates with the body — so the outstanding measurement is the pitching moment to some twenty-two degrees at low dynamic pressure, together with trim at cruise. A vortex-lattice solution establishes static pitch stability under a stated packaging rule and sizes the camber moment that trim requires without closing it. Roll is treated the same way: the inertia and the damping are computed for this planform, the moment needed for a twenty-degree-per-second roll follows from them, and the strip's effectiveness in supplying it is stated as a requirement rather than demonstrated. Yaw has the strongest authority of the three axes, because differential tip thrust acts through the semi-span, but the planform supplies no directional stability at all, so the tip-frame fairings must serve as the vertical surfaces as well as the drag measure they were introduced as. Attitude control is therefore sized in every axis and closed in none. Transition controllability remains the principal open requirement and is stated as a threshold a future measurement must meet.
 
 **Keywords:** vertical take-off and landing; tail-sitter; blended wing body; uncrewed aerial vehicle; series hybrid propulsion; cruise efficiency; aircraft configuration design
 
@@ -598,12 +598,17 @@ cruise efficiency of the group*, and the authors attribute the weight to hardwar
 hover rather than to cruise power. That is *f*₁ dominating while *f*₂ is favourable, which is
 the framework's prediction and not a restatement of it.
 
-The comparison of Section 5.5 reproduces the same pattern independently, on a different set
-of architectures: of the three sized there, the tilting layout has the best cruise
-lift-to-drag ratio — 13.44 against 12.00 — and is nonetheless twenty percent heavier than the
-tail-sitter, because it carries a tilt mechanism that the tail-sitter does not. Best in
-*f*₂, worse in *f*₁. Two independent studies, different architecture sets, the same
-structure.
+The comparison of Section 5.5 shows the same pattern on a different set of architectures:
+of the three sized there, the tilting layout has the best cruise lift-to-drag ratio — 13.44
+against 12.00 — and is nonetheless twenty percent heavier than the tail-sitter, because it
+carries a tilt mechanism that the tail-sitter does not. Best in *f*₂, worse in *f*₁. **That
+comparison is an illustration and not evidence, and the distinction matters here.** Its
+tilting layout is given a cruise-drag multiplier of 1.00 — that is, its mechanism is
+credited as aerodynamically free — precisely to make the *f*₂ advantage as large as the
+architecture could possibly claim. A comparison whose inputs were chosen by the present
+authors cannot corroborate the present authors' framework. **The evidential weight rests on
+the NASA study alone**, whose numbers were produced for another purpose and are not ours to
+choose; Section 5.5 shows what the framework looks like when applied, not that it is right.
 
 Neither comparison validates the framework. Both are external consistency checks: the NASA
 study was carried out for other purposes and its numbers were not chosen to suit the
@@ -767,12 +772,18 @@ free.
 
 [Figure 7 about here]
 
-Pitch and yaw follow immediately. Differential thrust between the upper and lower pairs
-produces a moment about one lateral axis; differential thrust between the left and
-right pairs produces a moment about the other. In hover these are the two axes the
-aircraft must control against disturbance; in cruise, with the airframe rotated through
-ninety degrees, the same four actuators address the same two axes with their roles
-exchanged. No actuator changes its function, its orientation, or its mounting.
+Pitch and yaw are produced by the same four actuators, but not with the same arm, and the
+difference has not previously been stated. Differential thrust between the upper and lower
+pairs produces a moment about the spanwise axis through the frame length, 0.71 m; differential
+thrust between the left and right pairs produces a moment about the remaining axis through the
+**semi-span, 1.726 m**. The yaw arm is therefore 2.43 times the pitch arm, and since the
+thrust available is the same, so is the moment: 55.9 N·m against 23.0 N·m at the quoted
+tip thrust, or 42.8 against 17.6 on the conservative thrust of Section 7.6. Yaw is the
+strongest axis this arrangement has, and it is strongest for a geometric reason rather than
+a designed one. In hover these are the two axes the aircraft must control against
+disturbance; in cruise, with the airframe rotated through ninety degrees, the same four
+actuators address the same two axes with their roles exchanged. No actuator changes its
+function, its orientation, or its mounting.
 
 Roll is different, and this is the one place where propellers alone are not sufficient.
 The result is elementary but decisive. Every propeller on this aircraft has its thrust
@@ -877,6 +888,40 @@ and at a hundred and fifty milliseconds by ±9.4°. The device is therefore usab
 fast and unusable if it is slow, and the threshold sits in a range where real actuators
 differ. That is a design requirement on the actuator, stated here for the first time. None
 of this is a closed-loop stability analysis, and none of it substitutes for one.
+
+**Yaw was examined last, and it separates cleanly into an easy half and an open half.** The
+easy half is authority. The yaw inertia computed from the same mass distribution is
+33.7 kg·m² — close, as it must be for a nearly planar aircraft, to the sum of the roll and
+pitch inertias — so the available yaw moment turns the aircraft's own inertia at 73 to 95
+degrees per second squared, reaching fifteen degrees of heading in about six tenths of a
+second. Nothing in this axis is short of moment.
+
+The open half is stability. A vortex-lattice solution of the planform at sideslip returns
+**C_n_β = 0**: the wing supplies no directional stability whatever, which is not a defect of
+the solution but the expected result for a planar surface with nothing to generate side
+force. Sweep gives this configuration its roll-due-to-sideslip — C_l_β = −0.045 per radian,
+a healthy value — and gives it no weathercock stability at all. The profile-drag
+contribution to yaw damping is likewise negligible, C_n_r = −0.0023, a time constant of over
+a minute.
+
+Directional stability must therefore come from the tip frames, which in cruise stand
+perpendicular to the wing plane above and below each tip and are the only vertical surfaces
+the aircraft has. Their mid-chord sits 0.879 m aft of the centre of gravity, so with a
+surface lift-curve slope of 4 per radian the side area needed is 0.058 m² for
+C_n_β = 0.03 and 0.097 m² for 0.05 — which, spread over the 2.84 m of combined frame
+length, is a fairing chord of 21 mm and 34 mm respectively. A faired strut of the 20 mm
+thickness assumed in Section 5.2 would have a chord of roughly 50 to 70 mm, so the
+requirement is comfortably inside what the fairing must be anyway.
+
+**That reframes the fairing, and the reframing is the substantive result of this
+subsection.** Section 5.2 introduced the fairing as a drag measure and computed the frame
+drag penalty on that basis. It is also, and not incidentally, the aircraft's directional
+stability surface and its principal source of yaw damping. The two roles are served by the
+same hardware — which is the same pattern the whole paper is about — but the paper had not
+noticed the second role, and the fairing's chord is consequently constrained from two
+directions rather than one. Neither the fin contribution nor the yaw damping it brings is
+computed here. **Yaw authority is sized; directional stability is a requirement placed on a
+component the design already carries.**
 
 The strip does one further thing that an ordinary aerodynamic surface cannot. Its
 inboard portion lies inside the slipstream of the nose propeller, where the dynamic
@@ -988,7 +1033,9 @@ One property of this cost is worth noting. The frame frontal area scales with th
 square of length, and so does the wing area, so under geometric scaling at equal cruise
 dynamic pressure the fraction is preserved. This bill does not grow with the aircraft.
 
-The drag coefficients used here are representative values for circular and faired sections at the relevant Reynolds number, and the frame cross-section has not yet been selected. The requirement to fair the frames is robust to that choice — the difference between a circular tube and a faired strut is not a matter of coefficient precision — but the twelve-percent figure is an estimate.
+The drag coefficients used here are representative values for circular and faired sections at the relevant Reynolds number, and the frame cross-section has not yet been selected. The requirement to fair the frames is robust to that choice — the difference between a circular tube and a faired strut is not a matter of coefficient precision — but the twelve-percent figure is an estimate. At the small cross-section Reynolds number of the light design, achieving a faired coefficient of order 0.15 is itself a design requirement rather than a guaranteed property of any faired shape.
+
+**The fairing is not only a drag measure, and Section 4.4 says why.** The frames are the only surfaces on this aircraft standing perpendicular to the wing plane, and the planform supplies no directional stability at all. The fairing is therefore also the vertical surface that provides it, and a chord of 21 to 34 mm over the combined frame length would deliver a weathercock derivative of 0.03 to 0.05 per radian. That is well inside the chord a 20 mm faired strut needs in any case, so the two requirements do not conflict — but the frame cross-section is now constrained from two directions, and a selection made on drag alone would be made on half the evidence.
 
 ## 5.3 Bill 3 — power system sizing: avoided for the engine, not for the electrical path
 
@@ -2304,6 +2351,14 @@ Several results depend on coefficients that were not computed for this geometry:
   is sized and not closed, in the same sense as cruise trim.** An earlier version of this
   paper quoted 46 N·m without stating the mechanism it came from; that number implies
   ΔC_L ≈ 0.20 and is not reproduced here as an authority.
+- The **directional stability** of the configuration. Section 4.4 computes C_n_β = 0 for
+  the planform — the wing supplies none — and shows that the tip-frame fairing must supply
+  it, at a chord well inside what the fairing needs for drag reasons. The fin contribution
+  itself is **not computed**, and neither is the yaw damping it would bring; the
+  profile-drag damping of the bare planform, C_n_r = −0.0023, is negligible. Yaw authority
+  is not in question — the yaw arm is the semi-span, so the available moment is 2.4 times
+  the pitch moment — but directional stability and yaw damping are a single open item
+  resting on a component whose section has not been selected.
 - The **roll actuator's speed** is a requirement this paper did not previously state. The
   on-off strip gives a bounded limit cycle of ±0.2° in bank at a fifty-millisecond
   deployment and ±9.4° at a hundred and fifty, so the device is usable if it is fast. No
@@ -2643,7 +2698,15 @@ per second at cruise requires 27.1 N·m, the strip's own force supplies about a 
 that, and the remainder must come from the change it makes to the half-wing's circulation —
 a requirement of ΔC_L ≈ 0.12 that published fence and Gurney data make plausible without
 this paper establishing it. Attitude control on this aircraft is therefore sized in every
-axis and closed in none of them, and that is the honest summary of its control case. The outstanding measurement is therefore of ordinary size. The claims
+axis and closed in none of them, and that is the honest summary of its control case. Yaw
+completes the picture and does so more favourably: because differential thrust between the
+left and right tip pairs acts through the semi-span rather than the frame length, yaw is the
+strongest axis the arrangement has, at 2.4 times the pitch moment. What yaw lacks is not
+authority but stability — the planform's weathercock derivative is zero — and the surfaces
+that must supply it are the tip-frame fairings, which the paper had until now treated purely
+as a drag measure. That the same member serves as landing structure, moment arm, propeller
+mount and directional stability surface is the configuration's own argument made once more;
+that none of the four roles has been verified together is its principal limitation. The outstanding measurement is therefore of ordinary size. The claims
 most exposed are identified in Section 8. An earlier version of this section stated that
 none of the remaining analyses required an experiment; that is no longer true, and the
 change is the most important thing this study learned about itself. Transition

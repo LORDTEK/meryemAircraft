@@ -124,12 +124,18 @@ power required for a given moment to roughly one fifth. The frames are structure
 is already needed for another reason, as Section 4.5 explains, so the arm is nearly
 free.
 
-Pitch and yaw follow immediately. Differential thrust between the upper and lower pairs
-produces a moment about one lateral axis; differential thrust between the left and
-right pairs produces a moment about the other. In hover these are the two axes the
-aircraft must control against disturbance; in cruise, with the airframe rotated through
-ninety degrees, the same four actuators address the same two axes with their roles
-exchanged. No actuator changes its function, its orientation, or its mounting.
+Pitch and yaw are produced by the same four actuators, but not with the same arm, and the
+difference has not previously been stated. Differential thrust between the upper and lower
+pairs produces a moment about the spanwise axis through the frame length, 0.71 m; differential
+thrust between the left and right pairs produces a moment about the remaining axis through the
+**semi-span, 1.726 m**. The yaw arm is therefore 2.43 times the pitch arm, and since the
+thrust available is the same, so is the moment: 55.9 N·m against 23.0 N·m at the quoted
+tip thrust, or 42.8 against 17.6 on the conservative thrust of Section 7.6. Yaw is the
+strongest axis this arrangement has, and it is strongest for a geometric reason rather than
+a designed one. In hover these are the two axes the aircraft must control against
+disturbance; in cruise, with the airframe rotated through ninety degrees, the same four
+actuators address the same two axes with their roles exchanged. No actuator changes its
+function, its orientation, or its mounting.
 
 Roll is different, and this is the one place where propellers alone are not sufficient.
 The result is elementary but decisive. Every propeller on this aircraft has its thrust
@@ -234,6 +240,40 @@ and at a hundred and fifty milliseconds by ±9.4°. The device is therefore usab
 fast and unusable if it is slow, and the threshold sits in a range where real actuators
 differ. That is a design requirement on the actuator, stated here for the first time. None
 of this is a closed-loop stability analysis, and none of it substitutes for one.
+
+**Yaw was examined last, and it separates cleanly into an easy half and an open half.** The
+easy half is authority. The yaw inertia computed from the same mass distribution is
+33.7 kg·m² — close, as it must be for a nearly planar aircraft, to the sum of the roll and
+pitch inertias — so the available yaw moment turns the aircraft's own inertia at 73 to 95
+degrees per second squared, reaching fifteen degrees of heading in about six tenths of a
+second. Nothing in this axis is short of moment.
+
+The open half is stability. A vortex-lattice solution of the planform at sideslip returns
+**C_n_β = 0**: the wing supplies no directional stability whatever, which is not a defect of
+the solution but the expected result for a planar surface with nothing to generate side
+force. Sweep gives this configuration its roll-due-to-sideslip — C_l_β = −0.045 per radian,
+a healthy value — and gives it no weathercock stability at all. The profile-drag
+contribution to yaw damping is likewise negligible, C_n_r = −0.0023, a time constant of over
+a minute.
+
+Directional stability must therefore come from the tip frames, which in cruise stand
+perpendicular to the wing plane above and below each tip and are the only vertical surfaces
+the aircraft has. Their mid-chord sits 0.879 m aft of the centre of gravity, so with a
+surface lift-curve slope of 4 per radian the side area needed is 0.058 m² for
+C_n_β = 0.03 and 0.097 m² for 0.05 — which, spread over the 2.84 m of combined frame
+length, is a fairing chord of 21 mm and 34 mm respectively. A faired strut of the 20 mm
+thickness assumed in Section 5.2 would have a chord of roughly 50 to 70 mm, so the
+requirement is comfortably inside what the fairing must be anyway.
+
+**That reframes the fairing, and the reframing is the substantive result of this
+subsection.** Section 5.2 introduced the fairing as a drag measure and computed the frame
+drag penalty on that basis. It is also, and not incidentally, the aircraft's directional
+stability surface and its principal source of yaw damping. The two roles are served by the
+same hardware — which is the same pattern the whole paper is about — but the paper had not
+noticed the second role, and the fairing's chord is consequently constrained from two
+directions rather than one. Neither the fin contribution nor the yaw damping it brings is
+computed here. **Yaw authority is sized; directional stability is a requirement placed on a
+component the design already carries.**
 
 The strip does one further thing that an ordinary aerodynamic surface cannot. Its
 inboard portion lies inside the slipstream of the nose propeller, where the dynamic

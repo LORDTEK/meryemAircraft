@@ -68,7 +68,9 @@ One property of this cost is worth noting. The frame frontal area scales with th
 square of length, and so does the wing area, so under geometric scaling at equal cruise
 dynamic pressure the fraction is preserved. This bill does not grow with the aircraft.
 
-The drag coefficients used here are representative values for circular and faired sections at the relevant Reynolds number, and the frame cross-section has not yet been selected. The requirement to fair the frames is robust to that choice — the difference between a circular tube and a faired strut is not a matter of coefficient precision — but the twelve-percent figure is an estimate.
+The drag coefficients used here are representative values for circular and faired sections at the relevant Reynolds number, and the frame cross-section has not yet been selected. The requirement to fair the frames is robust to that choice — the difference between a circular tube and a faired strut is not a matter of coefficient precision — but the twelve-percent figure is an estimate. At the small cross-section Reynolds number of the light design, achieving a faired coefficient of order 0.15 is itself a design requirement rather than a guaranteed property of any faired shape.
+
+**The fairing is not only a drag measure, and Section 4.4 says why.** The frames are the only surfaces on this aircraft standing perpendicular to the wing plane, and the planform supplies no directional stability at all. The fairing is therefore also the vertical surface that provides it, and a chord of 21 to 34 mm over the combined frame length would deliver a weathercock derivative of 0.03 to 0.05 per radian. That is well inside the chord a 20 mm faired strut needs in any case, so the two requirements do not conflict — but the frame cross-section is now constrained from two directions, and a selection made on drag alone would be made on half the evidence.
 
 ## 5.3 Bill 3 — power system sizing: avoided for the engine, not for the electrical path
 

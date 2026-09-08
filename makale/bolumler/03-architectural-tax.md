@@ -282,12 +282,17 @@ cruise efficiency of the group*, and the authors attribute the weight to hardwar
 hover rather than to cruise power. That is *f*₁ dominating while *f*₂ is favourable, which is
 the framework's prediction and not a restatement of it.
 
-The comparison of Section 5.5 reproduces the same pattern independently, on a different set
-of architectures: of the three sized there, the tilting layout has the best cruise
-lift-to-drag ratio — 13.44 against 12.00 — and is nonetheless twenty percent heavier than the
-tail-sitter, because it carries a tilt mechanism that the tail-sitter does not. Best in
-*f*₂, worse in *f*₁. Two independent studies, different architecture sets, the same
-structure.
+The comparison of Section 5.5 shows the same pattern on a different set of architectures:
+of the three sized there, the tilting layout has the best cruise lift-to-drag ratio — 13.44
+against 12.00 — and is nonetheless twenty percent heavier than the tail-sitter, because it
+carries a tilt mechanism that the tail-sitter does not. Best in *f*₂, worse in *f*₁. **That
+comparison is an illustration and not evidence, and the distinction matters here.** Its
+tilting layout is given a cruise-drag multiplier of 1.00 — that is, its mechanism is
+credited as aerodynamically free — precisely to make the *f*₂ advantage as large as the
+architecture could possibly claim. A comparison whose inputs were chosen by the present
+authors cannot corroborate the present authors' framework. **The evidential weight rests on
+the NASA study alone**, whose numbers were produced for another purpose and are not ours to
+choose; Section 5.5 shows what the framework looks like when applied, not that it is right.
 
 Neither comparison validates the framework. Both are external consistency checks: the NASA
 study was carried out for other purposes and its numbers were not chosen to suit the

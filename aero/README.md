@@ -1066,3 +1066,72 @@ Yani cihaz **hızlıysa kullanılabilir, yavaşsa değil**, ve eşik gerçek
 eyleyicilerin ayrıştığı bir bantta. Bu, makalenin daha önce hiç
 yazmadığı bir eyleyici gereksinimi. Kapalı çevrim kararlılık analizi
 DEĞİLDİR.
+
+---
+
+## `sapma.py` — SAPMA: OTORİTE BOL, KARARLILIK YOK (08.09.2026)
+
+Üç değerlendirmenin **üçü de** dondurmadan önce sapma eksenine bakılmasını
+istedi. Bakıldı ve eksen ikiye ayrıldı.
+
+### Kolay yarı: otorite
+
+- **I_zz = 33,706 kg·m²** (I_xx 25,010 + I_yy 9,813 = 34,823; uçak
+  neredeyse düzlemsel olduğu için yakın).
+- **Kol farkı, makalede hiç söylenmemiş:** yunuslama çerçeve boyundan
+  (0,71 m), sapma **yarı açıklıktan** (1,726 m) — yani **2,43 kat**.
+- Mevcut moment 55,9 N·m (16,2 N) / 42,8 N·m (temkinli 12,4 N);
+  yunuslamanınki 23,0 / 17,6. **Sapma, düzenin en güçlü ekseni.**
+- Atalet sınırı: 73–95°/s², 15° sapmaya 0,56–0,64 s.
+
+### Açık yarı: kararlılık
+
+Girdap kafes, yan kayma açısında **C_n_β = 0** veriyor. Hata değil:
+düzlemsel kanadın yanal kuvvet üretecek yüzeyi yok. Ok açısı
+**C_l_β = −0,0447/rad** veriyor — yani ok, *yalpa* kararlılığını
+sağlıyor, *sapma* kararlılığını sağlamıyor. Profil sürüklemesinden gelen
+sönümleme de ihmal edilebilir: **C_n_r = −0,0023**, τ = 68 s.
+
+**Demek ki yön kararlılığı uç çerçevelerinden gelmek zorunda** — seyirde
+kanat düzlemine dik duran tek yüzeyler onlar. Kol 0,879 m; a_f = 4 ile:
+
+| hedef C_n_β | gereken yanal alan | fairing veteri |
+|---|---|---|
+| 0,03 | 0,058 m² | **21 mm** |
+| 0,05 | 0,097 m² | **34 mm** |
+| 0,08 | 0,155 m² | 55 mm |
+
+20 mm kalınlıklı bir fairing'in veteri zaten 50–70 mm. Yani gereksinim
+rahatlıkla içeride.
+
+### ASIL BULGU
+
+**Fairing artık yalnızca bir sürükleme önlemi değil, aynı zamanda yön
+kararlılığı yüzeyi ve sapma sönümlemesinin ana kaynağı.** §5.2 onu
+sadece sürükleme kalemi olarak tanıtmıştı. Çerçeve kesiti artık iki
+yönden kısıtlı; yalnız sürüklemeye bakarak seçmek yarım kanıtla seçmek
+olurdu.
+
+Yatıştaki gibi: **otorite gösterilmiyor, boyutlandırılıyor.**
+
+---
+
+## §3.7 — kendi karşılaştırmamız kanıt değil, ÖRNEK (08.09.2026)
+
+YZ3'ün uyarısı: §5.5'in tilt hattına *cruise-drag çarpanı 1,00*
+veriliyor (mekanizma aerodinamik olarak bedava sayılıyor) ve sonra aynı
+karşılaştırma çerçevenin doğrulaması gibi kullanılıyorsa bu dairesel.
+
+Haklı. §3.7 düzeltildi: **kanıt ağırlığı yalnız NASA çalışmasında**;
+§5.5 çerçevenin uygulandığında neye benzediğini gösteren bir örnek.
+
+Not: tilt duyarlılığı **zaten** makalede vardı (§5.5'te çarpan taraması
+1,00/0,96/0,92/0,88, işaret değişimi ~0,89'da, ve "hiçbir yönde üstünlük
+iddiası yok" cümlesi). 10. tur metninde onu "denetlenmedi" diye
+listelemem hatalıydı.
+
+### CFD kontrolü (YZ3'ün küçük sorusu) — düzeltme gerekmedi
+
+Belirsizlik tablosunda başlangıç yayılımı zaten var (%4,3), simetri
+zaten seçim ölçütü olarak yazılı, ve `bl_E` "reference state" diliyle
+anılıyor. Dokunulmadı.
