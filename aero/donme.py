@@ -242,6 +242,23 @@ def en_kisa_tr(Iyy, T_cift, kol, aci=math.pi / 2, profil="yumusak"):
     return math.sqrt(kats * aci * Iyy / M)
 
 
+def aero_esigi(S, b, M_mevcut, M_gereken, hizlar=(10, 15, 20, 30)):
+    """Kalan payi TAM tuketecek yunuslama momenti katsayisi.
+
+    Aerodinamik momenti TAHMIN etmiyoruz -- C_m(alpha) verisi yok.
+    Bunun yerine kabuk alan yogunlugunda ise yarayan tekniğin aynisi:
+    hangi degerde tasarim kapanmaz, onu veriyoruz.
+
+        M_aero = q S c_ort C_m   ->   C_m_esik = (M_mevcut - M_ger)/(q S c_ort)
+    """
+    c = S / b
+    pay = M_mevcut - M_gereken
+    print("  ortalama veter %.3f m, aerodinamige kalan %.1f N m" % (c, pay))
+    print("  %-10s" % "V (m/s)" + "".join("%9.0f" % v for v in hizlar))
+    print("  %-10s" % "esik C_m" +
+          "".join("%9.3f" % (pay / (0.5 * RHO * v * v * S * c)) for v in hizlar))
+
+
 def olcek_davranisi(Iy_h, M_h, t_h, Iy_a, M_a, t_a):
     """Donme kontrol payi olcekle nasil degisiyor?
 
@@ -267,7 +284,11 @@ def olcek_davranisi(Iy_h, M_h, t_h, Iy_a, M_a, t_a):
     t_esit = t_h * math.sqrt(rI / rM)
     print("  hafif hattin PAYINI korumak icin agir hattin donme suresi: %.2f s"
           % t_esit)
-    print("  (tasarim %.1f s kullaniyor; bu yuzden payi daha dar)" % t_a)
+    print("  tasarim %.1f s kullaniyor -> %s"
+          % (t_a, "esitlenmis" if abs(t_a - t_esit) < 0.2
+             else "payi %s" % ("dar" if t_a < t_esit else "genis")))
+    print("  (agir hattin donme suresi ZATEN bu hesapla 4 s'den 5,1 s'ye")
+    print("   cikarildi; oran 0,61 idi, simdi 0,99)")
 
 
 if __name__ == "__main__":
@@ -277,11 +298,22 @@ if __name__ == "__main__":
     print()
     h = rapor("HAFIF 50 kg, t_r = 2 s", 50.0, 2.0, 10.9, 0.20, 0.71, 16.2, 335.0)
     print()
-    a = rapor("AGIR 1000 kg, t_r = 4 s", 1000.0, 4.0, 216.2, 0.67, 2.38, 0.0,
+    a = rapor("AGIR 1000 kg, t_r = 5.1 s", 1000.0, 5.1, 216.2, 0.67, 2.38, 0.0,
           0.0, olcek=3.3449, P_motor_kW=54.3, D_ana=5.40 / 3.3449,
           m_yakit=160.0, m_pil=40.0, m_faydali=260.0)
     print()
     print("=" * 74)
     print("OLCEK DAVRANISI -- olculen oranlardan")
     print("=" * 74)
-    olcek_davranisi(h["Iyy"], h["M_mev"], 2.0, a["Iyy"], a["M_mev"], 4.0)
+    olcek_davranisi(h["Iyy"], h["M_mev"], 2.0, a["Iyy"], a["M_mev"], 5.1)
+    print()
+    print("=" * 74)
+    print("AERODINAMIK MOMENT ESIGI -- payi tuketecek C_m")
+    print("=" * 74)
+    print("HAFIF:")
+    aero_esigi(1.98, 3.4528, h["M_mev"], h["M_ger"])
+    print("AGIR:")
+    aero_esigi(22.24, 11.55, a["M_mev"], a["M_ger"])
+    print()
+    print("  Ok kanatli planformlarda stall sonrasi C_m rutin olarak 0,1-0,3.")
+    print("  Yani aerodinamik terim buyuk olasilikla ATALETTEN BUYUK.")

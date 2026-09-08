@@ -1171,7 +1171,7 @@ the single most likely place for these numbers to be wrong.
 | Fuel | 160 kg |
 | **Endurance** | **12.6 h** |
 | **Range** | **1 814 km** |
-| Transition time | 4 s |
+| Transition time | 5.1 s |
 
 The heavy design has a longer range than the light one despite a shorter endurance.
 Both effects come from the same source: the larger aircraft cruises faster and, at a
@@ -1243,11 +1243,17 @@ available at all:
 |---:|---:|---:|
 | 2 s | 221.5 kW | 102 % |
 | 3 s | 65.6 kW | 30 % |
-| **4 s** | **27.7 kW** | **13 %** |
+| 4 s | 27.7 kW | 13 % |
 | 5 s | 14.2 kW | 7 % |
+| **5.1 s** | **13.4 kW** | **6 %** |
 
 **The rule is that a larger aircraft turns more slowly.** The heavy design rotates in
-four seconds, at thirteen percent of its hover power.
+5.1 seconds, at six percent of its hover power. That figure is not a round number chosen
+for convenience: Section 7.6 shows it is the rotation time at which the heavy design holds
+the same rotational control margin the light design holds at two seconds. An earlier
+version of this study used four seconds, at which the tip propellers must supply thirteen
+percent of hover power — nearly the whole of their allocation — and at which a smoothly
+commanded rotation does not close at all.
 
 This constraint is less costly than it first appears, and Section 7 explains why: a
 slower rotation does not lose more altitude but less, so the scaling penalty on
@@ -1742,16 +1748,17 @@ untouched: at an entry climb of 5 m s⁻¹ the loss is zero for all three profil
 design points and at every thrust-to-weight ratio tabulated, and it remains zero for the
 heavy design at 4.36 and 5.13 seconds. One cell moves materially and is flagged rather than
 smoothed: the heavy design at T/W = 1.2 and t_r = 4 s with no entry climb reads −1.4 m on
-the linear profile and −11.6 to −13.4 m on the realisable ones. That cell is not a
-reference condition — the reference profiles enter with climb — but the tables should be
-read as a kinematic parametric map rather than as achievable trajectories.
+the linear profile and −11.6 to −13.4 m on the realisable ones. That cell is a reference
+condition in neither respect — the reference profiles enter with climb, and the heavy
+rotation time has since been set at 5.1 s — but the tables should be read as a kinematic
+parametric map rather than as achievable trajectories.
 
 acquiring that climb rate is negligible: at T/W = 1.2 the vertical acceleration is
 (T/W − 1)g = 1.96 m s⁻², so five metres per second is reached in 2.6 s over 6.4 m of
 climb, and the kinetic energy involved is 625 J against a fuel energy of 103 kWh.
 
 **The reference profile is therefore to enter the rotation at 5 m s⁻¹ of climb and
-rotate over the times given in Section 6 — two seconds for the light design, four for
+rotate over the times given in Section 6 — two seconds for the light design, 5.1 for
 the heavy — for no altitude loss at all.** The manoeuvre that the
 literature treats as the tail-sitter's characteristic hazard becomes, in this
 configuration, a manoeuvre with no altitude penalty — not because of any device, but
@@ -1829,13 +1836,23 @@ pair, and 952 N m for the heavy design, whose transition thrust is not quoted in
 | | Required, bang-bang | Required, smooth | Available | Margin, bang-bang | Margin, smooth |
 |---|---:|---:|---:|---:|---:|
 | Light, t_r = 2 s | 11.1 N m | 16.6 N m | 23.0 N m | **2.08 ×** | 1.39 × |
-| Heavy, t_r = 4 s | 753 N m | 1 130 N m | 952 N m | **1.26 ×** | **0.84 ×** |
+| Heavy, t_r = 5.1 s | 463 N m | 695 N m | 952 N m | **2.05 ×** | 1.37 × |
 
-**The heavy design's four-second rotation is feasible only on the cheapest profile.** A
-smooth command does not close at four seconds and needs 4.36 s; the bang-bang minimum is
-3.56 s. The light design is comfortable on either, at 1.39 s and 1.70 s respectively
-against its quoted two. This is a result about the reference transition time of Section 6.3
-and not only about the propellers: four seconds is a boundary rather than a margin.
+**This calculation set the heavy design's rotation time.** An earlier version of this
+study used four seconds, at which the margins are 1.26 and 0.84 — that is, feasible only on
+the cheapest profile and not at all on a smooth one, with a bang-bang minimum of 3.56 s and
+a smooth minimum of 4.36 s. Four seconds was a boundary rather than a margin. Lengthening
+the rotation to 5.1 s brings the heavy margins to 2.05 and 1.37, matching the light design's
+2.08 and 1.39, and costs nothing: Table 4 shows the tip-propeller power falling from
+thirteen percent of hover power to six, and the altitude-loss result of Section 7.4 is
+unchanged, remaining zero at every profile tested when the rotation is entered in a climb.
+The light design is comfortable at its quoted two seconds against minima of 1.39 s and
+1.70 s.
+
+This is also, in moment terms, what Table 4 of Section 6.4 already said in units of power:
+that four seconds consumed nearly the whole tip-propeller allocation. The two statements
+agree, and the present calculation adds the rotation profile, which Table 4 did not
+distinguish.
 
 The light figure depends on a thrust the paper quotes without a basis. At 335 W and 0.20 m
 diameter, 16.2 N implies a figure of merit of 0.702 with no coaxial interference loss,
@@ -1849,24 +1866,46 @@ earlier version of this section derived a scaling law by assuming geometric simi
 The two reference designs are not geometrically similar: span grows by a factor 3.345 while
 mass grows by twenty, and 3.345³ is 37.4, not 20 — the wing loading rises from 25.3 to
 45.0 kg m⁻² precisely because they are not. The ratios are therefore read from the two
-computed designs instead. Inertia grows by 272.5, available moment by 41.4; with the
-rotation slowed from two seconds to four, required moment grows by 68.1. The margin
-therefore falls to 0.61 of its light-design value — a thirty-nine percent narrowing — and
-holding it constant would have required a rotation time of 5.13 s rather than 4. Section
-7.4 already concluded that the larger aircraft must rotate more slowly; the quantitative
-form of that statement is that the design does not yet rotate slowly enough to keep the
-control margin it has at 50 kg.
+computed designs instead. Inertia grows by 272.5 while available moment grows by only 41.4,
+so the margin is preserved when required moment grows by the same 41.4 — which fixes the
+rotation time at 5.13 s, and is where the 5.1 s of Section 6.3 comes from. At the four
+seconds originally used, required moment grew by 68.1 and the margin fell to 0.61 of its
+light-design value, a thirty-nine percent narrowing. Section 7.4 already concluded that the
+larger aircraft must rotate more slowly; the quantitative form of that statement is that
+the rotation time must grow as the square root of the ratio of inertia growth to moment
+growth, and that setting it any faster spends control margin to buy nothing, since a slower
+rotation loses no more altitude.
 
-**What this does not establish.** The centre of pressure travels as the aircraft rotates
-through ninety degrees, and the pitching moment that travel produces is not computed here.
-This is a *necessary* condition and not a sufficient one: the margins above say that the
-propellers can turn the aircraft's own inertia, and say nothing about turning it against
-aerodynamic moment, which may help or hinder and is of unknown size. On a twenty-five
-percent thick blended body through ninety degrees of incidence it could plausibly be of the
-same order as the 23 N m available. Whether it consumes the margin is the question a
-six-degree-of-freedom simulation would answer, and it cannot be answered without moment
-data this study does not have. Nothing here should be read as a demonstration of
-transition authority.
+**What this does not establish, and how far short it falls.** The centre of pressure
+travels as the aircraft rotates through ninety degrees, and the pitching moment that travel
+produces is not computed here. This is a *necessary* condition and not a sufficient one:
+the margins above say the propellers can turn the aircraft's own inertia, and say nothing
+about turning it against aerodynamic moment, which may help or hinder and is of unknown
+size.
+
+How far short can be quantified, and the answer is not reassuring. The moment left over
+after the inertia is turned is 11.9 N m for the light design and 489 N m for the heavy one.
+Setting that against q S c̄ gives the pitching-moment coefficient that would consume it
+entirely:
+
+| Airspeed during the rotation | 10 m s⁻¹ | 15 m s⁻¹ | 20 m s⁻¹ | 30 m s⁻¹ |
+|---|---:|---:|---:|---:|
+| Light design | 0.172 | 0.076 | 0.043 | 0.019 |
+| Heavy design | 0.186 | 0.083 | 0.047 | 0.021 |
+
+Post-stall pitching-moment coefficients on swept planforms at high incidence are routinely
+of order 0.1 to 0.3. **The aerodynamic term is therefore likely to be the larger of the two
+and possibly much larger, and the inertial margins reported above are not evidence that the
+manoeuvre closes.** They are evidence only that it is not ruled out by inertia. What the
+table above provides is the threshold a future measurement must be compared against, in the
+same spirit as the shell areal density of Section 6.7: the paper does not predict the
+number, it states what value would break the design.
+
+This makes transition controllability, not the mass budget, the largest unresolved item in
+this study. Answering it needs pitching-moment coefficients through ninety degrees of
+incidence for this planform, which requires a wind tunnel or a dedicated unsteady
+computational campaign, and neither is within the scope of this paper. Nothing here should
+be read as a demonstration of transition authority.
 
 # 8. Limitations
 
@@ -2021,12 +2060,13 @@ sufficient one. It also records that the linear angle ramp used in Section 7.4 c
 produced by any finite moment, and reports the measured sensitivity of the altitude-loss
 tables to that choice.
 
-**One published number changes as a result.** The heavy reference design's four-second
-rotation, in Section 6.3, is feasible on the cheapest rest-to-rest profile with a margin of
-1.26 and is *not* feasible on a smooth one, which needs 4.36 s. Four seconds is therefore a
-boundary rather than a margin, and the heavy transition time should be read as the shortest
-rotation the tip propellers can force rather than as a comfortable design point. The light
-design is not close to its boundary: two seconds against a minimum of 1.39. The aerodynamic model is a linear lift curve to stall with a flat-plate relation
+**One published number changed as a result.** The heavy reference design's rotation time
+was four seconds, at which the margins are 1.26 on the cheapest profile and 0.84 on a
+smooth one — a boundary rather than a margin. It is now 5.1 s, the time at which the heavy
+design holds the light design's margins, and the change costs nothing: the tip-propeller
+power falls from thirteen percent of hover power to six, and the altitude-loss result is
+unchanged. The light design was never close to its boundary: two seconds against a minimum
+of 1.39. The aerodynamic model is a linear lift curve to stall with a flat-plate relation
 beyond it; dynamic stall, separation hysteresis and propeller-wake effects on the wing
 are absent.
 
@@ -2040,7 +2080,7 @@ lift-curve slope from the thin-aerofoil expression, 4.72 rad⁻¹; the vortex-la
 solution of Section 6.6 gives 3.87 rad⁻¹ for this planform — eighteen percent lower, and
 in the direction that would make the aircraft fall further. Repeating both tables with
 the lower value moves no published entry by more than 1.2 m, and the two reference
-profiles — two seconds for the light design, four for the heavy, entered at 5 m s⁻¹ of
+profiles — two seconds for the light design, 5.1 for the heavy, entered at 5 m s⁻¹ of
 climb — still lose no altitude at either slope. The conclusion of Section 7.4 survives an
 eighteen-percent error in the coefficient it rests on.
 
@@ -2206,7 +2246,10 @@ are listed so that they can be:
    the inertia from the component build-up and shows the tip propellers carry it with a
    margin of 2.08 at the light design point and 1.26 at the heavy one — the latter only on
    the cheapest rotation profile — together with a measured account of how that margin
-   narrows with size. What it cannot do is charge the
+   narrows with size, and a threshold: the pitching-moment coefficient that would consume
+   the remaining margin is 0.076 for the light design at 15 m s⁻¹, where post-stall values
+   on swept planforms are routinely several times that. **Transition controllability, not
+   the mass budget, is now the largest unresolved item in this study.** What it cannot do is charge the
    aerodynamic pitching moment, which requires moment coefficients through ninety degrees
    of incidence; those are not available for this planform and cannot be produced without
    a wind tunnel or a dedicated computational campaign. **This item is therefore reduced
@@ -2274,9 +2317,11 @@ solution for the centre body, which narrowed the zero-lift drag without overturn
 a component build-up of the mass budget, which closes the light design point with 2.2 kg
 in hand provided the shell areal density stays at or below 1.78 kg m⁻² and does not close
 the heavy design at all, and a rotational check which shows the tip propellers can turn the aircraft's own inertia
-through the transition, with a margin of 2.08 at 50 kg and 1.26 at 1000 kg — the heavy
-figure holding only for the fastest available rotation profile, which makes its
-four-second transition a boundary rather than a margin. The fourth has not been carried
+through the transition, with a margin of 2.08 at 50 kg and 2.05 at 1000 kg. That
+second figure set the heavy design's rotation time: at the four seconds first used, the
+margin was 1.26 on the fastest profile and below unity on a smooth one, so the rotation was
+lengthened to 5.1 s, which costs six percent of hover power instead of thirteen and changes
+no other result. The fourth has not been carried
 out, and the third is a necessary condition only: charging the aerodynamic pitching moment
 through ninety degrees of incidence needs measurements this study does not have. The claims most exposed are identified in Section 8, and none of the
 remaining analyses requires an experiment. The configuration is
