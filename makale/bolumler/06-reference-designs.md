@@ -504,9 +504,11 @@ before.** It must supply the difference between hover power and engine rating, 8
 the light design point, from 1.8 kg — a specific power of 4.6 kW kg⁻¹, or about 26 C at
 180 Wh kg⁻¹. Energy is not the binding constraint until roughly 140 seconds of hover, well
 beyond the profile of Section 7; below that the buffer is power-limited. The heavy design
-is in the same regime, 4.1 kW kg⁻¹ at 22 C. Cells capable of those discharge rates
-generally carry less energy per kilogram than 180 Wh kg⁻¹, which lowers the crossover
-further. The buffer masses used are therefore a cell-selection requirement rather than a
+is in the same regime, 4.1 kW kg⁻¹ at 22 C. That places the buffer in the high-power
+lithium-ion or lithium-polymer class — cells rated for twenty to thirty times their
+capacity in continuous discharge — rather than in the high-energy class a range-driven
+selection would reach for. Cells capable of those discharge rates generally carry less
+energy per kilogram than 180 Wh kg⁻¹, which lowers the crossover further. The buffer masses used are therefore a cell-selection requirement rather than a
 free parameter, and the requirement is a demanding one.
 
 | Group | Build-up | Assumed in 6.2 |

@@ -36,8 +36,8 @@ one.
 
 meryemAircraft, an uncrewed tail-sitting blended-wing body, satisfies the escape condition
 and serves as the case study: one coaxial pair at the nose gives all thrust in both
-regimes, four small pairs at the tips give attitude moments only, and a deployable strip
-gives the roll that body-parallel thrust cannot. Against a lift-plus-cruise layout, on
+regimes, four small pairs at the tips give attitude moments only, and a deployable strip is
+assigned the roll that body-parallel thrust cannot produce. Against a lift-plus-cruise layout, on
 wind-tunnel drag, it closes the same mission at forty-two percent lower take-off mass and
 seventeen percent greater range; against a tilting layout the comparison reverses between
 contracts and no superiority is claimed. A three-dimensional solution bounds the zero-lift
@@ -51,7 +51,10 @@ the aircraft never reaches ninety degrees of incidence — the relative wind rot
 body — so the outstanding measurement is the pitching moment to some twenty-two degrees at low
 dynamic pressure, together with trim at cruise. A vortex-lattice solution establishes static
 pitch stability under a stated packaging rule and sizes the camber moment that trim requires
-without closing it. Transition controllability remains the
+without closing it. Roll is treated the same way: the inertia and the damping are computed
+for this planform, the moment needed for a twenty-degree-per-second roll follows from them,
+and the strip's effectiveness in supplying it is stated as a requirement rather than
+demonstrated. Attitude control is therefore sized throughout and closed nowhere. Transition controllability remains the
 principal open requirement and is stated as a threshold a future measurement must meet.
 
 *[≈270 kelime. 200 isteyen dergide kesilecek ilk yer: ikinci paragrafın

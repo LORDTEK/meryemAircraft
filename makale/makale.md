@@ -2,7 +2,7 @@
 
 Meryem Gülmen, Berke Gülmen, Ömer Gülmen
 
-**Abstract.** Hybrid vertical take-off and landing (VTOL) aircraft combine runway independence with wing-borne cruise and pay for it in cruise efficiency. This paper treats that cost as architectural rather than as a defect of implementation, and develops it as an accounting framework. The penalty is charged in three coupled currencies — the mass of hover hardware carried through cruise, its drag when exposed in cruise, and a power system sized by a condition holding for some two percent of the flight — and every remedy surveyed here reduces one by raising another. The escape condition is then explicit: the penalty is charged whenever hover and cruise are served by hardware that is not the same hardware, in the same orientation, doing the same job. A second result is methodological: architectural comparisons depend on the sizing contract chosen, and a fixed fuel fraction removes the mass bill from the range column altogether, so three contracts are reported rather than one. meryemAircraft, an uncrewed tail-sitting blended-wing body, satisfies the escape condition and serves as the case study: one coaxial pair at the nose gives all thrust in both regimes, four small pairs at the tips give attitude moments only, and a deployable strip gives the roll that body-parallel thrust cannot. Against a lift-plus-cruise layout, on wind-tunnel drag, it closes the same mission at forty-two percent lower take-off mass and seventeen percent greater range; against a tilting layout the comparison reverses between contracts and no superiority is claimed. A three-dimensional solution bounds the zero-lift drag with a measured uncertainty budget, and a component mass build-up closes the 50 kg design conditionally and not the 1000 kg one. The study is analytical, with no experimental validation of the configuration. The tip propellers can turn the aircraft's rotational inertia through the transition but not, on present evidence, its aerodynamic moment. Resolving that margin along the trajectory shows the aircraft never reaches ninety degrees of incidence — the relative wind rotates with the body — so the outstanding measurement is the pitching moment to some twenty-two degrees at low dynamic pressure, together with trim at cruise. A vortex-lattice solution establishes static pitch stability under a stated packaging rule and sizes the camber moment that trim requires without closing it. Transition controllability remains the principal open requirement and is stated as a threshold a future measurement must meet.
+**Abstract.** Hybrid vertical take-off and landing (VTOL) aircraft combine runway independence with wing-borne cruise and pay for it in cruise efficiency. This paper treats that cost as architectural rather than as a defect of implementation, and develops it as an accounting framework. The penalty is charged in three coupled currencies — the mass of hover hardware carried through cruise, its drag when exposed in cruise, and a power system sized by a condition holding for some two percent of the flight — and every remedy surveyed here reduces one by raising another. The escape condition is then explicit: the penalty is charged whenever hover and cruise are served by hardware that is not the same hardware, in the same orientation, doing the same job. A second result is methodological: architectural comparisons depend on the sizing contract chosen, and a fixed fuel fraction removes the mass bill from the range column altogether, so three contracts are reported rather than one. meryemAircraft, an uncrewed tail-sitting blended-wing body, satisfies the escape condition and serves as the case study: one coaxial pair at the nose gives all thrust in both regimes, four small pairs at the tips give attitude moments only, and a deployable strip is assigned the roll that body-parallel thrust cannot produce. Against a lift-plus-cruise layout, on wind-tunnel drag, it closes the same mission at forty-two percent lower take-off mass and seventeen percent greater range; against a tilting layout the comparison reverses between contracts and no superiority is claimed. A three-dimensional solution bounds the zero-lift drag with a measured uncertainty budget, and a component mass build-up closes the 50 kg design conditionally and not the 1000 kg one. The study is analytical, with no experimental validation of the configuration. The tip propellers can turn the aircraft's rotational inertia through the transition but not, on present evidence, its aerodynamic moment. Resolving that margin along the trajectory shows the aircraft never reaches ninety degrees of incidence — the relative wind rotates with the body — so the outstanding measurement is the pitching moment to some twenty-two degrees at low dynamic pressure, together with trim at cruise. A vortex-lattice solution establishes static pitch stability under a stated packaging rule and sizes the camber moment that trim requires without closing it. Roll is treated the same way: the inertia and the damping are computed for this planform, the moment needed for a twenty-degree-per-second roll follows from them, and the strip's effectiveness in supplying it is stated as a requirement rather than demonstrated. Attitude control is therefore sized throughout and closed nowhere. Transition controllability remains the principal open requirement and is stated as a threshold a future measurement must meet.
 
 **Keywords:** vertical take-off and landing; tail-sitter; blended wing body; uncrewed aerial vehicle; series hybrid propulsion; cruise efficiency; aircraft configuration design
 
@@ -62,9 +62,11 @@ body, thrust for every flight phase is produced by a single coaxial counter-rota
 propeller pair at the nose, and attitude control is produced by four small coaxial
 pairs mounted on rigid frames at the wing tips. The aircraft has no elevons, no
 rudder, no tilting mechanism and no dedicated lift system. Roll authority, which
-cannot be generated by thrust vectors parallel to the body axis, is provided by a
+cannot be generated by thrust vectors parallel to the body axis, is assigned to a
 level-controlled deployable strip on the lower surface positioned within the main
-propeller slipstream, so that it remains effective at zero airspeed.
+propeller slipstream, so that it is loaded at zero airspeed. Section 4.4 computes the roll
+inertia and the roll damping of this planform and states the moment the strip must supply;
+it does not show that the strip supplies it.
 
 Because the same primary propulsor serves hover and cruise without changing its
 orientation relative to the airframe, none of the three penalties **as defined in
@@ -818,11 +820,63 @@ Its authority comes from its length, not its height. The moment scales with the 
 arm, whereas the benefit of additional height saturates: at constant length, doubling
 the height from 5 cm to 10 cm roughly doubles the roll rate, while extending the length
 from sixty to one hundred and twenty percent of root chord raises it almost fourfold.
-The estimated roll moment is approximately 46 N·m, giving a roll rate of the order of
-twenty to twenty-five degrees per second, or 1.2 to 1.5 seconds to a thirty-degree
-bank.
+This comparison is robust to how the strip's force is modelled, because the length enters
+both the affected area and the moment arm while the height enters only the first.
 
-These figures are order-of-magnitude estimates: the damping and control-effectiveness coefficients are taken from the literature rather than computed for this geometry. The length-versus-height conclusion is robust to that choice, because the proportional difference between the two is far larger than the uncertainty in the coefficients.
+**What the roll axis costs, and what it is opposed by, are computed here.** The roll axis
+had not been examined with the care given to pitch, and doing so separates a part that can
+be computed for this geometry from a part that cannot. Distributing the component masses of
+Section 6.7 by the same volume-weighted rule used for pitch gives a roll inertia of
+**25.0 kg·m²** — two and a half times the pitch inertia of 9.81 kg·m², because the mass is
+spread along the span rather than along the chord. Roll damping was then computed for this
+planform rather than taken from the literature: imposing the helix-angle twist
+θ(y) = −arctan(p y / V) on a vortex-lattice solution of the actual geometry gives a damping
+coefficient of magnitude **|C_l_p| = 0.358**, linear in roll rate to 0.4 rad s⁻¹ and
+converged to within 1.3 percent over a threefold resolution refinement. At the cruise
+condition this is a damping slope of 77.6 N·m per rad s⁻¹ and a roll time constant of
+**0.32 s**, so the roll response is damping-dominated within a third of a second and the
+steady rate, not the initial acceleration, is what a control moment buys.
+
+**The requirement follows, and it is a requirement rather than a demonstration.** A steady
+roll rate of twenty degrees per second at cruise needs **27.1 N·m**, and twenty-five degrees
+per second needs 33.9 N·m; time to a thirty-degree bank is then about 1.2 s. Whether the
+strip supplies that depends on which mechanism it works by, and the two candidates do not
+agree:
+
+| Mechanism | Rolling moment | Steady roll rate |
+|---|---:|---:|
+| The strip's own force, as a swept fence (C_N = 1.3, an upper bound) | 11.3 N·m | 8.4 ° s⁻¹ |
+| A change in the half-wing's circulation, ΔC_L = 0.10 | 22.4 N·m | 16.6 ° s⁻¹ |
+| the same, ΔC_L = 0.15 | 33.7 N·m | 24.8 ° s⁻¹ |
+| the same, ΔC_L = 0.20 | 44.9 N·m | 33.1 ° s⁻¹ |
+
+The strip's own force cannot produce the twenty to twenty-five degrees per second this
+configuration needs — it falls short by a factor of about three, and an earlier version of
+this paper quoted 46 N·m without saying where it came from. The moment must therefore come
+from the second mechanism: the strip changes the circulation of the half-wing it sits on,
+which is how a Gurney flap or a low fence works, and the affected area is the wing's, not
+the strip's. Twenty degrees per second then asks for **ΔC_L ≈ 0.12** over the strip's span.
+Chordwise fences and Gurney strips of one to two percent chord are reported to deliver 0.1
+to 0.3, so the requirement is a plausible one — but it is a requirement, taken from the
+literature on a different device, and this paper does not compute it for this geometry.
+**Roll authority is therefore sized here and not closed.**
+
+**Hover is the harder case, and for a reason that is structural rather than numerical.** At
+zero airspeed only the inboard part of the strip is loaded, by the slipstream, and the same
+circulation model over the slipstream-washed area gives 6.0 to 12.0 N·m for ΔC_L between
+0.10 and 0.20 — enough for a thirty-degree bank in 1.5 to 2.1 s. But at zero airspeed there
+is no aerodynamic damping at all: the roll axis is a double integrator, so the rate does not
+settle and the strip must be commanded off rather than left on. Roll control in hover is
+consequently a tighter problem than roll control in cruise, which is the reverse of the
+usual situation and is a consequence of this configuration rather than of its numbers.
+
+**Being an on-off device is not, by itself, disqualifying.** Simulating the first-order roll
+dynamics above with a deadband and a finite actuator delay gives a bounded limit cycle: with
+a two-degree deadband and a fifty-millisecond deployment the bank angle oscillates by ±0.2°,
+and at a hundred and fifty milliseconds by ±9.4°. The device is therefore usable if it is
+fast and unusable if it is slow, and the threshold sits in a range where real actuators
+differ. That is a design requirement on the actuator, stated here for the first time. None
+of this is a closed-loop stability analysis, and none of it substitutes for one.
 
 The strip does one further thing that an ordinary aerodynamic surface cannot. Its
 inboard portion lies inside the slipstream of the nose propeller, where the dynamic
@@ -1648,9 +1702,11 @@ before.** It must supply the difference between hover power and engine rating, 8
 the light design point, from 1.8 kg — a specific power of 4.6 kW kg⁻¹, or about 26 C at
 180 Wh kg⁻¹. Energy is not the binding constraint until roughly 140 seconds of hover, well
 beyond the profile of Section 7; below that the buffer is power-limited. The heavy design
-is in the same regime, 4.1 kW kg⁻¹ at 22 C. Cells capable of those discharge rates
-generally carry less energy per kilogram than 180 Wh kg⁻¹, which lowers the crossover
-further. The buffer masses used are therefore a cell-selection requirement rather than a
+is in the same regime, 4.1 kW kg⁻¹ at 22 C. That places the buffer in the high-power
+lithium-ion or lithium-polymer class — cells rated for twenty to thirty times their
+capacity in continuous discharge — rather than in the high-energy class a range-driven
+selection would reach for. Cells capable of those discharge rates generally carry less
+energy per kilogram than 180 Wh kg⁻¹, which lowers the crossover further. The buffer masses used are therefore a cell-selection requirement rather than a
 free parameter, and the requirement is a demanding one.
 
 | Group | Build-up | Assumed in 6.2 |
@@ -2080,7 +2136,16 @@ pitch, and it owes that to the sweep, which carries the neutral point aft faster
 carries the volume. All chord-referenced quantities here use the true mean aerodynamic chord,
 0.651 m; an earlier version of this section quoted the margin on the mean aerodynamic chord
 but the trim requirement on the mean geometric chord, 0.573 m, and the two are now on the
-same datum.
+same datum. Because that error was a mismatch of conventions rather than of arithmetic, the
+absence of a second one was checked rather than assumed: the two chains — centre of gravity
+to neutral point to static margin, and centre of gravity to aerodynamic moment to required
+trim coefficient — were tested for a common origin, a common sign convention, independence
+of dynamic pressure, and agreement between the coefficient route and a dimensional route
+that never forms a coefficient at all. All four hold; in particular W(x_np − x_cg) and
+C_L × (static margin) × q S c̄ give the same 39.82 N·m. Re-deriving the margin directly from
+the solver's moment about the centre of gravity, rather than from the neutral point, gives
+12.8 percent against the 12.5 quoted above; the 0.3-point spread is the curvature of the
+fitted lift-moment slope and is smaller than the spread across the centre-of-gravity window.
 
 **Trim is not shown. It is a requirement, and the requirement is quantified.** At the cruise
 lift coefficient of 0.45 the moment to be balanced about the centre of gravity has coefficient
@@ -2227,11 +2292,22 @@ sections.
 
 Several results depend on coefficients that were not computed for this geometry:
 
-- The **roll authority** of the lower-surface strip — approximately 46 N·m, or twenty to
-  twenty-five degrees per second — uses damping and control-effectiveness coefficients
-  taken from the literature. The order of magnitude is defensible; the value is not. The
-  length-versus-height conclusion is robust to the coefficient choice, because the
-  proportional difference between the two is far larger than the uncertainty.
+- The **roll authority** of the lower-surface strip. Section 4.4 now computes the two
+  halves of this that can be computed for this geometry — the roll inertia, 25.0 kg·m²,
+  and the roll damping, |C_l_p| = 0.358 from a vortex-lattice solution rather than from
+  the literature — and inverts the question: twenty degrees per second at cruise requires
+  27.1 N·m. What remains from the literature is the strip's own effectiveness, and it is
+  the load-bearing part. The strip's own force as a swept fence supplies about a third of
+  the required moment; the moment must therefore come from the change in the half-wing's
+  circulation, which asks for ΔC_L ≈ 0.12 over the strip's span. That figure is consistent
+  with published Gurney-flap and fence data but is not computed here, so **roll authority
+  is sized and not closed, in the same sense as cruise trim.** An earlier version of this
+  paper quoted 46 N·m without stating the mechanism it came from; that number implies
+  ΔC_L ≈ 0.20 and is not reproduced here as an authority.
+- The **roll actuator's speed** is a requirement this paper did not previously state. The
+  on-off strip gives a bounded limit cycle of ±0.2° in bank at a fifty-millisecond
+  deployment and ±9.4° at a hundred and fifty, so the device is usable if it is fast. No
+  closed-loop stability analysis has been carried out.
 - The **frame drag** of Section 5.2 uses C_D values representative of circular and faired
   sections at the relevant Reynolds number. **The frame cross-section has not been
   selected.** The conclusion that the frames must be faired is robust — the difference
@@ -2508,9 +2584,9 @@ job, in the same orientation. The configuration described here satisfies that co
 rather than compensating for failing it. The aircraft rotates; nothing on the aircraft
 rotates relative to it. A single coaxial pair at the nose provides all thrust in both
 regimes. Four small coaxial pairs at the wing tips provide moments and nothing else, and
-a strip on the lower surface closes the one gap that propellers cannot — the rolling
-moment, which parallel thrust vectors cannot produce at any thrust setting or mounting
-position. There are no elevons, no rudder, no tilting mechanism, no retraction mechanism
+a strip on the lower surface is assigned the one gap that propellers cannot close — the
+rolling moment, which parallel thrust vectors cannot produce at any thrust setting or
+mounting position, and which Section 4.4 sizes without demonstrating. There are no elevons, no rudder, no tilting mechanism, no retraction mechanism
 and no dedicated lift system.
 
 The configuration was sized at 50 kg and at 1000 kg using the same equations and the
@@ -2533,7 +2609,7 @@ surfaces available as lifting surfaces at no additional part or mass. And the tr
 does not behave as commonly assumed: a slower rotation loses *less* altitude, not more,
 because the aircraft is supported during the manoeuvre rather than falling through it —
 so entering the rotation while still climbing, rather than stopping to hover first,
-removes the altitude penalty entirely.
+removes the altitude penalty entirely in the point-mass model of Section 7.4.
 
 What this paper offers is a configuration and its numbers, not a validated aircraft.
 There is no wind-tunnel data here and no flight test. Two of the four analyses that
@@ -2561,7 +2637,13 @@ question rather than a post-stall one. The trim question has since been sized ra
 closed: the configuration is statically stable, with a neutral point at 34 percent of mean
 aerodynamic chord and a margin of 12.5 percent at the assumed centre of gravity, and the
 camber moment needed to trim it at cruise is 0.056, which is at the upper edge of what
-reflexed sections deliver. The outstanding measurement is therefore of ordinary size. The claims
+reflexed sections deliver. The roll axis was treated the same way and gave the same kind of
+answer: the roll inertia and the roll damping are computed for this planform, twenty degrees
+per second at cruise requires 27.1 N·m, the strip's own force supplies about a third of
+that, and the remainder must come from the change it makes to the half-wing's circulation —
+a requirement of ΔC_L ≈ 0.12 that published fence and Gurney data make plausible without
+this paper establishing it. Attitude control on this aircraft is therefore sized in every
+axis and closed in none of them, and that is the honest summary of its control case. The outstanding measurement is therefore of ordinary size. The claims
 most exposed are identified in Section 8. An earlier version of this section stated that
 none of the remaining analyses required an experiment; that is no longer true, and the
 change is the most important thing this study learned about itself. Transition

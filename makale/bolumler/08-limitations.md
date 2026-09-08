@@ -104,11 +104,22 @@ sections.
 
 Several results depend on coefficients that were not computed for this geometry:
 
-- The **roll authority** of the lower-surface strip — approximately 46 N·m, or twenty to
-  twenty-five degrees per second — uses damping and control-effectiveness coefficients
-  taken from the literature. The order of magnitude is defensible; the value is not. The
-  length-versus-height conclusion is robust to the coefficient choice, because the
-  proportional difference between the two is far larger than the uncertainty.
+- The **roll authority** of the lower-surface strip. Section 4.4 now computes the two
+  halves of this that can be computed for this geometry — the roll inertia, 25.0 kg·m²,
+  and the roll damping, |C_l_p| = 0.358 from a vortex-lattice solution rather than from
+  the literature — and inverts the question: twenty degrees per second at cruise requires
+  27.1 N·m. What remains from the literature is the strip's own effectiveness, and it is
+  the load-bearing part. The strip's own force as a swept fence supplies about a third of
+  the required moment; the moment must therefore come from the change in the half-wing's
+  circulation, which asks for ΔC_L ≈ 0.12 over the strip's span. That figure is consistent
+  with published Gurney-flap and fence data but is not computed here, so **roll authority
+  is sized and not closed, in the same sense as cruise trim.** An earlier version of this
+  paper quoted 46 N·m without stating the mechanism it came from; that number implies
+  ΔC_L ≈ 0.20 and is not reproduced here as an authority.
+- The **roll actuator's speed** is a requirement this paper did not previously state. The
+  on-off strip gives a bounded limit cycle of ±0.2° in bank at a fifty-millisecond
+  deployment and ±9.4° at a hundred and fifty, so the device is usable if it is fast. No
+  closed-loop stability analysis has been carried out.
 - The **frame drag** of Section 5.2 uses C_D values representative of circular and faired
   sections at the relevant Reynolds number. **The frame cross-section has not been
   selected.** The conclusion that the frames must be faired is robust — the difference

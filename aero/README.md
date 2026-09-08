@@ -966,3 +966,103 @@ diye değil.
 | §7.6 statik marj | %12,4 | **%12,5** |
 
 `dogrula.py`: 40 kontrol, 0 sapma.
+
+---
+
+## `kararlilik.py` — KONVANSIYON DENETIMI (08.09.2026)
+
+Referans veter hatasi bir *konvansiyon* hatasiydi, aritmetik degil.
+Ayni aileden ikincisinin OLMADIGINI varsaymak yetmez. Alti sinama
+eklendi; ucu dogrudan cozucuye soruluyor, biri boyutlu yoldan bagimsiz
+turetiliyor.
+
+| sinama | sonuc |
+|---|---|
+| baslangic noktasi ortak (kok hucum kenari) | GECTI, x_le = 0 |
+| isaret: kok LE'ye gore C_m(α>0) < 0 | GECTI, −0,357 |
+| x_ref = x_np'de dC_m/dC_L → 0 | GECTI, −0,004 (LE'de −1,319 idi) |
+| x_ref = x_cg'de dC_m/dC_L = −marj | GECTI, çözücü −0,128 / formül −0,125 |
+| C_m hıza bağımsız | GECTI, 20 ve 40 m/s aynı |
+| W(x_np−x_cg) = C_L·marj·q·S·MAC | GECTI, 39,824 N·m ↔ 39,824 N·m |
+
+**6 sınama, 0 kaldı.** Dördüncüdeki 0,003'lük fark eğrilikten: marj
+tarafsız noktadan türetilirse %12,5, çözücünün CG momentinden doğrudan
+türetilirse %12,8. Metne yazıldı.
+
+---
+
+## ⚠️ `yatis.py` — 46 N·m NEREDEN GELİYOR? (08.09.2026)
+
+YZ3 (9. tur) makalenin en zayıf **taşıyıcı** iddiasının denge değil
+**yatış** olduğunu söyledi. Haklıydı ve sayı tutmadı.
+
+### Hesaplanabilen kısım hesaplandı
+
+- **I_xx = 25,010 kg·m²** — yunuslama ataletinin (9,813) 2,5 katı,
+  çünkü kütle veterce değil açıklıkça yayılı. Yatış ekseni bugüne dek
+  hiç bakılmamıştı.
+- **|C_l_p| = 0,358** — literatürden değil, bu planformdan. Yöntem:
+  kanada helis açısı kadar burulma, θ(y) = −atan(p·y/V), ve doğan
+  moment. p'de doğrusal (0,1–0,4 rad/s'de %0,3 sapma), çözünürlükte
+  yakınsamış (0,3536–0,3631, %1,3).
+- seyirde sönümleme eğimi **77,6 N·m/(rad/s)**, zaman sabiti **0,32 s**.
+
+### Gereksinim tersine çevrildi
+
+| hedef | gereken moment |
+|---|---|
+| 20°/s | **27,1 N·m** |
+| 25°/s | 33,9 N·m |
+| §4.4'ün 46 N·m'si | → 34,0°/s |
+
+30° yatışa ~1,21 s çıkıyor; §4.4 "1,2–1,5 s" diyordu. **Bu tutuyor.**
+
+### BULGU — 46 N·m şeridin kendi kuvvetinden GELEMEZ
+
+Şerit, Şekil 8'in üretim betiğine göre planformda 45° köşegen bir çit
+(uzunluk 1,164 m, yükseklik 2→6 cm, alan 0,0466 m²). Oklu bir çit için
+normal kuvvet cos²(ok) ile ölçeklenir.
+
+| mekanizma | moment |
+|---|---|
+| şeridin kendi kuvveti, C_N = 1,3 (üst sınır) | **11,3 N·m** |
+| yarı kanadın dolaşımını değiştirmesi, ΔC_L = 0,10 | 22,4 N·m |
+| ΔC_L = 0,15 | 33,7 N·m |
+| ΔC_L = 0,20 | **44,9 N·m** ← 46'nın geldiği yer |
+
+46 N·m için gereken C_N **5,28** olurdu; akışa dik düz levha 1,1–1,3
+verir. Yani şeridin kendi sürüklemesi dört kat eksik.
+
+**Demek ki moment ikinci mekanizmadan geliyor** — şerit, üstünde
+durduğu yarı kanadın dolaşımını değiştiriyor (Gurney/çit etkisi), ve
+etkiyen alan şeridin değil **kanadın** alanı (0,8024 m²). Metin hangi
+mekanizmayı kastettiğini hiç söylemiyordu.
+
+20°/s için gereken **ΔC_L ≈ 0,12**. %1–2 veter Gurney şeritleri
+0,1–0,3 veriyor: **makul ama gösterilmiş değil.** Denge için ne
+yaptıysak (gereksinimi nicelemek, kapanışı iddia etmemek) burada da o
+yapıldı.
+
+### Asılı durum daha zor, ve sebebi sayısal değil yapısal
+
+V = 0'da **aerodinamik sönümleme yok** — yatış ekseni çift
+integratör. İz içindeki yarı kanat (0,4907 m², kol 0,282 m) ve
+q_iz = 433,7 N/m² ile ΔC_L 0,10–0,20 → 6,0–12,0 N·m → 30° yatışa
+1,5–2,1 s. Ama hız oturmuyor; şerit kapatılmak zorunda. Yani asılı
+durumda yatış kontrolü seyirdekinden DAHA sıkı bir problem — olağanın
+tersi.
+
+### Aç-kapa olmak tek başına diskalifiye değil
+
+Birinci mertebe dinamikte ölü bant + eyleyici gecikmesi:
+
+| ölü bant | gecikme | sınır çevrimi |
+|---|---|---|
+| 2° | 50 ms | ±0,2° |
+| 2° | 150 ms | **±9,4°** |
+| 5° | 50 ms | ±0,0° |
+
+Yani cihaz **hızlıysa kullanılabilir, yavaşsa değil**, ve eşik gerçek
+eyleyicilerin ayrıştığı bir bantta. Bu, makalenin daha önce hiç
+yazmadığı bir eyleyici gereksinimi. Kapalı çevrim kararlılık analizi
+DEĞİLDİR.

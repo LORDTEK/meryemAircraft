@@ -20,9 +20,9 @@ job, in the same orientation. The configuration described here satisfies that co
 rather than compensating for failing it. The aircraft rotates; nothing on the aircraft
 rotates relative to it. A single coaxial pair at the nose provides all thrust in both
 regimes. Four small coaxial pairs at the wing tips provide moments and nothing else, and
-a strip on the lower surface closes the one gap that propellers cannot — the rolling
-moment, which parallel thrust vectors cannot produce at any thrust setting or mounting
-position. There are no elevons, no rudder, no tilting mechanism, no retraction mechanism
+a strip on the lower surface is assigned the one gap that propellers cannot close — the
+rolling moment, which parallel thrust vectors cannot produce at any thrust setting or
+mounting position, and which Section 4.4 sizes without demonstrating. There are no elevons, no rudder, no tilting mechanism, no retraction mechanism
 and no dedicated lift system.
 
 The configuration was sized at 50 kg and at 1000 kg using the same equations and the
@@ -45,7 +45,7 @@ surfaces available as lifting surfaces at no additional part or mass. And the tr
 does not behave as commonly assumed: a slower rotation loses *less* altitude, not more,
 because the aircraft is supported during the manoeuvre rather than falling through it —
 so entering the rotation while still climbing, rather than stopping to hover first,
-removes the altitude penalty entirely.
+removes the altitude penalty entirely in the point-mass model of Section 7.4.
 
 What this paper offers is a configuration and its numbers, not a validated aircraft.
 There is no wind-tunnel data here and no flight test. Two of the four analyses that
@@ -73,7 +73,13 @@ question rather than a post-stall one. The trim question has since been sized ra
 closed: the configuration is statically stable, with a neutral point at 34 percent of mean
 aerodynamic chord and a margin of 12.5 percent at the assumed centre of gravity, and the
 camber moment needed to trim it at cruise is 0.056, which is at the upper edge of what
-reflexed sections deliver. The outstanding measurement is therefore of ordinary size. The claims
+reflexed sections deliver. The roll axis was treated the same way and gave the same kind of
+answer: the roll inertia and the roll damping are computed for this planform, twenty degrees
+per second at cruise requires 27.1 N·m, the strip's own force supplies about a third of
+that, and the remainder must come from the change it makes to the half-wing's circulation —
+a requirement of ΔC_L ≈ 0.12 that published fence and Gurney data make plausible without
+this paper establishing it. Attitude control on this aircraft is therefore sized in every
+axis and closed in none of them, and that is the honest summary of its control case. The outstanding measurement is therefore of ordinary size. The claims
 most exposed are identified in Section 8. An earlier version of this section stated that
 none of the remaining analyses required an experiment; that is no longer true, and the
 change is the most important thing this study learned about itself. Transition
