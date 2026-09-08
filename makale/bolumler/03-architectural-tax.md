@@ -221,7 +221,7 @@ seventy years of engineering effort has improved hybrid VTOL aircraft considerab
 without producing one whose cruise efficiency matches a comparable fixed-wing
 aircraft.
 
-## 3.6 The condition for a zero bill
+## 3.6 The condition under which the three bills are not charged
 
 Stating the tax this way makes its escape condition explicit. The bill exists because
 hover and cruise are served by hardware that is not the same hardware, doing the same
@@ -231,11 +231,15 @@ job, in the same orientation. Relax any part of that and a bill appears:
 - **Same hardware, different orientation** → the tilting family. The mechanism that changes the orientation is itself mass, complexity and a control problem.
 - **Same hardware, same orientation, different sizing point** → Bill 3, unless the hover peak is supplied from somewhere other than the continuous power source.
 
-The condition for paying nothing is therefore that the same propulsors, fixed in the
-same orientation relative to the airframe, produce both the hover thrust and the cruise
-thrust — with the aircraft itself changing orientation rather than any part of it — and
-that the difference between the hover peak and the cruise demand is supplied by a
-buffer rather than by permanently installed continuous power.
+The condition for not incurring these three bills is therefore that the same propulsors,
+fixed in the same orientation relative to the airframe, produce both the hover thrust and
+the cruise thrust — with the aircraft itself changing orientation rather than any part of
+it — and that the difference between the hover peak and the cruise demand is supplied by a
+buffer rather than by permanently installed continuous power. This is referred to below as
+the *zero-bill condition*, and the name should be read strictly: it means zero of these
+three bills, not an architecture that costs nothing. What an architecture satisfying it
+pays instead is a separate question, and Section 5.4 answers it for the configuration
+proposed here.
 
 That is a description of a tail-sitter with a buffered series-hybrid powertrain. It is
 also, precisely, the configuration described in Section 4.
