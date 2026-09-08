@@ -1,194 +1,211 @@
-# Tur 3 — kütle bütçesi denetimi
+# Round 3 — auditing the mass budget
 
-Geçen turda üçünüz de aynı şeyi söylediniz: CFD'yi kapat, temel modeli
-düzelt, kütle bütçesini bileşen düzeyine indir. Üçü de yapıldı. Bu
-metin sonuçları veriyor.
+**Before anything else, a request about the shape of your answer.**
 
-**Ağırlık üçüncü bölümde.** İlk ikisi geçen turun kapanışı, kısa
-tutuldu. **Kütle bütçesi yeni ve hiç denetlenmedi** — asıl bakılacak
-yer orası.
+I am not looking for refinements. If your reply would change a number
+without changing a conclusion, please leave it out. Specifically:
+please do not propose better correlations, tighter coefficients, or
+extra sweeps unless the current value is wrong enough to flip a
+verdict. I have deliberately dropped two of my own questions from this
+text for failing that test.
+
+What I am looking for is one thing: **is there a mistake here that
+makes a conclusion false?** A missing load path, a missing mass
+category, an invalid inference. Say "no error found" if that is the
+honest answer — that is a useful reply and I will not read it as a
+failure to engage.
+
+All three of you said the same thing last round: freeze the CFD, fix
+the comparison model, take the mass budget down to components. All
+three are done. **The weight of this text is in Part 3.** Parts 1 and 2
+close out the last round and are short.
 
 ---
 
-# 1. CFD — verdiğim yorumu geri aldım
+# 1. CFD — I withdrew my own reading
 
-YZ1 ve YZ3, iki SST çözümünün basınç alanını karşılaştırmamı istedi.
-Yapıldı (yeni koşu yok, iki yakınsamış alan duruyordu). Sonuç beni
-çürüttü.
+You asked me to compare the pressure fields of the two SST solutions.
+Done, with no new run. It refuted me.
 
-**Geri aldığım:** *"kararlı RANS iki ayrı durağan çözüme oturuyor."*
+**Withdrawn:** *"steady RANS is settling into two distinct stationary
+solutions."*
 
-Neden yanlış:
-- **Ayrılma topolojisi birebir aynı:** iki vakada da %0,02 ters akış
-  alanı, aynı x aralığı (1,003–1,740 m).
-- **Fark açıklık boyunca düzgün dağılmış** — sekiz bandın her biri
-  farkın ~1/8'ini taşıyor. Gerçek bir ikinci çözüm dalı yerelleşirdi.
+- **Separation topology is identical**: 0.02 % reverse-flow area in
+  both, over the same streamwise interval (1.003–1.740 m).
+- **The pressure-drag difference is spread evenly across the inner
+  span** — each of eight bands carries about an eighth of it. A genuine
+  second solution branch would localise.
 
-**Yerine geçen ölçüt.** Kesitler simetrik NACA 00xx, burulma yok,
-α = 0 → **C_L sıfır olmak zorunda:**
+**What replaces it.** Sections are symmetric NACA 00xx, no twist,
+α = 0, so **C_L must vanish**:
 
-| | C_L | Cp üst/alt asimetrisi |
+| | C_L | upper/lower Cp asymmetry |
 |---|---|---|
-| bl_C (SA-ısınmış) | +1,45e−03 | 0,0249 |
-| bl_E (y⁺≈20'den taşınmış) | **+1,35e−04** | **0,0011** |
+| bl_C (warm-started from SA) | +1.45e−03 | 0.0249 |
+| bl_E (mapped from y⁺≈20) | **+1.35e−04** | **0.0011** |
 
-bl_E her ölçütte ~10 kat daha iyi. Asimetrinin indüklenen sürüklemesi
-ihmal edilebilir (C_D'nin milyonda 9'u) — yani **sebep değil, belirti**;
-ama hangi çözümün daha iyi koşullandığını söyleyen ölçüt o.
+bl_E is ~10× better on both. The induced drag of that residual lift is
+negligible (9 ppm of C_D) — so the asymmetry is a **symptom, not the
+cause**; but it is the criterion that says which solution is better
+conditioned.
 
-Böylece YZ1'in "üçüncü başlangıç gerekmez" ile YZ3'ün "gerekir"
-ayrışması çözüldü: **üçüncü koşu yerine simetri ölçütü karar verdi.**
-Aralık (0,01201–0,01253) yine yazılıyor; tek değer gerekirse bl_E,
-artığa göre değil fiziğe göre seçiliyor.
+This also settled the disagreement between you: a symmetry test decided
+it, instead of a third run. The range 0.01201–0.01253 is still
+published; where one value is needed, bl_E is chosen on physics rather
+than on residuals.
 
-**Soru 1:** Bu ölçüt meşru mu? Karşı argüman şu olabilir: ağ üst/alt
-tam simetrik değilse iki vaka da eşit etkilenirdi, dolayısıyla farkın
-kaynağı çözümdür — bu savunma yeterli mi?
+**Question 1.** Is that criterion legitimate? The obvious objection is
+mesh asymmetry — but a non-symmetric mesh would bias both cases
+equally, so the difference must come from the solution. Is that defence
+sufficient, or is there a way it fails?
 
 ---
 
-# 2. Üç sözleşme — YZ3 haklıydı
+# 2. Three sizing contracts — the third reviewer was right
 
-YZ1 ve YZ5, "sabit yakıt kesrinde menzilin MTOW'dan bağımsız olması
-Breguet'nin doğru özelliğidir" dedi. Doğru. YZ3 bunun **karşılaştırma
-sözleşmesi** olarak sonucu ürettiğini gördü. Üçü de uygulandı; C'ye
-"tilt seyirde sıfır ceza öder" hediyesi hâlâ dururken:
+Two of you said "range being independent of MTOW at fixed fuel fraction
+is a correct Breguet property, not an error." True. The third saw that
+it is nonetheless the wrong **comparison contract**, because the heavier
+architecture is then allowed to carry proportionally more fuel and the
+mass bill never reaches the range column. All three contracts are now
+computed, with the tilt architecture still credited with paying zero
+cruise drag for its mechanism:
 
-| C'nin A'ya göre menzili | sabit yakıt **kesri** | sabit yakıt **kütlesi** | sabit **MTOW**+faydalı |
+| Range vs. the proposed tail-sitter | fixed fuel **fraction** | fixed fuel **mass** | fixed **MTOW** + payload |
 |---|---|---|---|
-| B — lift+cruise | −%14,4 | −%36,5 | −%72,6 |
-| **C — tilt** | **+%12,0** | **+%0,2** | **−%19,1** |
+| B — lift + cruise | −14.4 % | −36.5 % | −72.6 % |
+| **C — tilt** | **+12.0 %** | **+0.2 %** | **−19.1 %** |
 
-L/D çarpanıyla çapraz tarandığında 12 kutunun yalnızca 3'ünde C önde,
-üçü de birinci sütunda.
+Crossed with the tilt drag multiplier, tilt leads in 3 of 12 cells, all
+three in the first column.
 
-**YZ3'ün bir sayısını düzelttim:** sabit yakıt kütlesinde elle −%7
-demiş; 60,3 kg'ı kullanmış ama o *sabit kesir* MTOW'u. Yakıt
-sabitlenince C'nin MTOW'u 55,9'a kapanıyor → **+%0,2**. Sabit MTOW'da
-YZ3 tam tutuyor: elle −%19, model −%19,1.
+One correction: the hand calculation for fixed fuel mass gave −7 %
+using 60.3 kg, which is the *fixed-fraction* MTOW. Fixing fuel mass
+re-closes tilt at 55.9 kg, giving **+0.2 %**. The fixed-MTOW figure was
+exact (−19 % by hand, −19.1 % from the model).
 
-**Soru 2:** Üçünden hangisi makalenin **ana** tablosu olmalı? Yoksa üçü
-de eşit ağırlıkta mı verilmeli?
+**Question 2.** Should one of the three be the paper's headline table,
+or should all three carry equal weight? This is an editorial call, not
+a numerical one.
 
 ---
 
-# 3. KÜTLE BÜTÇESİ — asıl denetlenecek yer
+# 3. MASS BUDGET — the part to audit
 
-Makale §6.2'nin kesirleri (%30 yapı / %16 tahrik / %4 pil / %8 aviyonik
-/ %16 yakıt → **%26 faydalı yük**) aşağıdan yukarı yeniden kuruldu.
-Kural: hiçbir kalem hedef kesirden geri çözülmedi.
+The paper's §6.2 fractions (30 % structure / 16 % propulsion / 4 %
+battery / 8 % avionics / 16 % fuel → **26 % payload**) have been rebuilt
+from components. Rule: no item is back-solved from the fraction it is
+meant to test.
 
-## 3.1 İlk koşu bir uyarı verdi
+## 3.1 The first run was a warning
 
-İlk sürüm **%42,8** faydalı yük verdi. Kendi hedefini %60 aşan bir
-bütçe iyi haber değil, **kalem eksikliği işaretidir.** Arandı, yedi
-kategori eksik çıktı (3,4 kg): bağlantı elemanı/yapıştırıcı/boya,
-erişim kapakları, motor yatağı-soğutma-egzoz, eş eksenli
-göbek-mil-yatak, sinyal demeti, faydalı yük arayüzü, temas pedleri.
-Ayrıca **belirsizlik payı** (kurunun %12'si) yoktu.
+It returned **42.8 %** payload. A bottom-up budget that beats its own
+target by 60 % is not good news; it means items are missing. Seven
+categories were, totalling 3.4 kg: fasteners/adhesive/paint, access
+panels, engine mount + cooling + exhaust, coaxial hub/shaft/bearings,
+signal harness, payload interface, landing contact pads. A
+**contingency allowance** (12 % of dry mass) was also absent.
 
-## 3.2 Nasıl hesaplandı
+## 3.2 How it is computed
 
-**Yapı.** Islak alan planformdan ve NACA 00xx kalınlık dağılımından
-integralle: **4,14 m²** (planform 1,98 m²). Kabuk 1,5 kg/m² karbon
-sandviç → 6,20 kg. İç yapı (kaburga, bölücü, yapıştırma) kabuğun %45'i.
-**Uç çerçeveleri iniş halinden boyutlandı** — bu uçak onların üzerine
-iniyor: 3 g dikey iniş, ağırlığın yarısı tek çerçeveden, post konsol
-kirişi → 0,95 kg (ikisi, fittingler dahil).
+**Structure.** Wetted area integrated from the planform and the NACA
+00xx thickness distribution: **4.14 m²** (planform 1.98 m²). Carbon
+sandwich shell at 1.5 kg m⁻² → 6.20 kg. Ribs, bulkheads and bonded
+joints at 45 % of shell. **Tip frames sized by the landing case** —
+this aircraft lands on them: 3 g vertical arrival, half the weight
+through one frame, post as a cantilever → 0.95 kg for both.
 
-**Kiriş.** n_ult = 5,25'te kök eğilme momenti **934 N·m**; 400 MPa'da,
-yapısal derinlik 0,9 × kök kalınlığı → başlık alanı **10,7 mm²**,
-kütlesi **41 gram** = MTOW'un binde 8'i.
+**Spar.** At n_ult = 5.25 the root bending moment is **934 N·m**; at
+400 MPa over a depth of 0.9 × root thickness the caps need **10.7 mm²**
+and weigh **41 g** — 8 parts in 10 000 of MTOW.
 
-**Tahrik.** Burun motoru **hover tepesine**, ICE **seyre** boyutlanıyor
-— makalenin merkezi iddiası bütçede de böyle görünüyor: 2,73 kg
-elektrik makinesi / 2,60 kg motor+jeneratör (4 kW/kg ve 1 kW/kg).
+**Propulsion.** Nose motor sized by **hover peak**, engine by **cruise**
+— the configuration's central claim, visible in the budget as 2.73 kg of
+electric machine against 2.60 kg of engine + generator (4 kW/kg and
+1 kW/kg).
 
-    m_kiris   = 2·2·ρ·[M_kök/(σ·h)]·(b/2)·0,35
-    m_kabuk   = σ_alan · S_ıslak
-    m_motor   = P_hover / (kW/kg)
-    m_ICE     = P_seyir_derecelendirme / (kW/kg)
+    m_spar  = 2·2·ρ·[M_root/(σ·h)]·(b/2)·0.35
+    m_shell = σ_areal · S_wet
+    m_motor = P_hover / (kW/kg)
+    m_ICE   = P_cruise_rating / (kW/kg)
 
-## 3.3 Sonuç — hafif hat kapanıyor
+## 3.3 The light design closes
 
-| grup | ölçülen | hedef |
+| group | build-up | assumed |
 |---|---|---|
-| yapı | %23,8 | %30 |
-| tahrik | %15,2 | %16 |
-| pil | %3,6 | %4 |
-| sistem + belirsizlik payı | %11,0 | %8 |
-| yakıt | %16,0 | %16 |
-| **faydalı yük (artan)** | **%30,4** | **%26** |
+| structure | 23.8 % | 30 % |
+| propulsion | 15.2 % | 16 % |
+| battery | 3.6 % | 4 % |
+| systems + contingency | 11.0 % | 8 % |
+| fuel | 16.0 % | 16 % |
+| **payload (residual)** | **30.4 %** | **26 %** |
 
-**+2,2 kg elde kalıyor.**
+**2.2 kg in hand.**
 
-## 3.4 Ama payın tamamı tek bir sayıda
+## 3.4 But the whole margin sits on one number
 
-13 kg faydalı yük hangi değerde kapanmaz:
+Value at which 13 kg of payload stops closing:
 
-| varsayım | taban | kırılma | pay |
+| assumption | base | break-even | margin |
 |---|---|---|---|
-| **kabuk kg/m²** | 1,50 | **1,783** | **%19** |
-| iç yapı / kabuk | 0,45 | 0,723 | %61 |
-| belirsizlik payı | 0,12 | 0,219 | %82 |
-| bağlantı oranı | 0,10 | 0,297 | %197 |
-| motor kW/kg | 4,00 | 2,433 | %39 |
-| ICE+jeneratör kW/kg | 1,00 | 0,623 | %38 |
+| **shell kg m⁻²** | 1.50 | **1.783** | **19 %** |
+| internal structure / shell | 0.45 | 0.723 | 61 % |
+| contingency | 0.12 | 0.219 | 82 % |
+| motor kW/kg | 4.00 | 2.433 | 39 % |
+| ICE + generator kW/kg | 1.00 | 0.623 | 38 % |
 
-Diğer her şey ciddi kötüleşebilir, tasarım kapanır. **Kabuk 1,78
-kg/m²'yi geçerse kapanmaz.** Belirsizlik payı satırının okunuşu:
-bütçeye **4,5 kg daha sayılmamış kütle** girebilir, fazlası giremez.
+Everything else can be substantially worse and the design still closes.
+**Above 1.78 kg m⁻² of skin it does not.** The contingency row reads:
+about **4.5 kg more unaccounted mass** is survivable, and no more.
 
-## 3.5 Ağır hat KAPANMIYOR — asıl açık soru
+## 3.5 The heavy design does NOT close — the real open question
 
-Kabuk kütlesi ~ ölçek², MTOW ~ ölçek³. Alan yoğunluğu sabit kalırsa
-kabuk *kesri* 1/ölçek düşer — büyük uçakta kaplama incelmediği için bu
-açıkça yanlış. Sabit kesir için alan yoğunluğu ~ ölçek¹ gerekir. Gerçek
-üs arada ve **ölçülmedi:**
+Shell mass ~ scale², MTOW ~ scale³. Constant areal density would make
+the shell *fraction* fall as 1/scale, which is plainly wrong — skins on
+larger aircraft are not thinner. A constant fraction needs areal density
+~ scale¹. The truth is between, and the exponent **was not measured**:
 
-| üs | kabuk kg/m² | faydalı kg (hedef 260) |
+| exponent | shell kg m⁻² | payload kg (target 260) |
 |---|---|---|
-| 0,00 | 1,50 | 359 ✓ |
-| 0,25 | 2,03 | 313 ✓ |
-| **0,467** | **2,64** | **260 — kırılma** |
-| 0,50 | 2,74 | 251 ✗ |
-| 1,00 | 5,02 | 52 ✗ |
+| 0.00 | 1.50 | 359 ✓ |
+| 0.25 | 2.03 | 313 ✓ |
+| **0.467** | **2.64** | **260 — break-even** |
+| 0.50 | 2.74 | 251 ✗ |
+| 1.00 | 5.02 | 52 ✗ |
 
-## 3.6 Kendi şüphelerim — buralara bakın
+## 3.6 Where I think the errors would be
 
-1. **Yapı %23,8 çıktı, hedef %30 idi.** Bütçe kendi hedefinden hafif
-   geliyor. İlk turda 7 kategori kaçırdığıma göre daha kaçırıyor
-   olabilir miyim? Hangi kategoriyi göremiyorum?
+1. **Structure came out at 23.8 % against a 30 % target.** The budget is
+   lighter than the thing it was meant to test. Having already missed
+   seven categories on the first pass, what category am I still not
+   seeing?
 
-2. **Kabuk 1,5 kg/m² savunulabilir mi?** 50 kg sınıfı, %25 kalın BWB,
-   içinde bütün sistemleri barındıran, uç çerçevelerinden iniş yükü
-   geçen bir yapı için. Bütün sonuç buna asılı.
+2. **Is 1.5 kg m⁻² defensible** for a 50 kg-class, 25 %-thick BWB that
+   houses all systems internally and takes landing loads through its tip
+   frames? The entire result hangs on this one value.
 
-3. **İç yapı = kabuğun %45'i** en zayıf halka. Bunun fiziksel bir
-   temeli yok, pratikten alınmış bir orandır. Daha iyi bir kurma
-   biçimi var mı?
+3. **Is "strength is not the driver" a valid inference?** The spar
+   weighs 41 g. Is that the known result at this scale, or am I missing
+   a load path — torsion box, local introduction at the frame joints,
+   flutter, ground handling?
 
-4. **"Yapıyı mukavemet belirlemiyor"** çıkarımı doğru mu? Kiriş 41
-   gram. Bu, bu ölçekte bilinen bir sonuç mu, yoksa bir şeyi mi
-   atlıyorum (burulma kutusu, yerel yükler, flutter, uç çerçeve
-   bağlantısındaki yığılma)?
+4. **Tip frames were sized by vertical landing.** Is that actually the
+   worst case, against propeller thrust moment, a gust on the ground, or
+   an off-axis touchdown?
 
-5. **Ağır hattaki üs.** 0,467 eşiğinin altında mı üstünde mi olması
-   beklenir? Bunu ölçmenin makul bir yolu var mı, yoksa "ölçülmedi,
-   açık" diye mi bırakılmalı?
-
-6. **Uç çerçevesi iniş halinden boyutlandı** ama tek yük hali o değil:
-   pervane itkisi momenti, yer rüzgârı, yana yatık iniş. En kötü hal
-   gerçekten dikey iniş mi?
+5. **The heavy-line exponent.** Should it be expected above or below
+   0.467? Is there a defensible way to bound it, or should it stay
+   labelled "not measured"?
 
 ---
 
-# SORULAR
+# QUESTIONS
 
-1. **Simetri ölçütü meşru mu?** (Bölüm 1)
-2. **Üç sözleşmeden hangisi ana tablo olmalı?** (Bölüm 2)
-3. **3.6'daki altı şüpheden hangisi gerçek hata?** Ve **listemde
-   olmayan neyi görüyorsunuz?** — asıl aradığım bu.
-4. **Sıradaki iş ne olmalı?** Elimde kalan: 6-DoF geçiş benzetimi
-   (YZ3 "Q1 için şart", YZ5 "şart değil"), ağır hattaki kabuk üssünün
-   ölçülmesi, makalenin yeniden okunması. Hangisi?
+1. Is the symmetry criterion legitimate? (Part 1)
+2. Which contract should be the headline table — or all three equally?
+   (Part 2)
+3. **Which of the five doubts in 3.6 is a real error, and what do you
+   see that is not on my list?** This is the one I actually need.
+4. What should the next piece of work be: the 6-DoF transition
+   simulation, bounding the heavy-line shell exponent, or a full re-read
+   of the paper? One answer, with a reason.
