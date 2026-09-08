@@ -284,3 +284,60 @@ hesaplanıyor). **Çift sayım yoktu** — YZ1'in şüphesi kontrol edildi ve
 Yeniden yapılandırma davranışı korudu: A 50,0 kg / 1600 km, B 86,0 kg /
 1370 km, C 60,3 kg / 1792 km. Değişen, bu sayıların **hangi
 varsayımdan geldiğinin ölçülmüş olması**.
+
+---
+
+## Karşılaştırma sözleşmeleri — üçüncü denetimin bulduğu (08.09.2026)
+
+YZ1 ve YZ5'in ikisi de "sabit yakıt kesrinde menzilin MTOW'dan bağımsız
+olması Breguet'nin doğru bir özelliğidir, hata değildir" dedi. Doğru —
+ama YZ3 bunun **karşılaştırma sözleşmesi** olarak tehlikeli olduğunu
+gördü ve haklı çıktı:
+
+    R = (E* η_zincir / g) · (L/D) · (m_yakıt / MTOW)
+
+    sabit KESİR  → m_yakıt/MTOW sabit → R, MTOW'dan bağımsız
+    sabit KÜTLE  → R ∝ (L/D)/MTOW      → kütle cezası geri gelir
+    sabit MTOW   → f_yakıt = 1 − f_boş − m_faydalı/MTOW
+
+Sabit kesirde **daha ağır mimari orantılı olarak daha fazla yakıt
+taşıyor** ve kütle faturası menzilden siliniyor. Üç sözleşme
+uygulandı (`sozlesmeler()`), C'ye ×1,00 hediyesi hâlâ duruyorken:
+
+| C'nin A'ya göre menzili | sözleşme 1 (sabit kesir) | sözleşme 2 (sabit yakıt kütlesi) | sözleşme 3 (sabit MTOW + faydalı yük) |
+|---|---|---|---|
+| **+%12,0** | **+%0,2** | **−%19,1** |
+
+B üç sözleşmede de kaybediyor ve gittikçe kötüleşiyor: −%14,4 / −%36,5
+/ −%72,6.
+
+L/D çarpanıyla birlikte tarandığında:
+
+| C'nin L/D çarpanı | söz. 1 | söz. 2 | söz. 3 |
+|---|---|---|---|
+| ×1,00 | +%12,0 | +%0,2 | −%19,1 |
+| ×0,96 | +%7,5 | −%4,3 | −%23,6 |
+| ×0,92 | +%3,0 | −%8,9 | −%28,2 |
+| ×0,88 | −%1,4 | −%13,4 | −%32,7 |
+
+**Yani C'nin üstünlüğü tek bir kutuda yaşıyor: sözleşme 1 + ×1,00.**
+Diğer sekiz kutunun yedisinde A önde.
+
+### YZ3'ün bir sayısının düzeltilmesi
+
+YZ3, sabit yakıt kütlesi için elle şunu hesapladı:
+
+    R_C/R_A = (13,44/12,00)·(50,0/60,3) ≈ 0,93   → C %7 kötü
+
+Yön doğru, sayı değil: 60,3 kg, **sabit kesir** sözleşmesinin MTOW'u.
+Yakıt kütlesi sabitlenince C'nin MTOW'u da kapanarak 55,9 kg'a düşüyor
+(daha az yakıt → daha hafif uçak → daha az kurulu güç). Modelin
+verdiği: **+%0,2**, yani berabere. Sabit MTOW sözleşmesinde ise YZ3'ün
+sayısı **tam tutuyor**: elle −%19, model −%19,1; f_yakıt = 1 − 0,624 −
+0,26 = 0,116, modelinki de 0,116.
+
+### Çift sayım kontrolü (YZ3 §5.2)
+
+`LD_temiz = 13,44 = 12,0 × 1,12` olarak tanımlı; A'ya sonra `1/1,12`
+uygulanıyor ve tam 12,00 çıkıyor. Doğrulama tablosu bunu kilitliyor.
+**Çift sayım yok.**

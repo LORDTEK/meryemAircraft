@@ -376,17 +376,39 @@ are otherwise identical, sharing the same grid file, the same transport and turb
 properties, and the same boundary conditions. Both ran five thousand iterations without
 bounding, the mapped start reaching the lower velocity residual of the two, 1.0 × 10⁻⁷.
 
-They do not agree. The drag coefficients are 0.01253 and 0.01201, four and three tenths
-of a percent apart, and the difference lies almost entirely in the pressure component:
+They do not agree. The drag coefficients are 0.01253 and 0.01201, four and three tenths of
+a percent apart, and the difference lies almost entirely in the pressure component:
 0.00386 against 0.00336, thirteen percent, while the viscous components agree to three
-parts in a thousand. Identical viscous drag with divergent pressure drag places the
-disagreement in the separated flow rather than in the boundary layer, which is consistent
-with a steady RANS problem admitting more than one stationary solution — a known
-possibility in separated flow, but one that removes the uniqueness of the number. A
-converged steady solution should not depend on its starting point; here it demonstrably
-does, and the test was run precisely to find out. Both values are therefore reported.
-Nothing shows that a third starting field would fall inside the interval between them, so
-0.01201 – 0.01253 is a measured spread and not a bound.
+parts in a thousand. A converged steady solution should not depend on its starting point;
+here it demonstrably does.
+
+The two solutions are not, however, of equal standing, and the criterion that separates
+them is geometric rather than numerical. The sections are symmetric and untwisted and the
+incidence is zero, so the lift coefficient must vanish. The mapped solution returns
+1.3 × 10⁻⁴ and the warm-started one 1.5 × 10⁻³ — an order of magnitude further from the
+value the geometry requires. The same asymmetry appears locally: at mid-span and
+three-quarter chord the upper and lower surface pressure coefficients differ by 0.0011 in
+the mapped solution and by 0.0249 in the warm-started one, where symmetry requires zero,
+and the ratio holds at every station examined. The induced drag of that residual lift is
+negligible — of order 10⁻⁷, nine parts per million of the total — so the asymmetry is a
+symptom and not the cause of the drag difference; but it is a physical test that one
+solution passes and the other does not.
+
+Three further diagnostics rule out the explanation that would have been most damaging.
+The reverse-flow area on the wall is 0.02 percent in both solutions and occupies the same
+streamwise interval in both, so the two are not settling into different separation
+topologies. The pressure-drag difference is distributed almost evenly across the inner
+span — each of eight bands carries roughly an eighth of it — rather than being localised,
+as a genuine second solution branch would be. And the difference is concentrated in the
+rear quarter of the chord, where the mapped solution recovers more pressure. What is being
+seen is therefore best described as one solution being better conditioned than the other,
+with the warm-started case carrying a residual asymmetry inherited from the
+Spalart–Allmaras field it was started from.
+
+Both values are reported, because a third starting field has not been tried and nothing
+shows one would fall inside the interval; 0.01201 – 0.01253 is a measured spread and not
+a bound. Where a single value from this pair is wanted, the mapped solution is the
+defensible choice, on the symmetry test and not on the residual.
 
 **What this does not settle.** The solution is fully turbulent throughout. It therefore
 speaks to the tripped row of the table above and not to the clean-surface row, and the

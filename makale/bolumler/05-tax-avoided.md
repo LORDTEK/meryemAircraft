@@ -187,39 +187,75 @@ lift is generally held to require makes its mass worse still — 117 kg at four 
 points of structure — without changing its range at all, so the comparison as tabulated
 is generous to it rather than the reverse.
 
-**Against tilt the result goes the other way, and the reason must be stated plainly.**
-The tilting layout closes lighter than lift-plus-cruise and cruises twelve percent
-further than the proposed configuration. That outcome is not a finding. It follows from
-the multiplier of 1.00 in the table above, which credits the tilting layout with paying
-no cruise drag at all for its nacelles, pivots, actuators and hover-sized blades. Sweeping
-that multiplier shows exactly how much of the result it carries:
+**Against tilt the table above goes the other way, and both reasons must be stated
+plainly.** The tilting layout closes lighter than lift-plus-cruise and cruises twelve
+percent further than the proposed configuration. Neither part of that outcome is a
+finding. The first reason is the multiplier of 1.00, which credits the tilting layout
+with paying no cruise drag at all for its nacelles, pivots, actuators and hover-pitched
+blades. The second is subtler and belongs to the sizing rule rather than to any
+architecture.
 
-| Tilt cruise-drag multiplier | 1.00 | 0.96 | 0.92 | 0.88 | 0.85 |
-|---|---:|---:|---:|---:|---:|
-| Range relative to the tail-sitter | +12.0 % | +7.5 % | +3.0 % | −1.4 % | −4.8 % |
+Range in the equation above contains the fuel fraction and not the fuel mass. Holding the
+fraction fixed across architectures — the natural choice, and the one the table uses —
+lets the heavier aircraft carry proportionally more fuel, which removes the mass bill
+from the range column entirely. The general form is
 
-The sign changes at approximately 0.89 — which is, to two decimal places, the penalty the
-proposed configuration charges itself for its own tip frames, 1/1.12 = 0.893. The
-comparison therefore establishes a conditional and not a ranking: **a tilting layout
-falls behind the proposed configuration only if its mechanism costs at least as much
-cruise drag as the tip frames cost this one.** Whether it does was not measured, and
-nothing here should be read as claiming that it does.
+$$R = \frac{E^{*}\eta_\text{chain}}{g}\,\frac{L}{D}\,\frac{m_\text{fuel}}{\mathrm{MTOW}}$$
+
+so that a fixed fraction makes range independent of take-off mass, a fixed fuel *mass*
+makes it inversely proportional to take-off mass, and a fixed take-off mass with a fixed
+payload leaves fuel as the residual. These are three different questions with three
+different answers, so all three are reported, with the tilting layout still credited with
+its zero cruise-drag penalty:
+
+| Range relative to the tail-sitter | Fixed fuel fraction | Fixed fuel mass | Fixed MTOW and payload |
+|---|---:|---:|---:|
+| B — lift + cruise | −14.4 % | −36.5 % | −72.6 % |
+| C — tilt | +12.0 % | +0.2 % | −19.1 % |
+
+Against lift-plus-cruise the conclusion is the same under every rule and grows more
+emphatic as the rule tightens. Against tilt it is not: the twelve percent advantage
+becomes a tie when the two aircraft carry the same fuel, and a nineteen percent deficit
+when they are the same take-off mass carrying the same payload — because at 50 kg the
+tilting layout's empty fraction leaves 0.116 for fuel where the proposed configuration
+leaves 0.160. Sweeping the cruise-drag multiplier across all three rules gives the full
+picture:
+
+| Tilt cruise-drag multiplier | Fixed fuel fraction | Fixed fuel mass | Fixed MTOW and payload |
+|---|---:|---:|---:|
+| 1.00 | +12.0 % | +0.2 % | −19.1 % |
+| 0.96 | +7.5 % | −4.3 % | −23.6 % |
+| 0.92 | +3.0 % | −8.9 % | −28.2 % |
+| 0.88 | −1.4 % | −13.4 % | −32.7 % |
+
+Of the twelve cells, the tilting layout leads in three, all of them in the first column
+and all of them requiring its mechanism to be aerodynamically free. Under the fixed
+fraction the sign changes at a multiplier of approximately 0.89, which is to two decimal
+places the penalty the proposed configuration charges itself for its own tip frames,
+1/1.12 = 0.893. **The comparison therefore supports a conditional and not a ranking:
+under a fixed fuel-fraction rule, and with the tilt mechanism assumed aerodynamically
+free, the tilting layout cruises further; under equal fuel mass or equal take-off mass
+that advantage disappears.** No claim of superiority over the tilting family is made here
+in either direction.
 
 Two smaller points belong with that disclosure. The cruise propulsive efficiency is also
 shared with the tilting layout, which is generous, since a blade pitched for hover is not
-the blade one would choose for cruise; but range in the equation above does not contain
-propulsive efficiency, so the generosity falls entirely on mass — 60.3 kg becomes 62.7 kg
-at a fifteen percent efficiency penalty — and none of it on the range comparison. And a
-second table, in which each architecture is given its own power system with no buffer, is
-not reported as a fair comparison and should not be read as one: a real lift-plus-cruise
-aircraft hovers on batteries rather than on an engine sized for hover, so that table
-describes an unbuffered series hybrid and not the architecture it is labelled with.
+the blade one would choose for cruise; but range does not contain propulsive efficiency,
+so the generosity falls entirely on mass — 60.3 kg becomes 62.7 kg at a fifteen percent
+efficiency penalty — and none of it on the range comparison. And a second table, in which
+each architecture is given its own power system with no buffer, is not reported as a fair
+comparison and should not be read as one: a real lift-plus-cruise aircraft hovers on
+batteries rather than on an engine sized for hover, so that table is a bounding case for
+an unbuffered series hybrid and not a description of the architecture it is labelled
+with.
 
 **What this comparison does and does not support.** It supports the claim that the
 proposed configuration avoids the mass and drag bills that a separate lift system pays,
 and it supports it with the paper's own measurements rather than by assertion. It does
-not support a claim of superiority over the tilting family, and the paper does not make
-one. The tilting family answers the same escape condition by a different route — the same
+not support a claim of superiority over the tilting family under every sizing rule, and
+the paper does not make one; what it shows is that the tilting family's apparent
+advantage survives only one of the three rules, and only on an assumption that was not
+measured. The tilting family answers the same escape condition by a different route — the same
 hardware, reused, but reoriented by a mechanism — and the case for the configuration
 proposed here rests on reaching that reuse without the mechanism, together with its
 control and transition consequences, and not on out-cruising it.

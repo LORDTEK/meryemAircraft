@@ -959,39 +959,75 @@ lift is generally held to require makes its mass worse still — 117 kg at four 
 points of structure — without changing its range at all, so the comparison as tabulated
 is generous to it rather than the reverse.
 
-**Against tilt the result goes the other way, and the reason must be stated plainly.**
-The tilting layout closes lighter than lift-plus-cruise and cruises twelve percent
-further than the proposed configuration. That outcome is not a finding. It follows from
-the multiplier of 1.00 in the table above, which credits the tilting layout with paying
-no cruise drag at all for its nacelles, pivots, actuators and hover-sized blades. Sweeping
-that multiplier shows exactly how much of the result it carries:
+**Against tilt the table above goes the other way, and both reasons must be stated
+plainly.** The tilting layout closes lighter than lift-plus-cruise and cruises twelve
+percent further than the proposed configuration. Neither part of that outcome is a
+finding. The first reason is the multiplier of 1.00, which credits the tilting layout
+with paying no cruise drag at all for its nacelles, pivots, actuators and hover-pitched
+blades. The second is subtler and belongs to the sizing rule rather than to any
+architecture.
 
-| Tilt cruise-drag multiplier | 1.00 | 0.96 | 0.92 | 0.88 | 0.85 |
-|---|---:|---:|---:|---:|---:|
-| Range relative to the tail-sitter | +12.0 % | +7.5 % | +3.0 % | −1.4 % | −4.8 % |
+Range in the equation above contains the fuel fraction and not the fuel mass. Holding the
+fraction fixed across architectures — the natural choice, and the one the table uses —
+lets the heavier aircraft carry proportionally more fuel, which removes the mass bill
+from the range column entirely. The general form is
 
-The sign changes at approximately 0.89 — which is, to two decimal places, the penalty the
-proposed configuration charges itself for its own tip frames, 1/1.12 = 0.893. The
-comparison therefore establishes a conditional and not a ranking: **a tilting layout
-falls behind the proposed configuration only if its mechanism costs at least as much
-cruise drag as the tip frames cost this one.** Whether it does was not measured, and
-nothing here should be read as claiming that it does.
+$$R = \frac{E^{*}\eta_\text{chain}}{g}\,\frac{L}{D}\,\frac{m_\text{fuel}}{\mathrm{MTOW}}$$
+
+so that a fixed fraction makes range independent of take-off mass, a fixed fuel *mass*
+makes it inversely proportional to take-off mass, and a fixed take-off mass with a fixed
+payload leaves fuel as the residual. These are three different questions with three
+different answers, so all three are reported, with the tilting layout still credited with
+its zero cruise-drag penalty:
+
+| Range relative to the tail-sitter | Fixed fuel fraction | Fixed fuel mass | Fixed MTOW and payload |
+|---|---:|---:|---:|
+| B — lift + cruise | −14.4 % | −36.5 % | −72.6 % |
+| C — tilt | +12.0 % | +0.2 % | −19.1 % |
+
+Against lift-plus-cruise the conclusion is the same under every rule and grows more
+emphatic as the rule tightens. Against tilt it is not: the twelve percent advantage
+becomes a tie when the two aircraft carry the same fuel, and a nineteen percent deficit
+when they are the same take-off mass carrying the same payload — because at 50 kg the
+tilting layout's empty fraction leaves 0.116 for fuel where the proposed configuration
+leaves 0.160. Sweeping the cruise-drag multiplier across all three rules gives the full
+picture:
+
+| Tilt cruise-drag multiplier | Fixed fuel fraction | Fixed fuel mass | Fixed MTOW and payload |
+|---|---:|---:|---:|
+| 1.00 | +12.0 % | +0.2 % | −19.1 % |
+| 0.96 | +7.5 % | −4.3 % | −23.6 % |
+| 0.92 | +3.0 % | −8.9 % | −28.2 % |
+| 0.88 | −1.4 % | −13.4 % | −32.7 % |
+
+Of the twelve cells, the tilting layout leads in three, all of them in the first column
+and all of them requiring its mechanism to be aerodynamically free. Under the fixed
+fraction the sign changes at a multiplier of approximately 0.89, which is to two decimal
+places the penalty the proposed configuration charges itself for its own tip frames,
+1/1.12 = 0.893. **The comparison therefore supports a conditional and not a ranking:
+under a fixed fuel-fraction rule, and with the tilt mechanism assumed aerodynamically
+free, the tilting layout cruises further; under equal fuel mass or equal take-off mass
+that advantage disappears.** No claim of superiority over the tilting family is made here
+in either direction.
 
 Two smaller points belong with that disclosure. The cruise propulsive efficiency is also
 shared with the tilting layout, which is generous, since a blade pitched for hover is not
-the blade one would choose for cruise; but range in the equation above does not contain
-propulsive efficiency, so the generosity falls entirely on mass — 60.3 kg becomes 62.7 kg
-at a fifteen percent efficiency penalty — and none of it on the range comparison. And a
-second table, in which each architecture is given its own power system with no buffer, is
-not reported as a fair comparison and should not be read as one: a real lift-plus-cruise
-aircraft hovers on batteries rather than on an engine sized for hover, so that table
-describes an unbuffered series hybrid and not the architecture it is labelled with.
+the blade one would choose for cruise; but range does not contain propulsive efficiency,
+so the generosity falls entirely on mass — 60.3 kg becomes 62.7 kg at a fifteen percent
+efficiency penalty — and none of it on the range comparison. And a second table, in which
+each architecture is given its own power system with no buffer, is not reported as a fair
+comparison and should not be read as one: a real lift-plus-cruise aircraft hovers on
+batteries rather than on an engine sized for hover, so that table is a bounding case for
+an unbuffered series hybrid and not a description of the architecture it is labelled
+with.
 
 **What this comparison does and does not support.** It supports the claim that the
 proposed configuration avoids the mass and drag bills that a separate lift system pays,
 and it supports it with the paper's own measurements rather than by assertion. It does
-not support a claim of superiority over the tilting family, and the paper does not make
-one. The tilting family answers the same escape condition by a different route — the same
+not support a claim of superiority over the tilting family under every sizing rule, and
+the paper does not make one; what it shows is that the tilting family's apparent
+advantage survives only one of the three rules, and only on an assumption that was not
+measured. The tilting family answers the same escape condition by a different route — the same
 hardware, reused, but reoriented by a mechanism — and the case for the configuration
 proposed here rests on reaching that reuse without the mechanism, together with its
 control and transition consequences, and not on out-cruising it.
@@ -1372,17 +1408,39 @@ are otherwise identical, sharing the same grid file, the same transport and turb
 properties, and the same boundary conditions. Both ran five thousand iterations without
 bounding, the mapped start reaching the lower velocity residual of the two, 1.0 × 10⁻⁷.
 
-They do not agree. The drag coefficients are 0.01253 and 0.01201, four and three tenths
-of a percent apart, and the difference lies almost entirely in the pressure component:
+They do not agree. The drag coefficients are 0.01253 and 0.01201, four and three tenths of
+a percent apart, and the difference lies almost entirely in the pressure component:
 0.00386 against 0.00336, thirteen percent, while the viscous components agree to three
-parts in a thousand. Identical viscous drag with divergent pressure drag places the
-disagreement in the separated flow rather than in the boundary layer, which is consistent
-with a steady RANS problem admitting more than one stationary solution — a known
-possibility in separated flow, but one that removes the uniqueness of the number. A
-converged steady solution should not depend on its starting point; here it demonstrably
-does, and the test was run precisely to find out. Both values are therefore reported.
-Nothing shows that a third starting field would fall inside the interval between them, so
-0.01201 – 0.01253 is a measured spread and not a bound.
+parts in a thousand. A converged steady solution should not depend on its starting point;
+here it demonstrably does.
+
+The two solutions are not, however, of equal standing, and the criterion that separates
+them is geometric rather than numerical. The sections are symmetric and untwisted and the
+incidence is zero, so the lift coefficient must vanish. The mapped solution returns
+1.3 × 10⁻⁴ and the warm-started one 1.5 × 10⁻³ — an order of magnitude further from the
+value the geometry requires. The same asymmetry appears locally: at mid-span and
+three-quarter chord the upper and lower surface pressure coefficients differ by 0.0011 in
+the mapped solution and by 0.0249 in the warm-started one, where symmetry requires zero,
+and the ratio holds at every station examined. The induced drag of that residual lift is
+negligible — of order 10⁻⁷, nine parts per million of the total — so the asymmetry is a
+symptom and not the cause of the drag difference; but it is a physical test that one
+solution passes and the other does not.
+
+Three further diagnostics rule out the explanation that would have been most damaging.
+The reverse-flow area on the wall is 0.02 percent in both solutions and occupies the same
+streamwise interval in both, so the two are not settling into different separation
+topologies. The pressure-drag difference is distributed almost evenly across the inner
+span — each of eight bands carries roughly an eighth of it — rather than being localised,
+as a genuine second solution branch would be. And the difference is concentrated in the
+rear quarter of the chord, where the mapped solution recovers more pressure. What is being
+seen is therefore best described as one solution being better conditioned than the other,
+with the warm-started case carrying a residual asymmetry inherited from the
+Spalart–Allmaras field it was started from.
+
+Both values are reported, because a third starting field has not been tried and nothing
+shows one would fall inside the interval; 0.01201 – 0.01253 is a measured spread and not
+a bound. Where a single value from this pair is wanted, the mapped solution is the
+defensible choice, on the symmetry test and not on the residual.
 
 **What this does not settle.** The solution is fully turbulent throughout. It therefore
 speaks to the tripped row of the table above and not to the clean-surface row, and the
@@ -1786,17 +1844,32 @@ the last of these, it was removed rather than retained on a summary. No patent c
 was read in the original; the prior-art position stated here is that of an author survey,
 not of a professional search.
 
-## 8.12 The architecture comparison is conditional on one unmeasured number
+## 8.12 The architecture comparison is conditional, and on two things rather than one
 
 The comparative sizing of Section 5.5 settles the case against a separate lift system
-using measurements, and does not settle the case against a tilting mechanism at all. The
-tilting layout is credited there with paying no cruise drag for its nacelles, pivots and
-hover-pitched blades, because no measurement of that penalty was available to charge it
-with; on that credit it cruises twelve percent further than the configuration proposed
-here. The sign of that comparison reverses if the penalty exceeds roughly eleven percent
-of cruise drag, which is what the tip frames of this configuration cost it. The
-comparison is therefore reported as a conditional, and the reader should treat the
-tilting column as an upper bound on that architecture rather than as an estimate of it.
+using measurements, and does not settle the case against a tilting mechanism at all. Two
+separate conditions carry that second result and both should be read as limitations.
+
+The first is an unmeasured number. The tilting layout is credited with paying no cruise
+drag for its nacelles, pivots and hover-pitched blades, because no measurement of that
+penalty was available to charge it with; on that credit it cruises twelve percent further
+than the configuration proposed here under the fixed-fuel-fraction rule. The sign of that
+comparison reverses if the penalty exceeds roughly eleven percent of cruise drag, which is
+what the tip frames of this configuration cost it. The reader should treat the tilting
+column as an upper bound on that architecture rather than as an estimate of it.
+
+The second is the sizing rule itself, and it applies symmetrically to every architecture
+including the one proposed here. Range as computed from a fixed fuel fraction does not
+depend on take-off mass, so an architecture that closes heavier is permitted to carry
+proportionally more fuel and its mass penalty never reaches the range column. This is a
+correct property of the Breguet form and not an error, but it is a poor contract for
+comparing architectures, and a comparison reported under it alone would be misleading.
+Section 5.5 therefore reports three contracts — fixed fuel fraction, fixed fuel mass, and
+fixed take-off mass with fixed payload — and the tilting layout's advantage survives only
+the first. Which of the three is the right question depends on what is being procured: a
+fixed mission, a fixed fuel load, or a fixed vehicle class. This paper does not choose
+among them, and no result here should be quoted without the contract it was computed
+under.
 
 Three further caveats sit under the same model. Wing loading and disc loading are held
 common across the three architectures, which is a controlled comparison and not a

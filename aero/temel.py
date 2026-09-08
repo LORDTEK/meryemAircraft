@@ -207,6 +207,109 @@ def tablo(f_kaldirma_grubu=0.10, f_egme=0.05, tamponlu_hepsi=True,
     return cik
 
 
+# --- KARSILASTIRMA SOZLESMELERI --------------------------------------
+#
+# Ucuncu bir bagimsiz denetim (YZ3) ilk ikisinin kacirdigi bir seyi
+# gordu ve haklı: menzil formulu
+#     R = f_yakit E* eta_zincir (L/D) / g
+# sabit f_yakit altinda MTOW'dan BAGIMSIZ. Formul dogru (Breguet'nin
+# kesir bicimi), ama MIMARI KARSILASTIRMASI icin tehlikeli bir
+# sozlesmedir: daha agir mimari, ayni kesri korudugu icin orantili
+# olarak DAHA FAZLA YAKIT tasir. Kutle faturasi menzilden silinir.
+#
+# Genel bicim:  R = (E* eta_zincir / g) (L/D) (m_yakit / MTOW)
+#   sabit kesir   -> m_yakit/MTOW sabit -> R MTOW'dan bagimsiz
+#   sabit kutle   -> R  ~  (L/D) / MTOW      <- kutle cezasi geri gelir
+#   sabit MTOW    -> f_yakit = 1 - f_bos - m_faydali/MTOW
+#
+# Uc sozlesme de raporlanmadan "C daha iyi menzil veriyor" denemez.
+
+def menzil_ver(LD, f_yakit, g=GOREV):
+    return (f_yakit * g["Estar"] * g["eta_zincir"] * LD / G) / 1000.0
+
+
+def sabit_MTOW(m, LD_temiz, MTOW, g=GOREV):
+    """Sabit MTOW ve sabit faydali yuk: yakit ARTAN yerdir.
+
+    Yineleme yok -- MTOW verili. f_yakit negatif cikarsa mimari o
+    MTOW'da bu gorevi kapatamaz."""
+    LD = LD_temiz * m.LD_carpan
+    eta_s = g["eta_seyir"] * m.eta_carpan
+    A = MTOW / g["disk_yuklemesi"]
+    W = MTOW * G
+    P_hover = W ** 1.5 / (g["eta_hover"] * math.sqrt(2 * RHO * A))
+    P_seyir = W * g["V"] / LD / eta_s
+    P_kurulu = P_hover if m.motor_hover else P_seyir * g["motor_pay"]
+    f_tahrik = F_TAHRIK_SABIT + (P_kurulu / 1000.0) / OZGUL_GUC / MTOW
+    f_bos = (ORTAK["f_govde"] + m.f_govde_ek + ORTAK["f_aviyonik"]
+             + f_tahrik + m.f_tampon + m.f_ek)
+    f_yakit = 1.0 - f_bos - g["m_faydali"] / MTOW
+    return dict(mimari=m.ad, MTOW=MTOW, LD=LD, f_bos=f_bos, f_yakit=f_yakit,
+                menzil=menzil_ver(LD, f_yakit, g) if f_yakit > 0 else float("nan"),
+                kapanmadi=f_yakit <= 0)
+
+
+def sabit_yakit(m, LD_temiz, m_yakit, g=GOREV, tur=200):
+    """Sabit YAKIT KUTLESI: f_yakit mimariye gore degisir, MTOW kapanir."""
+    LD = LD_temiz * m.LD_carpan
+    eta_s = g["eta_seyir"] * m.eta_carpan
+    MTOW = g["m_faydali"] / 0.26
+    for _ in range(tur):
+        A = MTOW / g["disk_yuklemesi"]
+        W = MTOW * G
+        P_hover = W ** 1.5 / (g["eta_hover"] * math.sqrt(2 * RHO * A))
+        P_seyir = W * g["V"] / LD / eta_s
+        P_kurulu = P_hover if m.motor_hover else P_seyir * g["motor_pay"]
+        f_tahrik = F_TAHRIK_SABIT + (P_kurulu / 1000.0) / OZGUL_GUC / MTOW
+        f_bos = (ORTAK["f_govde"] + m.f_govde_ek + ORTAK["f_aviyonik"]
+                 + f_tahrik + m.f_tampon + m.f_ek)
+        yeni_MTOW = (g["m_faydali"] + m_yakit) / (1.0 - f_bos)
+        if abs(yeni_MTOW - MTOW) < 1e-9:
+            MTOW = yeni_MTOW
+            break
+        MTOW = 0.5 * MTOW + 0.5 * yeni_MTOW
+    else:
+        return dict(mimari=m.ad, kapanmadi=True, f_bos=f_bos)
+    f_yakit = m_yakit / MTOW
+    return dict(mimari=m.ad, MTOW=MTOW, LD=LD, f_bos=f_bos, f_yakit=f_yakit,
+                m_yakit=m_yakit, menzil=menzil_ver(LD, f_yakit, g),
+                kapanmadi=False)
+
+
+def sozlesmeler(LD_temiz=13.44, C_LD=1.00, C_eta=1.00, f_egme=0.05,
+                f_kaldirma_grubu=0.10):
+    """Uc sozlesme yan yana. A her zaman payda."""
+    ms = mimariler(f_kaldirma_grubu, f_egme, True, C_LD, C_eta)
+    ref = boyutlandir(ms[0], LD_temiz)
+    m_yakit_A = ORTAK["f_yakit"] * ref["MTOW"]
+    MTOW_A = ref["MTOW"]
+    print("Referans A: MTOW %.1f kg, yakit %.2f kg, L/D %.2f, menzil %.0f km"
+          % (MTOW_A, m_yakit_A, ref["LD"], ref["menzil"]))
+    print("C'nin carpanlari: L/D x%.2f, eta x%.2f" % (C_LD, C_eta))
+    print()
+    baslik = ("1) sabit yakit KESRI (%0,16)",
+              "2) sabit yakit KUTLESI (%.2f kg)" % m_yakit_A,
+              "3) sabit MTOW (%.1f kg) + sabit faydali yuk" % MTOW_A)
+    hesap = (lambda m: boyutlandir(m, LD_temiz),
+             lambda m: sabit_yakit(m, LD_temiz, m_yakit_A),
+             lambda m: sabit_MTOW(m, LD_temiz, MTOW_A))
+    for ad, f in zip(baslik, hesap):
+        print(ad)
+        print("  %-24s %8s %8s %9s %10s" % ("", "MTOW", "f_yakit", "menzil", "A'ya gore"))
+        taban = None
+        for m in ms:
+            r = f(m)
+            if r.get("kapanmadi"):
+                print("  %-24s  KAPANMADI (f_bos %.3f)" % (m.ad, r["f_bos"]))
+                continue
+            if taban is None:
+                taban = r["menzil"]
+            print("  %-24s %8.1f %8.3f %9.0f %+9.1f%%"
+                  % (m.ad, r["MTOW"], r.get("f_yakit", ORTAK["f_yakit"]),
+                     r["menzil"], 100 * (r["menzil"] - taban) / taban))
+        print()
+
+
 def duyarlilik_C(LD_temiz=13.44, f_egme=0.05):
     """C'nin menzil ustunlugu HANGI VARSAYIMDAN geliyor?
 

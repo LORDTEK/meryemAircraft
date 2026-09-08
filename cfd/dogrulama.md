@@ -3516,3 +3516,82 @@ edilemez.
 **Kural:** *"Isınmış başlangıç çökmeyi çözer; çözümün tekliğini
 garanti etmez. Bir sıcak başlangıçla elde edilen kararlı çözüm, ikinci
 bir bağımsız başlangıçla sınanmadan tek değer olarak yazılamaz."*
+
+## ⚠️ DÜZELTME — "ÇOKLU ÇÖZÜM" OKUMASI FAZLA GÜÇLÜYDÜ (08.09.2026)
+
+Üç dış denetim de aynı şeyi istedi: iki SST çözümünün **basınç alanını
+ve ayrılma topolojisini** karşılaştır; yeni koşu gerekmiyor, iki
+yakınsamış alan duruyor. Yapıldı (`cfd/ortak/basinckarsi.py`) ve sonuç
+benim yorumumu çürüttü.
+
+### 1. Ayrılma topolojisi FARKLI DEĞİL — birebir aynı
+
+| | ters akış alanı | x aralığı |
+|---|---|---|
+| bl_C | %0,02 | 1,003 – 1,740 m |
+| bl_E | %0,02 | 1,003 – 1,740 m |
+
+"İki farklı ayrılmış duruma oturmuş" hipotezi buradan **çürüyor**.
+Ayrılma zaten yok denecek kadar az ve iki vakada aynı yerde.
+
+### 2. Fark açıklık boyunca DÜZGÜN dağılmış, yerel değil
+
+Basınç sürüklemesinin bantlara düşen farkı (toplam farkın yüzdesi):
+
+| s/yarı | 0,00–0,08 | 0,17–0,25 | 0,42–0,50 | 0,58–0,67 | 0,83–0,92 |
+|---|---|---|---|---|---|
+| pay | %11,4 | %11,1 | %15,1 | %10,3 | %1,0 |
+
+İç açıklığın sekiz bandının her biri farkın kabaca sekizde birini
+taşıyor. Yerel bir çözüm dalı olsaydı fark **bir yerde toplanırdı**.
+
+### 3. ASIL BULGU — bl_C simetri sınamasını GEÇMİYOR
+
+Kesitler simetrik NACA 00xx, burulma yok, α = 0. **C_L sıfır olmak
+zorunda.**
+
+| | C_L | sıfıra uzaklık |
+|---|---|---|
+| bl_C (SA-ısınmış) | **+0,0014547** | 10,8× |
+| bl_E (y⁺≈20'den taşınmış) | **+0,00013463** | 1× |
+
+Cp tablosu aynı şeyi yerel olarak da gösteriyor. s/yarı = 0,25,
+x/c = 0,875'te üst/alt yüzey Cp'si:
+
+| | üst | alt | fark |
+|---|---|---|---|
+| bl_C | 0,1715 | 0,1964 | **0,0249** |
+| bl_E | 0,1866 | 0,1877 | **0,0011** |
+
+Simetrik kesitte bu farkın sıfır olması gerekir. Ölçülen her
+istasyonda bl_C'nin asimetrisi bl_E'ninkinin yaklaşık **10 katı**.
+
+### 4. Yeni okuma — ve eskisinin geri alınması
+
+**Geri alınan:** *"kararlı RANS burada birden fazla durağan çözüme
+oturuyor."* Bu, elimdeki delilin taşıdığından fazlasıydı. Ayrılma aynı,
+fark yerel değil, ve iki çözümden biri simetri sınamasını geçiyor.
+
+**Yerine geçen, ölçülmüş ifade:** iki çözüm **eşit değerde değil.**
+bl_E, fiziğin dayattığı simetriyi 10 kat daha iyi sağlıyor, artığı daha
+düşük (1,0e−07 / 7,1e−07) ve firar kenarında daha çok basınç geri
+kazanıyor. bl_C, SA ısınmasından kalan bir **artık asimetri** taşıyor.
+
+Not: bu asimetrinin indüklenen sürüklemesi ihmal edilebilir
+(C_L²/(πARe) ≈ 1,1e−07, C_D'nin milyonda 9'u). Yani asimetri farkın
+**sebebi değil, belirtisidir**; ama hangi çözümün daha iyi
+koşullandığını söyleyen ölçüt odur.
+
+### 5. Sonuç
+
+Yayımlanacak sayı için ölçüt artık var: **bl_E = 0,012011.** bl_C
+(0,012532) alt sınır olarak kalır, ama artık "eşit derecede geçerli
+ikinci çözüm" değil, **daha kötü koşullanmış** olandır.
+
+Aralık yine de yazılır — üçüncü bir başlangıç denenmediği için
+0,01201–0,01253 ölçülmüş yayılımdır — ama aralığın **hangi ucunun
+tercih edildiği** artık gerekçelendirilebiliyor.
+
+**Kural:** *"İki çözüm 'ikisi de yakınsadı' diye eşit değildir.
+Geometrinin dayattığı bir simetri varsa, onu daha iyi sağlayan çözüm
+tercih edilir; ölçüt residual değil, fiziktir."*
