@@ -2,7 +2,7 @@
 
 Meryem Gülmen, Berke Gülmen, Ömer Gülmen
 
-**Abstract.** Hybrid vertical take-off and landing (VTOL) aircraft combine runway independence with wing-borne cruise and pay for it in cruise efficiency. This paper treats that cost as architectural rather than as a defect of implementation, and develops it as an accounting framework. The penalty is charged in three coupled currencies — the mass of hover hardware carried through cruise, its drag when exposed in cruise, and a power system sized by a condition holding for some two percent of the flight — and every known remedy reduces one by raising another. The escape condition is then explicit: the penalty is charged whenever hover and cruise are served by hardware that is not the same hardware, in the same orientation, doing the same job. A second result is methodological: architectural comparisons depend on the sizing contract chosen, and a fixed fuel fraction removes the mass bill from the range column altogether, so three contracts are reported rather than one. meryemAircraft, an uncrewed tail-sitting blended-wing body, satisfies the escape condition and serves as the case study: one coaxial pair at the nose gives all thrust in both regimes, four small pairs at the tips give attitude moments only, and a deployable strip gives the roll that body-parallel thrust cannot. Against a lift-plus-cruise layout, on wind-tunnel drag, it closes the same mission at forty-two percent lower take-off mass and seventeen percent greater range; against a tilting layout the comparison reverses between contracts and no superiority is claimed. A three-dimensional solution bounds the zero-lift drag with a measured uncertainty budget, and a component mass build-up closes the 50 kg design conditionally and not the 1000 kg one. The study is analytical, with no experimental validation of the configuration. The tip propellers can turn the aircraft's rotational inertia through the transition but not, on present evidence, its aerodynamic moment; transition controllability is therefore the principal open requirement, and is stated as a threshold a future measurement must meet.
+**Abstract.** Hybrid vertical take-off and landing (VTOL) aircraft combine runway independence with wing-borne cruise and pay for it in cruise efficiency. This paper treats that cost as architectural rather than as a defect of implementation, and develops it as an accounting framework. The penalty is charged in three coupled currencies — the mass of hover hardware carried through cruise, its drag when exposed in cruise, and a power system sized by a condition holding for some two percent of the flight — and every known remedy reduces one by raising another. The escape condition is then explicit: the penalty is charged whenever hover and cruise are served by hardware that is not the same hardware, in the same orientation, doing the same job. A second result is methodological: architectural comparisons depend on the sizing contract chosen, and a fixed fuel fraction removes the mass bill from the range column altogether, so three contracts are reported rather than one. meryemAircraft, an uncrewed tail-sitting blended-wing body, satisfies the escape condition and serves as the case study: one coaxial pair at the nose gives all thrust in both regimes, four small pairs at the tips give attitude moments only, and a deployable strip gives the roll that body-parallel thrust cannot. Against a lift-plus-cruise layout, on wind-tunnel drag, it closes the same mission at forty-two percent lower take-off mass and seventeen percent greater range; against a tilting layout the comparison reverses between contracts and no superiority is claimed. A three-dimensional solution bounds the zero-lift drag with a measured uncertainty budget, and a component mass build-up closes the 50 kg design conditionally and not the 1000 kg one. The study is analytical, with no experimental validation of the configuration. The tip propellers can turn the aircraft's rotational inertia through the transition but not, on present evidence, its aerodynamic moment. Resolving that margin along the trajectory shows the aircraft never reaches ninety degrees of incidence — the relative wind rotates with the body — so the outstanding measurement is the pitching moment to some twenty-two degrees at low dynamic pressure, together with trim at cruise. Transition controllability remains the principal open requirement and is stated as a threshold a future measurement must meet.
 
 **Keywords:** vertical take-off and landing; tail-sitter; blended wing body; uncrewed aerial vehicle; series hybrid propulsion; cruise efficiency; aircraft configuration design
 
@@ -1918,59 +1918,58 @@ larger aircraft must rotate more slowly; the quantitative form of that statement
 the rotation time must grow as the square root of the ratio of inertia growth to moment
 growth, and that setting it any faster spends control margin to buy nothing, since a slower
 rotation loses no more altitude.
+**What this does not establish.** The centre of pressure moves as the aircraft rotates, and
+the pitching moment that produces is not computed here. The margins above are inertial: they
+say the propellers can turn the aircraft's own inertia and say nothing about turning it
+against aerodynamic moment. This is a necessary condition, not a sufficient one.
 
-**What this does not establish, and how far short it falls.** The centre of pressure
-travels as the aircraft rotates through ninety degrees, and the pitching moment that travel
-produces is not computed here. This is a *necessary* condition and not a sufficient one:
-the margins above say the propellers can turn the aircraft's own inertia, and say nothing
-about turning it against aerodynamic moment, which may help or hinder and is of unknown
-size.
+**How much is left over can be resolved along the trajectory, and doing so corrects the
+question.** The moment remaining after the inertia is turned — 11.9 N m for the light design
+and 489 N m for the heavy one — divided by q S c̄ gives the pitching-moment coefficient that
+would consume it. Evaluating that along the trajectory of Section 7.4 rather than at a single
+representative speed shows something the single-speed form obscured: **the aircraft does not
+reach ninety degrees of incidence.** The body rotates through ninety degrees, but the relative
+wind rotates with it, because the aircraft is accelerating and climbing at the same time. Peak
+incidence is 17.5° for the light design entered in a 5 m s⁻¹ climb, and 21.6° entered from
+rest.
 
-How far short can be quantified, and the answer is not reassuring. The moment left over
-after the inertia is turned is 11.9 N m for the light design and 489 N m for the heavy one.
-Setting that against q S c̄ gives the pitching-moment coefficient that would consume it
-entirely:
+| | Entry | Peak incidence | Airspeed there | C_m budget there | Tightest budget, and where |
+|---|---|---:|---:|---:|---|
+| Light | 5 m s⁻¹ climb | 17.5° | 7.3 m s⁻¹ | 0.322 | 0.079, at rotation end, α = 4.9°, 14.7 m s⁻¹ |
+| Light | from rest | 21.6° | 2.8 m s⁻¹ | 2.174 | 0.080, at rotation end, α = 17.7°, 14.7 m s⁻¹ |
+| Heavy | 5 m s⁻¹ climb | 5.4° | 35.6 m s⁻¹ | 0.015 | 0.015, at rotation end |
+| Heavy | from rest | 20.5° | 6.8 m s⁻¹ | 0.404 | 0.015, at rotation end, α = 6.5°, 35.4 m s⁻¹ |
 
-| Airspeed during the rotation | 10 m s⁻¹ | 15 m s⁻¹ | 20 m s⁻¹ | 30 m s⁻¹ |
-|---|---:|---:|---:|---:|
-| Light design | 0.172 | 0.076 | 0.043 | 0.019 |
-| Heavy design | 0.186 | 0.083 | 0.047 | 0.021 |
+**The constraint splits into two, and they are different problems.** In the middle of the
+rotation the incidence is high — seventeen to twenty-two degrees — but the dynamic pressure is
+low, and the coefficient that would consume the margin is 0.32 or more, at or above the upper
+end of published post-stall values. At the end of the rotation the incidence is small, five to
+six degrees, but the aircraft is fast, and the budget falls to 0.079 for the light design and
+0.015 for the heavy one. That second condition is **not** a post-stall problem. It is the
+ordinary trim question of a tailless aircraft at its cruise incidence: an aircraft trimmed for
+cruise has near-zero pitching moment about its centre of gravity by definition, and what the
+number asks is how far from trim it is at the moment it arrives there. That is a
+centre-of-gravity placement question, and every tailless configuration must answer it
+regardless of how it took off.
 
-No configuration-specific value is assumed here, and none is available. Published post-stall
-pitching-moment coefficients for swept planforms are commonly of order 0.1 to 0.3, which is
-quoted only to establish that the thresholds above are not obviously negligible — not as an
-estimate for this aircraft. **The inertial margins reported above are therefore not evidence
-that the manoeuvre closes.** They are evidence only that it is not ruled out by inertia.
+**The requirement is therefore smaller and more recognisable than first stated.** An earlier
+version of this section asked for pitching-moment coefficients through ninety degrees of
+incidence, which would have needed a wind tunnel or an unsteady computational campaign. What
+is actually required is (a) the pitching moment up to roughly twenty-two degrees at low
+dynamic pressure, a mildly post-stall regime much closer to available data, and (b) trim at
+cruise incidence, which the configuration needs in any case. Neither is supplied here, and
+transition controllability remains the study's principal open item — but it is now an open
+item of ordinary size, and the reduced computational campaigns rejected earlier were rejected
+for substituting a less-validated model for a dominant term, not because the term is beyond
+reach.
 
-**The table has an architectural reading, and it is the more useful one.** The threshold
-falls as the square of airspeed: an aerodynamic moment that is comfortably survivable at
-10 m s⁻¹ consumes the entire margin by 20. The rotation must therefore be performed at low
-dynamic pressure — close to hover, and certainly not at cruise speed. This is not a
-limitation discovered after the fact but a constraint the configuration was already obeying:
-Section 7.2 begins the transition in the hover-like condition for reasons of thrust margin,
-and Section 7.4 finds that a slower rotation entered in a climb is better than a fast one.
-Both of those now have a second justification. Stated as a design rule: **the tail-sitting
-transition is a low-dynamic-pressure manoeuvre by necessity, and any variant of this
-configuration that attempts to rotate at speed requires either a measured C_m(α) or a
-control surface.**
-
-**What a future measurement must show.** The threshold makes the requirement testable
-rather than open-ended, in the same way the shell areal density of Section 6.7 does. The
-paper does not predict the pitching-moment coefficient; it states the value that would
-break the design. A wind-tunnel or high-fidelity computational campaign validating this
-configuration's transition must show that the net opposing pitching-moment coefficient
-through the rotation stays below approximately 0.08 at the mid-transition airspeeds of the
-reference designs, or else that the rotation is confined to airspeeds low enough for the
-threshold it must beat to rise above the measured value. Nothing else in this paper is
-carried by that number, and nothing here should be read as a demonstration of transition
-authority.
-
-This makes transition controllability, not the mass budget, the largest unresolved item in
-this study. Answering it needs pitching-moment coefficients through ninety degrees of
-incidence for this planform, which requires a wind tunnel or a dedicated unsteady
-computational campaign; a reduced computation would substitute a less-validated model for
-the dominant missing term, which is precisely what should not be done with a dominant term,
-and neither the full campaign nor an experiment is within the scope of this paper.
+**Two limits of this reading are worth stating.** The incidence history comes from the
+point-mass trajectory of Section 7.4: it is the geometric angle between the body axis and the
+velocity vector, so it is only as good as that trajectory. And the rotation rate itself varies
+the local incidence along the body by ω c̄ / 2V, which is ±3.1° for the light design entered in
+a climb and ±8.6° entered from rest — so at the peak-incidence instant of that second case
+parts of the airframe see close to thirty degrees. Nothing here should be read as a
+demonstration of transition authority.
 
 # 8. Limitations
 
@@ -2311,13 +2310,15 @@ are listed so that they can be:
    the inertia from the component build-up and shows the tip propellers carry it with a
    margin of 2.08 at the light design point and 1.26 at the heavy one — the latter only on
    the cheapest rotation profile — together with a measured account of how that margin
-   narrows with size, and a threshold: the pitching-moment coefficient that would consume
-   the remaining margin is 0.076 for the light design at 15 m s⁻¹, and falls as the square
-   of airspeed. **Transition controllability, not the mass budget, is now the largest
-   unresolved item in this study**, and the threshold converts it from an open question
-   into a testable acceptance criterion. What it does not do is answer it: a reduced
-   computation would replace the dominant missing term with a less-validated model, which
-   is the one thing that should not be done with a dominant term. What it cannot do is charge the
+   narrows with size, and a threshold for the aerodynamic moment resolved along the
+   trajectory. That resolution corrected the requirement rather than merely quantifying it:
+   the aircraft does not reach ninety degrees of incidence, because the relative wind
+   rotates with the body, and peak incidence is 17.5° to 21.6°. **Transition controllability
+   remains the largest unresolved item in this study**, but it now asks for the pitching
+   moment up to some twenty-two degrees at low dynamic pressure and for trim at cruise
+   incidence, rather than for a moment sweep through ninety degrees. What is still not done
+   is answering it: a reduced computation would replace a dominant term with a
+   less-validated model. What it cannot do is charge the
    aerodynamic pitching moment, which requires moment coefficients through ninety degrees
    of incidence; those are not available for this planform and cannot be produced without
    a wind tunnel or a dedicated computational campaign. **This item is therefore reduced
@@ -2392,10 +2393,13 @@ lengthened to 5.1 s, which costs six percent of hover power instead of thirteen 
 no other result. The fourth has not been carried
 out, and the third is a necessary condition only: charging the aerodynamic pitching moment
 through ninety degrees of incidence needs measurements this study does not have. What that
-check does supply is a threshold — a pitching-moment coefficient of roughly 0.08 at
-mid-transition airspeed would consume the margin, and the figure falls as the square of
-speed — which turns the gap into a testable requirement and yields a design rule of its
-own: the tail-sitting rotation is a low-dynamic-pressure manoeuvre by necessity. The claims
+check does supply is a threshold, resolved along the trajectory, and resolving it changed the
+question. The aircraft does not reach ninety degrees of incidence: the body rotates through
+ninety, but the relative wind rotates with it, and peak incidence is between seventeen and
+twenty-two degrees. The high-incidence part of the rotation happens at low dynamic pressure,
+where the margin tolerates a coefficient of 0.32 or more; the tight part is the end of the
+rotation, where incidence is small and speed is high, and that is a trim question rather than
+a post-stall one. The outstanding measurement is therefore of ordinary size. The claims
 most exposed are identified in Section 8. An earlier version of this section stated that
 none of the remaining analyses required an experiment; that is no longer true, and the
 change is the most important thing this study learned about itself. Transition

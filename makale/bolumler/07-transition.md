@@ -290,56 +290,55 @@ larger aircraft must rotate more slowly; the quantitative form of that statement
 the rotation time must grow as the square root of the ratio of inertia growth to moment
 growth, and that setting it any faster spends control margin to buy nothing, since a slower
 rotation loses no more altitude.
+**What this does not establish.** The centre of pressure moves as the aircraft rotates, and
+the pitching moment that produces is not computed here. The margins above are inertial: they
+say the propellers can turn the aircraft's own inertia and say nothing about turning it
+against aerodynamic moment. This is a necessary condition, not a sufficient one.
 
-**What this does not establish, and how far short it falls.** The centre of pressure
-travels as the aircraft rotates through ninety degrees, and the pitching moment that travel
-produces is not computed here. This is a *necessary* condition and not a sufficient one:
-the margins above say the propellers can turn the aircraft's own inertia, and say nothing
-about turning it against aerodynamic moment, which may help or hinder and is of unknown
-size.
+**How much is left over can be resolved along the trajectory, and doing so corrects the
+question.** The moment remaining after the inertia is turned — 11.9 N m for the light design
+and 489 N m for the heavy one — divided by q S c̄ gives the pitching-moment coefficient that
+would consume it. Evaluating that along the trajectory of Section 7.4 rather than at a single
+representative speed shows something the single-speed form obscured: **the aircraft does not
+reach ninety degrees of incidence.** The body rotates through ninety degrees, but the relative
+wind rotates with it, because the aircraft is accelerating and climbing at the same time. Peak
+incidence is 17.5° for the light design entered in a 5 m s⁻¹ climb, and 21.6° entered from
+rest.
 
-How far short can be quantified, and the answer is not reassuring. The moment left over
-after the inertia is turned is 11.9 N m for the light design and 489 N m for the heavy one.
-Setting that against q S c̄ gives the pitching-moment coefficient that would consume it
-entirely:
+| | Entry | Peak incidence | Airspeed there | C_m budget there | Tightest budget, and where |
+|---|---|---:|---:|---:|---|
+| Light | 5 m s⁻¹ climb | 17.5° | 7.3 m s⁻¹ | 0.322 | 0.079, at rotation end, α = 4.9°, 14.7 m s⁻¹ |
+| Light | from rest | 21.6° | 2.8 m s⁻¹ | 2.174 | 0.080, at rotation end, α = 17.7°, 14.7 m s⁻¹ |
+| Heavy | 5 m s⁻¹ climb | 5.4° | 35.6 m s⁻¹ | 0.015 | 0.015, at rotation end |
+| Heavy | from rest | 20.5° | 6.8 m s⁻¹ | 0.404 | 0.015, at rotation end, α = 6.5°, 35.4 m s⁻¹ |
 
-| Airspeed during the rotation | 10 m s⁻¹ | 15 m s⁻¹ | 20 m s⁻¹ | 30 m s⁻¹ |
-|---|---:|---:|---:|---:|
-| Light design | 0.172 | 0.076 | 0.043 | 0.019 |
-| Heavy design | 0.186 | 0.083 | 0.047 | 0.021 |
+**The constraint splits into two, and they are different problems.** In the middle of the
+rotation the incidence is high — seventeen to twenty-two degrees — but the dynamic pressure is
+low, and the coefficient that would consume the margin is 0.32 or more, at or above the upper
+end of published post-stall values. At the end of the rotation the incidence is small, five to
+six degrees, but the aircraft is fast, and the budget falls to 0.079 for the light design and
+0.015 for the heavy one. That second condition is **not** a post-stall problem. It is the
+ordinary trim question of a tailless aircraft at its cruise incidence: an aircraft trimmed for
+cruise has near-zero pitching moment about its centre of gravity by definition, and what the
+number asks is how far from trim it is at the moment it arrives there. That is a
+centre-of-gravity placement question, and every tailless configuration must answer it
+regardless of how it took off.
 
-No configuration-specific value is assumed here, and none is available. Published post-stall
-pitching-moment coefficients for swept planforms are commonly of order 0.1 to 0.3, which is
-quoted only to establish that the thresholds above are not obviously negligible — not as an
-estimate for this aircraft. **The inertial margins reported above are therefore not evidence
-that the manoeuvre closes.** They are evidence only that it is not ruled out by inertia.
+**The requirement is therefore smaller and more recognisable than first stated.** An earlier
+version of this section asked for pitching-moment coefficients through ninety degrees of
+incidence, which would have needed a wind tunnel or an unsteady computational campaign. What
+is actually required is (a) the pitching moment up to roughly twenty-two degrees at low
+dynamic pressure, a mildly post-stall regime much closer to available data, and (b) trim at
+cruise incidence, which the configuration needs in any case. Neither is supplied here, and
+transition controllability remains the study's principal open item — but it is now an open
+item of ordinary size, and the reduced computational campaigns rejected earlier were rejected
+for substituting a less-validated model for a dominant term, not because the term is beyond
+reach.
 
-**The table has an architectural reading, and it is the more useful one.** The threshold
-falls as the square of airspeed: an aerodynamic moment that is comfortably survivable at
-10 m s⁻¹ consumes the entire margin by 20. The rotation must therefore be performed at low
-dynamic pressure — close to hover, and certainly not at cruise speed. This is not a
-limitation discovered after the fact but a constraint the configuration was already obeying:
-Section 7.2 begins the transition in the hover-like condition for reasons of thrust margin,
-and Section 7.4 finds that a slower rotation entered in a climb is better than a fast one.
-Both of those now have a second justification. Stated as a design rule: **the tail-sitting
-transition is a low-dynamic-pressure manoeuvre by necessity, and any variant of this
-configuration that attempts to rotate at speed requires either a measured C_m(α) or a
-control surface.**
-
-**What a future measurement must show.** The threshold makes the requirement testable
-rather than open-ended, in the same way the shell areal density of Section 6.7 does. The
-paper does not predict the pitching-moment coefficient; it states the value that would
-break the design. A wind-tunnel or high-fidelity computational campaign validating this
-configuration's transition must show that the net opposing pitching-moment coefficient
-through the rotation stays below approximately 0.08 at the mid-transition airspeeds of the
-reference designs, or else that the rotation is confined to airspeeds low enough for the
-threshold it must beat to rise above the measured value. Nothing else in this paper is
-carried by that number, and nothing here should be read as a demonstration of transition
-authority.
-
-This makes transition controllability, not the mass budget, the largest unresolved item in
-this study. Answering it needs pitching-moment coefficients through ninety degrees of
-incidence for this planform, which requires a wind tunnel or a dedicated unsteady
-computational campaign; a reduced computation would substitute a less-validated model for
-the dominant missing term, which is precisely what should not be done with a dominant term,
-and neither the full campaign nor an experiment is within the scope of this paper.
+**Two limits of this reading are worth stating.** The incidence history comes from the
+point-mass trajectory of Section 7.4: it is the geometric angle between the body axis and the
+velocity vector, so it is only as good as that trajectory. And the rotation rate itself varies
+the local incidence along the body by ω c̄ / 2V, which is ±3.1° for the light design entered in
+a climb and ±8.6° entered from rest — so at the peak-incidence instant of that second case
+parts of the airframe see close to thirty degrees. Nothing here should be read as a
+demonstration of transition authority.
