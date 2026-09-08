@@ -754,3 +754,85 @@ değiştiriyor; hesaplandı: ω·(c/2)/V → hafif hatta tırmanışlı girişte
 **±3,1°**, tırmanışsız girişte **±8,6°**. Yani tırmanışsız girişte
 21,6°'lik ortalama açının üstüne ±8,6° biniyor ve gövdenin bazı
 kısımları ~30° görüyor. İhmal edilemez; metne yazıldı.
+
+---
+
+## ⚠️ `kararlilik.py` — SEYIRDE DENGE SAĞLANAMIYOR (08.09.2026)
+
+Dış denetimin ikisi de aynı yere bastı: §7.6'nın "dönüşün sonundaki dar
+bütçe, kuyruksuz bir uçağın **sıradan** denge sorusudur" ifadesi
+gösterilmemişti — ve bu uçakta elevon yok, refleks tarif edilmemiş, CG
+kök veterinin %57'sinde. Biri bunu "credible panel/VLM static trim
+analysis" ile kapatmayı önerdi. Yapıldı.
+
+### Girdap-kafes sonucu — yakınsamış
+
+| çözünürlük | tarafsız nokta |
+|---|---|
+| 6 kesit, sr 4, cr 8 | 0,8611 m |
+| 14 kesit, sr 8, cr 12 | 0,8591 m |
+| 20 kesit, sr 10, cr 16 | **0,8589 m** |
+
+%0,26 değişim; yakınsamış.
+
+**Tarafsız nokta = MAC'in %34,3'ü.** Bu, ok kanatlı bir planform için
+tamamen olağan bir değer — yani VLM sonucu güvenilir.
+
+### Sorun geometride değil, AĞIRLIK MERKEZİNDE
+
+Ok açısı yüzünden MAC hücum kenarı kök veterinin **%65,5**'inde, çeyrek
+MAC ise **%82,3**'ünde. Ama `donme.py`'nin kütle dağılımı CG'yi kök
+veterinin **%57**'sine koyuyor — yani **MAC'in hücum kenarının bile
+önüne.**
+
+| CG (kök veterinin) | statik marj (MAC) | seyirde gereken denge C_m | gereken moment |
+|---|---|---|---|
+| **%57 (mevcut varsayım)** | **%47** | **0,240** | **150 N·m** |
+| %70 | %28 | 0,141 | 88 N·m |
+| %80 | %13 | 0,065 | 41 N·m |
+| %85 | %5 | 0,027 | 17 N·m |
+
+**Mevcut uç pervane momenti: 23 N·m.**
+
+### Bulgu
+
+**Varsayılan kütle dağılımıyla uçak seyirde dengelenemiyor — 6,5 kat
+farkla.** Gereken 150 N·m, mevcut 23 N·m.
+
+Denge momenti aerodinamik olarak, **refleks kamberden** gelmelidir
+(kuyruksuz uçaklarda standart çözüm). Ama gereken C_m0 = 0,240;
+refleksli profiller tipik olarak **+0,02 ile +0,05** verir. Bir mertebe
+fark var.
+
+### Bunun ne olduğu ve ne OLMADIĞI
+
+**Bu bir VLM hatası değil** — tarafsız nokta %34 MAC, tamamen normal.
+
+**Bu makalenin bir hatası da tam olarak değil** — çünkü **makale CG
+konumunu hiçbir yerde belirtmiyor.** %57 benim `donme.py` içindeki
+bileşen konumu varsayımımdan geliyor ve orada zaten "yalnızca konumlar
+varsayım" diye işaretlenmişti.
+
+**Bu, makalenin söylemediği bir TASARIM KISITI:** kuyruksuz bir uçak
+olarak meryemAircraft'ın CG'si çeyrek-MAC'in yakınında olmak zorunda,
+yani kök veterinin **%80'inden geriye**. Yakıt, faydalı yük ve motorun
+nereye konduğu serbest bir seçim değil.
+
+### Sonuçları
+
+1. **§7.6'nın "sıradan denge sorusu" ifadesi fazla rahat.** Gösterilmesi
+   gerekiyordu, gösterilince sıradan çıkmadı.
+2. **Kütle bütçesi (§6.7) etkileniyor:** kalemlerin veter yönündeki
+   konumu artık serbest değil, kısıtlı.
+3. **Atalet hesabı (§7.6) etkileniyor:** CG geriye giderse I_yy değişir.
+4. **Bu, hakemin bulacağı türden bir açık.** Kendimiz bulmamız çok daha
+   iyi.
+
+### SINIR
+
+`vlm.py`'nin kesitleri **simetrik NACA**; makalenin tarif ettiği kamber
+ve refleks dağılımları modelde **yok**. Dolayısıyla bu koşum
+**kararlılığı** (C_m_α, tarafsız nokta) verir — ki bunlar kambere
+birinci mertebede duyarsızdır — ama **dengeyi (C_m0)** vermez. Gereken
+C_m0 hesaplanabildi; sağlanıp sağlanamayacağı kamber tanımlanmadan
+bilinemez.
