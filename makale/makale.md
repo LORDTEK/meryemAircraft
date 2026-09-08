@@ -1,8 +1,8 @@
-# Reducing the Cruise-Efficiency Penalty of Hybrid VTOL: The meryemAircraft Tail-Sitting Blended-Wing-Body Configuration with Propeller-Only Control
+# The Architectural Cost of Hybrid VTOL: meryemAircraft, a Propeller-Driven Tail-Sitting Blended-Wing-Body Without a Dedicated Lift System
 
 Meryem Gülmen, Berke Gülmen, Ömer Gülmen
 
-**Abstract.** Hybrid vertical take-off and landing (VTOL) aircraft combine runway independence with wing-borne cruise, but purchase that combination at a cost to cruise efficiency. This paper argues the cost is architectural rather than a defect of implementation. It is charged in three currencies — the mass of hover hardware carried through cruise, its drag when exposed in cruise, and a power system sized by a condition holding for roughly two percent of the flight — and every known remedy reduces one currency by increasing another. Stating the cost this way makes its escape condition explicit: it is charged whenever hover and cruise are served by hardware that is not the same hardware, in the same orientation, doing the same job. A configuration satisfying that condition is proposed — an uncrewed tail-sitting blended-wing body in which one coaxial counter-rotating pair at the nose produces all thrust in both regimes, four small coaxial pairs at the wing tips produce attitude moments only, and a deployable strip in the nose-propeller slipstream supplies the rolling moment that body-axis-parallel thrust vectors cannot generate. The aircraft has no elevons and no rudder, no tilting or retraction mechanism and no dedicated lift system; the strip is its only moving aerodynamic device. Sizing the same mission three ways, on one set of equations calibrated from the proposed design itself, closes it at forty-two percent lower take-off mass and seventeen percent greater range than a lift-plus-cruise layout, on measured drag; against a tilting layout the comparison is conditional on a cruise-drag penalty that was not measured, and no superiority over that family is claimed. Two reference designs are sized twenty times apart in mass, at 50 kg and 1000 kg, from identical equations, with the governing fractions preserved across that range by the sizing rules — though a component build-up meets those fractions only at the light design point, and only conditionally. Two findings changed the study: the tip frames must be faired, and transition altitude loss falls with rotation time rather than rising with it. The study is largely analytical, with no wind-tunnel or flight validation; a component mass build-up closes the light design conditionally and does not close the heavy one, and the tip propellers are shown to be able to turn the aircraft's rotational inertia through the transition but not, on present evidence, its aerodynamic moment, which sets a threshold that makes the rotation a low-dynamic-pressure manoeuvre. The two aerodynamic coefficients that carry the most weight are not replaced by computation but bounded by it — the zero-lift drag by a three-dimensional solution reported with a measured uncertainty budget.
+**Abstract.** Hybrid vertical take-off and landing (VTOL) aircraft combine runway independence with wing-borne cruise and pay for it in cruise efficiency. This paper treats that cost as architectural rather than as a defect of implementation, and develops it as an accounting framework. The penalty is charged in three coupled currencies — the mass of hover hardware carried through cruise, its drag when exposed in cruise, and a power system sized by a condition holding for some two percent of the flight — and every known remedy reduces one by raising another. The escape condition is then explicit: the penalty is charged whenever hover and cruise are served by hardware that is not the same hardware, in the same orientation, doing the same job. A second result is methodological: architectural comparisons depend on the sizing contract chosen, and a fixed fuel fraction removes the mass bill from the range column altogether, so three contracts are reported rather than one. meryemAircraft, an uncrewed tail-sitting blended-wing body, satisfies the escape condition and serves as the case study: one coaxial pair at the nose gives all thrust in both regimes, four small pairs at the tips give attitude moments only, and a deployable strip gives the roll that body-parallel thrust cannot. Against a lift-plus-cruise layout, on wind-tunnel drag, it closes the same mission at forty-two percent lower take-off mass and seventeen percent greater range; against a tilting layout the comparison reverses between contracts and no superiority is claimed. A three-dimensional solution bounds the zero-lift drag with a measured uncertainty budget, and a component mass build-up closes the 50 kg design conditionally and not the 1000 kg one. The study is analytical, with no experimental validation of the configuration. The tip propellers can turn the aircraft's rotational inertia through the transition but not, on present evidence, its aerodynamic moment; transition controllability is therefore the principal open requirement, and is stated as a threshold a future measurement must meet.
 
 **Keywords:** vertical take-off and landing; tail-sitter; blended wing body; uncrewed aerial vehicle; series hybrid propulsion; cruise efficiency; aircraft configuration design
 
@@ -66,18 +66,45 @@ cannot be generated by thrust vectors parallel to the body axis, is provided by 
 level-controlled deployable strip on the lower surface positioned within the main
 propeller slipstream, so that it remains effective at zero airspeed.
 
-Because hover and cruise are served by the same hardware, none of the three penalties
-is incurred. The cost that is incurred — the mass and drag of the control propellers
-and their supporting frames — is reported and quantified rather than omitted.
+Because the same primary propulsor serves hover and cruise without changing its
+orientation relative to the airframe, none of the three penalties **as defined in
+Section 3** arises: there is no second thrust system to carry, no lift hardware left
+exposed in the cruise airstream, and no continuous power system sized by the hover peak.
+That is a statement about three specific charges, not a claim that the configuration is
+free. What it pays instead — the mass and drag of the control propellers and their
+supporting frames, the rolling-moment device, and the transition manoeuvre itself — is
+reported and quantified in Section 5.4 rather than omitted.
 
-**Contributions.** This paper (i) states the cruise-efficiency penalty of hybrid VTOL
-as an architectural rather than an implementation property, and supports that statement
-with published figures; (ii) describes a configuration in which the penalty does not
-arise; (iii) sizes two reference designs, at 50 kg and 1000 kg maximum take-off weight,
-from first principles; and (iv) shows which properties of the configuration are
-preserved across that twenty-fold mass range — disc loading, energy-buffer mass fraction
-and tip-frame drag fraction — and identifies the two that are not: transition duration,
-and the ratio of propeller diameter to span.
+**Contributions.** The primary contribution of this paper is a framework, and the aircraft
+is the case that instantiates it. Specifically, the paper
+
+1. **states the cruise-efficiency penalty of hybrid VTOL as an architectural property**
+   rather than a defect of implementation, expresses it in three coupled currencies —
+   carried hover mass, exposed cruise drag, and continuous power sized by the hover peak —
+   shows with published figures that the known remedies transfer the penalty between
+   currencies rather than removing it, and derives from that structure an explicit escape
+   condition;
+2. **shows that architectural comparisons are contract-dependent**, which is a
+   methodological result independent of any particular aircraft: range computed at a fixed
+   fuel fraction is independent of take-off mass, so the mass bill never reaches the range
+   column, and an architecture that closes heavier is silently permitted to carry
+   proportionally more fuel. Three sizing contracts are therefore reported side by side,
+   and the ranking of architectures is shown to change between them;
+3. **instantiates the escape condition in a configuration** — meryemAircraft — audits the
+   three bills against it one at a time, and states what the configuration pays instead;
+4. **supports the case study with computation rather than assertion** where it could: a
+   three-dimensional Reynolds-averaged solution for the zero-lift drag, reported with a
+   measured uncertainty budget that includes turbulence-model and initialisation spread; a
+   component mass build-up that replaces the assumed mass fractions and closes the 50 kg
+   design conditionally while not closing the 1000 kg one; and a rotational check that
+   establishes inertial feasibility of the transition; and
+5. **states what is not established, as a testable requirement rather than an omission.**
+   The aerodynamic pitching moment through the rotation is not known, and the paper reports
+   the coefficient that would consume the available control margin instead of estimating
+   the coefficient itself.
+
+Items 1 and 2 stand independently of whether this particular aircraft is ever built. Item 5
+is the reason the paper does not claim that it can be.
 
 **Scope.** This is a configuration study. It contains no wind-tunnel measurement and no
 flight test. Its numerical results are analytical estimates from stated assumptions, with
@@ -2352,10 +2379,24 @@ through ninety degrees of incidence needs measurements this study does not have.
 check does supply is a threshold — a pitching-moment coefficient of roughly 0.08 at
 mid-transition airspeed would consume the margin, and the figure falls as the square of
 speed — which turns the gap into a testable requirement and yields a design rule of its
-own: the tail-sitting rotation is a low-dynamic-pressure manoeuvre by necessity. The claims most exposed are identified in Section 8, and none of the
-remaining analyses requires an experiment. The configuration is
-described in enough detail for another group to attempt any of them independently, and
-that is the outcome this paper is written to invite.
+own: the tail-sitting rotation is a low-dynamic-pressure manoeuvre by necessity. The claims
+most exposed are identified in Section 8. An earlier version of this section stated that
+none of the remaining analyses required an experiment; that is no longer true, and the
+change is the most important thing this study learned about itself. Transition
+controllability rests on a pitching moment that cannot be obtained without a wind tunnel or
+an unsteady computational campaign, and the paper declines to substitute a reduced
+calculation for it.
+
+What survives independently of that is the framework. The three currencies, the
+demonstration that architectural remedies transfer the penalty rather than remove it, the
+escape condition, and the finding that architectural comparisons change their ranking with
+the sizing contract chosen — none of these depends on whether this particular aircraft is
+ever built. meryemAircraft is the case that shows the escape condition can be instantiated
+in a real geometry and carried through to reference designs at two scales; it is not
+offered as a validated vehicle, and the paper is careful throughout to say which of its
+statements are demonstrated, which are conditional, and which are open. The configuration is
+described in enough detail for another group to attempt any of the outstanding analyses
+independently, and that is the outcome this paper is written to invite.
 
 # Declarations
 

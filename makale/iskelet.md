@@ -1,9 +1,17 @@
 # Makale İskeleti — v1
 
 **Başlık (karar verildi):**
-> Reducing the Cruise-Efficiency Penalty of Hybrid VTOL:
-> The meryemAircraft Tail-Sitting Blended-Wing-Body Configuration
-> with Propeller-Only Control
+> The Architectural Cost of Hybrid VTOL: meryemAircraft, a
+> Propeller-Driven Tail-Sitting Blended-Wing-Body Without a
+> Dedicated Lift System
+
+*(08.09.2026'da değişti. Gerekçe: "Propeller-Only Control" gösterilmemiş
+tek şeyi — kontrol edilebilirliği — en görünür yere koyuyordu, üstelik
+açılabilir şerit yüzünden harfiyen de doğru değildi. "Propeller-Driven"
+jet dışlama niyetini karşılıyor ama hiçbir şey iddia etmiyor.
+"Architectural Cost" ise makalenin asıl katkısını — çerçeveyi — öne
+alıyor. Üç dış değerlendirme de eski başlığın değişmesi gerektiğinde
+birleşti.)*
 
 **Dil:** İngilizce · **Durum:** yapı onayı bekliyor · **Kural:** makale ⊆ patent başvurusu
 
