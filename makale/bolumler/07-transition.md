@@ -221,13 +221,25 @@ of the question that can be closed without them.
 they certainly cannot rotate it against aerodynamic moment as well. If they can, the
 aerodynamic margin remains unknown and is reported as unknown.
 
-**Inertia.** The component build-up of Section 6.7 supplies the masses; the planform of
-Section 4.2 supplies where they sit. Distributing the shell and internal structure over the
-planform, the tip frames along their own length, the tip motors and propellers at the ends
-of those frames, and the centre-body items along the root chord gives a moment of inertia
-about the spanwise axis — the axis the transition rotates about — of 7.04 kg m² for the
-light design and 1 918 kg m² for the heavy one, with the centre of gravity at 57 and 58
-percent of root chord respectively.
+**Inertia, and where the mass may sit.** The component build-up of Section 6.7 supplies the
+masses; the planform of Section 4.2 supplies where they can go. The shell and internal
+structure are distributed over the planform, the tip frames along their own length, the tip
+motors and propellers at the ends of those frames. The coaxial pair, its hub and the
+electric machine that drives it are fixed at the nose. Everything else — engine, generator,
+power electronics, fuel, battery, avionics, payload — is distributed **in proportion to the
+internal volume available to hold it**, which is the constraint a real internal arrangement
+faces and is not a free choice.
+
+That distinction matters more than it appears. An earlier version of this calculation placed
+those items along the root chord by hand and obtained a centre of gravity at 57 percent of
+root chord. That was wrong, and the reason is the sweep: the outboard sections lie well aft
+of the root trailing edge, so the internal volume's own centroid sits at 78.3 percent of root
+chord and the structural centroid at 99 percent. Placed where the volume actually is, the
+centre of gravity falls at **80 percent of root chord** for the light design and 82 percent
+for the heavy one, and the moment of inertia about the spanwise axis — the axis the
+transition rotates about — is **9.81 kg m²** and **2 503 kg m²**. The hand-placed figures
+were 40 and 30 percent lower, and the margins below are correspondingly tighter than that
+earlier version reported.
 
 **The rotation profile matters, and Section 7.4's cannot be produced.** That simulation
 ramps the body angle linearly, which requires zero torque throughout and infinite torque at
@@ -250,8 +262,17 @@ pair, and 952 N m for the heavy design, whose transition thrust is not quoted in
 
 | | Required, bang-bang | Required, smooth | Available | Margin, bang-bang | Margin, smooth |
 |---|---:|---:|---:|---:|---:|
-| Light, t_r = 2 s | 11.1 N m | 16.6 N m | 23.0 N m | **2.08 ×** | 1.39 × |
-| Heavy, t_r = 5.1 s | 463 N m | 695 N m | 952 N m | **2.05 ×** | 1.37 × |
+| Light, t_r = 2 s | 15.4 N m | 23.1 N m | 23.0 N m | **1.49 ×** | 0.99 × |
+| Heavy, t_r = 5.1 s | 605 N m | 907 N m | 952 N m | **1.57 ×** | 1.05 × |
+
+**The rotation times of the reference designs are not free parameters.** Both close on the
+cheapest rest-to-rest profile with a margin near 1.5, and both sit essentially at unity on a
+smooth one — 2.01 s and 4.98 s being the shortest smoothly-commanded rotations the tip
+propellers can force, against reference times of 2 and 5.1 s. The two designs are therefore
+at the same point on the same constraint, which is the tip-propeller moment; the transition
+times follow from it rather than being chosen. A design iteration wanting comfort on a smooth
+command would lengthen both rotations by about a quarter, which Section 7.4 shows costs
+nothing in altitude.
 
 **This calculation set the heavy design's rotation time.** An earlier version of this
 study used four seconds, at which the margins are 1.26 and 0.84 — that is, feasible only on
@@ -281,11 +302,9 @@ earlier version of this section derived a scaling law by assuming geometric simi
 The two reference designs are not geometrically similar: span grows by a factor 3.345 while
 mass grows by twenty, and 3.345³ is 37.4, not 20 — the wing loading rises from 25.3 to
 45.0 kg m⁻² precisely because they are not. The ratios are therefore read from the two
-computed designs instead. Inertia grows by 272.5 while available moment grows by only 41.4,
+computed designs instead. Inertia grows by 255.1 while available moment grows by only 41.4,
 so the margin is preserved when required moment grows by the same 41.4 — which fixes the
-rotation time at 5.13 s, and is where the 5.1 s of Section 6.3 comes from. At the four
-seconds originally used, required moment grew by 68.1 and the margin fell to 0.61 of its
-light-design value, a thirty-nine percent narrowing. Section 7.4 already concluded that the
+rotation time at 4.96 s, and is where the 5.1 s of Section 6.3 comes from. Section 7.4 already concluded that the
 larger aircraft must rotate more slowly; the quantitative form of that statement is that
 the rotation time must grow as the square root of the ratio of inertia growth to moment
 growth, and that setting it any faster spends control margin to buy nothing, since a slower
@@ -317,12 +336,31 @@ rotation the incidence is high — seventeen to twenty-two degrees — but the d
 low, and the coefficient that would consume the margin is 0.32 or more, at or above the upper
 end of published post-stall values. At the end of the rotation the incidence is small, five to
 six degrees, but the aircraft is fast, and the budget falls to 0.079 for the light design and
-0.015 for the heavy one. That second condition is **not** a post-stall problem. It is the
-ordinary trim question of a tailless aircraft at its cruise incidence: an aircraft trimmed for
-cruise has near-zero pitching moment about its centre of gravity by definition, and what the
-number asks is how far from trim it is at the moment it arrives there. That is a
-centre-of-gravity placement question, and every tailless configuration must answer it
-regardless of how it took off.
+0.015 for the heavy one. That second condition is **not** a post-stall problem: it is the
+trim question of a tailless aircraft at its cruise incidence, and it has been checked rather
+than asserted.
+
+A vortex-lattice solution over the planform of Section 4.2 places the neutral point at
+0.859 m from the root leading edge — 34.3 percent of mean aerodynamic chord, an entirely
+conventional value — and the result is converged, moving by 0.26 percent over a threefold
+refinement. With the centre of gravity at the 80 percent of root chord that the internal
+volume dictates, the static margin is **+12.4 percent of mean aerodynamic chord**, in the
+middle of the usual tailless band of five to fifteen percent. The configuration is statically
+stable in pitch, and it owes that to the sweep, which carries the neutral point aft faster
+than it carries the volume.
+
+Trimming it is the remaining question. At cruise lift coefficient the moment to be balanced
+corresponds to a coefficient of 0.063 about the centre of gravity, which is what the section
+camber must supply; reflexed sections typically deliver 0.02 to 0.05. Moving the centre of
+gravity aft to 83 percent of root chord — a three-centimetre change in internal arrangement —
+reduces the requirement to 0.040 and leaves the static margin at 7.8 percent, both squarely
+conventional. **This defines a constraint the study had not previously stated: the centre of
+gravity must lie between roughly 80 and 85 percent of root chord.** It is not a demanding
+constraint, since the internal volume's own centroid is at 78.3 percent, but it is a
+constraint, and the placement of fuel, payload and engine is not free. The vortex-lattice
+model carries symmetric sections and cannot itself supply the camber that would trim the
+aircraft; what it establishes is the stability, and the size of the moment the camber must
+provide.
 
 **The requirement is therefore smaller and more recognisable than first stated.** An earlier
 version of this section asked for pitching-moment coefficients through ninety degrees of
