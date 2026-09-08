@@ -155,12 +155,13 @@ sufficient one. It also records that the linear angle ramp used in Section 7.4 c
 produced by any finite moment, and reports the measured sensitivity of the altitude-loss
 tables to that choice.
 
-**One published number changes as a result.** The heavy reference design's four-second
-rotation, in Section 6.3, is feasible on the cheapest rest-to-rest profile with a margin of
-1.26 and is *not* feasible on a smooth one, which needs 4.36 s. Four seconds is therefore a
-boundary rather than a margin, and the heavy transition time should be read as the shortest
-rotation the tip propellers can force rather than as a comfortable design point. The light
-design is not close to its boundary: two seconds against a minimum of 1.39. The aerodynamic model is a linear lift curve to stall with a flat-plate relation
+**One published number changed as a result.** The heavy reference design's rotation time
+was four seconds, at which the margins are 1.26 on the cheapest profile and 0.84 on a
+smooth one — a boundary rather than a margin. It is now 5.1 s, the time at which the heavy
+design holds the light design's margins, and the change costs nothing: the tip-propeller
+power falls from thirteen percent of hover power to six, and the altitude-loss result is
+unchanged. The light design was never close to its boundary: two seconds against a minimum
+of 1.39. The aerodynamic model is a linear lift curve to stall with a flat-plate relation
 beyond it; dynamic stall, separation hysteresis and propeller-wake effects on the wing
 are absent.
 
@@ -174,7 +175,7 @@ lift-curve slope from the thin-aerofoil expression, 4.72 rad⁻¹; the vortex-la
 solution of Section 6.6 gives 3.87 rad⁻¹ for this planform — eighteen percent lower, and
 in the direction that would make the aircraft fall further. Repeating both tables with
 the lower value moves no published entry by more than 1.2 m, and the two reference
-profiles — two seconds for the light design, four for the heavy, entered at 5 m s⁻¹ of
+profiles — two seconds for the light design, 5.1 for the heavy, entered at 5 m s⁻¹ of
 climb — still lose no altitude at either slope. The conclusion of Section 7.4 survives an
 eighteen-percent error in the coefficient it rests on.
 
@@ -340,7 +341,10 @@ are listed so that they can be:
    the inertia from the component build-up and shows the tip propellers carry it with a
    margin of 2.08 at the light design point and 1.26 at the heavy one — the latter only on
    the cheapest rotation profile — together with a measured account of how that margin
-   narrows with size. What it cannot do is charge the
+   narrows with size, and a threshold: the pitching-moment coefficient that would consume
+   the remaining margin is 0.076 for the light design at 15 m s⁻¹, where post-stall values
+   on swept planforms are routinely several times that. **Transition controllability, not
+   the mass budget, is now the largest unresolved item in this study.** What it cannot do is charge the
    aerodynamic pitching moment, which requires moment coefficients through ninety degrees
    of incidence; those are not available for this planform and cannot be produced without
    a wind tunnel or a dedicated computational campaign. **This item is therefore reduced

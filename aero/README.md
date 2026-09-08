@@ -647,3 +647,51 @@ hat için 4,36 ve 5,13 s'de de sıfır.
 **Ama bir girdi ciddi kaydı:** ağır hat, T/W = 1,2, tırmanışsız giriş —
 doğrusal profilde −1,4 m, sonlu momentli profillerde −11,6/−13,4 m.
 Yaklaşık **12 metre**. Bu, yayımlanmış bir tablo değeri ve düzeltilmeli.
+
+---
+
+## Ağır hattın geçiş süresi 4 s → 5,1 s (08.09.2026)
+
+`donme.py`'nin düzeltilmiş hâli, ağır hattın 4 saniyelik dönüşünün bir
+**sınır** olduğunu gösterdi: üçgen profilde pay 1,26, yumuşak profilde
+**0,84 — kapanmıyor.**
+
+Ölçek oranından türetilen doğru değer: I_yy 272,5 kat büyüyor, mevcut
+moment 41,4 kat. Payın korunması için gereken moment de 41,4 kat
+büyümeli → **t_r = 5,13 s.** Yuvarlanmış: **5,1 s.**
+
+| | t_r | üçgen payı | yumuşak payı | uç pervane gücü |
+|---|---|---|---|---|
+| eski | 4,0 s | 1,26 | **0,84 ✗** | %13 |
+| **yeni** | **5,1 s** | **2,05** | **1,37** | **%6** |
+| hafif (karşılaştırma) | 2,0 s | 2,08 | 1,39 | — |
+
+**Değişikliğin maliyeti yok, üç kazancı var:** paylar hafif hattınkine
+eşitleniyor, uç pervane gücü %13'ten %6'ya iniyor (makalenin **kendi
+Tablo 4'ünden**), ve irtifa kaybı tırmanışlı girişle üç profilde de
+sıfır kalıyor.
+
+**Not — bulgu makalenin kendi Tablo 4'üyle çelişmiyor, onu tekrarlıyor.**
+Tablo 4 zaten 4 s'nin uç pervane payının neredeyse tamamını (%13)
+yediğini söylüyordu. `donme.py` bunu moment cinsinden yeniden buldu ve
+üzerine **dönme profilini** ekledi — Tablo 4 profil ayrımı yapmıyordu.
+
+## Aerodinamik moment eşiği — atalet küçük terim çıktı
+
+Aerodinamik momenti tahmin etmiyoruz (C_m(α) verisi yok). Kabuk alan
+yoğunluğunda işe yarayan teknik: **payı tüketecek değeri vermek.**
+
+    C_m_eşik = (M_mevcut − M_gereken) / (q · S · c_ort)
+
+| V (m/s) | 10 | 15 | 20 | 30 |
+|---|---|---|---|---|
+| hafif (11,9 N·m artıyor) | 0,172 | **0,076** | 0,043 | 0,019 |
+| ağır (489 N·m artıyor) | 0,186 | **0,083** | 0,047 | 0,021 |
+
+Ok kanatlı planformlarda stall sonrası C_m rutin olarak **0,1–0,3.**
+
+**Yani atalet bu problemin küçük terimi.** §7.6'nın 2,05/2,08 payları,
+manevranın kapandığının delili **değil**; yalnızca ataletin onu
+engellemediğinin delili. Makaleye bu şekilde yazıldı ve **geçiş
+kontrol edilebilirliği, kütle bütçesinin önüne geçerek çalışmanın en
+büyük açık kalemi ilan edildi.**

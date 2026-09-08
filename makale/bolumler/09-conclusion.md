@@ -54,9 +54,11 @@ solution for the centre body, which narrowed the zero-lift drag without overturn
 a component build-up of the mass budget, which closes the light design point with 2.2 kg
 in hand provided the shell areal density stays at or below 1.78 kg m⁻² and does not close
 the heavy design at all, and a rotational check which shows the tip propellers can turn the aircraft's own inertia
-through the transition, with a margin of 2.08 at 50 kg and 1.26 at 1000 kg — the heavy
-figure holding only for the fastest available rotation profile, which makes its
-four-second transition a boundary rather than a margin. The fourth has not been carried
+through the transition, with a margin of 2.08 at 50 kg and 2.05 at 1000 kg. That
+second figure set the heavy design's rotation time: at the four seconds first used, the
+margin was 1.26 on the fastest profile and below unity on a smooth one, so the rotation was
+lengthened to 5.1 s, which costs six percent of hover power instead of thirteen and changes
+no other result. The fourth has not been carried
 out, and the third is a necessary condition only: charging the aerodynamic pitching moment
 through ninety degrees of incidence needs measurements this study does not have. The claims most exposed are identified in Section 8, and none of the
 remaining analyses requires an experiment. The configuration is

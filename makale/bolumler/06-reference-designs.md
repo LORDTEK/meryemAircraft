@@ -132,7 +132,7 @@ the single most likely place for these numbers to be wrong.
 | Fuel | 160 kg |
 | **Endurance** | **12.6 h** |
 | **Range** | **1 814 km** |
-| Transition time | 4 s |
+| Transition time | 5.1 s |
 
 The heavy design has a longer range than the light one despite a shorter endurance.
 Both effects come from the same source: the larger aircraft cruises faster and, at a
@@ -202,11 +202,17 @@ available at all:
 |---:|---:|---:|
 | 2 s | 221.5 kW | 102 % |
 | 3 s | 65.6 kW | 30 % |
-| **4 s** | **27.7 kW** | **13 %** |
+| 4 s | 27.7 kW | 13 % |
 | 5 s | 14.2 kW | 7 % |
+| **5.1 s** | **13.4 kW** | **6 %** |
 
 **The rule is that a larger aircraft turns more slowly.** The heavy design rotates in
-four seconds, at thirteen percent of its hover power.
+5.1 seconds, at six percent of its hover power. That figure is not a round number chosen
+for convenience: Section 7.6 shows it is the rotation time at which the heavy design holds
+the same rotational control margin the light design holds at two seconds. An earlier
+version of this study used four seconds, at which the tip propellers must supply thirteen
+percent of hover power — nearly the whole of their allocation — and at which a smoothly
+commanded rotation does not close at all.
 
 This constraint is less costly than it first appears, and Section 7 explains why: a
 slower rotation does not lose more altitude but less, so the scaling penalty on
