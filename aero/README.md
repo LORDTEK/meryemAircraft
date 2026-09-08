@@ -695,3 +695,62 @@ manevranın kapandığının delili **değil**; yalnızca ataletin onu
 engellemediğinin delili. Makaleye bu şekilde yazıldı ve **geçiş
 kontrol edilebilirliği, kütle bütçesinin önüne geçerek çalışmanın en
 büyük açık kalemi ilan edildi.**
+
+---
+
+## `zarf.py` — geçiş tasarım zarfı: hücum açısı 90°'ye ÇIKMIYOR (08.09.2026)
+
+§7.6 eşiği tek bir temsili hızda hesaplıyordu ve bu, yanlış bir soru
+sordurtuyordu: *"90 dereceye kadar C_m ne kadar?"*
+
+**Ölçüldü: geçiş boyunca hücum açısı 90 dereceye çıkmıyor.** GÖVDE açısı
+90° dönüyor, ama bağıl rüzgâr da onunla birlikte dönüyor — çünkü uçak
+aynı anda hızlanıyor ve tırmanıyor.
+
+7.4'ün kendi yörüngesi kullanıldı; yeni fizik yok.
+
+| | giriş | en büyük α | o anda V | **C_m bütçesi** |
+|---|---|---|---|---|
+| hafif | 5 m/s tırmanış | **17,5°** | 7,3 m/s | **0,322** |
+| hafif | tırmanışsız | **21,6°** | 2,8 m/s | **2,174** |
+| ağır | 5 m/s tırmanış | 5,4° | 35,6 m/s | 0,015 |
+| ağır | tırmanışsız | **20,5°** | 6,8 m/s | **0,404** |
+
+### Kısıt ikiye ayrılıyor ve ikisi FARKLI problemler
+
+**1. Dönüşün ortası — yüksek açı, düşük hız.** α = 17–22°, V = 2,8–7,3
+m/s → bütçe **0,32–2,17**. Rahat. Korktuğum rejim buymuş ve **kolay
+olan buymuş**, çünkü q küçük.
+
+**2. Dönüşün sonu — düşük açı, yüksek hız.** α = 5–6,5°, V = 14,7–35,6
+m/s → bütçe **0,079 (hafif) / 0,015 (ağır)**. Dar. **Ama bu bir stall
+sonrası problemi değil** — kuyruksuz bir uçağın seyir hücum açısındaki
+sıradan **denge (trim)** sorusudur. Seyir için dengelenmiş bir uçakta
+CG etrafındaki C_m ≈ 0'dır; soru, o anda dengeden ne kadar uzak
+olduğudur, ki bu bir **ağırlık merkezi yerleşimi** sorusudur.
+
+### Açık kalemin yeniden tanımı
+
+**Eski (yanlış):** *"90 dereceye kadar C_m(α) gerekiyor, bu rüzgâr
+tüneli ister."*
+
+**Yeni (ölçülmüş):** iki ayrı ve daha küçük gereksinim —
+- **(a)** ~22 dereceye kadar C_m, düşük q'da. Hafif stall sonrası;
+  mevcut veriye çok daha yakın bir rejim.
+- **(b)** seyir hücum açısı civarında C_m — ki bu **her kuyruksuz
+  tasarımın zaten cevaplaması gereken denge sorusudur**, geçişe özgü
+  değil.
+
+Bu, açık kalemi **ortadan kaldırmıyor ama küçültüyor ve
+tanınabilir hâle getiriyor.**
+
+### Kaydedilmesi gereken sınır
+
+α(t) **nokta kütle** yörüngesinden geliyor: gövde ekseni ile hız vektörü
+arasındaki açı. Yörünge yanlışsa açı da yanlıştır.
+
+Ayrıca dönme hızının kendisi gövde boyunca **yerel** hücum açısını
+değiştiriyor; hesaplandı: ω·(c/2)/V → hafif hatta tırmanışlı girişte
+**±3,1°**, tırmanışsız girişte **±8,6°**. Yani tırmanışsız girişte
+21,6°'lik ortalama açının üstüne ±8,6° biniyor ve gövdenin bazı
+kısımları ~30° görüyor. İhmal edilemez; metne yazıldı.
