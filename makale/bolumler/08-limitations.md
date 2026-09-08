@@ -150,9 +150,17 @@ dynamics, and the tip-propeller thrust required to produce the rotation does not
 from it. Section 7.6 supplies part of what is missing — the inertia about the rotation
 axis, the peak angular acceleration a finite moment can actually produce, and the resulting
 margin — but only part: the aerodynamic pitching moment through ninety degrees of incidence
-is still absent, and the margins reported there are inertial rather than total. It also
-records that the linear angle ramp used in Section 7.4 cannot be produced by any finite
-moment. The aerodynamic model is a linear lift curve to stall with a flat-plate relation
+is still absent, so what that section establishes is a necessary condition and not a
+sufficient one. It also records that the linear angle ramp used in Section 7.4 cannot be
+produced by any finite moment, and reports the measured sensitivity of the altitude-loss
+tables to that choice.
+
+**One published number changes as a result.** The heavy reference design's four-second
+rotation, in Section 6.3, is feasible on the cheapest rest-to-rest profile with a margin of
+1.26 and is *not* feasible on a smooth one, which needs 4.36 s. Four seconds is therefore a
+boundary rather than a margin, and the heavy transition time should be read as the shortest
+rotation the tip propellers can force rather than as a comfortable design point. The light
+design is not close to its boundary: two seconds against a minimum of 1.39. The aerodynamic model is a linear lift curve to stall with a flat-plate relation
 beyond it; dynamic stall, separation hysteresis and propeller-wake effects on the wing
 are absent.
 
@@ -330,8 +338,9 @@ are listed so that they can be:
 3. **A six-degree-of-freedom transition simulation** with rotational dynamics. **Partly
    done, and the remainder is blocked on data rather than on effort.** Section 7.6 derives
    the inertia from the component build-up and shows the tip propellers carry it with a
-   margin of 2.8 at the light design point and 1.69 at the heavy one, together with a
-   scaling law for how that margin narrows with size. What it cannot do is charge the
+   margin of 2.08 at the light design point and 1.26 at the heavy one — the latter only on
+   the cheapest rotation profile — together with a measured account of how that margin
+   narrows with size. What it cannot do is charge the
    aerodynamic pitching moment, which requires moment coefficients through ninety degrees
    of incidence; those are not available for this planform and cannot be produced without
    a wind tunnel or a dedicated computational campaign. **This item is therefore reduced

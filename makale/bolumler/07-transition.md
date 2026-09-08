@@ -155,6 +155,18 @@ simulation with an entry climb rate w₀:
 
 A five-metre-per-second entry climb removes the altitude loss at every rotation time
 that is otherwise sensible, and the heavy design behaves the same way. The cost of
+**These tables use a kinematically driven angle profile, and its sensitivity has been
+measured.** The body angle is ramped linearly, which Section 7.6 shows no finite moment can
+produce. Repeating the calculation with the two realisable profiles of that section moves
+the entries by one to two metres in most cells and leaves the conclusion of this section
+untouched: at an entry climb of 5 m s⁻¹ the loss is zero for all three profiles, at both
+design points and at every thrust-to-weight ratio tabulated, and it remains zero for the
+heavy design at 4.36 and 5.13 seconds. One cell moves materially and is flagged rather than
+smoothed: the heavy design at T/W = 1.2 and t_r = 4 s with no entry climb reads −1.4 m on
+the linear profile and −11.6 to −13.4 m on the realisable ones. That cell is not a
+reference condition — the reference profiles enter with climb — but the tables should be
+read as a kinematic parametric map rather than as achievable trajectories.
+
 acquiring that climb rate is negligible: at T/W = 1.2 the vertical acceleration is
 (T/W − 1)g = 1.96 m s⁻², so five metres per second is reached in 2.6 s over 6.4 m of
 climb, and the kinetic energy involved is 625 J against a fuel energy of 103 kWh.
@@ -218,39 +230,61 @@ percent of root chord respectively.
 
 **The rotation profile matters, and Section 7.4's cannot be produced.** That simulation
 ramps the body angle linearly, which requires zero torque throughout and infinite torque at
-each end. The nearest profile a finite moment can produce brings angular velocity and
-acceleration to zero at both ends, and its peak angular acceleration is 6Δθ/t_r²; a
-bang-bang profile needs 4Δθ/t_r². The stricter of the two is used here.
+each end. Two profiles a finite moment can produce bracket the choice: a bang-bang profile,
+accelerating for the first half and decelerating for the second, needs a peak angular
+acceleration of 4Δθ/t_r², and is the cheapest rest-to-rest profile there is; a smooth
+profile bringing angular velocity and acceleration to zero at both ends needs 6Δθ/t_r². A
+feasibility test — whether the manoeuvre is possible at all — must use the cheaper of the
+two, so the bang-bang value is taken as the requirement and the smooth value is reported
+alongside it as what a gentler command would cost.
 
 **Authority.** The frames place the upper and lower pairs 0.71 m from the planform in the
 light design, and differential thrust between them acts about the spanwise axis, as
-Section 4.3 sets out. Taking the transition thrust of Section 4.3:
+Section 4.3 sets out. Propeller thrust on this aircraft cannot reverse, so the largest
+differential available is the upper pairs at full thrust against the lower pairs at zero,
+which is the M = 2TL of Section 4.3 and not four times the single-pair moment. The
+available moments are therefore 23.0 N m for the light design at its quoted 16.2 N per
+pair, and 952 N m for the heavy design, whose transition thrust is not quoted in Section
+6.3 and is computed here from its twelve percent power share as 200 N per pair.
 
-| | Required | Available | Margin | Shortest rotation |
-|---|---:|---:|---:|---:|
-| Light, t_r = 2 s | 16.6 N m | 46.0 N m | **2.8 ×** | 1.20 s |
-| Heavy, t_r = 4 s | 1 130 N m | 1 905 N m | **1.69 ×** | 3.08 s |
+| | Required, bang-bang | Required, smooth | Available | Margin, bang-bang | Margin, smooth |
+|---|---:|---:|---:|---:|---:|
+| Light, t_r = 2 s | 11.1 N m | 16.6 N m | 23.0 N m | **2.08 ×** | 1.39 × |
+| Heavy, t_r = 4 s | 753 N m | 1 130 N m | 952 N m | **1.26 ×** | **0.84 ×** |
 
-The light design needs 5.84 N per pair to turn its own inertia, thirty-six percent of the
-16.2 N quoted in Section 4.3. That quoted figure is itself worth checking: at 335 W and
-0.20 m diameter it implies a figure of merit of 0.702 with no coaxial interference loss,
-where the hover figure of merit used elsewhere in this paper is 0.599. Recomputing at 0.599
-with a fifteen percent coaxial loss gives 12.4 N and a margin of 2.1 ×. The conclusion does
-not depend on which is right.
+**The heavy design's four-second rotation is feasible only on the cheapest profile.** A
+smooth command does not close at four seconds and needs 4.36 s; the bang-bang minimum is
+3.56 s. The light design is comfortable on either, at 1.39 s and 1.70 s respectively
+against its quoted two. This is a result about the reference transition time of Section 6.3
+and not only about the propellers: four seconds is a boundary rather than a margin.
 
-**The margin narrows with size, and now has a scaling law.** Available moment grows as
-thrust times arm, so as the cube of linear scale; inertia grows as mass times length
-squared, so as the fifth power; and required acceleration falls as the square of rotation
-time. The margin therefore goes as t_r²/scale², and holding it constant requires rotation
-time to grow *linearly* with scale. Going from 50 kg to 1000 kg is a linear scale factor of
-3.345, so preserving the light design's margin would need 6.7 s rather than the 4 s used —
-which is why the heavy margin is 1.69 rather than 2.8. Section 7.4 already concluded that
-the larger aircraft must rotate more slowly; this is the quantitative form of that
-statement, and it adds to it that the control margin, not only the altitude loss, is what
-tightens.
+The light figure depends on a thrust the paper quotes without a basis. At 335 W and 0.20 m
+diameter, 16.2 N implies a figure of merit of 0.702 with no coaxial interference loss,
+where the hover figure of merit used elsewhere is 0.599. Recomputing at 0.599 with a
+fifteen percent coaxial loss gives 12.4 N, an available moment of 17.6 N m, and a bang-bang
+margin of 1.59 — still comfortable. The heavy figure was computed on that conservative
+basis to begin with.
+
+**The margin narrows with size, and the narrowing is measured rather than derived.** An
+earlier version of this section derived a scaling law by assuming geometric similarity.
+The two reference designs are not geometrically similar: span grows by a factor 3.345 while
+mass grows by twenty, and 3.345³ is 37.4, not 20 — the wing loading rises from 25.3 to
+45.0 kg m⁻² precisely because they are not. The ratios are therefore read from the two
+computed designs instead. Inertia grows by 272.5, available moment by 41.4; with the
+rotation slowed from two seconds to four, required moment grows by 68.1. The margin
+therefore falls to 0.61 of its light-design value — a thirty-nine percent narrowing — and
+holding it constant would have required a rotation time of 5.13 s rather than 4. Section
+7.4 already concluded that the larger aircraft must rotate more slowly; the quantitative
+form of that statement is that the design does not yet rotate slowly enough to keep the
+control margin it has at 50 kg.
 
 **What this does not establish.** The centre of pressure travels as the aircraft rotates
 through ninety degrees, and the pitching moment that travel produces is not computed here.
-The margins above are inertial margins and not total control margins. Whether the
-aerodynamic moment consumes them is the question a six-degree-of-freedom simulation would
-answer, and it cannot be answered without moment data this study does not have.
+This is a *necessary* condition and not a sufficient one: the margins above say that the
+propellers can turn the aircraft's own inertia, and say nothing about turning it against
+aerodynamic moment, which may help or hinder and is of unknown size. On a twenty-five
+percent thick blended body through ninety degrees of incidence it could plausibly be of the
+same order as the 23 N m available. Whether it consumes the margin is the question a
+six-degree-of-freedom simulation would answer, and it cannot be answered without moment
+data this study does not have. Nothing here should be read as a demonstration of
+transition authority.

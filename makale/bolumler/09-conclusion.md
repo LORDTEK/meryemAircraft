@@ -53,11 +53,12 @@ Section 8 lists as tests of these results have been carried out — a three-dime
 solution for the centre body, which narrowed the zero-lift drag without overturning it,
 a component build-up of the mass budget, which closes the light design point with 2.2 kg
 in hand provided the shell areal density stays at or below 1.78 kg m⁻² and does not close
-the heavy design at all, and a rotational-authority check which shows the tip propellers
-carry the aircraft's own inertia through the transition with a margin of 2.8 at 50 kg and
-1.69 at 1000 kg. The fourth has not been carried out, and the third is complete only as far
-as inertia: charging the aerodynamic pitching moment through ninety degrees of incidence
-needs measurements this study does not have. The claims most exposed are identified in Section 8, and none of the
+the heavy design at all, and a rotational check which shows the tip propellers can turn the aircraft's own inertia
+through the transition, with a margin of 2.08 at 50 kg and 1.26 at 1000 kg — the heavy
+figure holding only for the fastest available rotation profile, which makes its
+four-second transition a boundary rather than a margin. The fourth has not been carried
+out, and the third is a necessary condition only: charging the aerodynamic pitching moment
+through ninety degrees of incidence needs measurements this study does not have. The claims most exposed are identified in Section 8, and none of the
 remaining analyses requires an experiment. The configuration is
 described in enough detail for another group to attempt any of them independently, and
 that is the outcome this paper is written to invite.
