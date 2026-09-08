@@ -185,17 +185,32 @@ the last of these, it was removed rather than retained on a summary. No patent c
 was read in the original; the prior-art position stated here is that of an author survey,
 not of a professional search.
 
-## 8.12 The architecture comparison is conditional on one unmeasured number
+## 8.12 The architecture comparison is conditional, and on two things rather than one
 
 The comparative sizing of Section 5.5 settles the case against a separate lift system
-using measurements, and does not settle the case against a tilting mechanism at all. The
-tilting layout is credited there with paying no cruise drag for its nacelles, pivots and
-hover-pitched blades, because no measurement of that penalty was available to charge it
-with; on that credit it cruises twelve percent further than the configuration proposed
-here. The sign of that comparison reverses if the penalty exceeds roughly eleven percent
-of cruise drag, which is what the tip frames of this configuration cost it. The
-comparison is therefore reported as a conditional, and the reader should treat the
-tilting column as an upper bound on that architecture rather than as an estimate of it.
+using measurements, and does not settle the case against a tilting mechanism at all. Two
+separate conditions carry that second result and both should be read as limitations.
+
+The first is an unmeasured number. The tilting layout is credited with paying no cruise
+drag for its nacelles, pivots and hover-pitched blades, because no measurement of that
+penalty was available to charge it with; on that credit it cruises twelve percent further
+than the configuration proposed here under the fixed-fuel-fraction rule. The sign of that
+comparison reverses if the penalty exceeds roughly eleven percent of cruise drag, which is
+what the tip frames of this configuration cost it. The reader should treat the tilting
+column as an upper bound on that architecture rather than as an estimate of it.
+
+The second is the sizing rule itself, and it applies symmetrically to every architecture
+including the one proposed here. Range as computed from a fixed fuel fraction does not
+depend on take-off mass, so an architecture that closes heavier is permitted to carry
+proportionally more fuel and its mass penalty never reaches the range column. This is a
+correct property of the Breguet form and not an error, but it is a poor contract for
+comparing architectures, and a comparison reported under it alone would be misleading.
+Section 5.5 therefore reports three contracts — fixed fuel fraction, fixed fuel mass, and
+fixed take-off mass with fixed payload — and the tilting layout's advantage survives only
+the first. Which of the three is the right question depends on what is being procured: a
+fixed mission, a fixed fuel load, or a fixed vehicle class. This paper does not choose
+among them, and no result here should be quoted without the contract it was computed
+under.
 
 Three further caveats sit under the same model. Wing loading and disc loading are held
 common across the three architectures, which is a controlled comparison and not a
