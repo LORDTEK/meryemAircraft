@@ -2,7 +2,7 @@
 
 Meryem Gülmen, Berke Gülmen, Ömer Gülmen
 
-**Abstract.** Hybrid vertical take-off and landing (VTOL) aircraft combine runway independence with wing-borne cruise, but purchase that combination at a cost to cruise efficiency. This paper argues the cost is architectural rather than a defect of implementation. It is charged in three currencies — the mass of hover hardware carried through cruise, its drag when exposed in cruise, and a power system sized by a condition holding for roughly two percent of the flight — and every known remedy reduces one currency by increasing another. Stating the cost this way makes its escape condition explicit: it is charged whenever hover and cruise are served by hardware that is not the same hardware, in the same orientation, doing the same job. A configuration satisfying that condition is proposed — an uncrewed tail-sitting blended-wing body in which one coaxial counter-rotating pair at the nose produces all thrust in both regimes, four small coaxial pairs at the wing tips produce attitude moments only, and a deployable strip in the nose-propeller slipstream supplies the rolling moment that body-axis-parallel thrust vectors cannot generate. The aircraft has no control surfaces, no tilting or retraction mechanism and no dedicated lift system. Sizing the same mission three ways, on one set of equations calibrated from the proposed design itself, closes it at forty-two percent lower take-off mass and seventeen percent greater range than a lift-plus-cruise layout, on measured drag; against a tilting layout the comparison is conditional on a cruise-drag penalty that was not measured, and no superiority over that family is claimed. Two reference designs are sized twenty times apart in mass, at 50 kg and 1000 kg, from identical equations, with the governing fractions preserved across that range by the sizing rules — though a component build-up meets those fractions only at the light design point, and only conditionally. Two findings changed the study: the tip frames must be faired, and transition altitude loss falls with rotation time rather than rising with it. The study is largely analytical, with no wind-tunnel or flight validation; a component mass build-up closes the light design conditionally and does not close the heavy one. The two aerodynamic coefficients that carry the most weight are not replaced by computation but bounded by it — the zero-lift drag by a three-dimensional solution reported with a measured uncertainty budget.
+**Abstract.** Hybrid vertical take-off and landing (VTOL) aircraft combine runway independence with wing-borne cruise, but purchase that combination at a cost to cruise efficiency. This paper argues the cost is architectural rather than a defect of implementation. It is charged in three currencies — the mass of hover hardware carried through cruise, its drag when exposed in cruise, and a power system sized by a condition holding for roughly two percent of the flight — and every known remedy reduces one currency by increasing another. Stating the cost this way makes its escape condition explicit: it is charged whenever hover and cruise are served by hardware that is not the same hardware, in the same orientation, doing the same job. A configuration satisfying that condition is proposed — an uncrewed tail-sitting blended-wing body in which one coaxial counter-rotating pair at the nose produces all thrust in both regimes, four small coaxial pairs at the wing tips produce attitude moments only, and a deployable strip in the nose-propeller slipstream supplies the rolling moment that body-axis-parallel thrust vectors cannot generate. The aircraft has no control surfaces, no tilting or retraction mechanism and no dedicated lift system. Sizing the same mission three ways, on one set of equations calibrated from the proposed design itself, closes it at forty-two percent lower take-off mass and seventeen percent greater range than a lift-plus-cruise layout, on measured drag; against a tilting layout the comparison is conditional on a cruise-drag penalty that was not measured, and no superiority over that family is claimed. Two reference designs are sized twenty times apart in mass, at 50 kg and 1000 kg, from identical equations, with the governing fractions preserved across that range by the sizing rules — though a component build-up meets those fractions only at the light design point, and only conditionally. Two findings changed the study: the tip frames must be faired, and transition altitude loss falls with rotation time rather than rising with it. The study is largely analytical, with no wind-tunnel or flight validation; a component mass build-up closes the light design conditionally and does not close the heavy one, and the tip propellers are shown to carry the aircraft's rotational inertia through the transition with margin, though not yet its aerodynamic moment. The two aerodynamic coefficients that carry the most weight are not replaced by computation but bounded by it — the zero-lift drag by a three-dimensional solution reported with a measured uncertainty budget.
 
 **Keywords:** vertical take-off and landing; tail-sitter; blended wing body; uncrewed aerial vehicle; series hybrid propulsion; cruise efficiency; aircraft configuration design
 
@@ -1774,6 +1774,66 @@ becomes erratic and increasing power makes matters worse. Whether the descent pr
 of this configuration enters that region, and at what rate of descent, is an open
 question. It is listed in Section 8 rather than answered here.
 
+## 7.6 Whether there is enough authority to rotate
+
+Section 7.4 drives the body angle kinematically. The aircraft does not rotate in that
+simulation; it is *assumed* to rotate, and the moment producing the rotation does not
+appear. Section 8.6 records this. What follows does not remove that limitation — a full
+six-degree-of-freedom treatment would need pitching-moment coefficients through ninety
+degrees of incidence, and no such data exists for this planform — but it closes the part
+of the question that can be closed without them.
+
+**The test is a lower bound.** If the tip propellers cannot rotate the aircraft's inertia,
+they certainly cannot rotate it against aerodynamic moment as well. If they can, the
+aerodynamic margin remains unknown and is reported as unknown.
+
+**Inertia.** The component build-up of Section 6.7 supplies the masses; the planform of
+Section 4.2 supplies where they sit. Distributing the shell and internal structure over the
+planform, the tip frames along their own length, the tip motors and propellers at the ends
+of those frames, and the centre-body items along the root chord gives a moment of inertia
+about the spanwise axis — the axis the transition rotates about — of 7.04 kg m² for the
+light design and 1 918 kg m² for the heavy one, with the centre of gravity at 57 and 58
+percent of root chord respectively.
+
+**The rotation profile matters, and Section 7.4's cannot be produced.** That simulation
+ramps the body angle linearly, which requires zero torque throughout and infinite torque at
+each end. The nearest profile a finite moment can produce brings angular velocity and
+acceleration to zero at both ends, and its peak angular acceleration is 6Δθ/t_r²; a
+bang-bang profile needs 4Δθ/t_r². The stricter of the two is used here.
+
+**Authority.** The frames place the upper and lower pairs 0.71 m from the planform in the
+light design, and differential thrust between them acts about the spanwise axis, as
+Section 4.3 sets out. Taking the transition thrust of Section 4.3:
+
+| | Required | Available | Margin | Shortest rotation |
+|---|---:|---:|---:|---:|
+| Light, t_r = 2 s | 16.6 N m | 46.0 N m | **2.8 ×** | 1.20 s |
+| Heavy, t_r = 4 s | 1 130 N m | 1 905 N m | **1.69 ×** | 3.08 s |
+
+The light design needs 5.84 N per pair to turn its own inertia, thirty-six percent of the
+16.2 N quoted in Section 4.3. That quoted figure is itself worth checking: at 335 W and
+0.20 m diameter it implies a figure of merit of 0.702 with no coaxial interference loss,
+where the hover figure of merit used elsewhere in this paper is 0.599. Recomputing at 0.599
+with a fifteen percent coaxial loss gives 12.4 N and a margin of 2.1 ×. The conclusion does
+not depend on which is right.
+
+**The margin narrows with size, and now has a scaling law.** Available moment grows as
+thrust times arm, so as the cube of linear scale; inertia grows as mass times length
+squared, so as the fifth power; and required acceleration falls as the square of rotation
+time. The margin therefore goes as t_r²/scale², and holding it constant requires rotation
+time to grow *linearly* with scale. Going from 50 kg to 1000 kg is a linear scale factor of
+3.345, so preserving the light design's margin would need 6.7 s rather than the 4 s used —
+which is why the heavy margin is 1.69 rather than 2.8. Section 7.4 already concluded that
+the larger aircraft must rotate more slowly; this is the quantitative form of that
+statement, and it adds to it that the control margin, not only the altitude loss, is what
+tightens.
+
+**What this does not establish.** The centre of pressure travels as the aircraft rotates
+through ninety degrees, and the pitching moment that travel produces is not computed here.
+The margins above are inertial margins and not total control margins. Whether the
+aerodynamic moment consumes them is the question a six-degree-of-freedom simulation would
+answer, and it cannot be answered without moment data this study does not have.
+
 # 8. Limitations
 
 This is a configuration study. It contains no experimental validation of any kind, and
@@ -1919,7 +1979,12 @@ roll in cruise, but the trim authority required has not been computed.
 The results of Section 7.4 come from a two-degree-of-freedom point-mass simulation in
 which the body angle is driven kinematically. It therefore does **not** model rotational
 dynamics, and the tip-propeller thrust required to produce the rotation does not follow
-from it. The aerodynamic model is a linear lift curve to stall with a flat-plate relation
+from it. Section 7.6 supplies part of what is missing — the inertia about the rotation
+axis, the peak angular acceleration a finite moment can actually produce, and the resulting
+margin — but only part: the aerodynamic pitching moment through ninety degrees of incidence
+is still absent, and the margins reported there are inertial rather than total. It also
+records that the linear angle ramp used in Section 7.4 cannot be produced by any finite
+moment. The aerodynamic model is a linear lift curve to stall with a flat-plate relation
 beyond it; dynamic stall, separation hysteresis and propeller-wake effects on the wing
 are absent.
 
@@ -2094,8 +2159,15 @@ are listed so that they can be:
    contain buckling, torsion, local load introduction or aeroelastic sizing, and its tip
    frames were sized for a vertical landing only. **This item is therefore narrowed rather
    than closed**, and what a fuller version of it would have to bound is now specific.
-3. **A six-degree-of-freedom transition simulation** with rotational dynamics, which
-   would size the tip propellers properly rather than by order of magnitude.
+3. **A six-degree-of-freedom transition simulation** with rotational dynamics. **Partly
+   done, and the remainder is blocked on data rather than on effort.** Section 7.6 derives
+   the inertia from the component build-up and shows the tip propellers carry it with a
+   margin of 2.8 at the light design point and 1.69 at the heavy one, together with a
+   scaling law for how that margin narrows with size. What it cannot do is charge the
+   aerodynamic pitching moment, which requires moment coefficients through ninety degrees
+   of incidence; those are not available for this planform and cannot be produced without
+   a wind tunnel or a dedicated computational campaign. **This item is therefore reduced
+   to a specific missing measurement rather than a missing analysis.**
 4. **A panel-method analysis of the tip surfaces**, which would either convert Section
    8.7 into a quantified benefit or remove it. The vortex-lattice solution of Section 6.6
    covers the planform but not the tip surfaces, which remain unquantified.
@@ -2156,9 +2228,13 @@ What this paper offers is a configuration and its numbers, not a validated aircr
 There is no wind-tunnel data here and no flight test. Two of the four analyses that
 Section 8 lists as tests of these results have been carried out — a three-dimensional
 solution for the centre body, which narrowed the zero-lift drag without overturning it,
-and a component build-up of the mass budget, which closes the light design point with
-2.2 kg in hand provided the shell areal density stays at or below 1.78 kg m⁻², and which
-does not close the heavy design at all. The other two have not been carried out. The claims most exposed are identified in Section 8, and none of the
+a component build-up of the mass budget, which closes the light design point with 2.2 kg
+in hand provided the shell areal density stays at or below 1.78 kg m⁻² and does not close
+the heavy design at all, and a rotational-authority check which shows the tip propellers
+carry the aircraft's own inertia through the transition with a margin of 2.8 at 50 kg and
+1.69 at 1000 kg. The fourth has not been carried out, and the third is complete only as far
+as inertia: charging the aerodynamic pitching moment through ninety degrees of incidence
+needs measurements this study does not have. The claims most exposed are identified in Section 8, and none of the
 remaining analyses requires an experiment. The configuration is
 described in enough detail for another group to attempt any of them independently, and
 that is the outcome this paper is written to invite.
