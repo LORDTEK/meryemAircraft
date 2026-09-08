@@ -102,7 +102,8 @@ than for hover. For the light reference design the continuous cruise requirement
 2.6 kW, while the hover requirement is 10.9 kW at the rotor; the
 difference is supplied for the duration of the vertical phase by a battery buffer of
 1.8 kg, which is 3.6 percent of the maximum take-off mass. Section 5 returns to this,
-because it is the mechanism by which Bill 3 is not paid.
+because it is the mechanism that releases the engine from the hover condition — Bill 3 as
+Section 3 defines it. The electrical path is not released, and Section 5.3 says so.
 
 ## 4.4 Control without control surfaces
 

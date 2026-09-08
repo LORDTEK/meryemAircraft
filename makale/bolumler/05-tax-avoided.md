@@ -1,4 +1,4 @@
-# 5. How the architectural tax is avoided
+# 5. The architectural tax, audited bill by bill
 
 *Taslak v1 — İngilizce. Türkçe notlar italik ve köşeli parantez içinde.*
 
@@ -11,7 +11,7 @@ detail, what the configuration does pay. The second half is not a concession app
 for balance. An architecture that claimed to pay nothing would be describing a
 different aircraft from the one in Section 4.
 
-## 5.1 Bill 1 — mass: not paid
+## 5.1 Bill 1 — mass: the charge does not arise
 
 There is no second propulsion group. The nose pair that lifts the aircraft off the
 ground is the same pair, in the same orientation, at the same station, that propels it
@@ -27,7 +27,7 @@ a second propulsion group: they are sized for moments rather than for weight, an
 the vertical phase they draw 1.34 kW against the nose pair's 10.9 kW, which is twelve
 percent.
 
-## 5.2 Bill 2 — drag: mostly not paid
+## 5.2 Bill 2 — drag: reduced, not removed
 
 In cruise there is no stopped rotor in the airstream, because there is no rotor that
 stops. The nose pair is the cruise propulsor and runs at its design condition
@@ -70,7 +70,7 @@ dynamic pressure the fraction is preserved. This bill does not grow with the air
 
 The drag coefficients used here are representative values for circular and faired sections at the relevant Reynolds number, and the frame cross-section has not yet been selected. The requirement to fair the frames is robust to that choice — the difference between a circular tube and a faired strut is not a matter of coefficient precision — but the twelve-percent figure is an estimate.
 
-## 5.3 Bill 3 — power system sizing: not paid
+## 5.3 Bill 3 — power system sizing: avoided for the engine, not for the electrical path
 
 The series-hybrid arrangement of Section 4.3 breaks the link that forces the power
 system to be sized by the hover condition. Because the engine drives a generator rather
@@ -90,6 +90,17 @@ engine rated above 10.9 kW instead of 2.6 kW. The mass difference is not recover
 elsewhere; it is simply not incurred. That the buffer costs under four percent of MTOW
 at both design points, twenty times apart in mass, is the numerical statement that this
 avoidance is architectural rather than a fortunate coincidence of one size.
+
+**What is not avoided, and the section heading says so.** The bill is defined in Section 3
+as a *continuous* power system sized by the hover peak, and it is the engine and its fuel
+consumption that the buffer releases from that condition. The electrical path is not
+released: the nose motor and the power electronics must still pass the full 10.9 kW, and
+the component build-up of Section 6.7 shows them as 2.73 kg and 0.61 kg against 2.60 kg of
+engine and generator — that is, the hover-sized electrical machine is the single largest
+item in the propulsion chain. The saving is real and it is the engine's, but a reader
+should not take it as an aircraft on which nothing is sized by hover. The buffer itself
+carries a further condition, given in Section 6.7: it is specified by power rather than
+energy, at 4.6 kW kg⁻¹, which is a demanding cell requirement and not a free parameter.
 
 ## 5.4 What is paid
 

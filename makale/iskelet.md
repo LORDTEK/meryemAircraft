@@ -107,7 +107,7 @@ pervanelerden alan bir konfigürasyon, üç faturayı da doğurmadan aynı kabil
 
 ---
 
-### 5. How the architectural tax is avoided
+### 5. The architectural tax, audited bill by bill
 **İddia:** Üç fatura, bu konfigürasyonda ödenmez — çünkü hover ve seyir **aynı
 donanımı** kullanır.
 
