@@ -27,10 +27,13 @@ taken from the literature or assumed.
 The reference designs are sized from an assumed mass breakdown — 30 % structure, 16 %
 propulsion chain, 4 % battery, 8 % avionics, 16 % fuel, 26 % payload — and that breakdown
 was, in the first version of this study, a target rather than a finding. A component
-build-up has since been carried out and is reported in Section 6.7. It closes: at 50 kg
-the components sum to a payload residual of 30.4 percent against the 26 percent assumed,
-a margin of 2.2 kg. That converts the assumption from an assertion into a bounded claim,
-but it does not make the claim comfortable, for three reasons.
+build-up has since been carried out and is reported in Section 6.7. It closes at 50 kg —
+the components sum to a payload residual of 30.4 percent against the 26 percent assumed, a
+margin of 2.2 kg — but it closes *conditionally*, and the conditions are worth stating as
+the result rather than as a footnote to it: **the light design closes if the average
+structural areal density stays at or below 1.78 kg m⁻², and if everything still outside the
+model together stays below 2.2 kg.** That converts the assumption from an assertion into a
+bounded claim. It does not make the claim comfortable, for three reasons.
 
 **The margin lives in one number.** Breaking each assumption in turn to find the value at
 which 13 kg of payload no longer closes gives margins of 38 to 197 percent on the
@@ -60,12 +63,18 @@ likely place for the results of this paper to be wrong, and it remains the reaso
 Section 6.5 declines to compare the calculated payload fractions against the published
 figures of aircraft that exist.
 
-One structural question is settled by the build-up rather than left open. At 50 kg the
-root bending moment is 934 N m, which a carbon spar cap of 10.7 mm² carries at the design
-allowable; the caps weigh 41 grams, eight parts in ten thousand of take-off mass, and
-under one percent even at 1000 kg. Structure at these scales is set by minimum gauge and
-assembly, not by strength — which is also why the twenty-five percent thick centre body
-costs nothing structurally.
+One structural question is narrowed by the build-up rather than settled. At 50 kg the root
+bending moment is 934 N m, which a carbon spar cap of 10.7 mm² carries at the design
+allowable; the caps weigh 41 grams, eight parts in ten thousand of take-off mass, and under
+one percent even at 1000 kg. **Global span bending is therefore not the sizing driver in
+this model** — which is why the twenty-five percent thick centre body costs nothing in
+bending. That is the whole of the claim. Buckling, core shear, torsion, local load
+introduction at the tip-frame roots and the nose mount, minimum manufacturing gauge,
+damage tolerance and aeroelastic margin are outside the model, and an earlier version of
+this section over-read the 41 grams as showing that strength in general is not the driver.
+It does not. Those modes are carried, if at all, inside the shell areal density and the
+internal-structure allowance — which is a further reason the shell figure is the number
+this budget stands or falls on.
 
 ## 8.3 Geometry chosen rather than derived
 
@@ -294,13 +303,16 @@ are listed so that they can be:
    — settle 4.3 percent apart, entirely in the pressure component. Steady RANS is
    admitting more than one stationary solution here. **This item is therefore narrowed
    rather than closed**, and what replaces it is stated above.
-2. ~~**A structural mass estimate** for the airframe and the tip frames.~~ **Done for the
-   light design, open for the heavy one.** The build-up of Section 6.7 closes the 50 kg
-   payload fraction with 2.2 kg in hand and locates the whole of that margin in the shell
-   areal density, which may not exceed 1.78 kg m⁻². **What it does not settle** is how that
-   areal density scales: the 1000 kg design closes only if it grows more slowly than the
-   0.467 power of linear scale, and that exponent was not measured. **This item is
-   therefore narrowed rather than closed.**
+2. ~~**A structural mass estimate** for the airframe and the tip frames.~~ **Attempted;
+   conditional at 50 kg, open at 1000 kg.** The build-up of Section 6.7 meets the 50 kg
+   payload fraction with 2.2 kg in hand, on the condition that the shell areal density does
+   not exceed 1.78 kg m⁻² and that everything still outside the model together stays under
+   that same 2.2 kg. **What it does not settle** is either of those conditions, or how the
+   areal density scales: the 1000 kg design is at break-even when it grows as the 0.467
+   power of linear scale, and that exponent was not measured. The build-up also does not
+   contain buckling, torsion, local load introduction or aeroelastic sizing, and its tip
+   frames were sized for a vertical landing only. **This item is therefore narrowed rather
+   than closed**, and what a fuller version of it would have to bound is now specific.
 3. **A six-degree-of-freedom transition simulation** with rotational dynamics, which
    would size the tip propellers properly rather than by order of magnitude.
 4. **A panel-method analysis of the tip surfaces**, which would either convert Section
