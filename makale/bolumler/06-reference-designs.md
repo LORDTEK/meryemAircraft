@@ -101,11 +101,14 @@ bounds them by independent calculation, which is a weaker but more honest claim.
 | **Range** | **1 598 km** |
 | Transition time | 2 s |
 
-The mass budget behind this is a target and not a finding: 30 % structure, 16 %
-propulsion chain, 4 % battery, 8 % avionics and control, 16 % fuel, leaving 26 % —
-13 kg — for payload. Paper aircraft are habitually lighter than the ones that get
-built, and that margin has not been paid in this table. Section 8 repeats this warning,
-because it is the single most likely place for these numbers to be wrong.
+The mass budget behind this — 30 % structure, 16 % propulsion chain, 4 % battery, 8 %
+avionics and control, 16 % fuel, leaving 26 %, or 13 kg, for payload — is the allowance the
+design is sized against, and it is asserted here rather than derived. Section 6.7 rebuilds
+it from components and finds it can be met, with 2.2 kg in hand, on one condition that is
+not demonstrated: a structural areal density no greater than 1.78 kg m⁻². Paper aircraft
+are habitually lighter than the ones that get built, and no allowance for that has been
+paid in this table beyond the contingency inside the build-up. Section 8.2 keeps this as
+the single most likely place for these numbers to be wrong.
 
 ## 6.3 Heavy reference design — 1000 kg
 
@@ -137,6 +140,13 @@ higher Reynolds number, achieves a lower zero-lift drag coefficient and therefor
 better lift-to-drag ratio. Nothing in the architecture was changed to obtain this.
 
 ## 6.4 Scale behaviour
+
+One qualification applies to everything in this section. The scaling described here is the
+scaling of the analytical sizing model — of powers, loadings and mass *fractions*. The
+component build-up of Section 6.7 does not reproduce it for the structure: whether the
+heavy design's mass closes depends on how shell areal density grows with size, which was
+not measured. The fractions below are preserved by the sizing rules; they have not been
+shown to be realisable at 1000 kg.
 
 Five properties of the scaling are worth separating, because three of them are
 favourable and two are not. Figure 11 shows the two designs at a common scale, and it
@@ -394,21 +404,27 @@ negligible — of order 10⁻⁷, nine parts per million of the total — so the
 symptom and not the cause of the drag difference; but it is a physical test that one
 solution passes and the other does not.
 
-Three further diagnostics rule out the explanation that would have been most damaging.
-The reverse-flow area on the wall is 0.02 percent in both solutions and occupies the same
-streamwise interval in both, so the two are not settling into different separation
-topologies. The pressure-drag difference is distributed almost evenly across the inner
-span — each of eight bands carries roughly an eighth of it — rather than being localised,
-as a genuine second solution branch would be. And the difference is concentrated in the
-rear quarter of the chord, where the mapped solution recovers more pressure. What is being
-seen is therefore best described as one solution being better conditioned than the other,
-with the warm-started case carrying a residual asymmetry inherited from the
-Spalart–Allmaras field it was started from.
+Two further diagnostics bear on where the difference lives. The reverse-flow area on the
+wall is 0.02 percent in both solutions and occupies the same streamwise interval in both,
+so the two are not settling into visibly different separation topologies. And the
+pressure-drag difference is distributed almost evenly across the inner span — each of
+eight bands carries roughly an eighth of it — and concentrated in the rear quarter of the
+chord, where the mapped solution recovers more pressure. An earlier version of this section
+read the even spanwise distribution as evidence against a second solution branch; that
+inference is withdrawn, since a second stationary state need not be spatially localised.
+What can be said is narrower: the two solutions share a separation topology, and the one
+that better satisfies the symmetry the geometry imposes also recovers more trailing-edge
+pressure.
 
 Both values are reported, because a third starting field has not been tried and nothing
 shows one would fall inside the interval; 0.01201 – 0.01253 is a measured spread and not
-a bound. Where a single value from this pair is wanted, the mapped solution is the
-defensible choice, on the symmetry test and not on the residual.
+a bound. Where a single value from this pair is wanted, the mapped solution is taken as
+the reference state, on the grounds that it carries the smaller residual lift and surface
+asymmetry. That is a selection criterion and not a proof: it does not establish that the
+warm-started solution is unphysical, only that it is further from a symmetry the geometry
+requires. The defence that a non-symmetric mesh would bias both cases equally is a
+supporting argument rather than a demonstration, since the equations are non-linear and a
+fixed mesh bias can couple differently to two different starting fields.
 
 **What this does not settle.** The solution is fully turbulent throughout. It therefore
 speaks to the tripped row of the table above and not to the clean-surface row, and the
@@ -443,17 +459,26 @@ specific quantity — an areal density, a specific power — stated openly and t
 **Structure.** The wetted area follows from the planform of Section 4.2 and the NACA 00xx
 thickness distribution: 4.14 m² against 1.98 m² of planform. A carbon–epoxy sandwich shell
 at 1.5 kg m⁻² gives 6.20 kg, with ribs, bulkheads and bonded joints taken at 45 percent of
-the shell. The tip frames are sized by the landing case, since this aircraft lands on
-them: a 3 g vertical arrival, half the weight through one frame, the post treated as a
-cantilever of the stated length, giving 0.95 kg for both frames including fittings.
+the shell. The tip frames are sized by a vertical landing case, since this aircraft lands on them: a
+3 g arrival, half the weight through one frame, the post treated as a cantilever of the
+stated length, giving 0.95 kg for both frames including fittings. That case is not shown to
+be the worst one — an off-axis touchdown, a ground gust against the planform standing on
+its tail, or the thrust moment of the nose pair may govern the frame root or the joint into
+the wing instead — and no combined case was run.
 Fasteners, adhesive, filler and paint are charged at 10 percent of primary structure and
 access panels at 6 percent. The total is 11.88 kg, 23.8 percent of take-off mass.
 
-The main spar is not a driver and this is worth recording, because a thick blended centre
-body invites the assumption that it must be. At an ultimate load factor of 5.25 the root
-bending moment is 934 N m; carried at 400 MPa over a structural depth of 0.9 times the root
-thickness, the caps require 10.7 mm² of carbon and weigh 41 grams. Structure at this scale
-is minimum-gauge and assembly driven, not strength driven.
+Span bending is not what sizes the spar, and this is worth recording, because a thick
+blended centre body invites the assumption that it must be. At an ultimate load factor of
+5.25 the root bending moment is 934 N m; carried at 400 MPa over a structural depth of 0.9
+times the root thickness, the caps require 10.7 mm² of carbon and weigh 41 grams. The claim
+that figure supports is narrow and is stated narrowly: **global span bending is not the
+sizing driver in this static model.** It says nothing about the failure modes the model
+does not contain — sandwich and face-sheet buckling, core shear, torsion, load introduction
+at the frame roots and the nose mount, minimum manufacturing gauge, damage tolerance,
+aeroelastic margin — and none of those is a reason to reduce the shell and internal-structure
+allowances above. Those allowances are where such mass would have to live, and the 41 grams
+does not license trimming them.
 
 **Propulsion.** The nose motor is sized by hover peak power and the engine by cruise,
 which is the configuration's central claim and is visible in the budget as such: 2.73 kg
@@ -476,16 +501,26 @@ contingency of 12 percent of dry mass — ordinary preliminary-design practice �
 | Fuel | 16.0 % | 16 % |
 | **Payload, as residual** | **30.4 %** | **26 %** |
 
-The build-up closes with 2.2 kg in hand. Where that margin is thin, and why a build-up
-coming in lighter than its own target should be read as a warning rather than a
-confirmation, is set out in Section 8.2.
+The build-up closes with 2.2 kg in hand — **conditionally, and the conditions are the
+result.** It closes if the average structural areal density is no more than 1.78 kg m⁻²,
+and if everything still outside the model together stays under that same 2.2 kg. Neither is
+demonstrated here; the 1.5 kg m⁻² used is an aggressive target for a composite airframe of
+this class rather than a measured property of one that has flown. Why a build-up coming in
+lighter than its own target should be read as a warning rather than a confirmation is set
+out in Section 8.2.
 
-**The heavy design is not closed by this exercise.** Shell mass scales as areal density
-times wetted area, so as the square of linear scale, while take-off mass scales as the
-cube; holding areal density constant would make the shell fraction fall as the inverse of
-scale, which is plainly wrong, since skins on larger aircraft are not thinner. Holding the
-fraction constant instead requires areal density to grow linearly with scale. The truth
-lies between, and the exponent has not been measured. Sweeping it shows the 1000 kg design
-closing on its 260 kg payload for exponents below 0.467 — an areal density of
-2.64 kg m⁻² — and failing above. That exponent, not any of the light-design assumptions,
-is the largest open question in the mass budget of this study.
+**The heavy design is not closed by this exercise, and no claim is made that it closes.**
+Shell mass scales as areal density times wetted area, so as the square of linear scale,
+while take-off mass scales as the cube; holding areal density constant would make the shell
+fraction fall as the inverse of scale, which is plainly wrong, since skins on larger
+aircraft are not thinner. Holding the fraction constant instead requires areal density to
+grow linearly with scale. The truth lies between, and the exponent has not been measured.
+Sweeping it puts the 1000 kg design's 260 kg payload at break-even at an exponent of 0.467,
+an areal density of 2.64 kg m⁻², closing below and failing above. No attempt is made here
+to argue for a value on either side of that threshold, because any such argument would be a
+structural model standing in for a measurement. What the sweep establishes is the
+statement itself: **the component build-up does not demonstrate closure of the heavy
+design.** That, and not any of the light-design assumptions, is the largest open question
+in the mass budget of this study, and it qualifies the scale-invariance of Section 6.4 —
+which holds for the analytical sizing fractions and has not been shown to hold for the
+structure that must realise them.

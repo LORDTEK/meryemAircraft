@@ -34,7 +34,9 @@ together. Holding the disc loading is what keeps hover power growing linearly wi
 instead of as the classical L^3.5. Two quantities do not scale, and both are reported
 rather than smoothed: the larger aircraft must rotate more slowly, and its propeller
 grows faster than its span, so the heavy design is not the light design seen from further
-away.
+away. A third does not scale either, and it is the one that matters most: these are
+properties of the sizing rules, and a component build-up of the structure that would have
+to realise them meets the mass fractions at 50 kg and does not at 1000 kg.
 
 Two results emerged during the study that changed it. The tip frames, if left as
 circular tubing, would produce nearly as much drag as the entire rest of the aircraft;
@@ -49,9 +51,9 @@ What this paper offers is a configuration and its numbers, not a validated aircr
 There is no wind-tunnel data here and no flight test. Two of the four analyses that
 Section 8 lists as tests of these results have been carried out — a three-dimensional
 solution for the centre body, which narrowed the zero-lift drag without overturning it,
-and a component build-up of the mass budget, which closes with 2.2 kg in hand at the light
-design point and hangs almost entirely on one number, the areal density of the shell. The
-other two have not, and the heavy design's structure is not closed by the second of them. The claims most exposed are identified in Section 8, and none of the
+and a component build-up of the mass budget, which closes the light design point with
+2.2 kg in hand provided the shell areal density stays at or below 1.78 kg m⁻², and which
+does not close the heavy design at all. The other two have not been carried out. The claims most exposed are identified in Section 8, and none of the
 remaining analyses requires an experiment. The configuration is
 described in enough detail for another group to attempt any of them independently, and
 that is the outcome this paper is written to invite.

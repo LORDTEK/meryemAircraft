@@ -41,11 +41,13 @@ range than a lift-plus-cruise layout, on measured drag; against a tilting layout
 comparison is conditional on a cruise-drag penalty that was not measured, and no
 superiority over that family is claimed. Two reference
 designs are sized twenty times apart in mass, at 50 kg and 1000 kg, from identical
-equations, with the governing fractions preserved across that range. Two findings
+equations, with the governing fractions preserved across that range by the sizing rules —
+though a component build-up meets those fractions only at the light design point, and only
+conditionally. Two findings
 changed the study: the tip frames must be faired, and transition altitude loss falls
 with rotation time rather than rising with it. The study
-is largely analytical, with no wind-tunnel or flight validation; the mass budget is closed
-from components at the light design point and remains open at the heavy one. The two aerodynamic coefficients that carry the most weight are not replaced by
+is largely analytical, with no wind-tunnel or flight validation; a component mass build-up
+closes the light design conditionally and does not close the heavy one. The two aerodynamic coefficients that carry the most weight are not replaced by
 computation but bounded by it — the zero-lift drag by a three-dimensional solution
 reported with a measured uncertainty budget.
 

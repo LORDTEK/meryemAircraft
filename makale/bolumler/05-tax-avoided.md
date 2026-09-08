@@ -204,9 +204,16 @@ $$R = \frac{E^{*}\eta_\text{chain}}{g}\,\frac{L}{D}\,\frac{m_\text{fuel}}{\mathr
 
 so that a fixed fraction makes range independent of take-off mass, a fixed fuel *mass*
 makes it inversely proportional to take-off mass, and a fixed take-off mass with a fixed
-payload leaves fuel as the residual. These are three different questions with three
-different answers, so all three are reported, with the tilting layout still credited with
-its zero cruise-drag penalty:
+payload leaves fuel as the residual.
+
+These are three different questions, and which one is the right question depends on what is
+being procured: a mission, a fuel load, or a vehicle class. The mission stated in Section
+6.2 — 13 kg of payload over roughly 1600 km, with take-off mass free to close where it will
+— is closest to the first, which is also the only rule under which the tilting layout
+leads, and leads only because its mechanism was credited as aerodynamically free. Reporting
+that column on its own would restate the credit as a conclusion. **All three are therefore
+given equal standing, and no result from this section should be quoted without the rule it
+was computed under.** The tilting layout keeps its zero cruise-drag credit throughout:
 
 | Range relative to the tail-sitter | Fixed fuel fraction | Fixed fuel mass | Fixed MTOW and payload |
 |---|---:|---:|---:|
