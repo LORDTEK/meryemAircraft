@@ -6,8 +6,9 @@
 
 ## Title
 
-**Reducing the Cruise-Efficiency Penalty of Hybrid VTOL: The meryemAircraft
-Tail-Sitting Blended-Wing-Body Configuration with Propeller-Only Control**
+**The Architectural Cost of Hybrid VTOL: meryemAircraft, a
+Propeller-Driven Tail-Sitting Blended-Wing-Body Without a Dedicated
+Lift System**
 
 ## Authors
 
@@ -21,41 +22,35 @@ researcher" yazar. Sorumlu yazar ve e-posta, dergi seçildiğinde eklenecek.]*
 ## Abstract
 
 Hybrid vertical take-off and landing (VTOL) aircraft combine runway independence with
-wing-borne cruise, but purchase that combination at a cost to cruise efficiency. This
-paper argues the cost is architectural rather than a defect of implementation. It is
-charged in three currencies — the mass of hover hardware carried through cruise, its
-drag when exposed in cruise, and a power system sized by a condition holding for roughly
-two percent of the flight — and every known remedy reduces one currency by increasing
-another. Stating the cost this way makes its escape condition explicit: it is charged
-whenever hover and cruise are served by hardware that is not the same hardware, in the
-same orientation, doing the same job. A configuration satisfying that condition is
-proposed — an uncrewed tail-sitting blended-wing body in which one coaxial
-counter-rotating pair at the nose produces all thrust in both regimes, four small coaxial
-pairs at the wing tips produce attitude moments only, and a deployable strip in the
-nose-propeller slipstream supplies the rolling moment that body-axis-parallel thrust
-vectors cannot generate. The aircraft has no elevons and no rudder, no tilting or
-retraction mechanism and no dedicated lift system; the strip is its only moving
-aerodynamic device. Sizing the
-same mission three ways, on one set of equations calibrated from the proposed design
-itself, closes it at forty-two percent lower take-off mass and seventeen percent greater
-range than a lift-plus-cruise layout, on measured drag; against a tilting layout the
-comparison is conditional on a cruise-drag penalty that was not measured, and no
-superiority over that family is claimed. Two reference
-designs are sized twenty times apart in mass, at 50 kg and 1000 kg, from identical
-equations, with the governing fractions preserved across that range by the sizing rules —
-though a component build-up meets those fractions only at the light design point, and only
-conditionally. Two findings
-changed the study: the tip frames must be faired, and transition altitude loss falls
-with rotation time rather than rising with it. The study
-is largely analytical, with no wind-tunnel or flight validation; a component mass build-up
-closes the light design conditionally and does not close the heavy one, and the tip
-propellers are shown to be able to turn the aircraft's rotational inertia through the
-transition but not, on present evidence, its aerodynamic moment, which sets a threshold
-that makes the rotation a low-dynamic-pressure manoeuvre. The two aerodynamic coefficients that carry the most weight are not replaced by
-computation but bounded by it — the zero-lift drag by a three-dimensional solution
-reported with a measured uncertainty budget.
+wing-borne cruise and pay for it in cruise efficiency. This paper treats that cost as
+architectural rather than as a defect of implementation, and develops it as an accounting
+framework. The penalty is charged in three coupled currencies — the mass of hover hardware
+carried through cruise, its drag when exposed in cruise, and a power system sized by a
+condition holding for some two percent of the flight — and every known remedy reduces one
+by raising another. The escape condition is then explicit: the penalty is charged whenever
+hover and cruise are served by hardware that is not the same hardware, in the same
+orientation, doing the same job. A second result is methodological: architectural
+comparisons depend on the sizing contract chosen, and a fixed fuel fraction removes the
+mass bill from the range column altogether, so three contracts are reported rather than
+one.
 
-*[≈270 kelime. MDPI 200 isterse kesilecek ilk yer: konfigürasyon tarifi.]*
+meryemAircraft, an uncrewed tail-sitting blended-wing body, satisfies the escape condition
+and serves as the case study: one coaxial pair at the nose gives all thrust in both
+regimes, four small pairs at the tips give attitude moments only, and a deployable strip
+gives the roll that body-parallel thrust cannot. Against a lift-plus-cruise layout, on
+wind-tunnel drag, it closes the same mission at forty-two percent lower take-off mass and
+seventeen percent greater range; against a tilting layout the comparison reverses between
+contracts and no superiority is claimed. A three-dimensional solution bounds the zero-lift
+drag with a measured uncertainty budget, and a component mass build-up closes the 50 kg
+design conditionally and not the 1000 kg one.
+
+The study is analytical, with no experimental validation of the configuration. The tip
+propellers can turn the aircraft's rotational inertia through the transition but not, on
+present evidence, its aerodynamic moment; transition controllability is therefore the
+principal open requirement, and is stated as a threshold a future measurement must meet.
+
+*[≈270 kelime. 200 isteyen dergide kesilecek ilk yer: ikinci paragrafın
+konfigürasyon tarifi, sonra üçüncü paragrafın ilk cümlesi.]*
 
 *[⚠️ Özette **hiçbir ödünç sayı yok.** %38/%13 (Bacchini & Cestino) bilerek
 dışarıda — kaynak henüz birinci elden okunmadı. Menzil sayıları da yok, çünkü

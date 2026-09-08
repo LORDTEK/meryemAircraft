@@ -64,8 +64,22 @@ through ninety degrees of incidence needs measurements this study does not have.
 check does supply is a threshold — a pitching-moment coefficient of roughly 0.08 at
 mid-transition airspeed would consume the margin, and the figure falls as the square of
 speed — which turns the gap into a testable requirement and yields a design rule of its
-own: the tail-sitting rotation is a low-dynamic-pressure manoeuvre by necessity. The claims most exposed are identified in Section 8, and none of the
-remaining analyses requires an experiment. The configuration is
-described in enough detail for another group to attempt any of them independently, and
-that is the outcome this paper is written to invite.
+own: the tail-sitting rotation is a low-dynamic-pressure manoeuvre by necessity. The claims
+most exposed are identified in Section 8. An earlier version of this section stated that
+none of the remaining analyses required an experiment; that is no longer true, and the
+change is the most important thing this study learned about itself. Transition
+controllability rests on a pitching moment that cannot be obtained without a wind tunnel or
+an unsteady computational campaign, and the paper declines to substitute a reduced
+calculation for it.
+
+What survives independently of that is the framework. The three currencies, the
+demonstration that architectural remedies transfer the penalty rather than remove it, the
+escape condition, and the finding that architectural comparisons change their ranking with
+the sizing contract chosen — none of these depends on whether this particular aircraft is
+ever built. meryemAircraft is the case that shows the escape condition can be instantiated
+in a real geometry and carried through to reference designs at two scales; it is not
+offered as a validated vehicle, and the paper is careful throughout to say which of its
+statements are demonstrated, which are conditional, and which are open. The configuration is
+described in enough detail for another group to attempt any of the outstanding analyses
+independently, and that is the outcome this paper is written to invite.
 
