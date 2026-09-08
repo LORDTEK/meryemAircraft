@@ -836,3 +836,58 @@ ve refleks dağılımları modelde **yok**. Dolayısıyla bu koşum
 birinci mertebede duyarsızdır — ama **dengeyi (C_m0)** vermez. Gereken
 C_m0 hesaplanabildi; sağlanıp sağlanamayacağı kamber tanımlanmadan
 bilinemez.
+
+### DÜZELTME — hatayı ben yapmışım, ve tablo tersine döndü
+
+Yukarıdaki "%57 CG" **benim** varsayımımdı ve **yanlıştı**: `donme.py`'de
+yakıtı, yükü ve motoru veter boyunca elle yerleştirmiş, **iç hacmin
+nerede olduğuna bakmamıştım.**
+
+İç hacmin **mutlak** ağırlık merkezi ölçüldü: **kök veterinin %78,3'ü.**
+Ok açısı hacmi geriye taşıyor — dış kesitler kök firar kenarının çok
+arkasında. Yapının kendi merkezi de %99,1'de.
+
+**Taşınabilir kütle hacme orantılı dağıtılınca:**
+
+| | eski (elle yerleştirme) | yeni (hacme orantılı) |
+|---|---|---|
+| CG | %57 kök veter | **%80,2** |
+| statik marj | +%47 MAC (saçma) | **+%12,4 MAC** (olağan) |
+| seyirde denge C_m | 0,240 (imkânsız) | **0,063** |
+| I_yy | 7,04 kg·m² | **9,68 kg·m²** |
+| dönme payı | 2,08× | **1,51×** |
+
+**Kuyruksuz tasarımda tipik statik marj %5–15 MAC.** %12,4 tam ortada.
+Yani konfigürasyon **doğal olarak kararlı** ve bunu ok açısına borçlu.
+
+### Geriye kalan gerçek kısıt
+
+Seyirde denge için gereken **C_m0 = 0,063**; refleksli profiller tipik
+olarak **+0,02 – +0,05** verir. Aynı mertebede ama üstünde.
+
+| CG (kök veterinin) | statik marj | gereken C_m0 |
+|---|---|---|
+| %78 | %16 | 0,083 |
+| **%80,2 (hacim doğal)** | **%12,4** | **0,063** |
+| **%83,3** | **%7,8** | **0,040** ← refleksle ulaşılabilir |
+| %85 | %5,3 | 0,027 |
+
+CG'yi %80,2'den %83,3'e almak **3 cm**'lik bir iç yerleşim değişikliği
+ve statik marjı hâlâ olağan bandın içinde bırakıyor. Yani **tasarım
+kapanıyor** — ama bu, makalenin söylemediği bir kısıt.
+
+### Makaleye girecek kısıt
+
+> Kuyruksuz bir uçak olarak meryemAircraft'ın ağırlık merkezi kök
+> veterinin **%80–85'i** arasında olmak zorundadır. Bu aralık, iç hacmin
+> doğal merkeziyle (%78,3) neredeyse çakışıyor — yani kısıt zorlayıcı
+> değil, ama **serbest de değil** ve bugüne kadar yazılmamıştı.
+
+### Etkilediği sayılar
+
+- **§7.6 atalet:** I_yy 7,04 → **9,68 kg·m²**; hafif hat dönme payı
+  2,08 → **1,51×**. Hâlâ yeterli ama daha dar.
+- **§6.7 kütle bütçesi:** **toplamlar değişmiyor.** Değişen, kalemlerin
+  nereye konabileceği. Yani bütçe **çözülmedi, daha da kısıtlandı.**
+- **§7.6'nın "sıradan denge sorusu" ifadesi:** artık gösterilmiş, ve
+  gerçekten sıradan çıktı — ama gösterilmesi gerekiyordu.
