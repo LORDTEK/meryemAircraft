@@ -483,3 +483,80 @@ kökleri, burun motoru yatağı, faydalı yük/yakıt/pil mesnetleri kabuk ve
 iç yapı payının içinde sayılıyor, ayrıca boyutlandırılmıyor. Bu yük
 yolları payın içerdiğinden pahalıya çıkarsa aynı 2,2 kg'dan çıkar.
 Kayda geçti (§8.2).
+
+---
+
+## `donme.py` — geçiş dönme dinamiği ve uç pervane boyutlandırması (08.09.2026)
+
+§8.14'ün 3. maddesi *"uç pervaneleri mertebe tahminiyle değil düzgün
+boyutlandırmak"* diyor. Tam 6-DoF bunun için gerekli değil — ve zaten
+yapılamaz: 90°'ye kadar `C_m(α)` verisi yok, deneysiz üretilemez.
+
+**Bunun yerine kurulan şey daha dar ve daha sağlam: atalet alt sınırı.**
+Uç pervaneler uçağın ataletini bile döndüremiyorsa aerodinamik momenti
+hiç döndüremez. Yetiyorsa, aerodinamik marjın bilinmediği açıkça yazılır.
+
+Dönme ekseni: uç çerçeveleri planforma **dik** uzanıyor (§4.3), üst/alt
+çift farkı → gövde x'i boyunca kuvvet × gövde z kolu → **açıklık ekseni
+etrafında yunuslama.** Geçişin döndüğü eksen de bu. Yani I_yy gerekli.
+
+### Atalet, kütle bütçesinden
+
+`kutle.py`'nin kalem kütleleri `planform.py`'nin geometrisine dağıtıldı
+(kabuk/iç yapı planforma yayılı, uç çerçeveleri z boyunca çubuk, uç
+motorları z = ±0,71 m'de nokta, merkez gövde kalemleri veter boyunca).
+Yalnızca **konumlar** varsayım; kütleler bütçeden geliyor.
+
+| | I_yy | CG (kök veterinin) |
+|---|---|---|
+| hafif 50 kg | **7,04 kg·m²** | %57 |
+| ağır 1000 kg | **1918 kg·m²** | %58 |
+
+### §7.4'ün rampası sonlu momentle üretilemez
+
+Mevcut benzetim θ = 90°·(t/t_r), yani **doğrusal rampa**: ivmesi her
+yerde sıfır, iki ucunda sonsuz. Sonlu momentle üretilebilen en yakın
+profil, hız ve ivmesi uçlarda sıfırlanan yumuşak profildir:
+
+    α_tepe = 6 · Δθ / t_r²        (yumuşak)
+    α_tepe = 4 · Δθ / t_r²        (üçgen / bang-bang)
+
+Bu, mevcut modelin sessiz bir varsayımıydı; artık sayısı var.
+
+### Sonuç — ikisi de yetiyor, ama payları farklı
+
+| | I_yy·α (yumuşak) | mevcut moment | **pay** | en kısa dönme |
+|---|---|---|---|---|
+| hafif, t_r = 2 s | 16,6 N·m | 46,0 N·m | **2,8×** | 1,20 s |
+| ağır, t_r = 4 s | 1130 N·m | 1905 N·m | **1,69×** | 3,08 s |
+
+Hafif hatta atalet için gereken itki **5,84 N/çift** — makalenin
+verdiği 16,2 N'un yalnızca **%36'sı**.
+
+Ağır hattın uç itkisi makalede verilmemiş; %12 güç payından hesaplandı
+(6486 W/çift → 200,1 N/çift).
+
+### Makalenin kendi sayısının denetimi
+
+16,2 N / 335 W / D=0,20 m → momentum teorisi **FoM = 0,702** ve **eş
+eksenli kayıp yok** varsayımına denk. Makalenin kendi hover FoM'u
+0,599. Onu ve %15 eş eksenli kaybı uygularsak itki 12,4 N'a düşüyor —
+**pay yine 2,1×.** Yani sonuç bu farktan etkilenmiyor; ama 16,2 N'un
+neye dayandığı makalede yazmıyor.
+
+### Ölçek yasası — makalenin nitel iddiasının sayısı
+
+    M_mevcut ~ ölçek³ ,  I_yy ~ ölçek⁵ ,  α ~ 1/t_r²
+    pay ~ t_r² / ölçek²        →  aynı pay için t_r ~ ölçek
+
+Ölçek 3,345 kat; aynı payı korumak için t_r 2 s'den **6,69 s**'ye
+çıkmalıydı. Tasarım 4 s kullanıyor, bu yüzden payı 2,8× yerine 1,69×.
+§7.4 zaten *"daha büyük uçak daha yavaş dönmeli"* diyordu; bu, o
+cümlenin sayısal karşılığı ve **payın ölçekle daraldığını** gösteriyor.
+
+### Bunun kapsamadığı
+
+Aerodinamik yunuslama momenti. Basınç merkezi 0→90° arasında göç eder
+ve o momenti karşılamak için gereken itki burada **hesaplanmadı**;
+C_m(α) verisi yok. Dolayısıyla 2,8× ve 1,69× **atalet payıdır**, toplam
+kontrol payı değil. Aerodinamik moment bu payı yiyebilir.
