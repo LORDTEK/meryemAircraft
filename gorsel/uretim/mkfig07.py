@@ -27,7 +27,9 @@ def dim(x0,y0,x1,y1,txt,off=0.0,c=INK,ha="center",va="center",fs=10.5):
                 arrowprops=dict(arrowstyle="<->",color=c,lw=1.2,shrinkA=0,shrinkB=0))
     ax.text((x0+x1)/2,(y0+y1)/2+off,txt,ha=ha,va=va,fontsize=fs,color=c,
             bbox=dict(fc="white",ec="none",pad=1.6))
-dim(-b2,-1.30,b2,-1.30,"span  $b$ = 3.453 m",0.0)
+dim(-b2,-1.72,b2,-1.72,"span  $b$ = 3.453 m",0.0)
+# yatis/sapma kolu: sapmanin kolu YARI ACIKLIK, yunuslamanınki cerceve boyu
+dim(0,-1.32,b2,-1.32,"$L_y$ = $b/2$ = 1.726 m",0.0,A)
 dim(b2+0.30,0,b2+0.30,L,"$L_p$ = 0.71 m",0.0,MUT)
 dim(b2+0.72,-L,b2+0.72,L,f"{2*L:.2f} m",0.0,MUT)
 ax.annotate("",xy=(Dm/2,0.80),xytext=(-Dm/2,0.80),
@@ -39,17 +41,21 @@ ax.text(-b2-0.34,L,"$d$ = 0.20 m",ha="right",va="center",fontsize=10.5,color=R)
 ax.text(0,-0.68,"thrust pair\n(all propulsion)",ha="center",va="top",fontsize=10.5,color=A,linespacing=1.4)
 ax.text(-b2-0.34,-L,"control\npairs",ha="right",va="center",fontsize=10.5,color=R,linespacing=1.4)
 # ---- moment blogu: diyagramin ALTINDA ----
-ax.axhline(-1.62,xmin=0.03,xmax=0.97,color=GR,lw=0.9)
-ax.text(0,-1.80,"All thrust vectors are parallel to the body $x$ axis:   "
+ax.axhline(-2.04,xmin=0.03,xmax=0.97,color=GR,lw=0.9)
+ax.text(0,-2.22,"All thrust vectors are parallel to the body $x$ axis:   "
         r"$\mathbf{F}=(F_x,\,0,\,0)$",ha="center",va="top",fontsize=11.5,color=INK)
-ax.text(-1.30,-2.12,r"pitch",ha="left",va="top",fontsize=11,color=INK,fontweight="bold")
-ax.text(-0.62,-2.12,r"$M_y = z\,F_x$      upper vs lower pairs",ha="left",va="top",fontsize=11,color=INK)
-ax.text(-1.30,-2.40,r"yaw",ha="left",va="top",fontsize=11,color=INK,fontweight="bold")
-ax.text(-0.62,-2.40,r"$M_z = -y\,F_x$     left vs right pairs",ha="left",va="top",fontsize=11,color=INK)
-ax.text(-1.30,-2.68,r"roll",ha="left",va="top",fontsize=11,color=R,fontweight="bold")
-ax.text(-0.62,-2.68,r"$M_x = y F_z - z F_y = 0$    identically, at every thrust setting",
+ax.text(-1.30,-2.54,r"pitch",ha="left",va="top",fontsize=11,color=INK,fontweight="bold")
+ax.text(-0.62,-2.54,r"$M_y = z\,F_x$      upper vs lower pairs, arm $L_p$ = 0.71 m"
+        "\n" r"                   $2TL_p$ = 23.0 N m",
+        ha="left",va="top",fontsize=11,color=INK,linespacing=1.5)
+ax.text(-1.30,-3.02,r"yaw",ha="left",va="top",fontsize=11,color=A,fontweight="bold")
+ax.text(-0.62,-3.02,r"$M_z = -y\,F_x$     left vs right pairs, arm $b/2$ = 1.726 m"
+        "\n" r"                   $2TL_y$ = 55.9 N m  —  2.43 $\times$ the pitch moment",
+        ha="left",va="top",fontsize=11,color=A,linespacing=1.5)
+ax.text(-1.30,-3.50,r"roll",ha="left",va="top",fontsize=11,color=R,fontweight="bold")
+ax.text(-0.62,-3.50,r"$M_x = y F_z - z F_y = 0$    identically, at every thrust setting",
         ha="left",va="top",fontsize=11,color=R)
-ax.set_xlim(-2.95,3.05); ax.set_ylim(-3.00,1.15); ax.set_aspect("equal"); ax.axis("off")
+ax.set_xlim(-2.95,3.05); ax.set_ylim(-3.82,1.15); ax.set_aspect("equal"); ax.axis("off")
 ax.set_title("Propeller placement and moment arms — front view",
              loc="left",fontsize=12.5,fontweight="bold",pad=6)
 fig.tight_layout()

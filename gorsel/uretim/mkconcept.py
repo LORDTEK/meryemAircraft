@@ -56,7 +56,7 @@ curve(P["mass"],P["drag"],"folding /\nretraction",0.22,1.75,5.9)
 curve(P["drag"],P["size"],"smaller rotors,\nhigher disc loading",0.22,5.0,1.35)
 ax.set_title("Three bills — and the moves that convert one into another",
              loc="left",fontsize=13,fontweight="bold",pad=10)
-ax.text(0.1,-0.05,"Every known architectural remedy reduces one bill by increasing another.\n"
+ax.text(0.1,-0.05,"Every remedy surveyed here reduces one bill by increasing another.\n"
         "The measured instance: removing 30 % of drag at a cost of 5 % of mass moved the range by under 2 %.",
         fontsize=9.8,color=MUT,linespacing=1.6)
 fig.tight_layout(); fig.savefig(OUT+"/sekil03-uc-fatura.png",dpi=300,bbox_inches="tight")
