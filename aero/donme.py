@@ -135,28 +135,44 @@ def atalet(kal):
 # ---------------------------------------------------------------------
 # GEREKEN ve MEVCUT MOMENT
 # ---------------------------------------------------------------------
-def gereken(Iyy, t_r, aci=math.pi / 2, profil="yumusak"):
+def gereken(Iyy, t_r, aci=math.pi / 2, profil="ucgen"):
     """Doksan dereceyi t_r saniyede donmek icin gereken TEPE moment.
 
     7.4'un benzetimi theta'yi DOGRUSAL rampa ile suruyor: theta = 90 t/t_r.
     Bunun ivmesi her yerde sifir, iki ucunda SONSUZ -- sonlu momentle
-    uretilemez. Sonlu momentle uretilebilen en yakin profil, hiz ve
-    ivmesi uclarda sifirlanan yumusak (3tau^2-2tau^3) profildir:
-        alpha_tepe = 6 * aci / t_r^2
-    Ucgen (bang-bang) profil daha ucuzdur: alpha = 4 * aci / t_r^2."""
+    uretilemez.
+
+    Iki aday sonlu profil:
+      ucgen (bang-bang)  ilk yari +a, ikinci yari -a
+                         alpha = 4 * aci / t_r^2   <- EN AZ olan
+      yumusak (3t^2-2t^3) hiz VE ivme uclarda sifir
+                         alpha = 6 * aci / t_r^2
+
+    YAPILABILIRLIK sinamasi (gerek sart) EN AZ olani kullanmalidir:
+    "bu hic yapilabilir mi" sorusunun cevabi en ucuz profille verilir.
+    Varsayilan bu yuzden ucgen. Yumusak profil, gercek bir kumandanin
+    daha muhtemel secimidir ve ayrica raporlanir."""
     kats = dict(yumusak=6.0, ucgen=4.0)[profil]
     alpha = kats * aci / (t_r ** 2)
     return alpha, Iyy * alpha
 
 
-def mevcut(T_cift, kol, n_cift_ust=2):
+def mevcut(T_cift, kol):
     """Ust ve alt ciftlerin itki farkindan dogan yunuslama momenti.
 
-    4.3: dort cift, ikisi ust ikisi alt, kol = post uzunlugu. Ust
-    ciftler +T, alt ciftler -T verirse cift kuvvet:
-        M = 2 * n_cift_ust * T * kol
-    Makalenin kendi bagintisi M = 2 T L, T'yi taraf basina toplam alarak."""
-    return 2 * n_cift_ust * T_cift * kol
+    ⚠️ DUZELTME (08.09.2026). Ilk surum 4 T L kullaniyordu; YANLISTI ve
+    dis denetim yakaladi. 4 T L, ALT ciftlerin -T uretmesini, yani
+    itkinin tersine cevrilebilmesini gerektirir. Bu ucakta pervaneler
+    tersine calismiyor: itki negatif olamaz.
+
+    Itki negatif olamiyorsa en buyuk fark, ust ciftler tepe degerde ve
+    alt ciftler SIFIRDA iken olusur. Iki ust cift vardir:
+
+        M_maks = 2 T_maks L
+
+    Bu, makalenin 4.4 ve 7.4'te zaten yazdigi bagintidir. Ilk surum
+    ikisiyle celisiyordu."""
+    return 2 * T_cift * kol
 
 
 def itki_gucten(P_W, D, FoM=0.599, es_eksenli_verim=0.85):
@@ -194,7 +210,7 @@ def rapor(ad, MTOW, t_r, P_hover_kW, D_uc, post, T_makale, P_uc_W, olcek=1.0,
         M_mev = mevcut(T_makale, post)
         print("  %-8s profil: alpha_tepe %.3f rad/s2 -> GEREKEN %.2f N m"
               % (profil, alpha, M_ger))
-        print("           MEVCUT %.2f N m (%.1f N x %.2f m x 4)   PAY %.1f kat"
+        print("           MEVCUT %.2f N m (2 x %.1f N x %.2f m)   PAY %.2f kat"
               % (M_mev, T_makale, post, M_mev / M_ger))
     if P_uc_W:
         T_hesap = itki_gucten(P_uc_W, D_uc)
@@ -203,18 +219,20 @@ def rapor(ad, MTOW, t_r, P_hover_kW, D_uc, post, T_makale, P_uc_W, olcek=1.0,
                              100 * (T_hesap - T_makale) / T_makale))
         print("           makalenin sayisi FoM = %.3f ve es eksenli kayip YOK"
               " varsayimina denk" % FoM_geri(T_makale, P_uc_W, D_uc))
-    alpha_y, M_y = gereken(Iyy, t_r, profil="yumusak")
-    T_ger = M_y / (2 * 2 * post)
+    alpha_y, M_y = gereken(Iyy, t_r, profil="ucgen")
+    T_ger = M_y / (2 * post)
     print("  ATALET icin YETEN itki: %.2f N/cift  (mevcut %.1f N'un %%%.0f'i)"
           % (T_ger, T_makale, 100 * T_ger / T_makale))
-    print("  mevcut momentle EN KISA donme: %.2f s  (tasarim %.1f s)"
-          % (en_kisa_tr(Iyy, T_makale, post), t_r))
+    for pr in ("ucgen", "yumusak"):
+        print("  EN KISA donme (%s): %.2f s   (tasarim %.1f s)"
+              % (pr, en_kisa_tr(Iyy, T_makale, post, profil=pr), t_r))
     # temkinli itki: makalenin KENDI hover FoM'u ve es eksenli kayip
     if P_uc_W:
         T_tem = itki_gucten(P_uc_W, D_uc, FoM=0.599, es_eksenli_verim=0.85)
         print("  temkinli itki (FoM 0,599 + es eksenli kayip): %.1f N -> pay %.1f kat"
               % (T_tem, mevcut(T_tem, post) / M_y))
-    return dict(M=M, Iyy=Iyy, alpha=alpha_y, M_ger=M_y, T_ger=T_ger)
+    return dict(M=M, Iyy=Iyy, alpha=alpha_y, M_ger=M_y, T_ger=T_ger,
+                M_mev=mevcut(T_makale, post), T=T_makale)
 
 
 def en_kisa_tr(Iyy, T_cift, kol, aci=math.pi / 2, profil="yumusak"):
@@ -224,19 +242,32 @@ def en_kisa_tr(Iyy, T_cift, kol, aci=math.pi / 2, profil="yumusak"):
     return math.sqrt(kats * aci * Iyy / M)
 
 
-def olcek_davranisi():
+def olcek_davranisi(Iy_h, M_h, t_h, Iy_a, M_a, t_a):
     """Donme kontrol payi olcekle nasil degisiyor?
 
-    M_mevcut ~ T kol ~ olcek^2 * olcek = olcek^3   (T guc payindan, ~ olcek^3)
-    I_yy     ~ m L^2                   ~ olcek^5
-    alpha    ~ 1/t_r^2
-    Pay = M/(I alpha) ~ olcek^3 / (olcek^5 / t_r^2) = t_r^2 / olcek^2
-    Yani ayni pay icin t_r OLCEKLE DOGRUSAL buyumeli. 7.4 zaten agir
-    ucagin daha yavas donmesi gerektigini soyluyor; bu, o ifadenin
-    sayisal karsiligidir."""
-    print("Donme kontrol payi ~ t_r^2 / olcek^2  ->  ayni pay icin t_r ~ olcek")
-    print("  olcek 3,345 kat -> ayni pay icin t_r 2 s'den %.2f s'ye cikmali"
-          % (2.0 * 3.3449))
+    ⚠️ DUZELTME. Ilk surum bunu GEOMETRIK BENZERLIK varsayarak turetti
+    (M ~ olcek^3, I ~ olcek^5, dolayisiyla pay ~ t_r^2/olcek^2). Iki
+    referans tasarim geometrik olarak benzer DEGIL: aciklik 3,345 kat
+    buyurken kutle 20 kat buyuyor (3,345^3 = 37,4, 20 degil) ve kanat
+    yuklemesi 25,3'ten 45,0 kg/m2'ye cikiyor. O turetim bu yuzden
+    gecersizdi.
+
+    Artik oran, VARSAYIMDAN DEGIL, iki tasarimin hesaplanmis
+    degerlerinden okunuyor."""
+    rI, rM = Iy_a / Iy_h, M_a / M_h
+    print("  olculen oranlar (agir / hafif):")
+    print("    I_yy      %7.1f     (aciklik orani 3,345^3 = %.1f, ^5 = %.1f)"
+          % (rI, 3.3449 ** 3, 3.3449 ** 5))
+    print("    M_mevcut  %7.1f" % rM)
+    ra = (t_h / t_a) ** 2
+    print("  gereken moment orani = I orani x alpha orani = %.1f x %.3f = %.1f"
+          % (rI, ra, rI * ra))
+    print("  -> pay orani = %.1f / %.1f = %.2f  (pay agir hatta %.0f%% daraliyor)"
+          % (rM, rI * ra, rM / (rI * ra), 100 * (1 - rM / (rI * ra))))
+    t_esit = t_h * math.sqrt(rI / rM)
+    print("  hafif hattin PAYINI korumak icin agir hattin donme suresi: %.2f s"
+          % t_esit)
+    print("  (tasarim %.1f s kullaniyor; bu yuzden payi daha dar)" % t_a)
 
 
 if __name__ == "__main__":
@@ -244,13 +275,13 @@ if __name__ == "__main__":
     print("GECIS DONME DINAMIGI -- atalet alt siniri")
     print("=" * 74)
     print()
-    rapor("HAFIF 50 kg, t_r = 2 s", 50.0, 2.0, 10.9, 0.20, 0.71, 16.2, 335.0)
+    h = rapor("HAFIF 50 kg, t_r = 2 s", 50.0, 2.0, 10.9, 0.20, 0.71, 16.2, 335.0)
     print()
-    rapor("AGIR 1000 kg, t_r = 4 s", 1000.0, 4.0, 216.2, 0.67, 2.38, 0.0,
+    a = rapor("AGIR 1000 kg, t_r = 4 s", 1000.0, 4.0, 216.2, 0.67, 2.38, 0.0,
           0.0, olcek=3.3449, P_motor_kW=54.3, D_ana=5.40 / 3.3449,
           m_yakit=160.0, m_pil=40.0, m_faydali=260.0)
     print()
     print("=" * 74)
-    print("OLCEK DAVRANISI")
+    print("OLCEK DAVRANISI -- olculen oranlardan")
     print("=" * 74)
-    olcek_davranisi()
+    olcek_davranisi(h["Iyy"], h["M_mev"], 2.0, a["Iyy"], a["M_mev"], 4.0)

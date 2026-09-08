@@ -560,3 +560,90 @@ Aerodinamik yunuslama momenti. Basınç merkezi 0→90° arasında göç eder
 ve o momenti karşılamak için gereken itki burada **hesaplanmadı**;
 C_m(α) verisi yok. Dolayısıyla 2,8× ve 1,69× **atalet payıdır**, toplam
 kontrol payı değil. Aerodinamik moment bu payı yiyebilir.
+
+---
+
+## ⚠️ DÜZELTME — dönme momenti modeli yanlıştı (08.09.2026)
+
+Dış denetim yakaladı ve haklı: `donme.py`'nin ilk sürümü mevcut
+momenti **4TL** alıyordu. Yanlış. 4TL, **alt çiftlerin −T üretmesini**,
+yani itkinin tersine çevrilebilmesini gerektirir. Bu uçakta pervaneler
+tersine çalışmıyor; itki negatif olamaz.
+
+İtki negatif olamıyorsa en büyük fark, üst çiftler tepe değerde ve alt
+çiftler **sıfırda** iken oluşur. İki üst çift vardır:
+
+    M_maks = 2 · T_maks · L
+
+Bu, makalenin §4.4'te ve §7.4'te **zaten yazdığı** bağıntıdır. İlk sürüm
+makalenin kendisiyle çelişiyordu — iç tutarsızlık, dışarıdan görüldü.
+
+### İkinci düzeltme: yapılabilirlik en UCUZ profille sınanır
+
+İlk sürüm yumuşak profili (α = 6Δθ/t_r²) kullanıyordu. Yapılabilirlik
+bir **gerek şart** sınamasıdır: *"bu hiç yapılabilir mi"* sorusunun
+cevabı en az ivme isteyen profille verilir — üçgen (bang-bang),
+α = 4Δθ/t_r². Varsayılan o yapıldı; yumuşak profil ayrıca raporlanıyor.
+
+### Düzeltilmiş sonuç
+
+| | mevcut M | üçgen: gereken → **pay** | yumuşak: gereken → **pay** |
+|---|---|---|---|
+| hafif, t_r = 2 s | 23,0 N·m | 11,1 → **2,08×** | 16,6 → **1,39×** |
+| ağır, t_r = 4 s | 952,3 N·m | 753,3 → **1,26×** | 1130,0 → **0,84× ✗** |
+
+**Ağır hattın 4 saniyelik dönüşü yalnızca en ucuz profille kapanıyor.**
+Daha yumuşak bir kumanda 4,36 s ister. En kısa dönme süreleri: hafif
+1,39 / 1,70 s; ağır **3,56 / 4,36 s**.
+
+Hafif hattın 16,2 N'u yerine temkinli 12,4 N kullanılırsa (makalenin
+kendi FoM 0,599'u + %15 eş eksenli kayıp) mevcut moment 17,6 N·m'ye
+düşer, üçgen payı **1,59×** olur. Ağır hattın 200,1 N'u zaten bu
+temkinli esasla hesaplandı.
+
+### Üçüncü düzeltme: ölçek paragrafı varsayımdan değil ölçümden
+
+İlk sürüm geometrik benzerlik varsaydı (M ~ ölçek³, I ~ ölçek⁵ →
+pay ~ t_r²/ölçek²). **İki referans tasarım geometrik olarak benzer
+değil:** açıklık 3,345 kat büyürken kütle 20 kat büyüyor (3,345³ =
+37,4 ≠ 20) ve kanat yüklemesi 25,3 → 45,0 kg/m². O türetim geçersizdi.
+
+Ölçülen oranlar:
+
+| | ağır / hafif |
+|---|---|
+| I_yy | **272,5** (açıklık³ = 37,4; ⁵ = 418,7 — ikisi de değil) |
+| M_mevcut | **41,4** |
+| gereken moment (α oranı 0,25 ile) | 68,1 |
+| **pay oranı** | **0,61 — ağır hatta %39 daralıyor** |
+
+Hafif hattın payını korumak için ağır hattın dönme süresi **5,13 s**
+olmalıydı; tasarım 4 s kullanıyor.
+
+**Bir dış iddia çürütüldü:** "50→1000 kg için doğrusal ölçek 20^(1/3) =
+2,714 olmalı" denildi. Değil — o, sabit yoğunlukta geometrik benzerlik
+varsayar. Makalenin kendi künye tablosu açıklığı 3,4528 → 11,55 m
+veriyor, yani **3,345**. Tasarımlar benzer değil, bu yüzden 2,714
+geçerli değil.
+
+## §7.4'ün irtifa kaybı, profil seçimine duyarlı mı — ÖLÇÜLDÜ
+
+§7.4'ün tabloları doğrusal θ rampasına dayanıyor ve o rampa sonlu
+momentle üretilemez. Üç profille yeniden koşuldu (irtifa kaybı, m):
+
+| | T/W | w0=0: doğrusal / yumuşak / üçgen | w0=5 |
+|---|---|---|---|
+| hafif | 1,1 | −13,2 / −14,5 / −14,9 | **0 / 0 / 0** |
+| hafif | 1,2 | −9,1 / −10,5 / −10,9 | **0 / 0 / 0** |
+| hafif | 1,3 | −2,1 / −2,7 / −2,9 | **0 / 0 / 0** |
+| ağır | 1,1 | −17,7 / −19,5 / −20,5 | **0 / 0 / 0** |
+| ağır | 1,2 | **−1,4 / −13,4 / −11,6** | **0 / 0 / 0** |
+| ağır | 1,3 | 0 / 0 / 0 | **0 / 0 / 0** |
+
+**Ana sonuç sağlam:** *"tırmanışta girmek irtifa kaybını tamamen
+kaldırır"* üç profilde de, iki tasarımda da, her T/W'de geçerli. Ağır
+hat için 4,36 ve 5,13 s'de de sıfır.
+
+**Ama bir girdi ciddi kaydı:** ağır hat, T/W = 1,2, tırmanışsız giriş —
+doğrusal profilde −1,4 m, sonlu momentli profillerde −11,6/−13,4 m.
+Yaklaşık **12 metre**. Bu, yayımlanmış bir tablo değeri ve düzeltilmeli.
