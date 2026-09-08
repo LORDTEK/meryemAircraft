@@ -2,7 +2,7 @@
 
 Meryem Gülmen, Berke Gülmen, Ömer Gülmen
 
-**Abstract.** Hybrid vertical take-off and landing (VTOL) aircraft combine runway independence with wing-borne cruise, but purchase that combination at a cost to cruise efficiency. This paper argues the cost is architectural rather than a defect of implementation. It is charged in three currencies — the mass of hover hardware carried through cruise, its drag when exposed in cruise, and a power system sized by a condition holding for roughly two percent of the flight — and every known remedy reduces one currency by increasing another. Stating the cost this way makes its escape condition explicit: it is charged whenever hover and cruise are served by hardware that is not the same hardware, in the same orientation, doing the same job. A configuration satisfying that condition is proposed — an uncrewed tail-sitting blended-wing body in which one coaxial counter-rotating pair at the nose produces all thrust in both regimes, four small coaxial pairs at the wing tips produce attitude moments only, and a deployable strip in the nose-propeller slipstream supplies the rolling moment that body-axis-parallel thrust vectors cannot generate. The aircraft has no control surfaces, no tilting or retraction mechanism and no dedicated lift system. Sizing the same mission three ways, on one set of equations calibrated from the proposed design itself, closes it at forty-two percent lower take-off mass and seventeen percent greater range than a lift-plus-cruise layout, on measured drag; against a tilting layout the comparison is conditional on a cruise-drag penalty that was not measured, and no superiority over that family is claimed. Two reference designs are sized twenty times apart in mass, at 50 kg and 1000 kg, from identical equations, with the governing fractions preserved across that range. Two findings changed the study: the tip frames must be faired, and transition altitude loss falls with rotation time rather than rising with it. The study is largely analytical, with no wind-tunnel or flight validation, and the mass budget is a target. The two aerodynamic coefficients that carry the most weight are not replaced by computation but bounded by it — the zero-lift drag by a three-dimensional solution reported with a measured uncertainty budget.
+**Abstract.** Hybrid vertical take-off and landing (VTOL) aircraft combine runway independence with wing-borne cruise, but purchase that combination at a cost to cruise efficiency. This paper argues the cost is architectural rather than a defect of implementation. It is charged in three currencies — the mass of hover hardware carried through cruise, its drag when exposed in cruise, and a power system sized by a condition holding for roughly two percent of the flight — and every known remedy reduces one currency by increasing another. Stating the cost this way makes its escape condition explicit: it is charged whenever hover and cruise are served by hardware that is not the same hardware, in the same orientation, doing the same job. A configuration satisfying that condition is proposed — an uncrewed tail-sitting blended-wing body in which one coaxial counter-rotating pair at the nose produces all thrust in both regimes, four small coaxial pairs at the wing tips produce attitude moments only, and a deployable strip in the nose-propeller slipstream supplies the rolling moment that body-axis-parallel thrust vectors cannot generate. The aircraft has no control surfaces, no tilting or retraction mechanism and no dedicated lift system. Sizing the same mission three ways, on one set of equations calibrated from the proposed design itself, closes it at forty-two percent lower take-off mass and seventeen percent greater range than a lift-plus-cruise layout, on measured drag; against a tilting layout the comparison is conditional on a cruise-drag penalty that was not measured, and no superiority over that family is claimed. Two reference designs are sized twenty times apart in mass, at 50 kg and 1000 kg, from identical equations, with the governing fractions preserved across that range. Two findings changed the study: the tip frames must be faired, and transition altitude loss falls with rotation time rather than rising with it. The study is largely analytical, with no wind-tunnel or flight validation; the mass budget is closed from components at the light design point and remains open at the heavy one. The two aerodynamic coefficients that carry the most weight are not replaced by computation but bounded by it — the zero-lift drag by a three-dimensional solution reported with a measured uncertainty budget.
 
 **Keywords:** vertical take-off and landing; tail-sitter; blended wing body; uncrewed aerial vehicle; series hybrid propulsion; cruise efficiency; aircraft configuration design
 
@@ -83,8 +83,9 @@ and the ratio of propeller diameter to span.
 flight test. Its numerical results are analytical estimates from stated assumptions, with
 one exception: the zero-lift drag of the wing and centre body has been computed
 three-dimensionally, and Section 6.6 reports it with a measured uncertainty budget. The
-mass budget is a target rather than a finding. Section 8 states these limitations
-explicitly.
+mass budget began as a target rather than a finding; Section 6.7 replaces it for the light
+design with a build-up from components, which closes, and identifies the one assumption
+the closure depends on. Section 8 states these limitations explicitly.
 
 The remainder of the paper is organised as follows. Section 2 reviews seventy years of
 attempts to merge the two configuration families and argues, on the evidence of two
@@ -1464,6 +1465,64 @@ payload, which requires a mean density of only 0.16 kg per litre. The configurat
 mass-limited rather than volume-limited, and the choice of mission therefore constrains
 the structure and the load paths rather than the internal arrangement.
 
+## 6.7 A component build-up of the mass budget
+
+The fractions used in Sections 6.2 and 6.3 are asserted, and Section 8.2 says so. This
+section replaces the assertion for the light design with a build-up from components. The
+rule followed throughout is that no item may be derived from the fraction it is meant to
+test: every line comes either from the geometry and a stress calculation, or from a
+specific quantity — an areal density, a specific power — stated openly and then varied.
+
+**Structure.** The wetted area follows from the planform of Section 4.2 and the NACA 00xx
+thickness distribution: 4.14 m² against 1.98 m² of planform. A carbon–epoxy sandwich shell
+at 1.5 kg m⁻² gives 6.20 kg, with ribs, bulkheads and bonded joints taken at 45 percent of
+the shell. The tip frames are sized by the landing case, since this aircraft lands on
+them: a 3 g vertical arrival, half the weight through one frame, the post treated as a
+cantilever of the stated length, giving 0.95 kg for both frames including fittings.
+Fasteners, adhesive, filler and paint are charged at 10 percent of primary structure and
+access panels at 6 percent. The total is 11.88 kg, 23.8 percent of take-off mass.
+
+The main spar is not a driver and this is worth recording, because a thick blended centre
+body invites the assumption that it must be. At an ultimate load factor of 5.25 the root
+bending moment is 934 N m; carried at 400 MPa over a structural depth of 0.9 times the root
+thickness, the caps require 10.7 mm² of carbon and weigh 41 grams. Structure at this scale
+is minimum-gauge and assembly driven, not strength driven.
+
+**Propulsion.** The nose motor is sized by hover peak power and the engine by cruise,
+which is the configuration's central claim and is visible in the budget as such: 2.73 kg
+of electric machine against 2.60 kg of engine and generator, at 4 kW kg⁻¹ and 1 kW kg⁻¹
+respectively. Adding the tip motors at twelve percent of nose power, the propellers, the
+coaxial hubs, the power electronics at 20 kW kg⁻¹, the engine mounting with its cooling
+and exhaust, and the power cabling gives 7.60 kg, 15.2 percent.
+
+**Systems, energy and contingency.** Avionics, fuel system, strip actuation, signal
+harness and payload interface total 2.84 kg. Fuel and battery are as sized, 9.80 kg. A
+contingency of 12 percent of dry mass — ordinary preliminary-design practice — adds
+2.68 kg.
+
+| Group | Build-up | Assumed in 6.2 |
+|---|---:|---:|
+| Structure | 23.8 % | 30 % |
+| Propulsion chain | 15.2 % | 16 % |
+| Battery buffer | 3.6 % | 4 % |
+| Systems and contingency | 11.0 % | 8 % |
+| Fuel | 16.0 % | 16 % |
+| **Payload, as residual** | **30.4 %** | **26 %** |
+
+The build-up closes with 2.2 kg in hand. Where that margin is thin, and why a build-up
+coming in lighter than its own target should be read as a warning rather than a
+confirmation, is set out in Section 8.2.
+
+**The heavy design is not closed by this exercise.** Shell mass scales as areal density
+times wetted area, so as the square of linear scale, while take-off mass scales as the
+cube; holding areal density constant would make the shell fraction fall as the inverse of
+scale, which is plainly wrong, since skins on larger aircraft are not thinner. Holding the
+fraction constant instead requires areal density to grow linearly with scale. The truth
+lies between, and the exponent has not been measured. Sweeping it shows the 1000 kg design
+closing on its 260 kg payload for exponents below 0.467 — an areal density of
+2.64 kg m⁻² — and failing above. That exponent, not any of the light-design assumptions,
+is the largest open question in the mass budget of this study.
+
 # 7. Flight profile and transition
 
 The transition between vertical and horizontal flight is the manoeuvre on which
@@ -1681,18 +1740,45 @@ to the turbulence-model uncertainty quantified there, which is its largest term,
 has not been checked against measurement. Every other aerodynamic coefficient is either
 taken from the literature or assumed.
 
-## 8.2 The mass budget is a target, not a finding
+## 8.2 The mass budget is bounded from below, and the bound is thinner than it looks
 
 The reference designs are sized from an assumed mass breakdown — 30 % structure, 16 %
-propulsion chain, 4 % battery, 8 % avionics, 16 % fuel, 26 % payload. Paper aircraft are
-habitually lighter than the aircraft that eventually get built, and no allowance for that
-margin has been made anywhere in this study. The payload fraction is the
-number most exposed to it, because payload is the residual: it absorbs the entire error
-of every other line.
+propulsion chain, 4 % battery, 8 % avionics, 16 % fuel, 26 % payload — and that breakdown
+was, in the first version of this study, a target rather than a finding. A component
+build-up has since been carried out and is reported in Section 6.7. It closes: at 50 kg
+the components sum to a payload residual of 30.4 percent against the 26 percent assumed,
+a margin of 2.2 kg. That converts the assumption from an assertion into a bounded claim,
+but it does not make the claim comfortable, for three reasons.
 
-This is the single most likely place for the results of this paper to be wrong, and it
-is the reason Section 6.5 declines to compare the calculated payload fractions against
-the published figures of aircraft that exist.
+**The margin lives in one number.** Breaking each assumption in turn to find the value at
+which 13 kg of payload no longer closes gives margins of 38 to 197 percent on the
+propulsion and assembly terms, and 19 percent on the shell areal density. At
+1.78 kg m⁻² of skin rather than the 1.5 assumed, the payload is gone. Every other line
+could be substantially worse than assumed and the design would still close; that one line
+could not.
+
+**The build-up came in lighter than the target, which is a warning and not a
+reassurance.** Its structure is 23.8 percent against the 30 assumed. The first pass of the
+same build-up returned a payload fraction of 42.8 percent, and the difference between
+that and the 30.4 reported is seven categories of hardware that the first pass had simply
+omitted. A build-up that has already been found to be missing 3.4 kg of items may still be
+missing more. What that risk costs is quantifiable: the contingency allowance can rise
+from the 12 percent of dry mass used to 22 percent before the payload claim fails, so
+roughly a further 4.5 kg of unaccounted mass is survivable and no more.
+
+**Paper aircraft are habitually lighter than the aircraft that eventually get built**, and
+the payload fraction remains the number most exposed to that, because payload is the
+residual and absorbs the entire error of every other line. This is still the single most
+likely place for the results of this paper to be wrong, and it remains the reason
+Section 6.5 declines to compare the calculated payload fractions against the published
+figures of aircraft that exist.
+
+One structural question is settled by the build-up rather than left open. At 50 kg the
+root bending moment is 934 N m, which a carbon spar cap of 10.7 mm² carries at the design
+allowable; the caps weigh 41 grams, eight parts in ten thousand of take-off mass, and
+under one percent even at 1000 kg. Structure at these scales is set by minimum gauge and
+assembly, not by strength — which is also why the twenty-five percent thick centre body
+costs nothing structurally.
 
 ## 8.3 Geometry chosen rather than derived
 
@@ -1921,8 +2007,13 @@ are listed so that they can be:
    — settle 4.3 percent apart, entirely in the pressure component. Steady RANS is
    admitting more than one stationary solution here. **This item is therefore narrowed
    rather than closed**, and what replaces it is stated above.
-2. **A structural mass estimate** for the airframe and the tip frames, which would test
-   the payload fraction — the weakest number in the study.
+2. ~~**A structural mass estimate** for the airframe and the tip frames.~~ **Done for the
+   light design, open for the heavy one.** The build-up of Section 6.7 closes the 50 kg
+   payload fraction with 2.2 kg in hand and locates the whole of that margin in the shell
+   areal density, which may not exceed 1.78 kg m⁻². **What it does not settle** is how that
+   areal density scales: the 1000 kg design closes only if it grows more slowly than the
+   0.467 power of linear scale, and that exponent was not measured. **This item is
+   therefore narrowed rather than closed.**
 3. **A six-degree-of-freedom transition simulation** with rotational dynamics, which
    would size the tip propellers properly rather than by order of magnitude.
 4. **A panel-method analysis of the tip surfaces**, which would either convert Section
@@ -1980,11 +2071,12 @@ so entering the rotation while still climbing, rather than stopping to hover fir
 removes the altitude penalty entirely.
 
 What this paper offers is a configuration and its numbers, not a validated aircraft.
-There is no wind-tunnel data here and no flight test; the mass budget is a target that
-has not paid the margin such budgets usually owe. One of the four analyses that Section 8
-lists as tests of these results has been carried out — a three-dimensional solution for
-the centre body, which narrowed the zero-lift drag without overturning it — and the other
-three have not. The claims most exposed are identified in Section 8, and none of the
+There is no wind-tunnel data here and no flight test. Two of the four analyses that
+Section 8 lists as tests of these results have been carried out — a three-dimensional
+solution for the centre body, which narrowed the zero-lift drag without overturning it,
+and a component build-up of the mass budget, which closes with 2.2 kg in hand at the light
+design point and hangs almost entirely on one number, the areal density of the shell. The
+other two have not, and the heavy design's structure is not closed by the second of them. The claims most exposed are identified in Section 8, and none of the
 remaining analyses requires an experiment. The configuration is
 described in enough detail for another group to attempt any of them independently, and
 that is the outcome this paper is written to invite.

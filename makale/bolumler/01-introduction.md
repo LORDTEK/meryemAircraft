@@ -77,8 +77,9 @@ and the ratio of propeller diameter to span.
 flight test. Its numerical results are analytical estimates from stated assumptions, with
 one exception: the zero-lift drag of the wing and centre body has been computed
 three-dimensionally, and Section 6.6 reports it with a measured uncertainty budget. The
-mass budget is a target rather than a finding. Section 8 states these limitations
-explicitly.
+mass budget began as a target rather than a finding; Section 6.7 replaces it for the light
+design with a build-up from components, which closes, and identifies the one assumption
+the closure depends on. Section 8 states these limitations explicitly.
 
 ---
 

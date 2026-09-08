@@ -22,18 +22,45 @@ to the turbulence-model uncertainty quantified there, which is its largest term,
 has not been checked against measurement. Every other aerodynamic coefficient is either
 taken from the literature or assumed.
 
-## 8.2 The mass budget is a target, not a finding
+## 8.2 The mass budget is bounded from below, and the bound is thinner than it looks
 
 The reference designs are sized from an assumed mass breakdown — 30 % structure, 16 %
-propulsion chain, 4 % battery, 8 % avionics, 16 % fuel, 26 % payload. Paper aircraft are
-habitually lighter than the aircraft that eventually get built, and no allowance for that
-margin has been made anywhere in this study. The payload fraction is the
-number most exposed to it, because payload is the residual: it absorbs the entire error
-of every other line.
+propulsion chain, 4 % battery, 8 % avionics, 16 % fuel, 26 % payload — and that breakdown
+was, in the first version of this study, a target rather than a finding. A component
+build-up has since been carried out and is reported in Section 6.7. It closes: at 50 kg
+the components sum to a payload residual of 30.4 percent against the 26 percent assumed,
+a margin of 2.2 kg. That converts the assumption from an assertion into a bounded claim,
+but it does not make the claim comfortable, for three reasons.
 
-This is the single most likely place for the results of this paper to be wrong, and it
-is the reason Section 6.5 declines to compare the calculated payload fractions against
-the published figures of aircraft that exist.
+**The margin lives in one number.** Breaking each assumption in turn to find the value at
+which 13 kg of payload no longer closes gives margins of 38 to 197 percent on the
+propulsion and assembly terms, and 19 percent on the shell areal density. At
+1.78 kg m⁻² of skin rather than the 1.5 assumed, the payload is gone. Every other line
+could be substantially worse than assumed and the design would still close; that one line
+could not.
+
+**The build-up came in lighter than the target, which is a warning and not a
+reassurance.** Its structure is 23.8 percent against the 30 assumed. The first pass of the
+same build-up returned a payload fraction of 42.8 percent, and the difference between
+that and the 30.4 reported is seven categories of hardware that the first pass had simply
+omitted. A build-up that has already been found to be missing 3.4 kg of items may still be
+missing more. What that risk costs is quantifiable: the contingency allowance can rise
+from the 12 percent of dry mass used to 22 percent before the payload claim fails, so
+roughly a further 4.5 kg of unaccounted mass is survivable and no more.
+
+**Paper aircraft are habitually lighter than the aircraft that eventually get built**, and
+the payload fraction remains the number most exposed to that, because payload is the
+residual and absorbs the entire error of every other line. This is still the single most
+likely place for the results of this paper to be wrong, and it remains the reason
+Section 6.5 declines to compare the calculated payload fractions against the published
+figures of aircraft that exist.
+
+One structural question is settled by the build-up rather than left open. At 50 kg the
+root bending moment is 934 N m, which a carbon spar cap of 10.7 mm² carries at the design
+allowable; the caps weigh 41 grams, eight parts in ten thousand of take-off mass, and
+under one percent even at 1000 kg. Structure at these scales is set by minimum gauge and
+assembly, not by strength — which is also why the twenty-five percent thick centre body
+costs nothing structurally.
 
 ## 8.3 Geometry chosen rather than derived
 
@@ -262,8 +289,13 @@ are listed so that they can be:
    — settle 4.3 percent apart, entirely in the pressure component. Steady RANS is
    admitting more than one stationary solution here. **This item is therefore narrowed
    rather than closed**, and what replaces it is stated above.
-2. **A structural mass estimate** for the airframe and the tip frames, which would test
-   the payload fraction — the weakest number in the study.
+2. ~~**A structural mass estimate** for the airframe and the tip frames.~~ **Done for the
+   light design, open for the heavy one.** The build-up of Section 6.7 closes the 50 kg
+   payload fraction with 2.2 kg in hand and locates the whole of that margin in the shell
+   areal density, which may not exceed 1.78 kg m⁻². **What it does not settle** is how that
+   areal density scales: the 1000 kg design closes only if it grows more slowly than the
+   0.467 power of linear scale, and that exponent was not measured. **This item is
+   therefore narrowed rather than closed.**
 3. **A six-degree-of-freedom transition simulation** with rotational dynamics, which
    would size the tip propellers properly rather than by order of magnitude.
 4. **A panel-method analysis of the tip surfaces**, which would either convert Section
