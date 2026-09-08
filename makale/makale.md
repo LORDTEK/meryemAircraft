@@ -1528,10 +1528,21 @@ respectively. Adding the tip motors at twelve percent of nose power, the propell
 coaxial hubs, the power electronics at 20 kW kg⁻¹, the engine mounting with its cooling
 and exhaust, and the power cabling gives 7.60 kg, 15.2 percent.
 
-**Systems, energy and contingency.** Avionics, fuel system, strip actuation, signal
-harness and payload interface total 2.84 kg. Fuel and battery are as sized, 9.80 kg. A
-contingency of 12 percent of dry mass — ordinary preliminary-design practice — adds
-2.68 kg.
+**Systems, energy and contingency.** Avionics, fuel system, strip actuation, signal harness
+and payload interface total 2.84 kg. There are no control-surface actuators to add, since
+there are no control surfaces; the strip is the only moving aerodynamic device and is
+carried here. Fuel and battery are as sized, 9.80 kg. A contingency of 12 percent of dry
+mass — ordinary preliminary-design practice — adds 2.68 kg.
+
+**The battery buffer is specified by power, not by energy, and this has not been stated
+before.** It must supply the difference between hover power and engine rating, 8.3 kW at
+the light design point, from 1.8 kg — a specific power of 4.6 kW kg⁻¹, or about 26 C at
+180 Wh kg⁻¹. Energy is not the binding constraint until roughly 140 seconds of hover, well
+beyond the profile of Section 7; below that the buffer is power-limited. The heavy design
+is in the same regime, 4.1 kW kg⁻¹ at 22 C. Cells capable of those discharge rates
+generally carry less energy per kilogram than 180 Wh kg⁻¹, which lowers the crossover
+further. The buffer masses used are therefore a cell-selection requirement rather than a
+free parameter, and the requirement is a demanding one.
 
 | Group | Build-up | Assumed in 6.2 |
 |---|---:|---:|
@@ -1816,6 +1827,15 @@ section quoted 4.5 kg by reading the break-even contingency as if it were additi
 the budget rather than inclusive of what is already in it. The two figures were never
 independent: the survivable unaccounted mass and the payload margin are the same 2.2 kg,
 counted once.
+
+The four categories most often missing from a build-up of this kind were checked
+explicitly and are present: propeller blades and coaxial hubs, power electronics sized on
+hover peak rather than on engine rating, fuel containment as distinct from fuel, and
+control actuation — the last being small here only because the configuration has no control
+surfaces to actuate. What is *not* separately modelled is local load introduction: the
+tip-frame roots, the nose motor mount, and the payload, fuel and battery supports are
+carried inside the shell and internal-structure allowances rather than sized. If those load
+paths cost more than the allowances contain, they come out of the same 2.2 kg.
 
 **Paper aircraft are habitually lighter than the aircraft that eventually get built**, and
 the payload fraction remains the number most exposed to that, because payload is the

@@ -289,6 +289,28 @@ def kirilma(anahtar, hedef=13.0, alt=0.1, ust=20.0, taban=None, **kw):
     return 0.5 * (alt + ust)
 
 
+def pil_sinami(P_hover=10.9, P_motor=2.6, m_pil=1.8, Wh_kg=180.0):
+    """Pil tamponu GUC mu ENERJI mi sinirli?
+
+    Dis denetim sordu: 1,8 kg pil, hover ile motor derecelendirmesi
+    arasindaki farki gercekten besleyebilir mi? Bu bir kutle kalemi
+    degil, bir HUCRE SARTNAMESI sorusudur ve makalede hic yazmiyor."""
+    fark = P_hover - P_motor
+    ozgul = fark / m_pil
+    C = ozgul / (Wh_kg / 1000.0)
+    t_esik = m_pil * Wh_kg * 3600.0 / (fark * 1000.0)
+    print("hover %.1f kW - motor %.1f kW = %.1f kW pilden" % (P_hover, P_motor, fark))
+    print("  %.1f kg pil -> GEREKEN OZGUL GUC %.2f kW/kg  (%.0fC, %.0f Wh/kg'da)"
+          % (m_pil, ozgul, C, Wh_kg))
+    print("  enerji sinirina gecis: %.0f s hover" % t_esik)
+    print("  Yani %.0f s'nin ALTINDA tampon GUC sinirli, ustunde ENERJI sinirli."
+          % t_esik)
+    print("  Not: %.0fC verebilen hucreler tipik olarak %.0f Wh/kg'in altinda kalir;"
+          % (C, Wh_kg))
+    print("  o durumda enerji esigi de asagi iner. Bu bir hucre secimi kisitidir.")
+    return ozgul, t_esik
+
+
 def agir(kabuk_us=0.5):
     """Agir hat (1000 kg). TEK ACIK SORU: kabuk alan yogunlugu olcekle
     nasil buyur?
@@ -357,6 +379,14 @@ if __name__ == "__main__":
         x = kirilma(anahtar, alt=0.2, ust=20.0)
         print("  %-22s taban %6.2f  ->  kirilma %s (ALTINDA kapanmaz)"
               % (ad, V[anahtar], ("%.3f" % x) if x else "bulunamadi"))
+    print()
+    print("=" * 74)
+    print("PIL TAMPONU -- guc mu enerji mi sinirli")
+    print("=" * 74)
+    pil_sinami()
+    print()
+    print("  agir hat:")
+    pil_sinami(216.2, 54.3, 40.0)
     print()
     print("=" * 74)
     print("AGIR HAT -- 1000 kg")

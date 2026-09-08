@@ -440,3 +440,46 @@ büyük bir belirsizlik.
 sabit). Ağır hatta 50 mm'lik boruya 44 mm et kalınlığı istedi ve yapıyı
 370 kg gösterdi. Çap kök veterine bağlandı (%5); hafif hat sayıları
 değişmedi (ölçek = 1), ağır hat düzeldi.
+
+---
+
+## Pil tamponu GÜÇ sınırlı — makalede hiç yazmıyordu (08.09.2026)
+
+Dış denetim sordu: 1,8 kg pil, hover ile motor derecelendirmesi
+arasındaki farkı gerçekten besleyebilir mi? Ölçüldü (`pil_sinami()`):
+
+| | hafif hat | ağır hat |
+|---|---|---|
+| pilden istenen güç | 8,3 kW | 161,9 kW |
+| pil kütlesi | 1,8 kg | 40,0 kg |
+| **gereken özgül güç** | **4,61 kW/kg** | **4,05 kW/kg** |
+| 180 Wh/kg'da C-oranı | 26C | 22C |
+| enerji sınırına geçiş | 141 s hover | 160 s hover |
+
+**Bulgu:** tampon, §7'nin uçuş profilindeki hover süreleri boyunca
+**enerji değil güç** sınırlıdır. Ve 26C verebilen hücreler tipik olarak
+180 Wh/kg'ın altında kalır — o zaman enerji eşiği de aşağı iner.
+
+Yani 1,8 kg serbest bir parametre değil, **bir hücre seçimi
+şartnamesidir** ve zorlayıcı bir şartnamedir. Makale bunu hiçbir yerde
+söylemiyordu; §6.7'ye eklendi.
+
+## Eksik kalem kontrolü — dört kategori doğrulandı
+
+Denetimlerin "muhtemelen unuttuğun" dediği dört kalem bütçede **var**:
+
+| kalem | nerede | kg |
+|---|---|---|
+| pervane palleri + eş eksenli göbek | TAHRİK | 0,400 + 0,044 + 0,140 |
+| güç elektroniği (hover tepesine boyutlu) | TAHRİK | 0,610 |
+| yakıt kabı/pompa/hat | SİSTEM | 0,960 |
+| kumanda tahriki | SİSTEM | 0,271 (yalnız şerit) |
+
+Son satır küçük çünkü **bu uçakta kumanda yüzeyi yok** — makalenin
+merkezi iddiası bu; şerit tek hareketli aerodinamik parça.
+
+**Ayrı modellenmeyen tek kategori: yerel yük girişi.** Uç çerçeve
+kökleri, burun motoru yatağı, faydalı yük/yakıt/pil mesnetleri kabuk ve
+iç yapı payının içinde sayılıyor, ayrıca boyutlandırılmıyor. Bu yük
+yolları payın içerdiğinden pahalıya çıkarsa aynı 2,2 kg'dan çıkar.
+Kayda geçti (§8.2).
