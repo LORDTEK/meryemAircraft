@@ -156,12 +156,13 @@ produced by any finite moment, and reports the measured sensitivity of the altit
 tables to that choice.
 
 **One published number changed as a result.** The heavy reference design's rotation time
-was four seconds, at which the margins are 1.26 on the cheapest profile and 0.84 on a
-smooth one — a boundary rather than a margin. It is now 5.1 s, the time at which the heavy
-design holds the light design's margins, and the change costs nothing: the tip-propeller
-power falls from thirteen percent of hover power to six, and the altitude-loss result is
-unchanged. The light design was never close to its boundary: two seconds against a minimum
-of 1.39. The aerodynamic model is a linear lift curve to stall with a flat-plate relation
+was four seconds, at which — against the corrected inertia of Section 7.6 — the margins are
+0.97 on the cheapest profile and 0.65 on a smooth one, that is, infeasible on both. It is
+now 5.1 s, the time at which the heavy design holds the light design's margins, and the
+change costs nothing: the tip-propeller power falls from thirteen percent of hover power to
+six, and the altitude-loss result is unchanged. The light design is on the same boundary
+rather than clear of it: two seconds against a smooth minimum of 2.01 s. Both reference
+rotation times should be read as actuator-limited lower bounds. The aerodynamic model is a linear lift curve to stall with a flat-plate relation
 beyond it; dynamic stall, separation hysteresis and propeller-wake effects on the wing
 are absent.
 
@@ -339,8 +340,9 @@ are listed so that they can be:
 3. **A six-degree-of-freedom transition simulation** with rotational dynamics. **Partly
    done, and the remainder is blocked on data rather than on effort.** Section 7.6 derives
    the inertia from the component build-up and shows the tip propellers carry it with a
-   margin of 2.08 at the light design point and 1.26 at the heavy one — the latter only on
-   the cheapest rotation profile — together with a measured account of how that margin
+   margin of 1.49 at the light design point and 1.57 at the heavy one on the cheapest
+   rotation profile, and of 0.99 and 1.05 on a smooth one — that is, at the actuator limit
+   rather than clear of it — together with a measured account of how that margin
    narrows with size, and a threshold for the aerodynamic moment resolved along the
    trajectory. That resolution corrected the requirement rather than merely quantifying it:
    the aircraft does not reach ninety degrees of incidence, because the relative wind

@@ -2,7 +2,7 @@
 
 Meryem Gülmen, Berke Gülmen, Ömer Gülmen
 
-**Abstract.** Hybrid vertical take-off and landing (VTOL) aircraft combine runway independence with wing-borne cruise and pay for it in cruise efficiency. This paper treats that cost as architectural rather than as a defect of implementation, and develops it as an accounting framework. The penalty is charged in three coupled currencies — the mass of hover hardware carried through cruise, its drag when exposed in cruise, and a power system sized by a condition holding for some two percent of the flight — and every known remedy reduces one by raising another. The escape condition is then explicit: the penalty is charged whenever hover and cruise are served by hardware that is not the same hardware, in the same orientation, doing the same job. A second result is methodological: architectural comparisons depend on the sizing contract chosen, and a fixed fuel fraction removes the mass bill from the range column altogether, so three contracts are reported rather than one. meryemAircraft, an uncrewed tail-sitting blended-wing body, satisfies the escape condition and serves as the case study: one coaxial pair at the nose gives all thrust in both regimes, four small pairs at the tips give attitude moments only, and a deployable strip gives the roll that body-parallel thrust cannot. Against a lift-plus-cruise layout, on wind-tunnel drag, it closes the same mission at forty-two percent lower take-off mass and seventeen percent greater range; against a tilting layout the comparison reverses between contracts and no superiority is claimed. A three-dimensional solution bounds the zero-lift drag with a measured uncertainty budget, and a component mass build-up closes the 50 kg design conditionally and not the 1000 kg one. The study is analytical, with no experimental validation of the configuration. The tip propellers can turn the aircraft's rotational inertia through the transition but not, on present evidence, its aerodynamic moment. Resolving that margin along the trajectory shows the aircraft never reaches ninety degrees of incidence — the relative wind rotates with the body — so the outstanding measurement is the pitching moment to some twenty-two degrees at low dynamic pressure, together with trim at cruise. Transition controllability remains the principal open requirement and is stated as a threshold a future measurement must meet.
+**Abstract.** Hybrid vertical take-off and landing (VTOL) aircraft combine runway independence with wing-borne cruise and pay for it in cruise efficiency. This paper treats that cost as architectural rather than as a defect of implementation, and develops it as an accounting framework. The penalty is charged in three coupled currencies — the mass of hover hardware carried through cruise, its drag when exposed in cruise, and a power system sized by a condition holding for some two percent of the flight — and every remedy surveyed here reduces one by raising another. The escape condition is then explicit: the penalty is charged whenever hover and cruise are served by hardware that is not the same hardware, in the same orientation, doing the same job. A second result is methodological: architectural comparisons depend on the sizing contract chosen, and a fixed fuel fraction removes the mass bill from the range column altogether, so three contracts are reported rather than one. meryemAircraft, an uncrewed tail-sitting blended-wing body, satisfies the escape condition and serves as the case study: one coaxial pair at the nose gives all thrust in both regimes, four small pairs at the tips give attitude moments only, and a deployable strip gives the roll that body-parallel thrust cannot. Against a lift-plus-cruise layout, on wind-tunnel drag, it closes the same mission at forty-two percent lower take-off mass and seventeen percent greater range; against a tilting layout the comparison reverses between contracts and no superiority is claimed. A three-dimensional solution bounds the zero-lift drag with a measured uncertainty budget, and a component mass build-up closes the 50 kg design conditionally and not the 1000 kg one. The study is analytical, with no experimental validation of the configuration. The tip propellers can turn the aircraft's rotational inertia through the transition but not, on present evidence, its aerodynamic moment. Resolving that margin along the trajectory shows the aircraft never reaches ninety degrees of incidence — the relative wind rotates with the body — so the outstanding measurement is the pitching moment to some twenty-two degrees at low dynamic pressure, together with trim at cruise. A vortex-lattice solution establishes static pitch stability under a stated packaging rule and sizes the camber moment that trim requires without closing it. Transition controllability remains the principal open requirement and is stated as a threshold a future measurement must meet.
 
 **Keywords:** vertical take-off and landing; tail-sitter; blended wing body; uncrewed aerial vehicle; series hybrid propulsion; cruise efficiency; aircraft configuration design
 
@@ -576,8 +576,9 @@ is the lift-to-drag ratio the airframe would have with no hover hardware exposed
 power of the power system. Each is dimensionless, each is zero for an aircraft that does not
 hover, and each is measurable for one that does.
 
-**The claim of Section 3.6 is that these three cannot be minimised independently.** The
-architectural moves available all move mass between them rather than removing it: retracting
+**The claim of Section 3.6 is that the same architectural choice need not minimise all
+three simultaneously.** The architectural moves available typically move cost between them
+rather than removing it: retracting
 the lift rotors reduces *f*₂ and raises *f*₁ by the retraction mechanism; tilting the
 propulsors reduces *f*₁ and *f*₂ together and introduces a mechanism whose mass and failure
 modes are the price; buffering the hover peak reduces *f*₃ and raises *f*₁ by the buffer.
@@ -585,7 +586,7 @@ Section 3.4 tabulates these transfers. The escape condition is the statement tha
 vanish simultaneously only when the hover and cruise hardware are the same hardware, in the
 same orientation, doing the same job, with the peak supplied from a buffer.
 
-**A consequence that can be tested against published work.** If the three are genuinely
+**A consequence that can be checked against published work.** If the three are genuinely
 separate currencies rather than three names for one quantity, then an architecture may be
 *best* in one and *worst* in another — in particular, the architecture with the highest
 cruise lift-to-drag ratio need not be the lightest. A single-metric comparison would not
@@ -601,6 +602,13 @@ lift-to-drag ratio — 13.44 against 12.00 — and is nonetheless twenty percent
 tail-sitter, because it carries a tilt mechanism that the tail-sitter does not. Best in
 *f*₂, worse in *f*₁. Two independent studies, different architecture sets, the same
 structure.
+
+Neither comparison validates the framework. Both are external consistency checks: the NASA
+study was carried out for other purposes and its numbers were not chosen to suit the
+argument here, and a framework that predicted the opposite ordering would be in difficulty
+against them. Corroboration of this kind raises confidence that the three charges are
+separable in practice; it does not establish that they are the only three, and nothing
+short of a broad survey of sized architectures could.
 
 **What the framework does not claim.** It does not predict the magnitude of any bill for an
 architecture that has not been sized; the fractions above must be computed or measured case
@@ -1655,13 +1663,17 @@ free parameter, and the requirement is a demanding one.
 | **Payload, as residual** | **30.4 %** | **26 %** |
 
 **Where the mass may sit is also constrained, and the constraint was not previously
-stated.** Section 7.6 shows that the configuration is statically stable in pitch only if the
-centre of gravity lies between roughly 80 and 85 percent of root chord — the sweep carries
-the neutral point to 0.859 m from the root leading edge, well aft of the root chord's
-midpoint. The internal volume's own centroid is at 78.3 percent, so an arrangement that
-simply follows the available volume lands close to the requirement; but fuel, payload and
-engine cannot be placed forward for convenience, and the budget above should be read as
-constrained in position as well as in magnitude.
+stated.** The budget above says how much each item weighs and not where it sits. Section 7.6
+adopts a first-order packaging rule in the absence of an internal layout — masses distributed
+in proportion to internal volume — and shows that the resulting centre of gravity has to lie
+between roughly 80 and 85 percent of root chord: forward of 80 percent the camber moment
+needed to trim exceeds what reflexed sections deliver, and aft of 85 percent the static
+margin falls below the usual tailless band. The sweep carries the neutral point to 0.859 m
+from the root leading edge, well aft of the root chord's midpoint, which is what makes such
+an aft centre of gravity admissible at all. The internal volume's own centroid is at 78.3
+percent, so an arrangement that simply follows the available volume lands just forward of the
+window; fuel, payload and engine therefore cannot be placed for convenience, and the budget
+above should be read as constrained in position as well as in magnitude.
 
 The build-up closes with 2.2 kg in hand — **conditionally, and the conditions are the
 result.** It closes if the average structural areal density is no more than 1.78 kg m⁻²,
@@ -1850,7 +1862,8 @@ produce. Repeating the calculation with the two realisable profiles of that sect
 the entries by one to two metres in most cells and leaves the conclusion of this section
 untouched: at an entry climb of 5 m s⁻¹ the loss is zero for all three profiles, at both
 design points and at every thrust-to-weight ratio tabulated, and it remains zero for the
-heavy design at 4.36 and 5.13 seconds. One cell moves materially and is flagged rather than
+heavy design at the 4.06 and 4.98 seconds that Section 7.6 identifies as the shortest
+rotations its moment authority allows. One cell moves materially and is flagged rather than
 smoothed: the heavy design at T/W = 1.2 and t_r = 4 s with no entry climb reads −1.4 m on
 the linear profile and −11.6 to −13.4 m on the realisable ones. That cell is a reference
 condition in neither respect — the reference profiles enter with climb, and the heavy
@@ -1954,25 +1967,32 @@ pair, and 952 N m for the heavy design, whose transition thrust is not quoted in
 | Light, t_r = 2 s | 15.4 N m | 23.1 N m | 23.0 N m | **1.49 ×** | 0.99 × |
 | Heavy, t_r = 5.1 s | 605 N m | 907 N m | 952 N m | **1.57 ×** | 1.05 × |
 
-**The rotation times of the reference designs are not free parameters.** Both close on the
-cheapest rest-to-rest profile with a margin near 1.5, and both sit essentially at unity on a
-smooth one — 2.01 s and 4.98 s being the shortest smoothly-commanded rotations the tip
-propellers can force, against reference times of 2 and 5.1 s. The two designs are therefore
-at the same point on the same constraint, which is the tip-propeller moment; the transition
-times follow from it rather than being chosen. A design iteration wanting comfort on a smooth
-command would lengthen both rotations by about a quarter, which Section 7.4 shows costs
-nothing in altitude.
+**The reference rotation times are actuator-limited lower bounds, not comfortable choices.**
+Both designs close on the cheapest rest-to-rest profile with a margin near 1.5, and both sit
+essentially at unity on a smooth one: 2.01 s and 4.98 s are the shortest smoothly-commanded
+rotations the tip propellers can force, against reference times of 2 and 5.1 s. Read
+correctly, that is not a margin of five percent — it is the statement that the reference
+rotation *is* the minimum smooth rotation the moment authority allows, to within the
+precision of the thrust estimate, and that anything faster is available only by commanding a
+profile with discontinuous angular acceleration. The two designs are at the same point on the
+same constraint, which is the tip-propeller moment; the transition times follow from it
+rather than being chosen. A design iteration wanting genuine comfort on a smooth command
+would lengthen both rotations by about a quarter, which Section 7.4 shows costs nothing in
+altitude — and that, rather than the quoted times, is what a design study should carry
+forward.
 
-**This calculation set the heavy design's rotation time.** An earlier version of this
-study used four seconds, at which the margins are 1.26 and 0.84 — that is, feasible only on
-the cheapest profile and not at all on a smooth one, with a bang-bang minimum of 3.56 s and
-a smooth minimum of 4.36 s. Four seconds was a boundary rather than a margin. Lengthening
-the rotation to 5.1 s brings the heavy margins to 2.05 and 1.37, matching the light design's
-2.08 and 1.39, and costs nothing: Table 4 shows the tip-propeller power falling from
+**This calculation set the heavy design's rotation time.** An earlier version of this study
+used four seconds. Against the inertia of this section that gives margins of 0.97 on the
+cheapest profile and 0.65 on a smooth one — that is, infeasible on both, since the shortest
+rotations the moment authority allows are 4.06 s and 4.98 s. Four seconds was not a margin
+and, with the corrected inertia, not even a boundary. Lengthening the rotation to 5.1 s
+brings the heavy margins to 1.57 and 1.05, matching the light design's 1.49 and 0.99 at its
+quoted two seconds, and costs nothing: Table 4 shows the tip-propeller power falling from
 thirteen percent of hover power to six, and the altitude-loss result of Section 7.4 is
 unchanged, remaining zero at every profile tested when the rotation is entered in a climb.
-The light design is comfortable at its quoted two seconds against minima of 1.39 s and
-1.70 s.
+The light design's own two seconds is on the same boundary — its smooth minimum is 2.01 s —
+so neither reference design has margin to spare on a smooth command, and both should be read
+as sized by this constraint.
 
 This is also, in moment terms, what Table 4 of Section 6.4 already said in units of power:
 that four seconds consumed nearly the whole tip-propeller allocation. The two statements
@@ -2015,41 +2035,76 @@ rest.
 
 | | Entry | Peak incidence | Airspeed there | C_m budget there | Tightest budget, and where |
 |---|---|---:|---:|---:|---|
-| Light | 5 m s⁻¹ climb | 17.5° | 7.3 m s⁻¹ | 0.322 | 0.079, at rotation end, α = 4.9°, 14.7 m s⁻¹ |
-| Light | from rest | 21.6° | 2.8 m s⁻¹ | 2.174 | 0.080, at rotation end, α = 17.7°, 14.7 m s⁻¹ |
-| Heavy | 5 m s⁻¹ climb | 5.4° | 35.6 m s⁻¹ | 0.015 | 0.015, at rotation end |
-| Heavy | from rest | 20.5° | 6.8 m s⁻¹ | 0.404 | 0.015, at rotation end, α = 6.5°, 35.4 m s⁻¹ |
+| Light | 5 m s⁻¹ climb | 17.5° | 7.3 m s⁻¹ | 0.205 | 0.050, at rotation end, α = 4.9°, 14.7 m s⁻¹ |
+| Light | from rest | 21.6° | 2.8 m s⁻¹ | 1.381 | 0.051, at rotation end, α = 17.7°, 14.7 m s⁻¹ |
+| Heavy | 5 m s⁻¹ climb | 5.4° | 35.6 m s⁻¹ | 0.010 | 0.010, at rotation end |
+| Heavy | from rest | 20.5° | 6.8 m s⁻¹ | 0.287 | 0.011, at rotation end, α = 6.5°, 35.4 m s⁻¹ |
+
+These budgets are what remains of the tip-propeller moment after the inertia is turned, so
+they follow the corrected inertia of this section. An earlier version of this table used an
+inertia thirty-nine percent lower and reported budgets correspondingly larger — 0.322 at the
+light design's peak incidence rather than 0.205. The values above supersede it.
 
 **The constraint splits into two, and they are different problems.** In the middle of the
 rotation the incidence is high — seventeen to twenty-two degrees — but the dynamic pressure is
-low, and the coefficient that would consume the margin is 0.32 or more, at or above the upper
-end of published post-stall values. At the end of the rotation the incidence is small, five to
-six degrees, but the aircraft is fast, and the budget falls to 0.079 for the light design and
-0.015 for the heavy one. That second condition is **not** a post-stall problem: it is the
-trim question of a tailless aircraft at its cruise incidence, and it has been checked rather
-than asserted.
+low, and the coefficient that would consume the margin is 0.205 entering in a climb and 1.38
+entering from rest. The first of those sits *inside* the range of published post-stall values
+rather than above it, so the mid-rotation condition is not comfortable either: entering the
+rotation from a climb buys altitude at the cost of arriving at the high-incidence phase
+faster, and therefore with less moment to spare. At the end of the rotation the incidence is small, five to
+six degrees, but the aircraft is fast, and the budget falls to 0.050 for the light design and
+0.010 for the heavy one. That second condition is **not** a post-stall problem: it is the
+trim question of a tailless aircraft at its cruise incidence, and it is examined below rather
+than asserted — though examining it separates a part that is shown from a part that is not.
 
-A vortex-lattice solution over the planform of Section 4.2 places the neutral point at
-0.859 m from the root leading edge — 34.3 percent of mean aerodynamic chord, an entirely
-conventional value — and the result is converged, moving by 0.26 percent over a threefold
-refinement. With the centre of gravity at the 80 percent of root chord that the internal
-volume dictates, the static margin is **+12.4 percent of mean aerodynamic chord**, in the
-middle of the usual tailless band of five to fifteen percent. The configuration is statically
-stable in pitch, and it owes that to the sweep, which carries the neutral point aft faster
-than it carries the volume.
+**The centre of gravity is an assumption, and it is stated as one.** No detailed internal
+layout exists for this aircraft, so none can be measured. In its place a first-order
+packaging rule is adopted: the non-structural masses — fuel, payload, engine, generator,
+buffer — are distributed in proportion to the internal volume available at each station,
+and the structural mass in proportion to the shell area. Applied to the planform of
+Section 4.2 this rule puts the centre of gravity at **0.778 m aft of the root leading edge**,
+which is 80.2 percent of root chord, or 21.9 percent of mean aerodynamic chord aft of the
+mean-chord leading edge. Every stability figure below follows from that rule and not from a
+layout; a different arrangement of the same masses gives a different centre of gravity, which
+is why the sensitivity to it is tabulated rather than assumed away. Burning the full fuel
+load moves the centre of gravity aft by 0.3 points of root chord, which is inside the
+tabulated window and is therefore not a separate constraint.
 
-Trimming it is the remaining question. At cruise lift coefficient the moment to be balanced
-corresponds to a coefficient of 0.063 about the centre of gravity, which is what the section
-camber must supply; reflexed sections typically deliver 0.02 to 0.05. Moving the centre of
-gravity aft to 83 percent of root chord — a three-centimetre change in internal arrangement —
-reduces the requirement to 0.040 and leaves the static margin at 7.8 percent, both squarely
-conventional. **This defines a constraint the study had not previously stated: the centre of
-gravity must lie between roughly 80 and 85 percent of root chord.** It is not a demanding
-constraint, since the internal volume's own centroid is at 78.3 percent, but it is a
-constraint, and the placement of fuel, payload and engine is not free. The vortex-lattice
-model carries symmetric sections and cannot itself supply the camber that would trim the
-aircraft; what it establishes is the stability, and the size of the moment the camber must
-provide.
+**Static stability is shown.** A vortex-lattice solution over the planform of Section 4.2
+places the neutral point at 0.859 m from the root leading edge — 34.4 percent of mean
+aerodynamic chord, an entirely conventional value — and the result is converged, moving by
+0.26 percent over a threefold refinement. With the centre of gravity where the packaging rule
+puts it, the static margin is **+12.5 percent of mean aerodynamic chord**, in the middle of
+the usual tailless band of five to fifteen percent. The configuration is statically stable in
+pitch, and it owes that to the sweep, which carries the neutral point aft faster than it
+carries the volume. All chord-referenced quantities here use the true mean aerodynamic chord,
+0.651 m; an earlier version of this section quoted the margin on the mean aerodynamic chord
+but the trim requirement on the mean geometric chord, 0.573 m, and the two are now on the
+same datum.
+
+**Trim is not shown. It is a requirement, and the requirement is quantified.** At the cruise
+lift coefficient of 0.45 the moment to be balanced about the centre of gravity has coefficient
+C_L × (static margin), and the section camber must supply it. Across the plausible range of
+centre-of-gravity positions:
+
+| CG, % root chord | x_cg, m | Static margin, % MAC | Camber C_m required |
+|---:|---:|---:|---:|
+| 78 | 0.757 | +15.7 | 0.071 |
+| 80.2 (packaging rule) | 0.778 | +12.5 | 0.056 |
+| 83 | 0.805 | +8.3 | 0.037 |
+| 85 | 0.825 | +5.3 | 0.024 |
+
+Reflexed sections typically deliver 0.02 to 0.05. The upper half of that window is therefore
+reachable with conventional reflex and the lower half is not, which turns the packaging rule
+from a result into a design constraint: **the centre of gravity must lie between roughly 80
+and 85 percent of root chord**, and closer to the aft end of that range than the volume
+centroid alone would place it. It is not a demanding constraint — the internal volume's own
+centroid is at 78.3 percent — but it is a constraint, and the placement of fuel, payload and
+engine is not free. What is *not* established is that any particular camber and twist
+distribution delivers the required moment at the required lift coefficient without an
+unacceptable cruise drag penalty: the vortex-lattice model carries symmetric sections, so it
+can size the requirement but cannot meet it. The aircraft of this paper is statically stable
+and has an open trim closure, and those two statements should not be run together.
 
 **The requirement is therefore smaller and more recognisable than first stated.** An earlier
 version of this section asked for pitching-moment coefficients through ninety degrees of
@@ -2224,12 +2279,13 @@ produced by any finite moment, and reports the measured sensitivity of the altit
 tables to that choice.
 
 **One published number changed as a result.** The heavy reference design's rotation time
-was four seconds, at which the margins are 1.26 on the cheapest profile and 0.84 on a
-smooth one — a boundary rather than a margin. It is now 5.1 s, the time at which the heavy
-design holds the light design's margins, and the change costs nothing: the tip-propeller
-power falls from thirteen percent of hover power to six, and the altitude-loss result is
-unchanged. The light design was never close to its boundary: two seconds against a minimum
-of 1.39. The aerodynamic model is a linear lift curve to stall with a flat-plate relation
+was four seconds, at which — against the corrected inertia of Section 7.6 — the margins are
+0.97 on the cheapest profile and 0.65 on a smooth one, that is, infeasible on both. It is
+now 5.1 s, the time at which the heavy design holds the light design's margins, and the
+change costs nothing: the tip-propeller power falls from thirteen percent of hover power to
+six, and the altitude-loss result is unchanged. The light design is on the same boundary
+rather than clear of it: two seconds against a smooth minimum of 2.01 s. Both reference
+rotation times should be read as actuator-limited lower bounds. The aerodynamic model is a linear lift curve to stall with a flat-plate relation
 beyond it; dynamic stall, separation hysteresis and propeller-wake effects on the wing
 are absent.
 
@@ -2407,8 +2463,9 @@ are listed so that they can be:
 3. **A six-degree-of-freedom transition simulation** with rotational dynamics. **Partly
    done, and the remainder is blocked on data rather than on effort.** Section 7.6 derives
    the inertia from the component build-up and shows the tip propellers carry it with a
-   margin of 2.08 at the light design point and 1.26 at the heavy one — the latter only on
-   the cheapest rotation profile — together with a measured account of how that margin
+   margin of 1.49 at the light design point and 1.57 at the heavy one on the cheapest
+   rotation profile, and of 0.99 and 1.05 on a smooth one — that is, at the actuator limit
+   rather than clear of it — together with a measured account of how that margin
    narrows with size, and a threshold for the aerodynamic moment resolved along the
    trajectory. That resolution corrected the requirement rather than merely quantifying it:
    the aircraft does not reach ninety degrees of incidence, because the relative wind
@@ -2485,9 +2542,11 @@ solution for the centre body, which narrowed the zero-lift drag without overturn
 a component build-up of the mass budget, which closes the light design point with 2.2 kg
 in hand provided the shell areal density stays at or below 1.78 kg m⁻² and does not close
 the heavy design at all, and a rotational check which shows the tip propellers can turn the aircraft's own inertia
-through the transition, with a margin of 2.08 at 50 kg and 2.05 at 1000 kg. That
+through the transition, with a margin of 1.49 at 50 kg and 1.57 at 1000 kg on the cheapest
+rotation profile — and of 0.99 and 1.05 on a smooth one, which is to say that both reference
+rotation times are actuator-limited lower bounds rather than comfortable choices. That
 second figure set the heavy design's rotation time: at the four seconds first used, the
-margin was 1.26 on the fastest profile and below unity on a smooth one, so the rotation was
+margin was below unity on both profiles, so the rotation was
 lengthened to 5.1 s, which costs six percent of hover power instead of thirteen and changes
 no other result. The fourth has not been carried
 out, and the third is a necessary condition only: charging the aerodynamic pitching moment
@@ -2496,9 +2555,13 @@ check does supply is a threshold, resolved along the trajectory, and resolving i
 question. The aircraft does not reach ninety degrees of incidence: the body rotates through
 ninety, but the relative wind rotates with it, and peak incidence is between seventeen and
 twenty-two degrees. The high-incidence part of the rotation happens at low dynamic pressure,
-where the margin tolerates a coefficient of 0.32 or more; the tight part is the end of the
-rotation, where incidence is small and speed is high, and that is a trim question rather than
-a post-stall one. The outstanding measurement is therefore of ordinary size. The claims
+where the margin tolerates a coefficient of about 0.21 entering in a climb; the tight part
+is the end of the rotation, where incidence is small and speed is high, and that is a trim
+question rather than a post-stall one. The trim question has since been sized rather than
+closed: the configuration is statically stable, with a neutral point at 34 percent of mean
+aerodynamic chord and a margin of 12.5 percent at the assumed centre of gravity, and the
+camber moment needed to trim it at cruise is 0.056, which is at the upper edge of what
+reflexed sections deliver. The outstanding measurement is therefore of ordinary size. The claims
 most exposed are identified in Section 8. An earlier version of this section stated that
 none of the remaining analyses required an experiment; that is no longer true, and the
 change is the most important thing this study learned about itself. Transition

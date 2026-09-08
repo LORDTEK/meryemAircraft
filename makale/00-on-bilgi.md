@@ -26,8 +26,8 @@ wing-borne cruise and pay for it in cruise efficiency. This paper treats that co
 architectural rather than as a defect of implementation, and develops it as an accounting
 framework. The penalty is charged in three coupled currencies — the mass of hover hardware
 carried through cruise, its drag when exposed in cruise, and a power system sized by a
-condition holding for some two percent of the flight — and every known remedy reduces one
-by raising another. The escape condition is then explicit: the penalty is charged whenever
+condition holding for some two percent of the flight — and every remedy surveyed here
+reduces one by raising another. The escape condition is then explicit: the penalty is charged whenever
 hover and cruise are served by hardware that is not the same hardware, in the same
 orientation, doing the same job. A second result is methodological: architectural
 comparisons depend on the sizing contract chosen, and a fixed fuel fraction removes the
@@ -49,7 +49,9 @@ propellers can turn the aircraft's rotational inertia through the transition but
 present evidence, its aerodynamic moment. Resolving that margin along the trajectory shows
 the aircraft never reaches ninety degrees of incidence — the relative wind rotates with the
 body — so the outstanding measurement is the pitching moment to some twenty-two degrees at low
-dynamic pressure, together with trim at cruise. Transition controllability remains the
+dynamic pressure, together with trim at cruise. A vortex-lattice solution establishes static
+pitch stability under a stated packaging rule and sizes the camber moment that trim requires
+without closing it. Transition controllability remains the
 principal open requirement and is stated as a threshold a future measurement must meet.
 
 *[≈270 kelime. 200 isteyen dergide kesilecek ilk yer: ikinci paragrafın

@@ -509,8 +509,13 @@ Yalnızca **konumlar** varsayım; kütleler bütçeden geliyor.
 
 | | I_yy | CG (kök veterinin) |
 |---|---|---|
-| hafif 50 kg | **7,04 kg·m²** | %57 |
-| ağır 1000 kg | **1918 kg·m²** | %58 |
+| hafif 50 kg | ~~7,04 kg·m²~~ | ~~%57~~ |
+| ağır 1000 kg | ~~1918 kg·m²~~ | ~~%58~~ |
+
+⚠️ **Bu tablo GEÇERSİZ.** Konumlar elle yerleştirilmişti ve iç hacme
+bakılmamıştı; aşağıdaki "DÜZELTME" bölümüne bakınız. Geçerli değerler
+hacme orantılı yerleştirmeden: **9,813 kg·m² / %80,2** ve
+**2503,069 kg·m² / %82**.
 
 ### §7.4'ün rampası sonlu momentle üretilemez
 
@@ -854,8 +859,9 @@ arkasında. Yapının kendi merkezi de %99,1'de.
 | CG | %57 kök veter | **%80,2** |
 | statik marj | +%47 MAC (saçma) | **+%12,4 MAC** (olağan) |
 | seyirde denge C_m | 0,240 (imkânsız) | **0,063** |
-| I_yy | 7,04 kg·m² | **9,68 kg·m²** |
-| dönme payı | 2,08× | **1,51×** |
+| I_yy | 7,04 kg·m² | **9,813 kg·m²** |
+| dönme payı (üçgen) | 2,08× | **1,49×** |
+| dönme payı (yumuşak) | 1,39× | **0,99×** |
 
 **Kuyruksuz tasarımda tipik statik marj %5–15 MAC.** %12,4 tam ortada.
 Yani konfigürasyon **doğal olarak kararlı** ve bunu ok açısına borçlu.
@@ -891,3 +897,72 @@ kapanıyor** — ama bu, makalenin söylemediği bir kısıt.
   nereye konabileceği. Yani bütçe **çözülmedi, daha da kısıtlandı.**
 - **§7.6'nın "sıradan denge sorusu" ifadesi:** artık gösterilmiş, ve
   gerçekten sıradan çıktı — ama gösterilmesi gerekiyordu.
+
+---
+
+## DÜZELTME 2 — referans veter karışmış (08.09.2026, geç)
+
+Yukarıdaki tablo **statik marjı MAC üzerinden** (%12,4) ama **denge
+gereksinimini S/b üzerinden** (0,063) veriyordu. İkisi aynı büyüklüğün
+iki farklı boyutsuzlaştırılması değil; aynı hesabın iki farklı referans
+veterle yazılması. Bu, makaleye de aynen geçmişti.
+
+Ölçülen: gerçek **MAC = 0,6514 m**, MAC hücum kenarı x = 0,6354 m,
+ortalama geometrik veter S/b = 0,5730 m. Aralarında %13,7 fark var.
+
+`kararlilik.py` artık **her yerde MAC** kullanıyor — VLM'in kendi
+boyutsuzlaştırmasında da. Tarafsız nokta değişmiyor (x_np = c_ref ×
+eğim çarpımı referanstan bağımsız), oran değişiyor.
+
+| CG (kök veterinin) | statik marj (%MAC) | gereken denge C_m |
+|---|---|---|
+| %78 | +%15,7 | 0,071 |
+| **%80,2 (hacim kuralı)** | **+%12,5** | **0,056** |
+| %83 | +%8,3 | 0,037 |
+| %85 | +%5,3 | 0,024 |
+
+C_L_seyir = 0,45 (50 kg, 30 m/s, S = 1,9785 m²; perdövites 20,1 m/s'nin
+1,49 katı). Refleks kesitler tipik 0,02–0,05 verdiğinden **pencerenin
+üst yarısı ulaşılabilir, alt yarısı değil.**
+
+### CG artık bir ÖLÇÜM değil, bir TASARIM KURALI olarak yazılıyor
+
+Üç dış değerlendirmenin de istediği ayrım: hacme orantılı yerleştirme
+bir *varsayım*. Metin (§7.6) artık bunu açıkça "first-order packaging
+rule" diye adlandırıyor, tek bir referansla veriyor (0,778 m = kök
+veterinin %80,2'si = MAC'in %21,9'u), yakıt yanınca CG'nin +0,3 puan
+kaydığını söylüyor, ve pencereyi tablo olarak veriyor.
+
+### Kararlılık GÖSTERİLİYOR, denge GÖSTERİLMİYOR
+
+Ayrıca ayrıldı: §7.6 artık "**Static stability is shown**" ve "**Trim is
+not shown. It is a requirement, and the requirement is quantified**"
+diye iki ayrı başlık taşıyor. "The aircraft is trimmed" cümlesi metinde
+hiçbir yerde yok.
+
+### Dönme süreleri: pay değil, ALT SINIR
+
+Eski metin 4 s'lik ağır hattı "1,26 / 0,84 pay" diye anıyordu; bunlar
+**eski atalete** aitti. Düzeltilmiş atalete karşı 4 s'te paylar **0,97 /
+0,65** — yani iki profilde de olanaksız. 5,1 s'te 1,57 / 1,05. Hafif hat
+2 s'te 1,49 / 0,99, yumuşak asgarisi 2,01 s.
+
+Yani **iki referans dönme süresi de yumuşak profilde eyleyici sınırında**;
+metin artık bunları "actuator-limited lower bounds" diye yazıyor, "pay"
+diye değil.
+
+### §7, §8, §9'da düzeltilen bayat sayılar
+
+| yer | eski | yeni |
+|---|---|---|
+| §7.6 en dar bütçe (hafif) | 0,079 | **0,050** |
+| §7.6 en dar bütçe (ağır) | 0,015 | **0,010** |
+| §7.6 ağır 4 s payları | 1,26 / 0,84 | **0,97 / 0,65** |
+| §7.6 asgari dönme (ağır) | 3,56 / 4,36 s | **4,06 / 4,98 s** |
+| §7.5 irtifa kaybı sınaması | 4,36 ve 5,13 s | **4,06 ve 4,98 s** (sıfır, doğrulandı) |
+| §8, §9 dönme payı | 2,08 / 2,05 | **1,49 / 1,57** (üçgen) |
+| §9 orta-dönüş C_m | 0,32 | **0,21** |
+| §7.6 denge C_m | 0,063 | **0,056** |
+| §7.6 statik marj | %12,4 | **%12,5** |
+
+`dogrula.py`: 40 kontrol, 0 sapma.
