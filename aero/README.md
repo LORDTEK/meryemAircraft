@@ -341,3 +341,90 @@ sayısı **tam tutuyor**: elle −%19, model −%19,1; f_yakıt = 1 − 0,624 �
 `LD_temiz = 13,44 = 12,0 × 1,12` olarak tanımlı; A'ya sonra `1/1,12`
 uygulanıyor ve tam 12,00 çıkıyor. Doğrulama tablosu bunu kilitliyor.
 **Çift sayım yok.**
+
+---
+
+## `kutle.py` — bileşen düzeyinde kütle bütçesi (08.09.2026)
+
+Üç dış denetim de listeledi; YZ3 Q1 için zorunlu saydı. Makale §6.2'nin
+kesirleri (%30 yapı / %16 tahrik / %4 pil / %8 aviyonik / %16 yakıt →
+%26 faydalı yük) **aşağıdan yukarı** yeniden kuruldu. İlke: hiçbir
+kalem hedef kesirden geri çözülmedi — yoksa sınama değil, kendini
+doğrulama olurdu.
+
+### İlk koşu bir uyarı verdi
+
+İlk sürüm **%42,8 faydalı yük** verdi; hedef %26. Aşağıdan yukarı bir
+bütçe kendi hedefini %60 aşıyorsa önce **kalem aranır**. Arandı ve yedi
+kategori eksik çıktı: bağlantı elemanı/yapıştırıcı/boya, erişim
+kapakları, motor yatağı-soğutma-egzoz, eş eksenli göbek-mil-yatak,
+sinyal demeti, faydalı yük arayüzü, iniş temas pedleri. Ayrıca ön
+tasarımda standart olan **belirsizlik payı** (kurunun %12'si) yoktu.
+
+### Hafif hat (50 kg) — kapanıyor
+
+| grup | ölçülen | hedef | fark |
+|---|---|---|---|
+| yapı | %23,8 | %30 | −6,2 puan |
+| tahrik | %15,2 | %16 | −0,8 puan |
+| pil | %3,6 | %4 | −0,4 puan |
+| aviyonik + sistem + pay | %11,0 | %8 | +3,0 puan |
+| yakit | %16,0 | %16 | 0,0 |
+| **faydalı yük** | **%30,4** | **%26** | **+2,2 kg** |
+
+En büyük tek kalem kabuk (6,20 kg, %12,4); ikincisi iç yapı (2,79 kg).
+
+### Kırılma değerleri — 13 kg hangi noktada kapanmaz
+
+| varsayım | taban | kırılma | pay |
+|---|---|---|---|
+| **kabuk kg/m²** | **1,50** | **1,783** | **%19** |
+| iç yapı / kabuk | 0,45 | 0,723 | %61 |
+| bağlantı oranı | 0,10 | 0,297 | %197 |
+| belirsizlik payı | 0,12 | 0,219 | %82 |
+| motor kW/kg | 4,00 | 2,433 | %39 |
+| ICE+jeneratör kW/kg | 1,00 | 0,623 | %38 |
+
+**Sonuç tek bir sayıya asılı: kabuk alan yoğunluğu.** Diğer bütün
+varsayımların payı %38–197 arasında; kabuğunki %19. 1,78 kg/m²'nin
+üstünde bir kaplama, 13 kg faydalı yükü kapatmaz.
+
+Belirsizlik payı satırının okunuşu ayrıca önemli: bütçeye **daha 4,5 kg
+sayılmamış kütle** girebilir ve iddia hâlâ ayakta kalır. İlk turda 3,4
+kg'lık kalem kaçırdığım düşünülürse bu, rahat değil ama makul bir
+pay.
+
+### Yapıyı mukavemet belirlemiyor
+
+Kök eğilme momenti 934 N·m, kiriş başlığı alanı **10,7 mm²**, başlık
+kütlesi **41 gram** — MTOW'un binde 8'i. Ağır hatta bile ~%0,3. Yani bu
+boyutlarda yapıyı belirleyen **asgari kaplama kalınlığı ve montajdır,
+mukavemet değildir.** Bu, %25 kalın merkez gövdenin yapısal bir bedel
+ödemediğini de açıklıyor.
+
+### Ağır hat (1000 kg) — AÇIK SORU
+
+Kabuk kütlesi ~ σ_alan · S_ıslak ~ ölçek²; MTOW ~ ölçek³. σ_alan sabit
+kalırsa kabuk **kesri** ölçekle 1/ölçek düşer — büyük uçakta kaplama
+incelmediği için bu açıkça yanlış. Sabit kesir için σ_alan ~ ölçek¹
+gerekir. Gerçek üs ikisinin arasında; tarandı:
+
+| üs | kabuk kg/m² | yapı kg | faydalı kg (hedef 260) |
+|---|---|---|---|
+| 0,00 | 1,50 | 197,3 | 359,0 ✓ |
+| 0,25 | 2,03 | 238,4 | 313,0 ✓ |
+| **0,467** | **2,64** | — | **260 (kırılma)** |
+| 0,50 | 2,74 | 294,1 | 250,6 ✗ |
+| 1,00 | 5,02 | 471,0 | 52,4 ✗ |
+
+**Ağır hat, kabuk alan yoğunluğu ölçek^0,467'den yavaş büyürse
+kapanıyor; hızlı büyürse kapanmıyor.** Bu üssün ne olduğu ölçülmedi ve
+bu, 1000 kg hattının gerçek açık sorusudur — hafif hattınkinden daha
+büyük bir belirsizlik.
+
+### Düzeltilen hata
+
+İlk sürümde uç çerçeve postunun **çapı ölçekle büyümüyordu** (50 mm'de
+sabit). Ağır hatta 50 mm'lik boruya 44 mm et kalınlığı istedi ve yapıyı
+370 kg gösterdi. Çap kök veterine bağlandı (%5); hafif hat sayıları
+değişmedi (ölçek = 1), ağır hat düzeldi.
