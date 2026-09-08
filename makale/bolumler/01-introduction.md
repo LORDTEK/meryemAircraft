@@ -73,11 +73,13 @@ reported and quantified in Section 5.4 rather than omitted.
 is the case that instantiates it. Specifically, the paper
 
 1. **states the cruise-efficiency penalty of hybrid VTOL as an architectural property**
-   rather than a defect of implementation, expresses it in three coupled currencies —
+   rather than a defect of implementation, expresses it as three dimensionless charges —
    carried hover mass, exposed cruise drag, and continuous power sized by the hover peak —
-   shows with published figures that the known remedies transfer the penalty between
-   currencies rather than removing it, and derives from that structure an explicit escape
-   condition;
+   shows with published figures that the known remedies transfer the penalty between them
+   rather than removing it, derives from that structure an explicit escape condition, and
+   tests a consequence of the framework against an independent published sizing study: that
+   the architecture with the best cruise efficiency need not be the lightest, which is what
+   that study reports and what a single-metric comparison would not anticipate;
 2. **shows that architectural comparisons are contract-dependent**, which is a
    methodological result independent of any particular aircraft: range computed at a fixed
    fuel fraction is independent of take-off mass, so the mass bill never reaches the range
