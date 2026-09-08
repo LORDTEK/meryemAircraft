@@ -61,10 +61,13 @@ lengthened to 5.1 s, which costs six percent of hover power instead of thirteen 
 no other result. The fourth has not been carried
 out, and the third is a necessary condition only: charging the aerodynamic pitching moment
 through ninety degrees of incidence needs measurements this study does not have. What that
-check does supply is a threshold — a pitching-moment coefficient of roughly 0.08 at
-mid-transition airspeed would consume the margin, and the figure falls as the square of
-speed — which turns the gap into a testable requirement and yields a design rule of its
-own: the tail-sitting rotation is a low-dynamic-pressure manoeuvre by necessity. The claims
+check does supply is a threshold, resolved along the trajectory, and resolving it changed the
+question. The aircraft does not reach ninety degrees of incidence: the body rotates through
+ninety, but the relative wind rotates with it, and peak incidence is between seventeen and
+twenty-two degrees. The high-incidence part of the rotation happens at low dynamic pressure,
+where the margin tolerates a coefficient of 0.32 or more; the tight part is the end of the
+rotation, where incidence is small and speed is high, and that is a trim question rather than
+a post-stall one. The outstanding measurement is therefore of ordinary size. The claims
 most exposed are identified in Section 8. An earlier version of this section stated that
 none of the remaining analyses required an experiment; that is no longer true, and the
 change is the most important thing this study learned about itself. Transition

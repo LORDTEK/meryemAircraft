@@ -46,8 +46,11 @@ design conditionally and not the 1000 kg one.
 
 The study is analytical, with no experimental validation of the configuration. The tip
 propellers can turn the aircraft's rotational inertia through the transition but not, on
-present evidence, its aerodynamic moment; transition controllability is therefore the
-principal open requirement, and is stated as a threshold a future measurement must meet.
+present evidence, its aerodynamic moment. Resolving that margin along the trajectory shows
+the aircraft never reaches ninety degrees of incidence — the relative wind rotates with the
+body — so the outstanding measurement is the pitching moment to some twenty-two degrees at low
+dynamic pressure, together with trim at cruise. Transition controllability remains the
+principal open requirement and is stated as a threshold a future measurement must meet.
 
 *[≈270 kelime. 200 isteyen dergide kesilecek ilk yer: ikinci paragrafın
 konfigürasyon tarifi, sonra üçüncü paragrafın ilk cümlesi.]*

@@ -341,13 +341,15 @@ are listed so that they can be:
    the inertia from the component build-up and shows the tip propellers carry it with a
    margin of 2.08 at the light design point and 1.26 at the heavy one — the latter only on
    the cheapest rotation profile — together with a measured account of how that margin
-   narrows with size, and a threshold: the pitching-moment coefficient that would consume
-   the remaining margin is 0.076 for the light design at 15 m s⁻¹, and falls as the square
-   of airspeed. **Transition controllability, not the mass budget, is now the largest
-   unresolved item in this study**, and the threshold converts it from an open question
-   into a testable acceptance criterion. What it does not do is answer it: a reduced
-   computation would replace the dominant missing term with a less-validated model, which
-   is the one thing that should not be done with a dominant term. What it cannot do is charge the
+   narrows with size, and a threshold for the aerodynamic moment resolved along the
+   trajectory. That resolution corrected the requirement rather than merely quantifying it:
+   the aircraft does not reach ninety degrees of incidence, because the relative wind
+   rotates with the body, and peak incidence is 17.5° to 21.6°. **Transition controllability
+   remains the largest unresolved item in this study**, but it now asks for the pitching
+   moment up to some twenty-two degrees at low dynamic pressure and for trim at cruise
+   incidence, rather than for a moment sweep through ninety degrees. What is still not done
+   is answering it: a reduced computation would replace a dominant term with a
+   less-validated model. What it cannot do is charge the
    aerodynamic pitching moment, which requires moment coefficients through ninety degrees
    of incidence; those are not available for this planform and cannot be produced without
    a wind tunnel or a dedicated computational campaign. **This item is therefore reduced
