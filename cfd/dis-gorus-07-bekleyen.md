@@ -136,3 +136,36 @@ azaltıyor. Hangi mekanizmanın **asılı durumda** baskın olduğu belirlenmedi
 NACA TR-796: yüksek en-boy oranlı finler toe-out ister, ve toe-out'ta arka
 fin perdövitese girerse **kararsızlaştırıcı** moment doğuyor. Açı ve işaret
 seçilmedi.
+
+### 🔴 S4. Refleks kesitlerin gerçek C_m0 mertebesi — EN ÖNEMLİ AÇIK SORU
+
+**Neden bu kadar önemli:** denge zincirinin tamamı buna bağlı. VLM taramasından
+C_m derece başına 0,00629; kesit ne verirse burulma gerisini tamamlıyor:
+
+| kesit C_m0 | gereken burulma | inviscid e | seyir L/D |
+|---|---|---|---|
+| 0 | 9,2° | 0,865 | 11,68 |
+| **0,004 (elimizdeki tek ölçüm)** | **8,6°** | 0,875 | 11,73 |
+| 0,020 | 6,0° | 0,937 | **12,01** |
+| 0,050 | 1,3° | 0,986 | 12,21 |
+
+Yani **0,02 veren bir kesit varsa, denge cezası neredeyse tamamen geri
+kazanılıyor** ve §5.4'ün beşinci defter kalemi (%4,3) büyük ölçüde siliniyor.
+
+**Elimizdeki kanıt tek bir sayı:** NACA TR-460'ın ölçtüğü 2R212 → **+0,004**.
+1933 tarihli. Makalede bunun seçimi taşıdığı açıkça yazılı.
+
+**Sorulacak:** Modern refleks kesitler için **ölçülmüş** C_m0 değerleri nedir?
+10⁻³ mü, 10⁻² mi? Bir XFOIL/XFLR5 poları bile işe yarar ama **kaynağı ve
+koşulları belli olmalı.**
+
+⚠️ **Kullanmadığımız bir kaynak — ve nedeni.** Shinde 2020 (*Micromachines*
+11(6):553) on refleks kesit için C_m0 tablosu veriyor, hepsi **10⁻⁴** ve hepsi
+**negatif**. Ama aynı makale iki sayfa önce *"C_m0 must be positive"* diyor.
+Kendi içinde tutarsız, ve gerçek refleks kesitlerin C_m0'ı standart
+kaynaklarda 10⁻³–10⁻² anılır. **Bu tablodan hiçbir sayı alınmadı**; kaynak
+yalnızca (a) denge gereksiniminin ifadesi ve (b) pratik kesit ailesinin listesi
+için anılıyor. Uzlaştıramadığımız bir büyüklüğü aktarmayız.
+
+**YZ'lere sorulacak ek soru:** Shinde'nin tablosu gerçekten hatalı mı, yoksa
+bizim okumadığımız bir normalizasyon/işaret kuralı mı var?

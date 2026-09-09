@@ -1553,8 +1553,15 @@ tutarsız. Ayrıca gerçek refleks kesitlerin C_m0'ı standart kaynaklarda 10⁻
 mertebesinde anılır, 10⁻⁴ değil. Yani ya işaret kuralı ters, ya
 normalizasyon farklı.
 
-**Metne nasıl girdi:** işaret değil, **mertebe** kanıtı olarak — ve tutarsızlık
-açıkça yazılarak. Tek **ölçülmüş** değer hâlâ NACA TR-460'ın 2R212'si: +0,004.
+**DÜZELTİLDİ (aynı gün).** İlk yazımda bu tabloyu "mertebe kanıtı" olarak
+kullanmıştım. Kaldırdım. Uzlaştıramadığımız bir büyüklüğü, ihtiyatlı bir
+cümleyle sarmalasak bile, aktarmayız — hakem haklı olarak "sayısından
+şüphelendiğiniz bir makaleyi neden anıyorsunuz?" diye sorar. Kaynak artık
+yalnızca **(a)** denge gereksiniminin ifadesi ve **(b)** pratik kesit ailesinin
+listesi için anılıyor; **hiçbir sayı alınmıyor.**
+
+Tek **ölçülmüş** değer NACA TR-460'ın 2R212'si: **+0,004**, 1933. Metin, bu tek
+sayının seçimi taşıdığını açıkça söylüyor.
 
 ### Sonuç: refleks + burulma takası yok
 
@@ -1569,9 +1576,17 @@ tamamlıyor:
 | 0,050 | 1,3° | 0,986 | 12,21 |
 
 **Kaldıraç gerçek** — 0,02 veren bir kesit denge cezasının neredeyse tamamını
-geri kazandırırdı. **Ama okunan literatürde 0,02 veren yok.** Ölçülen değerde
-refleks dokuz derecenin yarım derecesini alıyor. Yani denge sorunu bir
-**burulma** sorunu, ve öyle kalıyor.
+geri kazandırırdı. Elimizdeki tek ölçümde refleks dokuz derecenin yarım
+derecesini alıyor, yani denge bir **burulma** sorunu olarak kalıyor.
+
+Makale **temkinli dalı** seçiyor (9° ve cezası) ve bunu bir cümleyle kayda
+geçiriyor: *modern bir refleks kesidin C_m0 = 0,02'ye ulaştığını bilen bir
+okuyucu, tablonun üçüncü satırını tasarım noktası olarak okumalı ve denge
+cezasını büyük ölçüde geri kazanılabilir saymalı.* Böylece sonuç, tek bir
+1933 ölçümüne körü körüne bağlanmıyor — bağımlılık görünür oluyor.
+
+**Bu, S4 olarak bekleyen sorular listesine girdi ve şu an oradaki en önemli
+madde.**
 
 Bu, burulma bulgusunu "uygun bir çözüm"den **zorunlu çözüme** çeviriyor.
 
