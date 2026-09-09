@@ -74,3 +74,10 @@
     Airfoil Selection Procedure, Wind Tunnel Experimentation and Implementation
     of 6DOF Modeling on a Flying Wing Micro Aerial Vehicle. *Micromachines*
     **2020**, 11 (6), 553. https://doi.org/10.3390/mi11060553
+28. Li, B.; Sun, J.; Zhou, W.; Wen, C.-Y.; Low, K. H.; Chen, C.-K. Transition
+    Optimization for a VTOL Tail-sitter UAV. *IEEE/ASME Transactions on
+    Mechatronics* **2020**. doi:10.1109/TMECH.2020.2983255
+29. Lyu, X.; Gu, H.; Zhou, J.; Li, Z.; Shen, S.; Zhang, F. *A Hierarchical
+    Control Approach for a Quadrotor Tail-Sitter VTOL UAV and Experimental
+    Verification.* IEEE/RSJ International Conference on Intelligent Robots and
+    Systems (IROS), 2017.

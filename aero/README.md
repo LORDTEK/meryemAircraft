@@ -1591,3 +1591,53 @@ madde.**
 Bu, burulma bulgusunu "uygun bir çözüm"den **zorunlu çözüme** çeviriyor.
 
 Kaynakça 27.
+
+---
+
+## 🔑 GEÇİŞ LİTERATÜRÜ — açık kalemimiz alanın açık kalemiymiş, ve bir uyarı (09.09.2026)
+
+Merak ettiğim soru: *başkaları geçişteki aerodinamik momenti nasıl elde etmiş —
+ölçmüşler mi, yoksa onlar da mı varsaymış?*
+
+### Cevap: varsaymışlar, hatta bizden az
+
+**Li ve ark. 2020** (*IEEE/ASME Trans. Mechatronics*, açık hava uçuş denemeli):
+aerodinamik modelini **yayımlanmış 2-B NACA 0012** kaldırma/sürükleme verisini
+hücum açısı boyunca uydurarak kuruyor, kendi profilinin *"not exactly the same"*
+olduğunu yazıyor, hatayı model-tabanlı denetleyici için kabul edilebilir sayıyor
+— ve **hareket denklemlerinde hiç yunuslama momenti terimi taşımıyor.**
+
+**Lyu ve ark. 2017** (IROS, uçuş denemeli): taşıyor ama **doğrusal** biçimde,
+C_m = C_m0 + C_mα·α + C_mδ·δ, ve bunu manevranın tamamında kullanıyor.
+
+Yani alanın pratiği: **ödünç bir kesit poları + kapalı çevrim.** Bizim §7.4'ün
+kaldırma/sürükleme için yaptığının aynısı, moment için yaptığımızdan ise **daha
+azı.** Açık kalemimiz alanın ortak açık kalemi.
+
+### Ve bir UYARI — bizim tam sorumuzu uçuşta denemişler
+
+Lyu ve ark. aracı **elevonlu ve elevonsuz** karşılaştırıyor. Elevonsuz hâlde,
+yani **yalnız pervane fark itkisiyle** — bizim gibi:
+
+> *"a well-controlled attitude response during hovering and transition"* ✓
+> ama seviye uçuşta manevralar *"cause an oscillatory attitude response"*,
+> **"motor saturations are observed"**, ve sebep:
+> *"the increased aerodynamic moment but decreased motor thrust at high-speed
+> level flight."*
+
+**Bu, §7.6'nın moment bütçesinden çıkardığımız yapısal gerilimin uçuşta
+gözlenmiş hâli.** Dar durum dönüşün yüksek açılı ORTASI değil, **SONU ve
+ötesi**: aerodinamik moment V² ile büyürken pervane itkisi düşüyor.
+
+⚠️ **Benzetmeyi fazla zorlamamak lazım** ve metinde öyle yazıldı: onların
+yunuslama pervaneleri aracın **taşıyıcı rotorları**, kanat üzerinde ve kısa
+kollu; bizimkiler 0,71 m çerçevelerde **adanmış kontrol pervaneleri**; araçları
+daha küçük. Ama mekanizma aynı ve **gerçek bir uçağı doyurmuş.**
+
+### Sonuç
+
+Bu, dönüş sonundaki 0,050 ve 0,010'luk bütçelerin bu bölümün **bağlayıcı**
+sayıları olduğunun en güçlü dış kanıtı. Ve pervane-tek kuyruk-üstü bir aracın
+yunuslama otoritesinin **açıda değil hızda** sınanması gerektiğinin.
+
+Kaynakça 28 ve 29.
