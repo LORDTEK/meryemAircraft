@@ -113,6 +113,15 @@ under fifteen percent of the total power. For the light reference design each ti
 is 0.20 m in diameter and produces 16.2 N during the transition manoeuvre, drawing
 335 W, for a total of 1.34 kW across the four.
 
+The principle is not new, and the paper is better for saying so. A survey of tail-sitter
+development identifies it directly: "one way to generate a larger pitching moment to assist
+with the transition from vertical to horizontal flight is to add propellers away from the axis
+of rotation of the tail-sitter and apply a differential thrust to these propellers", and traces
+the idea to work at NASA Ames around the turn of the century [30]. What is particular here is
+not the mechanism but the arm and the accounting: the frames reach three tip chords rather than
+a fraction of one, and they are structure the aircraft needs anyway, so the arm is charged to
+the landing gear rather than to the control system.
+
 The tip pairs sit at the ends of rigid frames that extend from each wing tip
 perpendicular to the planform, above and below, by three hundred percent of the local
 tip chord — 0.71 m in each direction, giving a vertical separation of 1.42 m between

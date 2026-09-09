@@ -1641,3 +1641,56 @@ sayıları olduğunun en güçlü dış kanıtı. Ve pervane-tek kuyruk-üstü b
 yunuslama otoritesinin **açıda değil hızda** sınanması gerektiğinin.
 
 Kaynakça 28 ve 29.
+
+---
+
+## Carter 2021 (VT tezi) — iki şey: bir öncül, bir de ikinci kanıt
+
+### 1. Kontrol ilkemizin öncülü var, ve bunu SÖYLEMEK lehimize
+
+> *"One way to generate a larger pitching moment to assist with the transition
+> from vertical to horizontal flight is to **add propellers away from the axis of
+> rotation** of the tailsitter and **apply a differential thrust** to these
+> propellers. This idea was explored at NASA AMES almost two decades ago."*
+
+Bu, birebir bizim §4.4'ün ilkesi. Hakem bunu bulacak; ondan önce bizim
+yazmamız iyi. §4.4'e eklendi, ve **neyin özgün olduğu** netleştirildi: mekanizma
+değil, **kol ve muhasebe** — çerçeveler uç veterinin kesri değil **üç katı**
+kadar uzanıyor, ve zaten gereken yapı oldukları için kol iniş takımına
+faturalanıyor, kontrol sistemine değil.
+
+⚠️ NASA AMES çalışmasını **okumadık**; Carter'ın ifadesine atıf veriliyor,
+NASA raporuna değil.
+
+### 2. "Geçiş tamam, seyir sorunlu" — İKİNCİ bağımsız örnek
+
+UMD'nin CRC-20'si, rüzgâr tünelinden türetilmiş aerodinamikle:
+
+> *"They were able to achieve transition to forward flight, but they had
+> **poor control over the vehicle once in forward flight**."*
+
+Lyu'nun motor doyması bulgusuyla **aynı bölünme**, farklı araç, farklı grup.
+İki bağımsız program: **geçiş geçildi, seyir zor.**
+
+Bu artık tek bir gözlem değil, bir **örüntü**. Ve tam olarak §7.6'nın kendi
+bütçesinden çıkardığı yer: dar durum dönüşün sonu.
+
+### 3. Yan bulgu — yöntemimize destek
+
+"Morphing winglet tailsitter" projesi kanatçık dihedral açılarındaki kaldırmayı
+**VLM ile** belirleyip sonra **deneyle doğrulamış**. Yani kuyruk-üstü bir aracın
+taşıyıcı yüzeylerinde VLM kullanmanın uçuş-denemeli bir öncülü var.
+
+### Dört bağımsız grupta ortak örüntü
+
+| grup | L, D nereden | C_m nasıl |
+|---|---|---|
+| Li 2020 | ödünç NACA 0012 poları | **yok** |
+| Lyu 2017 | — | doğrusal C_m0+C_mα·α+C_mδ·δ |
+| Tohoku | rüzgâr tüneli | anılmıyor |
+| UMD CRC-20 | rüzgâr tüneli | anılmıyor |
+
+**Hiçbiri geçiş boyunca ölçülmüş bir C_m eğrisi kullanmıyor.** Bizim açığımız
+alanın açığı — ve bunu artık dört örnekle söyleyebiliyoruz.
+
+Kaynakça 30.
