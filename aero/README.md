@@ -1800,3 +1800,56 @@ hiçbir kısıt tanımlamamıştı; şimdi var.
 boyunca nerede doğduğunun bu makalede hiç hesaplanmadığı §8'de yazılı.
 
 Kaynakça 33.
+
+---
+
+## 🔑 KULLANICININ SORUSU — uç pervaneleri seyirde ne yapıyor? (09.09.2026)
+
+Bu, makalede **hiç sorulmamış** bir soruydu ve kullanıcı sordu. Cevabı, konfigürasyonun
+çalışıp çalışmamasını belirliyor.
+
+Sekiz uç rotoru 0,20 m çapında; toplam disk alanı **0,2513 m²**, yani kanat
+alanının **%12,7'si**. Yanlış durumda hava akışında bırakılacak küçük bir cisim değil.
+
+| seyirde uç rotorları | ΔC_D0 | 0,0248'in |
+|---|---|---|
+| sıfır şaft yükünde serbest dönüyor | 0,0003–0,0008 | **%1–3** |
+| kenarına durmuş, azimut seçilmiş | 0,0008 | %3 |
+| **yassı durmuş, azimut denetimsiz** | **0,015–0,018** | **%61–74** |
+
+**Birinci ile üçüncü satır arasındaki fark, çalışan bir konfigürasyonla
+çalışmayan bir konfigürasyon arasındaki fark.** Ve varsayılan katsayılara
+duyarsız, çünkü iki durum arasında **otuz kat** var.
+
+### Ve bir ironi: §5.2'nin kendi iddiası tehlikedeydi
+
+§5.2 şunu söylüyordu: *"A configuration with no rotor to stop needs neither
+[indeksleme ne de geri çekme]."* Ama **uç çiftleri de rotor.** Seyirde
+duruyorlarsa, iddia çöküyor — indeksleme mekanizması gerekirdi (ikinci satır).
+
+**Serbest döndürmek, §5.2'nin iddiasını AYAKTA TUTAN şey.**
+
+### Çözüm donanım değil, bir kontrol durumu
+
+Sabit hatveli bir pervane serbest bırakılınca net şaft torkunun sıfır olduğu
+ilerleme oranına oturur: iç kesitler sürüyor, dış kesitler frenliyor, dengeleniyor.
+O noktada şaft iş yapmıyor — motor ne sürüyor ne frenliyor, elektriksel maliyet
+denetleyicinin bekleme akımı ve yatak kayıpları. Kanatlar düşük hücum açısında,
+akış ekli. **Bedava.**
+
+### İki yeni sonuç
+
+1. **§4.3'ün sabit hatve kararı feathering'i tasarım uzayından çıkarıyor.** Yani
+   seçenek sadece ikisi: serbest dön ya da dur. Bu, argümanı "elverişli"den
+   **belirleyici** hâle getiriyor.
+2. Bu bir **kullanılabilirlik** gereksinimi: sekiz rotordan birinde sıkışmış
+   yatak ya da fren arızası artık bir kontrol sorunu değil, **sürükleme sorunu**
+   — ve büyük bir tanesi. Güvenilirlik analizi yok.
+
+⚠️ Pervaneye özgü hiçbir hesap ya da ölçüm yok; doluluk ve kesit sürükleme
+katsayısı **varsayım**. Sağlam olan **oran**, değerler değil. §8'e böyle yazıldı.
+
+**Not:** Kullanıcı bu soruyu kendi mühendislik sezgisiyle sordu; kaynak
+okumasından çıkmadı. Aç-kapa şeridin üç ekseni birden yüklediğini de önceden
+biliyormuş. Bu turların bir kısmı, benim hesaplayarak vardığım yerlere onun
+zaten sezgiyle varmış olduğunu doğrulamakla geçiyor.
