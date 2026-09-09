@@ -90,3 +90,5 @@
 32. Ross, J. C.; Storms, B. L.; Carrannanto, P. G. *Lift-Enhancing Tabs on
     Multielement Airfoils.* NASA Technical Memorandum 112990, Ames Research
     Center, 1997.
+33. Buchholz, M. D. *Lift Augmentation on a Delta Wing via Leading Edge Fences
+    and the Gurney Flap.* M.S. thesis; NASA Contractor Report 194793, 1993.

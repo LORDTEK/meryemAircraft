@@ -133,10 +133,14 @@ Several results depend on coefficients that were not computed for this geometry:
   is not in question — the yaw arm is the semi-span, so the available moment is 2.4 times
   the pitch moment — but directional stability and yaw damping are a single open item
   resting on a component whose section has not been selected.
-- The **roll–yaw coupling** of the strip. Deploying it on one side produces adverse yaw of
-  2.9 to 11.3 N·m depending on the height law, against 42.8 to 55.9 N·m of yaw authority. The
-  coupling is covered but was not previously stated, and the drag estimate behind it carries
-  the same unselected-cross-section caveat as the frames.
+- The **three-axis coupling of the roll strip**, none of which was previously stated.
+  Deploying it on one side produces adverse yaw of 2.9 to 11.3 N·m depending on the height
+  law, against 42.8 to 55.9 N·m of yaw authority — covered. It also produces a nose-down
+  pitching moment, measured for this class of device [33] and bracketed here at ΔC_m of 0.005
+  to 0.032 against a tightest budget of 0.050 — **not comfortably covered at the upper end**,
+  which yields a scheduling restriction rather than a redesign. Both estimates carry the same
+  unselected-cross-section caveat as the frames, and the chordwise position of the lift
+  increment, which sets the pitch coupling, is not computed anywhere in this paper.
 - The **roll actuator's speed** is a requirement this paper did not previously state. The
   on-off strip gives a bounded limit cycle of ±0.2° in bank at a fifty-millisecond
   deployment and ±9.4° at a hundred and fifty, so the device is usable if it is fast. No

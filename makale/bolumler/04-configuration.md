@@ -292,6 +292,29 @@ between five and twenty-six percent of the yaw axis while a roll is being comman
 covered, and it is covered by the axis that happens to be the strongest** — but it is a
 coupling, it had not been stated, and a control design would have to allocate for it.
 
+**It loads the pitch axis too, and that one is not comfortable.** A wind-tunnel study of
+tapered-height Gurney flaps on a 60° delta wing — tested at heights of two and five percent of
+root chord, which is the same height law and the same range as the strip specified here —
+reports that "the flap significantly increases nose down pitching moment" [33]. The mechanism
+is the same on this aircraft: the lift the strip adds acts aft of the centre of gravity, so it
+pitches the nose down. How far aft depends on where along the chord the increment appears, and
+that is the part this paper cannot compute, since the strip is neither at the trailing edge nor
+straight. Bracketing it by placing the increment at mid-chord, three-quarter chord and the
+trailing edge of the affected region:
+
+| Increment acts at | Moment about CG | ΔC_m |
+|---|---:|---:|
+| mid-chord | 3.7 N·m | 0.005 |
+| ¾ chord | 13.2 N·m | 0.019 |
+| trailing edge (upper bound) | 22.7 N·m | 0.032 |
+
+The tightest pitching-moment budget in the whole of Section 7.6 is **0.050**, at the end of the
+rotation. At the upper end of this bracket, commanding a roll during that phase would consume
+two thirds of it. **The conclusion is a scheduling requirement rather than a redesign: the roll
+strip should not be commanded during the end of the rotation**, which is the one phase where
+the pitch axis has least to spare. The paper had not previously identified any reason to
+restrict when the strip may be used.
+
 **Roll authority is therefore sized, supported by a measurement on a comparable device, and
 still not closed.** The quantity a future measurement must return is ΔC_L for this strip on
 this planform, not a moment.
