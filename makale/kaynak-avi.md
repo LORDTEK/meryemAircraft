@@ -105,3 +105,128 @@ verir.
 
 **Birinci elden okuma kuralı makaleye yazılmayacak** (özür gibi durur), **kapak
 mektubuna** yazılacak.
+
+---
+
+# İNDİRME BAĞLANTILARI (09.09.2026)
+
+> ⚠️ **Bu bağlantıları arama sonuçlarından topladım; HİÇBİRİNİ AÇMADIM.** Bu
+> ortamdan arxiv, ntrs, mdpi, doi — hiçbirine erişemiyorum (proxy engelli),
+> yalnızca arama yapabiliyorum. Yani başlıkların doğruluğunu, içeriğin iddia
+> edileni söyleyip söylemediğini ve erişilebilirliği **doğrulayamadım**.
+> Siz indirin, `kaynakca/` altına koyun, ben okuyayım.
+>
+> Arama özetleri bana bazı sayılar da verdi (örn. "%1,5 veter Gurney → ΔC_Lmax
+> ≈ 0,3", "NACA 4412'de 1,49 → 1,96"). **Bunları metne yazmadım ve
+> yazmayacağım** — tam olarak bu sınıftaki özetler daha önce bize üç yanlış sayı
+> vermişti. PDF açılıp sayı gözle görülene kadar hiçbiri makaleye girmez.
+
+**Erişim işaretleri:** 🟢 serbest PDF beklenir · 🟡 belirsiz · 🔴 ücretli olabilir
+
+---
+
+## 🔴 ŞART 1 — Gurney / çıta kaldırma artışı
+
+| | Bağlantı | Erişim |
+|---|---|---|
+| *Lift enhancement of an airfoil using a Gurney flap and vortex generators* (NASA Ames, NACA 4412 rüzgâr tüneli) | <https://ntrs.nasa.gov/citations/19930040765> | 🟢 |
+| *A Water Tunnel Study of Gurney Flaps* (NASA TM 4071) | <https://ntrs.nasa.gov/api/citations/19890004024/downloads/19890004024.pdf> | 🟢 doğrudan PDF |
+| *Experimental and Computational…* (NASA TM 110432) | <https://ntrs.nasa.gov/api/citations/19970012496/downloads/19970012496.pdf> | 🟢 doğrudan PDF |
+| *Static Extended Trailing Edge for Lift Enhancement* (NASA) | <https://ntrs.nasa.gov/api/citations/20070030823/downloads/20070030823.pdf> | 🟢 doğrudan PDF |
+| *Canard Enhancement with Gurney Flaps* (DTIC AD1062413) | <https://apps.dtic.mil/sti/html/tr/AD1062413/index.html> | 🟢 |
+| *Effects of Gurney Flaps on a NACA0012 Airfoil* (Springer) | <https://link.springer.com/article/10.1023/A:1015679408150> | 🔴 |
+| *Aerodynamic Loads Alteration by Gurney Flap* (arXiv) | <https://arxiv.org/pdf/1809.06975> | 🟢 |
+
+⚠️ **Teknik uyarı, önemli.** Gurney literatürünün tamamı, **firar kenarında,
+akışa dik** duran bir çıtayı ölçüyor. Bizim şeridimiz firar kenarında değil,
+alt yüzeyde, kök veterinin ~%15'inden başlayıp **45° köşegen** uzanıyor.
+Yani benzetme göründüğü kadar sıkı değil: bu kaynaklar **bağlam** verir
+("bu sınıf cihazlar bu mertebede artış üretebiliyor"), **aktarılabilir bir sayı
+vermez**. Metinde de böyle kullanılacak.
+
+## 🔴 ŞART 2 — Refleks kesit C_m0
+
+| | Bağlantı | Erişim |
+|---|---|---|
+| Kuyruksuz/uçan kanat profil veritabanı (Hepperle) | <https://www.mh-aerotools.de/airfoils/flywing1.htm> | 🟢 |
+| Kuyruksuz uçaklar için profil tasarımı (Hepperle, 3. bölüm) | <https://www.mh-aerotools.de/airfoils/nf_3.htm> | 🟢 |
+| Uçan kanat profil veritabanı (aerodesign.de) | <https://www.aerodesign.de/english/profile/profile_s.htm> | 🟢 |
+
+**Aranan:** genel bir aralık değil, **tek bir refleks kesit**, adıyla ve kendi
+C_m0'ıyla. Tablomuzun hangi satırına oturduğunu o söyleyecek. Hepperle'nin
+sayfaları hakemli dergi değil — eğer oradan bir kesit seçersek, o kesitin
+**birincil** kaynağını (profil kataloğu ya da özgün yayın) da bulmamız gerekir.
+
+## 🔴 ŞART 3 — Uç yüzeyleriyle yön kararlılığı
+
+| | Bağlantı | Erişim |
+|---|---|---|
+| *Flutter and Directional Stability of Aircraft with Wing-Tip Fins* (J. Aircraft) | <https://arc.aiaa.org/doi/10.2514/1.C031978> | 🔴 |
+| *Design and Flight Tests of a Small Flying Wing UAV* (MDPI Aerospace 13(3):240) | <https://www.mdpi.com/2226-4310/13/3/240> | 🟢 açık erişim |
+| *Assessment of C-Type Winglet Integration on a Fixed-Wing BWB UAV* (MDPI Eng. Proc.) | <https://www.mdpi.com/2673-4591/133/1/95> | 🟢 açık erişim |
+
+## 🔴 ŞART 4 — Güncel kuyruk-üstü İHA çalışmaları
+
+| | Bağlantı | Erişim |
+|---|---|---|
+| ⭐ *YawSitter: Modeling and Controlling a Tail-Sitter UAV with **Enhanced Yaw Control*** | <https://arxiv.org/html/2510.02968v1> | 🟢 |
+| *Global Incremental Flight Control for Agile Maneuvering of a Tailsitter Flying Wing* | <https://arxiv.org/pdf/2207.13218> | 🟢 doğrudan PDF |
+| *Control of a Tail-Sitter VTOL UAV Based on Recurrent Neural Networks* | <https://arxiv.org/abs/2104.02108> | 🟢 |
+| *A Universal Optimal Control Strategy for a Tailsitter UAV* | <https://arxiv.org/pdf/2605.01556> | 🟢 |
+| *Lifting-wing Quadcopter Modeling and Unified Control* | <https://arxiv.org/pdf/2301.00730> | 🟢 |
+| *Biplane-Quadrotor Tail-Sitter UAV: Flight Dynamics and Control* (JGCD) | <https://arc.aiaa.org/doi/10.2514/1.G003201> | 🔴 |
+
+⭐ **YawSitter'ı önce indirin.** Başlığından anlaşıldığı kadarıyla doğrudan
+kuyruk-üstü bir aracın **sapma kontrolü** üzerine, ve bizim dünkü sapma
+bulgumuz tam oraya bakıyor. Bize ya destek verir ya da düzeltir; ikisi de
+işimize yarar.
+
+## 🟠 BEKLENEN 5 — eVTOL boyutlandırma
+
+| | Bağlantı | Erişim |
+|---|---|---|
+| NASA TM-20210017971, *Design of a Tiltwing Concept Vehicle for UAM* | <https://rotorcraft.arc.nasa.gov/Publications/files/NASA-TM-20210017971.pdf> | 🟢 doğrudan PDF |
+| *Design of a Six-Tiltrotor Concept Vehicle for UAM* (NTRS) | <https://ntrs.nasa.gov/api/citations/20240008060/downloads/1724_Jeong_Final_062524.pdf> | 🟢 doğrudan PDF |
+| *NASA concept vehicles and the engineering of AAM aircraft* (Aeronautical J.) | <https://www.cambridge.org/core/journals/aeronautical-journal/article/nasa-concept-vehicles-and-the-engineering-of-advanced-air-mobility-aircraft/AA7E668D759491B1889299819A2F2715> | 🟡 |
+
+## 🟠 BEKLENEN 6 — Kanat-gövde (BWB) İHA aerodinamiği
+
+| | Bağlantı | Erişim |
+|---|---|---|
+| *Design, Computational Aerodynamic… VTOL-Configured Hybrid BWB UAV* (Wiley, açık) | <https://onlinelibrary.wiley.com/doi/10.1155/2023/9699908> | 🟢 |
+| *Aerodynamic design of a blended wing body VTOL UAV* (IOP, açık) | <https://iopscience.iop.org/article/10.1088/1742-6596/2965/1/012020> | 🟢 |
+
+## 🟠 BEKLENEN 7 — Seri hibrit İHA tahriki
+
+| | Bağlantı | Erişim |
+|---|---|---|
+| *The Design of Improved Series Hybrid Power System Based on Compound-Wing VTOL* (**Drones** 8(11):634) | <https://www.mdpi.com/2504-446X/8/11/634> | 🟢 |
+| *On the Range Equation for Hybrid-Electric Aircraft* (Aerospace 10(8):687) | <https://www.mdpi.com/2226-4310/10/8/687> | 🟢 |
+| *A Review of Hybrid-Electric Propulsion in Aviation* (Aerospace 12(10):895) | <https://www.mdpi.com/2226-4310/12/10/895> | 🟢 |
+
+💡 Birincisi **Drones'un kendi sayfalarında** ve tam bizim mimarimiz
+(seri hibrit + VTOL). Dergiye kendi yayımladığı işi atıf vermek her zaman iyi
+karşılanır.
+
+## 🟠 BEKLENEN 8 — Girdap kafes doğruluğu
+
+| | Bağlantı | Erişim |
+|---|---|---|
+| *Application of the vortex-lattice technique to thin wings with vortex separation* (NASA) | <https://ntrs.nasa.gov/api/citations/19760021089/downloads/19760021089.pdf> | 🟢 doğrudan PDF |
+| *Review of vortex lattice method for supersonic aircraft design* (Aeronautical J.) | <https://www.cambridge.org/core/journals/aeronautical-journal/article/review-of-vortex-lattice-method-for-supersonic-aircraft-design/56AC0DDC2161FEF838A72EACD3748AB7> | 🟡 |
+
+---
+
+## İndirme sırası önerisi
+
+Hepsini indirmeyin. **Şu beşle başlayın**, hepsi serbest ve doğrudan PDF:
+
+1. `19930040765` (Gurney, NASA Ames rüzgâr tüneli) — Şart 1
+2. `arxiv 2510.02968` (YawSitter) — Şart 4, ve dünkü bulguya en yakın
+3. `mdpi 2226-4310/13/3/240` (uçan kanat İHA uçuş denemeleri) — Şart 3
+4. `mdpi 2504-446X/8/11/634` (Drones, seri hibrit VTOL) — Beklenen 7
+5. `NASA-TM-20210017971` (eVTOL boyutlandırma) — Beklenen 5
+
+Bunlar geldiğinde okur, hangi sayının hangi sayfadan geldiğini
+`makale/kaynaklar.md`'ye yazar, metne bağlarım. Refleks kesit (Şart 2) en
+zoru — orada muhtemelen birlikte karar vermemiz gerekecek.
