@@ -482,6 +482,39 @@ item of ordinary size, and the reduced computational campaigns rejected earlier 
 for substituting a less-validated model for a dominant term, not because the term is beyond
 reach.
 
+**One mechanism was omitted, and including it makes the case better rather than worse.**
+The incidences above are geometric: the angle between the body axis and the velocity vector.
+But the nose propeller's slipstream passes over the inboard part of the wing — half its area
+on the light design and 63 percent on the heavy one — and inside that slipstream the air is not
+moving at freestream speed or in the freestream direction. Because the wake is aligned with the
+body axis, the resultant flow over the washed portion is pulled towards the body axis, and the
+local incidence there is smaller than the geometric one. Folk [23] writes this as
+
+    |V_a| = √( |V_w|² + |V_i|² + 2 |V_i| |V_w| cos α ),   α_e = arcsin( |V_i| sin α / |V_a| )
+
+with V_w the wake speed and V_i the freestream. Taking V_w from momentum theory at the
+transition thrust, and reporting both the fully developed wake (V_w = 2v) and the
+not-yet-developed case (V_w = v) because this study does not determine which applies at the
+wing station:
+
+| | Geometric α | α_e, V_w = v | α_e, V_w = 2v |
+|---|---:|---:|---:|
+| Light, from a 5 m s⁻¹ climb | 17.5° | 6.8° | 4.2° |
+| Light, from rest | 21.6° | 3.7° | 2.0° |
+| Heavy, from rest | 20.5° | 7.6° | 4.6° |
+| Heavy, from a climb | 5.4° | 4.7° | 4.2° |
+
+**Half the wing is therefore not post-stall at the moment of peak incidence, on either
+bracket.** It is at four to eight degrees, which is ordinary attached flow. The pitching-moment
+budgets of this section were computed as though the whole wing saw the geometric incidence,
+so they are conservative — and the outstanding measurement, which Section 8 keeps open, is
+smaller than it appeared: it concerns the *outboard* half of the wing, the part that is not
+washed. Two cautions belong with this. Folk records that the reduced-order wake model
+overpredicts wake velocity above roughly 8 m s⁻¹, which places three of the four cases inside
+its stated range and the fourth — the heavy design entering from a climb — outside it, where
+the geometric incidence is only 5.4° in any case. And the verification of that model is
+attributed there to work the present authors have not read.
+
 **Two limits of this reading are worth stating.** The incidence history comes from the
 point-mass trajectory of Section 7.4: it is the geometric angle between the body axis and the
 velocity vector, so it is only as good as that trajectory. And the rotation rate itself varies

@@ -1370,3 +1370,48 @@ group" oldu ve tiltwing satırı açıkça yazıldı. Kaynak okunmasa bu hata
 gönderimde kalırdı.
 
 Kaynakça 21 (Bacchini & Cestino 2019) ve 22 (Johnson & Silva 2022) eklendi.
+
+---
+
+## 🔑 İZ İÇİNDEKİ ETKİN HÜCUM AÇISI — geçişin en büyük açık kalemi daraldı (09.09.2026)
+
+Folk (arXiv:2412.06197), hibrit İHA geçiş literatürünün derlemesi. İçinde bizim
+hiç hesaba katmadığımız bir mekanizma var.
+
+**Bizim α'mız GEOMETRİK**: gövde ekseniyle hız vektörü arasındaki açı. Ama burun
+pervanesinin izi kanadın iç yarısının üzerinden geçiyor, ve iz **gövde ekseni
+boyunca** olduğu için bileşke akış gövde eksenine yaklaşıyor — yani o bölgede
+yerel hücum açısı geometrik olandan **küçük**.
+
+    |Va| = sqrt(|Vw|² + |Vi|² + 2|Vi||Vw| cos α)
+    α_etkin = arcsin(|Vi| sin α / |Va|)
+
+Vw momentum kuramından: T = 2ρA(V+v)v → v; tam gelişmiş izde Vw = 2v, kanat
+hizasında henüz gelişmemişse Vw = v. Hangisi doğru bilinmediği için **ikisi de**
+veriliyor.
+
+| durum | geometrik | Vw = v | Vw = 2v |
+|---|---|---|---|
+| hafif, tırmanışla | 17,5° | 6,8° | 4,2° |
+| hafif, duragan | 21,6° | 3,7° | 2,0° |
+| ağır, duragan | 20,5° | 7,6° | 4,6° |
+| ağır, tırmanışla | 5,4° | 4,7° | 4,2° |
+
+**İz kanat alanının %50'sini (hafif) ve %63'ünü (ağır) kaplıyor.** Yani geçişin
+en yüksek açılı anında bile **kanadın yarısı bağlı akışta.**
+
+### Ne demek
+
+§7.6'nın C_m bütçeleri, kanadın **tamamının** geometrik açıyı gördüğünü varsayarak
+hesaplanmıştı. Yani **temkinliler**. Ve borçlu olduğumuz ölçüm daraldı: mesele
+kanadın **dış** yarısı, izin dışında kalan kısım.
+
+### Sınırlar (metne yazıldı)
+
+- Folk, indirgenmiş modelin ~8 m/s üzerinde iz hızını **fazla tahmin ettiğini**
+  kaydediyor (Reddinger'e atıfla). Dört durumdan üçü sınır içinde; dışında kalan
+  tek durum (ağır, tırmanışla, 35,6 m/s) zaten yalnızca 5,4° geometrik açıda.
+- Modelin doğrulaması Folk'ta Misiorowski'ye atfediliyor ve **onu okumadık**.
+- Kaynak bir doktora yeterlik raporu, hakemli makale değil. Böyle anıldı.
+
+`zarf.py`'ye `etkin_alfa()` eklendi. Kaynakça 23.

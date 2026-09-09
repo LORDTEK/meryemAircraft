@@ -57,3 +57,7 @@
 22. Johnson, W.; Silva, C. NASA concept vehicles and the engineering of advanced
     air mobility aircraft. *The Aeronautical Journal* **2022**, 126 (1295),
     59–91. doi:10.1017/aer.2021.92
+23. Folk, S. *Modeling, Planning, and Control for Hybrid UAV Transition
+    Maneuvers.* Qualifying examination report, Department of Mechanical
+    Engineering and Applied Mechanics, University of Pennsylvania, 2020;
+    arXiv:2412.06197, 2024.

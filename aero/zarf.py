@@ -75,6 +75,41 @@ def yorunge(m, S, AR, Tw, tr, Vcr, w0=5.0, dt=0.0005, e=0.85, CD0=0.0248,
     return iz
 
 
+def etkin_alfa(alfa_deg, V, m, D, kat=2.0, Tw=1.2, rho=RHO):
+    """Iz icindeki kanatta ETKIN hucum acisi.
+
+    NEDEN VAR. Bu modulun (ve 7.6'nin) hesapladigi alfa GEOMETRIKTIR:
+    govde ekseniyle hiz vektoru arasindaki aci. Ama burun pervanesinin
+    izi kanadin ic yarisinin uzerinden geciyor ve o bolgede hava,
+    serbest akista degil izde akiyor. Iz govde ekseni boyunca oldugu
+    icin bileske akis govde eksenine YAKLASIR, yani yerel hucum acisi
+    geometrik olandan KUCUKTUR.
+
+    Folk (arXiv:2412.06197) bunu su bicimde yaziyor:
+
+        |Va| = sqrt(|Vw|^2 + |Vi|^2 + 2|Vi||Vw| cos(alfa))
+        alfa_etkin = arcsin(|Vi| sin(alfa) / |Va|)
+
+    Vw iz hizi, Vi serbest akis. Vw momentum kuramindan:
+    T = 2 rho A (V + v) v  ->  v; tam gelismis izde Vw = 2v, kanat
+    hizasinda henuz gelismemisse Vw = v. Ikisi de hesaplaniyor ve
+    metinde ARALIK olarak veriliyor -- hangisinin dogru oldugu bu
+    calismada belirlenmedi.
+
+    SINIR. Folk, indirgenmis modelin ~8 m/s uzerinde iz hizini FAZLA
+    tahmin ettigini (Reddinger'e atifla) kaydediyor. Asagidaki
+    durumlardan yalnizca agir hattin tirmanisla girisi (35,6 m/s) bu
+    sinirin disinda, ve orada geometrik aci zaten 5,4 derece.
+    """
+    T = Tw * m * 9.81
+    A = math.pi * (D / 2) ** 2
+    v = (-V + math.sqrt(V * V + 4 * T / (2 * rho * A))) / 2
+    Vw = kat * v
+    al = math.radians(alfa_deg)
+    Va = math.sqrt(Vw * Vw + V * V + 2 * V * Vw * math.cos(al))
+    return math.degrees(math.asin(V * math.sin(al) / Va)), v, Vw, Va
+
+
 def zarf(ad, m, S, b, AR, Tw, tr, Vcr, Iyy, M_mevcut, w0=5.0, profil="ucgen"):
     c = S / b
     alpha = (4.0 if profil == "ucgen" else 6.0) * (math.pi / 2) / tr ** 2
@@ -112,3 +147,24 @@ if __name__ == "__main__":
     for w0 in (5.0, 0.0):
         zarf("AGIR 1000 kg, t_r = 5,1 s", 1000, 22.24, 11.55, 6.0, 1.2, 5.1,
              40.0, 2503.069, 952.28, w0=w0)
+
+    print()
+    print("=" * 74)
+    print("IZ ICINDEKI ETKIN HUCUM ACISI -- Folk (arXiv:2412.06197)")
+    print("=" * 74)
+    print("  Burun pervanesinin izi kanat alaninin %50'sini (hafif) ve")
+    print("  %63'unu (agir) kapliyor. O bolgede yerel hucum acisi")
+    print("  geometrik olandan KUCUKTUR:")
+    print()
+    print("  %-22s %10s %12s %12s" % ("durum", "geometrik", "Vw = v", "Vw = 2v"))
+    for ad, a, V, m, D in (("hafif, tirmanisla", 17.5, 7.3, 50, 1.20),
+                           ("hafif, duragan", 21.6, 2.8, 50, 1.20),
+                           ("agir, duragan", 20.5, 6.8, 1000, 5.40),
+                           ("agir, tirmanisla", 5.4, 35.6, 1000, 5.40)):
+        e1 = etkin_alfa(a, V, m, D, kat=1.0)[0]
+        e2 = etkin_alfa(a, V, m, D, kat=2.0)[0]
+        print("  %-22s %9.1f° %11.1f° %11.1f°" % (ad, a, e1, e2))
+    print()
+    print("  Yani kanadin YARISI, gecisin en yuksek acili aninda bile")
+    print("  perdovites oncesi bolgede kaliyor. 7.6'nin C_m butcesi bu")
+    print("  mekanizmayi HIC hesaba katmiyordu ve o yuzden temkinlidir.")

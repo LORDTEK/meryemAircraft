@@ -66,7 +66,9 @@ through ninety degrees of incidence needs measurements this study does not have.
 check does supply is a threshold, resolved along the trajectory, and resolving it changed the
 question. The aircraft does not reach ninety degrees of incidence: the body rotates through
 ninety, but the relative wind rotates with it, and peak incidence is between seventeen and
-twenty-two degrees. The high-incidence part of the rotation happens at low dynamic pressure,
+twenty-two degrees — and over the half of the wing that lies in the nose propeller's
+slipstream, the effective incidence at that moment is four to eight degrees, which is attached
+flow. The high-incidence part of the rotation happens at low dynamic pressure,
 where the margin tolerates a coefficient of about 0.21 entering in a climb; the tight part
 is the end of the rotation, where incidence is small and speed is high, and that is a trim
 question rather than a post-stall one. The trim question has since been sized rather than
