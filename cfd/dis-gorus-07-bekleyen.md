@@ -155,9 +155,15 @@ kazanılıyor** ve §5.4'ün beşinci defter kalemi (%4,3) büyük ölçüde sil
 **Elimizdeki kanıt tek bir sayı:** NACA TR-460'ın ölçtüğü 2R212 → **+0,004**.
 1933 tarihli. Makalede bunun seçimi taşıdığı açıkça yazılı.
 
-**Sorulacak:** Modern refleks kesitler için **ölçülmüş** C_m0 değerleri nedir?
-10⁻³ mü, 10⁻² mi? Bir XFOIL/XFLR5 poları bile işe yarar ama **kaynağı ve
-koşulları belli olmalı.**
+**Sorulacak — açıkça bu biçimde:** Elimizdeki tek ölçüm **1933 tarihli**
+(NACA TR-460). Sayı sağlam, ama bir hakem *"doksan yıllık bir rapordan başka
+dayanağınız yok mu?"* diye sorar ve haklı olur. **Aynı şeyi söyleyen daha
+güncel, daha yerleşik, daha çok atıf alan bir yayın var mı?**
+
+Aranan: refleks bir kesit için **ölçülmüş** (tercihen rüzgâr tüneli) C_m0,
+kesit adıyla ve koşullarıyla. XFOIL/XFLR5 poları da kabul, ama kaynağı,
+Reynolds'u ve doğrulaması belli olmalı. TR-460'ı **değiştirmek** değil,
+**yanına koymak** istiyoruz — eski ölçüm sağlam, yalnız yalnız kalmasın.
 
 ⚠️ **Kullanmadığımız bir kaynak — ve nedeni.** Shinde 2020 (*Micromachines*
 11(6):553) on refleks kesit için C_m0 tablosu veriyor, hepsi **10⁻⁴** ve hepsi
