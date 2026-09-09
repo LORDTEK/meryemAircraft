@@ -12,10 +12,21 @@ Lift System**
 
 ## Authors
 
-Meryem Gülmen, Berke Gülmen, Ömer Gülmen
+Meryem Gülmen <sup>1,\*</sup>, Berke Gülmen <sup>1</sup>, Ömer Gülmen <sup>1</sup>
 
-*[Kurum bağlantısı verilecekse eklenir; verilmezse dergiler "Independent
-researcher" yazar. Sorumlu yazar ve e-posta, dergi seçildiğinde eklenecek.]*
+<sup>1</sup> Independent Researcher, Türkiye
+
+<sup>\*</sup> Correspondence: meryemgulmen@outlook.com
+
+| Yazar | E-posta |
+|---|---|
+| **Meryem Gülmen** (sorumlu yazar) | meryemgulmen@outlook.com |
+| Berke Gülmen | berkegulmen@outlook.com |
+| Ömer Gülmen | lordtek@me.com |
+
+*[Kurum bağlantısı yok; MDPI'ın "Independent Researcher" kaydı kullanılacak.
+ORCID varsa gönderim sırasında eklenir — dergi zorunlu tutmuyor ama tavsiye
+ediyor.]*
 
 ---
 
