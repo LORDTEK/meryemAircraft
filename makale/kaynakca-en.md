@@ -70,3 +70,7 @@
 26. Ugwueze, O.; Statheros, T.; Bromfield, M. A.; Horri, N. An Efficient and
     Robust Sizing Method for eVTOL Aircraft Configurations in Conceptual Design.
     *Aerospace* **2023**, 10 (3), 311. https://doi.org/10.3390/aerospace10030311
+27. Shinde, S. D.; Patel, A. A.; Mehta, M. A.; Mehta, A. B.; Kotecha, K.
+    Airfoil Selection Procedure, Wind Tunnel Experimentation and Implementation
+    of 6DOF Modeling on a Flying Wing Micro Aerial Vehicle. *Micromachines*
+    **2020**, 11 (6), 553. https://doi.org/10.3390/mi11060553
