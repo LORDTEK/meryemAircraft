@@ -160,9 +160,10 @@ Several results depend on coefficients that were not computed for this geometry:
   which yields a scheduling restriction rather than a redesign. Both estimates carry the same
   unselected-cross-section caveat as the frames, and the chordwise position of the lift
   increment, which sets the pitch coupling, is not computed anywhere in this paper.
-- The **roll actuator's speed** is a requirement this paper did not previously state. The
-  on-off strip gives a bounded limit cycle of ±0.2° in bank at a fifty-millisecond
-  deployment and ±9.4° at a hundred and fifty, so the device is usable if it is fast. No
+- The **roll actuator.** The strip extends by a commanded amount, so the limit cycle computed
+  in Section 4.4 — ±0.2° in bank at a fifty-millisecond deployment, ±9.4° at a hundred and
+  fifty — bounds the two-position worst case rather than describing normal operation. What is
+  not stated anywhere is the actuator's mass, its power draw or its bandwidth, and no
   closed-loop stability analysis has been carried out.
 - The **frame drag** of Section 5.2 uses C_D values representative of circular and faired
   sections at the relevant Reynolds number. **The frame cross-section has not been
