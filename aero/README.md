@@ -1486,3 +1486,44 @@ benzeşimiyle** genişletilmeli. Bizim seyir koşulumuz o rejimde değil (AR 6,0
 sonucu anılmıyor, ve sebebi artık yazılı.
 
 Kaynakça 24 ve 25.
+
+---
+
+## S1 kısmen kapandı: sonuç orandan bağımsız (09.09.2026)
+
+Traub 2024'ün Tablo 1a (ölçülen Kp) ve Tablo 2'sinden (AVL Kp) türettim,
+AR = 3, e = 1/(π·AR·Kp):
+
+| | ölçülen e | inviscid e | oran |
+|---|---|---|---|
+| düz | 0,947 | 1,001 | **0,946** |
+| dairesel | 1,220 | 1,206 | 1,011 |
+| köşegen | 1,179 | 1,105 | 1,067 |
+
+⚠️ İkisi 1'in üstünde. Gerçek bir kanatta iskoz verim inviscid'i geçemez;
+Traub duvar düzeltmesi uygulamadığını yazıyor ("tests were comparative in
+nature"), yani bu bir artefakt. **Veri oranı sabitlemiyor.**
+
+**Ama sonuç orana ihtiyaç duymuyor:** 1'in altındaki her oran için
+burulmalı Oswald verimi 0,85'in **altında** kalıyor (0,735–0,822) ve seyir
+L/D 12,04'ün **altında** (11,44–11,90). İşaret kesin, büyüklük açık: %1–5.
+
+Metin buna göre yazıldı: oran seçilmiyor, tablo veriliyor, ve "iskozitesi
+olan her kanat için" ifadesiyle sonuç orandan bağımsız kılınıyor.
+
+Ayrıca Ugwueze 2023, AR 7,0'lık bir powered-lift eVTOL için **aynı 0,85'i**
+kullanıyor — yani bizim varsayımımız dikkatsizlik değil konvansiyon, ve bu
+yüzden bu kadar uzun sorgulanmadan kaldı. Metne bir cümleyle girdi.
+
+## Zhang 2022 (küçük BWB İHA) — dengeleme her yolda pahalı
+
+Onlar dengeyi **burulmayla değil refleksle** kuruyor, ve şunu yazıyorlar:
+kesitlerin geniş açıklıkta refleks taşıması *"is not conducive to the
+improvement of overall lift-to-drag performance."*
+
+Yani BWB'de dengeye giden iki yol var — refleks ve burulma — ve **ikisi de
+seyir verimi yiyor.** Bizim %4,3'ümüz yanlış yol seçmenin cezası değil,
+kuyruksuz olmanın cezası. §5.4'ün beşinci defter kalemi bu okumayla
+sağlamlaştı.
+
+Kaynakça 26 (Ugwueze 2023).

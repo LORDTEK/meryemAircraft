@@ -162,10 +162,11 @@ Several results depend on coefficients that were not computed for this geometry:
   Oswald-type value once the viscous drag due to lift is allowed for — **though Section 7.6
   removes the margin that made this comfortable**, since the twist needed to trim lowers the
   inviscid figure to 0.865 and would put the implied Oswald value below the assumption rather
-  than above it. Two things are needed to settle it and neither is here: a source for the ratio
-  between inviscid and Oswald efficiency, and a viscous calculation of the trimmed wing. Until
-  then the range figures of Section 6.3 rest on an assumption that is exposed rather than
-  bounded. Neither vortex-lattice figure measures the same quantity as the assumption, and
+  than above it. The direction of the error is not in doubt — for any wing
+  with viscosity the trimmed value falls below 0.85 — and only its size is, between one and
+  five percent of cruise lift-to-drag ratio. Settling it needs a viscous calculation of the
+  trimmed wing, which is not here. Until then the range figures of Section 6.3 rest on an
+  assumption that is exposed rather than bounded. Neither vortex-lattice figure measures the same quantity as the assumption, and
   neither is offered as a correction to it.
 
 ## 8.5 Torque balance holds at one point only

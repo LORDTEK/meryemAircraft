@@ -67,3 +67,6 @@
 25. Smith, C. W.; Bhateley, I. C. *Application of the Vortex-Lattice Technique to
     the Analysis of Thin Wings with Vortex Separation and Thick Multi-Element
     Wings.* NASA report, Fort Worth Division of General Dynamics, 1976.
+26. Ugwueze, O.; Statheros, T.; Bromfield, M. A.; Horri, N. An Efficient and
+    Robust Sizing Method for eVTOL Aircraft Configurations in Conceptual Design.
+    *Aerospace* **2023**, 10 (3), 311. https://doi.org/10.3390/aerospace10030311
