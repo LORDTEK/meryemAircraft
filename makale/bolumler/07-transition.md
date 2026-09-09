@@ -347,10 +347,12 @@ light design's peak incidence rather than 0.205. The values above supersede it.
 **The constraint splits into two, and they are different problems.** In the middle of the
 rotation the incidence is high — seventeen to twenty-two degrees — but the dynamic pressure is
 low, and the coefficient that would consume the margin is 0.205 entering in a climb and 1.38
-entering from rest. The first of those sits *inside* the range of published post-stall values
-rather than above it, so the mid-rotation condition is not comfortable either: entering the
-rotation from a climb buys altitude at the cost of arriving at the high-incidence phase
-faster, and therefore with less moment to spare. At the end of the rotation the incidence is small, five to
+entering from rest. An earlier version of this paper compared these against a generic
+post-stall range quoted for swept planforms; that comparison is dropped, because the
+trajectory-resolved budget above supersedes it and the generic range was not attributable to
+a source we had read. What the budgets say without it is enough: entering the rotation from a
+climb buys altitude at the cost of arriving at the high-incidence phase faster, and therefore
+with less moment to spare, and 0.205 is not a comfortable coefficient to have left. At the end of the rotation the incidence is small, five to
 six degrees, but the aircraft is fast, and the budget falls to 0.050 for the light design and
 0.010 for the heavy one. That second condition is **not** a post-stall problem: it is the
 trim question of a tailless aircraft at its cruise incidence, and it is examined below rather
@@ -402,11 +404,27 @@ centre-of-gravity positions:
 | 83 | 0.805 | +8.3 | 0.037 |
 | 85 | 0.825 | +5.3 | 0.024 |
 
-Reflexed sections typically deliver 0.02 to 0.05. The upper half of that window is therefore
-reachable with conventional reflex and the lower half is not, which turns the packaging rule
-from a result into a design constraint: **the centre of gravity must lie between roughly 80
-and 85 percent of root chord**, and closer to the aft end of that range than the volume
-centroid alone would place it. It is not a demanding constraint — the internal volume's own
+The constraint is better stated the other way round, because doing so removes an assumption
+about what sections deliver. For a section able to supply a camber moment C_m0, the centre of
+gravity must lie no further forward than:
+
+| Section camber moment C_m0 | Most forward CG, % root chord | Static margin there, % MAC |
+|---:|---:|---:|
+| 0.02 | 85.6 | +4.4 |
+| 0.03 | 84.1 | +6.7 |
+| 0.04 | 82.6 | +8.9 |
+| 0.05 | 81.1 | +11.1 |
+| 0.06 | 79.6 | +13.3 |
+
+Read downward, the table is a trim constraint; read upward, it is a stability constraint,
+since a margin below about five percent is not a tailless aircraft anyone would fly. The two
+close on each other, and **the aft limit of roughly 85 percent of root chord is set by
+stability alone and is therefore firm; the forward limit is set by the section and is
+therefore not.** This paper does not fix the forward limit, because doing so would require a
+camber and reflex distribution it has not defined and a source for what such a distribution
+delivers that its authors have not read. What it fixes is the packaging rule's own answer,
+80.2 percent, and the observation that this sits in the part of the table reachable only by a
+section supplying rather more than the smallest camber moments. It is not a demanding constraint — the internal volume's own
 centroid is at 78.3 percent — but it is a constraint, and the placement of fuel, payload and
 engine is not free. What is *not* established is that any particular camber and twist
 distribution delivers the required moment at the required lift coefficient without an
