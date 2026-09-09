@@ -449,8 +449,14 @@ efficiency penalty, so 4.3 percent should be read as an upper bound on the cost 
 the cost. The vortex-lattice solution is inviscid, so it says nothing about how washout of this
 magnitude changes the stall behaviour of the outboard sections — washout normally improves it,
 which is a reason to expect no unpleasant surprise, not a demonstration that there is none.
-And the aft limit of the centre-of-gravity window, roughly 85 percent of root chord, is still
-set by static margin alone and is still firm. What has changed is that the forward limit is no
+Two places where this result could have propagated were checked and do not. The root bending
+moment of Section 6.7, 934 N·m, was computed on an untwisted loading; washout moves lift inboard
+and can therefore only reduce it, so the spar sizing and the mass budget that follows are
+conservative rather than threatened — the recomputation has not been done because its direction
+is not in doubt. And washout makes the root stall before the tip on a swept wing, which is the
+favourable direction for the transition of Section 7.4 rather than the unfavourable one. And the
+aft limit of the centre-of-gravity window, roughly 85 percent of root chord, is still set by
+static margin alone and is still firm. What has changed is that the forward limit is no
 longer set by a section property nobody had measured; it is set by how much twist the design is
 willing to pay for.
 

@@ -901,9 +901,19 @@ percent of chord everywhere. The strip specified in Section 4.4 grows linearly f
 
 Gurney-type devices saturate in lift increment at around two percent of chord while their drag
 continues to grow. The inboard end of this strip is therefore in the right regime and the
-outboard end is far past it, producing drag out of proportion to the lift it changes. **The
-height law should follow the chord taper rather than oppose it**, which would give a strip of
-roughly constant h/c — and this is a change to the configuration, not to its description.
+outboard end is far past it, producing drag out of proportion to the lift it changes.
+
+**A law that held h/c constant would be a different trade, and the paper had not seen that
+there was one to make.** Holding h/c at two percent everywhere gives a strip of 0.0165 m²
+instead of 0.0466 m² — sixty-four percent less frontal area, and the same reduction in deployed
+drag, from 16.7 N to 5.9 N at cruise. Because such a strip's area distribution follows the
+chord, its centroid sits at 0.507 m, exactly where the half-wing's own area centroid sits, so
+the rolling moment under the circulation mechanism is unchanged. What it costs is hover: the
+part of the strip lying inside the slipstream shrinks from 0.0182 m² to 0.0101 m², a
+forty-five percent reduction in whatever authority comes from the strip's *own* force at zero
+airspeed. Which way that trade should be settled depends on which mechanism dominates in
+hover, and this paper has not settled that. What it can say is that **the present height law
+was not derived from anything, and a better one exists.**
 
 **Roll authority is therefore sized, supported by a measurement on a comparable device, and
 still not closed.** The quantity a future measurement must return is ΔC_L for this strip on
@@ -1114,7 +1124,7 @@ energy, at 4.6 kW kg⁻¹, which is a demanding cell requirement and not a free 
 
 ## 5.4 What is paid
 
-The honest ledger has four entries.
+The honest ledger has five entries.
 
 **The control propellers.** Four pairs, their motors, mounts and wiring exist only to
 produce moments. In the vertical phase they draw twelve percent of the power the nose
@@ -1130,6 +1140,16 @@ the landing structure combined into one member.
 **The roll strip.** The one moving aerodynamic device on the aircraft. Its cost when
 retracted is a surface discontinuity; when deployed it is a drag device by construction,
 but it is deployed only while a roll is being commanded.
+
+**The twist needed to trim.** Section 7.6 finds that the configuration trims at cruise with
+nine degrees of tip washout, reflex being an order of magnitude short of the moment required.
+Washout is not free: it costs span efficiency, and the cruise lift-to-drag ratio falls from
+12.65 to 12.11 — **4.3 percent**. This entry was missing from earlier versions of this ledger,
+and it is worth being precise about what it is a payment for. It is not one of the three bills
+of Section 3, which are charged for having a hover capability; it is charged for being
+tailless, and a tailed aircraft of the same architecture would not pay it. It belongs here
+because this configuration is tailless, and because a ledger that omitted it would be
+flattering rather than honest.
 
 **The transition manoeuvre.** The aircraft must rotate through ninety degrees, and the
 rotation costs time, horizontal displacement and control power. Section 7 treats it in
@@ -2296,8 +2316,14 @@ efficiency penalty, so 4.3 percent should be read as an upper bound on the cost 
 the cost. The vortex-lattice solution is inviscid, so it says nothing about how washout of this
 magnitude changes the stall behaviour of the outboard sections — washout normally improves it,
 which is a reason to expect no unpleasant surprise, not a demonstration that there is none.
-And the aft limit of the centre-of-gravity window, roughly 85 percent of root chord, is still
-set by static margin alone and is still firm. What has changed is that the forward limit is no
+Two places where this result could have propagated were checked and do not. The root bending
+moment of Section 6.7, 934 N·m, was computed on an untwisted loading; washout moves lift inboard
+and can therefore only reduce it, so the spar sizing and the mass budget that follows are
+conservative rather than threatened — the recomputation has not been done because its direction
+is not in doubt. And washout makes the root stall before the tip on a swept wing, which is the
+favourable direction for the transition of Section 7.4 rather than the unfavourable one. And the
+aft limit of the centre-of-gravity window, roughly 85 percent of root chord, is still set by
+static margin alone and is still firm. What has changed is that the forward limit is no
 longer set by a section property nobody had measured; it is set by how much twist the design is
 willing to pay for.
 
