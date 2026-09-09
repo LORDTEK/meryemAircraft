@@ -280,6 +280,18 @@ would lengthen both rotations by about a quarter, which Section 7.4 shows costs 
 altitude — and that, rather than the quoted times, is what a design study should carry
 forward.
 
+**The field has a name for what this section computes, and a settled opinion about where in it
+to fly.** The feasible set of transition states is called a *transition corridor*, and it is
+used to turn trajectory generation over a complex aircraft model into a constrained motion
+planning problem [31]. The envelope of Section 7.4 and the moment limits here are a corridor of
+that kind, computed rather than borrowed. On where to fly inside it, the same source is
+explicit that existing corridor-based studies "only try to plan the flight trajectory in the
+middle of the corridor, considering that the corridor bounds might be sensitive to aerodynamic
+uncertainties and disturbance". **The reference rotation times of this paper are on the bound,
+not in the middle** — which is exactly the practice that source warns against, and an
+independent reason to read the recommendation of the preceding paragraph as the design
+statement and the quoted 2 s and 5.1 s as the limit they approach.
+
 **This calculation set the heavy design's rotation time.** An earlier version of this study
 used four seconds. Against the inertia of this section that gives margins of 0.97 on the
 cheapest profile and 0.65 on a smooth one — that is, infeasible on both, since the shortest

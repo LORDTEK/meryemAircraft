@@ -260,9 +260,12 @@ percent of chord everywhere. The strip specified in Section 4.4 grows linearly f
 | mid | 0.682 m | 0.040 m | 5.9 % |
 | outboard end | 0.436 m | 0.060 m | 13.7 % |
 
-Gurney-type devices saturate in lift increment at around two percent of chord while their drag
-continues to grow. The inboard end of this strip is therefore in the right regime and the
-outboard end is far past it, producing drag out of proportion to the lift it changes.
+There is a measured threshold for this. A NASA study of lift-enhancing tabs — devices placed on
+the **pressure side** of a wing and **near rather than at** the trailing edge, which is the
+closest published geometry to the strip described here — reports that "for flap heights less
+than about 1.5 % c, the maximum L/D can also increase" while "flap heights greater than 1.5 % c
+cause a decrease in the maximum L/D" [32]. Every station on this strip is above that threshold
+and the outboard end is nine times it.
 
 **A law that held h/c constant would be a different trade, and the paper had not seen that
 there was one to make.** Holding h/c at two percent everywhere gives a strip of 0.0165 m²
@@ -273,8 +276,21 @@ the rolling moment under the circulation mechanism is unchanged. What it costs i
 part of the strip lying inside the slipstream shrinks from 0.0182 m² to 0.0101 m², a
 forty-five percent reduction in whatever authority comes from the strip's *own* force at zero
 airspeed. Which way that trade should be settled depends on which mechanism dominates in
-hover, and this paper has not settled that. What it can say is that **the present height law
-was not derived from anything, and a better one exists.**
+hover, and this paper has not settled that. One thing that does *not* settle it is the L/D
+threshold above, because that threshold is about a device left deployed: this one is commanded
+on only while a roll is being flown, so its cruise-drag penalty is intermittent by construction
+and paying it is not obviously wrong. What can be said is that **the present height law was
+not derived from anything, and the alternatives are now visible.**
+
+**Deploying it on one side yaws the aircraft, and the paper had not said so.** The strip raises
+lift on the half-wing that carries it and also raises drag there; the aircraft therefore rolls
+away from the strip and yaws towards it, which is adverse yaw in the classical sense. The
+magnitude follows from the same drag estimate: 16.7 N at the present height law, acting at
+0.679 m, is **11.3 N·m** of yawing moment, falling to 2.9 N·m for a strip held at two percent of
+local chord. Against the 42.8 to 55.9 N·m of yaw authority computed above, the coupling costs
+between five and twenty-six percent of the yaw axis while a roll is being commanded. **It is
+covered, and it is covered by the axis that happens to be the strongest** — but it is a
+coupling, it had not been stated, and a control design would have to allocate for it.
 
 **Roll authority is therefore sized, supported by a measurement on a comparable device, and
 still not closed.** The quantity a future measurement must return is ΔC_L for this strip on

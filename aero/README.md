@@ -1694,3 +1694,63 @@ taşıyıcı yüzeylerinde VLM kullanmanın uçuş-denemeli bir öncülü var.
 alanın açığı — ve bunu artık dört örnekle söyleyebiliyoruz.
 
 Kaynakça 30.
+
+---
+
+## Ross & Storms 1997 + Cheng & Pei 2024 (09.09.2026)
+
+### 1. Şeridin yükseklik eşiği artık ÖLÇÜLMÜŞ ve ATIFLI
+
+Daha önce "Gurney cihazları %2 civarında doyuyor" demiştim — **genel bilgiden**.
+Şimdi ölçülmüş bir eşik var. NASA TM-112990, **basınç yüzüne** ve **firar
+kenarına yakın ama tam üstünde değil** yerleştirilen "lift-enhancing tab"lar —
+yani yayımlanmış literatürde bizim şeridimize **geometrik olarak en yakın**
+cihaz:
+
+> *"For flap heights less than about **1.5% c**, the maximum L/D can also
+> increase. Flap heights greater than 1.5% c cause a **decrease** in the maximum
+> L/D."*
+
+Bizim şeridin her istasyonu bu eşiğin üstünde, dış ucu **dokuz katı**.
+
+⚠️ **Ama bu eşik takası kapatmıyor** ve metinde öyle yazıldı: eşik **sürekli
+açık** duran bir cihaz için. Bizimki yalnızca yatış komut edilirken açılıyor,
+yani seyir sürüklemesi cezası **yapısı gereği aralıklı**. Ödemek açıkça yanlış
+değil.
+
+### 2. YENİ BULGU — şerit ters sapma üretiyor, ve bunu hiç yazmamışız
+
+Şerit bulunduğu yarı kanadın **hem kaldırmasını hem sürüklemesini** artırıyor.
+Uçak şeritten **uzağa yuvarlanıyor**, şeride **doğru sapıyor** — klasik ters
+sapma (adverse yaw).
+
+| yükseklik yasası | sürükleme | ters sapma momenti | sapma otoritesinin |
+|---|---|---|---|
+| mevcut (2→6 cm) | 16,7 N | **11,3 N·m** | %20–26'sı |
+| sabit h/c = %2 | 5,7 N | 2,9 N·m | %5–7'si |
+
+Mevcut sapma otoritesi 42,8–55,9 N·m. **Kapsanıyor** — ve tam da **en güçlü
+eksen** tarafından kapsanıyor, ki sapmanın kolu yarı açıklık olduğu için öyle.
+Ama bir kuplaj, yazılmamıştı, ve bir kontrol tasarımı buna pay ayırmak zorunda.
+§4.4 ve §8'e eklendi.
+
+### 3. "Transition corridor" — alanın bizim §7 için kullandığı ad
+
+Cheng & Pei 2024: geçişin olurlu durum kümesine **geçiş koridoru** deniyor ve
+karmaşık bir uçak modeli üzerindeki yörünge üretimini kısıtlı bir hareket
+planlama problemine çeviriyor. Bizim §7.4'ün zarfı ve buradaki moment sınırları
+tam olarak böyle bir koridor.
+
+**Ve nerede uçulacağı konusunda alanın yerleşik görüşü var:**
+
+> *"existing transition-corridor-based studies only try to plan the flight
+> trajectory in the **middle of the corridor**, considering that the corridor
+> bounds might be **sensitive to aerodynamic uncertainties and disturbance**."*
+
+**Bizim referans dönüş süreleri koridorun tam SINIRINDA** (2 s ve 5,1 s,
+eyleyici sınırlı alt sınırlar). Yani alanın kaçınmayı önerdiği yerdeyiz. Bu,
+§7.6'nın kendi tavsiyesini — "bir tasarım yinelemesi her iki dönüşü de dörtte
+bir uzatırdı" — **dışarıdan destekliyor**, ve alıntılanan 2 s / 5,1 s'nin
+tasarım değil **yaklaşılan sınır** olarak okunması gerektiğini söylüyor.
+
+Kaynakça 31 ve 32.

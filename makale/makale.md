@@ -962,9 +962,12 @@ percent of chord everywhere. The strip specified in Section 4.4 grows linearly f
 | mid | 0.682 m | 0.040 m | 5.9 % |
 | outboard end | 0.436 m | 0.060 m | 13.7 % |
 
-Gurney-type devices saturate in lift increment at around two percent of chord while their drag
-continues to grow. The inboard end of this strip is therefore in the right regime and the
-outboard end is far past it, producing drag out of proportion to the lift it changes.
+There is a measured threshold for this. A NASA study of lift-enhancing tabs — devices placed on
+the **pressure side** of a wing and **near rather than at** the trailing edge, which is the
+closest published geometry to the strip described here — reports that "for flap heights less
+than about 1.5 % c, the maximum L/D can also increase" while "flap heights greater than 1.5 % c
+cause a decrease in the maximum L/D" [32]. Every station on this strip is above that threshold
+and the outboard end is nine times it.
 
 **A law that held h/c constant would be a different trade, and the paper had not seen that
 there was one to make.** Holding h/c at two percent everywhere gives a strip of 0.0165 m²
@@ -975,8 +978,21 @@ the rolling moment under the circulation mechanism is unchanged. What it costs i
 part of the strip lying inside the slipstream shrinks from 0.0182 m² to 0.0101 m², a
 forty-five percent reduction in whatever authority comes from the strip's *own* force at zero
 airspeed. Which way that trade should be settled depends on which mechanism dominates in
-hover, and this paper has not settled that. What it can say is that **the present height law
-was not derived from anything, and a better one exists.**
+hover, and this paper has not settled that. One thing that does *not* settle it is the L/D
+threshold above, because that threshold is about a device left deployed: this one is commanded
+on only while a roll is being flown, so its cruise-drag penalty is intermittent by construction
+and paying it is not obviously wrong. What can be said is that **the present height law was
+not derived from anything, and the alternatives are now visible.**
+
+**Deploying it on one side yaws the aircraft, and the paper had not said so.** The strip raises
+lift on the half-wing that carries it and also raises drag there; the aircraft therefore rolls
+away from the strip and yaws towards it, which is adverse yaw in the classical sense. The
+magnitude follows from the same drag estimate: 16.7 N at the present height law, acting at
+0.679 m, is **11.3 N·m** of yawing moment, falling to 2.9 N·m for a strip held at two percent of
+local chord. Against the 42.8 to 55.9 N·m of yaw authority computed above, the coupling costs
+between five and twenty-six percent of the yaw axis while a roll is being commanded. **It is
+covered, and it is covered by the axis that happens to be the strongest** — but it is a
+coupling, it had not been stated, and a control design would have to allocate for it.
 
 **Roll authority is therefore sized, supported by a measurement on a comparable device, and
 still not closed.** The quantity a future measurement must return is ΔC_L for this strip on
@@ -2268,6 +2284,18 @@ would lengthen both rotations by about a quarter, which Section 7.4 shows costs 
 altitude — and that, rather than the quoted times, is what a design study should carry
 forward.
 
+**The field has a name for what this section computes, and a settled opinion about where in it
+to fly.** The feasible set of transition states is called a *transition corridor*, and it is
+used to turn trajectory generation over a complex aircraft model into a constrained motion
+planning problem [31]. The envelope of Section 7.4 and the moment limits here are a corridor of
+that kind, computed rather than borrowed. On where to fly inside it, the same source is
+explicit that existing corridor-based studies "only try to plan the flight trajectory in the
+middle of the corridor, considering that the corridor bounds might be sensitive to aerodynamic
+uncertainties and disturbance". **The reference rotation times of this paper are on the bound,
+not in the middle** — which is exactly the practice that source warns against, and an
+independent reason to read the recommendation of the preceding paragraph as the design
+statement and the quoted 2 s and 5.1 s as the limit they approach.
+
 **This calculation set the heavy design's rotation time.** An earlier version of this study
 used four seconds. Against the inertia of this section that gives margins of 0.97 on the
 cheapest profile and 0.65 on a smooth one — that is, infeasible on both, since the shortest
@@ -2738,6 +2766,10 @@ Several results depend on coefficients that were not computed for this geometry:
   is not in question — the yaw arm is the semi-span, so the available moment is 2.4 times
   the pitch moment — but directional stability and yaw damping are a single open item
   resting on a component whose section has not been selected.
+- The **roll–yaw coupling** of the strip. Deploying it on one side produces adverse yaw of
+  2.9 to 11.3 N·m depending on the height law, against 42.8 to 55.9 N·m of yaw authority. The
+  coupling is covered but was not previously stated, and the drag estimate behind it carries
+  the same unselected-cross-section caveat as the frames.
 - The **roll actuator's speed** is a requirement this paper did not previously state. The
   on-off strip gives a bounded limit cycle of ±0.2° in bank at a fifty-millisecond
   deployment and ±9.4° at a hundred and fifty, so the device is usable if it is fast. No
@@ -3236,3 +3268,9 @@ the authors accept full responsibility for the content.
 30. Carter, G. I. *Adaptive Control of the Transition from Vertical to
     Horizontal Flight Regime of a Quad-Tailsitter UAV.* M.S. thesis, Virginia
     Polytechnic Institute and State University, 2021.
+31. Cheng, Z.; Pei, H. Time Optimal Altitude-Hold Flight Mode Transition
+    Strategy for a Class of Ducted Fan Tail Sitter UAV. *Aerospace* **2024**,
+    11 (8), 654. https://doi.org/10.3390/aerospace11080654
+32. Ross, J. C.; Storms, B. L.; Carrannanto, P. G. *Lift-Enhancing Tabs on
+    Multielement Airfoils.* NASA Technical Memorandum 112990, Ames Research
+    Center, 1997.
