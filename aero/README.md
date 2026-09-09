@@ -1928,7 +1928,43 @@ okuduğumuz hiçbir kaynak o ürün için özgül güç vermiyor. Yani varsayım
 **kısa süreli bir tampon, otomotiv paketini 3,5–6 kat geçer.** *Türü itibarıyla
 makul, büyüklüğü itibarıyla doğrulanmamış, ve Fatura 3 buna dayanıyor.*
 
-### Enerji tarafı aynı riski taşıyor, ters yönden
+### ⚠️ DÜZELTME (aynı gün) — enerji tarafını fazla sıkmışım
+
+Kullanıcı haklı çıktı ve bu benim hatamdı. Tamponun **60 s boyunca sürekli**
+boşaldığını varsaymıştım. Öyle değil: kalkışta boşalıyor, **dönüş başlayınca
+kanat devralıyor ve talep düşüyor**, sonra saatlerce seyirde motordan doluyor,
+inişte tekrar boşalıyor.
+
+T/W = 1,2'de düşey ivme 0,2g; §7.4'ün girdiği 5 m/s tırmanışa **2,6 s ve 6,4 m**
+sonra ulaşılıyor. Yani tam çekişli kalkış segmenti 10–20 s, 60 değil.
+
+| kalkış segmenti | enerji | 180 Wh/kg'nin | 80 Wh/kg'nin |
+|---|---|---|---|
+| 10 s | 23 Wh | %7 | %16 |
+| 20 s | 46 Wh | %14 | **%32** |
+| 30 s | 69 Wh | %21 | %48 |
+
+**Yüksek güçlü kimyanın düşük enerji yoğunluğunda bile 20 s'lik kalkış tamponun
+üçte birini kullanıyor.** Yani "80 Wh/kg'de pay bitiyor" ifadem yanlıştı —
+60 s'lik sürekli boşalma varsayımının ürünüydü. Enerji **bağlayıcı değil.**
+
+### Ama güç tarafı geçici değil, ZEMIN
+
+Kullanıcının "geçici taşma sorun olmaz" savı burada geçerli değil, ve sebebi
+aritmetik: hover gücü T^1,5 ile gidiyor, yani T ~ P^(2/3).
+
+| tampon özgül gücü | toplam güç | çıkan T/W | yerden kalkar mı |
+|---|---|---|---|
+| 0,735 kW/kg | 3,9 kW | 0,61 | **hayır** |
+| 1,30 kW/kg | 4,9 kW | 0,71 | **hayır** |
+| 2,50 kW/kg | 7,1 kW | 0,90 | **hayır** |
+| 4,61 kW/kg | 10,9 kW | 1,20 | evet |
+
+**Atıf verebildiğimiz özgül güçlerde uçak yerden kalkmıyor.** Tolere edilecek
+kısa bir taşma yok, çünkü ortada kalkış yok. Tek çare daha ağır tampon — bu
+yüzden bir **kütle bütçesi** açığı, uçuş dinamiği açığı değil.
+
+### (eski hâli — 60 s varsayımıyla, artık geçersiz)
 
 Gücü veren kimya daha az enerji taşır. Dikey faz ~60 s (makalenin kendi "bir
 dakika mertebesinde" ifadesi):

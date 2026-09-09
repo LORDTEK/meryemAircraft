@@ -561,21 +561,41 @@ that product. **The assumption is therefore that a short-duration buffer beats a
 traction pack by a factor of three and a half to six — plausible in kind, unverified in
 magnitude, and load-bearing for Bill 3.**
 
-The energy side carries the same shape of risk. Cells capable of those discharge rates generally
-carry less energy per kilogram than the 180 Wh kg⁻¹ assumed above, and the crossover moves with
-it against a vertical phase of about a minute:
+**The energy side is a different matter, and it is far more comfortable than the power side.**
+The buffer does not discharge continuously for the whole vertical phase. It discharges through
+the take-off, which ends when the rotation begins and the wing starts carrying the aircraft;
+it then recharges from the engine over hours of cruise, and discharges again for the landing.
+At a thrust-to-weight ratio of 1.2 the vertical acceleration is 0.2 g, so the 5 m s⁻¹ climb
+from which Section 7.4 enters the rotation is reached in 2.6 s and 6.4 m. A take-off segment of
+ten to twenty seconds at full draw is generous. Against that:
 
-| Buffer energy density | Energy-limited after | Margin over a 60 s vertical phase |
-|---|---:|---:|
-| 180 Wh kg⁻¹ | 141 s | 2.3 × |
-| 120 Wh kg⁻¹ | 94 s | 1.6 × |
-| 100 Wh kg⁻¹ | 78 s | 1.3 × |
-| 80 Wh kg⁻¹ | 62 s | 1.0 × |
+| Take-off segment at full draw | Energy used | of a 180 Wh kg⁻¹ buffer | of an 80 Wh kg⁻¹ buffer |
+|---:|---:|---:|---:|
+| 10 s | 23 Wh | 7 % | 16 % |
+| 20 s | 46 Wh | 14 % | 32 % |
+| 30 s | 69 Wh | 21 % | 48 % |
 
-The two requirements pull against each other — the chemistry that delivers the power carries
-less energy — and at 80 Wh kg⁻¹ the margin is gone. The buffer masses used here are therefore a
-cell-selection requirement rather than a free parameter, and the requirement is demanding in
-both currencies at once.
+Even at the low energy density that a high-power chemistry would carry, a twenty-second take-off
+uses a third of the buffer. **The binding constraint is power, not energy, and it stays that way
+under any plausible take-off duration.**
+
+That distinction matters, because it says what would *not* rescue the specific-power figure.
+A shortfall in power is not a transient to be ridden out. Hover power goes as thrust to the
+three-halves, so thrust goes as power to the two-thirds, and a buffer delivering less simply
+buys less thrust:
+
+| Buffer specific power | Total power available | Resulting T/W | Leaves the ground |
+|---|---:|---:|---|
+| 0.735 kW kg⁻¹ | 3.9 kW | 0.61 | no |
+| 1.30 kW kg⁻¹ | 4.9 kW | 0.71 | no |
+| 2.50 kW kg⁻¹ | 7.1 kW | 0.90 | no |
+| 4.61 kW kg⁻¹ | 10.9 kW | 1.20 | yes |
+
+**At the specific powers this study has a citation for, the aircraft does not lift off**, so
+there is no brief overshoot to tolerate and no manoeuvre that shortens the exposure. The only
+remedy is a heavier buffer, which is why this appears as a mass-budget exposure rather than a
+flight-dynamics one. The buffer masses used here are a cell-selection requirement rather than a
+free parameter, and it is the specific power, not the energy, that has to be found.
 
 | Group | Build-up | Assumed in 6.2 |
 |---|---:|---:|
