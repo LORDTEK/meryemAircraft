@@ -377,7 +377,10 @@ are listed so that they can be:
    rotates with the body, and peak incidence is 17.5° to 21.6°. **Transition controllability
    remains the largest unresolved item in this study**, but it now asks for the pitching
    moment up to some twenty-two degrees at low dynamic pressure and for trim at cruise
-   incidence, rather than for a moment sweep through ninety degrees. What is still not done
+   incidence, rather than for a moment sweep through ninety degrees — and Section 7.6 narrows
+   it once more, since the inboard half of the wing lies in the nose propeller's slipstream and
+   sees an effective incidence of four to eight degrees rather than the geometric seventeen to
+   twenty-two [23]. The measurement that is still owed concerns the *outboard* half. What is still not done
    is answering it: a reduced computation would replace a dominant term with a
    less-validated model. What it cannot do is charge the
    aerodynamic pitching moment, which requires moment coefficients through ninety degrees

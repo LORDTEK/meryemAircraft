@@ -2432,6 +2432,39 @@ item of ordinary size, and the reduced computational campaigns rejected earlier 
 for substituting a less-validated model for a dominant term, not because the term is beyond
 reach.
 
+**One mechanism was omitted, and including it makes the case better rather than worse.**
+The incidences above are geometric: the angle between the body axis and the velocity vector.
+But the nose propeller's slipstream passes over the inboard part of the wing — half its area
+on the light design and 63 percent on the heavy one — and inside that slipstream the air is not
+moving at freestream speed or in the freestream direction. Because the wake is aligned with the
+body axis, the resultant flow over the washed portion is pulled towards the body axis, and the
+local incidence there is smaller than the geometric one. Folk [23] writes this as
+
+    |V_a| = √( |V_w|² + |V_i|² + 2 |V_i| |V_w| cos α ),   α_e = arcsin( |V_i| sin α / |V_a| )
+
+with V_w the wake speed and V_i the freestream. Taking V_w from momentum theory at the
+transition thrust, and reporting both the fully developed wake (V_w = 2v) and the
+not-yet-developed case (V_w = v) because this study does not determine which applies at the
+wing station:
+
+| | Geometric α | α_e, V_w = v | α_e, V_w = 2v |
+|---|---:|---:|---:|
+| Light, from a 5 m s⁻¹ climb | 17.5° | 6.8° | 4.2° |
+| Light, from rest | 21.6° | 3.7° | 2.0° |
+| Heavy, from rest | 20.5° | 7.6° | 4.6° |
+| Heavy, from a climb | 5.4° | 4.7° | 4.2° |
+
+**Half the wing is therefore not post-stall at the moment of peak incidence, on either
+bracket.** It is at four to eight degrees, which is ordinary attached flow. The pitching-moment
+budgets of this section were computed as though the whole wing saw the geometric incidence,
+so they are conservative — and the outstanding measurement, which Section 8 keeps open, is
+smaller than it appeared: it concerns the *outboard* half of the wing, the part that is not
+washed. Two cautions belong with this. Folk records that the reduced-order wake model
+overpredicts wake velocity above roughly 8 m s⁻¹, which places three of the four cases inside
+its stated range and the fourth — the heavy design entering from a climb — outside it, where
+the geometric incidence is only 5.4° in any case. And the verification of that model is
+attributed there to work the present authors have not read.
+
 **Two limits of this reading are worth stating.** The incidence history comes from the
 point-mass trajectory of Section 7.4: it is the geometric angle between the body axis and the
 velocity vector, so it is only as good as that trajectory. And the rotation rate itself varies
@@ -2815,7 +2848,10 @@ are listed so that they can be:
    rotates with the body, and peak incidence is 17.5° to 21.6°. **Transition controllability
    remains the largest unresolved item in this study**, but it now asks for the pitching
    moment up to some twenty-two degrees at low dynamic pressure and for trim at cruise
-   incidence, rather than for a moment sweep through ninety degrees. What is still not done
+   incidence, rather than for a moment sweep through ninety degrees — and Section 7.6 narrows
+   it once more, since the inboard half of the wing lies in the nose propeller's slipstream and
+   sees an effective incidence of four to eight degrees rather than the geometric seventeen to
+   twenty-two [23]. The measurement that is still owed concerns the *outboard* half. What is still not done
    is answering it: a reduced computation would replace a dominant term with a
    less-validated model. What it cannot do is charge the
    aerodynamic pitching moment, which requires moment coefficients through ninety degrees
@@ -2897,7 +2933,9 @@ through ninety degrees of incidence needs measurements this study does not have.
 check does supply is a threshold, resolved along the trajectory, and resolving it changed the
 question. The aircraft does not reach ninety degrees of incidence: the body rotates through
 ninety, but the relative wind rotates with it, and peak incidence is between seventeen and
-twenty-two degrees. The high-incidence part of the rotation happens at low dynamic pressure,
+twenty-two degrees — and over the half of the wing that lies in the nose propeller's
+slipstream, the effective incidence at that moment is four to eight degrees, which is attached
+flow. The high-incidence part of the rotation happens at low dynamic pressure,
 where the margin tolerates a coefficient of about 0.21 entering in a climb; the tight part
 is the end of the rotation, where incidence is small and speed is high, and that is a trim
 question rather than a post-stall one. The trim question has since been sized rather than
@@ -3021,3 +3059,7 @@ the authors accept full responsibility for the content.
 22. Johnson, W.; Silva, C. NASA concept vehicles and the engineering of advanced
     air mobility aircraft. *The Aeronautical Journal* **2022**, 126 (1295),
     59–91. doi:10.1017/aer.2021.92
+23. Folk, S. *Modeling, Planning, and Control for Hybrid UAV Transition
+    Maneuvers.* Qualifying examination report, Department of Mechanical
+    Engineering and Applied Mechanics, University of Pennsylvania, 2020;
+    arXiv:2412.06197, 2024.
