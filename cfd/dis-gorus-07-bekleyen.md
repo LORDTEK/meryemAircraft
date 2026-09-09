@@ -65,3 +65,42 @@
 
 **Bileşen düzeyinde kütle bütçesi.** Üç denetim de listeledi; YZ3 Q1
 için zorunlu saydı. Sonucu bir sonraki metnin ana gövdesi olacak.
+
+---
+
+## 6. DİĞER YZ'LERE SORULACAK — açık kalan kaynak soruları (09.09.2026)
+
+### ⚠️ S1. inviscid → Oswald açıklık verimi oranı (0,85–0,90)
+
+**Neden önemli:** §6.6 bu oranı **kaynaksız** kullanıyor ve şu an bir
+**başlık sayısı** ona bağlı. Denge için gereken 9° burulma, iskoz olmayan
+açıklık verimini 0,99'dan 0,865'e düşürdü. Aynı oranla:
+
+| | inviscid | ima edilen Oswald | varsayılan 0,85 |
+|---|---|---|---|
+| burulmasız | 0,99 | 0,84–0,89 | içinde → temkinli |
+| **burulmalı** | **0,865** | **0,735–0,78** | **üstünde → iyimser** |
+
+Doğruysa seyir L/D 12,04 → **11,4–11,7**, menzil **%3–5** düşüyor
+(1598 → ~1520–1550 km).
+
+**Sorulacak:** Bu oran için **birincil bir kaynak** var mı? Ya da doğrudan
+kuyruksuz/BWB bir kanat için ölçülmüş **Oswald** verimi? Alternatif olarak:
+burulmalı kanadın iskoz hesabı olmadan bu soruyu kapatmanın savunulabilir
+bir yolu var mı, yoksa menzil sayıları "koşullu" mu yazılmalı?
+
+**Şu an metinde ne yazıyor:** düzeltme **yapılmadı**. Kaynaksız bir oranı
+başlık sayısına yaymak, belirtilmiş bir varsayımı belirtilmemişle
+değiştirmek olurdu. Yazılan şey yapısal nokta: varsayım artık bir hesapla
+**üstten sınırlı değil.**
+
+### S2. Şeridin yükseklik yasası — takas kapatılmadı
+
+Sabit h/c seyirde sürüklemeyi %64 azaltıyor ama izdeki alanı %45
+azaltıyor. Hangi mekanizmanın **asılı durumda** baskın olduğu belirlenmedi.
+
+### S3. Uç çerçevesi fairing'inin toe açısı
+
+NACA TR-796: yüksek en-boy oranlı finler toe-out ister, ve toe-out'ta arka
+fin perdövitese girerse **kararsızlaştırıcı** moment doğuyor. Açı ve işaret
+seçilmedi.
