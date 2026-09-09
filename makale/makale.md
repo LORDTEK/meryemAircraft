@@ -813,6 +813,15 @@ under fifteen percent of the total power. For the light reference design each ti
 is 0.20 m in diameter and produces 16.2 N during the transition manoeuvre, drawing
 335 W, for a total of 1.34 kW across the four.
 
+The principle is not new, and the paper is better for saying so. A survey of tail-sitter
+development identifies it directly: "one way to generate a larger pitching moment to assist
+with the transition from vertical to horizontal flight is to add propellers away from the axis
+of rotation of the tail-sitter and apply a differential thrust to these propellers", and traces
+the idea to work at NASA Ames around the turn of the century [30]. What is particular here is
+not the mechanism but the arm and the accounting: the frames reach three tip chords rather than
+a fraction of one, and they are structure the aircraft needs anyway, so the arm is charged to
+the landing gear rather than to the control system.
+
 The tip pairs sit at the ends of rigid frames that extend from each wing tip
 perpendicular to the planform, above and below, by three hundred percent of the local
 tip chord — 0.71 m in each direction, giving a vertical separation of 1.42 m between
@@ -2576,10 +2585,19 @@ beyond, where speed is high: the aerodynamic moment grows as V² while propeller
 The correspondence should not be pushed too far — their pitch propellers are the vehicle's lift
 rotors, mounted on the wing with a short arm, where these are dedicated control propellers on
 0.71 m frames, and their vehicle is smaller — but the mechanism is identical and it saturated a
-real aircraft. It is the strongest external reason to treat the end-of-rotation budgets of
+real aircraft. **And it is not an isolated observation.** A survey of tail-sitter development records the
+same outcome for a separate vehicle, the CRC-20 developed at the University of Maryland with
+wind-tunnel-derived aerodynamics: its builders "were able to achieve transition to forward
+flight, but they had poor control over the vehicle once in forward flight" [30]. Two
+independent programmes, different vehicles, the same division — transition passed, forward
+flight difficult.
+
+That is the strongest external reason to treat the end-of-rotation budgets of
 0.050 and 0.010 as the binding numbers in this section, and the strongest external argument
 that a propeller-only tail-sitter needs its pitch authority checked at speed rather than at
-incidence.
+incidence. It also says something about where a future experiment should be pointed: the
+regime that has caused trouble in practice is not the one this paper spent the most effort
+on.
 
 **Two limits of this reading are worth stating.** The incidence history comes from the
 point-mass trajectory of Section 7.4: it is the geometric angle between the body axis and the
@@ -3215,3 +3233,6 @@ the authors accept full responsibility for the content.
     Control Approach for a Quadrotor Tail-Sitter VTOL UAV and Experimental
     Verification.* IEEE/RSJ International Conference on Intelligent Robots and
     Systems (IROS), 2017.
+30. Carter, G. I. *Adaptive Control of the Transition from Vertical to
+    Horizontal Flight Regime of a Quad-Tailsitter UAV.* M.S. thesis, Virginia
+    Polytechnic Institute and State University, 2021.

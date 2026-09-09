@@ -81,3 +81,6 @@
     Control Approach for a Quadrotor Tail-Sitter VTOL UAV and Experimental
     Verification.* IEEE/RSJ International Conference on Intelligent Robots and
     Systems (IROS), 2017.
+30. Carter, G. I. *Adaptive Control of the Transition from Vertical to
+    Horizontal Flight Regime of a Quad-Tailsitter UAV.* M.S. thesis, Virginia
+    Polytechnic Institute and State University, 2021.
