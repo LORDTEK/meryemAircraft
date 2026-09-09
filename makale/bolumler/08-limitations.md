@@ -133,6 +133,15 @@ Several results depend on coefficients that were not computed for this geometry:
   is not in question — the yaw arm is the semi-span, so the available moment is 2.4 times
   the pitch moment — but directional stability and yaw damping are a single open item
   resting on a component whose section has not been selected.
+- The **battery buffer's specific power**, which Section 6.7 now identifies as the most
+  exposed number in the mass budget. It asks for 4.6 kW kg⁻¹ where the only figures this study
+  has read give 0.7 to 1.3 kW kg⁻¹ at pack level for power-application Li-ion [21]. At the top
+  of that range the buffer would mass 6.4 kg instead of 1.8 and **the light design's budget
+  would not close**. The assumption is that a purpose-built short-duration buffer beats an
+  automotive traction pack by three and a half to six times; that is plausible in kind and
+  unverified in magnitude, and Bill 3 rests on it. The energy side compounds it, since the
+  crossover from power-limited to energy-limited falls from 141 s to 62 s if the cell carries
+  80 Wh kg⁻¹ instead of 180, against a vertical phase of about a minute.
 - The **cruise state of the tip rotors.** Section 5.2 shows that they must turn freely at
   zero shaft load rather than stop, on pain of adding 61 to 74 percent to the zero-lift drag,
   and that fixed pitch removes feathering as a third option. The estimate behind that is an
