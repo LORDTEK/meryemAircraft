@@ -1896,3 +1896,57 @@ Ve TR-796'nın uyarısı duruyor: toe-out'ta arka fin perdövitese girerse
 S3 buna göre güncellendi: büyüklük bulundu, işaret soruluyor.
 
 Kaynakça 34.
+
+---
+
+## 🔴 EN CİDDİ BULGU — tampon özgül gücü (09.09.2026)
+
+Bacchini & Cestino 2019, eVTOL boyutlandırırken güç uygulamaları için Li-ion
+özgül gücünü **paket düzeyinde** veriyor:
+
+> *"Li-ion batteries for power applications have specific energy ranging from
+> 100 to 250 Wh/kg and **specific power from 700 to 1300 W/kg**."*
+> (Tesla Model S paketi: 735 W/kg, 157 Wh/kg — kasa, bağlantı ve termal
+> yönetim dahil.)
+
+**Bizim tampon 4,6 kW/kg istiyor.** Yani bu bandın üst ucunun **3,5–6,6 katı.**
+
+| özgül güç | tampon kütlesi | MTOW'un |
+|---|---|---|
+| 0,735 kW/kg (onların varsaydığı paket) | 11,3 kg | %22,6 |
+| 1,30 kW/kg (bandın üst ucu) | 6,4 kg | %12,8 |
+| **4,61 kW/kg (bizim örtük varsayımımız)** | **1,8 kg** | **%3,6** |
+
+Bandın üst ucunda tampon bütçelenenden **4,6 kg ağır**; elimizdeki pay 2,2 kg.
+**Hafif hattın kütle bütçesi kapanmaz.**
+
+### Savunma gerçek ama savunma
+
+Onların rakamları **enerji için optimize edilmiş otomotiv paketi**; bizimki bir
+dakika boşalan, **güç için optimize edilmiş** bir tampon — farklı ürün. Ama
+okuduğumuz hiçbir kaynak o ürün için özgül güç vermiyor. Yani varsayım şu:
+**kısa süreli bir tampon, otomotiv paketini 3,5–6 kat geçer.** *Türü itibarıyla
+makul, büyüklüğü itibarıyla doğrulanmamış, ve Fatura 3 buna dayanıyor.*
+
+### Enerji tarafı aynı riski taşıyor, ters yönden
+
+Gücü veren kimya daha az enerji taşır. Dikey faz ~60 s (makalenin kendi "bir
+dakika mertebesinde" ifadesi):
+
+| tampon enerji yoğunluğu | enerji sınırına | 60 s'ye göre pay |
+|---|---|---|
+| 180 Wh/kg | 141 s | 2,3× |
+| 120 Wh/kg | 94 s | 1,6× |
+| 100 Wh/kg | 78 s | 1,3× |
+| **80 Wh/kg** | **62 s** | **1,0×** |
+
+**80 Wh/kg'de pay tamamen bitiyor.** İki gereksinim birbirini çekiştiriyor.
+
+### Değerlendirme
+
+Bu, kabuk yüzey yoğunluğundan (1,5 kg/m²) **daha ciddi** bir açık: kabuk
+"hedef" diye yazılıydı ve başabaşı biliniyordu; tampon özgül gücü ise hiç
+kaynakla karşılaştırılmamıştı ve karşılaştırınca **bir mertebe yakın** çıkmadı.
+
+§6.7 ve §8'e tablolarıyla yazıldı. Kullanıcının "acaba yeterli mi" sezgisinin
+en somut karşılığı bu.

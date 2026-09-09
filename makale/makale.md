@@ -2034,9 +2034,46 @@ beyond the profile of Section 7; below that the buffer is power-limited. The hea
 is in the same regime, 4.1 kW kg⁻¹ at 22 C. That places the buffer in the high-power
 lithium-ion or lithium-polymer class — cells rated for twenty to thirty times their
 capacity in continuous discharge — rather than in the high-energy class a range-driven
-selection would reach for. Cells capable of those discharge rates generally carry less
-energy per kilogram than 180 Wh kg⁻¹, which lowers the crossover further. The buffer masses used are therefore a cell-selection requirement rather than a
-free parameter, and the requirement is a demanding one.
+selection would reach for.
+
+**How demanding, measured against the only figures this study has read, is the most exposed
+number in the whole mass budget.** Bacchini and Cestino, sizing electric VTOL aircraft, take
+735 W kg⁻¹ at pack level from an automotive traction pack and report that "Li-ion batteries for
+power applications have… specific power from 700 to 1300 W kg⁻¹" [21]. The buffer here asks for
+**4.6 kW kg⁻¹**, three and a half to six and a half times the top of that range. Sized at
+figures from that range instead:
+
+| Buffer specific power | Buffer mass | Fraction of MTOW |
+|---|---:|---:|
+| 0.735 kW kg⁻¹ (the pack they assume) | 11.3 kg | 22.6 % |
+| 1.30 kW kg⁻¹ (top of their quoted range) | 6.4 kg | 12.8 % |
+| **4.61 kW kg⁻¹ (this study, implicitly)** | **1.8 kg** | **3.6 %** |
+
+At the top of their range the buffer would be 4.6 kg heavier than budgeted, against the 2.2 kg
+of unallocated mass this section leaves. **The light design's mass budget would not close.**
+
+The defence is real but it is a defence, not a measurement: their figures are for an
+energy-optimised automotive pack, and a buffer discharged for a minute at a time is a different
+product optimised for the opposite thing. Nothing this study has read gives a specific power for
+that product. **The assumption is therefore that a short-duration buffer beats an automotive
+traction pack by a factor of three and a half to six — plausible in kind, unverified in
+magnitude, and load-bearing for Bill 3.**
+
+The energy side carries the same shape of risk. Cells capable of those discharge rates generally
+carry less energy per kilogram than the 180 Wh kg⁻¹ assumed above, and the crossover moves with
+it against a vertical phase of about a minute:
+
+| Buffer energy density | Energy-limited after | Margin over a 60 s vertical phase |
+|---|---:|---:|
+| 180 Wh kg⁻¹ | 141 s | 2.3 × |
+| 120 Wh kg⁻¹ | 94 s | 1.6 × |
+| 100 Wh kg⁻¹ | 78 s | 1.3 × |
+| 80 Wh kg⁻¹ | 62 s | 1.0 × |
+
+The two requirements pull against each other — the chemistry that delivers the power carries
+less energy — and at 80 Wh kg⁻¹ the margin is gone. The buffer masses used here are therefore a
+cell-selection requirement rather than a free parameter, and the requirement is demanding in
+both currencies at once.
 
 | Group | Build-up | Assumed in 6.2 |
 |---|---:|---:|
@@ -2848,6 +2885,15 @@ Several results depend on coefficients that were not computed for this geometry:
   is not in question — the yaw arm is the semi-span, so the available moment is 2.4 times
   the pitch moment — but directional stability and yaw damping are a single open item
   resting on a component whose section has not been selected.
+- The **battery buffer's specific power**, which Section 6.7 now identifies as the most
+  exposed number in the mass budget. It asks for 4.6 kW kg⁻¹ where the only figures this study
+  has read give 0.7 to 1.3 kW kg⁻¹ at pack level for power-application Li-ion [21]. At the top
+  of that range the buffer would mass 6.4 kg instead of 1.8 and **the light design's budget
+  would not close**. The assumption is that a purpose-built short-duration buffer beats an
+  automotive traction pack by three and a half to six times; that is plausible in kind and
+  unverified in magnitude, and Bill 3 rests on it. The energy side compounds it, since the
+  crossover from power-limited to energy-limited falls from 141 s to 62 s if the cell carries
+  80 Wh kg⁻¹ instead of 180, against a vertical phase of about a minute.
 - The **cruise state of the tip rotors.** Section 5.2 shows that they must turn freely at
   zero shaft load rather than stop, on pain of adding 61 to 74 percent to the zero-lift drag,
   and that fixed pitch removes feathering as a third option. The estimate behind that is an
