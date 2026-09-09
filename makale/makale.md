@@ -2394,20 +2394,18 @@ same report concludes that reflexed mean lines "may be of questionable value bec
 adverse effect of this mean-line shape on the maximum lift coefficient." **Reflex does not
 trim this aircraft, and no plausible amount of it would.**
 
-**Nor is 2R212 an unlucky choice.** A survey of ten reflexed sections assembled specifically
-for flying-wing use — the Eppler 184, 186 and 387, FX 69-H-083, NACA M5 and M6, Selig 5010 and
-5020, MH 60 and HS-522 — reports zero-lift pitching-moment coefficients of order 10⁻⁴ for every
-one of them [27]. That paper states the requirement plainly, that "for trim flight, pitching
-moment coefficient at zero angle of attack, C_m0, must be positive", and then tabulates ten
-sections none of which reaches a thousandth; the tabulated signs are also negative throughout,
-which contradicts the requirement the same paper states, so the numbers are quoted here as
-evidence of magnitude rather than of sign. Between that survey and the measured +0.004 of
-2R212, **the reflex family delivers something of order a few thousandths against a requirement
-of 0.056** — a gap of one to two orders of magnitude, and not one that a better choice of
-section closes.
+The requirement 2R212 was built to meet is the one this configuration has. A survey of sections
+assembled for flying-wing use states it in the same terms — "for trim flight, pitching moment
+coefficient at zero angle of attack, C_m0, must be positive" — and identifies the practical
+family as the Eppler 184, 186 and 387, FX 69-H-083, NACA M5 and M6, Selig 5010 and 5020, MH 60
+and HS-522 [27]. **No numerical value is taken from that survey here.** Its tabulated
+coefficients are negative for all ten sections, which contradicts the positive-C_m0 requirement
+the same paper states two pages earlier, and a quantity this study cannot reconcile is not a
+quantity it will cite. The only measured number in hand remains the +0.004 of 2R212.
 
-The point can be put as a design trade, since a section that did more would buy back some of
-the twist:
+**Whether that single number is representative is now the most consequential open question in
+the trim chain, and it is a question for the literature rather than for a calculation.** A
+section supplying more would buy back the twist, and the sensitivity is steep:
 
 | If the section supplies C_m0 = | Washout still needed | Inviscid e | Cruise L/D |
 |---:|---:|---:|---:|
@@ -2416,9 +2414,13 @@ the twist:
 | 0.020 | 6.0° | 0.937 | 12.01 |
 | 0.050 | 1.3° | 0.986 | 12.21 |
 
-The lever is real — a section supplying 0.02 would recover almost the whole trim penalty — but
-nothing in the literature read here supplies 0.02. At the value that is measured, reflex buys
-half a degree of the nine, and the trim problem remains a twist problem.
+At the one value that has been measured, reflex buys half a degree of the nine and the trim
+problem stays a twist problem. At five times that value it would buy three degrees and most of
+the lost efficiency. **This paper takes the conservative branch** — nine degrees of washout and
+the penalty that goes with it — because that is what the evidence in hand supports, and it
+records that a single measured section, published in 1933, is carrying the choice. A reader
+who knows of modern reflexed sections reaching C_m0 of 0.02 should read the third row of the
+table as the design point instead, and the trim penalty as largely recoverable.
 
 What trims it is washout, which is how tailless aircraft have always been trimmed: on a swept
 wing the tips lie well aft, so negative tip incidence produces a nose-up moment about the
