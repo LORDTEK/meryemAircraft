@@ -218,12 +218,48 @@ configuration needs — it falls short by a factor of about three, and an earlie
 this paper quoted 46 N·m without saying where it came from. The moment must therefore come
 from the second mechanism: the strip changes the circulation of the half-wing it sits on,
 which is how a Gurney flap or a low fence works, and the affected area is the wing's, not
-the strip's. Twenty degrees per second then asks for **ΔC_L ≈ 0.12** over the strip's span. Whether a
-device of this kind delivers that increment is a question for the experimental literature on
-Gurney flaps and chordwise fences, and this paper does not settle it: no measurement of this
-strip on this geometry exists, and the increment is not computed here either. **Roll
-authority is therefore sized and not closed**, and the quantity a future measurement must
-return is ΔC_L, not a moment.
+the strip's. Twenty degrees per second then asks for **ΔC_L ≈ 0.12** over the strip's span.
+
+**That figure can be compared against a measurement, and the comparison is favourable.** Traub
+[18] tested an aspect-ratio-three wing in a low-speed tunnel with a Gurney flap two percent of
+chord in height, in two spanwise arrangements: full span, and **the inboard two-thirds only**.
+The second is the same spanwise fraction the strip occupies here. From the measured lift-curve
+slopes and zero-lift angles of that inboard case, the increment at lift coefficients spanning
+the present cruise condition is:
+
+| Clean C_L | With inboard flap | ΔC_L |
+|---:|---:|---:|
+| 0.30 | 0.442 | 0.142 |
+| 0.45 | 0.608 | 0.158 |
+| 0.60 | 0.773 | 0.173 |
+
+The requirement of 0.12 sits below the measured range rather than above it. **Two differences
+keep this short of a demonstration, and both cut the same way.** Traub's flap is at the
+trailing edge and perpendicular to the surface; the strip here is a swept fence on the lower
+surface, well forward of the trailing edge, and the mechanism is not identical. And his wing is
+unswept and rectangular where this one is swept and tapered. What the measurement establishes
+is that a device of this class, at this height fraction, over this spanwise extent, produces
+lift increments of the magnitude required — not that this strip produces one.
+
+**The comparison also exposes a design fault the paper had not noticed.** Traub's flap is two
+percent of chord everywhere. The strip specified in Section 4.4 grows linearly from 2 cm to
+6 cm while the chord it stands on shrinks:
+
+| Station along the strip | Local chord | Strip height | h/c |
+|---|---:|---:|---:|
+| root | 0.969 m | 0.020 m | 2.1 % |
+| mid | 0.682 m | 0.040 m | 5.9 % |
+| outboard end | 0.436 m | 0.060 m | 13.7 % |
+
+Gurney-type devices saturate in lift increment at around two percent of chord while their drag
+continues to grow. The inboard end of this strip is therefore in the right regime and the
+outboard end is far past it, producing drag out of proportion to the lift it changes. **The
+height law should follow the chord taper rather than oppose it**, which would give a strip of
+roughly constant h/c — and this is a change to the configuration, not to its description.
+
+**Roll authority is therefore sized, supported by a measurement on a comparable device, and
+still not closed.** The quantity a future measurement must return is ΔC_L for this strip on
+this planform, not a moment.
 
 **Hover is the harder case, and for a reason that is structural rather than numerical.** At
 zero airspeed only the inboard part of the strip is loaded, by the slipstream, and the same

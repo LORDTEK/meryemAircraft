@@ -392,45 +392,67 @@ the solver's moment about the centre of gravity, rather than from the neutral po
 12.8 percent against the 12.5 quoted above; the 0.3-point spread is the curvature of the
 fitted lift-moment slope and is smaller than the spread across the centre-of-gravity window.
 
-**Trim is not shown. It is a requirement, and the requirement is quantified.** At the cruise
-lift coefficient of 0.45 the moment to be balanced about the centre of gravity has coefficient
-C_L × (static margin), and the section camber must supply it. Across the plausible range of
-centre-of-gravity positions:
+**Trim was an open item, and it is now closed — by twist rather than by camber, and at a
+price.** At the cruise lift coefficient of 0.45 the moment to be balanced about the centre of
+gravity has coefficient C_L × (static margin): 0.056 at the centre of gravity the packaging
+rule gives, and less further aft.
 
-| CG, % root chord | x_cg, m | Static margin, % MAC | Camber C_m required |
+| CG, % root chord | x_cg, m | Static margin, % MAC | Moment to be balanced |
 |---:|---:|---:|---:|
 | 78 | 0.757 | +15.7 | 0.071 |
 | 80.2 (packaging rule) | 0.778 | +12.5 | 0.056 |
 | 83 | 0.805 | +8.3 | 0.037 |
 | 85 | 0.825 | +5.3 | 0.024 |
 
-The constraint is better stated the other way round, because doing so removes an assumption
-about what sections deliver. For a section able to supply a camber moment C_m0, the centre of
-gravity must lie no further forward than:
+An earlier version of this paper supposed that reflexed sections would supply this, on the
+strength of a range its authors had not read. Reading the source settles it in the other
+direction. In the variable-density tunnel measurements of Jacobs, Ward and Pinkerton [17], the
+reflexed section NACA 2R212 — two percent camber, mean line shaped specifically to give a
+small positive moment — returns **C_m0 = +0.004**, against −0.002 for the symmetric 0012 and
+−0.044 for the conventionally cambered 2412. That is one fourteenth of what the centre of
+gravity above demands, and one sixth of what even the aftmost entry in the table demands. The
+same report concludes that reflexed mean lines "may be of questionable value because of the
+adverse effect of this mean-line shape on the maximum lift coefficient." **Reflex does not
+trim this aircraft, and no plausible amount of it would.**
 
-| Section camber moment C_m0 | Most forward CG, % root chord | Static margin there, % MAC |
-|---:|---:|---:|
-| 0.02 | 85.6 | +4.4 |
-| 0.03 | 84.1 | +6.7 |
-| 0.04 | 82.6 | +8.9 |
-| 0.05 | 81.1 | +11.1 |
-| 0.06 | 79.6 | +13.3 |
+What trims it is washout, which is how tailless aircraft have always been trimmed: on a swept
+wing the tips lie well aft, so negative tip incidence produces a nose-up moment about the
+centre of gravity. Because this mechanism is geometric rather than sectional, the
+vortex-lattice model of Section 6.6 — whose sections are symmetric — can compute it directly.
+Applying a linear twist from zero at the root to θ_tip at the tip and re-trimming to
+C_L = 0.45 at each value:
 
-Read downward, the table is a trim constraint; read upward, it is a stability constraint,
-since a margin below about five percent is not a tailless aircraft anyone would fly. The two
-close on each other, and **the aft limit of roughly 85 percent of root chord is set by
-stability alone and is therefore firm; the forward limit is set by the section and is
-therefore not.** This paper does not fix the forward limit, because doing so would require a
-camber and reflex distribution it has not defined and a source for what such a distribution
-delivers that its authors have not read. What it fixes is the packaging rule's own answer,
-80.2 percent, and the observation that this sits in the part of the table reachable only by a
-section supplying rather more than the smallest camber moments. It is not a demanding constraint — the internal volume's own
-centroid is at 78.3 percent — but it is a constraint, and the placement of fuel, payload and
-engine is not free. What is *not* established is that any particular camber and twist
-distribution delivers the required moment at the required lift coefficient without an
-unacceptable cruise drag penalty: the vortex-lattice model carries symmetric sections, so it
-can size the requirement but cannot meet it. The aircraft of this paper is statically stable
-and has an open trim closure, and those two statements should not be run together.
+| Tip washout | Trim α | C_m about CG | Induced C_D | Span efficiency e | Cruise L/D |
+|---:|---:|---:|---:|---:|---:|
+| 0° | 6.68° | −0.058 | 0.01077 | 0.993 | 12.65 |
+| −4° | 8.20° | −0.034 | 0.01102 | 0.971 | 12.56 |
+| −6° | 8.98° | −0.021 | 0.01141 | 0.938 | 12.43 |
+| **−9°** | **10.16°** | **−0.001** | **0.01237** | **0.865** | **12.11** |
+
+**Nine degrees of tip washout trims the aircraft at cruise with no camber at all.** That is a
+large twist by transport-aircraft standards and an ordinary one for a swept tailless design,
+and it is not free: the span efficiency falls from 0.993 to 0.865 and the cruise lift-to-drag
+ratio from 12.65 to 12.11, a **4.3 percent penalty paid to be tailless**. It is the same kind
+of payment the rest of this paper is about — a capability bought in one currency and charged
+in another — and it had not previously been counted.
+
+**One assumption is retired by this.** Section 6.2 assumed a span efficiency of 0.85 without
+justification, and the range figures of Section 6.3 rest on it. The trimmed wing computes to
+0.865. The assumption was therefore conservative by 0.6 percent, and **the range figures do
+not change**; what changes is that they now have a basis. It is worth being clear about the
+direction of the argument, because the coincidence is easy to over-read: the assumption was
+not chosen to match this calculation, and the calculation was not tuned to the assumption.
+
+**What is still not established.** The twist here is linear, chosen for simplicity rather than
+optimised; a distribution shaped for span loading would trim at the same moment for a smaller
+efficiency penalty, so 4.3 percent should be read as an upper bound on the cost rather than as
+the cost. The vortex-lattice solution is inviscid, so it says nothing about how washout of this
+magnitude changes the stall behaviour of the outboard sections — washout normally improves it,
+which is a reason to expect no unpleasant surprise, not a demonstration that there is none.
+And the aft limit of the centre-of-gravity window, roughly 85 percent of root chord, is still
+set by static margin alone and is still firm. What has changed is that the forward limit is no
+longer set by a section property nobody had measured; it is set by how much twist the design is
+willing to pay for.
 
 **The requirement is therefore smaller and more recognisable than first stated.** An earlier
 version of this section asked for pitching-moment coefficients through ninety degrees of

@@ -197,6 +197,82 @@ def konvansiyon_denetimi():
 RHO_ = 1.225
 
 
+
+# ---------------------------------------------------------------------
+# BURULMA ile DENGE
+# ---------------------------------------------------------------------
+# NEDEN VAR. Metin, denge icin gereken kamber momentini (0,056) bir
+# GEREKSINIM olarak veriyordu ve refleks kesitlerin bunu verip
+# vermeyecegini acik birakiyordu. Kaynak okundu ve cevap CIKTI:
+#
+#   NACA TR-460 (Jacobs, Ward & Pinkerton 1933), degisken yogunluklu
+#   ruzgar tunelinde olculmus refleks kesit NACA 2R212: C_m0 = +0,004.
+#   Karsilastirma icin 0012: -0,002; 2R112: -0,020; 2412: -0,044.
+#   Raporun kendi sonucu: refleks orta cizgiler azami kaldirmayi
+#   dusurdugu icin "questionable value".
+#
+# Yani gereken 0,056'nin ondorttе biri. REFLEKSLE OLMUYOR.
+#
+# Gercek ucan kanatlar dengeyi BURULMAYLA (washout) kurar: ok acisi
+# uclari geriye tasidigi icin uctaki negatif burulma burun-yukari
+# moment uretir. vlm.py'nin kesitleri simetrik oldugundan bu HESAPLANABILIR --
+# kambere ihtiyac yok. Asagidaki tarama onu yapar.
+
+BURULMA_KESIT = 10
+
+
+def burulmali_kanat(burulma_uc, n=200, kesit=BURULMA_KESIT):
+    """Kokte sifir, ucta burulma_uc olan DOGRUSAL burulma."""
+    ist, yari, _ = istasyonlar(n=n)
+    idx = np.linspace(0, len(ist) - 1, kesit).astype(int)
+    xs = []
+    for i in idx:
+        y, x, c, tc, _ = ist[i]
+        xs.append(asb.WingXSec(
+            xyz_le=[x, y, 0.0], chord=c, twist=burulma_uc * (y / yari),
+            airfoil=asb.Airfoil("naca00%02d" % int(round(tc * 100)))))
+    return asb.Wing(name="govde", symmetric=True, xsecs=xs)
+
+
+def _burulma_kos(burulma_uc, alfa, x_ref, hiz=30.0):
+    o = olcuier()
+    ac = asb.Airplane(wings=[burulmali_kanat(burulma_uc)], s_ref=o["alan"],
+                      b_ref=o["aciklik"], c_ref=mac()[0],
+                      xyz_ref=[x_ref, 0.0, 0.0])
+    r = asb.VortexLatticeMethod(
+        airplane=ac, op_point=asb.OperatingPoint(velocity=hiz, alpha=alfa),
+        spanwise_resolution=SPAN_COZ, chordwise_resolution=VETER_COZ).run()
+    return float(r["CL"]), float(r["Cm"]), float(r["CD"])
+
+
+def denge_burulmasi(x_cg=None, CL=None, burulmalar=(0.0, -4.0, -6.0, -9.0)):
+    """Her burulma icin: C_L'yi veren alfa, oradaki C_m, C_Di ve e.
+
+    C_m dogrusal oldugu icin C_L'de ara deger alinabilir; C_Di DEGILDIR,
+    o yuzden alfa ikiye bolerek ARANIR ve C_D orada dogrudan okunur.
+    (Ilk surumde C_D de dogrusal ara deger alinmisti ve e > 1 gibi
+    fiziksel olarak imkansiz degerler veriyordu.)
+    """
+    kok = P["kokVeter"]
+    x_cg = CG_KURAL * kok if x_cg is None else x_cg
+    CL = CL_SEYIR if CL is None else CL
+    o = olcuier()
+    cik = []
+    for tw in burulmalar:
+        lo, hi = 0.0, 20.0
+        for _ in range(14):
+            mid = (lo + hi) / 2
+            if _burulma_kos(tw, mid, x_cg)[0] < CL:
+                lo = mid
+            else:
+                hi = mid
+        a = (lo + hi) / 2
+        c, cm, cd = _burulma_kos(tw, a, x_cg)
+        e = c * c / (math.pi * o["AR"] * cd)
+        cik.append((tw, a, cm, cd, e))
+    return cik
+
+
 if __name__ == "__main__":
     kok = P["kokVeter"]
     MAC, x_le = mac()
@@ -232,12 +308,30 @@ if __name__ == "__main__":
         print("  %9.1f%% %10.4f %11.1f%% %12.3f"
               % (100 * oran, x_cg, 100 * sm, CL_SEYIR * sm))
     print()
-    print("  Refleks kesitler tipik olarak 0,02-0,05 C_m0 verir; pencerenin")
-    print("  ust ucu (%83-85) bu araliga girer, alt ucu girmez.")
+    print("  OLCULMUS refleks degeri (NACA TR-460, 2R212): C_m0 = +0,004.")
+    print("  Yani pencerenin HICBIR satiri refleksle kapanmiyor -- gereken")
+    print("  en kucuk deger bile (0,024) olculenin alti katidir.")
     print()
     print("  Not: kesitler simetrik; C_m0 bu kosumda sifirdir ve gercek")
     print("  degildir. Bu sonuc KARARLILIGI verir, DENGEYI vermez: yukaridaki")
     print("  'gereken C_m' bir GEREKSINIMDIR, saglandiginin gosterimi degil.")
+    print()
+    print("=" * 74)
+    print("BURULMA ILE DENGE -- refleks yetmiyor, burulma yetiyor")
+    print("=" * 74)
+    print("  NACA TR-460'in olctugu refleks kesit 2R212: C_m0 = +0,004")
+    print("  (0012: -0,002 · 2R112: -0,020 · 2412: -0,044). Gereken 0,056.")
+    print("  Refleks bu isi GORMUYOR. Ucan kanatlarin gercek cozumu burulma.")
+    print()
+    print("  %8s %10s %10s %10s %8s" % ("uc bur.", "denge alfa", "C_m",
+                                        "C_Di", "e"))
+    for tw, a, cm, cd, e in denge_burulmasi():
+        print("  %7.1f° %9.2f° %+10.4f %10.5f %8.3f" % (tw, a, cm, cd, e))
+    print()
+    print("  -9 derece uc burulmasinda C_m ~ 0: UCAK SEYIRDE DENGELI.")
+    print("  Bedeli aciklik veriminde: 0,993 -> 0,865.")
+    print("  Makalenin VARSAYDIGI e = 0,85 ile arasi %0,6 -- yani varsayim")
+    print("  elverissiz tarafta ve dogru cikti; menzil sayilari degismiyor.")
     print()
     print("=" * 74)
     print("KONVANSIYON DENETIMI -- iki zincir ayni kurallari mi kullaniyor?")

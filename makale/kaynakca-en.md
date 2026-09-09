@@ -39,3 +39,9 @@
 16. Sharpe, P. D. *NeuralFoil: An airfoil aerodynamics analysis tool using
     physics-informed machine learning.* 2023.
     Software: https://github.com/peterdsharpe/NeuralFoil
+17. Jacobs, E. N.; Ward, K. E.; Pinkerton, R. M. *The Characteristics of 78
+    Related Airfoil Sections from Tests in the Variable-Density Wind Tunnel.*
+    NACA Report No. 460, National Advisory Committee for Aeronautics, 1933.
+    (Reflexed mean-line sections NACA 2R112 and 2R212, pp. 52–53.)
+18. Traub, L. W. *Effect of Gurney Flaps on Non-Planar Wings at Low Reynolds
+    Number.* Aerospace, 2024, 11 (9), 728. https://doi.org/10.3390/aerospace11090728
