@@ -284,6 +284,28 @@ does not replace them with computed values; it asks a narrower question that can
 answered honestly: **are the assumed values inside the range that a calculation gives,
 and on which side?**
 
+**What the vortex-lattice method is being asked for, and what it is not.** Four results in
+this paper come from a vortex-lattice solution: the span efficiency below, the neutral point
+of Section 7.6, the twist required to trim, and the roll damping of Section 4.4. Falkner's
+account of the method's accuracy [24] separates the quantities it settles quickly from those
+it does not, and the separation is favourable here. He reports that "the grading of spanwise
+circulation converges quickly" and that "the local aerodynamic centre can be adequately defined
+by the use of two chordwise terms only", while "a reasonably accurate calculation of pressure
+distribution in the neighbourhood of a discontinuity in plan would require at least three or
+four terms". Every quantity taken from the method here is of the first kind — circulation and
+aerodynamic centre — and none is of the second. That is consistent with what the convergence
+study found: the neutral point moved 0.26 percent over a threefold refinement, while the span
+efficiency needed four times the default resolution before it stopped returning values above
+unity, which is physically impossible for a planar wing and is the signature of an
+under-resolved plan discontinuity — this planform is cropped, and therefore has one.
+
+**A second boundary is worth stating because it marks where the method is not used.** For
+wings of low aspect ratio and high sweep, leading-edge vortex separation dominates and the
+linear method must be extended by a suction analogy to follow it [25]. That regime is not this
+wing's cruise condition — aspect ratio 6.03 at 45° root sweep, at incidences under eleven
+degrees — but it *is* the regime of the transition incidences in Section 7. No vortex-lattice
+result is quoted there, and this is why.
+
 **Span efficiency.** A vortex-lattice solution of the planform of Section 4.2 [15] gives
 an inviscid span efficiency of 0.99. That is not the same quantity as the 0.85 used here.
 The vortex-lattice figure counts only the departure of the induced drag from the
@@ -291,6 +313,13 @@ elliptic ideal; the 0.85 is an Oswald-type efficiency that also carries the visc
 drag due to lift, which for a clean wing runs at roughly 85 to 90 percent of the
 inviscid value. The two are consistent. Reporting the calculation as an improvement on
 the assumption would be a category error, and it is not claimed.
+
+**Section 7.6 unsettles this, and the unsettling is not resolved here.** The 0.99 belongs to
+the untwisted planform, and the untwisted planform cannot be trimmed; the trimmed wing computes
+to 0.865, which under the same reasoning implies an Oswald value of 0.735 to 0.78 — below the
+assumed 0.85 rather than above it. The ratio between the two efficiencies is itself a range
+this study has not sourced, so the assumption is not revised on the strength of it. What has
+changed is that it is no longer bounded from above by a calculation, and Section 8 says so.
 
 The same solution gives a lift-curve slope of 3.87 rad⁻¹ against the 4.72 rad⁻¹ that
 the transition simulation of Section 7.4 assumes — eighteen percent lower, and in the

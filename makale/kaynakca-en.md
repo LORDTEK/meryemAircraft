@@ -61,3 +61,9 @@
     Maneuvers.* Qualifying examination report, Department of Mechanical
     Engineering and Applied Mechanics, University of Pennsylvania, 2020;
     arXiv:2412.06197, 2024.
+24. Falkner, V. M. *The Scope and Accuracy of Vortex Lattice Theory.*
+    Aeronautical Research Council Reports and Memoranda No. 2749, Ministry of
+    Supply, London, 1952.
+25. Smith, C. W.; Bhateley, I. C. *Application of the Vortex-Lattice Technique to
+    the Analysis of Thin Wings with Vortex Separation and Thick Multi-Element
+    Wings.* NASA report, Fort Worth Division of General Dynamics, 1976.

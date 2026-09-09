@@ -1415,3 +1415,74 @@ kanadın **dış** yarısı, izin dışında kalan kısım.
 - Kaynak bir doktora yeterlik raporu, hakemli makale değil. Böyle anıldı.
 
 `zarf.py`'ye `etkin_alfa()` eklendi. Kaynakça 23.
+
+---
+
+## ⚠️ KENDİ HATAM — açıklık verimi karşılaştırmasında kategori hatası (09.09.2026)
+
+Burulma bulgusunu yazarken şunu söylemiştim: *"makalenin varsaydığı e = 0,85 ile
+hesaplanan 0,865 arasında %0,6 fark var, varsayım elverişsiz tarafta ve doğru
+çıktı; menzil sayıları değişmiyor."*
+
+**Yanlış.** İkisi aynı büyüklük değil, ve bunu §6.6 zaten yazıyor:
+
+- VLM'in verdiği **0,865 ISKOZ OLMAYAN (inviscid)** açıklık verimi.
+- §6.2'nin varsaydığı **0,85 OSWALD** verimi — kaldırmaya bağlı iskoz
+  sürüklemeyi de taşıyor.
+
+§6.6'nın kendi zinciri: Oswald ≈ inviscid × 0,85–0,90. O zaman:
+
+| | inviscid | ima edilen Oswald | varsayılan 0,85 |
+|---|---|---|---|
+| burulmasız (uçamaz) | 0,99 | 0,84–0,89 | **içinde**, alt ucunda → temkinli |
+| burulmalı (uçar) | **0,865** | **0,735–0,78** | **ÜSTÜNDE** → iyimser |
+
+Yani karşılaştırmayı doğru yapınca sonuç tersine dönüyor: **denge için gereken
+burulma, açıklık verimi varsayımını güvenli kılan payı yiyor.** Eğer 0,85–0,90
+oranı doğruysa seyir L/D 12,04 değil **11,4–11,7**, ve menzil %3–5 düşer
+(1598 → 1518–1550 km).
+
+### Ama düzeltmeyi YAPMADIM, ve sebebi
+
+**0,85–0,90 oranı da kaynaksız.** §6.6'da genel bilgiden alınmış ve atfı yok.
+Kaynaksız bir oranı bir başlık sayısına yaymak, belirtilmiş bir varsayımı
+belirtilmemiş bir varsayımla değiştirmek olurdu.
+
+Kaynak gerektirmeden söylenebilen **yapısal** nokta ise yazıldı: §6.6'dan önce
+varsayım bir hesapla **üstten sınırlıydı**; artık değil. Menzil sayılarının doğru
+olup olmadığı, bu çalışmada kimsenin ölçmediği bir katsayıya bağlı. §7.6, §6.6 ve
+§8'e böyle geçti.
+
+**Gereken iki şey:** (1) inviscid/Oswald oranı için bir kaynak, (2) burulmalı
+kanadın iskoz hesabı.
+
+---
+
+## VLM'in metodolojik dayanağı (09.09.2026)
+
+Artık **dört** sonuç VLM'den geliyor: açıklık verimi, tarafsız nokta, denge
+burulması, yatış sönümlemesi. Dayanağı okundu.
+
+**Falkner (ARC R&M 2749, 1952)** hangi büyüklüklerin hızlı, hangilerinin yavaş
+yakınsadığını ayırıyor:
+
+> *"the grading of spanwise circulation converges quickly"* · *"the local
+> aerodynamic centre can be adequately defined by the use of two chordwise terms
+> only"* · ama *"a reasonably accurate calculation of pressure distribution in
+> the neighbourhood of a discontinuity in plan would require at least three or
+> four terms."*
+
+**Bizim aldığımız her büyüklük birinci sınıfta** (dolaşım ve aerodinamik merkez),
+hiçbiri ikinci sınıfta (basınç dağılımı). Ve bu, yakınsama çalışmamızın bulduğuyla
+birebir uyuşuyor: tarafsız nokta üç kat çözünürlükte %0,26 oynadı, ama açıklık
+verimi varsayılan çözünürlüğün dört katına kadar **1'in üstünde** değerler verdi —
+düzlemsel kanatta fiziksel olarak imkânsız, ve **çözülmemiş bir planform
+süreksizliğinin imzası.** Bizim planform kırpılmış, yani süreksizliği var.
+
+**Smith & Bhateley (NASA 1976)** sınırı işaretliyor: düşük en-boy oranı + yüksek
+ok açısında hücum kenarı girdap ayrılması baskın ve doğrusal yöntem **emme
+benzeşimiyle** genişletilmeli. Bizim seyir koşulumuz o rejimde değil (AR 6,03,
+45° kök oku, α < 11°) — ama §7'nin geçiş açıları **o rejimde**. Orada hiçbir VLM
+sonucu anılmıyor, ve sebebi artık yazılı.
+
+Kaynakça 24 ve 25.
