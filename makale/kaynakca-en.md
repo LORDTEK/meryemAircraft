@@ -84,3 +84,9 @@
 30. Carter, G. I. *Adaptive Control of the Transition from Vertical to
     Horizontal Flight Regime of a Quad-Tailsitter UAV.* M.S. thesis, Virginia
     Polytechnic Institute and State University, 2021.
+31. Cheng, Z.; Pei, H. Time Optimal Altitude-Hold Flight Mode Transition
+    Strategy for a Class of Ducted Fan Tail Sitter UAV. *Aerospace* **2024**,
+    11 (8), 654. https://doi.org/10.3390/aerospace11080654
+32. Ross, J. C.; Storms, B. L.; Carrannanto, P. G. *Lift-Enhancing Tabs on
+    Multielement Airfoils.* NASA Technical Memorandum 112990, Ames Research
+    Center, 1997.
