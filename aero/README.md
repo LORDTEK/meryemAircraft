@@ -1229,3 +1229,72 @@ Bu iki sonuç da hafızadan değil, **PDF açılıp sayı gözle görülerek** �
 bir iddiayı çürüttü (refleks), biri bir iddiayı destekledi ama yanında bir
 tasarım hatası gösterdi (şerit yüksekliği). İkisi de aramayla ya da hatırlamayla
 bulunamazdı.
+
+---
+
+## 🔑 SAPMA KAYNAKLARI OKUNDU (09.09.2026) — biri doğruladı, biri uyardı
+
+### NASA TM-4649 (Moul ve ark. 1995) — dört adet 60° ok açılı uçan kanat
+
+Rüzgâr tüneli, α = −8°…48°. Dikey kuyruksuz hâlde:
+
+> *"each of these wings possessed **unstable or essentially neutral values of
+> directional stability** for most of the angles of attack tested."*
+
+**Bizim C_n_β = 0 sonucumuz bir VLM tuhaflığı değil.** Ölçülmüş davranış bu.
+İkinci bir kaynak (NACA TR-796) aynı şeyi deneyim olarak söylüyor:
+*"directional stability at low angles of attack for the wing alone has generally
+been found to be inadequate."*
+
+**Ama aynı rapor bir uyarı da taşıyor.** Ok kanatlarda yüksek hücum açısında
+**pitch-up**, ve *"became more severe as aspect ratio was increased"*. Bazı
+konfigürasyonlarda **hung stall** — burun aşağı otoritesi kurtarmaya yetmeyen bir
+denge noktası.
+
+Onların en-boy oranı 1,15–2,15; bizimki **6,03**. Mekanizmaları hücum kenarı
+girdap patlaması ve bizim 45°/35° ok açılı AR-6 kanadımız onu aynı biçimde
+üretmez. **Ama trend bizim aleyhimize** ve ortaya çıktığı açılar bizim geçişte
+geçtiğimiz 17–22° ile örtüşüyor. Geçiş kontrol edilebilirliğini **açık tutmak
+için ikinci bir sebep** — ve dengeleme için zaten gereken burulmayı istemek için
+ikinci bir sebep (burulma ok kanatta kök-önce perdövites verir, pitch-up'ın
+klasik çaresi).
+
+### NACA TR-796 (1944) — kuyruksuz uçaklarda uç finleri
+
+Üç şey verdi, üçü de metinde yoktu:
+
+**1. Mimari seçimi doğruluyor.**
+> *"If the tailless airplane has a swept-back wing, the usual practice is to
+> place the vertical tail surfaces at the tips rather than at the center section
+> in order to take advantage of the longer moment arm."*
+
+Uç çerçevelerini moment kolu ve iniş yapısı için koymuştuk; meğer yön kararlılığı
+yüzeyinin de istediği yer orasıymış.
+
+**2. Benim hesabım eksik ama muhafazakâr.** Fin'in **sürüklemesi** yarım açıklık
+kolunda etki ediyor, yani *"the drag characteristics as well as the lift
+characteristics exert an influence"*. Ve profil-sürükleme ilkesiyle çalışan
+finler, kaldırma ilkesiyle çalışanlardan **daha etkili** bulunmuş. Ben yalnız
+kaldırmayla boyutlandırdım (a_f = 4/rad) → **gereken alanı fazla tahmin
+etmişim**, az değil.
+
+**3. Yeni bir tasarım gereksinimi: toe açısı.** En-boy oranı ~2'nin altındaki
+finler **toe-in**, orta/yüksek olanlar **toe-out** ister. Bizim çerçeveler 1,42 m
+boyunda ve on milimetrelerce veterde — ikinci sınıfta, yani **toe-out**. Ve
+toe-out'un bir tehlikesi var: arka fin perdövitese girecek kadar sapma olursa
+**büyük bir kararsızlaştırıcı moment** doğuyor; toe-in'de tersine kararlılaştırıcı.
+
+Yani kılıfın bir toe açısına ihtiyacı var, o açının bir işareti var, ve gereken
+işaret yanında bir arıza kipi getiriyor. Metne §4.4 ve §8'e yazıldı.
+
+### Ne transfer eder, ne etmez — dikkat edilen ayrım
+
+| bulgu | transfer eder mi |
+|---|---|
+| kuyruksuz kanatta C_n_β ≈ 0 | **eder** — geometrik, yanal kuvvet yüzeyi yok |
+| uçları dikey yüzey yeri olarak kullanmak | **eder** — ok açısı kolu uzatıyor |
+| fin sürüklemesinin katkısı, toe açısı | **eder** — geometriden bağımsız |
+| yüksek α'da yanal kararsızlık (girdap patlaması) | **etmez** — 60°/AR-2'ye özgü |
+| pitch-up eğilimi | **belirsiz** — mekanizma farklı ama trend aleyhte; açık bırakıldı |
+
+Kaynakça 19 (NACA TR-796) ve 20 (NASA TM-4649) eklendi.

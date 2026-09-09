@@ -45,3 +45,10 @@
     (Reflexed mean-line sections NACA 2R112 and 2R212, pp. 52–53.)
 18. Traub, L. W. *Effect of Gurney Flaps on Non-Planar Wings at Low Reynolds
     Number.* Aerospace, 2024, 11 (9), 728. https://doi.org/10.3390/aerospace11090728
+19. *An Interim Report on the Stability and Control of Tailless Airplanes.*
+    NACA Report No. 796, Langley Research Division, National Advisory Committee
+    for Aeronautics, 1944. (Tip fins on swept tailless aircraft, pp. 428–429.)
+20. Moul, T. M.; Fears, S. P.; Ross, H. M.; Foster, J. V. *Low-Speed Wind-Tunnel
+    Investigation of the Stability and Control Characteristics of a Series of
+    Flying Wings With Sweep Angles of 60°.* NASA Technical Memorandum 4649,
+    Langley Research Center, August 1995.
