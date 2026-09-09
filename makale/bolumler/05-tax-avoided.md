@@ -65,8 +65,12 @@ blade sections drive and the outer sections retard, and they balance. At that co
 shaft does no work, so the motor neither drives nor brakes and the electrical cost is the
 controller's standby draw and the bearing losses — not the propulsive power the propeller would
 need to produce thrust. The blades sit at low incidence with attached flow, which is the first
-row of the table. **The tip rotors are therefore commanded to spin freely in cruise, neither
-driven nor braked**, and this is the state assumed throughout Section 6.
+row of the table. **The tip rotors are therefore held in cruise at the
+zero-shaft-torque condition — neither stopped nor driven, but turning at whatever speed the
+freestream gives them** — and this is the state assumed throughout Section 6. It is worth
+naming it explicitly because both neighbouring states are wrong: stopping them costs most of
+the drag budget, and driving them costs propulsive power for a thrust the aircraft does not
+want in cruise.
 
 Two things follow, and neither was previously stated. The first is that the fixed-pitch
 decision of Section 4.3 removes feathering from the design space, so the choice is between
