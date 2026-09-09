@@ -61,8 +61,10 @@ present evidence, its aerodynamic moment. Resolving that margin along the trajec
 the aircraft never reaches ninety degrees of incidence — the relative wind rotates with the
 body — so the outstanding measurement is the pitching moment to some twenty-two degrees at low
 dynamic pressure, together with trim at cruise. A vortex-lattice solution establishes static
-pitch stability under a stated packaging rule and sizes the camber moment that trim requires
-without closing it. Roll is treated the same way: the inertia and the damping are computed
+pitch stability under a stated packaging rule and closes cruise trim, though not in the way
+first supposed: measured data for reflexed sections fall an order of magnitude short of the
+moment required, while nine degrees of tip washout supplies it, at a cost of 4.3 percent of
+cruise lift-to-drag ratio. Roll is treated the same way: the inertia and the damping are computed
 for this planform, the moment needed for a twenty-degree-per-second roll follows from them,
 and the strip's effectiveness in supplying it is stated as a requirement rather than
 demonstrated. Yaw has the strongest authority of the three axes, because differential tip

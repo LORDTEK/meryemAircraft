@@ -1135,3 +1135,97 @@ listelemem hatalıydı.
 Belirsizlik tablosunda başlangıç yayılımı zaten var (%4,3), simetri
 zaten seçim ölçütü olarak yazılı, ve `bl_E` "reference state" diliyle
 anılıyor. Dokunulmadı.
+
+---
+
+## 🔑 KAYNAKTAN ÇALIŞMAK — iki taşıyıcı iddia kapandı (09.09.2026)
+
+35 PDF `kaynakca/` altına yüklendi ve okundu. İki sonuç, ikisi de metni
+değiştirdi.
+
+### 1. DENGE: refleks yapamıyor, burulma yapıyor
+
+**NACA TR-460** (Jacobs, Ward & Pinkerton 1933), değişken yoğunluklu rüzgâr
+tüneli, s. 52–53. Refleks orta çizgili kesitler:
+
+| kesit | C_m0 (ölçülmüş) |
+|---|---|
+| NACA 2412 (normal kamber) | −0,044 |
+| NACA 2R112 | −0,020 |
+| NACA 0012 (simetrik) | −0,002 |
+| **NACA 2R212 (refleks)** | **+0,004** |
+
+Bizim gereksinimimiz **0,056**. Yani ölçülenin **on dört katı**. Pencerenin en
+gevşek satırı bile (0,024) ölçülenin altı katı. **Refleks bu işi görmüyor** — ve
+raporun kendi sonucu da refleks orta çizgilerin azami kaldırmayı düşürdüğü için
+"questionable value" olduğu.
+
+Daha önce metinde duran "refleks kesitler 0,02–0,05 verir" cümlesi yalnızca
+atıfsız değil, **bir mertebe yanlıştı**. Silmekle iyi etmişiz.
+
+**Çözüm burulma.** Ok açısı uçları geriye taşıdığı için uçtaki negatif burulma
+burun-yukarı moment üretir; mekanizma **geometrik**, kesitsel değil, o yüzden
+simetrik kesitli VLM onu doğrudan hesaplayabiliyor. `kararlilik.py`'ye
+`denge_burulmasi()` eklendi:
+
+| uç burulması | denge α | C_m | C_Di | e | seyir L/D |
+|---|---|---|---|---|---|
+| 0° | 6,68° | −0,058 | 0,01077 | 0,993 | 12,65 |
+| −4° | 8,20° | −0,034 | 0,01102 | 0,971 | 12,56 |
+| −6° | 8,98° | −0,021 | 0,01141 | 0,938 | 12,43 |
+| **−9°** | **10,16°** | **−0,001** | 0,01237 | **0,865** | **12,11** |
+
+**Uçak −9° uç burulmasıyla, sıfır kamberle seyirde dengeleniyor.** Bedeli
+**%4,3 seyir L/D**. Bu, makalede hiç sayılmamış bir kalem: kuyruksuz olmanın
+kendi vergisi.
+
+⚠️ **İlk sürümde bir hata yaptım ve düzelttim.** C_Di'yi C_L'de doğrusal ara
+değerle almıştım; C_Di C_L'de **karesel**, o yüzden e > 1 gibi fiziksel olarak
+imkânsız değerler çıkıyordu (0° için 1,069). Şimdi C_L = 0,45'i veren α ikiye
+bölerek **aranıyor** ve C_D orada doğrudan okunuyor. C_m doğrusal olduğu için
+onda ara değer meşru.
+
+**Bir varsayım emekli oldu.** §6.2, açıklık verimini gerekçesiz 0,85
+varsaymıştı ve menzil sayıları ona dayanıyor. Dengeli kanadın hesaplanan değeri
+**0,865** — varsayım %0,6 ile elverişsiz tarafta. **Menzil sayıları
+değişmiyor**, ama artık dayanağı var.
+
+### 2. YATIŞ: ölçüm gereksinimi kuşatıyor, ama şeridin yükseklik yasası yanlış
+
+**Traub 2024** (*Aerospace* 11(9):728), AR=3 kanat, **%2 veter** Gurney, düşük
+Re rüzgâr tüneli. Kritik olan: **iç 2/3 açıklık** düzenlemesi de ölçülmüş — bizim
+şeridimizin kapladığı fraksiyonun aynısı. Ölçülen katsayılardan
+(C_Lα 0,065/derece, α_ZL −3,25°; temiz 0,059 ve −1,53°):
+
+| temiz C_L | iç-2/3 Gurney ile | ΔC_L |
+|---|---|---|
+| 0,30 | 0,442 | 0,142 |
+| 0,45 | 0,608 | **0,158** |
+| 0,60 | 0,773 | 0,173 |
+
+Gereksinimimiz **0,12** — ölçülen bandın **altında**. Ama iki fark var ve ikisi
+de aynı yöne çekiyor: Traub'un çıtası **firar kenarında ve akışa dik**, bizimki
+alt yüzeyde ve oklu; onun kanadı **oksuz ve dikdörtgen**. Yani gösterim değil,
+**mertebe desteği**.
+
+**Aynı karşılaştırma bir tasarım hatası ortaya çıkardı.** Traub'un çıtası her
+yerde %2 veter. Bizim şerit 2→6 cm doğrusal artarken veter daralıyor:
+
+| şerit boyunca | yerel veter | yükseklik | h/c |
+|---|---|---|---|
+| kök | 0,969 m | 0,020 m | %2,1 |
+| orta | 0,682 m | 0,040 m | %5,9 |
+| dış uç | 0,436 m | 0,060 m | **%13,7** |
+
+Gurney tipi cihazlar %2 civarında **doyuyor**, sürükleme ise artmaya devam
+ediyor. Şeridin iç ucu doğru rejimde, **dış ucu çok ötesinde**: değiştirdiği
+kaldırmayla orantısız sürükleme üretiyor. **Yükseklik yasası veter daralmasını
+takip etmeli**, ona karşı gitmemeli. Bu, tarifin değil **konfigürasyonun**
+değişmesi demek.
+
+### Ders
+
+Bu iki sonuç da hafızadan değil, **PDF açılıp sayı gözle görülerek** çıktı. Biri
+bir iddiayı çürüttü (refleks), biri bir iddiayı destekledi ama yanında bir
+tasarım hatası gösterdi (şerit yüksekliği). İkisi de aramayla ya da hatırlamayla
+bulunamazdı.

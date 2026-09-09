@@ -111,9 +111,13 @@ Several results depend on coefficients that were not computed for this geometry:
   27.1 N·m. What remains from the literature is the strip's own effectiveness, and it is
   the load-bearing part. The strip's own force as a swept fence supplies about a third of
   the required moment; the moment must therefore come from the change in the half-wing's
-  circulation, which asks for ΔC_L ≈ 0.12 over the strip's span. That increment is neither
-  measured nor computed here, so **roll authority is sized and not closed, in the same sense
-  as cruise trim.** An earlier version of this
+  circulation, which asks for ΔC_L ≈ 0.12 over the strip's span. Published wind-tunnel data
+  for a two-percent-chord device over the same inboard two-thirds of span report increments
+  of 0.14 to 0.17 [18], so the requirement is below what a comparable device delivers — but
+  that device is a trailing-edge flap on an unswept wing, and **roll authority remains sized
+  and not closed.** The same comparison shows the strip's height law to be wrong outboard,
+  reaching 13.7 percent of local chord where the mechanism saturates near two; Section 4.4
+  records this as a change the configuration needs. An earlier version of this
   paper quoted 46 N·m without stating the mechanism it came from; that number implies
   ΔC_L ≈ 0.20 and is not reproduced here as an authority.
 - The **directional stability** of the configuration. Section 4.4 computes C_n_β = 0 for

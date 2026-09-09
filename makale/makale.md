@@ -2,7 +2,7 @@
 
 Meryem Gülmen <sup>1,\*</sup>, Berke Gülmen <sup>1</sup>, Ömer Gülmen <sup>1</sup>  <sup>1</sup> Independent Researcher, Türkiye  <sup>\*</sup> Correspondence: meryemgulmen@outlook.com  | Yazar | E-posta | |---|---| | **Meryem Gülmen** (sorumlu yazar) | meryemgulmen@outlook.com | | Berke Gülmen | berkegulmen@outlook.com | | Ömer Gülmen | lordtek@me.com |
 
-**Abstract.** Hybrid vertical take-off and landing (VTOL) aircraft combine runway independence with wing-borne cruise and pay for it in cruise efficiency. This paper treats that cost as architectural rather than as a defect of implementation, and develops it as an accounting framework. The penalty is charged in three coupled currencies — the mass of hover hardware carried through cruise, its drag when exposed in cruise, and a power system sized by a condition holding for some two percent of the flight — and every remedy surveyed here reduces one by raising another. The escape condition is then explicit: the penalty is charged whenever hover and cruise are served by hardware that is not the same hardware, in the same orientation, doing the same job. A second result is methodological: architectural comparisons depend on the sizing contract chosen, and a fixed fuel fraction removes the mass bill from the range column altogether, so three contracts are reported rather than one. meryemAircraft, an uncrewed tail-sitting blended-wing body, satisfies the escape condition and serves as the case study: one coaxial pair at the nose gives all thrust in both regimes, four small pairs at the tips give attitude moments only, and a deployable strip is assigned the roll that body-parallel thrust cannot produce. Against a lift-plus-cruise layout, on wind-tunnel drag, it closes the same mission at forty-two percent lower take-off mass and seventeen percent greater range; against a tilting layout the comparison reverses between contracts and no superiority is claimed. A three-dimensional solution bounds the zero-lift drag with a measured uncertainty budget, and a component mass build-up closes the 50 kg design conditionally and not the 1000 kg one. The study is analytical, with no experimental validation of the configuration. The tip propellers can turn the aircraft's rotational inertia through the transition but not, on present evidence, its aerodynamic moment. Resolving that margin along the trajectory shows the aircraft never reaches ninety degrees of incidence — the relative wind rotates with the body — so the outstanding measurement is the pitching moment to some twenty-two degrees at low dynamic pressure, together with trim at cruise. A vortex-lattice solution establishes static pitch stability under a stated packaging rule and sizes the camber moment that trim requires without closing it. Roll is treated the same way: the inertia and the damping are computed for this planform, the moment needed for a twenty-degree-per-second roll follows from them, and the strip's effectiveness in supplying it is stated as a requirement rather than demonstrated. Yaw has the strongest authority of the three axes, because differential tip thrust acts through the semi-span, but the planform supplies no directional stability at all, so the tip-frame fairings must serve as the vertical surfaces as well as the drag measure they were introduced as. Attitude control is therefore sized in every axis and closed in none. Transition controllability remains the principal open requirement and is stated as a threshold a future measurement must meet.
+**Abstract.** Hybrid vertical take-off and landing (VTOL) aircraft combine runway independence with wing-borne cruise and pay for it in cruise efficiency. This paper treats that cost as architectural rather than as a defect of implementation, and develops it as an accounting framework. The penalty is charged in three coupled currencies — the mass of hover hardware carried through cruise, its drag when exposed in cruise, and a power system sized by a condition holding for some two percent of the flight — and every remedy surveyed here reduces one by raising another. The escape condition is then explicit: the penalty is charged whenever hover and cruise are served by hardware that is not the same hardware, in the same orientation, doing the same job. A second result is methodological: architectural comparisons depend on the sizing contract chosen, and a fixed fuel fraction removes the mass bill from the range column altogether, so three contracts are reported rather than one. meryemAircraft, an uncrewed tail-sitting blended-wing body, satisfies the escape condition and serves as the case study: one coaxial pair at the nose gives all thrust in both regimes, four small pairs at the tips give attitude moments only, and a deployable strip is assigned the roll that body-parallel thrust cannot produce. Against a lift-plus-cruise layout, on wind-tunnel drag, it closes the same mission at forty-two percent lower take-off mass and seventeen percent greater range; against a tilting layout the comparison reverses between contracts and no superiority is claimed. A three-dimensional solution bounds the zero-lift drag with a measured uncertainty budget, and a component mass build-up closes the 50 kg design conditionally and not the 1000 kg one. The study is analytical, with no experimental validation of the configuration. The tip propellers can turn the aircraft's rotational inertia through the transition but not, on present evidence, its aerodynamic moment. Resolving that margin along the trajectory shows the aircraft never reaches ninety degrees of incidence — the relative wind rotates with the body — so the outstanding measurement is the pitching moment to some twenty-two degrees at low dynamic pressure, together with trim at cruise. A vortex-lattice solution establishes static pitch stability under a stated packaging rule and closes cruise trim, though not in the way first supposed: measured data for reflexed sections fall an order of magnitude short of the moment required, while nine degrees of tip washout supplies it, at a cost of 4.3 percent of cruise lift-to-drag ratio. Roll is treated the same way: the inertia and the damping are computed for this planform, the moment needed for a twenty-degree-per-second roll follows from them, and the strip's effectiveness in supplying it is stated as a requirement rather than demonstrated. Yaw has the strongest authority of the three axes, because differential tip thrust acts through the semi-span, but the planform supplies no directional stability at all, so the tip-frame fairings must serve as the vertical surfaces as well as the drag measure they were introduced as. Attitude control is therefore sized in every axis and closed in none. Transition controllability remains the principal open requirement and is stated as a threshold a future measurement must meet.
 
 **Keywords:** vertical take-off and landing; tail-sitter; blended wing body; uncrewed aerial vehicle; series hybrid propulsion; cruise efficiency; aircraft configuration design
 
@@ -866,12 +866,48 @@ configuration needs — it falls short by a factor of about three, and an earlie
 this paper quoted 46 N·m without saying where it came from. The moment must therefore come
 from the second mechanism: the strip changes the circulation of the half-wing it sits on,
 which is how a Gurney flap or a low fence works, and the affected area is the wing's, not
-the strip's. Twenty degrees per second then asks for **ΔC_L ≈ 0.12** over the strip's span. Whether a
-device of this kind delivers that increment is a question for the experimental literature on
-Gurney flaps and chordwise fences, and this paper does not settle it: no measurement of this
-strip on this geometry exists, and the increment is not computed here either. **Roll
-authority is therefore sized and not closed**, and the quantity a future measurement must
-return is ΔC_L, not a moment.
+the strip's. Twenty degrees per second then asks for **ΔC_L ≈ 0.12** over the strip's span.
+
+**That figure can be compared against a measurement, and the comparison is favourable.** Traub
+[18] tested an aspect-ratio-three wing in a low-speed tunnel with a Gurney flap two percent of
+chord in height, in two spanwise arrangements: full span, and **the inboard two-thirds only**.
+The second is the same spanwise fraction the strip occupies here. From the measured lift-curve
+slopes and zero-lift angles of that inboard case, the increment at lift coefficients spanning
+the present cruise condition is:
+
+| Clean C_L | With inboard flap | ΔC_L |
+|---:|---:|---:|
+| 0.30 | 0.442 | 0.142 |
+| 0.45 | 0.608 | 0.158 |
+| 0.60 | 0.773 | 0.173 |
+
+The requirement of 0.12 sits below the measured range rather than above it. **Two differences
+keep this short of a demonstration, and both cut the same way.** Traub's flap is at the
+trailing edge and perpendicular to the surface; the strip here is a swept fence on the lower
+surface, well forward of the trailing edge, and the mechanism is not identical. And his wing is
+unswept and rectangular where this one is swept and tapered. What the measurement establishes
+is that a device of this class, at this height fraction, over this spanwise extent, produces
+lift increments of the magnitude required — not that this strip produces one.
+
+**The comparison also exposes a design fault the paper had not noticed.** Traub's flap is two
+percent of chord everywhere. The strip specified in Section 4.4 grows linearly from 2 cm to
+6 cm while the chord it stands on shrinks:
+
+| Station along the strip | Local chord | Strip height | h/c |
+|---|---:|---:|---:|
+| root | 0.969 m | 0.020 m | 2.1 % |
+| mid | 0.682 m | 0.040 m | 5.9 % |
+| outboard end | 0.436 m | 0.060 m | 13.7 % |
+
+Gurney-type devices saturate in lift increment at around two percent of chord while their drag
+continues to grow. The inboard end of this strip is therefore in the right regime and the
+outboard end is far past it, producing drag out of proportion to the lift it changes. **The
+height law should follow the chord taper rather than oppose it**, which would give a strip of
+roughly constant h/c — and this is a change to the configuration, not to its description.
+
+**Roll authority is therefore sized, supported by a measurement on a comparable device, and
+still not closed.** The quantity a future measurement must return is ΔC_L for this strip on
+this planform, not a moment.
 
 **Hover is the harder case, and for a reason that is structural rather than numerical.** At
 zero airspeed only the inboard part of the strip is loaded, by the slipstream, and the same
@@ -2203,45 +2239,67 @@ the solver's moment about the centre of gravity, rather than from the neutral po
 12.8 percent against the 12.5 quoted above; the 0.3-point spread is the curvature of the
 fitted lift-moment slope and is smaller than the spread across the centre-of-gravity window.
 
-**Trim is not shown. It is a requirement, and the requirement is quantified.** At the cruise
-lift coefficient of 0.45 the moment to be balanced about the centre of gravity has coefficient
-C_L × (static margin), and the section camber must supply it. Across the plausible range of
-centre-of-gravity positions:
+**Trim was an open item, and it is now closed — by twist rather than by camber, and at a
+price.** At the cruise lift coefficient of 0.45 the moment to be balanced about the centre of
+gravity has coefficient C_L × (static margin): 0.056 at the centre of gravity the packaging
+rule gives, and less further aft.
 
-| CG, % root chord | x_cg, m | Static margin, % MAC | Camber C_m required |
+| CG, % root chord | x_cg, m | Static margin, % MAC | Moment to be balanced |
 |---:|---:|---:|---:|
 | 78 | 0.757 | +15.7 | 0.071 |
 | 80.2 (packaging rule) | 0.778 | +12.5 | 0.056 |
 | 83 | 0.805 | +8.3 | 0.037 |
 | 85 | 0.825 | +5.3 | 0.024 |
 
-The constraint is better stated the other way round, because doing so removes an assumption
-about what sections deliver. For a section able to supply a camber moment C_m0, the centre of
-gravity must lie no further forward than:
+An earlier version of this paper supposed that reflexed sections would supply this, on the
+strength of a range its authors had not read. Reading the source settles it in the other
+direction. In the variable-density tunnel measurements of Jacobs, Ward and Pinkerton [17], the
+reflexed section NACA 2R212 — two percent camber, mean line shaped specifically to give a
+small positive moment — returns **C_m0 = +0.004**, against −0.002 for the symmetric 0012 and
+−0.044 for the conventionally cambered 2412. That is one fourteenth of what the centre of
+gravity above demands, and one sixth of what even the aftmost entry in the table demands. The
+same report concludes that reflexed mean lines "may be of questionable value because of the
+adverse effect of this mean-line shape on the maximum lift coefficient." **Reflex does not
+trim this aircraft, and no plausible amount of it would.**
 
-| Section camber moment C_m0 | Most forward CG, % root chord | Static margin there, % MAC |
-|---:|---:|---:|
-| 0.02 | 85.6 | +4.4 |
-| 0.03 | 84.1 | +6.7 |
-| 0.04 | 82.6 | +8.9 |
-| 0.05 | 81.1 | +11.1 |
-| 0.06 | 79.6 | +13.3 |
+What trims it is washout, which is how tailless aircraft have always been trimmed: on a swept
+wing the tips lie well aft, so negative tip incidence produces a nose-up moment about the
+centre of gravity. Because this mechanism is geometric rather than sectional, the
+vortex-lattice model of Section 6.6 — whose sections are symmetric — can compute it directly.
+Applying a linear twist from zero at the root to θ_tip at the tip and re-trimming to
+C_L = 0.45 at each value:
 
-Read downward, the table is a trim constraint; read upward, it is a stability constraint,
-since a margin below about five percent is not a tailless aircraft anyone would fly. The two
-close on each other, and **the aft limit of roughly 85 percent of root chord is set by
-stability alone and is therefore firm; the forward limit is set by the section and is
-therefore not.** This paper does not fix the forward limit, because doing so would require a
-camber and reflex distribution it has not defined and a source for what such a distribution
-delivers that its authors have not read. What it fixes is the packaging rule's own answer,
-80.2 percent, and the observation that this sits in the part of the table reachable only by a
-section supplying rather more than the smallest camber moments. It is not a demanding constraint — the internal volume's own
-centroid is at 78.3 percent — but it is a constraint, and the placement of fuel, payload and
-engine is not free. What is *not* established is that any particular camber and twist
-distribution delivers the required moment at the required lift coefficient without an
-unacceptable cruise drag penalty: the vortex-lattice model carries symmetric sections, so it
-can size the requirement but cannot meet it. The aircraft of this paper is statically stable
-and has an open trim closure, and those two statements should not be run together.
+| Tip washout | Trim α | C_m about CG | Induced C_D | Span efficiency e | Cruise L/D |
+|---:|---:|---:|---:|---:|---:|
+| 0° | 6.68° | −0.058 | 0.01077 | 0.993 | 12.65 |
+| −4° | 8.20° | −0.034 | 0.01102 | 0.971 | 12.56 |
+| −6° | 8.98° | −0.021 | 0.01141 | 0.938 | 12.43 |
+| **−9°** | **10.16°** | **−0.001** | **0.01237** | **0.865** | **12.11** |
+
+**Nine degrees of tip washout trims the aircraft at cruise with no camber at all.** That is a
+large twist by transport-aircraft standards and an ordinary one for a swept tailless design,
+and it is not free: the span efficiency falls from 0.993 to 0.865 and the cruise lift-to-drag
+ratio from 12.65 to 12.11, a **4.3 percent penalty paid to be tailless**. It is the same kind
+of payment the rest of this paper is about — a capability bought in one currency and charged
+in another — and it had not previously been counted.
+
+**One assumption is retired by this.** Section 6.2 assumed a span efficiency of 0.85 without
+justification, and the range figures of Section 6.3 rest on it. The trimmed wing computes to
+0.865. The assumption was therefore conservative by 0.6 percent, and **the range figures do
+not change**; what changes is that they now have a basis. It is worth being clear about the
+direction of the argument, because the coincidence is easy to over-read: the assumption was
+not chosen to match this calculation, and the calculation was not tuned to the assumption.
+
+**What is still not established.** The twist here is linear, chosen for simplicity rather than
+optimised; a distribution shaped for span loading would trim at the same moment for a smaller
+efficiency penalty, so 4.3 percent should be read as an upper bound on the cost rather than as
+the cost. The vortex-lattice solution is inviscid, so it says nothing about how washout of this
+magnitude changes the stall behaviour of the outboard sections — washout normally improves it,
+which is a reason to expect no unpleasant surprise, not a demonstration that there is none.
+And the aft limit of the centre-of-gravity window, roughly 85 percent of root chord, is still
+set by static margin alone and is still firm. What has changed is that the forward limit is no
+longer set by a section property nobody had measured; it is set by how much twist the design is
+willing to pay for.
 
 **The requirement is therefore smaller and more recognisable than first stated.** An earlier
 version of this section asked for pitching-moment coefficients through ninety degrees of
@@ -2371,9 +2429,13 @@ Several results depend on coefficients that were not computed for this geometry:
   27.1 N·m. What remains from the literature is the strip's own effectiveness, and it is
   the load-bearing part. The strip's own force as a swept fence supplies about a third of
   the required moment; the moment must therefore come from the change in the half-wing's
-  circulation, which asks for ΔC_L ≈ 0.12 over the strip's span. That increment is neither
-  measured nor computed here, so **roll authority is sized and not closed, in the same sense
-  as cruise trim.** An earlier version of this
+  circulation, which asks for ΔC_L ≈ 0.12 over the strip's span. Published wind-tunnel data
+  for a two-percent-chord device over the same inboard two-thirds of span report increments
+  of 0.14 to 0.17 [18], so the requirement is below what a comparable device delivers — but
+  that device is a trailing-edge flap on an unswept wing, and **roll authority remains sized
+  and not closed.** The same comparison shows the strip's height law to be wrong outboard,
+  reaching 13.7 percent of local chord where the mechanism saturates near two; Section 4.4
+  records this as a change the configuration needs. An earlier version of this
   paper quoted 46 N·m without stating the mechanism it came from; that number implies
   ΔC_L ≈ 0.20 and is not reproduced here as an authority.
 - The **directional stability** of the configuration. Section 4.4 computes C_n_β = 0 for
@@ -2716,9 +2778,14 @@ is the end of the rotation, where incidence is small and speed is high, and that
 question rather than a post-stall one. The trim question has since been sized rather than
 closed: the configuration is statically stable, with a neutral point at 34 percent of mean
 aerodynamic chord and a margin of 12.5 percent at the assumed centre of gravity, and the
-camber moment needed to trim it at cruise is 0.056 at the centre of gravity the packaging
-rule gives — a requirement on a camber distribution the paper has not defined, and one that
-moves with the centre of gravity rather than being fixed by it. The roll axis was treated the same way and gave the same kind of
+moment to be balanced at cruise is 0.056 at the centre of gravity the packaging rule gives.
+Reflex does not supply it — the measured value for a reflexed section is one fourteenth of
+that [17] — but nine degrees of tip washout does, and the vortex-lattice model computes the
+trim directly because the mechanism is geometric rather than sectional. The price is a span
+efficiency of 0.865 instead of 0.993 and a cruise lift-to-drag ratio of 12.11 instead of
+12.65: **4.3 percent of cruise efficiency, paid to be tailless**, and not previously counted.
+It also retires an assumption, since Section 6.2 had assumed 0.85 without justification and
+the range figures rest on it; they are unchanged, and now supported. The roll axis was treated the same way and gave the same kind of
 answer: the roll inertia and the roll damping are computed for this planform, twenty degrees
 per second at cruise requires 27.1 N·m, the strip's own force supplies about a third of
 that, and the remainder must come from the change it makes to the half-wing's circulation —
@@ -2811,3 +2878,9 @@ the authors accept full responsibility for the content.
 16. Sharpe, P. D. *NeuralFoil: An airfoil aerodynamics analysis tool using
     physics-informed machine learning.* 2023.
     Software: https://github.com/peterdsharpe/NeuralFoil
+17. Jacobs, E. N.; Ward, K. E.; Pinkerton, R. M. *The Characteristics of 78
+    Related Airfoil Sections from Tests in the Variable-Density Wind Tunnel.*
+    NACA Report No. 460, National Advisory Committee for Aeronautics, 1933.
+    (Reflexed mean-line sections NACA 2R112 and 2R212, pp. 52–53.)
+18. Traub, L. W. *Effect of Gurney Flaps on Non-Planar Wings at Low Reynolds
+    Number.* Aerospace, 2024, 11 (9), 728. https://doi.org/10.3390/aerospace11090728
