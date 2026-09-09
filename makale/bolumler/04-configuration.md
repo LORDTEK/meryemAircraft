@@ -394,9 +394,25 @@ angle is not free. Fins of aspect ratio below about two must be toed *in*, and f
 or high aspect ratio toed *out* — and the frames here, at 1.42 m long against a fairing chord
 of tens of millimetres, are firmly in the second class. Toe-out carries a hazard the paper had
 no way of knowing about: yawing far enough to stall the rear fin produces a large
-*destabilising* moment, where a toed-in fin stalling produces a stabilising one. **The frame
-fairing therefore needs a toe angle, that angle needs a sign, and the sign it needs brings a
-failure mode with it.** None of this is settled here.
+*destabilising* moment, where a toed-in fin stalling produces a stabilising one.
+
+The magnitude, at least, is small. Wind-tunnel tests of a tail-less swept cargo configuration
+with vertical tails carried on tip pods found the optimum toe angle for maximum lift-to-drag
+ratio to be **about 1.5 degrees** for symmetric-section tails, with a cambered tail
+"relatively insensitive to toe-in" [34]. The same tests found the lift-to-drag ratio "about the
+same with all three vertical-tail designs, notwithstanding the 75 % larger area" of the largest
+— which is the same conclusion reached above from the required-area side, arrived at by
+measurement rather than by estimate. **The frame fairing therefore needs a toe angle of order a
+degree or two, and that angle needs a sign.** The sign is the part that is open: the
+low-aspect-ratio fins of that study wanted toe-in, high-aspect-ratio fins want toe-out [19],
+and the frames here — 1.42 m long against a fairing chord of tens of millimetres — are at an
+aspect ratio beyond either source's range. What can be said is that the angle is small, that
+its cost in cruise efficiency is small, and that its sign is a design decision this paper does
+not make.
+
+That same study is the third independent report of the finding this subsection began with: a
+podded tailless wing was directionally *unstable*, and "the further addition of vertical tails
+restores directional stability to the configuration" [34].
 
 **That reframes the fairing, and the reframing is the substantive result of this
 subsection.** Section 5.2 introduced the fairing as a drag measure and computed the frame

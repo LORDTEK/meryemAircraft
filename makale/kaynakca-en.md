@@ -92,3 +92,5 @@
     Center, 1997.
 33. Buchholz, M. D. *Lift Augmentation on a Delta Wing via Leading Edge Fences
     and the Gurney Flap.* M.S. thesis; NASA Contractor Report 194793, 1993.
+34. *Wind Tunnel Tests on a Tail-less Swept Wing Span-Distributed Cargo Aircraft
+    Configuration.* NASA Technical Memorandum 78767, 1978.
