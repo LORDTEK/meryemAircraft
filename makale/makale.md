@@ -946,7 +946,14 @@ second. Nothing in this axis is short of moment.
 The open half is stability. A vortex-lattice solution of the planform at sideslip returns
 **C_n_β = 0**: the wing supplies no directional stability whatever, which is not a defect of
 the solution but the expected result for a planar surface with nothing to generate side
-force. Sweep gives this configuration its roll-due-to-sideslip — C_l_β = −0.045 per radian,
+force. Two measurement campaigns say the same thing about real aircraft rather than about a
+panel model. A NASA series of four 60°-swept flying wings tested from −8° to 48° of incidence
+found that, without vertical tails, "each of these wings possessed unstable or essentially
+neutral values of directional stability for most of the angles of attack tested" [20]; and the
+NACA survey of tailless practice records that "the directional stability at low angles of
+attack for the wing alone has generally been found to be inadequate" [19]. **The present
+configuration is not unusual in lacking weathercock stability; it is normal, and every tailless
+aircraft that flies has had to buy it somewhere.** Sweep gives this configuration its roll-due-to-sideslip — C_l_β = −0.045 per radian,
 a healthy value — and gives it no weathercock stability at all. The profile-drag
 contribution to yaw damping is likewise negligible, C_n_r = −0.0023, a time constant of over
 a minute.
@@ -965,6 +972,28 @@ disturbance environment and its control bandwidth, neither of which is establish
 two values above are reference points spanning the range conventional aircraft are usually
 designed to, and the useful statement is the scaling — that the required chord is small
 enough to disappear into a component already present — rather than either number.
+
+**Where to buy it is a question the tailless literature has already answered, and the answer
+is the arrangement this aircraft already has.** The NACA survey states that "if the tailless
+airplane has a swept-back wing, the usual practice is to place the vertical tail surfaces at
+the tips rather than at the center section in order to take advantage of the longer moment
+arm" [19]. That is the tip-frame arrangement of Section 4.3, adopted here for the moment arm it
+gives the control propellers and for the landing structure it provides, and it turns out to be
+the placement a directional-stability surface wants for an independent reason.
+
+The same source adds two things the estimate above does not contain, and they pull in opposite
+directions. The first is favourable: because a tip fin's drag acts at a moment arm of half the
+span, "the drag characteristics as well as the lift characteristics of the tip fins exert an
+influence on the directional stability", and fins working on the profile-drag principle were
+found more effective than those working on lift. The area estimated above was sized on lift
+alone, so it is an **over**-estimate of what is needed. The second is a requirement: the toe
+angle is not free. Fins of aspect ratio below about two must be toed *in*, and fins of moderate
+or high aspect ratio toed *out* — and the frames here, at 1.42 m long against a fairing chord
+of tens of millimetres, are firmly in the second class. Toe-out carries a hazard the paper had
+no way of knowing about: yawing far enough to stall the rear fin produces a large
+*destabilising* moment, where a toed-in fin stalling produces a stabilising one. **The frame
+fairing therefore needs a toe angle, that angle needs a sign, and the sign it needs brings a
+failure mode with it.** None of this is settled here.
 
 **That reframes the fairing, and the reframing is the substantive result of this
 subsection.** Section 5.2 introduced the fairing as a drag measure and computed the frame
@@ -2321,7 +2350,18 @@ moment of Section 6.7, 934 N·m, was computed on an untwisted loading; washout m
 and can therefore only reduce it, so the spar sizing and the mass budget that follows are
 conservative rather than threatened — the recomputation has not been done because its direction
 is not in doubt. And washout makes the root stall before the tip on a swept wing, which is the
-favourable direction for the transition of Section 7.4 rather than the unfavourable one. And the
+favourable direction for the transition of Section 7.4 rather than the unfavourable one — a
+point that matters more than it first appears, because the tailless literature reports the
+unfavourable direction as a real hazard. The NASA series of 60°-swept flying wings found a
+pitch-up at high incidence that "became more severe as aspect ratio was increased", severe
+enough on some configurations to produce a *hung stall* — a trim condition with insufficient
+nose-down control to recover [20]. Those wings are of aspect ratio 1.15 to 2.15 and their
+pitch-up is driven by leading-edge vortex breakdown, which a wing of aspect ratio 6.03 swept at
+45° at the root and 35° at the tip is unlikely to reproduce in the same form. But the trend
+they report runs the wrong way for a higher-aspect-ratio wing, and the incidences at which it
+appears overlap the 17° to 22° this aircraft passes through in transition. **This is a reason
+to keep transition controllability open rather than a new closure**, and it is the second
+independent reason to want the washout that Section 7.6 already requires for trim. And the
 aft limit of the centre-of-gravity window, roughly 85 percent of root chord, is still set by
 static margin alone and is still firm. What has changed is that the forward limit is no
 longer set by a section property nobody had measured; it is set by how much twist the design is
@@ -2465,8 +2505,13 @@ Several results depend on coefficients that were not computed for this geometry:
   paper quoted 46 N·m without stating the mechanism it came from; that number implies
   ΔC_L ≈ 0.20 and is not reproduced here as an authority.
 - The **directional stability** of the configuration. Section 4.4 computes C_n_β = 0 for
-  the planform — the wing supplies none — and shows that the tip-frame fairing must supply
-  it, at a chord well inside what the fairing needs for drag reasons. The fin contribution
+  the planform — the wing supplies none, which measured data on tailless aircraft confirm is
+  normal rather than unusual [19,20] — and shows that the tip-frame fairing must supply it, at
+  a chord well inside what the fairing needs for drag reasons. Two items are added by that
+  literature and closed by neither it nor this paper: the fairing needs a **toe angle**, whose
+  sign follows from its aspect ratio and which brings a stall-related failure mode with it;
+  and the fin's **drag** contributes to directional stability at an arm of half the span, a
+  mechanism the estimate here omits and which makes it conservative. The fin contribution
   itself is **not computed**, and neither is the yaw damping it would bring; the
   profile-drag damping of the bare planform, C_n_r = −0.0023, is negligible. Yaw authority
   is not in question — the yaw arm is the semi-span, so the available moment is 2.4 times
@@ -2910,3 +2955,10 @@ the authors accept full responsibility for the content.
     (Reflexed mean-line sections NACA 2R112 and 2R212, pp. 52–53.)
 18. Traub, L. W. *Effect of Gurney Flaps on Non-Planar Wings at Low Reynolds
     Number.* Aerospace, 2024, 11 (9), 728. https://doi.org/10.3390/aerospace11090728
+19. *An Interim Report on the Stability and Control of Tailless Airplanes.*
+    NACA Report No. 796, Langley Research Division, National Advisory Committee
+    for Aeronautics, 1944. (Tip fins on swept tailless aircraft, pp. 428–429.)
+20. Moul, T. M.; Fears, S. P.; Ross, H. M.; Foster, J. V. *Low-Speed Wind-Tunnel
+    Investigation of the Stability and Control Characteristics of a Series of
+    Flying Wings With Sweep Angles of 60°.* NASA Technical Memorandum 4649,
+    Langley Research Center, August 1995.

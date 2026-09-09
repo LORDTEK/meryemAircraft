@@ -454,7 +454,18 @@ moment of Section 6.7, 934 N·m, was computed on an untwisted loading; washout m
 and can therefore only reduce it, so the spar sizing and the mass budget that follows are
 conservative rather than threatened — the recomputation has not been done because its direction
 is not in doubt. And washout makes the root stall before the tip on a swept wing, which is the
-favourable direction for the transition of Section 7.4 rather than the unfavourable one. And the
+favourable direction for the transition of Section 7.4 rather than the unfavourable one — a
+point that matters more than it first appears, because the tailless literature reports the
+unfavourable direction as a real hazard. The NASA series of 60°-swept flying wings found a
+pitch-up at high incidence that "became more severe as aspect ratio was increased", severe
+enough on some configurations to produce a *hung stall* — a trim condition with insufficient
+nose-down control to recover [20]. Those wings are of aspect ratio 1.15 to 2.15 and their
+pitch-up is driven by leading-edge vortex breakdown, which a wing of aspect ratio 6.03 swept at
+45° at the root and 35° at the tip is unlikely to reproduce in the same form. But the trend
+they report runs the wrong way for a higher-aspect-ratio wing, and the incidences at which it
+appears overlap the 17° to 22° this aircraft passes through in transition. **This is a reason
+to keep transition controllability open rather than a new closure**, and it is the second
+independent reason to want the washout that Section 7.6 already requires for trim. And the
 aft limit of the centre-of-gravity window, roughly 85 percent of root chord, is still set by
 static margin alone and is still firm. What has changed is that the forward limit is no
 longer set by a section property nobody had measured; it is set by how much twist the design is

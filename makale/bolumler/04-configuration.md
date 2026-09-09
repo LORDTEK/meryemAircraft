@@ -298,7 +298,14 @@ second. Nothing in this axis is short of moment.
 The open half is stability. A vortex-lattice solution of the planform at sideslip returns
 **C_n_β = 0**: the wing supplies no directional stability whatever, which is not a defect of
 the solution but the expected result for a planar surface with nothing to generate side
-force. Sweep gives this configuration its roll-due-to-sideslip — C_l_β = −0.045 per radian,
+force. Two measurement campaigns say the same thing about real aircraft rather than about a
+panel model. A NASA series of four 60°-swept flying wings tested from −8° to 48° of incidence
+found that, without vertical tails, "each of these wings possessed unstable or essentially
+neutral values of directional stability for most of the angles of attack tested" [20]; and the
+NACA survey of tailless practice records that "the directional stability at low angles of
+attack for the wing alone has generally been found to be inadequate" [19]. **The present
+configuration is not unusual in lacking weathercock stability; it is normal, and every tailless
+aircraft that flies has had to buy it somewhere.** Sweep gives this configuration its roll-due-to-sideslip — C_l_β = −0.045 per radian,
 a healthy value — and gives it no weathercock stability at all. The profile-drag
 contribution to yaw damping is likewise negligible, C_n_r = −0.0023, a time constant of over
 a minute.
@@ -317,6 +324,28 @@ disturbance environment and its control bandwidth, neither of which is establish
 two values above are reference points spanning the range conventional aircraft are usually
 designed to, and the useful statement is the scaling — that the required chord is small
 enough to disappear into a component already present — rather than either number.
+
+**Where to buy it is a question the tailless literature has already answered, and the answer
+is the arrangement this aircraft already has.** The NACA survey states that "if the tailless
+airplane has a swept-back wing, the usual practice is to place the vertical tail surfaces at
+the tips rather than at the center section in order to take advantage of the longer moment
+arm" [19]. That is the tip-frame arrangement of Section 4.3, adopted here for the moment arm it
+gives the control propellers and for the landing structure it provides, and it turns out to be
+the placement a directional-stability surface wants for an independent reason.
+
+The same source adds two things the estimate above does not contain, and they pull in opposite
+directions. The first is favourable: because a tip fin's drag acts at a moment arm of half the
+span, "the drag characteristics as well as the lift characteristics of the tip fins exert an
+influence on the directional stability", and fins working on the profile-drag principle were
+found more effective than those working on lift. The area estimated above was sized on lift
+alone, so it is an **over**-estimate of what is needed. The second is a requirement: the toe
+angle is not free. Fins of aspect ratio below about two must be toed *in*, and fins of moderate
+or high aspect ratio toed *out* — and the frames here, at 1.42 m long against a fairing chord
+of tens of millimetres, are firmly in the second class. Toe-out carries a hazard the paper had
+no way of knowing about: yawing far enough to stall the rear fin produces a large
+*destabilising* moment, where a toed-in fin stalling produces a stabilising one. **The frame
+fairing therefore needs a toe angle, that angle needs a sign, and the sign it needs brings a
+failure mode with it.** None of this is settled here.
 
 **That reframes the fairing, and the reframing is the substantive result of this
 subsection.** Section 5.2 introduced the fairing as a drag measure and computed the frame

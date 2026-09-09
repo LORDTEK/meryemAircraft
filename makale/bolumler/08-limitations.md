@@ -121,8 +121,13 @@ Several results depend on coefficients that were not computed for this geometry:
   paper quoted 46 N·m without stating the mechanism it came from; that number implies
   ΔC_L ≈ 0.20 and is not reproduced here as an authority.
 - The **directional stability** of the configuration. Section 4.4 computes C_n_β = 0 for
-  the planform — the wing supplies none — and shows that the tip-frame fairing must supply
-  it, at a chord well inside what the fairing needs for drag reasons. The fin contribution
+  the planform — the wing supplies none, which measured data on tailless aircraft confirm is
+  normal rather than unusual [19,20] — and shows that the tip-frame fairing must supply it, at
+  a chord well inside what the fairing needs for drag reasons. Two items are added by that
+  literature and closed by neither it nor this paper: the fairing needs a **toe angle**, whose
+  sign follows from its aspect ratio and which brings a stall-related failure mode with it;
+  and the fin's **drag** contributes to directional stability at an arm of half the span, a
+  mechanism the estimate here omits and which makes it conservative. The fin contribution
   itself is **not computed**, and neither is the yaw damping it would bring; the
   profile-drag damping of the bare planform, C_n_r = −0.0023, is negligible. Yaw authority
   is not in question — the yaw arm is the semi-span, so the available moment is 2.4 times
