@@ -387,7 +387,16 @@ are listed so that they can be:
    incidence, rather than for a moment sweep through ninety degrees — and Section 7.6 narrows
    it once more, since the inboard half of the wing lies in the nose propeller's slipstream and
    sees an effective incidence of four to eight degrees rather than the geometric seventeen to
-   twenty-two [23]. The measurement that is still owed concerns the *outboard* half. What is still not done
+   twenty-two [23]. The measurement that is still owed concerns the *outboard* half. Two further
+   things are now known about this item. It is **the field's open item, not this study's
+   alone**: published transition analyses with flight trials carry either no pitching-moment
+   term or a linear one, and close the loop with a controller instead [28,29]. And a
+   flight-tested tail-sitter controlled by differential propeller thrust alone, with no elevons,
+   was well behaved through hover and transition but saturated its motors during manoeuvres in
+   **level flight**, its authors attributing this to aerodynamic moment growing with speed while
+   thrust falls [29]. **The binding condition for a propeller-only tail-sitter is therefore
+   pitch authority at speed, not at incidence** — which is where the tightest budgets of
+   Section 7.6, 0.050 and 0.010, already sit. What is still not done
    is answering it: a reduced computation would replace a dominant term with a
    less-validated model. What it cannot do is charge the
    aerodynamic pitching moment, which requires moment coefficients through ninety degrees
