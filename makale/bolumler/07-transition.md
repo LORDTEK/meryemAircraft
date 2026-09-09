@@ -415,6 +415,32 @@ same report concludes that reflexed mean lines "may be of questionable value bec
 adverse effect of this mean-line shape on the maximum lift coefficient." **Reflex does not
 trim this aircraft, and no plausible amount of it would.**
 
+**Nor is 2R212 an unlucky choice.** A survey of ten reflexed sections assembled specifically
+for flying-wing use — the Eppler 184, 186 and 387, FX 69-H-083, NACA M5 and M6, Selig 5010 and
+5020, MH 60 and HS-522 — reports zero-lift pitching-moment coefficients of order 10⁻⁴ for every
+one of them [27]. That paper states the requirement plainly, that "for trim flight, pitching
+moment coefficient at zero angle of attack, C_m0, must be positive", and then tabulates ten
+sections none of which reaches a thousandth; the tabulated signs are also negative throughout,
+which contradicts the requirement the same paper states, so the numbers are quoted here as
+evidence of magnitude rather than of sign. Between that survey and the measured +0.004 of
+2R212, **the reflex family delivers something of order a few thousandths against a requirement
+of 0.056** — a gap of one to two orders of magnitude, and not one that a better choice of
+section closes.
+
+The point can be put as a design trade, since a section that did more would buy back some of
+the twist:
+
+| If the section supplies C_m0 = | Washout still needed | Inviscid e | Cruise L/D |
+|---:|---:|---:|---:|
+| 0 | 9.2° | 0.865 | 11.68 |
+| 0.004 (the measured value) | 8.6° | 0.875 | 11.73 |
+| 0.020 | 6.0° | 0.937 | 12.01 |
+| 0.050 | 1.3° | 0.986 | 12.21 |
+
+The lever is real — a section supplying 0.02 would recover almost the whole trim penalty — but
+nothing in the literature read here supplies 0.02. At the value that is measured, reflex buys
+half a degree of the nine, and the trim problem remains a twist problem.
+
 What trims it is washout, which is how tailless aircraft have always been trimmed: on a swept
 wing the tips lie well aft, so negative tip incidence produces a nose-up moment about the
 centre of gravity. Because this mechanism is geometric rather than sectional, the

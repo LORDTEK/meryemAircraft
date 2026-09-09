@@ -1527,3 +1527,52 @@ kuyruksuz olmanın cezası. §5.4'ün beşinci defter kalemi bu okumayla
 sağlamlaştı.
 
 Kaynakça 26 (Ugwueze 2023).
+
+---
+
+## Shinde 2020 — refleks ailesi bir mertebe yetersiz, ve bu artık kanıtlı
+
+Uçan kanat için özel olarak derlenmiş **on refleks kesit** (E184, E186, E387,
+FX69H083, NACA M5, M6, S5010, S5020, MH60, HS-522), XFLR5 ile hesaplanmış.
+Tablo 1'deki C_m0 değerleri:
+
+| kesit | C_m0 | | kesit | C_m0 |
+|---|---|---|---|---|
+| E184 | −0,000124 | | M6 | −0,000251 |
+| E186 | −0,000042 | | S5010 | −0,000133 |
+| E387 | −0,000141 | | S5020 | −0,000151 |
+| FX69H083 | −0,000451 | | MH60 | −0,000711 |
+| M5 | −0,000471 | | HS-522 | −0,000859 |
+
+**Hepsi 10⁻⁴ mertebesinde.**
+
+⚠️ **Dikkat — bu kaynağı olduğu gibi almadım.** Makalenin kendi metni *"for
+trim flight, pitching moment coefficient at zero angle of attack, Cm0, must be
+positive"* diyor, ama tablodaki on değerin hepsi **negatif**. Kendi içinde
+tutarsız. Ayrıca gerçek refleks kesitlerin C_m0'ı standart kaynaklarda 10⁻³–10⁻²
+mertebesinde anılır, 10⁻⁴ değil. Yani ya işaret kuralı ters, ya
+normalizasyon farklı.
+
+**Metne nasıl girdi:** işaret değil, **mertebe** kanıtı olarak — ve tutarsızlık
+açıkça yazılarak. Tek **ölçülmüş** değer hâlâ NACA TR-460'ın 2R212'si: +0,004.
+
+### Sonuç: refleks + burulma takası yok
+
+C_m derece başına 0,00629 (VLM taramasından). Kesit ne verirse burulma gerisini
+tamamlıyor:
+
+| kesit C_m0 | gereken burulma | inviscid e | seyir L/D |
+|---|---|---|---|
+| 0 | 9,2° | 0,865 | 11,68 |
+| **0,004 (ölçülen)** | **8,6°** | 0,875 | 11,73 |
+| 0,020 | 6,0° | 0,937 | 12,01 |
+| 0,050 | 1,3° | 0,986 | 12,21 |
+
+**Kaldıraç gerçek** — 0,02 veren bir kesit denge cezasının neredeyse tamamını
+geri kazandırırdı. **Ama okunan literatürde 0,02 veren yok.** Ölçülen değerde
+refleks dokuz derecenin yarım derecesini alıyor. Yani denge sorunu bir
+**burulma** sorunu, ve öyle kalıyor.
+
+Bu, burulma bulgusunu "uygun bir çözüm"den **zorunlu çözüme** çeviriyor.
+
+Kaynakça 27.
