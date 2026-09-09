@@ -17,7 +17,7 @@ series hybrid: fuel drives an internal-combustion engine, the engine drives a
 generator, and the generator supplies electric machines at the rotors.
 
 The aircraft has no elevons, no rudder, no tilting mechanism, no retraction mechanism
-and no dedicated lift system. The only moving aerodynamic device is an on-off strip on
+and no dedicated lift system. The only moving aerodynamic device is a variable-extension strip on
 the lower surface, described in Section 4.4, which exists solely because roll cannot be
 produced by propellers alone. Figure 4 gives three orthogonal views of the light
 reference design and Figure 5 a general view of the same geometry.
@@ -186,8 +186,9 @@ This is the fork at which the present configuration departs from its nearest rel
 and it is why the strip is not an accessory. It is the element that makes the
 combination possible. The
 resolution adopted here is different in kind. A single strip on the lower surface,
-inclined at forty-five degrees, deploys on or off — it is not a proportional control
-surface. For the light reference design it runs one hundred and twenty percent of the
+inclined at forty-five degrees, extends by a commanded amount rather than snapping between
+two positions. The extension is the control variable, so the rolling moment is modulated by
+how far the strip stands proud of the surface rather than by how long it is held out. For the light reference design it runs one hundred and twenty percent of the
 root chord in length, reaching outboard to sixty-seven percent of the semi-span, and
 stands 2 cm high at its inboard end and 6 cm at its outboard end.
 
@@ -331,13 +332,27 @@ settle and the strip must be commanded off rather than left on. Roll control in 
 consequently a tighter problem than roll control in cruise, which is the reverse of the
 usual situation and is a consequence of this configuration rather than of its numbers.
 
-**Being an on-off device is not, by itself, disqualifying.** Simulating the first-order roll
-dynamics above with a deadband and a finite actuator delay gives a bounded limit cycle: with
-a two-degree deadband and a fifty-millisecond deployment the bank angle oscillates by ±0.2°,
-and at a hundred and fifty milliseconds by ±9.4°. The device is therefore usable if it is
-fast and unusable if it is slow, and the threshold sits in a range where real actuators
-differ. That is a design requirement on the actuator, stated here for the first time. None
-of this is a closed-loop stability analysis, and none of it substitutes for one.
+**The worst case, in which the extension is not modulated at all, is worth computing because
+it bounds the actuator requirement.** Simulating the first-order roll dynamics above as though
+the strip snapped between fully out and fully retracted, with a deadband and a finite actuator
+delay, gives a bounded limit cycle: with a two-degree deadband and a fifty-millisecond
+deployment the bank angle oscillates by ±0.2°, and at a hundred and fifty milliseconds by
+±9.4°. **A proportional extension does not produce that limit cycle at all**, so these figures
+are an upper bound on what the actuator must achieve rather than a description of how the
+aircraft is flown — and they say that even a device reduced to two positions would be usable
+provided it were fast. None of this is a closed-loop stability analysis, and none of it
+substitutes for one.
+
+**Two consequences of variable extension are worth stating, because both relieve constraints
+identified above.** The couplings scale with the extension: adverse yaw and the nose-down
+pitching moment are proportional to the lift and drag increments the strip produces, so a roll
+commanded at a fraction of full extension carries that fraction of both. The scheduling
+restriction derived above — that the strip should not be commanded at the end of the rotation —
+is therefore a restriction on *full* extension, and small corrections remain available
+throughout. And the height law is limited by those couplings rather than by mass: the strip's
+own structure is a small item, so how far it may extend is set by how much yaw and pitch
+disturbance the tip propellers can absorb, which is the calculation given above rather than
+anything in Section 6.7.
 
 **Yaw was examined last, and it separates cleanly into an easy half and an open half.** The
 easy half is authority. The yaw inertia computed from the same mass distribution is

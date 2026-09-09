@@ -190,3 +190,28 @@ için anılıyor. Uzlaştıramadığımız bir büyüklüğü aktarmayız.
 
 **YZ'lere sorulacak ek soru:** Shinde'nin tablosu gerçekten hatalı mı, yoksa
 bizim okumadığımız bir normalizasyon/işaret kuralı mı var?
+
+### S5. Kısa süreli, güç için optimize edilmiş tampon — ölçülmüş özgül güç?
+
+Tampon **4,6 kW/kg** istiyor. Okuduğumuz tek kaynak (Bacchini & Cestino 2019)
+güç uygulamaları için **paket düzeyinde 700–1300 W/kg** veriyor. Bandın üst
+ucunda tampon 1,8 kg yerine **6,4 kg** olur ve hafif hattın bütçesi kapanmaz.
+
+Güç **zemin**, geçici değil: T ~ P^(2/3) olduğu için 1,3 kW/kg'de T/W = 0,71
+çıkıyor, uçak yerden kalkmıyor. Enerji tarafı ise rahat (20 s'lik kalkışta
+tamponun %14–32'si).
+
+**Sorulacak:** Bir dakika boşalan, **güç için optimize edilmiş** bir tampon için
+(otomotiv traksiyon paketi değil) **ölçülmüş** özgül güç veren bir kaynak var mı?
+Hücre düzeyi kabul, ama paket cezası (kasa, bağlantı, termal) ayrıca sorulmalı.
+
+### S6. "Kumanda yüzeyi yok" iddiasının sınırı
+
+Tasarımcı belirtti: yatış şeridinin **çıkma miktarı sürekli**, aç-kapa değil.
+Metin düzeltildi. Ama bu, şeridi kumanda yüzeylerinden ayıran cümleyi
+("aç-kapa, orantılı bir kumanda yüzeyi değil") ortadan kaldırdı.
+
+**Sorulacak:** Sürekli çıkışlı bir alt-yüzey spoiler'ı varken "no control
+surfaces" konumlandırması savunulabilir mi, yoksa iddia "no elevons, no rudder,
+no hinged surfaces — one variable-extension strip" biçiminde mi kurulmalı?
+Hakem buradan girer mi?

@@ -1986,3 +1986,41 @@ kaynakla karşılaştırılmamıştı ve karşılaştırınca **bir mertebe yak�
 
 §6.7 ve §8'e tablolarıyla yazıldı. Kullanıcının "acaba yeterli mi" sezgisinin
 en somut karşılığı bu.
+
+---
+
+## ⚠️ TASARIMCI DÜZELTMESİ — şerit aç-kapa DEĞİL, çıkma miktarı sürekli (09.09.2026)
+
+Kullanıcı (tasarımcı) belirtti: şeridin **çıkma miktarı esnek**, aç-kapa değil.
+Makale dört yerde "on-off" diyordu ve bu **yanlıştı**. Düzeltildi.
+
+### Neyi değiştirdi
+
+**1. Sınır çevrimi analizi artık ÜST SINIR, tarif değil.**
+±0,2° (50 ms) / ±9,4° (150 ms) rakamları, cihaz iki konuma indirgenseydi ne
+olacağını gösteriyor. **Sürekli çıkışta o sınır çevrimi hiç oluşmuyor.** Yani
+eyleyici hız gereksinimi bir *tavan*, bir *şart* değil.
+
+**2. Kuplajlar çıkma miktarıyla ölçekleniyor.** Ters sapma (2,9–11,3 N·m) ve
+burun aşağı yunuslama (ΔC_m 0,005–0,032) **tam açılmada** hesaplanmıştı. Kısmî
+açılmada o kesir kadar. Dolayısıyla dönüş sonundaki çizelgeleme kısıtı, **tam
+açılmaya** getirilmiş bir kısıt; küçük düzeltmeler her fazda kullanılabilir.
+
+**3. Yükseklik sınırı kütleden değil KUPLAJDAN geliyor.** Kullanıcının işaret
+ettiği nokta: şeridin kendi yapısı küçük bir kalem, yani 10 cm yerine 20 cm de
+benzer kütle bütçesiyle mümkün. Ne kadar uzayabileceğini belirleyen şey, uç
+pervanelerinin soğurabileceği sapma ve yunuslama bozulması — yani §4.4'ün kendi
+hesabı. Bu, metne aynen böyle yazıldı.
+
+### ⚠️ Konumlandırma riski — kullanıcıya sorulacak
+
+Sürekli çıkışlı bir spoiler/çit, olağan anlamda bir **kumanda yüzeyidir**.
+Makalenin ayırt edici cümlesi "no elevons, no rudder, no tilting mechanism" ve
+§5.4 zaten şeridi "the one moving aerodynamic device" diye anıyor — yani
+dürüstlük yerinde. Ama "aç-kapa, orantılı bir kumanda yüzeyi değil" cümlesi
+şeridi kumanda yüzeylerinden **ayıran** ifadeydi ve o cümle artık yok.
+
+Bir hakem şunu sorabilir: *"orantılı çıkışlı bir spoiler'ınız var; 'kumanda
+yüzeyi yok' iddianız ne anlama geliyor?"* Cevap verilebilir (elevon/dümen yok,
+menteşeli kumanda yüzeyi yok, tek cihaz var) ama **cevabın hazır olması lazım.**
+Bu, YZ'lere sorulacaklar listesine girmeli.
