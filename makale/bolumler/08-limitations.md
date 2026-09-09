@@ -133,6 +133,13 @@ Several results depend on coefficients that were not computed for this geometry:
   is not in question — the yaw arm is the semi-span, so the available moment is 2.4 times
   the pitch moment — but directional stability and yaw damping are a single open item
   resting on a component whose section has not been selected.
+- The **cruise state of the tip rotors.** Section 5.2 shows that they must turn freely at
+  zero shaft load rather than stop, on pain of adding 61 to 74 percent to the zero-lift drag,
+  and that fixed pitch removes feathering as a third option. The estimate behind that is an
+  area-and-coefficient calculation with assumed solidity and section drag coefficients, not a
+  propeller calculation; what is robust is the ratio between the states, not the values. It
+  also converts a seized tip-rotor bearing from a control failure into a drag failure, and no
+  reliability analysis of that is offered here.
 - The **three-axis coupling of the roll strip**, none of which was previously stated.
   Deploying it on one side produces adverse yaw of 2.9 to 11.3 N·m depending on the height
   law, against 42.8 to 55.9 N·m of yaw authority — covered. It also produces a nose-down

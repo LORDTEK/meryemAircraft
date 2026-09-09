@@ -776,7 +776,10 @@ thrust costs a control channel. A counter-rotating pair does not produce it.
 
 The pairs are of fixed geometry. The two rotors of a pair may carry different blade
 twist, but the twist is fixed, and there is no cyclic pitch, no collective pitch and no
-variable mechanism of any kind. The design point at which torque balance is exact is
+variable mechanism of any kind. **This has a consequence for the tip pairs in cruise that
+Section 5.2 works out**: with no pitch mechanism they cannot be feathered, so in cruise they
+must either turn freely at zero shaft load or be stopped, and the difference between those two
+states is most of the aircraft's zero-lift drag. The design point at which torque balance is exact is
 cruise, not hover; a small residual torque therefore remains in hover, and Section 8
 records this.
 
@@ -1189,6 +1192,42 @@ It is worth noting what this avoidance also spares. Where lift rotors are retain
 keeping their drag small depends on stopping them at a favourable azimuth, which needs
 an indexing mechanism; where they are stowed, it needs a retraction mechanism. Both are
 mass, and both are failure modes. A configuration with no rotor to stop needs neither.
+
+**That last sentence carries a condition the paper had not stated, and it is a sharp one.**
+The four tip pairs are rotors, and the claim above holds only if they do not stop in cruise.
+The blades of the eight tip rotors sweep a disc area of 0.251 m², which is 12.7 percent of the
+wing area — not a small object to leave in the airstream in the wrong state. Taking a solidity
+of 0.10 to 0.15 and section drag coefficients appropriate to each condition:
+
+| Tip rotors in cruise | ΔC_D0 | as a fraction of the 0.0248 assumed |
+|---|---:|---:|
+| turning at zero shaft load, blades at low incidence | 0.0003 – 0.0008 | 1 – 3 % |
+| stopped edge-on, at a chosen azimuth | 0.0008 | 3 % |
+| **stopped broadside, azimuth uncontrolled** | **0.015 – 0.018** | **61 – 74 %** |
+
+**The difference between the first and third rows is the difference between a configuration
+that works and one that does not**, and it is robust to the coefficients assumed, because the
+two states differ by a factor of thirty. The second row shows why: stopping the rotors is
+survivable only if their azimuth is controlled, which is the indexing mechanism this section
+has just claimed the configuration does not need.
+
+**The resolution costs nothing, and it is a control state rather than hardware.** A fixed-pitch
+propeller left free settles at the advance ratio where the net shaft torque is zero: the inner
+blade sections drive and the outer sections retard, and they balance. At that condition the
+shaft does no work, so the motor neither drives nor brakes and the electrical cost is the
+controller's standby draw and the bearing losses — not the propulsive power the propeller would
+need to produce thrust. The blades sit at low incidence with attached flow, which is the first
+row of the table. **The tip rotors are therefore commanded to spin freely in cruise, neither
+driven nor braked**, and this is the state assumed throughout Section 6.
+
+Two things follow, and neither was previously stated. The first is that the fixed-pitch
+decision of Section 4.3 removes feathering from the design space, so the choice is between
+free-spinning and stopping, with nothing in between — which makes the argument above decisive
+rather than merely favourable. The second is that this is an *availability* requirement: the
+tip rotors must be free to turn in cruise, so a seized bearing or a braking failure in one of
+eight rotors is not a control problem but a drag problem, and a large one. No propeller-specific
+calculation or measurement supports the table above; it is an area-and-coefficient estimate of
+the same kind as the frame drag, and the section-drag coefficients are assumed.
 
 The word "mostly" in this heading is deliberate. The configuration does place hardware
 in the cruise airstream: the four tip frames and the four control propellers they
@@ -2789,6 +2828,13 @@ Several results depend on coefficients that were not computed for this geometry:
   is not in question — the yaw arm is the semi-span, so the available moment is 2.4 times
   the pitch moment — but directional stability and yaw damping are a single open item
   resting on a component whose section has not been selected.
+- The **cruise state of the tip rotors.** Section 5.2 shows that they must turn freely at
+  zero shaft load rather than stop, on pain of adding 61 to 74 percent to the zero-lift drag,
+  and that fixed pitch removes feathering as a third option. The estimate behind that is an
+  area-and-coefficient calculation with assumed solidity and section drag coefficients, not a
+  propeller calculation; what is robust is the ratio between the states, not the values. It
+  also converts a seized tip-rotor bearing from a control failure into a drag failure, and no
+  reliability analysis of that is offered here.
 - The **three-axis coupling of the roll strip**, none of which was previously stated.
   Deploying it on one side produces adverse yaw of 2.9 to 11.3 N·m depending on the height
   law, against 42.8 to 55.9 N·m of yaw authority — covered. It also produces a nose-down

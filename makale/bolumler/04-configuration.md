@@ -76,7 +76,10 @@ thrust costs a control channel. A counter-rotating pair does not produce it.
 
 The pairs are of fixed geometry. The two rotors of a pair may carry different blade
 twist, but the twist is fixed, and there is no cyclic pitch, no collective pitch and no
-variable mechanism of any kind. The design point at which torque balance is exact is
+variable mechanism of any kind. **This has a consequence for the tip pairs in cruise that
+Section 5.2 works out**: with no pitch mechanism they cannot be feathered, so in cruise they
+must either turn freely at zero shaft load or be stopped, and the difference between those two
+states is most of the aircraft's zero-lift drag. The design point at which torque balance is exact is
 cruise, not hover; a small residual torque therefore remains in hover, and Section 8
 records this.
 
