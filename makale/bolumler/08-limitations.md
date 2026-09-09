@@ -139,9 +139,12 @@ Several results depend on coefficients that were not computed for this geometry:
   of that range the buffer would mass 6.4 kg instead of 1.8 and **the light design's budget
   would not close**. The assumption is that a purpose-built short-duration buffer beats an
   automotive traction pack by three and a half to six times; that is plausible in kind and
-  unverified in magnitude, and Bill 3 rests on it. The energy side compounds it, since the
-  crossover from power-limited to energy-limited falls from 141 s to 62 s if the cell carries
-  80 Wh kg⁻¹ instead of 180, against a vertical phase of about a minute.
+  unverified in magnitude, and Bill 3 rests on it. The energy side does *not* compound it: the buffer
+  discharges through a take-off of ten to twenty seconds rather than continuously, and even a
+  low-energy high-power cell would use only a third of its capacity doing so. Power is the
+  binding currency, and a shortfall in it is a floor rather than a transient — thrust goes as
+  power to the two-thirds, so a buffer at 1.3 kW kg⁻¹ gives a thrust-to-weight ratio of 0.71
+  and the aircraft does not leave the ground.
 - The **cruise state of the tip rotors.** Section 5.2 shows that they must turn freely at
   zero shaft load rather than stop, on pain of adding 61 to 74 percent to the zero-lift drag,
   and that fixed pitch removes feathering as a third option. The estimate behind that is an
