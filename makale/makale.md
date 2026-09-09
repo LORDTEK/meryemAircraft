@@ -2427,14 +2427,28 @@ implies an Oswald value between **0.735 and 0.78** — a band the assumed 0.85 s
 rather than inside. If that reasoning holds, the cruise lift-to-drag ratio is 11.4 to 11.7
 rather than 12.0, and the range figures of Section 6.3 fall by three to five percent.
 
-**This paper does not make that correction, and the reason is a matter of evidence rather than
-of preference.** The ratio between inviscid and Oswald efficiency is itself a range this study
-took from general knowledge and has not sourced; propagating it into a headline number would
-replace a stated assumption with an unstated one. What can be said without a source is the
-structural point, and it is the important one: **the twist required for trim removes the
-margin that made the span-efficiency assumption safe.** Before Section 6.6 the assumption was
-bounded from above by a calculation. It no longer is. Whether the range figures are right now
-depends on a coefficient nobody in this study has measured, and Section 8 records it as such.
+**The conclusion does not depend on that ratio, which is fortunate, because the ratio is not
+settled.** Traub reports both an inviscid Oswald factor from a vortex-lattice solution and a
+measured one from the tunnel for three wings [18]; the planar case gives a measured-to-inviscid
+ratio of 0.95, but his two non-planar cases give 1.01 and 1.07, which cannot be right for a real
+wing and are presumably an artefact of comparing an uncorrected tunnel measurement with an
+inviscid calculation. That data therefore bounds the ratio loosely rather than fixing it. But
+the sign of the conclusion survives the whole plausible band:
+
+| Viscous / inviscid ratio | Implied Oswald e | Cruise L/D | Against the assumed 12.04 |
+|---:|---:|---:|---:|
+| 0.85 | 0.735 | 11.44 | −5.0 % |
+| 0.90 | 0.778 | 11.68 | −3.0 % |
+| 0.95 | 0.822 | 11.90 | −1.2 % |
+
+**For any ratio below unity — that is, for any wing with viscosity — the trimmed span
+efficiency is below the assumed 0.85 and the cruise lift-to-drag ratio is below 12.04.** Only
+the magnitude is open, and it lies between one and five percent. The assumption is not revised
+here because revising it would mean choosing a ratio this study has not measured; what has
+changed is that it is no longer bounded from above by a calculation, and Section 8 records it
+as exposed. It is worth adding that 0.85 at this aspect ratio is a conventional choice rather
+than a careless one — an independent eVTOL sizing study adopts the same value at aspect ratio
+7.0 [26] — which is precisely why it survived so long without being examined.
 
 **What is still not established.** The twist here is linear, chosen for simplicity rather than
 optimised; a distribution shaped for span loading would trim at the same moment for a smaller
@@ -2676,10 +2690,11 @@ Several results depend on coefficients that were not computed for this geometry:
   Oswald-type value once the viscous drag due to lift is allowed for — **though Section 7.6
   removes the margin that made this comfortable**, since the twist needed to trim lowers the
   inviscid figure to 0.865 and would put the implied Oswald value below the assumption rather
-  than above it. Two things are needed to settle it and neither is here: a source for the ratio
-  between inviscid and Oswald efficiency, and a viscous calculation of the trimmed wing. Until
-  then the range figures of Section 6.3 rest on an assumption that is exposed rather than
-  bounded. Neither vortex-lattice figure measures the same quantity as the assumption, and
+  than above it. The direction of the error is not in doubt — for any wing
+  with viscosity the trimmed value falls below 0.85 — and only its size is, between one and
+  five percent of cruise lift-to-drag ratio. Settling it needs a viscous calculation of the
+  trimmed wing, which is not here. Until then the range figures of Section 6.3 rest on an
+  assumption that is exposed rather than bounded. Neither vortex-lattice figure measures the same quantity as the assumption, and
   neither is offered as a correction to it.
 
 ## 8.5 Torque balance holds at one point only
@@ -3118,3 +3133,6 @@ the authors accept full responsibility for the content.
 25. Smith, C. W.; Bhateley, I. C. *Application of the Vortex-Lattice Technique to
     the Analysis of Thin Wings with Vortex Separation and Thick Multi-Element
     Wings.* NASA report, Fort Worth Division of General Dynamics, 1976.
+26. Ugwueze, O.; Statheros, T.; Bromfield, M. A.; Horri, N. An Efficient and
+    Robust Sizing Method for eVTOL Aircraft Configurations in Conceptual Design.
+    *Aerospace* **2023**, 10 (3), 311. https://doi.org/10.3390/aerospace10030311

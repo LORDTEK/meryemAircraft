@@ -94,6 +94,38 @@ başlık sayısına yaymak, belirtilmiş bir varsayımı belirtilmemişle
 değiştirmek olurdu. Yazılan şey yapısal nokta: varsayım artık bir hesapla
 **üstten sınırlı değil.**
 
+### 🔎 S1 KISMEN KAPANDI (09.09.2026 akşamı) — sonuç orandan bağımsız
+
+Traub 2024 hem **inviscid** (AVL) hem **ölçülmüş** Oswald faktörü veriyor.
+Kp'lerinden türettim (AR = 3):
+
+| | ölçülen e | inviscid e | oran |
+|---|---|---|---|
+| düz (planar) | 0,947 | 1,001 | **0,946** |
+| dairesel | 1,220 | 1,206 | 1,011 |
+| köşegen | 1,179 | 1,105 | 1,067 |
+
+İkisi 1'in **üstünde** — gerçek bir kanatta olamaz; duvar düzeltmesi
+uygulanmamış bir tünel ölçümünü inviscid hesapla karşılaştırmanın
+artefaktı. Yani bu veri oranı **sabitlemiyor**, gevşek sınırlıyor.
+
+**Ama sonucun işareti bütün bantta ayakta:**
+
+| oran | ima edilen Oswald e | seyir L/D | 12,04'e göre |
+|---|---|---|---|
+| 0,85 | 0,735 | 11,44 | −%5,0 |
+| 0,90 | 0,778 | 11,68 | −%3,0 |
+| 0,95 | 0,822 | 11,90 | −%1,2 |
+
+**1'in altındaki her oran için** — yani iskozitesi olan her kanat için —
+burulmalı açıklık verimi 0,85'in altında ve seyir L/D 12,04'ün altında.
+Yalnızca **büyüklüğü** açık: %1–5.
+
+Dolayısıyla YZ'lere sorulacak soru daraldı: *oranı bilmemize gerek yok,
+burulmalı kanadın **iskoz hesabı** lazım.* Bir de: 0,85 varsayımı
+konvansiyonel (Ugwueze 2023 de AR 7,0'da aynı değeri kullanıyor), yani
+dikkatsizlik değil — bu yüzden bu kadar uzun süre sorgulanmadan kaldı.
+
 ### S2. Şeridin yükseklik yasası — takas kapatılmadı
 
 Sabit h/c seyirde sürüklemeyi %64 azaltıyor ama izdeki alanı %45
