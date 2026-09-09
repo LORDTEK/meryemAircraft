@@ -571,6 +571,37 @@ its stated range and the fourth — the heavy design entering from a climb — o
 the geometric incidence is only 5.4° in any case. And the verification of that model is
 attributed there to work the present authors have not read.
 
+**What the flight-test literature does about the same term, and what it found.** The
+aerodynamic pitching moment through transition is not an item this study is alone in leaving
+open. A transition-optimisation study with outdoor flight trials builds its aerodynamic model
+by fitting published two-dimensional NACA 0012 lift and drag data through the incidence range,
+notes that its own aerofoil "is not exactly the same" and judges the error acceptable for a
+model-based controller, and carries **no pitching-moment term at all** in its equations of
+motion [28]. A second study does carry one, but as a linear form
+C_m = C_m0 + C_mα α + C_mδ δ used throughout the manoeuvre [29]. The practice of the field, in
+other words, is a borrowed section polar and a closed loop — which is what Section 7.4 does for
+lift and drag, and rather less than this section does for the moment. **The open item here is
+the field's open item.**
+
+That second study is worth more attention, because it flight-tested the question this
+configuration asks. Its authors compared their tail-sitter with and without elevons. Without
+them — that is, with attitude control by propeller differential thrust alone, as here — they
+report "a well-controlled attitude response during hovering and transition", but find that
+manoeuvres in level flight "cause an oscillatory attitude response" with "motor saturations
+observed", and conclude that the cause is "the increased aerodynamic moment but decreased motor
+thrust at high-speed level flight" [29].
+
+**That is the same structural tension this section derived from the moment budget, observed in
+flight.** The tight case is not the high-incidence middle of the rotation but its end and
+beyond, where speed is high: the aerodynamic moment grows as V² while propeller thrust falls.
+The correspondence should not be pushed too far — their pitch propellers are the vehicle's lift
+rotors, mounted on the wing with a short arm, where these are dedicated control propellers on
+0.71 m frames, and their vehicle is smaller — but the mechanism is identical and it saturated a
+real aircraft. It is the strongest external reason to treat the end-of-rotation budgets of
+0.050 and 0.010 as the binding numbers in this section, and the strongest external argument
+that a propeller-only tail-sitter needs its pitch authority checked at speed rather than at
+incidence.
+
 **Two limits of this reading are worth stating.** The incidence history comes from the
 point-mass trajectory of Section 7.4: it is the geometric angle between the body axis and the
 velocity vector, so it is only as good as that trajectory. And the rotation rate itself varies
