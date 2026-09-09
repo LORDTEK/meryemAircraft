@@ -106,7 +106,7 @@ energy, at 4.6 kW kg⁻¹, which is a demanding cell requirement and not a free 
 
 ## 5.4 What is paid
 
-The honest ledger has four entries.
+The honest ledger has five entries.
 
 **The control propellers.** Four pairs, their motors, mounts and wiring exist only to
 produce moments. In the vertical phase they draw twelve percent of the power the nose
@@ -122,6 +122,16 @@ the landing structure combined into one member.
 **The roll strip.** The one moving aerodynamic device on the aircraft. Its cost when
 retracted is a surface discontinuity; when deployed it is a drag device by construction,
 but it is deployed only while a roll is being commanded.
+
+**The twist needed to trim.** Section 7.6 finds that the configuration trims at cruise with
+nine degrees of tip washout, reflex being an order of magnitude short of the moment required.
+Washout is not free: it costs span efficiency, and the cruise lift-to-drag ratio falls from
+12.65 to 12.11 — **4.3 percent**. This entry was missing from earlier versions of this ledger,
+and it is worth being precise about what it is a payment for. It is not one of the three bills
+of Section 3, which are charged for having a hover capability; it is charged for being
+tailless, and a tailed aircraft of the same architecture would not pay it. It belongs here
+because this configuration is tailless, and because a ledger that omitted it would be
+flattering rather than honest.
 
 **The transition manoeuvre.** The aircraft must rotate through ninety degrees, and the
 rotation costs time, horizontal displacement and control power. Section 7 treats it in

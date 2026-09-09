@@ -253,9 +253,19 @@ percent of chord everywhere. The strip specified in Section 4.4 grows linearly f
 
 Gurney-type devices saturate in lift increment at around two percent of chord while their drag
 continues to grow. The inboard end of this strip is therefore in the right regime and the
-outboard end is far past it, producing drag out of proportion to the lift it changes. **The
-height law should follow the chord taper rather than oppose it**, which would give a strip of
-roughly constant h/c — and this is a change to the configuration, not to its description.
+outboard end is far past it, producing drag out of proportion to the lift it changes.
+
+**A law that held h/c constant would be a different trade, and the paper had not seen that
+there was one to make.** Holding h/c at two percent everywhere gives a strip of 0.0165 m²
+instead of 0.0466 m² — sixty-four percent less frontal area, and the same reduction in deployed
+drag, from 16.7 N to 5.9 N at cruise. Because such a strip's area distribution follows the
+chord, its centroid sits at 0.507 m, exactly where the half-wing's own area centroid sits, so
+the rolling moment under the circulation mechanism is unchanged. What it costs is hover: the
+part of the strip lying inside the slipstream shrinks from 0.0182 m² to 0.0101 m², a
+forty-five percent reduction in whatever authority comes from the strip's *own* force at zero
+airspeed. Which way that trade should be settled depends on which mechanism dominates in
+hover, and this paper has not settled that. What it can say is that **the present height law
+was not derived from anything, and a better one exists.**
 
 **Roll authority is therefore sized, supported by a measurement on a comparable device, and
 still not closed.** The quantity a future measurement must return is ΔC_L for this strip on
