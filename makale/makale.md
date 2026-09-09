@@ -994,6 +994,29 @@ between five and twenty-six percent of the yaw axis while a roll is being comman
 covered, and it is covered by the axis that happens to be the strongest** — but it is a
 coupling, it had not been stated, and a control design would have to allocate for it.
 
+**It loads the pitch axis too, and that one is not comfortable.** A wind-tunnel study of
+tapered-height Gurney flaps on a 60° delta wing — tested at heights of two and five percent of
+root chord, which is the same height law and the same range as the strip specified here —
+reports that "the flap significantly increases nose down pitching moment" [33]. The mechanism
+is the same on this aircraft: the lift the strip adds acts aft of the centre of gravity, so it
+pitches the nose down. How far aft depends on where along the chord the increment appears, and
+that is the part this paper cannot compute, since the strip is neither at the trailing edge nor
+straight. Bracketing it by placing the increment at mid-chord, three-quarter chord and the
+trailing edge of the affected region:
+
+| Increment acts at | Moment about CG | ΔC_m |
+|---|---:|---:|
+| mid-chord | 3.7 N·m | 0.005 |
+| ¾ chord | 13.2 N·m | 0.019 |
+| trailing edge (upper bound) | 22.7 N·m | 0.032 |
+
+The tightest pitching-moment budget in the whole of Section 7.6 is **0.050**, at the end of the
+rotation. At the upper end of this bracket, commanding a roll during that phase would consume
+two thirds of it. **The conclusion is a scheduling requirement rather than a redesign: the roll
+strip should not be commanded during the end of the rotation**, which is the one phase where
+the pitch axis has least to spare. The paper had not previously identified any reason to
+restrict when the strip may be used.
+
 **Roll authority is therefore sized, supported by a measurement on a comparable device, and
 still not closed.** The quantity a future measurement must return is ΔC_L for this strip on
 this planform, not a moment.
@@ -2766,10 +2789,14 @@ Several results depend on coefficients that were not computed for this geometry:
   is not in question — the yaw arm is the semi-span, so the available moment is 2.4 times
   the pitch moment — but directional stability and yaw damping are a single open item
   resting on a component whose section has not been selected.
-- The **roll–yaw coupling** of the strip. Deploying it on one side produces adverse yaw of
-  2.9 to 11.3 N·m depending on the height law, against 42.8 to 55.9 N·m of yaw authority. The
-  coupling is covered but was not previously stated, and the drag estimate behind it carries
-  the same unselected-cross-section caveat as the frames.
+- The **three-axis coupling of the roll strip**, none of which was previously stated.
+  Deploying it on one side produces adverse yaw of 2.9 to 11.3 N·m depending on the height
+  law, against 42.8 to 55.9 N·m of yaw authority — covered. It also produces a nose-down
+  pitching moment, measured for this class of device [33] and bracketed here at ΔC_m of 0.005
+  to 0.032 against a tightest budget of 0.050 — **not comfortably covered at the upper end**,
+  which yields a scheduling restriction rather than a redesign. Both estimates carry the same
+  unselected-cross-section caveat as the frames, and the chordwise position of the lift
+  increment, which sets the pitch coupling, is not computed anywhere in this paper.
 - The **roll actuator's speed** is a requirement this paper did not previously state. The
   on-off strip gives a bounded limit cycle of ±0.2° in bank at a fifty-millisecond
   deployment and ±9.4° at a hundred and fifty, so the device is usable if it is fast. No
@@ -3274,3 +3301,5 @@ the authors accept full responsibility for the content.
 32. Ross, J. C.; Storms, B. L.; Carrannanto, P. G. *Lift-Enhancing Tabs on
     Multielement Airfoils.* NASA Technical Memorandum 112990, Ames Research
     Center, 1997.
+33. Buchholz, M. D. *Lift Augmentation on a Delta Wing via Leading Edge Fences
+    and the Gurney Flap.* M.S. thesis; NASA Contractor Report 194793, 1993.

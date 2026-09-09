@@ -1754,3 +1754,49 @@ bir uzatırdı" — **dışarıdan destekliyor**, ve alıntılanan 2 s / 5,1 s'n
 tasarım değil **yaklaşılan sınır** olarak okunması gerektiğini söylüyor.
 
 Kaynakça 31 ve 32.
+
+---
+
+## 🔑 Buchholz 1993 — şerit ÜÇ EKSENİ birden yüklüyor (09.09.2026)
+
+60° delta kanat, rüzgâr tüneli, ve kritik olan: **konik yükseklikli Gurney flap,
+h/c_kök = 0,02 ve 0,05'te test edilmiş.** Bizim şeridin yükseklik yasası da kök
+veterine göre %2,1 → %6,2. **Aynı geometrik aile, aynı aralık.**
+
+### Ölçülmüş sonuç
+
+> *"The flap **significantly increases nose down pitching moment**."*
+
+Ve kaldırma eğrisinde **10°'ye varan kayma** (bizim ΔC_L = 0,12 gereksinimimizin
+çok üstünde bir yetenek), fence'lerin aksine flap **L/D'yi yüksek kaldırma
+katsayılarında artırıyor.**
+
+### Bunun bizde karşılığı: üçüncü kuplaj
+
+Şerit tek yarı kanatta açılınca:
+
+1. **yatış** (istenen)
+2. **ters sapma** (geçen tur bulundu): 2,9–11,3 N·m, sapma otoritesinin %5–26'sı
+3. **burun aşağı yunuslama** (bu tur): artışın veter boyunca nerede doğduğuna bağlı
+
+| artış nerede etkiyor | moment | ΔC_m |
+|---|---|---|
+| orta veter | 3,7 N·m | 0,005 |
+| ¾ veter | 13,2 N·m | 0,019 |
+| firar kenarı (üst sınır) | 22,7 N·m | **0,032** |
+
+**§7.6'nın en dar yunuslama bütçesi 0,050** (dönüş sonu). Üst sınırda şerit
+açmak bunun **üçte ikisini** yiyor.
+
+### Çıkan gereksinim — yeniden tasarım değil, ÇİZELGELEME
+
+**Yatış şeridi dönüşün sonunda komut edilmemeli** — yunuslama ekseninin en az
+payının olduğu tek faz orası. Makale şeridin ne zaman kullanılabileceğine dair
+hiçbir kısıt tanımlamamıştı; şimdi var.
+
+⚠️ **Aşırı transfer etmedim.** Buchholz'un flapı **firar kenarında**; bizimki
+%15 kök veterinden başlıyor ve köşegen. Yani kol daha kısa, moment daha küçük.
+İşaret biliniyor, büyüklük **bracket** olarak veriliyor, ve artışın veter
+boyunca nerede doğduğunun bu makalede hiç hesaplanmadığı §8'de yazılı.
+
+Kaynakça 33.
