@@ -866,11 +866,12 @@ configuration needs — it falls short by a factor of about three, and an earlie
 this paper quoted 46 N·m without saying where it came from. The moment must therefore come
 from the second mechanism: the strip changes the circulation of the half-wing it sits on,
 which is how a Gurney flap or a low fence works, and the affected area is the wing's, not
-the strip's. Twenty degrees per second then asks for **ΔC_L ≈ 0.12** over the strip's span.
-Chordwise fences and Gurney strips of one to two percent chord are reported to deliver 0.1
-to 0.3, so the requirement is a plausible one — but it is a requirement, taken from the
-literature on a different device, and this paper does not compute it for this geometry.
-**Roll authority is therefore sized here and not closed.**
+the strip's. Twenty degrees per second then asks for **ΔC_L ≈ 0.12** over the strip's span. Whether a
+device of this kind delivers that increment is a question for the experimental literature on
+Gurney flaps and chordwise fences, and this paper does not settle it: no measurement of this
+strip on this geometry exists, and the increment is not computed here either. **Roll
+authority is therefore sized and not closed**, and the quantity a future measurement must
+return is ΔC_L, not a moment.
 
 **Hover is the harder case, and for a reason that is structural rather than numerical.** At
 zero airspeed only the inboard part of the strip is loaded, by the slipstream, and the same
@@ -906,12 +907,18 @@ a minute.
 
 Directional stability must therefore come from the tip frames, which in cruise stand
 perpendicular to the wing plane above and below each tip and are the only vertical surfaces
-the aircraft has. Their mid-chord sits 0.879 m aft of the centre of gravity, so with a
-surface lift-curve slope of 4 per radian the side area needed is 0.058 m² for
-C_n_β = 0.03 and 0.097 m² for 0.05 — which, spread over the 2.84 m of combined frame
-length, is a fairing chord of 21 mm and 34 mm respectively. A faired strut of the 20 mm
-thickness assumed in Section 5.2 would have a chord of roughly 50 to 70 mm, so the
-requirement is comfortably inside what the fairing must be anyway.
+the aircraft has. Their mid-chord sits 0.879 m aft of the centre of gravity, which is a
+long arm for a surface that already exists. Taking a lift-curve slope of 4 per radian for a
+slender faired strut — an assumed value, not a measured one — the side area needed is 0.058 m²
+to reach C_n_β = 0.03 and 0.097 m² to reach 0.05, which spread over the 2.84 m of combined
+frame length is a fairing chord of 21 mm and 34 mm. A faired strut of the 20 mm thickness
+assumed in Section 5.2 carries a chord of several times its thickness, so both figures fall
+inside the chord the fairing needs for drag reasons alone. **What this paper does not do is
+fix the target.** How much weathercock stability this aircraft actually needs depends on its
+disturbance environment and its control bandwidth, neither of which is established here; the
+two values above are reference points spanning the range conventional aircraft are usually
+designed to, and the useful statement is the scaling — that the required chord is small
+enough to disappear into a component already present — rather than either number.
 
 **That reframes the fairing, and the reframing is the substantive result of this
 subsection.** Section 5.2 introduced the fairing as a drag measure and computed the frame
@@ -1769,9 +1776,9 @@ free parameter, and the requirement is a demanding one.
 stated.** The budget above says how much each item weighs and not where it sits. Section 7.6
 adopts a first-order packaging rule in the absence of an internal layout — masses distributed
 in proportion to internal volume — and shows that the resulting centre of gravity has to lie
-between roughly 80 and 85 percent of root chord: forward of 80 percent the camber moment
-needed to trim exceeds what reflexed sections deliver, and aft of 85 percent the static
-margin falls below the usual tailless band. The sweep carries the neutral point to 0.859 m
+in a band whose aft limit is firm and whose forward limit is not: aft of roughly 85 percent of
+root chord the static margin falls below the usual tailless band, while the forward limit
+depends on how much camber moment the sections can supply, which this paper does not fix. The sweep carries the neutral point to 0.859 m
 from the root leading edge, well aft of the root chord's midpoint, which is what makes such
 an aft centre of gravity admissible at all. The internal volume's own centroid is at 78.3
 percent, so an arrangement that simply follows the available volume lands just forward of the
@@ -2151,10 +2158,12 @@ light design's peak incidence rather than 0.205. The values above supersede it.
 **The constraint splits into two, and they are different problems.** In the middle of the
 rotation the incidence is high — seventeen to twenty-two degrees — but the dynamic pressure is
 low, and the coefficient that would consume the margin is 0.205 entering in a climb and 1.38
-entering from rest. The first of those sits *inside* the range of published post-stall values
-rather than above it, so the mid-rotation condition is not comfortable either: entering the
-rotation from a climb buys altitude at the cost of arriving at the high-incidence phase
-faster, and therefore with less moment to spare. At the end of the rotation the incidence is small, five to
+entering from rest. An earlier version of this paper compared these against a generic
+post-stall range quoted for swept planforms; that comparison is dropped, because the
+trajectory-resolved budget above supersedes it and the generic range was not attributable to
+a source we had read. What the budgets say without it is enough: entering the rotation from a
+climb buys altitude at the cost of arriving at the high-incidence phase faster, and therefore
+with less moment to spare, and 0.205 is not a comfortable coefficient to have left. At the end of the rotation the incidence is small, five to
 six degrees, but the aircraft is fast, and the budget falls to 0.050 for the light design and
 0.010 for the heavy one. That second condition is **not** a post-stall problem: it is the
 trim question of a tailless aircraft at its cruise incidence, and it is examined below rather
@@ -2206,11 +2215,27 @@ centre-of-gravity positions:
 | 83 | 0.805 | +8.3 | 0.037 |
 | 85 | 0.825 | +5.3 | 0.024 |
 
-Reflexed sections typically deliver 0.02 to 0.05. The upper half of that window is therefore
-reachable with conventional reflex and the lower half is not, which turns the packaging rule
-from a result into a design constraint: **the centre of gravity must lie between roughly 80
-and 85 percent of root chord**, and closer to the aft end of that range than the volume
-centroid alone would place it. It is not a demanding constraint — the internal volume's own
+The constraint is better stated the other way round, because doing so removes an assumption
+about what sections deliver. For a section able to supply a camber moment C_m0, the centre of
+gravity must lie no further forward than:
+
+| Section camber moment C_m0 | Most forward CG, % root chord | Static margin there, % MAC |
+|---:|---:|---:|
+| 0.02 | 85.6 | +4.4 |
+| 0.03 | 84.1 | +6.7 |
+| 0.04 | 82.6 | +8.9 |
+| 0.05 | 81.1 | +11.1 |
+| 0.06 | 79.6 | +13.3 |
+
+Read downward, the table is a trim constraint; read upward, it is a stability constraint,
+since a margin below about five percent is not a tailless aircraft anyone would fly. The two
+close on each other, and **the aft limit of roughly 85 percent of root chord is set by
+stability alone and is therefore firm; the forward limit is set by the section and is
+therefore not.** This paper does not fix the forward limit, because doing so would require a
+camber and reflex distribution it has not defined and a source for what such a distribution
+delivers that its authors have not read. What it fixes is the packaging rule's own answer,
+80.2 percent, and the observation that this sits in the part of the table reachable only by a
+section supplying rather more than the smallest camber moments. It is not a demanding constraint — the internal volume's own
 centroid is at 78.3 percent — but it is a constraint, and the placement of fuel, payload and
 engine is not free. What is *not* established is that any particular camber and twist
 distribution delivers the required moment at the required lift coefficient without an
@@ -2346,9 +2371,9 @@ Several results depend on coefficients that were not computed for this geometry:
   27.1 N·m. What remains from the literature is the strip's own effectiveness, and it is
   the load-bearing part. The strip's own force as a swept fence supplies about a third of
   the required moment; the moment must therefore come from the change in the half-wing's
-  circulation, which asks for ΔC_L ≈ 0.12 over the strip's span. That figure is consistent
-  with published Gurney-flap and fence data but is not computed here, so **roll authority
-  is sized and not closed, in the same sense as cruise trim.** An earlier version of this
+  circulation, which asks for ΔC_L ≈ 0.12 over the strip's span. That increment is neither
+  measured nor computed here, so **roll authority is sized and not closed, in the same sense
+  as cruise trim.** An earlier version of this
   paper quoted 46 N·m without stating the mechanism it came from; that number implies
   ΔC_L ≈ 0.20 and is not reproduced here as an authority.
 - The **directional stability** of the configuration. Section 4.4 computes C_n_β = 0 for
@@ -2691,8 +2716,9 @@ is the end of the rotation, where incidence is small and speed is high, and that
 question rather than a post-stall one. The trim question has since been sized rather than
 closed: the configuration is statically stable, with a neutral point at 34 percent of mean
 aerodynamic chord and a margin of 12.5 percent at the assumed centre of gravity, and the
-camber moment needed to trim it at cruise is 0.056, which is at the upper edge of what
-reflexed sections deliver. The roll axis was treated the same way and gave the same kind of
+camber moment needed to trim it at cruise is 0.056 at the centre of gravity the packaging
+rule gives — a requirement on a camber distribution the paper has not defined, and one that
+moves with the centre of gravity rather than being fixed by it. The roll axis was treated the same way and gave the same kind of
 answer: the roll inertia and the roll damping are computed for this planform, twenty degrees
 per second at cruise requires 27.1 N·m, the strip's own force supplies about a third of
 that, and the remainder must come from the change it makes to the half-wing's circulation —

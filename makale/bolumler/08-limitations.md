@@ -111,9 +111,9 @@ Several results depend on coefficients that were not computed for this geometry:
   27.1 N·m. What remains from the literature is the strip's own effectiveness, and it is
   the load-bearing part. The strip's own force as a swept fence supplies about a third of
   the required moment; the moment must therefore come from the change in the half-wing's
-  circulation, which asks for ΔC_L ≈ 0.12 over the strip's span. That figure is consistent
-  with published Gurney-flap and fence data but is not computed here, so **roll authority
-  is sized and not closed, in the same sense as cruise trim.** An earlier version of this
+  circulation, which asks for ΔC_L ≈ 0.12 over the strip's span. That increment is neither
+  measured nor computed here, so **roll authority is sized and not closed, in the same sense
+  as cruise trim.** An earlier version of this
   paper quoted 46 N·m without stating the mechanism it came from; that number implies
   ΔC_L ≈ 0.20 and is not reproduced here as an authority.
 - The **directional stability** of the configuration. Section 4.4 computes C_n_β = 0 for

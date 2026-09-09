@@ -524,9 +524,9 @@ free parameter, and the requirement is a demanding one.
 stated.** The budget above says how much each item weighs and not where it sits. Section 7.6
 adopts a first-order packaging rule in the absence of an internal layout — masses distributed
 in proportion to internal volume — and shows that the resulting centre of gravity has to lie
-between roughly 80 and 85 percent of root chord: forward of 80 percent the camber moment
-needed to trim exceeds what reflexed sections deliver, and aft of 85 percent the static
-margin falls below the usual tailless band. The sweep carries the neutral point to 0.859 m
+in a band whose aft limit is firm and whose forward limit is not: aft of roughly 85 percent of
+root chord the static margin falls below the usual tailless band, while the forward limit
+depends on how much camber moment the sections can supply, which this paper does not fix. The sweep carries the neutral point to 0.859 m
 from the root leading edge, well aft of the root chord's midpoint, which is what makes such
 an aft centre of gravity admissible at all. The internal volume's own centroid is at 78.3
 percent, so an arrangement that simply follows the available volume lands just forward of the

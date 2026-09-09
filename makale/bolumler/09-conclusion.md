@@ -72,8 +72,9 @@ is the end of the rotation, where incidence is small and speed is high, and that
 question rather than a post-stall one. The trim question has since been sized rather than
 closed: the configuration is statically stable, with a neutral point at 34 percent of mean
 aerodynamic chord and a margin of 12.5 percent at the assumed centre of gravity, and the
-camber moment needed to trim it at cruise is 0.056, which is at the upper edge of what
-reflexed sections deliver. The roll axis was treated the same way and gave the same kind of
+camber moment needed to trim it at cruise is 0.056 at the centre of gravity the packaging
+rule gives — a requirement on a camber distribution the paper has not defined, and one that
+moves with the centre of gravity rather than being fixed by it. The roll axis was treated the same way and gave the same kind of
 answer: the roll inertia and the roll damping are computed for this planform, twenty degrees
 per second at cruise requires 27.1 N·m, the strip's own force supplies about a third of
 that, and the remainder must come from the change it makes to the half-wing's circulation —

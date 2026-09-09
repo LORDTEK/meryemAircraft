@@ -218,11 +218,12 @@ configuration needs — it falls short by a factor of about three, and an earlie
 this paper quoted 46 N·m without saying where it came from. The moment must therefore come
 from the second mechanism: the strip changes the circulation of the half-wing it sits on,
 which is how a Gurney flap or a low fence works, and the affected area is the wing's, not
-the strip's. Twenty degrees per second then asks for **ΔC_L ≈ 0.12** over the strip's span.
-Chordwise fences and Gurney strips of one to two percent chord are reported to deliver 0.1
-to 0.3, so the requirement is a plausible one — but it is a requirement, taken from the
-literature on a different device, and this paper does not compute it for this geometry.
-**Roll authority is therefore sized here and not closed.**
+the strip's. Twenty degrees per second then asks for **ΔC_L ≈ 0.12** over the strip's span. Whether a
+device of this kind delivers that increment is a question for the experimental literature on
+Gurney flaps and chordwise fences, and this paper does not settle it: no measurement of this
+strip on this geometry exists, and the increment is not computed here either. **Roll
+authority is therefore sized and not closed**, and the quantity a future measurement must
+return is ΔC_L, not a moment.
 
 **Hover is the harder case, and for a reason that is structural rather than numerical.** At
 zero airspeed only the inboard part of the strip is loaded, by the slipstream, and the same
@@ -258,12 +259,18 @@ a minute.
 
 Directional stability must therefore come from the tip frames, which in cruise stand
 perpendicular to the wing plane above and below each tip and are the only vertical surfaces
-the aircraft has. Their mid-chord sits 0.879 m aft of the centre of gravity, so with a
-surface lift-curve slope of 4 per radian the side area needed is 0.058 m² for
-C_n_β = 0.03 and 0.097 m² for 0.05 — which, spread over the 2.84 m of combined frame
-length, is a fairing chord of 21 mm and 34 mm respectively. A faired strut of the 20 mm
-thickness assumed in Section 5.2 would have a chord of roughly 50 to 70 mm, so the
-requirement is comfortably inside what the fairing must be anyway.
+the aircraft has. Their mid-chord sits 0.879 m aft of the centre of gravity, which is a
+long arm for a surface that already exists. Taking a lift-curve slope of 4 per radian for a
+slender faired strut — an assumed value, not a measured one — the side area needed is 0.058 m²
+to reach C_n_β = 0.03 and 0.097 m² to reach 0.05, which spread over the 2.84 m of combined
+frame length is a fairing chord of 21 mm and 34 mm. A faired strut of the 20 mm thickness
+assumed in Section 5.2 carries a chord of several times its thickness, so both figures fall
+inside the chord the fairing needs for drag reasons alone. **What this paper does not do is
+fix the target.** How much weathercock stability this aircraft actually needs depends on its
+disturbance environment and its control bandwidth, neither of which is established here; the
+two values above are reference points spanning the range conventional aircraft are usually
+designed to, and the useful statement is the scaling — that the required chord is small
+enough to disappear into a component already present — rather than either number.
 
 **That reframes the fairing, and the reframing is the substantive result of this
 subsection.** Section 5.2 introduced the fairing as a drag measure and computed the frame
