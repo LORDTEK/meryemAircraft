@@ -52,3 +52,8 @@
     Investigation of the Stability and Control Characteristics of a Series of
     Flying Wings With Sweep Angles of 60°.* NASA Technical Memorandum 4649,
     Langley Research Center, August 1995.
+21. Bacchini, A.; Cestino, E. Electric VTOL Configurations Comparison.
+    *Aerospace* **2019**, 6 (3), 26. https://doi.org/10.3390/aerospace6030026
+22. Johnson, W.; Silva, C. NASA concept vehicles and the engineering of advanced
+    air mobility aircraft. *The Aeronautical Journal* **2022**, 126 (1295),
+    59–91. doi:10.1017/aer.2021.92
