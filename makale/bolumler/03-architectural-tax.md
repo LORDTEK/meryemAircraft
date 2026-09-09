@@ -278,9 +278,35 @@ separate currencies rather than three names for one quantity, then an architectu
 cruise lift-to-drag ratio need not be the lightest. A single-metric comparison would not
 anticipate that. The NASA sizing study quoted in Section 3.2 reports exactly this pattern:
 the lift-plus-cruise concepts are the heaviest of the four examined *while having the highest
-cruise efficiency of the group*, and the authors attribute the weight to hardware carried for
+cruise efficiency of that group*, and the authors attribute the weight to hardware carried for
 hover rather than to cruise power. That is *f*₁ dominating while *f*₂ is favourable, which is
-the framework's prediction and not a restatement of it.
+the framework's prediction and not a restatement of it. The later and larger version of the
+same programme states the transfer in a single sentence: "the high cruise efficiency of the
+lift+cruise type reduces the battery weight compared to the quadrotor, but not enough to
+counter the increase in structure and propulsion weight, so the all-electric lift+cruise
+aircraft is the heaviest design" [22]. A gain in one currency, insufficient against a loss in
+another, named as such by authors with no framework to defend.
+
+**That later study also contains the case that would embarrass the framework if it behaved
+differently, and it does not.** Sizing five architectures rather than four to the same mission
+adds a tiltwing, and the tiltwing has the highest cruise efficiency of all of them:
+
+| Concept | L/D_e | Design gross weight, lb |
+|---|---:|---:|
+| Quadrotor, turboshaft | 4.9 | 3 678 |
+| Quiet single main rotor, turboshaft | 5.4 | 3 951 |
+| Side-by-side, electric | 7.2 | 5 547 |
+| Lift + cruise, electric | 7.9 | 9 482 |
+| Lift + cruise, turbo-electric | 8.5 | 7 271 |
+| **Tiltwing, turbo-electric** | **8.6** | **6 584** |
+
+The tiltwing is best in cruise efficiency *and* lighter than either lift-plus-cruise concept.
+A framework that predicted "best in cruise implies heaviest" would be refuted by this row. The
+framework here predicts no such thing: it says the tiltwing satisfies most of the escape
+condition, because the same propulsors serve hover and cruise and nothing is left exposed, and
+that it pays instead for the mechanism that rotates them. That is precisely the trade
+Section 5.5 finds when it sizes a tilting layout itself, and it is why no claim of superiority
+over the tilting family is made anywhere in this paper.
 
 The comparison of Section 5.5 shows the same pattern on a different set of architectures:
 of the three sized there, the tilting layout has the best cruise lift-to-drag ratio — 13.44
@@ -291,13 +317,41 @@ tilting layout is given a cruise-drag multiplier of 1.00 — that is, its mechan
 credited as aerodynamically free — precisely to make the *f*₂ advantage as large as the
 architecture could possibly claim. A comparison whose inputs were chosen by the present
 authors cannot corroborate the present authors' framework. **The evidential weight rests on
-the NASA study alone**, whose numbers were produced for another purpose and are not ours to
+work done by others**, whose numbers were produced for other purposes and are not ours to
 choose; Section 5.5 shows what the framework looks like when applied, not that it is right.
 
-Neither comparison validates the framework. Both are external consistency checks: the NASA
+**A second independent check exists, and it is on aircraft that were built rather than sized.**
+Bacchini and Cestino compare three flying eVTOLs — one per architecture — on five parameters
+[21]:
+
+| | E-Hang 184 (multirotor) | Cora (lift + cruise) | Lilium (vectored thrust) |
+|---|---:|---:|---:|
+| Disc loading, N m⁻² | **440** | 880 | 7500 |
+| Total hover time, min | **20.5** | 16.5 | 12.1 |
+| Cruise speed, km h⁻¹ | 100 | 180 | **252** |
+| Practical range, km | 42 | 107 | **203** |
+
+The ranking reverses completely between the hover rows and the cruise rows. The architecture
+best in hover is worst in cruise and the architecture best in cruise is worst in hover, with
+the lift-plus-cruise layout between them on every line — which is what it means for the
+currencies to be separate rather than three names for one quantity. Those authors also state
+two of the three transfers in their own words, without any framework to state them in. Of the
+lift-plus-cruise aircraft: its "parasitic drag caused by the pylons and vertical thrust
+propellers increases the power required in cruise" — that is *f*₂. And of the vectored-thrust
+aircraft, whose cruise efficiency is the best of the three: its hover "is so power demanding
+that it requires batteries with higher specific power" than those assumed, so that "the
+aerodynamic advantages of this configuration are balanced by higher demands on the batteries
+and on the power electronics" — that is *f*₂ bought and *f*₃ paid, named as an exchange by an
+author who was not looking for one.
+
+None of these comparisons validates the framework. All are external consistency checks: the NASA
 study was carried out for other purposes and its numbers were not chosen to suit the
 argument here, and a framework that predicted the opposite ordering would be in difficulty
-against them. Corroboration of this kind raises confidence that the three charges are
+against them. The Bacchini and Cestino comparison is weaker as evidence in one specific way
+and stronger in another: weaker because its three aircraft differ in mass, mission and
+technical maturity as well as in architecture, so it does not isolate the mechanism the way a
+controlled sizing study does; stronger because they exist, and their numbers are not the
+output of anyone's sizing loop. Corroboration of this kind raises confidence that the three charges are
 separable in practice; it does not establish that they are the only three, and nothing
 short of a broad survey of sized architectures could.
 

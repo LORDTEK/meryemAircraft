@@ -1298,3 +1298,75 @@ işaret yanında bir arıza kipi getiriyor. Metne §4.4 ve §8'e yazıldı.
 | pitch-up eğilimi | **belirsiz** — mekanizma farklı ama trend aleyhte; açık bırakıldı |
 
 Kaynakça 19 (NACA TR-796) ve 20 (NASA TM-4649) eklendi.
+
+---
+
+## 🔑 ÇERÇEVENİN DAYANAĞI ÜÇE ÇIKTI (09.09.2026)
+
+YZ3'ün 11. turdaki uyarısı: çerçevenin dış tutarlılık sınaması **tek** bir NASA
+çalışmasına dayanıyordu, ve kendi §5.5 karşılaştırmamız (tilt'e 1,00 kredisi biz
+verdiğimiz için) kanıt sayılamazdı. İki kaynak okundu, dayanak üçe çıktı.
+
+### Bacchini & Cestino 2019 — **yapılmış** üç uçak, sıralama tam tersine dönüyor
+
+*Aerospace* 6(3):26, Tablo 16:
+
+| | E-Hang 184 (çokrotorlu) | Cora (lift+cruise) | Lilium (yönlendirilmiş itki) |
+|---|---|---|---|
+| disk yükü N/m² | **440** | 880 | 7500 |
+| toplam askı süresi | **20,5 dk** | 16,5 | 12,1 |
+| seyir hızı | 100 km/s | 180 | **252** |
+| pratik menzil | 42 km | 107 | **203** |
+
+**Askıda en iyi olan seyirde en kötü, seyirde en iyi olan askıda en kötü.** Para
+birimlerinin ayrı olması tam olarak budur.
+
+Ve yazarlar iki transferi kendi cümleleriyle söylüyor:
+- Cora için: *"parasitic drag caused by the pylons and vertical thrust
+  propellers increases the power required in cruise"* → **f₂**
+- Lilium için: askısı o kadar güç isteyen ki *"requires batteries with higher
+  specific power"*, ve *"the aerodynamic advantages of this configuration are
+  balanced by higher demands on the batteries and on the power electronics"*
+  → **f₂ kazanıldı, f₃ ödendi**, bir çerçeve aramayan bir yazar tarafından
+  bir takas olarak adlandırılmış.
+
+⚠️ Kanıt olarak zayıf yanı: üç uçak yalnızca mimaride değil kütle, görev ve
+olgunlukta da farklı, yani mekanizmayı izole etmiyor. Güçlü yanı: **var olan
+uçaklar**, ve sayıları kimsenin boyutlandırma döngüsünün çıktısı değil.
+
+### Johnson & Silva 2022 — NASA'nın BEŞ araçlı sürümü
+
+*The Aeronautical Journal* 126(1295):59–91, Tablo 3. Makale şimdiye kadar
+2018'in **dört** araçlı sürümüne (Silva ve ark.) dayanıyordu. Yenisi bir
+**tiltwing** ekliyor:
+
+| konsept | L/D_e | tasarım brüt ağırlık (lb) |
+|---|---|---|
+| quadrotor, turboşaft | 4,9 | 3 678 |
+| QSMR, turboşaft | 5,4 | 3 951 |
+| yan yana, elektrik | 7,2 | 5 547 |
+| lift+cruise, elektrik | 7,9 | **9 482** |
+| lift+cruise, turbo-elektrik | 8,5 | 7 271 |
+| **tiltwing, turbo-elektrik** | **8,6** | 6 584 |
+
+**Dikkat: tiltwing hem seyirde en verimli hem de lift+cruise'dan hafif.**
+"Seyirde en iyi olan en ağırdır" diyen bir çerçeve bu satırla çürürdü. Bizimki
+onu demiyor: tiltwing kaçınma koşulunun çoğunu sağlıyor (aynı tahrik hem askıda
+hem seyirde, açıkta bir şey kalmıyor) ve bedeli **mekanizma**. Bu, §5.5'in tilt
+hattını kendi boyutlandırdığında bulduğu takasın aynısı — ve tilt ailesine karşı
+hiçbir yerde üstünlük iddia etmememizin sebebi.
+
+Ayrıca doğrudan alıntılanabilir bir transfer cümlesi verdi:
+> *"the high cruise efficiency of the lift+cruise type reduces the battery weight
+> compared to the quadrotor, but not enough to counter the increase in structure
+> and propulsion weight, so the all-electric lift+cruise aircraft is the heaviest
+> design."*
+
+### Düzeltilen bir ifade
+
+§3.7 "highest cruise efficiency of **the group**" diyordu. Dört araçlı küme için
+doğru, beş araçlı küme için **yanlış** (tiltwing 8,6 ile önde). "of **that**
+group" oldu ve tiltwing satırı açıkça yazıldı. Kaynak okunmasa bu hata
+gönderimde kalırdı.
+
+Kaynakça 21 (Bacchini & Cestino 2019) ve 22 (Johnson & Silva 2022) eklendi.
