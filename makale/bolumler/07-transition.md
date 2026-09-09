@@ -436,12 +436,26 @@ ratio from 12.65 to 12.11, a **4.3 percent penalty paid to be tailless**. It is 
 of payment the rest of this paper is about — a capability bought in one currency and charged
 in another — and it had not previously been counted.
 
-**One assumption is retired by this.** Section 6.2 assumed a span efficiency of 0.85 without
-justification, and the range figures of Section 6.3 rest on it. The trimmed wing computes to
-0.865. The assumption was therefore conservative by 0.6 percent, and **the range figures do
-not change**; what changes is that they now have a basis. It is worth being clear about the
-direction of the argument, because the coincidence is easy to over-read: the assumption was
-not chosen to match this calculation, and the calculation was not tuned to the assumption.
+**One assumption is put at risk by this, and the risk runs the wrong way.** Section 6.2 assumed
+an Oswald span efficiency of 0.85, and the range figures of Section 6.3 rest on it. Section 6.6
+supported that assumption by computing an inviscid span efficiency of 0.99 for the planform and
+noting that an Oswald-type value runs at roughly 85 to 90 percent of the inviscid one, which
+places 0.85 at the bottom of the implied band of 0.84 to 0.89 — conservative, if only just.
+
+That argument was made for a wing without twist. The wing without twist cannot be trimmed. For
+the trimmed wing the inviscid figure is not 0.99 but **0.865**, and the same reasoning then
+implies an Oswald value between **0.735 and 0.78** — a band the assumed 0.85 sits *above*
+rather than inside. If that reasoning holds, the cruise lift-to-drag ratio is 11.4 to 11.7
+rather than 12.0, and the range figures of Section 6.3 fall by three to five percent.
+
+**This paper does not make that correction, and the reason is a matter of evidence rather than
+of preference.** The ratio between inviscid and Oswald efficiency is itself a range this study
+took from general knowledge and has not sourced; propagating it into a headline number would
+replace a stated assumption with an unstated one. What can be said without a source is the
+structural point, and it is the important one: **the twist required for trim removes the
+margin that made the span-efficiency assumption safe.** Before Section 6.6 the assumption was
+bounded from above by a calculation. It no longer is. Whether the range figures are right now
+depends on a coefficient nobody in this study has measured, and Section 8 records it as such.
 
 **What is still not established.** The twist here is linear, chosen for simplicity rather than
 optimised; a distribution shaped for span loading would trim at the same moment for a smaller
