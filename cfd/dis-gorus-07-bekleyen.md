@@ -131,11 +131,26 @@ dikkatsizlik değil — bu yüzden bu kadar uzun süre sorgulanmadan kaldı.
 Sabit h/c seyirde sürüklemeyi %64 azaltıyor ama izdeki alanı %45
 azaltıyor. Hangi mekanizmanın **asılı durumda** baskın olduğu belirlenmedi.
 
-### S3. Uç çerçevesi fairing'inin toe açısı
+### S3. Uç çerçevesi fairing'inin toe açısı — BÜYÜKLÜK BULUNDU, İŞARET AÇIK
 
-NACA TR-796: yüksek en-boy oranlı finler toe-out ister, ve toe-out'ta arka
-fin perdövitese girerse **kararsızlaştırıcı** moment doğuyor. Açı ve işaret
-seçilmedi.
+NACA TR-796: yüksek en-boy oranlı finler toe-out ister, düşük olanlar toe-in;
+ve toe-out'ta arka fin perdövitese girerse **kararsızlaştırıcı** moment doğuyor.
+
+**Büyüklük ölçülmüş (NASA TM-78767, 09.09.2026):** uç podlarında dikey kuyruk
+taşıyan kuyruksuz ok kanatlı bir kargo konfigürasyonunda, (L/D)max için
+**optimum toe açısı ~1,5°** (simetrik kesitli kuyruklar). Yani açı **bir-iki
+derece mertebesinde**, on derece değil. Ve aynı testler L/D'nin üç kuyruk
+tasarımında da "about the same" olduğunu buluyor, **%75 daha büyük alana
+rağmen** — bizim "gereken veter zaten olması gerekenin içinde" argümanımızın
+ölçümle gelen hâli.
+
+**Açık kalan: İŞARET.** O çalışmanın finleri düşük en-boy oranlı ve toe-in
+istiyor; TR-796 yüksek en-boy oranlılar için toe-out diyor; bizim çerçeveler
+(1,42 m boy / on milimetrelerce veter, AR ~20-28) **her iki kaynağın da
+aralığının dışında.**
+
+**Sorulacak:** Çok yüksek en-boy oranlı (AR > 15) uç finlerinde toe açısının
+işareti ne olmalı, ve perdövites arıza kipi bu AR'de nasıl davranıyor?
 
 ### 🔴 S4. Refleks kesitlerin gerçek C_m0 mertebesi — EN ÖNEMLİ AÇIK SORU
 

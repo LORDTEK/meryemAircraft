@@ -1853,3 +1853,46 @@ katsayısı **varsayım**. Sağlam olan **oran**, değerler değil. §8'e böyle
 okumasından çıkmadı. Aç-kapa şeridin üç ekseni birden yüklediğini de önceden
 biliyormuş. Bu turların bir kısmı, benim hesaplayarak vardığım yerlere onun
 zaten sezgiyle varmış olduğunu doğrulamakla geçiyor.
+
+---
+
+## NASA TM-78767 (kuyruksuz ok kanatlı kargo uçağı) — toe açısının BÜYÜKLÜĞÜ (09.09.2026)
+
+Uç podlarında dikey kuyruk taşıyan, kuyruksuz, ok kanatlı bir kargo
+konfigürasyonu; rüzgâr tüneli.
+
+**1. Toe açısı ölçülmüş: optimum ~1,5°.**
+> *"the optimum toe-in angle appears to be about 1.5 degrees"* (simetrik kesitli
+> kuyruklar; kamberli olan toe'ya "relatively insensitive").
+
+S3'ün **büyüklük** kısmı kapandı: açı **bir-iki derece mertebesinde**, on değil.
+Ve maliyeti küçük.
+
+**2. Fin alanı L/D'yi neredeyse etkilemiyor.**
+> *"(L/D)max is about the same with all three vertical-tail designs,
+> **notwithstanding the 75% larger area** of VT2."*
+
+Bu, bizim "gereken fairing veteri zaten olması gerekenin içinde" argümanımızın
+**ölçümle gelen hâli** — tahminle değil.
+
+**3. Üçüncü bağımsız doğrulama.**
+> *"The destabilizing effect of adding nacelles to the podded wing is noted.
+> The further addition of vertical tails **restores directional stability**."*
+
+Kuyruksuz kanat yön kararsız; uçtaki dikey yüzeyler geri getiriyor. Artık üç
+kaynak: TM-4649, TR-796, TM-78767.
+
+### Açık kalan: İŞARET
+
+| kaynak | fin AR | önerdiği |
+|---|---|---|
+| TM-78767 | düşük (pod kuyruğu) | **toe-in** ~1,5° |
+| TR-796 | AR < 2 → toe-in, orta/yüksek → **toe-out** | işaret AR'a bağlı |
+| **bizim çerçeveler** | **~20–28** | **iki kaynağın da aralığı dışında** |
+
+Ve TR-796'nın uyarısı duruyor: toe-out'ta arka fin perdövitese girerse
+**kararsızlaştırıcı** moment. Yani işaret seçimi bir arıza kipi seçimi.
+
+S3 buna göre güncellendi: büyüklük bulundu, işaret soruluyor.
+
+Kaynakça 34.
