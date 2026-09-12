@@ -58,29 +58,46 @@ is carried here. Fuel and battery are as sized, 9.80 kg. A contingency of 12 per
 mass — ordinary preliminary-design practice — adds 2.68 kg.
 
 **The battery buffer is specified by power, not by energy, and this has not been stated
-before.** It must supply the difference between hover power and engine rating, 8.3 kW at
-the light design point, from 1.8 kg — a specific power of 4.6 kW kg⁻¹, or about 26 C at
-180 Wh kg⁻¹. Energy is not the binding constraint until roughly 140 seconds of hover, well
-beyond the profile of Section 7; below that the buffer is power-limited. The heavy design
-is in the same regime, 4.1 kW kg⁻¹ at 22 C. That places the buffer in the high-power
-lithium-ion or lithium-polymer class — cells rated for twenty to thirty times their
-capacity in continuous discharge — rather than in the high-energy class a range-driven
-selection would reach for.
+before.** It must supply the difference between what the propellers demand and what the engine
+delivers — but that difference has to be taken at one station, and an earlier version of this
+section did not take it at one. It subtracted the engine's 2.6 kW of *shaft* power from the
+rotor's 10.9 kW of *shaft* power and divided the remainder by the buffer mass, giving
+4.61 kW kg⁻¹. The buffer sits on the electrical bus, which is neither of those stations. Running
+the chain of Section 6.1 link by link instead:
+
+| Station | Light design, hover |
+|---|---:|
+| Nose propeller shaft | 10.90 kW |
+| ÷ electric machine, 0.92 | 11.85 kW |
+| ÷ power electronics, 0.95 | **12.47 kW demanded at the bus** |
+| Engine shaft 2.60 kW × generator 0.90 | **2.34 kW supplied at the bus** |
+| **Buffer** | **10.13 kW** |
+
+which is **5.63 kW kg⁻¹** from 1.8 kg, or about 31 C at 180 Wh kg⁻¹ — twenty-two percent above
+the figure previously carried, and in the unfavourable direction. Taking the tip pairs as well,
+which Section 7.4 shows the aircraft needs in order to leave the ground at all, the bus demand
+rises to 14.00 kW and the buffer to 11.66 kW, or **6.48 kW kg⁻¹** at 36 C. The heavy design sits
+on the same line: 198.5 kW of buffer on 40 kg, **4.96 kW kg⁻¹**, rising to 5.54 kW kg⁻¹ if the
+tip pairs are counted. Energy is not the binding constraint until roughly 140 seconds of hover,
+well beyond the profile of Section 7; below that the buffer is power-limited. That places the
+buffer well past the high-power lithium-ion or lithium-polymer class — cells rated for twenty to
+thirty times their capacity in continuous discharge — and the paragraphs below measure how far
+past.
 
 **How demanding, measured against the only figures this study has read, is the most exposed
 number in the whole mass budget.** Bacchini and Cestino, sizing electric VTOL aircraft, take
 735 W kg⁻¹ at pack level from an automotive traction pack and report that "Li-ion batteries for
 power applications have… specific power from 700 to 1300 W kg⁻¹" [21]. The buffer here asks for
-**4.6 kW kg⁻¹**, three and a half to six and a half times the top of that range. Sized at
-figures from that range instead:
+**5.63 kW kg⁻¹** to hover and 6.48 to take off, four and a third to nearly nine times the top of
+that range. Sized at figures from that range instead, on the hover requirement alone:
 
 | Buffer specific power | Buffer mass | Fraction of MTOW |
 |---|---:|---:|
-| 0.735 kW kg⁻¹ (the pack they assume) | 11.3 kg | 22.6 % |
-| 1.30 kW kg⁻¹ (top of their quoted range) | 6.4 kg | 12.8 % |
-| **4.61 kW kg⁻¹ (this study, implicitly)** | **1.8 kg** | **3.6 %** |
+| 0.735 kW kg⁻¹ (the pack they assume) | 13.8 kg | 27.6 % |
+| 1.30 kW kg⁻¹ (top of their quoted range) | 7.8 kg | 15.6 % |
+| **5.63 kW kg⁻¹ (this study, implicitly)** | **1.8 kg** | **3.6 %** |
 
-At the top of their range the buffer would be 4.6 kg heavier than budgeted, against the 2.2 kg
+At the top of their range the buffer would be 6.0 kg heavier than budgeted, against the 2.2 kg
 of unallocated mass this section leaves. **The light design's mass budget would not close.**
 
 The defence available at that point was that those figures are for an energy-optimised
@@ -106,16 +123,23 @@ below the one assumed here as a future technology level rather than a present on
 | Same pack at its maximum tested rate [47] | ≈ 1.5 kW kg⁻¹ | measurement, 4.9 °C thermal margin |
 | Li-ion for power applications [21] | 0.7–1.3 kW kg⁻¹ | literature range |
 | Assumed future level in a design study [48] | 4 kW kg⁻¹ | stated as ≈ 2× what exists |
-| **This study, implicitly** | **4.61 kW kg⁻¹** | **assumption** |
+| **This study, implicitly — hover** | **5.63 kW kg⁻¹** | **assumption** |
+| **This study, implicitly — take-off** | **6.48 kW kg⁻¹** | **assumption** |
 
-Sized at the measured thermal ceiling of 1.5 kW kg⁻¹ the buffer becomes **5.5 kg** rather than
-1.8 kg — 3.7 kg heavier, against 2.2 kg of unallocated mass. Sized at the measured continuous
-figure it becomes 9.3 kg. **The light design's mass budget does not close at any measured
-specific power, and this is the single most exposed number in the paper.** It is not resolved
-by arguing that the buffer is a different product: the source above *is* that product, built
-and flown. What would resolve it is a pack demonstrating three times the measured specific
-power at acceptable temperature, or a heavier buffer carried at the cost of payload fraction.
-Section 8 states which.
+Sized at the measured thermal ceiling of 1.5 kW kg⁻¹ the buffer becomes **6.8 kg** rather than
+1.8 kg — 5.0 kg heavier, against 2.2 kg of unallocated mass — and 7.8 kg if it must also lift
+the aircraft off the ground. Sized at the measured continuous figure it becomes 11.4 kg, or
+23 percent of take-off mass, which is most of the payload. **The light design's mass budget does
+not close at any measured specific power, and this is the single most exposed number in the
+paper.** It is not resolved by arguing that the buffer is a different product: the source above
+*is* that product, built and flown. The gap to be closed is a factor of **3.8 on the measured
+thermal ceiling and 6.3 on the measured continuous rate**. What would resolve it is a pack
+demonstrating that, at acceptable temperature, or a heavier buffer carried at the cost of
+payload fraction. Section 8 states which.
+
+Both figures in this paragraph are larger than the ones an earlier version reported, and the
+reason is bookkeeping rather than new evidence: the buffer power was previously taken as a
+difference between two shaft stations and is now taken at the bus, where the buffer is.
 
 **The energy side is a different matter, and it is far more comfortable than the power side.**
 The buffer does not discharge continuously for the whole vertical phase. It discharges through
@@ -142,10 +166,17 @@ buys less thrust:
 
 | Buffer specific power | Total power available | Resulting T/W | Leaves the ground |
 |---|---:|---:|---|
-| 0.735 kW kg⁻¹ | 3.9 kW | 0.61 | no |
-| 1.30 kW kg⁻¹ | 4.9 kW | 0.71 | no |
-| 2.50 kW kg⁻¹ | 7.1 kW | 0.90 | no |
-| 4.61 kW kg⁻¹ | 10.9 kW | 1.20 | yes |
+| 0.735 kW kg⁻¹ | 3.9 kW | 0.50 | no |
+| 1.30 kW kg⁻¹ | 4.9 kW | 0.59 | no |
+| 2.50 kW kg⁻¹ | 7.1 kW | 0.75 | no |
+| 5.63 kW kg⁻¹ | 10.9 kW | 1.00 | only just |
+
+An earlier version of this table read 0.61, 0.71, 0.90 and 1.20 in the third column. Those
+figures were a fifth too high at every row, because they were scaled from an assumed T/W of 1.2
+at the top of the column while 10.9 kW is, by the sizing statement of Section 6.1 — thrust equal
+to weight — the power for T/W = 1.00 exactly. The correction makes the bottom row worse in two
+ways at once: the specific power it demands rises, for the reason given below, and what it buys
+is a hover rather than a take-off. Leaving the ground needs the tip pairs as well.
 
 **At the specific powers this study has a citation for, the aircraft does not lift off**, so
 there is no brief overshoot to tolerate and no manoeuvre that shortens the exposure. The only

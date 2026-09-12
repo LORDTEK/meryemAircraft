@@ -81,14 +81,26 @@ from zero to ninety degrees over a rotation time t_r; thrust acts along the body
 perpendicular to the velocity vector and drag opposite to it; the lift curve is linear to stall
 and a flat-plate relation beyond it. Altitude loss is the lowest point of the trajectory
 relative to the entry altitude. Figure 10a plots both reference designs at four
-thrust-to-weight ratios; the tables at T/W = 1.2 are:
+thrust-to-weight ratios.
+
+**The ratio the aircraft actually has must be established first, and it is not a free choice.**
+Section 6.1 sizes hover power at thrust equal to weight, so the 10.9 kW of Section 6.2 buys
+T/W = 1.00 and nothing more; the same is true of the 216.2 kW of Section 6.3. The only other
+source of vertical thrust on this aircraft is the tip pairs, and during the rotation they are
+occupied producing the rotation itself. On the bang-bang profile the upper pairs run at full
+thrust and the lower pairs at zero, which is the M = 2TL of Section 4.3 — and the two upper
+pairs still push upward. That fixes the ratio available *during* a full-authority rotation at
+**1.066 for the light design and 1.041 for the heavy one**, and it is the ratio the tables below
+use. Giving up rotation authority buys a little more, to 1.132 and 1.082 with none retained;
+Supplementary S2 gives the trade. An earlier version of this section assumed T/W = 1.2, which
+the installed power does not supply at any setting, and the tables have been recomputed.
 
 | t_r | Light, 50 kg | | t_r | Heavy, 1000 kg |
 |---:|---:|---|---:|---:|
-| 1 s | −14.2 m | | 2 s | −20.9 m |
-| 2 s | −9.1 m | | 3 s | −7.2 m |
-| 3 s | −0.8 m | | 4 s | −1.4 m |
-| 4 s | 0 m | | 5 s | 0 m |
+| 1 s | −18.2 m | | 2 s | −31.0 m |
+| 2 s | −14.7 m | | 3 s | −26.9 m |
+| 3 s | −11.2 m | | 4 s | −22.7 m |
+| 4 s | −4.9 m | | 5.1 s | −13.1 m |
 
 **The relationship is monotonic in the direction opposite to the one usually assumed.** It is
 frequently supposed that a tail-sitter should rotate as fast as possible, on the reasoning that
@@ -99,19 +111,41 @@ exactly the interval in which speed, and therefore lift, is being built. A fast 
 collapses cos θ before there is any lift to replace it, and the aircraft falls precisely because
 it hurried.
 
-The practical consequence is a simplification rather than a trade. Control power required to
-rotate in time t_r scales as 1/t_r², so a slow rotation is cheap in authority; and altitude loss
-also falls with t_r. **Both constraints point the same way**, so there is no optimum transition
-time to be found between competing penalties — the rotation time is set by what the actuator can
-do, not by a balance, and Section 7.6 shows that is where both reference times come from.
+The practical consequence is a simplification rather than a trade. The control *moment* required
+to rotate in time t_r scales as 1/t_r² and the control *power* as 1/t_r³ — Table 4 of Section 6.4
+is the second of these, and its entries are constant to within a third of a percent when
+multiplied by t_r³ — so a slow rotation is cheap in authority and cheaper still in power; and
+altitude loss also falls with t_r. **All of these point the same way**, so there is no optimum
+transition time to be found between competing penalties — the rotation time is set by what the
+actuator can do, not by a balance, and Section 7.6 shows that is where both reference times come
+from.
 
-**Entering the rotation while still climbing removes the penalty entirely.** The aircraft
-reaches transition altitude by climbing, so it need not stop and hover first. At an entry climb
-of 5 m s⁻¹ the altitude loss is zero for every profile at both design points, and acquiring that
-climb rate is nearly free: at T/W = 1.2 the vertical acceleration is 0.2 g, so 5 m s⁻¹ is reached
-in 2.6 s over 6.4 m, and the kinetic energy involved is 625 J against a fuel energy of 103 kWh.
-**The reference profile is therefore to enter the rotation at 5 m s⁻¹ of climb**, and the
-altitude-loss column is zero throughout.
+**Entering the rotation while still climbing removes the penalty entirely**, and it survives the
+correction to thrust-to-weight above. At an entry climb of 5 m s⁻¹ the altitude loss is zero at
+both reference rotation times — 2 s light and 5.1 s heavy — and remains zero at every ratio from
+1.066 down to 1.00, which is to say the result does not depend on the tip pairs contributing any
+lift at all once the climb has been acquired.
+
+**Acquiring the climb is where the correction is paid.** The aircraft reaches transition altitude
+by climbing, so it need not stop and hover first, but the excess thrust available to build that
+climb is now 0.132 g rather than the 0.2 g an earlier version claimed, and only if no rotation
+authority is held in reserve; with full authority retained it is 0.066 g. Five metres per second
+is therefore reached in 3.9 s over 9.6 m at best, and 7.7 s over 19.3 m at worst, against the
+2.6 s and 6.4 m previously stated. The energy involved is unchanged and remains negligible —
+625 J against a fuel energy of 103 kWh — so what the correction costs is time and height, not
+range. **The reference profile is therefore still to enter the rotation at 5 m s⁻¹ of climb**,
+with the acquisition charged at the achievable rate.
+
+Two consequences follow that the earlier tables hid. Starting the rotation from rest is worse
+than reported — the light design loses 14.7 m at its own two seconds rather than 9.1 m, and the
+heavy design 13.1 m at 5.1 s rather than none — so the climb entry is not a convenience but a
+requirement. And the tip pairs, introduced in Section 4.3 as moment producers and charged in
+Section 5.4 for their mass and drag, turn out to carry the take-off thrust margin as well: an
+aircraft whose primary propulsor is sized at thrust equal to weight leaves the ground on them.
+That is a second duty for hardware bought for the first, which is the kind of economy this
+configuration is built on — but it is also a dependency, and it is a harder one than it looks,
+because the margin and the attitude authority are drawn from the same four propellers and cannot
+both be had in full. Section 8 records it as an open item.
 
 **The test is a lower bound.** A point mass carries no rotational dynamics, no aerodynamic
 pitching moment and no control-power limit; Section 7.6 supplies the rotational budget that this
@@ -147,6 +181,16 @@ of **1.49** at the light design point and **1.57** at the heavy one; on a smooth
 profile the margins fall to 0.99 and 1.05. The reference rotation times — two seconds light,
 5.1 seconds heavy — are therefore lower bounds set by the actuator, not comfortable choices,
 and the margin narrows with size.
+
+**The light figure rests on a tip thrust the design tables assert rather than derive, and on the
+conservative basis it is thinner still.** The 16.2 N quoted per pair implies a figure of merit of
+0.702, against the 0.599 used for hover everywhere else. Recomputing at 0.599 with a fifteen
+percent coaxial interference loss gives 12.4 N, an available moment of 17.6 N·m, and margins of
+**1.14 bang-bang and 0.76 smooth** — which is to say the light design closes on the cheapest
+profile and does not close on a smooth one at two seconds. The heavy design was computed on the
+conservative basis from the outset. Supplementary S4 gives both, and the honest reading is that
+the rotation is sized by the actuator under either basis and has no margin to give under the
+stricter one.
 
 **Resolving the requirement along the trajectory changed the question rather than merely
 quantifying it.** The aircraft does not reach ninety degrees of incidence: the body rotates

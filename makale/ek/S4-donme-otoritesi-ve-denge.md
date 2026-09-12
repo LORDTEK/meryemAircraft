@@ -114,10 +114,21 @@ distinguish.
 
 The light figure depends on a thrust the paper quotes without a basis. At 335 W and 0.20 m
 diameter, 16.2 N implies a figure of merit of 0.702 with no coaxial interference loss,
-where the hover figure of merit used elsewhere is 0.599. Recomputing at 0.599 with a
-fifteen percent coaxial loss gives 12.4 N, an available moment of 17.6 N·m, and a bang-bang
-margin of 1.59 — still comfortable. The heavy figure was computed on that conservative
-basis to begin with.
+where the hover figure of merit used elsewhere is 0.599. The disc area used is that of one
+rotor rather than two, which is the ordinary treatment of a coaxial pair — the lower rotor
+works in the upper's wake, so the pair is charged a single disc and an interference penalty
+rather than twice the area.
+
+**Recomputing at 0.599 with a fifteen percent coaxial loss gives 12.4 N and an available moment
+of 17.6 N·m, which against the bang-bang requirement of 15.4 N·m is a margin of 1.14 and against
+the smooth requirement of 23.1 N·m is 0.76.** An earlier version of this section reported 1.59
+here and called it comfortable; that figure does not follow from 17.6 against 15.4, and the
+correct one is not comfortable. On the conservative thrust basis the light design closes only on
+the cheapest rotation profile and only just, and the smooth profile does not close at all at two
+seconds. The heavy figure was computed on that conservative basis to begin with, which is why
+the two designs are not directly comparable on this row. Section 8 carries the consequence: the
+reference rotation times are actuator-limited lower bounds under either thrust basis, and under
+the conservative one the light design has no margin to give.
 
 **The margin narrows with size, and the narrowing is measured rather than derived.** An
 earlier version of this section derived a scaling law by assuming geometric similarity.

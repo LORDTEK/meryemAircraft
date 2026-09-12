@@ -202,7 +202,7 @@ Several results depend on coefficients that were not computed for this geometry:
   body is not two-dimensional. **That link has since been replaced** by a
   three-dimensional solution, also reported in Section 6.6, which brackets the
   wing-and-body term between 0.0120 and 0.0148 depending on the turbulence closure and on
-  the starting field, and the total between 0.0203 and 0.0230 — still below the assumed
+  the starting field, and the total between 0.0201 and 0.0231 — still below the assumed
   value in every case. What remains uncertain is no longer the dimensionality but, first,
   the transition state — the solution is fully turbulent, and the clean-surface case is
   still the strip estimate — and, second, the uniqueness of the solution itself, since the
@@ -523,10 +523,14 @@ are listed so that they can be:
    factor — is withheld in that source. This is the one exposure in the aerodynamic chain with
    no bound at all.
 
-None of these requires an experiment. The first has been carried out and its result is
-folded into Section 6.6, and so is the fifth; the remaining four are within reach of a
-follow-on study, and
-the configuration is described in enough detail in Section 4 and Section 6 for another
+**Not all of these are within reach of a calculation, and an earlier version of this list said
+they were.** The first has been carried out and its result is folded into Section 6.6, and so is
+the fifth. Of the remainder, the transition pitching moment is blocked on data rather than on
+effort, for the reason item 3 gives — three methods of three fidelities fail above roughly ten
+degrees of incidence — and the fin derivative of Section 8.15 is blocked the same way, because
+what the low-Reynolds-number measurements remove is the linearity of the curve a calculation
+would have to assume. Those two need a tunnel. The rest are within reach of a follow-on study,
+and the configuration is described in enough detail in Section 4 and Section 6 for another
 group to attempt any of them independently. The computational setup, the grid-convergence
 study and the record of what failed along the way are in the repository, so the first
 item can be re-run and checked rather than taken on trust.

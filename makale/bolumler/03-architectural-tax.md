@@ -34,7 +34,7 @@ penalty.
 
 **This bill has been identified independently.** A NASA study sizing four VTOL architectures
 against a common mission with common tools found the lift-plus-cruise concepts the heaviest of
-the vehicles examined, and is explicit about the cause:
+the vehicles examined, and is explicit about the cause [22]:
 
 > *"The weight of the Lift+Cruise concepts is heavier in general than for the other vehicles.
 > This is not driven by the cruise power draw, as the L/D_e of the Lift+Cruise is indeed higher
@@ -184,15 +184,21 @@ drag, or installed continuous power, and that the three are linked by the sizing
 drives thrust, thrust drives power, power drives mass — so that relieving one without relieving
 its cause simply moves the charge.
 
-**A consequence that can be checked against published work.** If the framework is right, a
-configuration carrying a dedicated lift system should show lower cruise efficiency *and* higher
-design gross weight than one that does not, for the same mission. A NASA study sizing five
-concept vehicles against a common mission reports exactly that ordering, from a quadrotor at an
-effective lift-to-drag ratio of 4.9 and 3 678 lb to a lift-plus-cruise turbo-electric at 8.5 and
-7 271 lb [7]. The tilt-wing in that set reaches 8.6 — **higher than every lift-plus-cruise
-entry** — which is the point: it carries no dedicated lift system, and it is the one
+**A consequence that can be checked against published work.** If the framework is right, then
+for the same mission a configuration carrying a dedicated lift system should pay for it in gross
+weight, and that payment should *not* be recovered by the cruise efficiency the arrangement buys.
+This is a sharper prediction than it first appears, because it forbids the obvious defence: it
+says the efficiency gain is real and still insufficient. The NASA sizing set is a direct test of
+it. Against a common mission of 1 200 lb of payload over 75 nautical miles, the turboshaft
+quadrotor — which has no cruise wing, and therefore no dedicated lift hardware to carry — sizes
+at an effective lift-to-drag ratio of 4.9 and a design gross weight of 3 678 lb, while the
+turbo-electric lift-plus-cruise reaches 8.5 and weighs 7 271 lb [22]. **Its cruise efficiency is
+seventy percent better and it is nearly twice as heavy**, which is the prediction and not a
+counter-example to it. The tilt-wing in the same set reaches 8.6 — higher than every
+lift-plus-cruise entry — while carrying no dedicated lift system at all, and it is the one
 configuration in the table that uses the same hardware in both regimes. The framework does not
-predict the numbers; it predicts the ordering, and the ordering holds.
+predict the numbers; it predicts that the weight charge survives the efficiency credit, and in
+this set it does.
 
 **What the framework does not claim.** It does not claim that avoiding the three bills makes an
 aircraft better, only cheaper in those three specific currencies. A configuration may avoid all

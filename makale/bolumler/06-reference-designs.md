@@ -53,7 +53,7 @@ it bounds them rather than replacing them, which is a weaker but more honest cla
 | Tip chord | 0.236 m |
 | Span | 3.45 m |
 | Wing area | 1.98 m² |
-| Aspect ratio | 6.00 |
+| Aspect ratio | 6.03 |
 | Wing loading | 25.3 kg m⁻² |
 | Main propeller diameter | 1.20 m |
 | Disc loading | 44.2 kg m⁻² |
