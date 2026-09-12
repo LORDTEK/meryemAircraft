@@ -38,7 +38,16 @@ bounded claim. It does not make the claim comfortable, for three reasons.
 **The margin lives in one number.** Breaking each assumption in turn to find the value at
 which 13 kg of payload no longer closes gives margins of 38 to 197 percent on the
 propulsion and assembly terms, and 19 percent on the shell areal density. At
-1.78 kg m⁻² of skin rather than the 1.5 assumed, the payload is gone. Every other line
+1.78 kg m⁻² of skin rather than the 1.5 assumed, the payload is gone.
+
+The 1.5 is no longer without an anchor, though the anchor is not a direct one. A doctoral
+study of unmanned-aircraft sizing reports an areal density of **1.05 kg m⁻²** for the fuselage
+of a small UAV built as a monolithic composite shell supported by an internal structure [50].
+That is below the figure assumed here, so the assumption is conservative against it — but the
+comparison is not like for like: that shell is carried by an internal structure, while the
+shell here is the wing and carries flight loads directly. What the figure establishes is that
+the assumed value is not outside the range small composite airframes are built to. It does not
+establish that this airframe can be built to it. Every other line
 could be substantially worse than assumed and the design would still close; that one line
 could not.
 

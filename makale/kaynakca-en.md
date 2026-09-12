@@ -138,3 +138,8 @@
 49. Fischel, J.; Watson, J. M. *Investigation of Spoiler Ailerons for Use as Speed
     Brakes or Glide-Path Controls on Two NACA 65-Series Wings Equipped with
     Full-Span Slotted Flaps.* NACA Report 1034, Langley Aeronautical Laboratory, 1951.
+50. Pollet, F. *Design Optimization of Unmanned Aerial Vehicles: A Multidisciplinary
+    Approach with Uncertainty, Fault-Tolerance, and Environmental Impact Assessments.*
+    Doctoral thesis, ISAE-SUPAERO, Université de Toulouse, 2024. (The 1.05 kg m⁻²
+    figure is attributed there to Stahl, P.; Roessler, C.; Hornung, M., 2020,
+    doi:10.25967/490207.)
