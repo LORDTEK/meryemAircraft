@@ -75,7 +75,10 @@ dizin = ek_dizini(ek_sayi)
 on = oku(os.path.join(MAKALE, "00-on-bilgi.md"))
 parcalar = ["# The Architectural Cost of Hybrid VTOL", "---", "## Title",
             "**" + BASLIK + "**"]
-for ad in ("Authors", "Abstract", "Keywords"):
+# MDPI on madde sirasi: Title, Authors, Highlights, Abstract, Keywords.
+# Highlights ZORUNLU ve ilk surumde bu listede yoktu -- 00-on-bilgi.md'de
+# yazilmisti ama uretilen belgeye hic girmiyordu. Dis bir okuma yakaladi.
+for ad in ("Authors", "Highlights", "Abstract", "Keywords"):
     govde = blok(on, ad)
     if not govde:
         print("UYARI — 00-on-bilgi.md icinde '%s' bulunamadi" % ad)

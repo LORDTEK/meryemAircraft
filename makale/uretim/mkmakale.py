@@ -133,6 +133,7 @@ ON = open(os.path.join(OUT, "00-on-bilgi.md")).read()
 
 baslik   = blok(ON, "Title").replace("**", "").replace("\n", " ").strip()
 yazarlar = blok(ON, "Authors").replace("\n", " ").strip()
+one_cikan= blok(ON, "Highlights")     # ZORUNLU -- dergi bunu istiyor
 ozet     = blok(ON, "Abstract")
 anahtar  = blok(ON, "Keywords")
 tesekkur = blok(ON, "Acknowledgements")
@@ -140,12 +141,33 @@ cikar    = blok(ON, "Conflicts of Interest")
 veri     = blok(ON, "Data Availability")
 fon      = blok(ON, "Funding") or "This research received no external funding."
 
+# Derginin zorunlu tuttugu on/arka madde bloklari. Highlights ilk surumde
+# 00-on-bilgi.md'ye yazilmis ama HICBIR uretim betigine baglanmamisti --
+# yani zorunlu bir bolum gonderilecek belgede yoktu ve bunu disaridan bir
+# okuma yakaladi. Eksik blok artik uretimi durdurur.
+for _ad, _v in (("Title", baslik), ("Authors", yazarlar),
+                ("Highlights", one_cikan), ("Abstract", ozet),
+                ("Keywords", anahtar), ("Acknowledgements", tesekkur),
+                ("Conflicts of Interest", cikar),
+                ("Data Availability", veri), ("Funding", fon)):
+    if not (_v or "").strip():
+        sys.exit("00-on-bilgi.md icinde zorunlu blok bos ya da yok: %s" % _ad)
+
+# Dergi ozeti "about 200 words maximum" ile siniriyor ve bunu teknik on
+# denetimde uyguluyor. Ozet sessizce buyuyebilir; buyursun ama haber versin.
+_ozet_n = len(ozet.split())
+if _ozet_n > 215:
+    sys.exit("Ozet %d kelime -- dergi 'about 200 words maximum' diyor. Kisalt."
+             % _ozet_n)
+print("ozet %d kelime" % _ozet_n)
+
 def alintiyi_duzlestir(t):
     return re.sub(r"^>\s?", "", t, flags=re.M).strip()
 
 ON_HTML = "\n\n".join([
     "# " + baslik,
     yazarlar,
+    alintiyi_duzlestir(one_cikan),
     "**Abstract.** " + " ".join(ozet.split()),
     "**Keywords:** " + " ".join(anahtar.split()),
 ])

@@ -2,7 +2,22 @@
 
 Meryem Gülmen <sup>1,\*</sup>, Berke Gülmen <sup>1</sup>, Ömer Gülmen <sup>1</sup>  <sup>1</sup> Independent Researcher, Türkiye; meryemgulmen@outlook.com (M.G.); berkegulmen@outlook.com (B.G.); lordtek@me.com (Ö.G.)  <sup>\*</sup> Correspondence: meryemgulmen@outlook.com
 
-**Abstract.** Hybrid vertical take-off and landing (VTOL) aircraft pay for runway independence in cruise efficiency. This paper treats that cost as architectural rather than as a defect of implementation and develops it as an accounting framework: the penalty is charged in three coupled currencies — hover hardware carried through cruise, its drag when exposed, and continuous power sized by a condition holding for some two percent of the flight — and each remedy surveyed reduces one by raising another. The escape condition follows in four parts: the same hardware, in the same orientation, doing the same job, with the hover peak drawn from a buffer. meryemAircraft, an uncrewed tail-sitting blended-wing body with one coaxial nose pair and four tip pairs, instantiates it and is sized at 50 kg and 1000 kg from one set of equations. Against a lift-plus-cruise layout, on wind-tunnel drag, it closes the same mission at forty-two percent lower take-off mass; against a tilting layout the ranking reverses between sizing contracts, so three are reported rather than one. The aircraft is not shown to be flyable: its mass budget closes only on a battery specific power 3.8 times the highest rate yet measured on a flown pack, and transition controllability rests on a pitching moment no current method predicts reliably. The framework does not depend on that outcome.
+**What are the main findings?**
+- Hybrid VTOL aircraft pay for vertical flight in three coupled currencies — hover
+  hardware carried through cruise, its drag when exposed, and continuous power sized by a
+  condition holding for some two percent of the flight — and each architectural remedy
+  surveyed here reduces one by raising another.
+- A tail-sitting blended-wing body whose single coaxial nose pair serves both regimes
+  satisfies the escape condition and, sized against a lift-plus-cruise layout on
+  wind-tunnel drag, closes the same mission at forty-two percent lower take-off mass.
+**What are the implications of the main findings?**
+- Architectural comparisons change their ranking with the sizing contract chosen, so a
+  ranking quoted without its contract is not a result; three contracts are reported here.
+- The configuration is not shown to be flyable: its mass budget closes only on a battery
+  specific power 3.8 times the highest rate yet measured on a flown pack, and transition
+  controllability rests on a pitching moment no current method predicts reliably.
+
+**Abstract.** Hybrid vertical take-off and landing (VTOL) aircraft pay for runway independence in cruise efficiency. This paper treats that cost as architectural and develops it as an accounting framework: the penalty is charged in three coupled currencies — hover hardware carried through cruise, its drag when exposed, and continuous power sized by a condition holding for some two percent of the flight — and each remedy surveyed reduces one by raising another. The escape condition follows in four parts: the same hardware, in the same orientation, doing the same job, with the hover peak drawn from a buffer. meryemAircraft, an uncrewed tail-sitting blended-wing body, satisfies that condition for these three charges and is sized at 50 kg and 1000 kg from one set of equations. Against a lift-plus-cruise layout it closes the same mission at forty-two percent lower take-off mass; against a tilting layout the ranking reverses between sizing contracts, so three are reported. The aircraft is not shown to be flyable: its mass budget closes only on a battery specific power 3.8 times the highest rate yet measured on a flown pack, and transition controllability rests on a pitching moment no current method predicts reliably. The framework does not depend on that outcome.
 
 **Keywords:** vertical take-off and landing; tail-sitter; blended wing body; uncrewed aerial vehicle; series hybrid propulsion; cruise efficiency; aircraft configuration design
 
@@ -867,8 +882,8 @@ three and still be unbuildable, uncontrollable, or unsuited to its mission — a
 bills are the only costs; they are the ones that follow from the duty-cycle mismatch of Section
 2.1, and a design pays many others.
 
-Section 2 identified three bills and argued that they are one quantity paid in three
-currencies. Section 2 described a configuration built to satisfy the zero-bill
+Sections 2.1 to 2.6 identified three bills and argued that they are one quantity paid in three
+currencies. Sections 2.7 to 2.11 described a configuration built to satisfy the zero-bill
 condition. This section audits that claim bill by bill, and then states, in the same
 detail, what the configuration does pay. The second half is not a concession appended
 for balance. An architecture that claimed to pay nothing would be describing a
@@ -886,7 +901,9 @@ counting two propulsion systems where the mission needs one. A configuration tha
 counts one does not reduce the bill — it does not generate it.
 
 The tip pairs are a genuine addition and are accounted for in Section 3.5. They are not
-a second propulsion group: they are sized for moments rather than for weight, and in
+a second propulsion group: they are sized from the moment requirement rather than from hover
+weight support, though Section 3.15 shows that the thrust that sizing gives them also supplies
+the aircraft's entire take-off margin. In
 the vertical phase they draw 1.34 kW against the nose pair's 10.9 kW, which is twelve
 percent.
 

@@ -28,20 +28,19 @@ ediyor.]*
 ## Abstract
 
 Hybrid vertical take-off and landing (VTOL) aircraft pay for runway independence in cruise
-efficiency. This paper treats that cost as architectural rather than as a defect of
-implementation and develops it as an accounting framework: the penalty is charged in three
+efficiency. This paper treats that cost as architectural and develops it as an
+accounting framework: the penalty is charged in three
 coupled currencies — hover hardware carried through cruise, its drag when exposed, and
 continuous power sized by a condition holding for some two percent of the flight — and each
 remedy surveyed reduces one by raising another. The escape condition follows in four parts: the
 same hardware, in the same orientation, doing the same job, with the hover peak drawn from a
-buffer. meryemAircraft, an uncrewed tail-sitting blended-wing body with one coaxial nose pair
-and four tip pairs, instantiates it and is sized at 50 kg and 1000 kg from one set of equations.
-Against a lift-plus-cruise layout, on wind-tunnel drag, it closes the same mission at forty-two
-percent lower take-off mass; against a tilting layout the ranking reverses between sizing
-contracts, so three are reported rather than one. The aircraft is not shown to be flyable: its
-mass budget closes only on a battery specific power 3.8 times the highest rate yet measured on a
-flown pack, and transition controllability rests on a pitching moment no current method predicts
-reliably. The framework does not depend on that outcome.
+buffer. meryemAircraft, an uncrewed tail-sitting blended-wing body, satisfies that condition
+for these three charges and is sized at 50 kg and 1000 kg from one set of equations. Against a lift-plus-cruise layout it closes the same mission
+at forty-two percent lower take-off mass; against a tilting layout the ranking reverses between
+sizing contracts, so three are reported. The aircraft is not shown to be flyable: its mass
+budget closes only on a battery specific power 3.8 times the highest rate yet measured on a
+flown pack, and transition controllability rests on a pitching moment no current method
+predicts reliably. The framework does not depend on that outcome.
 
 *[Yukarısı ~200 kelimeye indirilmiş MDPI sürümü — dergi "about 200 words maximum"
 diyor ve bunu teknik ön denetimde uyguluyor. Yapı başlıksız ama Background →

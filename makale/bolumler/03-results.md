@@ -39,8 +39,8 @@ three and still be unbuildable, uncontrollable, or unsuited to its mission — a
 bills are the only costs; they are the ones that follow from the duty-cycle mismatch of Section
 2.1, and a design pays many others.
 
-Section 2 identified three bills and argued that they are one quantity paid in three
-currencies. Section 2 described a configuration built to satisfy the zero-bill
+Sections 2.1 to 2.6 identified three bills and argued that they are one quantity paid in three
+currencies. Sections 2.7 to 2.11 described a configuration built to satisfy the zero-bill
 condition. This section audits that claim bill by bill, and then states, in the same
 detail, what the configuration does pay. The second half is not a concession appended
 for balance. An architecture that claimed to pay nothing would be describing a
@@ -58,7 +58,9 @@ counting two propulsion systems where the mission needs one. A configuration tha
 counts one does not reduce the bill — it does not generate it.
 
 The tip pairs are a genuine addition and are accounted for in Section 3.5. They are not
-a second propulsion group: they are sized for moments rather than for weight, and in
+a second propulsion group: they are sized from the moment requirement rather than from hover
+weight support, though Section 3.15 shows that the thrust that sizing gives them also supplies
+the aircraft's entire take-off margin. In
 the vertical phase they draw 1.34 kW against the nose pair's 10.9 kW, which is twelve
 percent.
 
