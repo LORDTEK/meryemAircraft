@@ -121,3 +121,6 @@
     **2023**, 36 (7), 460–475. https://doi.org/10.1016/j.cja.2023.04.002
 43. McIntosh, K. F.; Mishra, S.; Reddinger, J.-P. *An Aerodynamic Feedforward-Feedback
     Architecture for Tailsitter Control in Hybrid Flight Regimes.* arXiv:2312.10761, 2023.
+44. Wang, K.; Zhou, Z. Aerodynamic Design, Analysis and Validation of a Small
+    Blended-Wing-Body Unmanned Aerial Vehicle. *Aerospace* **2022**, 9 (1), 36.
+    https://doi.org/10.3390/aerospace9010036

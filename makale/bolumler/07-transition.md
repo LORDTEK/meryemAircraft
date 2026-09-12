@@ -456,6 +456,13 @@ that reflex trims this aircraft but that the open question below is worth more t
 appeared**, since a twist of 2.44 degrees implies sections delivering considerably more than
 0.004.
 
+**The reflex route is not free either, and the same literature prices it.** A separate
+blended-wing UAV that trims by reflex rather than by twist records that carrying reflex over a
+wide span "is not conducive to the improvement of overall lift-to-drag performance" [44]. Both
+roads to trim on a tailless configuration therefore cost cruise efficiency, which is the
+reading Section 5.4 places on the 4.3 percent charged there: it is the price of having no tail,
+not the price of having chosen the wrong way to do without one.
+
 The requirement 2R212 was built to meet is the one this configuration has. A survey of sections
 assembled for flying-wing use states it in the same terms — "for trim flight, pitching moment
 coefficient at zero angle of attack, C_m0, must be positive" — and identifies the practical
@@ -665,6 +672,26 @@ recent statement of it than the source used there.
 the transition aerodynamics by borrowing, fitting or adapting, and none by measuring the vehicle
 it flies. The measurement this paper leaves open is not one the field has made and this study
 skipped.
+
+**There is a reason nobody computes it, and it has been measured.** A small blended-wing-body
+UAV was analysed by Reynolds-averaged computation and then tested in a wind tunnel at a
+Reynolds number of 2.0 × 10⁶. From −6° to 10° of incidence "both the aerodynamic force values
+and the variation trends are in quite good agreement"; from 10° to 26° they "show remarkable
+differences between the numerical and experimental results", which the authors attribute to the
+demands separated flow places on the computation [44]. The same boundary appears in the two
+other sources used here: a vortex-lattice solution of this class of configuration departs from
+computation above eight degrees [39], and the low-aspect-ratio flying-wing series records that
+its pitch-up is a separated-flow phenomenon [20]. **Three methods of three different fidelities
+fail at the same place, and the highest of them fails against measurement.** The incidences
+this aircraft passes through in transition — 17.5° to 21.6° geometric — lie inside that band.
+
+This changes what the open item is. It is not that this study declined to compute the
+transition pitching moment; it is that the computation is not currently reliable for anyone at
+those incidences, on this class of configuration, and the literature says so with a wind tunnel
+behind it. **The item belongs to measurement, and Section 8 asks for it as measurement.** One
+encouraging observation travels with it: the same tests found the blended-wing configuration to
+have "soft-stall performance", which is the benign end of the range of behaviours the pitch-up
+literature describes.
 
 That second study is worth more attention, because it flight-tested the question this
 configuration asks. Its authors compared their tail-sitter with and without elevons. Without
