@@ -10,11 +10,11 @@ study are in the repository the paper cites.
 
 **Contents**
 
-- **Supplementary S1** — Independent checks on the two assumed aerodynamic coefficients (3441 words)
+- **Supplementary S1** — Independent checks on the two assumed aerodynamic coefficients (3439 words)
 - **Supplementary S2** — A component build-up of the mass budget (2730 words)
 - **Supplementary S3** — Control axes in full (6560 words)
 - **Supplementary S4** — Rotational authority, trim, and the transition envelope (7510 words)
-- **Supplementary S5** — The limitations in full (6505 words)
+- **Supplementary S5** — The limitations in full (6503 words)
 - **Supplementary S6** — The three bills stated formally, and a comparative sizing (3001 words)
 
 ---
@@ -92,9 +92,9 @@ results in this paper carry an untested magnitude error of unknown size, bounded
 published comparison on a similar configuration, and that every use made of them here is of a
 kind that a magnitude error *would not* disturb if the moment scales with the lift by the same
 factor.** That conditional cannot be discharged from the source, and nothing else in the
-literature read here discharges it either. It is stated as a conditional and carried as one. Confirming that would take a viscous or
-Reynolds-averaged solution of this planform, which is named in Section 8 as the first thing
-worth computing next.
+literature read here discharges it either. It is stated as a conditional and carried as one.
+Confirming it would take a viscous or Reynolds-averaged solution of this planform, which
+Section 8 names as the first thing worth computing next.
 
 **Span efficiency.** A vortex-lattice solution of the planform of Section 4.2 [15] gives
 an inviscid span efficiency of 0.99. That is not the same quantity as the 0.85 used here.
@@ -149,7 +149,7 @@ zero-lift build-up uses, so the two numbers compose.
 
 The same solution gives a lift-curve slope of 3.87 rad⁻¹ against the 4.72 rad⁻¹ that
 the transition simulation of Section 7.4 assumes — eighteen percent lower, and in the
-unfavourable direction. Section 8.6 reports what that does to the transition results.
+unfavourable direction. Supplementary S5.6 reports what that does to the transition results.
 
 **Zero-lift drag.** A strip calculation over the span, taking section drag coefficients
 at zero lift from a physics-informed aerofoil model [16] and adding the tip frames and the propeller hubs, gives:
@@ -180,11 +180,11 @@ conservative in every scenario considered, not merely in the pessimistic one. Be
 range is linear in lift-to-drag ratio, the reference designs of Sections 6.2 and 6.3
 would gain rather than lose if the calculation were adopted — which is the reason it is
 not adopted. An assumption that is declared and shown to be conservative is a smaller
-target than a calculation whose weakest link, discussed in Section 8.4, is the
+target than a calculation whose weakest link, discussed in Supplementary S5.4, is the
 treatment of a twenty-five percent thick centre body as a two-dimensional section.
 
 **A three-dimensional solution for the centre body.** The weakness just named has since
-been removed. Section 8.17 lists it first among the places these results should be
+been removed. Supplementary S5.17 lists it first among the places these results should be
 attacked, and the calculation it asks for has now been carried out: a structured
 Reynolds-averaged solution over the planform of Section 4.2, at the cruise Reynolds
 number and at zero lift, resolving the wing and blended body as a three-dimensional
@@ -1104,7 +1104,7 @@ scripts are in the repository the paper cites.
 
 Section 7.4 drives the body angle kinematically. The aircraft does not rotate in that
 simulation; it is *assumed* to rotate, and the moment producing the rotation does not
-appear. Section 8.6 records this. What follows does not remove that limitation — a full
+appear. Supplementary S5.6 records this. What follows does not remove that limitation — a full
 six-degree-of-freedom treatment would need pitching-moment coefficients through ninety
 degrees of incidence, and no such data exists for this planform — but it closes the part
 of the question that can be closed without them.
@@ -1709,7 +1709,7 @@ could most efficiently be attacked.
 
 ---
 
-## 8.1 No experimental validation
+## S5.1 No experimental validation
 
 There is no wind-tunnel testing in this work and no flight testing. Nothing in Sections 4
 to 7 has been measured against an experiment.
@@ -1721,7 +1721,7 @@ to the turbulence-model uncertainty quantified there, which is its largest term,
 has not been checked against measurement. Every other aerodynamic coefficient is either
 taken from the literature or assumed.
 
-## 8.2 The mass budget is bounded from below, and the bound is thinner than it looks
+## S5.2 The mass budget is bounded from below, and the bound is thinner than it looks
 
 The reference designs are sized from an assumed mass breakdown — 30 % structure, 16 %
 propulsion chain, 4 % battery, 8 % avionics, 16 % fuel, 26 % payload — and that breakdown
@@ -1793,7 +1793,7 @@ It does not. Those modes are carried, if at all, inside the shell areal density 
 internal-structure allowance — which is a further reason the shell figure is the number
 this budget stands or falls on.
 
-## 8.3 Geometry chosen rather than derived
+## S5.3 Geometry chosen rather than derived
 
 The sweep distribution — 45° at the root falling to 38.3° at the tip on the leading edge,
 with the trailing edge constant at 25° — was selected from a 20°–40° band reported
@@ -1808,7 +1808,7 @@ The taper distribution has likewise not been optimised, and the aerofoil section
 described by thickness, camber and reflex distributions rather than by specific
 sections.
 
-## 8.4 Coefficients taken from the literature
+## S5.4 Coefficients taken from the literature
 
 Several results depend on coefficients that were not computed for this geometry:
 
@@ -1920,7 +1920,7 @@ Several results depend on coefficients that were not computed for this geometry:
   error the vortex-lattice solution carries on a configuration of this class, which Section 6.6
   reports as untested and bounded above by a published comparison.
 
-## 8.5 Torque balance holds at one point only
+## S5.5 Torque balance holds at one point only
 
 The propeller pairs are of fixed geometry, so exact torque cancellation occurs at one
 operating condition. That condition was chosen to be cruise, on the grounds that cruise
@@ -1928,7 +1928,7 @@ is long and strategic while hover is short and tactical. A small residual torque
 therefore remains in hover. It is trimmed by the same lower-surface strip that provides
 roll in cruise, but the trim authority required has not been computed.
 
-## 8.6 The transition simulation is a point mass
+## S5.6 The transition simulation is a point mass
 
 The results of Section 7.4 come from a two-degree-of-freedom point-mass simulation in
 which the body angle is driven kinematically. It therefore does **not** model rotational
@@ -1966,7 +1966,7 @@ profiles — two seconds for the light design, 5.1 for the heavy, entered at 5 m
 climb — still lose no altitude at either slope. The conclusion of Section 7.4 survives an
 eighteen-percent error in the coefficient it rests on.
 
-## 8.7 The tip-surface benefit is not quantified
+## S5.7 The tip-surface benefit is not quantified
 
 The tip frames extend perpendicular to the planform by 0.41 of the semi-span, which is
 four to eight times the relative height of a conventional winglet. Giving their fairings
@@ -1980,14 +1980,14 @@ requires a panel method or CFD. The associated costs — increased root bending 
 and increased directional stability that the tip propellers must overcome to command yaw
 — have likewise not been quantified.
 
-## 8.8 Disturbance rejection in hover
+## S5.8 Disturbance rejection in hover
 
 With the transition no longer sizing the tip propellers, hover disturbance rejection
 becomes the sizing case. Only an order-of-magnitude check has been made against a
 single gust condition. The disturbance spectrum, the closed-loop bandwidth required, and
 the actuator response needed to achieve it have not been analysed.
 
-## 8.9 Ground handling and crosswind
+## S5.9 Ground handling and crosswind
 
 No claim is made that the aircraft resists tipping in arbitrary ground wind, and the
 historical record gives a specific reason not to make one: the contemporary assessment of
@@ -2003,7 +2003,7 @@ and landing against 25 knots in cruise [8]. A lower ground-wind limit than cruis
 the normal condition for VTOL aircraft, not a defect peculiar to tail-sitters. The
 specific limits for this configuration have not been computed here.
 
-## 8.10 Vertical descent
+## S5.10 Vertical descent
 
 The vertical descent has not been analysed. A rotor descending into its own wake can
 enter the vortex ring state, in which thrust becomes erratic and additional power is
@@ -2011,7 +2011,7 @@ counterproductive. Whether and at what descent rate this configuration encounter
 region is an open question and one of the more important items of future work, because
 it bears directly on the landing phase.
 
-## 8.11 Prior art
+## S5.11 Prior art
 
 The novelty claimed in this paper is a combination, and the elements of that combination
 individually have antecedents. Blended-wing bodies, tail-sitters, coaxial
@@ -2036,7 +2036,7 @@ the last of these, it was removed rather than retained on a summary. No patent c
 was read in the original; the prior-art position stated here is that of an author survey,
 not of a professional search.
 
-## 8.12 The architecture comparison is conditional, and on two things rather than one
+## S5.12 The architecture comparison is conditional, and on two things rather than one
 
 The comparative sizing of Section 5.5 settles the case against a separate lift system
 using measurements, and does not settle the case against a tilting mechanism at all. Two
@@ -2072,7 +2072,7 @@ heavier without changing its range, so the direction of the result is unaffected
 second table in that section, which gives each architecture its own unbuffered power
 system, is a bounding case rather than a fair comparison, for the reason given there.
 
-## 8.13 The engine rating margin is not consistent between the two reference designs
+## S5.13 The engine rating margin is not consistent between the two reference designs
 
 The sizing model of Section 5.5, calibrated entirely on the light reference design,
 predicts the heavy one to within four percent in take-off mass and one tenth of a percent
@@ -2087,7 +2087,7 @@ after the fact; as the two designs stand, the margin is an undeclared choice rat
 a scaling law, and the scale-invariance claimed in Section 6.4 should be read as holding
 for the mass and range fractions and not for this one.
 
-## 8.14 The strip's authority does not start at zero
+## S5.14 The strip's authority does not start at zero
 
 Extension is the control variable, but a device of this kind produces no lift change until it
 projects about one percent of the local chord [19]. The strip is tapered, so the threshold is
@@ -2105,7 +2105,7 @@ The alternative resolution — a strip that projects from both surfaces, so that
 contributions oppose and the rolling contributions add — has not been examined, costed or
 ruled out.
 
-## 8.15 The directional-stability estimate omits the body, and the sign of the omission is known
+## S5.15 The directional-stability estimate omits the body, and the sign of the omission is known
 
 The vortex-lattice model used for C_n_β has no volume. The centre body of a blended wing
 develops side force in sideslip ahead of the centre of gravity and is therefore destabilising,
@@ -2121,7 +2121,7 @@ nonlinear about zero incidence, in one case reversing the sign of the lift-curve
 three-degree band [36] — the same band a toe angle of one to two degrees occupies. Whether a
 fairing of that chord develops the side force credited to it is not established.
 
-## 8.16 The toe-out arrangement has a failure mode at large sideslip
+## S5.16 The toe-out arrangement has a failure mode at large sideslip
 
 The frames' aspect ratio requires toe-out (Section 4.4). Toe-out carries a known hazard: yawing
 far enough to stall the rear fin produces a large *destabilising* yawing moment, where the same
@@ -2129,7 +2129,7 @@ stall on a toed-in fin produces a stabilising one [19]. The sideslip angle at wh
 sets an upper bound on the usable sideslip envelope, and it has not been computed. It depends
 on the fairing's section and Reynolds number, neither of which is fixed here.
 
-## 8.17 What would change these conclusions
+## S5.17 What would change these conclusions
 
 The results of this paper would be most efficiently attacked in six places, and they
 are listed so that they can be:
@@ -2196,8 +2196,8 @@ are listed so that they can be:
    of incidence; those are not available for this planform and cannot be produced without
    a wind tunnel or a dedicated computational campaign. **This item is therefore reduced
    to a specific missing measurement rather than a missing analysis.**
-4. **A panel-method analysis of the tip surfaces**, which would either convert Section
-   8.7 into a quantified benefit or remove it. The vortex-lattice solution of Section 6.6
+4. **A panel-method analysis of the tip surfaces**, which would either convert S5.7
+   into a quantified benefit or remove it. The vortex-lattice solution of Section 6.6
    covers the planform but not the tip surfaces, which remain unquantified.
 5. ~~**A viscous solution of the twisted planform, section by station.**~~ **Done.** The
    Oswald-type efficiency the drag build-up needs was obtained from the inviscid figure by a
@@ -2226,7 +2226,7 @@ are listed so that they can be:
 they were.** The first has been carried out and its result is folded into Section 6.6, and so is
 the fifth. Of the remainder, the transition pitching moment is blocked on data rather than on
 effort, for the reason item 3 gives — three methods of three fidelities fail above roughly ten
-degrees of incidence — and the fin derivative of Section 8.15 is blocked the same way, because
+degrees of incidence — and the fin derivative of S5.15 is blocked the same way, because
 what the low-Reynolds-number measurements remove is the linearity of the curve a calculation
 would have to assume. Those two need a tunnel. The rest are within reach of a follow-on study,
 and the configuration is described in enough detail in Section 4 and Section 6 for another
@@ -2405,7 +2405,7 @@ calibrated from, and it does — take-off mass, propulsion fraction, engine rati
 lift-to-drag ratio, range and hover power all within 0.1 percent. Run at the heavy design
 point without retuning, it predicts 1 037 kg against 1 000 kg and 1 813 km against
 1 814 km; the one term that does not carry across is the engine rating margin, discussed
-in Section 8.13.
+in Supplementary S5.13.
 
 **What differs between the architectures.** Mission, wing loading, disc loading, fuel
 fraction, structural fraction, avionics fraction and energy chain are held identical.
