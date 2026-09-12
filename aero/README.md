@@ -2842,3 +2842,89 @@ yazılmamıştı. §4.4'e eklenecek.
 ⚠️ Aktarım sınırı: onların kanadı geleneksel, yarıklı flaplı, Mach'ları bizden
 yüksek, ve cihaz **üst** yüzeyden çıkıyor; bizimki alt yüzeyde 45° ok açılı
 bir şerit. Yön aktarılabilir, büyüklük aktarılamaz.
+
+---
+
+# ✅ S1 HESAPLANDI — `aero/iskoz.py` (12.09.2026)
+
+Yöntem: VLM panel kuvvetlerinden her açıklık şeridinin **yerel c_l**'i
+çıkarılıyor; NeuralFoil o şeridin **kendi c_l'inde** çağrılıyor (α ikiye
+bölerek aranıyor, doğrusal ara değer YOK — o hatayı daha önce yapmıştım);
+profil direnci açıklık boyunca integre ediliyor.
+
+**Önce denetim, sonra sonuç.** Modül dört test koşuyor ve geçmeden hiçbir
+sayı vermiyor:
+
+| test | sonuç |
+|---|---|
+| şerit toplamı = çözücünün C_L'i | 0,269884 = 0,269884 |
+| panel kuvvet toplamı = çözücünün C_L'i | 0,269884 = 0,269884 |
+| şerit genişlikleri toplamı = açıklık | 3,4528 = 3,4528 |
+| hiçbir şeritte saçma c_l yok | 0,088 … 0,343 |
+
+⚠️ Üçüncü test **ilk koşumda kaldı** (3,4577 vs 3,4528, %0,14 taşma): şerit
+genişliğini komşu merkezlerden türetince en dıştaki şerit yarım genişlik
+dışarı taşıyordu. Panel geometrisinden (girdap bacağı köşeleri) alınacak
+şekilde düzeltildi. Küçük bir taşma ama integrali doğrudan şişirirdi.
+
+## 🔴 VE BİR KATEGORİ HATASI — kendim yakaladım, kayda geçiyor
+
+İlk koşumda şu oranı yazdırdım: **Oswald/inviscid = 1,0785.** Yani "iskoz
+verim, inviscid verimden büyük" — fiziksel değil.
+
+Sebep: `e = C_L²/(πAR·C_Di)` formülü **yalnızca burulmasız** kanatta geçerli,
+çünkü orada C_Di ∝ C_L². Burulmuş kanatta induklenen sürükleme C_L = 0'da
+sıfır değildir ve en küçük değerini sıfırdan farklı bir C_L'de alır. O formül
+burulmuş kanatta C_L = 0,03'te **e = 0,024** verdi. Ve ben parabol-uydurma
+e'si (poların *eğriliği*) ile nokta e'sini (oradaki *mutlak* sürükleme)
+bölmüştüm — iki **farklı büyüklüğü**.
+
+Bu, daha önce yaptığım inviscid/Oswald kategori hatasının aynı ailesinden.
+Doğru tanım, makalenin e'yi kullandığı denklemle tutarlı olan **nokta**
+tanımıdır:
+
+    e(C_L) = C_L² / (π AR [ C_Di(C_L) + C_Dp(C_L) − C_Dp(0) ])
+
+C_Dp(0) zaten C_D0'in içinde olduğu için çıkarılıyor; yoksa çift sayılır.
+Modül artık bunu kullanıyor ve gerekçe kodun içinde yazılı.
+
+## Sonuç
+
+| | inviscid e | **Oswald e** | oran |
+|---|---:|---:|---:|
+| burulmasız | 0,990 | 0,931 | 0,940 |
+| **trim (−9° washout)** | **0,859** | **0,817** | **0,951** |
+
+**Makale oranı 0,85–0,90 varsayıyordu; hesaplanan 0,94–0,95.** Yani iskoz
+cezası varsayılandan **küçük** — ödünç alınan kural fazla kötümsermiş.
+
+**Ama sonuç yine de varsayımın altında**, çünkü başlangıç noktası düşük:
+burulmuş kanat 0,859'dan başlıyor, çarpım **0,817**'de kalıyor. Makalenin
+kullandığı 0,85'e göre **%3,9 iyimser**, seyir L/D 12,04 yerine **11,87**
+(%1,4 kayıp). Daha önce §7.6'nın korktuğu %3–5 değil.
+
+Çapraz denetim: burulmasız inviscid e = 0,990, `vlm.py`'nin 104 şeritte
+belgelediği 0,9890 ile tutuyor. ✓
+
+## Ok açısı — ve neden basit-ok kuramı buraya uygulanamaz
+
+| konvansiyon | C_Dp |
+|---|---:|
+| akım yönlü (cd0.py ile aynı) | 0,01348 |
+| normal kesit (basit-ok) | 0,00745 |
+
+**İki kat fark.** Bu bir belirsizlik değil, bir **geçersizlik** işareti:
+basit-ok kuramı basınç alanını ok çizgisine dik bileşenle kurar, ama
+sürtünme yüzeyin üzerinden **V** ile akar, V·cosΛ ile değil. Sürtünmeyi
+cos³ ile küçültmek fiziksel değil. YZ5 ve YZ1 de aynı yöne işaret etti.
+Ana sonuç akım yönlü şeritle kuruldu — hem doğru olan o, hem de `cd0.py`'nin
+C_D0'i öyle kuruldu, aksi halde iki sayı toplanamaz.
+
+## İki sınır, ikisi de makalede yazılı
+
+1. VLM kesitleri **simetrik**. Kamberli bir kesit aynı yerel c_l'i daha küçük
+   α'da ve genellikle daha küçük c_d ile üretir → bu sayı bir **alt sınır**.
+2. Şerit kuramı ok açısını ihmal ediyor, kök ok açımız 45°.
+
+Polar verisi `aero/iskoz-sonuc.json`'a yazılıyor, yeniden analiz için
+VLM'i tekrar koşmaya gerek yok.

@@ -71,7 +71,10 @@ efficiency e assumed at 0.85; C_D0 assumed at 0.0248 for the light design, which
 generous for a clean blended-wing body and is intended to absorb the tip-frame
 contribution of Section 5.2 — that contribution is 0.0043, or seventeen percent of the
 assumed C_D0, so the assumption is self-consistent rather than optimistic. Both
-coefficients remain assumptions in what follows. Section 6.6 does not replace them; it
+coefficients are carried as assumptions in what follows, so that every downstream figure rests
+on one stated basis; Section 6.6 computes both and reports what the computation does to them —
+for the span efficiency it is a reduction to 0.817, worth 1.4 percent of cruise lift-to-drag
+ratio. Section 6.6 does not replace them; it
 bounds them by independent calculation, which is a weaker but more honest claim.
 
 ## 6.2 Light reference design — 50 kg
@@ -345,12 +348,48 @@ drag due to lift, which for a clean wing runs at roughly 85 to 90 percent of the
 inviscid value. The two are consistent. Reporting the calculation as an improvement on
 the assumption would be a category error, and it is not claimed.
 
-**Section 7.6 unsettles this, and the unsettling is not resolved here.** The 0.99 belongs to
-the untwisted planform, and the untwisted planform cannot be trimmed; the trimmed wing computes
-to 0.865, which under the same reasoning implies an Oswald value of 0.735 to 0.78 — below the
-assumed 0.85 rather than above it. The ratio between the two efficiencies is itself a range
-this study has not sourced, so the assumption is not revised on the strength of it. What has
-changed is that it is no longer bounded from above by a calculation, and Section 8 says so.
+**Section 7.6 unsettles this, and the ratio has since been computed rather than assumed.** The
+0.99 belongs to the untwisted planform, and the untwisted planform cannot be trimmed. An earlier
+version of this paper carried the trimmed case forward with the same 85-to-90-percent rule and
+reported an implied Oswald value of 0.735 to 0.78. That rule was borrowed, and it turns out to
+be too pessimistic.
+
+The calculation replacing it is the one the method of Section 6.6 was already equipped to make.
+The vortex-lattice solution gives the loading of the twisted wing station by station; the
+section solver used for the zero-lift drag build-up is then called at **each station's own local
+lift coefficient** rather than at zero lift, and the profile drag integrated across the span.
+This is the two-dimensional-viscous-coupled-to-three-dimensional-circulation construction used
+in the non-linear vortex-lattice literature [40], carried out on this planform. Before any
+result is taken from it, the strip decomposition is checked against the solver it comes from:
+summing the strip loads reproduces the solver's own lift coefficient to six decimal places, and
+the strip widths sum to the span.
+
+Taking the lift-dependent drag to be the induced drag plus the rise in profile drag above its
+zero-lift value — the quantity an Oswald efficiency has to carry, since the zero-lift part is
+already inside C_D0:
+
+| | Inviscid e | **Oswald e** | Ratio |
+|---|---:|---:|---:|
+| Untwisted planform | 0.990 | 0.931 | 0.940 |
+| **Trimmed, −9° washout** | **0.859** | **0.817** | **0.951** |
+
+**The borrowed ratio was wrong in the favourable direction and the conclusion is unchanged in
+the unfavourable one.** The viscous penalty is 5 to 6 percent rather than 10 to 15, but the
+trimmed wing starts from 0.859, so the Oswald efficiency lands at **0.817 — below the assumed
+0.85 by 3.9 percent**, not at the 0.735 to 0.78 previously feared. At that value the cruise
+lift-to-drag ratio is **11.87 against the 12.04 the assumption gives**, a shortfall of 1.4
+percent rather than the 3 to 5 percent Section 7.6 had allowed for.
+
+Two limits belong with the number. The vortex-lattice sections are symmetric, so the profile
+drag is that of a wing reaching each local lift coefficient without camber; a cambered section
+reaches the same lift at lower incidence and usually at lower drag, which makes this a
+**lower bound on the efficiency** rather than an estimate of it. And the strip method ignores
+sweep. Evaluating the same integral under simple-sweep theory instead — normal-component
+velocity and chord throughout — halves the profile drag, which is not a measure of uncertainty
+but a sign that the transformation does not apply to friction: the pressure field is set by the
+component normal to the sweep line, but the boundary layer runs over the surface at the full
+freestream speed. The flow-aligned convention is used here, and it is also the convention the
+zero-lift build-up uses, so the two numbers compose.
 
 The same solution gives a lift-curve slope of 3.87 rad⁻¹ against the 4.72 rad⁻¹ that
 the transition simulation of Section 7.4 assumes — eighteen percent lower, and in the

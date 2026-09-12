@@ -208,17 +208,17 @@ Several results depend on coefficients that were not computed for this geometry:
   wall-resolved SST case settles four percent apart from two different starting fields.
   The build-up is reported as a bound on the assumption rather than as a replacement for
   it.
-- **Span efficiency** is assumed at 0.85. A vortex-lattice solution gives an inviscid
-  span efficiency of 0.99 for this planform, which is consistent with the assumed
-  Oswald-type value once the viscous drag due to lift is allowed for — **though Section 7.6
-  removes the margin that made this comfortable**, since the twist needed to trim lowers the
-  inviscid figure to 0.865 and would put the implied Oswald value below the assumption rather
-  than above it. The direction of the error is not in doubt — for any wing
-  with viscosity the trimmed value falls below 0.85 — and only its size is, between one and
-  five percent of cruise lift-to-drag ratio. Settling it needs a viscous calculation of the
-  trimmed wing, which is not here. Until then the range figures of Section 6.3 rest on an
-  assumption that is exposed rather than bounded. Neither vortex-lattice figure measures the same quantity as the assumption, and
-  neither is offered as a correction to it.
+- **Span efficiency** is assumed at 0.85, and the assumption is now bounded by a calculation
+  rather than by a borrowed rule. A vortex-lattice solution gives an inviscid span efficiency
+  of 0.99 for the untwisted planform and 0.859 for the wing twisted to trim. Section 6.6
+  computes the corresponding Oswald-type values by calling a section solver at each spanwise
+  station's own local lift coefficient: **0.931 untwisted and 0.817 trimmed**, a viscous ratio
+  of 0.94 to 0.95. The assumed 0.85 is therefore **optimistic by 3.9 percent**, worth 1.4
+  percent of cruise lift-to-drag ratio and of the range figures of Section 6.3. What the
+  calculation does not settle: its sections are symmetric, so it is a lower bound rather than an
+  estimate; it ignores sweep, and the root sweep is 45°; and it inherits whatever magnitude
+  error the vortex-lattice solution carries on a configuration of this class, which Section 6.6
+  reports as untested and bounded above by a published comparison.
 
 ## 8.5 Torque balance holds at one point only
 
@@ -431,7 +431,7 @@ on the fairing's section and Reynolds number, neither of which is fixed here.
 
 ## 8.17 What would change these conclusions
 
-The results of this paper would be most efficiently attacked in five places, and they
+The results of this paper would be most efficiently attacked in six places, and they
 are listed so that they can be:
 
 1. ~~**A three-dimensional solution for the centre body.**~~ **Done.** This was the
@@ -499,23 +499,32 @@ are listed so that they can be:
 4. **A panel-method analysis of the tip surfaces**, which would either convert Section
    8.7 into a quantified benefit or remove it. The vortex-lattice solution of Section 6.6
    covers the planform but not the tip surfaces, which remain unquantified.
-5. **A viscous solution of the twisted planform, section by section.** This is the cheapest
-   of the five and it would close two items at once. The span efficiency of Section 6.6 is an
-   inviscid figure, and the Oswald-type efficiency the drag build-up actually needs is
-   obtained from it by a ratio this paper assumes rather than computes; the method for
-   computing it instead — two-dimensional viscous analyses at each spanwise station, coupled
-   to the three-dimensional circulation — is established, validated to better than one percent
-   on lift-curve and moment-curve slope, and costs about one percent of an equivalent RANS
-   solution [40]. It would also test the magnitude question raised in Section 6.6 by a
-   published vortex-lattice-against-RANS comparison on a blended-wing-body of this class [39],
-   which is the one exposure in the aerodynamic chain that currently has no bound at all. The
-   ingredients are already in the repository: the spanwise loading of the twisted wing, and a
-   section solver called station by station for the zero-lift drag build-up. What is missing is
-   that the section drag is read at zero lift rather than at each station's local lift
-   coefficient.
+5. ~~**A viscous solution of the twisted planform, section by station.**~~ **Done.** The
+   Oswald-type efficiency the drag build-up needs was obtained from the inviscid figure by a
+   borrowed ratio. It is now computed on this planform by the method the non-linear
+   vortex-lattice literature uses — two-dimensional viscous analyses at each spanwise station
+   coupled to the three-dimensional circulation [40] — and reported in Section 6.6. The
+   borrowed ratio of 0.85 to 0.90 was too pessimistic; the computed ratio is 0.94 to 0.95. The
+   conclusion nevertheless stands in the unfavourable direction, because the trimmed wing
+   starts from a lower inviscid figure: the Oswald efficiency is **0.817 against the assumed
+   0.85**, worth 1.4 percent of cruise lift-to-drag ratio. **What it does not settle** is,
+   first, that the sections used are symmetric, so the figure is a lower bound rather than an
+   estimate; second, that strip integration ignores sweep, and the root sweep is 45°; and
+   third, that it does nothing about the magnitude question of item 6 below, since it is built
+   on the same vortex-lattice loading. **This item is therefore closed as to the ratio and
+   open as to the absolute level.**
+6. **A Reynolds-averaged or panel solution of this planform's loading**, to bound the
+   magnitude error the vortex-lattice results carry. A published comparison on a
+   blended-wing-body of this class found the vortex-lattice lift coefficient low by thirty to
+   thirty-eight percent against RANS [39]. Section 6.6 argues that a near-constant
+   multiplicative error of that kind cancels in the ratios this paper takes from the solution,
+   but the check that would confirm it — whether the moment scales with the lift by the same
+   factor — is withheld in that source. This is the one exposure in the aerodynamic chain with
+   no bound at all.
 
 None of these requires an experiment. The first has been carried out and its result is
-folded into Section 6.6; the remaining four are within reach of a follow-on study, and
+folded into Section 6.6, and so is the fifth; the remaining four are within reach of a
+follow-on study, and
 the configuration is described in enough detail in Section 4 and Section 6 for another
 group to attempt any of them independently. The computational setup, the grid-convergence
 study and the record of what failed along the way are in the repository, so the first

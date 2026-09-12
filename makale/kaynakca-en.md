@@ -143,3 +143,6 @@
     Doctoral thesis, ISAE-SUPAERO, Université de Toulouse, 2024. (The 1.05 kg m⁻²
     figure is attributed there to Stahl, P.; Roessler, C.; Hornung, M., 2020,
     doi:10.25967/490207.)
+51. Lee, H.; Lee, J. D.; Bang, H. *Aerodynamic Model Identification of a VTOL Tailsitter
+    UAV Using Sparse Identification of Nonlinear Dynamics.* 34th Congress of the
+    International Council of the Aeronautical Sciences (ICAS), 2024, paper 0653.

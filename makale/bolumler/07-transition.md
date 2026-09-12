@@ -477,6 +477,16 @@ record above runs against it. What the comparison does establish is narrower and
 saying: that study's trim requirement is the lighter one — a static margin of 0.081 of the mean
 aerodynamic chord against 0.125 here — and reflex was not asked to act alone.
 
+**A flying tail-sitter shows where the positive moment actually comes from.** The aerodynamic
+model identification of a VTOL tail-sitter describes its own trim state explicitly: the aircraft
+uses a **symmetric** section, and "the upward trim of elevons makes the symmetric airfoil to
+have reflexed camber line. It makes the positive pitching moment at the aerodynamic center"
+[51]. The reflex that trims that aircraft is not a property of its section but a deflected
+control surface held permanently out of line — and its authors note that the elevons are sized
+larger than a conventional flying wing's in order to produce enough moment for the transition.
+That is the same trade this configuration faces, resolved with a control surface where this one
+resolves it with twist, and it carries the same kind of continuous cost.
+
 **The position this paper takes is therefore the conservative one, and it is a statement about
 evidence rather than about physics.** The trim moment this configuration needs is C_m = +0.056.
 No measured section approaches it. Whether a physically realisable reflexed section or planform
@@ -578,28 +588,40 @@ implies an Oswald value between **0.735 and 0.78** — a band the assumed 0.85 s
 rather than inside. If that reasoning holds, the cruise lift-to-drag ratio is 11.4 to 11.7
 rather than 12.0, and the range figures of Section 6.3 fall by three to five percent.
 
-**The conclusion does not depend on that ratio, which is fortunate, because the ratio is not
-settled.** Traub reports both an inviscid Oswald factor from a vortex-lattice solution and a
-measured one from the tunnel for three wings [18]; the planar case gives a measured-to-inviscid
-ratio of 0.95, but his two non-planar cases give 1.01 and 1.07, which cannot be right for a real
-wing and are presumably an artefact of comparing an uncorrected tunnel measurement with an
-inviscid calculation. That data therefore bounds the ratio loosely rather than fixing it. But
-the sign of the conclusion survives the whole plausible band:
+**That ratio has since been computed rather than assumed, and it is worth setting out what it
+replaced.** An earlier version of this section could only bound the viscous-to-inviscid ratio
+from the literature. Traub reports both an inviscid Oswald factor from a vortex-lattice solution
+and a measured one from the tunnel for three wings [18]; the planar case gives a
+measured-to-inviscid ratio of 0.95, but his two non-planar cases give 1.01 and 1.07, which
+cannot be right for a real wing and are presumably an artefact of comparing an uncorrected
+tunnel measurement with an inviscid calculation. That data bounds the ratio loosely rather than
+fixing it, and the section carried a band of 0.85 to 0.95 with an implied penalty of one to five
+percent.
 
-| Viscous / inviscid ratio | Implied Oswald e | Cruise L/D | Against the assumed 12.04 |
-|---:|---:|---:|---:|
-| 0.85 | 0.735 | 11.44 | −5.0 % |
-| 0.90 | 0.778 | 11.68 | −3.0 % |
-| 0.95 | 0.822 | 11.90 | −1.2 % |
+Section 6.6 now computes it on this planform, by calling the section solver at each strip's own
+local lift coefficient and integrating the profile drag across the span. The result:
 
-**For any ratio below unity — that is, for any wing with viscosity — the trimmed span
-efficiency is below the assumed 0.85 and the cruise lift-to-drag ratio is below 12.04.** Only
-the magnitude is open, and it lies between one and five percent. The assumption is not revised
-here because revising it would mean choosing a ratio this study has not measured; what has
-changed is that it is no longer bounded from above by a calculation, and Section 8 records it
-as exposed. It is worth adding that 0.85 at this aspect ratio is a conventional choice rather
-than a careless one — an independent eVTOL sizing study adopts the same value at aspect ratio
-7.0 [26] — which is precisely why it survived so long without being examined.
+| | Inviscid e | Oswald e | Ratio | Cruise L/D |
+|---|---:|---:|---:|---:|
+| Untwisted | 0.990 | 0.931 | 0.940 | 12.40 |
+| **Trimmed, −9°** | **0.859** | **0.817** | **0.951** | **11.87** |
+
+**The direction the section predicted is confirmed and the magnitude is at the mild end of the
+band it allowed.** The ratio is 0.951 rather than the 0.85 the borrowed rule would have given,
+so the viscous penalty is smaller than feared; but the trimmed wing starts at 0.859, and the
+product lands at 0.817 — **below the assumed 0.85 by 3.9 percent**, costing 1.4 percent of cruise
+lift-to-drag ratio rather than the three to five percent this section had allowed. The range
+figures of Section 6.3 fall by the same 1.4 percent, and are not restated at the lower value
+because they are computed on the stated assumption; the correction is reported here instead.
+
+Two things the computed number does not settle. Its sections are symmetric, so it is a lower
+bound: a cambered section reaching the same local lift coefficient at lower incidence would
+carry less profile drag. And the strip integration ignores sweep, which at 45° at the root is
+not a small omission — though the alternative, simple-sweep theory, halves the profile drag,
+which is a sign that the transformation does not apply to skin friction rather than a measure
+of the uncertainty. It is worth adding that 0.85 at this aspect ratio was a conventional choice
+rather than a careless one — an independent eVTOL sizing study adopts the same value at aspect
+ratio 7.0 [26] — which is precisely why it survived so long without being examined.
 
 **What is still not established.** The twist here is linear, chosen for simplicity rather than
 optimised; a distribution shaped for span loading would trim at the same moment for a smaller
