@@ -3097,3 +3097,126 @@ okumuştu.
    yunuslama momentini büyük ölçüde iptal ediyor (lehimize), ve ürettiği
    yuvarlanma momenti hücum açısıyla **işaret değiştiriyor** (aleyhimize,
    çünkü geçişte 17–22°'ye çıkıyoruz).
+
+---
+
+# Tur 15 — dört hesap koşturuldu, ikisi makaleyi değiştirdi
+
+Dış okumalar dört hesap önerdi ve birbirleriyle uyuşmadılar. Dördü de koşturuldu.
+Sonuç: **ikisi makalenin bir cümlesini çürüttü, biri onu yumuşattı, biri yapılamadı
+ve yapılamadığı yazıldı.**
+
+## 1. Uç pervanesi, sıfır şaft torkunda — EN SERT SONUÇ
+
+`aero/uc_pervane.py`
+
+§3.3'ün bütün "Fatura 2 yok" iddiası şu satıra dayanıyordu:
+
+> sıfır şaft yükünde dönen, düşük hücum açısında → ΔC_D0 = 0,0003 – 0,0008
+
+Bu satır **varsayımdı**. Hesaplandı.
+
+**Yöntem kararı önemli.** İlk sürüm 20 tasarımlık bir ızgarayı tarıyordu; dört
+milyon kesit değerlendirmesi ve saatler. Daha kötüsü, ızgara paleti bu görev için
+*tasarlamıyor*, en az kötü adayı seçiyordu. Onun yerine palet doğrudan tasarlandı:
+her şerit hedef kesit c_l'sini verecek açıya burulur, veteri 8,1 N'daki payını
+taşıyacak şekilde seçilir. Yani seyirde koşturulan şey bu uçağın pervanesi.
+
+| tasarım c_l | hover FM | boşta dönüş | uç Mach | ΔC_D0 (8 disk) |
+|---:|---:|---:|---:|---:|
+| 0,40 | 0,62 | 36 400 rpm | 1,12 | 0,0423 |
+| 0,55 | 0,65 | 29 200 rpm | 0,90 | 0,0238 |
+| 0,70 | 0,35 | 19 800 rpm | 0,61 | 0,0126 |
+| **0,85** | **0,27** | **14 500 rpm** | **0,45** | **0,0085** |
+
+**Dördü de varsayımı aşıyor, en düşüğü on kat.** İlk iki satır kendi şartlarında
+geçersiz — kesit verisi sıkıştırılamaz, o uç hızları değil. Ama son satır Mach
+0,45'te, modelin tam geçerli olduğu yerde, ve tek başına **0,0085** veriyor: uç
+çerçeveleri için ödenen 0,0043'ün iki katı, varsayılan toplam C_D0'ın %34'ü.
+
+Mekanizma çözücüye bağlı değil: hover için tasarlanmış pervanenin adımı düşüktür,
+30 m/s'de serbest bırakılınca kesitleri sıfır açıya gelene kadar hızlanır, ve o
+hızda paletlerin kendi profil sürüklemesi büyüktür. Dört tasarım arasındaki eğilim
+takası açıkça gösteriyor: **hover'da iyi olan palet seyirde en hızlı boşta dönüyor
+ve en çok sürüklüyor.** §2.9 kaçışı kapatıyor — çiftler sabit geometrili, pala
+açısı değiştirilemiyor.
+
+**Kendi hatam, kendi kontrolümle yakalandı.** İlk BEMT sürümü indükleme çarpanlarını
+serbest akışa göre tanımlıyordu (Va = V(1+a)). O formülasyon hover'da *yapısal
+olarak* çöküyor: V→0 iken eksenel indükleme hiç gelişmiyor. Palet 16,2 N yerine
+1,53 N verdi, uç hızı 400 m/s çıktı. Kalibrasyon on kat şaşmıştı ve bunu fark
+etmeden seyir sonucunu raporlayacaktım. Mutlak indükleme hızıyla yeniden yazıldı.
+
+## 2. Kapanma döngüsü — makalenin cümlesi fazla sertmiş
+
+`aero/kapanma.py`
+
+§4.4 şöyle diyordu: *"hiçbir ölçülmüş özgül güçte kapanmıyor."* Bu bir **çıkarma**
+idi — 6,8 kg tamponu 2,2 kg payla karşılaştırmak — ve o karşılaştırma, değiştirilen
+sayıyla boyutlandırılmış bir kutunun içinde yapılıyordu.
+
+Döngü kapatıldı: ağır tampon MTOW'u büyütür, MTOW hover gücünü, hover gücü tamponu.
+Sabit disk yüklemesinde geri besleme **doğrusaldır**, yani patlamaz, sonlu bir yere
+yığılır.
+
+| tampon kW/kg | kalkış kütlesi (13 kg yük) | tampon | menzil | 50 kg'da yük |
+|---|---:|---:|---:|---:|
+| 0,724 ölçülmüş sürekli | **çözüm yok** | — | — | 0,9 kg |
+| 0,892 ölçülmüş sürekli | 162,0 kg | 42,4 kg | 1 600 km | 3,9 kg |
+| **1,50 ölçülmüş termal tavan** | **68,9 kg** | **10,7 kg** | **1 600 km** | **9,2 kg** |
+| 5,63 varsayılan | 50,0 kg | 2,1 kg | 1 600 km | 14,9 kg |
+
+**Ölçülmüş termal tavanda uçak var.** %38 daha ağır, tamponu MTOW'un %15,6'sı,
+menzili aynı (menzili yakıt *kesri* belirliyor). Yalnız paketin *sürekli* derecesinde
+ve yalnız kalkış talebinde döngü yakınsamıyor.
+
+Bedeli: %42'lik kütle üstünlüğü 50 kg'a karşı 86 kg'dan hesaplanmıştı. Ölçülmüş
+pakette tail-sitter 69 kg, yani **%20**. Rakip düzen aynı pakette yeniden
+boyutlandırılmadı ve o da büyürdü — bu yüzden yeni bir sayı konmadı, koşul yazıldı.
+
+**Çözücü notu:** gevşetmeli yineleme salınıyordu ve salınım "kaçtı" gibi okunuyordu,
+yani çözücünün kusuru fiziğe yazılıyordu. İkiye bölmeye çevrildi; artık işaret
+değişimi yoksa **çözüm yoktur**, çözücü yorgunluğu değil.
+
+## 3. Geçiş, dönme dinamiğiyle — manşet sonucu modelin özelliğiymiş
+
+`aero/gecis_dinamik.py`
+
+§3.15 gövde açısını *kinematik sürüyor*: uçak dönmüyor, döndürülüyor, ve dönmeyi
+üreten moment denklemde yok. §3.17 momentin yetip yetmediğine ayrıca bakıyor. İkisi
+hiç buluşmamıştı.
+
+Buluşturuldu: üç serbestlik, sonlu kontrol momenti, ödünç C_m. **Sıfır aerodinamik
+momentte bile** — yani dönme dinamiğini tek başına ayırınca — hafif tasarım referans
+koşulunda **5,4 m** kaybediyor; kinematik model sıfır diyor.
+
+Üç kontrol bunu yapaylıktan ayırıyor:
+- Üç referans profilinde de aynı (5,4 / 6,6 / 6,3 m) → profil seçimi değil.
+- Kontrol momenti **hiç doymuyor** → otorite eksikliği değil.
+- Kazanç yükseltilince **büyüyor**, küçülmüyor: 6,6 → 8,7 → 17,2 m → izleme
+  gecikmesi değil.
+
+Kinematik modelin atladığı şey uçağı döndürmenin zorluğu değil, **döndürülürken
+uçtuğu yörünge**.
+
+Ödünç momentli satırlar raporlanmıyor, yalnız yayılım olarak veriliyor: modelde
+aerodinamik yunuslama sönümü yok (C_m_q de ölçülmemiş) ve kontrolcü ayarlanmış
+değil. İkisi de tek başına o satırları tahmin olmaktan çıkarır.
+
+## 4. RANS'a karşı VLM — YAPILMADI, ve yapılmadığı yazıldı
+
+İstenen hesap trimli planformun RANS çözümünü VLM'e koyup
+
+    K_L(y) = c_l,RANS(y) / c_l,VLM(y)
+
+oranının açıklık boyunca sabit olup olmadığına bakmaktı. Kurulum depoda var:
+1,67 M hücre, 4 çekirdekte 12,3 s/adım. Yakınsamış bir **kaldırmalı** çözüm ~4 000
+adım, yani **~14 saat**, üstelik burulmalı geometri için ağ yeniden üretilmeli.
+Bu oturumda yapılmadı. Yapılmış gibi raporlanmadı.
+
+Yerine `aero/yukleme_duyarlilik.py` yazıldı. RANS'ın yerine geçmez; **sonucunu
+sınırlar**. Makale "ortak çarpansa iptal olur" diyor — ortak çarpan varsayımı
+doğruysa iptal tanım gereğidir, sınanacak bir şey yok. Sınanabilir olan tersi:
+*yükleme şekli belli bir miktar değişirse tarafsız nokta ve denge burulması ne
+kadar oynar?* Böylece "hiç sınırı yok" olan maruziyet, "sınırlı, ve sınırı şu"
+hâline geliyor.

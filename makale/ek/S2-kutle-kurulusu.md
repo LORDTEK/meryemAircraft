@@ -257,3 +257,52 @@ design.** That, and not any of the light-design assumptions, is the largest open
 in the mass budget of this study, and it qualifies the scale-invariance of Section 3.9 —
 which holds for the analytical sizing fractions and has not been shown to hold for the
 structure that must realise them.
+
+---
+
+## S2.2 Closing the loop at a measured pack
+
+Section S2.1 compares the buffer mass a measured cell would require against the unallocated mass
+the build-up leaves. That comparison is a subtraction, and it is made inside a take-off mass that
+was itself sized on the specific power being replaced. The feedback it omits is the ordinary
+sizing loop: a heavier buffer raises take-off mass, which raises hover power, which raises the
+buffer again.
+
+**The feedback does not diverge, and that matters.** Section 3.9 holds disc loading constant,
+which makes hover power grow linearly with weight rather than as the classical three-halves
+power. A linear feedback accumulates to a finite answer, so the question "does it close" has a
+number rather than a verdict, and the number is not where the subtraction pointed.
+
+**Method.** Wing loading and disc loading are held at their Section 3.7 values, so the linear
+scale is the square root of the mass ratio. The fuel *fraction* is held at 0.16, which preserves
+range by the equation of Section 2.12. Hover shaft power, tip-pair power and engine rating all
+scale linearly with take-off mass. At each candidate mass the component build-up of Section S2.1
+is rebuilt at the new scale with the new buffer, and the payload residual is read. The mass at
+which the residual equals 13 kg is found by bisection rather than by relaxation, so that a
+non-converging case is distinguished from a solver that oscillates.
+
+**Result, on the take-off demand** — the aircraft must leave the ground, so the tip pairs are
+counted:
+
+| Buffer specific power | Take-off mass | Buffer | Buffer, % MTOW | Range | Payload if held at 50 kg |
+|---|---:|---:|---:|---:|---:|
+| 0.724 kW kg⁻¹ | **no solution to 5 000 kg** | — | — | — | 0.9 kg |
+| 0.892 kW kg⁻¹ | 162.0 kg | 42.4 kg | 26.2 % | 1 600 km | 3.9 kg |
+| **1.50 kW kg⁻¹** | **68.9 kg** | **10.7 kg** | **15.6 %** | **1 600 km** | **9.2 kg** |
+| 2.50 kW kg⁻¹ | 52.5 kg | 4.9 kg | 9.3 % | 1 600 km | 12.3 kg |
+| 5.63 kW kg⁻¹ | 50.0 kg | 2.1 kg | 4.1 % | 1 600 km | 14.9 kg |
+
+On the hover demand alone the same rows give 231.7, 110.4, 62.5, 50.2 and 50.0 kg.
+
+**The earlier conclusion was too strong.** At 1.5 kW kg⁻¹ — the highest rate measured on the flown
+pack of [47], at a thermal margin of 4.9 °C — the aircraft exists. It is 38 percent heavier, its
+buffer is 15.6 percent of take-off mass rather than 3.6, and its range is unchanged because range
+follows the fuel fraction. Held instead at 50 kg it carries 9.2 kg of payload rather than 13. Only
+at the pack's *continuous* rating does the loop fail to converge, and only on the take-off demand.
+
+**What this costs the comparison.** The forty-two percent mass advantage over the lift-plus-cruise
+layout is computed at 50 kg against 86 kg. At a measured pack the tail-sitter is 69 kg, and 69
+against 86 is twenty percent. The competing layout has *not* been re-sized on the same pack, and
+it would also grow; the honest statement is therefore that the forty-two percent figure is
+conditional on the buffer assumption and that nothing here replaces it. `aero/kapanma.py` carries
+the loop.

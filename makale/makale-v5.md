@@ -1021,25 +1021,64 @@ the wrong state:
 
 | Tip rotors in cruise | ΔC_D0 | of the 0.0248 assumed |
 |---|---:|---:|
-| turning at zero shaft load, blades at low incidence | 0.0003 – 0.0008 | 1 – 3 % |
+| turning at zero shaft load, blades at low incidence | 0.0003 – 0.0008 *(assumed)* | 1 – 3 % |
+| turning at zero shaft load, **computed below** | **0.0085 – 0.0423** | **34 – 171 %** |
 | stopped edge-on, at a chosen azimuth | 0.0008 | 3 % |
 | **stopped broadside, azimuth uncontrolled** | **0.015 – 0.018** | **61 – 74 %** |
 
-**The difference between the first and third rows is the difference between a configuration that
-works and one that does not**, and it is robust to the coefficients assumed, because the two
-states differ by a factor of thirty. The second row shows why stopping them is survivable only
-if azimuth is controlled — which is the indexing mechanism this section has just claimed the
-configuration does not need.
+**The first and third rows were taken to differ by a factor of thirty, and that gap was the whole
+of the argument**: whatever the coefficients, a configuration that holds its tip rotors turning
+was held to be safely far from one that stops them broadside. The computed second row removes the
+gap. It is derived later in this section, and it is reported here rather than buried because it
+changes what this subsection concludes. The *stopped edge-on* row shows, separately, why stopping
+the rotors is survivable only if azimuth is controlled — which is the indexing mechanism this
+section has just claimed the configuration does not need.
 
 **The resolution costs nothing, and it is a control state rather than hardware.** A fixed-pitch
 propeller left free settles at the advance ratio where net shaft torque is zero: inner sections
 drive, outer sections retard, and they balance. The shaft then does no work, so the motor
 neither drives nor brakes and the electrical cost is controller standby draw and bearing losses.
-The blades sit at low incidence with attached flow, which is the first row. **The tip rotors are
-therefore held in cruise at the zero-shaft-torque condition — neither stopped nor driven** — and
-this is the state assumed throughout Section 3. It is worth naming because both neighbouring
+The blades sit at low incidence, which was taken to put them in the first row. **The tip rotors
+are therefore held in cruise at the zero-shaft-torque condition — neither stopped nor driven** —
+and this is the state assumed throughout Section 3. It is worth naming because both neighbouring
 states are wrong: driven, they cost propulsive power; stopped without azimuth control, they cost
-most of the aircraft's zero-lift drag.
+most of the aircraft's zero-lift drag. What the state costs *itself*, the paragraphs below now
+compute, and the answer is not the first row.
+
+**That first row has since been computed rather than assumed, and it is the worst result in this
+paper.** A blade-element calculation was set up the only way that makes the comparison mean
+anything: the blade is first *designed* for the hover duty — each station twisted to a target
+section lift coefficient and chorded to carry its share of 8.1 N, with section data taken at each
+station's own Reynolds number — so that what is run at cruise is this aircraft's propeller rather
+than a generic one. Four designs were built, spanning target section lift coefficients from 0.40
+to 0.85 and hover figures of merit from 0.62 down to 0.27. Each was then run at 30 m s⁻¹ and the
+shaft speed found at which net torque is zero.
+
+| Design section c_l | Hover figure of merit | Free-wheeling speed | Tip Mach | ΔC_D0, eight discs |
+|---:|---:|---:|---:|---:|
+| 0.40 | 0.62 | 36 400 rpm | 1.12 | 0.0423 |
+| 0.55 | 0.65 | 29 200 rpm | 0.90 | 0.0238 |
+| 0.70 | 0.35 | 19 800 rpm | 0.61 | 0.0126 |
+| **0.85** | **0.27** | **14 500 rpm** | **0.45** | **0.0085** |
+
+**Every design exceeds the assumed 0.0003–0.0008, and the lowest exceeds it by a factor of ten.**
+The two fastest rows must be discarded on their own terms — the section data are incompressible
+and those tip speeds are not — but the last row is at Mach 0.45, inside the model's range, and it
+alone gives **0.0085: twice the 0.0043 charged for the tip frames, and thirty-four percent of the
+total zero-lift drag the sizing assumes.**
+
+The mechanism does not depend on the solver. A propeller designed for hover has low pitch; left
+free at 30 m s⁻¹ it must spin fast before its sections reach zero incidence, and at that speed
+the blades' own profile drag is large. The trend across the four designs is the trade stated
+plainly: the blade that hovers well free-wheels fastest and drags most. Section 2.9 rules out the
+escape, because these pairs are of fixed geometry and cannot feather.
+
+**The consequence is stated rather than absorbed.** Bill 2 is not absent. On the most favourable
+design computed here the tip rotors cost at least as much as the frames already charged, the
+cruise lift-to-drag ratio falls, and the margin over the lift-plus-cruise layout narrows by an
+amount this paper has not re-sized. What would settle it is a propeller design study that
+optimises the blade across both duties rather than for hover alone, or a variable-pitch tip pair
+— which is a mechanism, and mechanisms are what this configuration was built to avoid.
 
 What Bill 2 *is* paid, and this is why the heading says reduced rather than removed, is the tip
 frames. They are structure in the airstream that a conventional aircraft does not carry, and at
@@ -1521,11 +1560,33 @@ transition time to be found between competing penalties — the rotation time is
 actuator can do, not by a balance, and Section 3.17 shows that is where both reference times come
 from.
 
-**Entering the rotation while still climbing removes the penalty entirely**, and it survives the
-correction to thrust-to-weight above. At an entry climb of 5 m s⁻¹ the altitude loss is zero at
-both reference rotation times — 2 s light and 5.1 s heavy — and remains zero at every ratio from
-1.066 down to 1.00, which is to say the result does not depend on the tip pairs contributing any
-lift at all once the climb has been acquired.
+**Entering the rotation while still climbing removes the penalty entirely in this model**, and
+that survives the correction to thrust-to-weight above. At an entry climb of 5 m s⁻¹ the altitude
+loss is zero at both reference rotation times — 2 s light and 5.1 s heavy — and remains zero at
+every ratio from 1.066 down to 1.00, which is to say the result does not depend on the tip pairs
+contributing any lift at all once the climb has been acquired.
+
+**It does not survive the addition of rotational dynamics, and that is the sharpest limitation of
+this result.** The simulation above drives the body angle kinematically: the aircraft is assumed
+to rotate, and the moment producing the rotation does not appear. Section 3.17 asks separately
+whether the moment is available. The two have now been solved together — three degrees of freedom,
+a finite control moment, and the same trajectory model otherwise — and with **zero aerodynamic
+pitching moment**, which isolates the rotational dynamics alone, the light design loses **5.4 m**
+at its reference condition where the kinematic model reports zero. The loss is not a tracking
+artefact: it is unchanged across the linear, bang-bang and smooth reference profiles, it appears
+without the control moment ever saturating, and it grows rather than vanishes as the controller
+gains are raised, reaching 17 m at gains high enough to track the reference almost exactly. What
+the kinematic model omits is not the difficulty of turning the aircraft but the trajectory the
+aircraft flies while it is being turned.
+
+With a borrowed pitching moment the outcome depends on which moment is borrowed, and the spread is
+wide enough that no number from it is reportable: some models complete the rotation, others
+saturate the tip pairs, and others tumble. That spread is itself the finding, and it is the same
+finding Section 4 states from the other direction — the transition rests on a coefficient no
+current method predicts reliably. Supplementary S4 gives the sweep. **Two cautions belong with it:
+the model carries no aerodynamic pitch damping, and its controller is a fixed-gain regulator
+rather than a designed one, so the borrowed-moment rows bound nothing.** The zero-moment row does
+not depend on either and is the result carried forward.
 
 **Acquiring the climb is where the correction is paid.** The aircraft reaches transition altitude
 by climbing, so it need not stop and hover first, but the excess thrust available to build that
@@ -1775,15 +1836,38 @@ demand by a fifth. A 24S nickel–cobalt–manganese pack designed, built, bench
 to 10.68 C and flown in an electric VTOL aircraft measures **724 W kg⁻¹** continuous for the unit
 pack and **892 W kg⁻¹** for the flight system, reaching roughly 1.5 kW kg⁻¹ at its maximum tested
 rate with a thermal margin of 4.9 °C [47]. A NASA-funded design study adopts 4 kW kg⁻¹ and states
-that this is "about twice that of existing batteries" [48]. Sized at the measured thermal ceiling
-the buffer is **6.8 kg rather than 1.8 kg**, against 2.2 kg of unallocated mass; sized at the
-measured continuous figure, 11.4 kg, which is nearly the whole payload. **The light design's mass
-budget does not close at any measured specific power.** The defence available earlier — that a
+that this is "about twice that of existing batteries" [48]. The defence available earlier — that a
 short-duration buffer is a different product from an energy-optimised automotive pack — does not
-survive, because the source above *is* that product. The gap to be closed is a factor of 3.8 on
-the measured ceiling and 6.3 on the measured continuous rate. What would resolve it is a pack
-demonstrating that at acceptable temperature, or a heavier buffer carried at the cost of payload
-fraction.
+survive, because the source above *is* that product.
+
+**An earlier version of this section then compared a 6.8 kg buffer against 2.2 kg of unallocated
+mass and concluded that the budget does not close at any measured specific power. That comparison
+was a subtraction inside a box that had been sized on the number being replaced, and the
+conclusion drawn from it was too strong.** A heavier buffer raises take-off mass, which raises
+hover power, which raises the buffer again; at constant disc loading that feedback is linear
+rather than divergent, so it accumulates to a finite answer and the answer is not where the
+subtraction pointed. Closing the loop — holding wing and disc loading, holding the fuel fraction
+so that range is preserved, and rebuilding the component budget at each step — gives:
+
+| Buffer specific power | Take-off mass at 13 kg payload | Buffer | Range | Payload if held at 50 kg |
+|---|---:|---:|---:|---:|
+| 0.724 kW kg⁻¹, measured continuous | **no solution** | — | — | 0.9 kg |
+| 0.892 kW kg⁻¹, measured continuous | 162.0 kg | 42.4 kg | 1 600 km | 3.9 kg |
+| **1.5 kW kg⁻¹, measured thermal ceiling** | **68.9 kg** | **10.7 kg** | **1 600 km** | **9.2 kg** |
+| 5.63 kW kg⁻¹, assumed here | 50.0 kg | 1.8 kg | 1 600 km | 13.0 kg |
+
+**At the highest rate yet measured on a flown pack the aircraft exists.** It is 38 percent
+heavier than the reference design, it carries a buffer of 15.6 percent of take-off mass rather
+than 3.6, and its range is unchanged because the fuel fraction is what sets range. Held instead
+at 50 kg, it carries 9.2 kg rather than 13. At the pack's *continuous* rating the loop does not
+converge at all for the take-off demand, so the sharper statement survives there.
+
+The correction cuts both ways and both should be stated. The reference design is not unreachable,
+which is what the earlier sentence implied; but the comparison that opens this paper is made at
+50 kg against a lift-plus-cruise layout at 86 kg, and at a measured pack that margin is 69 against
+86 — twenty percent rather than forty-two. **The forty-two percent figure is conditional on the
+buffer, not merely on the mass model**, and the competing layout would have to be re-sized on the
+same pack before any number replaced it. That re-sizing has not been done here.
 
 **The aircraft leaves the ground on its control propellers, and that is a dependency rather than
 a design feature.** Section 2.12 sizes hover power at thrust equal to weight, so the primary
@@ -2133,9 +2217,9 @@ They carry the derivations behind the results stated here; each was a section of
 longer version and is reproduced without abridgement.
 
 - **Supplementary S1** — Independent checks on the two assumed aerodynamic coefficients (3438 words)
-- **Supplementary S2** — A component build-up of the mass budget (3132 words)
+- **Supplementary S2** — A component build-up of the mass budget (3672 words)
 - **Supplementary S3** — Control axes in full (6553 words)
-- **Supplementary S4** — Rotational authority, trim, and the transition envelope (7503 words)
+- **Supplementary S4** — Rotational authority, trim, and the transition envelope (8044 words)
 - **Supplementary S5** — The limitations in full (6499 words)
 - **Supplementary S6** — The three bills stated formally, and a comparative sizing (3000 words)
 
