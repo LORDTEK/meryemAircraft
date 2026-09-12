@@ -24,7 +24,7 @@ olduğunu söyler.
 |---|---|
 | `NACA-TR-796_...pdf` | **En verimli tek kaynak.** Toe açısının işareti (yüksek AR → toe-out), C_n_β ölçütü (0,001/derece), 0,01c spoiler eşiği, tek yönlü çıkıntının yunuslama cezası, gövdenin destabilize edici etkisi. Kaynakça [19]. |
 | `NACA-ACR-L4H19_1944_tailless-tip-fins.pdf` | ⚠️ **TR-796 ile AYNI rapor** — savaş zamanı ön baskısı. OCR'ı kötü; alıntılar TR-796'dan alındı. Silinmedi çünkü ön baskı olduğu belgelenmiş olsun. |
-| `NACA-TM-4649_Moul_...pdf` | 60° ok açılı dört uçan kanat, −8°…48°: yön kararlılığı kararsız/nötr, ve AR ile şiddetlenen pitch-up. Kaynakça [20]. |
+| `NASA-TM-4649_Moul_...pdf` | 60° ok açılı dört uçan kanat, −8°…48°: yön kararlılığı kararsız/nötr, ve AR ile şiddetlenen pitch-up. Kaynakça [20]. |
 | `NACA-WR_swept-all-wing-free-flight-directional.pdf` | Serbest uçuş: düşük C_n_β'da **düşük etkin dihedral gerekir**, yoksa Dutch roll sönümsüz kalır. Bizim C_l_β = −0,045 tam bu tarafta. |
 | `NASA-TM-78767_...pdf` | Uç podlarında dikey kuyruk: optimum toe açısı ~1,5°, ve %75 daha büyük alan L/D'yi değiştirmiyor. Kaynakça [34]. |
 | `NASA-TM-4726_Lepsch_...pdf` | Uç finleri **uç plakası** gibi davranıp taşımayı artırıyor. Bizim fairing'imiz tam veterli değil; **aktarılmıyor**, ve nedeni yazıldı. |
