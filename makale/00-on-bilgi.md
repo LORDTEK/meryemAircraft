@@ -153,6 +153,28 @@ series hybrid propulsion; cruise efficiency; aircraft configuration design
 
 ## Beyanlar
 
+### Supplementary Materials
+
+> The following supplementary material is available: **S1** — independent checks on the two
+> assumed aerodynamic coefficients (the full version of Section 3.10); **S2** — a component
+> build-up of the mass budget (Section 3.11); **S3** — the control axes in full (Section 2.10);
+> **S4** — rotational authority, trim and the transition envelope (Section 3.17); **S5** — the
+> limitations in full (Section 4); **S6** — the three bills stated formally and the comparative
+> sizing under three contracts (Sections 3.1 and 3.6).
+
+*[Dergi bu bölümü arka maddede zorunlu tutuyor ve her parçanın adıyla anılmasını
+istiyor. Altı ek tek dosyada gönderilecek — hakem için altı ayrı dosyadan kolay.]*
+
+### Patents
+
+> A patent application covering the aircraft configuration described in this paper has been
+> filed with the Turkish Patent and Trademark Office (application 2026/014570).
+
+*[Dergi bu bölümü isteğe bağlı tutuyor ama "bu çalışmadan doğan patent varsa
+eklenebilir" diyor. Patent hem burada hem Conflicts of Interest'te anılıyor: biri
+kaydın kendisi, diğeri çıkar beyanı. İkisi farklı şeyler ve dergi ikisini de
+istiyor.]*
+
 ### Author Contributions
 
 > Conceptualization, Ö.G. and M.G.; Methodology, Ö.G. and M.G.; Software, B.G.;
@@ -172,14 +194,26 @@ Funding Acquisition. Baş harfler: M.G., B.G., Ö.G.]*
 
 ### Acknowledgements
 
-> Artificial-intelligence tools were used during the preparation of this work, for
-> literature searching, numerical checking and language editing. All design decisions,
-> engineering judgements and claims presented in this paper are the authors' own, and
-> the authors accept full responsibility for the content.
+> During the preparation of this study, the authors used large-language-model assistants for
+> the purposes of literature searching and triage, numerical checking of the authors' own
+> calculations, and language editing. Section 2.14 states the scope of that use and the rules
+> under which it was admitted. No source was cited on a model's description of it, and no
+> correction was adopted until it had been reproduced independently from the underlying model.
+> All design decisions, engineering judgements and claims presented in this paper are the
+> authors' own. The authors have reviewed and edited the output and take full responsibility
+> for the content of this publication.
 
-*[✅ Tasarımcının değişmez kuralı: **genel ifade, marka/model/firma adı yok**,
-yazar satırında yapay zekâ yer almaz. Bu metin o kuralı karşılar ve aynı zamanda
-MDPI'ın yapay zekâ beyan zorunluluğunu da karşılar.]*
+*[✅ Değişmez kural korundu: **genel ifade, marka/model/firma adı yok**, yazar
+satırında yapay zekâ yer almaz.
+
+⚠️ AMA BİR ÇATIŞMA VAR, KARAR SENİN. MDPI'ın şablonu "[tool name, version
+information]" diyor — yani araç adı ve sürüm istiyor. Yukarıdaki metin şablonun
+*yapısını* (ne için kullanıldı + gözden geçirildi + sorumluluk yazarlarda) karşılıyor
+ama araç adını vermiyor. Editör ısrar ederse iki yol var: adı yazmak, ya da "genel
+sınıf yeterlidir" diye direnmek. Şimdilik ikincisindeyiz ve bu bilinçli bir seçim.
+
+Dergi ayrıca GenAI'ın analiz/yorumda kullanıldığı durumda Methods İÇİNDE de beyan
+istiyor; onu 2.14 karşılıyor. Buradaki blok Acknowledgements tarafı.]*
 
 ### Conflicts of Interest
 
@@ -200,6 +234,49 @@ MDPI'ın yapay zekâ beyan zorunluluğunu da karşılar.]*
 
 *Bölüm 8.12'deki "başka bir grup bunu bağımsız deneyebilir" davetinin somut
 karşılığı. Depo bağlantısı yayın öncesi eklenecek.*
+
+### Dual-Use Research of Concern
+
+> This paper is a civil aircraft configuration study. The applications the configuration was
+> conceived for are civil ones — wildfire observation and response, and cargo carriage to places
+> without a runway — and no military organization, mission, weapon or payload is named or
+> analysed anywhere in this work. It reports no experimental hardware and no controlled
+> technical data.
+>
+> **The authors acknowledge the dual-use potential inherent in the subject matter.** A
+> long-endurance unmanned aircraft is dual-use in principle, as most aircraft configurations
+> are, and the authors note for completeness that the heavier of the two analytical scale cases
+> — a 1000 kg vehicle with a computed range near 1800 km — falls within the range band by which
+> unmanned aerial vehicles are listed under international export-control arrangements. What is
+> published here is an open configuration study and its equations, offered so that others may
+> check or refute it; the authors neither direct it at, nor undertake to police, any particular
+> downstream use, and they remain available to provide whatever further declaration the editors
+> require.
+
+*[⚠️ KARAR SENİN, ama önceki taslağımı düzelttim ve sebebini yazayım.
+
+Önce "no part of this work was conducted for, or is directed at, a military application"
+yazmıştım. Bunun ikinci yarısı gelecek hakkında bir **taahhüt**ti ve kimse onu
+veremez. Senin itirazın doğru: birisi yarın askeri amaçla kullanırsa biz yanlış
+beyan vermiş oluruz.
+
+Şimdiki metin üç şeyi ayırıyor: (1) bu çalışmanın NE OLDUĞU — sivil, askeri hiçbir
+şey adlandırılmıyor, bu bir olgu; (2) NİYETİMİZ — orman yangını ve yük, bu da olgu;
+(3) ÇİFT KULLANIM POTANSİYELİ — inkâr edilmiyor, kabul ediliyor.
+
+Üçüncüsü ayrıca daha GÜÇLÜ bir DURC beyanı. MDPI'ın kendi rehberi yazarlardan
+"bulgularının nasıl kötüye kullanılabileceğini tahmin etmesini" istiyor. "Çift
+kullanım yoktur" demek bu rehbere uymaz; "vardır, farkındayız" demek uyar. Drones'ta
+2026'da yayımlanan İHA sürü makaleleri de tam bunu yapıyor.
+
+Derginin kapsam sayfası şablonu yalnızca askeri kuruluş/görev adı geçen makaleler
+için zorunlu tutuyor; bizde geçmiyor, yani bu blok gönüllü. Ama gönüllü olması onu
+zayıflatmıyor, tersine.
+
+NOT: Orman yangını ve yük amacını ilk kez burada yazdım. Makalenin GÖVDESİNDE hiçbir
+görev tanımı yok — hakem "bu ne için?" diye sorar. 13 kg faydalı yük / 1600 km bir
+misyonun sayısı; hangi misyon olduğunu söylemek makaleyi güçlendirir. Girişe bir
+cümle eklememi istersen söyle, kendiliğimden eklemedim.]*
 
 ### Funding
 
