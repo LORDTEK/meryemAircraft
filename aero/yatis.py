@@ -177,6 +177,69 @@ def kanat_serit_alani(y0=0.0, y1=None, n=400):
     return A, (My / A if A else 0.0)
 
 
+_VETER_TABLO = {}
+
+
+def _veter_tablo(n=400):
+    """Planform bir kez kurulur; yerel_veter cagri basina kurmaz."""
+    if n not in _VETER_TABLO:
+        ist, _, _ = istasyonlar(n=n)
+        _VETER_TABLO[n] = (np.array([a[0] for a in ist]),
+                           np.array([a[2] for a in ist]))
+    return _VETER_TABLO[n]
+
+
+def yerel_veter(y, n=400):
+    """Aciklik istasyonu y'deki yerel veter (dogrusal ara deger)."""
+    ys, cs = _veter_tablo(n)
+    return float(np.interp(y, ys, cs))
+
+
+# ---------------------------------------------------------------------
+# 4b. OLU BANT: NACA ACR L4H19'un olctugu h/c esigi
+# ---------------------------------------------------------------------
+# "spoiler projections of less than 0.01c produce negligible changes in
+# lift" -- NACA ACR No. L4H19 (1944), iki ayri model uzerinde.
+#
+# Bizim serit surekli degiskendir (kullanicinin duzeltmesi: ac-kapa
+# DEGIL). O halde bu esik, kumanda kursunun ALTINDAN bir olu bant
+# keser. Ve serit konik oldugu icin esik her istasyonda ayni f'te
+# asilmaz: dista yukseklik buyuk, veter kucuk, yani DIS UC ONCE calisir.
+ESIK_HC = 0.01
+
+
+def esik_istasyonu(f, n=400):
+    """Kumanda kesri f'te seridin hangi noktasindan itibaren etkin oldugu.
+
+    f = 0 tam kapali, f = 1 tam acik (yukseklikler 4.4'teki degerler).
+    Doner: (y_esik, etkin_uzunluk_orani). y_esik = 0 ise serit tumuyle
+    etkin; y_esik > SERIT_UZUNLUK ise hicbir yeri etkin degil.
+    """
+    ys = np.linspace(0.0, SERIT_UZUNLUK, n)
+    h = f * (SERIT_H_IC + (SERIT_H_DIS - SERIT_H_IC) * ys / SERIT_UZUNLUK)
+    c = np.interp(ys, *_veter_tablo())
+    etkin = h / c >= ESIK_HC
+    if not etkin.any():
+        return float("inf"), 0.0
+    i = int(np.argmax(etkin))          # ilk etkin istasyon
+    return float(ys[i]), float(etkin.sum()) / n
+
+
+def esik_kolu(f, n=400):
+    """Yalnizca esigi asan kismin agirlikli kolu ve alani."""
+    ys = np.linspace(0.0, SERIT_UZUNLUK, n)
+    h = f * (SERIT_H_IC + (SERIT_H_DIS - SERIT_H_IC) * ys / SERIT_UZUNLUK)
+    c = np.interp(ys, *_veter_tablo())
+    m = (h / c) >= ESIK_HC
+    if not m.any():
+        return 0.0, 0.0
+    tr = np.trapezoid if hasattr(np, "trapezoid") else np.trapz
+    A = tr(h[m], ys[m])
+    if A <= 0:
+        return 0.0, 0.0
+    return tr(ys[m] * h[m], ys[m]) / A, A
+
+
 def gereken_katsayi(M_hedef, q, kol, A):
     """Hedef momenti veren normal kuvvet katsayisi.
 
@@ -349,6 +412,32 @@ if __name__ == "__main__":
     print("  V = 0'da AERODINAMIK SONUMLEME YOK: hareket saf ataletsel,")
     print("  yani asili durumda serit kapatilmazsa yatis hizi SURESIZ artar.")
     print("  Bu, ac-kapa kontrolunu seyirdekinden daha kritik yapar.")
+    print()
+
+    print("-" * 74)
+    print("OLU BANT -- NACA ACR L4H19'un h/c = %0.2f esigi" % ESIK_HC)
+    print("-" * 74)
+    kol0, A0 = esik_kolu(1.0)
+    print("  1944 Langley olcumu: 0,01 veterden alcak spoiler cikintilari")
+    print("  tasimada 'negligible' degisiklik veriyor (iki ayri model).")
+    print("  Serit SUREKLI degisken oldugu icin bu esik kumanda kursunun")
+    print("  ALTINDAN bir olu bant keser. Serit konik: dis uc once calisir.")
+    print()
+    print("  %6s %9s %8s %8s %9s %9s" %
+          ("f", "y_esik", "etkin%", "kol(m)", "M/M_tam", "dogrusal"))
+    for f in (0.05, 0.075, 0.10, 0.15, 0.20, 0.25, 0.30, 0.40, 0.50, 1.0):
+        ye, orn = esik_istasyonu(f)
+        kol, A = esik_kolu(f)
+        print("  %6.3f %9s %8.1f %8.3f %9.3f %9.3f"
+              % (f, ("%.3f" % ye) if ye != float("inf") else "yok",
+                 100 * orn, kol, (A * kol) / (A0 * kol0), f))
+    print()
+    print("  Okunusu: esik gorundugunden UCUZA geliyor. Esigi asan kisim")
+    print("  seridin EN UZUN KOLLU kismi oldugu icin, kaybedilen alanin")
+    print("  buyuk bolumu buyuyen kolla geri geliyor. Kursun dortte birinin")
+    print("  ustunde tepki %5 icinde DOGRUSAL; %15'in altinda momentin")
+    print("  dortte birinden fazlasi kayip; %7'nin altinda serit HICBIR SEY")
+    print("  yapmiyor. Yani surekli kumanda sifirdan baslamiyor.")
     print()
 
     print("-" * 74)

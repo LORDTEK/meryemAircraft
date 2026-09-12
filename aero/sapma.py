@@ -34,6 +34,16 @@ V_SEYIR = 30.0
 CD0_KESIT = 0.010          # kesit profil surukleme katsayisi, sonumleme icin
 T_CIFT, T_CIFT_TEMKINLI = 16.2, 12.4
 
+# Yon kararliligi hedefleri. Ilk ikisi bu calismanin kendi sectigi
+# degerlerdi; son ikisi OLCUTTUR -- NACA ACR L4H19 (1944) s. 18.
+D2R_ = math.pi / 180.0
+HEDEFLER = (
+    (0.03, "bu calismanin sectigi alt deger"),
+    (0.05, "bu calismanin sectigi ust deger"),
+    (0.001 / D2R_ / 3, "L4H19: serbest-ucus tunelinde ucurulan en dusuk"),
+    (0.001 / D2R_, "L4H19: geleneksel ucaklar icin ONERILEN"),
+)
+
 
 def atalet_z():
     kal = donme.dagilim()
@@ -139,22 +149,31 @@ if __name__ == "__main__":
     kol_f = x_uc - xg
     print("  cerceve orta-veteri x = %.3f m, CG'ye kol = %.3f m" % (x_uc, kol_f))
     print("  GEREKEN yanal alan (iki cerceve toplami):")
-    print("  %10s %14s %14s" % ("C_n_beta", "a_f = 3,0", "a_f = 5,0"))
-    for hedef in (0.03, 0.05, 0.08):
-        print("  %10.2f %11.4f m2 %11.4f m2"
+    print("  %10s %14s %14s   %s" % ("C_n_beta", "a_f = 3,0", "a_f = 5,0",
+                                     "nereden"))
+    for hedef, etiket in HEDEFLER:
+        print("  %10.4f %11.4f m2 %11.4f m2   %s"
               % (hedef, gereken_yanal_alan(hedef, kol_f, 3.0, o),
-                 gereken_yanal_alan(hedef, kol_f, 5.0, o)))
+                 gereken_yanal_alan(hedef, kol_f, 5.0, o), etiket))
     boy = 2 * 0.71
     print()
     print("  Cerceve boyu 2 x 0,71 = %.2f m; iki cerceve -> %.2f m toplam."
           % (boy, 2 * boy))
-    for hedef in (0.03, 0.05, 0.08):
+    for hedef, etiket in HEDEFLER:
         s = gereken_yanal_alan(hedef, kol_f, 4.0, o)
-        print("     C_n_beta = %.2f  ->  gereken fairing veteri %3.0f mm"
-              % (hedef, 1000 * s / (2 * boy)))
+        print("     C_n_beta = %.4f /rad -> fairing veteri %3.0f mm   (%s)"
+              % (hedef, 1000 * s / (2 * boy), etiket))
     print("  20 mm kalinlikli bir fairing'in veteri tipik olarak 50-70 mm.")
-    print("  Yani cerceve fairing'i bu araligin ALT ucunda yon kararliligini")
-    print("  verebilir -- ama bu bir GEREKSINIMDIR, hesaplanmis sonuc degil.")
+    print()
+    print("  OLCUT NEREDEN GELIYOR (NACA ACR L4H19, 1944, s. 18):")
+    print("  Langley serbest-ucus tuneli, kuyruksuz modeller. Geleneksel")
+    print("  ucaklar icin onerilen deger 'usually greater than 0.001 per")
+    print("  degree'; modeller bunun UCTE BIRIYLE de ucurulmus, ama 'the")
+    print("  best flying qualities ... were obtained with values of C_n_beta")
+    print("  in excess of 0.001'. Ayni rapor kuyruksuz ucaklarin bu")
+    print("  gereksinimden MUAF OLMADIGINI acikca soyluyor.")
+    print("  Yani 0,03 ve 0,05 /rad bizim SECTIGIMIZ sayilardi; alanin")
+    print("  yerlesik olcutu 0,0573 /rad ve ikisi de onun ALTINDA.")
     print()
 
     print("-" * 74)

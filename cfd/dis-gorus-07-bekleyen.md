@@ -131,7 +131,7 @@ dikkatsizlik değil — bu yüzden bu kadar uzun süre sorgulanmadan kaldı.
 Sabit h/c seyirde sürüklemeyi %64 azaltıyor ama izdeki alanı %45
 azaltıyor. Hangi mekanizmanın **asılı durumda** baskın olduğu belirlenmedi.
 
-### S3. Uç çerçevesi fairing'inin toe açısı — BÜYÜKLÜK BULUNDU, İŞARET AÇIK
+### S3. Uç çerçevesi fairing'inin toe açısı — BÜYÜKLÜK ve İŞARET KAPANDI
 
 NACA TR-796: yüksek en-boy oranlı finler toe-out ister, düşük olanlar toe-in;
 ve toe-out'ta arka fin perdövitese girerse **kararsızlaştırıcı** moment doğuyor.
@@ -144,13 +144,37 @@ tasarımında da "about the same" olduğunu buluyor, **%75 daha büyük alana
 rağmen** — bizim "gereken veter zaten olması gerekenin içinde" argümanımızın
 ölçümle gelen hâli.
 
-**Açık kalan: İŞARET.** O çalışmanın finleri düşük en-boy oranlı ve toe-in
-istiyor; TR-796 yüksek en-boy oranlılar için toe-out diyor; bizim çerçeveler
-(1,42 m boy / on milimetrelerce veter, AR ~20-28) **her iki kaynağın da
-aralığının dışında.**
+### ✅ S3'ÜN İŞARETİ KAPANDI (12.09.2026) — soru yerini daha kötü bir soruya bıraktı
 
-**Sorulacak:** Çok yüksek en-boy oranlı (AR > 15) uç finlerinde toe açısının
-işareti ne olmalı, ve perdövites arıza kipi bu AR'de nasıl davranıyor?
+TR-796'yı baştan sona okuyunca, "her iki kaynağın da aralığının dışındayız"
+gerekçesi **çürüdü.** Kural bir korelasyon değil, *hangi kuvvetin iş yaptığına*
+dair bir ifade:
+
+> düşük AR → toe-**in**, çünkü stabilize edici moment o yüzeylerin taşıdığı
+> **büyük endüklenen dirençten** doğuyor;
+> orta/yüksek AR → toe-**out**, çünkü moment **"the outwardly directed lift"**ten
+> doğuyor.
+
+AR'ı yükseltmek dengeyi dirençten taşımaya doğru **daha da** kaydırır. Yani
+AR ~20 kuralı aşmıyor, kuralı **güçlendiriyor.** İşaret: **toe-out.**
+Makaleye bu gerekçeyle yazıldı; eski "işaret açık" ifadesi kaldırıldı.
+
+**Yerine geçen soru daha sert, ve YZ'lere bu sorulacak.** Fairing veteri 39 mm,
+seyirde **Re ≈ 80.000.** Varsaydığımız a_f = 4/rad hiçbir Reynolds'ta ölçüm
+değil, bu Reynolds'ta ise iyimser. Ve Selig'in derlemesi tam bu bandı vuruyor:
+Princeton'da denenen dört simetrik kesidin (J5012, NACA 0009, NACA 64A010,
+SD8020) hepsi α ≈ 0 civarında doğrusalsızlık gösteriyor; Mueller & Batill'in
+NACA 66₃-018'inde taşıma eğrisinin eğimi **3°'lik bir bantta işaret
+değiştiriyor** — bizim toe açımız 1,5°, yani tam o bandın içinde.
+
+**SORU:** Re ≈ 10⁵ mertebesinde, veter uzunluğu on milimetrelerce olan ince
+simetrik bir fin, 1–2°'lik sabit toe açısında beklenen yan kuvveti üretir mi?
+Bu Reynolds'ta ölçülmüş bir C_y_β / a_f değeri var mı? (Aradığımız, "düşük Re
+kötüdür" genellemesi değil; **sayı.**)
+
+**İKİNCİ SORU (arıza kipi):** toe-out'ta arka fin perdövitese girdiğinde
+kararsızlaştırıcı moment doğuyor. Bu, kullanılabilir yan kayma zarfına bir üst
+sınır koyar. Bu sınırın hesaplandığı ya da ölçüldüğü bir çalışma var mı?
 
 ### 🔴 S4. Refleks kesitlerin gerçek C_m0 mertebesi — EN ÖNEMLİ AÇIK SORU
 
@@ -190,6 +214,30 @@ için anılıyor. Uzlaştıramadığımız bir büyüklüğü aktarmayız.
 
 **YZ'lere sorulacak ek soru:** Shinde'nin tablosu gerçekten hatalı mı, yoksa
 bizim okumadığımız bir normalizasyon/işaret kuralı mı var?
+
+⚠️ **Selig UIUC'yi bizim adımıza aramayın — baktık, cevap orada yok.**
+*Low-Speed Airfoil Data* Cilt 1–2 (düşük Re kesit verisinin en çok atıf alan
+deneysel derlemesi) momenti **ölçmüyor.** Kendi ifadesi: *"the current setup
+does not provide pitching moment data, airfoil moment coefficients have been
+determined computationally using either the Eppler, ISES or XFOIL code."*
+Tablo 3.1'in tamamı hesaplanmış değerdir.
+
+Ve oradan çıkan sayı **aleyhimize:** derlemedeki tek uçan-kanat kesiti olan
+**MH45** (Repperle, hafif refleks, %9,84 kalınlık) → **C_m,c/4 = −0,006.**
+Shinde'nin (hepsi negatif) tablosuyla aynı yöne bakıyor. Yani artık *iki*
+bağımsız kaynakta uçan-kanat/refleks kesitlerinin C_m,c/4'ü negatif çıkıyor ve
+pozitif C_m0 varsayımı yalnız TR-460'a dayanıyor.
+
+Tek pozitif değer refleksten değil kısıtlı tasarımdan geliyor: **M06-13-128**
+(Miley, %5,16 kamburluk) → **+0,004**, *"c_lmax near 1.5... in light of the low
+pitching-moment constraint."* Bu, aradığımız takasın var olduğunu gösteriyor
+ama yine hesaplanmış bir sayı.
+
+**Dolayısıyla soruyu şöyle daraltıyoruz:** *momenti gerçekten ölçen* bir
+tünelde (NACA/NASA, Delft, Stuttgart tipi) alınmış, refleks veya düşük-moment
+kısıtıyla tasarlanmış bir kesidin C_m,c/4'ü — kesit adı, Reynolds ve tünel
+belirtilerek. Hesaplanmış (XFOIL/Eppler/ISES) değer **ikinci sınıf kanıt**
+sayılacak, ve bunu kabul ediyorsak da kaynağında hesap olduğu yazılacak.
 
 ### S5. Kısa süreli, güç için optimize edilmiş tampon — ölçülmüş özgül güç?
 
@@ -239,3 +287,52 @@ düşük türbülanslı bir ortam değil. Yani §4.4'ün "izde olduğu için sı
 
 **Sorulacak:** Pervane izi içindeki bir Gurney/çit cihazının etkinliğini ölçen
 bir çalışma var mı? İz türbülans yoğunluğu tipik olarak ne mertebede?
+
+### S9. İki yönlü şerit — tek yönlü çıkıntının yunuslama cezası (12.09.2026)
+
+NACA TR-796, kuyruksuz uçaklarda spoiler'ın aileron olarak kullanımı için şunu
+söylüyor:
+
+> *"If only **upgoing** spoiler projections are used, the pitching moments
+> developed are **prohibitive.** A spoiler arrangement employing **equal up and
+> down projections** would improve this condition but the data available are
+> insufficient for evaluating conclusively the merits of such a system."*
+
+Bizim şerit tek yönlü (yalnız alt yüzey). §4.4'te hesapladığımız kuplaj
+ΔC_m 0,005–0,032 ve bunu **çizelgeleme kısıtıyla** çözdük (dönüşün sonunda
+şerit kullanılmayacak). 1944'ün önerdiği yapısal çözümü ise hiç incelemedik.
+
+**Sorulacak:** 1944'ten bu yana iki yönlü (eşit yukarı+aşağı) çıkıntılı
+spoiler/şerit düzeni ölçülmüş mü? Yunuslama kuplajını gerçekten götürüyor mu,
+ve yatış otoritesinden ne kadar götürüyor? Bir de: bizim gibi **alt yüzeyde,
+45° planform ok açısıyla** duran bir şerit için üst yüzeyden simetrik bir
+ikizini çıkarmak, yatış momentlerini gerçekten toplar mı yoksa birbirini yer
+mi? (Üstteki şerit ters işaretli ΔC_L üretir; toplanması gerekenin işareti
+bizde net değil.)
+
+⚠️ Not: kullanıcının tasarım kararı tek şerit ve sürekli açılım. Bu soru o
+kararı değiştirme önerisi değil, **§8'e yazılmış incelenmemiş alternatifin**
+kapatılması için.
+
+### S10. Ölü bandın altı — küçük yatış düzeltmeleri nasıl yapılacak?
+
+TR-796'nın ölçümü: **0,01 veterden alçak çıkıntılar taşımada "negligible"
+değişiklik veriyor** (iki ayrı model). Şerit konik olduğu için bu, kumanda
+kursunun altından kademeli bir ölü bant kesiyor — `yatis.py:esik_istasyonu()`:
+
+| kumanda kesri | üretilen moment / tam |
+|---:|---:|
+| 0,05 | 0,000 |
+| 0,10 | 0,041 |
+| 0,15 | 0,113 |
+| 0,25 | 0,237 |
+| ≥ 0,25 | doğrusaldan %5 içinde |
+
+Yani şerit **büyük komutlarda doğrusal, küçük komutlarda kör.** Bu, eşik
+cihazlarında alışılmışın tersi (genelde büyük komutlar doyar, küçükler
+çalışır) ve koniklikten geliyor.
+
+**Sorulacak:** Ölü bandı kapatmanın bilinen yolları neler? (Dither, iki
+kademeli açılım, kök tarafında daha yüksek bir başlangıç profili, ya da küçük
+düzeltmeleri tamamen diferansiyel itkiye bırakmak.) Uçuş kontrolünde bu
+sınıftan bir cihazla küçük genlikli düzeltme yapılmış örnek var mı?

@@ -98,3 +98,7 @@
     Aerodynamic Characteristics of a Gurney Flap on a Wind Turbine Airfoil under
     High Turbulent Flow Condition. *Applied Sciences* **2020**, 10 (20), 7258.
     https://doi.org/10.3390/app10207258
+36. Selig, M. S.; Lyon, C. A.; Giguère, P.; Ninham, C. N.; Guglielmo, J. J.
+    *Summary of Low-Speed Airfoil Data, Volume 2.* SoarTech Publications:
+    Virginia Beach, VA, 1996. (Volume 1: Selig, M. S.; Guglielmo, J. J.;
+    Broeren, A. P.; Giguère, P., 1995.)
