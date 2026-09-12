@@ -199,6 +199,38 @@ from sixty to one hundred and twenty percent of root chord raises it almost four
 This comparison is robust to how the strip's force is modelled, because the length enters
 both the affected area and the moment arm while the height enters only the first.
 
+**Because extension is the control variable, the strip has a threshold, and the threshold has
+been measured.** Tests of rearwardly located spoilers on two models established that
+"projections of less than 0.01c produce negligible changes in lift", and warned that a device
+with that property is poor as a control because "a small stick movement produces no change in
+trim, whereas a larger movement of the stick may produce large changes" [19]. The strip here is
+tapered, so the threshold is not crossed everywhere at once: height grows outboard while chord
+shrinks, and the outboard end reaches one percent of local chord at seven percent of full
+extension while the root does not reach it until forty-eight percent. Evaluated on the actual
+chord distribution, the strip is wholly inert below seven percent of commanded travel and
+wholly active above fifty.
+
+| Commanded extension | First active station | Active length | Effective arm | Rolling moment, fraction of full |
+|---:|---:|---:|---:|---:|
+| 0.05 | none | 0 % | — | **0.000** |
+| 0.10 | 0.945 m | 19 % | 1.057 m | 0.041 |
+| 0.15 | 0.668 m | 43 % | 0.930 m | 0.113 |
+| 0.20 | 0.481 m | 59 % | 0.850 m | 0.177 |
+| 0.30 | 0.239 m | 80 % | 0.757 m | 0.293 |
+| 0.40 | 0.090 m | 92 % | 0.707 m | 0.399 |
+| 0.50 | root | 100 % | 0.679 m | 0.500 |
+
+The last column is the one that matters, and it is more benign than the threshold suggests. The
+part of the strip that survives the threshold is the part with the longest arm — the effective
+arm rises from 0.679 m at full extension to 1.057 m at one tenth of it — so most of the lost
+area is bought back by the lengthened arm. Above a quarter of travel the response is linear to
+within five percent; below fifteen percent more than a quarter of the commanded moment is
+missing; below seven percent there is none. **Continuous extension therefore does not give
+continuous authority from zero**, and a control design would have to carry that dead band
+explicitly. It bounds small corrections rather than large ones, which is the opposite of the
+usual complaint about a threshold device, and it is a consequence of the taper rather than of
+the concept: a strip of constant height fraction would cross the threshold everywhere at once.
+
 **What the roll axis costs, and what it is opposed by, are computed here.** The roll axis
 had not been examined with the care given to pitch, and doing so separates a part that can
 be computed for this geometry from a part that cannot. Distributing the component masses of
@@ -319,6 +351,21 @@ strip should not be commanded during the end of the rotation**, which is the one
 the pitch axis has least to spare. The paper had not previously identified any reason to
 restrict when the strip may be used.
 
+The coupling is not a novelty of this configuration, and the older literature states it more
+bluntly than the estimate above does. The same NACA survey reports that where spoilers were
+used for lateral control on tailless aircraft, "if only upgoing spoiler projections are used,
+the pitching moments developed are **prohibitive**", and that "a spoiler arrangement employing
+equal up and down projections would improve this condition" though the data then available were
+insufficient to settle it [19]. The strip specified here projects from one surface only, which
+is the arrangement that warning is about. Two things follow. The bracket computed above is a
+lower bound in kind as well as in magnitude, since it counts the lift increment and not the
+attendant pressure redistribution ahead of the device. And the remedy the survey names —
+projection from both surfaces, so that the pitching contributions oppose while the rolling
+contributions add — is available to this configuration in principle and has not been examined
+here. **The scheduling restriction above is the conservative resolution; a two-sided strip
+would be the structural one, and choosing between them needs the wind-tunnel measurement this
+section has already asked for.**
+
 **Roll authority is therefore sized, supported by a measurement on a comparable device, and
 still not closed.** The quantity a future measurement must return is ΔC_L for this strip on
 this planform, not a moment.
@@ -374,7 +421,25 @@ configuration is not unusual in lacking weathercock stability; it is normal, and
 aircraft that flies has had to buy it somewhere.** Sweep gives this configuration its roll-due-to-sideslip — C_l_β = −0.045 per radian,
 a healthy value — and gives it no weathercock stability at all. The profile-drag
 contribution to yaw damping is likewise negligible, C_n_r = −0.0023, a time constant of over
-a minute.
+a minute. That last number is less alarming than it looks, and the reason is conditional. Low
+rotational damping is inherent to the tailless class, and free-flight experience is that the
+small values "will not be excessively detrimental to the flying qualities **provided the
+directional stability of the airplane is adequate**" [19] — so the two open items in this axis
+are not independent, and the yaw-damping deficit is forgiven only if the weathercock
+requirement below is actually met. The same source adds that lateral-oscillation damping is
+most critical at high speed, because both C_n_r and the coupling between yawing and rolling
+diminish at low incidence. **For this aircraft that names cruise, not transition, as the
+critical case for Dutch roll.**
+
+**And zero is an optimistic starting point, not a neutral one.** A vortex-lattice model has no
+volume, so the calculation above contains the planform and nothing else. The centre body of a
+blended wing is a body, it develops side force in sideslip, and that side force acts forward of
+the centre of gravity. The survey states the magnitude in the only terms that matter here: on
+tailless aircraft the destabilising effect of the fuselage and nacelles "is usually at least as
+great as the stabilising effects contributed by the wing alone" [19]. The wing alone here
+contributes zero, so the comparison gives no number — but the sign is unambiguous, and the true
+figure the fairing has to make up is **below** zero rather than at it. Nothing in this section
+quantifies that deficit, and the margin reported below should be read with it outstanding.
 
 Directional stability must therefore come from the tip frames, which in cruise stand
 perpendicular to the wing plane above and below each tip and are the only vertical surfaces
@@ -382,14 +447,28 @@ the aircraft has. Their mid-chord sits 0.879 m aft of the centre of gravity, whi
 long arm for a surface that already exists. Taking a lift-curve slope of 4 per radian for a
 slender faired strut — an assumed value, not a measured one — the side area needed is 0.058 m²
 to reach C_n_β = 0.03 and 0.097 m² to reach 0.05, which spread over the 2.84 m of combined
-frame length is a fairing chord of 21 mm and 34 mm. A faired strut of the 20 mm thickness
-assumed in Section 5.2 carries a chord of several times its thickness, so both figures fall
-inside the chord the fairing needs for drag reasons alone. **What this paper does not do is
-fix the target.** How much weathercock stability this aircraft actually needs depends on its
-disturbance environment and its control bandwidth, neither of which is established here; the
-two values above are reference points spanning the range conventional aircraft are usually
-designed to, and the useful statement is the scaling — that the required chord is small
-enough to disappear into a component already present — rather than either number.
+frame length is a fairing chord of 21 mm and 34 mm.
+
+Those two targets were chosen by this study rather than taken from anywhere, and there is a
+published criterion that should have been used instead. The NACA survey of tailless practice
+states that tailless aircraft are **not exempt** from the conventional standard — directional
+stability "should be as great as required on conventional airplanes if the same requirements
+regarding satisfactory flying qualities are to be adhered to" — and puts that standard at
+C_n_β "usually greater than **0.001 per degree**", noting that free-flight tunnel models were
+flown successfully at one third of it but that "the best flying qualities of these models were
+obtained with values of C_n_β in excess of 0.001" [19]. In radian measure the recommendation is
+**0.0573** and the demonstrated floor is 0.0191. Both values this study picked lie below the
+recommendation.
+
+Sized against the criterion rather than against a guess, the fairing chord required is
+**39 mm**, and the floor demonstrated in free flight is met at 13 mm. A faired strut of the
+20 mm thickness assumed in Section 5.2 carries a chord of several times its thickness —
+typically 50 to 70 mm — so the established criterion is met by a fairing **smaller than the
+one the structure needs anyway**, with between a quarter and three quarters of that chord left
+over. The conclusion the paper drew from its own two numbers survives being held to a real
+standard, which is the only reason it is worth restating: directional stability on this
+configuration does not ask for a surface, it asks for a fairing on a frame that is already
+there.
 
 **Where to buy it is a question the tailless literature has already answered, and the answer
 is the arrangement this aircraft already has.** The NACA survey states that "if the tailless
@@ -418,12 +497,27 @@ ratio to be **about 1.5 degrees** for symmetric-section tails, with a cambered t
 same with all three vertical-tail designs, notwithstanding the 75 % larger area" of the largest
 — which is the same conclusion reached above from the required-area side, arrived at by
 measurement rather than by estimate. **The frame fairing therefore needs a toe angle of order a
-degree or two, and that angle needs a sign.** The sign is the part that is open: the
-low-aspect-ratio fins of that study wanted toe-in, high-aspect-ratio fins want toe-out [19],
-and the frames here — 1.42 m long against a fairing chord of tens of millimetres — are at an
-aspect ratio beyond either source's range. What can be said is that the angle is small, that
-its cost in cruise efficiency is small, and that its sign is a design decision this paper does
-not make.
+degree or two, and that angle needs a sign.**
+
+An earlier version of this paper left the sign open on the ground that these frames lie beyond
+the aspect-ratio range of either source. That reasoning was wrong, because the rule is not a
+correlation but a statement about which force does the work. Low-aspect-ratio fins are toed
+*in* so that the stabilising moment is generated by the large induced drag such surfaces carry;
+high-aspect-ratio fins are toed *out* so that it is generated by "the outwardly directed lift"
+[19]. Raising the aspect ratio shifts the balance further from drag and towards lift, so it
+strengthens the case for toe-out rather than carrying the rule outside its range. **The sign is
+toe-out.**
+
+What is genuinely open is narrower and more awkward. A fairing of 39 mm chord at cruise speed
+sits at a Reynolds number near **80,000**, and the assumed lift-curve slope of 4 per radian is
+an assumption at any Reynolds number and an optimistic one at that. Symmetric sections at low
+Reynolds number are measured to behave badly in exactly the band a toe angle of one or two
+degrees occupies: of four symmetric sections tested at Princeton, all showed lift-curve
+nonlinearity about zero incidence, and in a more severe case the slope of the lift curve
+"actually changed sign over a 3 deg range" [36]. **The question is therefore not which way to
+toe the fairing but whether a surface of that chord, at that Reynolds number, develops the side
+force this section has credited it with at all.** That is a wind-tunnel question, and it is the
+one this paper would put first if it had a tunnel.
 
 That same study is the third independent report of the finding this subsection began with: a
 podded tailless wing was directionally *unstable*, and "the further addition of vertical tails

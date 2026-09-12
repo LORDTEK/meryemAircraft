@@ -436,6 +436,19 @@ coefficients are negative for all ten sections, which contradicts the positive-C
 the same paper states two pages earlier, and a quantity this study cannot reconcile is not a
 quantity it will cite. The only measured number in hand remains the +0.004 of 2R212.
 
+The most heavily cited experimental compilation of low-Reynolds section data cannot settle the
+question either, and says so itself: the UIUC low-speed tunnel "does not provide pitching
+moment data," so every moment coefficient in that compilation was "determined computationally
+using either the Eppler, ISES or XFOIL code" [36]. What those computed values show, however,
+points the same way as the measurement. The only flying-wing section in the compilation — the
+slightly reflexed MH45, designed for that application — carries C_m,c/4 = **−0.006**, and the
+single positive entry among forty-one sections is not a reflexed section at all but a
+five-percent-camber high-lift section designed under an explicit low-pitching-moment
+constraint, at **+0.004**. Two independent sources therefore return negative quarter-chord
+moments for sections built for flying wings, and the positive value this configuration would
+need rests on one measurement from 1933. **The conclusion above is strengthened rather than
+weakened: the reflex route is closed, and the twist is what trims this aircraft.**
+
 **Whether that single number is representative is now the most consequential open question in
 the trim chain, and it is a question for the literature rather than for a calculation.** A
 section supplying more would buy back the twist, and the sensitivity is steep:

@@ -372,7 +372,49 @@ after the fact; as the two designs stand, the margin is an undeclared choice rat
 a scaling law, and the scale-invariance claimed in Section 6.4 should be read as holding
 for the mass and range fractions and not for this one.
 
-## 8.14 What would change these conclusions
+## 8.14 The strip's authority does not start at zero
+
+Extension is the control variable, but a device of this kind produces no lift change until it
+projects about one percent of the local chord [19]. The strip is tapered, so the threshold is
+crossed progressively from the outboard end inward: it is wholly inert below seven percent of
+commanded travel, and above a quarter of travel the response is linear to within five percent.
+The intervening band is genuinely nonlinear and is not modelled anywhere in this paper. The
+consequence is confined to small corrections rather than to large ones, but a closed-loop
+design would have to carry it, and no closed-loop design is attempted here.
+
+A second, larger omission sits beside it. The strip projects from one surface only, and the
+pitching moment that arrangement produces was described in the older literature as
+"prohibitive" for spoilers used as ailerons, with projection from both surfaces named as the
+remedy [19]. Section 4.4 resolves the coupling by restricting when the strip may be commanded.
+The alternative resolution — a strip that projects from both surfaces, so that the pitching
+contributions oppose and the rolling contributions add — has not been examined, costed or
+ruled out.
+
+## 8.15 The directional-stability estimate omits the body, and the sign of the omission is known
+
+The vortex-lattice model used for C_n_β has no volume. The centre body of a blended wing
+develops side force in sideslip ahead of the centre of gravity and is therefore destabilising,
+and on tailless aircraft that contribution is reported to be "at least as great as the
+stabilising effects contributed by the wing alone" [19]. The planform contributes zero here, so
+that statement yields no magnitude — only a direction. The fairing sized in Section 4.5 is
+sized to bring a zero up to criterion; the real starting point is below zero, and the shortfall
+is unquantified.
+
+The same section's fairing rests on an assumed lift-curve slope of 4 per radian at a chord
+Reynolds number near 80,000. Symmetric sections at low Reynolds number are measured to be
+nonlinear about zero incidence, in one case reversing the sign of the lift-curve slope over a
+three-degree band [36] — the same band a toe angle of one to two degrees occupies. Whether a
+fairing of that chord develops the side force credited to it is not established.
+
+## 8.16 The toe-out arrangement has a failure mode at large sideslip
+
+The frames' aspect ratio requires toe-out (Section 4.5). Toe-out carries a known hazard: yawing
+far enough to stall the rear fin produces a large *destabilising* yawing moment, where the same
+stall on a toed-in fin produces a stabilising one [19]. The sideslip angle at which that occurs
+sets an upper bound on the usable sideslip envelope, and it has not been computed. It depends
+on the fairing's section and Reynolds number, neither of which is fixed here.
+
+## 8.17 What would change these conclusions
 
 The results of this paper would be most efficiently attacked in four places, and they
 are listed so that they can be:

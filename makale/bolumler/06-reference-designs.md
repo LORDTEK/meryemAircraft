@@ -351,7 +351,7 @@ target than a calculation whose weakest link, discussed in Section 8.4, is the
 treatment of a twenty-five percent thick centre body as a two-dimensional section.
 
 **A three-dimensional solution for the centre body.** The weakness just named has since
-been removed. Section 8.14 lists it first among the places these results should be
+been removed. Section 8.17 lists it first among the places these results should be
 attacked, and the calculation it asks for has now been carried out: a structured
 Reynolds-averaged solution over the planform of Section 4.2, at the cruise Reynolds
 number and at zero lift, resolving the wing and blended body as a three-dimensional

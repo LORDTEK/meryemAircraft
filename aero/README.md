@@ -2055,3 +2055,269 @@ Yön ölçülmüş, büyüklük aktarılamaz.
 `kg/m2`, `areal density`, `structural mass fraction`, `empty weight fraction` —
 otuz beş PDF'in tamamı tarandı, **sıfır sonuç.** Hafif hattın kütle bütçesinin
 dayandığı 1,5 kg/m² için hâlâ tek kaynak yok. S7 olarak listeye eklendi.
+
+---
+
+## 🔴 Selig UIUC V1–V2 — S4'ü KAPATMIYOR, ve kapatamaz (12.09.2026)
+
+S4 için arananı hatırlatayım: refleks bir kesit için **ölçülmüş** C_m0, kesit
+adıyla. NACA TR-460'ın 1933'te ölçtüğü 2R212 → +0,004'ün *yanına* konacak,
+daha güncel bir ölçüm.
+
+**Selig bunu veremez, ve bunu kendisi yazıyor.** Cilt 1, s. 17:
+
+> *"even though the current setup does not provide pitching moment data,
+> airfoil moment coefficients have been determined computationally using either
+> the Eppler, ISES or XFOIL code."*
+
+Ve Bölüm 3'ün başında, Tablo 3.1'in hemen üstünde bir kez daha:
+
+> *"The airfoil moment coefficients listed in Table 3.1 were determined
+> computationally... The value given is representative of that over the low
+> drag range."*
+
+UIUC düzeneği **momenti hiç ölçmüyor**; taşıma ve direnç ölçülüyor, moment
+hesaplanıyor ve yalnızca tünel düzeltmelerinde kullanılıyor. Yani bu iki cilt,
+düşük Reynolds kesit verisinin en çok atıf alan deneysel derlemesi olmasına
+rağmen, **bizim sorumuzun sınıfına ait bir sayı içermiyor.**
+
+### Yine de çıkan üç şey
+
+**1. Tablodaki tek uçan-kanat kesiti NEGATİF veriyor.**
+
+| kesit | kalınlık | kamburluk | C_m,c/4 (hesaplanmış) |
+|---|---|---|---|
+| **MH45** (Repperle, *"designed for flying wings"*, hafif refleks) | %9,84 | %1,64 | **−0,006** |
+| J5012 / NACA 0009 / NACA 64A010 / SD8020 (kuyruk kesitleri, simetrik) | %9–12 | %0,00 | 0,000 |
+| geleneksel kamburlu kesitler (37 adet) | — | %1,5–10,2 | −0,012 … −0,290 |
+
+MH45 açıkça uçan kanat için tasarlanmış, refleksli, ve hesaplanan momenti
+**sıfırın altında.** Bu bizim lehimize bir sayı değil — aleyhimize. Refleksin
+pozitif C_m0'ı bedavaya verdiği varsayımına karşı bir veri noktası, ve
+Shinde'nin (hepsi negatif) tablosuyla aynı yöne bakıyor. İki bağımsız kaynakta
+uçan-kanat kesitlerinin C_m,c/4'ü negatif çıkıyor.
+
+⚠️ Selig'in kendi uyarısı var: *"The true characteristics of the MH45... are
+difficult to ascertain from the polars since the wind-tunnel model was too
+thick."* Model hatalı; ama C_m zaten modelden gelmiyor, koordinatlardan
+hesaplanıyor — bu uyarı momenti kurtarmıyor.
+
+**2. Tek pozitif değer refleks bir kesitten değil, KISITLI TASARIMDAN geliyor.**
+
+M06-13-128 (B) — Miley, %12,81 kalınlık, **%5,16 kamburluk** — ve C_m,c/4 =
+**+0,004.** Beş nokta kamburlukta pozitif moment, çünkü kesit bir *kısıt* altında
+tasarlanmış; Selig şöyle diyor: *"the c_lmax is near 1.5, which is substantial
+in light of the low pitching-moment constraint."*
+
+Bizim için ilginç olan bu: **c_lmax ≈ 1,5 (Re 300k) ve C_m,c/4 ≈ +0,004 aynı
+kesitte buluşabiliyor.** Denge zincirimizin istediği tam bu takas. Sayının
+TR-460'ın ölçtüğü +0,004 ile birebir çakışması ise tesadüf sayılmalı — biri
+ölçüm, öteki XFOIL/Eppler/ISES çıktısı.
+
+⚠️ Selig aynı yerde uyarıyor: Re < 300k'da *"should not be given serious
+consideration... owing to its high drag characteristics."* Bizim seyir
+Reynolds'umuz bunun üstünde, ama kesit doğrudan alınacak bir aday değil.
+
+**3. Kuyruk kesitlerinde sıfır etrafında doğrusalsızlık.**
+
+Princeton'da denenen dört simetrik kesitin hepsi α ≈ 0'da taşıma eğrisinde
+düzensizlik gösteriyor; NACA 64A010 en belirgini, ve Mueller & Batill'in
+NACA 66₃-018'inde eğim 3°'lik bir bantta **işaret değiştiriyor.** Selig bunu
+tam-hareketli stabilatör için uyarı olarak yazıyor. Bizde kuyruk yok, ama uç
+finlerimiz düşük Re'de simetrik kesitli yüzeyler ve toe açısı tartışması (S3)
+tam bu bandın içinde geçiyor: ~1,5°'lik bir toe açısı, doğrusalsızlığın
+bulunduğu aralıkta duruyor. **S3'ün altına not edildi.**
+
+### Karar
+
+Selig, S4'ün cevabı değil; **S4'ün cevabının nerede olmadığını** gösteriyor.
+Aranan şey düşük-Re model uçak kesit derlemelerinde yok, çünkü o tünellerin
+çoğu momenti ölçmüyor. YZ'lere sorarken bunu açıkça söylemeliyiz, yoksa üçü de
+bizi Selig'e yollar. Ölçülmüş C_m için gidilecek yer **moment ölçen** tüneller:
+NACA/NASA raporları, ve düşük-Re tarafında Delft/Stuttgart tünel dizileri.
+
+Makaleye **hiçbir Selig sayısı girmedi.** MH45'in negatifliği §8'e "refleksin
+pozitif C_m0 verdiği varsayımı iki bağımsız kaynakta doğrulanmadı" olarak
+yazılacak — bu bizim aleyhimize bir kalem, ve yazılması gerekiyor.
+
+---
+
+## 🔑 NACA TR-796 / ACR L4H19 (1944) — okuduğumuz en verimli tek kaynak (12.09.2026)
+
+Önce bir tespit: `kaynakca/`'daki **iki dosya aynı rapordur.**
+`NACA-ACR-L4H19_1944_tailless-tip-fins.pdf` savaş zamanı ön baskısı (Ekim 1944),
+`NACA-TR-796_...pdf` yayımlanmış hâli. Aynı metin, aynı şekiller. Atıf
+**TR-796'ya** yapılacak; ACR'ın OCR'ı kötü, alıntılar TR-796'dan alındı.
+
+Bu rapor, açık kalemlerimizden **üçünü** kapatıyor ve **iki yenisini** açıyor.
+
+### 1. S3 KAPANDI — toe açısının işareti en-boy oranına bağlı, ve bizimki TOE-OUT
+
+Aradığımız tam bu cümleydi:
+
+> *"If directional stability is to be obtained with tip fins of **low aspect
+> ratio (less than about 2)**, the tip fin must be set with some initial
+> **toe-in** because of the large induced drag associated with lifting surfaces
+> of low aspect ratio... If, on the other hand, directional stability is to be
+> obtained with tip fins of **moderate or high aspect ratio**, the tip fins must
+> be set with some initial **toe-out.** With toed-out tip fins, the stabilizing
+> moments are generated by the **outwardly directed lift**."*
+
+Bizim uç çerçevelerimiz AR ≈ 20–28. Tereddütsüz "high aspect ratio" tarafı →
+**toe-out.** TM-78767'den gelen büyüklük (~1,5°) duruyordu, işaret açıktı;
+işaret artık da kapalı. **S3'ün birinci yarısı bitti.**
+
+### 2. Ama aynı paragraf S3'ün ikinci yarısını KÖTÜ cevaplıyor
+
+Perdövites arıza kipini de aynı yerde veriyor, ve bizim tarafımız kötü olan
+taraf:
+
+| kurulum | perdövitese giren fin | doğan moment |
+|---|---|---|
+| **toe-out** (bizimki) | **arka** fin | **büyük DESTABİLİZE edici** (artan direnç) |
+| toe-in | ön fin | büyük STABİLİZE edici |
+
+> *"When an airplane with toed-out tip fins is yawed to an angle sufficient to
+> stall the rear tip fin, a **large destabilizing moment** is generated by the
+> increased drag of the rear tip fin."*
+
+Yani AR'ımızın dayattığı kurulum, **yan kayma büyüdüğünde kendi kendini
+bozan** kurulumdur. Küçük β'da doğru çalışır, büyük β'da yön kararlılığı
+işaret değiştirebilir. Bu bir **arıza kipi** ve §8'e yazılmalı: yan kayma
+zarfının üst sınırı, arka uç finin perdövites açısıyla belirleniyor — ve o
+sınırı biz hesaplamadık.
+
+⚠️ Rapor bir üçüncü yol da veriyor: **profil-direnç finleri** (NACA 4306 tipi
+kesit), sıfır taşımada toe-in'e kurulur, yan kaymada öndeki finin α'sı
+negatifleşip ayrılmayla büyük profil direnci üretir. Langley serbest-uçuş
+tünelinde denenen **en etkili** tip bu olmuş; sıralama: *profil-direnç >
+endüklenen-direnç > taşıma* finleri. Taşıma finleri en zayıf, çünkü moment
+kolları kısa (ok açısıyla belirlenen boyuna mesafe). **Bu bizim §4'teki
+"sapma kolu = yarı açıklık" iddiasını doğruluyor** — o kol direnç
+mekanizmasının kolu, ve rapor da *"the moment arm associated with the drag of
+the tip fin is so large (one-half the span)"* diyor. Aynı sayı, 1944'ten.
+
+### 3. ÖLÇÜT GELDİ — C_n_β için seçtiğimiz sayılar kendi uydurduğumuzdu, artık değil
+
+> *"The directional stability... should be as great as required on conventional
+> airplanes... The value of the directional-stability parameter C_n_β,
+> recommended for conventional airplanes, is usually **greater than 0.001 per
+> degree.** As evidenced from figure 14, however, models have been flown in the
+> Langley free-flight tunnel with a value of C_n_β of only **one-third** this
+> amount although the best flying qualities of these models were obtained with
+> values of C_n_β in excess of 0.001."*
+
+0,001/derece = **0,0573 /rad.** Serbest-uçuş tabanı = **0,0191 /rad.**
+
+`sapma.py`'de kullandığımız 0,03 ve 0,05 /rad **bizim seçtiğimiz** sayılardı ve
+ikisi de yerleşik ölçütün **altında.** Hedefler artık etiketleriyle birlikte
+modülde; fairing veteri de ölçüt için yeniden hesaplandı. Ve rapor kuyruksuz
+uçakların bu gereksinimden muaf olmadığını **açıkça** söylüyor — kaçış yok.
+
+Yeniden hesabın sonucu (çerçeve boyu 2 × 0,71 m, iki çerçeve, a_f = 4,0):
+
+| C_n_β (/rad) | gereken fairing veteri | nereden |
+|---:|---:|---|
+| 0,0191 | 13 mm | L4H19: serbest-uçuş tünelinde uçurulan en düşük |
+| 0,0300 | 21 mm | bu çalışmanın seçtiği alt değer |
+| 0,0500 | 34 mm | bu çalışmanın seçtiği üst değer |
+| **0,0573** | **39 mm** | **L4H19: geleneksel uçaklar için ÖNERİLEN** |
+
+**Ve bu iyi haber.** 20 mm kalınlıkta bir fairing'in veteri zaten tipik olarak
+50–70 mm olur — yani yerleşik ölçüt, yapısal olarak nasılsa gerekecek bir
+kaportanın **altında** kalıyor, %28–78 pay bırakarak. Yön kararlılığı bu
+konfigürasyonda *ek bir yüzey* istemiyor; var olan çerçeveyi kaportalamak
+yetiyor. Makaledeki "gereksinim" dili doğru kalıyor, ama gereksinimin
+karşılanabilirliği artık ölçütlü.
+
+⚠️ Payı fazla saymayalım: aşağıdaki 8. madde (gövdenin destabilize edici
+katkısı) modelde yok, ve o pay bu payı yer.
+
+### 4. Düşük C_n_r savunulabilir, ama YALNIZ C_n_β yeterliyse
+
+Bizde C_n_r = −0,0023, çok küçük. Rapor bunun kuyruksuzda kaçınılmaz olduğunu
+söylüyor ve şartlı bir teminat veriyor: küçük C_n_r *"will not be excessively
+detrimental to the flying qualities **provided the directional stability of the
+airplane is adequate**."* Yani iki açık kalemimiz bağımsız değil; C_n_r'ın
+affedilmesi C_n_β'nın ölçütü tutturmasına bağlı. Ve uyarı ekliyor: yanal
+salınımların sönümü **yüksek hızda kritik**, çünkü hem C_n_r hem yalpa-sapma
+kuplajı düşük α'da azalıyor. **Bizim kritik durumumuz seyir.**
+
+### 5. 🔴 YENİ AÇIK KALEM — şeridin ÖLÜ BANDI, ve ölçülmüş eşiği
+
+> *"Unpublished tests of rearwardly located spoilers on two different models
+> confirm the fact that **spoiler projections of less than 0.01c produce
+> negligible changes in lift.**"*
+
+Kullanıcının düzeltmesinden sonra şerit **sürekli değişken**; o hâlde bu eşik
+kumanda kursunun altından bir **ölü bant** kesiyor. Ve şerit konik olduğu için
+eşik her istasyonda aynı kumanda kesrinde aşılmıyor: dışta yükseklik büyük,
+veter küçük — **dış uç önce çalışıyor.** `yatis.py`'ye `esik_istasyonu()` ve
+`esik_kolu()` eklendi, gerçek planform veteriyle:
+
+| kumanda kesri f | eşik istasyonu | etkin % | kol (m) | M/M_tam | doğrusal olsa |
+|---:|---:|---:|---:|---:|---:|
+| 0,050 | yok | 0 | — | **0,000** | 0,050 |
+| 0,075 | 1,144 | 2,0 | 1,154 | 0,003 | 0,075 |
+| 0,100 | 0,945 | 19,0 | 1,057 | 0,041 | 0,100 |
+| 0,150 | 0,668 | 42,8 | 0,930 | 0,113 | 0,150 |
+| 0,200 | 0,481 | 58,8 | 0,850 | 0,177 | 0,200 |
+| 0,250 | 0,344 | 70,5 | 0,796 | 0,237 | 0,250 |
+| 0,300 | 0,239 | 79,5 | 0,757 | 0,293 | 0,300 |
+| 0,400 | 0,090 | 92,2 | 0,707 | 0,399 | 0,400 |
+| 0,500 | 0,000 | 100,0 | 0,679 | 0,500 | 0,500 |
+
+**Ve sonuç beklediğimden iyi çıktı.** Eşiği aşan kısım şeridin **en uzun kollu**
+kısmı olduğu için, kaybedilen alanın büyük bölümü büyüyen kolla geri geliyor:
+kol f = 0,5'te 0,679 m iken f = 0,1'de **1,057 m.** Bunun sayısal karşılığı:
+
+- kursun **%25'inin üstünde** tepki doğrusaldan **%5 içinde** — kontrol
+  tasarımı için pratikte doğrusal,
+- **%15'in altında** momentin dörtte birinden fazlası kayıp,
+- **%7'nin altında şerit hiçbir şey yapmıyor.**
+
+Yani sürekli kumanda **sıfırdan başlamıyor**, ama bozukluk kursun dibine
+hapsolmuş durumda. Küçük yatış düzeltmeleri için ölü bant gerçek; büyük
+komutlar için önemsiz. Bu, kullanıcının "çıkma miktarı esnek" tasarımına karşı
+bir itiraz **değil** — o tasarımın sayısallaştırılmış sınırı.
+
+### 6. 🔴 İKİNCİ YENİ KALEM — tek yönlü çıkıntı ve yunuslama momenti
+
+> *"If only **upgoing** spoiler projections are used, the pitching moments
+> developed are **prohibitive.** A spoiler arrangement employing **equal up and
+> down projections** would improve this condition."*
+
+Bizim şeridimiz tek yönlü (yalnız alt yüzeyden çıkıyor). §4.4'te hesapladığımız
+yunuslama kuplajı ΔC_m 0,005–0,032 idi ve "rahat değil" demiştik. **1944 aynı
+şeyi seksen yıl önce, daha sert dille söylemiş.** Bu bağımsız bir doğrulama, ve
+bir de çözüm öneriyor: iki yönlü (yukarı+aşağı eşit) çıkıntı. Bizim
+konfigürasyonda alt yüzeyden aşağı, üst yüzeyden yukarı çıkabilen bir şerit
+mümkün mü — bu **tasarım sorusu kullanıcıya sorulacak.**
+
+### 7. Bir de PRECEDENT — otomatik kararlılık, 1944'te önerilmiş
+
+> *"a tailless airplane of very low directional stability with fixed controls
+> could be flown satisfactorily if an automatic pilot were geared to the
+> directional control... Reference 1 includes the suggestion that the
+> directional control could be linked with the aileron control in order to
+> minimize the effects of adverse aileron yaw."*
+
+Bizim yaklaşımımız tam bu: düşük doğal C_n_β + otomatik denetim, ve yatış
+komutu ile sapma komutunun birlikte tahsisi (§4'teki ters sapma kuplajı için
+zaten gerekiyordu). 1944'te "uçuş denemesi yok" notuyla önerilmiş; bugün
+rutin. **Bu, konumlandırma riskimiz (S6) için savunma malzemesidir:** kontrol
+yüzeyi yokluğunu otomatik denetimle kapatmak, alanın kendi literatüründe
+kuyruksuz uçak için doğmuş bir fikirdir, bizim icadımız değil.
+
+### 8. Ve bir UYARI — gövdenin destabilize edici etkisi modelimizde YOK
+
+> *"The destabilizing effect of the fuselage and nacelle of tailless airplanes
+> is usually **at least as great as** the stabilizing effects contributed by the
+> wing alone."*
+
+VLM planformdan C_n_β = 0 veriyor. Ama VLM'in **hacmi yok**: merkez gövdemiz
+(BWB'nin kalın orta kesiti) yanal kuvvet üretir ve bu kuvvet CG'nin
+önündedir → **destabilize edicidir.** Yani gerçek başlangıç noktası sıfır
+değil, **sıfırın altı.** Fairing'in kapatması gereken açık, hesapladığımızdan
+büyük. Bu bir sayı değil, bir **işaret** bulgusu — ama işaret aleyhimize ve
+§8'e yazılmalı.
