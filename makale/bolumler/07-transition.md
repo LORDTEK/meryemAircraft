@@ -416,6 +416,20 @@ rule gives, and less further aft.
 | 83 | 0.805 | +8.3 | 0.037 |
 | 85 | 0.825 | +5.3 | 0.024 |
 
+**Two published benchmarks place that window, and both place it favourably.** A blended-wing
+UAV of this class reports its own static margin of 0.081 of the mean aerodynamic chord as
+"marginally outside the typical range for static longitudinal stability", which it gives as
+0.1 to 0.3, and its C_m_α of −0.086 per radian against a typical range of −0.3 to −1.5,
+concluding that stability augmentation "through either forward movement of the centre of
+gravity or additional reflex of the airfoils is advisable" [41]. The configuration here sits
+inside both ranges at the packaging centre of gravity: 0.125 of the mean aerodynamic chord, and
+C_m_α = −0.48 per radian on the lift-curve slope of 3.86 per radian the same solution returns.
+The second of those inherits the magnitude caveat of Section 6.6 — but that caveat runs the
+safe way here, since a lift-curve slope under-stated makes C_m_α under-stated too, and the true
+value would lie further inside the range rather than outside it. **The aft limit of the window,
+at 5.3 percent, is the one that falls outside the published range**, which is a second reason
+beyond static margin alone to prefer the packaging value to the aft end of the window.
+
 An earlier version of this paper supposed that reflexed sections would supply this, on the
 strength of a range its authors had not read. Reading the source settles it in the other
 direction. In the variable-density tunnel measurements of Jacobs, Ward and Pinkerton [17], the
@@ -424,8 +438,23 @@ small positive moment — returns **C_m0 = +0.004**, against −0.002 for the sy
 −0.044 for the conventionally cambered 2412. That is one fourteenth of what the centre of
 gravity above demands, and one sixth of what even the aftmost entry in the table demands. The
 same report concludes that reflexed mean lines "may be of questionable value because of the
-adverse effect of this mean-line shape on the maximum lift coefficient." **Reflex does not
-trim this aircraft, and no plausible amount of it would.**
+adverse effect of this mean-line shape on the maximum lift coefficient." **Reflex of the
+magnitude that has actually been measured does not trim this aircraft.**
+
+An earlier version of this paper put that more strongly — that no plausible amount of reflex
+would — and a published optimisation shows that claim was too wide. A blended-wing-body UAV of
+this class was trimmed by treating reflex as a design variable, deflecting the aft camber line
+of a NACA 2412 upward by an optimised amount at each of five spanwise stations, and closing the
+trim chain with a total twist of only **2.44 degrees** [41]. Reflex can therefore carry most of
+this job on a configuration of this kind. Two things keep the conclusion here intact in
+substance. That study's trim requirement is the lighter one — its static margin is 0.081 of the
+mean aerodynamic chord against 0.125 here, and a smaller margin asks for a smaller trimming
+moment. And the quantity that would decide the matter is exactly the one nobody has published a
+measurement of: closing this aircraft's trim by reflex alone needs a section supplying C_m0 of
+order 0.05, against the 0.004 that has been measured. **What the comparison establishes is not
+that reflex trims this aircraft but that the open question below is worth more than it first
+appeared**, since a twist of 2.44 degrees implies sections delivering considerably more than
+0.004.
 
 The requirement 2R212 was built to meet is the one this configuration has. A survey of sections
 assembled for flying-wing use states it in the same terms — "for trim flight, pitching moment
@@ -620,6 +649,22 @@ C_m = C_m0 + C_mα α + C_mδ δ used throughout the manoeuvre [29]. The practic
 other words, is a borrowed section polar and a closed loop — which is what Section 7.4 does for
 lift and drag, and rather less than this section does for the moment. **The open item here is
 the field's open item.**
+
+A third study carries the term in its fullest published form, and the form is instructive. Its
+equations of motion carry a nonlinear C_m(α) rather than a linear one, take the curve from a
+separate published study of the same vehicle rather than generating it, and evaluate the
+control-surface moment at "the sum of airspeed and slipstream speed near the quarter chord",
+closing the remaining discrepancy with an adaptive neural term rather than with better
+aerodynamics [42]. So the nonlinear moment does appear in this literature — borrowed, not
+derived, and backed by an adaptive law. Independently, a guidance architecture for the same
+manoeuvre computes an effective angle of attack from rotor wake velocity using hovering
+momentum theory [43], which is the same construction Section 7.4 applies above and a more
+recent statement of it than the source used there.
+
+**The pattern across all four is the same and it is worth naming.** Every one of them obtains
+the transition aerodynamics by borrowing, fitting or adapting, and none by measuring the vehicle
+it flies. The measurement this paper leaves open is not one the field has made and this study
+skipped.
 
 That second study is worth more attention, because it flight-tested the question this
 configuration asks. Its authors compared their tail-sitter with and without elevons. Without

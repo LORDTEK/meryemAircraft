@@ -360,3 +360,44 @@ cihazlarında alışılmışın tersi (genelde büyük komutlar doyar, küçükl
 kademeli açılım, kök tarafında daha yüksek bir başlangıç profili, ya da küçük
 düzeltmeleri tamamen diferansiyel itkiye bırakmak.) Uçuş kontrolünde bu
 sınıftan bir cihazla küçük genlikli düzeltme yapılmış örnek var mı?
+
+### 🎯 S11. İKİ ADLI HEDEF — bunları bulmalarını isteyeceğiz (12.09.2026)
+
+Bu ikisi belirsiz bir "kaynak arayın" isteği değil; **tam künyeleriyle** iki
+yayın. YZ'lerden indirilebilir bağlantı istiyoruz.
+
+**(a) En büyük açık kalemimize doğrudan bakan kaynak:**
+
+> **Olsson, C.; Verling, S. L.; Stastny, T.; ve diğ. "Full envelope system
+> identification of a VTOL tailsitter UAV." AIAA 2021-1054.**
+
+Neden: §8'in 3. maddesi, geçiş boyunca **yunuslama momentini** istiyor —
+22°'ye kadar, düşük dinamik basınçta. Bu makale, gerçek bir kuyruk-oturur
+İHA'nın (WingtraOne) **tüm uçuş zarfında** aerodinamik katsayılarını **uçuş
+verisinden** tanımlıyor. Zhong 2023 bunu *"the model was well suited for
+predicting the forces and moments"* diye anıyor. Eğer C_m(α) eğrisi bu
+makalede varsa, alanın bizim aradığımız şeye en çok yaklaşmış ölçümüdür.
+
+**(b) Dikey uçuş için kesit/konfigürasyon aerodinamiği:**
+
+> **Shkarayev, S.; Moschetta, J.-M.; Bataille, B. "Aerodynamic design of micro
+> air vehicles for vertical flight." *Journal of Aircraft* 2008; 45(5):
+> 1715–1724.**
+
+Neden: dikey uçuş için tasarlanmış araçların aerodinamiği; yüksek α verisi
+içermesi muhtemel.
+
+**İstenen:** PDF bağlantısı, ya da en azından C_m(α) verisinin hangi
+şekil/tabloda olduğu ve hangi α aralığını kapsadığı.
+
+### 📌 S4 için ek hedef (aynı kaynaktan)
+
+Lampropoulos 2025 (*Fluids* 10(54)) bir BWB'yi **refleksi tasarım değişkeni
+yaparak** (NACA2412'nin arka kamber çizgisi yukarı bükülüyor, seviye 1–5)
+ve yalnızca **2,44° burulmayla** dengeliyor. Ama **hiçbir yerde o reflekslerin
+C_m0'ını vermiyor.**
+
+**Sorulacak:** Refleks seviyesi parametrelenmiş kesitler için C_m0 değeri
+yayımlanmış mı? Yani "arka kamberi şu kadar bükersen C_m0 şu olur" diyen bir
+kaynak? Bu, S4'ün tablosunu (C_m0 = 0,004 → 0,050 arası) gerçek kesitlerle
+doldurmamızı sağlar.

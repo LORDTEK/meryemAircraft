@@ -113,3 +113,11 @@
 40. Şugar Gabor, O.; Koreanschi, A.; Botez, R. M. A New Non-Linear Vortex Lattice Method:
     Applications to Wing Aerodynamic Optimizations. *Chinese Journal of Aeronautics*
     **2016**, 29 (5), 1178–1195. https://doi.org/10.1016/j.cja.2016.08.001
+41. Lampropoulos, N.; Vouros, A.; Templalexis, I.; Lekas, T. On the Aerodynamic
+    Performance of a Blended-Wing-Body, Low-Mach Number Unmanned Aerial Vehicle.
+    *Fluids* **2025**, 10 (3), 54. https://doi.org/10.3390/fluids10030054
+42. Zhong, J.; Wang, C.; Zhang, H. Transition Control of a Tail-Sitter Unmanned Aerial
+    Vehicle with L1 Neural Network Adaptive Control. *Chinese Journal of Aeronautics*
+    **2023**, 36 (7), 460–475. https://doi.org/10.1016/j.cja.2023.04.002
+43. McIntosh, K. F.; Mishra, S.; Reddinger, J.-P. *An Aerodynamic Feedforward-Feedback
+    Architecture for Tailsitter Control in Hybrid Flight Regimes.* arXiv:2312.10761, 2023.
