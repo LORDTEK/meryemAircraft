@@ -1,6 +1,4 @@
-# Ön bilgi — başlık, özet, anahtar kelimeler, beyanlar
-
-*Taslak v1 — İngilizce. Türkçe notlar italik ve köşeli parantez içinde.*
+# The Architectural Cost of Hybrid VTOL
 
 ---
 
@@ -17,16 +15,6 @@ Meryem Gülmen <sup>1,\*</sup>, Berke Gülmen <sup>1</sup>, Ömer Gülmen <sup>1
 <sup>1</sup> Independent Researcher, Türkiye
 
 <sup>\*</sup> Correspondence: meryemgulmen@outlook.com
-
-| Yazar | E-posta |
-|---|---|
-| **Meryem Gülmen** (sorumlu yazar) | meryemgulmen@outlook.com |
-| Berke Gülmen | berkegulmen@outlook.com |
-| Ömer Gülmen | lordtek@me.com |
-
-*[Kurum bağlantısı yok; MDPI'ın "Independent Researcher" kaydı kullanılacak.
-ORCID varsa gönderim sırasında eklenir — dergi zorunlu tutmuyor ama tavsiye
-ediyor.]*
 
 ---
 
@@ -90,7 +78,7 @@ series hybrid propulsion; cruise efficiency; aircraft configuration design
 
 ---
 
-## Beyanlar
+## Declarations
 
 ### Acknowledgements
 
@@ -1742,8 +1730,6 @@ that is the outcome this paper is written to invite.
 
 # References
 
-# References
-
 1. Anderson, S. B. *Historical Overview of V/STOL Aircraft Technology.* NASA
    Technical Memorandum 81280, NASA Ames Research Center, Moffett Field, CA,
    March 1981.
@@ -1895,14 +1881,16 @@ that is the outcome this paper is written to invite.
 
 # Supplementary Material
 
-The following accompany this paper and are cited from it by number:
+Six supplementary files accompany this paper and are cited from it by number.
+They carry the derivations behind the results stated here; each was a section of an earlier,
+longer version and is reproduced without abridgement.
 
-- **Supplementary S1** (3339 words) — Independent checks on the two assumed aerodynamic coefficients
-- **Supplementary S2** (2404 words) — A component build-up of the mass budget
-- **Supplementary S3** (6336 words) — Control axes in full
-- **Supplementary S4** (7544 words) — Rotational authority, trim, and the transition envelope
-- **Supplementary S5** (6426 words) — The limitations in full
-- **Supplementary S6** (2935 words) — The three bills stated formally, and a comparative sizing
+- **Supplementary S1** — Independent checks on the two assumed aerodynamic coefficients (3339 words)
+- **Supplementary S2** — A component build-up of the mass budget (2404 words)
+- **Supplementary S3** — Control axes in full (6336 words)
+- **Supplementary S4** — Rotational authority, trim, and the transition envelope (7544 words)
+- **Supplementary S5** — The limitations in full (6426 words)
+- **Supplementary S6** — The three bills stated formally, and a comparative sizing (2935 words)
 
 The computational setup, the scripts that produce every number here, and a running record
-of the corrections made during the study are in the repository the paper cites.
+of the corrections made during the study are in the repository this paper cites.
