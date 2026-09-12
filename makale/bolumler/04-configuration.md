@@ -366,6 +366,18 @@ here. **The scheduling restriction above is the conservative resolution; a two-s
 would be the structural one, and choosing between them needs the wind-tunnel measurement this
 section has already asked for.**
 
+**The same device has a third use, and it is the one that costs nothing.** Deployed on both
+halves at once the strip is not a roll control but a speed brake, and in that mode the
+pitching-moment objection does not arise: a wind-tunnel investigation of spoiler-type ailerons
+used as speed brakes and glide-path controls found that they "had only a small effect on the
+wing pitching moments", and — the part that matters for a configuration with one moving surface
+— that "the rolling effectiveness of the ailerons will not be impaired by such use" [49]. A
+tail-sitter lands vertically and does not need a glide-path control for that, but it descends
+to the transition point like any other aircraft, and the strip gives it a descent-rate control
+that no other part of this configuration provides. The transfer is directional only: those
+tests are on conventional wings with slotted flaps at higher Mach number, and the device
+projects from the upper surface rather than, as here, the lower.
+
 **Roll authority is therefore sized, supported by a measurement on a comparable device, and
 still not closed.** The quantity a future measurement must return is ΔC_L for this strip on
 this planform, not a moment.

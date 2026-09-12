@@ -401,3 +401,126 @@ C_m0'ını vermiyor.**
 yayımlanmış mı? Yani "arka kamberi şu kadar bükersen C_m0 şu olur" diyen bir
 kaynak? Bu, S4'ün tablosunu (C_m0 = 0,004 → 0,050 arası) gerçek kesitlerle
 doldurmamızı sağlar.
+
+---
+
+# TUR 13 SONUCU — üç soru kapandı, biri kapanmadı, biri kötüleşti (12.09.2026)
+
+YZ1/YZ3/YZ5/YZ6'nın verdiği bağlantılardan indirilen 19 dosyanın hepsi açıldı.
+Üçü mükerrer, biri iddia edilen kaynak değildi. Aşağısı geri kalanın sonucu.
+
+## ✅ S1 CEVAPLANDI — kendimiz hesapladık
+
+`aero/iskoz.py` yazıldı: VLM panel kuvvetlerinden her açıklık şeridinin yerel
+c_l'i çıkarılıyor, NeuralFoil o şeridin **kendi c_l'inde** çağrılıyor, profil
+direnci integre ediliyor. Şerit ayrıştırması çözücünün C_L'ini altı hanede
+yeniden üretiyor (denetim modülün içinde).
+
+⚠️ **Ve bu hesap yaparken bir kategori hatasına düştüm, kendim yakaladım,
+kayda geçsin:** e = C_L²/(πAR·C_Di) formülü **yalnızca burulmasız** kanatta
+geçerli. Burulmuş kanatta induklenen sürükleme C_L = 0'da sıfır değil, ve en
+küçük değerini sıfırdan farklı bir C_L'de alıyor. İlk koşumda bu formül
+C_L = 0,03'te e = 0,024 verdi, ve parabol-uydurma e'si ile nokta e'sini
+bölünce **1,08** — yani "Oswald > inviscid" — gibi fiziksel olmayan bir oran
+çıktı. Oran anlamsızdı, sonuç değil. Doğru tanım makaleyle tutarlı **nokta**
+tanımıdır ve modülde artık o kullanılıyor. (Bu, daha önce yaptığım
+inviscid/Oswald kategori hatasının aynı ailesinden.)
+
+**YZ'lere artık sorulmayacak.** Yalnız bir yöntem sorusu kaldı, aşağıda.
+
+## 🔴 S4 KAPANDI — ve bizim ALEYHİMİZE
+
+Aradığımız şey buydu: refleks bir kesit için, momenti gerçekten ölçen bir
+tünelde alınmış C_m0. **Geldi, ve umduğumuzun tersini söylüyor.**
+
+| kesit | C_m,c/4 (ölçülmüş) | kaynak |
+|---|---:|---|
+| **NACA 2R212** | **+0,004** | TR-460 |
+| B106R / N60R / NACA M6 | −0,001 | **TN-388** (VDT, Re 3,1×10⁶) |
+| Gött. 398R | −0,007 | TN-388 |
+| 4409R / 4412R / 4415R / 4418R | −0,025 / −0,030 / −0,031 / −0,030 | **4400R WR** |
+
+TN-388'in refleks kesitleri, orta kamber çizgisi ince kanat kuramından
+**sıfır** moment verecek şekilde tasarlanmış ve ölçüm *"practically zero"*
+diyor. 4400R serisinin tasarım hedefi zaten **−0,03**, ve rapor *"the design
+pitching-moment coefficient was realized"* diyor.
+
+**Dokuz ölçülmüş kesit, yalnız biri pozitif.** Refleks, yapılıp ölçüldüğü
+hâliyle, negatif momenti **gidermek** için bir araç; pozitif moment
+**üretmek** için değil. Bize gereken +0,056.
+
+İki maliyet de ölçülmüş: C_Lmax **%12** (TN-388) ve **%10** (4400R) düşüyor —
+ve C_Lmax, kuyruk-oturur bir uçağın geçişte en çok ihtiyaç duyduğu şey.
+
+**Bu bizi güçlendiriyor:** burulma artık iki seçenekten biri değil, ölçülmüş
+dayanağı olan **tek** seçenek.
+
+**Bundan sonra S4 için kaynak ARAMAYIN.** Kapandı.
+
+## 🔴 S5 KÖTÜLEŞTİ — ve bir YZ okuması yanlıştı
+
+**Yu ve diğ. 2025** (*Batteries* 12(9):317): 24S NCM paket, tasarlanmış,
+üretilmiş, VS-210 eVTOL'da **uçurulmuş**. Ölçülmüş paket düzeyi özgül güç
+**724 W/kg** (5C sürekli) ve **892 W/kg**; 10,68C'de ≈**1,5 kW/kg**, ve orada
+paket 55,1 °C — 60 °C sınırına 4,9 °C pay.
+
+Bu, "otomotiv paketi bizim ürünümüz değil" savunmamızı bitiriyor: **bu kaynak
+tam bizim ürünümüz.** 1,5 kW/kg'da tampon 1,8 kg yerine **5,5 kg**; payımız
+2,2 kg, açık 3,7 kg. **Hafif hattın bütçesi kapanmıyor.**
+
+⚠️ **YZ1'e:** NASA NIAC raporunu *"4,6 kW/kg artık tamamen hayal değil"*
+gerekçesiyle verdiniz. Raporu açtık; **tam tersini söylüyor:**
+
+> *"the specific power (4 kW/kg) is about **twice that of existing
+> batteries**."*
+
+Yani o 4 kW/kg bir **gelecek teknoloji varsayımı** ve rapor bunu açıkça
+yazıyor. Bizim lehimize değil, aleyhimize **üçüncü** bağımsız ifade. Lütfen
+bundan sonra sayıyı bağlamıyla birlikte verin — bu haliyle makaleye yanlış
+bir savunma girecekti.
+
+## ❌ S9 KAPANMADI — NACA 1034 bu soruyu cevaplamıyor
+
+YZ1 *"Two-sided spoiler: NACA 1034 yeterli, artık kapatılabilir"* dedi.
+Raporu açtık: **kapatmıyor.** TR-1034, spoiler aileron'ların **hız freni /
+süzülme yolu denetimi** olarak kullanımını ölçüyor — yani **iki kanatta
+birden simetrik** açılım. Bizim sorumuz **tek kanatta üst+alt** eşit çıkıntı
+(TR-796'nın önerdiği düzen). O düzen bu raporda yok.
+
+**Soru aynen duruyor:** 1944'ten bu yana, tek bir kanat yarısında üst ve alt
+yüzeyden eşit çıkıntı yapan bir spoiler/şerit düzeni ölçülmüş mü?
+
+(TR-1034 yine de işe yaradı: simetrik açılımda yunuslama etkisi küçük ve
+yatış otoritesi bozulmuyor — yani şerit aynı anda bir alçalma yolu denetimi.
+Makaleye üçüncü rol olarak eklendi.)
+
+## 🟡 S3'ün ardılı — hâlâ açık, ve en iyi cevap YZ5'ten geldi
+
+39 mm veterli fin, Re ≈ 80.000. YZ5 mertebe verdi (düşük Re'de ince simetrik
+kesitlerde C_lα *"3,0–3,5 rad⁻¹ civarına düşer"*) ve Lissaman 1983'ü
+gösterdi. Bu bir **mertebe**, bizim istediğimiz **ölçüm** değil, ama yönü
+doğruluyor: varsaydığımız 4,0 rad⁻¹ iyimser.
+
+**Hâlâ aranıyor:** Re ≈ 10⁵'te, on milimetrelerce veterli ince simetrik bir
+fin için **ölçülmüş** C_lα veya yan kuvvet türevi.
+
+## 🟢 S7 — ilerledi ama kapanmadı
+
+YZ1'in verdiği iki kaynak indirildi: Pollet'in ISAE-SUPAERO tezi (İHA
+boyutlandırmada açık yüzey yoğunluğu varsayımları) ve Juno Composites'in
+imalatçı verisi (1,4–1,6 kg/m²). İkincisi **imalatçı iddiası**, hakemli
+ölçüm değil. 1,5 kg/m² artık "literatürde karşılıksız" değil, ama hâlâ
+**varsayım**.
+
+## ➕ YENİ — tek kalan yöntem sorusu
+
+Şerit kuramıyla profil direnci integre ederken ok açısı (kökte 45°) nasıl
+ele alınmalı? İki seçeneği de hesapladık ve aralarında **iki kat** fark
+çıktı (C_Dp 0,01303 akım yönlü, 0,00623 basit-ok). Bu bir belirsizlik değil,
+basit-ok kuramının **sürtünmeye uygulanamayacağının** işareti gibi duruyor:
+basınç alanı ok çizgisine dik bileşenle kurulur ama sürtünme yüzeyin
+üzerinden V ile akar, V·cosΛ ile değil.
+
+YZ5 ve YZ1 de aynı yöne işaret etti. **Sorumuz:** bu gerekçeyi doğrudan
+söyleyen, atıf yapılabilir bir kaynak var mı? (Ders kitabı düzeyi yeterli —
+Drela, Katz & Plotkin, Torenbeek, DATCOM.)

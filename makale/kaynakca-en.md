@@ -135,3 +135,6 @@
 48. Barrett, S. R. H.; Brown, A.; Gomez-Vega, N. *Silent, Solid-State Propulsion for
     Advanced Air Mobility Vehicles.* NASA Innovative Advanced Concepts Phase I Final
     Report, Massachusetts Institute of Technology, 2023.
+49. Fischel, J.; Watson, J. M. *Investigation of Spoiler Ailerons for Use as Speed
+    Brakes or Glide-Path Controls on Two NACA 65-Series Wings Equipped with
+    Full-Span Slotted Flaps.* NACA Report 1034, Langley Aeronautical Laboratory, 1951.
