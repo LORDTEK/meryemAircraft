@@ -64,8 +64,10 @@ most of the aircraft's zero-lift drag.
 
 What Bill 2 *is* paid, and this is why the heading says reduced rather than removed, is the tip
 frames. They are structure in the airstream that a conventional aircraft does not carry, and at
-the light design point they contribute ΔC_D0 = 0.0043 — **about twelve percent of cruise drag**.
-That is the honest figure and it is carried in the ledger of Section 5.4.
+the light design point they contribute ΔC_D0 = 0.0043 — **about twelve percent of total cruise
+drag**, and seventeen percent of the zero-lift drag the sizing assumes. Both denominators appear
+in this paper and each is named where it is used. That is the honest figure and it is carried in
+the ledger of Section 5.4.
 
 **The fairing on those frames is not only a drag measure.** The frames are the only surfaces
 standing perpendicular to the wing plane, and the planform supplies no directional stability at
@@ -88,8 +90,14 @@ electric machines, which is 1.9 kW at the engine shaft once the generator and po
 electronics are accounted for, and the engine is sized at 2.6 kW. Hover requires 10.9 kW
 at the rotor — 4.2 times the engine's rating. The difference is drawn for the duration of
 the vertical phase from a 1.8 kg battery, which is 3.6 percent of the maximum take-off
-mass. The heavy reference design sits on the same line: 39.2 kW electrical in cruise,
-54.3 kW engine, 216.2 kW hover, 40 kg of battery at 4.0 percent of MTOW.
+mass. **That difference must be taken at one station, and it is the electrical bus**: the
+rotor's 10.9 kW of shaft power is 12.47 kW at the bus once the machine and the power
+electronics are passed, the engine delivers 2.34 kW there through the generator, and the
+buffer supplies the remaining 10.13 kW. Supplementary S2 gives the chain and records that an
+earlier version of this paper differenced two shaft stations instead, understating the demand
+on the buffer by twenty-two percent. The heavy reference design sits on the same line:
+39.2 kW electrical in cruise, 54.3 kW engine, 216.2 kW hover, 40 kg of battery at 4.0 percent
+of MTOW.
 
 An aircraft of this class whose powerplant had to be sized for hover would carry an
 engine rated above 10.9 kW instead of 2.6 kW. The mass difference is not recovered
@@ -106,7 +114,8 @@ engine and generator — that is, the hover-sized electrical machine is the sing
 item in the propulsion chain. The saving is real and it is the engine's, but a reader
 should not take it as an aircraft on which nothing is sized by hover. The buffer itself
 carries a further condition, given in Section 6.7: it is specified by power rather than
-energy, at 4.6 kW kg⁻¹, which is a demanding cell requirement and not a free parameter.
+energy, at **5.63 kW kg⁻¹** to hover and 6.48 to leave the ground, which is a demanding cell
+requirement and not a free parameter. Section 8.2 measures it against what has been flown.
 
 ## 5.4 What is paid
 
@@ -156,21 +165,44 @@ faster than the aircraft.
 
 Supplementary S6 sizes three architectures against the same mission — this tail-sitter, a
 lift-plus-cruise aircraft, and a tilt-rotor — under three different sizing contracts: fixed fuel
-fraction, fixed fuel mass, and fixed maximum take-off mass with fixed payload. All twelve cells
-are given there with their sensitivity sweeps. The headline is that the ordering does not depend
-on which contract is used:
+fraction, fixed fuel mass, and fixed maximum take-off mass with fixed payload. One set of
+equations serves all three, and every coefficient in it is back-solved from the light reference
+design of Section 6.2 rather than assumed. Mission, wing loading, disc loading, structural
+fraction and energy chain are held identical; only the cruise-drag multiplier and the
+architecture-specific mass differ. Under the first contract:
 
-| | Tail-sitter | Lift + cruise | Tilt-rotor |
+| | Empty fraction | MTOW | Cruise L/D | Hover power | Range |
+|---|---:|---:|---:|---:|---:|
+| A — tail-sitter | **0.580** | **50.0 kg** | 12.00 | **10.9 kW** | 1 600 km |
+| B — lift + cruise | 0.689 | 86.0 kg | 10.28 | 18.7 kW | 1 370 km |
+| C — tilt | 0.624 | 60.3 kg | **13.44** | 13.1 kW | **1 792 km** |
+
+**The ordering depends on which contract is used, and that dependence is the result rather than
+an inconvenience.** Range in the sizing equation contains the fuel *fraction*, so holding the
+fraction fixed lets the heavier aircraft carry proportionally more fuel and removes the mass
+bill from the range column altogether. Fixing the fuel *mass* makes range inversely proportional
+to take-off mass; fixing take-off mass and payload leaves fuel as the residual. These are three
+different questions, and the answers separate:
+
+| Range relative to the tail-sitter | Fixed fuel fraction | Fixed fuel mass | Fixed MTOW and payload |
 |---|---:|---:|---:|
-| Disc loading, N m⁻² | **440** | 880 | 7 500 |
-| Total hover time, min | **20.5** | 16.5 | 12.1 |
-| Cruise speed, km h⁻¹ | 100 | 180 | **252** |
-| Practical range, km | 42 | 107 | **203** |
+| B — lift + cruise | −14.4 % | −36.5 % | −72.6 % |
+| C — tilt | **+12.0 %** | +0.2 % | −19.1 % |
+
+Against lift-plus-cruise the conclusion is the same under every rule and grows more emphatic as
+the rule tightens, and the drag term driving it is a wind-tunnel result rather than an
+assumption. Against tilt it is not: of the twelve cells S6 reports, the tilting layout leads in
+three, all of them under the fixed fraction and all of them requiring its nacelles, pivots,
+actuators and hover-pitched blades to be credited as aerodynamically free. **No result from this
+section should be quoted without the rule it was computed under**, and no claim of superiority
+over the tilting family is made here in either direction.
 
 **What this comparison does and does not support.** It supports the claim that the three bills
-are real and that a configuration avoiding them buys hover endurance and disc loading. It does
-**not** support a claim that this configuration is better: the competing architectures are
-modelled from published mass fractions at a coarser level of detail than the one proposed here,
-which is modelled from a component build-up. **Comparing a build-up against a fraction favours
-whichever is modelled more optimistically**, and this study cannot rule out that it is this one.
-Section 8 states the comparison as conditional on that asymmetry.
+are real and separable in a sizing loop. It does **not** support a claim that this configuration
+is better: the competing architectures are modelled from published mass fractions at a coarser
+level of detail than the one proposed here, which is modelled from a component build-up.
+**Comparing a build-up against a fraction favours whichever is modelled more optimistically**,
+and this study cannot rule out that it is this one. An external check against three flying
+eVTOLs, one per architecture, is reported in S6.1; it corroborates the ordering of the charges
+but is a comparison of other people's aircraft, not of this sizing. Section 8 states the
+comparison as conditional on both asymmetries.

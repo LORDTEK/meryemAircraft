@@ -52,7 +52,7 @@ assigned the roll that body-parallel thrust cannot produce. Against a lift-plus-
 wind-tunnel drag, it closes the same mission at forty-two percent lower take-off mass and
 seventeen percent greater range; against a tilting layout the comparison reverses between
 contracts and no superiority is claimed. A three-dimensional solution bounds the zero-lift
-drag with a measured uncertainty budget, and a component mass build-up closes the 50 kg
+drag with a quantified sensitivity budget, and a component mass build-up closes the 50 kg
 design conditionally and not the 1000 kg one.
 
 The study is analytical, with no experimental validation of the configuration. The tip

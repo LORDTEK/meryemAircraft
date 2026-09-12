@@ -131,13 +131,20 @@ unfavourable direction. Section 8.6 reports what that does to the transition res
 **Zero-lift drag.** A strip calculation over the span, taking section drag coefficients
 at zero lift from a physics-informed aerofoil model [16] and adding the tip frames and the propeller hubs, gives:
 
-| Contribution | Light design |
-|---|---:|
-| Wing and body, clean surface | 0.0073 |
-| Wing and body, transition tripped near the leading edge | 0.0129 |
-| Tip frames, faired | 0.0043 |
-| Tip-propeller hubs | 0.0015 – 0.0020 |
-| **Total** | **0.0131 – 0.0210** |
+| Contribution | Lower bound | Upper bound |
+|---|---:|---:|
+| Wing and body | 0.0073 (clean surface) | 0.0129 (transition tripped) |
+| Tip frames, faired | 0.0043 | 0.0043 |
+| Tip-propeller hubs | 0.0015 (30 mm can) | 0.0020 (50 mm can) |
+| Subtotal | 0.0131 | 0.0191 |
+| Excrescence allowance | none | +10 % |
+| **Total** | **0.0131** | **0.0210** |
+
+The two columns are deliberately not the same calculation. The lower bound takes the clean
+surface, the smaller hub and no allowance for excrescences; the upper bound takes the tripped
+surface, the larger hub and ten percent for fasteners, joints, antennas and surface
+imperfection. The interval is a bracket rather than an error bar, and the allowance row was
+omitted from an earlier version of this table, which therefore did not sum to its own total.
 
 The frame term reproduces the 0.0043 of Section 5.2, which was reached by a different
 route, and it comes out the same for the heavy design — an independent confirmation of
@@ -170,11 +177,13 @@ any of these numbers will hold.
 
 Against the 0.0129 of the tripped strip estimate, the Spalart–Allmaras value is fifteen
 percent higher and the SST values between two and seven percent lower; the strip method
-is therefore bracketed rather than simply beaten. Substituting each in turn raises the
-total to between 0.0203 and 0.0230. **The assumed 0.0248 lies above all of them**, so the
+is therefore bracketed rather than simply beaten. Substituting each in turn for the wing-and-body
+row, and carrying the larger hub and the ten percent allowance in every case so that the three
+are compared on one convention, gives **0.0201 with the low SST value, 0.0207 with the high one
+and 0.0231 with Spalart–Allmaras**. **The assumed 0.0248 lies above all of them**, so the
 conclusion of the previous paragraph survives the more expensive calculation under either
-closure and under either initialisation; the margin is twenty-two percent on the most
-optimistic value and eight percent on the conservative one. The assumption is not
+closure and under either initialisation; the margin is twenty-three percent on the most
+optimistic value and seven percent on the conservative one. The assumption is not
 replaced here either, for the same reason as before. Where a single number is needed
 downstream, the conservative value is carried.
 
@@ -255,7 +264,7 @@ that better satisfies the symmetry the geometry imposes also recovers more trail
 pressure.
 
 Both values are reported, because a third starting field has not been tried and nothing
-shows one would fall inside the interval; 0.01201 – 0.01253 is a measured spread and not
+shows one would fall inside the interval; 0.01201 – 0.01253 is a computed spread and not
 a bound. Where a single value from this pair is wanted, the mapped solution is taken as
 the reference state, on the grounds that it carries the smaller residual lift and surface
 asymmetry. That is a selection criterion and not a proof: it does not establish that the

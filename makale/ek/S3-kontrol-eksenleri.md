@@ -428,10 +428,34 @@ an assumption at any Reynolds number and an optimistic one at that. Symmetric se
 Reynolds number are measured to behave badly in exactly the band a toe angle of one or two
 degrees occupies: of four symmetric sections tested at Princeton, all showed lift-curve
 nonlinearity about zero incidence, and in a more severe case the slope of the lift curve
-"actually changed sign over a 3 deg range" [36]. **The question is therefore not which way to
-toe the fairing but whether a surface of that chord, at that Reynolds number, develops the side
-force this section has credited it with at all.** That is a wind-tunnel question, and it is the
-one this paper would put first if it had a tunnel.
+"actually changed sign over a 3 deg range" [36].
+
+**That is not one section behaving oddly; the same compilation states it as a property of the
+class.** Introducing a section designed for horizontal tails, it gives the reason such a section
+is cambered at all: "past work on symmetrical airfoils has shown that a deadband often appears
+in the lift curve near zero degrees. This nonlinearity can lead to undesirable longitudinal
+handling characteristics. Interestingly, cambered airfoils do not appear to have a similar,
+intrinsic deadband region" [36]. Elsewhere it records a deadband at Reynolds numbers of 60 000
+and 100 000 on a section where one was not expected, noting that "this type of behavior is
+usually only seen on symmetrical airfoils at low Re's" and that "at higher Re's the dead band is
+not present" [36]. The fairing sized here is a symmetric section at 80 000, which is inside that
+range, and it is asked to work at one to two degrees, which is inside that band.
+
+**The question is therefore not which way to toe the fairing but whether a surface of that
+chord, at that Reynolds number, develops the side force this section has credited it with at
+all.** Two things follow. The assumed 4 per radian is an upper bound and not a conservative
+choice, because what the measurements remove is the linearity of the curve rather than only the
+magnitude of its slope; a directional-stability margin computed on a linear derivative through
+zero is computed on the one part of the curve the data say is not there. And the remedy the
+source itself names is available at no structural cost: camber the fairing outboard and keep the
+toe-out, so that the operating point sits on the linear part of a curve that has one. This
+paper does not size that fairing. Doing so would mean choosing a slope from a curve it has not
+measured, which is the error the preceding paragraph exists to record.
+
+**This is the measurement this configuration would buy first**: side force and yawing moment on
+a faired tip frame of the geometry of Section 4.5, symmetric and cambered, through small
+sideslip, at a chord Reynolds number of 80 000. It is a small model in a small tunnel, and it
+would either confirm the only directional-stability surface this aircraft has or remove it.
 
 That same study is the third independent report of the finding this subsection began with: a
 podded tailless wing was directionally *unstable*, and "the further addition of vertical tails

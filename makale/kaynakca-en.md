@@ -131,7 +131,7 @@
     NACA Wartime Report, Langley Memorial Aeronautical Laboratory, 1939.
 47. Yu, S.; Jung, Y.-J.; Cho, B.-D.; Lee, G.-S. Design, Fabrication, and In-Flight
     Demonstration of a 24S NCM Battery System for an eVTOL Aircraft. *Batteries*
-    **2025**, 12 (9), 317. https://doi.org/10.3390/batteries12090317
+    **2026**, 12 (9), 317. https://doi.org/10.3390/batteries12090317
 48. Barrett, S. R. H.; Brown, A.; Gomez-Vega, N. *Silent, Solid-State Propulsion for
     Advanced Air Mobility Vehicles.* NASA Innovative Advanced Concepts Phase I Final
     Report, Massachusetts Institute of Technology, 2023.

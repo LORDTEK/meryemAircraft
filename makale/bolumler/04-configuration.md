@@ -114,7 +114,7 @@ force as a swept fence, at an upper-bound normal-force coefficient of 1.3, suppl
 about a third. The remainder must come from the second mechanism, the change the strip makes to
 the circulation of the half-wing it sits on, which asks for **ΔC_L ≈ 0.12** over the strip's
 span. Measured data on non-planar wings carrying Gurney flaps of two percent chord over the
-inboard two-thirds gives lift increments of that magnitude [31], and a lift-enhancing tab study
+inboard two-thirds gives lift increments of that magnitude [18], and a lift-enhancing tab study
 gives a measured height threshold of 1.5 % chord above which maximum lift-to-drag falls [32].
 **Roll authority is therefore sized and supported by measurement on a comparable device, and it
 is not closed**: the quantity a future measurement must return is ΔC_L for this strip on this
@@ -191,11 +191,30 @@ fins are toed *in* so the stabilising moment comes from induced drag, high-aspec
 toed *out* so it comes from "the outwardly directed lift" [19] — and these frames are firmly in
 the second class, so **the sign is toe-out**. Toe-out carries a hazard: yawing far enough to
 stall the rear fin produces a large *destabilising* moment, which sets an upper bound on usable
-sideslip that this paper does not compute. And a 39 mm chord at cruise sits at a Reynolds number
-near 80 000, where symmetric sections are measured to be nonlinear about zero incidence — in one
-case reversing the slope of the lift curve over a three-degree band [36], which is the band a
-toe angle of one or two degrees occupies. **Whether a fairing of that chord develops the side
-force credited to it is the open question, not which way to toe it.**
+sideslip that this paper does not compute.
+
+**The second requirement is harder, and the measured record is against the assumption the
+fairing was sized on.** A 39 mm chord at cruise sits at a chord Reynolds number near 80 000, and
+the side force credited to it above was computed from a lift-curve slope of 4 per radian.
+Symmetric sections at that Reynolds number are not measured to behave that way. The compilation
+that reports four such sections tested at Princeton finds lift-curve nonlinearity about zero
+incidence in all of them, in the severest case the slope "actually changed sign over a 3 deg
+range" [36] — and it states the effect as a property of the class rather than an accident of one
+section: "past work on **symmetrical** airfoils has shown that a **deadband often appears in the
+lift curve near zero degrees**", present at Reynolds numbers of 60 000 and 100 000 and absent at
+higher ones [36]. A toe angle of one or two degrees puts the fairing inside that band. **The open
+question is therefore not which way to toe the fairing but whether a surface of that chord, at
+that Reynolds number, develops the side force at all** — and 4 per radian should be read as an
+upper bound rather than as a conservative choice, since what fails there is the linearity of the
+curve and not merely the size of its slope.
+
+The same source names the remedy, and it is cheap here. Camber removes the deadband: cambered
+sections "do not appear to have a similar, intrinsic deadband region" [36], and the observation
+is drawn from designing tail surfaces, which is what these fairings are. A fairing that is
+cambered outboard and toed out would take its side force from the linear part of a curve that
+has one, at no cost the frame does not already pay. This paper does not size that fairing,
+because doing so on a curve it has not measured would repeat the error it has just described.
+Supplementary S3 states it as the measurement this configuration would buy first.
 
 ## 4.5 Structure and ground contact
 

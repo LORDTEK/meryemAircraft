@@ -60,10 +60,14 @@ it does not show that the strip supplies it.
 
 Because the same primary propulsor serves hover and cruise without changing its
 orientation relative to the airframe, none of the three penalties **as defined in
-Section 3** arises: there is no second thrust system to carry, no lift hardware left
-exposed in the cruise airstream, and no continuous power system sized by the hover peak.
-That is a statement about three specific charges, not a claim that the configuration is
-free. What it pays instead — the mass and drag of the control propellers and their
+Section 3** arises in full: there is no second thrust system to carry, no lift hardware left
+exposed in the cruise airstream, and no *engine* sized by the hover peak. The third of those is
+the one that comes with a qualification, and Section 5.3 states it rather than deferring it: the
+buffered series hybrid releases the engine and its fuel consumption from the hover condition, but
+the electric machines and the power electronics still pass the full hover power, and the
+hover-sized machine is the largest single item in the propulsion chain. That is a statement about
+three specific charges, two of which do not arise and one of which is halved, not a claim that
+the configuration is free. What it pays instead — the mass and drag of the control propellers and their
 supporting frames, the rolling-moment device, and the transition manoeuvre itself — is
 reported and quantified in Section 5.4 rather than omitted.
 
@@ -85,8 +89,9 @@ instantiates it. The paper
 3. **instantiates the escape condition in a configuration**, audits the three bills against it
    one at a time, and states what the configuration pays instead;
 4. **supports the case study with computation rather than assertion** where it could — a
-   three-dimensional Reynolds-averaged solution for the zero-lift drag with a measured
-   uncertainty budget; a component mass build-up that closes the 50 kg design conditionally and
+   three-dimensional Reynolds-averaged solution for the zero-lift drag with a quantified
+   sensitivity budget across grids, wall resolutions, turbulence closures and starting fields;
+   a component mass build-up that closes the 50 kg design conditionally and
    does not close the 1000 kg one; a rotational check establishing inertial feasibility of the
    transition; and a viscous, station-by-station solution of the trimmed wing that corrects the
    assumed span efficiency downward; and

@@ -253,9 +253,17 @@ in either direction.
 
 Two smaller points belong with that disclosure. The cruise propulsive efficiency is also
 shared with the tilting layout, which is generous, since a blade pitched for hover is not
-the blade one would choose for cruise; but range does not contain propulsive efficiency,
-so the generosity falls entirely on mass — 60.3 kg becomes 62.7 kg at a fifteen percent
-efficiency penalty — and none of it on the range comparison. And a second table, in which
+the blade one would choose for cruise. **An earlier version of this section claimed that range
+does not contain propulsive efficiency, and that is wrong**: the propeller is the last link of
+the η_chain that appears in the range equation above, at 0.80 of the overall 0.176. The
+generosity therefore falls on both columns. On mass, 60.3 kg becomes 62.7 kg at a fifteen percent
+efficiency penalty; on range, the tilting layout's fixed-fraction advantage of twelve percent
+falls to roughly **minus five percent**, since range is linear in η_chain. The correction moves
+the comparison against the tilting layout rather than for it, which is why it is recorded here
+rather than left as a rounding matter: the one column in which that architecture led is the
+column the correction removes it from. The sizing tables above are not recomputed on it, because
+the fifteen percent is an illustration and not a measurement; what the tables report is the
+comparison with the credit left in place, which is the generous case. And a second table, in which
 each architecture is given its own power system with no buffer, is not reported as a fair
 comparison and should not be read as one: a real lift-plus-cruise aircraft hovers on
 batteries rather than on an engine sized for hover, so that table is a bounding case for
