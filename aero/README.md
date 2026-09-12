@@ -2457,3 +2457,85 @@ tartışmalı; türbülans duyarlılığı ise yalnız Yang'da ölçülmüş ve
 çürütülmemiş.**
 
 §4.4 ve §8 buna göre düzeltilecek: risk duruyor, ama "oybirliği" değil.
+
+---
+
+## 🔴 Panagiotou 2021 (quasi-3D BWB) — yöntemimize en sert itiraz, ve beklenmedik bir savunma (12.09.2026)
+
+*Aerospace* 8(13). Taktik bir BWB İHA prototipi üzerinde üç yöntem
+karşılaştırılıyor: CFD (RANS, Spalart–Allmaras, y⁺<5), XFLR5 3-B (VLM), ve
+kendi önerdikleri quasi-3-B yöntem. Re = 2.932.000, MAC bazlı.
+
+### 1. 🔴 VLM, BWB'de taşımayı %30–38 EKSİK veriyor
+
+| α | CFD | XFLR5 3-B (VLM) | quasi-3-B | VLM sapması | quasi-3-B sapması |
+|---:|---:|---:|---:|---:|---:|
+| −4 | −0,2669 | −0,1659 | −0,2392 | **%37,8** | %10,4 |
+| 0 | 0,1476 | 0,0920 | 0,1483 | **%37,7** | %0,5 |
+| 4 | 0,5647 | 0,3489 | 0,5462 | **%38,2** | %3,3 |
+| 8 | 0,9583 | 0,6022 | 0,9376 | **%37,2** | %2,2 |
+| 12 | 1,2259 | 0,8497 | 1,2425 | **%30,7** | %1,4 |
+
+Ve trim bölümünde VLM'i **tamamen dışarıda bırakıyorlar:**
+
+> *"Due to the **large deviation** between the XFLR and CFD results for the
+> clean configuration, the former method is **not included** at the present
+> section."*
+
+**Bu bizim dört sonucumuzun altını oyuyor:** açıklık verimi, tarafsız nokta,
+denge burulması, yatış sönümlemesi — hepsi VLM'den.
+
+### Ama panik etmeden bakınca — sapma bir ÖLÇEK, bir şekil hatası değil
+
+Sapma α boyunca neredeyse sabit: %37,8 / %37,7 / %38,2 / %37,2 / %30,7. Yani
+eğri **çarpımsal bir katsayıyla** (≈0,62–0,68) küçülmüş, biçim değiştirmemiş.
+Bunun önemi şu: §6'nın VLM savunması zaten *"buradan alınan her büyüklük
+dolaşım veya aerodinamik merkez türündendir"* diyor — ve
+
+- x_np = −(dC_m/dC_L)·c + x_ref bir **orandır**; pay ve payda aynı katsayıyla
+  ölçeklenirse **değişmez**;
+- burulma etkinliği (derece başına C_m) aynı katsayıyla **eksik** çıkar, yani
+  gerçekte gereken burulma hesapladığımızdan **AZ** olur → lehimize.
+
+⚠️ **Ama bu çıkarımın kilit varsayımı denetlenemiyor:** C_m'in de C_L ile aynı
+katsayıyla ölçeklendiğini bilmemiz gerekiyor. Makalenin Tablo 4'ü tam olarak
+bu karşılaştırma — ve tabloda sayılar yerine **"Data restrictions apply"**
+yazıyor. Yani kontrol edilebilecek tek yerde veri kapalı.
+
+⚠️ İkinci uyarı, kendi lehimize olmayan tarafta: %38'lik bir açık, kalınlık
+etkisinden beklenenden **büyük.** Onların XFLR5 kurulumunun gövdeyi hiç
+modellemediğinden şüpheleniyorum (makale söylemiyor). Bizim planformumuzda
+merkez kesit **kanadın parçası** olarak modelde var — sıfır kalınlıkta bir
+kamber yüzeyi olarak. Yani bizim açığımız onlarınkinden küçük olmalı, ama
+sıfır değil: VLM'in hacmi yok, BWB'nin gövdesi hacimle taşıyor.
+
+**Sonuç: §6'ya yazılacak bir maruziyet.** "VLM'den yalnız oran ve şekil
+alıyoruz" savunması ayakta, ama artık *sınanmış* bir sayıya karşı ayakta
+duruyor ve o sayı büyük. Ve bu, S1 için önerdiğim iç hesabın (yerel C_l'de
+NeuralFoil) gerekçesini güçlendiriyor.
+
+### 2. ✅ Ve beklenmedik bir savunma — burulma ÜÇÜNCÜ bir iş yapıyor
+
+Aynı makale, α ≥ 8°'de kendi yönteminin de C_m'i kaçırdığını söylüyor ve
+sebebini veriyor:
+
+> *"likely linked to leading-edge separation over the main body... **The main
+> wing stalls before the main body, causing the BWB to pitch-up.**"*
+
+Bu, §7.4'teki NASA pitch-up uyarısından **farklı bir mekanizma.** NASA'nınki
+düşük en-boy oranı + hücum kenarı girdap patlaması; biz ondan "AR 6,03, o
+sınıfta değiliz" diye korunuyorduk. **Panagiotou'nun mekanizması en-boy
+oranına bakmıyor** — planformun hangi parçasının önce perdövitese girdiğine
+bakıyor. Yani o savunmamız bu mekanizmaya karşı işlemiyor.
+
+**Ama burulma işliyor.** Ok açılı bir kanatta washout kökü önce perdövitese
+sokar; BWB'de **kök = gövdedir.** Yani −9° washout, gövdeyi kanattan önce
+perdövitese sokarak Panagiotou'nun pitch-up sırasını **tersine çeviriyor.**
+
+Böylece washout'un gerekçesi üçe çıktı:
+1. denge (C_m0 açığını kapatıyor) — §7.6,
+2. ok açılı kanatta uç perdövitesini geciktirmek — §7.4,
+3. **BWB pitch-break'in perdövites sırasını tersine çevirmek** — yeni.
+
+%4,3'lük cezanın karşılığı gittikçe artıyor. Bu, defterin **beşinci kalemini**
+haklı çıkarmaz ama bağlamını değiştirir: o ceza tek bir iş için ödenmiyor.

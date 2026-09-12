@@ -422,7 +422,7 @@ on the fairing's section and Reynolds number, neither of which is fixed here.
 
 ## 8.17 What would change these conclusions
 
-The results of this paper would be most efficiently attacked in four places, and they
+The results of this paper would be most efficiently attacked in five places, and they
 are listed so that they can be:
 
 1. ~~**A three-dimensional solution for the centre body.**~~ **Done.** This was the
@@ -490,9 +490,23 @@ are listed so that they can be:
 4. **A panel-method analysis of the tip surfaces**, which would either convert Section
    8.7 into a quantified benefit or remove it. The vortex-lattice solution of Section 6.6
    covers the planform but not the tip surfaces, which remain unquantified.
+5. **A viscous solution of the twisted planform, section by section.** This is the cheapest
+   of the five and it would close two items at once. The span efficiency of Section 6.6 is an
+   inviscid figure, and the Oswald-type efficiency the drag build-up actually needs is
+   obtained from it by a ratio this paper assumes rather than computes; the method for
+   computing it instead — two-dimensional viscous analyses at each spanwise station, coupled
+   to the three-dimensional circulation — is established, validated to better than one percent
+   on lift-curve and moment-curve slope, and costs about one percent of an equivalent RANS
+   solution [40]. It would also test the magnitude question raised in Section 6.6 by a
+   published vortex-lattice-against-RANS comparison on a blended-wing-body of this class [39],
+   which is the one exposure in the aerodynamic chain that currently has no bound at all. The
+   ingredients are already in the repository: the spanwise loading of the twisted wing, and a
+   section solver called station by station for the zero-lift drag build-up. What is missing is
+   that the section drag is read at zero lift rather than at each station's local lift
+   coefficient.
 
 None of these requires an experiment. The first has been carried out and its result is
-folded into Section 6.6; the remaining three are within reach of a follow-on study, and
+folded into Section 6.6; the remaining four are within reach of a follow-on study, and
 the configuration is described in enough detail in Section 4 and Section 6 for another
 group to attempt any of them independently. The computational setup, the grid-convergence
 study and the record of what failed along the way are in the repository, so the first

@@ -107,3 +107,9 @@
     *Fluids* **2025**, 10 (6), 152. https://doi.org/10.3390/fluids10060152
 38. Neuhart, D. H.; Pendergraft, O. C., Jr. *A Water Tunnel Study of Gurney Flaps.*
     NASA Technical Memorandum 4071, Langley Research Center, 1988.
+39. Panagiotou, P.; Dimopoulos, T.; Dimitriou, S.; Yakinthos, K. Quasi-3D Aerodynamic
+    Analysis Method for Blended-Wing-Body UAV Configurations. *Aerospace* **2021**,
+    8 (1), 13. https://doi.org/10.3390/aerospace8010013
+40. Şugar Gabor, O.; Koreanschi, A.; Botez, R. M. A New Non-Linear Vortex Lattice Method:
+    Applications to Wing Aerodynamic Optimizations. *Chinese Journal of Aeronautics*
+    **2016**, 29 (5), 1178–1195. https://doi.org/10.1016/j.cja.2016.08.001
