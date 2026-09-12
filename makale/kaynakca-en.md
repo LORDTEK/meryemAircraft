@@ -102,3 +102,8 @@
     *Summary of Low-Speed Airfoil Data, Volume 2.* SoarTech Publications:
     Virginia Beach, VA, 1996. (Volume 1: Selig, M. S.; Guglielmo, J. J.;
     Broeren, A. P.; Giguère, P., 1995.)
+37. Liu, Z.; Li, K.; Sun, X. Influence of Gurney Flap and Leading-Edge/Trailing-Edge
+    Flaps on the Stall Characteristics and Aeroacoustic Performance of Airfoils.
+    *Fluids* **2025**, 10 (6), 152. https://doi.org/10.3390/fluids10060152
+38. Neuhart, D. H.; Pendergraft, O. C., Jr. *A Water Tunnel Study of Gurney Flaps.*
+    NASA Technical Memorandum 4071, Langley Research Center, 1988.

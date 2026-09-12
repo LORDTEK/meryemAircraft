@@ -126,6 +126,30 @@ burulmalı kanadın **iskoz hesabı** lazım.* Bir de: 0,85 varsayımı
 konvansiyonel (Ugwueze 2023 de AR 7,0'da aynı değeri kullanıyor), yani
 dikkatsizlik değil — bu yüzden bu kadar uzun süre sorgulanmadan kaldı.
 
+### ✅ S1 ARTIK YZ'LERE SORULMAYACAK — kendimiz hesaplayacağız (12.09.2026)
+
+Şugar Gabor & Botez'in doğrusal-olmayan VLM'ini okuyunca anlaşıldı ki
+aradığımız "iskoz hesabı" bir araç sorunu değil. Yöntem: her açıklık şeridinde
+2-B ağdalı çözüm, sonuç 3-B girdap halkalarıyla eşleniyor;
+C_D = C_Di + (1/S)∫c_d(y)c(y)dy. Doğrulama dC_L/dα'da %0,51, maliyet CFD'nin
+%1'i.
+
+**Ve bileşenlerin hepsi bizde zaten var:** `vlm.py` burulmuş kanadın açıklık
+yükünü veriyor, `cd0.py` NeuralFoil'i şerit şerit çağırıyor. Tek eksik,
+`cd0.py`'nin kesit direncini **sıfır kaldırmada** okuması — burulmuş kanadın
+**yerel C_l'inde** okumuyor.
+
+Yani S1 bir kaynak sorusu değil, **yapılmamış bir hesap.** YZ'lerden bunun
+için kaynak istemeyeceğiz. Kaynak okuması bitince yapılacak işler listesinin
+başında.
+
+⚠️ Onlara yine de sorulacak **tek** şey kalıyor, ve o bir yöntem sorusu:
+NeuralFoil/XFOIL sınıfı bir 2-B çözücüyü burulmuş bir kanadın yerel C_l'inde
+çağırıp profil direncini toplamak, **ok açılı** bir kanatta ne kadar
+güvenilir? (Şerit kuramı ok açısını ihmal eder; bizim kök ok açımız büyük.)
+Ok açısı düzeltmesi olarak ne kullanılıyor — cos yasası mı, yoksa akıma dik
+kesit mi?
+
 ### S2. Şeridin yükseklik yasası — takas kapatılmadı
 
 Sabit h/c seyirde sürüklemeyi %64 azaltıyor ama izdeki alanı %45

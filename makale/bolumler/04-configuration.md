@@ -548,6 +548,31 @@ geometry — the cited tests are on a wind-turbine aerofoil with grid-generated 
 turbulence, not a propeller wake — but the direction is measured rather than supposed, and it
 is recorded in Section 8 as a risk to hover roll authority specifically.
 
+**On the post-stall half of that risk the literature is not unanimous, and reporting only the
+unfavourable half would misrepresent it.** A delayed-detached-eddy simulation of a 21 %-thick
+section at twenty degrees of incidence — deep stall — with a Gurney flap of two percent chord,
+which is the height fraction at this strip's root station, returns a lift coefficient higher by
+ninety-four percent with the drag coefficient unchanged to within half a percent [37]. That is
+the opposite of a device weakening past the stall. The two results are not directly comparable:
+one is a measurement and the other a simulation whose plain-aerofoil baseline falls
+twenty-five percent below the experimental lift at the same condition, and they vary different
+things — one inflow turbulence, the other incidence. What can be said is that **the post-stall
+behaviour of this class of device is contested, while the turbulence sensitivity is measured
+and stands unopposed.** The risk carried into Section 8 is therefore the turbulence one
+primarily, with post-stall behaviour an open question rather than a known deficit.
+
+A third result bears on the part of the claim that looked weakest. The same device was
+visualised in a water tunnel at a Reynolds number of 8 588 — four orders of magnitude below
+the wind-tunnel work — and behaved in qualitative agreement with it, the authors attributing
+this to the mechanism being an effective camber increase and therefore "an inviscid effect to
+the first order" [38]. **That is the most direct support available for the claim that the strip
+still works at zero airspeed**, where the only flow it sees is the slipstream and the Reynolds
+number is at its lowest. It supports the direction and not the magnitude: the study is flow
+visualisation and reports no forces. The same source also records the cost, measured rather
+than estimated: a strip of 1.25 percent chord leaves drag unchanged from the clean wing, while
+one of five percent brings a significant drag increase [38]. This strip runs from 2.1 to
+13.7 percent.
+
 The strip does one further thing that an ordinary aerodynamic surface cannot. Its
 inboard portion lies inside the slipstream of the nose propeller, where the dynamic
 pressure is set by the disc loading rather than by the airspeed:

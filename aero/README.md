@@ -2321,3 +2321,139 @@ VLM planformdan C_n_β = 0 veriyor. Ama VLM'in **hacmi yok**: merkez gövdemiz
 değil, **sıfırın altı.** Fairing'in kapatması gereken açık, hesapladığımızdan
 büyük. Bu bir sayı değil, bir **işaret** bulgusu — ama işaret aleyhimize ve
 §8'e yazılmalı.
+
+---
+
+## 🔑 Şugar Gabor & Botez — S1 KAPATILABİLİR, ve alet zaten elimizde (12.09.2026)
+
+⚠️ Önce bir özeleştiri: bu dosyayı `Gallay-Laurendeau_...` diye adlandırmışım.
+**Yanlış.** İçeriği açıp bakınca yazarlar Oliviu Şugar Gabor, Andreea
+Koreanschi, Ruxandra Mihaela Botez (ÉTS Montréal); Laurendeau yalnızca
+kaynakçada ve teşekkürde geçiyor. Dosya
+`SugarGabor-Botez_nonlinear-VLM-viscous-strip-coupling.pdf` olarak
+yeniden adlandırıldı. Kaynakları "içerik doğrulayarak" adlandırdığımı
+söylemiştim; bu dosyada yapmamışım.
+
+### Yöntem tam olarak S1'in istediği şey
+
+Doğrusal-olmayan VLM: kanadın açıklık istasyonlarında **iki boyutlu ağdalı**
+çözüm (şerit kuramı) yapılıyor, çıkan şerit kuvvetleri kamber yüzeyine dağılmış
+girdap halkalarının üç boyutlu kuvvetleriyle **eşleniyor.** Toplam direnç:
+
+> C_D = C_Di + (1/S)·∫ c_d(y)·c(y) dy
+
+Doğrulama: dC_L/dα'da **%0,51**, dC_m/dα'da **%0,32** hata. Maliyet: eşdeğer
+CFD çözüm süresinin **~%1'i.**
+
+### Bunun bizim için anlamı: S1'i BAŞKASINA SORMAMIZA GEREK YOK
+
+S1'in kalan hâli şuydu: *"burulmuş kanadın ağdalı (Oswald) açıklık verimi
+nedir?"* Bu yöntem tam onu veriyor. Ve **bileşenlerinin hepsi zaten
+kodumuzda:**
+
+| gereken | bizde ne var |
+|---|---|
+| burulmuş kanadın açıklık yükü | `vlm.py` / `kararlilik.py:denge_burulmasi()` |
+| şerit başına 2-B ağdalı çözüm | `cd0.py` NeuralFoil'i (XFOIL üzerine eğitilmiş) **şerit şerit** çağırıyor |
+| eksik olan tek şey | `cd0.py` kesit direncini **sıfır kaldırmada** okuyor; burulmuş kanadın **yerel C_l'inde** okumuyor |
+
+Yani eksik olan bir araç değil, bir **çağrı noktası**: her şeridin VLM'den
+gelen yerel C_l'ini NeuralFoil'e verip c_d'yi orada okumak, sonra burulmalı ve
+burulmasız hâlleri karşılaştırmak. Bu yapıldığında S1 bir kaynak sorusu olmaktan
+çıkıp **hesaplanmış bir sonuç** olur ve §6'daki "inviscid→Oswald oranı
+varsayılmıştır" açığı kapanır.
+
+**Kaynaklar bitince karar verilecek işler listesinin başına bu yazıldı.**
+(Bugün yapmıyorum; kullanıcının talimatı önce kaynakları bitirmek.)
+
+### Bir de yöntem notu — konvansiyon denetimimizi doğruluyor
+
+Aynı makale, doğrulama bölümünde şunu açıkça yazıyor:
+
+> *"the lift and pitching moment coefficients are calculated using the
+> **average geometrical chord** (instead mean aerodynamic chord that is often
+> used), and the pitching moment coefficient is calculated about the **root
+> chord leading edge point**."*
+
+Bu, bu çalışmada benim yaptığım referans-veter hatasının ta kendisidir: kararlılık
+payı MAC'te, denge gereksinimi S/b'de idi. Ciddi bir yayın, hangi veteri ve
+hangi momenti aldığını **tek cümlede** ilan etme gereği duyuyor. Bu,
+`kararlilik.py:konvansiyon_denetimi()`'nin varlık sebebini dışarıdan
+doğruluyor — §6'nın metodoloji kısmına bir cümlelik dayanak.
+
+### Tasarım sonucu — endüklenen/profil takası standart
+
+Yeniden tasarladıkları kanatta endüklenen direnç ortalama **%20** düşerken
+profil direnci **%6'ya kadar** artıyor; net toplam direnç **%10** düşüyor. Bizim
+burulma takasımız (e 0,993 → 0,865, yani endüklenen direnç artıyor, karşılığında
+denge geliyor) aynı türden bir alışveriş; literatürde bu takasın iki yönlü
+işlediği yerleşik.
+
+---
+
+## Gurney literatürü ikinci tur — biri lehimize, biri Yang'la ÇELİŞİYOR (12.09.2026)
+
+### NASA TM-4071 (Neuhart & Pendergraft 1988) — mekanizma Reynolds'a karşı sağlam
+
+Langley 16×24 inç **su tüneli**, akış görselleştirme, **Re = 8.588.** Yani
+rüzgâr tüneli çalışmalarının **dört mertebe altında.** Buna rağmen:
+
+> *"the effect of the Gurney flaps was in **qualitative agreement** with the
+> investigations [at Re ~10⁶]... the general effects of the trailing-edge
+> devices on the flow are the same, since an **effective increase in camber
+> provides an inviscid effect to the first order**."*
+
+**Bu bizim için önemli, çünkü asılı durumda şeridin Reynolds'u düşük.** Cihazın
+çalışma mekanizması (etkin kamber artışı) birinci mertebede iskoz değil; bu
+yüzden Reynolds dört mertebe düştüğünde bile *yön* korunuyor. §4.4'ün "sıfır
+hızda bile çalışır" iddiası için bu, elimizdeki **en doğrudan** dayanak. Ama
+görselleştirme çalışması: yön veriyor, **büyüklük vermiyor.**
+
+İkinci bulgu bizim aleyhimize ve ölçülmüş: Roesch & Vuillet'nin Re = 0,75×10⁶
+ölçümünde **0,0125c** şerit direnci temiz kanada göre **değiştirmiyor**, ama
+**0,05c** şerit C_Lmax'ı artırırken *"a significant drag increase"* getiriyor;
+Liebeck de 0,0125c üstünün direnç cezası göstereceğini söylüyor. **Bizim
+şeridimiz h/c 0,021–0,137**, yani dış uçta ölçülmüş ceza bandının on katı
+derinliğinde. §4.4'ün 16,7 N konuşlu direnci bir kestirimdi; artık yönü
+ölçümle destekli.
+
+Üçüncü bulgu: Gurney'in üst yüzey ayrılmasına faydası **α < 3,5°** ile sınırlı
+bulunmuş, ve en büyük fayda en büyük şeritlerde. Geçiş koridorumuz bunun çok
+üstünde açılardan geçiyor.
+
+### Liu, Li & Sun 2025 (*Fluids*) — Yang'ın tersini söylüyor, ve bunu yazmak zorundayız
+
+DDES, NACA0021, **α = 20° (derin perdövites)**, Re = 2,7×10⁵, Ma = 0,1,
+Gurney yüksekliği **%2 veter** (bizim kök istasyonumuz %2,1 — neredeyse aynı).
+
+| | EXP | CFD sade | CFD Gurney | değişim |
+|---|---:|---:|---:|---:|
+| C_l | 0,443 | 0,332 | 0,643 | **+%93,7** |
+| C_d | 0,285 | 0,252 | 0,253 | **+%0,4** |
+| L/D | 1,557 | 1,317 | 2,542 | +%93,0 |
+
+Yani **derin perdövitesde taşımayı neredeyse ikiye katlıyor, direnci hiç
+artırmadan.**
+
+**Bu, Yang 2020'nin ölçtüğü *"became less effective after stall angle"* ile
+ters yöne bakıyor.** Ve ben §4.4 ile §8'e Yang'a dayanarak "türbülans ve
+perdövites sonrası bozulma, asılı durumdaki yatış otoritesine ana risk"
+yazmıştım. **O cümleyi tek taraflı bırakmak artık dürüst olmaz.**
+
+⚠️ Ama çelişkiyi de olduğundan büyük göstermeyelim, ve iki kaynağı eşit
+ağırlıkta saymayalım:
+
+| | Yang 2020 | Liu 2025 |
+|---|---|---|
+| yöntem | **rüzgâr tüneli ölçümü** | DDES (benzetim) |
+| ölçülen | L/D iyileşmesinin türbülansla ve α ile azalması | tek bir α'da C_l artışı |
+| serbest akış türbülansı | %0,2 / %10,5 / **%19** | temiz |
+| taban doğruluğu | ölçüm | **sade kanat C_l'i deneyin %25 altında** (0,332 vs 0,443) |
+
+Liu'nun Gurney farkı, deneyden dörtte bir sapan bir taban üzerinde
+hesaplanmış. Ve iki çalışma **aynı şeyi ölçmüyor**: Yang'ınki türbülans
+ekseni, Liu'nunki α ekseni. Doğru okuma şu: **perdövites sonrası etkinlik
+tartışmalı; türbülans duyarlılığı ise yalnız Yang'da ölçülmüş ve
+çürütülmemiş.**
+
+§4.4 ve §8 buna göre düzeltilecek: risk duruyor, ama "oybirliği" değil.
