@@ -10,15 +10,10 @@
 
 Meryem Gülmen <sup>1,\*</sup>, Berke Gülmen <sup>1</sup>, Ömer Gülmen <sup>1</sup>
 
-<sup>1</sup> Independent Researcher, Türkiye
+<sup>1</sup> Independent Researcher, Türkiye; meryemgulmen@outlook.com (M.G.);
+berkegulmen@outlook.com (B.G.); lordtek@me.com (Ö.G.)
 
 <sup>\*</sup> Correspondence: meryemgulmen@outlook.com
-
-| Yazar | E-posta |
-|---|---|
-| **Meryem Gülmen** (sorumlu yazar) | meryemgulmen@outlook.com |
-| Berke Gülmen | berkegulmen@outlook.com |
-| Ömer Gülmen | lordtek@me.com |
 
 ## Abstract
 
@@ -37,61 +32,6 @@ contracts, so three are reported rather than one. The aircraft is not shown to b
 mass budget closes only on a battery specific power 3.8 times the highest rate yet measured on a
 flown pack, and transition controllability rests on a pitching moment no current method predicts
 reliably. The framework does not depend on that outcome.
-
-Aşağıdaki 588 kelimelik uzun sürüm SİLİNMEDİ. Zenodo kaydında, depo tanıtım
-sayfasında ve gerekirse kapak mektubunda kullanılabilir. Buradan üretilen
-belgeye girmez.]*
-
-<details>
-<summary>Uzun özet (588 kelime) — gönderime girmez</summary>
-
-Hybrid vertical take-off and landing (VTOL) aircraft combine runway independence with
-wing-borne cruise and pay for it in cruise efficiency. This paper treats that cost as
-architectural rather than as a defect of implementation, and develops it as an accounting
-framework. The penalty is charged in three coupled currencies — the mass of hover hardware
-carried through cruise, its drag when exposed in cruise, and a power system sized by a
-condition holding for some two percent of the flight — and each of the remedies surveyed here
-reduces one by raising another. The escape condition is then explicit, and it has four parts:
-the penalty is charged unless hover and cruise are served by the same hardware, in the same
-orientation, doing the same job, with the hover peak supplied from a buffer rather than from
-permanently installed continuous power. A second result is methodological: architectural
-comparisons depend on the sizing contract chosen, and a fixed fuel fraction removes the
-mass bill from the range column altogether, so three contracts are reported rather than
-one.
-
-meryemAircraft, an uncrewed tail-sitting blended-wing body, satisfies the escape condition
-and serves as the case study: one coaxial pair at the nose gives all thrust in both
-regimes, four small pairs at the tips give attitude moments and the residual take-off thrust
-margin, and a deployable strip is
-assigned the roll that body-parallel thrust cannot produce. Sized against a lift-plus-cruise
-layout on wind-tunnel drag, it closes the same mission at forty-two percent lower take-off mass
-and seventeen percent greater range; against a tilting layout the comparison reverses between
-contracts and no superiority is claimed. Those are sizing results for an aircraft that has not
-been built: a three-dimensional solution bounds the zero-lift drag with a quantified sensitivity
-budget, but the component mass build-up closes the 50 kg design only on a battery specific power
-of 5.6 kW kg⁻¹, which is 3.8 times the highest rate yet measured on a flown pack, and it does not
-close the 1000 kg design at all.
-
-The study is analytical, with no experimental validation of the configuration. The tip
-propellers can turn the aircraft's rotational inertia through the transition but not, on
-present evidence, its aerodynamic moment. Resolving that margin along the trajectory shows
-the aircraft never reaches ninety degrees of incidence — the relative wind rotates with the
-body — so the outstanding measurement is the pitching moment to some twenty-two degrees at low
-dynamic pressure, together with trim at cruise. A vortex-lattice solution establishes static
-pitch stability under a stated packaging rule and closes cruise trim, though not in the way
-first supposed: measured data for reflexed sections fall an order of magnitude short of the
-moment required, while nine degrees of tip washout supplies it, at a cost of 4.3 percent of
-cruise lift-to-drag ratio. Roll is treated the same way: the inertia and the damping are computed
-for this planform, the moment needed for a twenty-degree-per-second roll follows from them,
-and the strip's effectiveness in supplying it is stated as a requirement rather than
-demonstrated. Yaw has the strongest authority of the three axes, because differential tip
-thrust acts through the semi-span, but the planform supplies no directional stability at
-all, so the tip-frame fairings must serve as the vertical surfaces as well as the drag
-measure they were introduced as. Attitude control is therefore sized in every axis and
-closed in none. Transition controllability remains the
-principal open requirement and is stated as a threshold a future measurement must meet.
-
-</details>
 
 ## Keywords
 
@@ -133,15 +73,6 @@ series hybrid propulsion; cruise efficiency; aircraft configuration design
 > authors' own. The authors have reviewed and edited the output and take full responsibility
 > for the content of this publication.
 
-⚠️ AMA BİR ÇATIŞMA VAR, KARAR SENİN. MDPI'ın şablonu "[tool name, version
-information]" diyor — yani araç adı ve sürüm istiyor. Yukarıdaki metin şablonun
-*yapısını* (ne için kullanıldı + gözden geçirildi + sorumluluk yazarlarda) karşılıyor
-ama araç adını vermiyor. Editör ısrar ederse iki yol var: adı yazmak, ya da "genel
-sınıf yeterlidir" diye direnmek. Şimdilik ikincisindeyiz ve bu bilinçli bir seçim.
-
-Dergi ayrıca GenAI'ın analiz/yorumda kullanıldığı durumda Methods İÇİNDE de beyan
-istiyor; onu 2.14 karşılıyor. Buradaki blok Acknowledgements tarafı.]*
-
 ### Conflicts of Interest
 
 > The authors have filed a patent application covering the aircraft configuration
@@ -173,29 +104,6 @@ istiyor; onu 2.14 karşılıyor. Buradaki blok Acknowledgements tarafı.]*
 > check or refute it; the authors neither direct it at, nor undertake to police, any particular
 > downstream use, and they remain available to provide whatever further declaration the editors
 > require.
-
-Önce "no part of this work was conducted for, or is directed at, a military application"
-yazmıştım. Bunun ikinci yarısı gelecek hakkında bir **taahhüt**ti ve kimse onu
-veremez. Senin itirazın doğru: birisi yarın askeri amaçla kullanırsa biz yanlış
-beyan vermiş oluruz.
-
-Şimdiki metin üç şeyi ayırıyor: (1) bu çalışmanın NE OLDUĞU — sivil, askeri hiçbir
-şey adlandırılmıyor, bu bir olgu; (2) NİYETİMİZ — orman yangını ve yük, bu da olgu;
-(3) ÇİFT KULLANIM POTANSİYELİ — inkâr edilmiyor, kabul ediliyor.
-
-Üçüncüsü ayrıca daha GÜÇLÜ bir DURC beyanı. MDPI'ın kendi rehberi yazarlardan
-"bulgularının nasıl kötüye kullanılabileceğini tahmin etmesini" istiyor. "Çift
-kullanım yoktur" demek bu rehbere uymaz; "vardır, farkındayız" demek uyar. Drones'ta
-2026'da yayımlanan İHA sürü makaleleri de tam bunu yapıyor.
-
-Derginin kapsam sayfası şablonu yalnızca askeri kuruluş/görev adı geçen makaleler
-için zorunlu tutuyor; bizde geçmiyor, yani bu blok gönüllü. Ama gönüllü olması onu
-zayıflatmıyor, tersine.
-
-NOT: Orman yangını ve yük amacını ilk kez burada yazdım. Makalenin GÖVDESİNDE hiçbir
-görev tanımı yok — hakem "bu ne için?" diye sorar. 13 kg faydalı yük / 1600 km bir
-misyonun sayısı; hangi misyon olduğunu söylemek makaleyi güçlendirir. Girişe bir
-cümle eklememi istersen söyle, kendiliğimden eklemedim.]*
 
 ### Funding
 

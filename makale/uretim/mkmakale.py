@@ -19,28 +19,89 @@ CAP = {n: (f if isinstance(f, list) else [f], c) for n, f, c in FIGS}
 # ---------------------------------------------------------------- temizlik
 NOT = re.compile(r"^\s*\*?\[.*", re.S)
 
+# Ciktida BULUNMASI MESRU olan Turkce karakterli parcalar. Baska her sey
+# calisma notudur ve disari sizmamalidir.
+# Ciktida bulunmasi mesru olan Turkce karakterli parcalar: yazar adlari,
+# kurum adlari, ve kaynakcadaki gercek isimler. Bu listeye bir sey eklemek
+# BILINCLI bir karardir -- denetci listede olmayan her seyi durdurur.
+MESRU = ("Gülmen",          # yazarlar
+         "Türkiye",         # yazar adresi
+         "Türkpatent",      # patent ofisi
+         "Ö.G.",            # CRediT bas harfi
+         "Şugar Gabor",     # kaynak [40] yazari
+         "Göttingen")       # kanat profili ailesi, S4 olculmus reflex tablosu
+TR = "şığçöüŞİĞÇÖÜ"
+
+# Ciktida gecerse kesinlikle calisma notudur -- beyaz listeden bagimsiz.
+DURDUR = ("Yazar |", "E-posta", "sorumlu yazar", "KARAR SENİN", "Öneri:",
+          "Taslak", "yazarların", "gerekiyor", "Bölüm ", "değil", "için ")
+
+
 def temizle(s):
-    """Turkce calisma notlarini ve taslak damgasini ayiklar."""
+    """Turkce calisma notlarini ve taslak damgasini ayiklar.
+
+    UYARI. Bu fonksiyonun ilk surumu paragraf paragraf calisiyordu ve
+    yalnizca '*[' ile BASLAYAN paragrafi atiyordu. Notlarin cogu COK
+    PARAGRAFLI oldugu icin ilk paragraf siliniyor, gerisi gonderilecek
+    belgeye sizyordu -- dokuz paragraf Turkce calisma notu makalenin
+    icinde yayina gidiyordu ve bunu yazar yakaladi, ben degil. Artik
+    not blogu '*[' den ']*' e kadar, paragraf sinirlarina bakilmadan
+    tek parca olarak siliniyor; ve asagidaki denetci sizan kalirsa
+    uretimi DURDURUYOR.
+    """
+    # 1) <details> bloklari: uzun ozet gibi "gonderime girmez" parcalar
+    s = re.sub(r"<details>.*?</details>", "", s, flags=re.S)
+    # 2) cok paragrafli not bloklari: *[ ... ]*
+    s = re.sub(r"\*\[.*?\]\*", "", s, flags=re.S)
+    # 3) taslak damgasi
     s = re.sub(r"^\*Taslak v1.*?\n", "", s, flags=re.M)
+
     ciktilar = []
     for par in s.split("\n\n"):
         p = par.strip()
-        if not p:
+        if not p or p == "---":
             continue
-        if p == "---":
-            continue
-        # koseli parantezle baslayan not paragraflari
         if NOT.match(p):
             continue
-        # italik Turkce not paragraflari (ASCII disi Turkce harf tasiyanlar)
+        # Turkce calisma tablosu (ornegin yazar/e-posta cizelgesi)
+        if p.startswith("|") and any(ch in p for ch in TR) and \
+           not any(m in p for m in MESRU):
+            continue
         govde = p.strip("*_ ")
         if p.startswith("*") and p.rstrip().endswith("*") and \
-           any(ch in govde for ch in "şığçöüŞİĞÇÖÜ") and not p.startswith("**"):
+           any(ch in govde for ch in TR) and not p.startswith("**"):
             continue
         if any(ch in p for ch in "şığŞİĞ") and re.match(r"^(Durum|Bölüm|Not|Kaynak)\b", p):
             continue
         ciktilar.append(par.rstrip())
     return "\n\n".join(ciktilar).strip()
+
+
+def turkce_denetle(metin, nereden):
+    """Ciktida mesru olmayan Turkce kalmis mi? Kalmissa DURDUR.
+
+    Sessiz sizinti bu projede bir kez yasandi ve yayina gidiyordu.
+    Uyarmak yetmez -- uretim durmali ki kimse fark etmeden gecmesin.
+    """
+    sizan = []
+    for par in metin.split("\n\n"):
+        # 1) beyaz listede olmayan Turkce karakter
+        if any(ch in par for ch in TR) and not any(m in par for m in MESRU):
+            sizan.append(" ".join(par.split())[:120])
+            continue
+        # 2) IKINCI AG. Beyaz listedeki bir ad (ornegin "Gülmen") bir
+        # calisma blogunun icinde geciyorsa birinci kural onu KORUR ve
+        # blok disari sizar -- Turkce yazar/e-posta cizelgesi tam boyle
+        # sizmisti. Ciktida asla bulunmamasi gereken Turkce sozcukler:
+        if any(w in par for w in DURDUR):
+            sizan.append(" ".join(par.split())[:120])
+    if sizan:
+        print("\n!! %s icinde Turkce calisma notu kalmis (%d paragraf):"
+              % (nereden, len(sizan)))
+        for x in sizan:
+            print("   ", x)
+        sys.exit("uretim durduruldu -- notlari ayikla ve tekrar calistir")
+
 
 def blok(metin, baslik):
     """00-on-bilgi.md icinden '## baslik' ya da '### baslik' bolumunu ceker."""
@@ -107,6 +168,7 @@ if eksik:
     print("UYARI — metinde atif bulunamayan sekiller:", eksik)
 
 MD = ON_HTML + "\n\n" + govde + "\n\n" + ARKA
+turkce_denetle(MD, "makale.md")
 open(os.path.join(OUT, "makale.md"), "w").write(
     re.sub(r"@@FIG:([0-9]+)@@", r"[Figure \1 about here]", MD))
 

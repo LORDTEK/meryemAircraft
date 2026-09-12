@@ -20,7 +20,7 @@ import os, re, sys
 BURA = os.path.dirname(os.path.abspath(__file__))
 MAKALE = os.path.abspath(os.path.join(BURA, ".."))
 sys.path.insert(0, BURA)
-from mkmakale import temizle, blok           # ayni ayiklama kurallari
+from mkmakale import temizle, blok, turkce_denetle   # ayni ayiklama kurallari
 
 BOLUM = os.path.join(MAKALE, "bolumler")
 EK = os.path.join(MAKALE, "ek")
@@ -105,6 +105,7 @@ longer version and is reproduced without abridgement.""", dizin,
 of the corrections made during the study are in the repository this paper cites."""]
 
 makale = "\n\n".join(parcalar) + "\n"
+turkce_denetle(makale, "makale-v5.md")
 open(os.path.join(MAKALE, "makale-v5.md"), "w", encoding="utf-8").write(makale)
 
 # ------------------------------------------------------------ ek belgesi
@@ -119,6 +120,7 @@ study are in the repository the paper cites.""",
     "**Contents**", dizin])
 
 ek_belge = ek_bas + "\n\n---\n\n" + "\n\n---\n\n".join(ek_govde) + "\n"
+turkce_denetle(ek_belge, "makale-v5-ek.md")
 open(os.path.join(MAKALE, "makale-v5-ek.md"), "w", encoding="utf-8").write(ek_belge)
 
 # ------------------------------------------------------------------ rapor

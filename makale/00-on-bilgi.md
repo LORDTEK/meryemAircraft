@@ -14,15 +14,10 @@ Lift System**
 
 Meryem Gülmen <sup>1,\*</sup>, Berke Gülmen <sup>1</sup>, Ömer Gülmen <sup>1</sup>
 
-<sup>1</sup> Independent Researcher, Türkiye
+<sup>1</sup> Independent Researcher, Türkiye; meryemgulmen@outlook.com (M.G.);
+berkegulmen@outlook.com (B.G.); lordtek@me.com (Ö.G.)
 
 <sup>\*</sup> Correspondence: meryemgulmen@outlook.com
-
-| Yazar | E-posta |
-|---|---|
-| **Meryem Gülmen** (sorumlu yazar) | meryemgulmen@outlook.com |
-| Berke Gülmen | berkegulmen@outlook.com |
-| Ömer Gülmen | lordtek@me.com |
 
 *[Kurum bağlantısı yok; MDPI'ın "Independent Researcher" kaydı kullanılacak.
 ORCID varsa gönderim sırasında eklenir — dergi zorunlu tutmuyor ama tavsiye
