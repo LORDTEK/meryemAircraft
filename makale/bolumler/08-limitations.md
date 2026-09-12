@@ -402,7 +402,7 @@ The vortex-lattice model used for C_n_β has no volume. The centre body of a ble
 develops side force in sideslip ahead of the centre of gravity and is therefore destabilising,
 and on tailless aircraft that contribution is reported to be "at least as great as the
 stabilising effects contributed by the wing alone" [19]. The planform contributes zero here, so
-that statement yields no magnitude — only a direction. The fairing sized in Section 4.5 is
+that statement yields no magnitude — only a direction. The fairing sized in Section 4.4 is
 sized to bring a zero up to criterion; the real starting point is below zero, and the shortfall
 is unquantified.
 
@@ -414,7 +414,7 @@ fairing of that chord develops the side force credited to it is not established.
 
 ## 8.16 The toe-out arrangement has a failure mode at large sideslip
 
-The frames' aspect ratio requires toe-out (Section 4.5). Toe-out carries a known hazard: yawing
+The frames' aspect ratio requires toe-out (Section 4.4). Toe-out carries a known hazard: yawing
 far enough to stall the rear fin produces a large *destabilising* yawing moment, where the same
 stall on a toed-in fin produces a stabilising one [19]. The sideslip angle at which that occurs
 sets an upper bound on the usable sideslip envelope, and it has not been computed. It depends
