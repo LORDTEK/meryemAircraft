@@ -3100,11 +3100,12 @@ okumuştu.
 
 ---
 
-# Tur 15 — dört hesap koşturuldu, ikisi makaleyi değiştirdi
+# Tur 15 — dört hesap koşturuldu, dördü de makaleyi değiştirdi
 
 Dış okumalar dört hesap önerdi ve birbirleriyle uyuşmadılar. Dördü de koşturuldu.
-Sonuç: **ikisi makalenin bir cümlesini çürüttü, biri onu yumuşattı, biri yapılamadı
-ve yapılamadığı yazıldı.**
+Sonuç: **ikisi makalenin bir cümlesini çürüttü, biri onu yumuşattı, dördüncüsü
+istendiği biçimde yapılamadı — ama yerine konan hesap maruziyeti yerinden oynattı
+ve "hiç sınırı yok" cümlesini de çürüttü.**
 
 ## 1. Uç pervanesi, sıfır şaft torkunda — EN SERT SONUÇ
 
@@ -3203,7 +3204,7 @@ uçtuğu yörünge**.
 aerodinamik yunuslama sönümü yok (C_m_q de ölçülmemiş) ve kontrolcü ayarlanmış
 değil. İkisi de tek başına o satırları tahmin olmaktan çıkarır.
 
-## 4. RANS'a karşı VLM — YAPILMADI, ve yapılmadığı yazıldı
+## 4. RANS'a karşı VLM — YAPILMADI; yerine konan hesap yine de bir cümle çürüttü
 
 İstenen hesap trimli planformun RANS çözümünü VLM'e koyup
 
@@ -3218,5 +3219,49 @@ Yerine `aero/yukleme_duyarlilik.py` yazıldı. RANS'ın yerine geçmez; **sonucu
 sınırlar**. Makale "ortak çarpansa iptal olur" diyor — ortak çarpan varsayımı
 doğruysa iptal tanım gereğidir, sınanacak bir şey yok. Sınanabilir olan tersi:
 *yükleme şekli belli bir miktar değişirse tarafsız nokta ve denge burulması ne
-kadar oynar?* Böylece "hiç sınırı yok" olan maruziyet, "sınırlı, ve sınırı şu"
-hâline geliyor.
+kadar oynar?*
+
+Burulma dağılımı `şekil · sin(πη)` ile bozuluyor: kökte ve uçta sıfır, yani uç
+yüklemesi sabit, yalnızca aradaki dağılım kayıyor. Her şekilde tarafsız nokta ve
+denge burulması yeniden çözülüyor.
+
+| şekil | x_np | Δx_np | denge burulması | Δ | inviskid e |
+|---|---:|---:|---:|---:|---:|
+| −2° (yük içeri) | 0,8646 m | −%0,34 MAC | −8,42° | +0,77° | 0,8460 |
+| −1° | 0,8658 m | −%0,16 MAC | −8,81° | +0,38° | 0,8544 |
+| **0, taban** | **0,8668 m** | — | **−9,19°** | — | **0,8596** |
+| +1° | 0,8677 m | +%0,14 MAC | −9,57° | −0,37° | 0,8614 |
+| +2° (yük dışarı) | 0,8685 m | +%0,26 MAC | −9,93° | −0,74° | 0,8600 |
+
+**Aktarım katsayıları:** derece başına tarafsız nokta %0,15 MAC, denge burulması
+0,38°. Eşikler (%5 MAC / 1°) için gereken yeniden dağılım **33°** ve **2,6°**.
+
+**Bağlayıcı kısıt denge burulması, tarafsız nokta değil — arada 13 kat var.**
+Bu beklenmiyordu. §3.10'un iptal savunması tam da statik marjı korumak için
+kurulmuş; hesap onun zaten zincirin sağlam yarısı olduğunu, savunmanın hiç
+değinmediği denge burulmasının ise on üç kat duyarlı olduğunu söylüyor.
+
+Bozulma bir yeniden **dağılım**, yeniden **ölçekleme** değil — kaynağın bulduğu
+hatanın tümleyeni olmasının sebebi bu: ±2° boyunca inviskid e en çok %1,6
+kıpırdıyor. Ölçülmeyen şey hâlâ yeniden dağılımın **büyüklüğü**; onu ancak RANS
+ya da panel çözümü verir. Çıkan şey bir kapanış değil, bir aktarım katsayısı.
+
+### Çözücüde üç kusur — üçü de koşmadan önce yakalandı
+
+1. **İç içe ikiye bölme, şekil başına 168 koşu → 1,5 saat**, `timeout 2000`
+   altında. Ortada kesilip hiçbir şey üretmeden ölecekti. VLM hücum açısında ve
+   burulmada neredeyse afin; harita üç koşuyla kuruluyor, sonra **ölçülmüş
+   Jacobian'la Newton** artığı 10⁻⁶'ya indiriyor. 51 koşu, ~4 dakika. Doğrusallık
+   hiçbir yerde varsayılmıyor: durma ölçütü koşulan artık.
+2. **Tarafsız nokta işareti tersti.** `x_np = x_ref − c_ref·(dC_m/dC_L)` yerine
+   `+` yazılmıştı; nokta 0,865 m *önde* çıkıyordu. Eski sonlu-fark yöntemiyle
+   karşılaştırma yakaladı — o yüzden ikisi de kodda duruyor.
+3. **Moment referansı x = 0 alınmıştı** — kök hücum kenarı, ağırlık merkezi
+   değil. Tarafsız nokta 0,87 m öteredeyken bu devasa bir burun-aşağı moment;
+   çözüm −81°'ye kaçıyordu. Eski ikiye bölme parantezi [−18, +2] olduğu için
+   **bunu görmezdi**: sessizce uca yapışır, makul görünen bir tablo basardı.
+
+Taban satır zinciri doğruluyor: −9,19° burulma ve 10,24° hücum açısı, makalenin
+kurulu "dokuz derece washout" sonucu. Bağımsız modül `kararlilik.py` — hücum
+açısında ikiye bölen ayrı bir çözücü — aynı burulmada **10,24°** ve C_m = −3×10⁻⁵
+veriyor.

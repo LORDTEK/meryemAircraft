@@ -40,7 +40,14 @@ import numpy as np                                          # noqa: E402
 import aerosandbox as asb                                   # noqa: E402
 import kararlilik as K                                      # noqa: E402
 
-CL_SEYIR = 0.4497
+CL_SEYIR = K.CL_SEYIR
+X_CG = K.CG_KURAL * K.P["kokVeter"]          # kararlilik.py ile AYNI
+
+# Denge, kok hucum kenarina gore DEGIL agirlik merkezine gore kuruluyor.
+# Betigin ilk surumu x_ref = 0 aliyordu: tarafsiz nokta 0,87 m oradayken
+# bu devasa bir burun-asagi moment demek ve cozum -81 dereceye kaciyordu.
+# Ikiye bolme parantezi [-18, +2] oldugundan eski surum bunu GORMEZ,
+# sessizce uca yapisir ve makul gorunen bir tablo basardi.
 
 
 def kanat_sekilli(burulma_uc, sekil, n=200, kesit=K.BURULMA_KESIT):
@@ -69,6 +76,8 @@ def kanat_sekilli(burulma_uc, sekil, n=200, kesit=K.BURULMA_KESIT):
 
 
 def kos(burulma_uc, sekil, alfa, x_ref, hiz=30.0):
+    global SAYAC
+    SAYAC += 1
     o = K.olcuier()
     ac = asb.Airplane(wings=[kanat_sekilli(burulma_uc, sekil)],
                       s_ref=o["alan"], b_ref=o["aciklik"], c_ref=K.mac()[0],
@@ -77,62 +86,167 @@ def kos(burulma_uc, sekil, alfa, x_ref, hiz=30.0):
         airplane=ac, op_point=asb.OperatingPoint(velocity=hiz, alpha=alfa),
         spanwise_resolution=K.SPAN_COZ,
         chordwise_resolution=K.VETER_COZ).run()
-    return float(r["CL"]), float(r["Cm"])
+    return float(r["CL"]), float(r["Cm"]), float(r["CD"])
 
 
-def alfa_icin_CL(burulma_uc, sekil, x_ref, hedef=CL_SEYIR):
-    alt, ust = -8.0, 16.0
-    for _ in range(14):
-        mid = 0.5 * (alt + ust)
-        if kos(burulma_uc, sekil, mid, x_ref)[0] < hedef:
-            alt = mid
-        else:
-            ust = mid
-    return 0.5 * (alt + ust)
+SAYAC = 0
+
+# --- Neden ikiye bolme DEGIL --------------------------------------------
+# Bu depoda kural: dogrusal aradegerleme yerine ikiye bolme. O kural
+# DOGRUSAL OLMAYAN seyler icin kondu (NeuralFoil kesit verisi gibi).
+# Burada cozulen sey vorteks kafesidir ve vorteks kafesi hucum acisinda
+# da burulmada da TAM OLARAK dogrusaldir: ikisi de sinir kosuluna dogrusal
+# girer, cozulen dogrusal denklem takimidir. Dogrusal bir fonksiyonu
+# ikiye bolerek aramak bilineni aramaktir -- sekil basina 168 kosu, alti
+# sekil icin 1,5 saat, ve sonunda ayni sayi.
+#
+# Bunun yerine afin harita UC kosuyla kuruluyor ve takim TAM cozuluyor.
+# Ama dogrusallik VARSAYILMIYOR: cozum noktasi ayrica KOSULUYOR ve
+# artiklari basiliyor. Artik sifira yakin degilse dogrusallik varsayimi
+# yanlistir ve tablo gecersizdir -- asagida durduruluyor.
 
 
-def tarafsiz(burulma_uc, sekil, dx=0.02):
-    """dC_m/dC_L = 0 olan x_ref."""
-    a1, a2 = 2.0, 6.0
-    CL1, Cm1 = kos(burulma_uc, sekil, a1, 0.0)
-    CL2, Cm2 = kos(burulma_uc, sekil, a2, 0.0)
-    s0 = (Cm2 - Cm1) / (CL2 - CL1)
-    CL1b, Cm1b = kos(burulma_uc, sekil, a1, dx)
-    CL2b, Cm2b = kos(burulma_uc, sekil, a2, dx)
-    s1 = (Cm2b - Cm1b) / (CL2b - CL1b)
-    return -s0 / ((s1 - s0) / dx)
+def afin(sekil, x_ref=0.0, a0=2.0, da=4.0, t0=-9.0, dt=-3.0):
+    """(alfa, burulma) -> (C_L, C_m) afin haritasi, uc kosuda.
+
+    Donen: taban degerler ve dort kismi turev.
+    """
+    CL1, Cm1, _ = kos(t0, sekil, a0, x_ref)
+    CL2, Cm2, _ = kos(t0, sekil, a0 + da, x_ref)
+    CL3, Cm3, _ = kos(t0 + dt, sekil, a0, x_ref)
+    return dict(a0=a0, t0=t0, x_ref=x_ref, CL0=CL1, Cm0=Cm1,
+                CLa=(CL2 - CL1) / da, Cma=(Cm2 - Cm1) / da,
+                CLt=(CL3 - CL1) / dt, Cmt=(Cm3 - Cm1) / dt)
 
 
-def denge_burulmasi(sekil, x_cg=0.0):
-    """Seyir C_L'inde C_m = 0 veren burulma (derece)."""
-    alt, ust = -18.0, 2.0
-    for _ in range(12):
-        tw = 0.5 * (alt + ust)
-        a = alfa_icin_CL(tw, sekil, x_cg)
-        if kos(tw, sekil, a, x_cg)[1] < 0.0:
-            ust = tw
-        else:
-            alt = tw
-    return 0.5 * (alt + ust)
+def tarafsiz_afin(h, c_ref):
+    """x_np = x_ref - c_ref (dC_m/dC_L) -- kararlilik.py'nin konvansiyonu.
+
+    Sonlu farkla x_ref'i taramaya gerek yok: iliski tam. Yine de ana
+    blokta taban sekil icin eski dort kosuluk sonlu fark ile
+    karsilastiriliyor. (Betigin ilk surumu bu isareti TERS yazmisti ve
+    tarafsiz noktayi 0,865 m ONDE degil ARKADA veriyordu; karsilastirma
+    onu yakaladi.)
+    """
+    return h["x_ref"] - c_ref * (h["Cma"] / h["CLa"])
+
+
+def _adim(h, b1, b2):
+    """Olculmus Jacobian ile 2x2 cozum: (dalfa, dburulma)."""
+    det = h["CLa"] * h["Cmt"] - h["CLt"] * h["Cma"]
+    return ((b1 * h["Cmt"] - h["CLt"] * b2) / det,
+            (h["CLa"] * b2 - b1 * h["Cma"]) / det)
+
+
+def denge_newton(sekil, h, hedef=CL_SEYIR, tol=1e-6, azami=6):
+    """C_L = hedef ve C_m = 0 veren (alfa, burulma).
+
+    Harita TAM afin degil: hem hucum acisi hem burulma VLM'e sinus ve
+    kosinusleriyle girer, yani egimler nokta nokta azicik kayar. Tek
+    atimlik afin cozum 2e-3 mertebesinde artik birakiyordu. Burada
+    Jacobian OLCULMUS degerinde sabit tutulup taban nokta her adimda
+    gercek kosuyla yenileniyor -- yani gercek fonksiyon uzerinde Newton,
+    durma olcutu de OLCULEN artik. Dogrusallik hicbir yerde varsayilmiyor.
+    """
+    alfa, tw = h["a0"], h["t0"]
+    dA, dT = _adim(h, hedef - h["CL0"], -h["Cm0"])
+    alfa, tw = alfa + dA, tw + dT
+    for it in range(1, azami + 1):
+        CL, Cm, CD = kos(tw, sekil, alfa, h["x_ref"])
+        art = max(abs(CL - hedef), abs(Cm))
+        if art < tol:
+            return alfa, tw, art, CD
+        dA, dT = _adim(h, hedef - CL, -Cm)
+        alfa, tw = alfa + dA, tw + dT
+    return alfa, tw, art, CD
 
 
 if __name__ == "__main__":
     mac_uz = K.mac()[0]
     print("YUKLEME SEKLI DUYARLILIGI -- RANS DEGIL, RANS'IN SONUCUNU SINIRLAMA")
-    print("MAC = %.4f m" % mac_uz)
+    print("MAC = %.4f m,  hedef C_L = %.4f,  x_cg = %.4f m"
+          % (mac_uz, CL_SEYIR, X_CG))
     print()
     print("Yukleme sekli, acikligin ortasindan kontrollu bicimde")
     print("bozuluyor; kok ve uc burulmasi degismiyor. Her sekilde")
     print("tarafsiz nokta ve denge burulmasi yeniden cozuluyor.")
     print()
-    print("%-14s %13s %13s %14s %13s"
-          % ("sekil (derece)", "x_np (m)", "Dx_np (%MAC)", "denge burul.", "D burul (der)"))
-    taban_np = tarafsiz(-9.0, 0.0)
-    taban_tw = denge_burulmasi(0.0)
-    for sekil in (0.0, +1.0, -1.0, +2.0, -2.0):
-        xnp = tarafsiz(-9.0, sekil)
-        tw = denge_burulmasi(sekil)
-        print("%-14.1f %13.4f %13.2f %14.2f %13.2f"
-              % (sekil, xnp, 100 * (xnp - taban_np) / mac_uz, tw, tw - taban_tw))
+
+    # --- Once cozucunun kendisi sinaniyor --------------------------------
+    h0 = afin(0.0, x_ref=X_CG)
+    xnp_afin = tarafsiz_afin(h0, mac_uz)
+
+    # Eski sonlu-fark tarafsiz nokta, ayni taban sekil icin (4 kosu).
+    dx = 0.02
+    CL1, Cm1, _ = kos(-9.0, 0.0, 2.0, X_CG)
+    CL2, Cm2, _ = kos(-9.0, 0.0, 6.0, X_CG)
+    s0 = (Cm2 - Cm1) / (CL2 - CL1)
+    CL1b, Cm1b, _ = kos(-9.0, 0.0, 2.0, X_CG + dx)
+    CL2b, Cm2b, _ = kos(-9.0, 0.0, 6.0, X_CG + dx)
+    s1 = (Cm2b - Cm1b) / (CL2b - CL1b)
+    xnp_fark = X_CG - s0 / ((s1 - s0) / dx)
+
+    # Tarafsiz nokta burulmadan bagimsiz olmali (egimler burulmaya
+    # bakmaz); bu da sinaniyor, varsayilmiyor.
+    h0b = afin(0.0, t0=-14.0, dt=-3.0, x_ref=X_CG)
+    xnp_burulma = tarafsiz_afin(h0b, mac_uz)
+
+    print("COZUCU SINAMASI")
+    print("  x_np, afin (2 kosu)            %.5f m" % xnp_afin)
+    print("  x_np, sonlu fark (4 kosu)      %.5f m   fark %.3f %%MAC"
+          % (xnp_fark, 100 * (xnp_fark - xnp_afin) / mac_uz))
+    print("  x_np, burulma -14 der taban    %.5f m   fark %.3f %%MAC"
+          % (xnp_burulma, 100 * (xnp_burulma - xnp_afin) / mac_uz))
     print()
+
+    taban_np = xnp_afin
+    _t0a, taban_tw, _t0r, taban_cd = denge_newton(0.0, h0)
+    AR = K.olcuier()["AR"]
+    taban_e = CL_SEYIR ** 2 / (math.pi * AR * taban_cd)
+
+    print("Yukleme sekli GERCEKTEN degisiyor mu? Olcusu aciklik verimi e:")
+    print("bozulma yalnizca kucuk bir yeniden dagilimsa e kipirdamaz ve")
+    print("tablo hicbir sey siniramaz. Tabanda e = %.4f (3.10: 0,817)."
+          % taban_e)
+    print()
+    print("%-14s %10s %12s %9s %11s %10s %8s %8s %6s"
+          % ("sekil (derece)", "x_np (m)", "Dx_np (%MAC)", "alfa",
+             "denge bur.", "D bur (der)", "e", "De (%)", "artik"))
+    kotu = []
+    kayit = []
+    for sekil in (0.0, +1.0, -1.0, +2.0, -2.0):
+        h = afin(sekil, x_ref=X_CG)
+        xnp = tarafsiz_afin(h, mac_uz)
+        alfa, tw, art, cd = denge_newton(sekil, h)
+        e = CL_SEYIR ** 2 / (math.pi * AR * cd)
+        if art > 1e-5:
+            kotu.append((sekil, art))
+        print("%-14.1f %10.4f %12.2f %9.2f %11.2f %10.2f %8.4f %8.2f %6.0e"
+              % (sekil, xnp, 100 * (xnp - taban_np) / mac_uz,
+                 alfa, tw, tw - taban_tw, e, 100 * (e - taban_e) / taban_e,
+                 art))
+        kayit.append((sekil, 100 * (xnp - taban_np) / mac_uz, tw - taban_tw))
+
+    # --- KARAR: bu bir SINIR degil, bir AKTARIM KATSAYISI --------------
+    # RANS'in bulacagi yeniden dagilimin ne kadar oldugunu BILMIYORUZ.
+    # Bilinen sey artik su: bir derecelik orta-aciklik yeniden dagilimi
+    # tarafsiz noktayi ve denge burulmasini su kadar oynatir. Okuyucu
+    # kendi yeniden dagilim tahminini bu katsayilarla carpabilir.
+    d_np = sum(abs(k[1]) / abs(k[0]) for k in kayit if k[0]) / 4.0
+    d_tw = sum(abs(k[2]) / abs(k[0]) for k in kayit if k[0]) / 4.0
+    print()
+    print("AKTARIM KATSAYILARI (derece basina, ortalama)")
+    print("  tarafsiz nokta   %.3f %%MAC / derece  -> %%5 esigi %.0f derecede"
+          % (d_np, 5.0 / d_np))
+    print("  denge burulmasi  %.3f derece / derece -> 1 der esigi %.1f derecede"
+          % (d_tw, 1.0 / d_tw))
+    print()
+    print("  BAGLAYICI KISIT denge burulmasi, tarafsiz nokta DEGIL --")
+    print("  arada %.0f kat var. Yeniden dagilim once dengeyi bozar." % ((5.0 / d_np) / (1.0 / d_tw)))
+    print()
+    print("Toplam VLM kosusu: %d" % SAYAC)
     print("Esikler (disaridan onerilen): tarafsiz nokta %5 MAC, burulma 1 derece.")
+    if kotu:
+        print()
+        print("!! DUR -- denge cozumu yakinsamadi, tablo gecersiz: %r" % kotu)
+        raise SystemExit(1)
