@@ -1,7 +1,6 @@
 # Supplementary Material — meryemAircraft
 
-*Supplementary material to "The Architectural Cost of Hybrid VTOL: meryemAircraft, a
-Propeller-Driven Tail-Sitting Blended-Wing-Body Without a Dedicated Lift System".*
+*Supplementary material to "The Architectural Cost of Hybrid VTOL: meryemAircraft, a Propeller-Driven Tail-Sitting Blended-Wing-Body Without a Dedicated Lift System".*
 
 These six files carry the derivations behind the results stated in the paper. Each was a
 section of an earlier, longer version and is reproduced without abridgement, so that every
@@ -11,12 +10,12 @@ study are in the repository the paper cites.
 
 **Contents**
 
-- **Supplementary S1** — Independent checks on the two assumed aerodynamic coefficients (3339 words)
-- **Supplementary S2** — A component build-up of the mass budget (2404 words)
-- **Supplementary S3** — Control axes in full (6336 words)
-- **Supplementary S4** — Rotational authority, trim, and the transition envelope (7544 words)
-- **Supplementary S5** — The limitations in full (6426 words)
-- **Supplementary S6** — The three bills stated formally, and a comparative sizing (2935 words)
+- **Supplementary S1** — Independent checks on the two assumed aerodynamic coefficients (3441 words)
+- **Supplementary S2** — A component build-up of the mass budget (2730 words)
+- **Supplementary S3** — Control axes in full (6560 words)
+- **Supplementary S4** — Rotational authority, trim, and the transition envelope (7510 words)
+- **Supplementary S5** — The limitations in full (6505 words)
+- **Supplementary S6** — The three bills stated formally, and a comparative sizing (3001 words)
 
 ---
 
@@ -91,7 +90,9 @@ section as part of the lifting surface, so the same deficit should not transfer 
 But it does not transfer to zero either, and **the honest statement is that the vortex-lattice
 results in this paper carry an untested magnitude error of unknown size, bounded above by a
 published comparison on a similar configuration, and that every use made of them here is of a
-kind that a magnitude error does not disturb.** Confirming that would take a viscous or
+kind that a magnitude error *would not* disturb if the moment scales with the lift by the same
+factor.** That conditional cannot be discharged from the source, and nothing else in the
+literature read here discharges it either. It is stated as a conditional and carried as one. Confirming that would take a viscous or
 Reynolds-averaged solution of this planform, which is named in Section 8 as the first thing
 worth computing next.
 
@@ -153,13 +154,20 @@ unfavourable direction. Section 8.6 reports what that does to the transition res
 **Zero-lift drag.** A strip calculation over the span, taking section drag coefficients
 at zero lift from a physics-informed aerofoil model [16] and adding the tip frames and the propeller hubs, gives:
 
-| Contribution | Light design |
-|---|---:|
-| Wing and body, clean surface | 0.0073 |
-| Wing and body, transition tripped near the leading edge | 0.0129 |
-| Tip frames, faired | 0.0043 |
-| Tip-propeller hubs | 0.0015 – 0.0020 |
-| **Total** | **0.0131 – 0.0210** |
+| Contribution | Lower bound | Upper bound |
+|---|---:|---:|
+| Wing and body | 0.0073 (clean surface) | 0.0129 (transition tripped) |
+| Tip frames, faired | 0.0043 | 0.0043 |
+| Tip-propeller hubs | 0.0015 (30 mm can) | 0.0020 (50 mm can) |
+| Subtotal | 0.0131 | 0.0191 |
+| Excrescence allowance | none | +10 % |
+| **Total** | **0.0131** | **0.0210** |
+
+The two columns are deliberately not the same calculation. The lower bound takes the clean
+surface, the smaller hub and no allowance for excrescences; the upper bound takes the tripped
+surface, the larger hub and ten percent for fasteners, joints, antennas and surface
+imperfection. The interval is a bracket rather than an error bar, and the allowance row was
+omitted from an earlier version of this table, which therefore did not sum to its own total.
 
 The frame term reproduces the 0.0043 of Section 5.2, which was reached by a different
 route, and it comes out the same for the heavy design — an independent confirmation of
@@ -192,11 +200,13 @@ any of these numbers will hold.
 
 Against the 0.0129 of the tripped strip estimate, the Spalart–Allmaras value is fifteen
 percent higher and the SST values between two and seven percent lower; the strip method
-is therefore bracketed rather than simply beaten. Substituting each in turn raises the
-total to between 0.0203 and 0.0230. **The assumed 0.0248 lies above all of them**, so the
+is therefore bracketed rather than simply beaten. Substituting each in turn for the wing-and-body
+row, and carrying the larger hub and the ten percent allowance in every case so that the three
+are compared on one convention, gives **0.0201 with the low SST value, 0.0207 with the high one
+and 0.0231 with Spalart–Allmaras**. **The assumed 0.0248 lies above all of them**, so the
 conclusion of the previous paragraph survives the more expensive calculation under either
-closure and under either initialisation; the margin is twenty-two percent on the most
-optimistic value and eight percent on the conservative one. The assumption is not
+closure and under either initialisation; the margin is twenty-three percent on the most
+optimistic value and seven percent on the conservative one. The assumption is not
 replaced here either, for the same reason as before. Where a single number is needed
 downstream, the conservative value is carried.
 
@@ -277,7 +287,7 @@ that better satisfies the symmetry the geometry imposes also recovers more trail
 pressure.
 
 Both values are reported, because a third starting field has not been tried and nothing
-shows one would fall inside the interval; 0.01201 – 0.01253 is a measured spread and not
+shows one would fall inside the interval; 0.01201 – 0.01253 is a computed spread and not
 a bound. Where a single value from this pair is wanted, the mapped solution is taken as
 the reference state, on the grounds that it carries the smaller residual lift and surface
 asymmetry. That is a selection criterion and not a proof: it does not establish that the
@@ -370,29 +380,46 @@ is carried here. Fuel and battery are as sized, 9.80 kg. A contingency of 12 per
 mass — ordinary preliminary-design practice — adds 2.68 kg.
 
 **The battery buffer is specified by power, not by energy, and this has not been stated
-before.** It must supply the difference between hover power and engine rating, 8.3 kW at
-the light design point, from 1.8 kg — a specific power of 4.6 kW kg⁻¹, or about 26 C at
-180 Wh kg⁻¹. Energy is not the binding constraint until roughly 140 seconds of hover, well
-beyond the profile of Section 7; below that the buffer is power-limited. The heavy design
-is in the same regime, 4.1 kW kg⁻¹ at 22 C. That places the buffer in the high-power
-lithium-ion or lithium-polymer class — cells rated for twenty to thirty times their
-capacity in continuous discharge — rather than in the high-energy class a range-driven
-selection would reach for.
+before.** It must supply the difference between what the propellers demand and what the engine
+delivers — but that difference has to be taken at one station, and an earlier version of this
+section did not take it at one. It subtracted the engine's 2.6 kW of *shaft* power from the
+rotor's 10.9 kW of *shaft* power and divided the remainder by the buffer mass, giving
+4.61 kW kg⁻¹. The buffer sits on the electrical bus, which is neither of those stations. Running
+the chain of Section 6.1 link by link instead:
+
+| Station | Light design, hover |
+|---|---:|
+| Nose propeller shaft | 10.90 kW |
+| ÷ electric machine, 0.92 | 11.85 kW |
+| ÷ power electronics, 0.95 | **12.47 kW demanded at the bus** |
+| Engine shaft 2.60 kW × generator 0.90 | **2.34 kW supplied at the bus** |
+| **Buffer** | **10.13 kW** |
+
+which is **5.63 kW kg⁻¹** from 1.8 kg, or about 31 C at 180 Wh kg⁻¹ — twenty-two percent above
+the figure previously carried, and in the unfavourable direction. Taking the tip pairs as well,
+which Section 7.4 shows the aircraft needs in order to leave the ground at all, the bus demand
+rises to 14.00 kW and the buffer to 11.66 kW, or **6.48 kW kg⁻¹** at 36 C. The heavy design sits
+on the same line: 198.5 kW of buffer on 40 kg, **4.96 kW kg⁻¹**, rising to 5.54 kW kg⁻¹ if the
+tip pairs are counted. Energy is not the binding constraint until roughly 140 seconds of hover,
+well beyond the profile of Section 7; below that the buffer is power-limited. That places the
+buffer well past the high-power lithium-ion or lithium-polymer class — cells rated for twenty to
+thirty times their capacity in continuous discharge — and the paragraphs below measure how far
+past.
 
 **How demanding, measured against the only figures this study has read, is the most exposed
 number in the whole mass budget.** Bacchini and Cestino, sizing electric VTOL aircraft, take
 735 W kg⁻¹ at pack level from an automotive traction pack and report that "Li-ion batteries for
 power applications have… specific power from 700 to 1300 W kg⁻¹" [21]. The buffer here asks for
-**4.6 kW kg⁻¹**, three and a half to six and a half times the top of that range. Sized at
-figures from that range instead:
+**5.63 kW kg⁻¹** to hover and 6.48 to take off, four and a third to nearly nine times the top of
+that range. Sized at figures from that range instead, on the hover requirement alone:
 
 | Buffer specific power | Buffer mass | Fraction of MTOW |
 |---|---:|---:|
-| 0.735 kW kg⁻¹ (the pack they assume) | 11.3 kg | 22.6 % |
-| 1.30 kW kg⁻¹ (top of their quoted range) | 6.4 kg | 12.8 % |
-| **4.61 kW kg⁻¹ (this study, implicitly)** | **1.8 kg** | **3.6 %** |
+| 0.735 kW kg⁻¹ (the pack they assume) | 13.8 kg | 27.6 % |
+| 1.30 kW kg⁻¹ (top of their quoted range) | 7.8 kg | 15.6 % |
+| **5.63 kW kg⁻¹ (this study, implicitly)** | **1.8 kg** | **3.6 %** |
 
-At the top of their range the buffer would be 4.6 kg heavier than budgeted, against the 2.2 kg
+At the top of their range the buffer would be 6.0 kg heavier than budgeted, against the 2.2 kg
 of unallocated mass this section leaves. **The light design's mass budget would not close.**
 
 The defence available at that point was that those figures are for an energy-optimised
@@ -418,24 +445,33 @@ below the one assumed here as a future technology level rather than a present on
 | Same pack at its maximum tested rate [47] | ≈ 1.5 kW kg⁻¹ | measurement, 4.9 °C thermal margin |
 | Li-ion for power applications [21] | 0.7–1.3 kW kg⁻¹ | literature range |
 | Assumed future level in a design study [48] | 4 kW kg⁻¹ | stated as ≈ 2× what exists |
-| **This study, implicitly** | **4.61 kW kg⁻¹** | **assumption** |
+| **This study, implicitly — hover** | **5.63 kW kg⁻¹** | **assumption** |
+| **This study, implicitly — take-off** | **6.48 kW kg⁻¹** | **assumption** |
 
-Sized at the measured thermal ceiling of 1.5 kW kg⁻¹ the buffer becomes **5.5 kg** rather than
-1.8 kg — 3.7 kg heavier, against 2.2 kg of unallocated mass. Sized at the measured continuous
-figure it becomes 9.3 kg. **The light design's mass budget does not close at any measured
-specific power, and this is the single most exposed number in the paper.** It is not resolved
-by arguing that the buffer is a different product: the source above *is* that product, built
-and flown. What would resolve it is a pack demonstrating three times the measured specific
-power at acceptable temperature, or a heavier buffer carried at the cost of payload fraction.
-Section 8 states which.
+Sized at the measured thermal ceiling of 1.5 kW kg⁻¹ the buffer becomes **6.8 kg** rather than
+1.8 kg — 5.0 kg heavier, against 2.2 kg of unallocated mass — and 7.8 kg if it must also lift
+the aircraft off the ground. Sized at the measured continuous figure it becomes 11.4 kg, or
+23 percent of take-off mass, which is most of the payload. **The light design's mass budget does
+not close at any measured specific power, and this is the single most exposed number in the
+paper.** It is not resolved by arguing that the buffer is a different product: the source above
+*is* that product, built and flown. The gap to be closed is a factor of **3.8 on the measured
+thermal ceiling and 6.3 on the measured continuous rate**. What would resolve it is a pack
+demonstrating that, at acceptable temperature, or a heavier buffer carried at the cost of
+payload fraction. Section 8 states which.
+
+Both figures in this paragraph are larger than the ones an earlier version reported, and the
+reason is bookkeeping rather than new evidence: the buffer power was previously taken as a
+difference between two shaft stations and is now taken at the bus, where the buffer is.
 
 **The energy side is a different matter, and it is far more comfortable than the power side.**
 The buffer does not discharge continuously for the whole vertical phase. It discharges through
 the take-off, which ends when the rotation begins and the wing starts carrying the aircraft;
 it then recharges from the engine over hours of cruise, and discharges again for the landing.
-At a thrust-to-weight ratio of 1.2 the vertical acceleration is 0.2 g, so the 5 m s⁻¹ climb
-from which Section 7.4 enters the rotation is reached in 2.6 s and 6.4 m. A take-off segment of
-ten to twenty seconds at full draw is generous. Against that:
+At the achievable thrust-to-weight ratio of 1.132 the vertical acceleration is 0.132 g, so the
+5 m s⁻¹ climb from which Section 7.4 enters the rotation is reached in 3.9 s and 9.6 m — and in
+7.7 s and 19.3 m if full rotation authority is held in reserve. A take-off segment of ten to
+twenty seconds at full draw therefore remains generous, though less so than at the 1.2 an
+earlier version assumed. Against that:
 
 | Take-off segment at full draw | Energy used | of a 180 Wh kg⁻¹ buffer | of an 80 Wh kg⁻¹ buffer |
 |---:|---:|---:|---:|
@@ -454,10 +490,17 @@ buys less thrust:
 
 | Buffer specific power | Total power available | Resulting T/W | Leaves the ground |
 |---|---:|---:|---|
-| 0.735 kW kg⁻¹ | 3.9 kW | 0.61 | no |
-| 1.30 kW kg⁻¹ | 4.9 kW | 0.71 | no |
-| 2.50 kW kg⁻¹ | 7.1 kW | 0.90 | no |
-| 4.61 kW kg⁻¹ | 10.9 kW | 1.20 | yes |
+| 0.735 kW kg⁻¹ | 3.9 kW | 0.50 | no |
+| 1.30 kW kg⁻¹ | 4.9 kW | 0.59 | no |
+| 2.50 kW kg⁻¹ | 7.1 kW | 0.75 | no |
+| 5.63 kW kg⁻¹ | 10.9 kW | 1.00 | only just |
+
+An earlier version of this table read 0.61, 0.71, 0.90 and 1.20 in the third column. Those
+figures were a fifth too high at every row, because they were scaled from an assumed T/W of 1.2
+at the top of the column while 10.9 kW is, by the sizing statement of Section 6.1 — thrust equal
+to weight — the power for T/W = 1.00 exactly. The correction makes the bottom row worse in two
+ways at once: the specific power it demands rises, for the reason given below, and what it buys
+is a hover rather than a take-off. Leaving the ground needs the tip pairs as well.
 
 **At the specific powers this study has a citation for, the aircraft does not lift off**, so
 there is no brief overshoot to tolerate and no manoeuvre that shortens the exposure. The only
@@ -943,10 +986,34 @@ an assumption at any Reynolds number and an optimistic one at that. Symmetric se
 Reynolds number are measured to behave badly in exactly the band a toe angle of one or two
 degrees occupies: of four symmetric sections tested at Princeton, all showed lift-curve
 nonlinearity about zero incidence, and in a more severe case the slope of the lift curve
-"actually changed sign over a 3 deg range" [36]. **The question is therefore not which way to
-toe the fairing but whether a surface of that chord, at that Reynolds number, develops the side
-force this section has credited it with at all.** That is a wind-tunnel question, and it is the
-one this paper would put first if it had a tunnel.
+"actually changed sign over a 3 deg range" [36].
+
+**That is not one section behaving oddly; the same compilation states it as a property of the
+class.** Introducing a section designed for horizontal tails, it gives the reason such a section
+is cambered at all: "past work on symmetrical airfoils has shown that a deadband often appears
+in the lift curve near zero degrees. This nonlinearity can lead to undesirable longitudinal
+handling characteristics. Interestingly, cambered airfoils do not appear to have a similar,
+intrinsic deadband region" [36]. Elsewhere it records a deadband at Reynolds numbers of 60 000
+and 100 000 on a section where one was not expected, noting that "this type of behavior is
+usually only seen on symmetrical airfoils at low Re's" and that "at higher Re's the dead band is
+not present" [36]. The fairing sized here is a symmetric section at 80 000, which is inside that
+range, and it is asked to work at one to two degrees, which is inside that band.
+
+**The question is therefore not which way to toe the fairing but whether a surface of that
+chord, at that Reynolds number, develops the side force this section has credited it with at
+all.** Two things follow. The assumed 4 per radian is an upper bound and not a conservative
+choice, because what the measurements remove is the linearity of the curve rather than only the
+magnitude of its slope; a directional-stability margin computed on a linear derivative through
+zero is computed on the one part of the curve the data say is not there. And the remedy the
+source itself names is available at no structural cost: camber the fairing outboard and keep the
+toe-out, so that the operating point sits on the linear part of a curve that has one. This
+paper does not size that fairing. Doing so would mean choosing a slope from a curve it has not
+measured, which is the error the preceding paragraph exists to record.
+
+**This is the measurement this configuration would buy first**: side force and yawing moment on
+a faired tip frame of the geometry of Section 4.5, symmetric and cambered, through small
+sideslip, at a chord Reynolds number of 80 000. It is a small model in a small tunnel, and it
+would either confirm the only directional-stability surface this aircraft has or remove it.
 
 That same study is the third independent report of the finding this subsection began with: a
 podded tailless wing was directionally *unstable*, and "the further addition of vertical tails
@@ -1136,10 +1203,21 @@ distinguish.
 
 The light figure depends on a thrust the paper quotes without a basis. At 335 W and 0.20 m
 diameter, 16.2 N implies a figure of merit of 0.702 with no coaxial interference loss,
-where the hover figure of merit used elsewhere is 0.599. Recomputing at 0.599 with a
-fifteen percent coaxial loss gives 12.4 N, an available moment of 17.6 N·m, and a bang-bang
-margin of 1.59 — still comfortable. The heavy figure was computed on that conservative
-basis to begin with.
+where the hover figure of merit used elsewhere is 0.599. The disc area used is that of one
+rotor rather than two, which is the ordinary treatment of a coaxial pair — the lower rotor
+works in the upper's wake, so the pair is charged a single disc and an interference penalty
+rather than twice the area.
+
+**Recomputing at 0.599 with a fifteen percent coaxial loss gives 12.4 N and an available moment
+of 17.6 N·m, which against the bang-bang requirement of 15.4 N·m is a margin of 1.14 and against
+the smooth requirement of 23.1 N·m is 0.76.** An earlier version of this section reported 1.59
+here and called it comfortable; that figure does not follow from 17.6 against 15.4, and the
+correct one is not comfortable. On the conservative thrust basis the light design closes only on
+the cheapest rotation profile and only just, and the smooth profile does not close at all at two
+seconds. The heavy figure was computed on that conservative basis to begin with, which is why
+the two designs are not directly comparable on this row. Section 8 carries the consequence: the
+reference rotation times are actuator-limited lower bounds under either thrust basis, and under
+the conservative one the light design has no margin to give.
 
 **The margin narrows with size, and the narrowing is measured rather than derived.** An
 earlier version of this section derived a scaling law by assuming geometric similarity.
@@ -1764,11 +1842,12 @@ Several results depend on coefficients that were not computed for this geometry:
   the pitch moment — but directional stability and yaw damping are a single open item
   resting on a component whose section has not been selected.
 - The **battery buffer's specific power**, which Section 6.7 now identifies as the most
-  exposed number in the mass budget. It asks for 4.6 kW kg⁻¹ where the only figures this study
+  exposed number in the mass budget. Taken at the electrical bus, where the buffer is, it asks
+  for **5.63 kW kg⁻¹** to hover and 6.48 to leave the ground, where the only figures this study
   has read give 0.7 to 1.3 kW kg⁻¹ at pack level for power-application Li-ion [21]. At the top
-  of that range the buffer would mass 6.4 kg instead of 1.8 and **the light design's budget
+  of that range the buffer would mass 7.8 kg instead of 1.8 and **the light design's budget
   would not close**. The assumption is that a purpose-built short-duration buffer beats an
-  automotive traction pack by three and a half to six times; that is plausible in kind and
+  automotive traction pack by four to nine times; that is plausible in kind and
   unverified in magnitude, and Bill 3 rests on it. The energy side does *not* compound it: the buffer
   discharges through a take-off of ten to twenty seconds rather than continuously, and even a
   low-energy high-power cell would use only a third of its capacity doing so. Power is the
@@ -1822,7 +1901,7 @@ Several results depend on coefficients that were not computed for this geometry:
   body is not two-dimensional. **That link has since been replaced** by a
   three-dimensional solution, also reported in Section 6.6, which brackets the
   wing-and-body term between 0.0120 and 0.0148 depending on the turbulence closure and on
-  the starting field, and the total between 0.0203 and 0.0230 — still below the assumed
+  the starting field, and the total between 0.0201 and 0.0231 — still below the assumed
   value in every case. What remains uncertain is no longer the dimensionality but, first,
   the transition state — the solution is fully turbulent, and the clean-surface case is
   still the strip estimate — and, second, the uniqueness of the solution itself, since the
@@ -2143,10 +2222,14 @@ are listed so that they can be:
    factor — is withheld in that source. This is the one exposure in the aerodynamic chain with
    no bound at all.
 
-None of these requires an experiment. The first has been carried out and its result is
-folded into Section 6.6, and so is the fifth; the remaining four are within reach of a
-follow-on study, and
-the configuration is described in enough detail in Section 4 and Section 6 for another
+**Not all of these are within reach of a calculation, and an earlier version of this list said
+they were.** The first has been carried out and its result is folded into Section 6.6, and so is
+the fifth. Of the remainder, the transition pitching moment is blocked on data rather than on
+effort, for the reason item 3 gives — three methods of three fidelities fail above roughly ten
+degrees of incidence — and the fin derivative of Section 8.15 is blocked the same way, because
+what the low-Reynolds-number measurements remove is the linearity of the curve a calculation
+would have to assume. Those two need a tunnel. The rest are within reach of a follow-on study,
+and the configuration is described in enough detail in Section 4 and Section 6 for another
 group to attempt any of them independently. The computational setup, the grid-convergence
 study and the record of what failed along the way are in the repository, so the first
 item can be re-run and checked rather than taken on trust.
@@ -2278,9 +2361,13 @@ short of a broad survey of sized architectures could.
 
 **What the framework does not claim.** It does not predict the magnitude of any bill for an
 architecture that has not been sized; the fractions above must be computed or measured case
-by case. What it provides is the statement that there are exactly three of them, that they
-are the currencies in which architectural remedies trade, and the condition under which none
-is charged.
+by case. Nor does it claim that these are the only architectural costs a VTOL aircraft carries:
+control authority, thermal management, transition hardware, reliability and certification are
+all real and none of them is one of these three. What it provides is narrower and, because it is
+narrower, defensible — that these three recurring charges follow from the duty-cycle mismatch of
+Section 3.1, that they are the currencies in which the architectural remedies surveyed in
+Section 3.5 trade against one another, and that there is a stateable condition under which none
+of the three is charged.
 
 
 
@@ -2408,9 +2495,17 @@ in either direction.
 
 Two smaller points belong with that disclosure. The cruise propulsive efficiency is also
 shared with the tilting layout, which is generous, since a blade pitched for hover is not
-the blade one would choose for cruise; but range does not contain propulsive efficiency,
-so the generosity falls entirely on mass — 60.3 kg becomes 62.7 kg at a fifteen percent
-efficiency penalty — and none of it on the range comparison. And a second table, in which
+the blade one would choose for cruise. **An earlier version of this section claimed that range
+does not contain propulsive efficiency, and that is wrong**: the propeller is the last link of
+the η_chain that appears in the range equation above, at 0.80 of the overall 0.176. The
+generosity therefore falls on both columns. On mass, 60.3 kg becomes 62.7 kg at a fifteen percent
+efficiency penalty; on range, the tilting layout's fixed-fraction advantage of twelve percent
+falls to roughly **minus five percent**, since range is linear in η_chain. The correction moves
+the comparison against the tilting layout rather than for it, which is why it is recorded here
+rather than left as a rounding matter: the one column in which that architecture led is the
+column the correction removes it from. The sizing tables above are not recomputed on it, because
+the fifteen percent is an illustration and not a measurement; what the tables report is the
+comparison with the credit left in place, which is the generous case. And a second table, in which
 each architecture is given its own power system with no buffer, is not reported as a fair
 comparison and should not be read as one: a real lift-plus-cruise aircraft hovers on
 batteries rather than on an engine sized for hover, so that table is a bounding case for

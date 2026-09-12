@@ -69,7 +69,9 @@ section as part of the lifting surface, so the same deficit should not transfer 
 But it does not transfer to zero either, and **the honest statement is that the vortex-lattice
 results in this paper carry an untested magnitude error of unknown size, bounded above by a
 published comparison on a similar configuration, and that every use made of them here is of a
-kind that a magnitude error does not disturb.** Confirming that would take a viscous or
+kind that a magnitude error *would not* disturb if the moment scales with the lift by the same
+factor.** That conditional cannot be discharged from the source, and nothing else in the
+literature read here discharges it either. It is stated as a conditional and carried as one. Confirming that would take a viscous or
 Reynolds-averaged solution of this planform, which is named in Section 8 as the first thing
 worth computing next.
 

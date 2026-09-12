@@ -37,10 +37,11 @@ wing-borne cruise and pay for it in cruise efficiency. This paper treats that co
 architectural rather than as a defect of implementation, and develops it as an accounting
 framework. The penalty is charged in three coupled currencies — the mass of hover hardware
 carried through cruise, its drag when exposed in cruise, and a power system sized by a
-condition holding for some two percent of the flight — and every remedy surveyed here
-reduces one by raising another. The escape condition is then explicit: the penalty is charged whenever
-hover and cruise are served by hardware that is not the same hardware, in the same
-orientation, doing the same job. A second result is methodological: architectural
+condition holding for some two percent of the flight — and each of the remedies surveyed here
+reduces one by raising another. The escape condition is then explicit, and it has four parts:
+the penalty is charged unless hover and cruise are served by the same hardware, in the same
+orientation, doing the same job, with the hover peak supplied from a buffer rather than from
+permanently installed continuous power. A second result is methodological: architectural
 comparisons depend on the sizing contract chosen, and a fixed fuel fraction removes the
 mass bill from the range column altogether, so three contracts are reported rather than
 one.
@@ -48,12 +49,14 @@ one.
 meryemAircraft, an uncrewed tail-sitting blended-wing body, satisfies the escape condition
 and serves as the case study: one coaxial pair at the nose gives all thrust in both
 regimes, four small pairs at the tips give attitude moments only, and a deployable strip is
-assigned the roll that body-parallel thrust cannot produce. Against a lift-plus-cruise layout, on
-wind-tunnel drag, it closes the same mission at forty-two percent lower take-off mass and
-seventeen percent greater range; against a tilting layout the comparison reverses between
-contracts and no superiority is claimed. A three-dimensional solution bounds the zero-lift
-drag with a quantified sensitivity budget, and a component mass build-up closes the 50 kg
-design conditionally and not the 1000 kg one.
+assigned the roll that body-parallel thrust cannot produce. Sized against a lift-plus-cruise
+layout on wind-tunnel drag, it closes the same mission at forty-two percent lower take-off mass
+and seventeen percent greater range; against a tilting layout the comparison reverses between
+contracts and no superiority is claimed. Those are sizing results for an aircraft that has not
+been built: a three-dimensional solution bounds the zero-lift drag with a quantified sensitivity
+budget, but the component mass build-up closes the 50 kg design only on a battery specific power
+of 5.6 kW kg⁻¹, which is 3.8 times the highest rate yet measured on a flown pack, and it does not
+close the 1000 kg design at all.
 
 The study is analytical, with no experimental validation of the configuration. The tip
 propellers can turn the aircraft's rotational inertia through the transition but not, on
@@ -125,4 +128,4 @@ karşılığı. Depo bağlantısı yayın öncesi eklenecek.*
 
 ### Funding
 
-*[Öneri: "This research received no external funding."]*
+> This research received no external funding.

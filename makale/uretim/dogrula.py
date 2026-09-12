@@ -149,7 +149,36 @@ for tr, satir in METIN_TIRM.items():
         h = sim(50, 1.98, 6, 1.2, tr, 30.0, w0=w0)[0]
         if abs(h - gt) > 0.15:
             print(f"  !! tirmanis t_r={tr} w0={w0}: hesap {h:.1f}  metin {gt}"); sap += 1
-print(f"  {'ok  ' if not sap else '!!  '}gecis tablolarinin 52 hucresi — sapan: {sap}")
+
+# 7.4'un GOVDEDEKI tablosu. Yukaridakiler sekil verisidir ve T/W = 1,2'de
+# kalir; govde tablosu ULASILABILIR orandadir. Ayrimi burada kilitliyoruz
+# cunku onceki surumde govde 1,2 varsayiyordu ve kurulu guc onu vermiyor:
+# 6.1 itki = agirlik diyor, yani 10,9 kW zaten T/W = 1,00'dir. Donme
+# sirasinda ust uc ciftleri tam itkide, alt ciftler sifirda (M = 2TL), ve
+# ust ciftler hala yukari itiyor -- kalan oran budur. aero/itki.py cikarir.
+TW_GOVDE = {"hafif": 1.066, "agir": 1.041}
+METIN_74_HAFIF = {1: -18.2, 2: -14.7, 3: -11.2, 4: -4.9}
+METIN_74_AGIR = {2: -31.0, 3: -26.9, 4: -22.7, 5.1: -13.1}
+for tr, gt in METIN_74_HAFIF.items():
+    h = sim(50, 1.98, 6, TW_GOVDE["hafif"], tr, 30.0)[0]
+    if abs(h - gt) > 0.15:
+        print(f"  !! 7.4 hafif t_r={tr}: hesap {h:.1f}  metin {gt}"); sap += 1
+for tr, gt in METIN_74_AGIR.items():
+    h = sim(1000, 22.24, 6, TW_GOVDE["agir"], tr, 40.0)[0]
+    if abs(h - gt) > 0.15:
+        print(f"  !! 7.4 agir t_r={tr}: hesap {h:.1f}  metin {gt}"); sap += 1
+
+# Ve mansetin kendisi: referans donme surelerinde 5 m/s girisle kayip SIFIR
+# olmali -- ulasilabilir her oranda, T/W = 1,00 dahil. Bu, duzeltmenin
+# sonucu degistirmedigini soyleyen iddiadir; bozulursa haber verilmeli.
+for ad, m, S, Vcr, tr in (("hafif", 50, 1.98, 30.0, 2.0),
+                          ("agir", 1000, 22.24, 40.0, 5.1)):
+    for tw in (1.000, TW_GOVDE[ad], 1.132 if ad == "hafif" else 1.082, 1.200):
+        h = sim(m, S, 6, tw, tr, Vcr, w0=5.0)[0]
+        if h < -0.05:
+            print(f"  !! manset {ad} T/W={tw} t_r={tr}: {h:.2f} m (sifir bekleniyordu)")
+            sap += 1
+print(f"  {'ok  ' if not sap else '!!  '}gecis tablolarinin 68 hucresi — sapan: {sap}")
 
 # -------------------------------------------------------------------- ozet
 print("\n" + "=" * 62)

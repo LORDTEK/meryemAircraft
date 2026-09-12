@@ -123,9 +123,13 @@ short of a broad survey of sized architectures could.
 
 **What the framework does not claim.** It does not predict the magnitude of any bill for an
 architecture that has not been sized; the fractions above must be computed or measured case
-by case. What it provides is the statement that there are exactly three of them, that they
-are the currencies in which architectural remedies trade, and the condition under which none
-is charged.
+by case. Nor does it claim that these are the only architectural costs a VTOL aircraft carries:
+control authority, thermal management, transition hardware, reliability and certification are
+all real and none of them is one of these three. What it provides is narrower and, because it is
+narrower, defensible — that these three recurring charges follow from the duty-cycle mismatch of
+Section 3.1, that they are the currencies in which the architectural remedies surveyed in
+Section 3.5 trade against one another, and that there is a stateable condition under which none
+of the three is charged.
 
 
 

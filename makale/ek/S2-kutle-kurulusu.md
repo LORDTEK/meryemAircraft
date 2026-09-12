@@ -145,9 +145,11 @@ difference between two shaft stations and is now taken at the bus, where the buf
 The buffer does not discharge continuously for the whole vertical phase. It discharges through
 the take-off, which ends when the rotation begins and the wing starts carrying the aircraft;
 it then recharges from the engine over hours of cruise, and discharges again for the landing.
-At a thrust-to-weight ratio of 1.2 the vertical acceleration is 0.2 g, so the 5 m s⁻¹ climb
-from which Section 7.4 enters the rotation is reached in 2.6 s and 6.4 m. A take-off segment of
-ten to twenty seconds at full draw is generous. Against that:
+At the achievable thrust-to-weight ratio of 1.132 the vertical acceleration is 0.132 g, so the
+5 m s⁻¹ climb from which Section 7.4 enters the rotation is reached in 3.9 s and 9.6 m — and in
+7.7 s and 19.3 m if full rotation authority is held in reserve. A take-off segment of ten to
+twenty seconds at full draw therefore remains generous, though less so than at the 1.2 an
+earlier version assumed. Against that:
 
 | Take-off segment at full draw | Energy used | of a 180 Wh kg⁻¹ buffer | of an 80 Wh kg⁻¹ buffer |
 |---:|---:|---:|---:|
