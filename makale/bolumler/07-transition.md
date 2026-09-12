@@ -146,7 +146,7 @@ simulation with an entry climb rate w₀:
 
 **Light reference design, T/W = 1.2. Altitude loss, metres:** (plotted in Figure 10b)
 
-| t_r | w₀ = 0 | w₀ = 2 m/s | w₀ = 5 m/s | w₀ = 8 m/s |
+| t_r | w₀ = 0 | w₀ = 2 m s⁻¹ | w₀ = 5 m s⁻¹ | w₀ = 8 m s⁻¹ |
 |---:|---:|---:|---:|---:|
 | 1 s | −14.2 | −10.3 | −0.4 | **0** |
 | 2 s | −9.1 | −0.4 | **0** | **0** |
@@ -238,7 +238,7 @@ of the root trailing edge, so the internal volume's own centroid sits at 78.3 pe
 chord and the structural centroid at 99 percent. Placed where the volume actually is, the
 centre of gravity falls at **80 percent of root chord** for the light design and 82 percent
 for the heavy one, and the moment of inertia about the spanwise axis — the axis the
-transition rotates about — is **9.81 kg m²** and **2 503 kg m²**. The hand-placed figures
+transition rotates about — is **9.81 kg·m²** and **2 503 kg·m²**. The hand-placed figures
 were 40 and 30 percent lower, and the margins below are correspondingly tighter than that
 earlier version reported.
 
@@ -257,14 +257,14 @@ light design, and differential thrust between them acts about the spanwise axis,
 Section 4.3 sets out. Propeller thrust on this aircraft cannot reverse, so the largest
 differential available is the upper pairs at full thrust against the lower pairs at zero,
 which is the M = 2TL of Section 4.3 and not four times the single-pair moment. The
-available moments are therefore 23.0 N m for the light design at its quoted 16.2 N per
-pair, and 952 N m for the heavy design, whose transition thrust is not quoted in Section
+available moments are therefore 23.0 N·m for the light design at its quoted 16.2 N per
+pair, and 952 N·m for the heavy design, whose transition thrust is not quoted in Section
 6.3 and is computed here from its twelve percent power share as 200 N per pair.
 
 | | Required, bang-bang | Required, smooth | Available | Margin, bang-bang | Margin, smooth |
 |---|---:|---:|---:|---:|---:|
-| Light, t_r = 2 s | 15.4 N m | 23.1 N m | 23.0 N m | **1.49 ×** | 0.99 × |
-| Heavy, t_r = 5.1 s | 605 N m | 907 N m | 952 N m | **1.57 ×** | 1.05 × |
+| Light, t_r = 2 s | 15.4 N·m | 23.1 N·m | 23.0 N·m | **1.49 ×** | 0.99 × |
+| Heavy, t_r = 5.1 s | 605 N·m | 907 N·m | 952 N·m | **1.57 ×** | 1.05 × |
 
 **The reference rotation times are actuator-limited lower bounds, not comfortable choices.**
 Both designs close on the cheapest rest-to-rest profile with a margin near 1.5, and both sit
@@ -313,7 +313,7 @@ distinguish.
 The light figure depends on a thrust the paper quotes without a basis. At 335 W and 0.20 m
 diameter, 16.2 N implies a figure of merit of 0.702 with no coaxial interference loss,
 where the hover figure of merit used elsewhere is 0.599. Recomputing at 0.599 with a
-fifteen percent coaxial loss gives 12.4 N, an available moment of 17.6 N m, and a bang-bang
+fifteen percent coaxial loss gives 12.4 N, an available moment of 17.6 N·m, and a bang-bang
 margin of 1.59 — still comfortable. The heavy figure was computed on that conservative
 basis to begin with.
 
@@ -335,8 +335,8 @@ say the propellers can turn the aircraft's own inertia and say nothing about tur
 against aerodynamic moment. This is a necessary condition, not a sufficient one.
 
 **How much is left over can be resolved along the trajectory, and doing so corrects the
-question.** The moment remaining after the inertia is turned — 11.9 N m for the light design
-and 489 N m for the heavy one — divided by q S c̄ gives the pitching-moment coefficient that
+question.** The moment remaining after the inertia is turned — 11.9 N·m for the light design
+and 489 N·m for the heavy one — divided by q S c̄ gives the pitching-moment coefficient that
 would consume it. Evaluating that along the trajectory of Section 7.4 rather than at a single
 representative speed shows something the single-speed form obscured: **the aircraft does not
 reach ninety degrees of incidence.** The body rotates through ninety degrees, but the relative
