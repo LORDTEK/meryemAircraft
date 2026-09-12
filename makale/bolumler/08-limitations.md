@@ -73,7 +73,7 @@ Section 6.5 declines to compare the calculated payload fractions against the pub
 figures of aircraft that exist.
 
 One structural question is narrowed by the build-up rather than settled. At 50 kg the root
-bending moment is 934 N m, which a carbon spar cap of 10.7 mm² carries at the design
+bending moment is 934 N·m, which a carbon spar cap of 10.7 mm² carries at the design
 allowable; the caps weigh 41 grams, eight parts in ten thousand of take-off mass, and under
 one percent even at 1000 kg. **Global span bending is therefore not the sizing driver in
 this model** — which is why the twenty-five percent thick centre body costs nothing in

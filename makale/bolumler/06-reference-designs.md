@@ -536,7 +536,7 @@ access panels at 6 percent. The total is 11.88 kg, 23.8 percent of take-off mass
 
 Span bending is not what sizes the spar, and this is worth recording, because a thick
 blended centre body invites the assumption that it must be. At an ultimate load factor of
-5.25 the root bending moment is 934 N m; carried at 400 MPa over a structural depth of 0.9
+5.25 the root bending moment is 934 N·m; carried at 400 MPa over a structural depth of 0.9
 times the root thickness, the caps require 10.7 mm² of carbon and weigh 41 grams. The claim
 that figure supports is narrow and is stated narrowly: **global span bending is not the
 sizing driver in this static model.** It says nothing about the failure modes the model

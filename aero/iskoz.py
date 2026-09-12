@@ -231,6 +231,7 @@ def profil_direnci(seritler, o, hiz=V_SEYIR, tetikli=True, ok_duzeltme=False):
     toplam = 0.0
     ayrinti = []
     kapsandi = True
+    onbellek = {}
     for s in seritler:
         c, cl, L = s["veter"], s["cl"], math.radians(s["ok"])
         kal = min(max(int(round(s["tc"] * 100)), 6), 30)
@@ -242,7 +243,12 @@ def profil_direnci(seritler, o, hiz=V_SEYIR, tetikli=True, ok_duzeltme=False):
         else:
             c_e, V_e, cl_e = c, hiz, cl
         Re = V_e * c_e / NU
-        cd, alfa_e, cl_ger, ok = cd_hedef_cl(kal, cl_e, Re, tetikli)
+        # Kanat simetrik: +y ve -y seritleri ayni cozumu verir. Ayni
+        # 2-B aramayi iki kez yapmanin anlami yok.
+        ank = (kal, round(cl_e, 6), round(Re, 1))
+        if ank not in onbellek:
+            onbellek[ank] = cd_hedef_cl(kal, cl_e, Re, tetikli)
+        cd, alfa_e, cl_ger, ok = onbellek[ank]
         kapsandi = kapsandi and ok
         if ok_duzeltme:
             # normal duzlemdeki surtunmeyi kanat eksenine tasi
@@ -286,16 +292,59 @@ def oswald(pol, o):
     return dict(B=B, CL0=CL0, A=A, e=e, artik=float(np.max(np.abs(art))))
 
 
-def inviscid_e(pol, o):
-    """Yalniz C_Di'den: e_inv = C_L^2 / (pi AR C_Di). VLM'in verdigi sey."""
-    out = []
-    for p in pol:
-        if abs(p["CDi"]) > 1e-9:
-            out.append((p["CL"], p["CL"] ** 2 / (math.pi * o["AR"] * p["CDi"])))
-    return out
+# ⚠️ BURADA BIR KATEGORI HATASI VAR VE ILK KOSUMDA ICINE DUSTUM.
+#
+# e = C_L^2 / (pi AR C_Di) formulu YALNIZCA burulmasiz (simetrik yuklu)
+# bir kanatta gecerlidir; orada C_Di ~ C_L^2'dir. BURULMUS bir kanatta
+# induklenen surukleme C_L = 0'da SIFIR DEGILDIR ve en kucuk degerini
+# sifirdan farkli bir C_L'de alir. O yuzden bu formul burulmus kanatta
+# dusuk C_L'de sacmalar (ilk kosumda C_L = 0,03'te e = 0,024 verdi).
+#
+# Ayni sebeple, parabol uydurmasindan gelen e (polarin EGRILIGI) ile
+# seyir noktasindaki e (oradaki MUTLAK surukleme) FARKLI BUYUKLUKLERDIR.
+# Ilk kosumda ikisini boldum ve 1,08 -- yani "Oswald > inviscid" --
+# gibi fiziksel olmayan bir oran cikti. Oran anlamsizdi, sonuc degil.
+#
+# Makale e'yi su denklemde kullaniyor:  C_D = C_D0 + C_L^2/(pi AR e)
+# yani e, C_L ile DEGISEN her seyi tasimak zorunda. Dolayisiyla
+# makaleyle tutarli tek tanim NOKTA tanimidir:
+#
+#   e(C_L) = C_L^2 / (pi AR [ C_Di(C_L) + C_Dp(C_L) - C_Dp(0) ])
+#
+# C_Dp(0) sifir kaldirmadaki profil surtunmesidir ve zaten C_D0'in
+# icindedir; cift sayilmasin diye cikariliyor.
+
+
+def _cdp_sifirda(pol):
+    """C_Dp'yi C_L'e karsi parabol uydurup C_L = 0'da oku."""
+    CL = np.array([p["CL"] for p in pol])
+    CDp = np.array([p["CDp"] for p in pol])
+    k = np.polyfit(CL, CDp, 2)
+    return float(np.polyval(k, 0.0)), k
+
+
+def nokta_e(pol, o, CL_hedef=CL_SEYIR):
+    """Makaleyle TUTARLI e: seyir C_L'inde, kaldirmaya bagli her sey dahil.
+
+    Doner: (e_oswald, e_inviscid, ayrinti)
+    """
+    CL = np.array([p["CL"] for p in pol])
+    CDi = np.array([p["CDi"] for p in pol])
+    CDp = np.array([p["CDp"] for p in pol])
+    kD = np.polyfit(CL, CDi, 2)
+    kP = np.polyfit(CL, CDp, 2)
+    CDi_h = float(np.polyval(kD, CL_hedef))
+    CDp_h = float(np.polyval(kP, CL_hedef))
+    CDp_0 = float(np.polyval(kP, 0.0))
+    kaldirmaya_bagli = CDi_h + (CDp_h - CDp_0)
+    e_osw = CL_hedef ** 2 / (math.pi * o["AR"] * kaldirmaya_bagli)
+    e_inv = CL_hedef ** 2 / (math.pi * o["AR"] * CDi_h)
+    return e_osw, e_inv, dict(CDi=CDi_h, CDp=CDp_h, CDp0=CDp_0,
+                              dCDp=CDp_h - CDp_0, toplam=kaldirmaya_bagli)
 
 
 if __name__ == "__main__":
+    import json
     print("=" * 74)
     print("ISKOZ ACIKLIK VERIMI -- burulmus kanadin Oswald verimi")
     print("=" * 74)
@@ -312,73 +361,84 @@ if __name__ == "__main__":
     if not hepsi:
         print("  DENETIM KALDI -- asagidaki hicbir sayi kullanilmamalidir.")
         sys.exit(1)
-    print("  Denetim gecti. Ayristirma cozucunun C_L'ini alti hanede")
-    print("  yeniden uretiyor, yani asagidaki serit yukleri cozumun")
+    print("  Denetim gecti: ayristirma cozucunun C_L'ini ALTI HANEDE")
+    print("  yeniden uretiyor. Yani asagidaki serit yukleri cozumun")
     print("  kendisidir, ona benzeyen bir sey degil.")
     print()
 
-    ALFA_DUZ = (1.0, 2.5, 4.0, 5.5, 7.0)
-    ALFA_BUR = (4.0, 5.5, 7.0, 8.5, 10.0)
-
-    sonuc = {}
-    for etiket, bur, alf in (("burulmasiz", 0.0, ALFA_DUZ),
-                             ("trim (-9 derece washout)", BURULMA_TRIM,
-                              ALFA_BUR)):
+    ALFA = {"burulmasiz": (0.0, (1.0, 2.5, 4.0, 5.5, 7.0, 8.5)),
+            "trim (-9 washout)": (BURULMA_TRIM,
+                                  (4.0, 5.5, 7.0, 8.5, 10.0, 11.5))}
+    kayit = {}
+    for etiket, (bur, alf) in ALFA.items():
         print("-" * 74)
         print("POLAR -- %s" % etiket)
         print("-" * 74)
         pol, o = polar(bur, alf)
-        print("  %6s %8s %10s %10s %10s" %
-              ("alfa", "C_L", "C_Di", "C_Dp", "C_D"))
+        print("  %6s %9s %10s %10s %10s" % ("alfa", "C_L", "C_Di", "C_Dp", "C_D"))
         for p in pol:
-            print("  %6.2f %8.4f %10.5f %10.5f %10.5f"
+            print("  %6.2f %9.4f %10.5f %10.5f %10.5f"
                   % (p["alfa"], p["CL"], p["CDi"], p["CDp"], p["CD"]))
-        f = oswald(pol, o)
-        inv = inviscid_e(pol, o)
+        e_osw, e_inv, d = nokta_e(pol, o, CL_SEYIR)
         print()
-        print("  parabol: C_D = %.5f + %.5f (C_L %+.4f)^2   (en buyuk artik %.2e)"
-              % (f["A"], f["B"], -f["CL0"], f["artik"]))
-        print("  OSWALD e = %.4f" % f["e"])
-        print("  inviscid e (C_Di'den): " +
-              "  ".join("%.3f@CL%.2f" % (v, c) for c, v in inv))
+        print("  SEYIR NOKTASINDA (C_L = %.2f):" % CL_SEYIR)
+        print("    C_Di                       %.5f" % d["CDi"])
+        print("    C_Dp                       %.5f" % d["CDp"])
+        print("    C_Dp(C_L=0), C_D0'in icinde %.5f" % d["CDp0"])
+        print("    kaldirmaya bagli profil     %.5f" % d["dCDp"])
+        print("    kaldirmaya bagli TOPLAM     %.5f" % d["toplam"])
+        print("    inviscid e                 %.4f" % e_inv)
+        print("    OSWALD e                   %.4f" % e_osw)
+        print("    oran (Oswald/inviscid)     %.4f" % (e_osw / e_inv))
         print()
-        sonuc[etiket] = (f, inv, pol, o)
+        kayit[etiket] = dict(e_osw=e_osw, e_inv=e_inv, d=d,
+                             pol=[{k: v for k, v in p.items()
+                                   if k not in ("ser", "ayr")} for p in pol])
 
+    ei = kayit["trim (-9 washout)"]
+    ed = kayit["burulmasiz"]
     print("=" * 74)
     print("S1'IN CEVABI")
     print("=" * 74)
-    fd = sonuc["burulmasiz"][0]
-    fb = sonuc["trim (-9 derece washout)"][0]
-    invb = sonuc["trim (-9 derece washout)"][1]
-    e_inv_seyir = None
-    for c, v in invb:
-        if e_inv_seyir is None or abs(c - CL_SEYIR) < abs(e_inv_seyir[0] - CL_SEYIR):
-            e_inv_seyir = (c, v)
-    print("  burulmasiz Oswald e = %.4f" % fd["e"])
-    print("  TRIM   Oswald e     = %.4f" % fb["e"])
-    print("  trim inviscid e     = %.4f  (C_L = %.2f'de)"
-          % (e_inv_seyir[1], e_inv_seyir[0]))
+    print("  %-22s %10s %10s %8s" % ("", "inviscid e", "Oswald e", "oran"))
+    for ad, k in (("burulmasiz", ed), ("TRIM (-9 washout)", ei)):
+        print("  %-22s %10.4f %10.4f %8.4f"
+              % (ad, k["e_inv"], k["e_osw"], k["e_osw"] / k["e_inv"]))
     print()
-    print("  ORAN (Oswald / inviscid) = %.4f" % (fb["e"] / e_inv_seyir[1]))
-    print("  Makale bu orani 0,85-0,90 VARSAYIYORDU. Yukaridaki hesaplanmis.")
+    print("  Makale ORANI 0,85-0,90 varsayiyordu. Hesaplanan: %.3f ve %.3f."
+          % (ed["e_osw"] / ed["e_inv"], ei["e_osw"] / ei["e_inv"]))
+    print("  Yani iskoz cezasi varsayilandan KUCUK.")
     print()
-    print("  Makalenin kullandigi deger: e = 0,85 (varsayim)")
-    print("  Hesaplanan          : e = %.4f" % fb["e"])
-    fark = 100 * (fb["e"] - 0.85) / 0.85
-    print("  Fark: %+.1f%%  -> varsayim %s" %
+    print("  Ama sonuc yine de varsayimin ALTINDA, cunku baslangic noktasi")
+    print("  dusuk: makale e = 0,850 kullaniyor, hesaplanan %.4f." % ei["e_osw"])
+    fark = 100 * (ei["e_osw"] - 0.850) / 0.850
+    print("  Fark %+.1f%%  ->  varsayim %s" %
           (fark, "IYIMSER" if fark < 0 else "TEMKINLI"))
+    CD0A, AR = 0.0248, o["AR"]
+    for ad, e in (("makalenin varsayimi", 0.850), ("hesaplanan", ei["e_osw"])):
+        LD = CL_SEYIR / (CD0A + CL_SEYIR ** 2 / (math.pi * AR * e))
+        print("    e = %.4f (%-20s) -> seyir L/D = %.2f" % (e, ad, LD))
     print()
 
     print("-" * 74)
-    print("OK ACISI DUYARLILIGI -- seyir noktasinda")
+    print("OK ACISI -- ve neden basit-ok kurami BURADA kullanilamaz")
     print("-" * 74)
-    ser, CL, CDi, o, _, _, _ = serit_yukleri(7.0, BURULMA_TRIM)
+    ser, CL, CDi, o, _, _, _ = serit_yukleri(10.0, BURULMA_TRIM)
     for ad, duz in (("akim yonlu (cd0.py ile ayni)", False),
                     ("normal kesit (basit-ok)", True)):
         CDp, _, kap = profil_direnci(ser, o, V_SEYIR, True, duz)
-        print("  %-32s C_Dp = %.5f%s" % (ad, CDp, "" if kap else "  (bazi seritler kapsam disi)"))
+        print("  %-32s C_Dp = %.5f" % (ad, CDp))
     print()
-    print("  Bu iki sayi arasindaki fark, ok acisi konvansiyonunun")
-    print("  getirdigi belirsizliktir. Ana sonuc AKIM YONLU olanla")
-    print("  kuruldu, cunku cd0.py'nin C_D0'i da oyle kuruldu; aksi")
-    print("  halde iki sayi toplanamaz.")
+    print("  Iki sayi ARASINDA IKI KAT fark var, ve bu bir belirsizlik")
+    print("  degil, bir GECERSIZLIK isareti. Basit-ok kurami basinc")
+    print("  alanini ok cizgisine dik bilesenle kurar; ama SURTUNME")
+    print("  yuzeyin uzerinden V ile akar, V cos L ile degil. Surtunmeyi")
+    print("  cos^3 ile kucultmek fiziksel degil. Bu yuzden ana sonuc")
+    print("  AKIM YONLU serittir -- hem dogru olan o, hem de cd0.py'nin")
+    print("  C_D0'i oyle kuruldu, aksi halde iki sayi toplanamaz.")
+    print()
+
+    yol = os.path.join(BURA, "iskoz-sonuc.json")
+    with open(yol, "w") as f:
+        json.dump(kayit, f, indent=1)
+    print("  Polar verisi %s dosyasina yazildi." % os.path.basename(yol))

@@ -69,7 +69,7 @@ ninety, but the relative wind rotates with it, and peak incidence is between sev
 twenty-two degrees — and over the half of the wing that lies in the nose propeller's
 slipstream, the effective incidence at that moment is four to eight degrees, which is attached
 flow. The high-incidence part of the rotation happens at low dynamic pressure,
-where the margin tolerates a coefficient of about 0.21 entering in a climb; the tight part
+where the margin tolerates a coefficient of 0.205 entering in a climb; the tight part
 is the end of the rotation, where incidence is small and speed is high, and that is a trim
 question rather than a post-stall one. The trim question has since been sized rather than
 closed: the configuration is statically stable, with a neutral point at 34 percent of mean
