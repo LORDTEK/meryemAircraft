@@ -604,3 +604,51 @@ the local incidence along the body by ω c̄ / 2V, which is ±3.1° for the ligh
 a climb and ±8.6° entered from rest — so at the peak-incidence instant of that second case
 parts of the airframe see close to thirty degrees. Nothing here should be read as a
 demonstration of transition authority.
+
+---
+
+## S4.7 The transition solved with rotational dynamics
+
+Section 3.15 drives the body angle kinematically and Section S4.1 asks separately whether the
+moment to turn the aircraft exists. Neither answers the question the two together imply: what
+trajectory does the aircraft fly *while* a finite moment is turning it? This section solves the
+two as one problem — three degrees of freedom in the longitudinal plane, a control moment bounded
+by the tip-pair authority, and the same lift, drag and thrust model Section 3.15 uses.
+
+**What is borrowed and what is not.** The rotational dynamics are not borrowed: inertia comes from
+the component build-up of Section 3.11 and the moment bound from Section S4.1. The aerodynamic
+pitching moment *is* borrowed, because no value exists for this planform, and four forms are run
+rather than one:
+
+| Model | Form | What it isolates |
+|---|---|---|
+| zero | C_m = 0 | the rotational dynamics alone |
+| linear | C_m = 0.056 − 0.48 α | the vortex-lattice derivative, valid only at small α |
+| flat plate | C_m = −0.25 sin 2α | the crude relation Section 3.15 already uses for lift |
+| offset | C_m = ±0.05, ±0.10 | how much constant moment the authority absorbs |
+
+**The zero-moment case is the reportable one, and it already changes the result.** With no
+aerodynamic moment at all, the light design entering at 5 m s⁻¹ of climb loses **5.4 m** at its
+two-second reference, where the kinematic simulation of Section 3.15 reports zero. Three checks
+separate this from a modelling artefact. It is unchanged across the linear, bang-bang and smooth
+reference profiles — 5.4, 6.6 and 6.3 m — so it is not a consequence of the profile Section 3.15
+chose. The control moment never saturates, so it is not a shortage of authority. And raising the
+controller gains, which tightens tracking of the commanded angle, makes the loss *larger* rather
+than smaller: 6.6 m at the nominal gains, 8.7 m at four times, 17.2 m at thirty-two times. What
+the kinematic model leaves out is therefore not the difficulty of turning the aircraft but the
+trajectory it flies during the turn.
+
+**The borrowed-moment cases are not reportable and are given only as a spread.** Across the seven
+combinations the outcomes range from completing the rotation with a 5 m loss to saturating the tip
+pairs within two seconds to departing entirely. The spread is the finding; no number inside it
+is. **Two limits make it so.** The model carries no aerodynamic pitch damping — there is no C_m_q
+for this planform either — so a destabilising moment is opposed only by the control system, which
+overstates every divergence. And the controller is a fixed-gain regulator rather than a designed
+one. Either limit alone would be enough to disqualify the borrowed rows as predictions.
+
+**What this section establishes** is narrow and, because it is narrow, firm: the zero altitude
+loss of Section 3.15 is a property of a model that does not rotate the aircraft, and adding the
+rotation costs between five and seventeen metres at the light design's reference condition
+depending on how tightly the commanded angle is tracked. It does not establish what the aircraft
+does, because that needs the pitching moment Section 4 names as the outstanding measurement.
+`aero/gecis_dinamik.py` carries the model.

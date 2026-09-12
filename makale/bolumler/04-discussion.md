@@ -85,15 +85,38 @@ demand by a fifth. A 24S nickel–cobalt–manganese pack designed, built, bench
 to 10.68 C and flown in an electric VTOL aircraft measures **724 W kg⁻¹** continuous for the unit
 pack and **892 W kg⁻¹** for the flight system, reaching roughly 1.5 kW kg⁻¹ at its maximum tested
 rate with a thermal margin of 4.9 °C [47]. A NASA-funded design study adopts 4 kW kg⁻¹ and states
-that this is "about twice that of existing batteries" [48]. Sized at the measured thermal ceiling
-the buffer is **6.8 kg rather than 1.8 kg**, against 2.2 kg of unallocated mass; sized at the
-measured continuous figure, 11.4 kg, which is nearly the whole payload. **The light design's mass
-budget does not close at any measured specific power.** The defence available earlier — that a
+that this is "about twice that of existing batteries" [48]. The defence available earlier — that a
 short-duration buffer is a different product from an energy-optimised automotive pack — does not
-survive, because the source above *is* that product. The gap to be closed is a factor of 3.8 on
-the measured ceiling and 6.3 on the measured continuous rate. What would resolve it is a pack
-demonstrating that at acceptable temperature, or a heavier buffer carried at the cost of payload
-fraction.
+survive, because the source above *is* that product.
+
+**An earlier version of this section then compared a 6.8 kg buffer against 2.2 kg of unallocated
+mass and concluded that the budget does not close at any measured specific power. That comparison
+was a subtraction inside a box that had been sized on the number being replaced, and the
+conclusion drawn from it was too strong.** A heavier buffer raises take-off mass, which raises
+hover power, which raises the buffer again; at constant disc loading that feedback is linear
+rather than divergent, so it accumulates to a finite answer and the answer is not where the
+subtraction pointed. Closing the loop — holding wing and disc loading, holding the fuel fraction
+so that range is preserved, and rebuilding the component budget at each step — gives:
+
+| Buffer specific power | Take-off mass at 13 kg payload | Buffer | Range | Payload if held at 50 kg |
+|---|---:|---:|---:|---:|
+| 0.724 kW kg⁻¹, measured continuous | **no solution** | — | — | 0.9 kg |
+| 0.892 kW kg⁻¹, measured continuous | 162.0 kg | 42.4 kg | 1 600 km | 3.9 kg |
+| **1.5 kW kg⁻¹, measured thermal ceiling** | **68.9 kg** | **10.7 kg** | **1 600 km** | **9.2 kg** |
+| 5.63 kW kg⁻¹, assumed here | 50.0 kg | 1.8 kg | 1 600 km | 13.0 kg |
+
+**At the highest rate yet measured on a flown pack the aircraft exists.** It is 38 percent
+heavier than the reference design, it carries a buffer of 15.6 percent of take-off mass rather
+than 3.6, and its range is unchanged because the fuel fraction is what sets range. Held instead
+at 50 kg, it carries 9.2 kg rather than 13. At the pack's *continuous* rating the loop does not
+converge at all for the take-off demand, so the sharper statement survives there.
+
+The correction cuts both ways and both should be stated. The reference design is not unreachable,
+which is what the earlier sentence implied; but the comparison that opens this paper is made at
+50 kg against a lift-plus-cruise layout at 86 kg, and at a measured pack that margin is 69 against
+86 — twenty percent rather than forty-two. **The forty-two percent figure is conditional on the
+buffer, not merely on the mass model**, and the competing layout would have to be re-sized on the
+same pack before any number replaced it. That re-sizing has not been done here.
 
 **The aircraft leaves the ground on its control propellers, and that is a dependency rather than
 a design feature.** Section 2.12 sizes hover power at thrust equal to weight, so the primary

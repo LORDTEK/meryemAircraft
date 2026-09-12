@@ -11,9 +11,9 @@ study are in the repository the paper cites.
 **Contents**
 
 - **Supplementary S1** — Independent checks on the two assumed aerodynamic coefficients (3438 words)
-- **Supplementary S2** — A component build-up of the mass budget (3132 words)
+- **Supplementary S2** — A component build-up of the mass budget (3672 words)
 - **Supplementary S3** — Control axes in full (6553 words)
-- **Supplementary S4** — Rotational authority, trim, and the transition envelope (7503 words)
+- **Supplementary S4** — Rotational authority, trim, and the transition envelope (8044 words)
 - **Supplementary S5** — The limitations in full (6499 words)
 - **Supplementary S6** — The three bills stated formally, and a comparative sizing (3000 words)
 
@@ -579,6 +579,55 @@ design.** That, and not any of the light-design assumptions, is the largest open
 in the mass budget of this study, and it qualifies the scale-invariance of Section 3.9 —
 which holds for the analytical sizing fractions and has not been shown to hold for the
 structure that must realise them.
+
+---
+
+## S2.2 Closing the loop at a measured pack
+
+Section S2.1 compares the buffer mass a measured cell would require against the unallocated mass
+the build-up leaves. That comparison is a subtraction, and it is made inside a take-off mass that
+was itself sized on the specific power being replaced. The feedback it omits is the ordinary
+sizing loop: a heavier buffer raises take-off mass, which raises hover power, which raises the
+buffer again.
+
+**The feedback does not diverge, and that matters.** Section 3.9 holds disc loading constant,
+which makes hover power grow linearly with weight rather than as the classical three-halves
+power. A linear feedback accumulates to a finite answer, so the question "does it close" has a
+number rather than a verdict, and the number is not where the subtraction pointed.
+
+**Method.** Wing loading and disc loading are held at their Section 3.7 values, so the linear
+scale is the square root of the mass ratio. The fuel *fraction* is held at 0.16, which preserves
+range by the equation of Section 2.12. Hover shaft power, tip-pair power and engine rating all
+scale linearly with take-off mass. At each candidate mass the component build-up of Section S2.1
+is rebuilt at the new scale with the new buffer, and the payload residual is read. The mass at
+which the residual equals 13 kg is found by bisection rather than by relaxation, so that a
+non-converging case is distinguished from a solver that oscillates.
+
+**Result, on the take-off demand** — the aircraft must leave the ground, so the tip pairs are
+counted:
+
+| Buffer specific power | Take-off mass | Buffer | Buffer, % MTOW | Range | Payload if held at 50 kg |
+|---|---:|---:|---:|---:|---:|
+| 0.724 kW kg⁻¹ | **no solution to 5 000 kg** | — | — | — | 0.9 kg |
+| 0.892 kW kg⁻¹ | 162.0 kg | 42.4 kg | 26.2 % | 1 600 km | 3.9 kg |
+| **1.50 kW kg⁻¹** | **68.9 kg** | **10.7 kg** | **15.6 %** | **1 600 km** | **9.2 kg** |
+| 2.50 kW kg⁻¹ | 52.5 kg | 4.9 kg | 9.3 % | 1 600 km | 12.3 kg |
+| 5.63 kW kg⁻¹ | 50.0 kg | 2.1 kg | 4.1 % | 1 600 km | 14.9 kg |
+
+On the hover demand alone the same rows give 231.7, 110.4, 62.5, 50.2 and 50.0 kg.
+
+**The earlier conclusion was too strong.** At 1.5 kW kg⁻¹ — the highest rate measured on the flown
+pack of [47], at a thermal margin of 4.9 °C — the aircraft exists. It is 38 percent heavier, its
+buffer is 15.6 percent of take-off mass rather than 3.6, and its range is unchanged because range
+follows the fuel fraction. Held instead at 50 kg it carries 9.2 kg of payload rather than 13. Only
+at the pack's *continuous* rating does the loop fail to converge, and only on the take-off demand.
+
+**What this costs the comparison.** The forty-two percent mass advantage over the lift-plus-cruise
+layout is computed at 50 kg against 86 kg. At a measured pack the tail-sitter is 69 kg, and 69
+against 86 is twenty percent. The competing layout has *not* been re-sized on the same pack, and
+it would also grow; the honest statement is therefore that the forty-two percent figure is
+conditional on the buffer assumption and that nothing here replaces it. `aero/kapanma.py` carries
+the loop.
 
 ---
 
@@ -1719,6 +1768,54 @@ the local incidence along the body by ω c̄ / 2V, which is ±3.1° for the ligh
 a climb and ±8.6° entered from rest — so at the peak-incidence instant of that second case
 parts of the airframe see close to thirty degrees. Nothing here should be read as a
 demonstration of transition authority.
+
+---
+
+## S4.7 The transition solved with rotational dynamics
+
+Section 3.15 drives the body angle kinematically and Section S4.1 asks separately whether the
+moment to turn the aircraft exists. Neither answers the question the two together imply: what
+trajectory does the aircraft fly *while* a finite moment is turning it? This section solves the
+two as one problem — three degrees of freedom in the longitudinal plane, a control moment bounded
+by the tip-pair authority, and the same lift, drag and thrust model Section 3.15 uses.
+
+**What is borrowed and what is not.** The rotational dynamics are not borrowed: inertia comes from
+the component build-up of Section 3.11 and the moment bound from Section S4.1. The aerodynamic
+pitching moment *is* borrowed, because no value exists for this planform, and four forms are run
+rather than one:
+
+| Model | Form | What it isolates |
+|---|---|---|
+| zero | C_m = 0 | the rotational dynamics alone |
+| linear | C_m = 0.056 − 0.48 α | the vortex-lattice derivative, valid only at small α |
+| flat plate | C_m = −0.25 sin 2α | the crude relation Section 3.15 already uses for lift |
+| offset | C_m = ±0.05, ±0.10 | how much constant moment the authority absorbs |
+
+**The zero-moment case is the reportable one, and it already changes the result.** With no
+aerodynamic moment at all, the light design entering at 5 m s⁻¹ of climb loses **5.4 m** at its
+two-second reference, where the kinematic simulation of Section 3.15 reports zero. Three checks
+separate this from a modelling artefact. It is unchanged across the linear, bang-bang and smooth
+reference profiles — 5.4, 6.6 and 6.3 m — so it is not a consequence of the profile Section 3.15
+chose. The control moment never saturates, so it is not a shortage of authority. And raising the
+controller gains, which tightens tracking of the commanded angle, makes the loss *larger* rather
+than smaller: 6.6 m at the nominal gains, 8.7 m at four times, 17.2 m at thirty-two times. What
+the kinematic model leaves out is therefore not the difficulty of turning the aircraft but the
+trajectory it flies during the turn.
+
+**The borrowed-moment cases are not reportable and are given only as a spread.** Across the seven
+combinations the outcomes range from completing the rotation with a 5 m loss to saturating the tip
+pairs within two seconds to departing entirely. The spread is the finding; no number inside it
+is. **Two limits make it so.** The model carries no aerodynamic pitch damping — there is no C_m_q
+for this planform either — so a destabilising moment is opposed only by the control system, which
+overstates every divergence. And the controller is a fixed-gain regulator rather than a designed
+one. Either limit alone would be enough to disqualify the borrowed rows as predictions.
+
+**What this section establishes** is narrow and, because it is narrow, firm: the zero altitude
+loss of Section 3.15 is a property of a model that does not rotate the aircraft, and adding the
+rotation costs between five and seventeen metres at the light design's reference condition
+depending on how tightly the commanded angle is tracked. It does not establish what the aircraft
+does, because that needs the pitching moment Section 4 names as the outstanding measurement.
+`aero/gecis_dinamik.py` carries the model.
 
 ---
 
