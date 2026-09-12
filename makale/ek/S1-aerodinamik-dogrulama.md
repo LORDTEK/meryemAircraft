@@ -71,9 +71,9 @@ results in this paper carry an untested magnitude error of unknown size, bounded
 published comparison on a similar configuration, and that every use made of them here is of a
 kind that a magnitude error *would not* disturb if the moment scales with the lift by the same
 factor.** That conditional cannot be discharged from the source, and nothing else in the
-literature read here discharges it either. It is stated as a conditional and carried as one. Confirming that would take a viscous or
-Reynolds-averaged solution of this planform, which is named in Section 8 as the first thing
-worth computing next.
+literature read here discharges it either. It is stated as a conditional and carried as one.
+Confirming it would take a viscous or Reynolds-averaged solution of this planform, which
+Section 8 names as the first thing worth computing next.
 
 **Span efficiency.** A vortex-lattice solution of the planform of Section 4.2 [15] gives
 an inviscid span efficiency of 0.99. That is not the same quantity as the 0.85 used here.
@@ -128,7 +128,7 @@ zero-lift build-up uses, so the two numbers compose.
 
 The same solution gives a lift-curve slope of 3.87 rad⁻¹ against the 4.72 rad⁻¹ that
 the transition simulation of Section 7.4 assumes — eighteen percent lower, and in the
-unfavourable direction. Section 8.6 reports what that does to the transition results.
+unfavourable direction. Supplementary S5.6 reports what that does to the transition results.
 
 **Zero-lift drag.** A strip calculation over the span, taking section drag coefficients
 at zero lift from a physics-informed aerofoil model [16] and adding the tip frames and the propeller hubs, gives:
@@ -159,11 +159,11 @@ conservative in every scenario considered, not merely in the pessimistic one. Be
 range is linear in lift-to-drag ratio, the reference designs of Sections 6.2 and 6.3
 would gain rather than lose if the calculation were adopted — which is the reason it is
 not adopted. An assumption that is declared and shown to be conservative is a smaller
-target than a calculation whose weakest link, discussed in Section 8.4, is the
+target than a calculation whose weakest link, discussed in Supplementary S5.4, is the
 treatment of a twenty-five percent thick centre body as a two-dimensional section.
 
 **A three-dimensional solution for the centre body.** The weakness just named has since
-been removed. Section 8.17 lists it first among the places these results should be
+been removed. Supplementary S5.17 lists it first among the places these results should be
 attacked, and the calculation it asks for has now been carried out: a structured
 Reynolds-averaged solution over the planform of Section 4.2, at the cruise Reynolds
 number and at zero lift, resolving the wing and blended body as a three-dimensional

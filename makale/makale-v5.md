@@ -2017,11 +2017,11 @@ Six supplementary files accompany this paper and are cited from it by number.
 They carry the derivations behind the results stated here; each was a section of an earlier,
 longer version and is reproduced without abridgement.
 
-- **Supplementary S1** — Independent checks on the two assumed aerodynamic coefficients (3441 words)
+- **Supplementary S1** — Independent checks on the two assumed aerodynamic coefficients (3439 words)
 - **Supplementary S2** — A component build-up of the mass budget (2730 words)
 - **Supplementary S3** — Control axes in full (6560 words)
 - **Supplementary S4** — Rotational authority, trim, and the transition envelope (7510 words)
-- **Supplementary S5** — The limitations in full (6505 words)
+- **Supplementary S5** — The limitations in full (6503 words)
 - **Supplementary S6** — The three bills stated formally, and a comparative sizing (3001 words)
 
 The computational setup, the scripts that produce every number here, and a running record

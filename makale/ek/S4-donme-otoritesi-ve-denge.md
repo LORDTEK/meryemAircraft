@@ -15,7 +15,7 @@ scripts are in the repository the paper cites.
 
 Section 7.4 drives the body angle kinematically. The aircraft does not rotate in that
 simulation; it is *assumed* to rotate, and the moment producing the rotation does not
-appear. Section 8.6 records this. What follows does not remove that limitation — a full
+appear. Supplementary S5.6 records this. What follows does not remove that limitation — a full
 six-degree-of-freedom treatment would need pitching-moment coefficients through ninety
 degrees of incidence, and no such data exists for this planform — but it closes the part
 of the question that can be closed without them.

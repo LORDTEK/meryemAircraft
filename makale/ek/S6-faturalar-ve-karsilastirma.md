@@ -167,7 +167,7 @@ calibrated from, and it does — take-off mass, propulsion fraction, engine rati
 lift-to-drag ratio, range and hover power all within 0.1 percent. Run at the heavy design
 point without retuning, it predicts 1 037 kg against 1 000 kg and 1 813 km against
 1 814 km; the one term that does not carry across is the engine rating margin, discussed
-in Section 8.13.
+in Supplementary S5.13.
 
 **What differs between the architectures.** Mission, wing loading, disc loading, fuel
 fraction, structural fraction, avionics fraction and energy chain are held identical.
