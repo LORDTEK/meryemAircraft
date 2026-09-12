@@ -75,13 +75,21 @@ question rather than a post-stall one. The trim question has since been sized ra
 closed: the configuration is statically stable, with a neutral point at 34 percent of mean
 aerodynamic chord and a margin of 12.5 percent at the assumed centre of gravity, and the
 moment to be balanced at cruise is 0.056 at the centre of gravity the packaging rule gives.
-Reflex does not supply it — the measured value for a reflexed section is one fourteenth of
-that [17] — but nine degrees of tip washout does, and the vortex-lattice model computes the
-trim directly because the mechanism is geometric rather than sectional. The price is a span
-efficiency of 0.865 instead of 0.993 and a cruise lift-to-drag ratio of 12.11 instead of
-12.65: **4.3 percent of cruise efficiency, paid to be tailless**, and not previously counted.
-It also retires an assumption, since Section 6.2 had assumed 0.85 without justification and
-the range figures rest on it; they are unchanged, and now supported. The roll axis was treated the same way and gave the same kind of
+Reflex does not supply it. Nine reflexed and low-moment sections have been measured in tunnels
+that measure moment, and exactly one returns a positive value, at one fourteenth of what is
+needed [17]; the rest lie between zero and −0.03, because reflex as actually built is a device
+for removing negative pitching moment rather than for producing positive moment [45,46]. Nine
+degrees of tip washout does supply it, and the vortex-lattice model computes the trim directly
+because the mechanism is geometric rather than sectional. The price is a span efficiency of
+0.865 instead of 0.993 and a cruise lift-to-drag ratio of 12.11 instead of 12.65: **4.3 percent
+of cruise efficiency, paid to be tailless**, and not previously counted.
+
+That twist also settled an assumption, and not in the paper's favour. Section 6.2 assumed an
+Oswald span efficiency of 0.85 without justification, and the range figures rest on it.
+Computing the profile drag of the trimmed wing station by station at each station's own local
+lift coefficient gives **0.817** — optimistic by 3.9 percent, worth 1.4 percent of cruise
+lift-to-drag ratio and of the ranges quoted. The ranges are reported on the stated assumption
+and this is the correction that applies to them. The roll axis was treated the same way and gave the same kind of
 answer: the roll inertia and the roll damping are computed for this planform, twenty degrees
 per second at cruise requires 27.1 N·m, the strip's own force supplies about a third of
 that, and the remainder must come from the change it makes to the half-wing's circulation —
