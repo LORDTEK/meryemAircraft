@@ -3,7 +3,7 @@
 *Supplementary material to "The Architectural Cost of Hybrid VTOL: meryemAircraft, a
 Propeller-Driven Tail-Sitting Blended-Wing-Body Without a Dedicated Lift System".*
 
-This was Section 4.4 of an earlier, longer version of the paper. It is reproduced in full so
+This is Section 2.10 of the paper, reproduced in full so
 that every control-axis number quoted in the main text can be traced to the calculation that
 produced it. The scripts that produce these numbers, and the record of the corrections made to
 them during the study, are in the repository the paper cites.
@@ -35,7 +35,7 @@ arms. The frames are long on purpose. The control moment is
 M = 2 T L, so lengthening the arm buys the same moment with less thrust; and because
 propeller power goes as thrust to the three-halves power, tripling the arm reduces the
 power required for a given moment to roughly one fifth. The frames are structure that
-is already needed for another reason, as Section 4.5 explains, so the arm is nearly
+is already needed for another reason, as Section 2.11 explains, so the arm is nearly
 free.
 
 Pitch and yaw are produced by the same four actuators, but not with the same arm, and the
@@ -44,7 +44,7 @@ pairs produces a moment about the spanwise axis through the frame length, 0.71 m
 thrust between the left and right pairs produces a moment about the remaining axis through the
 **semi-span, 1.726 m**. The yaw arm is therefore 2.43 times the pitch arm, and since the
 thrust available is the same, so is the moment: 55.9 N·m against 23.0 N·m at the quoted
-tip thrust, or 42.8 against 17.6 on the conservative thrust of Section 7.6. Yaw is the
+tip thrust, or 42.8 against 17.6 on the conservative thrust of Section 3.17. Yaw is the
 strongest axis this arrangement has, and it is strongest for a geometric reason rather than
 a designed one. In hover these are the two axes the aircraft must control against
 disturbance; in cruise, with the airframe rotated through ninety degrees, the same four
@@ -62,7 +62,7 @@ longitudinal axis is
 identically, for every propeller, at every thrust setting, regardless of where it is
 mounted. No arrangement of parallel thrust vectors, and no number of them, can produce a
 rolling moment. The only roll moment available from the propulsion system is the
-residual reaction torque, which the counter-rotating arrangement of Section 4.3 has
+residual reaction torque, which the counter-rotating arrangement of Section 2.9 has
 deliberately reduced to nearly zero. The two design decisions oppose one another, and
 the opposition is real rather than apparent.
 
@@ -79,7 +79,7 @@ That is the same mechanism a multirotor uses for yaw, appearing as roll once the
 airframe is rotated into wing-borne flight.
 
 The second solution is unavailable here, and unavailable by construction. The coaxial
-counter-rotating arrangement of Section 4.3 exists precisely to cancel reaction torque,
+counter-rotating arrangement of Section 2.9 exists precisely to cancel reaction torque,
 and it cancels the roll actuator along with it. The two decisions are not merely in
 tension, as noted above; they are mutually exclusive. A tail-sitter cannot both null its
 reaction torque and use that torque to roll.
@@ -136,7 +136,7 @@ the concept: a strip of constant height fraction would cross the threshold every
 **What the roll axis costs, and what it is opposed by, are computed here.** The roll axis
 had not been examined with the care given to pitch, and doing so separates a part that can
 be computed for this geometry from a part that cannot. Distributing the component masses of
-Section 6.7 by the same volume-weighted rule used for pitch gives a roll inertia of
+Section 3.11 by the same volume-weighted rule used for pitch gives a roll inertia of
 **25.0 kg·m²** — two and a half times the pitch inertia of 9.81 kg·m², because the mass is
 spread along the span rather than along the chord. Roll damping was then computed for this
 planform rather than taken from the literature: imposing the helix-angle twist
@@ -189,7 +189,7 @@ is that a device of this class, at this height fraction, over this spanwise exte
 lift increments of the magnitude required — not that this strip produces one.
 
 **The comparison also exposes a design fault the paper had not noticed.** Traub's flap is two
-percent of chord everywhere. The strip specified in Section 4.4 grows linearly from 2 cm to
+percent of chord everywhere. The strip specified in Section 2.10 grows linearly from 2 cm to
 6 cm while the chord it stands on shrinks:
 
 | Station along the strip | Local chord | Strip height | h/c |
@@ -246,7 +246,7 @@ trailing edge of the affected region:
 | ¾ chord | 13.2 N·m | 0.019 |
 | trailing edge (upper bound) | 22.7 N·m | 0.032 |
 
-The tightest pitching-moment budget in the whole of Section 7.6 is **0.050**, at the end of the
+The tightest pitching-moment budget in the whole of Section 3.17 is **0.050**, at the end of the
 rotation. At the upper end of this bracket, commanding a roll during that phase would consume
 two thirds of it. **The conclusion is a scheduling requirement rather than a redesign: the roll
 strip should not be commanded during the end of the rotation**, which is the one phase where
@@ -313,7 +313,7 @@ is therefore a restriction on *full* extension, and small corrections remain ava
 throughout. And the height law is limited by those couplings rather than by mass: the strip's
 own structure is a small item, so how far it may extend is set by how much yaw and pitch
 disturbance the tip propellers can absorb, which is the calculation given above rather than
-anything in Section 6.7.
+anything in Section 3.11.
 
 **Yaw was examined last, and it separates cleanly into an easy half and an open half.** The
 easy half is authority. The yaw inertia computed from the same mass distribution is
@@ -376,7 +376,7 @@ recommendation.
 
 Sized against the criterion rather than against a guess, the fairing chord required is
 **39 mm**, and the floor demonstrated in free flight is met at 13 mm. A faired strut of the
-20 mm thickness assumed in Section 5.2 carries a chord of several times its thickness —
+20 mm thickness assumed in Section 3.3 carries a chord of several times its thickness —
 typically 50 to 70 mm — so the established criterion is met by a fairing **smaller than the
 one the structure needs anyway**, with between a quarter and three quarters of that chord left
 over. The conclusion the paper drew from its own two numbers survives being held to a real
@@ -388,7 +388,7 @@ there.
 is the arrangement this aircraft already has.** The NACA survey states that "if the tailless
 airplane has a swept-back wing, the usual practice is to place the vertical tail surfaces at
 the tips rather than at the center section in order to take advantage of the longer moment
-arm" [19]. That is the tip-frame arrangement of Section 4.3, adopted here for the moment arm it
+arm" [19]. That is the tip-frame arrangement of Section 2.9, adopted here for the moment arm it
 gives the control propellers and for the landing structure it provides, and it turns out to be
 the placement a directional-stability surface wants for an independent reason.
 
@@ -453,7 +453,7 @@ paper does not size that fairing. Doing so would mean choosing a slope from a cu
 measured, which is the error the preceding paragraph exists to record.
 
 **This is the measurement this configuration would buy first**: side force and yawing moment on
-a faired tip frame of the geometry of Section 4.5, symmetric and cambered, through small
+a faired tip frame of the geometry of Section 2.11, symmetric and cambered, through small
 sideslip, at a chord Reynolds number of 80 000. It is a small model in a small tunnel, and it
 would either confirm the only directional-stability surface this aircraft has or remove it.
 
@@ -462,7 +462,7 @@ podded tailless wing was directionally *unstable*, and "the further addition of 
 restores directional stability to the configuration" [34].
 
 **That reframes the fairing, and the reframing is the substantive result of this
-subsection.** Section 5.2 introduced the fairing as a drag measure and computed the frame
+subsection.** Section 3.3 introduced the fairing as a drag measure and computed the frame
 drag penalty on that basis. It is also, and not incidentally, the aircraft's directional
 stability surface and its principal source of yaw damping. The two roles are served by the
 same hardware — which is the same pattern the whole paper is about — but the paper had not
@@ -484,7 +484,7 @@ environment. **The slipstream placement that gives the strip authority at zero a
 also be the place its mechanism works least well.** Neither effect is quantified for this
 geometry — the cited tests are on a wind-turbine aerofoil with grid-generated freestream
 turbulence, not a propeller wake — but the direction is measured rather than supposed, and it
-is recorded in Section 8 as a risk to hover roll authority specifically.
+is recorded in Section 4 as a risk to hover roll authority specifically.
 
 **On the post-stall half of that risk the literature is not unanimous, and reporting only the
 unfavourable half would misrepresent it.** A delayed-detached-eddy simulation of a 21 %-thick
@@ -496,7 +496,7 @@ one is a measurement and the other a simulation whose plain-aerofoil baseline fa
 twenty-five percent below the experimental lift at the same condition, and they vary different
 things — one inflow turbulence, the other incidence. What can be said is that **the post-stall
 behaviour of this class of device is contested, while the turbulence sensitivity is measured
-and stands unopposed.** The risk carried into Section 8 is therefore the turbulence one
+and stands unopposed.** The risk carried into Section 4 is therefore the turbulence one
 primarily, with post-stall behaviour an open question rather than a known deficit.
 
 A third result bears on the part of the claim that looked weakest. The same device was

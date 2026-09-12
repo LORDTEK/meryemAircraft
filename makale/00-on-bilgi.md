@@ -32,6 +32,34 @@ ediyor.]*
 
 ## Abstract
 
+Hybrid vertical take-off and landing (VTOL) aircraft pay for runway independence in cruise
+efficiency. This paper treats that cost as architectural rather than as a defect of
+implementation and develops it as an accounting framework: the penalty is charged in three
+coupled currencies — hover hardware carried through cruise, its drag when exposed, and
+continuous power sized by a condition holding for some two percent of the flight — and each
+remedy surveyed reduces one by raising another. The escape condition follows in four parts: the
+same hardware, in the same orientation, doing the same job, with the hover peak drawn from a
+buffer. meryemAircraft, an uncrewed tail-sitting blended-wing body with one coaxial nose pair
+and four tip pairs, instantiates it and is sized at 50 kg and 1000 kg from one set of equations.
+Against a lift-plus-cruise layout, on wind-tunnel drag, it closes the same mission at forty-two
+percent lower take-off mass; against a tilting layout the ranking reverses between sizing
+contracts, so three are reported rather than one. The aircraft is not shown to be flyable: its
+mass budget closes only on a battery specific power 3.8 times the highest rate yet measured on a
+flown pack, and transition controllability rests on a pitching moment no current method predicts
+reliably. The framework does not depend on that outcome.
+
+*[Yukarısı ~200 kelimeye indirilmiş MDPI sürümü — dergi "about 200 words maximum"
+diyor ve bunu teknik ön denetimde uyguluyor. Yapı başlıksız ama Background →
+Methods → Results → Conclusion sırasını izliyor, dergi öyle istiyor.
+Sondan bir önceki cümle kasten aleyhimize: hakem bulmadan biz söylüyoruz.
+
+Aşağıdaki 588 kelimelik uzun sürüm SİLİNMEDİ. Zenodo kaydında, depo tanıtım
+sayfasında ve gerekirse kapak mektubunda kullanılabilir. Buradan üretilen
+belgeye girmez.]*
+
+<details>
+<summary>Uzun özet (588 kelime) — gönderime girmez</summary>
+
 Hybrid vertical take-off and landing (VTOL) aircraft combine runway independence with
 wing-borne cruise and pay for it in cruise efficiency. This paper treats that cost as
 architectural rather than as a defect of implementation, and develops it as an accounting
@@ -48,7 +76,8 @@ one.
 
 meryemAircraft, an uncrewed tail-sitting blended-wing body, satisfies the escape condition
 and serves as the case study: one coaxial pair at the nose gives all thrust in both
-regimes, four small pairs at the tips give attitude moments only, and a deployable strip is
+regimes, four small pairs at the tips give attitude moments and the residual take-off thrust
+margin, and a deployable strip is
 assigned the roll that body-parallel thrust cannot produce. Sized against a lift-plus-cruise
 layout on wind-tunnel drag, it closes the same mission at forty-two percent lower take-off mass
 and seventeen percent greater range; against a tilting layout the comparison reverses between
@@ -86,6 +115,35 @@ hesaplanmış değerler özette bağlamsız durur.]*
 
 ---
 
+</details>
+
+## Highlights
+
+> **What are the main findings?**
+>
+> - Hybrid VTOL aircraft pay for vertical flight in three coupled currencies — hover
+>   hardware carried through cruise, its drag when exposed, and continuous power sized by a
+>   condition holding for some two percent of the flight — and each architectural remedy
+>   surveyed here reduces one by raising another.
+> - A tail-sitting blended-wing body whose single coaxial nose pair serves both regimes
+>   satisfies the escape condition and, sized against a lift-plus-cruise layout on
+>   wind-tunnel drag, closes the same mission at forty-two percent lower take-off mass.
+>
+> **What are the implications of the main findings?**
+>
+> - Architectural comparisons change their ranking with the sizing contract chosen, so a
+>   ranking quoted without its contract is not a result; three contracts are reported here.
+> - The configuration is not shown to be flyable: its mass budget closes only on a battery
+>   specific power 3.8 times the highest rate yet measured on a flown pack, and transition
+>   controllability rests on a pitching moment no current method predicts reliably.
+
+*[MDPI zorunlu tutuyor ve biçimi sabit: iki başlık, her biri en çok iki madde.
+Özetin kopyası olmamalı — arama motorlarında ve okuyucunun ilk üç saniyesinde
+çalışacak metin. Üçüncü ve dördüncü maddeler kasten aleyhimize: hakem bunu
+bulmadan önce biz söylüyoruz.]*
+
+---
+
 ## Keywords
 
 vertical take-off and landing; tail-sitter; blended wing body; uncrewed aerial vehicle;
@@ -94,6 +152,23 @@ series hybrid propulsion; cruise efficiency; aircraft configuration design
 ---
 
 ## Beyanlar
+
+### Author Contributions
+
+> Conceptualization, Ö.G. and M.G.; Methodology, Ö.G. and M.G.; Software, B.G.;
+> Formal Analysis, M.G. and B.G.; Investigation, M.G., B.G. and Ö.G.; Data Curation,
+> B.G.; Writing — Original Draft Preparation, M.G.; Writing — Review & Editing, M.G.,
+> B.G. and Ö.G.; Visualization, B.G.; Supervision, Ö.G.; Project Administration, M.G.
+> All authors have read and agreed to the published version of the manuscript.
+
+*[⚠️ BU TASLAK — yazarların onaylaması gerek. MDPI bu bölümü zorunlu tutuyor ve
+CRediT sözlüğünden terim istiyor; ben kimin ne yaptığını bilemem, o yüzden sorumlu
+yazarın Meryem, denetleyenin Ömer olduğu varsayımıyla makul bir dağılım yazdım.
+Yanlışsa değiştirin — uydurma bir katkı beyanı yayın etiği ihlalidir.
+Kullanılabilecek roller: Conceptualization, Methodology, Software, Validation,
+Formal Analysis, Investigation, Resources, Data Curation, Writing — Original Draft,
+Writing — Review & Editing, Visualization, Supervision, Project Administration,
+Funding Acquisition. Baş harfler: M.G., B.G., Ö.G.]*
 
 ### Acknowledgements
 
@@ -118,7 +193,7 @@ MDPI'ın yapay zekâ beyan zorunluluğunu da karşılar.]*
 
 > All data supporting the reported results are contained within the article. The
 > parametric geometry model, the figure-generation scripts and the transition
-> simulation, together with the aerodynamic calculations of Section 6.6 — including the
+> simulation, together with the aerodynamic calculations of Section 3.10 — including the
 > mesh generator, the case setup, the grid-convergence study and the wall-resolution and
 > turbulence-model sensitivity runs behind the computed zero-lift drag — are openly
 > available at https://github.com/LORDTEK/meryemAircraft

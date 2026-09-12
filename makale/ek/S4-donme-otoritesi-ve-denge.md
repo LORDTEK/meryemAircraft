@@ -3,7 +3,7 @@
 *Supplementary material to "The Architectural Cost of Hybrid VTOL: meryemAircraft, a
 Propeller-Driven Tail-Sitting Blended-Wing-Body Without a Dedicated Lift System".*
 
-This was Section 7.6 of an earlier, longer version of the paper. It is reproduced in full so
+This is Section 3.17 of the paper, reproduced in full so
 that every figure in the trim chain and the rotational-authority budget can be traced to the
 calculation that produced it — including the inertia derivation, the rotation profiles, the
 centre-of-gravity window, the twist sweep, and the measured reflex-section evidence. The
@@ -13,7 +13,7 @@ scripts are in the repository the paper cites.
 
 ## S4.1 Whether there is enough authority to rotate
 
-Section 7.4 drives the body angle kinematically. The aircraft does not rotate in that
+Section 3.15 drives the body angle kinematically. The aircraft does not rotate in that
 simulation; it is *assumed* to rotate, and the moment producing the rotation does not
 appear. Supplementary S5.6 records this. What follows does not remove that limitation — a full
 six-degree-of-freedom treatment would need pitching-moment coefficients through ninety
@@ -24,8 +24,8 @@ of the question that can be closed without them.
 they certainly cannot rotate it against aerodynamic moment as well. If they can, the
 aerodynamic margin remains unknown and is reported as unknown.
 
-**Inertia, and where the mass may sit.** The component build-up of Section 6.7 supplies the
-masses; the planform of Section 4.2 supplies where they can go. The shell and internal
+**Inertia, and where the mass may sit.** The component build-up of Section 3.11 supplies the
+masses; the planform of Section 2.8 supplies where they can go. The shell and internal
 structure are distributed over the planform, the tip frames along their own length, the tip
 motors and propellers at the ends of those frames. The coaxial pair, its hub and the
 electric machine that drives it are fixed at the nose. Everything else — engine, generator,
@@ -44,7 +44,7 @@ transition rotates about — is **9.81 kg·m²** and **2 503 kg·m²**. The hand
 were 40 and 30 percent lower, and the margins below are correspondingly tighter than that
 earlier version reported.
 
-**The rotation profile matters, and Section 7.4's cannot be produced.** That simulation
+**The rotation profile matters, and Section 3.15's cannot be produced.** That simulation
 ramps the body angle linearly, which requires zero torque throughout and infinite torque at
 each end. Two profiles a finite moment can produce bracket the choice: a bang-bang profile,
 accelerating for the first half and decelerating for the second, needs a peak angular
@@ -56,12 +56,12 @@ alongside it as what a gentler command would cost.
 
 **Authority.** The frames place the upper and lower pairs 0.71 m from the planform in the
 light design, and differential thrust between them acts about the spanwise axis, as
-Section 4.3 sets out. Propeller thrust on this aircraft cannot reverse, so the largest
+Section 2.9 sets out. Propeller thrust on this aircraft cannot reverse, so the largest
 differential available is the upper pairs at full thrust against the lower pairs at zero,
-which is the M = 2TL of Section 4.3 and not four times the single-pair moment. The
+which is the M = 2TL of Section 2.9 and not four times the single-pair moment. The
 available moments are therefore 23.0 N·m for the light design at its quoted 16.2 N per
 pair, and 952 N·m for the heavy design, whose transition thrust is not quoted in Section
-6.3 and is computed here from its twelve percent power share as 200 N per pair.
+3.8 and is computed here from its twelve percent power share as 200 N per pair.
 
 | | Required, bang-bang | Required, smooth | Available | Margin, bang-bang | Margin, smooth |
 |---|---:|---:|---:|---:|---:|
@@ -78,14 +78,14 @@ precision of the thrust estimate, and that anything faster is available only by 
 profile with discontinuous angular acceleration. The two designs are at the same point on the
 same constraint, which is the tip-propeller moment; the transition times follow from it
 rather than being chosen. A design iteration wanting genuine comfort on a smooth command
-would lengthen both rotations by about a quarter, which Section 7.4 shows costs nothing in
+would lengthen both rotations by about a quarter, which Section 3.15 shows costs nothing in
 altitude — and that, rather than the quoted times, is what a design study should carry
 forward.
 
 **The field has a name for what this section computes, and a settled opinion about where in it
 to fly.** The feasible set of transition states is called a *transition corridor*, and it is
 used to turn trajectory generation over a complex aircraft model into a constrained motion
-planning problem [31]. The envelope of Section 7.4 and the moment limits here are a corridor of
+planning problem [31]. The envelope of Section 3.15 and the moment limits here are a corridor of
 that kind, computed rather than borrowed. On where to fly inside it, the same source is
 explicit that existing corridor-based studies "only try to plan the flight trajectory in the
 middle of the corridor, considering that the corridor bounds might be sensitive to aerodynamic
@@ -101,13 +101,13 @@ rotations the moment authority allows are 4.06 s and 4.98 s. Four seconds was no
 and, with the corrected inertia, not even a boundary. Lengthening the rotation to 5.1 s
 brings the heavy margins to 1.57 and 1.05, matching the light design's 1.49 and 0.99 at its
 quoted two seconds, and costs nothing: Table 4 shows the tip-propeller power falling from
-thirteen percent of hover power to six, and the altitude-loss result of Section 7.4 is
+thirteen percent of hover power to six, and the altitude-loss result of Section 3.15 is
 unchanged, remaining zero at every profile tested when the rotation is entered in a climb.
 The light design's own two seconds is on the same boundary — its smooth minimum is 2.01 s —
 so neither reference design has margin to spare on a smooth command, and both should be read
 as sized by this constraint.
 
-This is also, in moment terms, what Table 4 of Section 6.4 already said in units of power:
+This is also, in moment terms, what Table 4 of Section 3.9 already said in units of power:
 that four seconds consumed nearly the whole tip-propeller allocation. The two statements
 agree, and the present calculation adds the rotation profile, which Table 4 did not
 distinguish.
@@ -126,7 +126,7 @@ here and called it comfortable; that figure does not follow from 17.6 against 15
 correct one is not comfortable. On the conservative thrust basis the light design closes only on
 the cheapest rotation profile and only just, and the smooth profile does not close at all at two
 seconds. The heavy figure was computed on that conservative basis to begin with, which is why
-the two designs are not directly comparable on this row. Section 8 carries the consequence: the
+the two designs are not directly comparable on this row. Section 4 carries the consequence: the
 reference rotation times are actuator-limited lower bounds under either thrust basis, and under
 the conservative one the light design has no margin to give.
 
@@ -137,7 +137,7 @@ mass grows by twenty, and 3.345³ is 37.4, not 20 — the wing loading rises fro
 45.0 kg m⁻² precisely because they are not. The ratios are therefore read from the two
 computed designs instead. Inertia grows by 255.1 while available moment grows by only 41.4,
 so the margin is preserved when required moment grows by the same 41.4 — which fixes the
-rotation time at 4.96 s, and is where the 5.1 s of Section 6.3 comes from. Section 7.4 already concluded that the
+rotation time at 4.96 s, and is where the 5.1 s of Section 3.8 comes from. Section 3.15 already concluded that the
 larger aircraft must rotate more slowly; the quantitative form of that statement is that
 the rotation time must grow as the square root of the ratio of inertia growth to moment
 growth, and that setting it any faster spends control margin to buy nothing, since a slower
@@ -150,7 +150,7 @@ against aerodynamic moment. This is a necessary condition, not a sufficient one.
 **How much is left over can be resolved along the trajectory, and doing so corrects the
 question.** The moment remaining after the inertia is turned — 11.9 N·m for the light design
 and 489 N·m for the heavy one — divided by q S c̄ gives the pitching-moment coefficient that
-would consume it. Evaluating that along the trajectory of Section 7.4 rather than at a single
+would consume it. Evaluating that along the trajectory of Section 3.15 rather than at a single
 representative speed shows something the single-speed form obscured: **the aircraft does not
 reach ninety degrees of incidence.** The body rotates through ninety degrees, but the relative
 wind rotates with it, because the aircraft is accelerating and climbing at the same time. Peak
@@ -188,7 +188,7 @@ layout exists for this aircraft, so none can be measured. In its place a first-o
 packaging rule is adopted: the non-structural masses — fuel, payload, engine, generator,
 buffer — are distributed in proportion to the internal volume available at each station,
 and the structural mass in proportion to the shell area. Applied to the planform of
-Section 4.2 this rule puts the centre of gravity at **0.778 m aft of the root leading edge**,
+Section 2.8 this rule puts the centre of gravity at **0.778 m aft of the root leading edge**,
 which is 80.2 percent of root chord, or 21.9 percent of mean aerodynamic chord aft of the
 mean-chord leading edge. Every stability figure below follows from that rule and not from a
 layout; a different arrangement of the same masses gives a different centre of gravity, which
@@ -196,7 +196,7 @@ is why the sensitivity to it is tabulated rather than assumed away. Burning the 
 load moves the centre of gravity aft by 0.3 points of root chord, which is inside the
 tabulated window and is therefore not a separate constraint.
 
-**Static stability is shown.** A vortex-lattice solution over the planform of Section 4.2
+**Static stability is shown.** A vortex-lattice solution over the planform of Section 2.8
 places the neutral point at 0.859 m from the root leading edge — 34.4 percent of mean
 aerodynamic chord, an entirely conventional value — and the result is converged, moving by
 0.26 percent over a threefold refinement. With the centre of gravity where the packaging rule
@@ -237,7 +237,7 @@ concluding that stability augmentation "through either forward movement of the c
 gravity or additional reflex of the airfoils is advisable" [41]. The configuration here sits
 inside both ranges at the packaging centre of gravity: 0.125 of the mean aerodynamic chord, and
 C_m_α = −0.48 per radian on the lift-curve slope of 3.86 per radian the same solution returns.
-The second of those inherits the magnitude caveat of Section 6.6 — but that caveat runs the
+The second of those inherits the magnitude caveat of Section 3.10 — but that caveat runs the
 safe way here, since a lift-curve slope under-stated makes C_m_α under-stated too, and the true
 value would lie further inside the range rather than outside it. **The aft limit of the window,
 at 5.3 percent, is the one that falls outside the published range**, which is a second reason
@@ -319,7 +319,7 @@ values of the lift coefficient" [45].
 blended-wing UAV that trims by reflex rather than by twist records that carrying reflex over a
 wide span "is not conducive to the improvement of overall lift-to-drag performance" [44]. Both
 roads to trim on a tailless configuration therefore cost cruise efficiency, which is the
-reading Section 5.4 places on the 4.3 percent charged there: it is the price of having no tail,
+reading Section 3.5 places on the 4.3 percent charged there: it is the price of having no tail,
 not the price of having chosen the wrong way to do without one.
 
 The requirement 2R212 was built to meet is the one this configuration has. A survey of sections
@@ -366,12 +366,12 @@ than between the rows. **This paper therefore takes the branch the evidence supp
 degrees of washout and the penalty that goes with it — and does not offer the third row as an
 alternative design point. What would change this is a measurement, not an assumption: a
 reflexed section, tested in a tunnel that measures moment, returning a positive C_m0 an order
-of magnitude above 0.004. Section 8 records that no such measurement was found.
+of magnitude above 0.004. Section 4 records that no such measurement was found.
 
 What trims it is washout, which is how tailless aircraft have always been trimmed: on a swept
 wing the tips lie well aft, so negative tip incidence produces a nose-up moment about the
 centre of gravity. Because this mechanism is geometric rather than sectional, the
-vortex-lattice model of Section 6.6 — whose sections are symmetric — can compute it directly.
+vortex-lattice model of Section 3.10 — whose sections are symmetric — can compute it directly.
 Applying a linear twist from zero at the root to θ_tip at the tip and re-trimming to
 C_L = 0.45 at each value:
 
@@ -389,8 +389,8 @@ ratio from 12.65 to 12.11, a **4.3 percent penalty paid to be tailless**. It is 
 of payment the rest of this paper is about — a capability bought in one currency and charged
 in another — and it had not previously been counted.
 
-**One assumption is put at risk by this, and the risk runs the wrong way.** Section 6.2 assumed
-an Oswald span efficiency of 0.85, and the range figures of Section 6.3 rest on it. Section 6.6
+**One assumption is put at risk by this, and the risk runs the wrong way.** Section 3.7 assumed
+an Oswald span efficiency of 0.85, and the range figures of Section 3.8 rest on it. Section 3.10
 supported that assumption by computing an inviscid span efficiency of 0.99 for the planform and
 noting that an Oswald-type value runs at roughly 85 to 90 percent of the inviscid one, which
 places 0.85 at the bottom of the implied band of 0.84 to 0.89 — conservative, if only just.
@@ -399,7 +399,7 @@ That argument was made for a wing without twist. The wing without twist cannot b
 the trimmed wing the inviscid figure is not 0.99 but **0.865**, and the same reasoning then
 implies an Oswald value between **0.735 and 0.78** — a band the assumed 0.85 sits *above*
 rather than inside. If that reasoning holds, the cruise lift-to-drag ratio is 11.4 to 11.7
-rather than 12.0, and the range figures of Section 6.3 fall by three to five percent.
+rather than 12.0, and the range figures of Section 3.8 fall by three to five percent.
 
 **That ratio has since been computed rather than assumed, and it is worth setting out what it
 replaced.** An earlier version of this section could only bound the viscous-to-inviscid ratio
@@ -411,7 +411,7 @@ tunnel measurement with an inviscid calculation. That data bounds the ratio loos
 fixing it, and the section carried a band of 0.85 to 0.95 with an implied penalty of one to five
 percent.
 
-Section 6.6 now computes it on this planform, by calling the section solver at each strip's own
+Section 3.10 now computes it on this planform, by calling the section solver at each strip's own
 local lift coefficient and integrating the profile drag across the span. The result:
 
 | | Inviscid e | Oswald e | Ratio | Cruise L/D |
@@ -424,7 +424,7 @@ band it allowed.** The ratio is 0.951 rather than the 0.85 the borrowed rule wou
 so the viscous penalty is smaller than feared; but the trimmed wing starts at 0.859, and the
 product lands at 0.817 — **below the assumed 0.85 by 3.9 percent**, costing 1.4 percent of cruise
 lift-to-drag ratio rather than the three to five percent this section had allowed. The range
-figures of Section 6.3 fall by the same 1.4 percent, and are not restated at the lower value
+figures of Section 3.8 fall by the same 1.4 percent, and are not restated at the lower value
 because they are computed on the stated assumption; the correction is reported here instead.
 
 Two things the computed number does not settle. Its sections are symmetric, so it is a lower
@@ -443,11 +443,11 @@ the cost. The vortex-lattice solution is inviscid, so it says nothing about how 
 magnitude changes the stall behaviour of the outboard sections — washout normally improves it,
 which is a reason to expect no unpleasant surprise, not a demonstration that there is none.
 Two places where this result could have propagated were checked and do not. The root bending
-moment of Section 6.7, 934 N·m, was computed on an untwisted loading; washout moves lift inboard
+moment of Section 3.11, 934 N·m, was computed on an untwisted loading; washout moves lift inboard
 and can therefore only reduce it, so the spar sizing and the mass budget that follows are
 conservative rather than threatened — the recomputation has not been done because its direction
 is not in doubt. And washout makes the root stall before the tip on a swept wing, which is the
-favourable direction for the transition of Section 7.4 rather than the unfavourable one — a
+favourable direction for the transition of Section 3.15 rather than the unfavourable one — a
 point that matters more than it first appears, because the tailless literature reports the
 unfavourable direction as a real hazard. The NASA series of 60°-swept flying wings found a
 pitch-up at high incidence that "became more severe as aspect ratio was increased", severe
@@ -458,7 +458,7 @@ pitch-up is driven by leading-edge vortex breakdown, which a wing of aspect rati
 they report runs the wrong way for a higher-aspect-ratio wing, and the incidences at which it
 appears overlap the 17° to 22° this aircraft passes through in transition. **This is a reason
 to keep transition controllability open rather than a new closure**, and it is the second
-independent reason to want the washout that Section 7.6 already requires for trim.
+independent reason to want the washout that Section 3.17 already requires for trim.
 
 A second pitch-up mechanism was found afterwards, and it does not care about aspect ratio at
 all. In a blended-wing-body UAV analysed by both a low-fidelity method and RANS, the moment
@@ -467,11 +467,11 @@ stalls before the main body, causing the BWB to pitch-up" [39]. That is a statem
 part of the planform separates first, not about leading-edge vortex breakdown, so the
 aspect-ratio argument that limits the previous hazard offers no protection against this one.
 **Washout does.** On a swept wing washout makes the root stall before the tip, and on a blended
-wing the root is the body — so the twist Section 7.6 requires for trim also reverses the stall
+wing the root is the body — so the twist Section 3.17 requires for trim also reverses the stall
 order that produces this pitch-up. The twist therefore earns its cost three times: it closes
 the trim chain, it delays tip stall on a swept planform, and it inverts the stall sequence
 behind the blended-wing pitch-break. **None of this makes the 4.3 percent penalty of Section
-5.4 disappear. It means the penalty is not being paid for one thing.** And the
+3.5 disappear. It means the penalty is not being paid for one thing.** And the
 aft limit of the centre-of-gravity window, roughly 85 percent of root chord, is still set by
 static margin alone and is still firm. What has changed is that the forward limit is no
 longer set by a section property nobody had measured; it is set by how much twist the design is
@@ -513,7 +513,7 @@ wing station:
 **Half the wing is therefore not post-stall at the moment of peak incidence, on either
 bracket.** It is at four to eight degrees, which is ordinary attached flow. The pitching-moment
 budgets of this section were computed as though the whole wing saw the geometric incidence,
-so they are conservative — and the outstanding measurement, which Section 8 keeps open, is
+so they are conservative — and the outstanding measurement, which Section 4 keeps open, is
 smaller than it appeared: it concerns the *outboard* half of the wing, the part that is not
 washed. Two cautions belong with this. Folk records that the reduced-order wake model
 overpredicts wake velocity above roughly 8 m s⁻¹, which places three of the four cases inside
@@ -529,7 +529,7 @@ notes that its own aerofoil "is not exactly the same" and judges the error accep
 model-based controller, and carries **no pitching-moment term at all** in its equations of
 motion [28]. A second study does carry one, but as a linear form
 C_m = C_m0 + C_mα α + C_mδ δ used throughout the manoeuvre [29]. The practice of the field, in
-other words, is a borrowed section polar and a closed loop — which is what Section 7.4 does for
+other words, is a borrowed section polar and a closed loop — which is what Section 3.15 does for
 lift and drag, and rather less than this section does for the moment. **The open item here is
 the field's open item.**
 
@@ -541,7 +541,7 @@ closing the remaining discrepancy with an adaptive neural term rather than with 
 aerodynamics [42]. So the nonlinear moment does appear in this literature — borrowed, not
 derived, and backed by an adaptive law. Independently, a guidance architecture for the same
 manoeuvre computes an effective angle of attack from rotor wake velocity using hovering
-momentum theory [43], which is the same construction Section 7.4 applies above and a more
+momentum theory [43], which is the same construction Section 3.15 applies above and a more
 recent statement of it than the source used there.
 
 **The pattern across all four is the same and it is worth naming.** Every one of them obtains
@@ -564,7 +564,7 @@ this aircraft passes through in transition — 17.5° to 21.6° geometric — li
 This changes what the open item is. It is not that this study declined to compute the
 transition pitching moment; it is that the computation is not currently reliable for anyone at
 those incidences, on this class of configuration, and the literature says so with a wind tunnel
-behind it. **The item belongs to measurement, and Section 8 asks for it as measurement.** One
+behind it. **The item belongs to measurement, and Section 4 asks for it as measurement.** One
 encouraging observation travels with it: the same tests found the blended-wing configuration to
 have "soft-stall performance", which is the benign end of the range of behaviours the pitch-up
 literature describes.
@@ -598,7 +598,7 @@ regime that has caused trouble in practice is not the one this paper spent the m
 on.
 
 **Two limits of this reading are worth stating.** The incidence history comes from the
-point-mass trajectory of Section 7.4: it is the geometric angle between the body axis and the
+point-mass trajectory of Section 3.15: it is the geometric angle between the body axis and the
 velocity vector, so it is only as good as that trajectory. And the rotation rate itself varies
 the local incidence along the body by ω c̄ / 2V, which is ±3.1° for the light design entered in
 a climb and ±8.6° entered from rest — so at the peak-incidence instant of that second case

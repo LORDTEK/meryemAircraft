@@ -3,7 +3,7 @@
 *Supplementary material to "The Architectural Cost of Hybrid VTOL: meryemAircraft, a
 Propeller-Driven Tail-Sitting Blended-Wing-Body Without a Dedicated Lift System".*
 
-This material was Sections 3.7 and 5.5 of an earlier, longer version of the paper. The first
+This material is Sections 3.1 and 3.6 of the paper, reproduced here in full. The first
 states the three bills as equations with the transfer table showing that they are one quantity
 in three currencies; the second sizes three architectures against the same mission under three
 different sizing contracts, all twelve cells, with the sensitivity sweeps.
@@ -28,13 +28,13 @@ is the lift-to-drag ratio the airframe would have with no hover hardware exposed
 power of the power system. Each is dimensionless, each is zero for an aircraft that does not
 hover, and each is measurable for one that does.
 
-**The claim of Section 3.6 is that the same architectural choice need not minimise all
+**The claim of Section 2.6 is that the same architectural choice need not minimise all
 three simultaneously.** The architectural moves available typically move cost between them
 rather than removing it: retracting
 the lift rotors reduces *f*₂ and raises *f*₁ by the retraction mechanism; tilting the
 propulsors reduces *f*₁ and *f*₂ together and introduces a mechanism whose mass and failure
 modes are the price; buffering the hover peak reduces *f*₃ and raises *f*₁ by the buffer.
-Section 3.4 tabulates these transfers. The escape condition is the statement that all three
+Section 2.4 tabulates these transfers. The escape condition is the statement that all three
 vanish simultaneously only when the hover and cruise hardware are the same hardware, in the
 same orientation, doing the same job, with the peak supplied from a buffer.
 
@@ -42,7 +42,7 @@ same orientation, doing the same job, with the peak supplied from a buffer.
 separate currencies rather than three names for one quantity, then an architecture may be
 *best* in one and *worst* in another — in particular, the architecture with the highest
 cruise lift-to-drag ratio need not be the lightest. A single-metric comparison would not
-anticipate that. The NASA sizing study quoted in Section 3.2 reports exactly this pattern:
+anticipate that. The NASA sizing study quoted in Section 2.2 reports exactly this pattern:
 the lift-plus-cruise concepts are the heaviest of the four examined *while having the highest
 cruise efficiency of that group*, and the authors attribute the weight to hardware carried for
 hover rather than to cruise power. That is *f*₁ dominating while *f*₂ is favourable, which is
@@ -71,10 +71,10 @@ A framework that predicted "best in cruise implies heaviest" would be refuted by
 framework here predicts no such thing: it says the tiltwing satisfies most of the escape
 condition, because the same propulsors serve hover and cruise and nothing is left exposed, and
 that it pays instead for the mechanism that rotates them. That is precisely the trade
-Section 5.5 finds when it sizes a tilting layout itself, and it is why no claim of superiority
+Section 3.6 finds when it sizes a tilting layout itself, and it is why no claim of superiority
 over the tilting family is made anywhere in this paper.
 
-The comparison of Section 5.5 shows the same pattern on a different set of architectures:
+The comparison of Section 3.6 shows the same pattern on a different set of architectures:
 of the three sized there, the tilting layout has the best cruise lift-to-drag ratio — 13.44
 against 12.00 — and is nonetheless twenty percent heavier than the tail-sitter, because it
 carries a tilt mechanism that the tail-sitter does not. Best in *f*₂, worse in *f*₁. **That
@@ -84,7 +84,7 @@ credited as aerodynamically free — precisely to make the *f*₂ advantage as l
 architecture could possibly claim. A comparison whose inputs were chosen by the present
 authors cannot corroborate the present authors' framework. **The evidential weight rests on
 work done by others**, whose numbers were produced for other purposes and are not ours to
-choose; Section 5.5 shows what the framework looks like when applied, not that it is right.
+choose; Section 3.6 shows what the framework looks like when applied, not that it is right.
 
 **A second independent check exists, and it is on aircraft that were built rather than sized.**
 Bacchini and Cestino compare three flying eVTOLs — one per architecture — on five parameters
@@ -127,8 +127,8 @@ by case. Nor does it claim that these are the only architectural costs a VTOL ai
 control authority, thermal management, transition hardware, reliability and certification are
 all real and none of them is one of these three. What it provides is narrower and, because it is
 narrower, defensible — that these three recurring charges follow from the duty-cycle mismatch of
-Section 3.1, that they are the currencies in which the architectural remedies surveyed in
-Section 3.5 trade against one another, and that there is a stateable condition under which none
+Section 2.1, that they are the currencies in which the architectural remedies surveyed in
+Section 2.5 trade against one another, and that there is a stateable condition under which none
 of the three is charged.
 
 
@@ -137,15 +137,15 @@ of the three is charged.
 
 ## S6.2 A comparative sizing of three architectures
 
-Sections 5.1 to 5.4 argue that a particular configuration declines a particular trade.
-That argument is made against the general statement of the tax in Section 3, not against
+Sections 3.2 to 3.5 argue that a particular configuration declines a particular trade.
+That argument is made against the general statement of the tax in Section 2, not against
 any competing aircraft, and an argument of that shape has a known weakness: it can be
 right about the mechanism and still be wrong about the outcome, because a rival
 architecture may pay the bills and recover more than it pays. The claim is therefore
 tested here by sizing the same mission three ways.
 
 **Method.** One set of equations is used for all three, and they are the equations of
-Section 6.1 — closed-loop mass, hover power from momentum theory, and a Breguet-type
+Section 2.12 — closed-loop mass, hover power from momentum theory, and a Breguet-type
 range:
 
 $$\mathrm{MTOW} = \frac{m_\text{payload}}{1 - f_\text{empty} - f_\text{fuel}}, \qquad
@@ -159,7 +159,7 @@ mass and take-off mass depends on installed power, so the system is closed by fi
 iteration.
 
 **Calibration.** Every coefficient is back-solved from the light reference design of
-Section 6.2 rather than assumed: a hover figure of merit of 0.599 from 10.9 kW at 50 kg,
+Section 3.7 rather than assumed: a hover figure of merit of 0.599 from 10.9 kW at 50 kg,
 a cruise propulsive efficiency of 0.721 from 1.7 kW at L/D 12, an engine rating margin of
 1.53, and a power-independent propulsion fraction of 0.108 given an assumed 1.0 kW kg⁻¹
 for a small engine and generator. The model must then reproduce the design it was
@@ -176,8 +176,8 @@ or an openly swept parameter:
 
 | | Cruise L/D multiplier | Architecture-specific mass | Source |
 |---|---|---|---|
-| A — tail-sitter | 1 / 1.12 | — | Section 5.2, tip-frame drag |
-| B — lift + cruise | 13 / 17 | second propulsion group, swept | Section 3.3, wind tunnel |
+| A — tail-sitter | 1 / 1.12 | — | Section 3.3, tip-frame drag |
+| B — lift + cruise | 13 / 17 | second propulsion group, swept | Section 2.3, wind tunnel |
 | C — tilt | 1.00 | tilt mechanism, swept | **assumed, not measured** |
 
 **Result.** With the same buffered series-hybrid power system given to all three — which
@@ -218,7 +218,7 @@ payload leaves fuel as the residual.
 
 These are three different questions, and which one is the right question depends on what is
 being procured: a mission, a fuel load, or a vehicle class. The mission stated in Section
-6.2 — 13 kg of payload over roughly 1600 km, with take-off mass free to close where it will
+3.7 — 13 kg of payload over roughly 1600 km, with take-off mass free to close where it will
 — is closest to the first, which is also the only rule under which the tilting layout
 leads, and leads only because its mechanism was credited as aerodynamically free. Reporting
 that column on its own would restate the credit as a conclusion. **All three are therefore

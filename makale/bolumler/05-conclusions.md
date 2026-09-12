@@ -1,4 +1,4 @@
-# 9. Conclusion
+# 5. Conclusions
 
 Hybrid vertical take-off aircraft pay for their vertical capability, and the payment is
 architectural rather than a defect of implementation. It appears in three currencies — the mass
@@ -17,8 +17,8 @@ orientation, with the hover peak drawn from a buffer rather than from permanentl
 continuous power.** The configuration described here satisfies that condition rather than
 compensating for failing it. The aircraft rotates; nothing on the aircraft rotates relative to
 it. A single coaxial pair at the nose provides all thrust in both regimes; four small coaxial
-pairs at the tips provide moments and nothing else; and a strip on the lower surface is assigned
-the one gap propellers cannot close — the rolling moment, which parallel thrust vectors cannot
+pairs at the tips provide attitude moments and the take-off thrust margin; and a strip on the
+lower surface is assigned the one gap propellers cannot close — the rolling moment, which parallel thrust vectors cannot
 produce at any setting or mounting position. There are no elevons, no rudder, no tilting
 mechanism, no retraction mechanism and no dedicated lift system.
 
@@ -47,9 +47,9 @@ worse than reported, and the take-off margin and the attitude authority are draw
 four propellers and compete for them.
 
 **What this paper offers is a configuration and its numbers, not a validated aircraft.** There
-is no wind-tunnel data here and no flight test. Of the analyses Section 8 lists as tests of
-these results, three have been carried out. A three-dimensional solution for the centre body
-narrowed the zero-lift drag without overturning the assumption. A component build-up closes the
+is no wind-tunnel data here and no flight test. Three of the analyses Section 4 lists as tests
+of these results have been carried out, and they are named so that the count can be checked
+against that section. A three-dimensional solution for the centre body narrowed the zero-lift drag without overturning the assumption. A component build-up closes the
 light design with 2.2 kg in hand, conditional on a shell areal density at or below 1.78 kg m⁻²
 *and* on a battery buffer no measured cell can yet supply, and does not close the heavy design.
 And a rotational check shows the tip propellers can turn the aircraft's own inertia through the

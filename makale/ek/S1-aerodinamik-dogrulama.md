@@ -4,7 +4,7 @@
 meryemAircraft, a Propeller-Driven Tail-Sitting Blended-Wing-Body Without a
 Dedicated Lift System".*
 
-This material was Section 6.6 of an earlier, longer version of the paper.
+This material is Section 3.10 of the paper, reproduced here in full.
 It is reproduced here in full so that every number quoted in the main text can
 be traced to the calculation that produced it. The computational setup, the
 scripts, and the record of what failed along the way are in the repository the
@@ -14,7 +14,7 @@ paper cites.
 
 ## S1.1 Independent checks on the two assumed coefficients
 
-The two coefficients that carry the most weight in Section 6 — span efficiency and
+The two coefficients that carry the most weight in Section 3 — span efficiency and
 zero-lift drag — were assumed rather than derived. They remain assumed. What follows
 does not replace them with computed values; it asks a narrower question that can be
 answered honestly: **are the assumed values inside the range that a calculation gives,
@@ -22,7 +22,7 @@ and on which side?**
 
 **What the vortex-lattice method is being asked for, and what it is not.** Four results in
 this paper come from a vortex-lattice solution: the span efficiency below, the neutral point
-of Section 7.6, the twist required to trim, and the roll damping of Section 4.4. Falkner's
+of Section 3.17, the twist required to trim, and the roll damping of Section 2.10. Falkner's
 account of the method's accuracy [24] separates the quantities it settles quickly from those
 it does not, and the separation is favourable here. He reports that "the grading of spanwise
 circulation converges quickly" and that "the local aerodynamic centre can be adequately defined
@@ -39,7 +39,7 @@ under-resolved plan discontinuity — this planform is cropped, and therefore ha
 wings of low aspect ratio and high sweep, leading-edge vortex separation dominates and the
 linear method must be extended by a suction analogy to follow it [25]. That regime is not this
 wing's cruise condition — aspect ratio 6.03 at 45° root sweep, at incidences under eleven
-degrees — but it *is* the regime of the transition incidences in Section 7. No vortex-lattice
+degrees — but it *is* the regime of the transition incidences in Section 3. No vortex-lattice
 result is quoted there, and this is why.
 
 **A third boundary was found by reading, and it is the sharpest of the three because it is a
@@ -56,7 +56,7 @@ percent — which is the signature of a multiplicative error in the magnitude of
 rather than an error in its distribution. A neutral point is a ratio of derivatives and a
 static margin is a ratio of lengths; a factor common to lift and moment cancels in both, and
 the twist effectiveness would be *under*-stated, meaning the twist actually required to trim
-would be smaller than Section 7.6 reports rather than larger. That argument depends entirely on
+would be smaller than Section 3.17 reports rather than larger. That argument depends entirely on
 the moment scaling with the lift, and the pitching-moment comparison in that paper is published
 with its values withheld. **The check that would settle it is precisely the one the source does
 not permit.**
@@ -73,9 +73,9 @@ kind that a magnitude error *would not* disturb if the moment scales with the li
 factor.** That conditional cannot be discharged from the source, and nothing else in the
 literature read here discharges it either. It is stated as a conditional and carried as one.
 Confirming it would take a viscous or Reynolds-averaged solution of this planform, which
-Section 8 names as the first thing worth computing next.
+Section 4 names as the first thing worth computing next.
 
-**Span efficiency.** A vortex-lattice solution of the planform of Section 4.2 [15] gives
+**Span efficiency.** A vortex-lattice solution of the planform of Section 2.8 [15] gives
 an inviscid span efficiency of 0.99. That is not the same quantity as the 0.85 used here.
 The vortex-lattice figure counts only the departure of the induced drag from the
 elliptic ideal; the 0.85 is an Oswald-type efficiency that also carries the viscous
@@ -83,13 +83,13 @@ drag due to lift, which for a clean wing runs at roughly 85 to 90 percent of the
 inviscid value. The two are consistent. Reporting the calculation as an improvement on
 the assumption would be a category error, and it is not claimed.
 
-**Section 7.6 unsettles this, and the ratio has since been computed rather than assumed.** The
+**Section 3.17 unsettles this, and the ratio has since been computed rather than assumed.** The
 0.99 belongs to the untwisted planform, and the untwisted planform cannot be trimmed. An earlier
 version of this paper carried the trimmed case forward with the same 85-to-90-percent rule and
 reported an implied Oswald value of 0.735 to 0.78. That rule was borrowed, and it turns out to
 be too pessimistic.
 
-The calculation replacing it is the one the method of Section 6.6 was already equipped to make.
+The calculation replacing it is the one the method of Section 3.10 was already equipped to make.
 The vortex-lattice solution gives the loading of the twisted wing station by station; the
 section solver used for the zero-lift drag build-up is then called at **each station's own local
 lift coefficient** rather than at zero lift, and the profile drag integrated across the span.
@@ -113,7 +113,7 @@ the unfavourable one.** The viscous penalty is 5 to 6 percent rather than 10 to 
 trimmed wing starts from 0.859, so the Oswald efficiency lands at **0.817 — below the assumed
 0.85 by 3.9 percent**, not at the 0.735 to 0.78 previously feared. At that value the cruise
 lift-to-drag ratio is **11.87 against the 12.04 the assumption gives**, a shortfall of 1.4
-percent rather than the 3 to 5 percent Section 7.6 had allowed for.
+percent rather than the 3 to 5 percent Section 3.17 had allowed for.
 
 Two limits belong with the number. The vortex-lattice sections are symmetric, so the profile
 drag is that of a wing reaching each local lift coefficient without camber; a cambered section
@@ -127,7 +127,7 @@ freestream speed. The flow-aligned convention is used here, and it is also the c
 zero-lift build-up uses, so the two numbers compose.
 
 The same solution gives a lift-curve slope of 3.87 rad⁻¹ against the 4.72 rad⁻¹ that
-the transition simulation of Section 7.4 assumes — eighteen percent lower, and in the
+the transition simulation of Section 3.15 assumes — eighteen percent lower, and in the
 unfavourable direction. Supplementary S5.6 reports what that does to the transition results.
 
 **Zero-lift drag.** A strip calculation over the span, taking section drag coefficients
@@ -148,15 +148,15 @@ surface, the larger hub and ten percent for fasteners, joints, antennas and surf
 imperfection. The interval is a bracket rather than an error bar, and the allowance row was
 omitted from an earlier version of this table, which therefore did not sum to its own total.
 
-The frame term reproduces the 0.0043 of Section 5.2, which was reached by a different
+The frame term reproduces the 0.0043 of Section 3.3, which was reached by a different
 route, and it comes out the same for the heavy design — an independent confirmation of
-the scale invariance claimed in Section 6.4. The hub term is bounded by hardware rather
+the scale invariance claimed in Section 3.9. The hub term is bounded by hardware rather
 than guessed: each tip rotor must deliver about 0.83 kgf on a 0.20 m propeller, which
 places it in the standard 22 mm stator class whose outer cans measure roughly 28 mm.
 
 **The assumed 0.0248 lies above the whole of that range.** The assumption is therefore
 conservative in every scenario considered, not merely in the pessimistic one. Because
-range is linear in lift-to-drag ratio, the reference designs of Sections 6.2 and 6.3
+range is linear in lift-to-drag ratio, the reference designs of Sections 3.7 and 3.8
 would gain rather than lose if the calculation were adopted — which is the reason it is
 not adopted. An assumption that is declared and shown to be conservative is a smaller
 target than a calculation whose weakest link, discussed in Supplementary S5.4, is the
@@ -165,7 +165,7 @@ treatment of a twenty-five percent thick centre body as a two-dimensional sectio
 **A three-dimensional solution for the centre body.** The weakness just named has since
 been removed. Supplementary S5.17 lists it first among the places these results should be
 attacked, and the calculation it asks for has now been carried out: a structured
-Reynolds-averaged solution over the planform of Section 4.2, at the cruise Reynolds
+Reynolds-averaged solution over the planform of Section 2.8, at the cruise Reynolds
 number and at zero lift, resolving the wing and blended body as a three-dimensional
 surface rather than as stacked sections. It gives a wing-and-body zero-lift drag of
 

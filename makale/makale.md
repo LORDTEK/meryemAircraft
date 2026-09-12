@@ -2,7 +2,7 @@
 
 Meryem Gülmen <sup>1,\*</sup>, Berke Gülmen <sup>1</sup>, Ömer Gülmen <sup>1</sup>  <sup>1</sup> Independent Researcher, Türkiye  <sup>\*</sup> Correspondence: meryemgulmen@outlook.com  | Yazar | E-posta | |---|---| | **Meryem Gülmen** (sorumlu yazar) | meryemgulmen@outlook.com | | Berke Gülmen | berkegulmen@outlook.com | | Ömer Gülmen | lordtek@me.com |
 
-**Abstract.** Hybrid vertical take-off and landing (VTOL) aircraft combine runway independence with wing-borne cruise and pay for it in cruise efficiency. This paper treats that cost as architectural rather than as a defect of implementation, and develops it as an accounting framework. The penalty is charged in three coupled currencies — the mass of hover hardware carried through cruise, its drag when exposed in cruise, and a power system sized by a condition holding for some two percent of the flight — and each of the remedies surveyed here reduces one by raising another. The escape condition is then explicit, and it has four parts: the penalty is charged unless hover and cruise are served by the same hardware, in the same orientation, doing the same job, with the hover peak supplied from a buffer rather than from permanently installed continuous power. A second result is methodological: architectural comparisons depend on the sizing contract chosen, and a fixed fuel fraction removes the mass bill from the range column altogether, so three contracts are reported rather than one. meryemAircraft, an uncrewed tail-sitting blended-wing body, satisfies the escape condition and serves as the case study: one coaxial pair at the nose gives all thrust in both regimes, four small pairs at the tips give attitude moments only, and a deployable strip is assigned the roll that body-parallel thrust cannot produce. Sized against a lift-plus-cruise layout on wind-tunnel drag, it closes the same mission at forty-two percent lower take-off mass and seventeen percent greater range; against a tilting layout the comparison reverses between contracts and no superiority is claimed. Those are sizing results for an aircraft that has not been built: a three-dimensional solution bounds the zero-lift drag with a quantified sensitivity budget, but the component mass build-up closes the 50 kg design only on a battery specific power of 5.6 kW kg⁻¹, which is 3.8 times the highest rate yet measured on a flown pack, and it does not close the 1000 kg design at all. The study is analytical, with no experimental validation of the configuration. The tip propellers can turn the aircraft's rotational inertia through the transition but not, on present evidence, its aerodynamic moment. Resolving that margin along the trajectory shows the aircraft never reaches ninety degrees of incidence — the relative wind rotates with the body — so the outstanding measurement is the pitching moment to some twenty-two degrees at low dynamic pressure, together with trim at cruise. A vortex-lattice solution establishes static pitch stability under a stated packaging rule and closes cruise trim, though not in the way first supposed: measured data for reflexed sections fall an order of magnitude short of the moment required, while nine degrees of tip washout supplies it, at a cost of 4.3 percent of cruise lift-to-drag ratio. Roll is treated the same way: the inertia and the damping are computed for this planform, the moment needed for a twenty-degree-per-second roll follows from them, and the strip's effectiveness in supplying it is stated as a requirement rather than demonstrated. Yaw has the strongest authority of the three axes, because differential tip thrust acts through the semi-span, but the planform supplies no directional stability at all, so the tip-frame fairings must serve as the vertical surfaces as well as the drag measure they were introduced as. Attitude control is therefore sized in every axis and closed in none. Transition controllability remains the principal open requirement and is stated as a threshold a future measurement must meet.
+**Abstract.** Hybrid vertical take-off and landing (VTOL) aircraft pay for runway independence in cruise efficiency. This paper treats that cost as architectural rather than as a defect of implementation and develops it as an accounting framework: the penalty is charged in three coupled currencies — hover hardware carried through cruise, its drag when exposed, and continuous power sized by a condition holding for some two percent of the flight — and each remedy surveyed reduces one by raising another. The escape condition follows in four parts: the same hardware, in the same orientation, doing the same job, with the hover peak drawn from a buffer. meryemAircraft, an uncrewed tail-sitting blended-wing body with one coaxial nose pair and four tip pairs, instantiates it and is sized at 50 kg and 1000 kg from one set of equations. Against a lift-plus-cruise layout, on wind-tunnel drag, it closes the same mission at forty-two percent lower take-off mass; against a tilting layout the ranking reverses between sizing contracts, so three are reported rather than one. The aircraft is not shown to be flyable: its mass budget closes only on a battery specific power 3.8 times the highest rate yet measured on a flown pack, and transition controllability rests on a pitching moment no current method predicts reliably. The framework does not depend on that outcome. Aşağıdaki 588 kelimelik uzun sürüm SİLİNMEDİ. Zenodo kaydında, depo tanıtım sayfasında ve gerekirse kapak mektubunda kullanılabilir. Buradan üretilen belgeye girmez.]* <details> <summary>Uzun özet (588 kelime) — gönderime girmez</summary> Hybrid vertical take-off and landing (VTOL) aircraft combine runway independence with wing-borne cruise and pay for it in cruise efficiency. This paper treats that cost as architectural rather than as a defect of implementation, and develops it as an accounting framework. The penalty is charged in three coupled currencies — the mass of hover hardware carried through cruise, its drag when exposed in cruise, and a power system sized by a condition holding for some two percent of the flight — and each of the remedies surveyed here reduces one by raising another. The escape condition is then explicit, and it has four parts: the penalty is charged unless hover and cruise are served by the same hardware, in the same orientation, doing the same job, with the hover peak supplied from a buffer rather than from permanently installed continuous power. A second result is methodological: architectural comparisons depend on the sizing contract chosen, and a fixed fuel fraction removes the mass bill from the range column altogether, so three contracts are reported rather than one. meryemAircraft, an uncrewed tail-sitting blended-wing body, satisfies the escape condition and serves as the case study: one coaxial pair at the nose gives all thrust in both regimes, four small pairs at the tips give attitude moments and the residual take-off thrust margin, and a deployable strip is assigned the roll that body-parallel thrust cannot produce. Sized against a lift-plus-cruise layout on wind-tunnel drag, it closes the same mission at forty-two percent lower take-off mass and seventeen percent greater range; against a tilting layout the comparison reverses between contracts and no superiority is claimed. Those are sizing results for an aircraft that has not been built: a three-dimensional solution bounds the zero-lift drag with a quantified sensitivity budget, but the component mass build-up closes the 50 kg design only on a battery specific power of 5.6 kW kg⁻¹, which is 3.8 times the highest rate yet measured on a flown pack, and it does not close the 1000 kg design at all. The study is analytical, with no experimental validation of the configuration. The tip propellers can turn the aircraft's rotational inertia through the transition but not, on present evidence, its aerodynamic moment. Resolving that margin along the trajectory shows the aircraft never reaches ninety degrees of incidence — the relative wind rotates with the body — so the outstanding measurement is the pitching moment to some twenty-two degrees at low dynamic pressure, together with trim at cruise. A vortex-lattice solution establishes static pitch stability under a stated packaging rule and closes cruise trim, though not in the way first supposed: measured data for reflexed sections fall an order of magnitude short of the moment required, while nine degrees of tip washout supplies it, at a cost of 4.3 percent of cruise lift-to-drag ratio. Roll is treated the same way: the inertia and the damping are computed for this planform, the moment needed for a twenty-degree-per-second roll follows from them, and the strip's effectiveness in supplying it is stated as a requirement rather than demonstrated. Yaw has the strongest authority of the three axes, because differential tip thrust acts through the semi-span, but the planform supplies no directional stability at all, so the tip-frame fairings must serve as the vertical surfaces as well as the drag measure they were introduced as. Attitude control is therefore sized in every axis and closed in none. Transition controllability remains the principal open requirement and is stated as a threshold a future measurement must meet. </details>
 
 **Keywords:** vertical take-off and landing; tail-sitter; blended wing body; uncrewed aerial vehicle; series hybrid propulsion; cruise efficiency; aircraft configuration design
 
@@ -64,22 +64,22 @@ pairs mounted on rigid frames at the wing tips. The aircraft has no elevons, no
 rudder, no tilting mechanism and no dedicated lift system. Roll authority, which
 cannot be generated by thrust vectors parallel to the body axis, is assigned to a
 level-controlled deployable strip on the lower surface positioned within the main
-propeller slipstream, so that it is loaded at zero airspeed. Section 4.4 computes the roll
+propeller slipstream, so that it is loaded at zero airspeed. Section 2.10 computes the roll
 inertia and the roll damping of this planform and states the moment the strip must supply;
 it does not show that the strip supplies it.
 
 Because the same primary propulsor serves hover and cruise without changing its
 orientation relative to the airframe, none of the three penalties **as defined in
-Section 3** arises in full: there is no second thrust system to carry, no lift hardware left
+Section 2** arises in full: there is no second thrust system to carry, no lift hardware left
 exposed in the cruise airstream, and no *engine* sized by the hover peak. The third of those is
-the one that comes with a qualification, and Section 5.3 states it rather than deferring it: the
+the one that comes with a qualification, and Section 3.4 states it rather than deferring it: the
 buffered series hybrid releases the engine and its fuel consumption from the hover condition, but
 the electric machines and the power electronics still pass the full hover power, and the
 hover-sized machine is the largest single item in the propulsion chain. That is a statement about
 three specific charges, two of which do not arise and one of which is halved, not a claim that
 the configuration is free. What it pays instead — the mass and drag of the control propellers and their
 supporting frames, the rolling-moment device, and the transition manoeuvre itself — is
-reported and quantified in Section 5.4 rather than omitted.
+reported and quantified in Section 3.5 rather than omitted.
 
 **Contributions.** The primary contribution is a framework; the aircraft is the case that
 instantiates it. The paper
@@ -119,24 +119,22 @@ here: the zero-lift drag of the wing and centre body, solved three-dimensionally
 efficiency of the trimmed wing, solved station by station with a viscous section method. The
 mass budget began as a target rather than a finding; a component build-up replaces it for the
 light design, closes conditionally, names the condition, and does not close the heavy design at
-all. Section 8 states these limitations, and Supplementary S5 enumerates all of them.
+all. Section 4 states these limitations, and Supplementary S5 enumerates all of them.
 
-The remainder of the paper is organised as follows. Section 2 reviews seventy years of
+The remainder of the paper is organised as follows. Section 1 reviews seventy years of
 attempts to merge the two configuration families and argues, on the evidence of two
 contemporary NASA reviews, that they ended for reasons external to the configuration —
 principally engine and transmission reliability — while the one difficulty those reviews
 document most fully, the workload of a pilot flying a vertical descent, is also the one
-that an uncrewed aircraft removes outright. Section 3 sets out the
+that an uncrewed aircraft removes outright. Section 2 sets out the
 architectural tax in its three currencies, shows that architectural remedies transfer it
 rather than remove it, and derives the condition under which it would not be charged.
-Section 4 describes the proposed configuration, which is built to satisfy that condition.
-Section 5 audits the claim bill by bill and states what the configuration does pay.
-Section 6 sizes two reference designs twenty times apart in mass and examines how the
-proportions scale. Section 7 treats the flight profile and the transition manoeuvre,
+Section 2 describes the proposed configuration, which is built to satisfy that condition.
+Section 3 audits the claim bill by bill and states what the configuration does pay.
+Section 3 sizes two reference designs twenty times apart in mass and examines how the
+proportions scale. Section 3 treats the flight profile and the transition manoeuvre,
 including a result that contradicts a common assumption about how quickly a tail-sitter
-should rotate. Section 8 states the limitations, and Section 9 concludes.
-
-# 2. Background: seventy years of attempts
+should rotate. Section 4 states the limitations, and Section 5 concludes.
 
 The configuration proposed in this paper is new, but the problem it addresses is not,
 and neither are several of its ingredients. This section reviews the attempts that
@@ -147,7 +145,7 @@ discussed below on a single timeline, with the recorded reason each one stopped.
 
 [Figure 2 about here]
 
-## 2.1 Removing the fuselage
+## 1.1 Removing the fuselage
 
 The idea that a transport aircraft should carry its payload inside a lifting surface
 rather than inside a cylinder is as old as the transport aircraft itself. Burnelli's
@@ -164,7 +162,7 @@ premature. Whatever weight that reading deserves, the aircraft's best-documented
 difficulties lay in its power transmission rather than in its aerodynamics: the
 contra-rotating propellers were driven through remote gearboxes and long extension
 shafts, and were eventually changed to single-rotation units. The distinction between an
-airframe and the machinery installed in it matters for the present work, and Section 4.3
+airframe and the machinery installed in it matters for the present work, and Section 2.9
 returns to it — the configuration proposed here uses counter-rotating propellers but
 never builds a contra-rotating gearbox, because each rotor of a pair is driven by its own
 electric machine on a common axis.
@@ -179,7 +177,7 @@ The recurring pattern is worth stating plainly: in each case the aircraft flew, 
 configuration was not disqualified in flight, and the programme ended for a reason
 that came from outside the configuration.
 
-## 2.2 Standing the aircraft on its tail
+## 1.2 Standing the aircraft on its tail
 
 The tail-sitter is the most direct answer to the runway: if the aircraft points its thrust line
 at the ground it needs no separate lift system, no tilting mechanism and no second propulsion
@@ -208,9 +206,9 @@ The XFY-1 was not stopped by pilot workload. The workload was real, separately d
 severe — but what curtailed the testing was mechanical. **Three of the four objections recorded
 against these aircraft are objections to 1954 machinery and to a human pilot, not to the
 configuration**: actuator response rate, gearbox reliability, and an orientation problem that
-exists only because someone is sitting in it. Section 2.5 returns to what that leaves.
+exists only because someone is sitting in it. Section 1.5 returns to what that leaves.
 
-## 2.3 Distributing sweep along the span
+## 1.3 Distributing sweep along the span
 
 The proposed planform varies its leading-edge sweep continuously from root to tip while
 holding the trailing edge at a constant angle. The principle of treating sweep, chord and
@@ -220,11 +218,11 @@ decreasing outboard so that the wing was not governed by its most vulnerable sta
 
 The present aircraft is subsonic and does not inherit the transonic motivation that
 produced that planform. What it takes is the structural idea alone, and it takes it in a
-much reduced form: as Section 4.2 records, the sweep variation actually realised here is
+much reduced form: as Section 2.8 records, the sweep variation actually realised here is
 under seven degrees. No claim of descent from the crescent wing is made, and none is
-needed. Section 4.2 states the values used, and Section 8 states plainly that they were
+needed. Section 2.8 states the values used, and Section 4 states plainly that they were
 chosen rather than derived.
-## 2.4 The contemporary hybrids
+## 1.4 The contemporary hybrids
 
 The problem did not go away when the prototypes did. Since roughly 2010 a large family
 of hybrid VTOL uncrewed aircraft has reached service, in two dominant architectures.
@@ -234,13 +232,13 @@ architectures — tilt-rotor, tilt-wing and tilt-nacelle — reuse the same prop
 both regimes by rotating them.
 
 Both work. Both are in operational use. This paper does not claim otherwise, and
-Section 6.5 places the proposed reference designs alongside them without ranking them.
-What Section 3 argues is that each of these architectures pays for its capability in a
+Section 4.1 places the proposed reference designs alongside them without ranking them.
+What Section 2 argues is that each of these architectures pays for its capability in a
 way the other does not, that the payment can be moved between mass, drag and power
 system sizing, and that it cannot be brought to zero as long as hover and cruise are
 served by different hardware or by hardware that must move between two roles.
 
-## 2.5 What this history does and does not show
+## 1.5 What this history does and does not show
 
 It would be too convenient to declare that every one of these programmes ended for
 reasons external to its configuration. Some of the difficulties were real and internal,
@@ -249,7 +247,7 @@ than a runway landing. A tail-sitting aircraft is more exposed to crosswind on t
 ground than a conventional one. And a set of propellers whose thrust vectors are all
 parallel to the body axis cannot, by construction, produce a rolling moment — a
 limitation that applies to this configuration exactly as it applied to its
-predecessors, and which Section 4.4 addresses rather than avoids.
+predecessors, and which Section 2.10 addresses rather than avoids.
 
 What the history does show is that the concept was never given a fair verdict under
 present-day conditions. The programmes of the 1950s were closed by engine deliveries, by
@@ -267,16 +265,22 @@ What the history does not settle is why the contemporary aircraft that did succe
 pay for their vertical capability, and what exactly they pay. That is the subject of the
 next section.
 
-# 3. The architectural tax of hybrid VTOL
+# 2. Materials and Methods
+
+This section states the analytical framework the paper is built on, defines the
+configuration it is applied to, and gives the methods by which every number in Section 3 was
+produced. Sections 2.1 to 2.6 develop the framework; Sections 2.7 to 2.11 define the aircraft;
+Sections 2.12 and 2.13 give the sizing and computational methods; Section 2.14 records the use
+of artificial-intelligence tools.
 
 Hybrid VTOL aircraft work. The argument of this section is not that they do not, but
 that they pay for the capability in a way that can be located precisely, that the
 payment appears in three different currencies, and that an improvement in one currency
 is usually a transfer into another rather than a reduction. The section closes by
 stating the condition under which the payment would be zero — a condition none of the
-current architectures satisfies, and which Section 4 is built to satisfy.
+current architectures satisfies, and which Section 2 is built to satisfy.
 
-## 3.1 The root: a duty cycle that does not match the hardware
+## 2.1 The root: a duty cycle that does not match the hardware
 
 Every hybrid VTOL aircraft contains hardware whose only purpose is the vertical phase.
 That phase is short. For a mission of one hour, a take-off, a transition, a return
@@ -290,7 +294,7 @@ A lighter lift rotor is still carried for the whole flight. A cleaner lift rotor
 still carried for the whole flight. The mismatch between how long a component is
 needed and how long it is present is the origin of all three bills below.
 
-## 3.2 Bill 1 — mass
+## 2.2 Bill 1 — mass
 
 The most direct payment is dead mass. A lift-plus-cruise aircraft carries two propulsion groups:
 rotors, motors, mounts, wiring and structural reinforcement for the vertical phase, and a
@@ -324,7 +328,7 @@ thrust across the span therefore obliges the structure that reaches it to be str
 fatigue-resistant enough to keep transmitting power there — charged to mass, whether or not the
 distributed propulsors are running.**
 
-## 3.3 Bill 2 — drag
+## 2.3 Bill 2 — drag
 
 The second payment is charged only to architectures that leave hover hardware exposed in forward
 flight: rotors stopped in the airstream, the booms that carry them, and the interference between
@@ -373,7 +377,7 @@ mechanism.
 **The important property of this bill is not its size but where it is charged.** It is charged
 per unit time in cruise, so it grows with exactly the quantity the aircraft exists to maximise.
 
-## 3.4 Bill 3 — power system sizing
+## 2.4 Bill 3 — power system sizing
 
 The third payment is the least visible and often the largest. A VTOL aircraft must
 install enough power to hover, but it only uses that much power for the two percent of
@@ -402,7 +406,7 @@ The consequence propagates. Sizing by hover means an oversized engine, or a batt
 that must deliver a peak it will rarely be asked for, or both — and whichever of the
 two is chosen, the extra installed capacity is mass, which returns to Bill 1.
 
-## 3.5 The bills are one quantity in three currencies
+## 2.5 The bills are one quantity in three currencies
 
 The three bills are not independent problems with independent fixes. **Each known architectural
 move reduces one and increases another.** Figure 3 shows the transfers; Table 1 lists them.
@@ -419,13 +423,13 @@ move reduces one and increases another.** Figure 3 shows the transfers; Table 1 
 | Higher disc loading, smaller rotors | 1 and 2 — smaller, lighter, cleaner rotors | 3 — hover power rises with √(DL) |
 | Lower disc loading, larger rotors | 3 — hover power falls | 1 and 2 — larger structure and exposed area |
 
-**One of these rows has been measured.** In the study of Section 3.3, the retraction system that
+**One of these rows has been measured.** In the study of Section 2.3, the retraction system that
 removed thirty percent of the drag was then costed: applied to a passenger eVTOL with the
 mechanism assessed at five percent of vehicle mass, maximum range rose from 119 km to 121 km —
 **a two-kilometre gain for a five-percent mass penalty.** Bill 2 was converted almost exactly
 into Bill 1, and the transfer is the point rather than the small residue.
 
-## 3.6 The condition under which the three bills are not charged
+## 2.6 The condition under which the three bills are not charged
 
 Stating the tax this way makes its escape condition explicit. The bill exists because
 hover and cruise are served by hardware that is not the same hardware, doing the same
@@ -442,81 +446,29 @@ it — and that the difference between the hover peak and the cruise demand is s
 buffer rather than by permanently installed continuous power. This is referred to below as
 the *zero-bill condition*, and the name should be read strictly: it means zero of these
 three bills, not an architecture that costs nothing. What an architecture satisfying it
-pays instead is a separate question, and Section 5.4 answers it for the configuration
+pays instead is a separate question, and Section 3.5 answers it for the configuration
 proposed here.
 
 That is a description of a tail-sitter with a buffered series-hybrid powertrain. It is
-also, precisely, the configuration described in Section 4.
+also, precisely, the configuration described in Section 2.
 
-## 3.7 The three bills stated formally
+## 2.7 Overview
 
-Supplementary S6 states the three bills as equations and gives the transfer table that shows
-them to be one quantity in three currencies: a design that refuses to pay one of them pays it
-in another. The short form is that each bill is a fraction of take-off mass, exposed cruise
-drag, or installed continuous power, and that the three are linked by the sizing loop — mass
-drives thrust, thrust drives power, power drives mass — so that relieving one without relieving
-its cause simply moves the charge.
-
-**A consequence that can be checked against published work.** If the framework is right, then
-for the same mission a configuration carrying a dedicated lift system should pay for it in gross
-weight, and that payment should *not* be recovered by the cruise efficiency the arrangement buys.
-This is a sharper prediction than it first appears, because it forbids the obvious defence: it
-says the efficiency gain is real and still insufficient. The NASA sizing set is a direct test of
-it. Against a common mission of 1 200 lb of payload over 75 nautical miles, the turboshaft
-quadrotor — which has no cruise wing, and therefore no dedicated lift hardware to carry — sizes
-at an effective lift-to-drag ratio of 4.9 and a design gross weight of 3 678 lb, while the
-turbo-electric lift-plus-cruise reaches 8.5 and weighs 7 271 lb [22]. **Its cruise efficiency is
-seventy percent better and it is nearly twice as heavy**, which is the prediction and not a
-counter-example to it. The tilt-wing in the same set reaches 8.6 — higher than every
-lift-plus-cruise entry — while carrying no dedicated lift system at all, and it is the one
-configuration in the table that uses the same hardware in both regimes. The framework does not
-predict the numbers; it predicts that the weight charge survives the efficiency credit, and in
-this set it does.
-
-**What the framework does not claim.** It does not claim that avoiding the three bills makes an
-aircraft better, only cheaper in those three specific currencies. A configuration may avoid all
-three and still be unbuildable, uncontrollable, or unsuited to its mission — and Sections 7 and
-8 are about exactly that possibility for the configuration proposed here. Nor does it claim the
-bills are the only costs; they are the ones that follow from the duty-cycle mismatch of Section
-3.1, and a design pays many others.
-
-## 3.8 Why the market looks the way it does
-
-One observable consequence supports the argument, and it has been stated independently.
-Surveying the field, the study cited above concludes that multirotors are efficient in
-hover and suited to short-range missions, that vectored-thrust aircraft are efficient in
-cruise and suited to long-range missions, and that "lift plus cruise eVTOLs are a
-compromise, but they are slowed down by the drag of the lift propellers."
-
- Hybrid VTOL aircraft occupy a narrow
-band of the mission space. Below it, where range requirements are short, a multirotor
-is cheaper and simpler and pays none of these bills because it never claimed cruise
-efficiency. Above it, where range requirements are long, a runway-launched fixed-wing
-aircraft is more efficient and pays none of them because it never claimed vertical
-capability. The hybrid sits between the two, and the width of that band is set by how
-much cruise efficiency the architecture had to surrender.
-
-An architecture that surrenders less does not merely perform better inside the band. It
-widens the band.
-
-# 4. Proposed configuration
-
-
-## 4.1 Overview
-
-The configuration satisfies the zero-bill condition of Section 3.6 directly rather than
+The configuration satisfies the zero-bill condition of Section 2.6 directly rather than
 by compensation. The aircraft stands on its tail. Its entire airframe is a blended-wing
 body: there is no cylindrical fuselage, and every part of the planform carries payload
 and produces lift. A single coaxial counter-rotating propeller pair at the nose
 produces all propulsive thrust, in hover and in cruise alike, without changing its
 orientation relative to the airframe. Four small coaxial pairs, mounted on rigid frames
-at the wing tips, produce attitude control and nothing else. The energy system is a
+at the wing tips, produce attitude control and, at take-off, the thrust margin the nose pair
+does not have — Section 3.15 works out why, and it is the one place this configuration asks a
+component to do a second job it was not sized for. The energy system is a
 series hybrid: fuel drives an internal-combustion engine, the engine drives a
 generator, and the generator supplies electric machines at the rotors.
 
 The aircraft has no elevons, no rudder, no tilting mechanism, no retraction mechanism
 and no dedicated lift system. The only moving aerodynamic device is a variable-extension strip on
-the lower surface, described in Section 4.4, which exists solely because roll cannot be
+the lower surface, described in Section 2.10, which exists solely because roll cannot be
 produced by propellers alone. Figure 4 gives three orthogonal views of the light
 reference design and Figure 5 a general view of the same geometry.
 
@@ -524,7 +476,7 @@ reference design and Figure 5 a general view of the same geometry.
 
 [Figure 5 about here]
 
-## 4.2 Planform
+## 2.8 Planform
 
 The planform is a blended-wing body whose leading-edge sweep varies continuously along the span
 while the trailing edge is held constant. The sweep law is linear in span from 45° at the root
@@ -537,7 +489,7 @@ seven degrees**, and the crescent character comes from the curvature of the lead
 divergence between the two edge angles rather than from a large change in sweep. These values
 were chosen, not derived: the 20°–40° band they started from was reported favourable in the
 transonic-transport literature the crescent-wing idea comes from, and this aircraft is subsonic,
-so that band does not transfer on its own authority. Section 8 lists it among the limitations.
+so that band does not transfer on its own authority. Section 4 lists it among the limitations.
 
 **Sweep does two jobs here, and the second is why it is not a free parameter.** The aircraft is
 tailless: with no horizontal stabiliser on a boom, the pitching moment must be generated by the
@@ -555,7 +507,7 @@ the distributions.
 
 [Figure 6 about here]
 
-## 4.3 Propulsion
+## 2.9 Propulsion
 
 Every propeller is a coaxial counter-rotating pair, for one reason worth stating narrowly:
 **reaction torque.** A single propeller applies to the airframe a torque equal and opposite to
@@ -564,7 +516,7 @@ and it must be opposed continuously — by a control surface, which costs drag, 
 thrust, which costs a control channel. A counter-rotating pair does not produce it.
 
 The pairs are of fixed geometry: no cyclic pitch, no collective, no variable mechanism. **This
-has a consequence for the tip pairs in cruise that Section 5.2 works out** — unable to feather,
+has a consequence for the tip pairs in cruise that Section 3.3 works out** — unable to feather,
 they must either turn at the zero-shaft-torque condition or be stopped, and the difference
 between those two states is most of the aircraft's zero-lift drag. The torque balance is exact
 at cruise rather than hover, so a small residual remains in hover.
@@ -585,10 +537,10 @@ allows it to be sized for cruise rather than hover. For the light design the con
 requirement is 1.9 kW at the engine shaft and the engine is sized at 2.6 kW, while the hover
 requirement is 10.9 kW at the rotor; the difference is supplied for the vertical phase by a
 **1.8 kg battery buffer, 3.6 percent of take-off mass**. That is the mechanism that releases the
-engine from the hover condition — Bill 3 as Section 3 defines it. The electrical path is not
-released, and Section 5.3 says so.
+engine from the hover condition — Bill 3 as Section 2 defines it. The electrical path is not
+released, and Section 3.4 says so.
 
-## 4.4 Control without control surfaces
+## 2.10 Control without control surfaces
 
 The nose pair produces thrust; the four tip pairs produce moments. They are not lift rotors and
 are not sized to hover the aircraft — in the vertical phase they carry under fifteen percent of
@@ -642,7 +594,7 @@ Deployed on one side it raises drag there and yaws the aircraft towards the stri
 in the classical sense, 11.3 N·m at the present height law, against 42.8 to 55.9 N·m of yaw
 authority, so it costs five to twenty-six percent of the strongest axis. It also pitches the
 nose down, by ΔC_m between 0.005 and 0.032 depending on where along the chord the lift increment
-acts; the tightest pitching-moment budget in Section 7.6 is 0.050, so at the upper end a
+acts; the tightest pitching-moment budget in Section 3.17 is 0.050, so at the upper end a
 commanded roll would consume two thirds of it. **The conclusion is a scheduling requirement
 rather than a redesign: the strip should not be commanded at full extension during the end of
 the rotation.** The older literature states the same coupling more bluntly — for spoilers used
@@ -733,7 +685,7 @@ has one, at no cost the frame does not already pay. This paper does not size tha
 because doing so on a curve it has not measured would repeat the error it has just described.
 Supplementary S3 states it as the measurement this configuration would buy first.
 
-## 4.5 Structure and ground contact
+## 2.11 Structure and ground contact
 
 The tip frames are not added for the propellers. They are the landing structure.
 
@@ -748,27 +700,175 @@ The aircraft rests on five points: the four lower ends of the tip frames and a s
 keel that runs aft along the centreline from the nose propeller to the trailing edge.
 Because the aircraft stands on its tail, these five points are what it stands on, and
 their spread is the stance base that resists tipping in wind. Lengthening the frames to
-buy the control moment arm of Section 4.4 widens the stance base at the same time. One
+buy the control moment arm of Section 2.10 widens the stance base at the same time. One
 structure serves three purposes — mounting the control propellers, providing the moment
 arm, and carrying the landing loads — and is charged to the mass budget once.
 
 The stance base is a design parameter, not a constraint imposed by the configuration.
 Moving the frame ends further outboard widens it without altering the planform, the
 propulsion, or the control architecture — and because the same displacement lengthens
-the control moment arm of Section 4.4, the two benefits arrive together from one
+the control moment arm of Section 2.10, the two benefits arrive together from one
 change. The reference geometry given here is one point on that trade; an operator with
 a stronger ground-wind requirement can take another without redesigning the aircraft.
 
-# 5. The architectural tax, audited bill by bill
 
-Section 3 identified three bills and argued that they are one quantity paid in three
-currencies. Section 4 described a configuration built to satisfy the zero-bill
+## 2.12 Sizing method
+
+The method is elementary and the equations are given so that any result in this section can be
+checked by hand.
+
+**Hover.** Thrust equals weight and induced power follows from momentum theory,
+v_i = √(T/2ρA) and P_i = T^1.5/√(2ρA), with disc loading DL = T/A as the governing parameter;
+figure of merit gives shaft power.
+
+**Cruise.** C_L = W/(qS) fixes the lift coefficient at the chosen speed, C_D = C_D0 + C_L²/(πARe)
+gives the drag, and L/D is their ratio **at the cruise condition, not at the aircraft's best
+point**. The familiar L/D_max = 0.5√(πARe/C_D0) occurs at one particular speed — 25.3 m s⁻¹ for
+the light design, only 1.26 times its stall speed. Cruising there would leave too little margin,
+so both designs cruise at 1.49 times stall and accept the lift-to-drag ratio that condition
+gives. Using the maximum value while quoting a different cruise speed would overstate the
+range, and an earlier version of this paper did exactly that.
+
+**Range.** The series-hybrid chain is stated link by link rather than folded into one
+efficiency, because the result is sensitive to it and a reader should be able to disagree with
+any single link: engine 0.28, generator 0.90, power electronics 0.95, electric machine 0.92,
+propeller 0.80 — **overall 0.176**. Fuel energy is 12.9 kWh kg⁻¹. The engine figure matters
+most: 0.28 is representative of a small four-stroke at its best operating point, and it is why
+the range figures below are lower than an optimistic estimate would give.
+
+**Control.** Tip-pair thrust follows from M = 2TL = Iα, with the transition manoeuvre as the
+sizing case.
+
+**Assumptions carried throughout:** sea-level density; no compressibility; span efficiency
+e = 0.85; C_D0 = 0.0248 for the light design, which is generous for a clean blended-wing body
+and absorbs the tip-frame contribution of Section 3.3 — that contribution is 0.0043, or
+seventeen percent of the assumed value, so the assumption is self-consistent rather than
+optimistic. Both are carried as assumptions throughout, so that every downstream figure rests
+on one stated basis. Section 3.10 computes both and reports what the computation does to them:
+it bounds them rather than replacing them, which is a weaker but more honest claim.
+
+## 2.13 Computational methods
+
+Five computational tools produce the results of Section 3. Each is named here with what it was
+asked for and what it was not; the results themselves, and the convergence and sensitivity
+evidence behind them, are in Sections 3.10 and 3.17 and in Supplementary S1 and S4.
+
+**Vortex-lattice.** A vortex-lattice solution of the planform of Section 2.8 supplies the
+inviscid span efficiency, the neutral point from dC_m/dC_L, the twist required to trim, and the
+roll damping from a helix-angle solution. It is used only for quantities that depend on the
+spanwise circulation and the aerodynamic centre, which converge quickly; it is not used for
+pressure distributions near the plan discontinuity, and no vortex-lattice result is quoted at
+the transition incidences of Sections 3.12 to 3.17, where leading-edge vortex separation puts
+the planform outside the linear method's range. A published comparison against RANS on a
+blended-wing body of this class found the vortex-lattice lift coefficient low by thirty to
+thirty-eight percent; Section 3.10 states what that does and does not disturb.
+
+**Strip method with a section solver.** Zero-lift drag is built up strip by strip along the span,
+with section drag coefficients from a physics-informed aerofoil model evaluated at each strip's
+own chord Reynolds number and thickness. The same construction, called instead at each strip's
+*local lift coefficient* taken from the vortex-lattice loading, gives the profile drag of the
+trimmed wing and hence the Oswald efficiency. The section angle of attack that delivers a
+required local lift coefficient is found by bisection rather than by linear interpolation.
+
+**Reynolds-averaged Navier–Stokes.** A structured three-dimensional solution over the wing and
+blended centre body, at the cruise Reynolds number and at zero lift, replaces the strip method's
+weakest term — its treatment of a twenty-five percent thick centre body as a two-dimensional
+section. The solution is fully turbulent. Its spread is quantified across three grids, four wall
+resolutions, two turbulence closures and two initialisation fields, and the turbulence closure
+dominates that spread.
+
+**Point-mass transition simulation.** The transition is simulated as a two-degree-of-freedom
+point mass. The body angle is driven kinematically from zero to ninety degrees over a rotation
+time; thrust acts along the body axis, lift perpendicular to the velocity vector and drag
+opposite to it; the lift curve is linear to stall and a flat-plate relation beyond it. **The
+aircraft does not rotate in this simulation — it is assumed to rotate, and the moment producing
+the rotation does not appear.** Whether the moment exists is a separate calculation, below.
+
+**Rotational-authority and mass models.** A component build-up distributes mass over the planform
+in proportion to the internal volume available to hold it, which fixes the centre of gravity and
+the moment of inertia about the axis the transition rotates about. Two rotation profiles a finite
+moment can produce — bang-bang and smooth — bracket the required moment, and the available moment
+follows from the tip-pair thrust and the frame length.
+
+Every script that produces a number in this paper is in the repository named in the Data
+Availability statement, together with the convergence studies and a record of the calculations
+that failed.
+
+## 2.14 Use of artificial-intelligence tools
+
+Large-language-model assistants were used during this study for three purposes, and the
+distinction between them matters for what the reader should check.
+
+They were used to **search and triage literature** — proposing candidate sources against a stated
+question. No number or claim in this paper rests on a model's description of a source. Every
+source cited was obtained as the original document and read by the authors before citation, a
+rule adopted after search-derived summaries produced three incorrect values early in the study,
+and one that has since caught two further cases in which a proposed source stated the opposite of
+what it was offered for.
+
+They were used to **check numerical work** — recomputing published arithmetic, auditing units and
+cross-references, and questioning derivations. Several corrections recorded in Sections 3 and 4
+originated this way, including the thrust-to-weight inconsistency of Section 3.15, the
+station-mixing error in the buffer power of Section 3.4, and the misattributed comparative table
+of Section 3.6. In each case the correction was reproduced independently from the underlying
+model before it was adopted, and the reproduction rather than the suggestion is what is reported.
+
+They were used for **language editing**.
+
+No text was accepted without review, no result was generated by a model, and the authors take
+full responsibility for the content of this publication. The prompts, the responses and the
+resulting corrections are in the repository, so a reader who wishes to audit this use can do so
+rather than take the statement on trust.
+
+# 3. Results
+
+Results are given in four groups: the framework tested against published sizing
+studies (Section 3.1), the three charges audited against the proposed configuration
+(Sections 3.2 to 3.6), two reference designs with the bounds on their assumed coefficients and a
+component build-up of their mass (Sections 3.7 to 3.11), and the flight profile with the
+transition analysis (Sections 3.12 to 3.17). Every number is calculated rather than measured;
+Section 4 states what that means.
+
+## 3.1 The three bills stated formally
+
+Supplementary S6 states the three bills as equations and gives the transfer table that shows
+them to be one quantity in three currencies: a design that refuses to pay one of them pays it
+in another. The short form is that each bill is a fraction of take-off mass, exposed cruise
+drag, or installed continuous power, and that the three are linked by the sizing loop — mass
+drives thrust, thrust drives power, power drives mass — so that relieving one without relieving
+its cause simply moves the charge.
+
+**A consequence that can be checked against published work.** If the framework is right, then
+for the same mission a configuration carrying a dedicated lift system should pay for it in gross
+weight, and that payment should *not* be recovered by the cruise efficiency the arrangement buys.
+This is a sharper prediction than it first appears, because it forbids the obvious defence: it
+says the efficiency gain is real and still insufficient. The NASA sizing set is a direct test of
+it. Against a common mission of 1 200 lb of payload over 75 nautical miles, the turboshaft
+quadrotor — which has no cruise wing, and therefore no dedicated lift hardware to carry — sizes
+at an effective lift-to-drag ratio of 4.9 and a design gross weight of 3 678 lb, while the
+turbo-electric lift-plus-cruise reaches 8.5 and weighs 7 271 lb [22]. **Its cruise efficiency is
+seventy percent better and it is nearly twice as heavy**, which is the prediction and not a
+counter-example to it. The tilt-wing in the same set reaches 8.6 — higher than every
+lift-plus-cruise entry — while carrying no dedicated lift system at all, and it is the one
+configuration in the table that uses the same hardware in both regimes. The framework does not
+predict the numbers; it predicts that the weight charge survives the efficiency credit, and in
+this set it does.
+
+**What the framework does not claim.** It does not claim that avoiding the three bills makes an
+aircraft better, only cheaper in those three specific currencies. A configuration may avoid all
+three and still be unbuildable, uncontrollable, or unsuited to its mission — and Sections 3 and
+4 are about exactly that possibility for the configuration proposed here. Nor does it claim the
+bills are the only costs; they are the ones that follow from the duty-cycle mismatch of Section
+2.1, and a design pays many others.
+
+Section 2 identified three bills and argued that they are one quantity paid in three
+currencies. Section 2 described a configuration built to satisfy the zero-bill
 condition. This section audits that claim bill by bill, and then states, in the same
 detail, what the configuration does pay. The second half is not a concession appended
 for balance. An architecture that claimed to pay nothing would be describing a
-different aircraft from the one in Section 4.
+different aircraft from the one in Section 2.
 
-## 5.1 Bill 1 — mass: the charge does not arise
+## 3.2 Bill 1 — mass: the charge does not arise
 
 There is no second propulsion group. The nose pair that lifts the aircraft off the
 ground is the same pair, in the same orientation, at the same station, that propels it
@@ -779,16 +879,16 @@ consequence of poor design in lift-plus-cruise aircraft; it was a consequence of
 counting two propulsion systems where the mission needs one. A configuration that
 counts one does not reduce the bill — it does not generate it.
 
-The tip pairs are a genuine addition and are accounted for in Section 5.4. They are not
+The tip pairs are a genuine addition and are accounted for in Section 3.5. They are not
 a second propulsion group: they are sized for moments rather than for weight, and in
 the vertical phase they draw 1.34 kW against the nose pair's 10.9 kW, which is twelve
 percent.
 
-## 5.2 Bill 2 — drag: reduced, not removed
+## 3.3 Bill 2 — drag: reduced, not removed
 
 In cruise there is no stopped rotor in the airstream, because there is no rotor that stops. The
 nose pair is the cruise propulsor and runs at its design condition throughout. The quarter of
-lift-to-drag ratio that Section 3.3 reports as the measured cost of installing hover hardware is
+lift-to-drag ratio that Section 2.3 reports as the measured cost of installing hover hardware is
 not incurred — not reduced, not mitigated, but **absent**, because the hardware that causes it
 does not exist here. Nor is there a retraction mechanism, so the transfer of Bill 2 into Bill 1
 does not occur either. Where lift rotors are retained, keeping their drag small needs an
@@ -819,7 +919,7 @@ drive, outer sections retard, and they balance. The shaft then does no work, so 
 neither drives nor brakes and the electrical cost is controller standby draw and bearing losses.
 The blades sit at low incidence with attached flow, which is the first row. **The tip rotors are
 therefore held in cruise at the zero-shaft-torque condition — neither stopped nor driven** — and
-this is the state assumed throughout Section 6. It is worth naming because both neighbouring
+this is the state assumed throughout Section 3. It is worth naming because both neighbouring
 states are wrong: driven, they cost propulsive power; stopped without azimuth control, they cost
 most of the aircraft's zero-lift drag.
 
@@ -828,7 +928,7 @@ frames. They are structure in the airstream that a conventional aircraft does no
 the light design point they contribute ΔC_D0 = 0.0043 — **about twelve percent of total cruise
 drag**, and seventeen percent of the zero-lift drag the sizing assumes. Both denominators appear
 in this paper and each is named where it is used. That is the honest figure and it is carried in
-the ledger of Section 5.4.
+the ledger of Section 3.5.
 
 **The fairing on those frames is not only a drag measure.** The frames are the only surfaces
 standing perpendicular to the wing plane, and the planform supplies no directional stability at
@@ -839,9 +939,9 @@ carries in any case. The two requirements do not conflict, and the directional o
 but the frame cross-section is now constrained from two directions, and a selection made on drag
 alone would be made on half the evidence.
 
-## 5.3 Bill 3 — power system sizing: avoided for the engine, not for the electrical path
+## 3.4 Bill 3 — power system sizing: avoided for the engine, not for the electrical path
 
-The series-hybrid arrangement of Section 4.3 breaks the link that forces the power
+The series-hybrid arrangement of Section 2.9 breaks the link that forces the power
 system to be sized by the hover condition. Because the engine drives a generator rather
 than a rotor, it supplies average power, not peak power, and the peak is supplied from
 a buffer.
@@ -866,19 +966,19 @@ elsewhere; it is simply not incurred. That the buffer costs under four percent o
 at both design points, twenty times apart in mass, is the numerical statement that this
 avoidance is architectural rather than a fortunate coincidence of one size.
 
-**What is not avoided, and the section heading says so.** The bill is defined in Section 3
+**What is not avoided, and the section heading says so.** The bill is defined in Section 2
 as a *continuous* power system sized by the hover peak, and it is the engine and its fuel
 consumption that the buffer releases from that condition. The electrical path is not
 released: the nose motor and the power electronics must still pass the full 10.9 kW, and
-the component build-up of Section 6.7 shows them as 2.73 kg and 0.61 kg against 2.60 kg of
+the component build-up of Section 3.11 shows them as 2.73 kg and 0.61 kg against 2.60 kg of
 engine and generator — that is, the hover-sized electrical machine is the single largest
 item in the propulsion chain. The saving is real and it is the engine's, but a reader
 should not take it as an aircraft on which nothing is sized by hover. The buffer itself
-carries a further condition, given in Section 6.7: it is specified by power rather than
+carries a further condition, given in Section 3.11: it is specified by power rather than
 energy, at **5.63 kW kg⁻¹** to hover and 6.48 to leave the ground, which is a demanding cell
-requirement and not a free parameter. Section 8.2 measures it against what has been flown.
+requirement and not a free parameter. Section 4.4 measures it against what has been flown.
 
-## 5.4 What is paid
+## 3.5 What is paid
 
 The honest ledger has five entries.
 
@@ -888,7 +988,7 @@ pair draws. This is the configuration's substitute for elevons and a rudder, and
 not free — it is merely cheaper than a second lift system, and it does not sit in the
 cruise airstream in the way a lift rotor does.
 
-**The tip frames.** As established in Section 5.2, of the order of twelve percent of
+**The tip frames.** As established in Section 3.3, of the order of twelve percent of
 cruise drag, conditional on being faired. This is the largest single payment the
 configuration makes, and it is the price of the moment arm, the propeller mounting and
 the landing structure combined into one member.
@@ -897,18 +997,18 @@ the landing structure combined into one member.
 retracted is a surface discontinuity; when deployed it is a drag device by construction,
 but it is deployed only while a roll is being commanded.
 
-**The twist needed to trim.** Section 7.6 finds that the configuration trims at cruise with
+**The twist needed to trim.** Section 3.17 finds that the configuration trims at cruise with
 nine degrees of tip washout, reflex being an order of magnitude short of the moment required.
 Washout is not free: it costs span efficiency, and the cruise lift-to-drag ratio falls from
 12.65 to 12.11 — **4.3 percent**. This entry was missing from earlier versions of this ledger,
 and it is worth being precise about what it is a payment for. It is not one of the three bills
-of Section 3, which are charged for having a hover capability; it is charged for being
+of Section 2, which are charged for having a hover capability; it is charged for being
 tailless, and a tailed aircraft of the same architecture would not pay it. It belongs here
 because this configuration is tailless, and because a ledger that omitted it would be
 flattering rather than honest.
 
 **The transition manoeuvre.** The aircraft must rotate through ninety degrees, and the
-rotation costs time, horizontal displacement and control power. Section 7 treats it in
+rotation costs time, horizontal displacement and control power. Section 3 treats it in
 full and shows that the altitude cost, which is the one usually assumed to dominate, can
 be brought to zero: rotating slowly and entering the rotation while still climbing
 removes it entirely at both design points. What remains is not free — the manoeuvre
@@ -916,19 +1016,19 @@ occupies seconds during which the aircraft is neither hovering nor cruising — 
 smaller than the literature on tail-sitters would suggest, and it is the one payment on
 this list that gets *cheaper* the less it is hurried.
 
-Set against the bills of Section 3, the ledger is favourable but not empty. The
+Set against the bills of Section 2, the ledger is favourable but not empty. The
 configuration does not escape physics; it declines a particular trade. What it pays
 instead is smaller, and — this is the part that matters for scaling — it does not grow
 faster than the aircraft.
 
 
-## 5.5 A comparative sizing of three architectures
+## 3.6 A comparative sizing of three architectures
 
 Supplementary S6 sizes three architectures against the same mission — this tail-sitter, a
 lift-plus-cruise aircraft, and a tilt-rotor — under three different sizing contracts: fixed fuel
 fraction, fixed fuel mass, and fixed maximum take-off mass with fixed payload. One set of
 equations serves all three, and every coefficient in it is back-solved from the light reference
-design of Section 6.2 rather than assumed. Mission, wing loading, disc loading, structural
+design of Section 3.7 rather than assumed. Mission, wing loading, disc loading, structural
 fraction and energy chain are held identical; only the cruise-drag multiplier and the
 architecture-specific mass differ. Under the first contract:
 
@@ -965,56 +1065,19 @@ level of detail than the one proposed here, which is modelled from a component b
 **Comparing a build-up against a fraction favours whichever is modelled more optimistically**,
 and this study cannot rule out that it is this one. An external check against three flying
 eVTOLs, one per architecture, is reported in S6.1; it corroborates the ordering of the charges
-but is a comparison of other people's aircraft, not of this sizing. Section 8 states the
+but is a comparison of other people's aircraft, not of this sizing. Section 4 states the
 comparison as conditional on both asymmetries.
 
-# 6. Reference designs at two scales
-
 A configuration argument is only as good as its willingness to become a number. This
-section sizes two aircraft from the arrangement of Section 4 — one at 50 kg and one at
+section sizes two aircraft from the arrangement of Section 2 — one at 50 kg and one at
 1000 kg, a factor of twenty apart in mass — using the same equations, the same
 assumptions and the same architecture. The two points are not a light version and a
 heavy version of different aircraft. They are the same aircraft at two sizes, and the
 purpose of presenting both is to show that the proportions hold.
 
-Every number below is calculated, not measured. Section 8 says what that means.
+Every number below is calculated, not measured. Section 4 says what that means.
 
-## 6.1 Sizing method
-
-The method is elementary and the equations are given so that any result in this section can be
-checked by hand.
-
-**Hover.** Thrust equals weight and induced power follows from momentum theory,
-v_i = √(T/2ρA) and P_i = T^1.5/√(2ρA), with disc loading DL = T/A as the governing parameter;
-figure of merit gives shaft power.
-
-**Cruise.** C_L = W/(qS) fixes the lift coefficient at the chosen speed, C_D = C_D0 + C_L²/(πARe)
-gives the drag, and L/D is their ratio **at the cruise condition, not at the aircraft's best
-point**. The familiar L/D_max = 0.5√(πARe/C_D0) occurs at one particular speed — 25.3 m s⁻¹ for
-the light design, only 1.26 times its stall speed. Cruising there would leave too little margin,
-so both designs cruise at 1.49 times stall and accept the lift-to-drag ratio that condition
-gives. Using the maximum value while quoting a different cruise speed would overstate the
-range, and an earlier version of this paper did exactly that.
-
-**Range.** The series-hybrid chain is stated link by link rather than folded into one
-efficiency, because the result is sensitive to it and a reader should be able to disagree with
-any single link: engine 0.28, generator 0.90, power electronics 0.95, electric machine 0.92,
-propeller 0.80 — **overall 0.176**. Fuel energy is 12.9 kWh kg⁻¹. The engine figure matters
-most: 0.28 is representative of a small four-stroke at its best operating point, and it is why
-the range figures below are lower than an optimistic estimate would give.
-
-**Control.** Tip-pair thrust follows from M = 2TL = Iα, with the transition manoeuvre as the
-sizing case.
-
-**Assumptions carried throughout:** sea-level density; no compressibility; span efficiency
-e = 0.85; C_D0 = 0.0248 for the light design, which is generous for a clean blended-wing body
-and absorbs the tip-frame contribution of Section 5.2 — that contribution is 0.0043, or
-seventeen percent of the assumed value, so the assumption is self-consistent rather than
-optimistic. Both are carried as assumptions throughout, so that every downstream figure rests
-on one stated basis. Section 6.6 computes both and reports what the computation does to them:
-it bounds them rather than replacing them, which is a weaker but more honest claim.
-
-## 6.2 Light reference design — 50 kg
+## 3.7 Light reference design — 50 kg
 
 | Quantity | Value |
 |---|---:|
@@ -1043,14 +1106,15 @@ it bounds them rather than replacing them, which is a weaker but more honest cla
 
 The mass budget behind this — 30 % structure, 16 % propulsion chain, 4 % battery, 8 %
 avionics and control, 16 % fuel, leaving 26 %, or 13 kg, for payload — is the allowance the
-design is sized against, and it is asserted here rather than derived. Section 6.7 rebuilds
+design is sized against, and it is asserted here rather than derived. Section 3.11 rebuilds
 it from components and finds it can be met, with 2.2 kg in hand, on one condition that is
 not demonstrated: a structural areal density no greater than 1.78 kg m⁻². Paper aircraft
 are habitually lighter than the ones that get built, and no allowance for that has been
-paid in this table beyond the contingency inside the build-up. Section 8.2 keeps this as
-the single most likely place for these numbers to be wrong.
+paid in this table beyond the contingency inside the build-up. Section 4.4 keeps the areal
+density as the most likely place for the *structural* numbers to be wrong, and identifies the
+battery buffer's specific power — not the structure — as the most exposed number in the paper.
 
-## 6.3 Heavy reference design — 1000 kg
+## 3.8 Heavy reference design — 1000 kg
 
 | Quantity | Value |
 |---|---:|
@@ -1079,7 +1143,7 @@ Both effects come from the same source: the larger aircraft cruises faster and, 
 higher Reynolds number, achieves a lower zero-lift drag coefficient and therefore a
 better lift-to-drag ratio. Nothing in the architecture was changed to obtain this.
 
-## 6.4 Scale behaviour
+## 3.9 Scale behaviour
 
 One qualification applies throughout: this is the scaling of the analytical sizing model — of
 powers, loadings and mass *fractions*. Whether the heavy design's structure closes depends on
@@ -1126,53 +1190,17 @@ faster than the aircraft. Scaling the light design's two-second rotation to 1000
 
 **The rule is that a larger aircraft turns more slowly.** The heavy design rotates in 5.1 s at
 six percent of hover power — not a round number but the rotation time at which it holds the same
-control margin the light design holds at two seconds (Section 7.6). The constraint is less costly
-than it looks, because Section 7.4 shows a slower rotation loses *less* altitude: the scaling
+control margin the light design holds at two seconds (Section 3.17). The constraint is less costly
+than it looks, because Section 3.15 shows a slower rotation loses *less* altitude: the scaling
 penalty on transition time works with the penalty on control power rather than against it. The
 classical objection to scaling a VTOL aircraft — hover power growing as L^3.5 against power
 available as L³ — is removed on the hover side by fixing disc loading. It is not removed on the
 transition side, and Table 4 is where it reappears: **the rotation is the one place in this
 aircraft where the square–cube relation is still paid in full.**
 
-## 6.5 Context
+## 3.10 Independent checks on the two assumed coefficients
 
-The following aircraft occupy the same mass range. They are listed to locate the reference
-designs in a real field, not to rank them.
-
-| Aircraft | MTOW | Payload | Payload fraction |
-|---|---:|---:|---:|
-| HAVELSAN BAHA [8] | 28 kg | 2 kg | 7.1 % |
-| Textron Aerosonde Mk 4.7 VTOL [9] | 45.4 kg | 9.1 kg | 20.0 % |
-| Baykar KALKAN [10] | 75 kg | ~3 kg internal | 4.0 % |
-| HAVELSAN BULUT [11] | not published | 5 kg | — |
-| Elroy Air Chaparral [12] | 865 kg | 136 / 227 kg | 15.7 / 26.2 % |
-| Sabrewing Rhaegal-A [13] | 1400 kg | 360–450 kg | 25.7–32.1 % |
-| Pipistrel Nuuva V300 [14] | 1700 kg | 408 kg | 24.0 % |
-
-All entries are from manufacturers' published material; payload definitions are not consistent
-between them and empty weights are generally not published.
-
-Three statements can be made and a fourth cannot. The field is real and populated at both ends
-of the range. Payload fraction rises with size across it, from a few percent to roughly a
-quarter, which is the ordinary consequence of fixed costs not scaling down. And **none of these
-aircraft connects an internal-combustion engine directly to a lifting rotor** — every one uses
-either a generator or separate electric lift, which is independent confirmation that the series
-arrangement of Section 4.3 is the practical choice at this scale rather than an unusual one.
-
-**The fourth statement — that the reference designs outperform these aircraft — is not made.**
-Sections 6.2 and 6.3 are calculated from a mass budget with an unpaid structural margin; this
-table describes aircraft that exist and fly. Placing a calculation beside a measurement and
-declaring a winner would be a category error. Several entries are also fully electric, for
-which endurance is set by battery specific energy rather than by configuration, so comparing
-them with a fuel-burning design would compare energy sources rather than architectures. What
-could properly be compared, once such aircraft are built, is **range at similar payload** — a
-configuration carrying a comparable load further is making an architectural claim, while one
-carrying a heavier load is making a claim about mass budgeting, which is the least validated
-part of this study.
-
-## 6.6 Independent checks on the two assumed coefficients
-
-Both coefficients carried through Sections 6.2 and 6.3 were assumed. Both have since been
+Both coefficients carried through Sections 3.7 and 3.8 were assumed. Both have since been
 computed, and the computations are reported in full in Supplementary S1. Neither replaces its
 assumption in the figures above — those are quoted on one stated basis throughout — but each
 bounds it, and the direction of each is stated here.
@@ -1208,7 +1236,7 @@ coefficient to six decimal places.
 the unfavourable one.** The viscous penalty is 5 to 6 percent rather than 10 to 15, but the
 trimmed wing starts from 0.859, so the Oswald efficiency lands at **0.817 — below the assumed
 0.85 by 3.9 percent**. At that value the cruise lift-to-drag ratio is **11.87 against 12.04**,
-and the range figures of Section 6.3 are optimistic by the same 1.4 percent. Two limits belong
+and the range figures of Section 3.8 are optimistic by the same 1.4 percent. Two limits belong
 with the number: the vortex-lattice sections are symmetric, so a cambered section reaching the
 same local lift coefficient at lower incidence would carry less drag and the figure is a
 **lower bound**; and strip integration ignores sweep, which at 45° at the root is not a small
@@ -1232,9 +1260,9 @@ untested magnitude error of unknown size, bounded above by a published compariso
 configuration, and every use made of them is of a kind a magnitude error *would not* disturb —
 provided the moment scales with the lift by the same factor, which is exactly what cannot be
 checked.**
-Section 8 lists settling this as the one exposure in the aerodynamic chain with no bound at all.
+Section 4 lists settling this as the one exposure in the aerodynamic chain with no bound at all.
 
-## 6.7 A component build-up of the mass budget
+## 3.11 A component build-up of the mass budget
 
 The sizing above assumes an empty-mass fraction rather than deriving one. Supplementary S2
 builds the 50 kg design's mass item by item — structure from wetted area and an assumed shell
@@ -1254,10 +1282,8 @@ the wing and carries flight loads directly.
 Paper aircraft are habitually lighter than the aircraft that get built. What S2 does not
 contain is buckling, torsion, local load introduction, aeroelastic sizing, fasteners, adhesive,
 paint, or the mass of anything the design has not yet specified — and the 2.2 kg of margin is
-what all of those must fit into. Section 8.2 states the item as bounded from below rather than
+what all of those must fit into. Section 4.4 states the item as bounded from below rather than
 demonstrated.
-
-# 7. Flight profile and transition
 
 The transition between vertical and horizontal flight is the manoeuvre on which
 tail-sitters have historically been judged, and it is the part of this configuration
@@ -1265,7 +1291,7 @@ that most deserves scrutiny. This section describes the flight profile, states t
 equations that govern the transition, and reports a simulation of it. One result
 contradicts a widely-assumed relationship and is presented as such.
 
-## 7.1 The five phases
+## 3.12 The five phases
 
 **Stance.** The aircraft rests on five points — the four lower ends of the tip frames
 and the aft end of the centre keel — with its longitudinal axis vertical. No launch
@@ -1283,14 +1309,14 @@ the cruise propulsor at its design point. The tip pairs provide pitch and yaw, a
 lower-surface strip provides roll.
 
 **Landing.** The reverse of transition, followed by a vertical descent onto the five
-contact points. Section 7.5 notes what is and is not analysed here.
+contact points. Section 3.16 notes what is and is not analysed here.
 
 Figure 9 shows the five phases in sequence. Nothing on the aircraft rotates relative to
 the aircraft at any point in it.
 
 [Figure 9 about here]
 
-## 7.2 Why the transition begins in the easiest condition
+## 3.13 Why the transition begins in the easiest condition
 
 A common objection to tail-sitter transition is that the aircraft must fight the
 airflow while rotating. For a transition that begins in hover, it does not. At the
@@ -1307,7 +1333,7 @@ its middle, where the airspeed has grown enough for aerodynamic moments to matte
 the wing is not yet carrying the weight. The control authority requirement is set
 there, not at the start.
 
-## 7.3 The thrust singularity that is never reached
+## 3.14 The thrust singularity that is never reached
 
 Consider the aircraft at an angle θ from the vertical, and suppose for a moment that it
 must hold altitude with thrust alone. Vertical equilibrium then requires
@@ -1335,7 +1361,7 @@ arrives first.
 This is the central mechanism of the manoeuvre, and it also explains the result of the
 next subsection.
 
-## 7.4 Transition time: slower is better
+## 3.15 Transition time: slower is better
 
 The transition was simulated as a two-degree-of-freedom point mass. The body angle is driven
 from zero to ninety degrees over a rotation time t_r; thrust acts along the body axis, lift
@@ -1347,11 +1373,11 @@ thrust-to-weight ratios.
 [Figure 10 about here]
 
 **The ratio the aircraft actually has must be established first, and it is not a free choice.**
-Section 6.1 sizes hover power at thrust equal to weight, so the 10.9 kW of Section 6.2 buys
-T/W = 1.00 and nothing more; the same is true of the 216.2 kW of Section 6.3. The only other
+Section 2.12 sizes hover power at thrust equal to weight, so the 10.9 kW of Section 3.7 buys
+T/W = 1.00 and nothing more; the same is true of the 216.2 kW of Section 3.8. The only other
 source of vertical thrust on this aircraft is the tip pairs, and during the rotation they are
 occupied producing the rotation itself. On the bang-bang profile the upper pairs run at full
-thrust and the lower pairs at zero, which is the M = 2TL of Section 4.3 — and the two upper
+thrust and the lower pairs at zero, which is the M = 2TL of Section 2.9 — and the two upper
 pairs still push upward. That fixes the ratio available *during* a full-authority rotation at
 **1.066 for the light design and 1.041 for the heavy one**, and it is the ratio the tables below
 use. Giving up rotation authority buys a little more, to 1.132 and 1.082 with none retained;
@@ -1375,12 +1401,12 @@ collapses cos θ before there is any lift to replace it, and the aircraft falls 
 it hurried.
 
 The practical consequence is a simplification rather than a trade. The control *moment* required
-to rotate in time t_r scales as 1/t_r² and the control *power* as 1/t_r³ — Table 4 of Section 6.4
+to rotate in time t_r scales as 1/t_r² and the control *power* as 1/t_r³ — Table 4 of Section 3.9
 is the second of these, and its entries are constant to within a third of a percent when
 multiplied by t_r³ — so a slow rotation is cheap in authority and cheaper still in power; and
 altitude loss also falls with t_r. **All of these point the same way**, so there is no optimum
 transition time to be found between competing penalties — the rotation time is set by what the
-actuator can do, not by a balance, and Section 7.6 shows that is where both reference times come
+actuator can do, not by a balance, and Section 3.17 shows that is where both reference times come
 from.
 
 **Entering the rotation while still climbing removes the penalty entirely**, and it survives the
@@ -1402,19 +1428,19 @@ with the acquisition charged at the achievable rate.
 Two consequences follow that the earlier tables hid. Starting the rotation from rest is worse
 than reported — the light design loses 14.7 m at its own two seconds rather than 9.1 m, and the
 heavy design 13.1 m at 5.1 s rather than none — so the climb entry is not a convenience but a
-requirement. And the tip pairs, introduced in Section 4.3 as moment producers and charged in
-Section 5.4 for their mass and drag, turn out to carry the take-off thrust margin as well: an
+requirement. And the tip pairs, introduced in Section 2.9 as moment producers and charged in
+Section 3.5 for their mass and drag, turn out to carry the take-off thrust margin as well: an
 aircraft whose primary propulsor is sized at thrust equal to weight leaves the ground on them.
 That is a second duty for hardware bought for the first, which is the kind of economy this
 configuration is built on — but it is also a dependency, and it is a harder one than it looks,
 because the margin and the attitude authority are drawn from the same four propellers and cannot
-both be had in full. Section 8 records it as an open item.
+both be had in full. Section 4 records it as an open item.
 
 **The test is a lower bound.** A point mass carries no rotational dynamics, no aerodynamic
-pitching moment and no control-power limit; Section 7.6 supplies the rotational budget that this
-model omits, and Section 8 states what neither supplies.
+pitching moment and no control-power limit; Section 3.17 supplies the rotational budget that this
+model omits, and Section 4 states what neither supplies.
 
-## 7.5 Landing
+## 3.16 Landing
 
 Landing reverses the sequence: the aircraft decelerates, rotates nose-up, and descends
 vertically onto its five contact points. Two things should be said about it plainly.
@@ -1428,9 +1454,9 @@ The second is that the vertical descent itself has not been analysed in this stu
 rotor descending into its own wake can enter the vortex ring state, in which thrust
 becomes erratic and increasing power makes matters worse. Whether the descent profile
 of this configuration enters that region, and at what rate of descent, is an open
-question. It is listed in Section 8 rather than answered here.
+question. It is listed in Section 4 rather than answered here.
 
-## 7.6 Whether there is enough authority to rotate, and whether it trims
+## 3.17 Whether there is enough authority to rotate, and whether it trims
 
 Rotating the airframe through ninety degrees is the manoeuvre this configuration must perform
 with four small propellers and no control surfaces. Supplementary S4 carries the full budget —
@@ -1503,11 +1529,11 @@ vortex-lattice model computes it directly because the mechanism is geometric rat
 sectional: on a swept wing the tips lie well aft, so negative tip incidence produces a nose-up
 moment about the centre of gravity. The price is a span efficiency of 0.865 instead of 0.993 and
 a cruise lift-to-drag ratio of 12.11 instead of 12.65 — **4.3 percent of cruise efficiency, paid
-to be tailless**, and entered in the ledger of Section 5.4 as its fifth item. The reflex route
+to be tailless**, and entered in the ledger of Section 3.5 as its fifth item. The reflex route
 is not free either: a blended-wing UAV trimming by reflex rather than twist records that
 carrying reflex over a wide span "is not conducive to the improvement of overall lift-to-drag
 performance" [44]. **Both roads to trim on a tailless configuration cost cruise efficiency**,
-which is the reading Section 5.4 places on the 4.3 percent: it is the price of having no tail,
+which is the reading Section 3.5 places on the 4.3 percent: it is the price of having no tail,
 not the price of choosing the wrong way to do without one.
 
 The twist earns its cost three times over. It closes the trim chain; on a swept planform it
@@ -1528,7 +1554,7 @@ then tested in a wind tunnel at a Reynolds number of 2.0 × 10⁶: from −6° t
 configuration departs above eight degrees [39] — and the incidences this aircraft passes through
 lie inside that band. **Three methods of three fidelities fail at the same place, and the
 highest of them fails against measurement.** The item therefore belongs to measurement rather
-than to computation, and Section 8 asks for it as measurement. The same tests found the
+than to computation, and Section 4 asks for it as measurement. The same tests found the
 blended-wing configuration to have "soft-stall performance", which is the benign end of the
 range the pitch-up literature describes.
 
@@ -1548,7 +1574,67 @@ flight difficult — and that is the same structural tension this section derive
 budget: the tight case is the end of the rotation and beyond, where aerodynamic moment grows as
 V² while propeller thrust falls.
 
-# 8. Limitations
+# 4. Discussion
+
+This section places the results against existing aircraft and existing
+literature, then states what is not shown. Sections 4.1 and 4.2 are interpretation;
+Sections 4.3 to 4.7 are limitations, ordered by whether they could change a conclusion.
+
+## 4.1 Context
+
+The following aircraft occupy the same mass range. They are listed to locate the reference
+designs in a real field, not to rank them.
+
+| Aircraft | MTOW | Payload | Payload fraction |
+|---|---:|---:|---:|
+| HAVELSAN BAHA [8] | 28 kg | 2 kg | 7.1 % |
+| Textron Aerosonde Mk 4.7 VTOL [9] | 45.4 kg | 9.1 kg | 20.0 % |
+| Baykar KALKAN [10] | 75 kg | ~3 kg internal | 4.0 % |
+| HAVELSAN BULUT [11] | not published | 5 kg | — |
+| Elroy Air Chaparral [12] | 865 kg | 136 / 227 kg | 15.7 / 26.2 % |
+| Sabrewing Rhaegal-A [13] | 1400 kg | 360–450 kg | 25.7–32.1 % |
+| Pipistrel Nuuva V300 [14] | 1700 kg | 408 kg | 24.0 % |
+
+All entries are from manufacturers' published material; payload definitions are not consistent
+between them and empty weights are generally not published.
+
+Three statements can be made and a fourth cannot. The field is real and populated at both ends
+of the range. Payload fraction rises with size across it, from a few percent to roughly a
+quarter, which is the ordinary consequence of fixed costs not scaling down. And **none of these
+aircraft connects an internal-combustion engine directly to a lifting rotor** — every one uses
+either a generator or separate electric lift, which is independent confirmation that the series
+arrangement of Section 2.9 is the practical choice at this scale rather than an unusual one.
+
+**The fourth statement — that the reference designs outperform these aircraft — is not made.**
+Sections 3.7 and 3.8 are calculated from a mass budget with an unpaid structural margin; this
+table describes aircraft that exist and fly. Placing a calculation beside a measurement and
+declaring a winner would be a category error. Several entries are also fully electric, for
+which endurance is set by battery specific energy rather than by configuration, so comparing
+them with a fuel-burning design would compare energy sources rather than architectures. What
+could properly be compared, once such aircraft are built, is **range at similar payload** — a
+configuration carrying a comparable load further is making an architectural claim, while one
+carrying a heavier load is making a claim about mass budgeting, which is the least validated
+part of this study.
+
+## 4.2 Why the market looks the way it does
+
+One observable consequence supports the argument, and it has been stated independently.
+Surveying the field, the study cited above concludes that multirotors are efficient in
+hover and suited to short-range missions, that vectored-thrust aircraft are efficient in
+cruise and suited to long-range missions, and that "lift plus cruise eVTOLs are a
+compromise, but they are slowed down by the drag of the lift propellers."
+
+ Hybrid VTOL aircraft occupy a narrow
+band of the mission space. Below it, where range requirements are short, a multirotor
+is cheaper and simpler and pays none of these bills because it never claimed cruise
+efficiency. Above it, where range requirements are long, a runway-launched fixed-wing
+aircraft is more efficient and pays none of them because it never claimed vertical
+capability. The hybrid sits between the two, and the width of that band is set by how
+much cruise efficiency the architecture had to surrender.
+
+An architecture that surrenders less does not merely perform better inside the band. It
+widens the band.
+
 
 This is a configuration study. It contains no experimental validation of any kind, and
 the numbers in it are the output of elementary methods applied to a set of assumptions.
@@ -1556,7 +1642,7 @@ This section states what those limits are, in enough detail that a reader can ju
 much weight each result will bear. Several of the items below were discovered during the
 study and changed its results; they are recorded here rather than smoothed away.
 
-## 8.1 What is not shown
+## 4.3 What is not shown
 
 **No part of this study has been validated experimentally.** No wind-tunnel test, no flight
 test, no hardware. Everything here is calculation, and the calculations rest on assumptions
@@ -1564,7 +1650,7 @@ stated in the sections that use them. Supplementary S5 enumerates every limitati
 with the break-even value of each assumption that has one. This section states the ones that
 bear on the conclusions.
 
-## 8.2 The three that could change a conclusion
+## 4.4 The three that could change a conclusion
 
 **The buffer's specific power is the most exposed number in the paper.** Bill 3 is avoided by
 sizing the engine for cruise and supplying the hover excess from a battery buffer, and the light
@@ -1586,14 +1672,14 @@ demonstrating that at acceptable temperature, or a heavier buffer carried at the
 fraction.
 
 **The aircraft leaves the ground on its control propellers, and that is a dependency rather than
-a design feature.** Section 6.1 sizes hover power at thrust equal to weight, so the primary
+a design feature.** Section 2.12 sizes hover power at thrust equal to weight, so the primary
 propulsor supplies T/W = 1.00 exactly and no more. The margin to take off comes from the four
 tip pairs, which raises the achievable ratio to 1.066 with full rotation authority retained and
-1.132 with none — never to the 1.2 an earlier version of Section 7.4 assumed. Three things follow
+1.132 with none — never to the 1.2 an earlier version of Section 3.15 assumed. Three things follow
 and none of them is closed here: the take-off margin and the attitude authority are drawn from
 the same four propellers and compete; the buffer must carry the tip pairs as well, which is the
 6.48 kW kg⁻¹ above; and a rotation entered from rest, rather than from a climb, now loses 14.7 m
-at the light design's own two seconds. The entry climb of Section 7.4 is therefore a requirement
+at the light design's own two seconds. The entry climb of Section 3.15 is therefore a requirement
 of the configuration and not a refinement of it.
 
 **The mass budget is bounded from below and the bound is thin.** The component build-up of
@@ -1607,7 +1693,7 @@ loads directly. The build-up contains no buckling, torsion, local load introduct
 sizing, fasteners, adhesive or paint, and 2.2 kg is what all of those must fit into. **Paper
 aircraft are habitually lighter than the aircraft that get built.**
 
-**The transition pitching moment is not computed, and Section 7.6 shows the computation is not
+**The transition pitching moment is not computed, and Section 3.17 shows the computation is not
 currently reliable for anyone on this class of configuration.** Three methods of three fidelities
 fail above roughly ten degrees of incidence, the highest of them against wind-tunnel measurement
 [39,44], and the incidences this aircraft passes through lie inside that band. **This item
@@ -1615,25 +1701,25 @@ belongs to measurement.** It asks for the pitching moment to about twenty-two de
 dynamic pressure, on the outboard half of the wing — the inboard half lies in the slipstream and
 sees four to eight degrees — and for trim at cruise incidence.
 
-## 8.3 What is assumed rather than derived
+## 4.5 What is assumed rather than derived
 
 The planform's sweep, taper and thickness distributions were **chosen, not optimised**. The
 centre of gravity is a packaging assumption. The zero-lift drag coefficient of 0.0248 and the
-span efficiency of 0.85 are assumptions; Section 6.6 bounds both by calculation and neither
+span efficiency of 0.85 are assumptions; Section 3.10 bounds both by calculation and neither
 replaces its assumption — the span efficiency computes to **0.817, optimistic by 3.9 percent**,
 worth 1.4 percent of cruise lift-to-drag ratio and of the ranges quoted. Torque balance is exact
-at cruise only, leaving a small residual in hover. The comparative sizing of Section 5.5 is
+at cruise only, leaving a small residual in hover. The comparative sizing of Section 3.6 is
 conditional on the two competing architectures being modelled at the same level of detail as
 this one, which they are not: they are modelled from published fractions.
 
 **The vortex-lattice results carry an untested magnitude error.** A published comparison on a
 blended-wing-body of this class found the vortex-lattice lift coefficient low by thirty to
-thirty-eight percent against RANS [39]. Section 6.6 argues that a near-constant multiplicative
+thirty-eight percent against RANS [39]. Section 3.10 argues that a near-constant multiplicative
 error of that kind cancels in the ratios this paper takes from the solution — neutral point,
 static margin, twist effectiveness — but the check that would confirm it is withheld in that
 source. **This is the one exposure in the aerodynamic chain with no bound at all.**
 
-## 8.4 What is sized but not closed
+## 4.6 What is sized but not closed
 
 Attitude control is sized in every axis and closed in none. Roll asks for **ΔC_L ≈ 0.12** from
 the strip, which published fence and Gurney data make plausible without establishing it for this
@@ -1646,9 +1732,9 @@ not established, and the toe-out its aspect ratio requires carries a stall-relat
 at large sideslip that has not been computed. Hover disturbance rejection, ground handling,
 crosswind and vertical descent have been checked only to order of magnitude or not at all.
 
-## 8.5 Where this could most efficiently be attacked
+## 4.7 Where this could most efficiently be attacked
 
-Supplementary S5 lists six places. Two have been carried out and are folded into Section 6.6: a
+Supplementary S5 lists six places. Two have been carried out and are folded into Section 3.10: a
 three-dimensional solution for the centre body, and a viscous solution of the twisted planform
 station by station. Of the remaining four, the one with no bound at all is a Reynolds-averaged or
 panel solution of this planform's loading, to bound the magnitude question above. **Three of the
@@ -1656,14 +1742,14 @@ four can be carried out computationally; the fourth cannot, and saying otherwise
 consequential thing this study got wrong about itself.** Transition controllability rests on a
 pitching moment that three methods of three different fidelities fail to predict above roughly
 ten degrees of incidence, the highest of them against wind-tunnel measurement, so it is blocked
-on data rather than on effort — as is the fin derivative of Section 4.4, for the reason
+on data rather than on effort — as is the fin derivative of Section 2.10, for the reason
 Supplementary S3 gives. An earlier version of this section stated that none of the four required
-an experiment. The configuration is described in enough detail in Sections 4 and 6 for another
+an experiment. The configuration is described in enough detail in Sections 2 and 3 for another
 group to attempt any of them independently, by whichever of the two routes each one needs. The computational setup, the
 grid-convergence study and the record of what failed along the way are in the repository, so
 every result here can be re-run and checked rather than taken on trust.
 
-# 9. Conclusion
+# 5. Conclusions
 
 Hybrid vertical take-off aircraft pay for their vertical capability, and the payment is
 architectural rather than a defect of implementation. It appears in three currencies — the mass
@@ -1682,8 +1768,8 @@ orientation, with the hover peak drawn from a buffer rather than from permanentl
 continuous power.** The configuration described here satisfies that condition rather than
 compensating for failing it. The aircraft rotates; nothing on the aircraft rotates relative to
 it. A single coaxial pair at the nose provides all thrust in both regimes; four small coaxial
-pairs at the tips provide moments and nothing else; and a strip on the lower surface is assigned
-the one gap propellers cannot close — the rolling moment, which parallel thrust vectors cannot
+pairs at the tips provide attitude moments and the take-off thrust margin; and a strip on the
+lower surface is assigned the one gap propellers cannot close — the rolling moment, which parallel thrust vectors cannot
 produce at any setting or mounting position. There are no elevons, no rudder, no tilting
 mechanism, no retraction mechanism and no dedicated lift system.
 
@@ -1712,9 +1798,9 @@ worse than reported, and the take-off margin and the attitude authority are draw
 four propellers and compete for them.
 
 **What this paper offers is a configuration and its numbers, not a validated aircraft.** There
-is no wind-tunnel data here and no flight test. Of the analyses Section 8 lists as tests of
-these results, three have been carried out. A three-dimensional solution for the centre body
-narrowed the zero-lift drag without overturning the assumption. A component build-up closes the
+is no wind-tunnel data here and no flight test. Three of the analyses Section 4 lists as tests
+of these results have been carried out, and they are named so that the count can be checked
+against that section. A three-dimensional solution for the centre body narrowed the zero-lift drag without overturning the assumption. A component build-up closes the
 light design with 2.2 kg in hand, conditional on a shell areal density at or below 1.78 kg m⁻²
 *and* on a battery buffer no measured cell can yet supply, and does not close the heavy design.
 And a rotational check shows the tip propellers can turn the aircraft's own inertia through the
@@ -1780,7 +1866,7 @@ described in this paper (Türkpatent application 2026/014570).
 
 **Data availability.** All data supporting the reported results are contained within the article. The
 parametric geometry model, the figure-generation scripts and the transition
-simulation, together with the aerodynamic calculations of Section 6.6 — including the
+simulation, together with the aerodynamic calculations of Section 3.10 — including the
 mesh generator, the case setup, the grid-convergence study and the wall-resolution and
 turbulence-model sensitivity runs behind the computed zero-lift drag — are openly
 available at https://github.com/LORDTEK/meryemAircraft
