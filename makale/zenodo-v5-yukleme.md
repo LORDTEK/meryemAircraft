@@ -25,6 +25,13 @@ Yeni sürüm kendi DOI'sini alır; eski sürümlerin DOI'leri çalışmaya devam
 
 Önceki sürümün dosyaları taşınmaz; her sürüm kendi dosya setini tutar.
 
+**`zenodo-v5-ek.md` diye bir dosya YOK ve olmamalı.** Adlandırmam yanıltıcıydı,
+açıklayayım: `zenodo-v5.md` bir *içerik* dosyası değil, Zenodo'nun **Description
+alanına yapıştırılacak metin**. Bir kaydın bir tane Description'ı olur, o yüzden
+tek dosya. Ek malzeme ise kaydın *içindeki bir dosya* — yukarıdaki tabloda
+`meryemAircraft-ek.pdf` ve `makale-v5-ek.md` olarak duruyor. İkisi farklı katman:
+biri kaydın metni, diğeri kaydın eki.
+
 **Markdown'ları da koymamın sebebi:** bazı yapay zekâ ortamları PDF açamıyor ama
 düz metni okuyabiliyor. Bu turda tam olarak o sorunu yaşadık.
 
@@ -76,8 +83,17 @@ bloğunun altında şuna benzer bir cümle var:
 
 O cümledeki numara kök DOI. Bana onu ver.
 
-`cfd/dis-gorus-20-v5-yayinda.md` içinde `[ZENODO-KOK-DOI]` yazan yer tutucuyu
-doldurup metni sana geri veririm — yapay zekâlara gidecek olan o.
+**Kullanılan kök adres:** `https://zenodo.org/records/22144194`
+(soru metnine yerleştirildi).
+
+*[Doğrulayamadım — Zenodo bu ortamda proxy'de bloklu, ne API ne sayfa açılıyor.
+Numaranın kök olduğuna dair dolaylı bir işaret var: 22144194 < 22664634, yani v4
+sürüm kaydından küçük, ve Zenodo kök kimliği ilk yatırımda ayırdığı için bu
+beklenen düzen. Ama işaret kanıt değil.
+
+**Bir kez şunu kontrol et:** o adresi aç, sayfa "Version 5" gösteriyor mu? Ve sağ
+sütunda "This DOI represents all versions, and will always resolve to the latest
+one" cümlesi var mı? İkisi de varsa doğru adres. Yoksa söyle, değiştiririm.]*
 
 *[Not: Zenodo bu ortamda proxy tarafından bloklu, kök DOI'yi ben çekemedim.
 Numarayı senin kopyalaman gerek.]*

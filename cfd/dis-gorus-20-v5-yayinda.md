@@ -27,7 +27,7 @@ correction record, and `aero/itki.py` is the thrust-budget script behind Section
 resolves to the most recent version:
 
 ```
-[ZENODO-KOK-DOI]
+https://zenodo.org/records/22144194
 ```
 
 That is the all-versions DOI deliberately, so that this link does not go stale the next
