@@ -167,7 +167,13 @@ Several results depend on coefficients that were not computed for this geometry:
   flight envelope. The cited measurements are on a different aerofoil in grid turbulence and
   transfer only in direction; no measurement of this strip in a slipstream exists. **This is
   the principal risk to hover roll authority**, and it sits on the same claim — slipstream
-  placement — that Section 4.4 offers as an advantage.
+  placement — that Section 4.4 offers as an advantage. The post-stall half of this item is
+  contested rather than established: a simulation at twenty degrees of incidence returns a
+  ninety-four percent lift increase from a flap of the same height fraction at essentially
+  unchanged drag [37]. The turbulence half is unopposed. Against both, a water-tunnel study at
+  a Reynolds number of 8 588 found the mechanism qualitatively unchanged four orders of
+  magnitude below the usual test range [38], which is evidence that low speed as such is not
+  the threat — turbulence is.
 - The **roll actuator.** The strip extends by a commanded amount, so the limit cycle computed
   in Section 4.4 — ±0.2° in bank at a fifty-millisecond deployment, ±9.4° at a hundred and
   fifty — bounds the two-position worst case rather than describing normal operation. What is
