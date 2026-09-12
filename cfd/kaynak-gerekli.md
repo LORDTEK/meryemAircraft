@@ -96,3 +96,87 @@ Bu verilerin GitHub'daki çeşitli CFD depolarında kopyaları var. Onlar
 yanlış sayıyı birinci el okumayla yakaladı (`makale/kaynaklar.md`); ikinci
 elden aktarılmış bir tabloya çözücü doğrulaması bağlamak aynı hatayı
 tekrarlamak olur.
+
+---
+
+# Tur 14 — çift taraflı şerit için indirilecekler (S9)
+
+**Ne arıyoruz.** Tek kanat yarısında, **üstte ve altta eşit çıkıntı** yapan bir
+şeridin ürettiği yuvarlanma momenti ve yunuslama momenti. NACA TR-796 (1944)
+bu düzeneği tek taraflı spoiler'ın "prohibitive" yunuslama momentine çare
+olarak **öneriyor** ama "veri yetersiz" diyor. Şimdiye kadar aradığımız yerde
+(NACA/NASA raporları) bulamadık.
+
+**Neden bulamadık.** Yanlış isimle arıyorduk. Bu cihazın modern adı
+**split drag rudder** — bazen *drag rudder*, *split flap*, *split aileron*,
+*deceleron*. B-2'de, YB-49'da, X-47B'de bu var. Yani TR-796'nın önerdiği
+düzenek gerçekten kuruldu, uçtu ve ölçüldü; NACA raflarında değil, çağdaş
+uçan-kanat literatüründe.
+
+**Dikkat — cihaz aynı, amaç farklı.** Yayınların neredeyse tamamı bunu bir
+**yaw** cihazı olarak karakterize ediyor (sürükleme farkıyla dönüş), bizimki
+ise bir **roll** cihazı (kaldırma bozarak yatış). Aradığımız sayı onların
+yan ürünü. Bu yüzden özetlere bakmak yetmez, **tabloya** bakmak gerek.
+
+## İndirilecekler — öncelik sırasıyla
+
+**1. DLR-F19 / SAGITTA kontrol cihazı çalışması** — tek taraflı ve çift taraflı
+spoiler'ı, wingtip flap'i ve **split flap**'i aynı modelde karşılaştırıyor.
+Bizim sorumuza en yakın olan bu.
+
+> Liersch, C. M. et al. *Control device effectiveness studies of a 53° swept
+> flying wing configuration. Experimental, computational, and modeling
+> considerations.*
+> https://elib.dlr.de/128954/
+
+Bu adres benim ortamımda **bloklu**, açamadım. Sizde açılıyorsa PDF'i indirin.
+Açılmazsa aynı çalışmanın rüzgâr tüneli raporu:
+
+> *Wind Tunnel Report TN2621: Static Force, Moment, Surface Pressure and PSP
+> Measurements on the DLR-F19 Configuration including Spoiler Geometries and
+> Control Surfaces.*
+> https://elib.dlr.de/110803/
+
+**2. Split drag rudder'ın kanat açıklığı boyunca yerleşimi** — başlığında
+doğrudan "rolling and yawing moments" geçiyor, yani aradığımız eşleşmeyi
+veriyor olabilir.
+
+> *Investigating the effect of the placement of the split drag rudder control
+> system along the wing span of a flying wing aircraft on rolling and yawing
+> moments.*
+> researchgate.net/publication/369857093
+
+**3. Farklı hücum açılarında split drag rudder** — bizim için kritik olan
+α bağımlılığını veriyor olabilir. Geçiş sırasında 17–22°'ye çıkıyoruz.
+
+> *Optimization of split drag rudder mechanism at different angles of attack in
+> a flying wing airplane.*
+> researchgate.net/publication/366325121
+
+**4. Yedek** — aynı ailenin daha eski ve daha genel iki incelemesi:
+
+> *Control features and application characteristics of split drag rudder
+> utilized by flying wing.* researchgate.net/publication/286967038
+> *Control Characteristics Analysis of Split-Drag-Rudder.*
+> researchgate.net/publication/271977076
+
+## Ne aranacak — açtıktan sonra
+
+PDF'i açınca **üç sayı** arayın, ve bulduğunuz **cümleyi** getirin, özeti değil:
+
+1. **ΔC_l** (yuvarlanma momenti katsayısı) çıkıntı yüksekliğine karşı.
+   Bizim ihtiyacımız ΔC_L ≈ 0,12 eşdeğeri.
+2. **ΔC_m** (yunuslama momenti) — çift taraflı düzenekte gerçekten iptal
+   oluyor mu, ve ne kadar?
+3. **Hücum açısı bağımlılığı.** Arama özetleri, yuvarlanma momentinin α ile
+   **işaret değiştirdiğini** ima ediyor: α arttıkça alt kanadın profil
+   sürüklemesi artıp üstünki azalıyor, cihaz aşağı kırılmış bir aileron gibi
+   davranmaya başlıyor. **Bu doğruysa bizim aleyhimize**, çünkü geçişte tam o
+   bölgedeyiz. Ben bunu doğrulamadım — özetten okudum, PDF'den değil.
+
+## Uyarı, bir kez daha
+
+Yukarıdaki üç imanın **hiçbirini açmadım**. Bunlar arama sonucu başlıkları ve
+arama motoru özetleri. Bu projede daha önce iki kez, teklif edildiği şeyin
+tersini söyleyen kaynak geldi. Bu liste bir **arama yönü**dür, atıf değildir;
+hiçbiri okunmadan makaleye girmeyecek.
