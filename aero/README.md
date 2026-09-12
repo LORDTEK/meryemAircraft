@@ -2539,3 +2539,66 @@ Böylece washout'un gerekçesi üçe çıktı:
 
 %4,3'lük cezanın karşılığı gittikçe artıyor. Bu, defterin **beşinci kalemini**
 haklı çıkarmaz ama bağlamını değiştirir: o ceza tek bir iş için ödenmiyor.
+
+---
+
+## ⚠️ Lampropoulos 2025 (BWB düşük-Mach) — §7'deki bir cümlem fazla güçlü (12.09.2026)
+
+*Fluids* 10(54). BWB İHA, Mach ~0,1, XFLR5 panel yöntemi + OpenFOAM
+(Spalart–Allmaras, y⁺<10, ~10 milyon hücre), CMA-ES ile trim optimizasyonu.
+
+### Ne yapmışlar
+
+Tasarım değişkenleri: kök kesit insidansı (0–4°), seyir α (0–4°), **doğrusal
+burulma (2–5°)**, ve beş kanat kesidinin her biri için **refleks seviyesi
+(1–5)** — refleks, standart NACA2412'nin kamber çizgisinin arka kısmını yukarı
+doğru bükerek, kalınlık dağılımı korunarak üretiliyor.
+
+Sonuç: α = 1,2°, insidans = 1,52°, **toplam burulma = 2,44°.**
+
+### Bu, §7'deki şu cümleyi zorluyor
+
+> *"**Reflex does not trim this aircraft, and no plausible amount of it
+> would.**"*
+
+Bu cümleyi NACA TR-460'ın ölçtüğü 2R212 değerine (+0,004) dayanarak yazmıştım
+ve **ölçüm için doğru.** Ama *"hiçbir makul miktarı"* ifadesi, refleksi bir
+tasarım değişkeni olarak parametreleyen ve onunla trim kapatan yayımlanmış bir
+optimizasyon karşısında ayakta duramaz. Doğru ifade şu olmalı: **elimizdeki
+tek ölçümün büyüklüğündeki refleks bu uçağı dengelemez.** Daha güçlü bir
+refleksin ne verdiği, S4'ün ta kendisidir — ve bu kaynak S4'ü *çözmüyor*,
+**önemini artırıyor**, çünkü 2,44°'lik bir burulmayla kapanan bir trim, o
+kesitlerin 0,004'ten hayli fazlasını verdiğini ima ediyor.
+
+⚠️ Karşılaştırmayı da dürüst kuralım, bizim aleyhimize okunmasın diye: onların
+kapattığı denge **bizimkinden hafif bir gereksinim.** Statik payları
+**%8,1 MAC**, bizimki **%12,5 MAC**; daha küçük pay, daha az trim momenti
+demektir.
+
+### Ve buradan iki sayı LEHİMİZE çıkıyor
+
+**1. Statik pay ölçütü.** Makale kendi payını şöyle değerlendiriyor:
+
+> *"The non-dimensional static margin with respect to mean aerodynamic chord
+> is **0.081.** This value is **marginally outside the typical range** for
+> static longitudinal stability that... lies **between 0.1 and 0.3**."*
+> Ve C_m_α = −0,086, *"when a typical range is considered to be between −0.3
+> and −1.5"*.
+
+Bizim **%12,5**'imiz bu aralığın **içinde**, onlarınki **dışında** — ve makale
+kendi konfigürasyonu için *"forward movement of the center of gravity or
+additional reflex of the airfoils is advisable"* diyor. §7.6'daki CG penceresi
+artık yayımlanmış bir ölçüte karşı konumlanabiliyor.
+⚠️ C_m_α'mızı henüz bu biçimde yazmadık; yazmadan önce C_L_α ile
+hesaplanmalı (pay × C_L_α). Not edildi.
+
+**2. BWB pitch-up'ın kaçınılmaz olmadığı — ölçülmüş bir karşı örnek.**
+
+> *"it remains longitudinally statically stable, even at high α values,
+> **without the pitch-up tendency which is typical of BWB designs with
+> back-swept wings**"*, perdövites açısı 20°'nin üstünde.
+
+Yani (a) pitch-up eğilimi ok kanatlı BWB'ler için *tipik* — Panagiotou ve
+NASA'dan sonra **üçüncü** bağımsız kaynak; ve (b) refleks + burulma ile
+**giderilebiliyor.** Bu, bir gün önce §7'ye yazdığım "burulma perdövites
+sırasını tersine çeviriyor" savını dışarıdan destekliyor.
