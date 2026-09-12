@@ -94,3 +94,7 @@
     and the Gurney Flap.* M.S. thesis; NASA Contractor Report 194793, 1993.
 34. *Wind Tunnel Tests on a Tail-less Swept Wing Span-Distributed Cargo Aircraft
     Configuration.* NASA Technical Memorandum 78767, 1978.
+35. Yang, J.; Yang, H.; Zhu, W.; Li, N.; Yuan, Y. Experimental Study on
+    Aerodynamic Characteristics of a Gurney Flap on a Wind Turbine Airfoil under
+    High Turbulent Flow Condition. *Applied Sciences* **2020**, 10 (20), 7258.
+    https://doi.org/10.3390/app10207258

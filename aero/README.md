@@ -2024,3 +2024,34 @@ Bir hakem şunu sorabilir: *"orantılı çıkışlı bir spoiler'ınız var; 'ku
 yüzeyi yok' iddianız ne anlama geliyor?"* Cevap verilebilir (elevon/dümen yok,
 menteşeli kumanda yüzeyi yok, tek cihaz var) ama **cevabın hazır olması lazım.**
 Bu, YZ'lere sorulacaklar listesine girmeli.
+
+---
+
+## Yang 2020 — şeridin iki zayıf noktası, ikisi de bizim kullandığımız koşulda
+
+Rüzgâr tüneli, DTU-LN221 profili, denetimli giriş türbülansı (%0,2 / %10,5 / %19),
+Gurney yüksekliği %1–2 veter.
+
+| bulgu | bizim için ne demek |
+|---|---|
+| *"became less effective after stall angle"* | geçiş, dış kanadın perdövites sonrasında olduğu açılardan geçiyor — yatış bozulmalarının en büyük olduğu yer |
+| %19 türbülansta fayda *"negligible"* (%10,5'te +%2,7…+%14,4 L/D) | şeridin iç kısmı **kasten** pervane izinde, ve iz düşük türbülanslı değil |
+| yükseklik çok önemli, kalınlık önemsiz | yükseklik yasası tartışmamızı destekliyor |
+
+**İroni:** §4.4, şeridin izde olmasını bir **avantaj** olarak sunuyor ("sıfır
+hızda bile çalışır"). Yang'ın ölçümü, izin aynı zamanda mekanizmanın **en zayıf
+çalıştığı yer** olabileceğini söylüyor.
+
+⚠️ Transfer sınırlı ve metinde yazılı: onların profili rüzgâr türbini profili,
+türbülans ızgarayla üretilmiş serbest akış türbülansı, **pervane izi değil.**
+Yön ölçülmüş, büyüklük aktarılamaz.
+
+§4.4'e ve §8'e "asılı durumdaki yatış otoritesine ana risk" olarak yazıldı.
+
+---
+
+## 🔎 ARAMA SONUCU: kabuk yüzey yoğunluğu 35 kaynağın hiçbirinde yok
+
+`kg/m2`, `areal density`, `structural mass fraction`, `empty weight fraction` —
+otuz beş PDF'in tamamı tarandı, **sıfır sonuç.** Hafif hattın kütle bütçesinin
+dayandığı 1,5 kg/m² için hâlâ tek kaynak yok. S7 olarak listeye eklendi.
