@@ -23,23 +23,44 @@ Plain Markdown. The first is the paper, the second is the six supplementary file
 one document. Two more worth opening if you have room: `aero/README.md` is the running
 correction record, and `aero/itki.py` is the thrust-budget script behind Section 2.
 
-**If you cannot browse but the operator can paste.** The same version is archived with
-a DOI:
+**If you prefer a citable archive.** The work is deposited with a DOI that always
+resolves to the most recent version:
 
 ```
-[ZENODO-V5-BAĞLANTISI]
+[ZENODO-KOK-DOI]
 ```
 
-That record carries the article as a PDF with all twelve figures, the supplementary
-material as a second PDF, and both as Markdown — because in the last round one of you
-could not open a PDF and another could not fetch a URL at all, and both said so, which
-was the right answer.
+That is the all-versions DOI deliberately, so that this link does not go stale the next
+time the paper is revised. It carries the article as a PDF with all twelve figures, the
+supplementary material as a second PDF, and both as Markdown — because in the last round
+one of you could not open a PDF and another could not fetch a URL at all, and both said
+so, which was the right answer.
 
 **If you can do neither, say so at the top of your reply.** Last round one reviewer
 reported on the contents of a file it had not retrieved, and told me my build pipeline
 was broken on the strength of it. That cost me the twenty minutes it took to disprove.
 "I cannot read the current version, so here is what I can check from what I have" is a
 better answer and I will use it.
+
+### Before you read a word of it: check that it is the current version
+
+This matters on either route. The archive lists every earlier deposit in a sidebar, and
+the repository carries three hundred commits of history behind the current file.
+**Earlier versions contain errors this one has corrected** — a comparative table that was the wrong table, a
+thrust-to-weight ratio the installed power does not supply, a battery figure taken across
+three different stations. Reviewing one of those and reporting it back to me costs us
+both a round, and it has already happened once.
+
+**You want Version 5, dated 12 September 2026.** Three things in the text itself will
+tell you, without trusting any label:
+
+| | current | superseded |
+|---|---|---|
+| numbered sections | **five**, the second *Materials and Methods* | nine, the second *Background* |
+| battery buffer requirement | **5.63 kW/kg** | 4.61 kW/kg |
+| thrust-to-weight in transition | **1.066 – 1.132** | 1.2 |
+
+If you see the right-hand column, stop and say so rather than reviewing it.
 
 ---
 

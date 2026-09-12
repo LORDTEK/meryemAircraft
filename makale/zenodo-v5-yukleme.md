@@ -52,11 +52,40 @@ değişikliği okuyucuyu şaşırtır.
 **Related identifiers:** `https://github.com/LORDTEK/meryemAircraft` →
 *is supplemented by*.
 
-## 4. Yükledikten sonra bana söyle
+## 4. Yükledikten sonra: **kök DOI'yi** al, sürüm DOI'sini değil
 
-Yeni kaydın DOI'sini ya da bağlantısını ver. `cfd/dis-gorus-20-*.md` içinde
-**iki yerde** `[ZENODO-V5-BAĞLANTISI]` yazan yer tutucu var; onları doldurup
-metni sana geri veririm. O metin yapay zekâlara gidecek olan.
+Bu ayrım önemli, çünkü yanlışını verirsek yapay zekâlar altı ay sonra eski bir
+sürüme bakıp düzelttiğimiz hataları bize geri raporlar.
+
+Zenodo her kayda **iki** DOI verir:
+
+| | ne yapar |
+|---|---|
+| **Sürüm DOI'si** | yalnız v5'e çözülür, sonsuza kadar orada kalır |
+| **Kök DOI** (concept / all-versions) | **her zaman en son sürüme** çözülür |
+
+Soru metninde **kök DOI** kullanılacak. Böylece v6 çıktığında aynı bağlantı
+kendiliğinden v6'yı gösterir ve metni güncellemek gerekmez.
+
+**Nerede yazıyor:** kayıt sayfasının sağ sütununda, *Citation* / *Versions*
+bloğunun altında şuna benzer bir cümle var:
+
+> *"Cite all versions? You can cite all versions by using the DOI
+> 10.5281/zenodo.XXXXXXX. This DOI represents all versions, and will always
+> resolve to the latest one."*
+
+O cümledeki numara kök DOI. Bana onu ver.
+
+`cfd/dis-gorus-20-v5-yayinda.md` içinde `[ZENODO-KOK-DOI]` yazan yer tutucuyu
+doldurup metni sana geri veririm — yapay zekâlara gidecek olan o.
+
+*[Not: Zenodo bu ortamda proxy tarafından bloklu, kök DOI'yi ben çekemedim.
+Numarayı senin kopyalaman gerek.]*
+
+Metin ayrıca bir **sürüm kontrolü** taşıyor: yapay zekâya "v5 / 12 Eylül 2026
+arıyorsun, ve metinden şu üç şeyle doğrulayabilirsin — beş bölüm, tampon 5,63
+kW/kg, özet uçağın uçabilir gösterilmediğini söylüyor" diyor. Kök DOI yanlışlıkla
+eski bir kayda düşerse bile yapay zekâ kendi yakalar.
 
 ---
 
