@@ -176,13 +176,23 @@ Every row below is taken through the same chain: the buffer and the generator bo
 bus, and the bus is converted to propeller-shaft power by the power electronics and the electric
 machine before momentum theory is applied.
 
-| Buffer specific power | At the bus | At the propeller shaft | Resulting T/W | Leaves the ground |
+| Buffer specific power | At the bus | At the nose propeller shaft | Resulting T/W | Leaves the ground |
 |---|---:|---:|---:|---|
 | 0.735 kW kg⁻¹ | 3.66 kW | 3.20 kW | 0.44 | no |
 | 1.30 kW kg⁻¹ | 4.68 kW | 4.09 kW | 0.52 | no |
 | 2.50 kW kg⁻¹ | 6.84 kW | 5.98 kW | 0.67 | no |
 | **5.63 kW kg⁻¹** | **12.47 kW** | **10.90 kW** | **1.00** | only just |
-| 6.48 kW kg⁻¹ | 14.00 kW | 12.24 kW | 1.13 | yes |
+
+Every row is the same calculation: all of the shaft power goes to the 1.20 m nose disc and
+T/W follows from momentum theory as (P/10.9 kW)^(2/3). **The take-off case cannot be added as a
+fifth row of this table, and an earlier version did add it.** Taking the aircraft off the ground
+needs 6.48 kW kg⁻¹, which is 14.00 kW at the bus and 12.24 kW of shaft power — but that 12.24 kW
+is 10.90 kW at the nose *plus* 1.34 kW at the tips, and the tip power drives four pairs of 0.20 m
+discs rather than the nose disc. Putting the whole 12.24 kW through the nose-disc formula gives
+T/W = 1.08, and that number is an artefact: it spends the tip power twice, once as nose thrust
+and once as the 64.8 N the tip pairs actually produce. The take-off ratio of **1.132** is a force
+sum across two different propulsors, 490.5 N from the nose and 64.8 N from the tips, and it is
+computed that way in `aero/itki.py`. The two calculations do not belong in one column.
 
 Two earlier versions of this table were wrong in two different ways, and both are worth naming
 because the second was introduced by the correction of the first. The original read 0.61, 0.71,
