@@ -585,12 +585,39 @@ figures from that range instead:
 At the top of their range the buffer would be 4.6 kg heavier than budgeted, against the 2.2 kg
 of unallocated mass this section leaves. **The light design's mass budget would not close.**
 
-The defence is real but it is a defence, not a measurement: their figures are for an
-energy-optimised automotive pack, and a buffer discharged for a minute at a time is a different
-product optimised for the opposite thing. Nothing this study has read gives a specific power for
-that product. **The assumption is therefore that a short-duration buffer beats an automotive
-traction pack by a factor of three and a half to six — plausible in kind, unverified in
-magnitude, and load-bearing for Bill 3.**
+The defence available at that point was that those figures are for an energy-optimised
+automotive pack, while a buffer discharged for a fraction of a minute is a different product
+optimised for the opposite thing. **That defence has since been tested against a measurement of
+the right product, and it does not survive.** A 24S nickel–cobalt–manganese pack was designed,
+built, bench-tested across discharge rates from 0.2 C to 10.68 C and then flown in an electric
+VTOL aircraft through six take-off, hover and landing cycles [47]. Its measured pack-level
+specific power is **724 W kg⁻¹** continuous for the unit pack and **892 W kg⁻¹** for the
+four-parallel flight system — inside the range quoted above, not above it. Its maximum tested
+rate, 10.68 C, corresponds to roughly **1.5 kW kg⁻¹**, and at that rate the pack reached
+55.1 °C against a 60 °C limit: a thermal margin of 4.9 °C. That is the ceiling of a pack built
+for exactly this duty, instrumented, and flown.
+
+A third source points the same way from the other direction. A NASA-funded design study of
+electrically propelled aircraft adopts a battery specific power of 4 kW kg⁻¹ and states plainly
+that this is "about **twice that of existing batteries**" [48] — that is, it treats a figure
+below the one assumed here as a future technology level rather than a present one.
+
+| Source | Specific power | Kind |
+|---|---:|---|
+| Measured eVTOL pack, continuous [47] | 0.72–0.89 kW kg⁻¹ | flight-tested measurement |
+| Same pack at its maximum tested rate [47] | ≈ 1.5 kW kg⁻¹ | measurement, 4.9 °C thermal margin |
+| Li-ion for power applications [21] | 0.7–1.3 kW kg⁻¹ | literature range |
+| Assumed future level in a design study [48] | 4 kW kg⁻¹ | stated as ≈ 2× what exists |
+| **This study, implicitly** | **4.61 kW kg⁻¹** | **assumption** |
+
+Sized at the measured thermal ceiling of 1.5 kW kg⁻¹ the buffer becomes **5.5 kg** rather than
+1.8 kg — 3.7 kg heavier, against 2.2 kg of unallocated mass. Sized at the measured continuous
+figure it becomes 9.3 kg. **The light design's mass budget does not close at any measured
+specific power, and this is the single most exposed number in the paper.** It is not resolved
+by arguing that the buffer is a different product: the source above *is* that product, built
+and flown. What would resolve it is a pack demonstrating three times the measured specific
+power at acceptable temperature, or a heavier buffer carried at the cost of payload fraction.
+Section 8 states which.
 
 **The energy side is a different matter, and it is far more comfortable than the power side.**
 The buffer does not discharge continuously for the whole vertical phase. It discharges through

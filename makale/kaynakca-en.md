@@ -124,3 +124,14 @@
 44. Wang, K.; Zhou, Z. Aerodynamic Design, Analysis and Validation of a Small
     Blended-Wing-Body Unmanned Aerial Vehicle. *Aerospace* **2022**, 9 (1), 36.
     https://doi.org/10.3390/aerospace9010036
+45. Defoe, G. L. *A Comparison of the Aerodynamic Characteristics of Three Simple
+    Reflexed Airfoils in the Normal and Variable Density Wind Tunnel.* NACA Technical
+    Note No. 388, Langley Memorial Aeronautical Laboratory, 1931.
+46. *Preliminary Report on the Characteristics of the NACA 4400R Series Airfoils.*
+    NACA Wartime Report, Langley Memorial Aeronautical Laboratory, 1939.
+47. Yu, S.; Jung, Y.-J.; Cho, B.-D.; Lee, G.-S. Design, Fabrication, and In-Flight
+    Demonstration of a 24S NCM Battery System for an eVTOL Aircraft. *Batteries*
+    **2025**, 12 (9), 317. https://doi.org/10.3390/batteries12090317
+48. Barrett, S. R. H.; Brown, A.; Gomez-Vega, N. *Silent, Solid-State Propulsion for
+    Advanced Air Mobility Vehicles.* NASA Innovative Advanced Concepts Phase I Final
+    Report, Massachusetts Institute of Technology, 2023.

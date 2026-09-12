@@ -2676,3 +2676,169 @@ bağımsız bir tasarımda birebir karşılığı — ve dengelemenin direnç ö
 ❌ **Ama makaleye atıf yapmıyoruz.** Bu bir öğrenci tasarım önergesi — gri
 literatür. Hakem haklı olarak sorar. Bulgu burada kalsın; makaledeki aynı
 sonuç zaten TR-460'ın kendi ölçümüne dayanıyor ve ona ihtiyacı yok.
+
+---
+
+# YZ TURU 13 — gelen kaynaklar (12.09.2026)
+
+Kullanıcı YZ1/YZ3/YZ5/YZ6'nın verdiği bağlantılardan indirdiklerini depoya
+koydu: 19 dosya. Hepsini **açtım**, künyelerini doğruladım, üçü mükerrer
+çıktı, biri de iddia edilen kaynak değildi.
+
+| dosya | iddia | gerçek |
+|---|---|---|
+| `19930091108` | TR-460 | ✅ TR-460 — **elimizde zaten var**, silindi |
+| `19930091873` | "spoiler ölü bant PDF'i" | ✅ TR-796 — **elimizde zaten var**, silindi |
+| `fluids-10-03-00054` | Lampropoulos | ✅ doğru — **elimizde zaten var**, silindi |
+| `19930082661` | "NACA TN 1862, Polhamus, süpürme" | ❌ **Doris Cohen, düz ok kanatların SÜPERSONİK taşıması + errata.** İlgisiz. Adı `YANLIS-KAYNAK_...` yapıldı, kayıt kalsın diye duruyor |
+| `tstastny_phd_thesis` | "Olsson master tezi" | ❌ Stastny'nin doktora tezi, konusu *sabit kanat düşük irtifa kontrolü*. (YZ1 bunu kendisi de söylemişti.) |
+| `Lv_9319` | "Shkarayev'in yakın metni" | kısmen: Lv ve diğ. 2013, *adaptive proprotors*. Ortak yazar yalnız Moschetta |
+| `no.ntnu_...` | "tailsitter sys-ID" | ⚠️ FoxTech **Babyshark** — kuyruk-oturur değil, quadplane |
+
+Geri kalan 12'si gerçekten işe yarar ve ikisi bizi **ciddi biçimde
+değiştiriyor.**
+
+## 🔴 S4 KAPANDI — ve bizim aleyhimize kapandı
+
+Geçen tur Lampropoulos'a bakıp §7'deki *"no plausible amount of reflex
+would trim this aircraft"* cümlesini yumuşatmış, yerine **"2,44°'lik bir
+burulma, kesitlerin 0,004'ten hayli fazla verdiğini ima ediyor"** diye bir
+cümle koymuştum. **O cümle bir çıkarımdı, okuma değildi — ve yanlıştı.**
+İki yeni NACA kaynağı, momenti gerçekten ölçen tünelde, tam tersini
+gösteriyor.
+
+### NACA TN-388 (Defoe) — üç refleks kesit, VDT, Re ≈ 3,1×10⁶
+
+Üç yaygın kesidin (Navy 60, Boeing 106, Gött. 398) arka kamber çizgisi %30
+veterden itibaren değiştirilmiş; yeni çizgi **ince kanat kuramına göre
+çeyrek veterde SIFIR moment** verecek şekilde seçilmiş. Ölçüm:
+
+> *"The pitching moment coefficients for the reflexed airfoil are
+> **practically zero**..."*
+
+| kesit | C_m (C_L = 0) |
+|---|---:|
+| Gött. 398 / B106 / N60 (normal) | −0,082 / −0,052 / −0,080 |
+| **Gött. 398R / B106R / N60R (refleks)** | **−0,007 / −0,001 / ≈−0,001** |
+| NACA M6 | −0,001 |
+
+Ve iki maliyet, ölçülmüş: C_Lmax **%12 düşük**; eşit C_L'de profil direnci
+refleksli kesitte **daha yüksek** (yalnız küçük C_L'de değil).
+
+### NACA 4400R serisi (Wartime Report) — tasarım hedefi ZATEN NEGATİF
+
+Orta kamber çizgisi, ince kanat kuramından **C_m = −0,03** verecek şekilde
+türetilmiş. Ve rapor: *"the design pitching-moment coefficient **was
+realized**."* Tablo I, ölçülmüş:
+
+| kesit | c_m,c/4 |
+|---|---:|
+| 4409R | −0,025 |
+| 4412R | −0,030 |
+| 4415R | −0,031 |
+| 4418R | −0,030 |
+
+C_Lmax cezası burada da ölçülmüş: **%10**.
+
+### Toplam tablo — dokuz ölçülmüş kesit, bir tanesi pozitif
+
+| kesit | C_m,c/4 | kaynak |
+|---|---:|---|
+| **NACA 2R212** | **+0,004** | TR-460 |
+| B106R | −0,001 | TN-388 |
+| N60R | ≈−0,001 | TN-388 |
+| NACA M6 | −0,001 | TN-388 |
+| Gött. 398R | −0,007 | TN-388 |
+| 4409R | −0,025 | 4400R WR |
+| 4412R / 4415R / 4418R | −0,030 / −0,031 / −0,030 | 4400R WR |
+
+**Refleks, yapılıp ölçüldüğü hâliyle, negatif momenti GİDERMEK için bir
+araçtır — pozitif moment ÜRETMEK için değil.** Bizim ihtiyacımız +0,056.
+
+**Ne yaptım:** §7'deki çıkarım cümlesi kaldırıldı, yerine ölçülmüş tablo
+kondu. Duyarlılık tablosuna "ölçülmüş emsal" sütunu eklendi ve 0,020 ile
+0,050 satırlarının karşısında **"none"** yazıyor. "0,02 veren modern bir
+kesit bilen okur üçüncü satırı tasarım noktası saysın" cümlesi de kaldırıldı
+— artık dokuz ölçüme karşı duruyor.
+
+**Ve bu bizi güçlendiriyor.** Burulma artık iki seçenekten biri değil;
+**ölçülmüş dayanağı olan tek seçenek.** %4,3'lük ceza kalkmıyor ama
+alternatifi olmadığı gösterilmiş oluyor.
+
+## 🔴 S5 DAHA DA KÖTÜLEŞTİ — ve bir YZ okuması yanlıştı
+
+### Yu ve diğ. 2025 — tasarlanmış, üretilmiş, UÇURULMUŞ paket
+
+24S NCM paket, VS-210 eVTOL'da altı kalkış–asılı–iniş çevrimi boyunca uçmuş.
+Tezgâhta 0,2C–10,68C arası ölçülmüş. **Paket düzeyinde ölçülmüş özgül güç:**
+
+- 724 W/kg sürekli (24S1P, 110 A ≈ 5C)
+- 892 W/kg (24S4P uçuş sistemi, 440 A)
+- 10,68C'de ≈ **1,5 kW/kg** — ve orada paket **55,1 °C**, 60 °C sınırına
+  **4,9 °C** pay kalmış.
+
+Yani "otomotiv paketi bizim ürünümüz değil" savunmamız çöktü: **bu kaynak
+tam bizim ürünümüz**, ve tavanı 1,5 kW/kg.
+
+### ⚠️ Ve YZ1'in karşı-kaynağı iddia edileni söylemiyor
+
+YZ1, NASA NIAC 2022 raporunu *"4,6 kW/kg artık tamamen hayal değil"*
+gerekçesi olarak verdi. **Raporu açtım. Tam tersini söylüyor:**
+
+> *"The specific energy (200 Wh/kg) is consistent with existing prototype
+> lithium-ion batteries. However, the specific power (4 kW/kg) is about
+> **twice that of existing batteries**."*
+
+Yani NIAC'ın 4 kW/kg'ı bir **gelecek teknoloji varsayımı**, ve rapor bunun
+mevcudun iki katı olduğunu açıkça yazıyor. Bizim lehimize değil, **aleyhimize
+üçüncü bağımsız ifade.** (Kullanıcının uyarısı burada birebir karşılık buldu:
+kaynağı açmadan aktarsaydım makaleye yanlış bir savunma girecekti.)
+
+### Sonuç — sayı büyüdü
+
+| özgül güç | tampon kütlesi | bütçe |
+|---|---:|---|
+| 0,892 kW/kg (ölçülmüş sürekli) | 9,3 kg | kapanmaz |
+| 1,5 kW/kg (ölçülmüş termal tavan) | **5,5 kg** | **kapanmaz** (pay 2,2 kg, açık 3,7 kg) |
+| 4,61 kW/kg (bizim varsayım) | 1,8 kg | — |
+
+§6'ya olduğu gibi yazıldı. **Bu artık makalenin en açık yeri** ve
+"farklı ürün" savunmasıyla kapatılamaz.
+
+## S9 KAPANMADI — YZ1'in "NACA 1034 yeterli" demesi doğru değil
+
+YZ1, iki yönlü şerit sorusunu *"artık kapatılabilir"* saydı. Raporu açtım:
+**kapatmıyor.**
+
+TR-1034, **spoiler aileron'ların HIZ FRENİ / süzülme yolu denetimi olarak**
+kullanımını ölçüyor (NACA 65-210 ve 65₂-215 kanatlar, tam açıklık yarıklı
+flap, Mach 0,13–0,71). Ölçtüğü yunuslama momenti **simetrik** açılımın
+(iki kanat birden) momenti. Bizim sorumuz ise **tek kanatta üst+alt**
+yüzeyden eşit çıkıntı — TR-796'nın önerdiği düzen. O düzen bu raporda yok.
+
+**S9 açık kalıyor**, ve YZ'lere tekrar sorulacak, bu kez yanlış anlaşılmayacak
+biçimde.
+
+### Ama TR-1034 başka bir şey veriyor, ve o işimize yarıyor
+
+> *"The plug and retractable ailerons investigated, when used as speed
+> brakes, had **only a small effect on the wing pitching moments.** The
+> rolling effectiveness of the ailerons **will not be impaired** by such use
+> and should be as good as the effectiveness when the ailerons are projected
+> in normal manner from the retracted position."*
+
+İkisi birden bizim mimarimize uyuyor:
+
+1. Şerit **iki kanatta birden** açılırsa bir hız frenidir, ve bu sınıftan bir
+   cihazın simetrik açılımı yunuslamayı **az** bozuyor. Bizim ΔC_m kaygımız
+   tek taraflı açılıma aitti; simetrik kullanım o cezayı ödemiyor.
+2. Ve hız freni görevi **yatış otoritesini yemiyor** — cihaz aynı anda iki işi
+   yapabiliyor.
+
+Yani şeridin üçüncü bir rolü var: **iniş/alçalma yolu denetimi.** Bu, makalenin
+"aynı donanım, iki iş" savının bir örneği daha, ve şu ana kadar hiç
+yazılmamıştı. §4.4'e eklenecek.
+
+⚠️ Aktarım sınırı: onların kanadı geleneksel, yarıklı flaplı, Mach'ları bizden
+yüksek, ve cihaz **üst** yüzeyden çıkıyor; bizimki alt yüzeyde 45° ok açılı
+bir şerit. Yön aktarılabilir, büyüklük aktarılamaz.
