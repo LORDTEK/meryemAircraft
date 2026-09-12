@@ -10,7 +10,38 @@ claim was checked by opening the PDF. Two of you had already been handed a
 source that said the opposite of what it was offered for, in an earlier round,
 and I am not going to repeat that in the other direction by taking your word.
 
-Attached: the current `makale-v5.md` and `makale-v5-ek.md`.
+---
+
+## 0. Where to read the paper
+
+Nothing is attached to this message. The repository is public; fetch the two
+documents yourself.
+
+**The paper** (body, references, supplementary index):
+
+```
+https://raw.githubusercontent.com/LORDTEK/meryemAircraft/main/makale/makale-v5.md
+```
+
+**The supplementary material** (S1–S6 in one file):
+
+```
+https://raw.githubusercontent.com/LORDTEK/meryemAircraft/main/makale/makale-v5-ek.md
+```
+
+Those are plain Markdown and will render as text. If your browsing tool prefers
+a normal page, the same files are at
+`github.com/LORDTEK/meryemAircraft/blob/main/makale/makale-v5.md` and
+`.../makale-v5-ek.md`.
+
+If your context will not hold both, **read the paper and skip the supplement**,
+then say so. Everything load-bearing is in the body; the supplement carries the
+derivations. Two files worth opening if you have room after that:
+
+- `aero/README.md` — the running correction record, including this round in full
+- `aero/itki.py` — the thrust-budget script behind Section 2 below
+
+Repository root: `github.com/LORDTEK/meryemAircraft`
 
 ---
 
@@ -223,4 +254,60 @@ on the faired tip frame at Re ≈ 80 000, for the reason in §4 above.
 
 **Third:** if you still think the paper is the wrong length or the wrong shape
 for the journal, say so — but say it after the two questions above, not instead
-of them.
+of them, and say it against the rules below rather than against a guess.
+
+---
+
+## 9. The journal's rules, now read rather than assumed
+
+Last round produced two confident and **mutually contradictory** claims about
+*Drones* — one that IMRaD is mandatory, one that there is no length limit. The
+authors have since pulled the Instructions for Authors. Both claims were half
+right, and the half that matters was missed by three of you. Advise within
+this, not around it.
+
+**Structure is mandatory, and we do not have it.** Even under the journal's
+"Free Format Submission" allowance, which waives layout but not content:
+
+> "all manuscripts must contain the required sections: Author Information,
+> Abstract, Keywords, **Introduction, Materials & Methods, Results,
+> Conclusions**, Figures and Tables with Captions, Funding Information, Author
+> Contributions, Conflict of Interest and other Ethics Statements."
+
+Our nine sections are Introduction / Background / Architectural tax /
+Configuration / Bills audited / Reference designs / Transition / Limitations /
+Conclusion. That is not IMRaD. **This is a restructure, not a rewrite** — the
+content maps onto Methods and Results without deletion — but it is real work
+and it has to happen before submission.
+
+**Highlights are obligatory and we have none.** The required shape is exact:
+
+> "What are the main findings?" — up to 2 bullets
+> "What are the implications of the main findings?" — up to 2 bullets
+
+**The abstract cap is confirmed at "about 200 words maximum".** Ours is ~270.
+
+**There is no maximum manuscript length anywhere in the Instructions.** So
+19 700 words is not a formal problem. Whether it is a *rhetorical* problem is a
+fair question — but argue it as a reader, not as a rule.
+
+**Two mandatory back-matter items are missing**: Author Contributions in CRediT
+form, and a GenAI disclosure placed in **Materials and Methods** — the journal
+requires that where GenAI assisted "study design or data collection, analysis or
+interpretation", not merely language editing, and this work used it for
+literature searching and numerical checking. There is also a prescribed
+acknowledgement wording. A Patents section is permitted and we have a patent to
+declare.
+
+**One thing to check that nobody has raised.** The journal requires authors of
+work "related to military purposes or applications" to determine whether the
+research involves dual-use items, and supplies a DURC statement template. This
+is a civil configuration study and claims no military application — but the
+heavy reference design is a 1000 kg unmanned aircraft with a computed range near
+1800 km, which is inside the band where export-control regimes list unmanned
+vehicles by range. If you know this territory, say what a *Drones* editor would
+expect here. If you do not, say that instead of improvising.
+
+**What I am not asking you to re-litigate:** whether the abstract should quote
+the 42 % / 17 % sizing result. It now does so with the mass-budget condition in
+the same sentence, and that is the authors' call.
