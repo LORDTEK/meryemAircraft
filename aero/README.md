@@ -2928,3 +2928,172 @@ C_D0'i öyle kuruldu, aksi halde iki sayı toplanamaz.
 
 Polar verisi `aero/iskoz-sonuc.json`'a yazılıyor, yeniden analiz için
 VLM'i tekrar koşmaya gerek yok.
+
+---
+
+# Tur 14 — dört bağımsız dış okuma, ve benim kendi denetimim
+
+Dört yapay zekâya v5'in ilk sürümü verildi. Dördü de bulgu getirdi. **Hiçbiri
+olduğu gibi kabul edilmedi**; her iddia dosyaya, betiğe veya elimizdeki PDF'e
+karşı sınandı. Aşağısı hem düzeltilenlerin hem de **çürütülenlerin** kaydıdır,
+çünkü ikincisi de bu projenin yöntemine dahil.
+
+## En utanç verici: §5.5 yanlış tabloyu taşıyordu
+
+Gövdedeki "üç mimarinin karşılaştırmalı boyutlandırması" tablosu, aslında
+S6.1'deki **Bacchini & Cestino'nun üç *uçan* eVTOL'ü** tablosuydu — sütun
+başlıkları "Tail-sitter / Lift+cruise / Tilt-rotor" olarak değiştirilmiş.
+"Tail-sitter" sütunu E-Hang 184'tü. Bizim uçağımızın menzili 1 600 km; orada
+42 km yazıyordu. Üstündeki cümle "üç sözleşme" vaat ediyordu, tabloda sözleşme
+yoktu.
+
+Dördün üçü bunu yakaladı. **Sebebi belliydi: v5 el ile toparlanmıştı.**
+Bu yüzden `makale/uretim/mkv5.py` yazıldı — belge artık bölüm dosyalarından
+her seferinde yeniden kuruluyor, kelime sayıları sayılıyor, ek dizini iki
+belgede tek kaynaktan üretiliyor, atıf boşluğu/hayaleti denetleniyor.
+
+## T/W çelişkisi — en çok şeyi değiştiren bulgu
+
+§6.1 "thrust equals weight" diyor. FM = 0,599, tek 1,20 m disk, 490,5 N →
+**10 895 W**. Yani 6.2'nin yazdığı 10,9 kW tam olarak **T/W = 1,00**'dir.
+
+Ama S2'nin tamponlu güç tablosu aynı 10,9 kW'a "T/W 1,20" yazıyordu (bütün
+sütun 1,2 kat şişkin), ve §7.4 "T/W = 1,2'de 0,2 g" diyerek makalenin manşet
+sonucunu — *tırmanarak girince irtifa kaybı sıfır* — o orana dayandırıyordu.
+
+`aero/itki.py` bunu dışarıdan bir varsayımla kapatmıyor. Uçağın elindeki tek
+ek dikey itki kaynağı **uç çiftleridir**, ve dönme sırasında onlar zaten dönmeyi
+üretiyor. Bang-bang profilinde üst çiftler tam itkide, alt çiftler sıfırda
+(M = 2TL) — ve üst çiftler hâlâ yukarı itiyor. Çıkan takas:
+
+| korunan yunuslama momenti | dikey katkı | T/W |
+|---|---:|---:|
+| %100 (23,0 N·m) | 32,4 N | **1,066** |
+| %50 | 48,6 N | 1,099 |
+| %0 | 64,8 N | **1,132** |
+
+1,200 hiçbir ayarda ulaşılmıyor.
+
+**Manşet yine de ayakta.** Geçiş benzetimi ulaşılabilir her oranda yeniden
+koşturuldu: referans dönme sürelerinde (hafif 2 s, ağır 5,1 s) 5 m/s girişle
+irtifa kaybı **sıfır** — T/W = 1,00'de bile. Değişen, o tırmanışı *kazanmanın*
+maliyeti: 0,132 g, 3,9 s, 9,6 m — eskiden 0,2 g, 2,6 s, 6,4 m deniyordu. Ve
+dinlenmeden başlayan dönüş belirgin şekilde kötüleşti (hafif 2 s'de −9,1 değil
+−14,7 m). Tırmanışla giriş artık bir incelik değil, bir **gereklilik**.
+
+Yan ürün: uç pervanelerinin ikinci bir görevi ortaya çıktı — kalkış itki payı.
+Ama bu bir bağımlılık, çünkü kalkış payı ile yunuslama otoritesi **aynı dört
+pervaneden** çekiliyor ve ikisi birden tam alınamıyor.
+
+`dogrula.py` artık hem §7.4'ün gövde tablosunu ulaşılabilir T/W'de, hem de
+manşetin kendisini kilitliyor (68 hücre, sıfır sapma).
+
+## Batarya: üç ayrı istasyondan çıkarma
+
+4,61 kW/kg şöyle bulunmuştu: (10,9 − 2,6)/1,8. Ama 10,9 **rotor milinde**,
+2,6 **motor milinde**, batarya **elektrik barasında**. Zincir link link:
+
+| istasyon | hafif tasarım, hover |
+|---|---:|
+| burun pervane mili | 10,90 kW |
+| ÷ makine 0,92 | 11,85 kW |
+| ÷ güç elektroniği 0,95 | **12,47 kW bara talebi** |
+| motor 2,60 × jeneratör 0,90 | **2,34 kW bara arzı** |
+| **tampon** | **10,13 kW → 5,63 kW/kg** |
+
+Uç çiftleri de sayılırsa (kalkış için gerekli) **6,48 kW/kg**. Ölçülmüş termal
+tavana açık **3,8 kat**, ölçülmüş sürekli hıza **6,3 kat**. Zaten en açık sayı
+daha da açıldı.
+
+## Selig ölü bandı — elimizdeki kaynakta duruyordu
+
+Bir okuma, 39 mm kaportanın C_lα = 4,0 /rad varsayımının düşük Re'de sorunlu
+olduğunu söyledi ama bizde olmayan bir kaynağa dayandı. **Elimizdeki Selig
+Cilt 2'de doğrudan buldum:**
+
+> "past work on **symmetrical** airfoils has shown that a **deadband often
+> appears in the lift curve near zero degrees**… Interestingly, cambered
+> airfoils do not appear to have a similar, intrinsic deadband region."
+
+ve bir başka kesit için, Re 60 000 ve 100 000'de ölü bant var, daha yüksek
+Re'de yok — "this type of behavior is **usually only seen on symmetrical
+airfoils at low Re's**".
+
+Kaportamız: **simetrik, Re ≈ 80 000, 1–2° toe**. Tam bandın içinde. Yani 4,0
+artık "2π'den küçük olduğu için muhafazakâr" değil, bir **üst sınır** — çünkü
+ölçümlerin kaldırdığı şey eğimin büyüklüğü değil, eğrinin o bölgede
+**doğrusallığı**. Sıfırdan geçen doğrusal bir türevle hesaplanan yön kararlılığı
+marjı, verilerin "yok" dediği tek parça üzerinde hesaplanmış oluyor.
+
+Aynı kaynak çareyi de adlandırıyor ve bize bedava: **kamburluk**. Dışa kamburlu
+ve dışa toe'lu bir kaporta, doğrusal parçası olan bir eğrinin üzerinde çalışır.
+Makale o kaportayı **boyutlandırmıyor** — ölçmediği bir eğriden eğim seçmek,
+az önce kaydettiği hatanın tekrarı olurdu.
+
+## Çürütülenler — bunlar dışarıdan geldi ve tutmadı
+
+| iddia | gerçek |
+|---|---|
+| "Sabit yakıt kütlesi sütunu yanlış: −36,5 değil −50,2" | **Makale doğru.** Yeniden boyutlandırınca −36,6 / +0,3 çıkıyor. İtiraz MTOW'u birinci sütundan sabit tutmuş; o bir sözleşme değil, iki kuralın karışımı. |
+| "Eş eksenli çift 2A alanıyla hesaplanmalı, FM 0,495" | Eş eksenli çiftin standart muamelesi **tek disk + girişim kaybı**dır. Makale tam onu yapıyor. |
+| "Dayanıklılık aritmetiği kapanmıyor" | Kapanıyor: D = 40,875 N → 1 226 W itki → /0,80/0,92 = 1 666 W; 24,71 kWh ÷ 1,666 = 14,83 h → 1 602 km. İtiraz 1,7'yi yuvarlanmış almış. |
+| "NASA sayıları yanlış, doğrusu 4,9/3 735 ve 9,3/7 517" | **Johnson & Silva PDF'ini açtım**: quadrotor/turboshaft 4,9 / 3 678; lift+cruise/turbo-electric 8,5 / 7 271. Bizim sayılarımız birebir doğru. Yanlış olan tek şey atıf numarasıydı ([7] → [22]). |
+
+Son satır özellikle önemli: iddia "üç şey aynı anda yanlış" diyordu; kaynağı
+açınca **bir şey** yanlış çıktı. Kaynağa bakmadan karar vermenin iki yönü de
+var.
+
+## §3.7'nin asıl kusuru — dördü de kaçırdı
+
+Atıf yanlıştı, evet. Ama asıl sorun mantıktaydı: "özel kaldırma sistemi taşıyan
+konfigürasyon **daha düşük seyir verimi ve** daha yüksek ağırlık göstermeli"
+deniyor, ve kanıt olarak quadrotor (4,9 / 3 678) → lift+cruise (8,5 / 7 271)
+çifti veriliyordu. Ama quadrotor'da özel kaldırma sistemi **yok** ve verimi
+*düşük*; lift+cruise'da **var** ve verimi *yüksek*. Tablo o sıralamayı
+göstermiyor.
+
+Doğru — ve daha keskin — tahmin şu: ağırlık cezası, mimarinin satın aldığı
+seyir verimiyle **telafi edilmiyor**. Bu, bariz savunmayı yasaklıyor. Ve tablo
+tam onu gösteriyor: %70 daha iyi seyir verimi, neredeyse iki katı ağırlık.
+§3.2 ve §9 bunu zaten doğru söylüyordu; yalnız §3.7 kendi kaynağını yanlış
+okumuştu.
+
+## Kalanlar
+
+- S1 süreklilik tablosundan **%10 artık payı satırı** düşmüştü; toplamlar
+  betikte doğruydu, tablo kendi toplamını vermiyordu. Satır eklendi, ikame
+  edilen aralık tek kurala oturtuldu: **0,0201 – 0,0231**.
+- S4'ün muhafazakâr dönme marjı **1,59 değil 1,14** (17,6/15,4), yumuşak
+  profilde **0,76**. "Still comfortable" cümlesi kaldırıldı.
+- §7.4 "control **power** ∝ 1/t²" diyordu; moment 1/t², **güç 1/t³** — ve
+  Tablo 4 zaten 1/t³. (Girişleri t³ ile çarpınca %0,3 içinde sabit.)
+- S6 "menzil itki verimini içermez" diyordu; pervane 0,80, **η_chain'in
+  içinde**. Düzeltme eğik mimarinin fixed-fraction avantajını +%12'den
+  ≈ −%5'e çeviriyor — yani **aleyhine**, lehine değil.
+- §8.5 ve S5.17 "hiçbiri deney gerektirmiyor" diyordu, sonuç bölümü ise "bu
+  artık doğru değil". İkisi de düzeltildi: geçiş yunuslama momenti **ve**
+  kaporta türevi tünel istiyor.
+- Girişteki sıfır-fatura cümlesi §5.3'ün nitelendirmesini taşımıyordu.
+- **S5 eski 8.1–8.17 numaralandırmasını koruyordu**, gövdedeki 8.1–8.5 ile
+  çakışıyordu; beş ekte altı kırık atıf. S5.1–S5.17 yapıldı, atıflar tek tek
+  bağlamıyla doğrulandı — kaskad regex yok (o hatayı bir kez yaptım).
+- Şekil 7 ve 8 kısaltmada atıflarını kaybetmiş, ikisi de §4.4'e ait. Geri
+  bağlandı; on iki şeklin hepsi yerleşiyor.
+- "measured uncertainty budget" → "quantified sensitivity budget"; "exactly
+  three" → üç yinelenen ücret; kaçış koşulu dört parçalı verildi (tampon şartı
+  dahil); VLM iptal argümanı koşullu yapıldı; AR 6,00 → 6,03; [47] 2026;
+  Funding beyanı dolduruldu.
+
+## Açık kalanlar
+
+1. **Drones'un format zorunluluğu.** mdpi.com proxy'de bloklu, açamadım. Ve
+   iki okuma birbiriyle çelişiyor: biri IMRaD'ın zorunlu olduğunu, diğeri
+   uzunluk sınırı olmadığını söylüyor. Yazarların bizzat bakması gerek.
+2. **Çift taraflı şerit ölçümü.** Aradığımız cihazın modern adı **split drag
+   rudder** — B-2'nin, YB-49'un kullandığı şey; DLR-F19 üzerinde de denenmiş.
+   TR-796'nın 1944'te "veri yetersiz" dediği düzenek sonradan kuruldu ve
+   ölçüldü. **Hiçbirini açmadım**; bu bir arama yönü, atıf değil. Arama
+   özetleri iki şey ima ediyor, ikisi de doğrulanmamış: çift taraflı çıkıntı
+   yunuslama momentini büyük ölçüde iptal ediyor (lehimize), ve ürettiği
+   yuvarlanma momenti hücum açısıyla **işaret değiştiriyor** (aleyhimize,
+   çünkü geçişte 17–22°'ye çıkıyoruz).
