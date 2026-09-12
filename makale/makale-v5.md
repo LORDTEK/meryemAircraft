@@ -100,6 +100,20 @@ series hybrid propulsion; cruise efficiency; aircraft configuration design
 
 ## Declarations
 
+### Supplementary Materials
+
+> The following supplementary material is available: **S1** — independent checks on the two
+> assumed aerodynamic coefficients (the full version of Section 3.10); **S2** — a component
+> build-up of the mass budget (Section 3.11); **S3** — the control axes in full (Section 2.10);
+> **S4** — rotational authority, trim and the transition envelope (Section 3.17); **S5** — the
+> limitations in full (Section 4); **S6** — the three bills stated formally and the comparative
+> sizing under three contracts (Sections 3.1 and 3.6).
+
+### Patents
+
+> A patent application covering the aircraft configuration described in this paper has been
+> filed with the Turkish Patent and Trademark Office (application 2026/014570).
+
 ### Author Contributions
 
 > Conceptualization, Ö.G. and M.G.; Methodology, Ö.G. and M.G.; Software, B.G.;
@@ -110,10 +124,23 @@ series hybrid propulsion; cruise efficiency; aircraft configuration design
 
 ### Acknowledgements
 
-> Artificial-intelligence tools were used during the preparation of this work, for
-> literature searching, numerical checking and language editing. All design decisions,
-> engineering judgements and claims presented in this paper are the authors' own, and
-> the authors accept full responsibility for the content.
+> During the preparation of this study, the authors used large-language-model assistants for
+> the purposes of literature searching and triage, numerical checking of the authors' own
+> calculations, and language editing. Section 2.14 states the scope of that use and the rules
+> under which it was admitted. No source was cited on a model's description of it, and no
+> correction was adopted until it had been reproduced independently from the underlying model.
+> All design decisions, engineering judgements and claims presented in this paper are the
+> authors' own. The authors have reviewed and edited the output and take full responsibility
+> for the content of this publication.
+
+⚠️ AMA BİR ÇATIŞMA VAR, KARAR SENİN. MDPI'ın şablonu "[tool name, version
+information]" diyor — yani araç adı ve sürüm istiyor. Yukarıdaki metin şablonun
+*yapısını* (ne için kullanıldı + gözden geçirildi + sorumluluk yazarlarda) karşılıyor
+ama araç adını vermiyor. Editör ısrar ederse iki yol var: adı yazmak, ya da "genel
+sınıf yeterlidir" diye direnmek. Şimdilik ikincisindeyiz ve bu bilinçli bir seçim.
+
+Dergi ayrıca GenAI'ın analiz/yorumda kullanıldığı durumda Methods İÇİNDE de beyan
+istiyor; onu 2.14 karşılıyor. Buradaki blok Acknowledgements tarafı.]*
 
 ### Conflicts of Interest
 
@@ -128,6 +155,47 @@ series hybrid propulsion; cruise efficiency; aircraft configuration design
 > mesh generator, the case setup, the grid-convergence study and the wall-resolution and
 > turbulence-model sensitivity runs behind the computed zero-lift drag — are openly
 > available at https://github.com/LORDTEK/meryemAircraft
+
+### Dual-Use Research of Concern
+
+> This paper is a civil aircraft configuration study. The applications the configuration was
+> conceived for are civil ones — wildfire observation and response, and cargo carriage to places
+> without a runway — and no military organization, mission, weapon or payload is named or
+> analysed anywhere in this work. It reports no experimental hardware and no controlled
+> technical data.
+>
+> **The authors acknowledge the dual-use potential inherent in the subject matter.** A
+> long-endurance unmanned aircraft is dual-use in principle, as most aircraft configurations
+> are, and the authors note for completeness that the heavier of the two analytical scale cases
+> — a 1000 kg vehicle with a computed range near 1800 km — falls within the range band by which
+> unmanned aerial vehicles are listed under international export-control arrangements. What is
+> published here is an open configuration study and its equations, offered so that others may
+> check or refute it; the authors neither direct it at, nor undertake to police, any particular
+> downstream use, and they remain available to provide whatever further declaration the editors
+> require.
+
+Önce "no part of this work was conducted for, or is directed at, a military application"
+yazmıştım. Bunun ikinci yarısı gelecek hakkında bir **taahhüt**ti ve kimse onu
+veremez. Senin itirazın doğru: birisi yarın askeri amaçla kullanırsa biz yanlış
+beyan vermiş oluruz.
+
+Şimdiki metin üç şeyi ayırıyor: (1) bu çalışmanın NE OLDUĞU — sivil, askeri hiçbir
+şey adlandırılmıyor, bu bir olgu; (2) NİYETİMİZ — orman yangını ve yük, bu da olgu;
+(3) ÇİFT KULLANIM POTANSİYELİ — inkâr edilmiyor, kabul ediliyor.
+
+Üçüncüsü ayrıca daha GÜÇLÜ bir DURC beyanı. MDPI'ın kendi rehberi yazarlardan
+"bulgularının nasıl kötüye kullanılabileceğini tahmin etmesini" istiyor. "Çift
+kullanım yoktur" demek bu rehbere uymaz; "vardır, farkındayız" demek uyar. Drones'ta
+2026'da yayımlanan İHA sürü makaleleri de tam bunu yapıyor.
+
+Derginin kapsam sayfası şablonu yalnızca askeri kuruluş/görev adı geçen makaleler
+için zorunlu tutuyor; bizde geçmiyor, yani bu blok gönüllü. Ama gönüllü olması onu
+zayıflatmıyor, tersine.
+
+NOT: Orman yangını ve yük amacını ilk kez burada yazdım. Makalenin GÖVDESİNDE hiçbir
+görev tanımı yok — hakem "bu ne için?" diye sorar. 13 kg faydalı yük / 1600 km bir
+misyonun sayısı; hangi misyon olduğunu söylemek makaleyi güçlendirir. Girişe bir
+cümle eklememi istersen söyle, kendiliğimden eklemedim.]*
 
 ### Funding
 
@@ -253,15 +321,21 @@ attempts to merge the two configuration families and argues, on the evidence of 
 contemporary NASA reviews, that they ended for reasons external to the configuration —
 principally engine and transmission reliability — while the one difficulty those reviews
 document most fully, the workload of a pilot flying a vertical descent, is also the one
-that an uncrewed aircraft removes outright. Section 2 sets out the
-architectural tax in its three currencies, shows that architectural remedies transfer it
-rather than remove it, and derives the condition under which it would not be charged.
-Section 2 describes the proposed configuration, which is built to satisfy that condition.
-Section 3 audits the claim bill by bill and states what the configuration does pay.
-Section 3 sizes two reference designs twenty times apart in mass and examines how the
-proportions scale. Section 3 treats the flight profile and the transition manoeuvre,
-including a result that contradicts a common assumption about how quickly a tail-sitter
-should rotate. Section 4 states the limitations, and Section 5 concludes.
+that an uncrewed aircraft removes outright.
+
+**The paper is arranged as follows.** Sections 2.1 to 2.6 set out the architectural tax in its
+three currencies, show that architectural remedies transfer it rather than remove it, and derive
+the condition under which it would not be charged. Sections 2.7 to 2.11 describe the proposed
+configuration, which is built to satisfy that condition, and Sections 2.12 to 2.14 give the
+sizing and computational methods and record the use of artificial-intelligence tools.
+Section 3.1 tests the framework against published sizing studies; Sections 3.2 to 3.6 audit the
+claim bill by bill, state what the configuration does pay, and size three architectures against
+one mission under three sizing contracts. Sections 3.7 to 3.11 size two reference designs twenty
+times apart in mass, bound the two assumed aerodynamic coefficients by calculation, and rebuild
+the mass budget from components. Sections 3.12 to 3.17 treat the flight profile and the
+transition manoeuvre, including a result that contradicts a common assumption about how quickly a
+tail-sitter should rotate. Section 4 places the results in context and states the limitations,
+ordered by whether they could change a conclusion. Section 5 concludes.
 
 The configuration proposed in this paper is new, but the problem it addresses is not,
 and neither are several of its ingredients. This section reviews the attempts that

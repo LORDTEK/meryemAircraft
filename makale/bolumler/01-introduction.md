@@ -116,15 +116,21 @@ attempts to merge the two configuration families and argues, on the evidence of 
 contemporary NASA reviews, that they ended for reasons external to the configuration —
 principally engine and transmission reliability — while the one difficulty those reviews
 document most fully, the workload of a pilot flying a vertical descent, is also the one
-that an uncrewed aircraft removes outright. Section 2 sets out the
-architectural tax in its three currencies, shows that architectural remedies transfer it
-rather than remove it, and derives the condition under which it would not be charged.
-Section 2 describes the proposed configuration, which is built to satisfy that condition.
-Section 3 audits the claim bill by bill and states what the configuration does pay.
-Section 3 sizes two reference designs twenty times apart in mass and examines how the
-proportions scale. Section 3 treats the flight profile and the transition manoeuvre,
-including a result that contradicts a common assumption about how quickly a tail-sitter
-should rotate. Section 4 states the limitations, and Section 5 concludes.
+that an uncrewed aircraft removes outright.
+
+**The paper is arranged as follows.** Sections 2.1 to 2.6 set out the architectural tax in its
+three currencies, show that architectural remedies transfer it rather than remove it, and derive
+the condition under which it would not be charged. Sections 2.7 to 2.11 describe the proposed
+configuration, which is built to satisfy that condition, and Sections 2.12 to 2.14 give the
+sizing and computational methods and record the use of artificial-intelligence tools.
+Section 3.1 tests the framework against published sizing studies; Sections 3.2 to 3.6 audit the
+claim bill by bill, state what the configuration does pay, and size three architectures against
+one mission under three sizing contracts. Sections 3.7 to 3.11 size two reference designs twenty
+times apart in mass, bound the two assumed aerodynamic coefficients by calculation, and rebuild
+the mass budget from components. Sections 3.12 to 3.17 treat the flight profile and the
+transition manoeuvre, including a result that contradicts a common assumption about how quickly a
+tail-sitter should rotate. Section 4 places the results in context and states the limitations,
+ordered by whether they could change a conclusion. Section 5 concludes.
 
 The configuration proposed in this paper is new, but the problem it addresses is not,
 and neither are several of its ingredients. This section reviews the attempts that
