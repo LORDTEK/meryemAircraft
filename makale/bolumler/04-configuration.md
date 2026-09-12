@@ -439,6 +439,21 @@ directions rather than one. Neither the fin contribution nor the yaw damping it 
 computed here. **Yaw authority is sized; directional stability is a requirement placed on a
 component the design already carries.**
 
+**Two measured effects work against the strip in exactly the conditions this configuration
+needs it, and both were found by reading rather than by calculating.** Wind-tunnel tests of a
+Gurney flap under controlled inflow turbulence report that the device "became less effective
+after stall angle", and that at a turbulence intensity of 19 percent "the benefit to the
+aerodynamic performance was negligible", against gains of 2.7 to 14.4 percent in lift-to-drag
+ratio at 10.5 percent [35]. Both findings point at this aircraft. The transition passes through
+incidences at which the outboard wing is post-stall, which is where roll disturbances are
+largest and where the device is reported to weaken; and the strip's inboard portion is
+deliberately placed inside the nose propeller's slipstream, which is not a low-turbulence
+environment. **The slipstream placement that gives the strip authority at zero airspeed may
+also be the place its mechanism works least well.** Neither effect is quantified for this
+geometry — the cited tests are on a wind-turbine aerofoil with grid-generated freestream
+turbulence, not a propeller wake — but the direction is measured rather than supposed, and it
+is recorded in Section 8 as a risk to hover roll authority specifically.
+
 The strip does one further thing that an ordinary aerodynamic surface cannot. Its
 inboard portion lies inside the slipstream of the nose propeller, where the dynamic
 pressure is set by the disc loading rather than by the airspeed:

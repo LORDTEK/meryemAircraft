@@ -215,3 +215,27 @@ Metin düzeltildi. Ama bu, şeridi kumanda yüzeylerinden ayıran cümleyi
 surfaces" konumlandırması savunulabilir mi, yoksa iddia "no elevons, no rudder,
 no hinged surfaces — one variable-extension strip" biçiminde mi kurulmalı?
 Hakem buradan girer mi?
+
+### S7. Kabuk yüzey yoğunluğu (1,5 kg/m²) — ELİMİZDEKİ 35 KAYNAKTA YOK
+
+Otuz beş PDF'in tamamını "kg/m2", "areal density", "structural mass fraction",
+"empty weight fraction" için taradım: **hiçbirinde yok.** Yani hafif hattın
+kütle bütçesinin dayandığı sayı için elimizde hâlâ tek bir kaynak bile yok.
+
+**Sorulacak:** Kompozit bir İHA gövde/kanat kabuğu için **ölçülmüş** yüzey
+yoğunluğu (kg/m²) veren bir kaynak var mı? Başabaş 1,78 kg/m²; varsayılan 1,5.
+Ayrıca: bu büyüklük ölçekle nasıl gidiyor (ağır hattın kapanmamasının sebebi
+tam olarak bu bilinmiyor).
+
+### S8. Şeridin türbülansta ve perdövites sonrasında zayıflaması
+
+Yang 2020: Gurney flap *"became less effective after stall angle"*, ve %19
+türbülans yoğunluğunda fayda *"negligible"* (%10,5'te hâlâ +%2,7…+%14,4 L/D).
+
+**Bizim için ikisi de kritik:** (a) geçiş, dış kanadın perdövites sonrasında
+olduğu açılardan geçiyor; (b) şeridin iç kısmı **kasten** pervane izinde, ve iz
+düşük türbülanslı bir ortam değil. Yani §4.4'ün "izde olduğu için sıfır hızda
+çalışır" avantajı, mekanizmanın en zayıf çalıştığı yer olabilir.
+
+**Sorulacak:** Pervane izi içindeki bir Gurney/çit cihazının etkinliğini ölçen
+bir çalışma var mı? İz türbülans yoğunluğu tipik olarak ne mertebede?

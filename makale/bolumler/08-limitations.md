@@ -160,6 +160,14 @@ Several results depend on coefficients that were not computed for this geometry:
   which yields a scheduling restriction rather than a redesign. Both estimates carry the same
   unselected-cross-section caveat as the frames, and the chordwise position of the lift
   increment, which sets the pitch coupling, is not computed anywhere in this paper.
+- **Turbulence and post-stall degradation of the strip.** The mechanism the roll requirement
+  depends on is reported to weaken past the stall angle and to become negligible at 19 percent
+  inflow turbulence [35]. The strip's inboard portion sits in a propeller slipstream and the
+  transition passes through post-stall incidence, so both conditions are met somewhere in the
+  flight envelope. The cited measurements are on a different aerofoil in grid turbulence and
+  transfer only in direction; no measurement of this strip in a slipstream exists. **This is
+  the principal risk to hover roll authority**, and it sits on the same claim — slipstream
+  placement — that Section 4.4 offers as an advantage.
 - The **roll actuator.** The strip extends by a commanded amount, so the limit cycle computed
   in Section 4.4 — ±0.2° in bank at a fifty-millisecond deployment, ±9.4° at a hundred and
   fifty — bounds the two-position worst case rather than describing normal operation. What is
