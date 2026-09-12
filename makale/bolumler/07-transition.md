@@ -441,20 +441,56 @@ same report concludes that reflexed mean lines "may be of questionable value bec
 adverse effect of this mean-line shape on the maximum lift coefficient." **Reflex of the
 magnitude that has actually been measured does not trim this aircraft.**
 
-An earlier version of this paper put that more strongly — that no plausible amount of reflex
-would — and a published optimisation shows that claim was too wide. A blended-wing-body UAV of
-this class was trimmed by treating reflex as a design variable, deflecting the aft camber line
-of a NACA 2412 upward by an optimised amount at each of five spanwise stations, and closing the
-trim chain with a total twist of only **2.44 degrees** [41]. Reflex can therefore carry most of
-this job on a configuration of this kind. Two things keep the conclusion here intact in
-substance. That study's trim requirement is the lighter one — its static margin is 0.081 of the
-mean aerodynamic chord against 0.125 here, and a smaller margin asks for a smaller trimming
-moment. And the quantity that would decide the matter is exactly the one nobody has published a
-measurement of: closing this aircraft's trim by reflex alone needs a section supplying C_m0 of
-order 0.05, against the 0.004 that has been measured. **What the comparison establishes is not
-that reflex trims this aircraft but that the open question below is worth more than it first
-appeared**, since a twist of 2.44 degrees implies sections delivering considerably more than
-0.004.
+**2R212 is not an isolated case, and the wider measured record is worse for reflex than that
+single number suggests.** Three further families were tested in the same variable-density
+tunnel, with pitching moment measured rather than computed, and none of them returns a positive
+value:
+
+| Section | c_m at zero lift | Test |
+|---|---:|---|
+| NACA 2R212 | **+0.004** | Variable-density tunnel [17] |
+| Boeing 106R | −0.001 | Variable-density tunnel, Re ≈ 3.1 × 10⁶ [45] |
+| Navy 60R | ≈ −0.001 | as above [45] |
+| Göttingen 398R | −0.007 | as above [45] |
+| NACA M6 | −0.001 | as above [45] |
+| NACA 4409R | −0.025 | Variable-density tunnel [46] |
+| NACA 4412R | −0.030 | as above [46] |
+| NACA 4415R | −0.031 | as above [46] |
+| NACA 4418R | −0.030 | as above [46] |
+
+The three 1930s reflexed sections of the second group were built by replacing the mean line aft
+of thirty percent chord with a curve chosen, from thin-aerofoil theory, to give **zero** moment
+about the quarter chord — and the measurements report their moments as "practically zero" over
+the useful incidence range [45]. The 4400R family was designed to a target of −0.03 and the
+report states that "the design pitching-moment coefficient was realized" [46]. **Reflex, as
+actually built and measured, is a device for removing negative pitching moment, not for
+producing positive pitching moment.** Across nine measured sections the single positive value
+is +0.004, and the requirement here is +0.056.
+
+An earlier version of this paper wrote that no plausible amount of reflex would trim this
+aircraft, then withdrew that as too wide on the strength of a published optimisation which
+trims a blended-wing-body of this class by treating reflex as a design variable and closing the
+chain with only **2.44 degrees** of twist [41]. The withdrawal went too far in the other
+direction. That study publishes no moment coefficient for the sections it generates, so the
+inference that they supply much more than 0.004 was an inference and not a reading; the measured
+record above runs against it. What the comparison does establish is narrower and still worth
+saying: that study's trim requirement is the lighter one — a static margin of 0.081 of the mean
+aerodynamic chord against 0.125 here — and reflex was not asked to act alone.
+
+**The position this paper takes is therefore the conservative one, and it is a statement about
+evidence rather than about physics.** The trim moment this configuration needs is C_m = +0.056.
+No measured section approaches it. Whether a physically realisable reflexed section or planform
+could supply it is unresolved, and this paper does not assume either way; it closes the chain
+with twist, which is the route for which a computed requirement and a costed penalty both
+exist.
+
+Two costs of the reflex route are measured, and both bear on a tail-sitter specifically.
+Reflex reduced maximum lift by about twelve percent in the first family [45] and by about ten
+percent in the second [46] — and maximum lift is what a tail-sitter needs at the high-incidence
+end of its transition. The same measurements also found that although minimum profile drag fell
+slightly, "if the profile drag coefficients are compared at equal values of the lift
+coefficient, the normal airfoil will be seen to have the lower profile drag except at small
+values of the lift coefficient" [45].
 
 **The reflex route is not free either, and the same literature prices it.** A separate
 blended-wing UAV that trims by reflex rather than by twist records that carrying reflex over a
@@ -480,29 +516,34 @@ points the same way as the measurement. The only flying-wing section in the comp
 slightly reflexed MH45, designed for that application — carries C_m,c/4 = **−0.006**, and the
 single positive entry among forty-one sections is not a reflexed section at all but a
 five-percent-camber high-lift section designed under an explicit low-pitching-moment
-constraint, at **+0.004**. Two independent sources therefore return negative quarter-chord
-moments for sections built for flying wings, and the positive value this configuration would
-need rests on one measurement from 1933. **The conclusion above is strengthened rather than
-weakened: the reflex route is closed, and the twist is what trims this aircraft.**
+constraint, at **+0.004**. That computed result points the same way as the measurements
+tabulated above: across four independent sources — one computational compilation and three
+tunnel campaigns — the reflexed and flying-wing sections return quarter-chord moments at or
+below zero, and the single positive value this configuration could lean on rests on one
+measurement from 1933. **The conclusion above is strengthened rather than weakened: the reflex
+route is closed, and the twist is what trims this aircraft.**
 
-**Whether that single number is representative is now the most consequential open question in
-the trim chain, and it is a question for the literature rather than for a calculation.** A
-section supplying more would buy back the twist, and the sensitivity is steep:
+**How much a section could contribute, if one existed that contributed more, is worth stating
+as a sensitivity — provided it is read as what it is.** The rows below are not candidate
+sections. They are the answer to "how much would have to come from somewhere else", and the
+measured evidence sits in the second row, with the whole measured record of the preceding table
+at or below it:
 
-| If the section supplies C_m0 = | Washout still needed | Inviscid e | Cruise L/D |
-|---:|---:|---:|---:|
-| 0 | 9.2° | 0.865 | 11.68 |
-| 0.004 (the measured value) | 8.6° | 0.875 | 11.73 |
-| 0.020 | 6.0° | 0.937 | 12.01 |
-| 0.050 | 1.3° | 0.986 | 12.21 |
+| If a section supplied C_m0 = | Washout still needed | Inviscid e | Cruise L/D | Measured precedent |
+|---:|---:|---:|---:|---|
+| 0 | 9.2° | 0.865 | 11.68 | four sections, at −0.001 to −0.007 |
+| 0.004 | 8.6° | 0.875 | 11.73 | one section, NACA 2R212 |
+| 0.020 | 6.0° | 0.937 | 12.01 | **none** |
+| 0.050 | 1.3° | 0.986 | 12.21 | **none** |
 
-At the one value that has been measured, reflex buys half a degree of the nine and the trim
-problem stays a twist problem. At five times that value it would buy three degrees and most of
-the lost efficiency. **This paper takes the conservative branch** — nine degrees of washout and
-the penalty that goes with it — because that is what the evidence in hand supports, and it
-records that a single measured section, published in 1933, is carrying the choice. A reader
-who knows of modern reflexed sections reaching C_m0 of 0.02 should read the third row of the
-table as the design point instead, and the trim penalty as largely recoverable.
+At the one measured positive value, reflex buys half a degree of the nine and the trim problem
+stays a twist problem. The two lower rows of the table describe a section nobody has published
+a measurement of, and the four sections of the 4400R family fall *below* the top row rather
+than between the rows. **This paper therefore takes the branch the evidence supports** — nine
+degrees of washout and the penalty that goes with it — and does not offer the third row as an
+alternative design point. What would change this is a measurement, not an assumption: a
+reflexed section, tested in a tunnel that measures moment, returning a positive C_m0 an order
+of magnitude above 0.004. Section 8 records that no such measurement was found.
 
 What trims it is washout, which is how tailless aircraft have always been trimmed: on a swept
 wing the tips lie well aft, so negative tip incidence produces a nose-up moment about the
