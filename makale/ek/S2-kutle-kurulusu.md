@@ -4,7 +4,7 @@
 meryemAircraft, a Propeller-Driven Tail-Sitting Blended-Wing-Body Without a
 Dedicated Lift System".*
 
-This material was Section 6.7 of an earlier, longer version of the paper.
+This material is Section 3.11 of the paper, reproduced here in full.
 It is reproduced here in full so that every number quoted in the main text can
 be traced to the calculation that produced it. The computational setup, the
 scripts, and the record of what failed along the way are in the repository the
@@ -14,13 +14,13 @@ paper cites.
 
 ## S2.1 A component build-up of the mass budget
 
-The fractions used in Sections 6.2 and 6.3 are asserted, and Section 8.2 says so. This
+The fractions used in Sections 3.7 and 3.8 are asserted, and Section 4.4 says so. This
 section replaces the assertion for the light design with a build-up from components. The
 rule followed throughout is that no item may be derived from the fraction it is meant to
 test: every line comes either from the geometry and a stress calculation, or from a
 specific quantity — an areal density, a specific power — stated openly and then varied.
 
-**Structure.** The wetted area follows from the planform of Section 4.2 and the NACA 00xx
+**Structure.** The wetted area follows from the planform of Section 2.8 and the NACA 00xx
 thickness distribution: 4.14 m² against 1.98 m² of planform. A carbon–epoxy sandwich shell
 at 1.5 kg m⁻² gives 6.20 kg, with ribs, bulkheads and bonded joints taken at 45 percent of
 the shell. The tip frames are sized by a vertical landing case, since this aircraft lands on them: a
@@ -63,7 +63,7 @@ delivers — but that difference has to be taken at one station, and an earlier 
 section did not take it at one. It subtracted the engine's 2.6 kW of *shaft* power from the
 rotor's 10.9 kW of *shaft* power and divided the remainder by the buffer mass, giving
 4.61 kW kg⁻¹. The buffer sits on the electrical bus, which is neither of those stations. Running
-the chain of Section 6.1 link by link instead:
+the chain of Section 2.12 link by link instead:
 
 | Station | Light design, hover |
 |---|---:|
@@ -75,11 +75,11 @@ the chain of Section 6.1 link by link instead:
 
 which is **5.63 kW kg⁻¹** from 1.8 kg, or about 31 C at 180 Wh kg⁻¹ — twenty-two percent above
 the figure previously carried, and in the unfavourable direction. Taking the tip pairs as well,
-which Section 7.4 shows the aircraft needs in order to leave the ground at all, the bus demand
+which Section 3.15 shows the aircraft needs in order to leave the ground at all, the bus demand
 rises to 14.00 kW and the buffer to 11.66 kW, or **6.48 kW kg⁻¹** at 36 C. The heavy design sits
 on the same line: 198.5 kW of buffer on 40 kg, **4.96 kW kg⁻¹**, rising to 5.54 kW kg⁻¹ if the
 tip pairs are counted. Energy is not the binding constraint until roughly 140 seconds of hover,
-well beyond the profile of Section 7; below that the buffer is power-limited. That places the
+well beyond the profile of Section 3; below that the buffer is power-limited. That places the
 buffer well past the high-power lithium-ion or lithium-polymer class — cells rated for twenty to
 thirty times their capacity in continuous discharge — and the paragraphs below measure how far
 past.
@@ -135,7 +135,7 @@ paper.** It is not resolved by arguing that the buffer is a different product: t
 *is* that product, built and flown. The gap to be closed is a factor of **3.8 on the measured
 thermal ceiling and 6.3 on the measured continuous rate**. What would resolve it is a pack
 demonstrating that, at acceptable temperature, or a heavier buffer carried at the cost of
-payload fraction. Section 8 states which.
+payload fraction. Section 4 states which.
 
 Both figures in this paragraph are larger than the ones an earlier version reported, and the
 reason is bookkeeping rather than new evidence: the buffer power was previously taken as a
@@ -146,39 +146,55 @@ The buffer does not discharge continuously for the whole vertical phase. It disc
 the take-off, which ends when the rotation begins and the wing starts carrying the aircraft;
 it then recharges from the engine over hours of cruise, and discharges again for the landing.
 At the achievable thrust-to-weight ratio of 1.132 the vertical acceleration is 0.132 g, so the
-5 m s⁻¹ climb from which Section 7.4 enters the rotation is reached in 3.9 s and 9.6 m — and in
+5 m s⁻¹ climb from which Section 3.15 enters the rotation is reached in 3.9 s and 9.6 m — and in
 7.7 s and 19.3 m if full rotation authority is held in reserve. A take-off segment of ten to
 twenty seconds at full draw therefore remains generous, though less so than at the 1.2 an
 earlier version assumed. Against that:
 
 | Take-off segment at full draw | Energy used | of a 180 Wh kg⁻¹ buffer | of an 80 Wh kg⁻¹ buffer |
 |---:|---:|---:|---:|
-| 10 s | 23 Wh | 7 % | 16 % |
-| 20 s | 46 Wh | 14 % | 32 % |
-| 30 s | 69 Wh | 21 % | 48 % |
+| 10 s | 32 Wh | 10 % | 23 % |
+| 20 s | 65 Wh | 20 % | 45 % |
+| 30 s | 97 Wh | 30 % | 68 % |
+
+These are the take-off draw of 11.66 kW at the bus. An earlier version of this table read 23, 46
+and 69 Wh, which is 8.3 kW — the rotor-shaft-minus-engine-shaft difference retired at the head of
+this section. The correction survived into the power figures and not into the energy ones.
 
 Even at the low energy density that a high-power chemistry would carry, a twenty-second take-off
-uses a third of the buffer. **The binding constraint is power, not energy, and it stays that way
-under any plausible take-off duration.**
+uses under half the buffer and a thirty-second one just over two thirds. **The binding constraint
+is power, not energy, and it stays that way under any plausible take-off duration** — though the
+margin on the energy side is thinner than the previous arithmetic suggested, and a buffer at
+80 Wh kg⁻¹ would not tolerate a take-off much longer than the ones tabulated.
 
 That distinction matters, because it says what would *not* rescue the specific-power figure.
 A shortfall in power is not a transient to be ridden out. Hover power goes as thrust to the
 three-halves, so thrust goes as power to the two-thirds, and a buffer delivering less simply
 buys less thrust:
 
-| Buffer specific power | Total power available | Resulting T/W | Leaves the ground |
-|---|---:|---:|---|
-| 0.735 kW kg⁻¹ | 3.9 kW | 0.50 | no |
-| 1.30 kW kg⁻¹ | 4.9 kW | 0.59 | no |
-| 2.50 kW kg⁻¹ | 7.1 kW | 0.75 | no |
-| 5.63 kW kg⁻¹ | 10.9 kW | 1.00 | only just |
+Every row below is taken through the same chain: the buffer and the generator both deliver to the
+bus, and the bus is converted to propeller-shaft power by the power electronics and the electric
+machine before momentum theory is applied.
 
-An earlier version of this table read 0.61, 0.71, 0.90 and 1.20 in the third column. Those
-figures were a fifth too high at every row, because they were scaled from an assumed T/W of 1.2
-at the top of the column while 10.9 kW is, by the sizing statement of Section 6.1 — thrust equal
-to weight — the power for T/W = 1.00 exactly. The correction makes the bottom row worse in two
-ways at once: the specific power it demands rises, for the reason given below, and what it buys
-is a hover rather than a take-off. Leaving the ground needs the tip pairs as well.
+| Buffer specific power | At the bus | At the propeller shaft | Resulting T/W | Leaves the ground |
+|---|---:|---:|---:|---|
+| 0.735 kW kg⁻¹ | 3.66 kW | 3.20 kW | 0.44 | no |
+| 1.30 kW kg⁻¹ | 4.68 kW | 4.09 kW | 0.52 | no |
+| 2.50 kW kg⁻¹ | 6.84 kW | 5.98 kW | 0.67 | no |
+| **5.63 kW kg⁻¹** | **12.47 kW** | **10.90 kW** | **1.00** | only just |
+| 6.48 kW kg⁻¹ | 14.00 kW | 12.24 kW | 1.13 | yes |
+
+Two earlier versions of this table were wrong in two different ways, and both are worth naming
+because the second was introduced by the correction of the first. The original read 0.61, 0.71,
+0.90 and 1.20 in the T/W column — a fifth too high at every row, because the column was scaled
+from an assumed T/W of 1.2 at its foot while 10.9 kW is, by the sizing statement of Section 2.12,
+the power for thrust equal to weight exactly. Correcting that left a second fault in place: the
+first three rows added the buffer's power to the engine's *shaft* rating and then read the sum as
+shaft power, which is the same mixing of stations this section has just spent two paragraphs
+removing from the headline figure. The rows above are on one formula throughout. The consequence
+of the pair of corrections is that the bottom of the table is worse than it looked: the specific
+power demanded rises, and what it buys is a hover rather than a take-off. Leaving the ground
+needs the tip pairs and 6.48 kW kg⁻¹.
 
 **At the specific powers this study has a citation for, the aircraft does not lift off**, so
 there is no brief overshoot to tolerate and no manoeuvre that shortens the exposure. The only
@@ -196,7 +212,7 @@ free parameter, and it is the specific power, not the energy, that has to be fou
 | **Payload, as residual** | **30.4 %** | **26 %** |
 
 **Where the mass may sit is also constrained, and the constraint was not previously
-stated.** The budget above says how much each item weighs and not where it sits. Section 7.6
+stated.** The budget above says how much each item weighs and not where it sits. Section 3.17
 adopts a first-order packaging rule in the absence of an internal layout — masses distributed
 in proportion to internal volume — and shows that the resulting centre of gravity has to lie
 in a band whose aft limit is firm and whose forward limit is not: aft of roughly 85 percent of
@@ -214,7 +230,7 @@ and if everything still outside the model together stays under that same 2.2 kg.
 demonstrated here; the 1.5 kg m⁻² used is an aggressive target for a composite airframe of
 this class rather than a measured property of one that has flown. Why a build-up coming in
 lighter than its own target should be read as a warning rather than a confirmation is set
-out in Section 8.2.
+out in Section 4.4.
 
 **The heavy design is not closed by this exercise, and no claim is made that it closes.**
 Shell mass scales as areal density times wetted area, so as the square of linear scale,
@@ -228,6 +244,6 @@ to argue for a value on either side of that threshold, because any such argument
 structural model standing in for a measurement. What the sweep establishes is the
 statement itself: **the component build-up does not demonstrate closure of the heavy
 design.** That, and not any of the light-design assumptions, is the largest open question
-in the mass budget of this study, and it qualifies the scale-invariance of Section 6.4 —
+in the mass budget of this study, and it qualifies the scale-invariance of Section 3.9 —
 which holds for the analytical sizing fractions and has not been shown to hold for the
 structure that must realise them.
