@@ -144,11 +144,12 @@ Several results depend on coefficients that were not computed for this geometry:
   the pitch moment — but directional stability and yaw damping are a single open item
   resting on a component whose section has not been selected.
 - The **battery buffer's specific power**, which Section 6.7 now identifies as the most
-  exposed number in the mass budget. It asks for 4.6 kW kg⁻¹ where the only figures this study
+  exposed number in the mass budget. Taken at the electrical bus, where the buffer is, it asks
+  for **5.63 kW kg⁻¹** to hover and 6.48 to leave the ground, where the only figures this study
   has read give 0.7 to 1.3 kW kg⁻¹ at pack level for power-application Li-ion [21]. At the top
-  of that range the buffer would mass 6.4 kg instead of 1.8 and **the light design's budget
+  of that range the buffer would mass 7.8 kg instead of 1.8 and **the light design's budget
   would not close**. The assumption is that a purpose-built short-duration buffer beats an
-  automotive traction pack by three and a half to six times; that is plausible in kind and
+  automotive traction pack by four to nine times; that is plausible in kind and
   unverified in magnitude, and Bill 3 rests on it. The energy side does *not* compound it: the buffer
   discharges through a take-off of ten to twenty seconds rather than continuously, and even a
   low-energy high-power cell would use only a third of its capacity doing so. Power is the

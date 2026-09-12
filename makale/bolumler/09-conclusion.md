@@ -3,15 +3,18 @@
 Hybrid vertical take-off aircraft pay for their vertical capability, and the payment is
 architectural rather than a defect of implementation. It appears in three currencies — the mass
 of hardware carried but unused, the drag of hardware exposed but inactive, and a power system
-sized by a condition that holds for about two percent of the flight — and **each known
-architectural move reduces one of them by increasing another**. A NASA sizing study of four VTOL
+sized by a condition that holds for about two percent of the flight — and **each of the
+architectural moves surveyed here reduces one of them by increasing another**. They are not
+offered as the only costs a VTOL aircraft carries; they are the three that follow from the
+duty-cycle mismatch, and the claim is about them. A NASA sizing study of four VTOL
 architectures reaches the same conclusion from the opposite direction, finding the
 lift-plus-cruise concept the heaviest of those examined while also the most efficient in cruise,
 and naming the cause as the empty weight carried for hover.
 
-Stating the tax that way makes its escape condition explicit: **it is charged whenever hover and
-cruise are served by hardware that is not the same hardware, doing the same job, in the same
-orientation.** The configuration described here satisfies that condition rather than
+Stating the tax that way makes its escape condition explicit, and it has four parts: **it is
+charged unless hover and cruise are served by the same hardware, doing the same job, in the same
+orientation, with the hover peak drawn from a buffer rather than from permanently installed
+continuous power.** The configuration described here satisfies that condition rather than
 compensating for failing it. The aircraft rotates; nothing on the aircraft rotates relative to
 it. A single coaxial pair at the nose provides all thrust in both regimes; four small coaxial
 pairs at the tips provide moments and nothing else; and a strip on the lower surface is assigned
@@ -34,17 +37,27 @@ would produce nearly as much drag as the rest of the aircraft — fairing them i
 rather than an option, and the same fairing turns out to be the aircraft's directional stability
 surface. And **a slower rotation loses *less* altitude, not more**, because the aircraft is
 supported during the manoeuvre rather than falling through it, so entering the rotation while
-still climbing removes the altitude penalty entirely in the point-mass model.
+still climbing removes the altitude penalty entirely in the point-mass model. That second result
+survived a correction that might have removed it. The primary propulsor is sized at thrust equal
+to weight and therefore supplies no climb at all; the margin comes from the four tip propellers,
+which raises the achievable ratio to between 1.066 and 1.132 rather than the 1.2 an earlier
+version assumed. Recomputed there, the altitude loss at both reference rotation times is still
+zero — but acquiring the entry climb now takes twice as long, a rotation begun from rest is
+worse than reported, and the take-off margin and the attitude authority are drawn from the same
+four propellers and compete for them.
 
 **What this paper offers is a configuration and its numbers, not a validated aircraft.** There
 is no wind-tunnel data here and no flight test. Of the analyses Section 8 lists as tests of
 these results, three have been carried out. A three-dimensional solution for the centre body
 narrowed the zero-lift drag without overturning the assumption. A component build-up closes the
-light design with 2.2 kg in hand, conditional on a shell areal density at or below 1.78 kg m⁻²,
-and does not close the heavy design. And a rotational check shows the tip propellers can turn
-the aircraft's own inertia through the transition with a margin of 1.49 at 50 kg and 1.57 at
-1000 kg on the cheapest profile — **0.99 and 1.05 on a smooth one**, which is to say both
-reference rotation times are actuator-limited lower bounds rather than comfortable choices.
+light design with 2.2 kg in hand, conditional on a shell areal density at or below 1.78 kg m⁻²
+*and* on a battery buffer no measured cell can yet supply, and does not close the heavy design.
+And a rotational check shows the tip propellers can turn the aircraft's own inertia through the
+transition with a margin of 1.49 at 50 kg and 1.57 at 1000 kg on the cheapest profile — **0.99
+and 1.05 on a smooth one**, and 1.14 and 0.76 at 50 kg if the tip thrust is recomputed on the
+figure of merit used elsewhere in the paper rather than the one its design table implies. Under
+every basis, both reference rotation times are actuator-limited lower bounds rather than
+comfortable choices.
 
 Resolving that check along the trajectory changed the question. The aircraft does not reach
 ninety degrees of incidence: the body rotates through ninety but the relative wind rotates with

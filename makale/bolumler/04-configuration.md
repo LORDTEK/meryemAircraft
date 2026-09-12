@@ -97,14 +97,20 @@ frames extend ±0.71 m perpendicular to the planform, so a differential between 
 lower pairs acts at 0.71 m in pitch, while a differential between the left and right pairs acts
 at the **semi-span, 1.726 m — 2.43 times the pitch arm**. Yaw is therefore the strongest axis
 on this aircraft, which is the reverse of the usual situation and is a free consequence of the
-tip-propeller layout rather than a design choice.
+tip-propeller layout rather than a design choice. Figure 7 shows the placement and the two arms,
+and shows why the third axis has neither: every thrust vector is parallel to the body axis, so
+no combination of settings produces a rolling moment.
 
 **Roll cannot be produced by propellers at all**, because every pair is coaxial and
 torque-balanced by construction. It is the one axis that needs an aerodynamic device, and that
 device is the only moving aerodynamic surface on the aircraft: a strip on the lower surface,
 inclined at 45° in planform, running 120 % of root chord and reaching 67 % of semi-span,
 standing 2 cm proud at its inboard end and 6 cm at its outboard end. **Extension is the control
-variable** — the strip is modulated, not switched.
+variable** — the strip is modulated, not switched. Figure 8 shows it against the nose
+propeller's slipstream: the inboard 46 percent of its length lies inside the slipstream, where
+dynamic pressure is set by disc loading and is therefore available at zero airspeed, and the
+outboard 54 percent works against the freestream in cruise. That split is why one device serves
+both regimes.
 
 Roll inertia computed from the component mass distribution is 25.0 kg·m², two and a half times
 the pitch inertia, and the roll damping derivative from a helix-angle vortex-lattice solution is

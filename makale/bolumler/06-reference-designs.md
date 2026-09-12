@@ -257,7 +257,9 @@ and a factor common to lift and moment cancels in a ratio of derivatives. That a
 on the moment scaling with the lift, and the pitching-moment comparison in that source is
 published with its values withheld. **The vortex-lattice results here therefore carry an
 untested magnitude error of unknown size, bounded above by a published comparison on a similar
-configuration, and every use made of them is of a kind a magnitude error does not disturb.**
+configuration, and every use made of them is of a kind a magnitude error *would not* disturb —
+provided the moment scales with the lift by the same factor, which is exactly what cannot be
+checked.**
 Section 8 lists settling this as the one exposure in the aerodynamic chain with no bound at all.
 
 ## 6.7 A component build-up of the mass budget
