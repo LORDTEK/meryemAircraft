@@ -159,12 +159,22 @@ at cruise only, leaving a small residual in hover. The comparative sizing of Sec
 conditional on the two competing architectures being modelled at the same level of detail as
 this one, which they are not: they are modelled from published fractions.
 
-**The vortex-lattice results carry an untested magnitude error.** A published comparison on a
-blended-wing-body of this class found the vortex-lattice lift coefficient low by thirty to
-thirty-eight percent against RANS [39]. Section 3.10 argues that a near-constant multiplicative
-error of that kind cancels in the ratios this paper takes from the solution — neutral point,
-static margin, twist effectiveness — but the check that would confirm it is withheld in that
-source. **This is the one exposure in the aerodynamic chain with no bound at all.**
+**The vortex-lattice results carry an untested magnitude error, and the part of the chain it
+threatens is not the part that was defended.** A published comparison on a blended-wing-body of
+this class found the vortex-lattice lift coefficient low by thirty to thirty-eight percent
+against RANS [39]. Section 3.10 argues that a near-constant multiplicative error of that kind
+cancels in the ratios this paper takes from the solution — neutral point, static margin, twist
+effectiveness — but the check that would confirm it is withheld in that source, so the argument
+stands unverified. An earlier version of this section called this the one exposure in the
+aerodynamic chain with no bound at all. **It now has one, and the bound points somewhere else.**
+Perturbing the spanwise loading shape and re-solving shows that a one-degree mid-span
+redistribution moves the neutral point by 0.15 percent of mean chord and the trim twist by 0.38
+degrees; the neutral point would need a redistribution of 33 degrees to matter and the trim twist
+one of 2.6. **The static margin — the quantity the cancellation argument exists to protect — is
+the robust half. The trim twist is thirteen times more sensitive and the argument never covered
+it.** What remains unmeasured is the size of the redistribution itself, which is what a RANS or
+panel solution of this planform would supply; until then the result is a transfer coefficient and
+not a closure.
 
 ## 4.6 What is sized but not closed
 
@@ -183,8 +193,10 @@ crosswind and vertical descent have been checked only to order of magnitude or n
 
 Supplementary S5 lists six places. Two have been carried out and are folded into Section 3.10: a
 three-dimensional solution for the centre body, and a viscous solution of the twisted planform
-station by station. Of the remaining four, the one with no bound at all is a Reynolds-averaged or
-panel solution of this planform's loading, to bound the magnitude question above. **Three of the
+station by station. Of the remaining four, the most valuable is a Reynolds-averaged or
+panel solution of this planform's loading — no longer because that exposure is unbounded, but
+because it is now the one input a single number would close: Section 3.10 supplies the
+sensitivity to a redistribution, and such a solution would supply the redistribution. **Three of the
 four can be carried out computationally; the fourth cannot, and saying otherwise was the most
 consequential thing this study got wrong about itself.** Transition controllability rests on a
 pitching moment that three methods of three different fidelities fail to predict above roughly

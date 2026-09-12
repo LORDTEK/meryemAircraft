@@ -14,7 +14,7 @@ study are in the repository the paper cites.
 - **Supplementary S2** — A component build-up of the mass budget (3672 words)
 - **Supplementary S3** — Control axes in full (6553 words)
 - **Supplementary S4** — Rotational authority, trim, and the transition envelope (8044 words)
-- **Supplementary S5** — The limitations in full (6499 words)
+- **Supplementary S5** — The limitations in full (6696 words)
 - **Supplementary S6** — The three bills stated formally, and a comparative sizing (3000 words)
 
 ---
@@ -2342,8 +2342,21 @@ are listed so that they can be:
    thirty-eight percent against RANS [39]. Section 3.10 argues that a near-constant
    multiplicative error of that kind cancels in the ratios this paper takes from the solution,
    but the check that would confirm it — whether the moment scales with the lift by the same
-   factor — is withheld in that source. This is the one exposure in the aerodynamic chain with
-   no bound at all.
+   factor — is withheld in that source. An earlier version of this item called it the one
+   exposure in the aerodynamic chain with no bound at all. **A loading-shape sensitivity has
+   since been run and it has a bound, in a place the cancellation argument did not cover.**
+   Perturbing the spanwise loading by a half-sine that vanishes at root and tip, and re-solving
+   at each shape, gives 0.15 percent of mean chord of neutral-point movement and 0.38 degrees
+   of trim-twist movement per degree of mid-span redistribution: the neutral point would need a
+   33-degree redistribution to breach 5 percent of mean chord, the trim twist a 2.6-degree one
+   to breach a degree. **The static margin is the robust half of the chain by a factor of
+   thirteen, and the trim twist — which the cancellation argument never addressed — is what a
+   redistribution disturbs first.** The perturbation is a redistribution and not a rescaling,
+   which is what makes it the complement of the reported error: the inviscid span efficiency
+   moves by at most 1.6 percent across ±2°. **What this item still needs is the size of the
+   redistribution**, which only a Reynolds-averaged or panel solution supplies. The sensitivity
+   is in `aero/yukleme_duyarlilik.py`; it is explicitly not a substitute for that solution, and
+   the script says so in its own header.
 
 **Not all of these are within reach of a calculation, and an earlier version of this list said
 they were.** The first has been carried out and its result is folded into Section 3.10, and so is
