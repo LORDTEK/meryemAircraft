@@ -1,9 +1,5 @@
 # 3. The architectural tax of hybrid VTOL
 
-*Taslak v1 — İngilizce. Türkçe notlar italik ve köşeli parantez içinde.*
-
----
-
 Hybrid VTOL aircraft work. The argument of this section is not that they do not, but
 that they pay for the capability in a way that can be located precisely, that the
 payment appears in three different currencies, and that an improvement in one currency
@@ -27,71 +23,46 @@ needed and how long it is present is the origin of all three bills below.
 
 ## 3.2 Bill 1 — mass
 
-The most direct payment is dead mass. A lift-plus-cruise aircraft carries two
-propulsion groups: rotors, motors, mounts, wiring and structural reinforcement for the
-vertical phase, and a separate propulsor with its own installation for cruise. The
-vertical group is inert for the whole cruise, but it is still lifted, and lifting it
-consumes energy in proportion to its weight and inversely to the lift-to-drag ratio.
+The most direct payment is dead mass. A lift-plus-cruise aircraft carries two propulsion groups:
+rotors, motors, mounts, wiring and structural reinforcement for the vertical phase, and a
+separate propulsor for cruise. The vertical group is inert for the whole cruise but is still
+lifted. Its cost is not linear, because mass growth feeds itself: MTOW = m_payload /
+(1 − f_empty − f_energy) shows that additional empty mass enters through a multiplier that grows
+as the denominator shrinks, and in the vertical phase the same increment is charged again
+because hover power scales with W^1.5. A modest dead-mass fraction becomes a large payload
+penalty.
 
-Its cost is also not linear, because mass growth feeds itself. Writing the maximum
-take-off mass in terms of the payload and the empty and energy fractions,
+**This bill has been identified independently.** A NASA study sizing four VTOL architectures
+against a common mission with common tools found the lift-plus-cruise concepts the heaviest of
+the vehicles examined, and is explicit about the cause:
 
-    MTOW = m_payload / (1 − f_empty − f_energy)
+> *"The weight of the Lift+Cruise concepts is heavier in general than for the other vehicles.
+> This is not driven by the cruise power draw, as the L/D_e of the Lift+Cruise is indeed higher
+> than the other vehicles... the most likely targets for reducing vehicle weight are the extra
+> empty weight items on board in hover (wing and propeller)."*
 
-shows that additional empty mass does not add to MTOW once, but through a multiplier
-that grows as the denominator shrinks. In the vertical phase the same increment is
-charged again, because hover power scales with weight to the three-halves power:
+**The finding separates the two things this paper is at pains to separate**: the lift-plus-cruise
+vehicle is *aerodynamically better* than the alternatives — its cruise efficiency is higher, and
+the study says so — and it is nevertheless the heaviest, because of hardware carried in order to
+hover. That is Bill 1 stated by an independent source in its own terms: not a failure of
+engineering, but the cost of an architecture.
 
-    P_hover = W^1.5 / (η √(2ρA))
-
-so a mass increment raises the hover power requirement faster than proportionally,
-which raises installed power, which raises mass. This is the mechanism by which a
-modest dead-mass fraction becomes a large payload penalty.
-
-This bill is not hypothetical, and it has been identified independently. In a NASA study
-that sized four VTOL architectures against a common mission with a common set of tools,
-the lift-plus-cruise concepts came out as the heaviest of the vehicles examined, and the
-authors are explicit about the cause:
-
-> *"The weight of the Lift+Cruise concepts is heavier in general than for the other
-> vehicles. This is not driven by the cruise power draw, as the L/D_e of the Lift+Cruise
-> is indeed higher than the other vehicles. Hover power is higher, but the most likely
-> targets for reducing vehicle weight are the extra empty weight items on board in hover
-> (wing and propeller)."*
-
-A second NASA review of United States V/STOL development states the structural half of
-the same bill as a general principle, drawn from the failure of a tilt-prop aircraft
-whose propeller separated in flight after a gearbox mounting fatigued: "this exemplified
-an inherent deficiency of this VTOL (lift) arrangement: **to safely transmit power to the
-extremities of the planform, very strong (and fatigue-resistant) structures must be
-incorporated with an obvious weight penalty**" [2].
-
-Distributing lift or thrust across the span is therefore not only a matter of carrying
-rotors and mounts. It obliges the structure that reaches them to be strong enough to
-transmit power to the planform extremities and fatigue-resistant enough to keep doing
-so. That obligation is charged to mass, and it is charged whether or not the distributed
-propulsors are running.
-
-The finding is worth reading carefully, because it separates the two things this paper
-is at pains to separate. The lift-plus-cruise vehicle is *aerodynamically better* than
-the alternatives it was compared against — its cruise efficiency is higher, and the
-study says so. It is nevertheless the heaviest, and the reason given is the hardware it
-carries in order to hover. That is Bill 1, stated by an independent source in its own
-terms: not a failure of engineering, but the cost of an architecture.
+A second NASA review states the structural half as a general principle, drawn from a tilt-prop
+aircraft whose propeller separated in flight after a gearbox mounting fatigued: "to safely
+transmit power to the extremities of the planform, very strong (and fatigue-resistant)
+structures must be incorporated with an obvious weight penalty" [2]. **Distributing lift or
+thrust across the span therefore obliges the structure that reaches it to be strong enough and
+fatigue-resistant enough to keep transmitting power there — charged to mass, whether or not the
+distributed propulsors are running.**
 
 ## 3.3 Bill 2 — drag
 
-The second payment is aerodynamic and is charged only to those architectures that
-leave hover hardware exposed in forward flight. Rotors stopped in the airstream, the
-booms that carry them, and the interference between their wakes and the wing all add
-drag in the regime where the aircraft spends nearly all of its time.
+The second payment is charged only to architectures that leave hover hardware exposed in forward
+flight: rotors stopped in the airstream, the booms that carry them, and the interference between
+their wakes and the wing.
 
-The cleanest available measurement of this bill is a controlled comparison within a
-single aircraft. In a doctoral study, one uncrewed airframe was tested in a wind tunnel
-in four configurations: clean, with the vertical-lift motors and their supporting beams
-installed and the propellers left free to align with the flow, with the same hardware but
-the propellers held perpendicular to the flow, and with the propellers retracted into the
-fuselage. The maximum lift-to-drag ratios measured were:
+The cleanest measurement is a controlled comparison within a single aircraft. In a doctoral
+study, one uncrewed airframe was tested in a wind tunnel in four configurations:
 
 | Configuration | Maximum L/D |
 |---|---:|
@@ -99,50 +70,37 @@ fuselage. The maximum lift-to-drag ratios measured were:
 | Hover hardware installed, propellers aligned with the flow | ≈ 13 |
 | Hover hardware installed, propellers perpendicular to the flow | ≈ 9 |
 
-Two numbers follow, and both are measured rather than estimated. Installing the hover
-hardware costs about a quarter of the aircraft's lift-to-drag ratio. Failing to let the
-propellers align with the flow costs about a third of what remains. A second model
-built on a different airframe reproduced the pattern, at L/D ≈ 11 with the propellers
-retracted against ≈ 8 with them exposed.
+**Two measured numbers follow.** Installing the hover hardware costs about a quarter of the
+lift-to-drag ratio; failing to let the propellers align with the flow costs about a third of what
+remains. A second model on a different airframe reproduced the pattern, at L/D ≈ 11 retracted
+against ≈ 8 exposed. Expressed as drag, retracting the propellers reduced it by 34 % and 30 %
+relative to a standard quadplane. That study's author is careful about which comparison is
+legitimate — measuring the retracted aircraft against *itself* with propellers deployed gives
+63 %, which he explicitly rejects — and the caution is worth adopting. Because range is linear in
+lift-to-drag ratio for a fixed energy system, this ladder translates directly into range
+(Figure 12).
 
-Because range is linear in lift-to-drag ratio for a fixed energy system, this ladder
-translates directly into range; Figure 12 carries it onto the range axis for both a
-battery-electric and a fuel-burning energy system.
+**A third finding constrains what can be done about the penalty**, and matters more than either
+number:
 
-Expressed as drag rather than efficiency, retracting the propellers reduced drag by 34 %
-relative to the standard quadplane configuration on one model and by 30 % on the other.
-The author of that study is careful about which comparison is legitimate: measuring the
-retracted aircraft against *itself* with the propellers deployed gives 63 %, and he
-explicitly rejects that figure in favour of the comparison against a conventional
-quadplane. The caution is worth adopting.
+> *"The difference between propellers parallel to the airflow and without propellers is modest.
+> The drag produced by the motors is significant."*
 
-A third finding from the same tests matters more than either number, because it
-constrains what can be done about the penalty. The drag is not dominated by the
-propeller blades:
+The bill is charged mainly by the motors and the beams that carry them — hardware that cannot be
+feathered, folded or aligned away, **because its cost is its presence.**
 
-> *"The difference between propellers parallel to the airflow and without propellers is
-> modest. The drag produced by the motors is significant."*
+Two further measurements support the direction. Wind-tunnel characterisation of a QuadPlane
+found the highest lift and least drag in fixed-wing mode at both cruise airspeeds, drag in the
+hybrid regime exceeding either pure mode through adverse flow interaction, and — a point that
+matters for how such aircraft are designed — that a simulation assuming negligible
+rotor–structure interaction "always predicts higher lift and lower drag than were experimentally
+observed." Separately, a study of twenty-six stationary lift propellers held edge-on found their
+drag scaling with frontal area and the square of airspeed, with hover powertrain components
+adding "a significant amount of aerodynamic drag during forward flight" absent a stowing
+mechanism.
 
-The bill is charged mainly by the motors and the beams that carry them — hardware that
-cannot be feathered, folded or aligned away, because its cost is its presence.
-
-Two further measurements support the direction of this result without being combined
-with it. Wind-tunnel characterisation of a QuadPlane uncrewed aircraft found that the
-highest lift and the least drag occurred in fixed-wing mode at both cruise airspeeds,
-that drag in the hybrid regime exceeded drag in either pure mode because of adverse flow
-interactions, and — a point that matters for how such aircraft are designed — that a
-simulation model assuming negligible interaction between the rotors and the structure
-"always predicts higher lift and lower drag than were experimentally observed."
-
-Separately, a wind-tunnel study of twenty-six stationary lift propellers held edge-on to
-the flow found that their drag scales with frontal area and with the square of airspeed,
-that blade pitch adds to it, and that the hover powertrain components "added a
-significant amount of aerodynamic drag during forward flight" in the absence of a
-mechanism to stow them.
-
-The important property of this bill is not its size but where it is charged. It is
-charged per unit time in cruise, so it grows with exactly the quantity the aircraft
-exists to maximise.
+**The important property of this bill is not its size but where it is charged.** It is charged
+per unit time in cruise, so it grows with exactly the quantity the aircraft exists to maximise.
 
 ## 3.4 Bill 3 — power system sizing
 
@@ -175,51 +133,24 @@ two is chosen, the extra installed capacity is mass, which returns to Bill 1.
 
 ## 3.5 The bills are one quantity in three currencies
 
-The three bills are not independent problems with three independent fixes. Each known
-architectural move reduces one and increases another. Figure 3 shows the three bills and
-the moves that convert one into another; Table 1 lists the same moves in full.
+The three bills are not independent problems with independent fixes. **Each known architectural
+move reduces one and increases another.** Figure 3 shows the transfers; Table 1 lists them.
 
 **Table 1.** Architectural moves and the bills they transfer.
 
 | Move | Bill it attacks | Bill it creates |
 |---|---|---|
 | Distributed electric lift rotors | 3 — the cruise engine no longer sizes to hover | 1 and 2 — many rotors and mounts, permanently carried and exposed |
-| Folding or retracting lift rotors | 2 — the exposed rotor is removed from cruise | 1 — mechanism, actuation, locking, and a new failure mode |
-| Tilt-rotor, tilt-wing, tilt-nacelle | 1 — one propulsion group serves both regimes | mechanical complexity, gyroscopic coupling during rotation, and a transition control problem |
+| Folding or retracting lift rotors | 2 — the exposed rotor is removed from cruise | 1 — mechanism, actuation, locking, a new failure mode |
+| Tilt-rotor, tilt-wing, tilt-nacelle | 1 — one propulsion group serves both regimes | mechanical complexity, gyroscopic coupling, a transition control problem |
 | Higher disc loading, smaller rotors | 1 and 2 — smaller, lighter, cleaner rotors | 3 — hover power rises with √(DL) |
-| Lower disc loading, larger rotors | 3 — hover power falls | 1 and 2 — larger structure, larger exposed area |
+| Lower disc loading, larger rotors | 3 — hover power falls | 1 and 2 — larger structure and exposed area |
 
-The table is not only an argument. One of its rows has been measured. In the study
-cited in Section 3.3, the retraction system that removed thirty percent of the drag was
-then costed: applied to a passenger eVTOL of known characteristics, with the retraction
-mechanism assessed at five percent of vehicle mass, the maximum range rose from 119 km
-to 121 km — an improvement of under two percent. The drag was genuinely removed and the
-range barely moved, because the mechanism that removed it was itself carried.
-
-That is the transfer in Table 1, observed rather than asserted: Bill 2 was paid off by
-borrowing from Bill 1, and the balance was very nearly unchanged. What did improve was
-speed — the airspeed for maximum range rose by 5 m s⁻¹, and an 80 km mission could be
-flown 10 m s⁻¹ faster — which is a real operational gain, and one worth having, but it
-is not a reduction of the tax. It is a change in the currency in which the tax is
-returned.
-
-The same study notes that for a surveillance aircraft, whose endurance is maximised at
-low airspeed where the drag reduction is least effective, even that gain largely
-disappears.
-
-Read as a whole, the table describes a pattern rather than a law. Across every move
-listed, the cost of giving a wing-borne aircraft a vertical capability behaves as though
-it were conserved: architectures do not remove that cost, they choose the currency in
-which to pay it.
-
-It should be said plainly that nothing in physics requires this. No conservation
-principle is being invoked, and an architecture that reduced all three bills at once
-would be a genuine contribution rather than a contradiction. The claim here is
-empirical and bounded: among the architectures surveyed, none does, and Section 3.3
-supplies a measured instance of the transfer rather than an assumed one. This is why
-seventy years of engineering effort has improved hybrid VTOL aircraft considerably
-without producing one whose cruise efficiency matches a comparable fixed-wing
-aircraft.
+**One of these rows has been measured.** In the study of Section 3.3, the retraction system that
+removed thirty percent of the drag was then costed: applied to a passenger eVTOL with the
+mechanism assessed at five percent of vehicle mass, maximum range rose from 119 km to 121 km —
+**a two-kilometre gain for a five-percent mass penalty.** Bill 2 was converted almost exactly
+into Bill 1, and the transfer is the point rather than the small residue.
 
 ## 3.6 The condition under which the three bills are not charged
 
@@ -244,122 +175,31 @@ proposed here.
 That is a description of a tail-sitter with a buffered series-hybrid powertrain. It is
 also, precisely, the configuration described in Section 4.
 
-## 3.7 The three bills stated formally, and a test of the statement
+## 3.7 The three bills stated formally
 
-The argument so far has been verbal. It is worth stating compactly, because the compact form
-makes clear what the framework claims and what it does not.
+Supplementary S6 states the three bills as equations and gives the transfer table that shows
+them to be one quantity in three currencies: a design that refuses to pay one of them pays it
+in another. The short form is that each bill is a fraction of take-off mass, exposed cruise
+drag, or installed continuous power, and that the three are linked by the sizing loop — mass
+drives thrust, thrust drives power, power drives mass — so that relieving one without relieving
+its cause simply moves the charge.
 
-For an architecture *a* flying a given mission, write the three charges as fractions of the
-quantity each degrades:
+**A consequence that can be checked against published work.** If the framework is right, a
+configuration carrying a dedicated lift system should show lower cruise efficiency *and* higher
+design gross weight than one that does not, for the same mission. A NASA study sizing five
+concept vehicles against a common mission reports exactly that ordering, from a quadrotor at an
+effective lift-to-drag ratio of 4.9 and 3 678 lb to a lift-plus-cruise turbo-electric at 8.5 and
+7 271 lb [7]. The tilt-wing in that set reaches 8.6 — **higher than every lift-plus-cruise
+entry** — which is the point: it carries no dedicated lift system, and it is the one
+configuration in the table that uses the same hardware in both regimes. The framework does not
+predict the numbers; it predicts the ordering, and the ordering holds.
 
-$$f_1(a) = \frac{m_\text{hover-only}(a)}{\mathrm{MTOW}}, \qquad
-f_2(a) = 1 - \frac{(L/D)_a}{(L/D)_\text{clean}}, \qquad
-f_3(a) = \frac{P_\text{cont}(a) - P_\text{cruise}}{\sigma_P\,\mathrm{MTOW}}$$
-
-where *m*<sub>hover-only</sub> is the mass that exists solely to hover, (L/D)<sub>clean</sub>
-is the lift-to-drag ratio the airframe would have with no hover hardware exposed,
-*P*<sub>cont</sub> is the continuously installed power, and σ<sub>P</sub> is the specific
-power of the power system. Each is dimensionless, each is zero for an aircraft that does not
-hover, and each is measurable for one that does.
-
-**The claim of Section 3.6 is that the same architectural choice need not minimise all
-three simultaneously.** The architectural moves available typically move cost between them
-rather than removing it: retracting
-the lift rotors reduces *f*₂ and raises *f*₁ by the retraction mechanism; tilting the
-propulsors reduces *f*₁ and *f*₂ together and introduces a mechanism whose mass and failure
-modes are the price; buffering the hover peak reduces *f*₃ and raises *f*₁ by the buffer.
-Section 3.4 tabulates these transfers. The escape condition is the statement that all three
-vanish simultaneously only when the hover and cruise hardware are the same hardware, in the
-same orientation, doing the same job, with the peak supplied from a buffer.
-
-**A consequence that can be checked against published work.** If the three are genuinely
-separate currencies rather than three names for one quantity, then an architecture may be
-*best* in one and *worst* in another — in particular, the architecture with the highest
-cruise lift-to-drag ratio need not be the lightest. A single-metric comparison would not
-anticipate that. The NASA sizing study quoted in Section 3.2 reports exactly this pattern:
-the lift-plus-cruise concepts are the heaviest of the four examined *while having the highest
-cruise efficiency of that group*, and the authors attribute the weight to hardware carried for
-hover rather than to cruise power. That is *f*₁ dominating while *f*₂ is favourable, which is
-the framework's prediction and not a restatement of it. The later and larger version of the
-same programme states the transfer in a single sentence: "the high cruise efficiency of the
-lift+cruise type reduces the battery weight compared to the quadrotor, but not enough to
-counter the increase in structure and propulsion weight, so the all-electric lift+cruise
-aircraft is the heaviest design" [22]. A gain in one currency, insufficient against a loss in
-another, named as such by authors with no framework to defend.
-
-**That later study also contains the case that would embarrass the framework if it behaved
-differently, and it does not.** Sizing five architectures rather than four to the same mission
-adds a tiltwing, and the tiltwing has the highest cruise efficiency of all of them:
-
-| Concept | L/D_e | Design gross weight, lb |
-|---|---:|---:|
-| Quadrotor, turboshaft | 4.9 | 3 678 |
-| Quiet single main rotor, turboshaft | 5.4 | 3 951 |
-| Side-by-side, electric | 7.2 | 5 547 |
-| Lift + cruise, electric | 7.9 | 9 482 |
-| Lift + cruise, turbo-electric | 8.5 | 7 271 |
-| **Tiltwing, turbo-electric** | **8.6** | **6 584** |
-
-The tiltwing is best in cruise efficiency *and* lighter than either lift-plus-cruise concept.
-A framework that predicted "best in cruise implies heaviest" would be refuted by this row. The
-framework here predicts no such thing: it says the tiltwing satisfies most of the escape
-condition, because the same propulsors serve hover and cruise and nothing is left exposed, and
-that it pays instead for the mechanism that rotates them. That is precisely the trade
-Section 5.5 finds when it sizes a tilting layout itself, and it is why no claim of superiority
-over the tilting family is made anywhere in this paper.
-
-The comparison of Section 5.5 shows the same pattern on a different set of architectures:
-of the three sized there, the tilting layout has the best cruise lift-to-drag ratio — 13.44
-against 12.00 — and is nonetheless twenty percent heavier than the tail-sitter, because it
-carries a tilt mechanism that the tail-sitter does not. Best in *f*₂, worse in *f*₁. **That
-comparison is an illustration and not evidence, and the distinction matters here.** Its
-tilting layout is given a cruise-drag multiplier of 1.00 — that is, its mechanism is
-credited as aerodynamically free — precisely to make the *f*₂ advantage as large as the
-architecture could possibly claim. A comparison whose inputs were chosen by the present
-authors cannot corroborate the present authors' framework. **The evidential weight rests on
-work done by others**, whose numbers were produced for other purposes and are not ours to
-choose; Section 5.5 shows what the framework looks like when applied, not that it is right.
-
-**A second independent check exists, and it is on aircraft that were built rather than sized.**
-Bacchini and Cestino compare three flying eVTOLs — one per architecture — on five parameters
-[21]:
-
-| | E-Hang 184 (multirotor) | Cora (lift + cruise) | Lilium (vectored thrust) |
-|---|---:|---:|---:|
-| Disc loading, N m⁻² | **440** | 880 | 7500 |
-| Total hover time, min | **20.5** | 16.5 | 12.1 |
-| Cruise speed, km h⁻¹ | 100 | 180 | **252** |
-| Practical range, km | 42 | 107 | **203** |
-
-The ranking reverses completely between the hover rows and the cruise rows. The architecture
-best in hover is worst in cruise and the architecture best in cruise is worst in hover, with
-the lift-plus-cruise layout between them on every line — which is what it means for the
-currencies to be separate rather than three names for one quantity. Those authors also state
-two of the three transfers in their own words, without any framework to state them in. Of the
-lift-plus-cruise aircraft: its "parasitic drag caused by the pylons and vertical thrust
-propellers increases the power required in cruise" — that is *f*₂. And of the vectored-thrust
-aircraft, whose cruise efficiency is the best of the three: its hover "is so power demanding
-that it requires batteries with higher specific power" than those assumed, so that "the
-aerodynamic advantages of this configuration are balanced by higher demands on the batteries
-and on the power electronics" — that is *f*₂ bought and *f*₃ paid, named as an exchange by an
-author who was not looking for one.
-
-None of these comparisons validates the framework. All are external consistency checks: the NASA
-study was carried out for other purposes and its numbers were not chosen to suit the
-argument here, and a framework that predicted the opposite ordering would be in difficulty
-against them. The Bacchini and Cestino comparison is weaker as evidence in one specific way
-and stronger in another: weaker because its three aircraft differ in mass, mission and
-technical maturity as well as in architecture, so it does not isolate the mechanism the way a
-controlled sizing study does; stronger because they exist, and their numbers are not the
-output of anyone's sizing loop. Corroboration of this kind raises confidence that the three charges are
-separable in practice; it does not establish that they are the only three, and nothing
-short of a broad survey of sized architectures could.
-
-**What the framework does not claim.** It does not predict the magnitude of any bill for an
-architecture that has not been sized; the fractions above must be computed or measured case
-by case. What it provides is the statement that there are exactly three of them, that they
-are the currencies in which architectural remedies trade, and the condition under which none
-is charged.
+**What the framework does not claim.** It does not claim that avoiding the three bills makes an
+aircraft better, only cheaper in those three specific currencies. A configuration may avoid all
+three and still be unbuildable, uncontrollable, or unsuited to its mission — and Sections 7 and
+8 are about exactly that possibility for the configuration proposed here. Nor does it claim the
+bills are the only costs; they are the ones that follow from the duty-cycle mismatch of Section
+3.1, and a design pays many others.
 
 ## 3.8 Why the market looks the way it does
 

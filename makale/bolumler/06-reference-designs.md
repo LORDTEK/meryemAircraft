@@ -1,9 +1,5 @@
 # 6. Reference designs at two scales
 
-*Taslak v1 — İngilizce. Türkçe notlar italik ve köşeli parantez içinde.*
-
----
-
 A configuration argument is only as good as its willingness to become a number. This
 section sizes two aircraft from the arrangement of Section 4 — one at 50 kg and one at
 1000 kg, a factor of twenty apart in mass — using the same equations, the same
@@ -139,9 +135,8 @@ its proportions applies to the quantities named here and not to every dimension.
 1000 kg, a single nose pair can no longer hold the disc loading and a second must be added.
 
 **The buffer fraction is preserved** (3.6 % of MTOW at 50 kg, 4.0 % at 1000 kg), so the
-mechanism by which Bill 3 is avoided does not degrade with size. **The frame drag fraction is
-preserved** — frontal and wing area both scale as L², so the twelve percent of Section 5.2
-holds at both ends.
+mechanism by which Bill 3 is avoided does not degrade with size, and **the frame drag fraction is
+preserved** because frontal and wing area both scale as L².
 
 **Transition time does not scale, and this is the exception.** The rotating moment follows
 M = Iα with I ∝ mL², so the moment needed to turn the aircraft in a fixed time grows much
@@ -159,8 +154,8 @@ faster than the aircraft. Scaling the light design's two-second rotation to 1000
 
 **The rule is that a larger aircraft turns more slowly.** The heavy design rotates in 5.1 s at
 six percent of hover power — not a round number but the rotation time at which it holds the same
-control margin the light design holds at two seconds (Section 7.6). The constraint is less
-costly than it looks: Section 7 shows a slower rotation loses *less* altitude, so the scaling
+control margin the light design holds at two seconds (Section 7.6). The constraint is less costly
+than it looks, because Section 7.4 shows a slower rotation loses *less* altitude: the scaling
 penalty on transition time works with the penalty on control power rather than against it. The
 classical objection to scaling a VTOL aircraft — hover power growing as L^3.5 against power
 available as L³ — is removed on the hover side by fixing disc loading. It is not removed on the
@@ -267,7 +262,7 @@ Section 8 lists settling this as the one exposure in the aerodynamic chain with 
 
 ## 6.7 A component build-up of the mass budget
 
-The sizing above assumes an empty-mass fraction rather than deriving one. Supplementary S3
+The sizing above assumes an empty-mass fraction rather than deriving one. Supplementary S2
 builds the 50 kg design's mass item by item — structure from wetted area and an assumed shell
 areal density, tip frames sized by a vertical landing case, propulsion, energy, avionics and
 systems — and reports the break-even value of every assumption in it.
@@ -282,7 +277,7 @@ this airframe reaches it — that shell is carried by an internal structure, whi
 the wing and carries flight loads directly.
 
 **The build-up came in lighter than the target, and that is a warning rather than a result.**
-Paper aircraft are habitually lighter than the aircraft that get built. What S3 does not
+Paper aircraft are habitually lighter than the aircraft that get built. What S2 does not
 contain is buckling, torsion, local load introduction, aeroelastic sizing, fasteners, adhesive,
 paint, or the mass of anything the design has not yet specified — and the 2.2 kg of margin is
 what all of those must fit into. Section 8.2 states the item as bounded from below rather than
