@@ -1,4 +1,4 @@
-# Supplementary S3 — A component build-up of the mass budget
+# Supplementary S2 — A component build-up of the mass budget
 
 *Supplementary material to "The Architectural Cost of Hybrid VTOL:
 meryemAircraft, a Propeller-Driven Tail-Sitting Blended-Wing-Body Without a
@@ -12,7 +12,7 @@ paper cites.
 
 ---
 
-## S3.1 A component build-up of the mass budget
+## S2.1 A component build-up of the mass budget
 
 The fractions used in Sections 6.2 and 6.3 are asserted, and Section 8.2 says so. This
 section replaces the assertion for the light design with a build-up from components. The

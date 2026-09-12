@@ -1,9 +1,5 @@
 # 1. Introduction
 
-*Taslak v1 — İngilizce. Türkçe notlar italik ve köşeli parantez içinde.*
-
----
-
 Powered flight for uncrewed aircraft is dominated by two configuration families, and
 each is bounded by a different limit.
 
@@ -71,49 +67,44 @@ free. What it pays instead — the mass and drag of the control propellers and t
 supporting frames, the rolling-moment device, and the transition manoeuvre itself — is
 reported and quantified in Section 5.4 rather than omitted.
 
-**Contributions.** The primary contribution of this paper is a framework, and the aircraft
-is the case that instantiates it. Specifically, the paper
+**Contributions.** The primary contribution is a framework; the aircraft is the case that
+instantiates it. The paper
 
-1. **states the cruise-efficiency penalty of hybrid VTOL as an architectural property**
-   rather than a defect of implementation, expresses it as three dimensionless charges —
-   carried hover mass, exposed cruise drag, and continuous power sized by the hover peak —
-   shows with published figures that the known remedies transfer the penalty between them
-   rather than removing it, derives from that structure an explicit escape condition, and
-   tests a consequence of the framework against an independent published sizing study: that
-   the architecture with the best cruise efficiency need not be the lightest, which is what
-   that study reports and what a single-metric comparison would not anticipate;
-2. **shows that architectural comparisons are contract-dependent**, which is a
-   methodological result independent of any particular aircraft: range computed at a fixed
-   fuel fraction is independent of take-off mass, so the mass bill never reaches the range
-   column, and an architecture that closes heavier is silently permitted to carry
-   proportionally more fuel. Three sizing contracts are therefore reported side by side,
-   and the ranking of architectures is shown to change between them;
-3. **instantiates the escape condition in a configuration** — meryemAircraft — audits the
-   three bills against it one at a time, and states what the configuration pays instead;
-4. **supports the case study with computation rather than assertion** where it could: a
-   three-dimensional Reynolds-averaged solution for the zero-lift drag, reported with a
-   measured uncertainty budget that includes turbulence-model and initialisation spread; a
-   component mass build-up that replaces the assumed mass fractions and closes the 50 kg
-   design conditionally while not closing the 1000 kg one; and a rotational check that
-   establishes inertial feasibility of the transition; and
-5. **states what is not established, as a testable requirement rather than an omission.**
-   The aerodynamic pitching moment through the rotation is not known, and the paper reports
-   the coefficient that would consume the available control margin instead of estimating
-   the coefficient itself.
+1. **states the cruise-efficiency penalty of hybrid VTOL as an architectural property** rather
+   than a defect of implementation, expresses it as three dimensionless charges — carried hover
+   mass, exposed cruise drag, and continuous power sized by the hover peak — shows with
+   published figures that the known remedies transfer the penalty between them rather than
+   removing it, derives an explicit escape condition, and tests a consequence against an
+   independent published sizing study: that the architecture with the best cruise efficiency
+   need not be the lightest, which is what that study reports and what a single-metric
+   comparison would not anticipate;
+2. **shows that architectural comparisons are contract-dependent**, a methodological result
+   independent of any particular aircraft: range computed at a fixed fuel fraction is
+   independent of take-off mass, so the mass bill never reaches the range column. Three sizing
+   contracts are reported side by side and the ranking changes between them;
+3. **instantiates the escape condition in a configuration**, audits the three bills against it
+   one at a time, and states what the configuration pays instead;
+4. **supports the case study with computation rather than assertion** where it could — a
+   three-dimensional Reynolds-averaged solution for the zero-lift drag with a measured
+   uncertainty budget; a component mass build-up that closes the 50 kg design conditionally and
+   does not close the 1000 kg one; a rotational check establishing inertial feasibility of the
+   transition; and a viscous, station-by-station solution of the trimmed wing that corrects the
+   assumed span efficiency downward; and
+5. **states what is not established, as a testable requirement rather than an omission.** The
+   aerodynamic pitching moment through the rotation is not known, and the paper reports the
+   coefficient that would consume the available control margin instead of estimating the
+   coefficient itself.
 
-Items 1 and 2 stand independently of whether this particular aircraft is ever built. Item 5
-is the reason the paper does not claim that it can be.
+Items 1 and 2 stand independently of whether this aircraft is ever built. Item 5 is the reason
+the paper does not claim that it can be.
 
-**Scope.** This is a configuration study. It contains no wind-tunnel measurement and no
-flight test. Its numerical results are analytical estimates from stated assumptions, with
-one exception: the zero-lift drag of the wing and centre body has been computed
-three-dimensionally, and Section 6.6 reports it with a measured uncertainty budget. The
-mass budget began as a target rather than a finding; Section 6.7 replaces it for the light
-design with a build-up from components, which closes conditionally and names the condition,
-and which does not close the heavy design at all. Section 8 states these limitations
-explicitly.
-
----
+**Scope.** This is a configuration study containing no wind-tunnel measurement and no flight
+test. Its results are analytical estimates from stated assumptions, with two exceptions computed
+here: the zero-lift drag of the wing and centre body, solved three-dimensionally, and the span
+efficiency of the trimmed wing, solved station by station with a viscous section method. The
+mass budget began as a target rather than a finding; a component build-up replaces it for the
+light design, closes conditionally, names the condition, and does not close the heavy design at
+all. Section 8 states these limitations, and Supplementary S5 enumerates all of them.
 
 The remainder of the paper is organised as follows. Section 2 reviews seventy years of
 attempts to merge the two configuration families and argues, on the evidence of two
