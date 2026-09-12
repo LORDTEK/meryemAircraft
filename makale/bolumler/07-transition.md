@@ -546,7 +546,20 @@ pitch-up is driven by leading-edge vortex breakdown, which a wing of aspect rati
 they report runs the wrong way for a higher-aspect-ratio wing, and the incidences at which it
 appears overlap the 17° to 22° this aircraft passes through in transition. **This is a reason
 to keep transition controllability open rather than a new closure**, and it is the second
-independent reason to want the washout that Section 7.6 already requires for trim. And the
+independent reason to want the washout that Section 7.6 already requires for trim.
+
+A second pitch-up mechanism was found afterwards, and it does not care about aspect ratio at
+all. In a blended-wing-body UAV analysed by both a low-fidelity method and RANS, the moment
+prediction departs from the computation above eight degrees of incidence because "the main wing
+stalls before the main body, causing the BWB to pitch-up" [39]. That is a statement about which
+part of the planform separates first, not about leading-edge vortex breakdown, so the
+aspect-ratio argument that limits the previous hazard offers no protection against this one.
+**Washout does.** On a swept wing washout makes the root stall before the tip, and on a blended
+wing the root is the body — so the twist Section 7.6 requires for trim also reverses the stall
+order that produces this pitch-up. The twist therefore earns its cost three times: it closes
+the trim chain, it delays tip stall on a swept planform, and it inverts the stall sequence
+behind the blended-wing pitch-break. **None of this makes the 4.3 percent penalty of Section
+5.4 disappear. It means the penalty is not being paid for one thing.** And the
 aft limit of the centre-of-gravity window, roughly 85 percent of root chord, is still set by
 static margin alone and is still firm. What has changed is that the forward limit is no
 longer set by a section property nobody had measured; it is set by how much twist the design is

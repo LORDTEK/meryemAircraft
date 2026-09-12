@@ -306,6 +306,37 @@ wing's cruise condition — aspect ratio 6.03 at 45° root sweep, at incidences 
 degrees — but it *is* the regime of the transition incidences in Section 7. No vortex-lattice
 result is quoted there, and this is why.
 
+**A third boundary was found by reading, and it is the sharpest of the three because it is a
+measured number rather than a statement of scope.** A study of a tactical blended-wing-body UAV
+compared a vortex-lattice solution against RANS at the same condition and found the
+vortex-lattice lift coefficient low by **thirty to thirty-eight percent** across incidences
+from −4° to 12°, and excluded the method from its trim analysis on that basis [39]. That is a
+configuration of the same class as this one, and the four results above rest on the same kind
+of solution.
+
+Two things keep the argument of the previous paragraphs standing, and one of them cannot be
+checked. The deviation is nearly constant with incidence — 37.8, 37.7, 38.2, 37.2 and 30.7
+percent — which is the signature of a multiplicative error in the magnitude of the loading
+rather than an error in its distribution. A neutral point is a ratio of derivatives and a
+static margin is a ratio of lengths; a factor common to lift and moment cancels in both, and
+the twist effectiveness would be *under*-stated, meaning the twist actually required to trim
+would be smaller than Section 7.6 reports rather than larger. That argument depends entirely on
+the moment scaling with the lift, and the pitching-moment comparison in that paper is published
+with its values withheld. **The check that would settle it is precisely the one the source does
+not permit.**
+
+What can be said without it is narrower. The likeliest origin of a deficit that large is the
+volume of the centre body, which a vortex-lattice method represents as a camber surface of zero
+thickness and which on a blended wing carries a real share of the lift; the cited study does not
+say whether its model included the body at all. The planform solved here carries its centre
+section as part of the lifting surface, so the same deficit should not transfer at full size.
+But it does not transfer to zero either, and **the honest statement is that the vortex-lattice
+results in this paper carry an untested magnitude error of unknown size, bounded above by a
+published comparison on a similar configuration, and that every use made of them here is of a
+kind that a magnitude error does not disturb.** Confirming that would take a viscous or
+Reynolds-averaged solution of this planform, which is named in Section 8 as the first thing
+worth computing next.
+
 **Span efficiency.** A vortex-lattice solution of the planform of Section 4.2 [15] gives
 an inviscid span efficiency of 0.99. That is not the same quantity as the 0.85 used here.
 The vortex-lattice figure counts only the departure of the induced drag from the
