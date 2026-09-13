@@ -198,10 +198,27 @@ tabulated window and is therefore not a separate constraint.
 
 **Static stability is shown.** A vortex-lattice solution over the planform of Section 2.8
 places the neutral point at 0.859 m from the root leading edge — 34.4 percent of mean
-aerodynamic chord, an entirely conventional value — and the result is converged, moving by
-0.26 percent over a threefold refinement. With the centre of gravity where the packaging rule
-puts it, the static margin is **+12.5 percent of mean aerodynamic chord**, in the middle of
-the usual tailless band of five to fifteen percent. The configuration is statically stable in
+aerodynamic chord, an entirely conventional value — and the result is converged on the grid,
+moving by 0.26 percent over a threefold refinement. With the centre of gravity where the
+packaging rule puts it, the static margin is **+12.5 percent of mean aerodynamic chord**, in
+the middle of the usual tailless band of five to fifteen percent.
+
+**The grid is not the largest uncertainty in this number, and the difference matters for how
+many digits it is worth quoting.** The 0.859 m above is the untwisted planform, referenced to
+the root leading edge, fitted over incidences of 0 to 6 degrees. Twisting the wing to trim —
+the geometry the aircraft actually flies — moves it to 0.867 m and the margin to +13.6 percent.
+Taking the moment reference at the centre of gravity instead of the root leading edge moves it
+again, and so does fitting over two incidences rather than four. Across the eight combinations
+of those three choices the neutral point spans **0.858 to 0.867 m** and the margin **12.3 to
+13.6 percent**, a scatter of 1.3 percent of mean chord — five times the grid sensitivity.
+
+In exact linear theory the moment reference and the incidence range cannot move a neutral
+point at all, and twist cannot either. They move it here because the vortex-lattice solution is
+linear in the circulation but not in the incidence: the freestream direction enters through its
+sine and cosine, so the lift and moment slopes drift slightly with where they are sampled. The
+scatter is therefore a property of the method and not a defect of any one run. It is reported
+rather than averaged away, it is small against the packaging window of roughly 5 to 20 percent,
+and it is the reason no static-margin figure in this paper is quoted to two decimals. The configuration is statically stable in
 pitch, and it owes that to the sweep, which carries the neutral point aft faster than it
 carries the volume. All chord-referenced quantities here use the true mean aerodynamic chord,
 0.651 m; an earlier version of this section quoted the margin on the mean aerodynamic chord
@@ -630,9 +647,9 @@ rather than one:
 **The zero-moment case is the reportable one, and it already changes the result.** With no
 aerodynamic moment at all, the light design entering at 5 m s⁻¹ of climb loses **5.4 m** at its
 two-second reference, where the kinematic simulation of Section 3.15 reports zero. Three checks
-separate this from a modelling artefact. It is unchanged across the linear, bang-bang and smooth
-reference profiles — 5.4, 6.6 and 6.3 m — so it is not a consequence of the profile Section 3.15
-chose. The control moment never saturates, so it is not a shortage of authority. And raising the
+separate this from a modelling artefact. It survives every reference profile tried — 5.4 m linear,
+6.6 m bang-bang, 6.3 m smooth — so while the profile changes its size by a fifth, it does not
+produce it, and the loss is not a consequence of the profile Section 3.15 chose. The control moment never saturates, so it is not a shortage of authority. And raising the
 controller gains, which tightens tracking of the commanded angle, makes the loss *larger* rather
 than smaller: 6.6 m at the nominal gains, 8.7 m at four times, 17.2 m at thirty-two times. What
 the kinematic model leaves out is therefore not the difficulty of turning the aircraft but the

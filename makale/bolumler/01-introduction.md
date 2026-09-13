@@ -111,13 +111,6 @@ mass budget began as a target rather than a finding; a component build-up replac
 light design, closes conditionally, names the condition, and does not close the heavy design at
 all. Section 4 states these limitations, and Supplementary S5 enumerates all of them.
 
-The remainder of the paper is organised as follows. Section 1 reviews seventy years of
-attempts to merge the two configuration families and argues, on the evidence of two
-contemporary NASA reviews, that they ended for reasons external to the configuration —
-principally engine and transmission reliability — while the one difficulty those reviews
-document most fully, the workload of a pilot flying a vertical descent, is also the one
-that an uncrewed aircraft removes outright.
-
 **The paper is arranged as follows.** Sections 2.1 to 2.6 set out the architectural tax in its
 three currencies, show that architectural remedies transfer it rather than remove it, and derive
 the condition under which it would not be charged. Sections 2.7 to 2.11 describe the proposed

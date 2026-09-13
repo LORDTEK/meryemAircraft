@@ -138,15 +138,28 @@ at zero lift from a physics-informed aerofoil model [16] and adding the tip fram
 | Wing and body | 0.0073 (clean surface) | 0.0129 (transition tripped) |
 | Tip frames, faired | 0.0043 | 0.0043 |
 | Tip-propeller hubs | 0.0015 (30 mm can) | 0.0020 (50 mm can) |
-| Subtotal | 0.0131 | 0.0191 |
+| **Tip rotors, free-wheeling** | **0.0085** (best design computed) | **0.0153** (design at usable hover efficiency) |
+| Subtotal | 0.0216 | 0.0345 |
 | Excrescence allowance | none | +10 % |
-| **Total** | **0.0131** | **0.0210** |
+| **Total** | **0.0216** | **0.0380** |
 
 The two columns are deliberately not the same calculation. The lower bound takes the clean
 surface, the smaller hub and no allowance for excrescences; the upper bound takes the tripped
 surface, the larger hub and ten percent for fasteners, joints, antennas and surface
 imperfection. The interval is a bracket rather than an error bar, and the allowance row was
 omitted from an earlier version of this table, which therefore did not sum to its own total.
+
+**The rotor row is new and it changes what this table says.** Two earlier versions omitted it,
+on the assumption of Section 2.3 that a free-wheeling propeller contributes 0.0003 to 0.0008.
+Section 3.3 computes the figure instead of assuming it, and the result is one to two orders of
+magnitude larger. The consequence is not a detail: without the row the upper bound is 0.0211 and
+the assumed 0.0248 lies above it, which is what three sections of this paper used to call
+conservative. With the row the bracket is 0.0216 to 0.0380 and **the assumption sits inside it,
+not above it** — optimistic by up to fifty-three percent at the upper end. The cruise
+lift-to-drag ratio, the ranges of Section 3.8 and the comparative sizing of Section 3.6 are all
+computed on 0.0248 and are not re-derived here. **That re-derivation is the largest single piece
+of unfinished work this paper leaves**, and it is named as such in Section 4 rather than
+absorbed quietly.
 
 The frame term reproduces the 0.0043 of Section 3.3, which was reached by a different
 route, and it comes out the same for the heavy design — an independent confirmation of

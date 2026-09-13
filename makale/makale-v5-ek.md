@@ -10,11 +10,11 @@ study are in the repository the paper cites.
 
 **Contents**
 
-- **Supplementary S1** — Independent checks on the two assumed aerodynamic coefficients (3438 words)
+- **Supplementary S1** — Independent checks on the two assumed aerodynamic coefficients (3616 words)
 - **Supplementary S2** — A component build-up of the mass budget (3672 words)
 - **Supplementary S3** — Control axes in full (6553 words)
-- **Supplementary S4** — Rotational authority, trim, and the transition envelope (8044 words)
-- **Supplementary S5** — The limitations in full (6696 words)
+- **Supplementary S4** — Rotational authority, trim, and the transition envelope (8310 words)
+- **Supplementary S5** — The limitations in full (6724 words)
 - **Supplementary S6** — The three bills stated formally, and a comparative sizing (3000 words)
 
 ---
@@ -159,15 +159,28 @@ at zero lift from a physics-informed aerofoil model [16] and adding the tip fram
 | Wing and body | 0.0073 (clean surface) | 0.0129 (transition tripped) |
 | Tip frames, faired | 0.0043 | 0.0043 |
 | Tip-propeller hubs | 0.0015 (30 mm can) | 0.0020 (50 mm can) |
-| Subtotal | 0.0131 | 0.0191 |
+| **Tip rotors, free-wheeling** | **0.0085** (best design computed) | **0.0153** (design at usable hover efficiency) |
+| Subtotal | 0.0216 | 0.0345 |
 | Excrescence allowance | none | +10 % |
-| **Total** | **0.0131** | **0.0210** |
+| **Total** | **0.0216** | **0.0380** |
 
 The two columns are deliberately not the same calculation. The lower bound takes the clean
 surface, the smaller hub and no allowance for excrescences; the upper bound takes the tripped
 surface, the larger hub and ten percent for fasteners, joints, antennas and surface
 imperfection. The interval is a bracket rather than an error bar, and the allowance row was
 omitted from an earlier version of this table, which therefore did not sum to its own total.
+
+**The rotor row is new and it changes what this table says.** Two earlier versions omitted it,
+on the assumption of Section 2.3 that a free-wheeling propeller contributes 0.0003 to 0.0008.
+Section 3.3 computes the figure instead of assuming it, and the result is one to two orders of
+magnitude larger. The consequence is not a detail: without the row the upper bound is 0.0211 and
+the assumed 0.0248 lies above it, which is what three sections of this paper used to call
+conservative. With the row the bracket is 0.0216 to 0.0380 and **the assumption sits inside it,
+not above it** — optimistic by up to fifty-three percent at the upper end. The cruise
+lift-to-drag ratio, the ranges of Section 3.8 and the comparative sizing of Section 3.6 are all
+computed on 0.0248 and are not re-derived here. **That re-derivation is the largest single piece
+of unfinished work this paper leaves**, and it is named as such in Section 4 rather than
+absorbed quietly.
 
 The frame term reproduces the 0.0043 of Section 3.3, which was reached by a different
 route, and it comes out the same for the heavy design — an independent confirmation of
@@ -1362,10 +1375,27 @@ tabulated window and is therefore not a separate constraint.
 
 **Static stability is shown.** A vortex-lattice solution over the planform of Section 2.8
 places the neutral point at 0.859 m from the root leading edge — 34.4 percent of mean
-aerodynamic chord, an entirely conventional value — and the result is converged, moving by
-0.26 percent over a threefold refinement. With the centre of gravity where the packaging rule
-puts it, the static margin is **+12.5 percent of mean aerodynamic chord**, in the middle of
-the usual tailless band of five to fifteen percent. The configuration is statically stable in
+aerodynamic chord, an entirely conventional value — and the result is converged on the grid,
+moving by 0.26 percent over a threefold refinement. With the centre of gravity where the
+packaging rule puts it, the static margin is **+12.5 percent of mean aerodynamic chord**, in
+the middle of the usual tailless band of five to fifteen percent.
+
+**The grid is not the largest uncertainty in this number, and the difference matters for how
+many digits it is worth quoting.** The 0.859 m above is the untwisted planform, referenced to
+the root leading edge, fitted over incidences of 0 to 6 degrees. Twisting the wing to trim —
+the geometry the aircraft actually flies — moves it to 0.867 m and the margin to +13.6 percent.
+Taking the moment reference at the centre of gravity instead of the root leading edge moves it
+again, and so does fitting over two incidences rather than four. Across the eight combinations
+of those three choices the neutral point spans **0.858 to 0.867 m** and the margin **12.3 to
+13.6 percent**, a scatter of 1.3 percent of mean chord — five times the grid sensitivity.
+
+In exact linear theory the moment reference and the incidence range cannot move a neutral
+point at all, and twist cannot either. They move it here because the vortex-lattice solution is
+linear in the circulation but not in the incidence: the freestream direction enters through its
+sine and cosine, so the lift and moment slopes drift slightly with where they are sampled. The
+scatter is therefore a property of the method and not a defect of any one run. It is reported
+rather than averaged away, it is small against the packaging window of roughly 5 to 20 percent,
+and it is the reason no static-margin figure in this paper is quoted to two decimals. The configuration is statically stable in
 pitch, and it owes that to the sweep, which carries the neutral point aft faster than it
 carries the volume. All chord-referenced quantities here use the true mean aerodynamic chord,
 0.651 m; an earlier version of this section quoted the margin on the mean aerodynamic chord
@@ -1794,9 +1824,9 @@ rather than one:
 **The zero-moment case is the reportable one, and it already changes the result.** With no
 aerodynamic moment at all, the light design entering at 5 m s⁻¹ of climb loses **5.4 m** at its
 two-second reference, where the kinematic simulation of Section 3.15 reports zero. Three checks
-separate this from a modelling artefact. It is unchanged across the linear, bang-bang and smooth
-reference profiles — 5.4, 6.6 and 6.3 m — so it is not a consequence of the profile Section 3.15
-chose. The control moment never saturates, so it is not a shortage of authority. And raising the
+separate this from a modelling artefact. It survives every reference profile tried — 5.4 m linear,
+6.6 m bang-bang, 6.3 m smooth — so while the profile changes its size by a fifth, it does not
+produce it, and the loss is not a consequence of the profile Section 3.15 chose. The control moment never saturates, so it is not a shortage of authority. And raising the
 controller gains, which tightens tracking of the commanded angle, makes the loss *larger* rather
 than smaller: 6.6 m at the nominal gains, 8.7 m at four times, 17.2 m at thirty-two times. What
 the kinematic model leaves out is therefore not the difficulty of turning the aircraft but the
@@ -2263,7 +2293,9 @@ are listed so that they can be:
    carried out and is reported in Section 3.10: it gives a wing-and-body C_D0 of 0.01475
    with the Spalart–Allmaras closure and 0.01201 – 0.01253 with k-ω SST — a spread of
    eighteen percent between the closures that nothing in the solutions resolves — and it
-   leaves the assumed 0.0248 conservative in every case. The dominant term is the
+   leaves the assumed 0.0248 conservative against the airframe in every case — but that
+   solution carries no rotors, and with the free-wheeling discs of Section 3.3 added the
+   assumption is no longer conservative against the aircraft. The dominant term is the
    turbulence model, and it is larger than first reported because the two models were
    subsequently paired at the same wall resolution rather than at two different ones.
    **What it does not settle** is, first, the transition state — the solution is fully
