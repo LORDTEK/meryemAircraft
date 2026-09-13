@@ -184,14 +184,7 @@ istiyor.]*
 > B.G. and Ö.G.; Visualization, B.G.; Supervision, Ö.G.; Project Administration, M.G.
 > All authors have read and agreed to the published version of the manuscript.
 
-*[⚠️ BU TASLAK — yazarların onaylaması gerek. MDPI bu bölümü zorunlu tutuyor ve
-CRediT sözlüğünden terim istiyor; ben kimin ne yaptığını bilemem, o yüzden sorumlu
-yazarın Meryem, denetleyenin Ömer olduğu varsayımıyla makul bir dağılım yazdım.
-Yanlışsa değiştirin — uydurma bir katkı beyanı yayın etiği ihlalidir.
-Kullanılabilecek roller: Conceptualization, Methodology, Software, Validation,
-Formal Analysis, Investigation, Resources, Data Curation, Writing — Original Draft,
-Writing — Review & Editing, Visualization, Supervision, Project Administration,
-Funding Acquisition. Baş harfler: M.G., B.G., Ö.G.]*
+*[Yazarlar onayladı — 13 Eylül 2026.]*
 
 ### Acknowledgements
 
@@ -231,7 +224,9 @@ istiyor; onu 2.14 karşılıyor. Buradaki blok Acknowledgements tarafı.]*
 > simulation, together with the aerodynamic calculations of Section 3.10 — including the
 > mesh generator, the case setup, the grid-convergence study and the wall-resolution and
 > turbulence-model sensitivity runs behind the computed zero-lift drag — are openly
-> available at https://github.com/LORDTEK/meryemAircraft
+> available at https://github.com/LORDTEK/meryemAircraft, and an archived version of this
+> manuscript with its supplementary material is deposited at
+> https://doi.org/10.5281/zenodo.22144194 (concept DOI, resolving to the latest version).
 
 *Bölüm 8.12'deki "başka bir grup bunu bağımsız deneyebilir" davetinin somut
 karşılığı. Depo bağlantısı yayın öncesi eklenecek.*
