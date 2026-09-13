@@ -129,9 +129,10 @@ hesaplanmış değerler özette bağlamsız durur.]*
 >
 > - Architectural comparisons change their ranking with the sizing contract chosen, so a
 >   ranking quoted without its contract is not a result; three contracts are reported here.
-> - The configuration is not shown to be flyable: its mass budget closes only on a battery
->   specific power 3.8 times the highest rate yet measured on a flown pack, and transition
->   controllability rests on a pitching moment no current method predicts reliably.
+> - The configuration is not shown to be flyable: its 50 kg reference budget needs a battery
+>   specific power 3.8 times the highest rate yet measured on a flown pack, and re-closes 38
+>   percent heavier at that measured rate; transition controllability rests on a pitching
+>   moment no current method predicts reliably.
 
 *[MDPI zorunlu tutuyor ve biçimi sabit: iki başlık, her biri en çok iki madde.
 Özetin kopyası olmamalı — arama motorlarında ve okuyucunun ilk üç saniyesinde
