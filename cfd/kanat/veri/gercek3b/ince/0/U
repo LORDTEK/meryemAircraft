@@ -1,0 +1,32 @@
+FoamFile
+{
+    version 2.0;
+    format ascii;
+    class volVectorField;
+    object U;
+}
+
+dimensions      [0 1 -1 0 0 0 0];
+
+internalField   uniform (0.9931909973 0.1164973943 0);
+
+boundaryField
+{
+    duvar
+    {
+        type            noSlip;
+    }
+    "(disalan|uc)"
+    {
+        type            freestreamVelocity;
+        freestreamValue uniform (0.9931909973 0.1164973943 0);
+    }
+    cikis
+    {
+        type            zeroGradient;
+    }
+    kok
+    {
+        type            symmetryPlane;
+    }
+}
