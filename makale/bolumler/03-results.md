@@ -294,9 +294,13 @@ architecture-specific mass differ. Under the first contract:
 
 | | Empty fraction | MTOW | Cruise L/D | Hover power | Range |
 |---|---:|---:|---:|---:|---:|
-| A — tail-sitter | **0.580** | **50.0 kg** | 12.00 | **10.9 kW** | 1 600 km |
+| A — tail-sitter | **0.580** | **50.0 kg** | 12.00 | **10.9 kW** | 1 600 km † |
 | B — lift + cruise | 0.689 | 86.0 kg | 10.28 | 18.7 kW | 1 370 km |
 | C — tilt | 0.624 | 60.3 kg | **13.44** | 13.1 kW | **1 792 km** |
+
+† *Every figure in this table is at the published drag assumption. The sweep at the end of this
+section gives the range as 1 173 to 1 442 km across the computed bracket, and the table is kept in
+this form because the corrections below are stated relative to it.*
 
 **That table is built on a cruise-drag multiplier this paper has since shown to be incomplete,
 and re-deriving it reverses one of the three results.** Architecture A was charged 1/1.12 for its
@@ -355,6 +359,52 @@ different contracts. The rotor drag costs A the range comparison under equal fue
 measured buffer costs B its ability to close at all. A reader taking one and not the other will
 reach a different conclusion from a reader taking both, which is why all four combinations are
 reported in the repository rather than a single replacement table.
+
+### The whole comparison, swept across the drag bracket
+
+Every figure above is computed at a single assumed zero-lift drag coefficient. Supplementary S1
+brackets that coefficient by calculation at **0.0285 to 0.0381**, and the assumed 0.0248 lies
+below both ends rather than inside them. The sweep below therefore replaces the single-point
+comparison. The drag book-keeping is the one used throughout: clean airframe from wing, body and
+hubs; the tip frames and the free-wheeling rotors charged to this configuration alone; the two
+competing layouts carrying their own published penalties against the same airframe. At the
+published assumption the construction returns a clean-body lift-to-drag ratio of 13.40 against
+the 13.44 used in the sizing, which is the check that the sweep and the original chain are the
+same calculation.
+
+| | Published assumption | Bracket, favourable end | Bracket, adverse end |
+|---|---:|---:|---:|
+| Zero-lift drag coefficient | 0.0248 | 0.0285 | 0.0381 |
+| Cruise lift-to-drag ratio, A | 11.88 | 10.82 | **8.80** |
+| Take-off mass, A | 50.1 kg | 51.1 kg | 53.9 kg |
+| **Range, A** | 1 583 km | **1 442 km** | **1 173 km** |
+| Range of B relative to A, fixed fuel fraction | −13.7 % | **+45.3 %** | **+24.4 %** |
+| Range of B relative to A, fixed fuel mass | −36.0 % | **+16.5 %** | −2.3 % |
+| Range of B relative to A, fixed mass and payload | −72.2 % | −29.2 % | −42.6 % |
+| Range of C relative to A, fixed fuel fraction | +12.8 % | +90.0 % | +62.6 % |
+
+**Three things survive the sweep and one does not.** What survives is the result this paper leads
+on: **the ranking still depends on the contract at every drag coefficient in the bracket**, and it
+depends on it more strongly, not less. A holds its advantage under fixed take-off mass across the
+whole bracket and loses it under equal fuel fractions across the whole bracket. What does not
+survive is any reading in which the choice of contract is a detail: under fixed fuel *mass* the
+sign itself changes inside the bracket, from B ahead by sixteen percent at the favourable end to A
+ahead by two at the adverse one.
+
+**The direction of the drag sensitivity is not the intuitive one and it is worth stating.** A
+*cleaner* airframe makes this configuration's position *worse* relative to lift-plus-cruise, not
+better. The tip frames and the free-wheeling rotors are a roughly fixed absolute charge; the
+cleaner the rest of the aircraft, the larger a fraction of the total that charge becomes. At the
+favourable end it is a nineteen-percent penalty on cruise efficiency and at the adverse end
+sixteen. **This is Bill 2 behaving exactly as Section 2.3 says a bill behaves** — it does not
+scale away, and improving the airframe does not pay it.
+
+**What the sweep does not do.** It holds the competing layouts' penalties at their published
+ratios against the swept airframe, so at the favourable end layout B is credited with a cruise
+efficiency no aircraft of its kind has demonstrated. It holds the span efficiency, the buffer
+fraction and the mass model fixed. And the range figures quoted elsewhere in this paper are at
+the published assumption; **the honest range of the light reference design is 1 173 to 1 442 km,
+not the single figure the earlier sections carry.**
 
 **The ordering depends on which contract is used, and that dependence is the result rather than
 an inconvenience.** Range in the sizing equation contains the fuel *fraction*, so holding the

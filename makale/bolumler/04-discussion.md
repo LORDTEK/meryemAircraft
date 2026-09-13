@@ -105,6 +105,11 @@ so that range is preserved, and rebuilding the component budget at each step —
 | **1.5 kW kg⁻¹, measured thermal ceiling** | **68.9 kg** | **10.7 kg** | **1 600 km** | **9.2 kg** |
 | 5.63 kW kg⁻¹, assumed here | 50.0 kg | 1.8 kg | 1 600 km | 13.0 kg |
 
+*The range column is constant by construction: the loop holds the fuel fraction so that range is
+preserved while mass is solved for. Its value is the published one; on the drag bracket of
+Section 3.6 the same column would read 1 173 to 1 442 km throughout, without changing any mass in
+the table.*
+
 The right-hand column is the same loop run the other way and it needs its arithmetic stated,
 because the figure is not a subtraction from the payload. Take-off demand at 50 kg is 11.66 kW at
 the bus, so a 1.5 kW kg⁻¹ buffer masses 7.78 kg against the 1.8 kg already budgeted. The extra
