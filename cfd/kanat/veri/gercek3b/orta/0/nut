@@ -1,0 +1,34 @@
+FoamFile
+{
+    version 2.0;
+    format ascii;
+    class volScalarField;
+    object nut;
+}
+
+dimensions      [0 2 -1 0 0 0 0];
+
+internalField   uniform 0;
+
+boundaryField
+{
+    duvar
+    {
+        type            nutUSpaldingWallFunction;
+        value           uniform 0;
+    }
+    "(disalan|uc)"
+    {
+        type            freestream;
+        freestreamValue uniform 0;
+    }
+    cikis
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    kok
+    {
+        type            symmetryPlane;
+    }
+}

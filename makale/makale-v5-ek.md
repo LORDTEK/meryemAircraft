@@ -10,7 +10,7 @@ study are in the repository the paper cites.
 
 **Contents**
 
-- **Supplementary S1** — Independent checks on the two assumed aerodynamic coefficients (3671 words)
+- **Supplementary S1** — Independent checks on the two assumed aerodynamic coefficients (3806 words)
 - **Supplementary S2** — A component build-up of the mass budget (3672 words)
 - **Supplementary S3** — Control axes in full (6553 words)
 - **Supplementary S4** — Rotational authority, trim, and the transition envelope (8310 words)
@@ -159,10 +159,20 @@ at zero lift from a physics-informed aerofoil model [16] and adding the tip fram
 | Wing and body | 0.0073 (clean surface) | 0.0129 (transition tripped) |
 | Tip frames, faired | 0.0043 | 0.0043 |
 | Tip-propeller hubs | 0.0015 (30 mm can) | 0.0020 (50 mm can) |
-| **Tip rotors, free-wheeling** | **0.0085** (best design computed) | **0.0154** (design at usable hover efficiency, compressibility-corrected) |
-| Subtotal | 0.0216 | 0.0345 |
+| **Tip rotors, free-wheeling** | **0.0154** | **0.0154** |
+| Subtotal | 0.0285 | 0.0346 |
 | Excrescence allowance | none | +10 % |
-| **Total** | **0.0216** | **0.0380** |
+| **Total** | **0.0285** | **0.0381** |
+
+**The rotor term is the same in both columns, and an earlier version of this table made it
+different.** That version put 0.0085 in the lower column — the drag of the most favourable blade
+of the four computed. Section 3.3 had already established that this blade has a hover figure of
+merit of 0.27 against the 0.599 the aircraft's power budget is built on, and therefore cannot
+hover it. Using it to set the optimistic end of a bracket repeats, in the other column, exactly
+the error that the headline figure was corrected for. The only rotor this aircraft can carry is
+the one that meets its hover requirement, and it costs 0.0154 whichever end of the bracket the
+airframe sits at. **The consequence is not cosmetic: with the term corrected the assumed 0.0248
+lies below the whole bracket rather than inside it.**
 
 The two columns are deliberately not the same calculation. The lower bound takes the clean
 surface, the smaller hub and no allowance for excrescences; the upper bound takes the tripped
