@@ -68,7 +68,9 @@ flight: rotors stopped in the airstream, the booms that carry them, and the inte
 their wakes and the wing.
 
 The cleanest measurement is a controlled comparison within a single aircraft. In a doctoral
-study, one uncrewed airframe was tested in a wind tunnel in four configurations:
+study, one uncrewed airframe was tested in a wind tunnel in four configurations (Table 1):
+
+**Table 1.** Maximum lift-to-drag ratio of one uncrewed airframe tested in four configurations in a single wind-tunnel campaign [3].
 
 | Configuration | Maximum L/D |
 |---|---:|
@@ -84,7 +86,7 @@ relative to a standard quadplane. That study's author is careful about which com
 legitimate — measuring the retracted aircraft against *itself* with propellers deployed gives
 63 %, which he explicitly rejects — and the caution is worth adopting. Because range is linear in
 lift-to-drag ratio for a fixed energy system, this ladder translates directly into range
-(Figure 12).
+(Figure 3).
 
 **A third finding constrains what can be done about the penalty**, and matters more than either
 number:
@@ -140,9 +142,9 @@ two is chosen, the extra installed capacity is mass, which returns to Bill 1.
 ## 2.5 The bills are one quantity in three currencies
 
 The three bills are not independent problems with independent fixes. **Each known architectural
-move reduces one and increases another.** Figure 3 shows the transfers; Table 1 lists them.
+move reduces one and increases another.** Figure 4 shows the transfers; Table 2 lists them.
 
-**Table 1.** Architectural moves and the bills they transfer.
+**Table 2.** Architectural moves and the bills they transfer.
 
 | Move | Bill it attacks | Bill it creates |
 |---|---|---|
@@ -211,8 +213,8 @@ in hover, and they are absent from the hover power budget as a lift term — but
 does depend on their surplus for take-off, and Section 4.4 treats that dependence as a
 limitation rather than a feature. The only moving aerodynamic device is a variable-extension strip on
 the lower surface, described in Section 2.10, which exists solely because roll cannot be
-produced by propellers alone. Figure 4 gives three orthogonal views of the light
-reference design and Figure 5 a general view of the same geometry.
+produced by propellers alone. Figure 5 gives three orthogonal views of the light
+reference design and Figure 6 a general view of the same geometry.
 
 ## 2.8 Planform
 
@@ -240,7 +242,7 @@ in, with no tail to argue with.
 
 The reference geometry for the light design is a root chord of 0.970 m, a tip chord of 0.236 m,
 a span of 3.453 m, a wing area of 1.979 m² and an aspect ratio of 6.03, giving a wing loading of
-25.3 kg m⁻² and a stall speed of 20.1 m s⁻¹ against a cruise speed of 30 m s⁻¹. Figure 6 gives
+25.3 kg m⁻² and a stall speed of 20.1 m s⁻¹ against a cruise speed of 30 m s⁻¹. Figure 7 gives
 the distributions.
 
 ## 2.9 Propulsion
@@ -293,7 +295,7 @@ frames extend ±0.71 m perpendicular to the planform, so a differential between 
 lower pairs acts at 0.71 m in pitch, while a differential between the left and right pairs acts
 at the **semi-span, 1.726 m — 2.43 times the pitch arm**. Yaw is therefore the strongest axis
 on this aircraft, which is the reverse of the usual situation and is a free consequence of the
-tip-propeller layout rather than a design choice. Figure 7 shows the placement and the two arms,
+tip-propeller layout rather than a design choice. Figure 8 shows the placement and the two arms,
 and shows why the third axis has neither: every thrust vector is parallel to the body axis, so
 no combination of settings produces a rolling moment.
 
@@ -302,7 +304,7 @@ torque-balanced by construction. It is the one axis that needs an aerodynamic de
 device is the only moving aerodynamic surface on the aircraft: a strip on the lower surface,
 inclined at 45° in planform, running 120 % of root chord and reaching 67 % of semi-span,
 standing 2 cm proud at its inboard end and 6 cm at its outboard end. **Extension is the control
-variable** — the strip is modulated, not switched. Figure 8 shows it against the nose
+variable** — the strip is modulated, not switched. Figure 9 shows it against the nose
 propeller's slipstream: the inboard 46 percent of its length lies inside the slipstream, where
 dynamic pressure is set by disc loading and is therefore available at zero airspeed, and the
 outboard 54 percent works against the freestream in cruise. That split is why one device serves

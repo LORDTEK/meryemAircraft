@@ -22,6 +22,7 @@ from docx.shared import Pt, Cm, RGBColor
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.enum.table import WD_TABLE_ALIGNMENT
 from docx.oxml.ns import qn
+from docx.oxml import OxmlElement
 from kapaklar import FIGS
 
 ROOT = "/home/user/meryemAircraft"
@@ -81,13 +82,26 @@ def _satir_vurgu(p, metin, boyut, kalin_hepsi):
 
 
 def paragraf(d, metin, boyut=GOVDE_PT, hiza=WD_ALIGN_PARAGRAPH.JUSTIFY,
-             once=0, sonra=4, kalin_hepsi=False):
+             once=0, sonra=4, kalin_hepsi=False, girinti=0):
     p = d.add_paragraph()
     p.alignment = hiza
     p.paragraph_format.space_before = Pt(once)
     p.paragraph_format.space_after = Pt(sonra)
+    if girinti:
+        p.paragraph_format.left_indent = Pt(girinti)
     p.paragraph_format.line_spacing = 1.0
     satir_isle(p, metin, boyut, kalin_hepsi)
+    return p
+
+
+def birlikte(p):
+    """Paragrafi bir SONRAKI paragrafla ayni sayfada tutar (keepNext).
+
+    Sekil ile altyazisinin, tablo ustyazisi ile tablosunun sayfa
+    sonunda ayrilmasi MDPI'nin acikca yasakladigi seylerden.
+    """
+    pPr = p._p.get_or_add_pPr()
+    pPr.append(OxmlElement("w:keepNext"))
     return p
 
 
@@ -102,6 +116,10 @@ def tablo_ekle(d, satirlar):
     t.style = "Table Grid"
     t.alignment = WD_TABLE_ALIGNMENT.CENTER
     for i, sat in enumerate(hucreler):
+        trPr = t.rows[i]._tr.get_or_add_trPr()
+        trPr.append(OxmlElement("w:cantSplit"))
+        if i == 0:
+            trPr.append(OxmlElement("w:tblHeader"))
         for j in range(n):
             hucre = t.cell(i, j)
             hucre.text = ""
@@ -124,6 +142,7 @@ def sekil_ekle(d, no):
         p.alignment = WD_ALIGN_PARAGRAPH.CENTER
         p.paragraph_format.space_after = Pt(2)
         p.add_run().add_picture(yol, width=Cm(15.0 if len(dosyalar) == 1 else 12.0))
+        birlikte(p)
         kondu = True
     if not kondu:
         return
@@ -199,6 +218,22 @@ if __name__ == "__main__":
     for sat in blok_metni("Authors"):
         paragraf(d, sat, GOVDE_PT, WD_ALIGN_PARAGRAPH.LEFT, sonra=2)
 
+    # HIGHLIGHTS PDF'DE VARDI, DOCX'TE YOKTU. ON kumesi onu atlıyordu;
+    # yani ayni kusurun -- zorunlu bir on maddenin uretilen belgeye hic
+    # girmemesi -- ikinci kopyasi, bu kez gonderilecek olan dosyada.
+    # Sira mksurum.py ile ayni: Title, Authors, Highlights, Abstract, Keywords.
+    vurgu = blok_metni("Highlights")
+    if not vurgu:
+        raise SystemExit("DUR -- Highlights bulunamadi; MDPI bunu zorunlu tutuyor")
+    for sat in vurgu:
+        if sat.strip().startswith("- "):
+            for madde in re.split(r"(?:^|\s)- ", sat.strip())[1:]:
+                paragraf(d, "\u2022  " + madde.strip(), KUCUK_PT,
+                         WD_ALIGN_PARAGRAPH.JUSTIFY, sonra=3, girinti=14)
+        elif sat.strip():
+            paragraf(d, sat.strip(), KUCUK_PT, WD_ALIGN_PARAGRAPH.LEFT,
+                     once=6, sonra=3)
+
     ozet = blok_metni("Abstract")
     p = d.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
     p.paragraph_format.space_before = Pt(10)
@@ -268,7 +303,10 @@ if __name__ == "__main__":
         elif beyan_kipi[0] and t in ("p", "h3"):
             beyanlar.append((t, i))
         elif icinde and t == "p":
-            paragraf(d, i)
+            par = paragraf(d, i)
+            # Tablo ustyazisi kendi tablosuyla ayni sayfada kalsin.
+            if re.match(r"^\*\*Table \d+\.\*\*", i):
+                birlikte(par)
             for m in re.finditer(r"Figure (\d+)", i):
                 n = m.group(1)
                 if n in CAP and n not in sekil_sirasi:

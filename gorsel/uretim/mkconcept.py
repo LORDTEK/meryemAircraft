@@ -59,5 +59,5 @@ ax.set_title("Three bills — and the moves that convert one into another",
 ax.text(0.1,-0.05,"Every remedy surveyed here reduces one bill by increasing another.\n"
         "The measured instance: removing 30 % of drag at a cost of 5 % of mass moved the range by under 2 %.",
         fontsize=9.8,color=MUT,linespacing=1.6)
-fig.tight_layout(); fig.savefig(OUT+"/sekil03-uc-fatura.png",dpi=300,bbox_inches="tight")
-fig.savefig(OUT+"/sekil03-uc-fatura.svg",bbox_inches="tight"); print("Sekil 3")
+fig.tight_layout(); fig.savefig(OUT+"/sekil04-uc-fatura.png",dpi=300,bbox_inches="tight")
+fig.savefig(OUT+"/sekil04-uc-fatura.svg",bbox_inches="tight"); print("Sekil 4")

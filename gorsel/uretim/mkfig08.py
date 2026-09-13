@@ -1,88 +1,64 @@
 import matplotlib; matplotlib.use("Agg")
-import matplotlib.pyplot as plt, numpy as np, math
-from matplotlib.patches import Circle, Polygon
-OUT="/home/user/meryemAircraft/gorsel/cikti"; D2R=math.pi/180
+import matplotlib.pyplot as plt
+from matplotlib.patches import Circle, FancyArrowPatch
+OUT="/home/user/meryemAircraft/gorsel/cikti"
 plt.rcParams.update({"font.family":"DejaVu Sans","font.size":11,
+ "axes.edgecolor":"#3A4046","text.color":"#1C2024",
  "figure.facecolor":"white","axes.facecolor":"white","savefig.facecolor":"white"})
-INK="#1C2024"; MUT="#6E7C87"; A="#2F6F8F"; R="#B03A2E"; TEAL="#1F8A8A"
+b2=1.7264; L=0.71; Dm=1.20; Dt=0.20
+INK="#1C2024"; A="#2F6F8F"; R="#B03A2E"; MUT="#6E7C87"; GR="#C6CCD1"
 
-# --- planform (Sekil 6 ile ayni yasalar) ---
-rc,sr,st,ste,crop=0.97,45.0,35.0,25.0,67.0
-def conv_span():
-    lo,hi=0.1,60*rc
-    for _ in range(200):
-        mid=(lo+hi)/2; n=3000; step=mid/n; x=0.0; y=0.0; hit=None
-        for i in range(n):
-            s=(sr+(st-sr)*min((y+step/2)/mid,1))*D2R
-            x+=math.tan(s)*step; y+=step
-            if rc+y*math.tan(ste*D2R)-x<=0: hit=y; break
-        if hit is None: lo=mid
-        else: hi=mid
-        if abs(hi-lo)<1e-7: break
-    return (lo+hi)/2
-conv=conv_span(); half=conv*crop/100
-n=600; ys=np.linspace(0,half,n); LE=np.zeros(n); acc=0.0
-for i in range(1,n):
-    step=ys[i]-ys[i-1]
-    s=(sr+(st-sr)*min((ys[i]-step/2)/conv,1))*D2R
-    acc+=math.tan(s)*step; LE[i]=acc
-TE=rc+ys*math.tan(ste*D2R)
-
-# --- serit ---
-zA0=rc*0.15; L=rc*1.20
-uu=np.linspace(0,1,300); sx=uu*L; sz=zA0+uu*L
-# --- iz siniri: 0.67 -> 0.47, kok veteri boyunca ---
-r0,r1=0.67,0.47
-def rz(z): return np.where(z<=rc, r0+(r1-r0)*np.clip(z,0,rc)/rc, r1)
-# kesisim
-uc=(r0-(r0-r1)*zA0/rc)/(L+(r0-r1)*L/rc)
-xc,zc=uc*L, zA0+uc*L
-print(f"yari-aciklik {half:.4f} m   serit dis ucu {L:.3f} m = %{100*L/half:.1f}")
-print(f"iz: %{100*r0/half:.1f} -> %{100*r1/half:.1f} yari-aciklik")
-print(f"kesisim: u={uc:.3f} ({100*uc:.1f}% serit boyu)  x={xc:.3f} m = %{100*xc/half:.1f} yari-aciklik")
-
-fig,ax=plt.subplots(figsize=(9.6,8.2))
-zz=np.linspace(0,1.45,300); rr=rz(zz)
-ax.fill_betweenx(zz,-rr,rr,color="#E7F2F2",zorder=1)
-ax.plot(rr,zz,color=TEAL,lw=1.5,ls=(0,(5,3)),zorder=3)
-ax.plot(-rr,zz,color=TEAL,lw=1.5,ls=(0,(5,3)),zorder=3)
-poly=np.concatenate([np.stack([ys,LE],1),np.stack([ys[::-1],TE[::-1]],1)])
-polym=poly.copy(); polym[:,0]*=-1
-for pp in (poly,polym):
-    ax.add_patch(Polygon(pp,closed=True,fc="#F5F0E2",ec="#B9AE93",lw=1.6,zorder=2))
-ax.add_patch(Circle((0,0),0.60,fill=False,ec=A,lw=2.0,zorder=4))
-for sd in (1,-1):
-    inb=uu<=uc; outb=uu>=uc
-    ax.plot(sd*sx[inb],sz[inb],color=TEAL,lw=5.0,solid_capstyle="round",zorder=6)
-    ax.plot(sd*sx[outb],sz[outb],color=R,lw=5.0,solid_capstyle="round",zorder=6)
-ax.plot([xc,-xc],[zc,zc],"o",ms=8,mfc="white",mec=INK,mew=1.8,zorder=7)
+fig,ax=plt.subplots(figsize=(9.8,7.4))
+# kanat (on gorunusten ince bir sey)
+ax.plot([-b2,b2],[0,0],lw=5,color="#E4DCC8",solid_capstyle="round",zorder=2)
+ax.plot([-b2,b2],[0,0],lw=1.0,color="#B9AE93",zorder=3)
+# ana pervane
+ax.add_patch(Circle((0,0),Dm/2,fill=False,ec=A,lw=2.4,zorder=4))
+ax.plot([0],[0],"o",ms=7,color=A,zorder=5)
+# dikmeler + uc pervaneleri
+for sx in (-1,1):
+    ax.plot([sx*b2,sx*b2],[-L,L],lw=2.0,color=MUT,zorder=3)
+    for sy in (-1,1):
+        ax.add_patch(Circle((sx*b2,sy*L),Dt/2,fill=False,ec=R,lw=2.2,zorder=4))
+        ax.plot([sx*b2],[sy*L],"o",ms=4,color=R,zorder=5)
+# olculer
+def dim(x0,y0,x1,y1,txt,off=0.0,c=INK,ha="center",va="center",fs=10.5):
+    ax.annotate("",xy=(x1,y1),xytext=(x0,y0),
+                arrowprops=dict(arrowstyle="<->",color=c,lw=1.2,shrinkA=0,shrinkB=0))
+    ax.text((x0+x1)/2,(y0+y1)/2+off,txt,ha=ha,va=va,fontsize=fs,color=c,
+            bbox=dict(fc="white",ec="none",pad=1.6))
+dim(-b2,-1.72,b2,-1.72,"span  $b$ = 3.453 m",0.0)
+# yatis/sapma kolu: sapmanin kolu YARI ACIKLIK, yunuslamanınki cerceve boyu
+dim(0,-1.32,b2,-1.32,"$L_y$ = $b/2$ = 1.726 m",0.0,A)
+dim(b2+0.30,0,b2+0.30,L,"$L_p$ = 0.71 m",0.0,MUT)
+dim(b2+0.72,-L,b2+0.72,L,f"{2*L:.2f} m",0.0,MUT)
+ax.annotate("",xy=(Dm/2,0.80),xytext=(-Dm/2,0.80),
+            arrowprops=dict(arrowstyle="<->",color=A,lw=1.2))
+ax.text(0,0.87,"$D$ = 1.20 m",ha="center",fontsize=10.5,color=A,
+        bbox=dict(fc="white",ec="none",pad=1.6))
+ax.text(-b2-0.34,L,"$d$ = 0.20 m",ha="right",va="center",fontsize=10.5,color=R)
 # etiketler
-ax.annotate("main propeller\n$D$ = 1.20 m",xy=(-0.44,-0.41),xytext=(-2.30,-0.60),
-            fontsize=10.4,color=A,ha="left",va="center",linespacing=1.4,
-            arrowprops=dict(arrowstyle="-",color=A,lw=0.9))
-ax.annotate("inboard 46 % of the strip lies inside\nthe slipstream  →  authority at zero\nairspeed, where $q_\\infty$ is nil",
-            xy=(0.291,0.437),xytext=(0.92,-0.60),fontsize=10.2,color=TEAL,ha="left",va="center",
-            linespacing=1.5,arrowprops=dict(arrowstyle="->",color=TEAL,lw=1.1))
-ax.annotate("outboard 54 % lies outside it\n→  roll in cruise",
-            xy=(-1.02,1.16),xytext=(-2.38,0.44),fontsize=10.2,color=R,ha="left",va="center",
-            linespacing=1.5,arrowprops=dict(arrowstyle="->",color=R,lw=1.1))
-ax.annotate("2 cm",xy=(0.02,0.155),xytext=(-0.62,-0.08),fontsize=10,color=INK,
-            ha="right",va="center",arrowprops=dict(arrowstyle="->",color=INK,lw=0.9))
-ax.annotate("6 cm  ·  outer end at\n67 % of semi-span",xy=(1.164,1.305),xytext=(1.42,1.66),
-            fontsize=10,color=INK,ha="left",va="center",linespacing=1.45,
-            arrowprops=dict(arrowstyle="->",color=INK,lw=0.9))
-ax.annotate("slipstream boundary\n0.67 m  →  0.47 m",xy=(0.52,1.62),xytext=(0.10,2.24),
-            fontsize=10.4,color=TEAL,ha="center",va="center",linespacing=1.45,
-            arrowprops=dict(arrowstyle="->",color=TEAL,lw=1.0))
-ax.plot([half],[TE[-1]],"|",ms=11,color=MUT,mew=1.6)
-ax.text(half+0.06,TE[-1]+0.16,"tip\n$b/2$ = 1.73 m",ha="center",va="top",fontsize=9.6,
-        color=MUT,linespacing=1.35)
-ax.set_xlim(-2.40,2.30); ax.set_ylim(2.45,-0.95); ax.set_aspect("equal"); ax.axis("off")
-ax.set_title("Roll strip and the main-propeller slipstream — view from below",
-             loc="left",fontsize=12.8,fontweight="bold",pad=8)
-ax.text(-2.40,2.62,"One device, two regimes. The strip is on the lower surface, inclined at 45°, "
-        "and deploys on–off.\nIn hover the slipstream supplies the dynamic pressure "
-        "($q = T/A$ = 433 Pa) that the freestream cannot.",
-        fontsize=9.6,color=MUT,linespacing=1.7,va="top")
-fig.savefig(OUT+"/sekil08-kanatcik-iz.png",dpi=300,bbox_inches="tight")
-fig.savefig(OUT+"/sekil08-kanatcik-iz.svg",bbox_inches="tight"); print("Sekil 8 yazildi")
+ax.text(0,-0.68,"thrust pair\n(all propulsion)",ha="center",va="top",fontsize=10.5,color=A,linespacing=1.4)
+ax.text(-b2-0.34,-L,"control\npairs",ha="right",va="center",fontsize=10.5,color=R,linespacing=1.4)
+# ---- moment blogu: diyagramin ALTINDA ----
+ax.axhline(-2.04,xmin=0.03,xmax=0.97,color=GR,lw=0.9)
+ax.text(0,-2.22,"All thrust vectors are parallel to the body $x$ axis:   "
+        r"$\mathbf{F}=(F_x,\,0,\,0)$",ha="center",va="top",fontsize=11.5,color=INK)
+ax.text(-1.30,-2.54,r"pitch",ha="left",va="top",fontsize=11,color=INK,fontweight="bold")
+ax.text(-0.62,-2.54,r"$M_y = z\,F_x$      upper vs lower pairs, arm $L_p$ = 0.71 m"
+        "\n" r"                   $2TL_p$ = 23.0 N m",
+        ha="left",va="top",fontsize=11,color=INK,linespacing=1.5)
+ax.text(-1.30,-3.02,r"yaw",ha="left",va="top",fontsize=11,color=A,fontweight="bold")
+ax.text(-0.62,-3.02,r"$M_z = -y\,F_x$     left vs right pairs, arm $b/2$ = 1.726 m"
+        "\n" r"                   $2TL_y$ = 55.9 N m  —  2.43 $\times$ the pitch moment",
+        ha="left",va="top",fontsize=11,color=A,linespacing=1.5)
+ax.text(-1.30,-3.50,r"roll",ha="left",va="top",fontsize=11,color=R,fontweight="bold")
+ax.text(-0.62,-3.50,r"$M_x = y F_z - z F_y = 0$    identically, at every thrust setting",
+        ha="left",va="top",fontsize=11,color=R)
+ax.set_xlim(-2.95,3.05); ax.set_ylim(-3.82,1.15); ax.set_aspect("equal"); ax.axis("off")
+ax.set_title("Propeller placement and moment arms — front view",
+             loc="left",fontsize=12.5,fontweight="bold",pad=6)
+fig.tight_layout()
+fig.savefig(OUT+"/sekil08-moment-kollari.png",dpi=300,bbox_inches="tight")
+fig.savefig(OUT+"/sekil08-moment-kollari.svg",bbox_inches="tight")
+print("Sekil 8 yazildi")

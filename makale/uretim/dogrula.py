@@ -112,14 +112,14 @@ esit("askı gucu orani = kutle orani (L^3.5 degil)", 216.2 / 10.9, 20.0, tol=0.0
 esit("cap/aciklik: hafif", 1.20 / 3.453, 0.35, tol=0.02)
 esit("cap/aciklik: agir", 5.40 / 11.55, 0.47, tol=0.02)
 
-# ------------------------------------------------- Tablo 4 (6.4) tutarliligi
-print("\n=== Tablo 4 " + "=" * 46)
+# ---------------------------------------------- Tablo 15 (3.9) tutarliligi
+print("\n=== Tablo 15 " + "=" * 45)
 # metinde tam yuzdeye yuvarli — tolerans yarim puan
 for tr, P, yuzde in ((2, 221.5, 1.02), (3, 65.6, 0.30), (4, 27.7, 0.13), (5, 14.2, 0.07)):
-    esit(f"Tablo 4, {tr} s — askı gucunun kesri", P / 216.2, yuzde,
+    esit(f"Tablo 15, {tr} s — aski gucunun kesri", P / 216.2, yuzde,
          tol=0.005 / max(yuzde, 0.07))
 # M = I alpha  ->  P ~ 1/t^3 degil, itki 1/t^2, guc T^1.5 -> 1/t^3
-esit("Tablo 4 olcegi: P(2s)/P(4s) ~ 2^3", 221.5 / 27.7, 8.0, tol=0.05)
+esit("Tablo 15 olcegi: P(2s)/P(4s) ~ 2^3", 221.5 / 27.7, 8.0, tol=0.05)
 
 # --------------------------------------------- gecis simulasyonu tablolari (7.4)
 print("\n=== gecis tablolari " + "=" * 38)

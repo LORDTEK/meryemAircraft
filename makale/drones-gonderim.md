@@ -91,8 +91,14 @@ kalmadığı. Yukarıdaki tablo makine denetimi; şablona özgü biçim kaymalar
 | `meryemAircraft-ek.pdf` | `makale/pdf/` | yedek |
 | `sekil01`…`sekil12` | `gorsel/cikti/` | **Figures**, ayrı ayrı, yüksek çözünürlüklü |
 
-Şekiller denetlendi: on üçünün hepsi ≥1500 piksel genişlikte, dokuz tanesi
-300 dpi gömülü. MDPI'ın alt sınırı 1000 piksel ya da 300 dpi — hepsi geçiyor.
+Şekiller yeniden numaralandı (ilk atıf sırasına göre) ve dosya adları da
+döndü; numara ile ad artık tutuyor. On üç dosyanın hepsi, `.docx` içinde
+yerleştirildikleri genişlikte **387 dpi'ın üstünde**; en düşüğü Şekil 6, en
+yükseği Şekil 5 (694 dpi). Üç boyutlu görünüşler bunun için yeniden
+üretildi — önceki sürümde Şekil 6 yalnızca 258 dpi veriyordu ve MDPI'ın
+300 dpi alt sınırının altındaydı. Dokuzunun ayrıca vektör (`.svg`) sürümü
+var; MDPI çizgi grafiklerinde vektörü tercih ediyor, o dokuzu `.svg` olarak
+yükle.
 **Ayrı dosya olarak da yükle**, PDF'in içinde gömülü olması yetmiyor.
 
 ---

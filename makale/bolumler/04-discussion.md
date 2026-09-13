@@ -7,7 +7,9 @@ Sections 4.3 to 4.7 are limitations, ordered by whether they could change a conc
 ## 4.1 Context
 
 The following aircraft occupy the same mass range. They are listed to locate the reference
-designs in a real field, not to rank them.
+designs in a real field, not to rank them. Table 21 lists them.
+
+**Table 21.** Aircraft occupying the same mass range as the two reference designs.
 
 | Aircraft | MTOW | Payload | Payload fraction |
 |---|---:|---:|---:|
@@ -113,7 +115,9 @@ conclusion drawn from it was too strong.** A heavier buffer raises take-off mass
 hover power, which raises the buffer again; at constant disc loading that feedback is linear
 rather than divergent, so it accumulates to a finite answer and the answer is not where the
 subtraction pointed. Closing the loop — holding wing and disc loading, holding the fuel fraction
-so that range is preserved, and rebuilding the component budget at each step — gives:
+so that range is preserved, and rebuilding the component budget at each step — gives (Table 22):
+
+**Table 22.** Take-off mass, buffer mass, range and payload as the buffer specific power is varied, with the sizing loop closed at each step.
 
 | Buffer specific power | Take-off mass at 13 kg payload | Buffer | Range | Payload if held at 50 kg |
 |---|---:|---:|---:|---:|
