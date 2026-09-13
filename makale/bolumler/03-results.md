@@ -143,8 +143,29 @@ by 0.70, so 0.599 falls in the collapse and no design in this family sits exactl
 design that *meets* the hover requirement lies at c_l ≤ 0.68, and **the least draggy of them gives
 0.0153** — three and a half times the 0.0043 charged for the tip frames, and sixty-two percent of
 the total zero-lift drag the sizing assumes. The two fastest rows are still discarded on their own
-terms, the section data being incompressible where their tips are not; the 0.68 row at Mach 0.77
-is marginal on the same ground and is quoted as a lower bound for that reason as well.
+terms, the section data being incompressible where their tips are not.
+
+**The 0.68 row runs at tip Mach 0.76, which is marginal for the same reason, so the correction
+was applied rather than assumed.** The section polar was recomputed with a Prandtl–Glauert lift
+correction, a Korn drag-divergence Mach number and a fourth-power wave-drag increment, and the
+zero-torque shaft speed was searched again rather than held fixed. The solver used for this was
+first run with the correction disabled and reproduced the uncorrected result exactly, so the two
+figures differ only in the polar:
+
+| | Shaft speed | Tip Mach | ΔC_D0, eight discs |
+|---|---:|---:|---:|
+| Incompressible section data | 25 046 rpm | 0.76 | 0.01535 |
+| Compressibility-corrected | 24 958 rpm | 0.76 | **0.01541** |
+
+**The figure moves by four tenths of one percent**, and two mechanisms explain why. The lift
+correction steepens the section lift-curve slope, so the blade reaches the same zero-torque state
+at a *lower* shaft speed — 24 958 against 25 046 — and the profile drag falls with the square of
+the local velocity, offsetting part of the wave term. More importantly, a free-wheeling blade
+sits at almost zero section lift by construction, which raises the drag-divergence Mach number to
+about 0.74 through the lift term in the Korn relation; at Mach 0.76 the wave increment is then of
+order 10⁻⁶. **The compressibility penalty that would fall on a loaded blade does not fall on this
+one.** The value is therefore reported as a figure rather than as a lower bound, and the
+comparisons built on it in Sections 3.6 and 4.4 do not need re-deriving for this reason.
 
 The mechanism does not depend on the solver. A propeller designed for hover has low pitch; left
 free at 30 m s⁻¹ it must spin fast before its sections reach zero incidence, and at that speed
@@ -342,16 +363,20 @@ bill from the range column altogether. Fixing the fuel *mass* makes range invers
 to take-off mass; fixing take-off mass and payload leaves fuel as the residual. These are three
 different questions, and the answers separate:
 
-| Range relative to the tail-sitter | Fixed fuel fraction | Fixed fuel mass | Fixed MTOW and payload |
+| Range relative to the tail-sitter, **rotors charged** | Fixed fuel fraction | Fixed fuel mass | Fixed MTOW and payload |
 |---|---:|---:|---:|
-| B — lift + cruise | −14.4 % | −36.5 % | −72.6 % |
-| C — tilt | **+12.0 %** | +0.2 % | −19.1 % |
+| B — lift + cruise | **+21.1 %** | −5.4 % | −44.9 % |
+| C — tilt | **+58.3 %** | +49.2 % | +35.7 % |
 
-Against lift-plus-cruise the conclusion is the same under every rule and grows more emphatic as
-the rule tightens, and the drag term driving it is a wind-tunnel result rather than an
-assumption. Against tilt it is not: of the twelve cells S6 reports, the tilting layout leads in
-three clearly and a fourth by two tenths of a percent, which is a tie rather than a lead;
-every one of them requires its nacelles, pivots,
+*(Before the rotor term was charged these rows read −14.4 / −36.5 / −72.6 and +12.0 / +0.2 /
+−19.1. The earlier figures are kept in Supplementary S6 so the size and direction of the
+correction can be read off; they are not the result.)*
+
+Against lift-plus-cruise the conclusion now depends on the rule: the tail-sitter leads under two
+of the three and loses the third, where equal fuel fractions expose its lower cruise efficiency.
+Against tilt it no longer leads at all: with the rotor term charged it leads under all three
+rules, where before it led in three of the twelve cells S6 reports and tied a fourth. Every one
+of those leads still requires its nacelles, pivots,
 actuators and hover-pitched blades to be credited as aerodynamically free. **No result from this
 section should be quoted without the rule it was computed under**, and no claim of superiority
 over the tilting family is made here in either direction.
