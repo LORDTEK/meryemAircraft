@@ -28,19 +28,19 @@ ediyor.]*
 ## Abstract
 
 Hybrid vertical take-off and landing (VTOL) aircraft pay for runway independence in cruise
-efficiency. This paper treats that cost as architectural and develops it as an
-accounting framework: the penalty is charged in three
-coupled currencies — hover hardware carried through cruise, its drag when exposed, and
-continuous power sized by a condition holding for some two percent of the flight — and each
-remedy surveyed reduces one by raising another. The escape condition follows in four parts: the
-same hardware, in the same orientation, doing the same job, with the hover peak drawn from a
-buffer. meryemAircraft, an uncrewed tail-sitting blended-wing body, satisfies that condition
-for these three charges and is sized at 50 kg and 1000 kg from one set of equations. Against a lift-plus-cruise layout it closes the same mission
-at forty-two percent lower take-off mass; against a tilting layout the ranking reverses between
-sizing contracts, so three are reported. The aircraft is not shown to be flyable: its mass
-budget closes only on a battery specific power 3.8 times the highest rate yet measured on a
-flown pack, and transition controllability rests on a pitching moment no current method
-predicts reliably. The framework does not depend on that outcome.
+efficiency. This paper treats that cost as architectural as an accounting framework: the
+penalty is charged in three coupled currencies — hover hardware carried through cruise, its drag
+when exposed, and continuous power sized by a condition holding two percent of the flight —
+and each remedy surveyed reduces one by raising another. Escape requires the same hardware, in
+the same orientation, doing the same job, with the hover peak drawn from a buffer.
+meryemAircraft, an uncrewed tail-sitting blended-wing body, satisfies this and is sized at 50 and 1000 kg from one set of equations. Against a lift-plus-cruise layout it closes the same mission
+at forty-two percent lower take-off mass on the assumed buffer, twenty percent on the highest
+measured one; against a tilting layout the ranking reverses between sizing contracts, so three
+are reported. The aircraft is not shown to be flyable. Its 50 kg budget closes only at 3.8 times
+the highest rate yet measured on a flown pack, and at that rate re-closes 38 percent heavier; its
+attitude rotors' free-wheeling drag is computed here and is not negligible; and transition
+controllability rests on a pitching moment no current method predicts reliably. The framework
+does not depend on that outcome.
 
 *[Yukarısı ~200 kelimeye indirilmiş MDPI sürümü — dergi "about 200 words maximum"
 diyor ve bunu teknik ön denetimde uyguluyor. Yapı başlıksız ama Background →
@@ -121,7 +121,8 @@ hesaplanmış değerler özette bağlamsız durur.]*
 >   surveyed here reduces one by raising another.
 > - A tail-sitting blended-wing body whose single coaxial nose pair serves both regimes
 >   satisfies the escape condition and, sized against a lift-plus-cruise layout on
->   wind-tunnel drag, closes the same mission at forty-two percent lower take-off mass.
+>   wind-tunnel drag, closes the same mission at twenty to forty-two percent lower take-off
+>   mass — the wider figure conditional on a battery buffer no flown pack has yet reached.
 >
 > **What are the implications of the main findings?**
 >

@@ -442,7 +442,9 @@ are listed so that they can be:
    carried out and is reported in Section 3.10: it gives a wing-and-body C_D0 of 0.01475
    with the Spalart–Allmaras closure and 0.01201 – 0.01253 with k-ω SST — a spread of
    eighteen percent between the closures that nothing in the solutions resolves — and it
-   leaves the assumed 0.0248 conservative in every case. The dominant term is the
+   leaves the assumed 0.0248 conservative against the airframe in every case — but that
+   solution carries no rotors, and with the free-wheeling discs of Section 3.3 added the
+   assumption is no longer conservative against the aircraft. The dominant term is the
    turbulence model, and it is larger than first reported because the two models were
    subsequently paired at the same wall resolution rather than at two different ones.
    **What it does not settle** is, first, the transition state — the solution is fully

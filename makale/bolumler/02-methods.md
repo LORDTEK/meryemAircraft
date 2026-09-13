@@ -241,7 +241,8 @@ thrust, which costs a control channel. A counter-rotating pair does not produce 
 The pairs are of fixed geometry: no cyclic pitch, no collective, no variable mechanism. **This
 has a consequence for the tip pairs in cruise that Section 3.3 works out** — unable to feather,
 they must either turn at the zero-shaft-torque condition or be stopped, and the difference
-between those two states is most of the aircraft's zero-lift drag. The torque balance is exact
+between those two states is a substantial fraction of the aircraft's zero-lift drag;
+Section 3.3 computes both ends of it rather than assuming the lower one. The torque balance is exact
 at cruise rather than hover, so a small residual remains in hover.
 
 The arrangement has a second consequence the transition analysis depends on. Because the two

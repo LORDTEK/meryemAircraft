@@ -46,6 +46,17 @@ zero — but acquiring the entry climb now takes twice as long, a rotation begun
 worse than reported, and the take-off margin and the attitude authority are drawn from the same
 four propellers and compete for them.
 
+**A second correction did remove it, and that is the sharper limitation of the two.** The
+point-mass model prescribes the attitude and so cannot charge for the time the aircraft spends
+rotating into it. Solved instead with rotational dynamics and a finite control moment, and with
+the aerodynamic pitching moment set to exactly zero so that nothing is borrowed, the light
+design loses **5.4 m** at the same reference condition where the point-mass model reports none,
+and the loss grows rather than shrinks as the controller is tightened. The zero-altitude-loss
+result is therefore a property of the model that produced it. What replaces it is not a
+prediction — the aerodynamic moment that would make it one is the quantity Section 4 says no
+current method supplies — but a floor: the manoeuvre costs altitude even in the most favourable
+case that can be constructed.
+
 **What this paper offers is a configuration and its numbers, not a validated aircraft.** There
 is no wind-tunnel data here and no flight test. Three of the analyses Section 4 lists as tests
 of these results have been carried out, and they are named so that the count can be checked

@@ -3265,3 +3265,115 @@ Taban satır zinciri doğruluyor: −9,19° burulma ve 10,24° hücum açısı, 
 kurulu "dokuz derece washout" sonucu. Bağımsız modül `kararlilik.py` — hücum
 açısında ikiye bölen ayrı bir çözücü — aynı burulmada **10,24°** ve C_m = −3×10⁻⁵
 veriyor.
+
+
+---
+
+# Tur 16 — dort dis okuma; ikisi kendi sayimi curuttu, biri ucuncu kez hayal gordu
+
+## Qwen, ust uste UCUNCU tur, yine getirmedigi dosya hakkinda
+
+"IMRaD yeniden yapilandirmasi canli `makale-v5.md`'de YOK, dosya hala dokuz
+numarali bolum tasiyor ve ikinci bolum hala *Background: seventy years of
+attempts*" dedi ve incelemeyi durdurdu.
+
+Dosyada bes bolum var, ikincisi *Materials and Methods*, ve "seventy years of
+attempts" ifadesi dosyada **hic gecmiyor**. Diger uc YZ ayni dosyada bes bolum
+gordu.
+
+Ama hatanin TOHUMU bizdendi ve bulundu: Giris'in sonunda IMRaD tasimasindan
+kalma olu bir yol haritasi duruyordu — *"The remainder of the paper is organised
+as follows. Section 1 reviews seventy years of attempts..."* Kendini isaret eden,
+yanlis bir cumle. Qwen muhtemelen onu okuyup etrafina bir bolum yapisi uydurdu.
+Cumle silindi (tarihsel inceleme zaten §1'in govdesinde, satir 134).
+
+## DeepSeek 1.4 — turun en degerli bulgusu, ve bizim aleyhimize
+
+Manset serbest donme direnci 0,0085'ti ve **FM = 0,27** olan tasarimdan
+geliyordu. Oysa makale hover gucunu her yerde **FM = 0,599** uzerinden kuruyor.
+Yani makale, kullanamayacagini kendi soyledigi pervaneden alinti yapip kendi
+maliyetini kucuk gosteriyordu.
+
+Ara deger almak yerine kosturuldu. Once ikiye bolme denendi ve **gecersizdi**:
+FM gurultulu gorunuyordu (ayni c_l'de 0,633 ve 0,557). Determinizm sinamasi
+yapildi — her tasarim iki kez kuruldu:
+
+| c_l | FM (1) | FM (2) | ayni? | dC_D0 |
+|---|---|---|---|---|
+| 0,55 | 0,646 | 0,646 | EVET | 0,02375 |
+| 0,60 | 0,645 | 0,645 | EVET | 0,01989 |
+| 0,64 | 0,641 | 0,641 | EVET | 0,01742 |
+| 0,68 | 0,633 | 0,633 | EVET | 0,01535 |
+| 0,70 | 0,350 | 0,350 | EVET | 0,01264 |
+| 0,85 | 0,270 | 0,270 | EVET | 0,00847 |
+
+Cozucu deterministik. Gurultu degil, **ucurum**: FM c_l ≈ 0,69'da 0,633'ten
+0,350'ye dusuyor, ve 0,599 tam o ucurumun ICINE dusuyor. Yani bu ailede FM
+0,599'a tam oturan tasarim yok. Hover sartini SAGLAYAN her tasarim c_l ≤ 0,68
+ve hepsi **dC_D0 ≥ 0,0153** veriyor.
+
+Manset 0,0085 → **0,0153**. Uc cercevelerinin (0,0043) uc buçuk kati.
+
+## Ve bunun zinciri kopardigi yer — DeepSeek 1.3
+
+S1'in surukleme kurulusunda **rotor satiri hic yoktu**. Eklenince:
+
+| | alt | ust |
+|---|---|---|
+| eski toplam | 0,0131 | 0,0210 |
+| rotorla | 0,0216 | **0,0380** |
+
+Varsayilan C_D0 = 0,0248. Eskiden brakete gore **ustteydi** ve uc bolum buna
+"muhafazakar" diyordu. Simdi braketin **ICINDE** — ust uctan %53 iyimser.
+
+Seyir L/D, 3.8'in menzilleri ve 3.6'nin mimari karsilastirmasi hepsi 0,0248
+uzerine kurulu ve **hicbiri yeniden turetilmedi**. Makalenin en buyuk acik isi
+artik bu ve oyle yazildi.
+
+## DeepSeek 1.5 — iki tarafsiz nokta, ve pesinden cikan daha kotu sey
+
+Makale iki yerde 0,859 m diyordu, benim yeni duyarlilik tabanim 0,8668 m. Fark
+gercekti ama sebebi DeepSeek'in dedigi degil: 0,859 **burulmasiz** planform,
+0,867 ise **trime burulmus** — ucagin ucacagi geometri.
+
+Pesine dusunce daha kotusu cikti. Hepsi savunulabilir sekiz cozucu secimi
+(geometri × moment referansi × hucum acisi araligi) arasinda:
+
+    x_np 0,8581 – 0,8668 m,  marj %12,3 – %13,6,  sacilma %1,34 MAC
+
+Dogrusal kuramda bu secimlerin HICBIRI tarafsiz noktayi oynatamaz. Oynatiyorlar
+cunku VLM sirkulasyonda dogrusal ama hucum acisinda degil. Ag inceltmesi bunu
+%0,26 oynatiyordu — yani **agdan bes kat buyuk bir belirsizlik vardi ve
+olculmemisti**.
+
+Bu **kendi gecen turdaki metnime karsi**: "%5 esigi 33 derecede" yazmistim.
+Dogru, ama tarafsiz nokta zaten %1,34 MAC'tan iyi belirlenmiyor — yani 9
+derecelik yeniden dagilima denk. Duyarlilik tablosunun tarafsiz nokta sutunu
+**yontemin kendi gurultu tabaninin icinde**. Denge burulmasinda boyle bir sorun
+yok: her sekilde 1e-6 artikla cozuluyor.
+
+## Grok 1.1 — sayi dogru cikti ama itiraz hakliydi
+
+Grok 50 kg sutununun 9,2 kg'ini curutmeye calisti: tampon 7,78 kg, fazlasi 5,98
+kg, 13 − 5,98 = 7,0 kg dedi. Tampon hesabi **birebir dogru**. Ama bütce faydali
+yukun USTUNDE 2,2 kg dagitilmamis pay birakiyor (kalan 15,2 kg); tampon once onu
+yiyor, sonra yuku. 15,2 − 5,98 = 9,2. Sayi duruyor.
+
+Itiraz yine de hakliydi: **o aritmetik yayinlanmamisti**, ve 9,2 kg rakami
+yapisal payin TAMAMINI harciyor — burkulma, torsiyon, baglanti elemanlari,
+yapistirici ve boyanin sigacagi 2,2 kg'in tamami. Kosul yazildi.
+
+## Uc YZ'nin bagimsiz olarak ayni yere bastigi iki yer
+
+Ozet ve Highlights, §4.4'un curuttugu iki cumleyi tasiyordu: kosulsuz "%42" ve
+"butce yalnizca 3,8 katinda kapanir". Ikisi de duzeltildi. Ozet 215 kelime
+(sinir 215) — dar gecti.
+
+## Kalan kucukler
+
+§3.5 defteri kontrol pervaneleri icin "seyir akimina girmez" diyordu; §3.3 tam
+tersini hesaplamisti. §2.9 ve §3.3 "zerre kaldirmasiz surukleme direncinin
+COGU" diyordu. §3.6 "ucunde onde" diyordu, dorduncu hucre +%0,2 ile berabere.
+S4.7 "profillerden bagimsiz — 5,4, 6,6 ve 6,3 m" diyordu; uc farkli sayi
+"bagimsiz" degildir. Sonuc bolumu donme dinamigi sonucunu hic anmiyordu.
+Hepsi duzeltildi.

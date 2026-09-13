@@ -105,6 +105,15 @@ so that range is preserved, and rebuilding the component budget at each step —
 | **1.5 kW kg⁻¹, measured thermal ceiling** | **68.9 kg** | **10.7 kg** | **1 600 km** | **9.2 kg** |
 | 5.63 kW kg⁻¹, assumed here | 50.0 kg | 1.8 kg | 1 600 km | 13.0 kg |
 
+The right-hand column is the same loop run the other way and it needs its arithmetic stated,
+because the figure is not a subtraction from the payload. Take-off demand at 50 kg is 11.66 kW at
+the bus, so a 1.5 kW kg⁻¹ buffer masses 7.78 kg against the 1.8 kg already budgeted. The extra
+5.98 kg does not come off the 13 kg payload directly: the component build-up leaves **2.2 kg
+unallocated above the payload**, and the buffer takes that first. Payload falls by the remaining
+3.8 kg, to 9.2. **That figure therefore spends the whole of the structural margin** — the 2.2 kg
+into which Section 4.4 below says buckling, torsion, local load introduction, fasteners, adhesive
+and paint must all fit. Read without that condition the column is too kind by 2.2 kg.
+
 **At the highest rate yet measured on a flown pack the aircraft exists.** It is 38 percent
 heavier than the reference design, it carries a buffer of 15.6 percent of take-off mass rather
 than 3.6, and its range is unchanged because the fuel fraction is what sets range. Held instead
@@ -154,7 +163,13 @@ The planform's sweep, taper and thickness distributions were **chosen, not optim
 centre of gravity is a packaging assumption. The zero-lift drag coefficient of 0.0248 and the
 span efficiency of 0.85 are assumptions; Section 3.10 bounds both by calculation and neither
 replaces its assumption — the span efficiency computes to **0.817, optimistic by 3.9 percent**,
-worth 1.4 percent of cruise lift-to-drag ratio and of the ranges quoted. Torque balance is exact
+worth 1.4 percent of cruise lift-to-drag ratio and of the ranges quoted. **The drag assumption is
+the more serious of the two and it moved this round.** Counting the free-wheeling rotors of
+Section 3.3, which no earlier version of the build-up contained, puts the computed bracket at
+0.0216 to 0.0380 with 0.0248 inside it rather than above it. Every lift-to-drag ratio, range and
+architectural comparison in this paper is computed on 0.0248; **re-deriving them on a bracket that
+now surrounds it is the largest single piece of unfinished work here**, and it is more likely to
+move the comparative results of Section 3.6 than anything else left open. Torque balance is exact
 at cruise only, leaving a small residual in hover. The comparative sizing of Section 3.6 is
 conditional on the two competing architectures being modelled at the same level of detail as
 this one, which they are not: they are modelled from published fractions.
