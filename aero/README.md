@@ -3530,3 +3530,89 @@ Kutu kenarlari `n=20` istasyon listesine gomuluydu; 28 istasyonlu orta agda
 yuzler kutular arasinda SIRAYLA dusuyor ve duzenli bir alternatif desen
 uretiyordu (0,56 / 1,15 / 0,56 / 1,11 ...). Fizik gibi gorunuyordu, bolme
 kusuruydu. Istasyon sayisi artik vakadan aliniyor.
+
+
+---
+
+# Tur 19 — dis okuma bir MEKANIZMA hatasi gosterdi, pesi bir KOD hatasina cikti
+
+## Qwen'in itirazi ve nerede durdugu
+
+Qwen, 3.9'un "Fatura 2 olcekle kuculuyor cunku uc diskleri kendilerinden
+hizli buyuyen bir kanat alanina referansli" cumlesinin YANLIS oldugunu
+soyledi. Dogruladim, hakli:
+
+    hafif  disk 0,2513 m2 / kanat 1,98 m2  = 0,1270
+    agir   disk 2,8205 m2 / kanat 22,24 m2 = 0,1268
+
+Oran **birebir ayni**. Mekanizma o degil.
+
+Qwen'in yerine koydugu ("buyuk rotorlar daha yavas doner") de tam degil:
+devir dususe de UC HIZLARI neredeyse esit (262 karsi 269 m/s).
+
+## Pesine dusunce cikan sey cok daha kotu
+
+Gercek mekanizma DOLGUNLUK. Ama agir rotorun dolgunlugu neden 3,6 kat
+dusuk? Palet veterine baktim:
+
+    hafif  R 0,100 m   ort veter 13,9 mm   veter/R = 0,139
+    agir   R 0,335 m   ort veter 11,9 mm   veter/R = 0,035
+
+335 mm yaricapta 12 mm veter. Sebep:
+
+    c_yeni = np.clip(..., 0.004, 0.040)     # MUTLAK metre
+
+Kirpma 0,20 m'lik hafif rotor icin secilmis (veter/R 0,04 - 0,40) ve
+orada dogru. Ayni MUTLAK arali_ 0,67 m'lik rotora uygulaninca fiziksel
+olarak sacma bir palet uretiyor. Kirpma iki ucta da BAGLIYORDU.
+
+## Bunun URETTIGI sahte bulgu
+
+Kirpma yaricapa goreli yapilinca:
+
+| | FM | dC_D0 |
+|---|---|---|
+| eski (kirpma kusurlu) | 0,536 - 0,547 | 0,0033 |
+| **duzeltilmis** | **0,652 - 0,660** | **0,0051** |
+
+**Agir hattin uc rotorlari 0,599'u rahatca asiyor.** "Agir tasarim kendi
+guc tahsisinin verimini saglamiyor" bulgusu YOKTU -- benim sabit
+kirpmamdi. Ve DORT DIS OKUMANIN DORDU de o bulguyu "gonderim engeli"
+olarak isaretlemisti. Hicbiri sebebini bulamazdi; ancak kodu acan
+bulabilirdi.
+
+Hafif hat DEGISMEDI: kendi yaricapinda goreli ve mutlak sinirlar ayni,
+butun hafif sayilar haneye kadar yeniden uretiliyor. Bu, duzeltmenin
+baska bir sey kirmadiginin sinamasi.
+
+## Gercek mekanizma, olculmus
+
+    dC_D0  ~  sigma R^2 / (q S)
+
+R^2/S geometrik benzerlikle SABIT (0,127). Oynayan iki terim:
+dolgunluk 0,075 -> 0,044 (1,73 kat) ve seyir dinamik basinci 1,78 kat.
+Carpim 3,08; olculen oran 3,04. Fatura 2 hala olcekle kuculuyor ama
+sebep kanadin diski gecmesi degil.
+
+## Ve bir apples-to-oranges daha -- Grok yakaladi
+
+Kutle avantaji "%37" diye yaziliydi: A rotorlu (54,5 kg) karsi B
+ROTORSUZ (86,0 kg). Iki farkli aerodinamik taban. Ikisini de braketin
+her ucunda ayni suruklemede cozunce:
+
+    braket alt   A 51,1  B 75,5   -> %32,3
+    braket ust   A 53,9  B 83,9   -> %35,7
+
+**%32 - 36**, %37 degil, %42 hic degil. Ozet, Highlights, 3.6, 4.4 ve
+S2 duzeltildi.
+
+## Kalan duzeltmeler
+
+- 2,6 derece artik "esik" degil, oldugu sey: birim cevrimi. Uc okuma da
+  ayni seyi soyledi -- esik deyip asmak, kapiyi kendin koyup sonra
+  onemsiz ilan etmek gibi okunuyor.
+- Ucdaki uyusmazligin INTEGRAL niceliklere etkisi sinirlandi (Qwen):
+  uc yukun onda birini tasiyor, yerel uyusmazlik dortte bir, yani
+  aciklik verimi / yatis sonumu / tarafsiz nokta ~%2,5 tasiyor.
+- Ozet 195 kelime (dergi "about 200" diyor; 214'ten indi).
+- Agir hat menzili 1649 -> **1571 km**.

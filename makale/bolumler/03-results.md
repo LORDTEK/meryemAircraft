@@ -324,9 +324,13 @@ real and it runs against this configuration.**
 **Under the first contract the ranking reverses.** On equal fuel fractions the lift-plus-cruise
 layout now flies twenty-one percent further, because A's cruise efficiency has fallen below B's:
 0.632 of the clean value against B's 0.765. A retains the advantage under the other two contracts
-and retains a mass advantage under all three — 54.5 kg against 86.0, which is **thirty-seven
-percent lower rather than forty-two** — but the claim that this architecture leads on range under
-every rule does not survive. Against the tilting layout, which was already ahead in three of
+and retains a mass advantage under all three, though **not the advantage an earlier version
+quoted**. That version compared this configuration with its rotors charged, at 54.5 kg, against a
+lift-plus-cruise layout at 86.0 kg sized on the *uncharged* drag — 37 percent, on two different
+aerodynamic bases. Re-solving both layouts on the same drag at each end of the bracket gives 51.1
+against 75.5 kg at the favourable end and 53.9 against 83.9 at the adverse one: **a mass advantage
+of 32 to 36 percent, not 37 and not the 42 of the original assumption.** The claim that this
+architecture leads on range under every rule does not survive either. Against the tilting layout, which was already ahead in three of
 twelve cells, A now trails under all three contracts.
 
 **A second correction pushes the other way, and it is larger.** The comparison above holds the
@@ -543,30 +547,36 @@ smaller charge than the light design pays:
 
 | | Published | Rotors charged |
 |---|---:|---:|
-| Free-wheeling ΔC_D0, eight discs | assumed negligible | **0.0033** |
-| Zero-lift drag coefficient | 0.0200 | 0.0233 |
-| Cruise L/D | 13.60 | **12.37** |
-| Take-off mass | 1 037 kg | 1 063 kg |
-| **Range** | **1 813 km** | **1 649 km** |
+| Free-wheeling ΔC_D0, eight discs | assumed negligible | **0.0051** |
+| Zero-lift drag coefficient | 0.0200 | 0.0251 |
+| Cruise L/D | 13.60 | **11.78** |
+| Take-off mass | 1 037 kg | 1 077 kg |
+| **Range** | **1 813 km** | **1 571 km** |
 
 The published row is what the sizing loop returns with no rotor charge, and it reproduces the
-13.6 and 1 814 km of the table above, which is the check that this is the same calculation.
-**The charge is five times lighter than the light design's 0.0154**, and the reason is scale: the
-discs grow more slowly than the wing they are referenced to, so the same architecture pays less of
-this particular bill as it gets larger. That is a property worth stating because it runs opposite
-to the mass bill, which scales the other way.
+13.6 and 1 814 km of the table above, which is the check that this is the same calculation. The
+charge is **a third of the light design's 0.0154**, and Section 3.9 works out why.
 
-**A second result from the same calculation is adverse and is not a drag result.** No blade in the
-family reaches the hover figure of merit of 0.599 that this design's power budget assumes: the best
-is 0.547, and the designs that come closest do so at tip Mach numbers above unity, where the
-section data underneath the solver do not apply. **The heavy design's tip pairs therefore do not
-meet the efficiency their own power allocation is built on**, and the twelve percent of hover power
-assigned to them in Section 2.12 is insufficient by roughly a tenth. This is not corrected in the
-table above, because correcting it means re-sizing the tip pairs rather than adjusting a
-coefficient, and that is a design change rather than a calculation.
+**An earlier version of this section carried a second result here — that no blade in the heavy
+family reaches the hover figure of merit of 0.599 the design's own power budget assumes, the best
+being 0.547. That result was an artefact of this study's own code and is withdrawn.** The
+blade-element routine sized the blade chord inside absolute limits of 4 to 40 mm. Those bounds were
+chosen for the light design's 0.20 m rotor, where they correspond to chord-to-radius ratios of 0.04
+to 0.40 and bind sensibly. Applied unchanged to the heavy design's 0.67 m rotor, the same absolute
+bounds give a mean chord of 12 mm on a 335 mm radius — a chord-to-radius ratio of 0.035, a blade
+too slender to be a design — and the clip was binding at both ends. **With the limits expressed
+relative to the radius, as they should have been, the heavy family reaches a figure of merit of
+0.65 to 0.66 across every design tried, comfortably above the 0.599 required**, and the
+free-wheeling drag rises from the 0.0033 the error produced to the 0.0051 in the table above.
+
+The light design is unaffected: at its own radius the relative and absolute limits are identical,
+and every light figure in this paper reproduces to the digit. **The error is recorded rather than
+quietly repaired because it had manufactured a finding — a heavy design unable to hover on its own
+power allocation — that did not exist**, and because a reader comparing this version with the
+deposited earlier one is entitled to know which of the two numbers to believe and why.
 
 The heavy design still has a longer range than the light one despite a shorter endurance, and the
-margin survives charging both lines: 1 649 km against 1 173 to 1 442 km. Both effects come from the
+margin survives charging both lines: 1 571 km against 1 173 to 1 442 km. Both effects come from the
 same source: the larger aircraft cruises faster and, at a higher Reynolds number, achieves a lower
 zero-lift drag coefficient and therefore a better lift-to-drag ratio. Nothing in the architecture
 was changed to obtain this.
@@ -587,14 +597,33 @@ must then grow as L³ rather than L², which for a fixed number of propellers is
 architecture has two ways out and uses both: a coaxial pair may be added at no architectural
 cost, since every pair is torque-balanced on its own; and geometric similarity is not held.
 
-**The three bills do not scale together, and Bill 2 scales in the configuration's favour.**
-The free-wheeling charge computed in Sections 3.3 and 3.8 falls from 0.0154 at 50 kg to 0.0033 at
-1000 kg, because the tip discs are referenced to a wing area that grows faster than they do. The
-mass bill scales the other way, and the power bill is held flat by construction. **This is the
-framework's own prediction operating on its own case**: the three currencies are separable, so
-they need not move together, and an architecture can be getting better in one while getting worse
-in another. It also means the light design is the harder case for this configuration and the
-heavy design the easier one, which is the opposite of the usual expectation for a tail-sitter.
+**The three bills do not scale together, and Bill 2 scales in the configuration's favour.** The
+free-wheeling charge computed in Sections 3.3 and 3.8 falls from 0.0154 at 50 kg to 0.0051 at
+1000 kg while the mass bill rises and the power bill is held flat by construction.
+
+**The mechanism is not the obvious one, and an earlier version of this paragraph gave the obvious
+one and was wrong.** That version said the tip discs are referenced to a wing area that grows
+faster than they do. They are not: the eight discs total 0.251 m² against 1.98 m² of wing at
+50 kg and 2.82 m² against 22.24 m² at 1000 kg, which is 0.127 in both cases. **The disc-to-wing
+area ratio is constant to three digits, and contributes nothing.** What the charge actually
+follows is
+
+$$\Delta C_{D0} \;\propto\; \frac{\sigma R^{2}}{q\,S},$$
+
+in which the geometric ratio *R²/S* is the constant just quoted, so only two terms move: the blade
+solidity falls from 0.075 to 0.044 as the larger rotor meets its thrust with proportionally less
+blade, and the cruise dynamic pressure rises by a factor 1.78 between 30 and 40 m s⁻¹. Their
+product, 1.73 × 1.78 = 3.08, is the predicted ratio; the computed ratio is 3.04. **The bill falls
+because the reference dynamic pressure rises and the blade thins, not because the wing outgrows
+the disc.**
+
+**What this does and does not establish.** The three currencies were computed independently at two
+design points and moved in opposite directions; nothing in the definitions of Section 2 required
+them to. That is evidence *consistent with* the separability the framework asserts, on one case —
+not a verification of separability as a general property, which a single instantiation cannot
+supply. What it does establish for this configuration is a consequence worth stating on its own:
+**the light design is the harder case and the heavy design the easier**, which is the opposite of
+the usual expectation for a tail-sitter.
 
 **The propeller therefore grows faster than the airframe.** Wing loading rises from 25.3 to
 45.0 kg m⁻², so span grows by 3.35 against the 4.50 by which the main propeller must grow. The
@@ -786,20 +815,23 @@ The tip-region residual barely moves across a threefold change in cell count, wh
 signature of a real disagreement rather than a discretisation error.
 
 **Converted into the units of the sensitivity above, the converged residual is 2.75 degrees of
-equivalent redistribution over the inner nine tenths of the span, against a threshold of 2.6.**
+equivalent redistribution over the inner nine tenths of the span.**
 The conversion is measured rather than asserted — the same half-sine perturbation was applied to
 the vortex-lattice solution and its effect on the normalised loading ratio recorded — and both
 sides are measured as standard deviations rather than as extremes, because the two solutions carry
 different numbers of spanwise stations and an extreme-value measure would reward whichever had
 more. That choice is not cosmetic: on the same converged solution the extreme-value measure gives
-2.80 degrees and a coarser common sampling gives 1.87, which straddle the threshold and would let
-the measurement decide the result.
+2.80 degrees and a coarser common sampling gives 1.87, and the two sit on opposite sides of the
+one-degree trim-twist mark, so the measurement rather than the physics would have decided what the
+paper reported.
 
-**The threshold is therefore exceeded, by six percent, and the consequence of exceeding it is
-smaller than the exceedance suggests.** The threshold is defined as the redistribution that would
-move the trim twist by one degree. Carrying 2.75 degrees through the measured chain moves the trim
-twist by 1.04 degrees, the span efficiency by 2.1 percent — from 0.817 to 0.799 — and the cruise
-lift-to-drag ratio and every range computed from it by **0.8 percent**. That is an order of
+**What that number is, and what it is not.** The 2.6 degrees is not an acceptance criterion the
+solution has failed; it is a unit conversion — the redistribution that corresponds to one degree
+of trim twist through the measured sensitivity of 0.38 degrees per degree. Read as a criterion it
+invites the reply that the paper exceeded its own gate and then argued the gate did not matter.
+Read as what it is, the calculation is a calibration: **a measured redistribution of 2.75 degrees
+converts to 1.04 degrees of trim twist, a 2.1 percent change in span efficiency from 0.817 to
+0.799, and 0.8 percent on the cruise lift-to-drag ratio and on every range computed from it.** That is an order of
 magnitude inside the drag bracket the same section already applies, which moves range by nine to
 twenty-six percent. **The vortex-lattice trim chain is therefore not overturned by this
 comparison; it is displaced by less than the uncertainty already carried around it**, and the
@@ -807,9 +839,16 @@ paper reports the exceedance rather than rounding it away.
 
 What the comparison does establish against the configuration is the tip. The disagreement outboard
 of η = 0.90 survives refinement undiminished, and the vortex-lattice method is where it would be
-expected to fail — at the tip vortex, on a section of finite thickness modelled as a sheet. No
-quantity in this paper is taken from the outboard tenth of the span alone, so nothing here depends
-on it, but a strip-based estimate that did would be unsafe.
+expected to fail — at the tip vortex, on a section of finite thickness modelled as a sheet.
+
+**No quantity here is taken from the outboard tenth alone, but three are integrals over the span
+that include it, and saying "nothing depends on the tip" would be too quick.** The span
+efficiency, the roll damping and the neutral point all integrate the loading, so the tip enters
+them weighted by its share of the load. That share is about a tenth, and the local disagreement
+there is about a quarter, so the integrated quantities carry roughly 2.5 percent from this source
+— inside the drag bracket applied to the same numbers and of the same order as the trim
+displacement above. A strip-based estimate drawn from the tip region by itself would not be
+safe; none is made.
 
 **Three limits belong with all of this.** No viscous drag is taken from these runs, which use wall
 functions. The twisted geometry is not solved at all, because the mesh generator accepts stations
