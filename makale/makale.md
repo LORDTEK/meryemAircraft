@@ -9,8 +9,8 @@ Meryem Gülmen <sup>1,\*</sup>, Berke Gülmen <sup>1</sup>, Ömer Gülmen <sup>1
   surveyed here reduces one by raising another.
 - A tail-sitting blended-wing body whose single coaxial nose pair serves both regimes
   satisfies the escape condition and, sized against a lift-plus-cruise layout on
-  wind-tunnel drag, closes the same mission at twenty to forty-two percent lower take-off
-  mass — the wider figure conditional on a battery buffer no flown pack has yet reached.
+  wind-tunnel drag, closes the same mission at thirty-seven to forty-two percent lower
+  take-off mass, though not at longer range under every sizing contract.
 **What are the implications of the main findings?**
 - Architectural comparisons change their ranking with the sizing contract chosen, so a
   ranking quoted without its contract is not a result; three contracts are reported here.
@@ -18,7 +18,7 @@ Meryem Gülmen <sup>1,\*</sup>, Berke Gülmen <sup>1</sup>, Ömer Gülmen <sup>1
   specific power 3.8 times the highest rate yet measured on a flown pack, and transition
   controllability rests on a pitching moment no current method predicts reliably.
 
-**Abstract.** Hybrid vertical take-off and landing (VTOL) aircraft pay for runway independence in cruise efficiency. This paper treats that cost as architectural as an accounting framework: the penalty is charged in three coupled currencies — hover hardware carried through cruise, its drag when exposed, and continuous power sized by a condition holding two percent of the flight — and each remedy surveyed reduces one by raising another. Escape requires the same hardware, in the same orientation, doing the same job, with the hover peak drawn from a buffer. meryemAircraft, an uncrewed tail-sitting blended-wing body, satisfies this and is sized at 50 and 1000 kg from one set of equations. Against a lift-plus-cruise layout it closes the same mission at forty-two percent lower take-off mass on the assumed buffer, twenty percent on the highest measured one; against a tilting layout the ranking reverses between sizing contracts, so three are reported. The aircraft is not shown to be flyable. Its 50 kg budget closes only at 3.8 times the highest rate yet measured on a flown pack, and at that rate re-closes 38 percent heavier; its attitude rotors' free-wheeling drag is computed here and is not negligible; and transition controllability rests on a pitching moment no current method predicts reliably. The framework does not depend on that outcome.
+**Abstract.** Hybrid vertical take-off and landing (VTOL) aircraft pay for runway independence in cruise efficiency. This paper treats that cost as architectural as an accounting framework: the penalty is charged in three coupled currencies — hover hardware carried through cruise, its drag when exposed, and continuous power sized by a condition holding two percent of the flight — and each remedy surveyed reduces one by raising another. Escape requires the same hardware, in the same orientation, doing the same job, with the hover peak drawn from a buffer. meryemAircraft, an uncrewed tail-sitting blended-wing body, satisfies this and is sized at 50 and 1000 kg from one set of equations. Against a lift-plus-cruise layout it closes the same mission at thirty-seven to forty-two percent lower take-off mass, depending on whether its attitude rotors' free-wheeling drag is charged; charging it reverses the range comparison under one of three sizing contracts. The aircraft is not shown to be flyable. Its 50 kg budget closes only at 3.8 times the highest rate yet measured on a flown pack, and at that rate re-closes 38 percent heavier; its attitude rotors' free-wheeling drag is computed here and is not negligible; and transition controllability rests on a pitching moment no current method predicts reliably. The framework does not depend on that outcome.
 
 **Keywords:** vertical take-off and landing; tail-sitter; blended wing body; uncrewed aerial vehicle; series hybrid propulsion; cruise efficiency; aircraft configuration design
 
@@ -1112,6 +1112,64 @@ architecture-specific mass differ. Under the first contract:
 | B — lift + cruise | 0.689 | 86.0 kg | 10.28 | 18.7 kW | 1 370 km |
 | C — tilt | 0.624 | 60.3 kg | **13.44** | 13.1 kW | **1 792 km** |
 
+**That table is built on a cruise-drag multiplier this paper has since shown to be incomplete,
+and re-deriving it reverses one of the three results.** Architecture A was charged 1/1.12 for its
+exposed hardware, a figure covering the tip frames alone. Architecture B was charged 13/17, which
+comes from a measured configuration and therefore already contains the drag of its lift rotors.
+The comparison was asymmetric, and Section 3.3 has now computed the term that was missing: the
+free-wheeling tip rotors add at least 0.0153 to zero-lift drag. Rebuilt from the same drag
+book-keeping that reproduces the original 1.12 to three digits, A's multiplier becomes **1/1.58**,
+its cruise lift-to-drag ratio falls from 12.00 to **8.49**, and its take-off mass rises to
+**54.5 kg**. B cannot escape this charge by stopping its rotors and A cannot: B's lift discs are
+horizontal in cruise and can be stopped with the blades aligned fore-and-aft, while A's are
+fixed-pitch tractors whose blades cannot be turned out of the flow at all. **The asymmetry is
+real and it runs against this configuration.**
+
+| Contract | B against A, as published | B against A, rotors charged |
+|---|---:|---:|
+| Fixed fuel fraction | −14.4 % | **+21.1 %** |
+| Fixed fuel mass | −36.5 % | −5.4 % |
+| Fixed MTOW and payload | −72.6 % | −44.9 % |
+
+**Under the first contract the ranking reverses.** On equal fuel fractions the lift-plus-cruise
+layout now flies twenty-one percent further, because A's cruise efficiency has fallen below B's:
+0.632 of the clean value against B's 0.765. A retains the advantage under the other two contracts
+and retains a mass advantage under all three — 54.5 kg against 86.0, which is **thirty-seven
+percent lower rather than forty-two** — but the claim that this architecture leads on range under
+every rule does not survive. Against the tilting layout, which was already ahead in three of
+twelve cells, A now trails under all three contracts.
+
+**A second correction pushes the other way, and it is larger.** The comparison above holds the
+battery buffer at four percent of take-off mass for all three architectures. Section 4.4 sizes
+that buffer on a measured pack instead, where it becomes roughly sixteen percent. Applying the
+same fraction to all three — B and C included, since charging only A would invert the very
+objection that motivated it — does not narrow A's margin. It widens it, because B's hover power
+per unit mass is the highest of the three and the buffer feeds back on itself through hover
+power:
+
+| Buffer fraction | A | B | C |
+|---|---:|---:|---:|
+| 4 % | 54.5 kg | 86.0 kg | 60.3 kg |
+| 12 % | 82.1 kg | 182.5 kg | 95.9 kg |
+| 16 % | 106.2 kg | 369 kg | 130.6 kg |
+| 18 % | 132.1 kg | 1 157 kg | 172.1 kg |
+| 20 % | 165.8 kg | **does not close** | 234.1 kg |
+
+**The entries for B beyond twelve percent are not masses and should not be read as masses.** They
+lie on a curve going vertical: B stops closing between eighteen and twenty percent, so its value
+at sixteen is set by how near that limit it sits rather than by anything structural. The
+reportable statement is the qualitative one — **on the highest specific power yet measured on a
+flown pack, the lift-plus-cruise layout is close to not closing at all, while this one closes at
+106 kg and goes on closing past twenty percent.** Section 4.4 estimates that margin at twenty
+percent by holding B fixed at 86 kg while A grows; that estimate is now superseded, and it was
+conservative rather than generous.
+
+**Neither correction cancels the other, and the paper does not claim they do.** They act on
+different contracts. The rotor drag costs A the range comparison under equal fuel fractions; the
+measured buffer costs B its ability to close at all. A reader taking one and not the other will
+reach a different conclusion from a reader taking both, which is why all four combinations are
+reported in the repository rather than a single replacement table.
+
 **The ordering depends on which contract is used, and that dependence is the result rather than
 an inconvenience.** Range in the sizing equation contains the fuel *fraction*, so holding the
 fraction fixed lets the heavier aircraft carry proportionally more fuel and removes the mass
@@ -1851,11 +1909,19 @@ at 50 kg, it carries 9.2 kg rather than 13. At the pack's *continuous* rating th
 converge at all for the take-off demand, so the sharper statement survives there.
 
 The correction cuts both ways and both should be stated. The reference design is not unreachable,
-which is what the earlier sentence implied; but the comparison that opens this paper is made at
-50 kg against a lift-plus-cruise layout at 86 kg, and at a measured pack that margin is 69 against
-86 — twenty percent rather than forty-two. **The forty-two percent figure is conditional on the
-buffer, not merely on the mass model**, and the competing layout would have to be re-sized on the
-same pack before any number replaced it. That re-sizing has not been done here.
+which is what the earlier sentence implied; and the comparison that opens this paper is made at
+50 kg against a lift-plus-cruise layout at 86 kg, so an obvious reading is that at a measured pack
+the margin falls to 69 against 86 — twenty percent rather than forty-two. **That reading is wrong,
+and it is wrong in this configuration's favour, which is why it is corrected here rather than
+left standing.** It grows A on the measured pack while holding B at a mass sized on the assumed
+one. Section 3.6 now re-sizes all three architectures on the same buffer fraction, and the
+lift-plus-cruise layout is the one that suffers: its hover power per unit mass is the highest of
+the three, the buffer feeds back through hover power, and somewhere between eighteen and twenty
+percent of take-off mass its budget stops closing altogether. **What the measured pack costs is
+not this architecture's margin but the competing architecture's existence.** The figure that does
+move against this paper is the rotor drag of Section 3.3, which takes the mass margin from
+forty-two percent to thirty-seven and reverses the range comparison under one of the three
+contracts.
 
 **The aircraft leaves the ground on its control propellers, and that is a dependency rather than
 a design feature.** Section 2.12 sizes hover power at thrust equal to weight, so the primary

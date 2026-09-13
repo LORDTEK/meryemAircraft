@@ -121,11 +121,19 @@ at 50 kg, it carries 9.2 kg rather than 13. At the pack's *continuous* rating th
 converge at all for the take-off demand, so the sharper statement survives there.
 
 The correction cuts both ways and both should be stated. The reference design is not unreachable,
-which is what the earlier sentence implied; but the comparison that opens this paper is made at
-50 kg against a lift-plus-cruise layout at 86 kg, and at a measured pack that margin is 69 against
-86 — twenty percent rather than forty-two. **The forty-two percent figure is conditional on the
-buffer, not merely on the mass model**, and the competing layout would have to be re-sized on the
-same pack before any number replaced it. That re-sizing has not been done here.
+which is what the earlier sentence implied; and the comparison that opens this paper is made at
+50 kg against a lift-plus-cruise layout at 86 kg, so an obvious reading is that at a measured pack
+the margin falls to 69 against 86 — twenty percent rather than forty-two. **That reading is wrong,
+and it is wrong in this configuration's favour, which is why it is corrected here rather than
+left standing.** It grows A on the measured pack while holding B at a mass sized on the assumed
+one. Section 3.6 now re-sizes all three architectures on the same buffer fraction, and the
+lift-plus-cruise layout is the one that suffers: its hover power per unit mass is the highest of
+the three, the buffer feeds back through hover power, and somewhere between eighteen and twenty
+percent of take-off mass its budget stops closing altogether. **What the measured pack costs is
+not this architecture's margin but the competing architecture's existence.** The figure that does
+move against this paper is the rotor drag of Section 3.3, which takes the mass margin from
+forty-two percent to thirty-seven and reverses the range comparison under one of the three
+contracts.
 
 **The aircraft leaves the ground on its control propellers, and that is a dependency rather than
 a design feature.** Section 2.12 sizes hover power at thrust equal to weight, so the primary

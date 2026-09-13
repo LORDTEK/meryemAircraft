@@ -15,7 +15,7 @@ study are in the repository the paper cites.
 - **Supplementary S3** — Control axes in full (6553 words)
 - **Supplementary S4** — Rotational authority, trim, and the transition envelope (8310 words)
 - **Supplementary S5** — The limitations in full (6724 words)
-- **Supplementary S6** — The three bills stated formally, and a comparative sizing (3000 words)
+- **Supplementary S6** — The three bills stated formally, and a comparative sizing (3123 words)
 
 ---
 
@@ -2636,8 +2636,16 @@ was computed under.** The tilting layout keeps its zero cruise-drag credit throu
 | B — lift + cruise | −14.4 % | −36.5 % | −72.6 % |
 | C — tilt | +12.0 % | +0.2 % | −19.1 % |
 
-Against lift-plus-cruise the conclusion is the same under every rule and grows more
-emphatic as the rule tightens. Against tilt it is not: the twelve percent advantage
+**These rows charge the tail-sitter for its tip frames and not for its rotors, and Section 3.3
+has since computed the rotor term.** Recharging it at 1/1.58 rather than 1/1.12 gives −14.4 →
+**+21.1 %**, −36.5 → −5.4 % and −72.6 → −44.9 % for the lift-plus-cruise layout, and puts the
+tilting layout ahead under all three rules. The reversal under the first rule is the one that
+matters: on equal fuel fractions the tail-sitter's cruise efficiency drops below the
+lift-plus-cruise layout's, 0.632 of clean against 0.765. The rows above are kept as published so
+that the size and direction of the correction can be read off, not because they still stand.
+
+Against lift-plus-cruise the conclusion was the same under every rule and grew more
+emphatic as the rule tightened; with the rotors charged it holds under two rules of three. Against tilt it is not: the twelve percent advantage
 becomes a tie when the two aircraft carry the same fuel, and a nineteen percent deficit
 when they are the same take-off mass carrying the same payload — because at 50 kg the
 tilting layout's empty fraction leaves 0.116 for fuel where the proposed configuration

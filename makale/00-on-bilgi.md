@@ -33,10 +33,10 @@ penalty is charged in three coupled currencies — hover hardware carried throug
 when exposed, and continuous power sized by a condition holding two percent of the flight —
 and each remedy surveyed reduces one by raising another. Escape requires the same hardware, in
 the same orientation, doing the same job, with the hover peak drawn from a buffer.
-meryemAircraft, an uncrewed tail-sitting blended-wing body, satisfies this and is sized at 50 and 1000 kg from one set of equations. Against a lift-plus-cruise layout it closes the same mission
-at forty-two percent lower take-off mass on the assumed buffer, twenty percent on the highest
-measured one; against a tilting layout the ranking reverses between sizing contracts, so three
-are reported. The aircraft is not shown to be flyable. Its 50 kg budget closes only at 3.8 times
+meryemAircraft, an uncrewed tail-sitting blended-wing body, satisfies this and is sized at 50 and 1000 kg from one set of equations. Against a lift-plus-cruise layout it closes the
+same mission at thirty-seven to forty-two percent lower take-off mass, depending on whether its
+attitude rotors' free-wheeling drag is charged; charging it reverses the range comparison under
+one of three sizing contracts. The aircraft is not shown to be flyable. Its 50 kg budget closes only at 3.8 times
 the highest rate yet measured on a flown pack, and at that rate re-closes 38 percent heavier; its
 attitude rotors' free-wheeling drag is computed here and is not negligible; and transition
 controllability rests on a pitching moment no current method predicts reliably. The framework
@@ -73,9 +73,10 @@ and serves as the case study: one coaxial pair at the nose gives all thrust in b
 regimes, four small pairs at the tips give attitude moments and the residual take-off thrust
 margin, and a deployable strip is
 assigned the roll that body-parallel thrust cannot produce. Sized against a lift-plus-cruise
-layout on wind-tunnel drag, it closes the same mission at forty-two percent lower take-off mass
-and seventeen percent greater range; against a tilting layout the comparison reverses between
-contracts and no superiority is claimed. Those are sizing results for an aircraft that has not
+layout on wind-tunnel drag, it closes the same mission at thirty-seven to forty-two percent lower
+take-off mass depending on whether its attitude rotors' free-wheeling drag is charged; charging it
+costs the range comparison under one of three sizing contracts. Against a tilting layout the
+comparison reverses between contracts and no superiority is claimed. Those are sizing results for an aircraft that has not
 been built: a three-dimensional solution bounds the zero-lift drag with a quantified sensitivity
 budget, but the component mass build-up closes the 50 kg design only on a battery specific power
 of 5.6 kW kg⁻¹, which is 3.8 times the highest rate yet measured on a flown pack, and it does not
@@ -121,8 +122,8 @@ hesaplanmış değerler özette bağlamsız durur.]*
 >   surveyed here reduces one by raising another.
 > - A tail-sitting blended-wing body whose single coaxial nose pair serves both regimes
 >   satisfies the escape condition and, sized against a lift-plus-cruise layout on
->   wind-tunnel drag, closes the same mission at twenty to forty-two percent lower take-off
->   mass — the wider figure conditional on a battery buffer no flown pack has yet reached.
+>   wind-tunnel drag, closes the same mission at thirty-seven to forty-two percent lower
+>   take-off mass, though not at longer range under every sizing contract.
 >
 > **What are the implications of the main findings?**
 >
