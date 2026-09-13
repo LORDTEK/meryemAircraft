@@ -274,6 +274,64 @@ architecture-specific mass differ. Under the first contract:
 | B — lift + cruise | 0.689 | 86.0 kg | 10.28 | 18.7 kW | 1 370 km |
 | C — tilt | 0.624 | 60.3 kg | **13.44** | 13.1 kW | **1 792 km** |
 
+**That table is built on a cruise-drag multiplier this paper has since shown to be incomplete,
+and re-deriving it reverses one of the three results.** Architecture A was charged 1/1.12 for its
+exposed hardware, a figure covering the tip frames alone. Architecture B was charged 13/17, which
+comes from a measured configuration and therefore already contains the drag of its lift rotors.
+The comparison was asymmetric, and Section 3.3 has now computed the term that was missing: the
+free-wheeling tip rotors add at least 0.0153 to zero-lift drag. Rebuilt from the same drag
+book-keeping that reproduces the original 1.12 to three digits, A's multiplier becomes **1/1.58**,
+its cruise lift-to-drag ratio falls from 12.00 to **8.49**, and its take-off mass rises to
+**54.5 kg**. B cannot escape this charge by stopping its rotors and A cannot: B's lift discs are
+horizontal in cruise and can be stopped with the blades aligned fore-and-aft, while A's are
+fixed-pitch tractors whose blades cannot be turned out of the flow at all. **The asymmetry is
+real and it runs against this configuration.**
+
+| Contract | B against A, as published | B against A, rotors charged |
+|---|---:|---:|
+| Fixed fuel fraction | −14.4 % | **+21.1 %** |
+| Fixed fuel mass | −36.5 % | −5.4 % |
+| Fixed MTOW and payload | −72.6 % | −44.9 % |
+
+**Under the first contract the ranking reverses.** On equal fuel fractions the lift-plus-cruise
+layout now flies twenty-one percent further, because A's cruise efficiency has fallen below B's:
+0.632 of the clean value against B's 0.765. A retains the advantage under the other two contracts
+and retains a mass advantage under all three — 54.5 kg against 86.0, which is **thirty-seven
+percent lower rather than forty-two** — but the claim that this architecture leads on range under
+every rule does not survive. Against the tilting layout, which was already ahead in three of
+twelve cells, A now trails under all three contracts.
+
+**A second correction pushes the other way, and it is larger.** The comparison above holds the
+battery buffer at four percent of take-off mass for all three architectures. Section 4.4 sizes
+that buffer on a measured pack instead, where it becomes roughly sixteen percent. Applying the
+same fraction to all three — B and C included, since charging only A would invert the very
+objection that motivated it — does not narrow A's margin. It widens it, because B's hover power
+per unit mass is the highest of the three and the buffer feeds back on itself through hover
+power:
+
+| Buffer fraction | A | B | C |
+|---|---:|---:|---:|
+| 4 % | 54.5 kg | 86.0 kg | 60.3 kg |
+| 12 % | 82.1 kg | 182.5 kg | 95.9 kg |
+| 16 % | 106.2 kg | 369 kg | 130.6 kg |
+| 18 % | 132.1 kg | 1 157 kg | 172.1 kg |
+| 20 % | 165.8 kg | **does not close** | 234.1 kg |
+
+**The entries for B beyond twelve percent are not masses and should not be read as masses.** They
+lie on a curve going vertical: B stops closing between eighteen and twenty percent, so its value
+at sixteen is set by how near that limit it sits rather than by anything structural. The
+reportable statement is the qualitative one — **on the highest specific power yet measured on a
+flown pack, the lift-plus-cruise layout is close to not closing at all, while this one closes at
+106 kg and goes on closing past twenty percent.** Section 4.4 estimates that margin at twenty
+percent by holding B fixed at 86 kg while A grows; that estimate is now superseded, and it was
+conservative rather than generous.
+
+**Neither correction cancels the other, and the paper does not claim they do.** They act on
+different contracts. The rotor drag costs A the range comparison under equal fuel fractions; the
+measured buffer costs B its ability to close at all. A reader taking one and not the other will
+reach a different conclusion from a reader taking both, which is why all four combinations are
+reported in the repository rather than a single replacement table.
+
 **The ordering depends on which contract is used, and that dependence is the result rather than
 an inconvenience.** Range in the sizing equation contains the fuel *fraction*, so holding the
 fraction fixed lets the heavier aircraft carry proportionally more fuel and removes the mass

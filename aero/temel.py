@@ -145,7 +145,8 @@ def boyutlandir(m, LD_temiz, g=GOREV, tur=60):
 # LEHINE ve makalenin aleyhine bir secim; kasitlidir.
 
 def mimariler(f_kaldirma_grubu=0.10, f_egme=0.05, tamponlu_hepsi=True,
-              C_LD=1.00, C_eta=1.00, B_govde_ek=0.00):
+              C_LD=1.00, C_eta=1.00, B_govde_ek=0.00, A_LD_carpan=None,
+              f_tampon=0.04):
     """f_kaldirma_grubu: B'nin ikinci tahrik grubunun MTOW kesri.
        f_egme:           C'nin egme mekanizmasinin MTOW kesri.
        C_LD, C_eta:      C'nin seyir L/D ve itki verimi carpanlari.
@@ -160,17 +161,18 @@ def mimariler(f_kaldirma_grubu=0.10, f_egme=0.05, tamponlu_hepsi=True,
     duyarlilik_C()."""
     return [
         Mimari("A  kuyruk ustu (makale)",
-               f_tampon=0.04, LD_carpan=1.0 / 1.12,
+               f_tampon=f_tampon,
+               LD_carpan=(1.0 / 1.12) if A_LD_carpan is None else A_LD_carpan,
                motor_hover=False,
                gerekce="6.2'nin butcesi; uc cerceveleri seyir suruklemesinin %12'si"),
         Mimari("B  lift + cruise",
-               f_tampon=0.04, f_ek=f_kaldirma_grubu,
+               f_tampon=f_tampon, f_ek=f_kaldirma_grubu,
                ek_ad="ikinci tahrik grubu", LD_carpan=13.0 / 17.0,
                f_govde_ek=B_govde_ek,
                motor_hover=not tamponlu_hepsi,
                gerekce="3.3 olcumu: L/D 17 -> 13; ek grup ve yapisal ek parametre"),
         Mimari("C  tilt",
-               f_tampon=0.04, f_ek=f_egme,
+               f_tampon=f_tampon, f_ek=f_egme,
                ek_ad="egme mekanizmasi", LD_carpan=C_LD, eta_carpan=C_eta,
                motor_hover=not tamponlu_hepsi,
                gerekce="IDEALLESTIRILMIS: seyirde sifir tilt cezasi varsayimi"),
@@ -277,9 +279,17 @@ def sabit_yakit(m, LD_temiz, m_yakit, g=GOREV, tur=200):
 
 
 def sozlesmeler(LD_temiz=13.44, C_LD=1.00, C_eta=1.00, f_egme=0.05,
-                f_kaldirma_grubu=0.10):
-    """Uc sozlesme yan yana. A her zaman payda."""
-    ms = mimariler(f_kaldirma_grubu, f_egme, True, C_LD, C_eta)
+                f_kaldirma_grubu=0.10, A_LD_carpan=None, f_tampon=0.04):
+    """Uc sozlesme yan yana. A her zaman payda.
+
+    A_LD_carpan: A'nin seyir L/D carpani. Varsayilan 1/1,12 YALNIZCA uc
+    cercevelerini faturalar. 3.3 serbest donen uc rotorlarini hesapladi
+    (dC_D0 >= 0,0153) ve o terim bu carpanda YOKTU -- oysa B'nin 13/17'si
+    OLCULMUS bir konfigurasyondan gelir ve kendi rotor suruklemesini
+    zaten icerir. Yani karsilastirma A'nin lehine egikti.
+    """
+    ms = mimariler(f_kaldirma_grubu, f_egme, True, C_LD, C_eta,
+                   A_LD_carpan=A_LD_carpan, f_tampon=f_tampon)
     ref = boyutlandir(ms[0], LD_temiz)
     m_yakit_A = ORTAK["f_yakit"] * ref["MTOW"]
     MTOW_A = ref["MTOW"]
