@@ -183,8 +183,14 @@ also, precisely, the configuration described in Section 2.
 
 ## 2.7 Overview
 
-The configuration satisfies the zero-bill condition of Section 2.6 directly rather than
-by compensation. The aircraft stands on its tail. Its entire airframe is a blended-wing
+**The configuration satisfies the zero-bill condition of Section 2.6 in its primary propulsor,
+and re-opens one of the three bills in its attitude system.** The distinction matters enough to
+state here rather than to leave to Section 3: the single coaxial nose pair meets all four
+conditions — same hardware, same orientation, same job, hover peak from a buffer — and it is that
+pair which carries the aircraft. The four attitude pairs do not. They are exposed in the cruise
+flow, they cannot be feathered, and Section 3.3 computes the drag they cost. **The instantiation
+is therefore partial, and reporting what the partial part costs is a substantial share of what
+Section 3 does.** What follows is the configuration that makes the primary pair possible. The aircraft stands on its tail. Its entire airframe is a blended-wing
 body: there is no cylindrical fuselage, and every part of the planform carries payload
 and produces lift. A single coaxial counter-rotating propeller pair at the nose
 produces all propulsive thrust, in hover and in cruise alike, without changing its

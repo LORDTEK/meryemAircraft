@@ -33,7 +33,8 @@ when exposed, and continuous power sized by a two-percent-of-flight condition, a
 reduces one by raising another. Escape requires the same hardware, in the same orientation,
 doing the same job, with the hover peak from a buffer. **The framework predicts that
 architectural rankings belong to sizing contracts rather than to architectures**, so three contracts are
-reported. An uncrewed tail-sitting blended-wing body instantiates it at two scales. Across a computed drag bracket it holds a 32 to 36 percent mass
+reported. An uncrewed tail-sitting blended-wing body instantiates it in its
+primary propulsor, at two scales. Across a computed drag bracket it holds a 32 to 36 percent mass
 advantage over a lift-plus-cruise layout under every contract but loses the range comparison
 under equal fuel fractions, a reversal driven by the free-wheeling drag of its own attitude
 rotors — a bill computed here rather than assumed. It is not shown to be flyable: the budget needs 3.8
@@ -127,9 +128,11 @@ hesaplanmış değerler özette bağlamsız durur.]*
 >
 > **What are the implications of the main findings?**
 >
-> - Architectural rankings are properties of the sizing contract, not of the architecture:
->   the ranking reverses between contracts and the reversal survives the full drag bracket,
->   so a ranking quoted without its contract is not a result.
+> - Architectural rankings are properties of the sizing contract, not of the architecture.
+>   Across the computed drag bracket the lift-plus-cruise layout leads on range under equal
+>   fuel fractions by 24 to 45 percent, the tail-sitter leads under equal take-off mass by 29
+>   to 43, and under equal fuel mass the sign changes inside the bracket. **A ranking quoted
+>   without its contract is not a result.**
 > - The configuration is not shown to be flyable: its 50 kg reference budget needs a battery
 >   specific power 3.8 times the highest rate yet measured on a flown pack, and re-closes 38
 >   percent heavier at that measured rate; transition controllability rests on a pitching

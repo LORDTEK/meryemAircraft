@@ -14,8 +14,10 @@ and naming the cause as the empty weight carried for hover.
 Stating the tax that way makes its escape condition explicit, and it has four parts: **it is
 charged unless hover and cruise are served by the same hardware, doing the same job, in the same
 orientation, with the hover peak drawn from a buffer rather than from permanently installed
-continuous power.** The configuration described here satisfies that condition rather than
-compensating for failing it. The aircraft rotates; nothing on the aircraft rotates relative to
+continuous power.** The configuration described here satisfies that condition **in the
+propulsor that carries it**, rather than compensating for failing it — and re-opens the drag bill
+in the attitude system that controls it, which is a result of this study rather than a caveat on
+it. The aircraft rotates; nothing on the aircraft rotates relative to
 it. A single coaxial pair at the nose provides all thrust in both regimes; four small coaxial
 pairs at the tips provide attitude moments and the take-off thrust margin; and a strip on the
 lower surface is assigned the one gap propellers cannot close — the rolling moment, which parallel thrust vectors cannot
@@ -62,7 +64,7 @@ is no wind-tunnel data here and no flight test. Three of the analyses Section 4 
 of these results have been carried out, and they are named so that the count can be checked
 against that section. A three-dimensional solution for the centre body narrowed the zero-lift drag without overturning the assumption. A component build-up closes the
 light design with 2.2 kg in hand, conditional on a shell areal density at or below 1.78 kg m⁻²
-*and* on a battery buffer no measured cell can yet supply, and does not close the heavy design.
+*and* on a battery buffer no measured cell can yet supply, and leaves the heavy design's closure undetermined.
 And a rotational check shows the tip propellers can turn the aircraft's own inertia through the
 transition with a margin of 1.49 at 50 kg and 1.57 at 1000 kg on the cheapest profile — **0.99
 and 1.05 on a smooth one**, and 1.14 and 0.76 at 50 kg if the tip thrust is recomputed on the

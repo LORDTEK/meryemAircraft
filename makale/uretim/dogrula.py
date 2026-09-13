@@ -185,3 +185,51 @@ print("\n" + "=" * 62)
 print(f"{kontrol} kontrol calisti, {len(hatalar)} sapma, gecis tablosunda {sap} sapma.")
 for ad, h, m2, s2 in hatalar:
     print(f"  SAPMA  {ad}: hesap {h:.4g} / metin {m2:.4g}  (%{100*s2:.1f})")
+
+# ---------------------------------------------------------------------
+# TEKRAR EDEN SAYILARIN BIREBIR AYNILIGI
+# ---------------------------------------------------------------------
+# NEDEN VAR. Son uc turun hatalarinin hepsi ayni sinifta: bir deger bir
+# bolumde guncellendi, oteki bolumlerde kalmadi. Surukleme braketi UC
+# yerde eski haliyle duruyordu (S1'in kendi nesri dahil, yani digerlerinin
+# kaynak gosterdigi yerde) ve alt sinir ucaǧın kullanamayacagi pervaneyi
+# tasiyordu. Disaridan iki okuma ayni turda yakaladi.
+#
+# Bu denetim onu makinaya devrediyor: asagidaki dizgelerin HER BIRI, gectigi
+# her dosyada ayni yazilisla gecmek zorunda; eski bir surumu kalmissa
+# uretim DURUR.
+import glob as _glob, os as _os, io as _io
+
+_KOK = _os.path.dirname(_os.path.dirname(
+    _os.path.dirname(_os.path.abspath(__file__))))
+
+_YASAK = {
+    "0.0216": "eski surukleme braketi alt siniri (kullanilamaz pervaneyle)",
+    "0.0380": "eski surukleme braketi ust siniri",
+    "0.0153": "eski rotor surukleme yuvarlamasi (0.0154 olmali)",
+    "0.0033": "eski AGIR rotor suruklemesi (kirpma kusurlu; 0.0051 olmali)",
+    "0.547":  "eski AGIR verim sayisi (kirpma kusurlu)",
+    "1 649":  "eski agir menzil (1 571 olmali)",
+    "12.37":  "eski agir L/D (11.78 olmali)",
+    "1800 km": "eski agir menzil, ikili kullanim beyaninda",
+}
+_dosyalar = (_glob.glob(_os.path.join(_KOK, "makale", "bolumler", "*.md"))
+             + _glob.glob(_os.path.join(_KOK, "makale", "ek", "*.md"))
+             + [_os.path.join(_KOK, "makale", "00-on-bilgi.md")])
+_bulunan = []
+for _f in _dosyalar:
+    _t = _io.open(_f, encoding="utf-8").read()
+    for _k, _neden in _YASAK.items():
+        if _k in _t:
+            # 0.00336 gibi uzun sayilarin icindeki yanlis eslesmeyi ele
+            if _k == "0.0033" and "0.00336" in _t and _t.count("0.0033") == _t.count("0.00336"):
+                continue
+            _bulunan.append((_os.path.basename(_f), _k, _neden))
+print()
+print("=== BAYAT SAYI DENETIMI ===")
+if _bulunan:
+    for _f, _k, _n in _bulunan:
+        print("  !! %s icinde '%s' — %s" % (_f, _k, _n))
+    sys.exit("Bayat deger bulundu; uretim durduruldu.")
+print("  ok  %d yasakli eski degerin hicbiri %d dosyada gecmiyor."
+      % (len(_YASAK), len(_dosyalar)))
