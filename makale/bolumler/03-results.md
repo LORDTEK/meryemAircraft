@@ -627,10 +627,50 @@ margin, which is the quantity the cancellation argument above was constructed to
 robust half of the chain; the trim twist, which that argument never addressed, is what a
 redistribution disturbs first.
 
-This does not measure the redistribution a RANS solution would find, and it is not offered as
-one. It converts an exposure that had no bound into a transfer coefficient: a reader holding an
-estimate of the redistribution can multiply. Section 4 keeps this among the open items for that
-reason, with its location changed.
+This does not measure the redistribution a RANS solution would find. It converts an exposure that
+had no bound into a transfer coefficient: a reader holding an estimate of the redistribution can
+multiply.
+
+**A Reynolds-averaged solution of this planform now supplies that estimate, and the answer falls
+across the threshold rather than cleanly on one side of it.** The untwisted planform was solved
+at the incidence where the vortex-lattice method returns the cruise lift coefficient, 6.69°, on a
+192 000-cell wall-function mesh, and the spanwise loading was extracted from the wall pressures.
+The face sum reproduces the case's own integrated lift coefficient exactly, which is the check
+that the extraction is not itself the result.
+
+| | Value |
+|---|---|
+| RANS lift coefficient | 0.354 |
+| Vortex-lattice lift coefficient | 0.450 |
+| Ratio *K_L* | **0.787** |
+| Local ratio *K(y)*, η = 0.05 to 0.91 | 0.740 – 0.816 |
+| *K(y)/K_L* over the same range | **0.940 – 1.037** |
+
+**Two things follow and they point in different directions.** The first is that the error is
+very nearly multiplicative: once the overall ratio is divided out, the local ratio holds to within
+five percent of unity across nine tenths of the span. That is the condition the cancellation
+argument of this section requires, and it is the first direct evidence for it rather than an
+assumption about it. The second is that **the overall ratio runs the other way from the published
+comparison this paper cites**: that source reports the vortex-lattice lift coefficient low by
+thirty to thirty-eight percent against RANS, whereas here it is high by twenty-seven percent. The
+two are different geometries solved at different fidelities and neither refutes the other, but
+the direction assumed in the earlier argument is not the direction found here.
+
+**Converted into the units of the sensitivity above, the residual is 1.6 degrees of equivalent
+redistribution — or 5.3 degrees if one outlying station is retained.** The conversion is measured
+rather than asserted: the same half-sine perturbation was applied to the vortex-lattice solution
+and its effect on the normalised loading ratio recorded, giving 0.0605 of scatter per degree.
+One station near the tip, at η = 0.94, departs from the others and carries the difference between
+the two figures by itself. Against the 2.6-degree threshold at which the trim twist would move by
+a degree, **the trim chain survives without that station and does not survive with it.**
+
+The station cannot be adjudicated from this run. It sits where the mesh is coarsest and nearest
+the tip closure, which makes a discretisation artefact plausible, but plausible is not
+demonstrated. **What would settle it is a grid-refinement study of this solution**, which is a
+smaller piece of work than the solution itself and is now the specific open item rather than the
+general one. The run reported here is a single wall-function mesh and is not grid-converged; no
+viscous drag is taken from it, and the twisted geometry is not solved at all, because the mesh
+generator accepts no twist per station.
 
 ## 3.11 A component build-up of the mass budget
 

@@ -195,9 +195,19 @@ redistribution moves the neutral point by 0.15 percent of mean chord and the tri
 degrees; the neutral point would need a redistribution of 33 degrees to matter and the trim twist
 one of 2.6. **The static margin — the quantity the cancellation argument exists to protect — is
 the robust half. The trim twist is thirteen times more sensitive and the argument never covered
-it.** What remains unmeasured is the size of the redistribution itself, which is what a RANS or
-panel solution of this planform would supply; until then the result is a transfer coefficient and
-not a closure.
+it.**
+
+**A Reynolds-averaged solution has since supplied the missing redistribution, and it lands on the
+threshold rather than clear of it.** The local loading ratio holds to within five percent of a
+constant across nine tenths of the span, which is direct support for the cancellation argument
+and the first evidence for it of any kind. Converted into the units of the sensitivity, the
+residual is **1.6 degrees of equivalent redistribution against a 2.6-degree threshold** — or 5.3
+degrees, above it, if one station near the tip is retained rather than treated as an artefact of
+a coarse mesh. **The exposure is therefore reduced but not closed, and what closes it is a
+grid-refinement study of that single solution rather than another solution.** Two further limits
+belong with it: the run is untwisted, because the mesh generator accepts no twist per station;
+and the overall lift ratio runs opposite to the published comparison cited above, which is a
+result the paper reports rather than reconciles.
 
 ## 4.6 What is sized but not closed
 
