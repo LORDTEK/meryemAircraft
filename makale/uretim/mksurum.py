@@ -1,5 +1,11 @@
 # -*- coding: utf-8 -*-
-"""v5 GONDERIM BELGELERINI KURAR -- makale-v5.md ve makale-v5-ek.md.
+"""GONDERIM BELGELERINI KURAR -- makale-<surum>.md ve makale-<surum>-ek.md.
+
+SURUM TEK YERDE. Betik once mkv5.py adiyla duruyordu ve cikti adlari da
+gomuluydu. Bir surum atlaninca "v6 ureten mkv5.py" gibi bayat bir isim
+kaliyor; bu depoda bayat isimlerin bir dis okuyucuyu var olmayan bir
+surumu tarif etmeye goturdugu gorulmustu. Surum asagida SURUM sabitidir
+ve dosya adlari ondan turer.
 
 NEDEN VAR. v5'in ilk surumu EL ILE toparlanmisti. Bunun bedelini odedik:
 disaridan dort bagimsiz okuma, govdedeki 5.5 tablosunun aslinda S6.1'in
@@ -18,6 +24,9 @@ gonderim/paylasim surumunu uretir. Ikisi ayni bolum dosyalarini okur.
 import os, re, sys
 
 BURA = os.path.dirname(os.path.abspath(__file__))
+
+SURUM = "v6"          # cikti adlari bundan turer
+
 MAKALE = os.path.abspath(os.path.join(BURA, ".."))
 sys.path.insert(0, BURA)
 from mkmakale import temizle, blok, turkce_denetle   # ayni ayiklama kurallari
@@ -108,8 +117,9 @@ longer version and is reproduced without abridgement.""", dizin,
 of the corrections made during the study are in the repository this paper cites."""]
 
 makale = "\n\n".join(parcalar) + "\n"
-turkce_denetle(makale, "makale-v5.md")
-open(os.path.join(MAKALE, "makale-v5.md"), "w", encoding="utf-8").write(makale)
+turkce_denetle(makale, "makale-%s.md" % SURUM)
+open(os.path.join(MAKALE, "makale-%s.md" % SURUM), "w",
+     encoding="utf-8").write(makale)
 
 # ------------------------------------------------------------ ek belgesi
 ek_bas = "\n\n".join([
@@ -123,13 +133,14 @@ study are in the repository the paper cites.""",
     "**Contents**", dizin])
 
 ek_belge = ek_bas + "\n\n---\n\n" + "\n\n---\n\n".join(ek_govde) + "\n"
-turkce_denetle(ek_belge, "makale-v5-ek.md")
-open(os.path.join(MAKALE, "makale-v5-ek.md"), "w", encoding="utf-8").write(ek_belge)
+turkce_denetle(ek_belge, "makale-%s-ek.md" % SURUM)
+open(os.path.join(MAKALE, "makale-%s-ek.md" % SURUM), "w",
+     encoding="utf-8").write(ek_belge)
 
 # ------------------------------------------------------------------ rapor
-print("makale-v5.md      %6d kelime  (govde %d, %d bolum)"
+print("makale-%s.md      %%6d kelime  (govde %%d, %%d bolum)" % SURUM
       % (kelime(makale), gsayi, len(bolumler)))
-print("makale-v5-ek.md   %6d kelime" % kelime(ek_belge))
+print(("makale-%s-ek.md   " % SURUM) + "%6d kelime" % kelime(ek_belge))
 for kod, _, _ in EKLER:
     print("   %-3s %6d" % (kod, ek_sayi[kod]))
 
