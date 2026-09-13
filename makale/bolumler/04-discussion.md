@@ -137,8 +137,9 @@ the three, the buffer feeds back through hover power, and somewhere between eigh
 percent of take-off mass its budget stops closing altogether. **What the measured pack costs is
 not this architecture's margin but the competing architecture's existence.** The figure that does
 move against this paper is the rotor drag of Section 3.3, which takes the mass margin from
-forty-two percent to thirty-seven and reverses the range comparison under one of the three
-contracts.
+forty-two percent to between thirty-two and thirty-six, once both layouts are
+re-solved on the same drag at each end of the computed bracket, and reverses the range comparison
+under one of the three contracts.
 
 **The aircraft leaves the ground on its control propellers, and that is a dependency rather than
 a design feature.** Section 2.12 sizes hover power at thrust equal to weight, so the primary

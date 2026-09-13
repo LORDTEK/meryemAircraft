@@ -28,20 +28,18 @@ ediyor.]*
 ## Abstract
 
 Hybrid vertical take-off and landing (VTOL) aircraft pay for runway independence in cruise
-efficiency. This paper treats that cost as architectural and builds an accounting framework: the
-penalty is charged in three coupled currencies — hover hardware carried through cruise, its drag
-when exposed, and continuous power sized by a two-percent-of-flight condition — and every remedy
-surveyed reduces one by raising another. Escape requires the same hardware, in the same
-orientation, doing the same job, with the hover peak from a buffer. **The framework predicts that
-architectural rankings belong to sizing contracts rather than to architectures**, so three
-contracts are reported. An uncrewed tail-sitting blended-wing body instantiates the condition,
-sized at 50 and 1000 kg from one set of equations and carried far enough to show what that costs.
-Across the computed drag bracket it holds a mass advantage over a lift-plus-cruise layout under
-every contract but loses the range comparison under equal fuel fractions — a reversal driven by
-the free-wheeling drag of its own attitude rotors, a bill computed here rather than assumed. It is
-not shown to be flyable: the budget needs 3.8 times the highest battery specific power yet
-measured on a flown pack, and transition rests on an unpredicted pitching moment. **The framework
-does not depend on that outcome.**
+efficiency. This paper treats that cost as architectural and builds an accounting framework: the penalty is charged in three coupled currencies — hover hardware carried through cruise, its drag
+when exposed, and continuous power sized by a two-percent-of-flight condition, and every remedy surveyed
+reduces one by raising another. Escape requires the same hardware, in the same orientation,
+doing the same job, with the hover peak from a buffer. **The framework predicts that
+architectural rankings belong to sizing contracts rather than to architectures**, so three contracts are
+reported. An uncrewed tail-sitting blended-wing body instantiates it at two scales. Across a computed drag bracket it holds a 32 to 36 percent mass
+advantage over a lift-plus-cruise layout under every contract but loses the range comparison
+under equal fuel fractions, a reversal driven by the free-wheeling drag of its own attitude
+rotors — a bill computed here rather than assumed. It is not shown to be flyable: the budget needs 3.8
+times the highest battery specific power yet measured, and transition rests on an unpredicted
+pitching moment. **The framework does not depend on that
+outcome.**
 
 *[Yukarısı ~200 kelimeye indirilmiş MDPI sürümü — dergi "about 200 words maximum"
 diyor ve bunu teknik ön denetimde uyguluyor. Yapı başlıksız ama Background →
@@ -74,9 +72,9 @@ and serves as the case study: one coaxial pair at the nose gives all thrust in b
 regimes, four small pairs at the tips give attitude moments and the residual take-off thrust
 margin, and a deployable strip is
 assigned the roll that body-parallel thrust cannot produce. Sized against a lift-plus-cruise
-layout on wind-tunnel drag, it closes the same mission at thirty-seven to forty-two percent lower
-take-off mass depending on whether its attitude rotors' free-wheeling drag is charged; charging it
-costs the range comparison under one of three sizing contracts. Against a tilting layout the
+layout on wind-tunnel drag and across a computed drag bracket, it closes the same mission at
+thirty-two to thirty-six percent lower take-off mass; charging the free-wheeling drag of its
+attitude rotors also costs the range comparison under one of three sizing contracts. Against a tilting layout the
 comparison reverses between contracts and no superiority is claimed. Those are sizing results for an aircraft that has not
 been built: a three-dimensional solution bounds the zero-lift drag with a quantified sensitivity
 budget, but the component mass build-up closes the 50 kg design only on a battery specific power
@@ -123,8 +121,9 @@ hesaplanmış değerler özette bağlamsız durur.]*
 >   surveyed here reduces one by raising another.
 > - A tail-sitting blended-wing body whose single coaxial nose pair serves both regimes
 >   instantiates the escape condition, and carrying the case that far shows what it costs:
->   the free-wheeling drag of its own attitude rotors is a bill the configuration was
->   assumed to avoid, and charging it reverses one of the three range comparisons.
+>   the free-wheeling drag of its own attitude rotors is a bill the configuration was assumed
+>   to avoid, and charging it reverses one of the three range comparisons and takes the mass
+>   advantage from 42 to between 32 and 36 percent.
 >
 > **What are the implications of the main findings?**
 >

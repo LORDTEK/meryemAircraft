@@ -300,9 +300,10 @@ buffer is 15.6 percent of take-off mass rather than 3.6, and its range is unchan
 follows the fuel fraction. Held instead at 50 kg it carries 9.2 kg of payload rather than 13. Only
 at the pack's *continuous* rating does the loop fail to converge, and only on the take-off demand.
 
-**What this costs the comparison.** The forty-two percent mass advantage over the lift-plus-cruise
+**What this costs the comparison.** The mass advantage over the lift-plus-cruise layout — 42
+percent at the assumed drag, 32 to 36 percent across the computed bracket of Section 3.6 —
 layout is computed at 50 kg against 86 kg. At a measured pack the tail-sitter is 69 kg, and 69
 against 86 is twenty percent. The competing layout has *not* been re-sized on the same pack, and
-it would also grow; the honest statement is therefore that the forty-two percent figure is
+it would also grow; the honest statement is therefore that any single figure is
 conditional on the buffer assumption and that nothing here replaces it. `aero/kapanma.py` carries
 the loop.

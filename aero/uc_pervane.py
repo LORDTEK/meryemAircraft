@@ -176,7 +176,22 @@ def hover_tasarla(cl_hedef=0.55, om=2100.0, T_hedef=8.1, tur=40):
         cl, cd = kesit_kuvvet(alfa, Re)
         dTdr_hedef = T_hedef / (R - r_h)    # her serit esit disk yuklemesi
         pay = B * 0.5 * RHO * W ** 2 * (cl * np.cos(phi) - cd * np.sin(phi))
-        c_yeni = np.clip(dTdr_hedef / np.maximum(pay, 1e-6), 0.004, 0.040)
+        # VETER SINIRLARI YARICAPA GORELI, MUTLAK DEGIL.
+        #
+        # Ilk surum bunu 0,004 - 0,040 m olarak MUTLAK yaziyordu. O
+        # araliK 0,20 m'lik hafif rotor icin secilmisti (veter/R = 0,04
+        # ile 0,40) ve orada dogru calisiyor. Ama ayni betik 0,67 m'lik
+        # AGIR rotora uygulaninca ayni mutlak arali_ 335 mm yaricapta
+        # 12 mm veter demek oluyor -- veter/R = 0,035, yani fiziksel
+        # olarak sacma bir palet. Kirpma her iki ucta da BAGLIYORDU.
+        #
+        # Bunun sonucu masum degildi: agir rotorun dusuk dolgunlugu hem
+        # serbest donme suruklemesini yapay olarak kucultuyor hem de
+        # hover verim sayisini dusuruyordu. 3.8'in "agir hat FM 0,599'a
+        # ulasamiyor" bulgusu ve 3.9'un "Fatura 2 olcekle kuculuyor"
+        # sonucu ikisi de bu kirpmadan geliyordu.
+        c_yeni = np.clip(dTdr_hedef / np.maximum(pay, 1e-6),
+                         0.04 * R, 0.40 * R)
         c += 0.4 * (c_yeni - c)
         dT = pay * c
         v_yeni = np.clip(np.sqrt(np.maximum(dT / (4 * math.pi * RHO * r), 0.0)),
