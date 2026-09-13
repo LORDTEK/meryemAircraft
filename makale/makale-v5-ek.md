@@ -10,7 +10,7 @@ study are in the repository the paper cites.
 
 **Contents**
 
-- **Supplementary S1** — Independent checks on the two assumed aerodynamic coefficients (3616 words)
+- **Supplementary S1** — Independent checks on the two assumed aerodynamic coefficients (3671 words)
 - **Supplementary S2** — A component build-up of the mass budget (3672 words)
 - **Supplementary S3** — Control axes in full (6553 words)
 - **Supplementary S4** — Rotational authority, trim, and the transition envelope (8310 words)
@@ -159,7 +159,7 @@ at zero lift from a physics-informed aerofoil model [16] and adding the tip fram
 | Wing and body | 0.0073 (clean surface) | 0.0129 (transition tripped) |
 | Tip frames, faired | 0.0043 | 0.0043 |
 | Tip-propeller hubs | 0.0015 (30 mm can) | 0.0020 (50 mm can) |
-| **Tip rotors, free-wheeling** | **0.0085** (best design computed) | **0.0153** (design at usable hover efficiency) |
+| **Tip rotors, free-wheeling** | **0.0085** (best design computed) | **0.0154** (design at usable hover efficiency, compressibility-corrected) |
 | Subtotal | 0.0216 | 0.0345 |
 | Excrescence allowance | none | +10 % |
 | **Total** | **0.0216** | **0.0380** |
@@ -173,7 +173,10 @@ omitted from an earlier version of this table, which therefore did not sum to it
 **The rotor row is new and it changes what this table says.** Two earlier versions omitted it,
 on the assumption of Section 2.3 that a free-wheeling propeller contributes 0.0003 to 0.0008.
 Section 3.3 computes the figure instead of assuming it, and the result is one to two orders of
-magnitude larger. The consequence is not a detail: without the row the upper bound is 0.0211 and
+magnitude larger. It is a computed figure and not a bound: re-running the blade with a
+compressibility-corrected section polar and searching the zero-torque speed again moves it by
+four tenths of one percent, because a free-wheeling blade sits at almost zero section lift and
+so carries its drag-divergence Mach number above the speed it turns at. The consequence is not a detail: without the row the upper bound is 0.0211 and
 the assumed 0.0248 lies above it, which is what three sections of this paper used to call
 conservative. With the row the bracket is 0.0216 to 0.0380 and **the assumption sits inside it,
 not above it** — optimistic by up to fifty-three percent at the upper end. The cruise

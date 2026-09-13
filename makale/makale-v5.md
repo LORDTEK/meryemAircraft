@@ -32,9 +32,10 @@ berkegulmen@outlook.com (B.G.); lordtek@me.com (Ö.G.)
 >
 > - Architectural comparisons change their ranking with the sizing contract chosen, so a
 >   ranking quoted without its contract is not a result; three contracts are reported here.
-> - The configuration is not shown to be flyable: its mass budget closes only on a battery
->   specific power 3.8 times the highest rate yet measured on a flown pack, and transition
->   controllability rests on a pitching moment no current method predicts reliably.
+> - The configuration is not shown to be flyable: its 50 kg reference budget needs a battery
+>   specific power 3.8 times the highest rate yet measured on a flown pack, and re-closes 38
+>   percent heavier at that measured rate; transition controllability rests on a pitching
+>   moment no current method predicts reliably.
 
 ## Abstract
 
@@ -1083,8 +1084,29 @@ by 0.70, so 0.599 falls in the collapse and no design in this family sits exactl
 design that *meets* the hover requirement lies at c_l ≤ 0.68, and **the least draggy of them gives
 0.0153** — three and a half times the 0.0043 charged for the tip frames, and sixty-two percent of
 the total zero-lift drag the sizing assumes. The two fastest rows are still discarded on their own
-terms, the section data being incompressible where their tips are not; the 0.68 row at Mach 0.77
-is marginal on the same ground and is quoted as a lower bound for that reason as well.
+terms, the section data being incompressible where their tips are not.
+
+**The 0.68 row runs at tip Mach 0.76, which is marginal for the same reason, so the correction
+was applied rather than assumed.** The section polar was recomputed with a Prandtl–Glauert lift
+correction, a Korn drag-divergence Mach number and a fourth-power wave-drag increment, and the
+zero-torque shaft speed was searched again rather than held fixed. The solver used for this was
+first run with the correction disabled and reproduced the uncorrected result exactly, so the two
+figures differ only in the polar:
+
+| | Shaft speed | Tip Mach | ΔC_D0, eight discs |
+|---|---:|---:|---:|
+| Incompressible section data | 25 046 rpm | 0.76 | 0.01535 |
+| Compressibility-corrected | 24 958 rpm | 0.76 | **0.01541** |
+
+**The figure moves by four tenths of one percent**, and two mechanisms explain why. The lift
+correction steepens the section lift-curve slope, so the blade reaches the same zero-torque state
+at a *lower* shaft speed — 24 958 against 25 046 — and the profile drag falls with the square of
+the local velocity, offsetting part of the wave term. More importantly, a free-wheeling blade
+sits at almost zero section lift by construction, which raises the drag-divergence Mach number to
+about 0.74 through the lift term in the Korn relation; at Mach 0.76 the wave increment is then of
+order 10⁻⁶. **The compressibility penalty that would fall on a loaded blade does not fall on this
+one.** The value is therefore reported as a figure rather than as a lower bound, and the
+comparisons built on it in Sections 3.6 and 4.4 do not need re-deriving for this reason.
 
 The mechanism does not depend on the solver. A propeller designed for hover has low pitch; left
 free at 30 m s⁻¹ it must spin fast before its sections reach zero incidence, and at that speed
@@ -1282,16 +1304,20 @@ bill from the range column altogether. Fixing the fuel *mass* makes range invers
 to take-off mass; fixing take-off mass and payload leaves fuel as the residual. These are three
 different questions, and the answers separate:
 
-| Range relative to the tail-sitter | Fixed fuel fraction | Fixed fuel mass | Fixed MTOW and payload |
+| Range relative to the tail-sitter, **rotors charged** | Fixed fuel fraction | Fixed fuel mass | Fixed MTOW and payload |
 |---|---:|---:|---:|
-| B — lift + cruise | −14.4 % | −36.5 % | −72.6 % |
-| C — tilt | **+12.0 %** | +0.2 % | −19.1 % |
+| B — lift + cruise | **+21.1 %** | −5.4 % | −44.9 % |
+| C — tilt | **+58.3 %** | +49.2 % | +35.7 % |
 
-Against lift-plus-cruise the conclusion is the same under every rule and grows more emphatic as
-the rule tightens, and the drag term driving it is a wind-tunnel result rather than an
-assumption. Against tilt it is not: of the twelve cells S6 reports, the tilting layout leads in
-three clearly and a fourth by two tenths of a percent, which is a tie rather than a lead;
-every one of them requires its nacelles, pivots,
+*(Before the rotor term was charged these rows read −14.4 / −36.5 / −72.6 and +12.0 / +0.2 /
+−19.1. The earlier figures are kept in Supplementary S6 so the size and direction of the
+correction can be read off; they are not the result.)*
+
+Against lift-plus-cruise the conclusion now depends on the rule: the tail-sitter leads under two
+of the three and loses the third, where equal fuel fractions expose its lower cruise efficiency.
+Against tilt it no longer leads at all: with the rotor term charged it leads under all three
+rules, where before it led in three of the twelve cells S6 reports and tied a fourth. Every one
+of those leads still requires its nacelles, pivots,
 actuators and hover-pitched blades to be credited as aerodynamically free. **No result from this
 section should be quoted without the rule it was computed under**, and no claim of superiority
 over the tilting family is made here in either direction.
@@ -1542,10 +1568,50 @@ margin, which is the quantity the cancellation argument above was constructed to
 robust half of the chain; the trim twist, which that argument never addressed, is what a
 redistribution disturbs first.
 
-This does not measure the redistribution a RANS solution would find, and it is not offered as
-one. It converts an exposure that had no bound into a transfer coefficient: a reader holding an
-estimate of the redistribution can multiply. Section 4 keeps this among the open items for that
-reason, with its location changed.
+This does not measure the redistribution a RANS solution would find. It converts an exposure that
+had no bound into a transfer coefficient: a reader holding an estimate of the redistribution can
+multiply.
+
+**A Reynolds-averaged solution of this planform now supplies that estimate, and the answer falls
+across the threshold rather than cleanly on one side of it.** The untwisted planform was solved
+at the incidence where the vortex-lattice method returns the cruise lift coefficient, 6.69°, on a
+192 000-cell wall-function mesh, and the spanwise loading was extracted from the wall pressures.
+The face sum reproduces the case's own integrated lift coefficient exactly, which is the check
+that the extraction is not itself the result.
+
+| | Value |
+|---|---|
+| RANS lift coefficient | 0.354 |
+| Vortex-lattice lift coefficient | 0.450 |
+| Ratio *K_L* | **0.787** |
+| Local ratio *K(y)*, η = 0.05 to 0.91 | 0.740 – 0.816 |
+| *K(y)/K_L* over the same range | **0.940 – 1.037** |
+
+**Two things follow and they point in different directions.** The first is that the error is
+very nearly multiplicative: once the overall ratio is divided out, the local ratio holds to within
+five percent of unity across nine tenths of the span. That is the condition the cancellation
+argument of this section requires, and it is the first direct evidence for it rather than an
+assumption about it. The second is that **the overall ratio runs the other way from the published
+comparison this paper cites**: that source reports the vortex-lattice lift coefficient low by
+thirty to thirty-eight percent against RANS, whereas here it is high by twenty-seven percent. The
+two are different geometries solved at different fidelities and neither refutes the other, but
+the direction assumed in the earlier argument is not the direction found here.
+
+**Converted into the units of the sensitivity above, the residual is 1.6 degrees of equivalent
+redistribution — or 5.3 degrees if one outlying station is retained.** The conversion is measured
+rather than asserted: the same half-sine perturbation was applied to the vortex-lattice solution
+and its effect on the normalised loading ratio recorded, giving 0.0605 of scatter per degree.
+One station near the tip, at η = 0.94, departs from the others and carries the difference between
+the two figures by itself. Against the 2.6-degree threshold at which the trim twist would move by
+a degree, **the trim chain survives without that station and does not survive with it.**
+
+The station cannot be adjudicated from this run. It sits where the mesh is coarsest and nearest
+the tip closure, which makes a discretisation artefact plausible, but plausible is not
+demonstrated. **What would settle it is a grid-refinement study of this solution**, which is a
+smaller piece of work than the solution itself and is now the specific open item rather than the
+general one. The run reported here is a single wall-function mesh and is not grid-converged; no
+viscous drag is taken from it, and the twisted geometry is not solved at all, because the mesh
+generator accepts no twist per station.
 
 ## 3.11 A component build-up of the mass budget
 
@@ -2084,9 +2150,19 @@ redistribution moves the neutral point by 0.15 percent of mean chord and the tri
 degrees; the neutral point would need a redistribution of 33 degrees to matter and the trim twist
 one of 2.6. **The static margin — the quantity the cancellation argument exists to protect — is
 the robust half. The trim twist is thirteen times more sensitive and the argument never covered
-it.** What remains unmeasured is the size of the redistribution itself, which is what a RANS or
-panel solution of this planform would supply; until then the result is a transfer coefficient and
-not a closure.
+it.**
+
+**A Reynolds-averaged solution has since supplied the missing redistribution, and it lands on the
+threshold rather than clear of it.** The local loading ratio holds to within five percent of a
+constant across nine tenths of the span, which is direct support for the cancellation argument
+and the first evidence for it of any kind. Converted into the units of the sensitivity, the
+residual is **1.6 degrees of equivalent redistribution against a 2.6-degree threshold** — or 5.3
+degrees, above it, if one station near the tip is retained rather than treated as an artefact of
+a coarse mesh. **The exposure is therefore reduced but not closed, and what closes it is a
+grid-refinement study of that single solution rather than another solution.** Two further limits
+belong with it: the run is untwisted, because the mesh generator accepts no twist per station;
+and the overall lift ratio runs opposite to the published comparison cited above, which is a
+result the paper reports rather than reconciles.
 
 ## 4.6 What is sized but not closed
 
@@ -2400,7 +2476,7 @@ Six supplementary files accompany this paper and are cited from it by number.
 They carry the derivations behind the results stated here; each was a section of an earlier,
 longer version and is reproduced without abridgement.
 
-- **Supplementary S1** — Independent checks on the two assumed aerodynamic coefficients (3616 words)
+- **Supplementary S1** — Independent checks on the two assumed aerodynamic coefficients (3671 words)
 - **Supplementary S2** — A component build-up of the mass budget (3672 words)
 - **Supplementary S3** — Control axes in full (6553 words)
 - **Supplementary S4** — Rotational authority, trim, and the transition envelope (8310 words)

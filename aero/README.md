@@ -3377,3 +3377,93 @@ COGU" diyordu. §3.6 "ucunde onde" diyordu, dorduncu hucre +%0,2 ile berabere.
 S4.7 "profillerden bagimsiz — 5,4, 6,6 ve 6,3 m" diyordu; uc farkli sayi
 "bagimsiz" degildir. Sonuc bolumu donme dinamigi sonucunu hic anmiyordu.
 Hepsi duzeltildi.
+
+
+---
+
+# Tur 17 — RANS kosturuldu; iptal savunmasi ilk kez KANITLANDI, ama esige oturdu
+
+## Ozet
+
+| | |
+|---|---|
+| RANS C_L | 0,354 |
+| VLM C_L | 0,450 |
+| **K_L** | **0,787** (RANS %21 DAHA AZ) |
+| K(y)/K_L, eta 0,05–0,91 | **0,940 – 1,037** |
+| esdeger yeniden dagilim | **1,6 derece** (sapan haric) / 5,3 derece (dahil) |
+| 3.10'un esigi | 2,6 derece |
+
+**Hata neredeyse tam carpansal.** Toplam oran bolunup atilinca yerel oran
+acikligin dokuzda dokuzunda birin %5'i icinde kaliyor. Iptal savunmasinin
+istedigi kosul tam olarak budur ve bu, tur 14'ten beri savunulan ama
+sinanamayan bir iddianin **ilk dogrudan kaniti**.
+
+**Ama toplam oran makalenin alintiladigi kaynagin TERSI yonde.** O kaynak
+VLM'i RANS'a gore %30–38 DUSUK diyor; burada %27 YUKSEK cikti. Farkli
+geometri, farkli mertebe, biri otekini curutmez -- ama onceki savunmanin
+varsaydigi yon bu kosuda bulunan yon degil. Makale bunu uzlastirmiyor,
+raporluyor.
+
+**Esdeger derece kopruSU OLCULDU, iddia edilmedi.** RANS artigi "K/K_L
+sacilmasi" biriminde, esik ise "derece" biriminde; ikisi ayni birim degil.
+Ayni sin(pi eta) bozulmasi VLM'e uygulanip normalize edilmis yukleme
+oranina etkisi olculdu: derece basina 0,0605 sacilma. Sonra cevrildi.
+
+**Tek istasyon butun farki tasiyor:** eta = 0,936. Agin en kaba ve uc
+kapanisina en yakin oldugu yer, yani ayriklastirma kalintisi MAKUL -- ama
+makul gosterilmis degildir ve makalenin tercih ettigi cevabi verdigi icin
+bir istasyonu dusurmedim. Acik is artik SPESIFIK ve KUCUK: bu tek cozumun
+ag inceltme calismasi.
+
+## Kosmak uc ag kusuru cikardi
+
+1. `normal="kesit"` 104 negatif hucre; `"ortak"` 2'ye dusurdu.
+2. **Asil oldurucu SIVRI FIRAR KENARIYDI.** Ust ve alt yuzey tek cizgide
+   bulusunca hucre cokuyor; checkMesh azami en-boy oranini **8,2e96**
+   gosteriyordu (sayisal sonsuz) ve simpleFoam kayan nokta istisnasiyla
+   oluyordu. `firar_taban=4`: en-boy 5000, negatif hucre **sifir**, dikey
+   olmayanlik 116 -> 80,5.
+3. Kusur uc kapaginda **degildi** -- ayrica sinandi: kapak kapatilinca
+   negatif hucre 2'den 1306'ya cikiyor.
+
+**Makalenin "kurulum hazir, 14 saat" ifadesi fazla iyimserdi.** Kurulum
+vardi ama KOSMUYORDU; bu planformda hic denenmemis bir ag ayari
+gerekiyordu. Yazildi.
+
+## Uc kutulama hatasi, ucu de rapor edilmeden yakalandi
+
+Hepsi ayni disiplinle: toplam, cozucunun KENDI katsayisini uretmeli.
+
+1. Tekduze kutu -> kimi kutu bos kaldi (duvar yuzleri istasyonlarda
+   kumeleniyor), K(y)'de delik acildi.
+2. Yuz merkezlerinin z'lerine gore kutulama -> 621 "istasyon"; duvar
+   yuzleri sabit-z duzlemlerinde DEGIL.
+3. VLM'in 104 ince seridini 20 kaba kutuya DOLDURMAK -> puruzsuz tarafi
+   tirtiklandi, cunku kutu sinirlari seritleri kesiyor. Dogrusu VLM
+   egrisinin her kutu uzerinde INTEGRALINI almak.
+
+Ayrica ilk surum isareti ters yazmisti (p S artidir) ve C_L'yi -0,354
+veriyordu; ve normalizasyon Aref = 1 ile yarim kanattaydi.
+
+## Sikistirilabilirlik: dordu de yanildi
+
+| | rpm | uc Mach | dC_D0 |
+|---|---|---|---|
+| sikistirilamaz | 25 046 | 0,76 | 0,01535 |
+| sikistirilabilir | 24 958 | 0,76 | **0,01541** |
+
+**%0,4.** Dordu de "once bunu yap, 0,020-0,030'a cikar" demisti.
+
+Ikiz cozucu yazildi, maymun-yamasi degil: `kesit_kuvvet(alfa, Re)` yerel
+hizi gormuyor ve Re kirpildigi icin W geri cikarilamiyor; yama, kirpilan
+seritlerde sessizce yanlis Mach kullanirdi. Ikiz once duzeltme kapaliyken
+ozgun sonucu BIREBIR uretti.
+
+Grok'un "isaret bir ciktidir" uyarisi hakliydi: Prandtl-Glauert kaldirma
+egimini dikleştirdigi icin ayni itki daha DUSUK devirde uretiliyor
+(25 046 -> 24 958) ve profil suruklemesi duserek dalga terimini kismen
+dengeliyor. **Ama asil sebep daha temiz: serbest donen palet neredeyse
+SIFIR kesit kaldirmasinda oturuyor.** Korn bagintisindaki kaldirma terimi
+M_dd'yi 0,74'e cikariyor, M = 0,76'da dalga terimi 1e-6 mertebesinde.
+Yuklu paleti vuracak ceza serbest donen palete vurmuyor.
