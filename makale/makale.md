@@ -1628,21 +1628,51 @@ thirty to thirty-eight percent against RANS, whereas here it is high by twenty-s
 two are different geometries solved at different fidelities and neither refutes the other, but
 the direction assumed in the earlier argument is not the direction found here.
 
-**Converted into the units of the sensitivity above, the residual is 1.6 degrees of equivalent
-redistribution — or 5.3 degrees if one outlying station is retained.** The conversion is measured
-rather than asserted: the same half-sine perturbation was applied to the vortex-lattice solution
-and its effect on the normalised loading ratio recorded, giving 0.0605 of scatter per degree.
-One station near the tip, at η = 0.94, departs from the others and carries the difference between
-the two figures by itself. Against the 2.6-degree threshold at which the trim twist would move by
-a degree, **the trim chain survives without that station and does not survive with it.**
+**The solution was refined twice and the refinement changed the answer**, so what follows is the
+converged reading rather than the first one. Three meshes were run at identical settings:
 
-The station cannot be adjudicated from this run. It sits where the mesh is coarsest and nearest
-the tip closure, which makes a discretisation artefact plausible, but plausible is not
-demonstrated. **What would settle it is a grid-refinement study of this solution**, which is a
-smaller piece of work than the solution itself and is now the specific open item rather than the
-general one. The run reported here is a single wall-function mesh and is not grid-converged; no
-viscous drag is taken from it, and the twisted geometry is not solved at all, because the mesh
-generator accepts no twist per station.
+| Mesh | Cells | *K_L* | Inner-region residual | Tip-region residual |
+|---|---:|---:|---:|---:|
+| Coarse | 192 000 | 0.787 | 0.029 | 0.133 |
+| Medium | 444 000 | 0.793 | 0.046 | 0.130 |
+| Fine | 682 000 | **0.796** | **0.048** | **0.122** |
+
+The overall ratio converges — 0.787, 0.793, 0.796, the last step being four tenths of a percent.
+The **inner-region residual does not shrink with refinement; it grows and then settles**, which
+means the coarse mesh was smoothing the loading and making the agreement look better than it is.
+The tip-region residual barely moves across a threefold change in cell count, which is the
+signature of a real disagreement rather than a discretisation error.
+
+**Converted into the units of the sensitivity above, the converged residual is 2.75 degrees of
+equivalent redistribution over the inner nine tenths of the span, against a threshold of 2.6.**
+The conversion is measured rather than asserted — the same half-sine perturbation was applied to
+the vortex-lattice solution and its effect on the normalised loading ratio recorded — and both
+sides are measured as standard deviations rather than as extremes, because the two solutions carry
+different numbers of spanwise stations and an extreme-value measure would reward whichever had
+more. That choice is not cosmetic: on the same converged solution the extreme-value measure gives
+2.80 degrees and a coarser common sampling gives 1.87, which straddle the threshold and would let
+the measurement decide the result.
+
+**The threshold is therefore exceeded, by six percent, and the consequence of exceeding it is
+smaller than the exceedance suggests.** The threshold is defined as the redistribution that would
+move the trim twist by one degree. Carrying 2.75 degrees through the measured chain moves the trim
+twist by 1.04 degrees, the span efficiency by 2.1 percent — from 0.817 to 0.799 — and the cruise
+lift-to-drag ratio and every range computed from it by **0.8 percent**. That is an order of
+magnitude inside the drag bracket the same section already applies, which moves range by nine to
+twenty-six percent. **The vortex-lattice trim chain is therefore not overturned by this
+comparison; it is displaced by less than the uncertainty already carried around it**, and the
+paper reports the exceedance rather than rounding it away.
+
+What the comparison does establish against the configuration is the tip. The disagreement outboard
+of η = 0.90 survives refinement undiminished, and the vortex-lattice method is where it would be
+expected to fail — at the tip vortex, on a section of finite thickness modelled as a sheet. No
+quantity in this paper is taken from the outboard tenth of the span alone, so nothing here depends
+on it, but a strip-based estimate that did would be unsafe.
+
+**Three limits belong with all of this.** No viscous drag is taken from these runs, which use wall
+functions. The twisted geometry is not solved at all, because the mesh generator accepts stations
+as span, leading edge, chord and thickness and has no field for twist. And the overall ratio runs
+opposite to the published comparison cited above, which the paper reports rather than reconciles.
 
 ## 3.11 A component build-up of the mass budget
 
@@ -2190,17 +2220,26 @@ one of 2.6. **The static margin — the quantity the cancellation argument exist
 the robust half. The trim twist is thirteen times more sensitive and the argument never covered
 it.**
 
-**A Reynolds-averaged solution has since supplied the missing redistribution, and it lands on the
-threshold rather than clear of it.** The local loading ratio holds to within five percent of a
-constant across nine tenths of the span, which is direct support for the cancellation argument
-and the first evidence for it of any kind. Converted into the units of the sensitivity, the
-residual is **1.6 degrees of equivalent redistribution against a 2.6-degree threshold** — or 5.3
-degrees, above it, if one station near the tip is retained rather than treated as an artefact of
-a coarse mesh. **The exposure is therefore reduced but not closed, and what closes it is a
-grid-refinement study of that single solution rather than another solution.** Two further limits
-belong with it: the run is untwisted, because the mesh generator accepts no twist per station;
-and the overall lift ratio runs opposite to the published comparison cited above, which is a
-result the paper reports rather than reconciles.
+**A Reynolds-averaged solution has since supplied the missing redistribution, on three meshes
+rather than one, and the answer is that the threshold is exceeded and the exceedance does not
+matter much.** The local loading ratio holds to within five percent of a constant across nine
+tenths of the span, which is direct support for the cancellation argument and the first evidence
+for it of any kind. Refinement matters: the coarse mesh put the residual at 1.7 degrees of
+equivalent redistribution and the converged solution puts it at **2.75 against a 2.6-degree
+threshold**, so the first reading was under-resolution rather than agreement. **Carrying the
+exceedance through the measured chain moves the trim twist by one degree, the span efficiency
+from 0.817 to 0.799, and every cruise efficiency and range in this paper by 0.8 percent** — an
+order of magnitude inside the drag bracket already applied to the same numbers. The exposure that
+had no bound is therefore bounded, exceeded and quantified, in that order, and the trim chain
+stands.
+
+What does not resolve with refinement is the outboard tenth of the span, where the disagreement
+is undiminished across a threefold change in cell count. That is where a vortex-lattice method
+would be expected to fail and nothing in this paper is taken from that region alone, but a
+strip-based estimate that depended on it would not be safe. Two limits belong with all of it: the
+runs are untwisted, because the mesh generator has no field for twist; and the overall lift ratio
+runs opposite to the published comparison cited above, which the paper reports rather than
+reconciles.
 
 ## 4.6 What is sized but not closed
 

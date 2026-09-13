@@ -202,17 +202,26 @@ one of 2.6. **The static margin — the quantity the cancellation argument exist
 the robust half. The trim twist is thirteen times more sensitive and the argument never covered
 it.**
 
-**A Reynolds-averaged solution has since supplied the missing redistribution, and it lands on the
-threshold rather than clear of it.** The local loading ratio holds to within five percent of a
-constant across nine tenths of the span, which is direct support for the cancellation argument
-and the first evidence for it of any kind. Converted into the units of the sensitivity, the
-residual is **1.6 degrees of equivalent redistribution against a 2.6-degree threshold** — or 5.3
-degrees, above it, if one station near the tip is retained rather than treated as an artefact of
-a coarse mesh. **The exposure is therefore reduced but not closed, and what closes it is a
-grid-refinement study of that single solution rather than another solution.** Two further limits
-belong with it: the run is untwisted, because the mesh generator accepts no twist per station;
-and the overall lift ratio runs opposite to the published comparison cited above, which is a
-result the paper reports rather than reconciles.
+**A Reynolds-averaged solution has since supplied the missing redistribution, on three meshes
+rather than one, and the answer is that the threshold is exceeded and the exceedance does not
+matter much.** The local loading ratio holds to within five percent of a constant across nine
+tenths of the span, which is direct support for the cancellation argument and the first evidence
+for it of any kind. Refinement matters: the coarse mesh put the residual at 1.7 degrees of
+equivalent redistribution and the converged solution puts it at **2.75 against a 2.6-degree
+threshold**, so the first reading was under-resolution rather than agreement. **Carrying the
+exceedance through the measured chain moves the trim twist by one degree, the span efficiency
+from 0.817 to 0.799, and every cruise efficiency and range in this paper by 0.8 percent** — an
+order of magnitude inside the drag bracket already applied to the same numbers. The exposure that
+had no bound is therefore bounded, exceeded and quantified, in that order, and the trim chain
+stands.
+
+What does not resolve with refinement is the outboard tenth of the span, where the disagreement
+is undiminished across a threefold change in cell count. That is where a vortex-lattice method
+would be expected to fail and nothing in this paper is taken from that region alone, but a
+strip-based estimate that depended on it would not be safe. Two limits belong with all of it: the
+runs are untwisted, because the mesh generator has no field for twist; and the overall lift ratio
+runs opposite to the published comparison cited above, which the paper reports rather than
+reconciles.
 
 ## 4.6 What is sized but not closed
 

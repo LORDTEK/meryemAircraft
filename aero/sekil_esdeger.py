@@ -56,16 +56,27 @@ if __name__ == "__main__":
     kk = np.array(rj["K"]) / rj["KL"]
     # Uc kutusundaki tek sicrama disarida: orada VLM yuklemesi kucuk ve
     # oran iki kucuk sayinin bolumu. Hem dahil hem haric raporlanir.
-    rans_tam = float(kk.max() - kk.min())
-    ic = np.sort(kk)[:-1]
-    rans_ic = float(ic.max() - ic.min())
-    print("RANS artigi (K/K_L sacilmasi)")
-    print("  tum kutular        %.3f" % rans_tam)
-    print("  en buyuk sapan haric %.3f" % rans_ic)
+    # OLCU: STANDART SAPMA, azami-asgari DEGIL.
+    #
+    # Azami-asgari orneklem sayisina duyarlidir: RANS tarafi agin
+    # istasyon sayisina gore 20, 29 ya da 37 kutu; VLM tarafi ~52 serit.
+    # Ikisini azami-asgari ile kiyaslamak, daha cok ornege daha cok uc
+    # deger sansi vermektir. Olculdu: ayni ince ag icin azami-asgari
+    # 2,80 derece, ortak 15 noktali izgarada 1,87 derece veriyordu --
+    # yani ESIGIN iki yanina dusuyordu ve karari OLCU veriyordu.
+    # Standart sapma orneklem sayisina duyarsizdir ve iki tarafta da
+    # AYNI bicimde hesaplanir.
+    eta = np.array(rj["eta"])
+    ic = kk[eta <= 0.90]
+    rans_tam = float(kk.std())
+    rans_ic = float(ic.std())
+    print("RANS artigi (K/K_L standart sapmasi)")
+    print("  tum aciklik        %.4f" % rans_tam)
+    print("  ic bolge eta<=0,90 %.4f" % rans_ic)
     print()
 
     # --- ayni olcuyu sin(pi eta) bozulmasi icin uret -------------------
-    print("%-10s %10s %12s" % ("sekil (der)", "alfa", "K/K_L sacilmasi"))
+    print("%-10s %10s %14s" % ("sekil (der)", "alfa", "K/K_L std"))
     taban = None
     kayit = []
     for sekil in (0.0, 0.5, 1.0, 2.0):
@@ -80,17 +91,17 @@ if __name__ == "__main__":
         # Ayni normalizasyon: yerel oran / toplam oran
         oran = np.interp(taban_y, yy, clc) / taban_clc
         oran = oran / (r["CL"] / CL_HEDEF)
-        s = float(oran.max() - oran.min())
+        s = float(oran.std())
         kayit.append((sekil, s))
-        print("%-10.1f %10.3f %12.3f" % (sekil, a, s))
+        print("%-10.1f %10.3f %14.4f" % (sekil, a, s))
 
     # Derece basina sacilma -> RANS artigini dereceye cevir
     egim = np.mean([s / d for d, s in kayit])
     print()
-    print("derece basina K/K_L sacilmasi: %.4f" % egim)
+    print("derece basina K/K_L std: %.4f" % egim)
     print()
     print("RANS'IN YENIDEN DAGILIMI, DERECE CINSINDEN")
-    print("  tum kutular          %.2f derece" % (rans_tam / egim))
-    print("  en buyuk sapan haric %.2f derece" % (rans_ic / egim))
+    print("  tum aciklik          %.2f derece" % (rans_tam / egim))
+    print("  ic bolge eta<=0,90   %.2f derece" % (rans_ic / egim))
     print()
     print("3.10'un esigi: 2,6 derece (1 derecelik denge burulmasi hareketi)")

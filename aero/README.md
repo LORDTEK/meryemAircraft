@@ -3467,3 +3467,66 @@ dengeliyor. **Ama asil sebep daha temiz: serbest donen palet neredeyse
 SIFIR kesit kaldirmasinda oturuyor.** Korn bagintisindaki kaldirma terimi
 M_dd'yi 0,74'e cikariyor, M = 0,76'da dalga terimi 1e-6 mertebesinde.
 Yuklu paleti vuracak ceza serbest donen palete vurmuyor.
+
+
+---
+
+# Tur 18 — ag inceltmesi: kaba agin cevabi yanlismis, ve esik asiliyor
+
+## Uc seviye, ayni ayarlar
+
+| ag | hucre | K_L | C_L | ic bolge artigi | uc bolgesi artigi |
+|---|---|---|---|---|---|
+| kaba | 192 320 | 0,787 | 0,3541 | 0,029 | 0,133 |
+| orta | 444 416 | 0,793 | 0,3570 | 0,046 | 0,130 |
+| **ince** | **681 984** | **0,796** | **0,3581** | **0,048** | **0,122** |
+
+**Toplam oran yakinsiyor** (%0,8 sonra %0,4). **Ic bolge artigi ise KUCULMUYOR,
+buyuyup oturuyor** -- yani kaba ag yuklemeyi yumusatiyor ve uyumu oldugundan
+iyi gosteriyordu. **Uc bolgesi artigi uc kat hucre degisimine ragmen neredeyse
+hic kipirdamiyor**: bu ayriklastirma degil, gercek bir uyusmazligin imzasi.
+
+## Olcu kavgasi ve nasil cozuldu
+
+Yakinsanmis cozumde esdeger yeniden dagilim OLCUYE gore degisiyordu:
+
+    azami-asgari, kendi kutulari      2,80 derece
+    ortak 15 noktali izgara            1,87 derece
+    esik                               2,60 derece
+
+Yani esigin iki yanina dusuyordu ve karari olcu veriyordu. Kabul edilemez.
+
+Sebep: azami-asgari ORNEKLEM SAYISINA duyarli. RANS tarafi agin istasyon
+sayisina gore 20 / 29 / 37 kutu, VLM tarafi ~52 serit. Daha cok ornege daha
+cok uc deger sansi vermek demek.
+
+Cozum: **her iki tarafta da STANDART SAPMA**, ayni bicimde. Katsayi yeniden
+turetildi: derece basina 0,0175 K/K_L std.
+
+    ic bolge (eta <= 0,90)   2,75 derece
+    tum aciklik              4,55 derece
+    esik                     2,60 derece
+
+**ESIK ASILIYOR, %6 ile.** Kaba agin verdigi 1,66 derece yetersiz
+cozunurlukmus.
+
+## Ama asmanin SONUCU hesaplandi ve kucuk
+
+Esik disaridan "denge burulmasi bir derece oynarsa zincir yeniden
+hesaplanmali" diye konmustu. 2,75 dereceyi olculmus zincirden gecirince:
+
+    denge burulmasi   1,04 derece oynar
+    aciklik verimi    %2,1 oynar  (0,817 -> 0,799)
+    seyir L/D ve MENZIL  %0,8 oynar
+
+%0,8, ayni bolumun ZATEN uyguladigi surukleme braketinin (menzilde %9-26)
+bir mertebe icinde. Yani VLM denge zinciri bu karsilastirmayla devrilmiyor;
+etrafinda zaten tasinan belirsizlikten daha az kayiyor. Asma yuvarlanip
+atilmadi, yazildi.
+
+## Yakalanan kutulama hatasi
+
+Kutu kenarlari `n=20` istasyon listesine gomuluydu; 28 istasyonlu orta agda
+yuzler kutular arasinda SIRAYLA dusuyor ve duzenli bir alternatif desen
+uretiyordu (0,56 / 1,15 / 0,56 / 1,11 ...). Fizik gibi gorunuyordu, bolme
+kusuruydu. Istasyon sayisi artik vakadan aliniyor.
