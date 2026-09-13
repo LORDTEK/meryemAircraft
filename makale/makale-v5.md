@@ -585,7 +585,14 @@ series hybrid: fuel drives an internal-combustion engine, the engine drives a
 generator, and the generator supplies electric machines at the rotors.
 
 The aircraft has no elevons, no rudder, no tilting mechanism, no retraction mechanism
-and no dedicated lift system. The only moving aerodynamic device is a variable-extension strip on
+and no dedicated lift system. **That last phrase needs one qualification, made here so that it is
+not mistaken for a stronger claim later.** The four tip pairs exist to produce moments, and their
+thrust is sized by that duty; but the primary propulsor is sized at thrust equal to weight
+exactly, so the margin that actually lifts the aircraft off the ground comes from those four
+pairs. They are not a lift system — they are not sized for lift, they do not carry the aircraft
+in hover, and they are absent from the hover power budget as a lift term — but the configuration
+does depend on their surplus for take-off, and Section 4.4 treats that dependence as a
+limitation rather than a feature. The only moving aerodynamic device is a variable-extension strip on
 the lower surface, described in Section 2.10, which exists solely because roll cannot be
 produced by propellers alone. Figure 4 gives three orthogonal views of the light
 reference design and Figure 5 a general view of the same geometry.
@@ -1029,11 +1036,14 @@ changes what this subsection concludes. The *stopped edge-on* row shows, separat
 the rotors is survivable only if azimuth is controlled — which is the indexing mechanism this
 section has just claimed the configuration does not need.
 
-**The resolution costs nothing, and it is a control state rather than hardware.** A fixed-pitch
+**The resolution needs no hardware and can be imposed as a control state, but its aerodynamic
+cost has to be computed rather than assumed away — and this section computes it.** A fixed-pitch
 propeller left free settles at the advance ratio where net shaft torque is zero: inner sections
 drive, outer sections retard, and they balance. The shaft then does no work, so the motor
 neither drives nor brakes and the electrical cost is controller standby draw and bearing losses.
-The blades sit at low incidence, which was taken to put them in the first row. **The tip rotors
+The blades sit at low incidence, which was taken to put them in the first row —
+**an inference the calculation below overturns**, since low section incidence at high rotational
+speed is not the same thing as low drag. **The tip rotors
 are therefore held in cruise at the zero-shaft-torque condition — neither stopped nor driven** —
 and this is the state assumed throughout Section 3. It is worth naming because both neighbouring
 states are wrong: driven, they cost propulsive power; stopped without azimuth control, they cost
