@@ -100,16 +100,16 @@ cheapest profile and 0.65 on a smooth one — that is, infeasible on both, since
 rotations the moment authority allows are 4.06 s and 4.98 s. Four seconds was not a margin
 and, with the corrected inertia, not even a boundary. Lengthening the rotation to 5.1 s
 brings the heavy margins to 1.57 and 1.05, matching the light design's 1.49 and 0.99 at its
-quoted two seconds, and costs nothing: Table 4 shows the tip-propeller power falling from
+quoted two seconds, and costs nothing: Table 15 shows the tip-propeller power falling from
 thirteen percent of hover power to six, and the altitude-loss result of Section 3.15 is
 unchanged, remaining zero at every profile tested when the rotation is entered in a climb.
 The light design's own two seconds is on the same boundary — its smooth minimum is 2.01 s —
 so neither reference design has margin to spare on a smooth command, and both should be read
 as sized by this constraint.
 
-This is also, in moment terms, what Table 4 of Section 3.9 already said in units of power:
+This is also, in moment terms, what Table 15 of Section 3.9 already said in units of power:
 that four seconds consumed nearly the whole tip-propeller allocation. The two statements
-agree, and the present calculation adds the rotation profile, which Table 4 did not
+agree, and the present calculation adds the rotation profile, which Table 15 did not
 distinguish.
 
 The light figure depends on a thrust the paper quotes without a basis. At 335 W and 0.20 m

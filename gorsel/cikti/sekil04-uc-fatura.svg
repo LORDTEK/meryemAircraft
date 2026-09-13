@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-09-08T17:59:21.225490</dc:date>
+    <dc:date>2026-09-13T19:54:23.850179</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -32,29 +32,29 @@ z
    <g id="patch_2">
     <path d="M 436.45002 330.216911 
 Q 410.186296 259.556094 361.457594 204.852464 
-" clip-path="url(#p9ce29bba48)" style="fill: none; stroke: #b03a2e; stroke-width: 1.9; stroke-linecap: round"/>
+" clip-path="url(#p0c0eaeadbb)" style="fill: none; stroke: #b03a2e; stroke-width: 1.9; stroke-linecap: round"/>
     <path d="M 363.558527 212.623312 
 L 361.457594 204.852464 
 L 368.934833 207.834227 
-" clip-path="url(#p9ce29bba48)" style="fill: none; stroke: #b03a2e; stroke-width: 1.9; stroke-linecap: round"/>
+" clip-path="url(#p0c0eaeadbb)" style="fill: none; stroke: #b03a2e; stroke-width: 1.9; stroke-linecap: round"/>
    </g>
    <g id="patch_3">
     <path d="M 204.316468 203.265896 
 Q 154.174733 259.555687 128.651028 328.225287 
-" clip-path="url(#p9ce29bba48)" style="fill: none; stroke: #b03a2e; stroke-width: 1.9; stroke-linecap: round"/>
+" clip-path="url(#p0c0eaeadbb)" style="fill: none; stroke: #b03a2e; stroke-width: 1.9; stroke-linecap: round"/>
     <path d="M 134.533957 322.730641 
 L 128.651028 328.225287 
 L 127.785068 320.222156 
-" clip-path="url(#p9ce29bba48)" style="fill: none; stroke: #b03a2e; stroke-width: 1.9; stroke-linecap: round"/>
+" clip-path="url(#p0c0eaeadbb)" style="fill: none; stroke: #b03a2e; stroke-width: 1.9; stroke-linecap: round"/>
    </g>
    <g id="patch_4">
     <path d="M 202.551003 462.816675 
 Q 282.180805 478.426089 359.726015 463.225149 
-" clip-path="url(#p9ce29bba48)" style="fill: none; stroke: #b03a2e; stroke-width: 1.9; stroke-linecap: round"/>
+" clip-path="url(#p0c0eaeadbb)" style="fill: none; stroke: #b03a2e; stroke-width: 1.9; stroke-linecap: round"/>
     <path d="M 351.967971 461.077417 
 L 359.726015 463.225149 
 L 353.353004 468.142945 
-" clip-path="url(#p9ce29bba48)" style="fill: none; stroke: #b03a2e; stroke-width: 1.9; stroke-linecap: round"/>
+" clip-path="url(#p0c0eaeadbb)" style="fill: none; stroke: #b03a2e; stroke-width: 1.9; stroke-linecap: round"/>
    </g>
    <g id="patch_5">
     <path d="M 282.180392 212.414753 
@@ -67,7 +67,7 @@ C 212.314483 93.744027 204.085961 113.609436 204.085961 134.320322
 C 204.085961 155.031207 212.314483 174.896616 226.95929 189.541424 
 C 241.604098 204.186231 261.469507 212.414753 282.180392 212.414753 
 z
-" clip-path="url(#p9ce29bba48)" style="fill: #f2f5f6; stroke: #2f6f8f; stroke-width: 2.1; stroke-linejoin: miter"/>
+" clip-path="url(#p0c0eaeadbb)" style="fill: #f2f5f6; stroke: #2f6f8f; stroke-width: 2.1; stroke-linejoin: miter"/>
    </g>
    <g id="patch_6">
     <path d="M 103.443137 509.393577 
@@ -80,7 +80,7 @@ C 33.577228 390.722851 25.348706 410.58826 25.348706 431.299145
 C 25.348706 452.010031 33.577228 471.87544 48.222035 486.520247 
 C 62.866843 501.165055 82.732252 509.393577 103.443137 509.393577 
 z
-" clip-path="url(#p9ce29bba48)" style="fill: #f2f5f6; stroke: #2f6f8f; stroke-width: 2.1; stroke-linejoin: miter"/>
+" clip-path="url(#p0c0eaeadbb)" style="fill: #f2f5f6; stroke: #2f6f8f; stroke-width: 2.1; stroke-linejoin: miter"/>
    </g>
    <g id="patch_7">
     <path d="M 460.917647 509.393577 
@@ -93,7 +93,7 @@ C 391.051738 390.722851 382.823216 410.58826 382.823216 431.299145
 C 382.823216 452.010031 391.051738 471.87544 405.696545 486.520247 
 C 420.341352 501.165055 440.206762 509.393577 460.917647 509.393577 
 z
-" clip-path="url(#p9ce29bba48)" style="fill: #f2f5f6; stroke: #2f6f8f; stroke-width: 2.1; stroke-linejoin: miter"/>
+" clip-path="url(#p0c0eaeadbb)" style="fill: #f2f5f6; stroke: #2f6f8f; stroke-width: 2.1; stroke-linejoin: miter"/>
    </g>
    <g id="text_1">
     <!-- Every remedy surveyed here reduces one bill by increasing another. -->
@@ -2033,7 +2033,7 @@ z
   </g>
  </g>
  <defs>
-  <clipPath id="p9ce29bba48">
+  <clipPath id="p0c0eaeadbb">
    <rect x="7.2" y="27.077969" width="549.960784" height="560.96"/>
   </clipPath>
  </defs>

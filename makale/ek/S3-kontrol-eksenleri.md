@@ -30,7 +30,7 @@ the landing gear rather than to the control system.
 The tip pairs sit at the ends of rigid frames that extend from each wing tip
 perpendicular to the planform, above and below, by three hundred percent of the local
 tip chord — 0.71 m in each direction, giving a vertical separation of 1.42 m between
-the upper and lower pairs. Figure 7 gives the placement and the resulting moment
+the upper and lower pairs. Figure 8 gives the placement and the resulting moment
 arms. The frames are long on purpose. The control moment is
 M = 2 T L, so lengthening the arm buys the same moment with less thrust; and because
 propeller power goes as thrust to the three-halves power, tripling the arm reduces the
@@ -523,7 +523,7 @@ moment while the aircraft is standing still, which an aerodynamic surface outsid
 slipstream cannot. Its outboard portion lies beyond the slipstream, where it works
 against the freestream in cruise. The slipstream covers only twenty-seven to
 thirty-nine percent of the semi-span, so lengthening the strip to serve cruise does not
-compromise its hover function; one device serves two regimes. Figure 8 shows the strip
+compromise its hover function; one device serves two regimes. Figure 9 shows the strip
 against the slipstream boundary: the inboard 46 % of its length lies inside, the
 outboard 54 % outside.
 

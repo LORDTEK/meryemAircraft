@@ -1,64 +1,72 @@
 import matplotlib; matplotlib.use("Agg")
-import matplotlib.pyplot as plt
-from matplotlib.patches import Circle, FancyArrowPatch
+import matplotlib.pyplot as plt, numpy as np, math
 OUT="/home/user/meryemAircraft/gorsel/cikti"
-plt.rcParams.update({"font.family":"DejaVu Sans","font.size":11,
- "axes.edgecolor":"#3A4046","text.color":"#1C2024",
- "figure.facecolor":"white","axes.facecolor":"white","savefig.facecolor":"white"})
-b2=1.7264; L=0.71; Dm=1.20; Dt=0.20
-INK="#1C2024"; A="#2F6F8F"; R="#B03A2E"; MUT="#6E7C87"; GR="#C6CCD1"
+D2R=math.pi/180
+P=dict(rootChord=0.97,sweepRoot=45.0,sweepTip=35.0,sweepTE=25.0,crop=67.0,tcRoot=25.0,tcTip=12.0)
 
-fig,ax=plt.subplots(figsize=(9.8,7.4))
-# kanat (on gorunusten ince bir sey)
-ax.plot([-b2,b2],[0,0],lw=5,color="#E4DCC8",solid_capstyle="round",zorder=2)
-ax.plot([-b2,b2],[0,0],lw=1.0,color="#B9AE93",zorder=3)
-# ana pervane
-ax.add_patch(Circle((0,0),Dm/2,fill=False,ec=A,lw=2.4,zorder=4))
-ax.plot([0],[0],"o",ms=7,color=A,zorder=5)
-# dikmeler + uc pervaneleri
-for sx in (-1,1):
-    ax.plot([sx*b2,sx*b2],[-L,L],lw=2.0,color=MUT,zorder=3)
-    for sy in (-1,1):
-        ax.add_patch(Circle((sx*b2,sy*L),Dt/2,fill=False,ec=R,lw=2.2,zorder=4))
-        ax.plot([sx*b2],[sy*L],"o",ms=4,color=R,zorder=5)
-# olculer
-def dim(x0,y0,x1,y1,txt,off=0.0,c=INK,ha="center",va="center",fs=10.5):
-    ax.annotate("",xy=(x1,y1),xytext=(x0,y0),
-                arrowprops=dict(arrowstyle="<->",color=c,lw=1.2,shrinkA=0,shrinkB=0))
-    ax.text((x0+x1)/2,(y0+y1)/2+off,txt,ha=ha,va=va,fontsize=fs,color=c,
-            bbox=dict(fc="white",ec="none",pad=1.6))
-dim(-b2,-1.72,b2,-1.72,"span  $b$ = 3.453 m",0.0)
-# yatis/sapma kolu: sapmanin kolu YARI ACIKLIK, yunuslamanınki cerceve boyu
-dim(0,-1.32,b2,-1.32,"$L_y$ = $b/2$ = 1.726 m",0.0,A)
-dim(b2+0.30,0,b2+0.30,L,"$L_p$ = 0.71 m",0.0,MUT)
-dim(b2+0.72,-L,b2+0.72,L,f"{2*L:.2f} m",0.0,MUT)
-ax.annotate("",xy=(Dm/2,0.80),xytext=(-Dm/2,0.80),
-            arrowprops=dict(arrowstyle="<->",color=A,lw=1.2))
-ax.text(0,0.87,"$D$ = 1.20 m",ha="center",fontsize=10.5,color=A,
-        bbox=dict(fc="white",ec="none",pad=1.6))
-ax.text(-b2-0.34,L,"$d$ = 0.20 m",ha="right",va="center",fontsize=10.5,color=R)
-# etiketler
-ax.text(0,-0.68,"thrust pair\n(all propulsion)",ha="center",va="top",fontsize=10.5,color=A,linespacing=1.4)
-ax.text(-b2-0.34,-L,"control\npairs",ha="right",va="center",fontsize=10.5,color=R,linespacing=1.4)
-# ---- moment blogu: diyagramin ALTINDA ----
-ax.axhline(-2.04,xmin=0.03,xmax=0.97,color=GR,lw=0.9)
-ax.text(0,-2.22,"All thrust vectors are parallel to the body $x$ axis:   "
-        r"$\mathbf{F}=(F_x,\,0,\,0)$",ha="center",va="top",fontsize=11.5,color=INK)
-ax.text(-1.30,-2.54,r"pitch",ha="left",va="top",fontsize=11,color=INK,fontweight="bold")
-ax.text(-0.62,-2.54,r"$M_y = z\,F_x$      upper vs lower pairs, arm $L_p$ = 0.71 m"
-        "\n" r"                   $2TL_p$ = 23.0 N m",
-        ha="left",va="top",fontsize=11,color=INK,linespacing=1.5)
-ax.text(-1.30,-3.02,r"yaw",ha="left",va="top",fontsize=11,color=A,fontweight="bold")
-ax.text(-0.62,-3.02,r"$M_z = -y\,F_x$     left vs right pairs, arm $b/2$ = 1.726 m"
-        "\n" r"                   $2TL_y$ = 55.9 N m  —  2.43 $\times$ the pitch moment",
-        ha="left",va="top",fontsize=11,color=A,linespacing=1.5)
-ax.text(-1.30,-3.50,r"roll",ha="left",va="top",fontsize=11,color=R,fontweight="bold")
-ax.text(-0.62,-3.50,r"$M_x = y F_z - z F_y = 0$    identically, at every thrust setting",
-        ha="left",va="top",fontsize=11,color=R)
-ax.set_xlim(-2.95,3.05); ax.set_ylim(-3.82,1.15); ax.set_aspect("equal"); ax.axis("off")
-ax.set_title("Propeller placement and moment arms — front view",
-             loc="left",fontsize=12.5,fontweight="bold",pad=6)
+# conv: LE ve TE'nin bulusacagi aciklik
+def conv_span(p):
+    lo,hi=0.1,60*p['rootChord']
+    for _ in range(200):
+        mid=(lo+hi)/2
+        # mid'i bRef alarak entegre et, kesisim var mi
+        n=4000; step=mid/n; x=0.0; y=0.0; hit=None
+        for i in range(n):
+            s=(p['sweepRoot']+(p['sweepTip']-p['sweepRoot'])*min((y+step/2)/mid,1))*D2R
+            x+=math.tan(s)*step; y+=step
+            if p['rootChord']+y*math.tan(p['sweepTE']*D2R)-x<=0: hit=y; break
+        if hit is None: lo=mid
+        else: hi=mid
+        if abs(hi-lo)<1e-7: break
+    return (lo+hi)/2
+conv=conv_span(P)
+half=conv*P['crop']/100
+print(f"conv = {conv:.4f} m   yari-aciklik = {half:.4f} m   aciklik = {2*half:.3f} m")
+
+n=1200; ys=np.linspace(0,half,n)
+LE=np.zeros(n); x=0.0
+for i in range(1,n):
+    step=ys[i]-ys[i-1]
+    s=(P['sweepRoot']+(P['sweepTip']-P['sweepRoot'])*min((ys[i]-step/2)/conv,1))*D2R
+    x+=math.tan(s)*step; LE[i]=x
+TE=P['rootChord']+ys*math.tan(P['sweepTE']*D2R)
+ch=TE-LE
+f=ys/half
+tc=(P['tcRoot']+(P['tcTip']-P['tcRoot'])*f)
+lam=P['sweepRoot']+(P['sweepTip']-P['sweepRoot'])*np.minimum(ys/conv,1)
+Sw=2*np.trapezoid(ch,ys); AR=(2*half)**2/Sw
+print(f"kanat alani = {Sw:.4f} m2   AR = {AR:.3f}   (kunye: 1.98 m2, AR 6.00)")
+print(f"kok veter {ch[0]:.3f} m   uc veter {ch[-1]:.3f} m   sivrilme {ch[-1]/ch[0]:.3f}")
+print(f"hucum kenari ok acisi: kokte {lam[0]:.1f} deg -> ucta {lam[-1]:.2f} deg")
+
+plt.rcParams.update({"font.family":"DejaVu Sans","font.size":11,
+ "axes.edgecolor":"#3A4046","axes.labelcolor":"#1C2024","text.color":"#1C2024",
+ "xtick.color":"#3A4046","ytick.color":"#3A4046","axes.linewidth":0.9,
+ "figure.facecolor":"white","axes.facecolor":"white","savefig.facecolor":"white"})
+fig,axs=plt.subplots(1,3,figsize=(9.2,3.3))
+A,B,Cc="#2F6F8F","#B03A2E","#6E7C87"
+axs[0].plot(f,lam,lw=2.4,color=A,label="leading edge")
+axs[0].plot(f,np.full_like(f,P['sweepTE']),lw=2.4,color=B,ls="--",label="trailing edge")
+axs[0].set_ylabel("Sweep angle  (deg)"); axs[0].set_ylim(0,50)
+axs[0].legend(frameon=False,fontsize=10,loc="lower left")
+axs[0].annotate(f"{lam[0]:.0f}°",xy=(0.02,lam[0]),xytext=(0.06,lam[0]+3),fontsize=10,color=A)
+axs[0].annotate(f"{lam[-1]:.1f}°",xy=(1,lam[-1]),xytext=(0.72,lam[-1]-5.5),fontsize=10,color=A)
+axs[0].annotate("25° constant",xy=(0.5,25),xytext=(0.30,18),fontsize=10,color=B)
+axs[0].set_title("(a)  Sweep distribution",loc="left",fontsize=12,fontweight="bold",pad=10)
+axs[1].plot(f,tc,lw=2.4,color=A)
+axs[1].set_ylabel("Thickness / chord  (%)"); axs[1].set_ylim(0,30)
+axs[1].set_title("(b)  Thickness distribution",loc="left",fontsize=12,fontweight="bold",pad=10)
+axs[1].annotate("25 %",xy=(0.02,25),xytext=(0.06,26.4),fontsize=10,color=A)
+axs[1].annotate("12 %",xy=(1,12),xytext=(0.70,8.4),fontsize=10,color=A)
+axs[2].plot(f,ch,lw=2.4,color=A)
+axs[2].set_ylabel("Chord  (m)"); axs[2].set_ylim(0,1.1)
+axs[2].set_title("(c)  Chord distribution",loc="left",fontsize=12,fontweight="bold",pad=10)
+axs[2].annotate(f"{ch[0]:.2f} m",xy=(0.02,ch[0]),xytext=(0.22,0.885),fontsize=10,color=A)
+axs[2].annotate(f"{ch[-1]:.3f} m",xy=(1,ch[-1]),xytext=(0.56,ch[-1]-0.11),fontsize=10,color=A)
+for ax in axs:
+    ax.set_xlabel("Semi-span station  $y/(b/2)$")
+    ax.grid(True,lw=0.5,color="#E9ECEE"); ax.set_axisbelow(True); ax.set_xlim(0,1)
+    for s in ("top","right"): ax.spines[s].set_visible(False)
 fig.tight_layout()
-fig.savefig(OUT+"/sekil07-moment-kollari.png",dpi=300,bbox_inches="tight")
-fig.savefig(OUT+"/sekil07-moment-kollari.svg",bbox_inches="tight")
+fig.savefig(OUT+"/sekil07-dagilimlar.png",dpi=300); fig.savefig(OUT+"/sekil07-dagilimlar.svg")
 print("Sekil 7 yazildi")

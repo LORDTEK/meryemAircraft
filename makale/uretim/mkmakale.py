@@ -222,7 +222,28 @@ def b64(p):
     with open(p, "rb") as fh:
         return "data:image/png;base64," + base64.b64encode(fh.read()).decode()
 
-GENIS = {"2", "9"}   # en/boy > 2 — dik sayfaya sigmaz, yatay tam sayfa basilir
+# EN/BOY ORANI DOSYADAN OLCULUR, ELLE YAZILMAZ. Eskiden {"2","9"} diye
+# gomuluydu; sekiller yeniden numaralaninca 9 artik ucus profili degil
+# kanatcik izi oldu (1,21 oranli, hic genis degil) ve dik basilmasi
+# gereken bir sekil tam sayfa yatay basilmaya basladi -- kimse fark
+# etmeden. Numara bir daha kayarsa bu liste yine bayatlar; o yuzden
+# liste yok, olcum var.
+GENIS_ESIK = 2.0     # en/boy bunun ustundeyse dik sayfaya sigmaz
+
+
+def _genis_mi(dosyalar):
+    from PIL import Image as _I
+    for d in dosyalar:
+        yol = os.path.join(GOR, d)
+        if not os.path.exists(yol):
+            return False
+        en, boy = _I.open(yol).size
+        if en / float(boy) <= GENIS_ESIK:
+            return False        # cok parcali sekilde HEPSI genis olmali
+    return True
+
+
+GENIS = {n for n, f, _ in FIGS if _genis_mi(f if isinstance(f, list) else [f])}
 
 YATAY_DIZIN = os.path.join(ROOT, "gorsel", "cikti", "yatay")
 os.makedirs(YATAY_DIZIN, exist_ok=True)

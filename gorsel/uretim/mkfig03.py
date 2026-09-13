@@ -49,6 +49,6 @@ fig.text(0.115,0.128,
  "Each line gives range for one fixed energy system: the markers locate L/D values only, and are\n"
  "not claims about the range of the aircraft those measurements came from.",
  fontsize=9,color="#6E7C87",linespacing=1.75,va="top")
-fig.savefig(OUT+"/sekil12-menzil-LD.png",dpi=300)
-fig.savefig(OUT+"/sekil12-menzil-LD.svg")
-print("Sekil 12 yazildi")
+fig.savefig(OUT+"/sekil03-menzil-LD.png",dpi=300)
+fig.savefig(OUT+"/sekil03-menzil-LD.svg")
+print("Sekil 3 yazildi")

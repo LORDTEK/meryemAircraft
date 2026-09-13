@@ -18,9 +18,9 @@ makes clear what the framework claims and what it does not.
 For an architecture *a* flying a given mission, write the three charges as fractions of the
 quantity each degrades:
 
-$$f_1(a) = \frac{m_\text{hover-only}(a)}{\mathrm{MTOW}}, \qquad
-f_2(a) = 1 - \frac{(L/D)_a}{(L/D)_\text{clean}}, \qquad
-f_3(a) = \frac{P_\text{cont}(a) - P_\text{cruise}}{\sigma_P\,\mathrm{MTOW}}$$
+    f_1(a) = m_hover-only(a) / MTOW
+    f_2(a) = 1 - (L/D)_a / (L/D)_clean
+    f_3(a) = ( P_cont(a) - P_cruise ) / ( σ_P · MTOW )
 
 where *m*<sub>hover-only</sub> is the mass that exists solely to hover, (L/D)<sub>clean</sub>
 is the lift-to-drag ratio the airframe would have with no hover hardware exposed,
@@ -148,9 +148,9 @@ tested here by sizing the same mission three ways.
 Section 2.12 — closed-loop mass, hover power from momentum theory, and a Breguet-type
 range:
 
-$$\mathrm{MTOW} = \frac{m_\text{payload}}{1 - f_\text{empty} - f_\text{fuel}}, \qquad
-P_\text{hover} = \frac{W^{3/2}}{\eta_h \sqrt{2\rho A}}, \qquad
-R = \frac{f_\text{fuel}\, E^{*} \eta_\text{chain}}{g}\,\frac{L}{D}$$
+    MTOW      = m_payload / ( 1 - f_empty - f_fuel )
+    P_hover   = W^(3/2) / ( η_h √(2ρA) )
+    R         = f_fuel · E* · η_chain · (L/D) / g
 
 The propulsion-chain mass is not a fixed fraction. It is split into a part proportional
 to take-off mass and a part proportional to installed power, because a fixed fraction
@@ -210,7 +210,7 @@ fraction fixed across architectures — the natural choice, and the one the tabl
 lets the heavier aircraft carry proportionally more fuel, which removes the mass bill
 from the range column entirely. The general form is
 
-$$R = \frac{E^{*}\eta_\text{chain}}{g}\,\frac{L}{D}\,\frac{m_\text{fuel}}{\mathrm{MTOW}}$$
+    R = ( E* · η_chain / g ) · (L/D) · ( m_fuel / MTOW )
 
 so that a fixed fraction makes range independent of take-off mass, a fixed fuel *mass*
 makes it inversely proportional to take-off mass, and a fixed take-off mass with a fixed

@@ -6,9 +6,9 @@ bağımsız olarak deneyebilir" iddiasının somut karşılığıdır.
 | Dosya | Ne yapar |
 |---|---|
 | `figlib.py` | 3B modeli başsız Chromium'da açar, kamerayı sürer, ekran görüntüsü alır, otomatik kırpar |
-| `mkfig.py` | Şekil 4 (üç görünüş), Şekil 5 (serbest), Şekil 11 (iki ölçek) |
-| `mkplot.py` | Şekil 10a (geçiş / dönüş süresi), Şekil 10b (tırmanarak giriş) |
-| `mkfig12.py` | Şekil 12 (menzil – L/D düzlemi) |
+| `mkfig.py` | Şekil 5 (üç görünüş), Şekil 6 (serbest), Şekil 10 (iki ölçek) |
+| `mkplot.py` | Şekil 12a (geçiş / dönüş süresi), Şekil 12b (tırmanarak giriş) |
+| `mkfig03.py` | Şekil 3 (menzil – L/D düzlemi) |
 | `gecis2.py` | Geçiş benzetimi — 2 serbestlik dereceli nokta kütle |
 
 **Bağımlılıklar:** `playwright`, `pillow`, `matplotlib`. Chromium yolu
@@ -21,7 +21,7 @@ kopya üretilir (kaynak dosya **değiştirilmez**), sonra `mkfig.py` çalışır
 ⚠️ Kaynak model `../kaynak/govde-etudu.html` bir IIFE içindedir; kanca
 `window.__fig` olarak enjekte edilir. Enjeksiyon kodu `mkfig.py` başında.
 
-## Şekil 12'nin iki bağımsız doğrulaması
+## Şekil 3'ün iki bağımsız doğrulaması
 
 Menzil bağıntısı $R = (m_e/m)\,E^*\,\eta\,(L/D)/g$ iki ayrı noktadan sınandı:
 
@@ -46,32 +46,37 @@ Beklenen uzunluk ölçeği **3,35**. Bu, iki hattın gerçekten aynı geometride
 |---|---|---|
 | 1 | `sekil01-iki-aile.png/.svg` | `mkconcept.py` |
 | 2 | `sekil02-zaman-cizelgesi.png/.svg` | `mkfig02.py` |
-| 3 | `sekil03-uc-fatura.png/.svg` | `mkconcept.py` |
-| 4 | `sekil04-uc-gorunus.png` | `mkfig.py` (3B) |
-| 5 | `sekil05-serbest-gorunus.png` | `mkfig.py` (3B) |
-| 6 | `sekil06-dagilimlar.png/.svg` | `mkfig06.py` |
-| 7 | `sekil07-moment-kollari.png/.svg` | `mkfig07.py` |
-| 8 | `sekil08-kanatcik-iz.png/.svg` | `mkfig08.py` |
-| 9 | `sekil09-ucus-profili.png` | `mkfig09.py` (3B + döndürme) |
-| 10a | `sekil10a-gecis-donus-suresi.png/.svg` | `mkplot.py` |
-| 10b | `sekil10b-tirmanarak-giris.png/.svg` | `mkplot.py` |
-| 11 | `sekil11-iki-olcek.png` | `mkfig.py` (3B) |
-| 12 | `sekil12-menzil-LD.png/.svg` | `mkfig12.py` |
+| 3 | `sekil03-menzil-LD.png/.svg` | `mkfig03.py` |
+| 4 | `sekil04-uc-fatura.png/.svg` | `mkconcept.py` |
+| 5 | `sekil05-uc-gorunus.png` | `mkfig.py` (3B) |
+| 6 | `sekil06-serbest-gorunus.png` | `mkfig.py` (3B) |
+| 7 | `sekil07-dagilimlar.png/.svg` | `mkfig07.py` |
+| 8 | `sekil08-moment-kollari.png/.svg` | `mkfig08.py` |
+| 9 | `sekil09-kanatcik-iz.png/.svg` | `mkfig09.py` |
+| 10 | `sekil10-iki-olcek.png` | `mkfig.py` (3B) |
+| 11 | `sekil11-ucus-profili.png` | `mkfig11.py` (3B + döndürme) |
+| 12a | `sekil12a-gecis-donus-suresi.png/.svg` | `mkplot.py` |
+| 12b | `sekil12b-tirmanarak-giris.png/.svg` | `mkplot.py` |
 
-**Şekil 8** planformu modelin ok açısı yasalarından yeniden kurar, iz sınırını
+> Numaralar makalenin **ilk atıf sırasına** göredir. Dosya adları da bu
+> numarayı taşır; MDPI şekil dosyalarını ayrı yüklettiği için adın
+> numarayla tutması gerekiyor. Numara bir daha kayarsa hem `gorsel/cikti`
+> adları hem `makale/uretim/kapaklar.py` hem de bu tablo birlikte döner.
+
+**Şekil 9** planformu modelin ok açısı yasalarından yeniden kurar, iz sınırını
 ve şeridi üzerine bindirir. Model izi çizmediği için bu şekil tamamen Python'da
-üretilir; geometri yasaları `mkfig06.py` ile aynıdır.
+üretilir; geometri yasaları `mkfig07.py` ile aynıdır.
 
 ## Yöntem notları
 
-**Şekil 9'daki döndürme geometrik olarak doğrudur:** yunuslama ekseni yan görünüş
+**Şekil 11'deki döndürme geometrik olarak doğrudur:** yunuslama ekseni yan görünüş
 düzlemine dik olduğu için, yan görünüş silüetini döndürmek aracı gerçekten
 döndürmekle aynı sonucu verir.
 
-**Şekil 8'in ürettiği yeni sayı:** şerit, boyunun **%45,6**'sında iz sınırını
+**Şekil 9'un ürettiği yeni sayı:** şerit, boyunun **%45,6**'sında iz sınırını
 kesiyor (yarı-açıklığın %30,7'sinde). Yani iç %46 hover'da, dış %54 seyirde
 çalışıyor. Bu sayı künyede yoktu; şekil üretilirken çıktı.
 
-**Şekil 6 geometriyi bağımsız doğruladı:** modelin yasaları Python'da yeniden
+**Şekil 7 geometriyi bağımsız doğruladı:** modelin yasaları Python'da yeniden
 kurulunca açıklık 3,453 m, alan 1,9785 m², AR 6,026 çıktı — künyeyle örtüşüyor.
 Aynı hesap makale metnindeki **yanlış ok açılarını yakaladı**.
