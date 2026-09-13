@@ -196,7 +196,14 @@ series hybrid: fuel drives an internal-combustion engine, the engine drives a
 generator, and the generator supplies electric machines at the rotors.
 
 The aircraft has no elevons, no rudder, no tilting mechanism, no retraction mechanism
-and no dedicated lift system. The only moving aerodynamic device is a variable-extension strip on
+and no dedicated lift system. **That last phrase needs one qualification, made here so that it is
+not mistaken for a stronger claim later.** The four tip pairs exist to produce moments, and their
+thrust is sized by that duty; but the primary propulsor is sized at thrust equal to weight
+exactly, so the margin that actually lifts the aircraft off the ground comes from those four
+pairs. They are not a lift system — they are not sized for lift, they do not carry the aircraft
+in hover, and they are absent from the hover power budget as a lift term — but the configuration
+does depend on their surplus for take-off, and Section 4.4 treats that dependence as a
+limitation rather than a feature. The only moving aerodynamic device is a variable-extension strip on
 the lower surface, described in Section 2.10, which exists solely because roll cannot be
 produced by propellers alone. Figure 4 gives three orthogonal views of the light
 reference design and Figure 5 a general view of the same geometry.

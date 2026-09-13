@@ -96,11 +96,14 @@ changes what this subsection concludes. The *stopped edge-on* row shows, separat
 the rotors is survivable only if azimuth is controlled — which is the indexing mechanism this
 section has just claimed the configuration does not need.
 
-**The resolution costs nothing, and it is a control state rather than hardware.** A fixed-pitch
+**The resolution needs no hardware and can be imposed as a control state, but its aerodynamic
+cost has to be computed rather than assumed away — and this section computes it.** A fixed-pitch
 propeller left free settles at the advance ratio where net shaft torque is zero: inner sections
 drive, outer sections retard, and they balance. The shaft then does no work, so the motor
 neither drives nor brakes and the electrical cost is controller standby draw and bearing losses.
-The blades sit at low incidence, which was taken to put them in the first row. **The tip rotors
+The blades sit at low incidence, which was taken to put them in the first row —
+**an inference the calculation below overturns**, since low section incidence at high rotational
+speed is not the same thing as low drag. **The tip rotors
 are therefore held in cruise at the zero-shaft-torque condition — neither stopped nor driven** —
 and this is the state assumed throughout Section 3. It is worth naming because both neighbouring
 states are wrong: driven, they cost propulsive power; stopped without azimuth control, they cost
