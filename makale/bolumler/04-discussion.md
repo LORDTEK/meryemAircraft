@@ -59,6 +59,23 @@ much cruise efficiency the architecture had to surrender.
 An architecture that surrenders less does not merely perform better inside the band. It
 widens the band.
 
+**Where this configuration sits in that statement has to be said precisely, because the obvious
+reading is too generous to it.** Against the two families that bound the band, the case is
+straightforward and is why the configuration exists: it needs no runway, which the fixed-wing
+family cannot say, and it carries a cruising wing, which the multirotor family does not — the
+sizing set of Section 3.2 puts a turboshaft quadrotor at an effective lift-to-drag ratio of 4.9
+against this configuration's 8.8 to 10.8. On both edges the band is genuinely wider.
+
+**Inside the band, against the other hybrids, the claim splits and one half of it fails.** Once
+the free-wheeling drag of the attitude rotors is charged, this configuration retains 0.632 of its
+clean cruise efficiency against the lift-plus-cruise layout's 0.765. **It surrenders more cruise
+efficiency, not less**, so on the range axis it does not widen the band against that layout — and
+Section 3.6 measures the consequence, a range deficit of 24 to 45 percent under equal fuel
+fractions. What it does hold is the mass axis, by 32 to 36 percent across the same bracket.
+**The band is widened on one axis and not the other, and which one matters is the sizing
+contract's question rather than the architecture's** — which is this paper's central result
+arriving at its own case.
+
 
 This is a configuration study. It contains no experimental validation of any kind, and
 the numbers in it are the output of elementary methods applied to a set of assumptions.

@@ -7,9 +7,20 @@ gerekiyor), **KARAR** (iki seçenek var, seçmen gerek).
 
 ---
 
-## 0. Gönderimi durduran iki madde — önce bunlar
+## 0. Durum — iki madde kapandı
 
-### 0.1 Yazar katkıları onayı — **SENDEN, zorunlu**
+**Yazar katkıları onaylandı** (senin "iş paylaşımı o şekilde" onayınla), taslak
+işareti kaldırıldı. **Zenodo kök DOI'si eklendi:** Data Availability artık
+`https://doi.org/10.5281/zenodo.22144194` taşıyor — bütün sürümlere işaret eden,
+sabit olan.
+
+**Gönderimi durduran madde kalmadı.**
+
+---
+
+## 0b. Kapanan maddenin kaydı
+
+### Yazar katkıları — **ONAYLANDI**
 
 `00-on-bilgi.md` içindeki Author Contributions bloğu hâlâ **⚠️ TASLAK** işaretli.
 Ben yazdım, varsayımla: sorumlu yazar Meryem, denetleyen Ömer, yazılım Berke.
@@ -25,49 +36,59 @@ ihlalidir.** Kimin ne yaptığını ben bilemem.
 > M.G., B.G. and Ö.G.; Visualization, B.G.; Supervision, Ö.G.; Project
 > Administration, M.G.
 
-**Yapılacak:** üç yazar da okusun, doğruysa onayla, değilse düzelt. Düzeltince bana
-söyle, kaynağa işleyip yeniden kurayım. CRediT sözlüğü dışında terim
-kullanılamaz.
+Onaylandı ve taslak işareti kaldırıldı. Sonradan değiştirmek istersen söyle.
 
-### 0.2 Zenodo DOI'si makalede yok — **SENDEN**
+### Zenodo DOI — **EKLENDİ**
 
-Data Availability şu an yalnız GitHub'a işaret ediyor. Zenodo'ya yükledin, ve
-dergi kalıcı tanımlayıcı istiyor.
+Data Availability artık şunu taşıyor:
 
-**Bana ver:** v6 sürümünün **concept DOI**'si (bütün sürümlere işaret eden, sabit
-olan). Zenodo kayıt sayfasında "Cite all versions" altında görünür,
-`10.5281/zenodo.XXXXXXX` biçiminde.
-
-Verince Data Availability'ye şu biçimde ekleyeceğim:
-
-> …are openly available at https://github.com/LORDTEK/meryemAircraft and are
-> archived at https://doi.org/10.5281/zenodo.XXXXXXX
+> …are openly available at https://github.com/LORDTEK/meryemAircraft, and an
+> archived version of this manuscript with its supplementary material is
+> deposited at https://doi.org/10.5281/zenodo.22144194 (concept DOI, resolving
+> to the latest version).
 
 ---
 
-## 1. Gönderim biçimi — **KARAR**
+## 1. Gönderim biçimi — **MDPI ŞABLONU, ÜRETİLDİ**
 
-Drones **Free Format Submission** kabul ediyor: ilk gönderimde MDPI şablonuna
-dökmek zorunlu değil, kendi düzenimizde PDF gönderilebilir. Ama IMRaD yapısı,
-Highlights, özet sınırı ve beyan blokları **Free Format'ta da zorunlu** —
-hepsi bizde var.
+Kararın MDPI şablonu yönünde. Şablona **elle dökmedim, ürettim** — 70 sayfa,
+172 tablo satırı ve 12 şekil elle taşınacak iş değil, ve bu depoda bir sürüm
+elle toparlandığı için yanlış tablo taşımıştı.
 
-| seçenek | ne demek |
-|---|---|
-| **A — Free Format** (önerim) | Elimizdeki PDF'i olduğu gibi gönder. Kabul sonrası şablona dökülür. |
-| B — MDPI şablonu | Word/LaTeX şablonuna şimdi dök. Birkaç saatlik biçim işi, bilimsel katkısı yok. |
+`makale/uretim/mkdocx.py` `makale-v6.md`'den okuyup MDPI düzeninde `.docx`
+üretiyor: başlık, üstsimgeli yazar/kurum satırları, `Abstract:`, `Keywords:`,
+numaralı bölümler, `Figure N.` altyazıları, tablolar, **derginin kendi
+sırasındaki** arka madde blokları, ve numaralı kaynakça.
 
-**Önerim A.** Sebep: makale 70 sayfa ve 172 tablo taşıyor; şablona dökmek biçim
-hatası üretme riski taşıyor ve reddi etkilemiyor. Hakem bilimi okur.
+**Kayma denetimi — üretilen belge kaynağa karşı:**
 
----
+| | kaynak | .docx |
+|---|---:|---:|
+| kelime | 31 200 | **31 198** |
+| şekil | 12 | **12** |
+| kaynak girdisi | 51 | **51**, 1–51 tam |
+| beyan bloğu | 8 | **8**, MDPI sırasında |
+| ham markdown kalıntısı (`**`, `<sup>`, `>`) | — | **0** |
+| Türkçe çalışma notu | — | **0** |
+
+Üretirken beş kusur çıktı ve hepsi düzeltildi: üstsimgeler ham `<sup>` olarak
+kalıyordu; alıntı işaretleri paragraf ortasında duruyordu; beyanlar gövdeden
+önce geliyordu (MDPI kaynakçadan önce, ama gövdeden sonra ister); beyan alt
+başlıkları hiç basılmıyordu; ve kaynakçanın üç girdisi italikle başladığı için
+bir öncekine yapışmıştı.
+
+**Grok ve ChatGPT'ye soracağın şey:** kaymanın gözle görülür bir yerde kalıp
+kalmadığı. Yukarıdaki tablo makine denetimi; şablona özgü biçim kaymalarını
+(tablo taşması, şekil yerleşimi, sayfa kırılması) onlar daha iyi görür.
 
 ## 2. Yüklenecek dosyalar — **HAZIR**
 
 | dosya | nereden | ne olarak |
 |---|---|---|
-| `meryemAircraft-makale.pdf` | `makale/pdf/` | **Manuscript** (ana belge, 70 sayfa) |
-| `meryemAircraft-ek.pdf` | `makale/pdf/` | **Supplementary File** (60 sayfa, S1–S6) |
+| `meryemAircraft-MDPI.docx` | `makale/pdf/` | **Manuscript** — MDPI düzeninde, gönderilecek olan |
+| `meryemAircraft-MDPI-ek.docx` | `makale/pdf/` | **Supplementary File** — aynı düzende |
+| `meryemAircraft-makale.pdf` | `makale/pdf/` | yedek; sistem PDF isterse |
+| `meryemAircraft-ek.pdf` | `makale/pdf/` | yedek |
 | `sekil01`…`sekil12` | `gorsel/cikti/` | **Figures**, ayrı ayrı, yüksek çözünürlüklü |
 
 Şekiller denetlendi: on üçünün hepsi ≥1500 piksel genişlikte, dokuz tanesi
@@ -143,7 +164,7 @@ Drones kapak mektubu istiyor. Kısa tutmak doğru. Taslak:
 > The computational record — mesh generator, case setups, grid-convergence study,
 > and the scripts behind every figure — is openly available, and an archived
 > version of this manuscript with its supplementary material is deposited at
-> Zenodo (DOI: …).
+> Zenodo (DOI: 10.5281/zenodo.22144194).
 >
 > The authors have filed a patent application covering the configuration
 > (Türkpatent 2026/014570); this is declared in the manuscript.

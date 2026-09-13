@@ -110,7 +110,9 @@ series hybrid propulsion; cruise efficiency; aircraft configuration design
 > simulation, together with the aerodynamic calculations of Section 3.10 — including the
 > mesh generator, the case setup, the grid-convergence study and the wall-resolution and
 > turbulence-model sensitivity runs behind the computed zero-lift drag — are openly
-> available at https://github.com/LORDTEK/meryemAircraft
+> available at https://github.com/LORDTEK/meryemAircraft, and an archived version of this
+> manuscript with its supplementary material is deposited at
+> https://doi.org/10.5281/zenodo.22144194 (concept DOI, resolving to the latest version).
 
 ### Dual-Use Research of Concern
 
@@ -253,9 +255,16 @@ Items 1 and 2 stand independently of whether this aircraft is ever built, and th
 contribution. Items 3 and 4 are what a case study is for: they show the framework applied to a
 real geometry in enough detail that the bills can be audited one at a time, including the two
 occasions on which the audit found against the configuration. Item 5 is the reason the paper does
-not claim the aircraft can be built. **No claim of general architectural superiority is made
-anywhere in this paper**, and the sizing results are reported as properties of a case under
-stated contracts rather than as a ranking of families.
+not claim the aircraft can be built. **Two architectural claims are made and a third is not**, and the
+distinction runs through the whole paper. The first is that this configuration escapes the
+runway requirement, which no fixed-wing aircraft does. The second is that it retains a cruising
+wing, and therefore a range, that no multirotor has: the sizing set discussed in Section 3.2
+puts a turboshaft quadrotor at an effective lift-to-drag ratio of 4.9 against this
+configuration's 8.8 to 10.8 across its computed drag bracket. **Those two together are why the
+configuration exists, and neither is weakened by anything in this paper.** What is *not* claimed
+is a ranking against the other hybrid VTOL architectures — lift-plus-cruise and tilting — because
+Section 3.6 shows that ranking reverses with the sizing contract. The sizing results are reported
+as properties of a case under stated contracts, not as a ranking of the hybrid family.
 
 **Scope.** This is a configuration study containing no wind-tunnel measurement and no flight
 test. Its results are analytical estimates from stated assumptions, with two exceptions computed
@@ -2247,6 +2256,23 @@ much cruise efficiency the architecture had to surrender.
 
 An architecture that surrenders less does not merely perform better inside the band. It
 widens the band.
+
+**Where this configuration sits in that statement has to be said precisely, because the obvious
+reading is too generous to it.** Against the two families that bound the band, the case is
+straightforward and is why the configuration exists: it needs no runway, which the fixed-wing
+family cannot say, and it carries a cruising wing, which the multirotor family does not — the
+sizing set of Section 3.2 puts a turboshaft quadrotor at an effective lift-to-drag ratio of 4.9
+against this configuration's 8.8 to 10.8. On both edges the band is genuinely wider.
+
+**Inside the band, against the other hybrids, the claim splits and one half of it fails.** Once
+the free-wheeling drag of the attitude rotors is charged, this configuration retains 0.632 of its
+clean cruise efficiency against the lift-plus-cruise layout's 0.765. **It surrenders more cruise
+efficiency, not less**, so on the range axis it does not widen the band against that layout — and
+Section 3.6 measures the consequence, a range deficit of 24 to 45 percent under equal fuel
+fractions. What it does hold is the mass axis, by 32 to 36 percent across the same bracket.
+**The band is widened on one axis and not the other, and which one matters is the sizing
+contract's question rather than the architecture's** — which is this paper's central result
+arriving at its own case.
 
 
 This is a configuration study. It contains no experimental validation of any kind, and
