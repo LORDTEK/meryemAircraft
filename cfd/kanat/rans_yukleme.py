@@ -105,11 +105,19 @@ if __name__ == "__main__":
     # Dogrusu, agi kuran istasyon listesini dogrudan kullanmak: o liste
     # geometrinin tanimi ve iki cozucu de ayni kenarlara toplanabilir.
     from gercek import gercek_istasyonlar
-    gist, _ = gercek_istasyonlar(n=20, sikistir=True)
+    # ISTASYON SAYISI VAKAYA AITTIR, sabit DEGIL. Ilk surum n=20'yi
+    # gomuyordu; 28 istasyonlu orta agda kenarlar agin istasyonlariyla
+    # hizalanmiyor ve yuzler kutular arasinda SIRAYLA dusuyor. Cikan
+    # duzenli alternatif desen (0,56 / 1,15 / 0,56 / 1,11 ...) fizik
+    # degil, hizalanmama kusuruydu.
+    n_ist = int(sys.argv[3]) if len(sys.argv) > 3 else 20
+    gist, _ = gercek_istasyonlar(n=n_ist, sikistir=True)
     kenar = np.array([g[0] for g in gist], dtype=float)
     kenar[0] = 0.0
     kenar[-1] = max(kenar[-1], float(np.abs(span).max()), yari)
     print("\nkenar: agi kuran %d istasyon" % len(kenar))
+    if len(kenar) - 1 < 8:
+        sys.exit("!! DUR -- kutu sayisi cok az.")
     Lr = kutula(np.abs(span), L, kenar)
     clc_r = 2.0 * (Lr / 0.5) / np.diff(kenar)          # c_l*c, tam kanat
 

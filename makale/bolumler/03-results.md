@@ -477,6 +477,30 @@ Every number below is calculated, not measured. Section 4 says what that means.
 | **Range** | **1 598 km** |
 | Transition time | 2 s |
 
+**The four cruise quantities in that table are computed at a single assumed zero-lift drag
+coefficient, and Supplementary S1 brackets that coefficient by calculation.** The bracket is
+0.0285 to 0.0381 and the assumed 0.0248 lies below both ends, so the table is optimistic rather
+than central. Re-solving the same sizing loop across the bracket — same wing and disc loading,
+same fuel fraction, same mass model, only the drag changed:
+
+| | Assumption | Favourable end | Adverse end |
+|---|---:|---:|---:|
+| Zero-lift drag coefficient | 0.0248 | 0.0285 | 0.0381 |
+| Cruise L/D | 11.88 | 10.82 | **8.80** |
+| Cruise power, electrical | 1.72 kW | 1.93 kW | **2.50 kW** |
+| Take-off mass | 50.1 kg | 51.1 kg | 53.9 kg |
+| Endurance | 14.7 h | 13.4 h | **10.9 h** |
+| **Range** | **1 583 km** | **1 442 km** | **1 173 km** |
+
+At the published assumption the loop returns 50.1 kg and 1 583 km against the 50 kg and 1 598 km
+in the table above, which is the check that the sweep and the original sizing are the same
+calculation rather than two.
+
+**The honest figure for this design is a range of 1 173 to 1 442 km, not 1 598.** Nothing else in
+the table moves: the geometry, the loadings, the hover power and the transition time are all set
+by mass and disc area, none of which the drag coefficient touches. What moves is every quantity
+that passes through cruise efficiency, and those are the four in bold.
+
 The mass budget behind this — 30 % structure, 16 % propulsion chain, 4 % battery, 8 %
 avionics and control, 16 % fuel, leaving 26 %, or 13 kg, for payload — is the allowance the
 design is sized against, and it is asserted here rather than derived. Section 3.11 rebuilds
@@ -511,10 +535,41 @@ battery buffer's specific power — not the structure — as the most exposed nu
 | **Range** | **1 814 km** |
 | Transition time | 5.1 s |
 
-The heavy design has a longer range than the light one despite a shorter endurance.
-Both effects come from the same source: the larger aircraft cruises faster and, at a
-higher Reynolds number, achieves a lower zero-lift drag coefficient and therefore a
-better lift-to-drag ratio. Nothing in the architecture was changed to obtain this.
+**This table charges the tip frames and not the free-wheeling rotors, which is the defect
+Section 3.3 found in the light line, and the heavy line carries it too.** Running the same
+blade-element calculation at this design's own conditions — 0.67 m discs, 40 m s⁻¹, the tip-pair
+power this configuration allocates, and the hover thrust that follows from it — gives a much
+smaller charge than the light design pays:
+
+| | Published | Rotors charged |
+|---|---:|---:|
+| Free-wheeling ΔC_D0, eight discs | assumed negligible | **0.0033** |
+| Zero-lift drag coefficient | 0.0200 | 0.0233 |
+| Cruise L/D | 13.60 | **12.37** |
+| Take-off mass | 1 037 kg | 1 063 kg |
+| **Range** | **1 813 km** | **1 649 km** |
+
+The published row is what the sizing loop returns with no rotor charge, and it reproduces the
+13.6 and 1 814 km of the table above, which is the check that this is the same calculation.
+**The charge is five times lighter than the light design's 0.0154**, and the reason is scale: the
+discs grow more slowly than the wing they are referenced to, so the same architecture pays less of
+this particular bill as it gets larger. That is a property worth stating because it runs opposite
+to the mass bill, which scales the other way.
+
+**A second result from the same calculation is adverse and is not a drag result.** No blade in the
+family reaches the hover figure of merit of 0.599 that this design's power budget assumes: the best
+is 0.547, and the designs that come closest do so at tip Mach numbers above unity, where the
+section data underneath the solver do not apply. **The heavy design's tip pairs therefore do not
+meet the efficiency their own power allocation is built on**, and the twelve percent of hover power
+assigned to them in Section 2.12 is insufficient by roughly a tenth. This is not corrected in the
+table above, because correcting it means re-sizing the tip pairs rather than adjusting a
+coefficient, and that is a design change rather than a calculation.
+
+The heavy design still has a longer range than the light one despite a shorter endurance, and the
+margin survives charging both lines: 1 649 km against 1 173 to 1 442 km. Both effects come from the
+same source: the larger aircraft cruises faster and, at a higher Reynolds number, achieves a lower
+zero-lift drag coefficient and therefore a better lift-to-drag ratio. Nothing in the architecture
+was changed to obtain this.
 
 ## 3.9 Scale behaviour
 
@@ -531,6 +586,15 @@ the classical result**, and that is the whole benefit of fixing it. The cost is 
 must then grow as L³ rather than L², which for a fixed number of propellers is impossible. The
 architecture has two ways out and uses both: a coaxial pair may be added at no architectural
 cost, since every pair is torque-balanced on its own; and geometric similarity is not held.
+
+**The three bills do not scale together, and Bill 2 scales in the configuration's favour.**
+The free-wheeling charge computed in Sections 3.3 and 3.8 falls from 0.0154 at 50 kg to 0.0033 at
+1000 kg, because the tip discs are referenced to a wing area that grows faster than they do. The
+mass bill scales the other way, and the power bill is held flat by construction. **This is the
+framework's own prediction operating on its own case**: the three currencies are separable, so
+they need not move together, and an architecture can be getting better in one while getting worse
+in another. It also means the light design is the harder case for this configuration and the
+heavy design the easier one, which is the opposite of the usual expectation for a tail-sitter.
 
 **The propeller therefore grows faster than the airframe.** Wing loading rises from 25.3 to
 45.0 kg m⁻², so span grows by 3.35 against the 4.50 by which the main propeller must grow. The
