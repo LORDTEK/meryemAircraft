@@ -84,7 +84,7 @@ the wrong state:
 | Tip rotors in cruise | ΔC_D0 | of the 0.0248 assumed |
 |---|---:|---:|
 | turning at zero shaft load, blades at low incidence | 0.0003 – 0.0008 *(assumed)* | 1 – 3 % |
-| turning at zero shaft load, **computed below** | **0.0153 – 0.0423** | **62 – 171 %** |
+| turning at zero shaft load, **computed below** | **0.0154 – 0.0423** | **62 – 171 %** |
 | stopped edge-on, at a chosen azimuth | 0.0008 | 3 % |
 | **stopped broadside, azimuth uncontrolled** | **0.015 – 0.018** | **61 – 74 %** |
 
@@ -125,7 +125,7 @@ shaft speed found at which net torque is zero.
 | 0.55 | 0.65 | 29 200 rpm | 0.90 | 0.0238 |
 | 0.60 | 0.65 | — | — | 0.0199 |
 | 0.64 | 0.64 | — | — | 0.0174 |
-| **0.68** | **0.63** | **25 000 rpm** | **0.77** | **0.0153** |
+| **0.68** | **0.63** | **25 000 rpm** | **0.77** | **0.0154** |
 | 0.70 | 0.35 | 19 800 rpm | 0.61 | 0.0126 |
 | 0.85 | 0.27 | 14 500 rpm | 0.45 | 0.0085 |
 
@@ -141,7 +141,7 @@ allotted; quoting its cruise drag charges the configuration for a component it h
 out. The figure of merit is flat at 0.63 to 0.65 from c_l 0.55 to 0.68 and then collapses to 0.35
 by 0.70, so 0.599 falls in the collapse and no design in this family sits exactly on it. Every
 design that *meets* the hover requirement lies at c_l ≤ 0.68, and **the least draggy of them gives
-0.0153** — three and a half times the 0.0043 charged for the tip frames, and sixty-two percent of
+0.0154** — three and a half times the 0.0043 charged for the tip frames, and sixty-two percent of
 the total zero-lift drag the sizing assumes. The two fastest rows are still discarded on their own
 terms, the section data being incompressible where their tips are not.
 
@@ -154,7 +154,7 @@ figures differ only in the polar:
 
 | | Shaft speed | Tip Mach | ΔC_D0, eight discs |
 |---|---:|---:|---:|
-| Incompressible section data | 25 046 rpm | 0.76 | 0.01535 |
+| Incompressible section data | 25 046 rpm | 0.76 | 0.01545 |
 | Compressibility-corrected | 24 958 rpm | 0.76 | **0.01541** |
 
 **The figure moves by four tenths of one percent**, and two mechanisms explain why. The lift
@@ -307,7 +307,7 @@ and re-deriving it reverses one of the three results.** Architecture A was charg
 exposed hardware, a figure covering the tip frames alone. Architecture B was charged 13/17, which
 comes from a measured configuration and therefore already contains the drag of its lift rotors.
 The comparison was asymmetric, and Section 3.3 has now computed the term that was missing: the
-free-wheeling tip rotors add at least 0.0153 to zero-lift drag. Rebuilt from the same drag
+free-wheeling tip rotors add at least 0.0154 to zero-lift drag. Rebuilt from the same drag
 book-keeping that reproduces the original 1.12 to three digits, A's multiplier becomes **1/1.58**,
 its cruise lift-to-drag ratio falls from 12.00 to **8.49**, and its take-off mass rises to
 **54.5 kg**. B cannot escape this charge by stopping its rotors and A cannot: B's lift discs are
@@ -691,9 +691,9 @@ bounds it, and the direction of each is stated here.
 at matched wall resolution. **The assumption lies above the whole of that range**, so
 against the airframe alone it is conservative rather than optimistic. **It is not conservative
 against the aircraft.** That solution resolves the wing and the body and no rotors, and the
-free-wheeling discs computed in Section 3.3 add at least 0.0153 to whatever it returns. Carried
-into the build-up of Supplementary S1 the bracket becomes 0.0216 to 0.0380 and the assumed 0.0248
-lies inside it rather than above it — optimistic by as much as fifty-three percent at the upper
+free-wheeling discs computed in Section 3.3 add at least 0.0154 to whatever it returns. Carried
+into the build-up of Supplementary S1 the bracket becomes 0.0285 to 0.0381 and the assumed 0.0248
+lies below both ends rather than above them — optimistic by as much as fifty-three percent at the upper
 end. **The cruise lift-to-drag ratio, the ranges of Section 3.8 and the comparative sizing of
 Section 3.6 are all computed on 0.0248 and none of them is re-derived here.** Two things S1 does not settle: the solutions are fully
 turbulent, so the clean-surface figure of 0.0073 from the strip method is untested and the gap
@@ -901,6 +901,15 @@ equations that govern the transition, and reports a simulation of it. One result
 contradicts a widely-assumed relationship and is presented as such.
 
 ## 3.12 The five phases
+
+**Why the next six subsections are here.** Everything so far has audited the three bills and the
+sizing that follows from them, which is what the framework of Section 2 asks of a case. None of it
+establishes that the configuration can perform the manoeuvre that makes it a tail-sitter rather
+than a fixed-wing aircraft that cannot take off. **The bills are only owed by an aircraft that
+rotates**, and whether this one can is a separate question from what its architecture costs. The
+subsections below ask it, and the answer decides whether the case study is of an aircraft or of a
+configuration that has never left the ground. It is also where this paper's largest unresolved
+item lives.
 
 **Stance.** The aircraft rests on five points — the four lower ends of the tip frames
 and the aft end of the centre keel — with its longitudinal axis vertical. No launch

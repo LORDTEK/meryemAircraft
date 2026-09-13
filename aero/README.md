@@ -3674,3 +3674,86 @@ Tur 20 metninde dolgunlugu iki kez verdim: "0,0754 karsi 0,0215" (kusurlu
 deger, kesif anlatilirken) ve "0,075 -> 0,044" (duzeltilmis, mekanizma
 bolumunde). Ikisi de dogru ama ETIKETLENMEMISTI. Makalede boyle bir sorun
 yok -- yalnizca duzeltilmis degerler var. Kusur iletisimdeydi.
+
+
+---
+
+# Tur 21 — parca-butun-parca; butun okuma iki dikisi buldu, parca okuma bir blokeri
+
+Kullanici bu tur acikca PARCA -> BUTUN -> PARCA istedi. Isabetli oldu:
+son dort tur parca odakliydi ve cok etkiliydi (uc kod kusuru, iki sahte
+bulgu), ama hicbiri "bu tek bir makale olarak duruyor mu" diye
+sormamisti. Bu turun iki en degerli bulgusu BUTUN okumadan geldi.
+
+## BLOKER — surukleme braketi UC yerde bayatti
+
+Qwen ve DeepSeek ayni turda, birbirinden bagimsiz yakaladi. Qwen'in
+teshisi ARITMETIK OLARAK TAM:
+
+    0,0285 - 0,0216 = 0,0069
+    0,0154 - 0,0085 = 0,0069     <- ayni sayi
+
+Yani bayat alt sinir, ucagin KULLANAMAYACAGI FM=0,27 pervanesini
+tasiyordu:
+    0,0073 + 0,0043 + 0,0015 + 0,0085 = 0,0216   (bayat)
+    0,0073 + 0,0043 + 0,0015 + 0,0154 = 0,0285   (dogru)
+
+Ve YZ'lerin dediginden BIR FAZLA yerdeydi: 3.10, 4.5 ve **S1'in kendi
+nesri** -- yani otekilerin kaynak gosterdigi bolum. S1 kendi tablosuyla
+celisiyordu: tablo 0,0285-0,0381, altindaki metin 0,0216-0,0380.
+
+"0,0248 braketin ICINDE" ile "IKI UCUNUN DA ALTINDA" birbirini dislar.
+Uc yer de duzeltildi.
+
+**Bu ayni hata sinifinin UCUNCU tekrari.** DeepSeek'in ifadesi: "bir
+duzeltme bir bolumde uygulandi, otekilerde uygulanmadi."
+
+## DOGRULA.PY'YE BAYAT SAYI DENETIMI EKLENDI
+
+Qwen'in onerisi. Sekiz eski deger (0.0216, 0.0380, 0.0153, 0.0033,
+0.547, "1 649", 12.37, "1800 km") on iki kaynak dosyada aranir; biri
+bile gecerse uretim DURUR. Uc turdur ayni sinifta hata yapiyoruz;
+denetim artik makinanin.
+
+## Ikinci dikis — Giris, Fatura 2'nin DOGMADIGINI soyluyordu
+
+Yalniz Qwen buldu, ve yalniz butun okumayla bulunabilirdi.
+
+    Giris:  "uc ucretin ikisi DOGMUYOR, biri yariya iniyor"
+    3.3  :  "Fatura 2 YOK DEGIL" (baslik: azaltilmis, ve varsayilandan buyuk)
+    Ozet :  "yapilandirmanin kacindigi varsayilan bir fatura"
+
+Giris -> 3.3 okuyan bir okuyucu dogrudan celiskiye carpiyordu. Sayim
+duzeltildi: **biri dogmuyor (kutle), biri yariya iniyor (guc), biri
+azaltiliyor ama kalkmiyor (surukleme).**
+
+## OMURGA CUMLESI — Grok'un Q3'u, Qwen'in bulgusuyla ayni yere ciktri
+
+Grok: "Makale hem 'kacis kosulunu saglar' hem '3.5'in en buyuk kalemi
+Fatura 2' diyorsa, tek bir cumle olmadan bunlar zimbalanmis iki
+makaledir." Ve: "temiz bir onay olarak 'kacis kosulunu saglar' bir
+sonraki %42'dir."
+
+2.7, 5. bolum ve ozete ayni ayrim kondu: **birincil pervane dort kosulu
+da saglar; tutum sistemi surukleme faturasini yeniden acar. Somutlama
+KISMIDIR ve kisminin ne odedigini raporlamak 3. bolumun buyuk kismidir.**
+
+## DeepSeek'in uc maddesi
+
+- "does not close" (1., 5., S2) karsi "closure undetermined" (3.8) --
+  tur 20'de israrla ayirdigimiz ayrim tutarli tasinmamisti. Uc yer de
+  "undetermined"a cekildi.
+- 0,0153 karsi 0,0154 -- alti yerde birlestirildi.
+- 3.12 (gecis) cerceveye baglanmiyordu. Koprü cumlesi yazildi:
+  "faturalar yalnizca DONEN bir ucak tarafindan odenir."
+- Highlights yalniz A'nin KAYBETTIGI sozlesmeyi tasiyordu (+%21,1);
+  ucu birden kondu. Hakem yalnizca Highlights okursa kaybi gorup
+  kazanclari gormuyordu.
+
+## Q4 -- ilk hakem neye saldirir
+
+Dortten UCU ayni yere: karsilastirmanin model simetrisizligi. A bilesen
+bazli kutle kurulusu + hesaplanmis surukleme + hesaplanmis rotor
+suruklemesi; B ve C yayinlanmis kesirler. Makale bunu zaten kabul
+ediyor. Savunma: ana sonuc A > B degil, SIRALAMANIN SOZLESMEYE BAGLI
+oldugu. Qwen ise braket tutarsizligini isaret etti -- ve o giderildi.

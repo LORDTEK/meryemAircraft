@@ -60,14 +60,21 @@ it does not show that the strip supplies it.
 
 Because the same primary propulsor serves hover and cruise without changing its
 orientation relative to the airframe, none of the three penalties **as defined in
-Section 2** arises in full: there is no second thrust system to carry, no lift hardware left
-exposed in the cruise airstream, and no *engine* sized by the hover peak. The third of those is
-the one that comes with a qualification, and Section 3.4 states it rather than deferring it: the
-buffered series hybrid releases the engine and its fuel consumption from the hover condition, but
-the electric machines and the power electronics still pass the full hover power, and the
-hover-sized machine is the largest single item in the propulsion chain. That is a statement about
-three specific charges, two of which do not arise and one of which is halved, not a claim that
-the configuration is free. What it pays instead — the mass and drag of the control propellers and their
+Section 2** arises in full — but they do not fail to arise equally, and the differences are what
+Section 3 spends its length on.
+
+**The mass bill does not arise**: there is no second thrust system to carry. **The power bill is
+halved rather than removed**, and Section 3.4 states the qualification rather than deferring it:
+the buffered series hybrid releases the engine and its fuel consumption from the hover condition,
+but the electric machines and the power electronics still pass the full hover power, and the
+hover-sized machine is the largest single item in the propulsion chain. **The drag bill is reduced
+and not removed.** There is no *lift* system left exposed in the cruise airstream — but the four
+attitude pairs are exposed, they cannot be feathered, and Section 3.3 computes what they cost
+rather than assuming it away. An earlier version of this paper counted that charge as absent; it
+is not, and it turns out to be the largest single entry in the ledger of Section 3.5.
+
+That is a statement about three specific charges, **one of which does not arise, one of which is
+halved and one of which is reduced**, not a claim that the configuration is free. What it pays instead — the mass and drag of the control propellers and their
 supporting frames, the rolling-moment device, and the transition manoeuvre itself — is
 reported and quantified in Section 3.5 rather than omitted.
 
@@ -92,7 +99,7 @@ instantiates it. The paper
    three-dimensional Reynolds-averaged solution for the zero-lift drag with a quantified
    sensitivity budget across grids, wall resolutions, turbulence closures and starting fields;
    a component mass build-up that closes the 50 kg design conditionally and
-   does not close the 1000 kg one; a rotational check establishing inertial feasibility of the
+   leaves the 1000 kg one's closure undetermined; a rotational check establishing inertial feasibility of the
    transition; a viscous, station-by-station solution of the trimmed wing that corrects the
    assumed span efficiency downward; a blade-element solution of the attitude rotors in their
    free-wheeling cruise state, which overturns this study's own earlier assumption that they cost
@@ -117,7 +124,7 @@ test. Its results are analytical estimates from stated assumptions, with two exc
 here: the zero-lift drag of the wing and centre body, solved three-dimensionally, and the span
 efficiency of the trimmed wing, solved station by station with a viscous section method. The
 mass budget began as a target rather than a finding; a component build-up replaces it for the
-light design, closes conditionally, names the condition, and does not close the heavy design at
+light design, closes conditionally, names the condition, and leaves the heavy design's closure undetermined at
 all. Section 4 states these limitations, and Supplementary S5 enumerates all of them.
 
 **The paper is arranged as follows.** Sections 2.1 to 2.6 set out the architectural tax in its

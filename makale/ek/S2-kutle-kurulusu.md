@@ -242,7 +242,7 @@ this class rather than a measured property of one that has flown. Why a build-up
 lighter than its own target should be read as a warning rather than a confirmation is set
 out in Section 4.4.
 
-**The heavy design is not closed by this exercise, and no claim is made that it closes.**
+**The heavy design's closure is left undetermined by this exercise, and no claim is made either way.**
 Shell mass scales as areal density times wetted area, so as the square of linear scale,
 while take-off mass scales as the cube; holding areal density constant would make the shell
 fraction fall as the inverse of scale, which is plainly wrong, since skins on larger

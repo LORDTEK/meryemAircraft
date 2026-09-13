@@ -180,7 +180,7 @@ replaces its assumption — the span efficiency computes to **0.817, optimistic 
 worth 1.4 percent of cruise lift-to-drag ratio and of the ranges quoted. **The drag assumption is
 the more serious of the two and it moved this round.** Counting the free-wheeling rotors of
 Section 3.3, which no earlier version of the build-up contained, puts the computed bracket at
-0.0216 to 0.0380 with 0.0248 inside it rather than above it. Every lift-to-drag ratio, range and
+0.0285 to 0.0381 with 0.0248 below both ends rather than above them. Every lift-to-drag ratio, range and
 architectural comparison in this paper is computed on 0.0248; **re-deriving them on a bracket that
 now surrounds it is the largest single piece of unfinished work here**, and it is more likely to
 move the comparative results of Section 3.6 than anything else left open. Torque balance is exact

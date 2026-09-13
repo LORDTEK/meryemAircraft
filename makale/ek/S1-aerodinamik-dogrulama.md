@@ -167,8 +167,9 @@ compressibility-corrected section polar and searching the zero-torque speed agai
 four tenths of one percent, because a free-wheeling blade sits at almost zero section lift and
 so carries its drag-divergence Mach number above the speed it turns at. The consequence is not a detail: without the row the upper bound is 0.0211 and
 the assumed 0.0248 lies above it, which is what three sections of this paper used to call
-conservative. With the row the bracket is 0.0216 to 0.0380 and **the assumption sits inside it,
-not above it** — optimistic by up to fifty-three percent at the upper end. The cruise
+conservative. With the row the bracket is 0.0285 to 0.0381 and **the assumption sits below both
+ends, not inside them** — optimistic even at the favourable end, and by fifty-three percent at the
+adverse one. The cruise
 lift-to-drag ratio, the ranges of Section 3.8 and the comparative sizing of Section 3.6 are all
 computed on 0.0248 and are not re-derived here. **That re-derivation is the largest single piece
 of unfinished work this paper leaves**, and it is named as such in Section 4 rather than
