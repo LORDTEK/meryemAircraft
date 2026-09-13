@@ -244,7 +244,7 @@ karşılığı. Depo bağlantısı yayın öncesi eklenecek.*
 > **The authors acknowledge the dual-use potential inherent in the subject matter.** A
 > long-endurance unmanned aircraft is dual-use in principle, as most aircraft configurations
 > are, and the authors note for completeness that the heavier of the two analytical scale cases
-> — a 1000 kg vehicle with a computed range near 1800 km — falls within the range band by which
+> — a 1000 kg vehicle with a computed range near 1 570 km — falls within the range band by which
 > unmanned aerial vehicles are listed under international export-control arrangements. What is
 > published here is an open configuration study and its equations, offered so that others may
 > check or refute it; the authors neither direct it at, nor undertake to police, any particular
