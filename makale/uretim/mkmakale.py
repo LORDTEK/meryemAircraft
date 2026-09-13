@@ -141,11 +141,25 @@ cikar    = blok(ON, "Conflicts of Interest")
 veri     = blok(ON, "Data Availability")
 fon      = blok(ON, "Funding") or "This research received no external funding."
 
+# --- DERGININ ISTEDIGI AMA URETIME HIC BAGLANMAMIS DORT BLOK -------------
+# Highlights ile AYNI kusur, bir tur sonra tekrar: dordu de 00-on-bilgi.md
+# icinde yazili ama PDF'e hic girmiyordu. Ikisi MDPI'da kosulsuz zorunlu
+# (Author Contributions CRediT bicimiyle; Patents, basvuru varsa), biri
+# derginin Instructions'inda isteniyor (Supplementary Materials), biri de
+# yazarin acikca istedigi ikili kullanim beyani.
+ek_malz  = blok(ON, "Supplementary Materials")
+patent   = blok(ON, "Patents")
+katki    = blok(ON, "Author Contributions")
+ikili    = blok(ON, "Dual-Use Research of Concern")
+
 # Derginin zorunlu tuttugu on/arka madde bloklari. Highlights ilk surumde
 # 00-on-bilgi.md'ye yazilmis ama HICBIR uretim betigine baglanmamisti --
 # yani zorunlu bir bolum gonderilecek belgede yoktu ve bunu disaridan bir
 # okuma yakaladi. Eksik blok artik uretimi durdurur.
-for _ad, _v in (("Title", baslik), ("Authors", yazarlar),
+for _ad, _v in (("Supplementary Materials", ek_malz), ("Patents", patent),
+                ("Author Contributions", katki),
+                ("Dual-Use Research of Concern", ikili),
+                ("Title", baslik), ("Authors", yazarlar),
                 ("Highlights", one_cikan), ("Abstract", ozet),
                 ("Keywords", anahtar), ("Acknowledgements", tesekkur),
                 ("Conflicts of Interest", cikar),
@@ -176,12 +190,19 @@ bolumler = sorted(glob.glob(os.path.join(BOL, "*.md")))
 govde = "\n\n".join(temizle(open(f).read()) for f in bolumler)
 govde, sirali = sekilleri_yerlestir(govde)
 
+# MDPI'nin arka madde sirasi: Supplementary, Author Contributions, Funding,
+# Data Availability, Acknowledgements, Conflicts, Patents. Ikili kullanim
+# beyani Conflicts'ten sonra geliyor.
 ARKA = "\n\n".join([
     "# Declarations",
+    "**Supplementary Materials.** " + alintiyi_duzlestir(ek_malz),
+    "**Author Contributions.** " + alintiyi_duzlestir(katki),
     "**Funding.** " + alintiyi_duzlestir(fon),
-    "**Conflicts of interest.** " + alintiyi_duzlestir(cikar),
     "**Data availability.** " + alintiyi_duzlestir(veri),
     "**Acknowledgements.** " + alintiyi_duzlestir(tesekkur),
+    "**Conflicts of interest.** " + alintiyi_duzlestir(cikar),
+    "**Dual-use research of concern.** " + alintiyi_duzlestir(ikili),
+    "**Patents.** " + alintiyi_duzlestir(patent),
     temizle(open(os.path.join(OUT, "kaynakca-en.md")).read()),
 ])
 

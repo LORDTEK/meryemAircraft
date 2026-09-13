@@ -120,7 +120,7 @@ series hybrid propulsion; cruise efficiency; aircraft configuration design
 > **The authors acknowledge the dual-use potential inherent in the subject matter.** A
 > long-endurance unmanned aircraft is dual-use in principle, as most aircraft configurations
 > are, and the authors note for completeness that the heavier of the two analytical scale cases
-> — a 1000 kg vehicle with a computed range near 1800 km — falls within the range band by which
+> — a 1000 kg vehicle with a computed range near 1 570 km — falls within the range band by which
 > unmanned aerial vehicles are listed under international export-control arrangements. What is
 > published here is an open configuration study and its equations, offered so that others may
 > check or refute it; the authors neither direct it at, nor undertake to police, any particular
@@ -1280,7 +1280,11 @@ quoted**. That version compared this configuration with its rotors charged, at 5
 lift-plus-cruise layout at 86.0 kg sized on the *uncharged* drag — 37 percent, on two different
 aerodynamic bases. Re-solving both layouts on the same drag at each end of the bracket gives 51.1
 against 75.5 kg at the favourable end and 53.9 against 83.9 at the adverse one: **a mass advantage
-of 32 to 36 percent, not 37 and not the 42 of the original assumption.** The claim that this
+of 32 to 36 percent, not 37 and not the 42 of the original assumption.** The two ends run the
+opposite way to the intuition: the advantage is *larger* at the adverse end, because the
+lift-plus-cruise layout's mass grows faster with drag than this one's does. **The conservative
+single figure is therefore 32 percent, at the favourable end** — which is why the range is quoted
+rather than either end alone. The claim that this
 architecture leads on range under every rule does not survive either. Against the tilting layout, which was already ahead in three of
 twelve cells, A now trails under all three contracts.
 
@@ -1490,6 +1494,18 @@ battery buffer's specific power — not the structure — as the most exposed nu
 | **Range** | **1 814 km** |
 | Transition time | 5.1 s |
 
+**Before any of these numbers is read, one condition belongs beside them rather than in the
+supplement.** The light design of Section 3.7 closes its component build-up with 2.2 kg in hand,
+conditional on a structural areal density no greater than 1.78 kg m⁻² — an assumed value with a
+margin and a published anchor. **The heavy design has no such margin and no assumed value.** Its
+shell mass scales with wetted area while take-off mass scales with volume, so the shell fraction
+depends on how areal density grows with size, and that exponent has not been measured. At an
+exponent of 0.467 the 260 kg payload is exactly break-even, closing below and failing above, and
+Supplementary S2 declines to argue for either side because any such argument would be a structural
+model standing in for a measurement. **The aerodynamic, propulsive, energy and mission numbers in
+this section close; the structure is not shown to.** The two designs therefore differ in kind and
+not only in degree: the light one closes conditionally, the heavy one's closure is undetermined.
+
 **This table charges the tip frames and not the free-wheeling rotors, which is the defect
 Section 3.3 found in the light line, and the heavy line carries it too.** Running the same
 blade-element calculation at this design's own conditions — 0.67 m discs, 40 m s⁻¹, the tip-pair
@@ -1508,23 +1524,13 @@ The published row is what the sizing loop returns with no rotor charge, and it r
 13.6 and 1 814 km of the table above, which is the check that this is the same calculation. The
 charge is **a third of the light design's 0.0154**, and Section 3.9 works out why.
 
-**An earlier version of this section carried a second result here — that no blade in the heavy
-family reaches the hover figure of merit of 0.599 the design's own power budget assumes, the best
-being 0.547. That result was an artefact of this study's own code and is withdrawn.** The
-blade-element routine sized the blade chord inside absolute limits of 4 to 40 mm. Those bounds were
-chosen for the light design's 0.20 m rotor, where they correspond to chord-to-radius ratios of 0.04
-to 0.40 and bind sensibly. Applied unchanged to the heavy design's 0.67 m rotor, the same absolute
-bounds give a mean chord of 12 mm on a 335 mm radius — a chord-to-radius ratio of 0.035, a blade
-too slender to be a design — and the clip was binding at both ends. **With the limits expressed
-relative to the radius, as they should have been, the heavy family reaches a figure of merit of
-0.65 to 0.66 across every design tried, comfortably above the 0.599 required**, and the
-free-wheeling drag rises from the 0.0033 the error produced to the 0.0051 in the table above.
-
-The light design is unaffected: at its own radius the relative and absolute limits are identical,
-and every light figure in this paper reproduces to the digit. **The error is recorded rather than
-quietly repaired because it had manufactured a finding — a heavy design unable to hover on its own
-power allocation — that did not exist**, and because a reader comparing this version with the
-deposited earlier one is entitled to know which of the two numbers to believe and why.
+**The heavy family's blades meet the hover requirement.** Across every design tried the figure of
+merit is 0.65 to 0.66, against the 0.599 the power budget assumes, so the twelve percent of hover
+power allocated to the tip pairs buys the thrust it is credited with. The chord limits in the
+blade-element routine are expressed relative to rotor radius; an earlier draft of this study used
+absolute limits taken from the light design's 0.20 m rotor, which on a 0.67 m rotor produce a
+12 mm chord on a 335 mm radius and a correspondingly slender blade. The repository records that
+correction and its effect.
 
 The heavy design still has a longer range than the light one despite a shorter endurance, and the
 margin survives charging both lines: 1 571 km against 1 173 to 1 442 km. Both effects come from the
@@ -1568,12 +1574,22 @@ product, 1.73 × 1.78 = 3.08, is the predicted ratio; the computed ratio is 3.04
 because the reference dynamic pressure rises and the blade thins, not because the wing outgrows
 the disc.**
 
-**What this does and does not establish.** The three currencies were computed independently at two
+**The two halves of this comparison do not have the same standing, and putting them under one
+heading would suggest they do.** Bill 2's scaling is computed: it comes from two blade-element
+solutions on two sized rotors, it uses solidity and cruise dynamic pressure, and **it does not
+touch the shell-mass exponent at all.** It would remain a result even if the heavy airframe were
+shown not to close. Bill 1's scaling is the opposite case: it *is* the unmeasured exponent of
+Supplementary S2, and it is a projection of the sizing model rather than a computed outcome. The
+first is reported here as a result; the second as a property of the model, conditional on an
+exponent nobody has measured.
+
+**What the pair does and does not establish.** The currencies were computed independently at two
 design points and moved in opposite directions; nothing in the definitions of Section 2 required
-them to. That is evidence *consistent with* the separability the framework asserts, on one case —
-not a verification of separability as a general property, which a single instantiation cannot
-supply. What it does establish for this configuration is a consequence worth stating on its own:
-**the light design is the harder case and the heavy design the easier**, which is the opposite of
+them to. That is evidence *consistent with* the separability the framework asserts, demonstrated
+on one case — not a verification of separability as a general property, which a single
+instantiation cannot supply. What it does establish for this configuration, and what does not
+depend on the structural question at all, is a consequence worth stating on its own: **the light
+design is the harder case for Bill 2 and the heavy design the easier**, which is the opposite of
 the usual expectation for a tail-sitter.
 
 **The propeller therefore grows faster than the airframe.** Wing loading rises from 25.3 to

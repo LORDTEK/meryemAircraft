@@ -3616,3 +3616,61 @@ S2 duzeltildi.
   aciklik verimi / yatis sonumu / tarafsiz nokta ~%2,5 tasiyor.
 - Ozet 195 kelime (dergi "about 200" diyor; 214'ten indi).
 - Agir hat menzili 1649 -> **1571 km**.
+
+
+---
+
+# Tur 20 — dordu de FoM bulgusunu geri cekti; etiket sorusu 3-1 ile (c)
+
+## Yanlis sayilar ZENODO'YA HIC GITMEDI -- dogrulandi
+
+    makale-v5.md (yatirilan surum):  0.547 yok, 0.0033 yok, 1649 yok, 12.37 yok
+
+Hepsi yalniz v6'da vardi ve v6 yatirilmadi. Grok ve ChatGPT olgularda
+hakli; Qwen'in "yatirilmis bir surumde vardi" oncülü YANLIS. Bunun
+sonucu var: geri cekme paragrafi kisaltildi. Hic kamuya gitmemis bir
+sayinin otopsisi makalede yer kaplamamali -- kirpma hatasi buraya ve
+Zenodo surum notuna, makaleye duzeltilmis sayi.
+
+## Oylama ve ne yapildi
+
+**Q1 etiket:** ChatGPT (c), Grok (c), DeepSeek (c), Qwen (b). **3-1 (c)**.
+Ama DORDU DE ayni sarti kostu: kapanma kosulu EKTEN 3.8'in ICINE tasinsin.
+Mevcut hal -- basliкta "reference design", kapanmama altmis sayfa oteде --
+dordune gore savunulamaz. Tasindi. Ustelik DeepSeek'in ve Qwen'in
+isaret ettigi TUR farki da yazildi: hafif tasarimin ONCULU ve PAYI var
+(1,5 varsayim, 1,78 basabas, 2,2 kg pay), agirinkinin varsayimi bile yok
+-- yalniz olculmemis bir usste basabas. "Kosullu kapaniyor" ile "kapanmasi
+belirsiz" ayni sey degil.
+
+**Q2 -- turun en keskin fikri, yalniz Grok soyledi:** 3.9'u IKIYE AYIR.
+Fatura 2'nin olceklemesi HESAPLANMIS (iki palet-elemani cozumu, dolgunluk
+ve dinamik basinc; kabuk ussunu HIC kullanmiyor) -- agir govde kapanmasa
+bile sonuc kalir. Fatura 1'inki ise olculmemis ussun TA KENDISI, yani
+model ongorusu. Tek baslik altinda ayni statude gibi durmalari yanlisti.
+Ayrildi.
+
+**Q3:** hafif tasarim yeniden etiketlenmiyor; kosulu ZATEN 3.7'de yerinde
+(satir 512). Asimetri agir taraftaydi, o giderildi.
+
+**Q4 -- Qwen DeepSeek'i duzeltti ve hakli:**
+
+    braket ALT (elverisli surukleme)  A 51,1  B 75,5  -> %32,3
+    braket UST (ters surukleme)       A 53,9  B 83,9  -> %35,8
+
+Avantaj TERS ucta DAHA BUYUK, cunku B'nin kutlesi surukleme ile daha hizli
+buyuyor. Yani muhafazakar tek sayi %32 (elverisli uc), %36 degil. DeepSeek
+"adverse end alone (32%)" diyerek iki ucu karistirmisti. Sezgiye aykiri
+oldugu icin makaleye acikca yazildi.
+
+**Q6 -- Qwen'in yakaladigi bayat sayi:** ikili kullanim beyani hala
+"computed range near 1800 km" diyordu; agir menzil artik 1571 km.
+Duzeltildi. Benim taramam bunu kacirmisti cunku metin degil beyan
+bolumundeydi.
+
+## ChatGPT benim METNIMDE bir tutarsizlik yakaladi
+
+Tur 20 metninde dolgunlugu iki kez verdim: "0,0754 karsi 0,0215" (kusurlu
+deger, kesif anlatilirken) ve "0,075 -> 0,044" (duzeltilmis, mekanizma
+bolumunde). Ikisi de dogru ama ETIKETLENMEMISTI. Makalede boyle bir sorun
+yok -- yalnizca duzeltilmis degerler var. Kusur iletisimdeydi.
