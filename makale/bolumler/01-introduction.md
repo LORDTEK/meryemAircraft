@@ -93,15 +93,24 @@ instantiates it. The paper
    sensitivity budget across grids, wall resolutions, turbulence closures and starting fields;
    a component mass build-up that closes the 50 kg design conditionally and
    does not close the 1000 kg one; a rotational check establishing inertial feasibility of the
-   transition; and a viscous, station-by-station solution of the trimmed wing that corrects the
-   assumed span efficiency downward; and
+   transition; a viscous, station-by-station solution of the trimmed wing that corrects the
+   assumed span efficiency downward; a blade-element solution of the attitude rotors in their
+   free-wheeling cruise state, which overturns this study's own earlier assumption that they cost
+   nothing; and a Reynolds-averaged comparison of the spanwise loading against the vortex-lattice
+   solution, which supplies the first direct evidence that the method's magnitude error is
+   largely multiplicative; and
 5. **states what is not established, as a testable requirement rather than an omission.** The
    aerodynamic pitching moment through the rotation is not known, and the paper reports the
    coefficient that would consume the available control margin instead of estimating the
    coefficient itself.
 
-Items 1 and 2 stand independently of whether this aircraft is ever built. Item 5 is the reason
-the paper does not claim that it can be.
+Items 1 and 2 stand independently of whether this aircraft is ever built, and they are the
+contribution. Items 3 and 4 are what a case study is for: they show the framework applied to a
+real geometry in enough detail that the bills can be audited one at a time, including the two
+occasions on which the audit found against the configuration. Item 5 is the reason the paper does
+not claim the aircraft can be built. **No claim of general architectural superiority is made
+anywhere in this paper**, and the sizing results are reported as properties of a case under
+stated contracts rather than as a ranking of families.
 
 **Scope.** This is a configuration study containing no wind-tunnel measurement and no flight
 test. Its results are analytical estimates from stated assumptions, with two exceptions computed

@@ -15,7 +15,8 @@ BURA = os.path.dirname(os.path.abspath(__file__))
 MAKALE = os.path.abspath(os.path.join(BURA, ".."))
 sys.path.insert(0, BURA)
 
-KAYNAK = os.path.join(MAKALE, "makale-v5-ek.md")
+SURUM = "v6"          # mksurum.py ile AYNI olmali
+KAYNAK = os.path.join(MAKALE, "makale-%s-ek.md" % SURUM)
 PDF = os.path.join(MAKALE, "pdf", "meryemAircraft-ek.pdf")
 CHROME = "/opt/pw-browsers/chromium-1194/chrome-linux/chrome"
 
@@ -62,7 +63,7 @@ async def bas(html):
 
 if __name__ == "__main__":
     if not os.path.exists(KAYNAK):
-        sys.exit("once mkv5.py calistirin: %s yok" % KAYNAK)
+        sys.exit("once mksurum.py calistirin: %s yok" % KAYNAK)
     md = open(KAYNAK, encoding="utf-8").read()
     html = ("<!doctype html><html lang='en'><head><meta charset='utf-8'>"
             "<title>meryemAircraft — Supplementary Material</title>"

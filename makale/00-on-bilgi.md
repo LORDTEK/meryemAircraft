@@ -28,19 +28,20 @@ ediyor.]*
 ## Abstract
 
 Hybrid vertical take-off and landing (VTOL) aircraft pay for runway independence in cruise
-efficiency. This paper treats that cost as architectural as an accounting framework: the
+efficiency. This paper treats that cost as architectural and builds an accounting framework: the
 penalty is charged in three coupled currencies — hover hardware carried through cruise, its drag
-when exposed, and continuous power sized by a condition holding two percent of the flight —
-and each remedy surveyed reduces one by raising another. Escape requires the same hardware, in
-the same orientation, doing the same job, with the hover peak drawn from a buffer.
-meryemAircraft, an uncrewed tail-sitting blended-wing body, satisfies this and is sized at 50 and 1000 kg from one set of equations. Against a lift-plus-cruise layout it closes the
-same mission at thirty-seven to forty-two percent lower take-off mass, depending on whether its
-attitude rotors' free-wheeling drag is charged; charging it reverses the range comparison under
-one of three sizing contracts. The aircraft is not shown to be flyable. Its 50 kg budget closes only at 3.8 times
-the highest rate yet measured on a flown pack, and at that rate re-closes 38 percent heavier; its
-attitude rotors' free-wheeling drag is computed here and is not negligible; and transition
-controllability rests on a pitching moment no current method predicts reliably. The framework
-does not depend on that outcome.
+when exposed, and continuous power sized by a two-percent-of-flight condition — and every remedy
+surveyed reduces one by raising another. Escape requires the same hardware, in the same
+orientation, doing the same job, with the hover peak from a buffer. **The framework predicts that
+architectural rankings belong to sizing contracts rather than to architectures**, so three
+contracts are reported. An uncrewed tail-sitting blended-wing body instantiates the condition,
+sized at 50 and 1000 kg from one set of equations and carried far enough to show what that costs.
+Across the computed drag bracket it holds a mass advantage over a lift-plus-cruise layout under
+every contract but loses the range comparison under equal fuel fractions — a reversal driven by
+the free-wheeling drag of its own attitude rotors, a bill computed here rather than assumed. It is
+not shown to be flyable: the budget needs 3.8 times the highest battery specific power yet
+measured on a flown pack, and transition rests on an unpredicted pitching moment. **The framework
+does not depend on that outcome.**
 
 *[Yukarısı ~200 kelimeye indirilmiş MDPI sürümü — dergi "about 200 words maximum"
 diyor ve bunu teknik ön denetimde uyguluyor. Yapı başlıksız ama Background →
@@ -121,14 +122,15 @@ hesaplanmış değerler özette bağlamsız durur.]*
 >   condition holding for some two percent of the flight — and each architectural remedy
 >   surveyed here reduces one by raising another.
 > - A tail-sitting blended-wing body whose single coaxial nose pair serves both regimes
->   satisfies the escape condition and, sized against a lift-plus-cruise layout on
->   wind-tunnel drag, closes the same mission at thirty-seven to forty-two percent lower
->   take-off mass, though not at longer range under every sizing contract.
+>   instantiates the escape condition, and carrying the case that far shows what it costs:
+>   the free-wheeling drag of its own attitude rotors is a bill the configuration was
+>   assumed to avoid, and charging it reverses one of the three range comparisons.
 >
 > **What are the implications of the main findings?**
 >
-> - Architectural comparisons change their ranking with the sizing contract chosen, so a
->   ranking quoted without its contract is not a result; three contracts are reported here.
+> - Architectural rankings are properties of the sizing contract, not of the architecture:
+>   the ranking reverses between contracts and the reversal survives the full drag bracket,
+>   so a ranking quoted without its contract is not a result.
 > - The configuration is not shown to be flyable: its 50 kg reference budget needs a battery
 >   specific power 3.8 times the highest rate yet measured on a flown pack, and re-closes 38
 >   percent heavier at that measured rate; transition controllability rests on a pitching
