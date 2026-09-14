@@ -1,0 +1,75 @@
+# Revizyonda düzeltilecekler
+
+Makale *Drones*'a gönderildi. Bu liste, gönderimden **sonra** bulunan ve hakem
+raporu geldiğinde düzeltilecek olan şeyleri tutar. Şu anda makaleye dokunmuyoruz:
+gönderilen dosya ile depodaki dosya ayrışırsa, bu depoda iki kez bedeli ödenmiş
+olan "aynı ad, iki içerik" sorunu yeniden doğar. `SURUMLER.md` kuralı geçerli —
+düzeltme yeni sürüm numarası alır ve o sürüm revizyonla birlikte üretilir.
+
+---
+
+## 1. EKSİK KAYNAK — en önemlisi, ve bir hakem bunu kesin görecek
+
+**Bacchini, A.; Cestino, E.; Magill, B.; Verstraete, D. *Impact of lift propeller
+drag on the performance of eVTOL lift+cruise aircraft.* Aerospace Science and
+Technology **2021**, 109, 106429.**
+
+Bu makale **tam olarak bizim en büyük defter kalemimizin konusu**: seyirde kaldıraç
+pervanelerinin sürüklemesi, ve **rüzgâr tünelinde ölçülmüş.** Pervaneleri geri
+çekmek parazit sürüklemeyi %38 azaltıyor, menzili %13 artırıyor.
+
+**Biz aynı olguyu pervane-element momentum kuramıyla hesaplıyoruz (0,0154) ve bu
+ölçümü hiç anmıyoruz.** Kaynakçada yok. `00-on-bilgi.md` içindeki bir not, %38/%13
+sayılarının *"kaynak henüz birinci elden okunmadı"* diye bilerek dışarıda
+bırakıldığını söylüyor — yani bilerek yapıldı, ama gerekçe artık geçerli değil:
+makale o olguyu hesaplayan bir bölüm taşıyor.
+
+**Neden ciddi:** aynı grubun *başka* verisini (Tablo 1'in rüzgâr tüneli L/D
+değerleri, 13/17 seyir cezası) makalenin omurgasında kullanıyoruz. Onların en
+ilgili çalışmasını atlamış görünmek, seçici alıntı izlenimi verir.
+
+**Yapılacak:** kaynağı birinci elden oku, §3.3'e ekle, ve hesabımızla ölçümlerini
+karşılaştır. Ölçüm *durdurulmuş/geri çekilmiş* pervane için, bizimki *serbest
+dönen* için — aynı şey değil, ve bu farkı yazmak hesabı zayıflatmaz, konumlandırır.
+
+---
+
+## 2. Giriş §1.4'te tekrar
+
+Şu iki cümle üst üste duruyor:
+
+> "...and it is to them, not to any aerodynamic shortcoming, that this paper offers
+> an alternative. **This paper offers an alternative route to the same end.**"
+
+Aynı şey iki kez. Tur 25 düzeltmesini yaparken eskisini silmemişim. Olgusal hata
+değil, sadece tekrar — ama Giriş'te ve göze çarpar.
+
+**Yapılacak:** ikinci cümleyi sil.
+
+---
+
+## 3. Beklenen hakem itirazları ve hazır cevaplar
+
+Bunlar kusur değil; gönderimden önce dört dış okumanın "hakem şunu soracak"
+dediği şeyler. Rapor gelince hangisinin geldiğine bakılır.
+
+| İtiraz | Hazır cevap nerede |
+|---|---|
+| Mekanizma avantajının nicel karşılaştırması yok (kütle, arıza kipi, güvenilirlik) | İddia bir **sayım**, güvenilirlik iddiası değil; makale bunu açıkça söylüyor |
+| Yatış otoritesi ΔC_L ≈ 0,12 ödünç alınmış, bu geometride ölçülmemiş | §2.10 ve §4.6 açık madde olarak taşıyor |
+| Şerit eyleyicisi boyutlandırılmamış, üstelik pervane izinde (bant genişliği, yorulma) | §4.6'da açık madde |
+| Ağır hat için sürükleme bandı hesaplanmamış | §3.8 asimetriyi adlandırıyor |
+| Serbest dönme ile kenarı öne kilitleme arasındaki ticaret fiyatlanmamış (yirmi kat) | §3.3 ve §4.6'da açık madde |
+| Makale uzun (36 200 + 33 100 kelime) | `drones-gonderim.md` 7. maddede hazır cevap |
+
+---
+
+## 4. İsteğe bağlı, zamanı olursa
+
+- **Tablo 8'i ortak sürükleme tabanında yeniden hesapla.** Şu an karışık taban
+  olduğu üstyazıda yazılı ve nitel sonuç tabandan bağımsız, ama iki dış okuma
+  "vakit varsa yap" dedi.
+- **Grafik özet (graphical abstract).** MDPI isteğe bağlı tutuyor; revizyonda
+  eklenebilir ve görünürlüğe yarar.
+- **600 dpi yeniden dışa aktarım** gerekirse; şu an en düşük şekil 387 dpi ve
+  MDPI'ın 300 sınırının üstünde.
