@@ -7,7 +7,7 @@ gerekiyor), **KARAR** (iki seçenek var, seçmen gerek).
 
 ---
 
-## 0. Durum — iki madde kapandı
+## 0. Durum — GÖNDERİLDİ, drones-4595522 (bkz. §9)
 
 **Yazar katkıları onaylandı** (senin "iş paylaşımı o şekilde" onayınla), taslak
 işareti kaldırıldı. **Zenodo kök DOI'si eklendi:** Data Availability artık
@@ -274,3 +274,36 @@ sonrası sürpriz olmasın.
 **Hakem geldiğinde bana getir.** Dört dış okumayla kurduğumuz düzenin aynısını
 hakem raporuna uygularım: her iddiayı dosyaya karşı doğrular, hangisinin haklı
 hangisinin olmadığını ayırırım.
+
+---
+
+## 9. Gönderildi — kayıt
+
+Bu bölüm kayıt içindir; iş listesi değildir. Yazışmanın her parçası bu numarayla
+anılacak, hakem raporu bu numarayla gelecek.
+
+| Alan | Değer |
+|---|---|
+| **Manuscript ID** | **drones-4595522** |
+| Başlık | The Architectural Cost of Hybrid VTOL: meryemAircraft, a Propeller-Driven Tail-Sitting Blended-Wing-Body Without a Dedicated Lift System |
+| Dergi | *Drones* (MDPI) |
+| Gönderim tarihi | 2026-09-14, 15:06:04 |
+| Durum | Pending review |
+| Gönderen | Ömer Gülmen (submitting author) |
+| Sorumlu yazar | Meryem Gülmen — meryemgulmen@outlook.com |
+
+**Gönderilen sürüm — bunu karıştırma.** Sisteme yüklenen dosya **v7**'dir:
+depoda `makale-v7.md` / `makale-v7-ek.md`, yayımlandığı commit `8138b62`,
+sha-256 başı `c5b0cd898d20`, Zenodo sürüm DOI'si `10.5281/zenodo.22745666`.
+Yani gönderilen metin, Zenodo'da yatan v7 ile **bit bit aynıdır**. Bundan sonra
+depoda yapılacak hiçbir düzeltme o dosyaya dokunmaz (bkz. `SURUMLER.md`);
+düzeltmeler `revizyon-listesi.md`'de birikir ve hakem raporu geldiğinde
+**v8** olarak çıkar.
+
+**Data Availability alanına girilen** (serbest metin değil, üç ayrı kutu):
+Repository `GitHub`, DOI or URL `https://github.com/LORDTEK/meryemAircraft`,
+Reference number `973b12f`.
+
+**Şimdi ne olacak.** Drones'ta ortalama ilk karar ~16 gün. İlk engel hakem
+değil, **editör masası**: uzunluk gerekçesiyle geri gelirse cevabı §7'nin
+sonunda hazır duruyor. Hakem raporu geldiğinde bana getir.
