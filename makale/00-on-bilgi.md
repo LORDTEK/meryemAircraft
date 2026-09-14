@@ -234,7 +234,9 @@ istiyor; onu 2.14 karşılıyor. Buradaki blok Acknowledgements tarafı.]*
 > https://doi.org/10.5281/zenodo.22144194 (concept DOI, resolving to the latest version).
 
 *Bölüm 8.12'deki "başka bir grup bunu bağımsız deneyebilir" davetinin somut
-karşılığı. Depo bağlantısı yayın öncesi eklenecek.*
+karşılığı. Depo açık ve bağ verildi. **Makale bilerek yalnızca concept DOI'yi
+taşıyor:** bir sürümün DOI'si o sürüm yatırıldıktan sonra doğar, yani makale
+kendi sürüm DOI'sini içeremez. v7'nin sürüm DOI'si (22745666) kapak mektubunda.*
 
 ### Dual-Use Research of Concern
 

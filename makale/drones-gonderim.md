@@ -93,8 +93,8 @@ kalmadığı. Yukarıdaki tablo makine denetimi; şablona özgü biçim kaymalar
 
 > **Sürüm:** gönderilecek metin **v7**'dir, v6 değil. Zenodo'da v6 yayımlandı ve
 > v7 onu düzeltiyor; `makale/SURUMLER.md` hangi dosyanın nerede yayımlandığını
-> tutuyor. Gönderim sırasında Zenodo'nun **v7 sürüm DOI'si** de kapak mektubuna
-> eklenecek.
+> tutuyor. v7 sürüm DOI'si **10.5281/zenodo.22745666**, concept DOI ise
+> **10.5281/zenodo.22144194** — kapak mektubunda ikisi de var.
 
 Şekiller yeniden numaralandı (ilk atıf sırasına göre) ve dosya adları da
 döndü; numara ile ad artık tutuyor. On üç dosyanın hepsi, `.docx` içinde
@@ -113,12 +113,12 @@ yükle.
 | alan | değer |
 |---|---|
 | **Title** | The Architectural Cost of Hybrid VTOL: meryemAircraft, a Propeller-Driven Tail-Sitting Blended-Wing-Body Without a Dedicated Lift System |
-| **Abstract** | `00-on-bilgi.md` → Abstract bloğu. **199 kelime**, derginin "about 200" sınırının altında |
+| **Abstract** | `00-on-bilgi.md` → Abstract bloğu. **214 kelime**. Dergi "about 200 words maximum" diyor; 214 "about 200" içinde sayılır ama teknik ön denetim itiraz ederse kısaltılacak yer, tilt paragrafının ikinci yarısıdır |
 | **Keywords** | vertical take-off and landing; tail-sitter; blended wing body; uncrewed aerial vehicle; series hybrid propulsion; cruise efficiency; aircraft configuration design |
 | **Highlights** | `00-on-bilgi.md` → Highlights bloğu. İki başlık, her birinde iki madde — derginin istediği biçim |
 | **Corresponding author** | Meryem Gülmen, meryemgulmen@outlook.com |
 | **Affiliation** | Independent Researcher, Türkiye |
-| **Article type** | Article (Communication değil — 31 500 kelime) |
+| **Article type** | Article. **Ana metin 36 200 kelime, ek belge 33 100 kelime** — bu uzun bir makale ve aşağıda 7. maddede ayrı ele alınıyor |
 
 **ORCID:** dergi zorunlu tutmuyor ama istiyor. Üç yazarın da varsa gir; yoksa
 orcid.org'dan beş dakikada alınır ve ileride işine yarar.
@@ -154,28 +154,50 @@ Drones kapak mektubu istiyor. Kısa tutmak doğru. Taslak:
 >
 > The paper treats the cruise-efficiency penalty of hybrid VTOL aircraft as an
 > architectural property rather than an implementation defect, and develops it as
-> an accounting framework in three coupled currencies. Its central result is
-> methodological: architectural rankings are properties of the sizing contract
-> under which a comparison is made, not of the architectures compared. We report
-> three contracts and the ranking changes between them.
+> an accounting framework in three coupled currencies: hover hardware carried
+> through cruise, its drag when exposed, and continuous power sized by a condition
+> holding some two percent of the flight. Every architectural remedy we survey
+> reduces one by raising another.
 >
-> An uncrewed tail-sitting blended-wing body is developed as the case that
-> instantiates the framework's escape condition, sized at two scales, and carried
-> far enough to report what instantiating it costs — including two charges the
-> configuration was initially assumed to avoid and which computation showed it
-> does not.
+> **The configuration we propose addresses a specific gap.** Tilting architectures
+> satisfy the framework's escape condition — one propulsion group serving both
+> regimes — by rotating their propulsors, and pay a pivot, its actuators, a
+> gyroscopic moment during the rotation and a transition control problem for it.
+> Those are mechanical and control costs rather than aerodynamic ones. We propose
+> an alternative route to the same condition: an uncrewed tail-sitting blended-wing
+> body in which **the airframe rotates and the propulsors do not**. There is no
+> pivot, no nacelle actuator, no variable-pitch hub and no retraction mechanism;
+> pitch and yaw are produced by differential thrust between fixed-pitch propellers,
+> and roll — which coaxial torque-balanced pairs cannot produce at any setting — by
+> a single variable-extension strip. **What we claim to eliminate is a mechanism
+> class, not every moving part, and the paper is explicit about the distinction.**
 >
-> We state plainly that the aircraft is not shown to be flyable. It contains no
-> wind-tunnel measurement and no flight test, its mass budget closes only on a
-> battery specific power above any measured on a flown pack, and the transition
-> pitching moment is identified as blocked on measurement rather than on effort.
-> The framework does not depend on that outcome, and no claim of general
-> architectural superiority is made.
+> A second result is methodological and independent of the configuration:
+> architectural rankings are properties of the sizing contract under which a
+> comparison is made, not of the architectures compared. We report three contracts
+> and the ranking changes between them. **We therefore do not claim a range
+> advantage over the other hybrid families; we report that the tilting layout leads
+> on range under all three contracts, and that result stands in the paper.**
+>
+> The case is sized at two scales and carried far enough to report what
+> instantiating the escape condition costs — including two charges the
+> configuration was initially assumed to avoid and which computation showed it does
+> not, one of which reverses a range comparison against our own case.
+>
+> We state plainly that the aircraft is not shown to be flyable. There is no
+> wind-tunnel measurement and no flight test; the mass budget closes only on a
+> battery specific power about 3.8 times the highest yet measured on a flown pack;
+> the transition pitching moment is blocked on measurement rather than on effort;
+> the roll strip's actuation is unsized; and the landing transition is unmodelled.
+> The framework does not depend on that outcome, and the architectural claims above
+> are claims about hardware topology rather than about demonstrated performance.
 >
 > The computational record — mesh generator, case setups, grid-convergence study,
 > and the scripts behind every figure — is openly available, and an archived
 > version of this manuscript with its supplementary material is deposited at
-> Zenodo (DOI: 10.5281/zenodo.22144194).
+> Zenodo: this version is DOI 10.5281/zenodo.22745666, and DOI
+> 10.5281/zenodo.22144194 is the concept identifier that resolves to the latest
+> version.
 >
 > The authors have filed a patent application covering the configuration
 > (Türkpatent 2026/014570); this is declared in the manuscript.
@@ -207,10 +229,32 @@ kaynakçasından, çıkar çatışması olmayanlar:
 
 ## 7. Göndermeden önce son üç kontrol — **HAZIR**
 
-1. **`dogrula.py` çalıştır.** 40 kontrol + bayat sayı denetimi. Şu an 0 sapma.
+1. **`dogrula.py` ve `baglanti.py` çalıştır.** 43 sayısal kontrol + 9 yasaklı bayat değer + bağ dokusu (işaretçiler doğru yere çözülüyor mu, tablo/şekil atıfları tutuyor mu). Şu an 0 sapma.
 2. **PDF'i aç ve göz gezdir** — özellikle Şekil 2 ve Şekil 9 gibi geniş
    grafiklerin sayfaya sığdığını, tabloların taşmadığını.
-3. **Özetin kelime sayısı** — 199. Kaynağa dokunulursa yeniden say.
+3. **Özetin kelime sayısı** — 214. `mksurum.py` 215'i aşarsa kurulumu durduruyor, yani sessizce büyüyemez.
+
+### Ve dördüncü bir şey, kontrol değil **karar**: makale uzun
+
+Ana metin **36 200 kelime**, ek belge **33 100**. *Drones* katı bir sınır koymuyor
+ama bu, tipik bir dergi makalesinin üç katı. İki sonuç doğurabilir:
+
+- **Editör masadan çevirebilir** ("please condense"), ki bu hakemliğe hiç
+  gitmeden gelir.
+- **Ya da uzunluğu haklı bulabilir**, çünkü makale bir çerçeve *ve* onu
+  somutlaştıran bir vaka çalışması taşıyor ve ikisini ayırmak ikisini de
+  zayıflatır.
+
+**Benim görüşüm: olduğu gibi gönder.** Kısaltmak için tek gerçek yer, düzeltme
+izlerinin ("bir önceki sürüm şunu diyordu") gövdeden eke taşınmasıdır — yaklaşık
+2 000 kelime — ama o izler bu makalenin en güçlü tarafı ve bir dış okuma onları
+açıkça övdü. Editör isterse kısaltırız; kendiliğinden feda etmeyelim.
+
+**Hazır olması gereken cevap:** *"The paper carries a framework and the case that
+instantiates it. The case is what makes the framework falsifiable — it is where
+the framework's own prediction is tested against a configuration and twice found
+against it. Separating them would leave a framework with no test and a
+configuration with no reason."*
 
 ---
 
