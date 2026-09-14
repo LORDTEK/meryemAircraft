@@ -271,9 +271,10 @@ zero-lift drag than the frames that carry them, which makes this the largest ent
 ledger and not the third.
 
 **The tip frames.** As established in Section 3.3, of the order of twelve percent of
-cruise drag, conditional on being faired. This is the largest single payment the
-configuration makes, and it is the price of the moment arm, the propeller mounting and
-the landing structure combined into one member.
+cruise drag, conditional on being faired. **An earlier version of this entry called it the
+largest single payment the configuration makes; since Section 3.3 computed the free-wheeling
+rotors at 0.0154 against the frames' 0.0043, it is the second largest** — the price of the
+moment arm, the propeller mounting and the landing structure combined into one member.
 
 **The roll strip.** The one moving aerodynamic device on the aircraft. Its cost when
 retracted is a surface discontinuity; when deployed it is a drag device by construction,
@@ -476,8 +477,9 @@ actuators and hover-pitched blades to be credited as aerodynamically free. **No 
 section should be quoted without the rule it was computed under**, and **no claim of *range*
 superiority over the tilting family is made here in either direction.** The claim this paper does
 make against that family is made in Section 1 and restated in Section 4.2, and it is not on this
-axis: it is that the same regime transition is reached with no pivot, no nacelle actuator, no
-variable-pitch hub and no control surface. Nothing in this section supports or damages it,
+axis: it is that the same regime transition is reached with no pivot, no nacelle actuator and no
+variable-pitch hub — the propulsors never change orientation. Nothing in this section supports
+or damages it,
 because this section measures range and that claim is about parts.
 
 **What this comparison does and does not support.** It supports the claim that the three bills
@@ -655,7 +657,13 @@ absolute limits taken from the light design's 0.20 m rotor, which on a 0.67 m ro
 correction and its effect.
 
 The heavy design still has a longer range than the light one despite a shorter endurance, and the
-margin survives charging both lines: 1 571 km against 1 173 to 1 442 km. Both effects come from the
+margin survives charging both lines: 1 571 km against 1 173 to 1 442 km. **That comparison is
+asymmetric and the asymmetry is worth naming rather than leaving to be noticed: the light range
+is a bracket and the heavy range is a single number, because no drag bracket has been computed
+for the heavy line.** Supplementary S1 brackets the light airframe's zero-lift drag; the heavy
+line stands on its own 0.0200 with no equivalent bound. The margin survives because 1 571
+exceeds the adverse end of the light bracket, which is the weakest form of the statement and the
+only one the evidence supports. Both effects come from the
 same source: the larger aircraft cruises faster and, at a higher Reynolds number, achieves a lower
 zero-lift drag coefficient and therefore a better lift-to-drag ratio. Nothing in the architecture
 was changed to obtain this.
@@ -1200,7 +1208,7 @@ take-off one.** Section 4 records it.
 ## 3.17 Whether there is enough authority to rotate, and whether it trims
 
 Rotating the airframe through ninety degrees is the manoeuvre this configuration must perform
-with four small propellers and no control surfaces. Supplementary S4 carries the full budget —
+with four small propellers and no pitch control surface — the one aerodynamic device the aircraft carries, the roll strip of Section 2.10, produces no pitching moment and takes no part in this manoeuvre. Supplementary S4 carries the full budget —
 inertia derivation, rotation profiles, centre-of-gravity window, twist sweep and the measured
 section evidence. This section states what it returns.
 

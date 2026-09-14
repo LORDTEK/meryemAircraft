@@ -28,21 +28,20 @@ ediyor.]*
 ## Abstract
 
 Hybrid vertical take-off and landing (VTOL) aircraft pay for runway independence in cruise
-efficiency. That cost is architectural, charged in three coupled currencies — hover hardware
-carried through cruise, its drag when exposed, and continuous power sized by a
-two-percent-of-flight condition — and every remedy reduces one by raising another. Escape
-requires one set of hardware serving both regimes in one orientation, with the hover peak from a
-buffer. Tilting architectures meet it by rotating their propulsors, at the cost of a pivot,
-actuators and a transition control problem. **An uncrewed tail-sitting blended-wing
-body is proposed as an alternative route to it: the airframe rotates and the propulsors do not**,
-leaving no tilting mechanism, no variable-pitch hub and no control surface, every moment coming
-from differential thrust between fixed-pitch propellers. **Architectural rankings belong to sizing
-contracts, not to architectures**; three are reported, and the configuration holds a 32 to 36
-percent mass advantage over a lift-plus-cruise layout under all three but loses range under equal
-fuel fractions — a reversal driven by the free-wheeling drag of its own attitude rotors. **No range superiority is claimed; the architectural claim is the
-absence of mechanism.** It is not shown to be flyable: the budget needs 3.8 times the highest
-measured battery specific power.
-*[Yukarısı MDPI sürümü (211 kelime) — dergi "about 200 words maximum"
+efficiency. That cost is architectural, charged in three coupled currencies — hover hardware carried
+through cruise, its drag when exposed, and continuous power sized by a two-percent-of-flight
+condition — each remedy reducing one by raising another. Escape requires one set of hardware serving both regimes in one orientation, with the hover peak
+from a buffer. Tilting architectures meet it by rotating their propulsors, at the cost of a pivot
+and a control problem. **An uncrewed tail-sitting blended-wing body is
+proposed as an alternative route: the airframe rotates and the propulsors do not**, so there is no
+pivot, nacelle actuator or variable-pitch hub. Pitch and yaw come from differential
+thrust; roll, which coaxial pairs cannot produce, comes from one moving strip. **What is
+eliminated is the propulsor-reorientation mechanism, not every moving part.** **Architectural rankings belong to sizing
+contracts, not to architectures**; three are reported, and the configuration holds a 32 to 36 percent mass advantage over a
+lift-plus-cruise layout under all three but loses range under equal fuel fractions, driven by
+the free-wheeling drag of its own attitude rotors. **No range superiority is claimed.** It is not shown to be flyable: the budget needs 3.8 times
+the highest measured battery specific power.
+*[Yukarısı MDPI sürümü (214 kelime) — dergi "about 200 words maximum"
 diyor ve bunu teknik ön denetimde uyguluyor. Yapı başlıksız ama Background →
 Methods → Results → Conclusion sırasını izliyor, dergi öyle istiyor.
 Sondan bir önceki cümle kasten aleyhimize: hakem bulmadan biz söylüyoruz.
@@ -122,8 +121,10 @@ hesaplanmış değerler özette bağlamsız durur.]*
 >   surveyed here reduces one by raising another.
 > - A tail-sitting blended-wing body reaches the escape condition by a route the tilting
 >   architectures do not take — the airframe rotates and the propulsors stay fixed — so it
->   carries no tilting mechanism, no variable-pitch hub and no control surface, every moment
->   coming from differential thrust between fixed-pitch propellers.
+>   carries no pivot, no nacelle actuator and no variable-pitch hub: the propellers hold one
+>   orientation from take-off to cruise. Pitch and yaw come from differential thrust between
+>   fixed-pitch propellers; roll, which coaxial pairs cannot produce, comes from a single moving
+>   strip. What is eliminated is the propulsor-reorientation mechanism, not every moving part.
 > - Carrying that case far enough to audit shows what it costs: the free-wheeling drag of its
 >   own attitude rotors is a bill the configuration was assumed to avoid, and charging it
 >   reverses one of the three range comparisons and leaves a mass advantage of 32 to 36 percent.

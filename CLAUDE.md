@@ -41,6 +41,33 @@ değildir.
 **"Genel mimari üstünlük iddiası yoktur" gibi bir cümle bir daha yazılmaz.**
 Bir kez yazıldı, 4.2 ile çelişti ve makalenin kendi tezini inkâr etti.
 
+### 0.1 Üçüncü iddianın SINIRI. Bunu da bir daha aşma.
+
+İddiayı düzeltirken hemen aşırıya kaçtım ve **makalenin kendi §2.10'uyla çelişen**
+bir cümle yazdım: *"hareket eden mekanizma yok", "hiçbir aerodinamik kumanda
+yüzeyi yok", "her eksendeki her moment diferansiyel itkiden".* Üçü de **yanlış.**
+
+**Yatış (roll) eşeksenli pervanelerle ÜRETİLEMEZ.** §2.10 bunu türetiyor: her
+çift eşeksenli ve tork dengeli, hiçbir ayar yatış momenti vermiyor. Yatışı alt
+yüzeydeki **değişken uzantılı şerit** sağlıyor ve makale ona *"uçaktaki tek
+hareketli aerodinamik yüzey"* diyor.
+
+**Doğru iddia dar olanıdır:**
+
+> Tilt mimarilerine karşı ortadan kaldırılan şey **propulsor'ü yeniden
+> yönlendiren mekanizma sınıfıdır** — pivot yok, nasel eyleyicisi yok, değişken
+> hatve göbeği yok, dönen kütleden gyroskopik moment yok. **Uçakta hiç hareketli
+> parça olmadığı DEĞİL.** Yunuslama ve sapma diferansiyel itkiden; yatış
+> şeritten. Eyleyici envanteri: motorlar **artı bir şerit eyleyicisi.**
+
+**"Mekanik olarak daha basit" de denmez** — parça sayısı, kütle, arıza kipi,
+bakım hiçbiri ölçülmedi. Denen şey bir **sayımdır**, güvenilirlik iddiası değil.
+
+Bunu üç dış okuyucu bağımsız olarak yakaladı ve biri yanlış dosyayı okurken
+yakaladı, çünkü §2.10 her iki sürümde de aynıydı. **Ders: bir iddiayı
+düzeltirken, yeni iddianın makalenin kendi bölümleriyle çelişip çelişmediğini
+denetle.** Doğru çerçeve, yanlış kapsamla yazılırsa yine yanlıştır.
+
 ## 1. Yazışma ve üslup
 
 - Kullanıcıyla **Türkçe**. Öteki YZ'lere (ChatGPT, Grok, DeepSeek, Qwen)
