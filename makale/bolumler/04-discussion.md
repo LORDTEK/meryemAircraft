@@ -86,9 +86,12 @@ arriving at its own case.
 **None of that touches the third claim, because the third claim is not on this axis at all.**
 Against the tilting family the offer of this configuration was never a longer range; Section 3.6
 reports that the tilting layout leads on range under all three contracts, and that result stands.
-The offer is that the same regime transition is reached **without a rotating mechanism** — no
-pivot, no nacelle actuator, no gyroscopic moment during the rotation, no variable-pitch hub, and
-no aerodynamic control surface of any kind. Every one of the tilting layout's range advantages
+The offer is that the same regime transition is reached **without reorienting a propulsor** — no
+pivot, no nacelle actuator, no gyroscopic moment from tilting mass, no variable-pitch hub. **Not
+that the aircraft has no moving parts:** roll is supplied by the variable-extension strip of
+Section 2.10, which is a moving aerodynamic device and is charged as one in Section 3.5. The
+claim is the elimination of a mechanism *class* — the one that turns a propulsor between hover
+and cruise — and it is stated that narrowly on purpose. Every one of the tilting layout's range advantages
 in Section 3.6 is computed with its nacelles, pivots, actuators and hover-pitched blades credited
 as aerodynamically free and mechanically reliable; the present configuration has nothing
 corresponding to charge, because it has nothing corresponding. **That is a hardware claim rather

@@ -119,9 +119,10 @@ depends on whether this particular aircraft is ever built.
 
 **The second is the configuration's architectural claim, and it is not a performance claim.**
 Against the fixed-wing family this aircraft needs no runway; against the multirotor family it
-cruises on a wing; against the tilting family it reaches the same regime transition **with no
-mechanism that moves** — no pivot, no nacelle actuator, no gyroscopic moment during the rotation,
-no variable-pitch hub and no aerodynamic control surface. The tilting solution is the less widely
+cruises on a wing; against the tilting family it reaches the same regime transition **without reorienting a
+propulsor** — no pivot, no nacelle actuator, no gyroscopic moment from tilting mass, no
+variable-pitch hub. It is not a claim that nothing on the aircraft moves: the roll strip is a
+moving aerodynamic device and the paper charges it as one. The tilting solution is the less widely
 fielded of the two contemporary hybrid families, and the reasons given for that in the literature
 are mechanical and control reasons rather than aerodynamic ones; **this configuration is offered
 as an alternative route to the same end, and that is what it is for.** Each of those three claims

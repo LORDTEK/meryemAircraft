@@ -119,9 +119,10 @@ not claim the aircraft can be built. **Three architectural claims are made and a
 not, and each is made against a different competitor on a different axis.** Keeping them apart
 is what makes them defensible, and running them together is what would make them indefensible.
 
-**First, against the fixed-wing family: this configuration does not need a runway.** It takes
-off and lands vertically from its own five contact points. No fixed-wing aircraft does this, and
-no assumption in this paper can take it away.
+**First, against runway-dependent fixed-wing aircraft: this configuration needs no prepared
+surface.** It takes off and lands vertically from its own five contact points. The qualifier is
+deliberate — catapult, water and short-field launch exist and are not the comparison — and
+within it no assumption in this paper can take the claim away.
 
 **Second, against the multirotor family: it cruises on a wing.** Lift in cruise is carried by a
 surface rather than by rotors, which is a structural difference and not a margin. For scale —
@@ -130,16 +131,26 @@ puts a turboshaft quadrotor at an *effective* lift-to-drag ratio of 4.9, a syste
 merit, against this configuration's *aerodynamic* 8.8 to 10.8 across its computed drag bracket.
 
 **Third, against the tilting architectures: it reaches the same regime transition with no
-mechanism that moves.** Tilt-rotor, tilt-wing and tilt-nacelle layouts solve the duty-cycle
-problem by rotating their propulsors, and Table 2 records what that costs them — mechanical
-complexity, gyroscopic coupling during the rotation, and a transition control problem. Those
-costs are the reason the tilting solution is the less widely fielded of the two contemporary
-families. **This paper offers an alternative route to the same end.** The aircraft rotates
-itself rather than its propulsors: it has no tilting mechanism, no elevons, no rudder, no
-variable-pitch hub and no retraction mechanism, and every moment about every axis is produced by
-differential thrust between fixed-pitch propellers that are already turning. The actuator
-inventory is the motors. **That is a claim about hardware, it is countable, and no sizing
-contract changes it.**
+mechanism that reorients the propulsors.** Tilt-rotor, tilt-wing and tilt-nacelle layouts solve
+the duty-cycle problem by rotating their propulsors, and Table 2 records what that costs them —
+mechanical complexity, gyroscopic coupling during the rotation, and a transition control
+problem. Those costs are the reason the tilting solution is the less widely fielded of the two
+contemporary families. **This paper offers an alternative route to the same end.** The aircraft
+rotates itself rather than its propulsors: there is no pivot, no nacelle actuator, no
+variable-pitch hub, no retraction mechanism and no gyroscopic moment from tilting mass, and the
+propellers hold one orientation relative to the airframe from take-off to cruise.
+
+**The claim is bounded, and the boundary has to be stated in the same breath or it is false.**
+It is a claim about the *propulsion* system, not about the aircraft having no moving parts.
+Pitch and yaw are produced by differential thrust between fixed-pitch propellers that are
+already turning; **roll cannot be, because coaxial torque-balanced pairs produce no rolling
+moment at any setting, and it is produced instead by a variable-extension strip on the lower
+surface — the one moving aerodynamic device on the aircraft**, derived in Section 2.10. The
+actuator inventory is therefore the motors plus one strip actuator, against a tilting layout's
+pivots, nacelle actuators and, usually, variable-pitch hubs and control surfaces as well.
+**What is eliminated is a class of mechanism — the one that reorients a propulsor between hover
+and cruise — not every mechanism.** That is countable, no sizing contract changes it, and it is
+narrower than "mechanically simpler", which this paper does not measure and does not claim.
 
 **Those three claims together are why the configuration exists, and none of them is weakened by
 anything in this paper.** They are claims against three different families on three different
@@ -160,6 +171,14 @@ layout lacks freedom from a rotating mechanism. None of those is a quantity a si
 can move. Range against a competitor that also cruises on a wing *is* such a quantity, which is
 exactly why it is reported as a case result rather than claimed as a property of the
 architecture.
+
+**The three axes are not chosen because they are the ones this configuration wins; they are the
+three that decide whether an aircraft can fly the mission class this paper is about.** Wildfire
+observation and cargo delivery to sites without a runway require, in order: getting airborne
+where there is no strip, staying up long enough to be useful once there, and being maintainable
+and controllable by an operator who is not an airline. Those are the runway axis, the cruise
+axis and the mechanism axis. A range ranking among winged VTOL layouts decides none of them by
+itself, which is a second reason it is reported rather than claimed.
 
 **Scope.** This is a configuration study containing no wind-tunnel measurement and no flight
 test. Its results are analytical estimates from stated assumptions, with two exceptions computed
@@ -294,8 +313,10 @@ rejected by the market; its implementation is.**
 **That is the gap this paper addresses.** The configuration studied here reaches the same
 end as a tilting layout — one propulsion group serving both regimes — by a different route:
 the propulsors are fixed to the airframe and the *airframe* rotates. Nothing pivots, nothing
-retracts, nothing changes pitch, and there is no aerodynamic control surface anywhere on the
-aircraft. Whether that trade is worth making is what the rest of the paper audits, bill by
+retracts and nothing changes pitch. **One moving aerodynamic device remains** — a strip on the
+lower surface that supplies the rolling moment coaxial propellers cannot, described in
+Section 2.10 — and it is named here rather than left for a reader to find, because what is
+eliminated is the propulsor-reorientation mechanism and not every moving part. Whether that trade is worth making is what the rest of the paper audits, bill by
 bill, including where the audit finds against it.
 
 ## 1.5 What this history does and does not show
