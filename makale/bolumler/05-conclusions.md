@@ -109,10 +109,26 @@ of three different fidelities fail to predict above roughly ten degrees of incid
 highest of them against wind-tunnel measurement — and the paper declines to substitute a reduced
 calculation for a measurement.
 
-**What survives independently of that is the framework.** The three currencies, the
-demonstration that architectural remedies transfer the penalty rather than remove it, the escape
-condition, and the finding that architectural comparisons change their ranking with the sizing
-contract chosen — none of these depends on whether this particular aircraft is ever built.
+**Two things survive independently of that, and they should be stated separately because they
+are claims of different kinds.**
+
+**The first is the framework.** The three currencies, the demonstration that architectural
+remedies transfer the penalty rather than remove it, the escape condition, and the finding that
+architectural comparisons change their ranking with the sizing contract chosen — none of these
+depends on whether this particular aircraft is ever built.
+
+**The second is the configuration's architectural claim, and it is not a performance claim.**
+Against the fixed-wing family this aircraft needs no runway; against the multirotor family it
+cruises on a wing; against the tilting family it reaches the same regime transition **with no
+mechanism that moves** — no pivot, no nacelle actuator, no gyroscopic moment during the rotation,
+no variable-pitch hub and no aerodynamic control surface. The tilting solution is the less widely
+fielded of the two contemporary hybrid families, and the reasons given for that in the literature
+are mechanical and control reasons rather than aerodynamic ones; **this configuration is offered
+as an alternative route to the same end, and that is what it is for.** Each of those three claims
+is made against a different family on a different axis, and none of them is a range ranking
+against the other hybrids — a ranking this paper reports in full, finds to reverse with the
+sizing contract, and does not claim. **The absence of a mechanism is countable and no contract
+moves it; the range comparison is neither.**
 meryemAircraft is the case that shows the escape condition can be instantiated in a real
 geometry and carried through to reference designs at two scales. It is not offered as a
 validated vehicle, and the paper is careful throughout to say which of its statements are

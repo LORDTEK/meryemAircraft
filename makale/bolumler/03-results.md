@@ -473,8 +473,12 @@ under all three rules, where before **the tail-sitter** led in three of the twel
 reports and tied a fourth. Every one
 of those leads still requires its nacelles, pivots,
 actuators and hover-pitched blades to be credited as aerodynamically free. **No result from this
-section should be quoted without the rule it was computed under**, and no claim of superiority
-over the tilting family is made here in either direction.
+section should be quoted without the rule it was computed under**, and **no claim of *range*
+superiority over the tilting family is made here in either direction.** The claim this paper does
+make against that family is made in Section 1 and restated in Section 4.2, and it is not on this
+axis: it is that the same regime transition is reached with no pivot, no nacelle actuator, no
+variable-pitch hub and no control surface. Nothing in this section supports or damages it,
+because this section measures range and that claim is about parts.
 
 **What this comparison does and does not support.** It supports the claim that the three bills
 are real and separable in a sizing loop. It does **not** support a claim that this configuration
