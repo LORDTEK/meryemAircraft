@@ -55,7 +55,7 @@ Kararın MDPI şablonu yönünde. Şablona **elle dökmedim, ürettim** — 70 s
 172 tablo satırı ve 12 şekil elle taşınacak iş değil, ve bu depoda bir sürüm
 elle toparlandığı için yanlış tablo taşımıştı.
 
-`makale/uretim/mkdocx.py` `makale-v7.md`'den okuyup MDPI düzeninde `.docx`
+`makale/uretim/mkdocx.py` `makale-v8.md`'den okuyup MDPI düzeninde `.docx`
 üretiyor: başlık, üstsimgeli yazar/kurum satırları, `Abstract:`, `Keywords:`,
 numaralı bölümler, `Figure N.` altyazıları, tablolar, **derginin kendi
 sırasındaki** arka madde blokları, ve numaralı kaynakça.
@@ -91,10 +91,12 @@ kalmadığı. Yukarıdaki tablo makine denetimi; şablona özgü biçim kaymalar
 | `meryemAircraft-ek.pdf` | `makale/pdf/` | yedek |
 | `sekil01`…`sekil12` | `gorsel/cikti/` | **Figures**, ayrı ayrı, yüksek çözünürlüklü |
 
-> **Sürüm:** gönderilecek metin **v7**'dir, v6 değil. Zenodo'da v6 yayımlandı ve
-> v7 onu düzeltiyor; `makale/SURUMLER.md` hangi dosyanın nerede yayımlandığını
-> tutuyor. v7 sürüm DOI'si **10.5281/zenodo.22745666**, concept DOI ise
-> **10.5281/zenodo.22144194** — kapak mektubunda ikisi de var.
+> **Sürüm:** gönderilecek metin **v8**'dir. Zenodo'da v6 yayımlandı ve
+> Zenodo'ya yatırılan **v7**'dir (DOI **10.5281/zenodo.22745666**,
+> concept DOI **10.5281/zenodo.22144194**); v8 ondan **tek satır** farklıdır —
+> gönderimi yapan yazarın da corresponding author olması. `makale/SURUMLER.md`
+> hangi dosyanın nerede yayımlandığını ve v8'in neden ayrı bir sürüm olduğunu
+> tutuyor. v8 Zenodo'ya yüklenmiyor.
 
 Şekiller yeniden numaralandı (ilk atıf sırasına göre) ve dosya adları da
 döndü; numara ile ad artık tutuyor. On üç dosyanın hepsi, `.docx` içinde
@@ -116,7 +118,8 @@ yükle.
 | **Abstract** | `00-on-bilgi.md` → Abstract bloğu. **214 kelime**. Dergi "about 200 words maximum" diyor; 214 "about 200" içinde sayılır ama teknik ön denetim itiraz ederse kısaltılacak yer, tilt paragrafının ikinci yarısıdır |
 | **Keywords** | vertical take-off and landing; tail-sitter; blended wing body; uncrewed aerial vehicle; series hybrid propulsion; cruise efficiency; aircraft configuration design |
 | **Highlights** | `00-on-bilgi.md` → Highlights bloğu. İki başlık, her birinde iki madde — derginin istediği biçim |
-| **Corresponding author** | Meryem Gülmen, meryemgulmen@outlook.com |
+| **Corresponding author** | **İki kişi:** Meryem Gülmen (meryemgulmen@outlook.com) ve Ömer Gülmen (lordtek@me.com). Sistemde ikisini de corresponding olarak işaretle |
+| **Submitting author** | Ömer Gülmen. MDPI'da submitting ≠ corresponding; gönderimi oluşturan hesap sistemde yönetir, ama **yazışma corresponding author'a gider** — bu yüzden Ö.G. de corresponding yapıldı |
 | **Affiliation** | Independent Researcher, Türkiye |
 | **Article type** | Article. **Ana metin 36 200 kelime, ek belge 33 100 kelime** — bu uzun bir makale ve aşağıda 7. maddede ayrı ele alınıyor |
 
@@ -203,7 +206,9 @@ Drones kapak mektubu istiyor. Kısa tutmak doğru. Taslak:
 > (Türkpatent 2026/014570); this is declared in the manuscript.
 >
 > Yours sincerely,
-> Meryem Gülmen, on behalf of the authors
+> Ömer Gülmen, on behalf of the authors
+> (corresponding authors: Meryem Gülmen, meryemgulmen@outlook.com; Ömer Gülmen,
+> lordtek@me.com)
 
 **Yapma:** "kırk iç tutarlılık kontrolü, sıfır sapma" gibi bir cümle koyma. Bir
 dış okuma bunu açıkça uyardı ve haklı — hakemi denetlemeye davet eder.

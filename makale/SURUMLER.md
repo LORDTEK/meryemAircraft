@@ -15,6 +15,7 @@ yeni bir sürüm numarası alır.
 | v5 | `makale-v5.md`, `makale-v5-ek.md` | — | Zenodo'da yayımlandı |
 | v6 | `makale-v6.md`, `makale-v6-ek.md` | `f208eca` | Zenodo'da yayımlandı; **dosya o hale geri alındı** |
 | v7 | `makale-v7.md`, `makale-v7-ek.md` | `8138b62` | Zenodo'da yayımlandı — DOI `10.5281/zenodo.22745666`, sha `c5b0cd898d20` |
+| v8 | `makale-v8.md`, `makale-v8-ek.md` | çalışılan sürüm | **Drones'a gönderilecek olan.** v7'den tek farkı: ikinci corresponding author |
 
 Sürüm numarası `makale/uretim/surum.py` içindedir ve **tek yerdedir**. Önce
 öyle değildi: `mkdocx.py`, `mkekpdf.py` ve `baglanti.py` kendi kopyalarını
@@ -22,6 +23,19 @@ tutuyordu, ve `baglanti.py` sabit `"v6"` okuduğu için sürüm v7'ye çıktığ
 **bayat dosyayı denetleyip "temiz" diyordu.** Geçtiğini sandığın bir denetim,
 hiç olmayandan beterdir; bu depoda ikinci kez oldu.
 
+
+## v8 neden var — kuralın ilk gerçek sınavı
+
+v7 Zenodo'ya yatırıldıktan sonra tek bir satır değişmesi gerekti: gönderimi
+fiilen yapan yazarın da corresponding author olması. Bu, gönderim için zorunlu
+ve makaleyi bir satır değiştiriyor.
+
+`makale-v7.md`'yi düzenlemek en kolayıydı ve **yanlış olurdu** — yukarıdaki
+kuralı yazdıktan bir saat sonra ihlal etmek olurdu. Sürüm v8'e çıkarıldı,
+v7 yatırılan haline (`c5b0cd898d20`) geri alındı.
+
+**v8 Zenodo'ya yüklenmiyor.** Yatırılan arşiv v7'dir; v8 dergiye gönderilen
+sürümdür ve ikisi arasındaki tek fark kayıtlıdır. Revizyon gelirse v9 olur.
 
 ## Sürüm DOI'si makaleye konmaz
 

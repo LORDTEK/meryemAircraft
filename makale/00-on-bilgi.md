@@ -12,16 +12,23 @@ Lift System**
 
 ## Authors
 
-Meryem Gülmen <sup>1,\*</sup>, Berke Gülmen <sup>1</sup>, Ömer Gülmen <sup>1</sup>
+Meryem Gülmen <sup>1,\*</sup>, Berke Gülmen <sup>1</sup>, Ömer Gülmen <sup>1,\*</sup>
 
 <sup>1</sup> Independent Researcher, Türkiye; meryemgulmen@outlook.com (M.G.);
 berkegulmen@outlook.com (B.G.); lordtek@me.com (Ö.G.)
 
-<sup>\*</sup> Correspondence: meryemgulmen@outlook.com
+<sup>\*</sup> Correspondence: meryemgulmen@outlook.com (M.G.); lordtek@me.com (Ö.G.)
 
 *[Kurum bağlantısı yok; MDPI'ın "Independent Researcher" kaydı kullanılacak.
 ORCID varsa gönderim sırasında eklenir — dergi zorunlu tutmuyor ama tavsiye
-ediyor.]*
+ediyor.
+
+**İki corresponding author var ve bu bilerek.** Gönderimi Ö.G. yapıyor;
+derginin bütün yazışması — revizyon isteği, düzelti onayı, fatura —
+corresponding author'a gider, o yüzden gönderimi fiilen yürüten kişi de
+corresponding olmalı. M.G. birinci corresponding kalır, yazar sırası
+değişmez. Ö.G.'nin katkı beyanındaki rolü (Conceptualization, Methodology,
+Supervision) bu sorumluluğu zaten taşıyor.]*
 
 ---
 

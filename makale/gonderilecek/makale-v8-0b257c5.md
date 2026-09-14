@@ -1,37 +1,148 @@
-# The Architectural Cost of Hybrid VTOL: meryemAircraft, a Propeller-Driven Tail-Sitting Blended-Wing-Body Without a Dedicated Lift System
+# The Architectural Cost of Hybrid VTOL
 
-Meryem Gülmen <sup>1,\*</sup>, Berke Gülmen <sup>1</sup>, Ömer Gülmen <sup>1,\*</sup>  <sup>1</sup> Independent Researcher, Türkiye; meryemgulmen@outlook.com (M.G.); berkegulmen@outlook.com (B.G.); lordtek@me.com (Ö.G.)  <sup>\*</sup> Correspondence: meryemgulmen@outlook.com (M.G.); lordtek@me.com (Ö.G.)
+---
 
-**What are the main findings?**
-- Hybrid VTOL aircraft pay for vertical flight in three coupled currencies — hover
-  hardware carried through cruise, its drag when exposed, and continuous power sized by a
-  condition holding for some two percent of the flight — and each architectural remedy
-  surveyed here reduces one by raising another.
-- A tail-sitting blended-wing body reaches the escape condition by a route the tilting
-  architectures do not take — the airframe rotates and the propulsors stay fixed — so it
-  carries no pivot, no nacelle actuator and no variable-pitch hub: the propellers hold one
-  orientation from take-off to cruise. Pitch and yaw come from differential thrust between
-  fixed-pitch propellers; roll, which coaxial pairs cannot produce, comes from a single moving
-  strip. What is eliminated is the propulsor-reorientation mechanism, not every moving part.
-- Carrying that case far enough to audit shows what it costs: the free-wheeling drag of its
-  own attitude rotors is a bill the configuration was assumed to avoid, and charging it
-  reverses one of the three range comparisons and leaves a mass advantage of 32 to 36 percent.
-**What are the implications of the main findings?**
-- Architectural rankings are properties of the sizing contract, not of the architecture.
-  Across the computed drag bracket the lift-plus-cruise layout leads on range under equal
-  fuel fractions by 24 to 45 percent, the tail-sitter leads under equal take-off mass by 29
-  to 43, and under equal fuel mass the sign changes inside the bracket. **A ranking quoted
-  without its contract is not a result.** The architectural claim made here is on a different
-  axis from all of these: it is the absence of a mechanism that reorients a propulsor, which
-  no contract moves.
-- The configuration is not shown to be flyable: its 50 kg reference budget needs a battery
-  specific power 3.8 times the highest rate yet measured on a flown pack, and re-closes 38
-  percent heavier at that measured rate; transition controllability rests on a pitching
-  moment no current method predicts reliably.
+## Title
 
-**Abstract.** Hybrid vertical take-off and landing (VTOL) aircraft pay for runway independence in cruise efficiency. That cost is architectural, charged in three coupled currencies — hover hardware carried through cruise, its drag when exposed, and continuous power sized by a two-percent-of-flight condition — each remedy reducing one by raising another. Escape requires one set of hardware serving both regimes in one orientation, with the hover peak from a buffer. Tilting architectures meet it by rotating their propulsors, at the cost of a pivot and a control problem. **An uncrewed tail-sitting blended-wing body is proposed as an alternative route: the airframe rotates and the propulsors do not**, so there is no pivot, nacelle actuator or variable-pitch hub. Pitch and yaw come from differential thrust; roll, which coaxial pairs cannot produce, comes from one moving strip. **What is eliminated is the propulsor-reorientation mechanism, not every moving part.** **Architectural rankings belong to sizing contracts, not to architectures**; three are reported, and the configuration holds a 32 to 36 percent mass advantage over a lift-plus-cruise layout under all three but loses range under equal fuel fractions, driven by the free-wheeling drag of its own attitude rotors. **No range superiority is claimed.** It is not shown to be flyable: the budget needs 3.8 times the highest measured battery specific power.
+**The Architectural Cost of Hybrid VTOL: meryemAircraft, a Propeller-Driven Tail-Sitting Blended-Wing-Body Without a Dedicated Lift System**
 
-**Keywords:** vertical take-off and landing; tail-sitter; blended wing body; uncrewed aerial vehicle; series hybrid propulsion; cruise efficiency; aircraft configuration design
+## Authors
+
+Meryem Gülmen <sup>1,\*</sup>, Berke Gülmen <sup>1</sup>, Ömer Gülmen <sup>1,\*</sup>
+
+<sup>1</sup> Independent Researcher, Türkiye; meryemgulmen@outlook.com (M.G.);
+berkegulmen@outlook.com (B.G.); lordtek@me.com (Ö.G.)
+
+<sup>\*</sup> Correspondence: meryemgulmen@outlook.com (M.G.); lordtek@me.com (Ö.G.)
+
+## Highlights
+
+> **What are the main findings?**
+>
+> - Hybrid VTOL aircraft pay for vertical flight in three coupled currencies — hover
+>   hardware carried through cruise, its drag when exposed, and continuous power sized by a
+>   condition holding for some two percent of the flight — and each architectural remedy
+>   surveyed here reduces one by raising another.
+> - A tail-sitting blended-wing body reaches the escape condition by a route the tilting
+>   architectures do not take — the airframe rotates and the propulsors stay fixed — so it
+>   carries no pivot, no nacelle actuator and no variable-pitch hub: the propellers hold one
+>   orientation from take-off to cruise. Pitch and yaw come from differential thrust between
+>   fixed-pitch propellers; roll, which coaxial pairs cannot produce, comes from a single moving
+>   strip. What is eliminated is the propulsor-reorientation mechanism, not every moving part.
+> - Carrying that case far enough to audit shows what it costs: the free-wheeling drag of its
+>   own attitude rotors is a bill the configuration was assumed to avoid, and charging it
+>   reverses one of the three range comparisons and leaves a mass advantage of 32 to 36 percent.
+>
+> **What are the implications of the main findings?**
+>
+> - Architectural rankings are properties of the sizing contract, not of the architecture.
+>   Across the computed drag bracket the lift-plus-cruise layout leads on range under equal
+>   fuel fractions by 24 to 45 percent, the tail-sitter leads under equal take-off mass by 29
+>   to 43, and under equal fuel mass the sign changes inside the bracket. **A ranking quoted
+>   without its contract is not a result.** The architectural claim made here is on a different
+>   axis from all of these: it is the absence of a mechanism that reorients a propulsor, which
+>   no contract moves.
+> - The configuration is not shown to be flyable: its 50 kg reference budget needs a battery
+>   specific power 3.8 times the highest rate yet measured on a flown pack, and re-closes 38
+>   percent heavier at that measured rate; transition controllability rests on a pitching
+>   moment no current method predicts reliably.
+
+## Abstract
+
+Hybrid vertical take-off and landing (VTOL) aircraft pay for runway independence in cruise
+efficiency. That cost is architectural, charged in three coupled currencies — hover hardware carried
+through cruise, its drag when exposed, and continuous power sized by a two-percent-of-flight
+condition — each remedy reducing one by raising another. Escape requires one set of hardware serving both regimes in one orientation, with the hover peak
+from a buffer. Tilting architectures meet it by rotating their propulsors, at the cost of a pivot
+and a control problem. **An uncrewed tail-sitting blended-wing body is
+proposed as an alternative route: the airframe rotates and the propulsors do not**, so there is no
+pivot, nacelle actuator or variable-pitch hub. Pitch and yaw come from differential
+thrust; roll, which coaxial pairs cannot produce, comes from one moving strip. **What is
+eliminated is the propulsor-reorientation mechanism, not every moving part.** **Architectural rankings belong to sizing
+contracts, not to architectures**; three are reported, and the configuration holds a 32 to 36 percent mass advantage over a
+lift-plus-cruise layout under all three but loses range under equal fuel fractions, driven by
+the free-wheeling drag of its own attitude rotors. **No range superiority is claimed.** It is not shown to be flyable: the budget needs 3.8 times
+the highest measured battery specific power.
+
+## Keywords
+
+vertical take-off and landing; tail-sitter; blended wing body; uncrewed aerial vehicle;
+series hybrid propulsion; cruise efficiency; aircraft configuration design
+
+## Declarations
+
+### Supplementary Materials
+
+> The following supplementary material is available: **S1** — independent checks on the two
+> assumed aerodynamic coefficients (the full version of Section 3.10); **S2** — a component
+> build-up of the mass budget (Section 3.11); **S3** — the control axes in full (Section 2.10);
+> **S4** — rotational authority, trim and the transition envelope (Section 3.17); **S5** — the
+> limitations in full (Section 4); **S6** — the three bills stated formally and the comparative
+> sizing under three contracts (Sections 3.1 and 3.6).
+
+### Patents
+
+> A patent application covering the aircraft configuration described in this paper has been
+> filed with the Turkish Patent and Trademark Office (application 2026/014570).
+
+### Author Contributions
+
+> Conceptualization, Ö.G. and M.G.; Methodology, Ö.G. and M.G.; Software, B.G.;
+> Formal Analysis, M.G. and B.G.; Investigation, M.G., B.G. and Ö.G.; Data Curation,
+> B.G.; Writing — Original Draft Preparation, M.G.; Writing — Review & Editing, M.G.,
+> B.G. and Ö.G.; Visualization, B.G.; Supervision, Ö.G.; Project Administration, M.G.
+> All authors have read and agreed to the published version of the manuscript.
+
+### Acknowledgements
+
+> During the preparation of this study, the authors used large-language-model assistants for
+> the purposes of literature searching and triage, numerical checking of the authors' own
+> calculations, and language editing. Section 2.14 states the scope of that use and the rules
+> under which it was admitted. No source was cited on a model's description of it, and no
+> correction was adopted until it had been reproduced independently from the underlying model.
+> All design decisions, engineering judgements and claims presented in this paper are the
+> authors' own. The authors have reviewed and edited the output and take full responsibility
+> for the content of this publication.
+
+### Conflicts of Interest
+
+> The authors have filed a patent application covering the aircraft configuration
+> described in this paper (Türkpatent application 2026/014570).
+
+### Data Availability
+
+> All data supporting the reported results are contained within the article. The
+> parametric geometry model, the figure-generation scripts and the transition
+> simulation, together with the aerodynamic calculations of Section 3.10 — including the
+> mesh generator, the case setup, the grid-convergence study and the wall-resolution and
+> turbulence-model sensitivity runs behind the computed zero-lift drag — are openly
+> available at https://github.com/LORDTEK/meryemAircraft, and an archived version of this
+> manuscript with its supplementary material is deposited at
+> https://doi.org/10.5281/zenodo.22144194 (concept DOI, resolving to the latest version).
+
+### Dual-Use Research of Concern
+
+> This paper is a civil aircraft configuration study. The applications the configuration was
+> conceived for are civil ones — wildfire observation and response, and cargo carriage to places
+> without a runway — and no military organization, mission, weapon or payload is named or
+> analysed anywhere in this work. It reports no experimental hardware and no controlled
+> technical data.
+>
+> **The authors acknowledge the dual-use potential inherent in the subject matter.** A
+> long-endurance unmanned aircraft is dual-use in principle, as most aircraft configurations
+> are, and the authors note for completeness that the heavier of the two analytical scale cases
+> — a 1000 kg vehicle with a computed range of 1 571 km — falls within the range band by which
+> unmanned aerial vehicles are listed under international export-control arrangements. What is
+> published here is an open configuration study and its equations, offered so that others may
+> check or refute it; the authors neither direct it at, nor undertake to police, any particular
+> downstream use, and they remain available to provide whatever further declaration the editors
+> require.
+
+### Funding
+
+> This research received no external funding.
+
+---
 
 # 1. Introduction
 
@@ -52,8 +163,6 @@ converse: without a wing, every second of flight is paid for with installed powe
 range and endurance remain modest and degrade further as the vehicle grows. Figure 1
 places the two families against the two capabilities and marks the corner that neither
 occupies.
-
-[Figure 1 about here]
 
 The demand to combine the two has been continuous and expensive. Tail-sitting
 prototypes were flown in the 1950s, vectored-thrust and tilt-wing aircraft in the
@@ -255,8 +364,6 @@ the need has been pursued continuously for seventy years, and that the pursuit w
 rarely abandoned because the aerodynamics failed. Figure 2 places the programmes
 discussed below on a single timeline, with the recorded reason each one stopped.
 
-[Figure 2 about here]
-
 ## 1.1 Removing the fuselage
 
 The idea that a transport aircraft should carry its payload inside a lifting surface
@@ -395,6 +502,8 @@ What the history does not settle is why the contemporary aircraft that did succe
 pay for their vertical capability, and what exactly they pay. That is the subject of the
 next section.
 
+---
+
 # 2. Materials and Methods
 
 This section states the analytical framework the paper is built on, defines the
@@ -485,8 +594,6 @@ legitimate — measuring the retracted aircraft against *itself* with propellers
 lift-to-drag ratio for a fixed energy system, this ladder translates directly into range
 (Figure 3).
 
-[Figure 3 about here]
-
 **A third finding constrains what can be done about the penalty**, and matters more than either
 number:
 
@@ -542,8 +649,6 @@ two is chosen, the extra installed capacity is mass, which returns to Bill 1.
 
 The three bills are not independent problems with independent fixes. **Each known architectural
 move reduces one and increases another.** Figure 4 shows the transfers; Table 2 lists them.
-
-[Figure 4 about here]
 
 **Table 2.** Architectural moves and the bills they transfer.
 
@@ -617,10 +722,6 @@ the lower surface, described in Section 2.10, which exists solely because roll c
 produced by propellers alone. Figure 5 gives three orthogonal views of the light
 reference design and Figure 6 a general view of the same geometry.
 
-[Figure 5 about here]
-
-[Figure 6 about here]
-
 ## 2.8 Planform
 
 The planform is a blended-wing body whose leading-edge sweep varies continuously along the span
@@ -649,8 +750,6 @@ The reference geometry for the light design is a root chord of 0.970 m, a tip ch
 a span of 3.453 m, a wing area of 1.979 m² and an aspect ratio of 6.03, giving a wing loading of
 25.3 kg m⁻² and a stall speed of 20.1 m s⁻¹ against a cruise speed of 30 m s⁻¹. Figure 7 gives
 the distributions.
-
-[Figure 7 about here]
 
 ## 2.9 Propulsion
 
@@ -712,8 +811,6 @@ tip-propeller layout rather than a design choice. Figure 8 shows the placement a
 and shows why the third axis has neither: every thrust vector is parallel to the body axis, so
 no combination of settings produces a rolling moment.
 
-[Figure 8 about here]
-
 **Roll cannot be produced by propellers at all**, because every pair is coaxial and
 torque-balanced by construction. It is the one axis that needs an aerodynamic device, and that
 device is the only moving aerodynamic surface on the aircraft: a strip on the lower surface,
@@ -724,8 +821,6 @@ propeller's slipstream: the inboard 46 percent of its length lies inside the sli
 dynamic pressure is set by disc loading and is therefore available at zero airspeed, and the
 outboard 54 percent works against the freestream in cruise. That split is why one device serves
 both regimes.
-
-[Figure 9 about here]
 
 Roll inertia computed from the component mass distribution is 25.0 kg·m², two and a half times
 the pitch inertia, and the roll damping derivative from a helix-angle vortex-lattice solution is
@@ -990,6 +1085,8 @@ No text was accepted without review, no result was generated by a model, and the
 full responsibility for the content of this publication. The prompts, the responses and the
 resulting corrections are in the repository, so a reader who wishes to audit this use can do so
 rather than take the statement on trust.
+
+---
 
 # 3. Results
 
@@ -1668,8 +1765,6 @@ powers, loadings and mass *fractions*. Whether the heavy design's structure clos
 how shell areal density grows with size, which was not measured. Figure 10 shows the two
 designs at a common scale. Four properties are preserved and one is not.
 
-[Figure 10 about here]
-
 **Disc loading is held constant** — 44.2 and 43.7 kg m⁻². This is the rule that governs the
 sizing rather than a coincidence of it. Hover power per unit weight is √(DL/2ρ), so fixing disc
 loading fixes specific hover power: hover power rises from 10.9 kW to 216.2 kW, a factor of 19.8
@@ -2026,8 +2121,6 @@ contact points. Section 3.16 notes what is and is not analysed here.
 Figure 11 shows the five phases in sequence. Nothing on the aircraft rotates relative to
 the aircraft at any point in it.
 
-[Figure 11 about here]
-
 ## 3.13 Why the transition begins in the easiest condition
 
 A common objection to tail-sitter transition is that the aircraft must fight the
@@ -2081,8 +2174,6 @@ perpendicular to the velocity vector and drag opposite to it; the lift curve is 
 and a flat-plate relation beyond it. Altitude loss is the lowest point of the trajectory
 relative to the entry altitude. Figure 12a plots both reference designs against rotation
 time, each at the two thrust-to-weight ratios its own installed power supplies.
-
-[Figure 12 about here]
 
 **The ratio the aircraft actually has must be established first, and it is not a free choice.**
 Section 2.12 sizes hover power at thrust equal to weight, so the 10.9 kW of Section 3.7 buys
@@ -2334,6 +2425,8 @@ Two independent programmes, different vehicles, the same division — transition
 flight difficult — and that is the same structural tension this section derives from the moment
 budget: the tight case is the end of the rotation and beyond, where aerodynamic moment grows as
 V² while propeller thrust falls.
+
+---
 
 # 4. Discussion
 
@@ -2674,6 +2767,8 @@ group to attempt any of them independently, by whichever of the two routes each 
 grid-convergence study and the record of what failed along the way are in the repository, so
 every result here can be re-run and checked rather than taken on trust.
 
+---
+
 # 5. Conclusions
 
 Hybrid vertical take-off aircraft pay for their vertical capability, and the payment is
@@ -2812,61 +2907,7 @@ demonstrated, which are conditional, and which are open. The configuration is de
 enough detail for another group to attempt any of the outstanding analyses independently, and
 that is the outcome this paper is written to invite.
 
-# Declarations
-
-**Supplementary Materials.** The following supplementary material is available: **S1** — independent checks on the two
-assumed aerodynamic coefficients (the full version of Section 3.10); **S2** — a component
-build-up of the mass budget (Section 3.11); **S3** — the control axes in full (Section 2.10);
-**S4** — rotational authority, trim and the transition envelope (Section 3.17); **S5** — the
-limitations in full (Section 4); **S6** — the three bills stated formally and the comparative
-sizing under three contracts (Sections 3.1 and 3.6).
-
-**Author Contributions.** Conceptualization, Ö.G. and M.G.; Methodology, Ö.G. and M.G.; Software, B.G.;
-Formal Analysis, M.G. and B.G.; Investigation, M.G., B.G. and Ö.G.; Data Curation,
-B.G.; Writing — Original Draft Preparation, M.G.; Writing — Review & Editing, M.G.,
-B.G. and Ö.G.; Visualization, B.G.; Supervision, Ö.G.; Project Administration, M.G.
-All authors have read and agreed to the published version of the manuscript.
-
-**Funding.** This research received no external funding.
-
-**Data availability.** All data supporting the reported results are contained within the article. The
-parametric geometry model, the figure-generation scripts and the transition
-simulation, together with the aerodynamic calculations of Section 3.10 — including the
-mesh generator, the case setup, the grid-convergence study and the wall-resolution and
-turbulence-model sensitivity runs behind the computed zero-lift drag — are openly
-available at https://github.com/LORDTEK/meryemAircraft, and an archived version of this
-manuscript with its supplementary material is deposited at
-https://doi.org/10.5281/zenodo.22144194 (concept DOI, resolving to the latest version).
-
-**Acknowledgements.** During the preparation of this study, the authors used large-language-model assistants for
-the purposes of literature searching and triage, numerical checking of the authors' own
-calculations, and language editing. Section 2.14 states the scope of that use and the rules
-under which it was admitted. No source was cited on a model's description of it, and no
-correction was adopted until it had been reproduced independently from the underlying model.
-All design decisions, engineering judgements and claims presented in this paper are the
-authors' own. The authors have reviewed and edited the output and take full responsibility
-for the content of this publication.
-
-**Conflicts of interest.** The authors have filed a patent application covering the aircraft configuration
-described in this paper (Türkpatent application 2026/014570).
-
-**Dual-use research of concern.** This paper is a civil aircraft configuration study. The applications the configuration was
-conceived for are civil ones — wildfire observation and response, and cargo carriage to places
-without a runway — and no military organization, mission, weapon or payload is named or
-analysed anywhere in this work. It reports no experimental hardware and no controlled
-technical data.
-**The authors acknowledge the dual-use potential inherent in the subject matter.** A
-long-endurance unmanned aircraft is dual-use in principle, as most aircraft configurations
-are, and the authors note for completeness that the heavier of the two analytical scale cases
-— a 1000 kg vehicle with a computed range of 1 571 km — falls within the range band by which
-unmanned aerial vehicles are listed under international export-control arrangements. What is
-published here is an open configuration study and its equations, offered so that others may
-check or refute it; the authors neither direct it at, nor undertake to police, any particular
-downstream use, and they remain available to provide whatever further declaration the editors
-require.
-
-**Patents.** A patent application covering the aircraft configuration described in this paper has been
-filed with the Turkish Patent and Trademark Office (application 2026/014570).
+---
 
 # References
 
@@ -3016,3 +3057,21 @@ filed with the Turkish Patent and Trademark Office (application 2026/014570).
 51. Lee, H.; Lee, J. D.; Bang, H. *Aerodynamic Model Identification of a VTOL Tailsitter
     UAV Using Sparse Identification of Nonlinear Dynamics.* 34th Congress of the
     International Council of the Aeronautical Sciences (ICAS), 2024, paper 0653.
+
+---
+
+# Supplementary Material
+
+Six supplementary files accompany this paper and are cited from it by number.
+They carry the derivations behind the results stated here; each was a section of an earlier,
+longer version and is reproduced without abridgement.
+
+- **Supplementary S1** — Independent checks on the two assumed aerodynamic coefficients (3811 words)
+- **Supplementary S2** — A component build-up of the mass budget (3689 words)
+- **Supplementary S3** — Control axes in full (6553 words)
+- **Supplementary S4** — Rotational authority, trim, and the transition envelope (8310 words)
+- **Supplementary S5** — The limitations in full (6724 words)
+- **Supplementary S6** — The three bills stated formally, and a comparative sizing (3158 words)
+
+The computational setup, the scripts that produce every number here, and a running record
+of the corrections made during the study are in the repository this paper cites.
