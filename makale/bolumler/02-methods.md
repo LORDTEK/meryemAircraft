@@ -68,9 +68,9 @@ flight: rotors stopped in the airstream, the booms that carry them, and the inte
 their wakes and the wing.
 
 The cleanest measurement is a controlled comparison within a single aircraft. In a doctoral
-study, one uncrewed airframe was tested in a wind tunnel in four configurations (Table 1):
+study, one uncrewed airframe was tested in a wind tunnel in three configurations (Table 1):
 
-**Table 1.** Maximum lift-to-drag ratio of one uncrewed airframe tested in four configurations in a single wind-tunnel campaign [3].
+**Table 1.** Maximum lift-to-drag ratio of one uncrewed airframe tested in three configurations in a single wind-tunnel campaign [3].
 
 | Configuration | Maximum L/D |
 |---|---:|
@@ -475,11 +475,22 @@ the range figures below are lower than an optimistic estimate would give.
 sizing case.
 
 **Assumptions carried throughout:** sea-level density; no compressibility; span efficiency
-e = 0.85; C_D0 = 0.0248 for the light design, which is generous for a clean blended-wing body
-and absorbs the tip-frame contribution of Section 3.3 — that contribution is 0.0043, or
-seventeen percent of the assumed value, so the assumption is self-consistent rather than
-optimistic. Both are carried as assumptions throughout, so that every downstream figure rests
-on one stated basis. Section 3.10 computes both and reports what the computation does to them:
+e = 0.85; C_D0 = 0.0248 for the light design, which was taken as generous for a clean
+blended-wing body on the grounds that it absorbs the tip-frame contribution of Section 3.3 —
+0.0043, or seventeen percent of the assumed value. **Section 3.10 computes the coefficient and
+that reasoning does not survive:** the computed bracket is 0.0285 to 0.0381 and the assumption
+lies below both ends, so it is an assumption and an optimistic one, not a self-consistent
+choice. It is carried unchanged so that every downstream figure rests on one stated basis, and
+every result that depends on it is also reported across the computed bracket.
+
+**Sea-level density is a deliberate choice and not an oversight, and it is the conservative
+one.** A cruise at altitude would reduce drag with the density ratio and lengthen every range
+figure quoted here; holding sea level therefore understates the aircraft rather than flattering
+it. The choice also matches the intended missions — wildfire observation and cargo delivery to
+sites without a runway — which are flown low, and it keeps the hover and cruise calculations on
+one atmosphere so that the ratio between them, which is what the three bills are about, is not
+carrying a density change as well. A design intended to cruise high would need the whole chain
+re-run; nothing in the framework prevents that, and nothing in this paper does it. Section 3.10 computes both and reports what the computation does to them:
 it bounds them rather than replacing them, which is a weaker but more honest claim.
 
 ## 2.13 Computational methods

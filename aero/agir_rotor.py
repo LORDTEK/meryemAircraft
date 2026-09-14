@@ -46,7 +46,19 @@ if __name__ == "__main__":
     print("%-12s %9s %10s %9s %12s" % ("tasarim c_l", "FM", "rpm", "uc Mach",
                                        "dC_D0 (8 disk)"))
     en_iyi = None
-    for cl_h in (0.55, 0.62, 0.68, 0.75):
+    # LISTE GENISLETILDI VE BU BIR DUZELTME DEGIL, BIR ITIRAF.
+    # Eski liste (0,55 / 0,62 / 0,68 / 0,75) ile "FM >= 0,599 saglayanlar
+    # arasinda en az surukleyen" kurali 0,75'i seciyor, dC_D0 = 0,00446.
+    # Oysa makale 0,0051 tasiyor ve o, listede OLMAYAN c_l = 0,70'in
+    # degeri. Yani tasinan sayi kuralin sectigi sayi degildi.
+    # Genisletince asil sorun goruldu: HAFIF hatta FM 0,70'in ustunde
+    # ucurumdan atliyor (0,633 -> 0,350) ve kural orada BAGLIYOR; agir
+    # hatta atlamiyor (0,85'te hala 0,657), yani kural hic baglamiyor ve
+    # secilen sayi listenin nerede bittigine bagli. Kurali oldugu gibi
+    # uygulamak 0,85'i ve 0,0035'i verirdi -- bizim LEHIMIZE. Makale bu
+    # yuzden tek sayi degil ARALIK rapor ediyor ve 0,0051'i tasimaya
+    # devam ediyor; bkz. 3.8.
+    for cl_h in (0.55, 0.62, 0.68, 0.70, 0.72, 0.75, 0.78, 0.85):
         c, th = U.hover_tasarla(cl_hedef=cl_h, T_hedef=T)
         om = U.devir_itki_icin(c, th, T_hedef=T)
         Th, Q, _ = U.bemt_sabit(1e-3, om, c, th)
@@ -65,6 +77,11 @@ if __name__ == "__main__":
         print("HOVER SARTINI (FM >= %.3f) SAGLAYAN EN AZ SURUKLEYEN TASARIM" % FM)
         print("  tasarim c_l %.2f, FM %.3f, dC_D0 = %.5f" % (en_iyi[0], en_iyi[2], en_iyi[1]))
         print("  hafif hat karsiligi: 0,01541")
+        print()
+        print("  !! KURAL BURADA BAGLAMIYOR. Hafif hatta FM 0,70'in ustunde")
+        print("     coker ve secimi o coküs yapar; burada en yuksek c_l'de")
+        print("     bile FM %.3f. Secilen tasarim listenin nerede bittigine" % en_iyi[2])
+        print("     bagli, fizige degil. Makale bu yuzden ARALIK rapor eder.")
     else:
         print("!! Hicbir tasarim FM >= %.3f saglamadi -- agir uc rotoru" % FM)
         print("   hafif hattinki gibi tek bir sayiya oturmuyor; rapor edilmeli.")
