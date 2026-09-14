@@ -117,14 +117,23 @@ real geometry in enough detail that the bills can be audited one at a time, incl
 occasions on which the audit found against the configuration. Item 5 is the reason the paper does
 not claim the aircraft can be built. **Two architectural claims are made and a third is not**, and the
 distinction runs through the whole paper. The first is that this configuration escapes the
-runway requirement, which no fixed-wing aircraft does. The second is that it retains a cruising
-wing, and therefore a range, that no multirotor has: the sizing set discussed in Section 3.2
-puts a turboshaft quadrotor at an effective lift-to-drag ratio of 4.9 against this
-configuration's 8.8 to 10.8 across its computed drag bracket. **Those two together are why the
-configuration exists, and neither is weakened by anything in this paper.** What is *not* claimed
-is a ranking against the other hybrid VTOL architectures — lift-plus-cruise and tilting — because
-Section 3.6 shows that ranking reverses with the sizing contract. The sizing results are reported
-as properties of a case under stated contracts, not as a ranking of the hybrid family.
+runway requirement, which no fixed-wing aircraft does. The second is that it cruises on a wing,
+which a multirotor does not: lift in cruise is carried by a surface rather than by rotors, and
+that is a structural difference rather than a margin. For scale — and the two numbers are not the
+same kind of number — the sizing set discussed in Section 3.1 puts a turboshaft quadrotor at an
+*effective* lift-to-drag ratio of 4.9, a system-level figure of merit, against this
+configuration's *aerodynamic* 8.8 to 10.8 across its computed drag bracket. **Those two claims
+together are why the configuration exists, and neither is weakened by anything in this paper.**
+What is *not* claimed is a ranking against the other hybrid VTOL architectures — lift-plus-cruise
+and tilting — because Section 3.6 shows that ranking reverses with the sizing contract.
+
+**The line between the two is not arbitrary, and it is worth stating as a criterion: it tracks
+whether the competitor has a cruising wing at all.** A multirotor does not, so the comparison
+with it is structural and no sizing contract can change it. The other hybrids do, so they sit in
+the same cruise-efficiency class as this configuration and the ordering between them turns on the
+mass, drag and power trade that Section 3.6 shows to be contract-dependent. The sizing results
+are therefore reported as properties of a case under stated contracts, not as a ranking of the
+hybrid family.
 
 **Scope.** This is a configuration study containing no wind-tunnel measurement and no flight
 test. Its results are analytical estimates from stated assumptions, with two exceptions computed

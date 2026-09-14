@@ -65,8 +65,13 @@ widens the band.
 reading is too generous to it.** Against the two families that bound the band, the case is
 straightforward and is why the configuration exists: it needs no runway, which the fixed-wing
 family cannot say, and it carries a cruising wing, which the multirotor family does not — the
-sizing set of Section 3.2 puts a turboshaft quadrotor at an effective lift-to-drag ratio of 4.9
-against this configuration's 8.8 to 10.8. On both edges the band is genuinely wider.
+sizing set of Section 3.1 puts a turboshaft quadrotor at an *effective* lift-to-drag ratio of
+4.9 against this configuration's *aerodynamic* 8.8 to 10.8. Those are different kinds of number
+— the first a system-level figure of merit, the second a force ratio — and the comparison is
+offered for scale rather than as a measured margin. **The claim that survives it is structural:
+a vehicle that carries its cruise lift on a wing is in a different efficiency class from one that
+carries it on rotors, and no sizing contract moves a vehicle between those classes.** On both
+edges the band is genuinely wider.
 
 **Inside the band, against the other hybrids, the claim splits and one half of it fails.** Once
 the free-wheeling drag of the attitude rotors is charged, this configuration retains 0.632 of its
@@ -257,6 +262,16 @@ nonlinear about zero incidence; whether such a fairing develops the side force c
 not established, and the toe-out its aspect ratio requires carries a stall-related failure mode
 at large sideslip that has not been computed. Hover disturbance rejection, ground handling,
 crosswind and vertical descent have been checked only to order of magnitude or not at all.
+
+**The landing transition belongs on this list and had been left off it.** The forward
+transition is treated in six subsections of Section 3 and the reverse — decelerate, rotate
+nose-up, descend — in a clause. The two are not symmetric: the forward rotation gains dynamic
+pressure while it turns, so lift arrives as the vertical component of thrust departs, and
+Section 3.15 shows the altitude loss turns on that race; the reverse loses dynamic pressure
+while turning, so lift departs before the thrust vector has returned to vertical. Nothing in
+this paper models that case, no number here describes it, and the take-off transition must not
+be read backwards to supply one. Together with the vertical descent above it, the landing is
+the least examined phase of the flight profile.
 
 ## 4.7 Where this could most efficiently be attacked
 

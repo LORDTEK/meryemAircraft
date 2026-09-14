@@ -112,6 +112,35 @@ esit("askı gucu orani = kutle orani (L^3.5 degil)", 216.2 / 10.9, 20.0, tol=0.0
 esit("cap/aciklik: hafif", 1.20 / 3.453, 0.35, tol=0.02)
 esit("cap/aciklik: agir", 5.40 / 11.55, 0.47, tol=0.02)
 
+# ---------------------------------------- agir uc rotoru: ARALIK denetimi
+# BU DENETIM BIR DELIGI KAPATIYOR. 3.8 uzun sure 0,0051 tasidi ve hicbir
+# kontrol onu yeniden turetmedi; tur 22'de betik kosturulunca kuralin
+# ("FM >= 0,599 saglayanlarin en az surukleyeni") sectigi sayinin 0,00446
+# oldugu, 0,0051'in ise listede bulunmayan c_l = 0,70'e ait oldugu
+# goruldu. Cozum tek sayiyi degistirmek degil -- degistirmek BIZIM
+# LEHIMIZE olurdu -- kuralin agir hatta hic baglamadigini kabul edip
+# aralik rapor etmekti. Denetim de artik araligi sinar.
+print("\n=== agir uc rotoru araligi " + "=" * 32)
+try:
+    sys.path.insert(0, "/home/user/meryemAircraft/aero")
+    import agir_rotor as _A, uc_pervane as _U
+    _, _T = _A.agir_ayarla()
+    _d = []
+    for _cl in (0.55, 0.85):               # yalniz iki uc; digerleri arada
+        _c, _th = _U.hover_tasarla(cl_hedef=_cl, T_hedef=_T)
+        _om, _T2 = _U.sifir_tork(_c, _th)
+        if _om:
+            _d.append(_U.dcd0(_T2))
+    if len(_d) == 2:
+        esit("agir rotor yuku, ust uc", max(_d), 0.0074, tol=0.03)
+        esit("agir rotor yuku, alt uc", min(_d), 0.0035, tol=0.03)
+        esit("tasinan 0,0051 aralik icinde",
+             1.0 if min(_d) <= 0.0051 <= max(_d) else 0.0, 1.0, tol=0.001)
+    else:
+        print("  -- atlandi: sifir tork cozulmedi")
+except Exception as _h:                    # pragma: no cover
+    print("  -- atlandi (%s: %s)" % (type(_h).__name__, _h))
+
 # ---------------------------------------------- Tablo 15 (3.9) tutarliligi
 print("\n=== Tablo 15 " + "=" * 45)
 # metinde tam yuzdeye yuvarli — tolerans yarim puan
@@ -208,6 +237,7 @@ _YASAK = {
     "0.0380": "eski surukleme braketi ust siniri",
     "0.0153": "eski rotor surukleme yuvarlamasi (0.0154 olmali)",
     "0.0033": "eski AGIR rotor suruklemesi (kirpma kusurlu; 0.0051 olmali)",
+    "0.00446": "agir rotor yukunun EN DUSUK ucu; tek sayi olarak tasinamaz",
     "0.547":  "eski AGIR verim sayisi (kirpma kusurlu)",
     "1 649":  "eski agir menzil (1 571 olmali)",
     "12.37":  "eski agir L/D (11.78 olmali)",

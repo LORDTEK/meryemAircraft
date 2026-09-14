@@ -42,8 +42,9 @@ supported during the manoeuvre rather than falling through it, so entering the r
 still climbing removes the altitude penalty entirely in the point-mass model. That second result
 survived a correction that might have removed it. The primary propulsor is sized at thrust equal
 to weight and therefore supplies no climb at all; the margin comes from the four tip propellers,
-which raises the achievable ratio to between 1.066 and 1.132 rather than the 1.2 an earlier
-version assumed. Recomputed there, the altitude loss at both reference rotation times is still
+which raises the achievable ratio to 1.066 for the light design and 1.041 for the heavy
+one with full rotation authority retained, and to 1.132 and 1.082 with none retained, rather
+than the 1.2 an earlier version assumed. Recomputed there, the altitude loss at both reference rotation times is still
 zero — but acquiring the entry climb now takes twice as long, a rotation begun from rest is
 worse than reported, and the take-off margin and the attitude authority are drawn from the same
 four propellers and compete for them.
