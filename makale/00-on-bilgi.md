@@ -28,21 +28,21 @@ ediyor.]*
 ## Abstract
 
 Hybrid vertical take-off and landing (VTOL) aircraft pay for runway independence in cruise
-efficiency. This paper treats that cost as architectural and builds an accounting framework: the penalty is charged in three coupled currencies — hover hardware carried through cruise, its drag
-when exposed, and continuous power sized by a two-percent-of-flight condition, and every remedy surveyed
-reduces one by raising another. Escape requires the same hardware, in the same orientation,
-doing the same job, with the hover peak from a buffer. **The framework predicts that
-architectural rankings belong to sizing contracts rather than to architectures**, so three contracts are
-reported. An uncrewed tail-sitting blended-wing body instantiates it in its
-primary propulsor, at two scales. Across a computed drag bracket it holds a 32 to 36 percent mass
-advantage over a lift-plus-cruise layout under every contract but loses the range comparison
-under equal fuel fractions, a reversal driven by the free-wheeling drag of its own attitude
-rotors — a bill computed here rather than assumed. It is not shown to be flyable: the budget needs 3.8
-times the highest battery specific power yet measured, and transition rests on an unpredicted
-pitching moment. **The framework does not depend on that
-outcome.**
-
-*[Yukarısı ~200 kelimeye indirilmiş MDPI sürümü — dergi "about 200 words maximum"
+efficiency. That cost is architectural, charged in three coupled currencies — hover hardware
+carried through cruise, its drag when exposed, and continuous power sized by a
+two-percent-of-flight condition — and every remedy reduces one by raising another. Escape
+requires one set of hardware serving both regimes in one orientation, with the hover peak from a
+buffer. Tilting architectures meet it by rotating their propulsors, at the cost of a pivot,
+actuators and a transition control problem. **An uncrewed tail-sitting blended-wing
+body is proposed as an alternative route to it: the airframe rotates and the propulsors do not**,
+leaving no tilting mechanism, no variable-pitch hub and no control surface, every moment coming
+from differential thrust between fixed-pitch propellers. **Architectural rankings belong to sizing
+contracts, not to architectures**; three are reported, and the configuration holds a 32 to 36
+percent mass advantage over a lift-plus-cruise layout under all three but loses range under equal
+fuel fractions — a reversal driven by the free-wheeling drag of its own attitude rotors. **No range superiority is claimed; the architectural claim is the
+absence of mechanism.** It is not shown to be flyable: the budget needs 3.8 times the highest
+measured battery specific power.
+*[Yukarısı MDPI sürümü (211 kelime) — dergi "about 200 words maximum"
 diyor ve bunu teknik ön denetimde uyguluyor. Yapı başlıksız ama Background →
 Methods → Results → Conclusion sırasını izliyor, dergi öyle istiyor.
 Sondan bir önceki cümle kasten aleyhimize: hakem bulmadan biz söylüyoruz.
@@ -120,11 +120,13 @@ hesaplanmış değerler özette bağlamsız durur.]*
 >   hardware carried through cruise, its drag when exposed, and continuous power sized by a
 >   condition holding for some two percent of the flight — and each architectural remedy
 >   surveyed here reduces one by raising another.
-> - A tail-sitting blended-wing body whose single coaxial nose pair serves both regimes
->   instantiates the escape condition, and carrying the case that far shows what it costs:
->   the free-wheeling drag of its own attitude rotors is a bill the configuration was assumed
->   to avoid, and charging it reverses one of the three range comparisons and leaves a mass
->   advantage of 32 to 36 percent.
+> - A tail-sitting blended-wing body reaches the escape condition by a route the tilting
+>   architectures do not take — the airframe rotates and the propulsors stay fixed — so it
+>   carries no tilting mechanism, no variable-pitch hub and no control surface, every moment
+>   coming from differential thrust between fixed-pitch propellers.
+> - Carrying that case far enough to audit shows what it costs: the free-wheeling drag of its
+>   own attitude rotors is a bill the configuration was assumed to avoid, and charging it
+>   reverses one of the three range comparisons and leaves a mass advantage of 32 to 36 percent.
 >
 > **What are the implications of the main findings?**
 >
@@ -132,7 +134,8 @@ hesaplanmış değerler özette bağlamsız durur.]*
 >   Across the computed drag bracket the lift-plus-cruise layout leads on range under equal
 >   fuel fractions by 24 to 45 percent, the tail-sitter leads under equal take-off mass by 29
 >   to 43, and under equal fuel mass the sign changes inside the bracket. **A ranking quoted
->   without its contract is not a result.**
+>   without its contract is not a result.** The architectural claim made here is on a different
+>   axis from all of these: it is the absence of a rotating mechanism, which no contract moves.
 > - The configuration is not shown to be flyable: its 50 kg reference budget needs a battery
 >   specific power 3.8 times the highest rate yet measured on a flown pack, and re-closes 38
 >   percent heavier at that measured rate; transition controllability rests on a pitching

@@ -83,6 +83,27 @@ fractions. What it does hold is the mass axis, by 32 to 36 percent across the sa
 contract's question rather than the architecture's** — which is this paper's central result
 arriving at its own case.
 
+**None of that touches the third claim, because the third claim is not on this axis at all.**
+Against the tilting family the offer of this configuration was never a longer range; Section 3.6
+reports that the tilting layout leads on range under all three contracts, and that result stands.
+The offer is that the same regime transition is reached **without a rotating mechanism** — no
+pivot, no nacelle actuator, no gyroscopic moment during the rotation, no variable-pitch hub, and
+no aerodynamic control surface of any kind. Every one of the tilting layout's range advantages
+in Section 3.6 is computed with its nacelles, pivots, actuators and hover-pitched blades credited
+as aerodynamically free and mechanically reliable; the present configuration has nothing
+corresponding to charge, because it has nothing corresponding. **That is a hardware claim rather
+than a performance claim, it is countable rather than contract-dependent, and it is the reason
+this configuration is proposed at all.** Whether the hardware saved is worth the range given up
+is a question for a designer with a mission in hand, and this paper does not answer it for them.
+
+**Stated together, then, the three claims sit on three different axes against three different
+families, and each is safe from the others.** Runway independence against fixed wings is not
+weakened by a range deficit against lift-plus-cruise. Wing-borne cruise against multirotors is
+not weakened by a tilting layout flying further. Freedom from mechanism against tilts is not
+weakened by anything in Section 3.6, because Section 3.6 measures range and the claim is about
+parts. The one thing that would damage all three at once is the aircraft not flying, and
+Section 4.4 is the honest account of how close that possibility still is.
+
 
 This is a configuration study. It contains no experimental validation of any kind, and
 the numbers in it are the output of elementary methods applied to a set of assumptions.

@@ -115,25 +115,51 @@ Items 1 and 2 stand independently of whether this aircraft is ever built, and th
 contribution. Items 3 and 4 are what a case study is for: they show the framework applied to a
 real geometry in enough detail that the bills can be audited one at a time, including the two
 occasions on which the audit found against the configuration. Item 5 is the reason the paper does
-not claim the aircraft can be built. **Two architectural claims are made and a third is not**, and the
-distinction runs through the whole paper. The first is that this configuration escapes the
-runway requirement, which no fixed-wing aircraft does. The second is that it cruises on a wing,
-which a multirotor does not: lift in cruise is carried by a surface rather than by rotors, and
-that is a structural difference rather than a margin. For scale — and the two numbers are not the
-same kind of number — the sizing set discussed in Section 3.1 puts a turboshaft quadrotor at an
-*effective* lift-to-drag ratio of 4.9, a system-level figure of merit, against this
-configuration's *aerodynamic* 8.8 to 10.8 across its computed drag bracket. **Those two claims
-together are why the configuration exists, and neither is weakened by anything in this paper.**
-What is *not* claimed is a ranking against the other hybrid VTOL architectures — lift-plus-cruise
-and tilting — because Section 3.6 shows that ranking reverses with the sizing contract.
+not claim the aircraft can be built. **Three architectural claims are made and a fourth is
+not, and each is made against a different competitor on a different axis.** Keeping them apart
+is what makes them defensible, and running them together is what would make them indefensible.
 
-**The line between the two is not arbitrary, and it is worth stating as a criterion: it tracks
-whether the competitor has a cruising wing at all.** A multirotor does not, so the comparison
-with it is structural and no sizing contract can change it. The other hybrids do, so they sit in
-the same cruise-efficiency class as this configuration and the ordering between them turns on the
-mass, drag and power trade that Section 3.6 shows to be contract-dependent. The sizing results
-are therefore reported as properties of a case under stated contracts, not as a ranking of the
-hybrid family.
+**First, against the fixed-wing family: this configuration does not need a runway.** It takes
+off and lands vertically from its own five contact points. No fixed-wing aircraft does this, and
+no assumption in this paper can take it away.
+
+**Second, against the multirotor family: it cruises on a wing.** Lift in cruise is carried by a
+surface rather than by rotors, which is a structural difference and not a margin. For scale —
+and the two numbers are not the same kind of number — the sizing set discussed in Section 3.1
+puts a turboshaft quadrotor at an *effective* lift-to-drag ratio of 4.9, a system-level figure of
+merit, against this configuration's *aerodynamic* 8.8 to 10.8 across its computed drag bracket.
+
+**Third, against the tilting architectures: it reaches the same regime transition with no
+mechanism that moves.** Tilt-rotor, tilt-wing and tilt-nacelle layouts solve the duty-cycle
+problem by rotating their propulsors, and Table 2 records what that costs them — mechanical
+complexity, gyroscopic coupling during the rotation, and a transition control problem. Those
+costs are the reason the tilting solution is the less widely fielded of the two contemporary
+families. **This paper offers an alternative route to the same end.** The aircraft rotates
+itself rather than its propulsors: it has no tilting mechanism, no elevons, no rudder, no
+variable-pitch hub and no retraction mechanism, and every moment about every axis is produced by
+differential thrust between fixed-pitch propellers that are already turning. The actuator
+inventory is the motors. **That is a claim about hardware, it is countable, and no sizing
+contract changes it.**
+
+**Those three claims together are why the configuration exists, and none of them is weakened by
+anything in this paper.** They are claims against three different families on three different
+axes: runway independence against fixed wings, wing-borne cruise against multirotors, absence of
+mechanism against tilts.
+
+**What is *not* claimed is a range ranking against the other hybrid VTOL architectures** —
+lift-plus-cruise and tilting — because Section 3.6 shows that ranking reverses with the sizing
+contract, and because it is not the axis on which this configuration is offered. Section 3.6
+reports that ranking in full, including a range deficit against the lift-plus-cruise layout
+under one of the three contracts. That result is a property of a sizing case; it is not the
+thesis, and it neither supports nor damages the three claims above.
+
+**The line between the three claims and the disclaimed fourth is not arbitrary, and it is worth
+stating as a criterion: each claim names the thing the competitor structurally lacks.** A
+fixed-wing aircraft lacks vertical take-off; a multirotor lacks a cruising wing; a tilting
+layout lacks freedom from a rotating mechanism. None of those is a quantity a sizing contract
+can move. Range against a competitor that also cruises on a wing *is* such a quantity, which is
+exactly why it is reported as a case result rather than claimed as a property of the
+architecture.
 
 **Scope.** This is a configuration study containing no wind-tunnel measurement and no flight
 test. Its results are analytical estimates from stated assumptions, with two exceptions computed
@@ -256,6 +282,21 @@ What Section 2 argues is that each of these architectures pays for its capabilit
 way the other does not, that the payment can be moved between mass, drag and power
 system sizing, and that it cannot be brought to zero as long as hover and cruise are
 served by different hardware or by hardware that must move between two roles.
+
+**The two families are not equally represented, and the reason matters to this paper.**
+Lift-plus-cruise dominates the fielded population. The tilting architectures are the more
+elegant answer on paper — one propulsion group, no dead hardware in cruise — and the less
+common one in service, because rotating a propulsor in flight brings a pivot and its
+actuators, a gyroscopic moment during the rotation, and a control problem through a regime
+in which the aircraft is neither a rotorcraft nor an aeroplane. **The tilting idea is not
+rejected by the market; its implementation is.**
+
+**That is the gap this paper addresses.** The configuration studied here reaches the same
+end as a tilting layout — one propulsion group serving both regimes — by a different route:
+the propulsors are fixed to the airframe and the *airframe* rotates. Nothing pivots, nothing
+retracts, nothing changes pitch, and there is no aerodynamic control surface anywhere on the
+aircraft. Whether that trade is worth making is what the rest of the paper audits, bill by
+bill, including where the audit finds against it.
 
 ## 1.5 What this history does and does not show
 
