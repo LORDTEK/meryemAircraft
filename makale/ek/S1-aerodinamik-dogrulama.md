@@ -170,7 +170,7 @@ the assumed 0.0248 lies above it, which is what three sections of this paper use
 conservative. With the row the bracket is 0.0285 to 0.0381 and **the assumption sits below both
 ends, not inside them** — optimistic even at the favourable end, and by fifty-three percent at the
 adverse one. The cruise
-lift-to-drag ratio, the ranges of Section 3.8 and the comparative sizing of Section 3.6 are all
+lift-to-drag ratio, the ranges of Section 3.7 and the comparative sizing of Section 3.6 are all
 computed on 0.0248 and are not re-derived here. **That re-derivation is the largest single piece
 of unfinished work this paper leaves**, and it is named as such in Section 4 rather than
 absorbed quietly.

@@ -45,6 +45,48 @@ print("%-46s %s" % ("atif alan bolum", len(atif)))
 if yok:
     sap.append("var olmayan bolume atif: %s" % ", ".join(yok))
 
+# ------------------- 1b. ISARETCI DOGRU YERE MI COZULUYOR? (anlam denetimi)
+# Qwen'in tur 23 kapanisi: "bu projede kurulan her denetim bir atfin
+# COZULDUGUNU sinar, hicbiri DOGRU seye cozuldugunu sinamaz." Haklidir ve
+# ornegi vardir: "Section 3.2" var olan bir bolumdur, ama NASA dizisi
+# 3.1'dedir; isaretci hem iyi bicimli hem yanlisti ve uc tur, dort okuyucu
+# ve bir denetimden gecti.
+#
+# Tam otomasyon imkansiz. Ama isaretcinin gectigi CUMLEDE ayirt edici bir
+# sayi varsa -- "Section N.M puts a quadrotor at 4.9" gibi -- o sayinin
+# N.M bolumunun icinde gecip gecmedigi sinanabilir. Gecmiyorsa isaretci
+# muhtemelen yanlis yeri gosteriyordur. Uyari, hata degil.
+govde = {}
+for i, l in enumerate(L):
+    m = re.match(r"^#{1,3}\s+(\d+)(\.\d+)?\.?\s", l)
+    if m:
+        ad = m.group(1) + (m.group(2) or "")
+        j = i + 1
+        while j < len(L) and not re.match(r"^#{1,3}\s+\d", L[j]):
+            j += 1
+        govde[ad] = "\n".join(L[i:j])
+
+# Cumleyi noktaya gore bolmek BURADA CALISMAZ: "3.2" ve "4.9" zaten nokta
+# icerir, o yuzden cumle sinirlari sayinin ortasindan geciyordu ve denetim
+# hicbir sey bulamiyordu. Ilk yazimi boyleydi ve sessizce bos donuyordu --
+# calistigini sanmak, calismamasindan beterdi. Simdi sabit bir pencere.
+for m in re.finditer(r"Section (\d+\.\d+)", s):
+    hedef = m.group(1)
+    cumle = s[m.end():m.end() + 150]     # isaretciden SONRAKI pencere
+    if hedef not in govde:
+        continue
+    # ILK YAZIMI FAZLA GEVSEKTI: ilk tutmayan sayida bagirıyordu ve temiz
+    # bir belgede dort yanlis alarm uretti. Cumlede gecen her sayinin hedef
+    # bolumde bulunmasi gerekmez -- "3.1 ... 4.9 ... bizim 8.8'imize karsi"
+    # cumlesinde 8.8 BIZIM sayimizdir, 3.1'de olmasi beklenmez. Dogru kural:
+    # sayilardan EN AZ BIRI hedefte geciyorsa isaretci muhtemelen dogrudur;
+    # HICBIRI gecmiyorsa suphelidir.
+    sayilar = [x for x in re.findall(r"\b\d+\.\d+\b", cumle)
+               if x != hedef and x not in govde]
+    if sayilar and not any(x in govde[hedef] for x in sayilar):
+        goz.append("Section %-5s atfi %s sayilarini animsatiyor; HICBIRI "
+                   "%s'in govdesinde yok" % (hedef, "/".join(sayilar[:3]), hedef))
+
 # --------------------------- 2. ustyazidaki sayim, tablonun satir sayisi
 for i, l in enumerate(L):
     m = re.match(r"^\*\*Table (\d+)\.\*\*\s+(.*)$", l)
@@ -96,8 +138,8 @@ for tur, desen in (("Table", r"\*\*Table (\d+)\.\*\*"),
 # -------------------------------------------------------------- 4. rapor
 print()
 if goz:
-    print("GOZ AT -- ustyazidaki sayi sozcugu satir sayisiyla tutmuyor.")
-    print("Cogu mesru (satir saymayan bir sayi); tutmayanlari insan okur.")
+    print("GOZ AT -- otomatik karar VERILMEYEN, insana birakilan noktalar.")
+    print("Cogu mesru; tutmayanlari bir insan acip bakmali.")
     for x in goz:
         print("   " + x)
     print()
