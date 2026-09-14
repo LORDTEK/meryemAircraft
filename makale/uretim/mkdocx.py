@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""MDPI SABLONUNDA .docx URETIR -- makale-v6.md'den, elle bicimleme YOK.
+"""MDPI SABLONUNDA .docx URETIR -- makale-<surum>.md'den, elle bicimleme YOK.
 
 NEDEN BOYLE. Sablona elle dokmek 70 sayfa, 172 tablo ve 12 sekil demek;
 her biri bir kopyala-yapistir kaymasi firsatidir ve bu depoda bir surum
@@ -24,9 +24,9 @@ from docx.enum.table import WD_TABLE_ALIGNMENT
 from docx.oxml.ns import qn
 from docx.oxml import OxmlElement
 from kapaklar import FIGS
+from surum import SURUM                  # tek dogruluk kaynagi
 
 ROOT = "/home/user/meryemAircraft"
-SURUM = "v6"
 KAYNAK = os.path.join(ROOT, "makale", "makale-%s.md" % SURUM)
 EK_KAYNAK = os.path.join(ROOT, "makale", "makale-%s-ek.md" % SURUM)
 GOR = os.path.join(ROOT, "gorsel", "cikti")
