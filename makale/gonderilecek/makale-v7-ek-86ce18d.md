@@ -15,7 +15,7 @@ study are in the repository the paper cites.
 - **Supplementary S3** — Control axes in full (6553 words)
 - **Supplementary S4** — Rotational authority, trim, and the transition envelope (8310 words)
 - **Supplementary S5** — The limitations in full (6724 words)
-- **Supplementary S6** — The three bills stated formally, and a comparative sizing (3123 words)
+- **Supplementary S6** — The three bills stated formally, and a comparative sizing (3158 words)
 
 ---
 
@@ -191,7 +191,7 @@ the assumed 0.0248 lies above it, which is what three sections of this paper use
 conservative. With the row the bracket is 0.0285 to 0.0381 and **the assumption sits below both
 ends, not inside them** — optimistic even at the favourable end, and by fifty-three percent at the
 adverse one. The cruise
-lift-to-drag ratio, the ranges of Section 3.8 and the comparative sizing of Section 3.6 are all
+lift-to-drag ratio, the ranges of Section 3.7 and the comparative sizing of Section 3.6 are all
 computed on 0.0248 and are not re-derived here. **That re-derivation is the largest single piece
 of unfinished work this paper leaves**, and it is named as such in Section 4 rather than
 absorbed quietly.
@@ -691,7 +691,7 @@ the landing gear rather than to the control system.
 The tip pairs sit at the ends of rigid frames that extend from each wing tip
 perpendicular to the planform, above and below, by three hundred percent of the local
 tip chord — 0.71 m in each direction, giving a vertical separation of 1.42 m between
-the upper and lower pairs. Figure 7 gives the placement and the resulting moment
+the upper and lower pairs. Figure 8 gives the placement and the resulting moment
 arms. The frames are long on purpose. The control moment is
 M = 2 T L, so lengthening the arm buys the same moment with less thrust; and because
 propeller power goes as thrust to the three-halves power, tripling the arm reduces the
@@ -1184,7 +1184,7 @@ moment while the aircraft is standing still, which an aerodynamic surface outsid
 slipstream cannot. Its outboard portion lies beyond the slipstream, where it works
 against the freestream in cruise. The slipstream covers only twenty-seven to
 thirty-nine percent of the semi-span, so lengthening the strip to serve cruise does not
-compromise its hover function; one device serves two regimes. Figure 8 shows the strip
+compromise its hover function; one device serves two regimes. Figure 9 shows the strip
 against the slipstream boundary: the inboard 46 % of its length lies inside, the
 outboard 54 % outside.
 
@@ -1292,16 +1292,16 @@ cheapest profile and 0.65 on a smooth one — that is, infeasible on both, since
 rotations the moment authority allows are 4.06 s and 4.98 s. Four seconds was not a margin
 and, with the corrected inertia, not even a boundary. Lengthening the rotation to 5.1 s
 brings the heavy margins to 1.57 and 1.05, matching the light design's 1.49 and 0.99 at its
-quoted two seconds, and costs nothing: Table 4 shows the tip-propeller power falling from
+quoted two seconds, and costs nothing: Table 15 shows the tip-propeller power falling from
 thirteen percent of hover power to six, and the altitude-loss result of Section 3.15 is
 unchanged, remaining zero at every profile tested when the rotation is entered in a climb.
 The light design's own two seconds is on the same boundary — its smooth minimum is 2.01 s —
 so neither reference design has margin to spare on a smooth command, and both should be read
 as sized by this constraint.
 
-This is also, in moment terms, what Table 4 of Section 3.9 already said in units of power:
+This is also, in moment terms, what Table 15 of Section 3.9 already said in units of power:
 that four seconds consumed nearly the whole tip-propeller allocation. The two statements
-agree, and the present calculation adds the rotation profile, which Table 4 did not
+agree, and the present calculation adds the rotation profile, which Table 15 did not
 distinguish.
 
 The light figure depends on a thrust the paper quotes without a basis. At 335 W and 0.20 m
@@ -2439,9 +2439,9 @@ makes clear what the framework claims and what it does not.
 For an architecture *a* flying a given mission, write the three charges as fractions of the
 quantity each degrades:
 
-$$f_1(a) = \frac{m_\text{hover-only}(a)}{\mathrm{MTOW}}, \qquad
-f_2(a) = 1 - \frac{(L/D)_a}{(L/D)_\text{clean}}, \qquad
-f_3(a) = \frac{P_\text{cont}(a) - P_\text{cruise}}{\sigma_P\,\mathrm{MTOW}}$$
+    f_1(a) = m_hover-only(a) / MTOW
+    f_2(a) = 1 - (L/D)_a / (L/D)_clean
+    f_3(a) = ( P_cont(a) - P_cruise ) / ( σ_P · MTOW )
 
 where *m*<sub>hover-only</sub> is the mass that exists solely to hover, (L/D)<sub>clean</sub>
 is the lift-to-drag ratio the airframe would have with no hover hardware exposed,
@@ -2569,9 +2569,9 @@ tested here by sizing the same mission three ways.
 Section 2.12 — closed-loop mass, hover power from momentum theory, and a Breguet-type
 range:
 
-$$\mathrm{MTOW} = \frac{m_\text{payload}}{1 - f_\text{empty} - f_\text{fuel}}, \qquad
-P_\text{hover} = \frac{W^{3/2}}{\eta_h \sqrt{2\rho A}}, \qquad
-R = \frac{f_\text{fuel}\, E^{*} \eta_\text{chain}}{g}\,\frac{L}{D}$$
+    MTOW      = m_payload / ( 1 - f_empty - f_fuel )
+    P_hover   = W^(3/2) / ( η_h √(2ρA) )
+    R         = f_fuel · E* · η_chain · (L/D) / g
 
 The propulsion-chain mass is not a fixed fraction. It is split into a part proportional
 to take-off mass and a part proportional to installed power, because a fixed fraction
@@ -2631,7 +2631,7 @@ fraction fixed across architectures — the natural choice, and the one the tabl
 lets the heavier aircraft carry proportionally more fuel, which removes the mass bill
 from the range column entirely. The general form is
 
-$$R = \frac{E^{*}\eta_\text{chain}}{g}\,\frac{L}{D}\,\frac{m_\text{fuel}}{\mathrm{MTOW}}$$
+    R = ( E* · η_chain / g ) · (L/D) · ( m_fuel / MTOW )
 
 so that a fixed fraction makes range independent of take-off mass, a fixed fuel *mass*
 makes it inversely proportional to take-off mass, and a fixed take-off mass with a fixed

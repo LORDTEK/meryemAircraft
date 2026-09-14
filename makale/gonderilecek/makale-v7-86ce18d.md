@@ -23,11 +23,15 @@ berkegulmen@outlook.com (B.G.); lordtek@me.com (Ö.G.)
 >   hardware carried through cruise, its drag when exposed, and continuous power sized by a
 >   condition holding for some two percent of the flight — and each architectural remedy
 >   surveyed here reduces one by raising another.
-> - A tail-sitting blended-wing body whose single coaxial nose pair serves both regimes
->   instantiates the escape condition, and carrying the case that far shows what it costs:
->   the free-wheeling drag of its own attitude rotors is a bill the configuration was assumed
->   to avoid, and charging it reverses one of the three range comparisons and takes the mass
->   advantage from 42 to between 32 and 36 percent.
+> - A tail-sitting blended-wing body reaches the escape condition by a route the tilting
+>   architectures do not take — the airframe rotates and the propulsors stay fixed — so it
+>   carries no pivot, no nacelle actuator and no variable-pitch hub: the propellers hold one
+>   orientation from take-off to cruise. Pitch and yaw come from differential thrust between
+>   fixed-pitch propellers; roll, which coaxial pairs cannot produce, comes from a single moving
+>   strip. What is eliminated is the propulsor-reorientation mechanism, not every moving part.
+> - Carrying that case far enough to audit shows what it costs: the free-wheeling drag of its
+>   own attitude rotors is a bill the configuration was assumed to avoid, and charging it
+>   reverses one of the three range comparisons and leaves a mass advantage of 32 to 36 percent.
 >
 > **What are the implications of the main findings?**
 >
@@ -35,7 +39,9 @@ berkegulmen@outlook.com (B.G.); lordtek@me.com (Ö.G.)
 >   Across the computed drag bracket the lift-plus-cruise layout leads on range under equal
 >   fuel fractions by 24 to 45 percent, the tail-sitter leads under equal take-off mass by 29
 >   to 43, and under equal fuel mass the sign changes inside the bracket. **A ranking quoted
->   without its contract is not a result.**
+>   without its contract is not a result.** The architectural claim made here is on a different
+>   axis from all of these: it is the absence of a mechanism that reorients a propulsor, which
+>   no contract moves.
 > - The configuration is not shown to be flyable: its 50 kg reference budget needs a battery
 >   specific power 3.8 times the highest rate yet measured on a flown pack, and re-closes 38
 >   percent heavier at that measured rate; transition controllability rests on a pitching
@@ -44,19 +50,19 @@ berkegulmen@outlook.com (B.G.); lordtek@me.com (Ö.G.)
 ## Abstract
 
 Hybrid vertical take-off and landing (VTOL) aircraft pay for runway independence in cruise
-efficiency. This paper treats that cost as architectural and builds an accounting framework: the penalty is charged in three coupled currencies — hover hardware carried through cruise, its drag
-when exposed, and continuous power sized by a two-percent-of-flight condition, and every remedy surveyed
-reduces one by raising another. Escape requires the same hardware, in the same orientation,
-doing the same job, with the hover peak from a buffer. **The framework predicts that
-architectural rankings belong to sizing contracts rather than to architectures**, so three contracts are
-reported. An uncrewed tail-sitting blended-wing body instantiates it in its
-primary propulsor, at two scales. Across a computed drag bracket it holds a 32 to 36 percent mass
-advantage over a lift-plus-cruise layout under every contract but loses the range comparison
-under equal fuel fractions, a reversal driven by the free-wheeling drag of its own attitude
-rotors — a bill computed here rather than assumed. It is not shown to be flyable: the budget needs 3.8
-times the highest battery specific power yet measured, and transition rests on an unpredicted
-pitching moment. **The framework does not depend on that
-outcome.**
+efficiency. That cost is architectural, charged in three coupled currencies — hover hardware carried
+through cruise, its drag when exposed, and continuous power sized by a two-percent-of-flight
+condition — each remedy reducing one by raising another. Escape requires one set of hardware serving both regimes in one orientation, with the hover peak
+from a buffer. Tilting architectures meet it by rotating their propulsors, at the cost of a pivot
+and a control problem. **An uncrewed tail-sitting blended-wing body is
+proposed as an alternative route: the airframe rotates and the propulsors do not**, so there is no
+pivot, nacelle actuator or variable-pitch hub. Pitch and yaw come from differential
+thrust; roll, which coaxial pairs cannot produce, comes from one moving strip. **What is
+eliminated is the propulsor-reorientation mechanism, not every moving part.** **Architectural rankings belong to sizing
+contracts, not to architectures**; three are reported, and the configuration holds a 32 to 36 percent mass advantage over a
+lift-plus-cruise layout under all three but loses range under equal fuel fractions, driven by
+the free-wheeling drag of its own attitude rotors. **No range superiority is claimed.** It is not shown to be flyable: the budget needs 3.8 times
+the highest measured battery specific power.
 
 ## Keywords
 
@@ -110,7 +116,9 @@ series hybrid propulsion; cruise efficiency; aircraft configuration design
 > simulation, together with the aerodynamic calculations of Section 3.10 — including the
 > mesh generator, the case setup, the grid-convergence study and the wall-resolution and
 > turbulence-model sensitivity runs behind the computed zero-lift drag — are openly
-> available at https://github.com/LORDTEK/meryemAircraft
+> available at https://github.com/LORDTEK/meryemAircraft, and an archived version of this
+> manuscript with its supplementary material is deposited at
+> https://doi.org/10.5281/zenodo.22144194 (concept DOI, resolving to the latest version).
 
 ### Dual-Use Research of Concern
 
@@ -123,7 +131,7 @@ series hybrid propulsion; cruise efficiency; aircraft configuration design
 > **The authors acknowledge the dual-use potential inherent in the subject matter.** A
 > long-endurance unmanned aircraft is dual-use in principle, as most aircraft configurations
 > are, and the authors note for completeness that the heavier of the two analytical scale cases
-> — a 1000 kg vehicle with a computed range near 1 570 km — falls within the range band by which
+> — a 1000 kg vehicle with a computed range of 1 571 km — falls within the range band by which
 > unmanned aerial vehicles are listed under international export-control arrangements. What is
 > published here is an open configuration study and its equations, offered so that others may
 > check or refute it; the authors neither direct it at, nor undertake to police, any particular
@@ -253,9 +261,79 @@ Items 1 and 2 stand independently of whether this aircraft is ever built, and th
 contribution. Items 3 and 4 are what a case study is for: they show the framework applied to a
 real geometry in enough detail that the bills can be audited one at a time, including the two
 occasions on which the audit found against the configuration. Item 5 is the reason the paper does
-not claim the aircraft can be built. **No claim of general architectural superiority is made
-anywhere in this paper**, and the sizing results are reported as properties of a case under
-stated contracts rather than as a ranking of families.
+not claim the aircraft can be built. **Three architectural claims are made and a fourth is
+not, and each is made against a different competitor on a different axis.** Keeping them apart
+is what makes them defensible, and running them together is what would make them indefensible.
+
+**First, against runway-dependent fixed-wing aircraft: this configuration needs no prepared
+surface.** It takes off and lands vertically from its own five contact points. The qualifier is
+deliberate — catapult, water and short-field launch exist and are not the comparison — and
+within it no assumption in this paper can take the claim away.
+
+**Second, against the multirotor family: it cruises on a wing.** Lift in cruise is carried by a
+surface rather than by rotors, which is a structural difference and not a margin. For scale —
+and the two numbers are not the same kind of number — the sizing set discussed in Section 3.1
+puts a turboshaft quadrotor at an *effective* lift-to-drag ratio of 4.9, a system-level figure of
+merit, against this configuration's *aerodynamic* 8.8 to 10.8 across its computed drag bracket.
+
+**Third, against the tilting architectures: it reaches the same regime transition with no
+mechanism that reorients the propulsors.** Tilt-rotor, tilt-wing and tilt-nacelle layouts solve
+the duty-cycle problem by rotating their propulsors, and Table 2 records what that costs them —
+mechanical complexity, gyroscopic coupling during the rotation, and a transition control
+problem. **Those costs are mechanical and control costs rather than aerodynamic ones**, and it
+is to them, not to any aerodynamic shortcoming, that this paper offers an alternative. **This paper offers an alternative route to the same end.** The aircraft
+rotates itself rather than its propulsors: there is no pivot, no nacelle actuator, no
+variable-pitch hub, no retraction mechanism and no gyroscopic moment from tilting mass, and the
+propellers hold one orientation relative to the airframe from take-off to cruise.
+
+**The claim is bounded, and the boundary has to be stated in the same breath or it is false.**
+It is a claim about the *propulsion* system, not about the aircraft having no moving parts.
+Pitch and yaw are produced by differential thrust between fixed-pitch propellers that are
+already turning; **roll cannot be, because coaxial torque-balanced pairs produce no rolling
+moment at any setting, and it is produced instead by a variable-extension strip on the lower
+surface — the one moving aerodynamic device on the aircraft**, derived in Section 2.10. The
+actuator inventory is therefore the motors plus the strip's actuation. **How many actuators
+that is, this study does not fix:** Section 2.10 describes the strip as deployable in two halves
+— one side for roll, both together as a speed brake — and Supplementary S2 carries its actuation
+in the systems budget without sizing the mechanism. Against it, a tilting layout requires at
+least one mechanism per propulsor group to reorient it, which depending on implementation is a
+pivot, a nacelle actuator or a variable-pitch arrangement, and often more than one of these.
+**The comparison is between mechanism classes, not between counted parts**, because this paper
+has counted neither side's parts.
+**What is eliminated is a class of mechanism — the one that reorients a propulsor between hover
+and cruise — not every mechanism.** That is countable, no sizing contract changes it, and it is
+narrower than "mechanically simpler", which this paper does not measure and does not claim.
+
+**Those three claims together are why the configuration exists, and none of them is weakened by
+anything in this paper.** They are claims against three different families on three different
+axes: runway independence against fixed wings, wing-borne cruise against multirotors, absence of
+mechanism against tilts.
+
+**What is *not* claimed is a range ranking against the other hybrid VTOL architectures** —
+lift-plus-cruise and tilting — because Section 3.6 shows that ranking reverses with the sizing
+contract, and because it is not the axis on which this configuration is offered. Section 3.6
+reports that ranking in full, including a range deficit against the lift-plus-cruise layout
+under one of the three contracts. That result is a property of a sizing case; it is not the
+thesis, and it neither supports nor damages the three claims above.
+
+**The line between the three claims and the disclaimed fourth is not arbitrary, and it is worth
+stating as a criterion: each claim names the thing the competitor structurally lacks.** A
+fixed-wing aircraft lacks vertical take-off; a multirotor lacks a cruising wing; a tilting
+layout lacks freedom from a propulsor-reorientation mechanism. None of those is a quantity a
+sizing contract
+can move. Range against a competitor that also cruises on a wing *is* such a quantity, which is
+exactly why it is reported as a case result rather than claimed as a property of the
+architecture.
+
+**The three axes are not chosen because they are the ones this configuration wins; they are the
+three architectural capabilities most directly relevant to the mission class this paper is
+about.** They are not a sufficient condition for mission viability — payload, weather, speed,
+cost, certification and reliability all bear on that and none of them is settled here. Wildfire
+observation and cargo delivery to sites without a runway require, in order: getting airborne
+where there is no strip, staying up long enough to be useful once there, and being maintainable
+and controllable by an operator who is not an airline. Those are the runway axis, the cruise
+axis and the mechanism axis. A range ranking among winged VTOL layouts decides none of them by
+itself, which is a second reason it is reported rather than claimed.
 
 **Scope.** This is a configuration study containing no wind-tunnel measurement and no flight
 test. Its results are analytical estimates from stated assumptions, with two exceptions computed
@@ -379,6 +457,24 @@ way the other does not, that the payment can be moved between mass, drag and pow
 system sizing, and that it cannot be brought to zero as long as hover and cruise are
 served by different hardware or by hardware that must move between two roles.
 
+**The two answers do not cost the same, and the difference matters to this paper.** The tilting
+architectures are the more elegant answer on paper — one propulsion group, no dead hardware in
+cruise — and the more demanding one to build, because rotating a propulsor in flight brings a
+pivot and its actuators, a gyroscopic moment during the rotation, and a control problem through
+a regime in which the aircraft is neither a rotorcraft nor an aeroplane. **Those requirements
+are mechanical and control requirements rather than aerodynamic ones**, which is the distinction
+this paper builds on; whether they also explain the relative size of the two fielded populations
+is a market question this paper does not attempt to settle.
+
+**That is the gap this paper addresses.** The configuration studied here reaches the same
+end as a tilting layout — one propulsion group serving both regimes — by a different route:
+the propulsors are fixed to the airframe and the *airframe* rotates. Nothing pivots, nothing
+retracts and nothing changes pitch. **One moving aerodynamic device remains** — a strip on the
+lower surface that supplies the rolling moment coaxial propellers cannot, described in
+Section 2.10 — and it is named here rather than left for a reader to find, because what is
+eliminated is the propulsor-reorientation mechanism and not every moving part. Whether that trade is worth making is what the rest of the paper audits, bill by
+bill, including where the audit finds against it.
+
 ## 1.5 What this history does and does not show
 
 It would be too convenient to declare that every one of these programmes ended for
@@ -478,7 +574,9 @@ flight: rotors stopped in the airstream, the booms that carry them, and the inte
 their wakes and the wing.
 
 The cleanest measurement is a controlled comparison within a single aircraft. In a doctoral
-study, one uncrewed airframe was tested in a wind tunnel in four configurations:
+study, one uncrewed airframe was tested in a wind tunnel in three configurations (Table 1):
+
+**Table 1.** Maximum lift-to-drag ratio of one uncrewed airframe tested in three configurations in a single wind-tunnel campaign [3].
 
 | Configuration | Maximum L/D |
 |---|---:|
@@ -494,7 +592,7 @@ relative to a standard quadplane. That study's author is careful about which com
 legitimate — measuring the retracted aircraft against *itself* with propellers deployed gives
 63 %, which he explicitly rejects — and the caution is worth adopting. Because range is linear in
 lift-to-drag ratio for a fixed energy system, this ladder translates directly into range
-(Figure 12).
+(Figure 3).
 
 **A third finding constrains what can be done about the penalty**, and matters more than either
 number:
@@ -550,9 +648,9 @@ two is chosen, the extra installed capacity is mass, which returns to Bill 1.
 ## 2.5 The bills are one quantity in three currencies
 
 The three bills are not independent problems with independent fixes. **Each known architectural
-move reduces one and increases another.** Figure 3 shows the transfers; Table 1 lists them.
+move reduces one and increases another.** Figure 4 shows the transfers; Table 2 lists them.
 
-**Table 1.** Architectural moves and the bills they transfer.
+**Table 2.** Architectural moves and the bills they transfer.
 
 | Move | Bill it attacks | Bill it creates |
 |---|---|---|
@@ -621,8 +719,8 @@ in hover, and they are absent from the hover power budget as a lift term — but
 does depend on their surplus for take-off, and Section 4.4 treats that dependence as a
 limitation rather than a feature. The only moving aerodynamic device is a variable-extension strip on
 the lower surface, described in Section 2.10, which exists solely because roll cannot be
-produced by propellers alone. Figure 4 gives three orthogonal views of the light
-reference design and Figure 5 a general view of the same geometry.
+produced by propellers alone. Figure 5 gives three orthogonal views of the light
+reference design and Figure 6 a general view of the same geometry.
 
 ## 2.8 Planform
 
@@ -650,7 +748,7 @@ in, with no tail to argue with.
 
 The reference geometry for the light design is a root chord of 0.970 m, a tip chord of 0.236 m,
 a span of 3.453 m, a wing area of 1.979 m² and an aspect ratio of 6.03, giving a wing loading of
-25.3 kg m⁻² and a stall speed of 20.1 m s⁻¹ against a cruise speed of 30 m s⁻¹. Figure 6 gives
+25.3 kg m⁻² and a stall speed of 20.1 m s⁻¹ against a cruise speed of 30 m s⁻¹. Figure 7 gives
 the distributions.
 
 ## 2.9 Propulsion
@@ -665,8 +763,14 @@ The pairs are of fixed geometry: no cyclic pitch, no collective, no variable mec
 has a consequence for the tip pairs in cruise that Section 3.3 works out** — unable to feather,
 they must either turn at the zero-shaft-torque condition or be stopped, and the difference
 between those two states is a substantial fraction of the aircraft's zero-lift drag;
-Section 3.3 computes both ends of it rather than assuming the lower one. The torque balance is exact
-at cruise rather than hover, so a small residual remains in hover.
+Section 3.3 computes both ends of it rather than assuming the lower one. The torque balance is
+exact at cruise rather than hover, so a small residual remains in hover. **What trims that
+residual is not established here, and the omission is worth naming rather than leaving to be
+found.** It is too small to be carried by the tip pairs without spending roll-axis authority the
+aircraft does not have in hover, and the strip works against dynamic pressure the slipstream
+supplies only over its inboard portion. Either the residual is small enough to be absorbed by
+the speed trim of the pairs — which this study has not shown — or a fourth duty falls on the
+strip. Section 4.6 records it.
 
 The arrangement has a second consequence the transition analysis depends on. Because the two
 rotors of each pair carry equal and opposite angular momentum, **the net angular momentum of the
@@ -703,7 +807,7 @@ frames extend ±0.71 m perpendicular to the planform, so a differential between 
 lower pairs acts at 0.71 m in pitch, while a differential between the left and right pairs acts
 at the **semi-span, 1.726 m — 2.43 times the pitch arm**. Yaw is therefore the strongest axis
 on this aircraft, which is the reverse of the usual situation and is a free consequence of the
-tip-propeller layout rather than a design choice. Figure 7 shows the placement and the two arms,
+tip-propeller layout rather than a design choice. Figure 8 shows the placement and the two arms,
 and shows why the third axis has neither: every thrust vector is parallel to the body axis, so
 no combination of settings produces a rolling moment.
 
@@ -712,7 +816,7 @@ torque-balanced by construction. It is the one axis that needs an aerodynamic de
 device is the only moving aerodynamic surface on the aircraft: a strip on the lower surface,
 inclined at 45° in planform, running 120 % of root chord and reaching 67 % of semi-span,
 standing 2 cm proud at its inboard end and 6 cm at its outboard end. **Extension is the control
-variable** — the strip is modulated, not switched. Figure 8 shows it against the nose
+variable** — the strip is modulated, not switched. Figure 9 shows it against the nose
 propeller's slipstream: the inboard 46 percent of its length lies inside the slipstream, where
 dynamic pressure is set by disc loading and is therefore available at zero airspeed, and the
 outboard 54 percent works against the freestream in cruise. That split is why one device serves
@@ -883,12 +987,31 @@ the range figures below are lower than an optimistic estimate would give.
 sizing case.
 
 **Assumptions carried throughout:** sea-level density; no compressibility; span efficiency
-e = 0.85; C_D0 = 0.0248 for the light design, which is generous for a clean blended-wing body
-and absorbs the tip-frame contribution of Section 3.3 — that contribution is 0.0043, or
-seventeen percent of the assumed value, so the assumption is self-consistent rather than
-optimistic. Both are carried as assumptions throughout, so that every downstream figure rests
-on one stated basis. Section 3.10 computes both and reports what the computation does to them:
-it bounds them rather than replacing them, which is a weaker but more honest claim.
+e = 0.85; C_D0 = 0.0248 for the light design, which was taken as generous for a clean
+blended-wing body on the grounds that it absorbs the tip-frame contribution of Section 3.3 —
+0.0043, or seventeen percent of the assumed value. **Section 3.10 computes the coefficient and
+that reasoning does not survive:** the computed bracket is 0.0285 to 0.0381 and the assumption
+lies below both ends, so it is an assumption and an optimistic one, not a self-consistent
+choice. It is carried unchanged so that every downstream figure rests on one stated basis, and
+every result that depends on it is also reported across the computed bracket.
+
+**Sea-level density is a deliberate choice and not an oversight.** An earlier version of this
+paragraph called it the conservative one, on the grounds that cruising at altitude would reduce
+drag with the density ratio and lengthen every range figure; **that reasoning is wrong and the
+paper's own range equation shows why.** Range here is f_fuel · E* · η_chain · (L/D) / g, in
+which density does not appear: at a fixed lift coefficient a thinner atmosphere is flown faster
+for the same lift-to-drag ratio, and the range is unchanged. Altitude would move these figures
+only by moving L/D — which it can do in either direction, depending on where the trimmed cruise
+sits on the polar — so sea level is neither conservative nor generous, it is simply the one
+atmosphere everything here is computed on. The choice matches the intended missions — wildfire observation and cargo delivery to
+sites without a runway — which are flown low, and it keeps the hover and cruise calculations on
+one atmosphere so that the ratio between them, which is what the three bills are about, is not
+carrying a density change as well. A design intended to cruise high would need the whole chain
+re-run; nothing in the framework prevents that, and nothing in this paper does it.
+
+Section 3.10 computes **the drag coefficient and the span efficiency** and reports what the
+computation does to them: it bounds them rather than replacing them, which is a weaker but more
+honest claim.
 
 ## 2.13 Computational methods
 
@@ -1046,7 +1169,9 @@ neither.
 **That carries a condition the paper had not stated, and it is a sharp one.** The four tip pairs
 *are* rotors, and the claim holds only if they do not stop in cruise. Their eight discs sweep
 0.251 m², **12.7 percent of the wing area** — not a small object to leave in the airstream in
-the wrong state:
+the wrong state (Table 3):
+
+**Table 3.** Cruise zero-lift drag increment of the eight tip discs in four cruise states, against the 0.0248 assumed for the clean airframe.
 
 | Tip rotors in cruise | ΔC_D0 | of the 0.0248 assumed |
 |---|---:|---:|
@@ -1063,8 +1188,23 @@ changes what this subsection concludes. The *stopped edge-on* row shows, separat
 the rotors is survivable only if azimuth is controlled — which is the indexing mechanism this
 section has just claimed the configuration does not need.
 
-**The resolution needs no hardware and can be imposed as a control state, but its aerodynamic
-cost has to be computed rather than assumed away — and this section computes it.** A fixed-pitch
+**Charging the free-wheeling state also reopens a trade this paper has not priced, and that
+absence should be stated before the calculation rather than after it.** The computed
+free-wheeling charge below is 0.0154; the *stopped edge-on* row is 0.0008 — **a factor of twenty
+cheaper in drag**. The configuration cannot be made to stop its rotors for free, because
+azimuth control is exactly the indexing mechanism Section 2.10 gives as a reason not to stop
+them; but "this configuration has no rotor to stop" is a design choice, not a consequence, and
+a reader is entitled to ask what the mechanism would cost against the twenty-fold drag saving.
+**The comparison is not made anywhere in this paper.** Sizing an indexing mechanism for eight
+small discs, charging its mass and its failure modes, and re-solving the loop against a
+zero-lift drag reduced by 0.0146 is a bounded calculation and it has not been done. It is the
+single most likely question a reader of Section 3.3 will ask, and the honest answer is that the
+free-wheeling state was adopted because it needs no hardware, not because it was shown to beat
+the hardware.
+
+**With that said, the resolution needs no hardware and can be imposed as a control state, but
+its aerodynamic cost has to be computed rather than assumed away — and this section computes
+it.** A fixed-pitch
 propeller left free settles at the advance ratio where net shaft torque is zero: inner sections
 drive, outer sections retard, and they balance. The shaft then does no work, so the motor
 neither drives nor brakes and the electrical cost is controller standby draw and bearing losses.
@@ -1082,9 +1222,11 @@ paper.** A blade-element calculation was set up the only way that makes the comp
 anything: the blade is first *designed* for the hover duty — each station twisted to a target
 section lift coefficient and chorded to carry its share of 8.1 N, with section data taken at each
 station's own Reynolds number — so that what is run at cruise is this aircraft's propeller rather
-than a generic one. Four designs were built, spanning target section lift coefficients from 0.40
-to 0.85 and hover figures of merit from 0.62 down to 0.27. Each was then run at 30 m s⁻¹ and the
-shaft speed found at which net torque is zero.
+than a generic one. Seven designs were built, spanning target section lift coefficients from 0.40
+to 0.85 and hover figures of merit from 0.65 down to 0.27. Each was then run at 30 m s⁻¹ and the
+shaft speed found at which net torque is zero. Table 4 collects them.
+
+**Table 4.** Seven tip-propeller designs run to their zero-torque free-wheeling state at 30 m s⁻¹. Shaft speed and tip Mach number were not recorded for the two designs added by the later solver-stability sweep.
 
 | Design section c_l | Hover figure of merit | Free-wheeling speed | Tip Mach | ΔC_D0, eight discs |
 |---:|---:|---:|---:|---:|
@@ -1117,7 +1259,9 @@ was applied rather than assumed.** The section polar was recomputed with a Prand
 correction, a Korn drag-divergence Mach number and a fourth-power wave-drag increment, and the
 zero-torque shaft speed was searched again rather than held fixed. The solver used for this was
 first run with the correction disabled and reproduced the uncorrected result exactly, so the two
-figures differ only in the polar:
+figures differ only in the polar (Table 5):
+
+**Table 5.** The same free-wheeling state recomputed with a compressibility correction in the blade polar.
 
 | | Shaft speed | Tip Mach | ΔC_D0, eight discs |
 |---|---:|---:|---:|
@@ -1136,14 +1280,14 @@ comparisons built on it in Sections 3.6 and 4.4 do not need re-deriving for this
 
 The mechanism does not depend on the solver. A propeller designed for hover has low pitch; left
 free at 30 m s⁻¹ it must spin fast before its sections reach zero incidence, and at that speed
-the blades' own profile drag is large. The trend across the four designs is the trade stated
+the blades' own profile drag is large. The trend across the seven designs is the trade stated
 plainly: the blade that hovers well free-wheels fastest and drags most. Section 2.9 rules out the
 escape, because these pairs are of fixed geometry and cannot feather.
 
 **The consequence is stated rather than absorbed.** Bill 2 is not absent. On the most favourable
 design computed here the tip rotors cost at least as much as the frames already charged, the
 cruise lift-to-drag ratio falls, and the margin over the lift-plus-cruise layout narrows by an
-amount this paper has not re-sized. What would settle it is a propeller design study that
+amount Section 3.6 re-sizes. What would settle it is a propeller design study that
 optimises the blade across both duties rather than for hover alone, or a variable-pitch tip pair
 — which is a mechanism, and mechanisms are what this configuration was built to avoid.
 
@@ -1194,11 +1338,12 @@ avoidance is architectural rather than a fortunate coincidence of one size.
 as a *continuous* power system sized by the hover peak, and it is the engine and its fuel
 consumption that the buffer releases from that condition. The electrical path is not
 released: the nose motor and the power electronics must still pass the full 10.9 kW, and
-the component build-up of Section 3.11 shows them as 2.73 kg and 0.61 kg against 2.60 kg of
+the component build-up of Supplementary S2, summarised in Section 3.11, shows them as 2.73 kg
+and 0.61 kg against 2.60 kg of
 engine and generator — that is, the hover-sized electrical machine is the single largest
 item in the propulsion chain. The saving is real and it is the engine's, but a reader
 should not take it as an aircraft on which nothing is sized by hover. The buffer itself
-carries a further condition, given in Section 3.11: it is specified by power rather than
+carries a further condition, given in Supplementary S2: it is specified by power rather than
 energy, at **5.63 kW kg⁻¹** to hover and 6.48 to leave the ground, which is a demanding cell
 requirement and not a free parameter. Section 4.4 measures it against what has been flown.
 
@@ -1216,9 +1361,10 @@ zero-lift drag than the frames that carry them, which makes this the largest ent
 ledger and not the third.
 
 **The tip frames.** As established in Section 3.3, of the order of twelve percent of
-cruise drag, conditional on being faired. This is the largest single payment the
-configuration makes, and it is the price of the moment arm, the propeller mounting and
-the landing structure combined into one member.
+cruise drag, conditional on being faired. **An earlier version of this entry called it the
+largest single payment the configuration makes; since Section 3.3 computed the free-wheeling
+rotors at 0.0154 against the frames' 0.0043, it is the second largest** — the price of the
+moment arm, the propeller mounting and the landing structure combined into one member.
 
 **The roll strip.** The one moving aerodynamic device on the aircraft. Its cost when
 retracted is a surface discontinuity; when deployed it is a drag device by construction,
@@ -1257,7 +1403,9 @@ fraction, fixed fuel mass, and fixed maximum take-off mass with fixed payload. O
 equations serves all three, and every coefficient in it is back-solved from the light reference
 design of Section 3.7 rather than assumed. Mission, wing loading, disc loading, structural
 fraction and energy chain are held identical; only the cruise-drag multiplier and the
-architecture-specific mass differ. Under the first contract:
+architecture-specific mass differ. Under the first contract (Table 6):
+
+**Table 6.** Three architectures sized for the same mission under the first contract, a fixed fuel fraction, **at the published zero-lift drag assumption**. The rows for A are superseded twice below — first by charging its free-wheeling rotors, then by the bracket sweep of Table 9 — and are kept so the size of each correction can be read.
 
 | | Empty fraction | MTOW | Cruise L/D | Hover power | Range |
 |---|---:|---:|---:|---:|---:|
@@ -1280,7 +1428,9 @@ its cruise lift-to-drag ratio falls from 12.00 to **8.49**, and its take-off mas
 **54.5 kg**. B cannot escape this charge by stopping its rotors and A cannot: B's lift discs are
 horizontal in cruise and can be stopped with the blades aligned fore-and-aft, while A's are
 fixed-pitch tractors whose blades cannot be turned out of the flow at all. **The asymmetry is
-real and it runs against this configuration.**
+real and it runs against this configuration.** Table 7 states the effect on each contract.
+
+**Table 7.** Architecture B against A under each of the three contracts, before and after A's free-wheeling rotor drag is charged. **A mixed basis:** the charge is applied to A and not to the clean-airframe drag coefficient the other two are sized on. Table 9 re-solves all three on a common basis and is the reportable form.
 
 | Contract | B against A, as published | B against A, rotors charged |
 |---|---:|---:|
@@ -1310,7 +1460,9 @@ that buffer on a measured pack instead, where it becomes roughly sixteen percent
 same fraction to all three — B and C included, since charging only A would invert the very
 objection that motivated it — does not narrow A's margin. It widens it, because B's hover power
 per unit mass is the highest of the three and the buffer feeds back on itself through hover
-power:
+power (Table 8):
+
+**Table 8.** Take-off mass of the three architectures as the energy-buffer mass fraction is raised, applied equally to all three. **On the same mixed basis as Table 7:** every row pairs A with its rotors charged against B and C at the published drag assumption — the pairing this section retires three paragraphs above. The rows are kept for the buffer trend, which is what they are used for; no mass difference should be read off them.
 
 | Buffer fraction | A | B | C |
 |---|---:|---:|---:|
@@ -1325,7 +1477,11 @@ lie on a curve going vertical: B stops closing between eighteen and twenty perce
 at sixteen is set by how near that limit it sits rather than by anything structural. The
 reportable statement is the qualitative one — **on the highest specific power yet measured on a
 flown pack, the lift-plus-cruise layout is close to not closing at all, while this one closes at
-106 kg and goes on closing past twenty percent.** Section 4.4 estimates that margin at twenty
+106 kg and goes on closing past twenty percent.** **That statement inherits the mixed basis of the
+caption and should be read as a direction, not a margin.** What carries it is B's hover power per
+unit mass, the highest of the three, and that ordering does not depend on the drag assumption;
+what would move with the basis is how far apart the two curves are, which is why no number from
+this table is quoted anywhere else in the paper. Section 4.4 estimates that margin at twenty
 percent by holding B fixed at 86 kg while A grows; that estimate is now superseded, and it was
 conservative rather than generous.
 
@@ -1345,7 +1501,9 @@ hubs; the tip frames and the free-wheeling rotors charged to this configuration 
 competing layouts carrying their own published penalties against the same airframe. At the
 published assumption the construction returns a clean-body lift-to-drag ratio of 13.40 against
 the 13.44 used in the sizing, which is the check that the sweep and the original chain are the
-same calculation.
+same calculation. Table 9 gives the sweep.
+
+**Table 9.** The whole comparison swept across the zero-lift drag bracket of Supplementary S1.
 
 | | Published assumption | Bracket, favourable end | Bracket, adverse end |
 |---|---:|---:|---:|
@@ -1386,7 +1544,9 @@ an inconvenience.** Range in the sizing equation contains the fuel *fraction*, s
 fraction fixed lets the heavier aircraft carry proportionally more fuel and removes the mass
 bill from the range column altogether. Fixing the fuel *mass* makes range inversely proportional
 to take-off mass; fixing take-off mass and payload leaves fuel as the residual. These are three
-different questions, and the answers separate:
+different questions, and the answers separate (Table 10):
+
+**Table 10.** Range of the two competing architectures relative to the tail-sitter under each of the three sizing contracts, with the rotor drag charged, **at the single published drag assumption**. Table 9 sweeps the same comparison across the computed bracket and is the reportable form; the first column here reads +21.1 % where the bracket gives +24 to +45 %.
 
 | Range relative to the tail-sitter, **rotors charged** | Fixed fuel fraction | Fixed fuel mass | Fixed MTOW and payload |
 |---|---:|---:|---:|
@@ -1399,12 +1559,18 @@ correction can be read off; they are not the result.)*
 
 Against lift-plus-cruise the conclusion now depends on the rule: the tail-sitter leads under two
 of the three and loses the third, where equal fuel fractions expose its lower cruise efficiency.
-Against tilt it no longer leads at all: with the rotor term charged it leads under all three
-rules, where before it led in three of the twelve cells S6 reports and tied a fourth. Every one
+Against tilt it no longer leads at all: with the rotor term charged **the tilting layout** leads
+under all three rules, where before **the tail-sitter** led in three of the twelve cells S6
+reports and tied a fourth. Every one
 of those leads still requires its nacelles, pivots,
 actuators and hover-pitched blades to be credited as aerodynamically free. **No result from this
-section should be quoted without the rule it was computed under**, and no claim of superiority
-over the tilting family is made here in either direction.
+section should be quoted without the rule it was computed under**, and **no claim of *range*
+superiority over the tilting family is made here in either direction.** The claim this paper does
+make against that family is made in Section 1 and restated in Section 4.2, and it is not on this
+axis: it is that the same regime transition is reached with no pivot, no nacelle actuator and no
+variable-pitch hub — the propulsors never change orientation. Nothing in this section supports
+or damages it,
+because this section measures range and that claim is about parts.
 
 **What this comparison does and does not support.** It supports the claim that the three bills
 are real and separable in a sizing loop. It does **not** support a claim that this configuration
@@ -1427,6 +1593,10 @@ Every number below is calculated, not measured. Section 4 says what that means.
 
 ## 3.7 Light reference design — 50 kg
 
+Table 11 gives the design.
+
+**Table 11.** The light reference design, 50 kg, **at the published zero-lift drag assumption**. Table 12 re-solves it across the computed bracket; the cruise and range rows here are optimistic rather than central.
+
 | Quantity | Value |
 |---|---:|
 | Maximum take-off mass | 50 kg |
@@ -1439,6 +1609,7 @@ Every number below is calculated, not measured. Section 4 says what that means.
 | Main propeller diameter | 1.20 m |
 | Disc loading | 44.2 kg m⁻² |
 | Tip propeller diameter | 0.20 m |
+| Tip-pair disc loading | 26.3 kg m⁻² |
 | Frame post length | 0.71 m each direction |
 | Stall speed | 20.1 m s⁻¹ |
 | Cruise speed | 30 m s⁻¹ (108 km h⁻¹) |
@@ -1456,7 +1627,9 @@ Every number below is calculated, not measured. Section 4 says what that means.
 coefficient, and Supplementary S1 brackets that coefficient by calculation.** The bracket is
 0.0285 to 0.0381 and the assumed 0.0248 lies below both ends, so the table is optimistic rather
 than central. Re-solving the same sizing loop across the bracket — same wing and disc loading,
-same fuel fraction, same mass model, only the drag changed:
+same fuel fraction, same mass model, only the drag changed (Table 12):
+
+**Table 12.** The light reference design re-solved across the zero-lift drag bracket.
 
 | | Assumption | Favourable end | Adverse end |
 |---|---:|---:|---:|
@@ -1487,6 +1660,10 @@ density as the most likely place for the *structural* numbers to be wrong, and i
 battery buffer's specific power — not the structure — as the most exposed number in the paper.
 
 ## 3.8 Heavy reference design — 1000 kg
+
+Table 13 gives the design.
+
+**Table 13.** The heavy reference design, 1000 kg.
 
 | Quantity | Value |
 |---|---:|
@@ -1526,7 +1703,9 @@ not only in degree: the light one closes conditionally, the heavy one's closure 
 Section 3.3 found in the light line, and the heavy line carries it too.** Running the same
 blade-element calculation at this design's own conditions — 0.67 m discs, 40 m s⁻¹, the tip-pair
 power this configuration allocates, and the hover thrust that follows from it — gives a much
-smaller charge than the light design pays:
+smaller charge than the light design pays (Table 14):
+
+**Table 14.** The heavy reference design before and after its own free-wheeling rotor drag is charged.
 
 | | Published | Rotors charged |
 |---|---:|---:|
@@ -1534,22 +1713,47 @@ smaller charge than the light design pays:
 | Zero-lift drag coefficient | 0.0200 | 0.0251 |
 | Cruise L/D | 13.60 | **11.78** |
 | Take-off mass | 1 037 kg | 1 077 kg |
-| **Range** | **1 813 km** | **1 571 km** |
+| **Range** | **1 814 km** | **1 571 km** |
 
 The published row is what the sizing loop returns with no rotor charge, and it reproduces the
 13.6 and 1 814 km of the table above, which is the check that this is the same calculation. The
-charge is **a third of the light design's 0.0154**, and Section 3.9 works out why.
+carried value is **a third of the light design's 0.0154** — the interval around it spans a
+quarter to a half — and Section 3.9 works out why.
 
-**The heavy family's blades meet the hover requirement.** Across every design tried the figure of
-merit is 0.65 to 0.66, against the 0.599 the power budget assumes, so the twelve percent of hover
-power allocated to the tip pairs buys the thrust it is credited with. The chord limits in the
+**The heavy family's blades meet the hover requirement, and that is exactly why the charge above
+is a range rather than a single number.** Across every design tried the figure of merit is 0.65 to
+0.66, against the 0.599 the power budget assumes, so the twelve percent of hover power allocated to
+the tip pairs buys the thrust it is credited with. **But this is where the heavy line differs from
+the light one in a way that has to be stated, because it weakens the number rather than
+strengthening it.** In the light line the design is pinned: the figure of merit collapses from
+0.633 to 0.350 above a target section lift coefficient of 0.68, so the least-draggy blade that
+still hovers is the one the cliff leaves standing, and the 0.0154 of Section 3.3 is selected by
+physics. In the heavy line there is no cliff — the figure of merit is still 0.657 at a target of
+0.85 — so the same rule selects whichever design sits at the end of whatever range is swept.
+Across designs meeting the hover requirement the charge runs from **0.0074 down to 0.0035**, and
+applying the light line's rule literally would return the lowest of these, which is the end
+favourable to this configuration. **The 0.0051 carried above is the interior value the sizing was
+run at, not a minimum, and it is reported as such:** the honest statement is that the heavy
+charge is bounded by 0.0035 and 0.0074 and is not pinned within that interval by any criterion
+this study applies. It remains between **a quarter and a half** of the light design's charge at every point in the
+interval — 0.0035/0.0154 is 0.23 and 0.0074/0.0154 is 0.48 — so the qualitative statement that
+the heavy line pays a fraction of the light line's charge holds wherever in the interval the
+value falls. **One thing in Section 3.9 does not hold that way, and it is named there rather
+than buried here:** the numerical agreement between the predicted and computed scaling ratios is
+computed at 0.0051 and moves with the choice. The chord limits in the
 blade-element routine are expressed relative to rotor radius; an earlier draft of this study used
 absolute limits taken from the light design's 0.20 m rotor, which on a 0.67 m rotor produce a
 12 mm chord on a 335 mm radius and a correspondingly slender blade. The repository records that
 correction and its effect.
 
 The heavy design still has a longer range than the light one despite a shorter endurance, and the
-margin survives charging both lines: 1 571 km against 1 173 to 1 442 km. Both effects come from the
+margin survives charging both lines: 1 571 km against 1 173 to 1 442 km. **That comparison is
+asymmetric and the asymmetry is worth naming rather than leaving to be noticed: the light range
+is a bracket and the heavy range is a single number, because no drag bracket has been computed
+for the heavy line.** Supplementary S1 brackets the light airframe's zero-lift drag; the heavy
+line stands on its own 0.0200 with no equivalent bound. The margin survives because 1 571
+exceeds the adverse end of the light bracket, which is the weakest form of the statement and the
+only one the evidence supports. Both effects come from the
 same source: the larger aircraft cruises faster and, at a higher Reynolds number, achieves a lower
 zero-lift drag coefficient and therefore a better lift-to-drag ratio. Nothing in the architecture
 was changed to obtain this.
@@ -1558,7 +1762,7 @@ was changed to obtain this.
 
 One qualification applies throughout: this is the scaling of the analytical sizing model — of
 powers, loadings and mass *fractions*. Whether the heavy design's structure closes depends on
-how shell areal density grows with size, which was not measured. Figure 11 shows the two
+how shell areal density grows with size, which was not measured. Figure 10 shows the two
 designs at a common scale. Four properties are preserved and one is not.
 
 **Disc loading is held constant** — 44.2 and 43.7 kg m⁻². This is the rule that governs the
@@ -1581,7 +1785,7 @@ faster than they do. They are not: the eight discs total 0.251 m² against 1.98 
 area ratio is constant to three digits, and contributes nothing.** What the charge actually
 follows is
 
-$$\Delta C_{D0} \;\propto\; \frac{\sigma R^{2}}{q\,S},$$
+    ΔC_D0  ∝  σ R² / (q S),
 
 in which the geometric ratio *R²/S* is the constant just quoted, so only two terms move: the blade
 solidity falls from 0.075 to 0.044 as the larger rotor meets its thrust with proportionally less
@@ -1589,6 +1793,15 @@ blade, and the cruise dynamic pressure rises by a factor 1.78 between 30 and 40 
 product, 1.73 × 1.78 = 3.08, is the predicted ratio; the computed ratio is 3.04. **The bill falls
 because the reference dynamic pressure rises and the blade thins, not because the wing outgrows
 the disc.**
+
+**How close that agreement is depends on a number Section 3.8 has just declared unpinned, and
+saying so costs the agreement some of its force.** The computed 3.04 is 0.0154/0.0051, and 0.0051
+is the interior value the heavy sizing was run at rather than a value any criterion selects; at
+the ends of the interval Section 3.8 bounds — 0.0035 and 0.0074 — the ratio computes to 2.08 and
+4.40, either side of the predicted 3.08. **The mechanism — that solidity and dynamic pressure are the only two terms that
+move — does not depend on the choice, and neither does the direction or the order of magnitude.
+The three-digit agreement does.** It is reported as a consistency check at the sizing point, not
+as a validation of the scaling law.
 
 **The two halves of this comparison do not have the same standing, and putting them under one
 heading would suggest they do.** Bill 2's scaling is computed: it comes from two blade-element
@@ -1624,9 +1837,9 @@ preserved** because frontal and wing area both scale as L².
 **Transition time does not scale, and this is the exception.** The rotating moment follows
 M = Iα with I ∝ mL², so the moment needed to turn the aircraft in a fixed time grows much
 faster than the aircraft. Scaling the light design's two-second rotation to 1000 kg would demand
-221.5 kW from the tip propellers — 102 % of hover power, which is to say it is not available:
+221.5 kW from the tip propellers — 102 % of hover power, which is to say it is not available (Table 15):
 
-**Table 4.** Tip-propeller power required to rotate the heavy reference design.
+**Table 15.** Tip-propeller power required to rotate the heavy reference design.
 
 | Rotation time | Tip-propeller power, 4 total | Fraction of hover power |
 |---:|---:|---:|
@@ -1642,7 +1855,7 @@ than it looks, because Section 3.15 shows a slower rotation loses *less* altitud
 penalty on transition time works with the penalty on control power rather than against it. The
 classical objection to scaling a VTOL aircraft — hover power growing as L^3.5 against power
 available as L³ — is removed on the hover side by fixing disc loading. It is not removed on the
-transition side, and Table 4 is where it reappears: **the rotation is the one place in this
+transition side, and Table 15 is where it reappears: **the rotation is the one place in this
 aircraft where the square–cube relation is still paid in full.**
 
 ## 3.10 Independent checks on the two assumed coefficients
@@ -1661,8 +1874,9 @@ against the aircraft.** That solution resolves the wing and the body and no roto
 free-wheeling discs computed in Section 3.3 add at least 0.0154 to whatever it returns. Carried
 into the build-up of Supplementary S1 the bracket becomes 0.0285 to 0.0381 and the assumed 0.0248
 lies below both ends rather than above them — optimistic by as much as fifty-three percent at the upper
-end. **The cruise lift-to-drag ratio, the ranges of Section 3.8 and the comparative sizing of
-Section 3.6 are all computed on 0.0248 and none of them is re-derived here.** Two things S1 does not settle: the solutions are fully
+end. **The cruise lift-to-drag ratio, the ranges of Section 3.7 and the comparative sizing of
+Section 3.6 are all computed on 0.0248 and none of them is re-derived here** — the heavy line of
+Section 3.8 stands on its own coefficient, 0.0200, which this bracket does not address. Two things S1 does not settle: the solutions are fully
 turbulent, so the clean-surface figure of 0.0073 from the strip method is untested and the gap
 between it and 0.0120–0.0148 is now the largest single uncertainty in the zero-lift drag; and
 the wall-resolved SST case admits more than one stationary solution, two converged starts
@@ -1678,7 +1892,9 @@ coefficient** rather than at zero lift and integrating the profile drag across t
 two-dimensional-viscous-coupled-to-three-dimensional-circulation construction of the non-linear
 vortex-lattice literature [40]. Before any number is taken from it, the strip decomposition is
 checked against the solver it comes from: the strip loads reproduce the solver's own lift
-coefficient to six decimal places.
+coefficient to six decimal places. Table 16 gives the two efficiencies.
+
+**Table 16.** Inviscid and Oswald span efficiency of the planform, and the ratio between them.
 
 | | Inviscid e | **Oswald e** | Ratio |
 |---|---:|---:|---:|
@@ -1722,7 +1938,9 @@ the span fraction, which vanishes at root and tip, so root and tip incidence —
 loading — are untouched and only the distribution between them shifts. The neutral point and the
 trim twist are then re-solved at each shape. The perturbation is a redistribution and not a
 rescaling, which is what makes it the complement of the error the source reports: across ±2° the
-inviscid span efficiency moves by at most 1.6 percent from its 0.859.
+inviscid span efficiency moves by at most 1.6 percent from its 0.859. Table 17 gives the sweep.
+
+**Table 17.** Neutral point and trim twist under a spanwise redistribution of the loading shape.
 
 | Shape perturbation | Neutral point | Δ from baseline | Trim twist | Δ from baseline |
 |---|---:|---:|---:|---:|
@@ -1762,7 +1980,9 @@ across the threshold rather than cleanly on one side of it.** The untwisted plan
 at the incidence where the vortex-lattice method returns the cruise lift coefficient, 6.69°, on a
 192 000-cell wall-function mesh, and the spanwise loading was extracted from the wall pressures.
 The face sum reproduces the case's own integrated lift coefficient exactly, which is the check
-that the extraction is not itself the result.
+that the extraction is not itself the result. Table 18 gives the result.
+
+**Table 18.** Reynolds-averaged solution of the untwisted planform at the vortex-lattice cruise incidence, on the **initial 192 000-cell mesh**. Table 19 refines it twice; the converged ratio is 0.796, not the 0.787 below.
 
 | | Value |
 |---|---|
@@ -1783,7 +2003,9 @@ two are different geometries solved at different fidelities and neither refutes 
 the direction assumed in the earlier argument is not the direction found here.
 
 **The solution was refined twice and the refinement changed the answer**, so what follows is the
-converged reading rather than the first one. Three meshes were run at identical settings:
+converged reading rather than the first one. Three meshes were run at identical settings (Table 19):
+
+**Table 19.** Grid refinement of the Reynolds-averaged solution: three meshes at identical settings.
 
 | Mesh | Cells | *K_L* | Inner-region residual | Tip-region residual |
 |---|---:|---:|---:|---:|
@@ -1896,7 +2118,7 @@ lower-surface strip provides roll.
 **Landing.** The reverse of transition, followed by a vertical descent onto the five
 contact points. Section 3.16 notes what is and is not analysed here.
 
-Figure 9 shows the five phases in sequence. Nothing on the aircraft rotates relative to
+Figure 11 shows the five phases in sequence. Nothing on the aircraft rotates relative to
 the aircraft at any point in it.
 
 ## 3.13 Why the transition begins in the easiest condition
@@ -1950,8 +2172,8 @@ The transition was simulated as a two-degree-of-freedom point mass. The body ang
 from zero to ninety degrees over a rotation time t_r; thrust acts along the body axis, lift
 perpendicular to the velocity vector and drag opposite to it; the lift curve is linear to stall
 and a flat-plate relation beyond it. Altitude loss is the lowest point of the trajectory
-relative to the entry altitude. Figure 10a plots both reference designs at four
-thrust-to-weight ratios.
+relative to the entry altitude. Figure 12a plots both reference designs against rotation
+time, each at the two thrust-to-weight ratios its own installed power supplies.
 
 **The ratio the aircraft actually has must be established first, and it is not a free choice.**
 Section 2.12 sizes hover power at thrust equal to weight, so the 10.9 kW of Section 3.7 buys
@@ -1963,14 +2185,16 @@ pairs still push upward. That fixes the ratio available *during* a full-authorit
 **1.066 for the light design and 1.041 for the heavy one**, and it is the ratio the tables below
 use. Giving up rotation authority buys a little more, to 1.132 and 1.082 with none retained;
 Supplementary S2 gives the trade. An earlier version of this section assumed T/W = 1.2, which
-the installed power does not supply at any setting, and the tables have been recomputed.
+the installed power does not supply at any setting, and the tables have been recomputed. Table 20 gives the recomputed losses.
 
-| t_r | Light, 50 kg | | t_r | Heavy, 1000 kg |
-|---:|---:|---|---:|---:|
-| 1 s | −18.2 m | | 2 s | −31.0 m |
-| 2 s | −14.7 m | | 3 s | −26.9 m |
-| 3 s | −11.2 m | | 4 s | −22.7 m |
-| 4 s | −4.9 m | | 5.1 s | −13.1 m |
+**Table 20.** Transition altitude loss against rotation time, at the thrust-to-weight ratio each design's installed power supplies with full rotation authority retained.
+
+| t_r, light | Altitude loss, 50 kg | t_r, heavy | Altitude loss, 1000 kg |
+|---:|---:|---:|---:|
+| 1 s | −18.2 m | 2 s | −31.0 m |
+| 2 s | −14.7 m | 3 s | −26.9 m |
+| 3 s | −11.2 m | 4 s | −22.7 m |
+| 4 s | −4.9 m | 5.1 s | −13.1 m |
 
 **The relationship is monotonic in the direction opposite to the one usually assumed.** It is
 frequently supposed that a tail-sitter should rotate as fast as possible, on the reasoning that
@@ -1982,7 +2206,7 @@ collapses cos θ before there is any lift to replace it, and the aircraft falls 
 it hurried.
 
 The practical consequence is a simplification rather than a trade. The control *moment* required
-to rotate in time t_r scales as 1/t_r² and the control *power* as 1/t_r³ — Table 4 of Section 3.9
+to rotate in time t_r scales as 1/t_r² and the control *power* as 1/t_r³ — Table 15 of Section 3.9
 is the second of these, and its entries are constant to within a third of a percent when
 multiplied by t_r³ — so a slow rotation is cheap in authority and cheaper still in power; and
 altitude loss also falls with t_r. **All of these point the same way**, so there is no optimum
@@ -2059,10 +2283,27 @@ becomes erratic and increasing power makes matters worse. Whether the descent pr
 of this configuration enters that region, and at what rate of descent, is an open
 question. It is listed in Section 4 rather than answered here.
 
+**The third belongs with them and has not been said at all until now: the deceleration
+and nose-up rotation are not analysed either.** Sections 3.12 to 3.15 treat the forward
+transition in six subsections and the reverse in this clause. The two are not symmetric
+and should not be assumed to be: the forward rotation builds dynamic pressure while it
+turns, so lift arrives to replace the vertical component of thrust as that component
+falls, and Section 3.15 shows the result turns on exactly that race. The reverse runs the
+race backwards — dynamic pressure falls while the aircraft is being turned, so lift is
+leaving at the moment the thrust vector has not yet returned to vertical — and a model
+built for the first case cannot be read for the second by changing a sign. **No figure in
+this paper describes the landing transition, and none should be inferred from the
+take-off one.** Section 4 records it.
+
 ## 3.17 Whether there is enough authority to rotate, and whether it trims
 
 Rotating the airframe through ninety degrees is the manoeuvre this configuration must perform
-with four small propellers and no control surfaces. Supplementary S4 carries the full budget —
+with four small propellers and no pitch control surface. **The one aerodynamic device the
+aircraft carries, the roll strip of Section 2.10, is not commanded during the rotation** — and
+that is a scheduling requirement rather than a property of the device, because Section 2.10
+shows the strip *does* pitch the nose down when it is deployed, by ΔC_m between 0.005 and 0.032.
+At the upper end that would consume two thirds of the budget below, which is why Section 2.10
+requires it not be commanded at full extension at the end of the rotation. Supplementary S4 carries the full budget —
 inertia derivation, rotation profiles, centre-of-gravity window, twist sweep and the measured
 section evidence. This section states what it returns.
 
@@ -2196,7 +2437,9 @@ Sections 4.3 to 4.7 are limitations, ordered by whether they could change a conc
 ## 4.1 Context
 
 The following aircraft occupy the same mass range. They are listed to locate the reference
-designs in a real field, not to rank them.
+designs in a real field, not to rank them. Table 21 lists them.
+
+**Table 21.** Aircraft occupying the same mass range as the two reference designs.
 
 | Aircraft | MTOW | Payload | Payload fraction |
 |---|---:|---:|---:|
@@ -2248,6 +2491,52 @@ much cruise efficiency the architecture had to surrender.
 An architecture that surrenders less does not merely perform better inside the band. It
 widens the band.
 
+**Where this configuration sits in that statement has to be said precisely, because the obvious
+reading is too generous to it.** Against the two families that bound the band, the case is
+straightforward and is why the configuration exists: it needs no runway, which the fixed-wing
+family cannot say, and it carries a cruising wing, which the multirotor family does not — the
+sizing set of Section 3.1 puts a turboshaft quadrotor at an *effective* lift-to-drag ratio of
+4.9 against this configuration's *aerodynamic* 8.8 to 10.8. Those are different kinds of number
+— the first a system-level figure of merit, the second a force ratio — and the comparison is
+offered for scale rather than as a measured margin. **The claim that survives it is structural:
+a vehicle that carries its cruise lift on a wing is in a different efficiency class from one that
+carries it on rotors, and no sizing contract moves a vehicle between those classes.** On both
+edges the band is genuinely wider.
+
+**Inside the band, against the other hybrids, the claim splits and one half of it fails.** Once
+the free-wheeling drag of the attitude rotors is charged, this configuration retains 0.632 of its
+clean cruise efficiency against the lift-plus-cruise layout's 0.765. **It surrenders more cruise
+efficiency, not less**, so on the range axis it does not widen the band against that layout — and
+Section 3.6 measures the consequence, a range deficit of 24 to 45 percent under equal fuel
+fractions. What it does hold is the mass axis, by 32 to 36 percent across the same bracket.
+**The band is widened on one axis and not the other, and which one matters is the sizing
+contract's question rather than the architecture's** — which is this paper's central result
+arriving at its own case.
+
+**None of that touches the third claim, because the third claim is not on this axis at all.**
+Against the tilting family the offer of this configuration was never a longer range; Section 3.6
+reports that the tilting layout leads on range under all three contracts, and that result stands.
+The offer is that the same regime transition is reached **without reorienting a propulsor** — no
+pivot, no nacelle actuator, no gyroscopic moment from tilting mass, no variable-pitch hub. **Not
+that the aircraft has no moving parts:** roll is supplied by the variable-extension strip of
+Section 2.10, which is a moving aerodynamic device and is charged as one in Section 3.5. The
+claim is the elimination of a mechanism *class* — the one that turns a propulsor between hover
+and cruise — and it is stated that narrowly on purpose. Every one of the tilting layout's range advantages
+in Section 3.6 is computed with its nacelles, pivots, actuators and hover-pitched blades credited
+as aerodynamically free and mechanically reliable; the present configuration has nothing
+corresponding to charge, because it has nothing corresponding. **That is a hardware claim rather
+than a performance claim, it is countable rather than contract-dependent, and it is the reason
+this configuration is proposed at all.** Whether the hardware saved is worth the range given up
+is a question for a designer with a mission in hand, and this paper does not answer it for them.
+
+**Stated together, then, the three claims sit on three different axes against three different
+families, and each is safe from the others.** Runway independence against fixed wings is not
+weakened by a range deficit against lift-plus-cruise. Wing-borne cruise against multirotors is
+not weakened by a tilting layout flying further. Freedom from mechanism against tilts is not
+weakened by anything in Section 3.6, because Section 3.6 measures range and the claim is about
+parts. The one thing that would damage all three at once is the aircraft not flying, and
+Section 4.4 is the honest account of how close that possibility still is.
+
 
 This is a configuration study. It contains no experimental validation of any kind, and
 the numbers in it are the output of elementary methods applied to a set of assumptions.
@@ -2285,7 +2574,9 @@ conclusion drawn from it was too strong.** A heavier buffer raises take-off mass
 hover power, which raises the buffer again; at constant disc loading that feedback is linear
 rather than divergent, so it accumulates to a finite answer and the answer is not where the
 subtraction pointed. Closing the loop — holding wing and disc loading, holding the fuel fraction
-so that range is preserved, and rebuilding the component budget at each step — gives:
+so that range is preserved, and rebuilding the component budget at each step — gives (Table 22):
+
+**Table 22.** Take-off mass, buffer mass, range and payload as the buffer specific power is varied, with the sizing loop closed at each step.
 
 | Buffer specific power | Take-off mass at 13 kg payload | Buffer | Range | Payload if held at 50 kg |
 |---|---:|---:|---:|---:|
@@ -2333,8 +2624,9 @@ under one of the three contracts.
 **The aircraft leaves the ground on its control propellers, and that is a dependency rather than
 a design feature.** Section 2.12 sizes hover power at thrust equal to weight, so the primary
 propulsor supplies T/W = 1.00 exactly and no more. The margin to take off comes from the four
-tip pairs, which raises the achievable ratio to 1.066 with full rotation authority retained and
-1.132 with none — never to the 1.2 an earlier version of Section 3.15 assumed. Three things follow
+tip pairs, which raises the achievable ratio to 1.066 for the light design and 1.041 for the
+heavy one with full rotation authority retained, and to 1.132 and 1.082 with none — never to the
+1.2 an earlier version of Section 3.15 assumed. Three things follow
 and none of them is closed here: the take-off margin and the attitude authority are drawn from
 the same four propellers and compete; the buffer must carry the tip pairs as well, which is the
 6.48 kW kg⁻¹ above; and a rotation entered from rest, rather than from a climb, now loses 14.7 m
@@ -2371,7 +2663,7 @@ the more serious of the two and it moved this round.** Counting the free-wheelin
 Section 3.3, which no earlier version of the build-up contained, puts the computed bracket at
 0.0285 to 0.0381 with 0.0248 below both ends rather than above them. Every lift-to-drag ratio, range and
 architectural comparison in this paper is computed on 0.0248; **re-deriving them on a bracket that
-now surrounds it is the largest single piece of unfinished work here**, and it is more likely to
+now sits entirely above it is the largest single piece of unfinished work here**, and it is more likely to
 move the comparative results of Section 3.6 than anything else left open. Torque balance is exact
 at cruise only, leaving a small residual in hover. The comparative sizing of Section 3.6 is
 conditional on the two competing architectures being modelled at the same level of detail as
@@ -2425,6 +2717,36 @@ nonlinear about zero incidence; whether such a fairing develops the side force c
 not established, and the toe-out its aspect ratio requires carries a stall-related failure mode
 at large sideslip that has not been computed. Hover disturbance rejection, ground handling,
 crosswind and vertical descent have been checked only to order of magnitude or not at all.
+
+**The strip's actuation is unsized, and it lives in the worst place on the aircraft for an
+actuator.** Supplementary S3 bounds what the actuator must *achieve* — a fifty-millisecond
+deployment holds the bank oscillation to ±0.2° in the crudest bang-bang case, a hundred and
+fifty milliseconds lets it reach ±9.4° — but nothing here sizes the device that achieves it: no
+mass, no power draw, no bandwidth, no hinge. And the inboard 46 percent of the strip sits inside
+the nose propeller's slipstream, which is where its hover authority comes from and also a
+high-frequency pulsating load environment. **Whether an actuator can be built that is fast
+enough for a hover axis with no aerodynamic damping, and survives that load spectrum for a
+fourteen-hour endurance flight, is not addressed anywhere in this paper.** It belongs beside the
+battery and the pitching moment rather than below them. **The residual hover torque of
+Section 2.9 may add a fourth duty to the same device**, which would tighten the same requirement.
+
+**The free-wheeling-versus-indexing trade is unpriced, and it is the first thing a reader of
+Section 3.3 will ask.** Stopping the tip rotors edge-on at a controlled azimuth costs 0.0008 in
+zero-lift drag against the free-wheeling state's 0.0154 — a factor of twenty — at the price of an
+indexing mechanism this configuration was designed to avoid. The free-wheeling state was adopted
+because it needs no hardware; it was not shown to beat the hardware, and this paper does not
+compare them. The calculation is bounded and belongs in the next version of this work rather
+than in a later one.
+
+**The landing transition belongs on this list and had been left off it.** The forward
+transition is treated in six subsections of Section 3 and the reverse — decelerate, rotate
+nose-up, descend — in a clause. The two are not symmetric: the forward rotation gains dynamic
+pressure while it turns, so lift arrives as the vertical component of thrust departs, and
+Section 3.15 shows the altitude loss turns on that race; the reverse loses dynamic pressure
+while turning, so lift departs before the thrust vector has returned to vertical. Nothing in
+this paper models that case, no number here describes it, and the take-off transition must not
+be read backwards to supply one. Together with the vertical descent above it, the landing is
+the least examined phase of the flight profile.
 
 ## 4.7 Where this could most efficiently be attacked
 
@@ -2491,8 +2813,9 @@ supported during the manoeuvre rather than falling through it, so entering the r
 still climbing removes the altitude penalty entirely in the point-mass model. That second result
 survived a correction that might have removed it. The primary propulsor is sized at thrust equal
 to weight and therefore supplies no climb at all; the margin comes from the four tip propellers,
-which raises the achievable ratio to between 1.066 and 1.132 rather than the 1.2 an earlier
-version assumed. Recomputed there, the altitude loss at both reference rotation times is still
+which raises the achievable ratio to 1.066 for the light design and 1.041 for the heavy
+one with full rotation authority retained, and to 1.132 and 1.082 with none retained, rather
+than the 1.2 an earlier version assumed. Recomputed there, the altitude loss at both reference rotation times is still
 zero — but acquiring the entry climb now takes twice as long, a rotation begun from rest is
 worse than reported, and the take-off margin and the attitude authority are drawn from the same
 four propellers and compete for them.
@@ -2557,10 +2880,26 @@ of three different fidelities fail to predict above roughly ten degrees of incid
 highest of them against wind-tunnel measurement — and the paper declines to substitute a reduced
 calculation for a measurement.
 
-**What survives independently of that is the framework.** The three currencies, the
-demonstration that architectural remedies transfer the penalty rather than remove it, the escape
-condition, and the finding that architectural comparisons change their ranking with the sizing
-contract chosen — none of these depends on whether this particular aircraft is ever built.
+**Two things survive independently of that, and they should be stated separately because they
+are claims of different kinds.**
+
+**The first is the framework.** The three currencies, the demonstration that architectural
+remedies transfer the penalty rather than remove it, the escape condition, and the finding that
+architectural comparisons change their ranking with the sizing contract chosen — none of these
+depends on whether this particular aircraft is ever built.
+
+**The second is the configuration's architectural claim, and it is not a performance claim.**
+Against the fixed-wing family this aircraft needs no runway; against the multirotor family it
+cruises on a wing; against the tilting family it reaches the same regime transition **without reorienting a
+propulsor** — no pivot, no nacelle actuator, no gyroscopic moment from tilting mass, no
+variable-pitch hub. It is not a claim that nothing on the aircraft moves: the roll strip is a
+moving aerodynamic device and the paper charges it as one. **What a tilting layout pays to reach
+the same regime is mechanical and control cost rather than aerodynamic cost; this configuration
+is offered as an alternative route to the same end, and that is what it is for.** Each of those three claims
+is made against a different family on a different axis, and none of them is a range ranking
+against the other hybrids — a ranking this paper reports in full, finds to reverse with the
+sizing contract, and does not claim. **The absence of a mechanism is countable and no contract
+moves it; the range comparison is neither.**
 meryemAircraft is the case that shows the escape condition can be instantiated in a real
 geometry and carried through to reference designs at two scales. It is not offered as a
 validated vehicle, and the paper is careful throughout to say which of its statements are
@@ -2732,7 +3071,7 @@ longer version and is reproduced without abridgement.
 - **Supplementary S3** — Control axes in full (6553 words)
 - **Supplementary S4** — Rotational authority, trim, and the transition envelope (8310 words)
 - **Supplementary S5** — The limitations in full (6724 words)
-- **Supplementary S6** — The three bills stated formally, and a comparative sizing (3123 words)
+- **Supplementary S6** — The three bills stated formally, and a comparative sizing (3158 words)
 
 The computational setup, the scripts that produce every number here, and a running record
 of the corrections made during the study are in the repository this paper cites.

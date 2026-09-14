@@ -22,7 +22,9 @@ import os, re, sys
 
 BURA = os.path.dirname(os.path.abspath(__file__))
 MAKALE = os.path.abspath(os.path.join(BURA, ".."))
-KAYNAK = os.path.join(MAKALE, "makale-%s.md" % "v6")
+sys.path.insert(0, BURA)
+from surum import SURUM                 # sabit "v6" yazıliydi; surum
+KAYNAK = os.path.join(MAKALE, "makale-%s.md" % SURUM)   # kayinca BAYAT dosyayi denetliyordu
 
 SAYI = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6,
         "seven": 7, "eight": 8, "nine": 9, "ten": 10, "eleven": 11,

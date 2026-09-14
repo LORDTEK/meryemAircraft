@@ -55,7 +55,7 @@ Kararın MDPI şablonu yönünde. Şablona **elle dökmedim, ürettim** — 70 s
 172 tablo satırı ve 12 şekil elle taşınacak iş değil, ve bu depoda bir sürüm
 elle toparlandığı için yanlış tablo taşımıştı.
 
-`makale/uretim/mkdocx.py` `makale-v6.md`'den okuyup MDPI düzeninde `.docx`
+`makale/uretim/mkdocx.py` `makale-v7.md`'den okuyup MDPI düzeninde `.docx`
 üretiyor: başlık, üstsimgeli yazar/kurum satırları, `Abstract:`, `Keywords:`,
 numaralı bölümler, `Figure N.` altyazıları, tablolar, **derginin kendi
 sırasındaki** arka madde blokları, ve numaralı kaynakça.
@@ -90,6 +90,11 @@ kalmadığı. Yukarıdaki tablo makine denetimi; şablona özgü biçim kaymalar
 | `meryemAircraft-makale.pdf` | `makale/pdf/` | yedek; sistem PDF isterse |
 | `meryemAircraft-ek.pdf` | `makale/pdf/` | yedek |
 | `sekil01`…`sekil12` | `gorsel/cikti/` | **Figures**, ayrı ayrı, yüksek çözünürlüklü |
+
+> **Sürüm:** gönderilecek metin **v7**'dir, v6 değil. Zenodo'da v6 yayımlandı ve
+> v7 onu düzeltiyor; `makale/SURUMLER.md` hangi dosyanın nerede yayımlandığını
+> tutuyor. Gönderim sırasında Zenodo'nun **v7 sürüm DOI'si** de kapak mektubuna
+> eklenecek.
 
 Şekiller yeniden numaralandı (ilk atıf sırasına göre) ve dosya adları da
 döndü; numara ile ad artık tutuyor. On üç dosyanın hepsi, `.docx` içinde

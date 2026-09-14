@@ -15,7 +15,7 @@ BURA = os.path.dirname(os.path.abspath(__file__))
 MAKALE = os.path.abspath(os.path.join(BURA, ".."))
 sys.path.insert(0, BURA)
 
-SURUM = "v6"          # mksurum.py ile AYNI olmali
+from surum import SURUM   # elle kopyalanmis "v6" idi; artik tek kaynak
 KAYNAK = os.path.join(MAKALE, "makale-%s-ek.md" % SURUM)
 PDF = os.path.join(MAKALE, "pdf", "meryemAircraft-ek.pdf")
 CHROME = "/opt/pw-browsers/chromium-1194/chrome-linux/chrome"

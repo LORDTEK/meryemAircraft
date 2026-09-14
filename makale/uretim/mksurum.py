@@ -4,8 +4,9 @@
 SURUM TEK YERDE. Betik once mkv5.py adiyla duruyordu ve cikti adlari da
 gomuluydu. Bir surum atlaninca "v6 ureten mkv5.py" gibi bayat bir isim
 kaliyor; bu depoda bayat isimlerin bir dis okuyucuyu var olmayan bir
-surumu tarif etmeye goturdugu gorulmustu. Surum asagida SURUM sabitidir
-ve dosya adlari ondan turer.
+surumu tarif etmeye goturdugu gorulmustu. Surum artik surum.py'de durur --
+ONCE burada duruyordu ve mkdocx.py kendi kopyasini tutuyordu, yani "tek
+yerde" diyen bu yazi yanlisti. Dosya adlari oradan turer.
 
 NEDEN VAR. v5'in ilk surumu EL ILE toparlanmisti. Bunun bedelini odedik:
 disaridan dort bagimsiz okuma, govdedeki 5.5 tablosunun aslinda S6.1'in
@@ -25,7 +26,7 @@ import os, re, sys
 
 BURA = os.path.dirname(os.path.abspath(__file__))
 
-SURUM = "v6"          # cikti adlari bundan turer
+from surum import SURUM        # tek dogruluk kaynagi; cikti adlari bundan turer
 
 MAKALE = os.path.abspath(os.path.join(BURA, ".."))
 sys.path.insert(0, BURA)
