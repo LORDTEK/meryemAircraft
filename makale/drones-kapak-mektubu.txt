@@ -1,0 +1,93 @@
+Dear Editors,
+
+We submit "The Architectural Cost of Hybrid VTOL: meryemAircraft, a
+Propeller-Driven Tail-Sitting Blended-Wing-Body Without a Dedicated Lift System"
+for consideration as an Article in Drones, in the Drone Design and Development
+section.
+
+HOW THIS WORK IS LINKED TO DRONES
+
+The subject is an uncrewed aerial vehicle and nothing else: its configuration,
+its sizing, its aerodynamics, its propulsion and its control architecture. The
+aircraft is uncrewed by design rather than by simplification — the transition
+manoeuvre it performs is one a pilot cannot judge by eye, which is the recorded
+reason the crewed tail-sitters of the 1950s were abandoned, and the paper says
+so in its opening section. Its intended missions are drone missions: wildfire
+observation and cargo delivery to sites without a runway.
+
+The paper's primary output is a decision tool for this journal's readership. A
+designer choosing between lift-plus-cruise, tilting and tail-sitting layouts for
+a small uncrewed aircraft has no common accounting for what each choice costs.
+We provide one, and we show that the ranking obtained depends on the sizing
+contract imposed — so a ranking quoted without its contract is not usable, and
+several published comparisons are quoted that way.
+
+We note that the closest literature to this work, and six of our references,
+appear in Aerospace. We are submitting to Drones rather than to Aerospace
+because the constraints that generate every result here — uncrewed operation,
+small scale, no runway, an operator who is not an airline — are the constraints
+of this journal's subject, not of aerospace generally.
+
+WHAT THE PAPER DOES
+
+The paper treats the cruise-efficiency penalty of hybrid VTOL aircraft as
+architectural rather than as a defect of implementation, and develops it as an
+accounting framework in three coupled currencies: hover hardware carried through
+cruise, its drag when exposed, and continuous power sized by a condition holding
+some two percent of the flight. Every remedy we survey reduces one by raising
+another.
+
+The configuration we propose addresses a specific gap. Tilting architectures
+satisfy the framework's escape condition — one propulsion group serving both
+regimes — by rotating their propulsors, and pay a pivot, its actuators, a
+gyroscopic moment and a transition control problem for it. Those are mechanical
+and control costs rather than aerodynamic ones. We propose an alternative route
+to the same condition: an uncrewed tail-sitting blended-wing body in which the
+airframe rotates and the propulsors do not. Pitch and yaw come from differential
+thrust between fixed-pitch propellers; roll, which coaxial torque-balanced pairs
+cannot produce at any setting, comes from a single variable-extension strip.
+What we claim to eliminate is a mechanism class — the one that reorients a
+propulsor — and not every moving part; the paper is explicit about the
+distinction.
+
+A second result is methodological and independent of the configuration:
+architectural rankings belong to the sizing contract under which a comparison is
+made, not to the architectures compared. We report three contracts and the
+ranking changes between them. We therefore claim no range advantage over the
+other hybrid families — we report that the tilting layout leads on range under
+all three contracts, and that result stands in the paper.
+
+The case is sized at two scales and carried far enough to report what
+instantiating the escape condition costs, including two charges the
+configuration was assumed to avoid and which computation showed it does not.
+
+WHAT WE DO NOT CLAIM
+
+The aircraft is not shown to be flyable and we say so throughout. There is no
+wind-tunnel measurement and no flight test; the mass budget closes only on a
+battery specific power about 3.8 times the highest yet measured on a flown pack;
+the transition pitching moment is blocked on measurement rather than on effort;
+the roll strip's actuation is unsized; and the landing transition is unmodelled.
+The framework does not depend on that outcome, and the architectural claims
+above concern hardware topology rather than demonstrated performance.
+
+AVAILABILITY AND DECLARATIONS
+
+The computational record — mesh generator, case setups, grid-convergence study,
+and the scripts behind every figure — is openly available, and an archived
+version of this manuscript with its supplementary material is deposited at
+Zenodo: this version is DOI 10.5281/zenodo.22745666, and DOI
+10.5281/zenodo.22144194 is the concept identifier that resolves to the latest
+version.
+
+The authors have filed a patent application covering the configuration
+(Türkpatent application 2026/014570); this is declared in the manuscript.
+
+The manuscript is not under consideration elsewhere and has not been published
+previously.
+
+Yours sincerely,
+
+Meryem Gülmen, on behalf of the authors
+Independent Researcher, Türkiye
+meryemgulmen@outlook.com
