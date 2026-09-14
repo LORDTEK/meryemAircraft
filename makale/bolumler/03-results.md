@@ -98,8 +98,23 @@ changes what this subsection concludes. The *stopped edge-on* row shows, separat
 the rotors is survivable only if azimuth is controlled — which is the indexing mechanism this
 section has just claimed the configuration does not need.
 
-**The resolution needs no hardware and can be imposed as a control state, but its aerodynamic
-cost has to be computed rather than assumed away — and this section computes it.** A fixed-pitch
+**Charging the free-wheeling state also reopens a trade this paper has not priced, and that
+absence should be stated before the calculation rather than after it.** The computed
+free-wheeling charge below is 0.0154; the *stopped edge-on* row is 0.0008 — **a factor of twenty
+cheaper in drag**. The configuration cannot be made to stop its rotors for free, because
+azimuth control is exactly the indexing mechanism Section 2.10 gives as a reason not to stop
+them; but "this configuration has no rotor to stop" is a design choice, not a consequence, and
+a reader is entitled to ask what the mechanism would cost against the twenty-fold drag saving.
+**The comparison is not made anywhere in this paper.** Sizing an indexing mechanism for eight
+small discs, charging its mass and its failure modes, and re-solving the loop against a
+zero-lift drag reduced by 0.0146 is a bounded calculation and it has not been done. It is the
+single most likely question a reader of Section 3.3 will ask, and the honest answer is that the
+free-wheeling state was adopted because it needs no hardware, not because it was shown to beat
+the hardware.
+
+**With that said, the resolution needs no hardware and can be imposed as a control state, but
+its aerodynamic cost has to be computed rather than assumed away — and this section computes
+it.** A fixed-pitch
 propeller left free settles at the advance ratio where net shaft torque is zero: inner sections
 drive, outer sections retard, and they balance. The shaft then does no work, so the motor
 neither drives nor brakes and the electrical cost is controller standby draw and bearing losses.
@@ -175,7 +190,7 @@ comparisons built on it in Sections 3.6 and 4.4 do not need re-deriving for this
 
 The mechanism does not depend on the solver. A propeller designed for hover has low pitch; left
 free at 30 m s⁻¹ it must spin fast before its sections reach zero incidence, and at that speed
-the blades' own profile drag is large. The trend across the four designs is the trade stated
+the blades' own profile drag is large. The trend across the seven designs is the trade stated
 plainly: the blade that hovers well free-wheels fastest and drags most. Section 2.9 rules out the
 escape, because these pairs are of fixed geometry and cannot feather.
 
@@ -233,11 +248,12 @@ avoidance is architectural rather than a fortunate coincidence of one size.
 as a *continuous* power system sized by the hover peak, and it is the engine and its fuel
 consumption that the buffer releases from that condition. The electrical path is not
 released: the nose motor and the power electronics must still pass the full 10.9 kW, and
-the component build-up of Section 3.11 shows them as 2.73 kg and 0.61 kg against 2.60 kg of
+the component build-up of Supplementary S2, summarised in Section 3.11, shows them as 2.73 kg
+and 0.61 kg against 2.60 kg of
 engine and generator — that is, the hover-sized electrical machine is the single largest
 item in the propulsion chain. The saving is real and it is the engine's, but a reader
 should not take it as an aircraft on which nothing is sized by hover. The buffer itself
-carries a further condition, given in Section 3.11: it is specified by power rather than
+carries a further condition, given in Supplementary S2: it is specified by power rather than
 energy, at **5.63 kW kg⁻¹** to hover and 6.48 to leave the ground, which is a demanding cell
 requirement and not a free parameter. Section 4.4 measures it against what has been flown.
 
@@ -605,7 +621,8 @@ smaller charge than the light design pays (Table 14):
 
 The published row is what the sizing loop returns with no rotor charge, and it reproduces the
 13.6 and 1 814 km of the table above, which is the check that this is the same calculation. The
-charge is **a third of the light design's 0.0154**, and Section 3.9 works out why.
+carried value is **a third of the light design's 0.0154** — the interval around it spans a
+quarter to a half — and Section 3.9 works out why.
 
 **The heavy family's blades meet the hover requirement, and that is exactly why the charge above
 is a range rather than a single number.** Across every design tried the figure of merit is 0.65 to
@@ -622,9 +639,12 @@ applying the light line's rule literally would return the lowest of these, which
 favourable to this configuration. **The 0.0051 carried above is the interior value the sizing was
 run at, not a minimum, and it is reported as such:** the honest statement is that the heavy
 charge is bounded by 0.0035 and 0.0074 and is not pinned within that interval by any criterion
-this study applies. It remains between a third and a half of the light design's charge at every
-point in the interval, which is the comparison Section 3.9 uses; nothing in that section depends
-on where inside the interval the value falls. The chord limits in the
+this study applies. It remains between **a quarter and a half** of the light design's charge at every point in the
+interval — 0.0035/0.0154 is 0.23 and 0.0074/0.0154 is 0.48 — so the qualitative statement that
+the heavy line pays a fraction of the light line's charge holds wherever in the interval the
+value falls. **One thing in Section 3.9 does not hold that way, and it is named there rather
+than buried here:** the numerical agreement between the predicted and computed scaling ratios is
+computed at 0.0051 and moves with the choice. The chord limits in the
 blade-element routine are expressed relative to rotor radius; an earlier draft of this study used
 absolute limits taken from the light design's 0.20 m rotor, which on a 0.67 m rotor produce a
 12 mm chord on a 335 mm radius and a correspondingly slender blade. The repository records that
@@ -671,6 +691,15 @@ blade, and the cruise dynamic pressure rises by a factor 1.78 between 30 and 40 
 product, 1.73 × 1.78 = 3.08, is the predicted ratio; the computed ratio is 3.04. **The bill falls
 because the reference dynamic pressure rises and the blade thins, not because the wing outgrows
 the disc.**
+
+**How close that agreement is depends on a number Section 3.8 has just declared unpinned, and
+saying so costs the agreement some of its force.** The computed 3.04 is 0.0154/0.0051, and 0.0051
+is the interior value the heavy sizing was run at rather than a value any criterion selects; at
+the ends of the interval Section 3.8 bounds — 0.0035 and 0.0074 — the ratio computes to 2.08 and
+4.40, either side of the predicted 3.08. **The mechanism — that solidity and dynamic pressure are the only two terms that
+move — does not depend on the choice, and neither does the direction or the order of magnitude.
+The three-digit agreement does.** It is reported as a consistency check at the sizing point, not
+as a validation of the scaling law.
 
 **The two halves of this comparison do not have the same standing, and putting them under one
 heading would suggest they do.** Bill 2's scaling is computed: it comes from two blade-element
@@ -743,8 +772,9 @@ against the aircraft.** That solution resolves the wing and the body and no roto
 free-wheeling discs computed in Section 3.3 add at least 0.0154 to whatever it returns. Carried
 into the build-up of Supplementary S1 the bracket becomes 0.0285 to 0.0381 and the assumed 0.0248
 lies below both ends rather than above them — optimistic by as much as fifty-three percent at the upper
-end. **The cruise lift-to-drag ratio, the ranges of Section 3.8 and the comparative sizing of
-Section 3.6 are all computed on 0.0248 and none of them is re-derived here.** Two things S1 does not settle: the solutions are fully
+end. **The cruise lift-to-drag ratio, the ranges of Section 3.7 and the comparative sizing of
+Section 3.6 are all computed on 0.0248 and none of them is re-derived here** — the heavy line of
+Section 3.8 stands on its own coefficient, 0.0200, which this bracket does not address. Two things S1 does not settle: the solutions are fully
 turbulent, so the clean-surface figure of 0.0073 from the strip method is untested and the gap
 between it and 0.0120–0.0148 is now the largest single uncertainty in the zero-lift drag; and
 the wall-resolved SST case admits more than one stationary solution, two converged starts

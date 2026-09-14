@@ -170,8 +170,9 @@ under one of the three contracts.
 **The aircraft leaves the ground on its control propellers, and that is a dependency rather than
 a design feature.** Section 2.12 sizes hover power at thrust equal to weight, so the primary
 propulsor supplies T/W = 1.00 exactly and no more. The margin to take off comes from the four
-tip pairs, which raises the achievable ratio to 1.066 with full rotation authority retained and
-1.132 with none — never to the 1.2 an earlier version of Section 3.15 assumed. Three things follow
+tip pairs, which raises the achievable ratio to 1.066 for the light design and 1.041 for the
+heavy one with full rotation authority retained, and to 1.132 and 1.082 with none — never to the
+1.2 an earlier version of Section 3.15 assumed. Three things follow
 and none of them is closed here: the take-off margin and the attitude authority are drawn from
 the same four propellers and compete; the buffer must carry the tip pairs as well, which is the
 6.48 kW kg⁻¹ above; and a rotation entered from rest, rather than from a climb, now loses 14.7 m
@@ -208,7 +209,7 @@ the more serious of the two and it moved this round.** Counting the free-wheelin
 Section 3.3, which no earlier version of the build-up contained, puts the computed bracket at
 0.0285 to 0.0381 with 0.0248 below both ends rather than above them. Every lift-to-drag ratio, range and
 architectural comparison in this paper is computed on 0.0248; **re-deriving them on a bracket that
-now surrounds it is the largest single piece of unfinished work here**, and it is more likely to
+now sits entirely above it is the largest single piece of unfinished work here**, and it is more likely to
 move the comparative results of Section 3.6 than anything else left open. Torque balance is exact
 at cruise only, leaving a small residual in hover. The comparative sizing of Section 3.6 is
 conditional on the two competing architectures being modelled at the same level of detail as
@@ -262,6 +263,14 @@ nonlinear about zero incidence; whether such a fairing develops the side force c
 not established, and the toe-out its aspect ratio requires carries a stall-related failure mode
 at large sideslip that has not been computed. Hover disturbance rejection, ground handling,
 crosswind and vertical descent have been checked only to order of magnitude or not at all.
+
+**The free-wheeling-versus-indexing trade is unpriced, and it is the first thing a reader of
+Section 3.3 will ask.** Stopping the tip rotors edge-on at a controlled azimuth costs 0.0008 in
+zero-lift drag against the free-wheeling state's 0.0154 — a factor of twenty — at the price of an
+indexing mechanism this configuration was designed to avoid. The free-wheeling state was adopted
+because it needs no hardware; it was not shown to beat the hardware, and this paper does not
+compare them. The calculation is bounded and belongs in the next version of this work rather
+than in a later one.
 
 **The landing transition belongs on this list and had been left off it.** The forward
 transition is treated in six subsections of Section 3 and the reverse — decelerate, rotate

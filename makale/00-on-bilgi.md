@@ -123,8 +123,8 @@ hesaplanmış değerler özette bağlamsız durur.]*
 > - A tail-sitting blended-wing body whose single coaxial nose pair serves both regimes
 >   instantiates the escape condition, and carrying the case that far shows what it costs:
 >   the free-wheeling drag of its own attitude rotors is a bill the configuration was assumed
->   to avoid, and charging it reverses one of the three range comparisons and takes the mass
->   advantage from 42 to between 32 and 36 percent.
+>   to avoid, and charging it reverses one of the three range comparisons and leaves a mass
+>   advantage of 32 to 36 percent.
 >
 > **What are the implications of the main findings?**
 >

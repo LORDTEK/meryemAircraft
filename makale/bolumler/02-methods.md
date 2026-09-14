@@ -483,15 +483,23 @@ lies below both ends, so it is an assumption and an optimistic one, not a self-c
 choice. It is carried unchanged so that every downstream figure rests on one stated basis, and
 every result that depends on it is also reported across the computed bracket.
 
-**Sea-level density is a deliberate choice and not an oversight, and it is the conservative
-one.** A cruise at altitude would reduce drag with the density ratio and lengthen every range
-figure quoted here; holding sea level therefore understates the aircraft rather than flattering
-it. The choice also matches the intended missions — wildfire observation and cargo delivery to
+**Sea-level density is a deliberate choice and not an oversight.** An earlier version of this
+paragraph called it the conservative one, on the grounds that cruising at altitude would reduce
+drag with the density ratio and lengthen every range figure; **that reasoning is wrong and the
+paper's own range equation shows why.** Range here is f_fuel · E* · η_chain · (L/D) / g, in
+which density does not appear: at a fixed lift coefficient a thinner atmosphere is flown faster
+for the same lift-to-drag ratio, and the range is unchanged. Altitude would move these figures
+only by moving L/D — which it can do in either direction, depending on where the trimmed cruise
+sits on the polar — so sea level is neither conservative nor generous, it is simply the one
+atmosphere everything here is computed on. The choice matches the intended missions — wildfire observation and cargo delivery to
 sites without a runway — which are flown low, and it keeps the hover and cruise calculations on
 one atmosphere so that the ratio between them, which is what the three bills are about, is not
 carrying a density change as well. A design intended to cruise high would need the whole chain
-re-run; nothing in the framework prevents that, and nothing in this paper does it. Section 3.10 computes both and reports what the computation does to them:
-it bounds them rather than replacing them, which is a weaker but more honest claim.
+re-run; nothing in the framework prevents that, and nothing in this paper does it.
+
+Section 3.10 computes **the drag coefficient and the span efficiency** and reports what the
+computation does to them: it bounds them rather than replacing them, which is a weaker but more
+honest claim.
 
 ## 2.13 Computational methods
 
