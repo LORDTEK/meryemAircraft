@@ -137,6 +137,28 @@ turkce_denetle(ek_belge, "makale-%s-ek.md" % SURUM)
 open(os.path.join(MAKALE, "makale-%s-ek.md" % SURUM), "w",
      encoding="utf-8").write(ek_belge)
 
+# -------------------------------------------------- ADI COMMIT TASIYAN KOPYA
+# NEDEN VAR. Iki ardisik turda ayni ad -- makale-v6.md -- ile IKI FARKLI
+# icerik gonderildi. Disaridan bir okuyucu eski indirdigini yukledi ve
+# bunu bilmesinin hicbir yolu yoktu; yalnizca dosyaya bakarak iki surumu
+# ayirt edemezdi. Kusur dosyayi yukleyende degil, ayni adi iki kez
+# kullananda. Bundan sonra gonderilen kopyanin ADINDA commit karmasi
+# olur; bayat bir kopya ADINDAN belli olur.
+import hashlib, subprocess
+
+try:
+    _c = subprocess.run(["git", "rev-parse", "--short", "HEAD"], cwd=MAKALE,
+                        capture_output=True, text=True).stdout.strip()
+except Exception:
+    _c = ""
+if _c:
+    for _kaynak, _etiket in ((makale, ""), (ek_belge, "-ek")):
+        _ad = "makale-%s%s-%s.md" % (SURUM, _etiket, _c)
+        open(os.path.join(MAKALE, "gonderilecek", _ad), "w",
+             encoding="utf-8").write(_kaynak)
+        print("gonderilecek/%s  sha256 %s" %
+              (_ad, hashlib.sha256(_kaynak.encode()).hexdigest()[:12]))
+
 # ------------------------------------------------------------------ rapor
 print("makale-%s.md      %%6d kelime  (govde %%d, %%d bolum)" % SURUM
       % (kelime(makale), gsayi, len(bolumler)))
