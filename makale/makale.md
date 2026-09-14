@@ -1,6 +1,6 @@
 # The Architectural Cost of Hybrid VTOL: meryemAircraft, a Propeller-Driven Tail-Sitting Blended-Wing-Body Without a Dedicated Lift System
 
-Meryem Gülmen <sup>1,\*</sup>, Berke Gülmen <sup>1</sup>, Ömer Gülmen <sup>1,\*</sup>  <sup>1</sup> Independent Researcher, Türkiye; meryemgulmen@outlook.com (M.G.); berkegulmen@outlook.com (B.G.); lordtek@me.com (Ö.G.)  <sup>\*</sup> Correspondence: meryemgulmen@outlook.com (M.G.); lordtek@me.com (Ö.G.)
+Meryem Gülmen <sup>1,\*</sup>, Berke Gülmen <sup>1</sup>, Ömer Gülmen <sup>1</sup>  <sup>1</sup> Independent Researcher, Türkiye; meryemgulmen@outlook.com (M.G.); berkegulmen@outlook.com (B.G.); lordtek@me.com (Ö.G.)  <sup>\*</sup> Correspondence: meryemgulmen@outlook.com
 
 **What are the main findings?**
 - Hybrid VTOL aircraft pay for vertical flight in three coupled currencies — hover

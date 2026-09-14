@@ -9,4 +9,4 @@ sinif hata (ayni ad, iki icerik) zaten bir kez disariya sizdi.
 
 Buraya yazilir, oteki betikler buradan okur.
 """
-SURUM = "v8"
+SURUM = "v7"
