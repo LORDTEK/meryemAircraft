@@ -1208,7 +1208,12 @@ take-off one.** Section 4 records it.
 ## 3.17 Whether there is enough authority to rotate, and whether it trims
 
 Rotating the airframe through ninety degrees is the manoeuvre this configuration must perform
-with four small propellers and no pitch control surface — the one aerodynamic device the aircraft carries, the roll strip of Section 2.10, produces no pitching moment and takes no part in this manoeuvre. Supplementary S4 carries the full budget —
+with four small propellers and no pitch control surface. **The one aerodynamic device the
+aircraft carries, the roll strip of Section 2.10, is not commanded during the rotation** — and
+that is a scheduling requirement rather than a property of the device, because Section 2.10
+shows the strip *does* pitch the nose down when it is deployed, by ΔC_m between 0.005 and 0.032.
+At the upper end that would consume two thirds of the budget below, which is why Section 2.10
+requires it not be commanded at full extension at the end of the rotation. Supplementary S4 carries the full budget —
 inertia derivation, rotation profiles, centre-of-gravity window, twist sweep and the measured
 section evidence. This section states what it returns.
 

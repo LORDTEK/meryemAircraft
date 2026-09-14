@@ -136,7 +136,8 @@ hesaplanmış değerler özette bağlamsız durur.]*
 >   fuel fractions by 24 to 45 percent, the tail-sitter leads under equal take-off mass by 29
 >   to 43, and under equal fuel mass the sign changes inside the bracket. **A ranking quoted
 >   without its contract is not a result.** The architectural claim made here is on a different
->   axis from all of these: it is the absence of a rotating mechanism, which no contract moves.
+>   axis from all of these: it is the absence of a mechanism that reorients a propulsor, which
+>   no contract moves.
 > - The configuration is not shown to be flyable: its 50 kg reference budget needs a battery
 >   specific power 3.8 times the highest rate yet measured on a flown pack, and re-closes 38
 >   percent heavier at that measured rate; transition controllability rests on a pitching

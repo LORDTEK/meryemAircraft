@@ -134,8 +134,8 @@ merit, against this configuration's *aerodynamic* 8.8 to 10.8 across its compute
 mechanism that reorients the propulsors.** Tilt-rotor, tilt-wing and tilt-nacelle layouts solve
 the duty-cycle problem by rotating their propulsors, and Table 2 records what that costs them —
 mechanical complexity, gyroscopic coupling during the rotation, and a transition control
-problem. Those costs are the reason the tilting solution is the less widely fielded of the two
-contemporary families. **This paper offers an alternative route to the same end.** The aircraft
+problem. **Those costs are mechanical and control costs rather than aerodynamic ones**, and it
+is to them, not to any aerodynamic shortcoming, that this paper offers an alternative. **This paper offers an alternative route to the same end.** The aircraft
 rotates itself rather than its propulsors: there is no pivot, no nacelle actuator, no
 variable-pitch hub, no retraction mechanism and no gyroscopic moment from tilting mass, and the
 propellers hold one orientation relative to the airframe from take-off to cruise.
@@ -146,8 +146,14 @@ Pitch and yaw are produced by differential thrust between fixed-pitch propellers
 already turning; **roll cannot be, because coaxial torque-balanced pairs produce no rolling
 moment at any setting, and it is produced instead by a variable-extension strip on the lower
 surface — the one moving aerodynamic device on the aircraft**, derived in Section 2.10. The
-actuator inventory is therefore the motors plus one strip actuator, against a tilting layout's
-pivots, nacelle actuators and, usually, variable-pitch hubs and control surfaces as well.
+actuator inventory is therefore the motors plus the strip's actuation. **How many actuators
+that is, this study does not fix:** Section 2.10 describes the strip as deployable in two halves
+— one side for roll, both together as a speed brake — and Supplementary S2 carries its actuation
+in the systems budget without sizing the mechanism. Against it, a tilting layout requires at
+least one mechanism per propulsor group to reorient it, which depending on implementation is a
+pivot, a nacelle actuator or a variable-pitch arrangement, and often more than one of these.
+**The comparison is between mechanism classes, not between counted parts**, because this paper
+has counted neither side's parts.
 **What is eliminated is a class of mechanism — the one that reorients a propulsor between hover
 and cruise — not every mechanism.** That is countable, no sizing contract changes it, and it is
 narrower than "mechanically simpler", which this paper does not measure and does not claim.
@@ -167,13 +173,16 @@ thesis, and it neither supports nor damages the three claims above.
 **The line between the three claims and the disclaimed fourth is not arbitrary, and it is worth
 stating as a criterion: each claim names the thing the competitor structurally lacks.** A
 fixed-wing aircraft lacks vertical take-off; a multirotor lacks a cruising wing; a tilting
-layout lacks freedom from a rotating mechanism. None of those is a quantity a sizing contract
+layout lacks freedom from a propulsor-reorientation mechanism. None of those is a quantity a
+sizing contract
 can move. Range against a competitor that also cruises on a wing *is* such a quantity, which is
 exactly why it is reported as a case result rather than claimed as a property of the
 architecture.
 
 **The three axes are not chosen because they are the ones this configuration wins; they are the
-three that decide whether an aircraft can fly the mission class this paper is about.** Wildfire
+three architectural capabilities most directly relevant to the mission class this paper is
+about.** They are not a sufficient condition for mission viability — payload, weather, speed,
+cost, certification and reliability all bear on that and none of them is settled here. Wildfire
 observation and cargo delivery to sites without a runway require, in order: getting airborne
 where there is no strip, staying up long enough to be useful once there, and being maintainable
 and controllable by an operator who is not an airline. Those are the runway axis, the cruise
@@ -302,13 +311,14 @@ way the other does not, that the payment can be moved between mass, drag and pow
 system sizing, and that it cannot be brought to zero as long as hover and cruise are
 served by different hardware or by hardware that must move between two roles.
 
-**The two families are not equally represented, and the reason matters to this paper.**
-Lift-plus-cruise dominates the fielded population. The tilting architectures are the more
-elegant answer on paper — one propulsion group, no dead hardware in cruise — and the less
-common one in service, because rotating a propulsor in flight brings a pivot and its
-actuators, a gyroscopic moment during the rotation, and a control problem through a regime
-in which the aircraft is neither a rotorcraft nor an aeroplane. **The tilting idea is not
-rejected by the market; its implementation is.**
+**The two answers do not cost the same, and the difference matters to this paper.** The tilting
+architectures are the more elegant answer on paper — one propulsion group, no dead hardware in
+cruise — and the more demanding one to build, because rotating a propulsor in flight brings a
+pivot and its actuators, a gyroscopic moment during the rotation, and a control problem through
+a regime in which the aircraft is neither a rotorcraft nor an aeroplane. **Those requirements
+are mechanical and control requirements rather than aerodynamic ones**, which is the distinction
+this paper builds on; whether they also explain the relative size of the two fielded populations
+is a market question this paper does not attempt to settle.
 
 **That is the gap this paper addresses.** The configuration studied here reaches the same
 end as a tilting layout — one propulsion group serving both regimes — by a different route:

@@ -288,6 +288,18 @@ not established, and the toe-out its aspect ratio requires carries a stall-relat
 at large sideslip that has not been computed. Hover disturbance rejection, ground handling,
 crosswind and vertical descent have been checked only to order of magnitude or not at all.
 
+**The strip's actuation is unsized, and it lives in the worst place on the aircraft for an
+actuator.** Supplementary S3 bounds what the actuator must *achieve* — a fifty-millisecond
+deployment holds the bank oscillation to ±0.2° in the crudest bang-bang case, a hundred and
+fifty milliseconds lets it reach ±9.4° — but nothing here sizes the device that achieves it: no
+mass, no power draw, no bandwidth, no hinge. And the inboard 46 percent of the strip sits inside
+the nose propeller's slipstream, which is where its hover authority comes from and also a
+high-frequency pulsating load environment. **Whether an actuator can be built that is fast
+enough for a hover axis with no aerodynamic damping, and survives that load spectrum for a
+fourteen-hour endurance flight, is not addressed anywhere in this paper.** It belongs beside the
+battery and the pitching moment rather than below them. **The residual hover torque of
+Section 2.9 may add a fourth duty to the same device**, which would tighten the same requirement.
+
 **The free-wheeling-versus-indexing trade is unpriced, and it is the first thing a reader of
 Section 3.3 will ask.** Stopping the tip rotors edge-on at a controlled azimuth costs 0.0008 in
 zero-lift drag against the free-wheeling state's 0.0154 — a factor of twenty — at the price of an
