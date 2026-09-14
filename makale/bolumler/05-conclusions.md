@@ -122,10 +122,9 @@ Against the fixed-wing family this aircraft needs no runway; against the multiro
 cruises on a wing; against the tilting family it reaches the same regime transition **without reorienting a
 propulsor** — no pivot, no nacelle actuator, no gyroscopic moment from tilting mass, no
 variable-pitch hub. It is not a claim that nothing on the aircraft moves: the roll strip is a
-moving aerodynamic device and the paper charges it as one. The tilting solution is the less widely
-fielded of the two contemporary hybrid families, and the reasons given for that in the literature
-are mechanical and control reasons rather than aerodynamic ones; **this configuration is offered
-as an alternative route to the same end, and that is what it is for.** Each of those three claims
+moving aerodynamic device and the paper charges it as one. **What a tilting layout pays to reach
+the same regime is mechanical and control cost rather than aerodynamic cost; this configuration
+is offered as an alternative route to the same end, and that is what it is for.** Each of those three claims
 is made against a different family on a different axis, and none of them is a range ranking
 against the other hybrids — a ranking this paper reports in full, finds to reverse with the
 sizing contract, and does not claim. **The absence of a mechanism is countable and no contract

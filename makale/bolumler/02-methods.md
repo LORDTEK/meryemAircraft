@@ -257,8 +257,14 @@ The pairs are of fixed geometry: no cyclic pitch, no collective, no variable mec
 has a consequence for the tip pairs in cruise that Section 3.3 works out** — unable to feather,
 they must either turn at the zero-shaft-torque condition or be stopped, and the difference
 between those two states is a substantial fraction of the aircraft's zero-lift drag;
-Section 3.3 computes both ends of it rather than assuming the lower one. The torque balance is exact
-at cruise rather than hover, so a small residual remains in hover.
+Section 3.3 computes both ends of it rather than assuming the lower one. The torque balance is
+exact at cruise rather than hover, so a small residual remains in hover. **What trims that
+residual is not established here, and the omission is worth naming rather than leaving to be
+found.** It is too small to be carried by the tip pairs without spending roll-axis authority the
+aircraft does not have in hover, and the strip works against dynamic pressure the slipstream
+supplies only over its inboard portion. Either the residual is small enough to be absorbed by
+the speed trim of the pairs — which this study has not shown — or a fourth duty falls on the
+strip. Section 4.6 records it.
 
 The arrangement has a second consequence the transition analysis depends on. Because the two
 rotors of each pair carry equal and opposite angular momentum, **the net angular momentum of the

@@ -40,7 +40,8 @@ berkegulmen@outlook.com (B.G.); lordtek@me.com (Ö.G.)
 >   fuel fractions by 24 to 45 percent, the tail-sitter leads under equal take-off mass by 29
 >   to 43, and under equal fuel mass the sign changes inside the bracket. **A ranking quoted
 >   without its contract is not a result.** The architectural claim made here is on a different
->   axis from all of these: it is the absence of a rotating mechanism, which no contract moves.
+>   axis from all of these: it is the absence of a mechanism that reorients a propulsor, which
+>   no contract moves.
 > - The configuration is not shown to be flyable: its 50 kg reference budget needs a battery
 >   specific power 3.8 times the highest rate yet measured on a flown pack, and re-closes 38
 >   percent heavier at that measured rate; transition controllability rests on a pitching
@@ -279,8 +280,8 @@ merit, against this configuration's *aerodynamic* 8.8 to 10.8 across its compute
 mechanism that reorients the propulsors.** Tilt-rotor, tilt-wing and tilt-nacelle layouts solve
 the duty-cycle problem by rotating their propulsors, and Table 2 records what that costs them —
 mechanical complexity, gyroscopic coupling during the rotation, and a transition control
-problem. Those costs are the reason the tilting solution is the less widely fielded of the two
-contemporary families. **This paper offers an alternative route to the same end.** The aircraft
+problem. **Those costs are mechanical and control costs rather than aerodynamic ones**, and it
+is to them, not to any aerodynamic shortcoming, that this paper offers an alternative. **This paper offers an alternative route to the same end.** The aircraft
 rotates itself rather than its propulsors: there is no pivot, no nacelle actuator, no
 variable-pitch hub, no retraction mechanism and no gyroscopic moment from tilting mass, and the
 propellers hold one orientation relative to the airframe from take-off to cruise.
@@ -291,8 +292,14 @@ Pitch and yaw are produced by differential thrust between fixed-pitch propellers
 already turning; **roll cannot be, because coaxial torque-balanced pairs produce no rolling
 moment at any setting, and it is produced instead by a variable-extension strip on the lower
 surface — the one moving aerodynamic device on the aircraft**, derived in Section 2.10. The
-actuator inventory is therefore the motors plus one strip actuator, against a tilting layout's
-pivots, nacelle actuators and, usually, variable-pitch hubs and control surfaces as well.
+actuator inventory is therefore the motors plus the strip's actuation. **How many actuators
+that is, this study does not fix:** Section 2.10 describes the strip as deployable in two halves
+— one side for roll, both together as a speed brake — and Supplementary S2 carries its actuation
+in the systems budget without sizing the mechanism. Against it, a tilting layout requires at
+least one mechanism per propulsor group to reorient it, which depending on implementation is a
+pivot, a nacelle actuator or a variable-pitch arrangement, and often more than one of these.
+**The comparison is between mechanism classes, not between counted parts**, because this paper
+has counted neither side's parts.
 **What is eliminated is a class of mechanism — the one that reorients a propulsor between hover
 and cruise — not every mechanism.** That is countable, no sizing contract changes it, and it is
 narrower than "mechanically simpler", which this paper does not measure and does not claim.
@@ -312,13 +319,16 @@ thesis, and it neither supports nor damages the three claims above.
 **The line between the three claims and the disclaimed fourth is not arbitrary, and it is worth
 stating as a criterion: each claim names the thing the competitor structurally lacks.** A
 fixed-wing aircraft lacks vertical take-off; a multirotor lacks a cruising wing; a tilting
-layout lacks freedom from a rotating mechanism. None of those is a quantity a sizing contract
+layout lacks freedom from a propulsor-reorientation mechanism. None of those is a quantity a
+sizing contract
 can move. Range against a competitor that also cruises on a wing *is* such a quantity, which is
 exactly why it is reported as a case result rather than claimed as a property of the
 architecture.
 
 **The three axes are not chosen because they are the ones this configuration wins; they are the
-three that decide whether an aircraft can fly the mission class this paper is about.** Wildfire
+three architectural capabilities most directly relevant to the mission class this paper is
+about.** They are not a sufficient condition for mission viability — payload, weather, speed,
+cost, certification and reliability all bear on that and none of them is settled here. Wildfire
 observation and cargo delivery to sites without a runway require, in order: getting airborne
 where there is no strip, staying up long enough to be useful once there, and being maintainable
 and controllable by an operator who is not an airline. Those are the runway axis, the cruise
@@ -447,13 +457,14 @@ way the other does not, that the payment can be moved between mass, drag and pow
 system sizing, and that it cannot be brought to zero as long as hover and cruise are
 served by different hardware or by hardware that must move between two roles.
 
-**The two families are not equally represented, and the reason matters to this paper.**
-Lift-plus-cruise dominates the fielded population. The tilting architectures are the more
-elegant answer on paper — one propulsion group, no dead hardware in cruise — and the less
-common one in service, because rotating a propulsor in flight brings a pivot and its
-actuators, a gyroscopic moment during the rotation, and a control problem through a regime
-in which the aircraft is neither a rotorcraft nor an aeroplane. **The tilting idea is not
-rejected by the market; its implementation is.**
+**The two answers do not cost the same, and the difference matters to this paper.** The tilting
+architectures are the more elegant answer on paper — one propulsion group, no dead hardware in
+cruise — and the more demanding one to build, because rotating a propulsor in flight brings a
+pivot and its actuators, a gyroscopic moment during the rotation, and a control problem through
+a regime in which the aircraft is neither a rotorcraft nor an aeroplane. **Those requirements
+are mechanical and control requirements rather than aerodynamic ones**, which is the distinction
+this paper builds on; whether they also explain the relative size of the two fielded populations
+is a market question this paper does not attempt to settle.
 
 **That is the gap this paper addresses.** The configuration studied here reaches the same
 end as a tilting layout — one propulsion group serving both regimes — by a different route:
@@ -752,8 +763,14 @@ The pairs are of fixed geometry: no cyclic pitch, no collective, no variable mec
 has a consequence for the tip pairs in cruise that Section 3.3 works out** — unable to feather,
 they must either turn at the zero-shaft-torque condition or be stopped, and the difference
 between those two states is a substantial fraction of the aircraft's zero-lift drag;
-Section 3.3 computes both ends of it rather than assuming the lower one. The torque balance is exact
-at cruise rather than hover, so a small residual remains in hover.
+Section 3.3 computes both ends of it rather than assuming the lower one. The torque balance is
+exact at cruise rather than hover, so a small residual remains in hover. **What trims that
+residual is not established here, and the omission is worth naming rather than leaving to be
+found.** It is too small to be carried by the tip pairs without spending roll-axis authority the
+aircraft does not have in hover, and the strip works against dynamic pressure the slipstream
+supplies only over its inboard portion. Either the residual is small enough to be absorbed by
+the speed trim of the pairs — which this study has not shown — or a fourth duty falls on the
+strip. Section 4.6 records it.
 
 The arrangement has a second consequence the transition analysis depends on. Because the two
 rotors of each pair carry equal and opposite angular momentum, **the net angular momentum of the
@@ -2281,7 +2298,12 @@ take-off one.** Section 4 records it.
 ## 3.17 Whether there is enough authority to rotate, and whether it trims
 
 Rotating the airframe through ninety degrees is the manoeuvre this configuration must perform
-with four small propellers and no pitch control surface — the one aerodynamic device the aircraft carries, the roll strip of Section 2.10, produces no pitching moment and takes no part in this manoeuvre. Supplementary S4 carries the full budget —
+with four small propellers and no pitch control surface. **The one aerodynamic device the
+aircraft carries, the roll strip of Section 2.10, is not commanded during the rotation** — and
+that is a scheduling requirement rather than a property of the device, because Section 2.10
+shows the strip *does* pitch the nose down when it is deployed, by ΔC_m between 0.005 and 0.032.
+At the upper end that would consume two thirds of the budget below, which is why Section 2.10
+requires it not be commanded at full extension at the end of the rotation. Supplementary S4 carries the full budget —
 inertia derivation, rotation profiles, centre-of-gravity window, twist sweep and the measured
 section evidence. This section states what it returns.
 
@@ -2696,6 +2718,18 @@ not established, and the toe-out its aspect ratio requires carries a stall-relat
 at large sideslip that has not been computed. Hover disturbance rejection, ground handling,
 crosswind and vertical descent have been checked only to order of magnitude or not at all.
 
+**The strip's actuation is unsized, and it lives in the worst place on the aircraft for an
+actuator.** Supplementary S3 bounds what the actuator must *achieve* — a fifty-millisecond
+deployment holds the bank oscillation to ±0.2° in the crudest bang-bang case, a hundred and
+fifty milliseconds lets it reach ±9.4° — but nothing here sizes the device that achieves it: no
+mass, no power draw, no bandwidth, no hinge. And the inboard 46 percent of the strip sits inside
+the nose propeller's slipstream, which is where its hover authority comes from and also a
+high-frequency pulsating load environment. **Whether an actuator can be built that is fast
+enough for a hover axis with no aerodynamic damping, and survives that load spectrum for a
+fourteen-hour endurance flight, is not addressed anywhere in this paper.** It belongs beside the
+battery and the pitching moment rather than below them. **The residual hover torque of
+Section 2.9 may add a fourth duty to the same device**, which would tighten the same requirement.
+
 **The free-wheeling-versus-indexing trade is unpriced, and it is the first thing a reader of
 Section 3.3 will ask.** Stopping the tip rotors edge-on at a controlled azimuth costs 0.0008 in
 zero-lift drag against the free-wheeling state's 0.0154 — a factor of twenty — at the price of an
@@ -2859,10 +2893,9 @@ Against the fixed-wing family this aircraft needs no runway; against the multiro
 cruises on a wing; against the tilting family it reaches the same regime transition **without reorienting a
 propulsor** — no pivot, no nacelle actuator, no gyroscopic moment from tilting mass, no
 variable-pitch hub. It is not a claim that nothing on the aircraft moves: the roll strip is a
-moving aerodynamic device and the paper charges it as one. The tilting solution is the less widely
-fielded of the two contemporary hybrid families, and the reasons given for that in the literature
-are mechanical and control reasons rather than aerodynamic ones; **this configuration is offered
-as an alternative route to the same end, and that is what it is for.** Each of those three claims
+moving aerodynamic device and the paper charges it as one. **What a tilting layout pays to reach
+the same regime is mechanical and control cost rather than aerodynamic cost; this configuration
+is offered as an alternative route to the same end, and that is what it is for.** Each of those three claims
 is made against a different family on a different axis, and none of them is a range ranking
 against the other hybrids — a ranking this paper reports in full, finds to reverse with the
 sizing contract, and does not claim. **The absence of a mechanism is countable and no contract

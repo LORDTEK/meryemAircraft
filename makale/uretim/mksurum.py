@@ -152,6 +152,11 @@ try:
 except Exception:
     _c = ""
 if _c:
+    import glob
+    # Her kurulum yeni bir commit adi uretir; eskiler birikmesin. Dizinde
+    # HER ZAMAN tek bir surum durur, o da en son kurulani.
+    for _eski in glob.glob(os.path.join(MAKALE, "gonderilecek", "makale-*.md")):
+        os.remove(_eski)
     for _kaynak, _etiket in ((makale, ""), (ek_belge, "-ek")):
         _ad = "makale-%s%s-%s.md" % (SURUM, _etiket, _c)
         open(os.path.join(MAKALE, "gonderilecek", _ad), "w",

@@ -68,6 +68,27 @@ yakaladı, çünkü §2.10 her iki sürümde de aynıydı. **Ders: bir iddiayı
 düzeltirken, yeni iddianın makalenin kendi bölümleriyle çelişip çelişmediğini
 denetle.** Doğru çerçeve, yanlış kapsamla yazılırsa yine yanlıştır.
 
+### 0.2 Aynı hata ÜÇÜNCÜ kez oldu. Kural artık mekanik.
+
+§2.10 çelişkisini düzeltirken §3.17'ye *"şerit yunuslama momenti üretmez"*
+yazdım. §2.10 ise şeridin **burnu aşağı yunuslattığını** söylüyor
+(ΔC_m 0,005–0,032). Yine düzeltmenin kendisi yeni bir çelişki doğurdu.
+Ayrıca dayanağı olmayan bir sayı uydurdum: *"artı bir şerit eyleyicisi."*
+Makale şeridin eyleyici sayısını hiçbir yerde vermiyor; §2.10 onu **iki
+yarım** olarak tarif ediyor.
+
+**Bundan sonraki kural — istisnasız:**
+
+> Bir iddiayı ya da bir özeti yazdıktan sonra, içindeki **her olgusal
+> yüklem** için o iddianın özetlediği bölümü AÇ ve oku. Sayı veriyorsan
+> o sayının kaynakta geçtiğini gör. Bir şeyin *olmadığını* söylüyorsan,
+> onun olduğunu söyleyen bir bölüm var mı diye ara.
+
+Üç turda üç kez: "hiçbir mimari üstünlük yok" (4.2 ile çelişti),
+"hareket eden mekanizma yok" (2.10 ile çelişti), "şerit yunuslama momenti
+üretmez" (yine 2.10 ile çelişti). Üçü de **özet yazarken** oldu. Özet
+yazmak, bu projede en yüksek hata oranlı iştir.
+
 ## 1. Yazışma ve üslup
 
 - Kullanıcıyla **Türkçe**. Öteki YZ'lere (ChatGPT, Grok, DeepSeek, Qwen)
