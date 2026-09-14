@@ -8,12 +8,12 @@
 
 ## Authors
 
-Meryem Gülmen <sup>1,\*</sup>, Berke Gülmen <sup>1</sup>, Ömer Gülmen <sup>1</sup>
+Meryem Gülmen <sup>1,\*</sup>, Berke Gülmen <sup>1</sup>, Ömer Gülmen <sup>1,\*</sup>
 
 <sup>1</sup> Independent Researcher, Türkiye; meryemgulmen@outlook.com (M.G.);
 berkegulmen@outlook.com (B.G.); lordtek@me.com (Ö.G.)
 
-<sup>\*</sup> Correspondence: meryemgulmen@outlook.com
+<sup>\*</sup> Correspondence: meryemgulmen@outlook.com (M.G.); lordtek@me.com (Ö.G.)
 
 ## Highlights
 
