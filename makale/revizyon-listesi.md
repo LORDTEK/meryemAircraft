@@ -1,10 +1,12 @@
 # Revizyonda düzeltilecekler
 
-Makale *Drones*'a gönderildi. Bu liste, gönderimden **sonra** bulunan ve hakem
-raporu geldiğinde düzeltilecek olan şeyleri tutar. Şu anda makaleye dokunmuyoruz:
-gönderilen dosya ile depodaki dosya ayrışırsa, bu depoda iki kez bedeli ödenmiş
-olan "aynı ad, iki içerik" sorunu yeniden doğar. `SURUMLER.md` kuralı geçerli —
-düzeltme yeni sürüm numarası alır ve o sürüm revizyonla birlikte üretilir.
+Makale *Drones*'a gönderildi — **Manuscript ID drones-4595522**, gönderim
+2026-09-14 15:06:04, durum *Pending review*. Bu liste, gönderimden **sonra**
+bulunan ve hakem raporu geldiğinde düzeltilecek olan şeyleri tutar. Şu anda
+makaleye dokunmuyoruz: gönderilen dosya ile depodaki dosya ayrışırsa, bu depoda
+iki kez bedeli ödenmiş olan "aynı ad, iki içerik" sorunu yeniden doğar.
+`SURUMLER.md` kuralı geçerli — düzeltme yeni sürüm numarası alır ve o sürüm
+revizyonla birlikte üretilir.
 
 ---
 
@@ -73,3 +75,6 @@ dediği şeyler. Rapor gelince hangisinin geldiğine bakılır.
   eklenebilir ve görünürlüğe yarar.
 - **600 dpi yeniden dışa aktarım** gerekirse; şu an en düşük şekil 387 dpi ve
   MDPI'ın 300 sınırının üstünde.
+- **Depo için ayrı bir Zenodo DOI'si üret** (GitHub–Zenodo bağı). Şu an Data
+  Availability alanında depo için çıplak GitHub bağı var; bir hakem haklı olarak
+  "GitHub kalıcı değil" diyebilir. Kabul öncesi yapılırsa son nüshaya girer.
