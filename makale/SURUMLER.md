@@ -17,10 +17,14 @@ yeni bir sürüm numarası alır.
 | v7 | `makale-v7.md`, `makale-v7-ek.md` | `8138b62` | Zenodo'da yayımlandı — DOI `10.5281/zenodo.22745666`, sha `c5b0cd898d20` |
 
 **v7, *Drones*'a gönderilen sürümdür.** Manuscript ID **drones-4595522**,
-gönderim 2026-09-14 15:06:04. Yani bu dosya artık iki yerde birden sabittir:
-Zenodo'da ve dergi sisteminde. Değiştirilirse üçüncü bir "aynı ad, iki içerik"
-vakası doğar ve bu sefer hakemin elindeki nüshayla ayrışır. Düzeltmeler
-`revizyon-listesi.md`'de birikir, **v8** olarak çıkar.
+gönderim 2026-09-14 15:06:04. **2026-09-15'te masadan reddedildi** — *Drones*
+kapsam dışı bulup *Aerospace*'e aktardı (`aerospace-4595522`), *Aerospace* aynı
+gün reddetti. Hakeme gitmedi; ayrıntı ve öğrenilenler `drones-gonderim.md` §10.
+
+Ret, v7'yi değiştirmek için gerekçe **değildir**: v7 Zenodo'da yayımlandı ve
+orada sabittir. Bu depoda "aynı ad, iki içerik" bedeli iki kez ödendi. Ne
+yapılacaksa **v8** olarak yapılır; düzeltmeler `revizyon-listesi.md`'de
+birikmeye devam eder.
 
 Sürüm numarası `makale/uretim/surum.py` içindedir ve **tek yerdedir**. Önce
 öyle değildi: `mkdocx.py`, `mkekpdf.py` ve `baglanti.py` kendi kopyalarını
