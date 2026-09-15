@@ -13,6 +13,31 @@ revizyonla birlikte üretilir.
 
 ---
 
+## 0. HEDEF DERGİNİN KENDİ ŞARTI — v8'de her şeyden önce gelen madde
+
+*Drones*'un aims & scope sayfasında yazılı, denetlenebilir bir şart var. Tur 27'de
+iki dış okuyucu söyledi, ben doğruladım:
+
+> "If the manuscript is dealing with general theoretical aircraft design, it is
+> recommended to validate the theoretical/numerical results with experimental data
+> from a study of an unmanned platform, **at least at a laboratory scale**."
+
+Makalemiz genel teorik uçak tasarımıdır, **hiçbir deneysel verisi yoktur** ve bunu
+kendi özetinde söyler. Yani "kapsam dışı" büyük olasılıkla nazik bir kalıp değil,
+**birebir doğru** bir tespitti.
+
+**Bu benim hatam ve gönderimdeki en büyüğü.** `drones-gonderim.md` formun dokuz
+bölümünü adım adım yürüdü; derginin kendi şartlarını makaleyle hiç karşılaştırmadı.
+Denetlenen her şey iyi denetlendi — sayılar, bağlar, şekil sırası — ve sonucu
+belirleyen tek şey hiç açılmadı.
+
+**v8 kuralı, mekanik:** bir hedef dergi adı konmadan önce o derginin aims, scope ve
+özel şartları baştan sona okunur ve **şart şart** makaleyle karşılaştırılıp yazılır.
+Makaleyi kendine karşı denetleyip yere karşı hiç denetlemeyen bir düzen, yanlış şeyi
+denetliyor demektir.
+
+---
+
 ## 1. EKSİK KAYNAK — en önemlisi, ve bir hakem bunu kesin görecek
 
 **Bacchini, A.; Cestino, E.; Magill, B.; Verstraete, D. *Impact of lift propeller
