@@ -7,7 +7,7 @@ gerekiyor), **KARAR** (iki seçenek var, seçmen gerek).
 
 ---
 
-## 0. Durum — GÖNDERİLDİ, drones-4595522 (bkz. §9)
+## 0. Durum — **MASADAN DÖNDÜ.** Hakeme gitmedi (bkz. §10)
 
 **Yazar katkıları onaylandı** (senin "iş paylaşımı o şekilde" onayınla), taslak
 işareti kaldırıldı. **Zenodo kök DOI'si eklendi:** Data Availability artık
@@ -288,7 +288,7 @@ anılacak, hakem raporu bu numarayla gelecek.
 | Başlık | The Architectural Cost of Hybrid VTOL: meryemAircraft, a Propeller-Driven Tail-Sitting Blended-Wing-Body Without a Dedicated Lift System |
 | Dergi | *Drones* (MDPI) |
 | Gönderim tarihi | 2026-09-14, 15:06:04 |
-| Durum | Pending review |
+| Durum | **Reddedildi — masadan, 2026-09-15.** Bkz. §10 |
 | Gönderen | Ömer Gülmen (submitting author) |
 | Sorumlu yazar | Meryem Gülmen — meryemgulmen@outlook.com |
 
@@ -307,3 +307,67 @@ Reference number `973b12f`.
 **Şimdi ne olacak.** Drones'ta ortalama ilk karar ~16 gün. İlk engel hakem
 değil, **editör masası**: uzunluk gerekçesiyle geri gelirse cevabı §7'nin
 sonunda hazır duruyor. Hakem raporu geldiğinde bana getir.
+
+---
+
+## 10. Masadan döndü — kayıt ve ne öğrendik
+
+Bu bölüm kayıt içindir. Karar burada verilmiyor; olan biten burada duruyor.
+
+### Olay dizisi
+
+| Tarih | Ne oldu |
+|---|---|
+| 2026-09-14 15:06 | *Drones*'a gönderildi, `drones-4595522`, "Pending review" |
+| 2026-09-15 | *Drones* **kapsam dışı** dedi; **hakeme göndermeden**, gönderim formundaki *alternatif dergi* seçimi uyarınca *Aerospace*'e aktardı |
+| 2026-09-15 | *Aerospace* aynı gün aldı (`aerospace-4595522`) ve **aynı gün masadan reddetti** — "discipline, novelty and general significance" kalıbı |
+
+### Tek en önemli olgu
+
+**Metni kimse okumadı.** *Aerospace* makaleyi aldığı gün reddetti. 35 827 kelimelik
+gövde ve 32 739 kelimelik ek, bir günde okunmaz. Karar **başlık, özet ve sayfa
+sayısı** üzerinden verildi. Yani bu ret, makalenin fiziğine ilişkin **hiçbir şey
+söylemiyor** — ne lehte ne aleyhte. Ambalaja ilişkin bir şey söylüyor.
+
+Bu ayrım kaydedilsin, çünkü bir sonraki turda "demek ki yanlışmış" diye
+yorumlamak kolay olacak. Yanlış olduğu söylenmedi. Bakılmadı.
+
+### Kendi hatalarım — ikisi de belgeli
+
+**1. Kapak mektubunda rakip dergiyi ben adlandırdım.** `drones-kapak-mektubu.txt`
+içindeki "HOW THIS WORK IS LINKED TO DRONES" bölümünün son paragrafı şunu
+diyor:
+
+> We note that the closest literature to this work, and six of our references,
+> appear in Aerospace. We are submitting to Drones rather than to Aerospace
+> because…
+
+Amacım "neden Drones, neden Aerospace değil" itirazını önceden karşılamaktı.
+Sonuç: editörün kapsam için ilk baktığı bölüme, **aktarılacak dergiyi yazılı
+olarak koydum.** Kapak mektubunda başka bir derginin adı geçmez. Bunun kararda
+payı oldu mu bilinmez; bilinen, benim yazmış olduğumdur.
+
+**2. Uzunlukta "olduğu gibi gönder" dedim.** §7'nin sonunda duruyor: riski
+gördüm, adını koydum ("editör masadan çevirebilir"), hazır cevabı yazdım ve yine
+de gönderilmesini önerdim. Hazır cevap işe yaramadı çünkü **cevap verilecek bir
+soru gelmedi.** Masadan dönen makale itiraz edemez. 35 827 kelime, bu dergilerde
+tipik makalenin üç katıdır ve editör bunu kapağa bakarak görür.
+
+§7'deki gerekçe ("çerçeveyi ve onu sınayan vakayı ayırmak ikisini de zayıflatır")
+kendi içinde hâlâ geçerli — ama o bir **hakeme** yapılacak savunmadır ve masadan
+dönen makalenin hakemi olmaz. Savunulamayan doğru, pratikte yoktur.
+
+### Formda hiç konuşmadığımız alan
+
+Gönderim formunda bir **alternatif dergi / aktarım onayı** alanı varmış; aktarım
+"in accordance with your alternative journal selection at submission" diye
+gerekçelendirildi. Bu kontrol listesi dokuz bölüm boyunca formu adım adım
+yürüdü ve **o alana hiç değinmedi.** Bir sonraki gönderimde formun her alanı
+önceden yazılır; "herhalde önemsizdir" diye atlanan alan kalmaz.
+
+### Bundan sonrası
+
+Karar verilmedi. Seçenekler ve ölçüleri konuşuluyor; seçildiğinde
+`revizyon-listesi.md` ona göre yeniden düzenlenir. Kesin olan tek şey:
+**v7 dosyalarına dokunulmaz.** Zenodo'da yayımlandılar, orada sabitler.
+Ne yapılacaksa **v8** olarak yapılır.
