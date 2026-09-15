@@ -236,7 +236,8 @@ kaynakçasından, çıkar çatışması olmayanlar:
 
 ### Ve dördüncü bir şey, kontrol değil **karar**: makale uzun
 
-Ana metin **36 200 kelime**, ek belge **33 100**. *Drones* katı bir sınır koymuyor
+Ana metin **35 969 kelime / 79 sayfa**, ek belge **32 393 / 60 sayfa** (gönderilen
+docx ve pdf üzerinden ölçüldü; daha önce burada duran 36 200 / 33 100 yaklaşıktı). *Drones* katı bir sınır koymuyor
 ama bu, tipik bir dergi makalesinin üç katı. İki sonuç doğurabilir:
 
 - **Editör masadan çevirebilir** ("please condense"), ki bu hakemliğe hiç

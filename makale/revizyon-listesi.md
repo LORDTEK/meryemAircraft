@@ -4,8 +4,9 @@ Makale *Drones*'a gönderildi (`drones-4595522`), **masadan reddedildi ve
 *Aerospace*'e aktarılıp orada da masadan reddedildi** — 2026-09-15, hakeme
 gitmeden. Kayıt ve öğrenilenler: `drones-gonderim.md` §10. Bu liste, gönderimden
 **sonra** bulunan ve bir sonraki sürümde düzeltilecek olan şeyleri tutar; artık
-hakem raporunu beklemiyor. Şu anda
-makaleye dokunmuyoruz: gönderilen dosya ile depodaki dosya ayrışırsa, bu depoda
+hakem raporunu beklemiyor.
+
+Şu anda makaleye dokunmuyoruz: gönderilen dosya ile depodaki dosya ayrışırsa, bu depoda
 iki kez bedeli ödenmiş olan "aynı ad, iki içerik" sorunu yeniden doğar.
 `SURUMLER.md` kuralı geçerli — düzeltme yeni sürüm numarası alır ve o sürüm
 revizyonla birlikte üretilir.
@@ -64,7 +65,7 @@ dediği şeyler. Rapor gelince hangisinin geldiğine bakılır.
 | Şerit eyleyicisi boyutlandırılmamış, üstelik pervane izinde (bant genişliği, yorulma) | §4.6'da açık madde |
 | Ağır hat için sürükleme bandı hesaplanmamış | §3.8 asimetriyi adlandırıyor |
 | Serbest dönme ile kenarı öne kilitleme arasındaki ticaret fiyatlanmamış (yirmi kat) | §3.3 ve §4.6'da açık madde |
-| Makale uzun (36 200 + 33 100 kelime) | `drones-gonderim.md` 7. maddede hazır cevap |
+| Makale uzun (35 969 + 32 393 kelime, 79 + 60 sayfa) | `drones-gonderim.md` 7. maddede hazır cevap |
 
 ---
 
