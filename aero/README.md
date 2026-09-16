@@ -14,7 +14,7 @@ sorusunun karşılığı, yerleşik ve bağımsız bir kod kullanmaktır.
 |---|---|
 | `planform.py` | Planformu makalenin ok açısı yasalarından yeniden kurar; künye değerleriyle karşılaştırır |
 | `vlm.py` | Girdap-kafes çözümü: kaldırma eğrisi eğimi ve açıklık verimi |
-| `duyarlilik.py` | Geçiş tablolarının, hesaplanmış eğime dayanıp dayanmadığını sınar |
+| `sensitivity.py` | Geçiş tablolarının, hesaplanmış eğime dayanıp dayanmadığını sınar |
 
 `python3 planform.py` — planform açıklık, alan, AR, uç veteri ve uç ok açısını
 künyeyle **%0,2'nin altında** farkla yeniden üretiyor.
@@ -56,7 +56,7 @@ iyiymiş" demek yanlış olurdu — farklı iki büyüklüğü karşılaştırma
 
 | | CL_α |
 |---|---:|
-| `gecis2.py` varsayımı, 2π/(1+2/AR) | 4,72 /rad |
+| `transition2.py` varsayımı, 2π/(1+2/AR) | 4,72 /rad |
 | VLM hesabı | **3,87 /rad** |
 
 Fark %18 ve yön kötü tarafa: benzetim, geçiş sırasında kaldırmanın gerçekte
@@ -64,7 +64,7 @@ olduğundan hızlı toparlandığını sanıyor.
 
 ### 3. Ama geçiş sonuçları buna dayanıyor
 
-`duyarlilik.py` iki eğimle de tabloları üretiyor. En büyük sapma **4,0 m** ve o
+`sensitivity.py` iki eğimle de tabloları üretiyor. En büyük sapma **4,0 m** ve o
 da makalede referans olarak verilmeyen bir noktada (hafif hat, 1 s dönüş,
 w₀ = 5 m/s). Yayımlanmış tablolardaki değişim en çok **1,2 m**.
 
@@ -74,7 +74,7 @@ eğrisi eğimindeki %18'lik hataya dayanacak kadar sağlam.
 
 ### 4. `C_D0` bileşen bileşen kuruldu
 
-`cd0.py` şerit yöntemiyle kanat/gövdeyi, `ozet.py` sonuçları toplar. Kesit
+`cd0.py` şerit yöntemiyle wing/gövdeyi, `summary.py` sonuçları toplar. Kesit
 sürükleme katsayıları NeuralFoil'den (XFOIL üzerine eğitilmiş) **sıfır
 kaldırmada** alınıyor — `C_D0`'ın tanımı budur.
 
@@ -171,7 +171,7 @@ somununun doğal spinner etkisini ve koaksiyel çiftte arkadaki motorun öndekin
 izinde kalmasını hesaba katar. Kaportalamanın kazancı `C_D0`'da yalnızca **0,0010**,
 L/D'de %0,5'ten az — sonucu değiştirmediği için tasarımı bağlamıyoruz.
 
-## Hacim kapanışı — `hacim.py`
+## Hacim kapanışı — `volume.py`
 
 Kanat-gövde yükü gövdenin **içinde** taşır, dolayısıyla görev seçiminden önce
 sorulması gereken şey şudur: yük zaten sığıyor mu?
@@ -190,7 +190,7 @@ zaten "en çok yanılma ihtimali olan yer" dediği kalem.
 
 ---
 
-## `temel.py` — karşılaştırmalı temel: dış denetim sonrası düzeltmeler (08.09.2026)
+## `baseline.py` — karşılaştırmalı temel: dış denetim sonrası düzeltmeler (08.09.2026)
 
 İki bağımsız denetim de aynı yere işaret etti: hesap tutarlı, ama
 **C'ye (tilt) verilen varsayımlar sonucu hesap başlamadan belirliyor.**
@@ -344,7 +344,7 @@ uygulanıyor ve tam 12,00 çıkıyor. Doğrulama tablosu bunu kilitliyor.
 
 ---
 
-## `kutle.py` — bileşen düzeyinde kütle bütçesi (08.09.2026)
+## `mass.py` — bileşen düzeyinde kütle bütçesi (08.09.2026)
 
 Üç dış denetim de listeledi; YZ3 Q1 için zorunlu saydı. Makale §6.2'nin
 kesirleri (%30 yapı / %16 tahrik / %4 pil / %8 aviyonik / %16 yakıt →
@@ -486,7 +486,7 @@ Kayda geçti (§8.2).
 
 ---
 
-## `donme.py` — geçiş dönme dinamiği ve uç pervane boyutlandırması (08.09.2026)
+## `rotation.py` — geçiş dönme dinamiği ve uç pervane boyutlandırması (08.09.2026)
 
 §8.14'ün 3. maddesi *"uç pervaneleri mertebe tahminiyle değil düzgün
 boyutlandırmak"* diyor. Tam 6-DoF bunun için gerekli değil — ve zaten
@@ -502,7 +502,7 @@ etrafında yunuslama.** Geçişin döndüğü eksen de bu. Yani I_yy gerekli.
 
 ### Atalet, kütle bütçesinden
 
-`kutle.py`'nin kalem kütleleri `planform.py`'nin geometrisine dağıtıldı
+`mass.py`'nin kalem kütleleri `planform.py`'nin geometrisine dağıtıldı
 (kabuk/iç yapı planforma yayılı, uç çerçeveleri z boyunca çubuk, uç
 motorları z = ±0,71 m'de nokta, merkez gövde kalemleri veter boyunca).
 Yalnızca **konumlar** varsayım; kütleler bütçeden geliyor.
@@ -570,7 +570,7 @@ kontrol payı değil. Aerodinamik moment bu payı yiyebilir.
 
 ## ⚠️ DÜZELTME — dönme momenti modeli yanlıştı (08.09.2026)
 
-Dış denetim yakaladı ve haklı: `donme.py`'nin ilk sürümü mevcut
+Dış denetim yakaladı ve haklı: `rotation.py`'nin ilk sürümü mevcut
 momenti **4TL** alıyordu. Yanlış. 4TL, **alt çiftlerin −T üretmesini**,
 yani itkinin tersine çevrilebilmesini gerektirir. Bu uçakta pervaneler
 tersine çalışmıyor; itki negatif olamaz.
@@ -657,7 +657,7 @@ Yaklaşık **12 metre**. Bu, yayımlanmış bir tablo değeri ve düzeltilmeli.
 
 ## Ağır hattın geçiş süresi 4 s → 5,1 s (08.09.2026)
 
-`donme.py`'nin düzeltilmiş hâli, ağır hattın 4 saniyelik dönüşünün bir
+`rotation.py`'nin düzeltilmiş hâli, ağır hattın 4 saniyelik dönüşünün bir
 **sınır** olduğunu gösterdi: üçgen profilde pay 1,26, yumuşak profilde
 **0,84 — kapanmıyor.**
 
@@ -678,7 +678,7 @@ sıfır kalıyor.
 
 **Not — bulgu makalenin kendi Tablo 4'üyle çelişmiyor, onu tekrarlıyor.**
 Tablo 4 zaten 4 s'nin uç pervane payının neredeyse tamamını (%13)
-yediğini söylüyordu. `donme.py` bunu moment cinsinden yeniden buldu ve
+yediğini söylüyordu. `rotation.py` bunu moment cinsinden yeniden buldu ve
 üzerine **dönme profilini** ekledi — Tablo 4 profil ayrımı yapmıyordu.
 
 ## Aerodinamik moment eşiği — atalet küçük terim çıktı
@@ -703,7 +703,7 @@ büyük açık kalemi ilan edildi.**
 
 ---
 
-## `zarf.py` — geçiş tasarım zarfı: hücum açısı 90°'ye ÇIKMIYOR (08.09.2026)
+## `envelope.py` — geçiş tasarım zarfı: hücum açısı 90°'ye ÇIKMIYOR (08.09.2026)
 
 §7.6 eşiği tek bir temsili hızda hesaplıyordu ve bu, yanlış bir soru
 sordurtuyordu: *"90 dereceye kadar C_m ne kadar?"*
@@ -762,7 +762,7 @@ kısımları ~30° görüyor. İhmal edilemez; metne yazıldı.
 
 ---
 
-## ⚠️ `kararlilik.py` — SEYIRDE DENGE SAĞLANAMIYOR (08.09.2026)
+## ⚠️ `stability.py` — SEYIRDE DENGE SAĞLANAMIYOR (08.09.2026)
 
 Dış denetimin ikisi de aynı yere bastı: §7.6'nın "dönüşün sonundaki dar
 bütçe, kuyruksuz bir uçağın **sıradan** denge sorusudur" ifadesi
@@ -786,7 +786,7 @@ tamamen olağan bir değer — yani VLM sonucu güvenilir.
 ### Sorun geometride değil, AĞIRLIK MERKEZİNDE
 
 Ok açısı yüzünden MAC hücum kenarı kök veterinin **%65,5**'inde, çeyrek
-MAC ise **%82,3**'ünde. Ama `donme.py`'nin kütle dağılımı CG'yi kök
+MAC ise **%82,3**'ünde. Ama `rotation.py`'nin kütle dağılımı CG'yi kök
 veterinin **%57**'sine koyuyor — yani **MAC'in hücum kenarının bile
 önüne.**
 
@@ -814,7 +814,7 @@ fark var.
 **Bu bir VLM hatası değil** — tarafsız nokta %34 MAC, tamamen normal.
 
 **Bu makalenin bir hatası da tam olarak değil** — çünkü **makale CG
-konumunu hiçbir yerde belirtmiyor.** %57 benim `donme.py` içindeki
+konumunu hiçbir yerde belirtmiyor.** %57 benim `rotation.py` içindeki
 bileşen konumu varsayımımdan geliyor ve orada zaten "yalnızca konumlar
 varsayım" diye işaretlenmişti.
 
@@ -844,7 +844,7 @@ bilinemez.
 
 ### DÜZELTME — hatayı ben yapmışım, ve tablo tersine döndü
 
-Yukarıdaki "%57 CG" **benim** varsayımımdı ve **yanlıştı**: `donme.py`'de
+Yukarıdaki "%57 CG" **benim** varsayımımdı ve **yanlıştı**: `rotation.py`'de
 yakıtı, yükü ve motoru veter boyunca elle yerleştirmiş, **iç hacmin
 nerede olduğuna bakmamıştım.**
 
@@ -910,7 +910,7 @@ veterle yazılması. Bu, makaleye de aynen geçmişti.
 Ölçülen: gerçek **MAC = 0,6514 m**, MAC hücum kenarı x = 0,6354 m,
 ortalama geometrik veter S/b = 0,5730 m. Aralarında %13,7 fark var.
 
-`kararlilik.py` artık **her yerde MAC** kullanıyor — VLM'in kendi
+`stability.py` artık **her yerde MAC** kullanıyor — VLM'in kendi
 boyutsuzlaştırmasında da. Tarafsız nokta değişmiyor (x_np = c_ref ×
 eğim çarpımı referanstan bağımsız), oran değişiyor.
 
@@ -965,11 +965,11 @@ diye değil.
 | §7.6 denge C_m | 0,063 | **0,056** |
 | §7.6 statik marj | %12,4 | **%12,5** |
 
-`dogrula.py`: 40 kontrol, 0 sapma.
+`verify.py`: 40 kontrol, 0 sapma.
 
 ---
 
-## `kararlilik.py` — KONVANSIYON DENETIMI (08.09.2026)
+## `stability.py` — KONVANSIYON DENETIMI (08.09.2026)
 
 Referans veter hatasi bir *konvansiyon* hatasiydi, aritmetik degil.
 Ayni aileden ikincisinin OLMADIGINI varsaymak yetmez. Alti sinama
@@ -991,7 +991,7 @@ türetilirse %12,8. Metne yazıldı.
 
 ---
 
-## ⚠️ `yatis.py` — 46 N·m NEREDEN GELİYOR? (08.09.2026)
+## ⚠️ `roll.py` — 46 N·m NEREDEN GELİYOR? (08.09.2026)
 
 YZ3 (9. tur) makalenin en zayıf **taşıyıcı** iddiasının denge değil
 **yatış** olduğunu söyledi. Haklıydı ve sayı tutmadı.
@@ -1069,7 +1069,7 @@ DEĞİLDİR.
 
 ---
 
-## `sapma.py` — SAPMA: OTORİTE BOL, KARARLILIK YOK (08.09.2026)
+## `yaw.py` — SAPMA: OTORİTE BOL, KARARLILIK YOK (08.09.2026)
 
 Üç değerlendirmenin **üçü de** dondurmadan önce sapma eksenine bakılmasını
 istedi. Bakıldı ve eksen ikiye ayrıldı.
@@ -1140,7 +1140,7 @@ anılıyor. Dokunulmadı.
 
 ## 🔑 KAYNAKTAN ÇALIŞMAK — iki taşıyıcı iddia kapandı (09.09.2026)
 
-35 PDF `kaynakca/` altına yüklendi ve okundu. İki sonuç, ikisi de metni
+35 PDF `references/` altına yüklendi ve okundu. İki sonuç, ikisi de metni
 değiştirdi.
 
 ### 1. DENGE: refleks yapamıyor, burulma yapıyor
@@ -1165,7 +1165,7 @@ atıfsız değil, **bir mertebe yanlıştı**. Silmekle iyi etmişiz.
 
 **Çözüm burulma.** Ok açısı uçları geriye taşıdığı için uçtaki negatif burulma
 burun-yukarı moment üretir; mekanizma **geometrik**, kesitsel değil, o yüzden
-simetrik kesitli VLM onu doğrudan hesaplayabiliyor. `kararlilik.py`'ye
+simetrik kesitli VLM onu doğrudan hesaplayabiliyor. `stability.py`'ye
 `denge_burulmasi()` eklendi:
 
 | uç burulması | denge α | C_m | C_Di | e | seyir L/D |
@@ -1414,7 +1414,7 @@ kanadın **dış** yarısı, izin dışında kalan kısım.
 - Modelin doğrulaması Folk'ta Misiorowski'ye atfediliyor ve **onu okumadık**.
 - Kaynak bir doktora yeterlik raporu, hakemli makale değil. Böyle anıldı.
 
-`zarf.py`'ye `etkin_alfa()` eklendi. Kaynakça 23.
+`envelope.py`'ye `etkin_alfa()` eklendi. Kaynakça 23.
 
 ---
 
@@ -2152,7 +2152,7 @@ yazılacak — bu bizim aleyhimize bir kalem, ve yazılması gerekiyor.
 
 ## 🔑 NACA TR-796 / ACR L4H19 (1944) — okuduğumuz en verimli tek kaynak (12.09.2026)
 
-Önce bir tespit: `kaynakca/`'daki **iki dosya aynı rapordur.**
+Önce bir tespit: `references/`'daki **iki dosya aynı rapordur.**
 `NACA-ACR-L4H19_1944_tailless-tip-fins.pdf` savaş zamanı ön baskısı (Ekim 1944),
 `NACA-TR-796_...pdf` yayımlanmış hâli. Aynı metin, aynı şekiller. Atıf
 **TR-796'ya** yapılacak; ACR'ın OCR'ı kötü, alıntılar TR-796'dan alındı.
@@ -2217,7 +2217,7 @@ the tip fin is so large (one-half the span)"* diyor. Aynı sayı, 1944'ten.
 
 0,001/derece = **0,0573 /rad.** Serbest-uçuş tabanı = **0,0191 /rad.**
 
-`sapma.py`'de kullandığımız 0,03 ve 0,05 /rad **bizim seçtiğimiz** sayılardı ve
+`yaw.py`'de kullandığımız 0,03 ve 0,05 /rad **bizim seçtiğimiz** sayılardı ve
 ikisi de yerleşik ölçütün **altında.** Hedefler artık etiketleriyle birlikte
 modülde; fairing veteri de ölçüt için yeniden hesaplandı. Ve rapor kuyruksuz
 uçakların bu gereksinimden muaf olmadığını **açıkça** söylüyor — kaçış yok.
@@ -2260,7 +2260,7 @@ kuplajı düşük α'da azalıyor. **Bizim kritik durumumuz seyir.**
 Kullanıcının düzeltmesinden sonra şerit **sürekli değişken**; o hâlde bu eşik
 kumanda kursunun altından bir **ölü bant** kesiyor. Ve şerit konik olduğu için
 eşik her istasyonda aynı kumanda kesrinde aşılmıyor: dışta yükseklik büyük,
-veter küçük — **dış uç önce çalışıyor.** `yatis.py`'ye `esik_istasyonu()` ve
+veter küçük — **dış uç önce çalışıyor.** `roll.py`'ye `esik_istasyonu()` ve
 `esik_kolu()` eklendi, gerçek planform veteriyle:
 
 | kumanda kesri f | eşik istasyonu | etkin % | kol (m) | M/M_tam | doğrusal olsa |
@@ -2361,7 +2361,7 @@ kodumuzda:**
 
 | gereken | bizde ne var |
 |---|---|
-| burulmuş kanadın açıklık yükü | `vlm.py` / `kararlilik.py:denge_burulmasi()` |
+| burulmuş kanadın açıklık yükü | `vlm.py` / `stability.py:denge_burulmasi()` |
 | şerit başına 2-B ağdalı çözüm | `cd0.py` NeuralFoil'i (XFOIL üzerine eğitilmiş) **şerit şerit** çağırıyor |
 | eksik olan tek şey | `cd0.py` kesit direncini **sıfır kaldırmada** okuyor; burulmuş kanadın **yerel C_l'inde** okumuyor |
 
@@ -2386,7 +2386,7 @@ Aynı makale, doğrulama bölümünde şunu açıkça yazıyor:
 Bu, bu çalışmada benim yaptığım referans-veter hatasının ta kendisidir: kararlılık
 payı MAC'te, denge gereksinimi S/b'de idi. Ciddi bir yayın, hangi veteri ve
 hangi momenti aldığını **tek cümlede** ilan etme gereği duyuyor. Bu,
-`kararlilik.py:konvansiyon_denetimi()`'nin varlık sebebini dışarıdan
+`stability.py:konvansiyon_denetimi()`'nin varlık sebebini dışarıdan
 doğruluyor — §6'nın metodoloji kısmına bir cümlelik dayanak.
 
 ### Tasarım sonucu — endüklenen/profil takası standart
@@ -2845,7 +2845,7 @@ bir şerit. Yön aktarılabilir, büyüklük aktarılamaz.
 
 ---
 
-# ✅ S1 HESAPLANDI — `aero/iskoz.py` (12.09.2026)
+# ✅ S1 HESAPLANDI — `aero/viscous.py` (12.09.2026)
 
 Yöntem: VLM panel kuvvetlerinden her açıklık şeridinin **yerel c_l**'i
 çıkarılıyor; NeuralFoil o şeridin **kendi c_l'inde** çağrılıyor (α ikiye
@@ -2926,7 +2926,7 @@ C_D0'i öyle kuruldu, aksi halde iki sayı toplanamaz.
    α'da ve genellikle daha küçük c_d ile üretir → bu sayı bir **alt sınır**.
 2. Şerit kuramı ok açısını ihmal ediyor, kök ok açımız 45°.
 
-Polar verisi `aero/iskoz-sonuc.json`'a yazılıyor, yeniden analiz için
+Polar verisi `aero/viscous-result.json`'a yazılıyor, yeniden analiz için
 VLM'i tekrar koşmaya gerek yok.
 
 ---
@@ -2948,7 +2948,7 @@ başlıkları "Tail-sitter / Lift+cruise / Tilt-rotor" olarak değiştirilmiş.
 yoktu.
 
 Dördün üçü bunu yakaladı. **Sebebi belliydi: v5 el ile toparlanmıştı.**
-Bu yüzden `makale/uretim/mkv5.py` yazıldı — belge artık bölüm dosyalarından
+Bu yüzden `paper/build/mkv5.py` yazıldı — belge artık bölüm dosyalarından
 her seferinde yeniden kuruluyor, kelime sayıları sayılıyor, ek dizini iki
 belgede tek kaynaktan üretiliyor, atıf boşluğu/hayaleti denetleniyor.
 
@@ -2961,7 +2961,7 @@ Ama S2'nin tamponlu güç tablosu aynı 10,9 kW'a "T/W 1,20" yazıyordu (bütün
 sütun 1,2 kat şişkin), ve §7.4 "T/W = 1,2'de 0,2 g" diyerek makalenin manşet
 sonucunu — *tırmanarak girince irtifa kaybı sıfır* — o orana dayandırıyordu.
 
-`aero/itki.py` bunu dışarıdan bir varsayımla kapatmıyor. Uçağın elindeki tek
+`aero/thrust.py` bunu dışarıdan bir varsayımla kapatmıyor. Uçağın elindeki tek
 ek dikey itki kaynağı **uç çiftleridir**, ve dönme sırasında onlar zaten dönmeyi
 üretiyor. Bang-bang profilinde üst çiftler tam itkide, alt çiftler sıfırda
 (M = 2TL) — ve üst çiftler hâlâ yukarı itiyor. Çıkan takas:
@@ -2985,7 +2985,7 @@ Yan ürün: uç pervanelerinin ikinci bir görevi ortaya çıktı — kalkış i
 Ama bu bir bağımlılık, çünkü kalkış payı ile yunuslama otoritesi **aynı dört
 pervaneden** çekiliyor ve ikisi birden tam alınamıyor.
 
-`dogrula.py` artık hem §7.4'ün gövde tablosunu ulaşılabilir T/W'de, hem de
+`verify.py` artık hem §7.4'ün gövde tablosunu ulaşılabilir T/W'de, hem de
 manşetin kendisini kilitliyor (68 hücre, sıfır sapma).
 
 ## Batarya: üç ayrı istasyondan çıkarma
@@ -3109,7 +3109,7 @@ ve "hiç sınırı yok" cümlesini de çürüttü.**
 
 ## 1. Uç pervanesi, sıfır şaft torkunda — EN SERT SONUÇ
 
-`aero/uc_pervane.py`
+`aero/tip_propeller.py`
 
 §3.3'ün bütün "Fatura 2 yok" iddiası şu satıra dayanıyordu:
 
@@ -3150,7 +3150,7 @@ etmeden seyir sonucunu raporlayacaktım. Mutlak indükleme hızıyla yeniden yaz
 
 ## 2. Kapanma döngüsü — makalenin cümlesi fazla sertmiş
 
-`aero/kapanma.py`
+`aero/closure.py`
 
 §4.4 şöyle diyordu: *"hiçbir ölçülmüş özgül güçte kapanmıyor."* Bu bir **çıkarma**
 idi — 6,8 kg tamponu 2,2 kg payla karşılaştırmak — ve o karşılaştırma, değiştirilen
@@ -3181,7 +3181,7 @@ değişimi yoksa **çözüm yoktur**, çözücü yorgunluğu değil.
 
 ## 3. Geçiş, dönme dinamiğiyle — manşet sonucu modelin özelliğiymiş
 
-`aero/gecis_dinamik.py`
+`aero/transition_dynamics.py`
 
 §3.15 gövde açısını *kinematik sürüyor*: uçak dönmüyor, döndürülüyor, ve dönmeyi
 üreten moment denklemde yok. §3.17 momentin yetip yetmediğine ayrıca bakıyor. İkisi
@@ -3215,7 +3215,7 @@ oranının açıklık boyunca sabit olup olmadığına bakmaktı. Kurulum depoda
 adım, yani **~14 saat**, üstelik burulmalı geometri için ağ yeniden üretilmeli.
 Bu oturumda yapılmadı. Yapılmış gibi raporlanmadı.
 
-Yerine `aero/yukleme_duyarlilik.py` yazıldı. RANS'ın yerine geçmez; **sonucunu
+Yerine `aero/loading_sensitivity.py` yazıldı. RANS'ın yerine geçmez; **sonucunu
 sınırlar**. Makale "ortak çarpansa iptal olur" diyor — ortak çarpan varsayımı
 doğruysa iptal tanım gereğidir, sınanacak bir şey yok. Sınanabilir olan tersi:
 *yükleme şekli belli bir miktar değişirse tarafsız nokta ve denge burulması ne
@@ -3262,7 +3262,7 @@ ya da panel çözümü verir. Çıkan şey bir kapanış değil, bir aktarım ka
    **bunu görmezdi**: sessizce uca yapışır, makul görünen bir tablo basardı.
 
 Taban satır zinciri doğruluyor: −9,19° burulma ve 10,24° hücum açısı, makalenin
-kurulu "dokuz derece washout" sonucu. Bağımsız modül `kararlilik.py` — hücum
+kurulu "dokuz derece washout" sonucu. Bağımsız modül `stability.py` — hücum
 açısında ikiye bölen ayrı bir çözücü — aynı burulmada **10,24°** ve C_m = −3×10⁻⁵
 veriyor.
 
@@ -3273,7 +3273,7 @@ veriyor.
 
 ## Qwen, ust uste UCUNCU tur, yine getirmedigi dosya hakkinda
 
-"IMRaD yeniden yapilandirmasi canli `makale-v5.md`'de YOK, dosya hala dokuz
+"IMRaD yeniden yapilandirmasi canli `paper-v5.md`'de YOK, dosya hala dokuz
 numarali bolum tasiyor ve ikinci bolum hala *Background: seventy years of
 attempts*" dedi ve incelemeyi durdurdu.
 
@@ -3624,7 +3624,7 @@ S2 duzeltildi.
 
 ## Yanlis sayilar ZENODO'YA HIC GITMEDI -- dogrulandi
 
-    makale-v5.md (yatirilan surum):  0.547 yok, 0.0033 yok, 1649 yok, 12.37 yok
+    paper-v5.md (yatirilan surum):  0.547 yok, 0.0033 yok, 1649 yok, 12.37 yok
 
 Hepsi yalniz v6'da vardi ve v6 yatirilmadi. Grok ve ChatGPT olgularda
 hakli; Qwen'in "yatirilmis bir surumde vardi" oncülü YANLIS. Bunun

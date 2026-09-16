@@ -114,9 +114,9 @@ ne yaptın, ne buldun, ne umuyordun, hangi aşamadasın, hangi aşamalar için
 
 Hiçbir iddia denetlenmeden aktarılmaz — ne YZ'lerinki ne benimki.
 
-- `makale/uretim/dogrula.py` — sayısal denetim (43 kontrol) + yasaklı bayat
+- `paper/build/verify.py` — sayısal denetim (43 kontrol) + yasaklı bayat
   değer listesi.
-- `makale/uretim/baglanti.py` — bağ dokusu: işaretçiler çözülüyor mu, **doğru
+- `paper/build/links.py` — bağ dokusu: işaretçiler çözülüyor mu, **doğru
   yere mi** çözülüyor, tablo/şekil atıfları tutuyor mu.
 - Bir denetim yazdığında **eski hatayı geri koyup yakalayıp yakalamadığını
   sına.** Sessizce boş dönen bir denetim, hiç olmayandan beterdir; bu bir kez

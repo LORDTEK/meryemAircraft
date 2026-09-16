@@ -102,7 +102,7 @@ if __name__ == "__main__":
         print(f"{'y/(b/2)':>9}{'veter':>8}{'t/c':>7}{'Re':>11}{'Cd':>9}")
         for y, c, tc, Re, cd in satir[::8]:
             print(f"{y/o['yari']:9.2f}{c:8.3f}{tc*100:6.1f}%{Re:11.3e}{cd:9.5f}")
-        print(f"kanat/govde C_D0 = {cd_kanat:.5f}\n")
+        print(f"wing/govde C_D0 = {cd_kanat:.5f}\n")
 
     o = sonuc[list(sonuc)[0]][2]
     S = o["alan"]

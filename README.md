@@ -36,11 +36,11 @@ meryemAircraft, kaçınma koşulunu sağlayan **vaka analizidir**.
 | DOI (her zaman son sürüm) | [10.5281/zenodo.22144194](https://doi.org/10.5281/zenodo.22144194) — şu an **v4** |
 | v4 kaydı | <https://zenodo.org/records/22664634> |
 | İlk sürüm (v1, değişmez) | [10.5281/zenodo.22144195](https://doi.org/10.5281/zenodo.22144195) |
-| PDF | [`makale/pdf/meryemAircraft-makale.pdf`](makale/pdf/meryemAircraft-makale.pdf) — 71 sayfa, 12 şekil |
-| Tek dosya kaynak | [`makale/makale.md`](makale/makale.md) |
-| Bölüm bölüm | [`makale/bolumler/`](makale/bolumler/) |
-| Kaynakça | [`makale/kaynakca-en.md`](makale/kaynakca-en.md) |
-| Hedef dergi | **Drones** (MDPI) — ilk gönderim; gerekçe ve bilinen risk [`makale/00-yol-plani.md`](makale/00-yol-plani.md) |
+| PDF | [`paper/pdf/meryemAircraft-paper.pdf`](paper/pdf/meryemAircraft-paper.pdf) — 71 sayfa, 12 şekil |
+| Tek dosya kaynak | [`paper/paper.md`](paper/paper.md) |
+| Bölüm bölüm | [`paper/sections/`](paper/sections/) |
+| Kaynakça | [`paper/bibliography-en.md`](paper/bibliography-en.md) |
+| Hedef dergi | **Drones** (MDPI) — ilk gönderim; gerekçe ve bilinen risk [`paper/00-roadmap.md`](paper/00-roadmap.md) |
 
 ---
 
@@ -72,18 +72,18 @@ kapatılmamıştır.** Makale bunu böyle yazar.
 ## Ne var burada
 
 ```
-makale/     Makale: bölümler, tek dosya kaynak, PDF, kaynakça, yol planı
-  uretim/     Derleyici ve doğrulama betiği
+paper/     Makale: bölümler, tek dosya kaynak, PDF, kaynakça, yol planı
+  build/     Derleyici ve doğrulama betiği
 aero/        Bağımsız hesaplar — her biri kendi gerekçesini ve sınırını yazar
-gorsel/     On iki şekil
-  kaynak/     Parametrik geometri modeli
-  uretim/     Şekilleri ve geçiş benzetimini üreten betikler
-  cikti/      Yayına hazır png / svg
+figures/     On iki şekil
+  source/     Parametrik geometri modeli
+  build/     Şekilleri ve geçiş benzetimini üreten betikler
+  output/      Yayına hazır png / svg
 cfd/        OpenFOAM kurulumu, doğrulama kaydı ve dış değerlendirme yazışmaları
 patent/     Türkiye patent başvurusunun metinleri ve çizimleri
-tasarim/    Tasarım künyesi — her kararın, verildiği andaki gerekçesiyle kaydı
-kaynakca/   Okunan literatürün kaydı
-sunum/      Sunum malzemesi
+design/    Tasarım künyesi — her kararın, verildiği andaki gerekçesiyle kaydı
+references/   Okunan literatürün kaydı
+presentation/      Sunum malzemesi
 video/      Görselleştirme
 ```
 
@@ -93,22 +93,22 @@ Makaledeki her sayı ve her şekil bu depodaki betiklerden yeniden üretilebilir
 
 | Betik | Ne yapar |
 |---|---|
-| `makale/uretim/mkmakale.py` | Bölümleri, şekilleri ve kaynakçayı tek PDF'te derler |
-| `makale/uretim/dogrula.py` | **Makalenin her başlık sayısını, makalenin kendi denklemleriyle bağımsız hesaplayıp metinle karşılaştırır** |
+| `paper/build/mkpaper.py` | Bölümleri, şekilleri ve kaynakçayı tek PDF'te derler |
+| `paper/build/verify.py` | **Makalenin her başlık sayısını, makalenin kendi denklemleriyle bağımsız hesaplayıp metinle karşılaştırır** |
 | `aero/planform.py` | Ok açısı yasalarından planformu yeniden kurar; künye değerleriyle sınar |
-| `aero/temel.py` | Üç mimarinin kapalı çevrim boyutlandırması ve üç sözleşme |
-| `aero/kutle.py` | Bileşen bileşen kütle bütçesi, kabuk yoğunluğu başabaşı, tampon sınaması |
+| `aero/baseline.py` | Üç mimarinin kapalı çevrim boyutlandırması ve üç sözleşme |
+| `aero/mass.py` | Bileşen bileşen kütle bütçesi, kabuk yoğunluğu başabaşı, tampon sınaması |
 | `aero/vlm.py` · `aero/cd0.py` | Girdap kafes ve `C_D0` kurulumu |
-| `aero/kararlilik.py` | Tarafsız nokta, statik marj, denge gereksinimi, **konvansiyon denetimi** |
-| `aero/donme.py` · `aero/zarf.py` | Geçiş dönme dinamiği ve tasarım zarfı |
-| `aero/yatis.py` | Yatış ataleti, sönümlemesi, otorite gereksinimi, aç-kapa sınır çevrimi |
-| `aero/sapma.py` | Sapma ataleti, otoritesi, yön kararlılığı gereksinimi |
-| `aero/hacim.py` · `aero/duyarlilik.py` | Hacim kapanışı ve eğim duyarlılığı |
-| `gorsel/uretim/gecis2.py` | Geçiş benzetimi — iki serbestlik dereceli nokta kütle |
-| `gorsel/uretim/mkfig*.py` · `mkconcept.py` | On iki şeklin üreticileri |
-| `gorsel/uretim/figlib.py` | 3B modeli başsız Chromium'da açar, kamerayı sürer, görüntü alır |
+| `aero/stability.py` | Tarafsız nokta, statik marj, denge gereksinimi, **konvansiyon denetimi** |
+| `aero/rotation.py` · `aero/envelope.py` | Geçiş dönme dinamiği ve tasarım zarfı |
+| `aero/roll.py` | Yatış ataleti, sönümlemesi, otorite gereksinimi, aç-kapa sınır çevrimi |
+| `aero/yaw.py` | Sapma ataleti, otoritesi, yön kararlılığı gereksinimi |
+| `aero/volume.py` · `aero/sensitivity.py` | Hacim kapanışı ve eğim duyarlılığı |
+| `figures/build/transition2.py` | Geçiş benzetimi — iki serbestlik dereceli nokta kütle |
+| `figures/build/mkfig*.py` · `mkconcept.py` | On iki şeklin üreticileri |
+| `figures/build/figlib.py` | 3B modeli başsız Chromium'da açar, kamerayı sürer, görüntü alır |
 
-`dogrula.py` şu an **40 kontrol** ve geçiş tablolarının **52 hücresini** sınıyor;
+`verify.py` şu an **40 kontrol** ve geçiş tablolarının **52 hücresini** sınıyor;
 sapma yok. Betik, derleme sırasında iki tablonun bayat kaldığını ve bir yerde
 momentin itkiyle karıştırıldığını yakaladı.
 
@@ -117,14 +117,14 @@ momentin itkiyle karıştırıldığını yakaladı.
 `aerosandbox` ve `neuralfoil`.
 
 Betikler bulundukları yerden çalışır; depo dışında bir yola ihtiyaç duymazlar.
-Üç boyutlu şekiller `gorsel/kaynak/govde-etudu.html` modelinden üretilir:
+Üç boyutlu şekiller `figures/source/body-study.html` modelinden üretilir:
 `figlib.py` modelin bir **kopyasına** render kancası enjekte eder, kaynak dosya
 değiştirilmez. Chromium başka bir yerdeyse `CHROME_PATH` ile gösterilebilir.
 
 ## Dış değerlendirme kaydı
 
 Makale, gönderimden önce birbirinden bağımsız üç dil modeline **tur tur** okutuldu
-ve her turun metni [`cfd/dis-gorus-*.md`](cfd/) altında saklandı. Bu bir doğrulama
+ve her turun metni [`cfd/external-review-*.md`](cfd/) altında saklandı. Bu bir doğrulama
 değil, bir **hata avıdır** ve avın kayıtları tutulmuştur — bulunan hatalar
 düzeltilmekle kalmayıp `aero/README.md` içinde neyin neden yanlış olduğuyla birlikte
 yazılıdır. Süreçte çöken iddialar arasında şunlar var: yunuslama momentinin 4TL değil
@@ -137,7 +137,7 @@ yazıldığı; ve §4.4'ün 46 N·m'lik yatış momentinin şeridin kendi kuvvet
 
 Sayısal ve tarihsel iddiaların tamamı **birinci elden okunan** kaynaklara
 dayandırılmıştır; okunmayan kaynaklara hiçbir sayı bağlanmamıştır. Bu ayrım
-makalenin 8. bölümünde açıkça yazılıdır. `makale/kaynaklar.md`, hangi kaynağın ne
+makalenin 8. bölümünde açıkça yazılıdır. `paper/references.md`, hangi kaynağın ne
 düzeyde doğrulandığını ve arama motoru özetlerinden gelen **üç yanlış sayının**
 birinci el okumayla nasıl yakalandığını kaydeder.
 
@@ -146,7 +146,7 @@ birinci el okumayla nasıl yakalandığını kaydeder.
 | Sürüm | Tarih | Öz |
 |---|---|---|
 | **v4** | 2026-09-08 | Çerçeve merkezli yeniden kurgu; kabiliyet cümleleri gereksinim diline çevrildi. Üç kontrol ekseni denetlendi: yunuslama (CG hacim ağırlıklı, marj +%12,5, denge 0,056), yatış (46 N·m çöktü, ΔC_L ≈ 0,12 gereksinimine dönüştü), sapma (otorite 2,4 kat, yön kararlılığı fairing'e bağlı). İki referans veter birleştirildi; dönme süreleri "pay" değil **eyleyici sınırlı alt sınır** oldu. |
-| v3 | 2026-09-05 | Merkez gövde için 3B çözüm: kanat/gövde C_D0 = 0,0141 ± ~%5, varsayılan 0,0248 hâlâ üstünde. 8.1 "No experimental validation" oldu. |
+| v3 | 2026-09-05 | Merkez gövde için 3B çözüm: wing/gövde C_D0 = 0,0141 ± ~%5, varsayılan 0,0248 hâlâ üstünde. 8.1 "No experimental validation" oldu. |
 | v2 | 2026-08-29 | Menzil yöntemi düzeltildi (azami L/D yerine seyir noktası poları): 1 695 → **1 598 km**. Bölüm 6.6 eklendi; hacim kapanışı yapıldı. |
 | v1 | 2026-08 | İlk yayım. |
 

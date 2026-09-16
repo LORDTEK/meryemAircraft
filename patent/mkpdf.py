@@ -3,7 +3,7 @@ import asyncio, sys, os, base64, html
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from playwright.async_api import async_playwright
 from mkpdf_css import CSS
-from tarifname_icerik import TARIFNAME, BASLIK
+from description_content import TARIFNAME, BASLIK
 OUT="/home/user/meryemAircraft/patent/pdf"; os.makedirs(OUT,exist_ok=True)
 RES="/home/user/meryemAircraft/patent/resimler"
 CHROME="/opt/pw-browsers/chromium-1194/chrome-linux/chrome"
@@ -282,22 +282,22 @@ async def main():
         await bas(BIRLESIK, ham)
         num = os.path.join(gec, "birlesik.pdf")
         satir_numarala(ham, num)
-        pdf_bol(num, [("%s/01-tarifname.pdf" % OUT, 1, n1),
-                      ("%s/02-istemler.pdf" % OUT, n1 + 1, n1 + n2),
-                      ("%s/03-ozet.pdf" % OUT, n1 + n2 + 1, n1 + n2 + n3)])
-        print("  -> 01-tarifname.pdf (1-%d), 02-istemler.pdf (%d-%d), "
-              "03-ozet.pdf (%d-%d)"
+        pdf_bol(num, [("%s/01-description.pdf" % OUT, 1, n1),
+                      ("%s/02-claims.pdf" % OUT, n1 + 1, n1 + n2),
+                      ("%s/03-abstract.pdf" % OUT, n1 + n2 + 1, n1 + n2 + n3)])
+        print("  -> 01-description.pdf (1-%d), 02-claims.pdf (%d-%d), "
+              "03-abstract.pdf (%d-%d)"
               % (n1, n1 + 1, n1 + n2, n1 + n2 + 1, n1 + n2 + n3))
 
         # 3) Resimler ayri: bildirimde adi gecmiyor, satir numarasi da
         #    istenmiyor; kendi numaralandirmasiyla basiliyor.
         await pg.set_content(RES_HTML, wait_until="load")
         await pg.emulate_media(media="print")
-        await pg.pdf(path=OUT + "/04-resimler.pdf", format="A4",
+        await pg.pdf(path=OUT + "/04-figures.pdf", format="A4",
                      print_background=True, margin=MARJ,
                      display_header_footer=True,
                      header_template=RES_UST, footer_template="<div></div>")
-        print("  -> 04-resimler.pdf")
+        print("  -> 04-figures.pdf")
         await b.close()
 
 

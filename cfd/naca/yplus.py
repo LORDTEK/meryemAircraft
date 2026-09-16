@@ -23,10 +23,10 @@ import json, os, subprocess, sys
 
 BURA = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, BURA)
-sys.path.insert(0, os.path.join(BURA, "..", "ortak"))
-from kur import kur                                    # noqa: E402
-from kuvvet import hesapla                             # noqa: E402
-from kilit import Kilit                                # noqa: E402
+sys.path.insert(0, os.path.join(BURA, "..", "common"))
+from setup import kur                                    # noqa: E402
+from forces import hesapla                             # noqa: E402
+from runlock import Kilit                                # noqa: E402
 
 HEDEF = [1.50, 1.00, 0.667, 0.40]
 NF, NN, NW = 384, 144, 96
@@ -65,7 +65,7 @@ if __name__ == "__main__":
                         adim=3000, yaz_araligi=1500, model=MODEL)
             print("[y+ %.3f] %d hucre -- cozuluyor" % (yp, bilgi["hucre"]),
                   flush=True)
-            subprocess.run([os.path.join(BURA, "kos.sh"), vaka, "4"],
+            subprocess.run([os.path.join(BURA, "run.sh"), vaka, "4"],
                            check=True, stdout=subprocess.DEVNULL)
             r = hesapla(vaka, alfa=0.0, mertebe=2)
             print("   C_D=%.6f  basinc=%.6f  viskoz=%.6f  y+ olculen %.2f"
