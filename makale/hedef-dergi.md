@@ -18,9 +18,27 @@ gönderimden önce yeniden bakılacak. Aşağıda kaynağı belirsiz olan her ş
    ayrıca **APC ödeme gücü** bakımından da bağlayıcı — ücretsiz yayımlayan dergiler
    bizim için nesnel olarak daha iyi.
 
-Birinci kısıt en önemlisi ve **masa ile hakem için farklı çalışıyor.** Masa,
-paketlemeyle geçilebilir. **Hakem geçilemez.** Deneysel dayanağı olmayan bir
-yapılandırma çalışmasına Q1 hakemi "bunu ne doğruluyor" diye soracak ve haklı olacak.
+Birinci kısıt en önemlisi ve **masa ile hakem için farklı çalışıyor.** Masa
+paketlemeyle geçilir. Hakem "bunu ne doğruluyor" diye soracaktır — ve **bunun cevabı
+kendi deneyimiz olmak zorunda değildir.**
+
+**Bu satırın ilk hâli yanlıştı ve düzeltildi.** "Hakem geçilemez" yazmıştım. Doğru
+değil, üstelik makalenin kendi içeriğiyle de çelişiyor:
+
+- **Çerçeve zaten dış veriyle sınanmış durumda.** §3.1, çerçevenin *çürütülebilir* bir
+  öngörüsünü kuruyor — ağırlık cezası, verim kazancını aşar — ve onu **bağımsız bir
+  NASA boyutlandırma setine** karşı test ediyor: turboşaft quadrotor L/D 4,9 ve
+  3 678 lb, turbo-elektrik lift+cruise L/D 8,5 ve 7 271 lb. Seyir verimi %70 daha iyi
+  ve neredeyse iki katı ağır. Bu, bizim üretmediğimiz veriye karşı nicel bir sınamadır.
+- Tablo 1'in L/D değerleri de rüzgâr tünelinde **ölçülmüş** verilerdir (bizim
+  ölçümümüz değil).
+- Dört dış okuyucunun **dördü de** donanımın Q1 için zorunlu olmadığını söyledi.
+
+Doğru ayrım şudur: **çerçeve dış veriyle doğrulanmıştır ve yeni deney istemez.**
+Doğrulanmamış olan, yapılandırmanın kendi sayılarıdır (0,0154 ve ΔC_L ≈ 0,12) — ve
+makale bunları zaten varsayım olarak ilan ediyor. Yani yapılandırma bölümü
+*doğrulanmış bir tasarım* olarak değil, **ilan edilmiş varsayımlar altında işlenmiş
+bir vaka** olarak yayımlanabilir.
 
 ---
 
