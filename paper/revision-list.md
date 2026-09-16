@@ -109,6 +109,8 @@ dediği şeyler. Rapor gelince hangisinin geldiğine bakılır.
   eklenebilir ve görünürlüğe yarar.
 - **600 dpi yeniden dışa aktarım** gerekirse; şu an en düşük şekil 387 dpi ve
   MDPI'ın 300 sınırının üstünde.
-- **Depo için ayrı bir Zenodo DOI'si üret** (GitHub–Zenodo bağı). Şu an Data
-  Availability alanında depo için çıplak GitHub bağı var; bir hakem haklı olarak
-  "GitHub kalıcı değil" diyebilir. Kabul öncesi yapılırsa son nüshaya girer.
+- ~~Depo için ayrı bir Zenodo DOI'si üret~~ → **ZORUNLU OLDU, isteğe bağlı
+  değil.** JoA'nın kaynakça kuralı: *"websites where there is no commitment to
+  archiving… should not be cited in the reference list."* GitHub'ın arşivleme
+  taahhüdü yok, Zenodo'nun var. Yani depoya çıplak GitHub bağıyla atıf
+  yapılamaz. Bkz. `joa-compliance.md` §6.
