@@ -126,7 +126,22 @@ Hiçbir iddia denetlenmeden aktarılmaz — ne YZ'lerinki ne benimki.
 
 - Geliştirme dalı: `claude/ecstatic-cori-6w30at`. `main` de güncel tutulur.
 - **Başka hiçbir repository'ye dokunulmaz.** Başkalarının uzun emeği var.
-- Yayın: Zenodo (kök DOI 10.5281/zenodo.22144194), hedef dergi *Drones* (MDPI).
+- Yayın: Zenodo (kök DOI 10.5281/zenodo.22144194).
+- **Hedef dergi: *Journal of Aircraft* (AIAA).** *Drones*'a gönderildi
+  (`drones-4595522`, 2026-09-14), kapsam dışı bulunup *Aerospace*'e aktarıldı,
+  orada da aynı gün masadan reddedildi. **Hakeme hiç gitmedi.** Kayıt:
+  `paper/drones-submission.md` §10, hedef denetimi `paper/target-journal.md`.
+- **Dergi şartı kuralı — bu bedeli bir kez ödedik.** Bir hedef dergi adı
+  konmadan önce o derginin aims, scope ve özel şartları **baştan sona okunur**
+  ve şart şart makaleyle karşılaştırılıp yazılır. *Drones*'un kapsam sayfasında
+  *"genel teorik uçak tasarımı makaleleri için en azından laboratuvar ölçeğinde,
+  insansız bir platformdan deneysel veriyle doğrulama"* şartı yazılıydı; hiç
+  açmadım. Makaleyi kendine karşı denetleyip gideceği yere karşı hiç
+  denetlemeyen bir düzen, yanlış şeyi denetliyor demektir.
+- **v8 yeniden kurgulanır, kısaltılmaz.** Ve dergi gövdesinde *"bir önceki
+  sürümde şöyleydi"* anlatısı **bulunmaz** — makale tek başına yeter olmalıdır;
+  düzeltme tarihi depoda durur. Gerekçesini o anlatının içinde taşıyan sayılar
+  gerekçeleriyle birlikte **şimdiki zamanda yeniden yazılır**, silinmez.
 - YZ kullanım beyanında **marka/model/şirket adı geçmez**; YZ yazar satırında
   asla yer almaz.
 - Uygulama alanları: **orman yangını gözlem/müdahale** ve **piste ihtiyaç
