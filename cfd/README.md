@@ -46,12 +46,12 @@ Doğrulama önce gelir. Sıra bilinçli:
 
 **1. basamak kapandı.** Deneyle, sekiz yerleşik kodla ve — asıl önemlisi —
 iki bağımsız kodla *profil düzeyinde* karşılaştırıldı. Sonuç
-`dogrulama.md`'de; özeti "Hangi modele güveniyoruz" bölümünde. Kısaca:
+`validation.md`'de; özeti "Hangi modele güveniyoruz" bölümünde. Kısaca:
 Spalart–Allmaras kurulumumuz doğrulandı, k-ω SST kurulumumuzda ölçülmüş
 ama nedeni bulunamamış bir kusur var. Bu yüzden birincil model SA.
 
 **2. basamak koşuluyor** ve şimdiden ilk makalenin kendi uyarısını
-ölçümle destekliyor. İlk makale (`makale/bolumler/08-limitations.md`)
+ölçümle destekliyor. İlk makale (`paper/sections/08-limitations.md`)
 şunu söylüyordu:
 
 > "Its strip method treats the root section as a two-dimensional aerofoil
@@ -93,11 +93,11 @@ Bu ortamda iki engele çarpıldı; ikisi de kayda geçiyor, çünkü sonucun nas
 `error in IOstream "sha1"` verip çıkıyor. Kusur vakada değil kurulumda: stok
 bir vakada da aynı sonuç alınıyor. Daha yeni bir OpenFOAM kurmak da mümkün
 değil (aşağıya bakınız). Bu yüzden **katsayılar ve y+, çözümden sonra
-yazılmış alanlardan `ortak/kuvvet.py` ile hesaplanıyor** — basınç kuvveti
-∫p·S_f, kayma gerilmesi ν_eff·|U_t|/d. Yöntem `ortak/kuvvet.py`'nin
+yazılmış alanlardan `common/forces.py` ile hesaplanıyor** — basınç kuvveti
+∫p·S_f, kayma gerilmesi ν_eff·|U_t|/d. Yöntem `common/forces.py`'nin
 başında açık yazılıdır.
 
-Bu, projenin geri kalanıyla tutarlı: `dogrula.py` de makalenin her sayısını
+Bu, projenin geri kalanıyla tutarlı: `verify.py` de makalenin her sayısını
 kendi denklemleriyle bağımsız yeniden hesaplıyor.
 
 **2. Dış ağ erişimi kapalı.** `turbmodels.larc.nasa.gov`, `ntrs.nasa.gov`,
@@ -111,11 +111,11 @@ duyarlılığı — bunların hepsi dışarıdan veri gerektirmez ve yapılabili
 bunlar *doğrulama* değil **denetimdir** (verification). Doğrulama için
 birinci elden okunmuş deney verisi gerekir ve projenin kuralı bu:
 sayısal iddialar yalnızca birinci elden okunan kaynaklara bağlanır.
-Gerekli iki kaynak `kaynak-gerekli.md`'de yazılıdır.
+Gerekli iki kaynak `references-needed.md`'de yazılıdır.
 
 ## Ağ üreteci
 
-`ortak/cagi.py` — iki boyutlu yapısal C-ağı, gmsh 2.2 → `gmshToFoam`.
+`common/c_mesh.py` — iki boyutlu yapısal C-ağı, gmsh 2.2 → `gmshToFoam`.
 
 Neden hazır ağlayıcı değil: sürükleme, duvar kayma gerilmesinin yüzey
 üzerindeki integralidir; duvara komşu hücrenin yüzeye **dik** olması
@@ -151,11 +151,11 @@ kayıtlı:
 
 | Betik | Ne yapar |
 |---|---|
-| `ortak/cagi.py` | İki boyutlu yapısal C-ağı → gmsh `.msh` |
-| `ortak/foamoku.py` | Küçük OpenFOAM ASCII okuyucu (polyMesh + alanlar) |
-| `ortak/kuvvet.py` | C_L, C_D ve **ölçülmüş** y+ — yazılmış alanlardan |
-| `naca/kur.py` | Eksiksiz `simpleFoam` vakası kurar |
-| `naca/kos.sh` | Çevirir, `checkMesh`, çözer |
+| `common/c_mesh.py` | İki boyutlu yapısal C-ağı → gmsh `.msh` |
+| `common/foam_read.py` | Küçük OpenFOAM ASCII okuyucu (polyMesh + alanlar) |
+| `common/forces.py` | C_L, C_D ve **ölçülmüş** y+ — yazılmış alanlardan |
+| `naca/setup.py` | Eksiksiz `simpleFoam` vakası kurar |
+| `naca/run.sh` | Çevirir, `checkMesh`, çözer |
 
 Ölçekleme: veter = 1 m, U = 1 m/s, ρ = 1, ν = 1/Re. Katsayılar doğrudan
 çıkar. Hücum açısı **ağı döndürmez**, serbest akış vektörünü döndürür:
@@ -163,15 +163,15 @@ bütün açılar tek ağda çözülür, aradaki farklar ağdan değil akıştan 
 
 ## Sonuçlar
 
-Tablolar `ozet.py`'nin çıktısıdır:
+Tablolar `summary.py`'nin çıktısıdır:
 
 ```
-python3 cfd/ozet.py          # ekrana
-python3 cfd/ozet.py --md     # markdown
+python3 cfd/summary.py          # ekrana
+python3 cfd/summary.py --md     # markdown
 ```
 
 Bu depoda daha önce makalenin 7.4'ündeki iki tablo bayat kalmış ve aynı
-vaka iki yerde farklı sayılarla görünmüştü. `dogrula.py` onu yakaladı; o
+vaka iki yerde farklı sayılarla görünmüştü. `verify.py` onu yakaladı; o
 günden beri kural şu: **bir sayı iki yerde duruyorsa, ikincisi elle
 yazılmaz.**
 
@@ -203,12 +203,12 @@ kullanılır (NAS-2016-01, α = 0: SA ortalama 0,00819, SST ortalama
 0,00812 — %0,9).
 
 Ayrıntı, eleme sırası ve iki kendi hatamın düzeltmesi için:
-[`dogrulama.md`](dogrulama.md).
+[`validation.md`](validation.md).
 
 ### Kuvvet hesabının sınanması
 
-`kuvvet.py` yük taşıyor (OpenFOAM'ın kendi aracı çalışmıyor), o yüzden
-kendisi de sınandı — `kuvvet_sina.py`:
+`forces.py` yük taşıyor (OpenFOAM'ın kendi aracı çalışmıyor), o yüzden
+kendisi de sınandı — `forces_test.py`:
 
 | sınama | sonuç |
 |---|---|
@@ -233,7 +233,7 @@ Bu tek yönlü bir taramadır ve sakattır: hoşa gitmeyen sonuçlarda hata
 bulma olasılığı, hoşa gidenlerdekinden yüksek olur. Kabul edilen sonuçlar
 denetlenmemiş kalır.
 
-`denetim.py` o asimetriyi kapatıyor — eşikleri **önceden** yazılmış aynı
+`audit.py` o asimetriyi kapatıyor — eşikleri **önceden** yazılmış aynı
 batarya, her vakaya, sonuç ne olursa olsun:
 
 | vaka | C_L | kalıntı (son/ilk) | ayrılma |
@@ -276,7 +276,7 @@ geldiği için bütün seviyelerde sabit; ölçülen y+ bunu doğruluyor (0,96 /
 uygulanınca **p = 8,95** ve **GCI %0,02** çıkıyor — ikisi de sahte. İkinci
 mertebeden bir şemadan 9. mertebe çıkmaz, ve GCI %0,02 "ağ hatası ihmal
 edilebilir" diye okunurdu, oysa A2 ile A3 arasında C_D %6,3 değişiyor.
-`yakinsama.py` artık bu ailede mertebe hesaplamayı reddediyor.
+`convergence.py` artık bu ailede mertebe hesaplamayı reddediyor.
 
 ## Ağ yakınsaması hakkında söylenebilecek
 
@@ -304,7 +304,7 @@ yinelemede B3'ün Ux kalıntısı 6,2×10⁻⁷, B4'ünki 8,3×10⁻⁷. Dolayı
 "hepsi 3 000'de" diye karşılaştırmak, ağ farkının üstüne yakınsama
 farkını bindirir.
 
-`kalinti.py` ikisini ayırıyor — C_D'yi eşit **kalıntı düzeyinde**
+`residual.py` ikisini ayırıyor — C_D'yi eşit **kalıntı düzeyinde**
 karşılaştırıyor:
 
 | B3 → B4 farkı | |
@@ -418,7 +418,7 @@ yazıyor: SST için serbest akışta (μt/μ)∞ = **0,001**. Biz **1,0**
 kullanmışız — bin kat büyük. `k` doğruydu (%0,1 şiddet, referansın
 %0,088–0,104'üyle uyumlu), ama ω∞ = k/ν_t olduğu için bizimki 9,
 referansınki 9000. Bu değişken **SA'da yoktur** — SA'nın oturup SST'nin
-oturmamasının nedeni bu olabilir. `naca/serbest.py` bu tek değişkeni
+oturmamasının nedeni bu olabilir. `naca/free.py` bu tek değişkeni
 tarıyor; beklenti betiğin başında **önceden** yazılı.
 
 **Bu neden burada duruyor.** Yanlış bölümü silmek yerine geri çekilmiş
@@ -435,7 +435,7 @@ Bu arada geriye kalan sayısal belirsizlikler değişmedi ve hâlâ küçük:
 | yineleme yakınsaması | ~0,1 % |
 | duvar gradyanı mertebesi (y+ < 1) | 0,03 % |
 
-Doğrulamanın tamamı için `dogrulama.md`.
+Doğrulamanın tamamı için `validation.md`.
 
 ## Bir yan bulgu: NeuralFoil'in geçiş sınırı
 

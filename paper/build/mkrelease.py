@@ -1,0 +1,184 @@
+# -*- coding: utf-8 -*-
+"""GONDERIM BELGELERINI KURAR -- paper-<version>.md ve paper-<version>-supp.md.
+
+SURUM TEK YERDE. Betik once mkv5.py adiyla duruyordu ve cikti adlari da
+gomuluydu. Bir surum atlaninca "v6 ureten mkv5.py" gibi bayat bir isim
+kaliyor; bu depoda bayat isimlerin bir dis okuyucuyu var olmayan bir
+surumu tarif etmeye goturdugu gorulmustu. Surum artik version.py'de durur --
+ONCE burada duruyordu ve mkdocx.py kendi kopyasini tutuyordu, yani "tek
+yerde" diyen bu yazi yanlisti. Dosya adlari oradan turer.
+
+NEDEN VAR. v5'in ilk surumu EL ILE toparlanmisti. Bunun bedelini odedik:
+disaridan dort bagimsiz okuma, govdedeki 5.5 tablosunun aslinda S6.1'in
+Bacchini & Cestino tablosu oldugunu, sutun basliklari degistirilmis halde
+kendi boyutlandirmamiz gibi durdugunu buldu. El ile toplanan bir belgede
+bu tur bir kayma sessizce yasar.
+
+Bu betik ayni belgeyi bolum dosyalarindan ve 00-front-matter.md'den her
+seferinde yeniden kurar, kelime sayilarini SAYAR (elle yazmaz), ve ek
+dizinini iki yerde ayni kaynaktan uretir -- boylece iki liste birbirinden
+ayrisamaz.
+
+mkpaper.py sekilli PDF'i uretir; bu betik sekilsiz, tek dosyalik
+gonderim/paylasim surumunu uretir. Ikisi ayni bolum dosyalarini okur.
+"""
+import os, re, sys
+
+BURA = os.path.dirname(os.path.abspath(__file__))
+
+from version import SURUM        # tek dogruluk kaynagi; cikti adlari bundan turer
+
+MAKALE = os.path.abspath(os.path.join(BURA, ".."))
+sys.path.insert(0, BURA)
+from mkpaper import temizle, blok, turkce_denetle   # ayni ayiklama kurallari
+
+BOLUM = os.path.join(MAKALE, "sections")
+EK = os.path.join(MAKALE, "supplement")
+
+EKLER = [
+    ("S1", "S1-aerodynamic-validation.md",
+     "Independent checks on the two assumed aerodynamic coefficients"),
+    ("S2", "S2-mass-buildup.md",
+     "A component build-up of the mass budget"),
+    ("S3", "S3-control-axes.md",
+     "Control axes in full"),
+    ("S4", "S4-rotation-authority-and-trim.md",
+     "Rotational authority, trim, and the transition envelope"),
+    ("S5", "S5-limits-full.md",
+     "The limitations in full"),
+    ("S6", "S6-bills-and-comparison.md",
+     "The three bills stated formally, and a comparative sizing"),
+]
+
+BASLIK = ("The Architectural Cost of Hybrid VTOL: meryemAircraft, a "
+          "Propeller-Driven Tail-Sitting Blended-Wing-Body Without a Dedicated "
+          "Lift System")
+
+
+def oku(yol):
+    return open(yol, encoding="utf-8").read()
+
+
+def kelime(s):
+    """Baslik isaretlerini ve tablo cubuklarini saymadan kelime sayar."""
+    s = re.sub(r"^#{1,6}\s", "", s, flags=re.M)
+    s = s.replace("|", " ")
+    return len(s.split())
+
+
+def ek_dizini(sayilar):
+    return "\n".join(
+        "- **Supplementary %s** — %s (%d words)" % (kod, ad, sayilar[kod])
+        for kod, _, ad in EKLER)
+
+
+# ---------------------------------------------------------------- ekler
+ek_govde, ek_sayi = [], {}
+for kod, dosya, _ in EKLER:
+    metin = oku(os.path.join(EK, dosya)).strip()
+    ek_sayi[kod] = kelime(metin)
+    ek_govde.append(metin)
+
+dizin = ek_dizini(ek_sayi)
+
+# ---------------------------------------------------------------- makale
+on = oku(os.path.join(MAKALE, "00-front-matter.md"))
+parcalar = ["# The Architectural Cost of Hybrid VTOL", "---", "## Title",
+            "**" + BASLIK + "**"]
+# MDPI on madde sirasi: Title, Authors, Highlights, Abstract, Keywords.
+# Highlights ZORUNLU ve ilk surumde bu listede yoktu -- 00-front-matter.md'de
+# yazilmisti ama uretilen belgeye hic girmiyordu. Dis bir okuma yakaladi.
+for ad in ("Authors", "Highlights", "Abstract", "Keywords"):
+    govde = blok(on, ad)
+    if not govde:
+        print("UYARI — 00-front-matter.md icinde '%s' bulunamadi" % ad)
+    parcalar += ["## " + ad, govde]
+
+# Beyanlar kendi alt basliklarini tasiyor, o yuzden blok() ile degil:
+# "## Beyanlar"dan dosya sonuna kadar alinip basligi ingilizcelestiriliyor.
+m = re.search(r"^##\s+Beyanlar\s*$(.*)\Z", on, flags=re.M | re.S)
+if m:
+    parcalar += ["## Declarations", temizle(m.group(1))]
+else:
+    print("UYARI — 00-front-matter.md icinde 'Beyanlar' bulunamadi")
+
+bolumler = sorted(f for f in os.listdir(BOLUM) if f.endswith(".md"))
+gsayi = 0
+for f in bolumler:
+    metin = temizle(oku(os.path.join(BOLUM, f))).strip()
+    gsayi += kelime(metin)
+    parcalar += ["---", metin]
+
+parcalar += ["---", oku(os.path.join(MAKALE, "bibliography-en.md"))
+             .strip().replace("# References", "# References", 1)]
+parcalar += ["---", "# Supplementary Material", """Six supplementary files accompany this paper and are cited from it by number.
+They carry the derivations behind the results stated here; each was a section of an earlier,
+longer version and is reproduced without abridgement.""", dizin,
+             """The computational setup, the scripts that produce every number here, and a running record
+of the corrections made during the study are in the repository this paper cites."""]
+
+makale = "\n\n".join(parcalar) + "\n"
+turkce_denetle(makale, "paper-%s.md" % SURUM)
+open(os.path.join(MAKALE, "paper-%s.md" % SURUM), "w",
+     encoding="utf-8").write(makale)
+
+# ------------------------------------------------------------ ek belgesi
+ek_bas = "\n\n".join([
+    "# Supplementary Material — meryemAircraft",
+    '*Supplementary material to "%s".*' % BASLIK,
+    """These six files carry the derivations behind the results stated in the paper. Each was a
+section of an earlier, longer version and is reproduced without abridgement, so that every
+number quoted in the main text can be traced to the calculation that produced it. The
+computational setup, the scripts, and a running record of the corrections made during the
+study are in the repository the paper cites.""",
+    "**Contents**", dizin])
+
+ek_belge = ek_bas + "\n\n---\n\n" + "\n\n---\n\n".join(ek_govde) + "\n"
+turkce_denetle(ek_belge, "paper-%s-supp.md" % SURUM)
+open(os.path.join(MAKALE, "paper-%s-supp.md" % SURUM), "w",
+     encoding="utf-8").write(ek_belge)
+
+# -------------------------------------------------- ADI COMMIT TASIYAN KOPYA
+# NEDEN VAR. Iki ardisik turda ayni ad -- paper-v6.md -- ile IKI FARKLI
+# icerik gonderildi. Disaridan bir okuyucu eski indirdigini yukledi ve
+# bunu bilmesinin hicbir yolu yoktu; yalnizca dosyaya bakarak iki surumu
+# ayirt edemezdi. Kusur dosyayi yukleyende degil, ayni adi iki kez
+# kullananda. Bundan sonra gonderilen kopyanin ADINDA commit karmasi
+# olur; bayat bir kopya ADINDAN belli olur.
+import hashlib, subprocess
+
+try:
+    _c = subprocess.run(["git", "rev-parse", "--short", "HEAD"], cwd=MAKALE,
+                        capture_output=True, text=True).stdout.strip()
+except Exception:
+    _c = ""
+if _c:
+    import glob
+    # Her kurulum yeni bir commit adi uretir; eskiler birikmesin. Dizinde
+    # HER ZAMAN tek bir surum durur, o da en son kurulani.
+    for _eski in glob.glob(os.path.join(MAKALE, "submitted", "paper-*.md")):
+        os.remove(_eski)
+    for _kaynak, _etiket in ((makale, ""), (ek_belge, "-ek")):
+        _ad = "paper-%s%s-%s.md" % (SURUM, _etiket, _c)
+        open(os.path.join(MAKALE, "submitted", _ad), "w",
+             encoding="utf-8").write(_kaynak)
+        print("submitted/%s  sha256 %s" %
+              (_ad, hashlib.sha256(_kaynak.encode()).hexdigest()[:12]))
+
+# ------------------------------------------------------------------ rapor
+print("paper-%s.md       %%6d kelime  (govde %%d, %%d bolum)" % SURUM
+      % (kelime(makale), gsayi, len(bolumler)))
+print(("paper-%s-supp.md  " % SURUM) + "%6d kelime" % kelime(ek_belge))
+for kod, _, _ in EKLER:
+    print("   %-3s %6d" % (kod, ek_sayi[kod]))
+
+# atif bosluk/hayalet denetimi -- kaynakca ile govde tutuyor mu
+kaynak_sayisi = len(re.findall(r"^\s*(\d+)\. ",
+                               oku(os.path.join(MAKALE, "bibliography-en.md")), re.M))
+atifli = set()
+for m in re.finditer(r"\[(\d+(?:\s*,\s*\d+)*)\]", makale + ek_belge):
+    atifli.update(int(x) for x in m.group(1).split(","))
+eksik = sorted(n for n in range(1, kaynak_sayisi + 1) if n not in atifli)
+hayalet = sorted(n for n in atifli if n > kaynak_sayisi)
+print("kaynak %d; atif almayan %s; listede olmayan %s"
+      % (kaynak_sayisi, eksik or "yok", hayalet or "yok"))
