@@ -1,170 +1,216 @@
 # meryemAircraft
 
-**Kuyruğuna oturan, kanat-gövde biçimli, kumanda yüzeyi bulunmayan bir insansız hava
-aracı konfigürasyonu — ve onun üzerinden kurulan bir maliyet çerçevesi.** Bu depo,
-tasarımın kaydını, ondan üretilen bilimsel makaleyi ve makaledeki her sayıyı yeniden
-üreten betikleri barındırır.
+**An uncrewed tail-sitting blended-wing-body configuration with no control surfaces —
+and the cost framework built on it.** This repository holds the design record, the
+paper produced from it, and the scripts that reproduce every number in that paper.
 
-Aracın tüm itkisi burundaki **tek bir eş eksenli karşıt dönüşlü pervane çiftinden**
-gelir; kanat uçlarındaki dört küçük çift yalnızca yönelim momenti üretir; gövde
-altındaki aç-kapa bir **şeride**, gövde eksenine paralel itki vektörlerinin
-üretemediği yalpa momenti **atanmıştır**. Elevon, dümen, eğilme mekanizması, geri
-çekme mekanizması ve ayrı bir kaldırma sistemi yoktur.
+All propulsive thrust comes from **a single coaxial contra-rotating pair at the nose**;
+four small pairs at the wing tips produce attitude moments only; a deployable **strip**
+on the lower surface is assigned the roll moment that thrust vectors parallel to the
+body axis cannot produce. There are no elevons, no rudder, no tilting mechanism, no
+retraction mechanism, and no dedicated lift system.
 
 ---
 
-## Makale
+## The paper
 
 **The Architectural Cost of Hybrid VTOL: meryemAircraft, a Propeller-Driven
 Tail-Sitting Blended-Wing-Body Without a Dedicated Lift System**
 Meryem Gülmen, Berke Gülmen, Ömer Gülmen · 2026
 
-Hibrit VTOL hava araçları piste bağımsızlığı kanatla seyirle birleştirir ve bunun
-bedelini seyir verimliliğinden öder. Makale bu bedeli bir uygulama kusuru değil
-**mimari** sayar ve bir muhasebe çerçevesi olarak kurar: bedel üç para biriminde
-tahakkuk eder — seyirde taşınan askı donanımının **kütlesi**, açıkta kalan askı
-donanımının **sürüklemesi**, ve uçuşun yaklaşık yüzde ikisinde geçerli bir koşula
-göre boyutlandırılmış **güç sistemi**. Burada taranan her çare bunlardan birini
-azaltırken bir diğerini artırır. Bedeli böyle ifade etmek, ondan kaçınma koşulunu
-açık eder. İkinci bir sonuç yöntemseldir: mimari karşılaştırmalar seçilen
-**boyutlandırma sözleşmesine** bağlıdır, ve sabit yakıt kesri kütle faturasını menzil
-sütunundan tümüyle siler — bu yüzden tek sözleşme değil üçü birden raporlanır.
-meryemAircraft, kaçınma koşulunu sağlayan **vaka analizidir**.
+Hybrid VTOL aircraft combine runway independence with wing-borne cruise and pay for it
+in cruise efficiency. The paper treats that cost not as an implementation defect but as
+**architectural**, and builds it as an accounting framework: the cost falls due in three
+coupled currencies — the **mass** of hover hardware carried through cruise, the **drag**
+of that hardware when exposed, and a **power system** sized by a condition that holds for
+about two percent of the flight. Every remedy surveyed reduces one by raising another.
+Expressing the cost this way exposes the condition for escaping it. A second result is
+methodological: architectural comparisons depend on the **sizing contract** chosen, and a
+fixed fuel fraction erases the mass bill from the range column entirely — which is why
+three contracts are reported rather than one. meryemAircraft is the **case study** that
+meets the escape condition.
+
+### What is claimed, and against whom
+
+The contribution is architectural. The four axes have four different opponents and are
+not interchangeable.
+
+| Axis | Opponent | Claim |
+|---|---|---|
+| Range and cruise efficiency | Multirotors | **Claimed.** |
+| Runway independence, vertical take-off and landing | Fixed-wing | **Claimed**, by construction. |
+| **Absence of a propulsor-reorientation mechanism** | Tilting architectures | **The actual contribution.** |
+| Range against the other hybrids | Lift-plus-cruise, tilt | **Not claimed** — it reverses with the sizing contract. |
+
+The third claim is narrow and stated narrowly. What is eliminated against tilting
+architectures is the *class of mechanism that reorients a propulsor* — no pivot, no
+nacelle actuator, no variable-pitch hub, no gyroscopic moment from a rotating mass. It is
+**not** a claim that nothing on the aircraft moves: roll cannot be produced by coaxial
+torque-balanced pairs at all, and comes from the strip, which the paper calls the only
+moving aerodynamic surface on the aircraft. Nor is it a claim of mechanical simplicity —
+part count, mass, failure modes and maintenance were never measured. The claim is a
+**count of eliminated mechanism classes**, not a reliability result.
 
 | | |
 |---|---|
-| DOI (her zaman son sürüm) | [10.5281/zenodo.22144194](https://doi.org/10.5281/zenodo.22144194) — şu an **v4** |
-| v4 kaydı | <https://zenodo.org/records/22664634> |
-| İlk sürüm (v1, değişmez) | [10.5281/zenodo.22144195](https://doi.org/10.5281/zenodo.22144195) |
-| PDF | [`paper/pdf/meryemAircraft-paper.pdf`](paper/pdf/meryemAircraft-paper.pdf) — 71 sayfa, 12 şekil |
-| Tek dosya kaynak | [`paper/paper.md`](paper/paper.md) |
-| Bölüm bölüm | [`paper/sections/`](paper/sections/) |
-| Kaynakça | [`paper/bibliography-en.md`](paper/bibliography-en.md) |
-| Hedef dergi | **Drones** (MDPI) — ilk gönderim; gerekçe ve bilinen risk [`paper/00-roadmap.md`](paper/00-roadmap.md) |
+| DOI (always the latest version) | [10.5281/zenodo.22144194](https://doi.org/10.5281/zenodo.22144194) — currently **v7** |
+| v7 version DOI | [10.5281/zenodo.22745666](https://doi.org/10.5281/zenodo.22745666) |
+| First release (v1, immutable) | [10.5281/zenodo.22144195](https://doi.org/10.5281/zenodo.22144195) |
+| PDF | [`paper/pdf/meryemAircraft-paper.pdf`](paper/pdf/meryemAircraft-paper.pdf) — 79 pages, 12 figures, 22 tables |
+| Single-file source | [`paper/paper-v7.md`](paper/paper-v7.md) |
+| Supplementary | [`paper/paper-v7-supp.md`](paper/paper-v7-supp.md) |
+| Section by section | [`paper/sections/`](paper/sections/) |
+| Bibliography | [`paper/bibliography-en.md`](paper/bibliography-en.md) |
+
+### Submission status — not peer reviewed
+
+Submitted to **Drones** (MDPI) on 14 September 2026. Returned from the editorial desk the
+next day as out of scope and transferred to **Aerospace** (MDPI), which rejected it the
+same day. **Neither rejection reached a referee**, and neither carries any technical
+comment, so neither says anything about the content — for it or against it. The record,
+including the two errors in the submission that were ours, is in
+[`paper/drones-submission.md`](paper/drones-submission.md) §10; what is being corrected for
+the next version is in [`paper/revision-list.md`](paper/revision-list.md).
 
 ---
 
-## Neyin gösterildiği, neyin gösterilmediği
+## What is shown and what is not
 
-Bu, deponun en önemli bölümüdür. Makale bir **konfigürasyon çalışmasıdır**; rüzgâr
-tüneli ve uçuş verisi **yoktur**. Aşağıdaki ayrım makalenin her yerinde tutulur ve
-burada da tutulur.
+This is the most important section of the repository. The paper is a **configuration
+study**. There is **no wind-tunnel and no flight data**. The distinction below is held
+everywhere in the paper and is held here.
 
-| | durum |
+| | status |
 |---|---|
-| Üç faturalı çerçeve ve kaçınma koşulu | **kurulmuş**; bağımsız yayımlanmış bir boyutlandırma çalışmasına karşı tutarlılık sınamasından geçiyor |
-| Üç boyutlandırma sözleşmesi | **hesaplanmış**; tek sözleşmeden çıkan sıralamaların neden aldatıcı olduğu gösteriliyor |
-| Statik yunuslama kararlılığı | **gösterilmiş** — girdap kafes, tarafsız nokta MAC'in %34,4'ü, marj +%12,5 (yakınsamış) |
-| Seyirde denge (trim) | **gösterilmemiş** — gereken kamber momenti 0,056 olarak *nicelenmiş*; kamber/refleks dağılımı tanımlı değil |
-| Yatış otoritesi | **gösterilmemiş** — atalet (25,0 kg·m²) ve sönümleme (\|C_l_p\| = 0,358) bu planform için hesaplandı; 20°/s için 27,1 N·m gerekiyor, şeridin kendi kuvveti bunun ~üçte birini veriyor, gerisi ΔC_L ≈ 0,12 *gereksinimi* |
-| Sapma otoritesi | **rahat** — kol yarı açıklık olduğu için yunuslamanınkinin 2,43 katı (55,9 N·m'ye karşı 23,0) |
-| Yön kararlılığı | **gösterilmemiş** — planform C_n_β = 0 veriyor; uç çerçevesi fairing'inden gelmek zorunda, gereken veter 21–34 mm |
-| Geçiş kontrol edilebilirliği | **açık** — uç pervaneler ataleti döndürüyor, aerodinamik momenti döndürdükleri gösterilmedi. Çalışmanın en büyük açık kalemi |
-| Kütle bütçesi, 50 kg | **koşullu kapanıyor** — kabuk yüzey yoğunluğu ≤ 1,78 kg/m² kalırsa 2,2 kg pay; 1,5 kg/m² bir hedeftir, ölçüm değil |
-| Kütle bütçesi, 1000 kg | **kapanmıyor** — ağır nokta bir ölçek uzantısıdır, ikinci bir tasarım noktası değil |
-| Sıfır taşıma sürüklemesi | **sınırlanmış, değiştirilmemiş** — 3B çözüm C_D0 = 0,0141 ± ~%5 veriyor; varsayılan 0,0248 hâlâ üstünde |
+| The three-bill framework and the escape condition | **established**; its falsifiable prediction is tested against an independent published sizing set |
+| Three sizing contracts | **computed**; shows why rankings drawn from a single contract mislead |
+| Static pitch stability | **shown** — vortex-lattice, neutral point at 34.4 % MAC, margin +12.5 % |
+| Cruise trim | **not shown** — the camber moment required is *quantified* at 0.056; the camber/reflex distribution is undefined |
+| Roll authority | **not shown** — inertia (25.0 kg·m²) and damping (\|C_l_p\| = 0.358) computed for this planform; 27.1 N·m needed for 20°/s, of which the strip's own force gives about a third, the rest being a *requirement* of ΔC_L ≈ 0.12 borrowed from published fence and Gurney data |
+| Yaw authority | **comfortable** — 2.43 times the pitch case, the arm being the semi-span (55.9 N·m against 23.0) |
+| Directional stability | **not shown** — the planform gives C_n_β = 0; it must come from a tip-frame fairing, chord required 39 mm at a chord Reynolds number near 80 000 where thin symmetric sections are measured to be nonlinear |
+| Transition controllability | **open** — the tip propellers rotate the inertia; that they rotate the aerodynamic moment is not shown. The largest open item in the study |
+| Free-wheeling rotor drag | **computed, not measured** — C_D0 = 0.0154 at 50 kg, 62 % of the assumed zero-lift drag, against 0.0008 for the same propeller stopped edge-on |
+| Mass budget, 50 kg | **closes conditionally** — 2.2 kg of margin if shell areal density stays ≤ 1.78 kg/m²; 1.5 kg/m² is a target, not a measurement |
+| Mass budget, 1000 kg | **does not close** — the heavy point is a scale extension, not a second design point |
+| Power budget | **does not close on measured cells** — it needs 3.8 times the highest specific power yet measured on a flown pack, and re-closes 38 % heavier at that measured rate |
+| Loading shape | **bounded, not replaced** — the RANS study converges to *K_L* = 0.796 across a three-level grid refinement |
 
-Kısacası: **yönelim kontrolü her eksende boyutlandırılmış, hiçbir eksende
-kapatılmamıştır.** Makale bunu böyle yazar.
+In short: **attitude control is sized in every axis and closed in none.** The paper says
+so in those words.
 
 ---
 
-## Ne var burada
+## What is here
 
 ```
-paper/     Makale: bölümler, tek dosya kaynak, PDF, kaynakça, yol planı
-  build/     Derleyici ve doğrulama betiği
-aero/        Bağımsız hesaplar — her biri kendi gerekçesini ve sınırını yazar
-figures/     On iki şekil
-  source/     Parametrik geometri modeli
-  build/     Şekilleri ve geçiş benzetimini üreten betikler
-  output/      Yayına hazır png / svg
-cfd/        OpenFOAM kurulumu, doğrulama kaydı ve dış değerlendirme yazışmaları
-patent/     Türkiye patent başvurusunun metinleri ve çizimleri
-design/    Tasarım künyesi — her kararın, verildiği andaki gerekçesiyle kaydı
-references/   Okunan literatürün kaydı
-presentation/      Sunum malzemesi
-video/      Görselleştirme
+paper/          The paper: sections, single-file source, PDF, bibliography, roadmap
+  build/          Compiler and verification scripts
+  sections/       Section-by-section source
+  supplement/     Supplementary material
+aero/           Independent calculations — each states its own reasoning and its limit
+figures/        The twelve figures
+  source/         Parametric geometry model
+  build/          Scripts that produce the figures and the transition simulation
+  output/         Publication-ready png / svg
+cfd/            OpenFOAM setups, the validation record, and the external-review rounds
+patent/         Texts and drawings of the Turkish patent application (in Turkish)
+design/         Design record — every decision with the reasoning held at the time
+references/     Record of the literature read
+presentation/   Presentation material
+video/          Visualisation
 ```
 
-## Yeniden üretilebilirlik
+## Reproducibility
 
-Makaledeki her sayı ve her şekil bu depodaki betiklerden yeniden üretilebilir.
+Every number and every figure in the paper can be regenerated from the scripts here.
 
-| Betik | Ne yapar |
+| Script | What it does |
 |---|---|
-| `paper/build/mkpaper.py` | Bölümleri, şekilleri ve kaynakçayı tek PDF'te derler |
-| `paper/build/verify.py` | **Makalenin her başlık sayısını, makalenin kendi denklemleriyle bağımsız hesaplayıp metinle karşılaştırır** |
-| `aero/planform.py` | Ok açısı yasalarından planformu yeniden kurar; künye değerleriyle sınar |
-| `aero/baseline.py` | Üç mimarinin kapalı çevrim boyutlandırması ve üç sözleşme |
-| `aero/mass.py` | Bileşen bileşen kütle bütçesi, kabuk yoğunluğu başabaşı, tampon sınaması |
-| `aero/vlm.py` · `aero/cd0.py` | Girdap kafes ve `C_D0` kurulumu |
-| `aero/stability.py` | Tarafsız nokta, statik marj, denge gereksinimi, **konvansiyon denetimi** |
-| `aero/rotation.py` · `aero/envelope.py` | Geçiş dönme dinamiği ve tasarım zarfı |
-| `aero/roll.py` | Yatış ataleti, sönümlemesi, otorite gereksinimi, aç-kapa sınır çevrimi |
-| `aero/yaw.py` | Sapma ataleti, otoritesi, yön kararlılığı gereksinimi |
-| `aero/volume.py` · `aero/sensitivity.py` | Hacim kapanışı ve eğim duyarlılığı |
-| `figures/build/transition2.py` | Geçiş benzetimi — iki serbestlik dereceli nokta kütle |
-| `figures/build/mkfig*.py` · `mkconcept.py` | On iki şeklin üreticileri |
-| `figures/build/figlib.py` | 3B modeli başsız Chromium'da açar, kamerayı sürer, görüntü alır |
+| `paper/build/mkpaper.py` | Compiles sections, figures and bibliography into one PDF |
+| `paper/build/verify.py` | **Recomputes every headline number in the paper from the paper's own equations and compares it with the text** |
+| `paper/build/links.py` | Connective-tissue guard: checks that every cross-reference resolves, and to the right place |
+| `aero/planform.py` | Rebuilds the planform from the sweep laws; checks it against the design record |
+| `aero/baseline.py` | Closed-loop sizing of three architectures under three contracts |
+| `aero/mass.py` | Component-level mass budget, shell-density break-even, buffer check |
+| `aero/vlm.py` · `aero/cd0.py` | Vortex-lattice solution and the `C_D0` build-up |
+| `aero/stability.py` | Neutral point, static margin, trim requirement, **convention audit** |
+| `aero/rotation.py` · `aero/envelope.py` | Transition rotation dynamics and the design envelope |
+| `aero/roll.py` · `aero/yaw.py` | Roll and yaw inertia, damping, authority requirement |
+| `aero/tip_propeller.py` | Free-wheeling drag of the tip propellers at zero shaft torque |
+| `figures/build/transition2.py` | Transition simulation — two-degree-of-freedom point mass |
+| `figures/build/mkfig*.py` · `mkconcept.py` | Generators for the twelve figures |
+| `figures/build/figlib.py` | Opens the 3-D model in headless Chromium, drives the camera, captures |
 
-`verify.py` şu an **40 kontrol** ve geçiş tablolarının **52 hücresini** sınıyor;
-sapma yok. Betik, derleme sırasında iki tablonun bayat kaldığını ve bir yerde
-momentin itkiyle karıştırıldığını yakaladı.
+`verify.py` currently runs **43 checks** plus **68 cells** of the transition tables, with
+no deviation, and screens twelve files against a list of forbidden stale values. It has
+caught, among other things, two tables left stale during a build and one place where a
+moment had been confused with a thrust.
 
-**Bağımlılıklar:** `python3`, `matplotlib`, `pillow`, `markdown`, `playwright`
-(başsız Chromium — üç boyutlu şekiller ve PDF için); `aero/` için ayrıca
-`aerosandbox` ve `neuralfoil`.
+**Dependencies:** `python3`, `matplotlib`, `pillow`, `markdown`, `playwright` (headless
+Chromium, for the three-dimensional figures and the PDF); `aero/` additionally needs
+`aerosandbox` and `neuralfoil`.
 
-Betikler bulundukları yerden çalışır; depo dışında bir yola ihtiyaç duymazlar.
-Üç boyutlu şekiller `figures/source/body-study.html` modelinden üretilir:
-`figlib.py` modelin bir **kopyasına** render kancası enjekte eder, kaynak dosya
-değiştirilmez. Chromium başka bir yerdeyse `CHROME_PATH` ile gösterilebilir.
+Scripts run from where they sit and need no path outside the repository. The
+three-dimensional figures are produced from `figures/source/body-study.html`: `figlib.py`
+injects a render hook into a **copy** of the model and never modifies the source file. If
+Chromium lives elsewhere, point to it with `CHROME_PATH`.
 
-## Dış değerlendirme kaydı
+## External review record
 
-Makale, gönderimden önce birbirinden bağımsız üç dil modeline **tur tur** okutuldu
-ve her turun metni [`cfd/external-review-*.md`](cfd/) altında saklandı. Bu bir doğrulama
-değil, bir **hata avıdır** ve avın kayıtları tutulmuştur — bulunan hatalar
-düzeltilmekle kalmayıp `aero/README.md` içinde neyin neden yanlış olduğuyla birlikte
-yazılıdır. Süreçte çöken iddialar arasında şunlar var: yunuslama momentinin 4TL değil
-**2TL** olduğu; ağırlık merkezinin elle yerleştirilmesinin saçma bir statik marj
-verdiği; statik marjla denge gereksiniminin **iki farklı referans veterle**
-yazıldığı; ve §4.4'ün 46 N·m'lik yatış momentinin şeridin kendi kuvvetinden
-**gelemeyeceği**.
+Before submission the paper was read round by round by **four mutually independent
+language models**, and the text of every round is kept under
+[`cfd/external-review-*.md`](cfd/). This is not a validation; it is a **bug hunt**, and the
+hunt is on the record — what was found was not only corrected but written down, with what
+was wrong and why, in `aero/README.md`. Claims that collapsed during the process include:
+that the pitching moment was 2TL rather than 4TL; that placing the centre of gravity by
+hand gave an absurd static margin; that the static margin and the trim requirement had
+been written with **two different reference chords**; and that §4.4's 46 N·m rolling
+moment **could not** come from the strip's own force.
 
-## Kaynak kullanımı
+Errors made while *summarising* the paper are recorded with equal weight, because that
+turned out to be the highest-error activity in the project: a claim that no general
+architectural superiority was asserted, which denied the paper's own earned claims; a
+claim that nothing on the aircraft moves, contradicted by the strip; and a claim that the
+strip produces no pitching moment, contradicted by the same section.
 
-Sayısal ve tarihsel iddiaların tamamı **birinci elden okunan** kaynaklara
-dayandırılmıştır; okunmayan kaynaklara hiçbir sayı bağlanmamıştır. Bu ayrım
-makalenin 8. bölümünde açıkça yazılıdır. `paper/references.md`, hangi kaynağın ne
-düzeyde doğrulandığını ve arama motoru özetlerinden gelen **üç yanlış sayının**
-birinci el okumayla nasıl yakalandığını kaydeder.
+## Use of sources
 
-## Sürüm geçmişi
+Every numerical and historical claim rests on a source **read first-hand**; no number is
+attached to a source that was not read. The distinction is written out in §8 of the paper.
+`paper/references.md` records how far each source was verified, and how **three wrong
+numbers** taken from search-engine summaries were caught by first-hand reading.
 
-| Sürüm | Tarih | Öz |
+## Version history
+
+Published versions are **immutable**; each remains reachable at its own DOI. File *names*
+in this repository were translated to English on 16 September 2026, but the contents of
+published versions were not touched — see [`paper/VERSIONS.md`](paper/VERSIONS.md) for the
+path translation table.
+
+| Version | Date | Substance |
 |---|---|---|
-| **v4** | 2026-09-08 | Çerçeve merkezli yeniden kurgu; kabiliyet cümleleri gereksinim diline çevrildi. Üç kontrol ekseni denetlendi: yunuslama (CG hacim ağırlıklı, marj +%12,5, denge 0,056), yatış (46 N·m çöktü, ΔC_L ≈ 0,12 gereksinimine dönüştü), sapma (otorite 2,4 kat, yön kararlılığı fairing'e bağlı). İki referans veter birleştirildi; dönme süreleri "pay" değil **eyleyici sınırlı alt sınır** oldu. |
-| v3 | 2026-09-05 | Merkez gövde için 3B çözüm: wing/gövde C_D0 = 0,0141 ± ~%5, varsayılan 0,0248 hâlâ üstünde. 8.1 "No experimental validation" oldu. |
-| v2 | 2026-08-29 | Menzil yöntemi düzeltildi (azami L/D yerine seyir noktası poları): 1 695 → **1 598 km**. Bölüm 6.6 eklendi; hacim kapanışı yapıldı. |
-| v1 | 2026-08 | İlk yayım. |
-
-Yayımlanmış sürümler **değişmez**; her biri kendi DOI'siyle erişilebilir durumdadır.
+| **v7** | 2026-09-13 | Submitted version. Claim structure rebuilt onto four axes with four different opponents; the mechanism claim narrowed to the propulsor-reorientation class; figure order and numbering corrected to first mention; heavy-rotor charge reported as an interval. |
+| v6 | 2026-09-11 | Figure and table production defects closed; all 22 tables numbered, captioned and cited. |
+| v5 | 2026-09-10 | Supplementary material separated; sizing contracts consolidated. |
+| v4 | 2026-09-08 | Framework-centred restructuring; capability sentences rewritten as requirements. Three control axes audited. |
+| v3 | 2026-09-05 | Three-dimensional solution for the centre body. §8.1 became "No experimental validation". |
+| v2 | 2026-08-29 | Range method corrected (cruise-point polar instead of maximum L/D): 1 695 → **1 598 km**. |
+| v1 | 2026-08 | First release. |
 
 ## Patent
 
-Konfigürasyon için Türkiye'de patent başvurusu yapılmıştır (2026-08). `patent/`
-altındaki metinler ve çizimler başvuruya esas alınan taslaklardır. Bir patent
-vekili tarafından hazırlanmamıştır.
+A patent application for the configuration was filed in Türkiye (2026-08). The texts and
+drawings under `patent/` are the drafts the application was based on, and are **in
+Turkish**, as filed. They were not prepared by a patent attorney.
 
-## Lisans
+## Licence
 
-Metin, şekiller ve betikler: **AGPL-3.0** — bkz. [LICENSE](LICENSE).
-Makalenin Zenodo'daki sürümü **CC BY 4.0** ile yayımlanmıştır.
+Text, figures and scripts: **AGPL-3.0** — see [LICENSE](LICENSE).
+The Zenodo version of the paper is published under **CC BY 4.0**.
 
 ---
 
-*Yapay zekâ araçları bu çalışmanın hazırlanmasında literatür taraması, sayısal
-denetim ve dil düzeltmesi için kullanılmıştır. Tüm tasarım kararları, mühendislik
-yargıları ve iddialar yazarlara aittir.*
+*Artificial-intelligence tools were used in preparing this work for literature search,
+numerical checking and language correction. All design decisions, engineering judgements
+and claims belong to the authors.*
