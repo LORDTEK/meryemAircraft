@@ -54,6 +54,12 @@ Bu makale **tam olarak bizim en büyük defter kalemimizin konusu**: seyirde kal
 pervanelerinin sürüklemesi, ve **rüzgâr tünelinde ölçülmüş.** Pervaneleri geri
 çekmek parazit sürüklemeyi %38 azaltıyor, menzili %13 artırıyor.
 
+> ⚠️ **BU İKİ SAYI DOĞRULANMADI VE TEZLE UYUŞMUYOR.** Arama motoru özetinden
+> geldiler. Birinci elden okuduğumuz doktora tezi ([K1]) aynı olgular için
+> **%34 sürükleme** (doğru kıyas) ve **+%1,7 menzil** veriyor. Farklı taban mı,
+> yanlış sayı mı — dergi makalesi okunmadan bilinemez. **Makaleye hiçbir
+> biçimde girmezler.** Bkz. `bacchini-2021-reading-plan.md` §0.
+
 **Biz aynı olguyu pervane-element momentum kuramıyla hesaplıyoruz (0,0154) ve bu
 ölçümü hiç anmıyoruz.** Kaynakçada yok. `00-front-matter.md` içindeki bir not, %38/%13
 sayılarının *"kaynak henüz birinci elden okunmadı"* diye bilerek dışarıda

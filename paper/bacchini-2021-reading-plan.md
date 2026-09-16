@@ -13,7 +13,64 @@ değil mekanik olması için önceden yazıldı. **Buradaki hiçbir sayı Bacchi
 değerler bu projede üç kez yanlış çıkmış bir kaynak sınıfındandır. Okunmadan
 yazılmaz.
 
+
 ---
+
+## 0. ÖNEMLİ — 2026-09-16'da anlaşıldı: tezi ZATEN okumuşuz
+
+Yazar, öğrencilerden **doktora tezini** aldı ve "bu var mıydı bizde" diye sordu.
+**Vardı.** `references.md` [K1]: *Bacchini, A., "Electric VTOL preliminary design
+and wind tunnel tests", doktora tezi, Politecnico di Torino, Mart 2020,*
+**durum A — birinci elden okundu.** Makalenin Tablo 1'indeki L/D merdiveni
+(≈17 / ≈13 / ≈9) oradan geliyor.
+
+**Ama tezin PDF'i depoda YOK.** `iris.polito.it` üzerinden okunmuş, dosya
+arşivlenmemiş. **Arşivlenecek** — bu deponun kendi kuralı yayımlanmış bir şeyin
+elde tutulmasını gerektiriyor ve okuduğumuz en yüklü dış kaynak bu.
+
+### Tezin zaten taşıdığı şey — 2021 makalesinden beklediğimin çoğu
+
+`references.md` [K1] kaydından, birinci elden okunmuş hâliyle:
+
+| Bulgu | Değer |
+|---|---|
+| L/D merdiveni (Mini Talon 3) | motorsuz ≈17, pervane akışa paralel ≈13, akışa dik ≈9 |
+| Geri çekme, **doğru kıyas** (standart quadplane'e karşı) | **%34 sürükleme azalması** |
+| Geri çekme, aracın kendisiyle kıyası | %63 — **yazarın kendisi bunun yanlış kıyas olduğunu söylüyor** |
+| SkyProwler, açık → çekilmiş | %30 |
+| Ceza nerede | *"The drag produced by the **motors** is significant"* — pervane kanadında değil |
+| **Kitty Hawk Cora'ya uygulanınca** | **%30 sürükleme azalması + %5 sistem kütlesi** → menzil 119 → **121 km (+%1,7)**, azami menzil hızı **+5 m/s** |
+
+**Son satır, aradığım şeyin ta kendisi.** Çerçevemiz her çarenin bir faturayı
+başkasına dönüştürdüğünü söylüyor. Bu ölçüm tam olarak onu gösteriyor:
+**%30 sürükleme kazancı, %5 sistem kütlesi karşılığında satın alınmış** —
+Fatura 2 → Fatura 1, ölçülmüş hâliyle. Ve net kazanç yalnızca **%1,7 menzil.**
+Yani dönüşüm gerçek, ve kazanç küçük. Çerçevenin öngördüğü şey budur.
+
+### Ve bir sorun: elimizdeki %38 / %13 sayıları tezle UYUŞMUYOR
+
+`revision-list.md` §1'de 2021 makalesine atfen *"parazit sürüklemeyi %38
+azaltıyor, menzili %13 artırıyor"* yazıyor. **Bu sayılar birinci elden
+okunmadı; arama motoru özetinden geldi.** Tezin birinci elden okunmuş sayıları:
+sürüklemede **%34**, menzilde **+%1,7**. Aynı yerde durmuyorlar.
+
+İki ihtimal var ve **hangisi olduğunu okumadan bilemeyiz:**
+- Dergi makalesi farklı bir tabanda farklı bir büyüklük bildiriyor olabilir
+  (parazit sürükleme ≠ toplam sürükleme; farklı araç, farklı görev).
+- Ya da %38/%13 basitçe yanlıştır.
+
+**Bu, kuralın neden var olduğunun kanıtıdır.** `00-front-matter.md` o sayıları
+"kaynak birinci elden okunmadı" diye bilerek dışarıda bırakmıştı ve haklıymış.
+**Makaleye hiçbir biçimde girmezler.**
+
+### Sonuç: 2021 makalesi artık ACIL değil
+
+Bilimsel içeriğin çoğu elimizde ve birinci elden. Dergi makalesi hâlâ değerli —
+hakemli sürüm, AIAA *"cite the original source… journal articles rather than
+conference counterparts"* diyor, ve %38/%13 bilmecesini çözer. Ama **v8'in
+önünde duran engel olmaktan çıktı.** Gelirse eklenir; gelmezse teze atıf
+yapılır ve bu meşrudur.
+
 
 ## 1. Bizim tarafımız — karşılaştırmaya girecek sayılar, kaynağıyla
 
