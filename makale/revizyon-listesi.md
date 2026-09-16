@@ -38,7 +38,13 @@ denetliyor demektir.
 
 ---
 
-## 1. EKSİK KAYNAK — en önemlisi, ve bir hakem bunu kesin görecek
+## 1. EKSİK KAYNAK — **YAZAR KARARI: KOŞULSUZ, HANGİ DERGİ OLURSA OLSUN**
+
+**Yazarın 2026-09-16 talimatı:** Bacchini 2021 kaynağı, hangi dergiye gidilirse
+gidilsin, hesap istemeyen bir yere gidilse bile, **profesyonel biçimde tamamlanacak.**
+Bu madde artık isteğe bağlı değil ve bir dergi şartına bağlı değil. Kaynak birinci
+elden okunacak, §3.3'e girecek, ve bizim hesabımızla ölçümü karşılaştırılacak.
+
 
 **Bacchini, A.; Cestino, E.; Magill, B.; Verstraete, D. *Impact of lift propeller
 drag on the performance of eVTOL lift+cruise aircraft.* Aerospace Science and
