@@ -123,3 +123,110 @@ sonra sormaya başlaması. Ama bu bir tahmin, bir gerekçe değil.
 kullanıldıkları yerde durur. Ayrı bir adım, anlatıyı hesap merkezine geri çeker.
 AIAA'nın sayısal doğruluk politikası ayrı bir bölüm değil, **karşılanması gereken bir
 şart** — ve o şart 8 ile 10'un içinde karşılanır.
+
+---
+
+# REVİZYON — dördünü okuduktan sonra (Tur 31 sonrası)
+
+Dört listeyi okudum. **Üç yerde fikrimi değiştiriyorum, bir yerde ayrılığı
+keskinleştiriyorum.**
+
+## Değiştirdiğim: 4 ve 5'in kesim ekseni
+
+Ben ikiyi **donanıma** göre kesmiştim — gövde çözümü, itki çözümü. **Grok
+yeteneğe göre kesmiş** — piste ihtiyaç duymayan dikey işletim yarısı, kanatla
+seyir yarısı; ve **her yarıya kendi rakibini bağlamış.**
+
+**Grok'unki daha iyi.** Benimki uçağın nasıl kurulduğunu anlatıyor; onunki
+argümanın neyi kazandığını anlatıyor, ve iddia yapısını anlatının içine erkenden
+kilitliyor. Bu makalenin kronik sorunu mühendisliğin argümanı yutması; yeteneğe
+göre kesmek o riski azaltıyor.
+
+## Değiştirdiğim: parça listesi birleştirmeden SONRA
+
+Ben parçaları önce koymuştum. **Grok ve DeepSeek ikisi de birleştirmeyi önce,
+parçaları sonra koyuyor.** DeepSeek'in gerekçesi ikna edici: okuyucu önce hamleyi
+görsün, sonra donanımı ne için olduğunu bilerek okusun.
+
+Benim itirazım *"tanımadığı parçaların birleşimi anlatılamaz"* idi. Ama yeteneğe
+göre kesilen 4 ve 5, parçaları zaten asgari düzeyde tanıtıyor. Tam envanter
+birleştirmeden sonra bir kez gelirse tekrar da olmuyor.
+
+## Keskinleştirdiğim: dış sınama tek bir şey DEĞİL
+
+Kendi listemde 10'un yerinin *"tahmin, gerekçe değil"* olduğunu yazmıştım. Grok'un
+gerekçesi var: dış veri bizim defterimizden önce gelsin, muhasebe kendi uçağımıza
+uygulanmadan önce kendine hizmet etmediği gösterilsin.
+
+**Ama ikimiz de bir şeyi kaçırmışız, ve dördü de kaçırmış: NASA ile Bacchini aynı
+işi yapmıyor.**
+
+- **NASA boyutlandırma seti çerçeveyi doğruluyor** — çürütülebilir bir öngörü
+  kuruluyor ve bizim üretmediğimiz veriye karşı tutuyor.
+- **Bacchini bir sayıyı çıpalıyor** — serbest dönme yükünün büyüklük mertebesini
+  dışarıdan bir ölçüme bağlıyor.
+
+Biri çerçevenin sınaması, öteki defterin kalemine dış dayanak. **Aynı yerde durmak
+zorunda değiller** — hatta muhtemelen durmamalılar: NASA çerçeve kurulur kurulmaz,
+Bacchini sürükleme faturasının yanında.
+
+Bunu beş listenin hiçbiri yapmıyor. **Bir sonraki turda savunacağım nokta budur.**
+
+## Değiştirmediğim: kaçış koşulu ayrı durur
+
+Üçümüz ayrı adım yapmış (Grok, DeepSeek, ben), Qwen ikiye katlamış, **ChatGPT hiç
+koymamış.** Bence ChatGPT'ninki bir eksik: kaçış koşulu olmadan yapılandırma
+"böyle de yapılabilirmiş" olur, "böyle yapılması gerekiyormuş" olmaz.
+
+---
+
+## Revize edilmiş liste — on iki adım
+
+1. **Boşluk** — görev iki şey istiyor, tek aile ikisini vermiyor.
+2. **Vergi** — hibritler ikisini verir ve üç bağlaşık para biriminde öder; her çare
+   aktarır, hiçbiri kaldırmaz.
+3. **Kaçış koşulu** — aynı donanım, aynı yönelim, aynı iş, tampondan tepe.
+4. **Birinci yarı: piste ihtiyaç duymayan dikey işletim.** Rakip sabit kanatlı.
+   **Boyutlandırıldı, gösterilmedi.**
+5. **İkinci yarı: kanatla seyir verimi.** Rakip çok rotorlu. Yeter. Sabit kanatla
+   menzil yarışı yok.
+6. **BİRLEŞTİRME** — ikisi aynı anda, çünkü gövde döner ve propulsor'ler dönmez.
+   Buluş budur.
+7. **Neyden yapıldığı, ve hâlâ ne hareket ettiği** — burun çifti, uç çiftleri,
+   şerit ve onun yunuslama momenti; ortadan kaldırılan mekanizma sınıflarının
+   **sayımı**, "daha basit" değil.
+8. **Muhasebe kendine mi hizmet ediyor** — NASA seti çerçeveyi sınar.
+9. **Bu bir uçak mı, kapanıyor mu** — kütle, denge, kararlılık, her eksende
+   boyutlandırılmış kumanda.
+10. **Birleşme ne ödüyor** — defter; serbest dönme sürüklemesi en büyük kalem;
+    **Bacchini çıpası burada.**
+11. **Sayıların söylemesine izin verilen şey** — sözleşmeye göre sıralama değişir,
+    öteki hibritlere menzil iddiası yok.
+12. **Kapanmayanlar, ve dört eksende durmak.**
+
+**En zayıf dikişim hâlâ 9 ile 10 arası.** Grok ve Qwen bu ikisini hiç ayırmamış.
+Ayrı tutuyorum çünkü yazarın kendi taslağında *"ortaya çıkan ürünün sorunsuzluğu"*
+ile *"mevcut hesaplar"* ayrı duruyor — ama bir okuyucu birleştirmek isterse
+direnmem.
+
+---
+
+## Grok'un briefing'e yaptığı itiraz — kabul
+
+> *"'Claimed' on vertical operation is only safe if milestone 4 keeps 'sized, not
+> demonstrated.' I would not write 'claimed, by construction' in the paper."*
+
+**Haklı.** İddia tablosundaki *"Claimed"* satırı, 4. adım "boyutlandırıldı,
+gösterilmedi" demedikçe fazla güçlü. Revize listemde 4'e o kaydı koydum.
+
+## ChatGPT'nin briefing'e yaptığı itiraz — bu turun en iyi hamlesi
+
+Düzeltilmiş hâliyle bile *"novelty ana akıştır"* ifadesini **yazarın kesinleşmiş
+görüşü olarak kabul etmiyor**, çünkü aynı metin yazarın konumunun iki kez fazla
+kesin aktarıldığını söylüyor. Bunun yerine operasyonel bir ilkeye çeviriyor:
+
+> *"Okur önce neyin yeni olduğunu anlamalı; ardından hesapların bu yeniliği nasıl
+> sınadığını ve bedelini nasıl ortaya koyduğunu görmeli."*
+
+**Bu doğru epistemik hamle**, ve briefing'e koyduğum "beni denetleyin" bölümünün
+işe yaradığının kanıtı.
