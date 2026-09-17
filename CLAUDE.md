@@ -89,6 +89,59 @@ yarım** olarak tarif ediyor.
 üretmez" (yine 2.10 ile çelişti). Üçü de **özet yazarken** oldu. Özet
 yazmak, bu projede en yüksek hata oranlı iştir.
 
+### 0.3 DÖRDÜNCÜ kez, ve bu kez dış okuyucular yakaladı.
+
+Tur 29'da dış okuyuculara giden metne şunu yazdım — üstelik tam da *"bunu
+unutma"* diye kendime not düştüğüm paragrafın içinde:
+
+> *"a configuration that unites the tactical freedom of a rotorcraft with **the
+> range of a fixed-wing aircraft**"*
+
+**Bu, §0'ın birinci yasak hatasıdır:** sabit kanatlıyla menzilde yarışmak. İki dış
+okuyucu bağımsız olarak yakaladı.
+
+**Bundan sonra kullanılacak ifade:**
+
+> **piste ihtiyaç duymayan dikey işletim** ile **kanatla seyir verimini**
+> birleştiren, ve bu birleşmeye **propulsor'ü yeniden yönlendiren hiçbir mekanizma
+> olmadan** ulaşan yapılandırma.
+
+"Sabit kanadın menzili" **denmez.** Menzil iddiası yalnız çok rotorluya karşıdır.
+
+Ayrıca *"inşa gereği"* (by construction) ifadesi dikkatli kullanılacak: tasarım
+dikey işletimi **boyutlandırıyor**, ama geçiş ve uçabilirlik **gösterilmedi**.
+
+### 0.4 Merkez ne demek — yazarın düzeltmesi.
+
+Tur 29'da yazarın konumunu dış okuyuculara **yanlış aktardım**: mimarinin merkez
+olmasını *"geri kalan her şey ya muhasebedir ya da ödenen bedeldir"* diye yazdım.
+Bu, çerçeveyi araçsal gösterdi ve turun bir kısmını yanlış yere götürdü.
+
+**Yazarın gerçek konumu:** *"Ben işin merkezi derken diğer kısımlarının olmayacağını
+söylemedim."* **Ana akış ve gölgelenmeyecek olan, anlatılan yeniliktir. Ama bugüne
+kadar yapılmış hesaplar da doğru şekilde, doğru yerinde eklenecektir.** İkisi
+birden; biri ötekinin pahasına değil.
+
+### 0.5 Aşama atlama. Yazarın ikinci düzeltmesi.
+
+Tur 29'da dış okuyuculardan kelime bütçeli, şekil ve tablo atamalı bir içindekiler
+istedim. **Yanlış aşamanın sorusuydu.** Yazarın istediği çok daha geride:
+
+> *"Çok kabaca genel anlatım akış taslağı oluşturmaya çalışıyorum. Tablolar falan
+> çok detay şeyler."*
+
+Yazarın kendi örneği — bir saniyede, yalnız *şekil* olarak verilmiş:
+
+> giriş · mevcut durum · şu soruna çözüm · bu soruna çözüm · **çözümlerin
+> birleştirilmesi** · ortaya çıkan ürünün sorunsuzluğu · mevcut hesaplar · sonuç
+
+**Dikkat: "çözümlerin birleştirilmesi" kendi başına bir adım.** Bir sonuç bölümünün
+içine sıkıştırılmış bir yan ürün değil, argümanın adı konmuş bir hamlesi. Beş ayrı
+içindekiler önerisinin hiçbirinde böyle bir adım yoktu.
+
+**Kural: önce en kaba hat, sonra ayrıntı.** Bütçe, tablo sayısı, şekil ataması —
+hepsi kabul edilmiş akışın üstüne kurulur, öncesine değil.
+
 ## 1. Yazışma ve üslup
 
 - Kullanıcıyla **Türkçe**. Öteki YZ'lere (ChatGPT, Grok, DeepSeek, Qwen)
