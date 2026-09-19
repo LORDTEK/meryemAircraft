@@ -79,7 +79,16 @@ gerekçesi Grok'un kendi itirazını Grok'un önerisinden daha iyi koruyor:
 *"bir boyutlandırma döngüsünü matematiksel olarak kapatmak, bir uçağı fiziksel olarak
 kapatmakla aynı şey değildir"* — işi bitiriyor. Başarısızlıklar 14'te yaşar.
 
-### 2. Özette bir katkı mı iki mi: DeepSeek'e karşı Grok
+### 2. ~~Özette bir katkı mı iki mi~~ — **KAPANDI. Yazarın kararı, Tur 35.**
+
+**Tek katkı: mimari.** Çerçeve, mimari iddiayı **denetlenebilir kılan araçtır** — eşit
+ikinci katkı değil, ama süs de değil: 2, 3, 4, 12 ve 13. adımlar tam boyuyla durur.
+Sözleşme bağımlılığı **belirgin biçimde, bir bulgu olarak** söylenir. Bu, v7'nin 227.
+satırını (*"The primary contribution is a framework; the aircraft is the case that
+instantiates it"*) bilerek tersine çevirir. Gerekçe ve kabul edilen bedel:
+`CLAUDE.md` §0.6. Aşağıdaki tartışma kayıt olarak durur.
+
+#### Karar öncesi tartışma: DeepSeek'e karşı Grok
 
 **DeepSeek** ısrarla iki katkının da özette ve girişte adlandırılmasını istiyor.
 **Grok karşı çıkıyor ve gerekçesi bizim kendi tarihimizden:**

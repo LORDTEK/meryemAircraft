@@ -142,6 +142,35 @@ içindekiler önerisinin hiçbirinde böyle bir adım yoktu.
 **Kural: önce en kaba hat, sonra ayrıntı.** Bütçe, tablo sayısı, şekil ataması —
 hepsi kabul edilmiş akışın üstüne kurulur, öncesine değil.
 
+### 0.6 Katkı sayısı. Yazarın kararı, Tur 35.
+
+DeepSeek iki katkı önerdi (uçak; çerçeve+sözleşme sonucu). Grok bir katkıda ısrar etti:
+*"sonuç, ikinci ve eşit bir buluş değil"* ve *"özette iki katkı yine iki makale gibi
+okunur"* — masadan ret tam olarak buydu. Masada aslında **üç** aday vardı:
+
+| | Ne | Türü |
+|---|---|---|
+| **A** | Mimari — kaçış koşulunu propulsor'ü döndüren mekanizma olmadan karşılayan yapı | **buluş** |
+| **B** | Üç faturalı çerçeve — taşınan askı kütlesi, açıkta seyir sürüklemesi, askı tepesiyle boyutlanan sürekli güç | **yöntem** |
+| **C** | Sıralamalar mimariye değil boyutlandırma sözleşmesine aittir; sıra tersine döner | **bulgu** |
+
+**Karar — tek katkı: mimari.** Çerçeve, mimari iddiayı **denetlenebilir kılan araçtır**;
+eşit ikinci katkı değildir, ama süs de değildir: kendi adımlarını (2, 3, 4, 12, 13) tam
+boyuyla korur. Sözleşme bağımlılığı **belirgin biçimde, bir bulgu olarak** söylenir —
+makalenin savunduğu ikinci bir tez olarak değil.
+
+**Bu, v7'nin 227. satırının bilerek tersine çevrilmesidir:**
+
+> *"**Contributions.** The primary contribution is a framework; the aircraft is the case
+> that instantiates it."*
+
+Gerekçe §0.4'tür: merkez mimaridir, ama öteki kısımlar yok olmaz; hesaplar doğru yerinde
+tam olarak durur.
+
+**Bedeli bilerek kabul edildi:** hakem uçağı reddederse, v7'nin sıralaması ayakta bir
+çerçeve bırakıyordu; v8'inki bırakmıyor. Buna karşılık, bizi koruyan o sıralama aynı
+zamanda bizi *"iki makale"* gibi gösterip masadan attıran sıralamaydı.
+
 ## 1. Yazışma ve üslup
 
 - Kullanıcıyla **Türkçe**. Öteki YZ'lere (ChatGPT, Grok, DeepSeek, Qwen)
