@@ -20,28 +20,35 @@ is the accounting that the rest of the paper is checked against.
 
 ### The root: a duty cycle that does not match the hardware
 
-Every hybrid VTOL aircraft carries hardware whose only purpose is the vertical phase, and that
-phase is short. For a mission of one hour, a take-off, a transition, a return transition and a
-landing occupy on the order of a minute — **roughly two percent of the flight.** The remaining
-ninety-eight percent is spent carrying that hardware through the air.
+The vertical phase is short. For a mission of one hour, a take-off, a transition, a return
+transition and a landing occupy on the order of a minute — **roughly two percent of the flight.**
+Any hardware installed for that phase alone is carried through the remaining ninety-eight
+percent.
 
-This is not an implementation defect, and it cannot be removed by making the hardware better,
-because it is a statement about duty cycle rather than about quality. A lighter lift rotor is
-still carried for the whole flight. A cleaner lift rotor is still carried for the whole flight.
-**The mismatch between how long a component is needed and how long it is present is the origin
-of all three charges below.**
+**An architecture that provides the vertical phase with a dedicated lift subsystem therefore
+carries it for fifty times as long as it uses it.** This is not an implementation defect and it
+cannot be removed by making the subsystem better, because it is a statement about duty cycle
+rather than about quality: a lighter lift rotor is still carried for the whole flight, and a
+cleaner lift rotor is still carried for the whole flight. **The mismatch between how long a
+component is needed and how long it is present is the origin of all three charges below.**
+
+The statement is deliberately confined to architectures with a dedicated lift subsystem, because
+that is the family the charges describe. Whether any architecture avoids the mismatch — and what
+it pays instead — is the subject of the next section, and it is not settled here.
 
 ### Bill 1 — mass
 
 The most direct payment is dead mass. A lift-plus-cruise aircraft carries two propulsion
 groups: rotors, motors, mounts, wiring and structural reinforcement for the vertical phase, and
-a separate propulsor for cruise. The vertical group is inert throughout cruise and is lifted
-anyway.
+a separate propulsor for cruise. The vertical group provides no required lift or thrust during cruise and is
+lifted anyway.
 
 Its cost is not linear. Mass growth feeds itself — MTOW = m_payload / (1 − f_empty − f_energy)
 puts additional empty mass through a multiplier that grows as the denominator shrinks — and in
-the vertical phase the same increment is charged a second time, because hover power scales with
-W^1.5. A modest dead-mass fraction becomes a large payload penalty.
+the vertical phase the same increment is charged a second time, because at a fixed disc area
+hover power scales with W^1.5. *(The exponent is a property of the scaling rule chosen: holding
+disc loading constant instead makes hover power grow linearly with weight, and Section 12 uses
+that.)* A modest dead-mass fraction becomes a large payload penalty.
 
 **This charge has been identified independently, and by a source with no interest in the present
 argument.** A NASA study sizing four VTOL architectures against a common mission with common
@@ -64,9 +71,10 @@ there — charged to mass, whether or not the distributed propulsors are running
 
 ### Bill 2 — drag
 
-The second payment falls only on architectures that leave hover hardware exposed in forward
-flight: rotors stopped in the airstream, the booms that carry them, and the interference between
-their wakes and the wing.
+The second payment falls on architectures that leave hover hardware exposed in forward flight:
+rotors stopped in the airstream, the booms that carry them, and the interference between their
+wakes and the wing. Cruise drag has other sources on any aircraft; what is charged here is the
+part attributable to hardware retained for a phase that is over.
 
 Wind-tunnel work on a hybrid airframe found that the difference between propellers parallel to
 the airflow and no propellers at all is modest, while *"the drag produced by the motors is
@@ -101,9 +109,16 @@ so that
 
     P_hover / P_cruise = √(DL / 2ρ) · (L/D) / V · (η_p / η_h)
 
-**Every term on the right is a property of the configuration, not of the workmanship.** A
-vehicle with a disc loading of 100 N m⁻², a cruise lift-to-drag ratio of 15 and a cruise speed
-of 30 m s⁻¹ needs roughly four times as much power to hover as to cruise, and raising the disc
+**The quantities on the right come from the configuration and from the propulsion operating
+points, not from the duration of the hover phase.** That distinction matters and the efficiencies
+are the reason for it: η_h and η_p are not configuration constants, they depend on the propeller
+and on the condition it is run at, and Section 11 computes what happens when one fixed-pitch
+blade has to supply both.
+
+A vehicle with a disc loading of 100 N m⁻², a cruise lift-to-drag ratio of 15 and a cruise speed
+of 30 m s⁻¹ needs **between three and four times** as much power to hover as to cruise: the
+geometric terms alone give 3.2, and the efficiency ratio η_p/η_h carries it to about four when
+the cruise propeller is roughly a quarter more efficient than the hover rotor. Raising the disc
 loading raises the ratio as its square root. The prediction is borne out in flight: a
 carbon-fibre tail-sitter reported in the literature measures its level-flight power consumption
 at one fifth of its hover power, which is the ratio this expression gives for an aircraft of
@@ -114,38 +129,54 @@ unused, for an hour. And the consequence propagates: sizing by hover means an ov
 or a battery that must deliver a peak it will rarely be asked for, or both — and whichever is
 chosen, the extra installed capacity is mass, which returns to Bill 1.
 
-### The three are one quantity in three currencies
+### The charges behave as one quantity in three currencies
 
-The three charges are not independent problems with independent fixes. **Each known
-architectural move reduces one and raises another.**
+The three charges are not independent problems with independent fixes. **Each known partial
+remedy reduces one and raises another.**
 
 | Move | Bill it attacks | Bill it creates |
 |---|---|---|
 | Distributed electric lift rotors | 3 — the cruise engine no longer sizes to hover | 1 and 2 — many rotors and mounts, permanently carried and exposed |
 | Folding or retracting lift rotors | 2 — the exposed rotor is removed from cruise | 1 — mechanism, actuation, locking, a new failure mode |
-| Tilt-rotor, tilt-wing, tilt-nacelle | 1 — one propulsion group serves both regimes | mechanical complexity, gyroscopic coupling, a transition control problem |
+| Tilt-rotor, tilt-wing, tilt-nacelle | 1 — one propulsion group serves both regimes | mechanical complexity, gyroscopic coupling, a transition control problem — **not one of the three; see below** |
+| Variable-pitch or feathering propulsors | 1 and 3 — one propulsor is retrimmed across two widely separated operating points instead of duplicated | 1 — pitch hub, actuation, and a new failure mode |
 | Higher disc loading, smaller rotors | 1 and 2 — smaller, lighter, cleaner rotors | 3 — hover power rises with √(DL) |
 | Lower disc loading, larger rotors | 3 — hover power falls | 1 and 2 — larger structure and exposed area |
 
-**One of these rows has been measured, and the measurement is worth more than the table.** In
-the wind-tunnel study cited above, a retraction system removed thirty percent of the airframe's
-drag; the same author then costed it. Applied to a passenger eVTOL, with the mechanism assessed
+**One row does not pay in any of the three currencies, and that is not an oversight.** What a
+tilting architecture buys its unified propulsion group with is a mechanism — a pivot, an
+actuator, the gyroscopic coupling of a reorienting mass, and a control problem through the turn.
+That is a cost, but it is not one of the three charges this accounting tracks, and the next
+section says why it is treated separately. **The table is not a census of the field**; it lists
+the moves whose transfers are documented, and a remedy absent from it is not thereby claimed to
+cancel a charge.
+
+**One of these transfers has direct experimental support, and it is worth more than the table.**
+In the doctoral study whose wind-tunnel campaign supplies Table 1 — and in that document rather
+than in the journal article by the same author, which reports a different comparison — a
+retraction system removed thirty percent of the airframe's drag; the same work then costed it. Applied to a passenger eVTOL, with the mechanism assessed
 at five percent of vehicle mass, maximum range rose from 119 km to 121 km — **a two-kilometre
 gain for a five-percent mass penalty.** Bill 2 was converted almost exactly into Bill 1, and
 **the transfer is the point rather than the small residue.**
 
 ### What this accounting is for
 
-Stated this way, the tax has a property that makes it useful rather than merely descriptive:
-**it is falsifiable at the level of an architecture.** If some arrangement pays none of the
-three, the accounting says where to look for the payment it makes instead; if it pays one
-heavily to escape another, the accounting predicts which comparisons will reverse when the
-sizing rule changes.
+**The accounting is refuted by any remedy that removes one charge without raising another.**
+That is the test it has to survive, and the table above is where it would fail: every entry in
+it is a documented transfer, and a counter-example would be a move with an empty right-hand
+column.
 
-That is what the remainder of this paper uses it for. The next section states the condition
-under which the three are not charged — a definition, derived from the table above rather than
-from any aircraft — and the section after it tests one consequence of the accounting against a
-sizing study this work did not produce.
+It also makes a prediction that can be checked without settling the architectural question at
+all: **where an arrangement pays one charge heavily in order to escape another, the ranking
+against a differently-balanced arrangement will reverse when the sizing rule changes.** Section
+13 tests that prediction on this configuration, and Section 4 tests a different consequence
+against a sizing study this work did not produce.
+
+**The moves in the table are partial remedies: each accepts the duty-cycle mismatch and then
+redistributes what it costs.** Whether an architecture can decline the mismatch itself, rather
+than redistribute its consequences, is a different question, and the next section states the
+condition it would have to meet — a definition, derived from the table above rather than from
+any aircraft.
 
 ---
 
@@ -169,6 +200,40 @@ sizing study this work did not produce.
 | Karbon fiber kuyruk üstü: seyir gücü askının beşte biri | §2.4, satır 638–641 |
 | Aktarım tablosu, beş satır | §2.5, Tablo 2, satır 655–661 |
 | Geri çekme %30 sürükleme aldı; %5 kütle cezasıyla 119 → 121 km | §2.5, satır 663–666 |
+
+| Değişken hatve satırı | Tur 41'de dördü de istedi; §2.9'un "no variable-pitch hub" elemesinin karşılığı |
+| P_askı/P_seyir = 3,2 (geometrik terimler), η oranıyla ~4 | §2.4 denklemi, doğrudan hesaplandı |
+| Sabit disk yüklemesinde askı gücü **doğrusal** | §3.9; `aero/closure.py` satır 50–54 |
+| 119 → 121 km **tezde**, dergi makalesinde değil | `paper/bacchini-reading-record.md`; makale atfı [3] |
+
+**Tur 41'de düzeltilenler.** ChatGPT ve Grok *"her hibrit VTOL dikey faz için donanım taşır"*
+cümlesini yakaladı: evrensel olarak yanlış (tilt ve kuyruk üstü taşımaz) **ve kendi uçağımızı da
+çürütüyor** — bizim de 1,8 kg tamponumuz dikey faz için. ChatGPT'nin teşhisi tam yerinde:
+*"artık en büyük tehlike çerçevenin fazla belirsiz olması değil; sınayacağı mimari için fazla
+evrensel ifade edilmiş olması."* Cümle **adanmış kaldırma alt sistemi olan** ailelere daraltıldı.
+
+Dördü de **değişken hatve satırını** istedi. Eklendi — makalenin kendi katkısı o satıra karşı
+tanımlanıyor.
+
+Üçü bağımsız olarak *"kabaca dört kat"* aritmetiğini denetledi ve η oranı 1 iken 3,2 çıkıyor.
+Düzeltildi: geometrik terimler 3,2, η oranı dörde taşıyor, ve bu **söyleniyor.**
+
+Qwen çürütülebilirlik cümlesinin **tersine çalıştığını** gösterdi — *"hiçbirini ödemeyen bir
+düzenleme varsa muhasebe ödemenin nereye gittiğini söyler"* bir sağlamlık iddiasıdır, çürütme
+ölçütü değil. Çürütme ölçütü artık başta ve doğru: **bir faturayı bir başkasını yükseltmeden
+kaldıran herhangi bir çare.**
+
+ChatGPT *"sağdaki her terim yapılandırmanın özelliğidir"* cümlesini yakaladı — η_h ve η_p
+yapılandırma sabiti değil, ve bunu **kendi pervane hesabımız kanıtlıyor.**
+
+**Qwen'in bir sayısı yanlıştı ve düzeltildi.** Sabit disk yüklemesinde askı gücünün W^0,5 ile
+ölçeklendiğini söyledi; doğrusu **W^1,0**, yani doğrusal: P = W^1,5/(η√(2ρA)) ve A = W/DL ise
+P ∝ W. Bulgu geçerli (bağlam belirtilmeliydi), sayı değil.
+
+**Eklenmeyen tek satır: seri hibrit tamponu.** DeepSeek istedi, ChatGPT "3. adım karar versin"
+dedi, Grok'un kuralı belirleyici oldu: *"Kuyruk üstünü ekleme. Bu, onu yasaklayan sayfada kaçışı
+uçaktan türetmek olur."* Tampon bizim mimarimizin parçası; vergi tablosuna girerse ölçüt
+ölçülenden türemiş olur.
 
 **Bu sayfada BİLEREK olmayanlar:** kaçış koşulunun kendisi (Adım 3), NASA sınaması (Adım 4),
 ve bu uçağa ait hiçbir sayı. Vergi, uçaktan **önce** ve uçaktan **bağımsız** kurulur; yoksa
