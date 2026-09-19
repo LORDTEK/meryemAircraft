@@ -38,7 +38,8 @@ of them supplies it alone:
 - The **blended wing body** carries the cruise lift on a surface, so that cruise is
   wing-borne rather than thrust-borne. That is the second half of the union.
 - The **tail-sitting stance** aligns the thrust axis with the body axis, so the propulsor
-  that produces the vertical thrust is the same one that produces the cruise thrust, holding
+  that produces the thrust for vertical operation is the same one that produces the cruise
+  thrust, holding
   one orientation relative to the airframe throughout. There is no dedicated lift system to
   carry, and vertical operation does not depend on a runway. That is the first half.
 - The **series-hybrid buffer** releases the continuous power plant from the hover peak,
@@ -48,8 +49,8 @@ of them supplies it alone:
 The change of regime is then made by **rotating the airframe**. The propulsors hold
 their orientation relative to the body from take-off to cruise; what changes is the
 orientation of the body relative to the flight path. A tilting architecture reaches the
-same end by turning its propulsors instead, and pays for the turning with a pivot, an
-actuator, gyroscopic coupling from the reorienting mass, and a control problem through the
+same end by turning its propulsors instead, which requires a pivot and an actuator and
+introduces gyroscopic coupling from the reorienting mass and a control problem through the
 turn. It does not satisfy the condition as stated: the condition requires one orientation
 relative to the airframe, and turning the propulsors is the case the condition excludes.
 Here the end is reached by turning the thing the propulsors are already attached to, which
@@ -61,8 +62,9 @@ That single move is what removes the mechanism. The configuration therefore carr
 |---|---|---|
 | Pivot or tilting joint | Tilting architectures | — |
 | Nacelle or rotor-group actuator | Tilting architectures | — |
-| Variable-pitch hub | Architectures that change regime, or stow a rotor out of the cruise flow, by changing blade pitch | — |
-| Dedicated lift rotors, and the mechanism to stop, index or retract them | Lift-plus-cruise architectures | — |
+| Variable-pitch hub | Architectures that trim a rotor across two widely separated operating points, or feather a rotor unused in one regime | — |
+| Dedicated lift rotors | Lift-plus-cruise architectures | — |
+| Rotor stowing, indexing or stopping mechanism | Architectures that remove dedicated lift rotors from the cruise flow by such means | — |
 | Elevons, rudder, or any trailing-edge control surface | Conventional and blended-wing-body practice | — |
 
 Attitude is produced instead by differential thrust between fixed-pitch propellers: a
@@ -90,7 +92,7 @@ Nor does a fixed-pitch propeller serve two regimes for nothing. The nose pair ho
 orientation, which is the architectural claim, but it also holds one blade geometry across a
 hovering condition and a cruising one, and no single fixed-pitch blade is at its best in both.
 That is a price of refusing the variable-pitch hub rather than an argument against refusing it,
-and it is charged where the propulsion is audited, not settled here.
+and it is charged in Section 11 with the other costs of the union, not settled here.
 
 Nor is this a claim of mechanical simplicity. Part count, mass, failure modes and
 maintenance burden were not measured, and nothing in this work supports a statement

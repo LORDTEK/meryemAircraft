@@ -171,6 +171,26 @@ tam olarak durur.
 çerçeve bırakıyordu; v8'inki bırakmıyor. Buna karşılık, bizi koruyan o sıralama aynı
 zamanda bizi *"iki makale"* gibi gösterip masadan attıran sıralamaydı.
 
+### 0.7 Menzil sayısı tez değildir. Yazarın duruşu, Tur 38.
+
+Burun çifti hesabı programa alınırken yazar şunu söyledi ve bu, hesabın riskini
+tanımlayan cümledir:
+
+> *"Lütfen menzile çok takılma. 1600 km değil de 1000 km olsa inan ki hiç ama hiç bir şey
+> kaybetmem. Herhangi bir quadcopter 1000 km gidebilir mi? Dolayısıyla menzil ile ilgili
+> bilimsel bölgede kaldığımız sürece sonuç hiç önemli değil."*
+
+Bu §0'ın yeniden ifadesidir: **menzil iddiası yalnız çok rotorluya karşıdır** ve o eksende
+pay o kadar geniştir ki bir hesabın sayıyı aşağı çekmesi tezi tehdit etmez.
+
+**Pratik sonucu şudur:** bir hesabın menzili düşürmesi, o hesabı yapmamak için gerekçe
+değildir. Tersine — menzil sayısı tez olmadığı için hesabı **rahatça** yapabiliriz.
+Kaybedilecek şey bir sayı, korunacak şey dürüstlüktür, ve bu takas her seferinde kabul
+edilir.
+
+**Yine de sayı tahmin edilmez.** Grok'un uyarısı geçerli: *"Do not guess the sign."*
+Hesabın işareti hesaptan önce söylenmez.
+
 ## 1. Yazışma ve üslup
 
 - Kullanıcıyla **Türkçe**. Öteki YZ'lere (ChatGPT, Grok, DeepSeek, Qwen)
