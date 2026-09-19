@@ -100,7 +100,7 @@ büyüdü, o kadar.
 senaryosu rotor terimi **öncesi** ayardaydı; yayımlanmış tablo ise rotorlar faturalanmış
 halde. Karşılaştırılması gereken şey ikincisiydi. Doğrusu:
 
-| | basılı (hepsi 0,80) | **hepsi 0,632** |
+| | yayımlanmış ayar, A = 0,80 | **aynı ayar, hepsi 0,632** |
 |---|---:|---:|
 | B, sabit yakıt kesri | +21,1 % | **+21,1 %** |
 | B, sabit yakıt kütlesi | −5,4 % | **−5,7 %** |
@@ -109,7 +109,13 @@ halde. Karşılaştırılması gereken şey ikincisiydi. Doğrusu:
 | C, sabit yakıt kütlesi | +49,2 % | +51,8 % |
 | C, sabit MTOW | +35,7 % | +42,8 % |
 
-> **Ceza simetrik olsa bile B satırında işaret dönüyor: +21,1 → −5,7 → −42,3.**
+> **Ceza simetrik olsa bile işaret SÖZLEŞMELER ARASINDA dönüyor:** sözleşme 1'de +21,1
+> (B önde), sözleşme 2'de −5,7 ve sözleşme 3'te −42,3 (A önde). Dönüş 1 ile 2 arasında.
+
+*(Bu satır bir **karşı-olgusaldır**: B ve C'ye A'nın hesaplanmış veriminin verilmesi, bulgunun
+cezaya bağlı olup olmadığını sınamak içindir. B ve C'nin pervanelerinin gerçekten 0,632 verdiği
+iddia edilmiyor. — Qwen'in uyarısı. Ayrıca sütunları satırlarla karıştıran bir yanlış okuma
+oldu; dikkatli bir okuyucu karıştırdıysa hakem de karıştırır, bu yüzden başlıklar değiştirildi.)*
 
 **Sözleşme bağımlılığı bulgusu, cezanın mimariye özgü olmasına BAĞLI DEĞİL.** Ters dönüş
 her iki senaryoda da var. Mimariye özgü ceza **dönüşün yerini** kaydırıyor (2'ye 1 yerine

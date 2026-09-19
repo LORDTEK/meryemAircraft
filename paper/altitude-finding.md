@@ -44,7 +44,7 @@ Paragrafın kendi argümanı — *"ince hava daha hızlı uçulur"* — çift g�
 şeyin ta kendisi. Yani yoğunluk menzil formülüne doğrudan girmiyor ama **η_p üzerinden ikinci
 bir kanaldan giriyor**, ve o kanal paragraf yazıldığında yoktu.
 
-## 3. Ölçüldü
+## 3. Hesaplandı
 
 Aynı palet ailesi, aynı FM hedefi (0,599), 2 pala, c_l 0,70:
 
@@ -55,7 +55,14 @@ Aynı palet ailesi, aynı FM hedefi (0,599), 2 pala, c_l 0,70:
 | 2000 | 1,0066 | 33,1 | 0,602 | 0,671 | 0,84 | 12,00 |
 | 3000 | 0,9093 | 34,8 | 0,590 | **0,663** | 0,87 | 12,87 |
 
-**Yön doğrulandı, büyüklük küçük.** η_p 3000 m'de 0,683 → 0,663, yani **göreli %2,9 düşüş.**
+**FM sütunu üzerine bir not — DeepSeek yakaladı.** 3000 m satırında FM = 0,590, Tur 38'de
+beyan ettiğim 0,591–0,603 toleransının **dışında.** Bu bir irtifa etkisi değil, yedi turluk
+ikiye bölmenin artığı; ama beyan edilen tolerans yanlıştı ve düzeltiliyor. Ve masum değil:
+**Qwen askı gücü artışını ayrıştırdı ve denetledim** — yoğunluk payı √(1,2250/0,9093) = 1,1607,
+FM payı 0,598/0,590 = 1,0136, çarpım 1,1764; gözlenen 12,87/10,94 = 1,1764. **%0,0006 hatayla
+tutuyor.** Yani o 0,008'lik FM sapması, %17,6'lık artışın **%1,36'sını** taşıyor.
+
+**Yön hesaplandı, büyüklük küçük.** η_p 3000 m'de 0,683 → 0,663, yani **göreli %2,9 düşüş.**
 Kıyas: 0,80 → 0,65 açığı %19. İrtifa kanalı ikinci derece.
 
 **Askı gücü ikinci derece DEĞİL.** 10,94 → 12,87 kW, **%17,6 artış.** Tampon, motor
@@ -65,12 +72,12 @@ derecelendirmesi ve kütle bütçesi bundan etkilenir; menzilden çok daha fazla
 
 1. Makalenin *"deniz seviyesi"* ilanı **duruyor ve yeterli.**
 2. §2.12'nin *"irtifa menzili yalnız L/D üzerinden etkiler"* cümlesi **eksik**. Bir yan cümle
-   gerekiyor: η_p da irtifayla değişir, çünkü çift görev açıklığı açılır; ölçülen etki 3000 m
+   gerekiyor: η_p da irtifayla değişir, çünkü çift görev açıklığı açılır; hesaplanan etki 3000 m
    için göreli %2,9 ve **aleyhimize**.
 3. *"A design intended to cruise high would need the whole chain re-run"* cümlesi **zaten
    doğru** ve şimdi bir sayıyla destekleniyor.
 4. Görev profili (orman yangını, piste ihtiyaç duymayan yere kargo) alçak uçuş demek,
-   dolayısıyla seçim göreve uygun. Ama **sebebi "etkisi yok" değil, "etkisi küçük ve ölçüldü."**
+   dolayısıyla seçim göreve uygun. Ama **sebebi "etkisi yok" değil, "etkisi küçük ve hesaplandı."**
 
 **Yazarın sezgisi doğruydu ve bulduğu şey sandığından dar ama gerçek:** eksik olan ilan değil,
 ilanın gerekçesindeki bir kanaldı.
