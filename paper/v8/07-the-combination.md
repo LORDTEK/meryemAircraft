@@ -27,9 +27,18 @@ for three decades. Series-hybrid propulsion is ordinary in small uncrewed aircra
 Each can be found on its own, in the literature and in hardware.
 
 What is new is that the three of them, taken together, satisfy the escape condition of
-Section 3 — and that they satisfy it with no mechanism that reorients a propulsor. The
-assembly is not new because it is an assembly. It is new because of what it satisfies, and
-because of what it does not need in order to satisfy it.
+Section 3 **in the propulsor that carries the aircraft** — and that they satisfy it with no
+mechanism that reorients a propulsor. The assembly is not new because it is an assembly. It is
+new because of what it satisfies, and because of what it does not need in order to satisfy it.
+
+**The qualification in that sentence is not decoration, and it is made here rather than
+conceded later.** Section 3 lists partial instantiation among the ways an architecture can fail
+the condition: meeting it where the aircraft is carried and failing it elsewhere. That is this
+configuration's own case. The single nose pair meets all four parts — same hardware, same job,
+same orientation, hover peak from a buffer. The four attitude pairs do not: they are exposed in
+the cruise flow and they cannot be feathered, so they re-open the second charge. **The
+instantiation is therefore partial**, and reporting what the failing part costs is a substantial
+share of what Section 11 does.
 
 The condition asks for one set of hardware to serve both regimes in one orientation,
 with the hover peak drawn from a buffer. Each element supplies one part of it, and none
