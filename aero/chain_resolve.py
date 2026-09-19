@@ -215,3 +215,25 @@ if __name__ == "__main__":
     print("Makalenin basili satirlari: B +21,1 / -5,4 / -44,9")
     print("                            C +58,3 / +49,2 / +35,7")
     print("Ustteki 'basili' sutunu bunlari yeniden uretmiyorsa DUR.")
+
+    # --- 7. KARSI SENARYO, YAYIMLANMIS AYARDA ------------------------
+    print()
+    print("=" * 74)
+    print("7. KARSI SENARYO -- rotorlar faturalanmis halde, hepsi 0,632")
+    print("=" * 74)
+    print("BUNU KACIRMISTIM. 3. bolumdeki karsi senaryo rotor terimi ONCESI")
+    print("ayarda kosuyordu; yayimlanmis tablo ise rotorlar faturalanmis")
+    print("halde. Karsilastirilmasi gereken sey bu.")
+    print()
+    hepsi_y = sozlesmeler_mimariye_ozgu(ETA_P_ALT, ETA_P_ALT, ETA_P_ALT,
+                                        A_LD_carpan=carp)
+    print("%-30s %10s %10s" % ("sozlesme", "basili", "hepsi 0,632"))
+    print("-" * 54)
+    for i in range(3):
+        print("B  %-27s %+9.1f%% %+9.1f%%"
+              % (taban[i][0][:27], taban[i][1][1], hepsi_y[i][1][1]))
+    for i in range(3):
+        print("C  %-27s %+9.1f%% %+9.1f%%"
+              % (taban[i][0][:27], taban[i][1][2], hepsi_y[i][1][2]))
+    print()
+    print("SORU: ceza simetrik olsa bile B satirinda ISARET DONUYOR mu?")

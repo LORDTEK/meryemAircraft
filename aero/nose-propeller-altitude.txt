@@ -1,0 +1,17 @@
+IRTIFA VE CIFT GOREV CEZASI
+Sabit C_L = 0.451; 2.12'nin kendi argumani: V = sqrt(2W/(rho S C_L))
+Aski itkisi = agirlik (irtifadan bagimsiz); seyir itkisi = W/(L/D)
+Palet ailesi ayni, FM hedefi ayni (0.599). 2 pala, c_l 0,70.
+
+irtifa m      rho    V m/s       FM      eta        J   aski kW
+----------------------------------------------------------------
+0          1.2250     30.0    0.598    0.683     0.80     10.94
+1000       1.1117     31.5    0.601    0.677     0.82     11.44
+2000       1.0066     33.1    0.602    0.671     0.84     12.00
+3000       0.9093     34.8    0.590    0.663     0.87     12.87
+----------------------------------------------------------------
+
+OKUMA. eta deniz seviyesinden uzaklastikca DUSUYORSA, 2.12'nin
+'irtifa menzili yalniz L/D uzerinden etkiler' cumlesi eksiktir:
+eta_zincir'in icindeki eta_p ikinci bir kanaldir ve o paragraf
+pervane hesabindan ONCE yazildi.

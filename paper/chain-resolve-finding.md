@@ -96,20 +96,28 @@ büyüdü, o kadar.
 
 ## 4. Karşı senaryo — hepsi aynı cezayı öderse
 
-Basıldı, çünkü A'nın lehine olan okuma budur:
+**İlk yazımda bunu yanlış ayarda koşturdum ve Qwen'in itirazı onu buldurdu.** §3'ün karşı
+senaryosu rotor terimi **öncesi** ayardaydı; yayımlanmış tablo ise rotorlar faturalanmış
+halde. Karşılaştırılması gereken şey ikincisiydi. Doğrusu:
 
-| | hepsi 0,632 |
-|---|---:|
-| B, sabit yakıt kesri | −14,4 % |
-| B, sabit yakıt kütlesi | −37,8 % |
-| B, sabit MTOW | −73,8 % |
+| | basılı (hepsi 0,80) | **hepsi 0,632** |
+|---|---:|---:|
+| B, sabit yakıt kesri | +21,1 % | **+21,1 %** |
+| B, sabit yakıt kütlesi | −5,4 % | **−5,7 %** |
+| B, sabit MTOW | −44,9 % | **−42,3 %** |
+| C, sabit yakıt kesri | +58,3 % | +58,3 % |
+| C, sabit yakıt kütlesi | +49,2 % | +51,8 % |
+| C, sabit MTOW | +35,7 % | +42,8 % |
 
-**Yüzdeler değiştirilmemiş tabanla neredeyse aynı** (−14,4 / −36,5 / −72,6). Menzil zincirle
-doğrusal olduğu için, herkes aynı cezayı öderse **oranlar hiç değişmez**, yalnız mutlak
-menziller düşer.
+> **Ceza simetrik olsa bile B satırında işaret dönüyor: +21,1 → −5,7 → −42,3.**
 
-> **Dolayısıyla her şey tek bir soruya bağlı: ceza mimariye özgü mü?** Öyle, ve nedeni §2'de
-> yazılı. Ama okuyucu ikisini de görsün diye ikisi de basılıyor.
+**Sözleşme bağımlılığı bulgusu, cezanın mimariye özgü olmasına BAĞLI DEĞİL.** Ters dönüş
+her iki senaryoda da var. Mimariye özgü ceza **dönüşün yerini** kaydırıyor (2'ye 1 yerine
+1'e 2), **varlığını** değil.
+
+Yüzdeler simetrik senaryoda neredeyse değişmiyor ama **tam olarak** değişmiyor değil
+(−5,4 → −5,7; −44,9 → −42,3): kapanma döngüsü geri besliyor, çünkü düşen η_p seyir gücünü,
+seyir gücü motoru, motor kütleyi büyütüyor.
 
 ## 5. Kendi kodumuzda bulduğumuz şey
 
