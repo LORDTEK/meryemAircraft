@@ -39,8 +39,8 @@ ceza (ΔC_D0 = 0,0154)** var. Burun çifti için **hiçbiri yok.**
 
 | Ne | Değer | Satır | Hangi rejim |
 |---|---|---|---|
-| Askı figure of merit | **0,599** | 1248, 1725, 2320 | askı |
-| Seyir pervane verimi | **0,80** | 982 (zincir: *"propeller 0.80 — overall 0.176"*) | seyir |
+| Askı figure of merit | **0,599** | §3.3 (1248), §3.8 (1725), §3.17 (2320) | askı |
+| Seyir pervane verimi | **0,80** | §2.12 (982), zincir: *"propeller 0.80 — overall 0.176"* | seyir |
 | Ana pervane çapı, hafif | 1,20 m | 1609 | — |
 | Seyir hızı, hafif | 30 m s⁻¹ | 1615 | — |
 | Ana pervane çapı, ağır | 5,40 m | 1675 | — |
