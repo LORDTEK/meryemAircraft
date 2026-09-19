@@ -40,7 +40,7 @@ of them supplies it alone:
 - The **tail-sitting stance** aligns the thrust axis with the body axis, so the propulsor
   that produces the vertical thrust is the same one that produces the cruise thrust, holding
   one orientation relative to the airframe throughout. There is no dedicated lift system to
-  carry and no prepared surface to need. That is the first half.
+  carry, and vertical operation does not depend on a runway. That is the first half.
 - The **series-hybrid buffer** releases the continuous power plant from the hover peak,
   so that it is sized by cruise rather than by a condition holding for about two percent
   of the flight.
@@ -49,7 +49,7 @@ The change of regime is then made by **rotating the airframe**. The propulsors h
 their orientation relative to the body from take-off to cruise; what changes is the
 orientation of the body relative to the flight path. A tilting architecture reaches the
 same end by turning its propulsors instead, and pays for the turning with a pivot, an
-actuator, a gyroscopic moment from the reorienting mass, and a control problem through the
+actuator, gyroscopic coupling from the reorienting mass, and a control problem through the
 turn. It does not satisfy the condition as stated: the condition requires one orientation
 relative to the airframe, and turning the propulsors is the case the condition excludes.
 Here the end is reached by turning the thing the propulsors are already attached to, which
@@ -61,7 +61,7 @@ That single move is what removes the mechanism. The configuration therefore carr
 |---|---|---|
 | Pivot or tilting joint | Tilting architectures | — |
 | Nacelle or rotor-group actuator | Tilting architectures | — |
-| Variable-pitch hub | Where one propulsor must be trimmed across two widely separated operating points | — |
+| Variable-pitch hub | Architectures that change regime, or stow a rotor out of the cruise flow, by changing blade pitch | — |
 | Dedicated lift rotors, and the mechanism to stop, index or retract them | Lift-plus-cruise architectures | — |
 | Elevons, rudder, or any trailing-edge control surface | Conventional and blended-wing-body practice | — |
 
@@ -72,7 +72,7 @@ sized from the moment requirement rather than from weight support, but the thrus
 gives them also supplies the aircraft's entire take-off margin, because the nose pair is sized
 at thrust equal to weight and no more. That is the one place the configuration asks a component
 to do a second job it was not sized for; it is a dependency, it is reported as one where the
-sizing is audited, and it does not make the tip pairs a lift system.
+sizing is audited, and it does not make the tip pairs a dedicated lift system.
 
 **The claim is narrower than it may appear, and the boundary matters.**
 
@@ -85,6 +85,12 @@ strip on the lower surface, modulated rather than switched, which also pitches t
 down by a small increment when it is deployed. The strip is part of the configuration
 and is named here rather than later, because a claim about eliminated mechanisms that
 omitted it would be false.
+
+Nor does a fixed-pitch propeller serve two regimes for nothing. The nose pair holds one
+orientation, which is the architectural claim, but it also holds one blade geometry across a
+hovering condition and a cruising one, and no single fixed-pitch blade is at its best in both.
+That is a price of refusing the variable-pitch hub rather than an argument against refusing it,
+and it is charged where the propulsion is audited, not settled here.
 
 Nor is this a claim of mechanical simplicity. Part count, mass, failure modes and
 maintenance burden were not measured, and nothing in this work supports a statement
