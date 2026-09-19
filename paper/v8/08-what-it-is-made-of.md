@@ -64,14 +64,21 @@ phase from a **1.8 kg battery buffer, 3.6 % of take-off mass.**
 ### What produces each moment
 
 **Pitch and yaw come from differential thrust between the tip pairs**, and the two axes do not
-have the same authority. The frames project ±0.71 m perpendicular to the planform, so a
+have the same moment arm. The frames project ±0.71 m perpendicular to the planform, so a
 differential between the upper and lower pairs acts at 0.71 m in pitch, while a differential
 between the left and right pairs acts at the semi-span, **1.726 m — 2.43 times the pitch arm.**
-Yaw is therefore the strongest axis on this aircraft, which is the reverse of the usual situation
-and is a consequence of the layout rather than a design choice.
+The yaw arm is therefore the larger by that factor, which is the reverse of the usual situation
+and is a consequence of the layout rather than a design choice. What authority each axis
+actually has depends on the available thrust differential and on allocation as well as on the
+arm, and is not settled by the ratio alone.
 
-**Roll comes from neither.** Every pair is coaxial and torque-balanced, so every thrust vector is
-parallel to the body axis and no combination of settings produces a rolling moment. Roll is
+**The same differential-thrust system is what is assigned to rotate the airframe through
+transition.** That is a design assignment, not a demonstrated result: whether the moment it
+produces is sufficient, and whether the aircraft trims through the rotation, are questions for
+Section 10.
+
+**Roll comes from neither.** Every pair is coaxial and nominally torque-balanced, so every thrust
+vector is parallel to the body axis and no combination of settings produces a rolling moment. Roll is
 produced instead by a strip on the lower surface: inclined at 45° in planform, running 120 % of
 root chord, reaching 67 % of semi-span, and standing 2 cm proud at its inboard end and 6 cm at
 its outboard end. **Extension is the control variable** — the strip is modulated, not switched —
@@ -86,6 +93,21 @@ The aircraft rests on five points: the four lower ends of the tip frames, and th
 keel running along the centreline. It stands on its tail in its own storage attitude, with no
 launch equipment present.
 
+**The frames carry a fairing, and it is not only a drag measure.** The frames are the only
+surfaces standing perpendicular to the wing plane, and a planar planform supplies no directional
+stability at all, so the fairing is also the only vertical surface the aircraft has. Sized
+against the criterion the tailless literature recommends — C_n_β greater than 0.001 per degree —
+the chord required over the combined frame length is **39 mm**, against the 50 to 70 mm that a
+20 mm faired strut carries in any case. Directional stability on this configuration therefore
+does not ask for a surface; it asks for a fairing on a frame that is already there.
+
+**One part is not airframe and is easy to omit from a list of this kind: the flight control
+system.** The stability of this configuration is not airframe-borne — it is produced by
+differential thrust and by the strip, both of which are actively commanded — so an attitude
+reference and a flight computer are not optional equipment but part of the mechanism the
+preceding paragraphs describe. They are carried in the systems budget. The configuration
+replaces a pilot's workload with computation, and the computer is the part that does it.
+
 **The tip frames therefore do three jobs at once**, and this is the clearest instance in the
 configuration of one structure carrying several duties: they are the landing gear, they set the
 control moment arms, and they carry the attitude rotors. Lengthening them to buy control
@@ -94,8 +116,10 @@ structure that is exposed in cruise, and Section 11 charges them for it.
 
 ### What moves
 
-The propellers rotate, as propellers do, but none of them changes its orientation relative to the
-airframe at any point in the flight. Beyond that, **one thing on this aircraft moves: the strip.**
+The propellers rotate, as propellers do, and their shaft speed is commanded; but none of them
+changes its orientation relative to the airframe, or its blade pitch, at any point in the flight.
+**Beyond the propellers' rotation, one thing on this aircraft changes its configuration: the
+strip.**
 It is described as deployable in two halves — one side alone for roll, both together as a speed
 brake. The actuator inventory is therefore the propulsion motors plus the strip's actuation.
 **How many actuators that is, this study does not fix.** The systems budget carries the
@@ -106,17 +130,35 @@ actuation without sizing the mechanism, and naming a number here would be invent
 Two items belong here rather than in a later list, because both are properties of the hardware
 just described.
 
-**The torque balance is exact at cruise rather than at hover, so a small residual remains in
-hover.** What trims that residual is not established. It is too small to be carried by the tip
-pairs without spending roll-axis authority the aircraft does not have in hover, and the strip
-works against dynamic pressure that the slipstream supplies over only part of its length. Either
-the residual is absorbed by the speed trim of the pairs — which this study has not shown — or a
-fourth duty falls on the strip.
+**An untrimmed hover torque, with no trim mechanism identified.** This is a control question
+rather than a property of the hardware, and it is stated as one.
 
-**The fixed geometry of the tip pairs has a cruise consequence.** Unable to feather, they must
-either turn at the zero-shaft-torque condition or be stopped, and the difference between those two
-states is a substantial fraction of the aircraft's zero-lift drag. Both ends are computed rather
-than assumed, and the charge appears in Section 11.
+The torque balance within each pair is set exact at the cruise condition rather than at hover, so
+a small residual remains in hover. It acts about the propeller axis — the aircraft's longitudinal
+axis, which is the roll axis in body terms and stands vertical in the hover attitude, so it
+appears there as a change of heading. *(This paper fixes body-axis naming throughout; the earlier
+description of reaction torque as acting "about the yaw axis in hover" named the same axis by its
+earth-frame effect, and the two conventions are not mixed here.)*
+
+That axis is the one the propellers cannot command at all, which is why the residual is a
+problem: the tip pairs cannot absorb it without roll authority the aircraft does not have in
+hover, and the strip works against dynamic pressure that the slipstream supplies over only part
+of its length at zero airspeed. Either the residual is small enough to be absorbed by the speed
+trim of the pairs — which this study has not shown — or a fourth duty falls on the strip.
+
+**The fixed geometry of the tip pairs leaves two admissible cruise states, and only one of them
+is physically closed.** Unable to feather, the pairs must either turn at the zero-shaft-torque
+condition or be stopped, and the difference between those two states is a substantial fraction of
+the aircraft's zero-lift drag. Both ends are computed rather than assumed and the charge appears
+in Section 11.
+
+The free-wheeling state is physically determinate: the rotor settles where net shaft torque is
+zero. **The stopped state is not.** Stopping a rotor requires the stop to be produced by
+something — motor holding torque, an electrical brake, a mechanical lock — and a stopped
+fixed-pitch blade also has an azimuth, so "stopped" is a family of aerodynamic states rather than
+one. Neither the means nor the azimuth is fixed by this study, and the drag figure quoted for the
+stopped condition should be read as the state Section 11 defines rather than as the state a
+particular installation would reach.
 
 ---
 
@@ -146,6 +188,26 @@ than assumed, and the charge appears in Section 11.
 | **Eyleyici sayısı bu çalışmada belirlenmiyor** | §1, satır 295–298 |
 | Tork dengesi seyirde tam, askıda artık kalıyor; trim edilişi belirlenmemiş | §2.9, satır 766–773; §4.6 |
 | Uç çiftleri pala açısı değiştiremez; durmak ya da sıfır tork | §2.9, satır 762–766 |
+| Fairing: uçaktaki tek dikey yüzey, C_n_β > 0,001/derece, 39 mm veter | §2.11, satır 899–903; §3.5, satır 1301–1306 |
+| 20 mm kaplanmış dikme zaten 50–70 mm taşıyor | §2.11, satır 902–903 |
+| Aviyonik kütle bütçesinde (%8) | §3.7 kütle dökümü, satır 1653 |
+| **Motor yerleşimi, hava alışı, soğutması: makalede YOK** | arama: intake/exhaust/cooling/engine bay — sonuç yok |
+| Enerji yolu sayıları yayımlanmış 0,80 zincirinden | §2.9, satır 788–793; aşıldı: `paper/chain-resolve-finding.md` |
+
+**Tur 40'ta düzeltilenler.** ChatGPT ve Qwen bağımsız olarak *"beş pervane, her biri bir çift"*
+çelişkisini buldu. **Grok'un bulgusu en ağırıydı:** enerji yolu sayıları yayımlanmış 0,80
+zincirinden geliyordu ve Adım 7 o varsayımı zaten 0,63–0,68'e indirmişti — iki sayfa birbiriyle
+çelişiyordu. DeepSeek fairing'in eksik olduğunu, Qwen uçuş kontrol sisteminin eksik olduğunu,
+Grok motorun nerede durduğunun hiç söylenmediğini buldu. ChatGPT *"durdurulmuş"* durumunun tek
+bir aerodinamik durum olmadığını gösterdi. Eksen adlandırması iki okuyucuyu birden tökezletti;
+kaynakta gerçekten iki ayrı anlaşma karışık kullanılıyor ve burada sabitlendi.
+
+**Kabul edilmeyen tek bulgu:** ChatGPT eşeksenli çiftin iç içe mil gerektirdiğini, dolayısıyla
+*"concentric shafts... is never built"* cümlesinin yanlış olduğunu söyledi. İki makine eksende
+istiflenip her biri kendi bitişik rotorunu doğrudan sürerse iç içe mil gerekmez; yani iddia en
+az bir standart uygulama için savunulabilir. Ama makale uygulamayı belirlemiyor, bu yüzden
+**ChatGPT'nin dar hali alındı**: dişli kutusu ve regülatörler elenir, mil düzeni hakkında iddia
+yok.
 
 **Bu sayfada BİLEREK olmayanlar:** pervane verimi sayısı (Adım 7'de bir kez, defterde kalem),
 sürükleme kalemlerinin büyüklüğü (Adım 11), kütle dökümü (Adım 10 ve 11).
