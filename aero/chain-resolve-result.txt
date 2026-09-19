@@ -198,3 +198,42 @@ C  3) sabit MTOW (54.5 kg) + s     +35.7%     +73.5%     +96.3%
 Makalenin basili satirlari: B +21,1 / -5,4 / -44,9
                             C +58,3 / +49,2 / +35,7
 Ustteki 'basili' sutunu bunlari yeniden uretmiyorsa DUR.
+
+==========================================================================
+7. KARSI SENARYO -- rotorlar faturalanmis halde, hepsi 0,632
+==========================================================================
+BUNU KACIRMISTIM. 3. bolumdeki karsi senaryo rotor terimi ONCESI
+ayarda kosuyordu; yayimlanmis tablo ise rotorlar faturalanmis
+halde. Karsilastirilmasi gereken sey bu.
+
+  Referans A: MTOW 59.4 kg, yakit 9.50 kg, L/D 8.49, menzil 895 km
+  eta_p:  A 0.632   B 0.632   C 0.632
+
+  1) sabit yakit KESRI (%0,16)
+                                 MTOW  f_yakit    menzil  A'ya gore
+    A  kuyruk ustu (makale)      59.4    0.160       895      +0.0%
+    B  lift + cruise             96.2    0.160      1084     +21.1%
+    C  tilt                      64.0    0.160      1417     +58.3%
+
+  2) sabit yakit KUTLESI (9.50 kg)
+                                 MTOW  f_yakit    menzil  A'ya gore
+    A  kuyruk ustu (makale)      59.4    0.160       895      +0.0%
+    B  lift + cruise             76.3    0.125       844      -5.7%
+    C  tilt                      62.0    0.153      1358     +51.8%
+
+  3) sabit MTOW (59.4 kg) + sabit faydali yuk
+                                 MTOW  f_yakit    menzil  A'ya gore
+    A  kuyruk ustu (makale)      59.4    0.160       895      +0.0%
+    B  lift + cruise             59.4    0.076       516     -42.3%
+    C  tilt                      59.4    0.144      1278     +42.8%
+
+sozlesme                           basili hepsi 0,632
+------------------------------------------------------
+B  1) sabit yakit KESRI (%0,16     +21.1%     +21.1%
+B  2) sabit yakit KUTLESI (8.7      -5.4%      -5.7%
+B  3) sabit MTOW (54.5 kg) + s     -44.9%     -42.3%
+C  1) sabit yakit KESRI (%0,16     +58.3%     +58.3%
+C  2) sabit yakit KUTLESI (8.7     +49.2%     +51.8%
+C  3) sabit MTOW (54.5 kg) + s     +35.7%     +42.8%
+
+SORU: ceza simetrik olsa bile B satirinda ISARET DONUYOR mu?
