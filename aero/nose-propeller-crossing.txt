@@ -1,0 +1,19 @@
+MAKALENIN FM'INI TUTTURAN PALET, SEYIRDE NE VERIYOR?
+Aranan: FM = 0.599. Makalenin ayni palet icin iddiasi: eta = 0.80
+Zincir, pervane haric: 0.2202. Makalenin toplami: 0.1762
+
+pala   c_l         d_th       FM      eta        J    zincir menzil km
+--------------------------------------------------------------------------
+2      0.55        13.7    0.603    0.648     0.86    0.1426      1294
+2      0.70        10.5    0.598    0.683     0.80    0.1504      1364
+3      0.55        11.6    0.598    0.632     0.80    0.1391      1262
+3      0.70         8.7    0.591    0.643     0.76    0.1415      1283
+--------------------------------------------------------------------------
+eta araligi          0.632 - 0.683   (makale: 0.80)
+zincir araligi       0.1391 - 0.1504  (makale: 0.1762)
+menzil araligi       1262 - 1364 km  (makale: 1598 km)
+dusus                14.6 - 21.0 %
+
+KARSILASTIRMA OLCEGI: cok rotorlu bir ucak icin menzil 10-100 km
+mertebesindedir. Bu aralik iddiayi degistirmiyor; degistirdigi sey
+makalenin 0,80'i hak edip etmedigidir.
