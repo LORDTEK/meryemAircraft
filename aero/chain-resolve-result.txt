@@ -1,0 +1,200 @@
+==========================================================================
+1. ZINCIR
+==========================================================================
+motor 0,28 x jeneratör 0,90 x güç elektroniği 0,95 x makine 0,92
+  = 0.2202, pervane HARIC
+
+                                eta_p    zincir    hafif km     agir km
+  --------------------------------------------------------------------
+  makalenin varsayimi           0.800    0.1762        1598        1814
+  hesaplanan, alt uc            0.632    0.1392        1262        1433
+  hesaplanan, ust uc            0.683    0.1504        1364        1549
+  --------------------------------------------------------------------
+  dusus, ust uc                                      -14.6%      -14.6%
+  dusus, alt uc                                      -21.0%      -21.0%
+
+  NOT: agir hattin kendi iki noktali hesabi ayri kosuyor
+  (nose_propeller_heavy.py). Yukaridaki agir sutun, hafif
+  hattin oranini tasiyan bir ON DEGERDIR, sonuc degildir.
+
+==========================================================================
+2. SOZLESMELER -- A cezayi oder, B ve C odemez
+==========================================================================
+Gerekce: B'nin seyir pervanesi yalnizca seyir yapar; C'nin
+degisken hatve gobegi vardir. Ikisi de 0,80'i hak eder.
+
+-- A'nin UST ucu (lehimize) --
+  Referans A: MTOW 51.8 kg, yakit 8.29 kg, L/D 12.00, menzil 1367 km
+  eta_p:  A 0.683   B 0.800   C 0.800
+
+  1) sabit yakit KESRI (%0,16)
+                                 MTOW  f_yakit    menzil  A'ya gore
+    A  kuyruk ustu (makale)      51.8    0.160      1367      +0.0%
+    B  lift + cruise             86.0    0.160      1372      +0.3%
+    C  tilt                      60.3    0.160      1794     +31.2%
+
+  2) sabit yakit KUTLESI (8.29 kg)
+                                 MTOW  f_yakit    menzil  A'ya gore
+    A  kuyruk ustu (makale)      51.8    0.160      1367      +0.0%
+    B  lift + cruise             68.4    0.121      1039     -24.0%
+    C  tilt                      56.7    0.146      1639     +19.9%
+
+  3) sabit MTOW (51.8 kg) + sabit faydali yuk
+                                 MTOW  f_yakit    menzil  A'ya gore
+    A  kuyruk ustu (makale)      51.8    0.160      1367      +0.0%
+    B  lift + cruise             51.8    0.060       516     -62.3%
+    C  tilt                      51.8    0.124      1396      +2.1%
+
+-- A'nin ALT ucu (aleyhimize) --
+  Referans A: MTOW 52.8 kg, yakit 8.45 kg, L/D 12.00, menzil 1265 km
+  eta_p:  A 0.632   B 0.800   C 0.800
+
+  1) sabit yakit KESRI (%0,16)
+                                 MTOW  f_yakit    menzil  A'ya gore
+    A  kuyruk ustu (makale)      52.8    0.160      1265      +0.0%
+    B  lift + cruise             86.0    0.160      1372      +8.4%
+    C  tilt                      60.3    0.160      1794     +41.8%
+
+  2) sabit yakit KUTLESI (8.45 kg)
+                                 MTOW  f_yakit    menzil  A'ya gore
+    A  kuyruk ustu (makale)      52.8    0.160      1265      +0.0%
+    B  lift + cruise             68.9    0.123      1051     -16.9%
+    C  tilt                      57.1    0.148      1659     +31.1%
+
+  3) sabit MTOW (52.8 kg) + sabit faydali yuk
+                                 MTOW  f_yakit    menzil  A'ya gore
+    A  kuyruk ustu (makale)      52.8    0.160      1265      +0.0%
+    B  lift + cruise             52.8    0.065       558     -55.9%
+    C  tilt                      52.8    0.129      1451     +14.7%
+
+==========================================================================
+3. KARSI SENARYO -- hepsi ayni cezayi oderse
+==========================================================================
+Bu, 0,80'i hepsinden almak demek. A'nin lehine olan okuma budur
+ve tam da bu yuzden basiliyor: okuyucu ikisini de gorsun.
+
+  Referans A: MTOW 52.8 kg, yakit 8.45 kg, L/D 12.00, menzil 1265 km
+  eta_p:  A 0.632   B 0.632   C 0.632
+
+  1) sabit yakit KESRI (%0,16)
+                                 MTOW  f_yakit    menzil  A'ya gore
+    A  kuyruk ustu (makale)      52.8    0.160      1265      +0.0%
+    B  lift + cruise             96.2    0.160      1084     -14.4%
+    C  tilt                      64.0    0.160      1417     +12.0%
+
+  2) sabit yakit KUTLESI (8.45 kg)
+                                 MTOW  f_yakit    menzil  A'ya gore
+    A  kuyruk ustu (makale)      52.8    0.160      1265      +0.0%
+    B  lift + cruise             72.7    0.116       787     -37.8%
+    C  tilt                      59.1    0.143      1267      +0.2%
+
+  3) sabit MTOW (52.8 kg) + sabit faydali yuk
+                                 MTOW  f_yakit    menzil  A'ya gore
+    A  kuyruk ustu (makale)      52.8    0.160      1265      +0.0%
+    B  lift + cruise             52.8    0.049       332     -73.8%
+    C  tilt                      52.8    0.117      1037     -18.1%
+
+==========================================================================
+4. NE DEGISTI
+==========================================================================
+sozlesme                                A ust      A alt hepsi ayni
+--------------------------------------------------------------------
+1) sabit yakit KESRI (%0,16)             0.3%       8.4%     -14.4%
+2) sabit yakit KUTLESI (8.29 kg)       -24.0%     -16.9%     -37.8%
+3) sabit MTOW (51.8 kg) + sabit fa     -62.3%     -55.9%     -73.8%
+(sutunlar: B'nin A'ya gore menzil farki, yuzde)
+
+                                        A ust      A alt hepsi ayni
+1) sabit yakit KESRI (%0,16)            31.2%      41.8%      12.0%
+2) sabit yakit KUTLESI (8.29 kg)        19.9%      31.1%       0.2%
+3) sabit MTOW (51.8 kg) + sabit fa       2.1%      14.7%     -18.1%
+(sutunlar: C'nin A'ya gore menzil farki, yuzde)
+
+==========================================================================
+5. 3.6'NIN YAYIMLANMIS TABLOSU -- 'rotorlar faturalanmis'
+==========================================================================
+Makalenin BASILI sonucu bu satirdir; yukaridaki 2. bolum
+rotor terimi ONCESI durumdur. A'nin L/D carpani 1/1.583.
+
+-- makalenin kendi hali (eta_p = 0,80, hepsine) --
+  Referans A: MTOW 54.5 kg, yakit 8.72 kg, L/D 8.49, menzil 1133 km
+  eta_p:  A 0.800   B 0.800   C 0.800
+
+  1) sabit yakit KESRI (%0,16)
+                                 MTOW  f_yakit    menzil  A'ya gore
+    A  kuyruk ustu (makale)      54.5    0.160      1133      +0.0%
+    B  lift + cruise             86.0    0.160      1372     +21.1%
+    C  tilt                      60.3    0.160      1794     +58.3%
+
+  2) sabit yakit KUTLESI (8.72 kg)
+                                 MTOW  f_yakit    menzil  A'ya gore
+    A  kuyruk ustu (makale)      54.5    0.160      1133      +0.0%
+    B  lift + cruise             69.8    0.125      1071      -5.4%
+    C  tilt                      57.8    0.151      1691     +49.2%
+
+  3) sabit MTOW (54.5 kg) + sabit faydali yuk
+                                 MTOW  f_yakit    menzil  A'ya gore
+    A  kuyruk ustu (makale)      54.5    0.160      1133      +0.0%
+    B  lift + cruise             54.5    0.073       624     -44.9%
+    C  tilt                      54.5    0.137      1537     +35.7%
+
+-- A'nin UST ucu (0,683), B ve C 0,80 --
+  Referans A: MTOW 57.6 kg, yakit 9.21 kg, L/D 8.49, menzil 967 km
+  eta_p:  A 0.683   B 0.800   C 0.800
+
+  1) sabit yakit KESRI (%0,16)
+                                 MTOW  f_yakit    menzil  A'ya gore
+    A  kuyruk ustu (makale)      57.6    0.160       967      +0.0%
+    B  lift + cruise             86.0    0.160      1372     +41.8%
+    C  tilt                      60.3    0.160      1794     +85.5%
+
+  2) sabit yakit KUTLESI (9.21 kg)
+                                 MTOW  f_yakit    menzil  A'ya gore
+    A  kuyruk ustu (makale)      57.6    0.160       967      +0.0%
+    B  lift + cruise             71.4    0.129      1106     +14.4%
+    C  tilt                      59.1    0.156      1746     +80.5%
+
+  3) sabit MTOW (57.6 kg) + sabit faydali yuk
+                                 MTOW  f_yakit    menzil  A'ya gore
+    A  kuyruk ustu (makale)      57.6    0.160       967      +0.0%
+    B  lift + cruise             57.6    0.085       732     -24.3%
+    C  tilt                      57.6    0.150      1678     +73.5%
+
+-- A'nin ALT ucu (0,632), B ve C 0,80 --
+  Referans A: MTOW 59.4 kg, yakit 9.50 kg, L/D 8.49, menzil 895 km
+  eta_p:  A 0.632   B 0.800   C 0.800
+
+  1) sabit yakit KESRI (%0,16)
+                                 MTOW  f_yakit    menzil  A'ya gore
+    A  kuyruk ustu (makale)      59.4    0.160       895      +0.0%
+    B  lift + cruise             86.0    0.160      1372     +53.3%
+    C  tilt                      60.3    0.160      1794    +100.4%
+
+  2) sabit yakit KUTLESI (9.50 kg)
+                                 MTOW  f_yakit    menzil  A'ya gore
+    A  kuyruk ustu (makale)      59.4    0.160       895      +0.0%
+    B  lift + cruise             72.3    0.131      1127     +25.9%
+    C  tilt                      59.9    0.159      1778     +98.7%
+
+  3) sabit MTOW (59.4 kg) + sabit faydali yuk
+                                 MTOW  f_yakit    menzil  A'ya gore
+    A  kuyruk ustu (makale)      59.4    0.160       895      +0.0%
+    B  lift + cruise             59.4    0.092       792     -11.5%
+    C  tilt                      59.4    0.157      1756     +96.3%
+
+==========================================================================
+6. YAYIMLANMIS TABLO: ONCE / SONRA
+==========================================================================
+sozlesme                           basili      A ust      A alt
+----------------------------------------------------------------
+B  1) sabit yakit KESRI (%0,16     +21.1%     +41.8%     +53.3%
+B  2) sabit yakit KUTLESI (8.7      -5.4%     +14.4%     +25.9%
+B  3) sabit MTOW (54.5 kg) + s     -44.9%     -24.3%     -11.5%
+----------------------------------------------------------------
+C  1) sabit yakit KESRI (%0,16     +58.3%     +85.5%    +100.4%
+C  2) sabit yakit KUTLESI (8.7     +49.2%     +80.5%     +98.7%
+C  3) sabit MTOW (54.5 kg) + s     +35.7%     +73.5%     +96.3%
+
+Makalenin basili satirlari: B +21,1 / -5,4 / -44,9
+                            C +58,3 / +49,2 / +35,7
+Ustteki 'basili' sutunu bunlari yeniden uretmiyorsa DUR.

@@ -1,0 +1,16 @@
+AGIR TASARIM, BURUN CIFTI
+D = 5.40 m, W = 9810 N, V = 40 m/s, T_seyir = 721 N (L/D 13.6)
+Makalenin kendi aritmetigi: ideal 129712 W / 216200 W = FM 0.6000
+3.8 ayrica FM'in agir hatta 0,599'a ULASAMADIGINI soyluyor;
+bu yuzden hedef, makalenin kendi agir FM'i: 0.6000
+
+pala   c_l         d_th       FM      eta        J    zincir menzil km
+--------------------------------------------------------------------------
+2      0.55        18.7    0.597    0.616     1.07    0.1358      1398
+2      0.70        15.5    0.597    0.669     1.00    0.1473      1517
+3      0.55        17.3    0.601    0.619     1.03    0.1364      1404
+3      0.70        14.6    0.603    0.656     0.99    0.1445      1488
+--------------------------------------------------------------------------
+eta araligi     0.616 - 0.669   (makale: 0,80)
+menzil araligi  1398 - 1517 km  (makale: 1814 km)
+dusus           16.4 - 22.9 %
