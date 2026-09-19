@@ -152,6 +152,13 @@ condition or be stopped, and the difference between those two states is a substa
 the aircraft's zero-lift drag. Both ends are computed rather than assumed and the charge appears
 in Section 11.
 
+**These are the parts that fail the escape condition**, and naming them here is the point of
+listing them. The nose pair meets all four parts of Section 3. The tip pairs meet none of the
+first three: they are carried through cruise producing moments rather than thrust, so they fail
+the second row of Section 3's table, and they are exposed while doing it. This is the partial
+instantiation Section 3 lists as its fourth failure mode, and the charge it re-opens is carried
+in Section 11.
+
 The free-wheeling state is physically determinate: the rotor settles where net shaft torque is
 zero. **The stopped state is not.** Stopping a rotor requires the stop to be produced by
 something — motor holding torque, an electrical brake, a mechanical lock — and a stopped
