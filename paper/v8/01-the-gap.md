@@ -71,11 +71,12 @@ problem through a regime in which the aircraft is neither a rotorcraft nor an ae
 **Those are mechanical and control requirements rather than aerodynamic ones**, and that
 distinction is what this paper is built on.
 
-### The third route was flown, and the record of why it stopped is not what it is usually taken to be
+### The third route is established, and its history is not what it is usually taken to be
 
 There is a third way to put one set of propulsors into both regimes without reorienting them:
-**point the thrust line at the ground and let the whole aircraft rotate.** It is not a new idea
-and it was not untried. Two American prototypes flew it in 1954. The Lockheed XFV-1 never
+**point the thrust line at the ground and let the whole aircraft rotate.** It is neither new nor
+untried nor abandoned. Two American prototypes flew it in 1954, **and uncrewed tail-sitters have
+revisited it continuously since.** The Lockheed XFV-1 never
 completed the cycle. The Convair XFY-1 did: it flew vertically in August 1954, and six
 transitions to conventional flight were completed.
 
@@ -109,35 +110,65 @@ conventional one. And a set of propellers whose thrust vectors are all parallel 
 cannot produce a rolling moment — a limitation that applies to the configuration described later
 exactly as it applied to its predecessors, and one this paper addresses rather than avoids.
 
-What the record does show is that **the configuration was never given a verdict under
-present-day conditions.** The single best-documented obstacle — the human pilot — is the one an
-uncrewed aircraft removes entirely. And three things are now available that were not: electric
-drive on each individual rotor, sensor-based attitude reference, and enough onboard computation
-that stability need not come from the airframe alone.
+What the record does show is that **the obstacle that ended the flying was mechanical**, and
+that one of the documented handling obstacles — the pilot's spatial orientation and workload —
+is removed by an uncrewed aircraft. **The others are not removed by anything.** Precise hovering,
+ground gusts and the absent rolling moment are configuration facts, and they are inherited.
+
+Three things are available now that were not: electric drive on each individual rotor,
+sensor-based attitude reference, and enough onboard computation that stability need not come
+from the airframe alone. **The uncrewed tail-sitter literature has been exploiting exactly those
+three for over a decade**, which is why the gap below is not a historical one.
+
+### What is already occupied, stated before the gap
+
+It would be easy, and wrong, to present the third route as an empty field. **It is not**, and
+the paper is better for saying so first.
+
+**The route itself is established.** Uncrewed tail-sitters combining fixed-pitch rotors with a
+flying wing have been built and flown for more than a decade, beginning with quadrotor-plus-wing
+arrangements carrying a few aerodynamic actuators for forward flight.
+
+**Attitude without aerodynamic control surfaces is established.** A quadrotor tail-sitter
+operated without control surfaces, with experimental verification, was reported in 2013.
+
+**Coaxial contra-rotating propulsion on a tail-sitter is established**, proposed specifically to
+remove the reaction torque a single propeller imposes, at the cost of an extra motor and the
+coaxial arrangement.
+
+**A blended-wing-body tail-sitter with contra-rotating propulsion, aimed at disaster response,
+is established**, reported in 2025 with vortex-lattice and RANS analysis of its planform,
+winglets and transition.
+
+**And the propeller compromise at the centre of this paper's own ledger is a known result, not a
+discovery.** The uncrewed tail-sitter literature states it directly: fixed-pitch propellers make
+it *"theoretically impossible to be very efficient in both hovering and forward flight."* A
+long-range tail-sitter reported in 2018 describes its own rotor as *"a compromise between
+efficient hover and efficient forward flight"* and selects its diameter on exactly that basis.
 
 ### The gap, stated precisely
 
-Putting those together gives a gap that is narrower and more specific than "nobody has built a
-good VTOL aircraft."
+**Each half of the required capability is well served, and both halves together are served by
+the contemporary hybrids.** This paper does not claim otherwise. **And the third route is
+occupied.** What follows is therefore not a claim to an empty field.
 
-**Each half of the required capability is well served, and by different families.** Wing-borne
-cruise is what fixed-wing aircraft do. Runway-independent vertical operation is what rotorcraft
-do. **Both halves together are served by the contemporary hybrids, and this paper does not
-claim that they fail to serve them.**
+**What is not established is the combination taken together with its price.** Specifically:
+a blended-wing-body tail-sitter in which *every* propulsor is a coaxial, torque-balanced pair —
+so that reaction torque and net angular momentum are given up along with the reorientation
+mechanism — carrying no aerodynamic control surfaces beyond a single moving device, powered
+through a buffered series hybrid, and **audited explicitly against carried hover mass, exposed
+cruise drag and hover-sized continuous power**, at two scales and under three sizing contracts.
 
-**What is unoccupied is the means.** Every architecture that puts one set of hardware into both
-regimes does so by reorienting the propulsors, and pays a mechanism for it. Every architecture
-that refuses the mechanism does so by carrying a second set of hardware, and pays mass and drag
-for that. **The route that refuses both — one set of hardware, never reoriented, with the
-airframe turning instead — was flown once, in 1954, with the machinery and the pilot of 1954,
-and has not been revisited as a design proposition since the constraints that stopped it were
-removed.**
+Each of those choices costs something, and **the giving-up is the part that is not free**: a
+torque-balanced coaxial pair cannot produce a rolling moment by any setting, which the quadrotor
+tail-sitters can. What that costs, and what the rest of the combination costs, is what the paper
+is for.
 
-That is the gap this paper addresses. **None of the elements it uses is new**, and Section 7
-says so explicitly: tail-sitting aircraft are seventy years old, blended wing bodies have been a
-standing subject of transport research for three decades, and series-hybrid propulsion is
-ordinary in small uncrewed aircraft. **What is offered is the combination and the means**, and
-the paper's job is to say what that combination costs rather than to assert that it is free.
+**None of the elements is new**, and Section 7 says so. Tail-sitting aircraft are seventy years
+old and uncrewed ones are ordinary; blended wing bodies have been a standing subject of transport
+research for three decades; series-hybrid propulsion has established precedent in small uncrewed
+aircraft. **What this paper offers is the combination, the consequences of the choices inside it,
+and an accounting of what they cost** — not a claim that the route was waiting to be found.
 
 Section 2 states the cost that any architecture in this corner pays, in terms that do not
 presume an escape.
