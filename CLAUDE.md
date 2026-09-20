@@ -56,8 +56,10 @@ aerodinamik yüzey"* diyor.
 > eşeksenli pervanelerle üretilemez"* diyordu. **Yanlış.** §2.9 her rotorun **kendi
 > elektrik makinesinde** olduğunu söylüyor; iki karşıt rotor farklı devirlerde
 > döndürülürse torkları birbirini götürmez ve net tork X_b etrafındadır. Burun
-> rotoru başına askıda ≈ 20 N·m; %30 dengesizlik **6 N·m** verir, şeridin askıdaki
-> alt ucuyla (6–12 N·m) aynı mertebe. Ve literatür bu kanalı **kullanıyor**:
+> rotoru başına askıda **24,9–27,5 N·m** (hesaplandı: `aero/reaction_torque.py`,
+> seçilmiş paletlerden; çift gücü makalenin 10,9 kW'ını %1,7 içinde yeniden
+> üretiyor); **%30 dengesizlik 7,5–8,2 N·m** verir, yani şeridin askıdaki
+> aralığının (6–12 N·m) **içinde.** Ve literatür bu kanalı **kullanıyor**:
 > Zhang ve ark. 2012, eşeksenli çift rotorlu kuyruk üstüde *"Roll motion is
 > controlled by the **differential velocity of the two motors**"* diyor
 > (`cfd/ica20120400001_12673514.pdf`). Ayrıca makale kendisiyle de çelişiyordu:

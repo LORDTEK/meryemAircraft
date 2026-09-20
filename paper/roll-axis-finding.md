@@ -74,19 +74,30 @@ Askıda yanal konum denetimi **bank** ister — ve bank, **en uzun kolu olan** s
 **Bağımsız sürülen iki karşıt rotor farklı devirlerde döndürülebilir ve torkları artık
 birbirini götürmez.** Net tork X_b etrafındadır — yani gövde yatışı, askıda yön.
 
-### Büyüklüğü — ihmal edilebilir değil
+### Büyüklüğü — ihmal edilebilir değil, ve ilk tahminim DÜŞÜKTÜ
 
-Burun çifti askıda 10,9 kW, ω ≈ 273 rad/s → **rotor başına ≈ 20 N·m.**
+> **DÜZELTME, aynı tur.** Burada önce şu yazıyordu: *"10,9 kW, ω ≈ 273 rad/s → rotor başına
+> ≈ 20 N·m; %30 → 6,0 N·m."* **İki sayıyı karıştırıyordu:** 10,9 kW makalenin **yayımlanmış**
+> askı gücü, 273 rad/s ise BEMT tablosunun **d_theta = 0** satırı — yani **seçilmeyen** palet.
+> FM = 0,599'u tutturan paletler daha **yavaş** döner, dolayısıyla aynı güç için tork **daha
+> büyüktür.** Sayı şimdi seçilmiş paletlerin kendisinden alınıyor: `aero/reaction_torque.py`.
 
-| Dengesizlik | Net X_b torku |
-|---|---|
-| %5 | 1,0 N·m |
-| %10 | 2,0 N·m |
-| %20 | 4,0 N·m |
-| **%30** | **6,0 N·m** |
+| pala | c_l | ω_askı (rad/s) | çift kW | **rotor başına Q** | %10 net | **%30 net** |
+|---|---|---:|---:|---:|---:|---:|
+| 2 | 0,55 | 197,3 | 10,85 | **27,5 N·m** | 2,7 | **8,3** |
+| 2 | 0,70 | 219,3 | 10,94 | **25,0 N·m** | 2,5 | **7,5** |
+| 3 | 0,55 | 201,8 | 10,95 | **27,2 N·m** | 2,7 | **8,1** |
+| 3 | 0,70 | 220,3 | 11,08 | **25,2 N·m** | 2,5 | **7,6** |
 
-**Şerit askıda 6,0–12,0 N·m veriyor.** Yani %30'luk bir devir dengesizliği **şeridin alt
-ucuyla aynı mertebede.** Bu bir kanal ve makale onu yok sayıyor.
+> **rotor başına 24,9–27,5 N·m** · %10 dengesizlikte **2,5–2,7 N·m** · %30'da **7,5–8,2 N·m**
+
+**Çapraz denetim:** hesaplanan çift gücü 10,85–11,08 kW, makalenin yayımlanmış **10,9 kW**'ını
+bağımsız olarak yeniden üretiyor (en büyük sapma **%1,7**). Betik sapma %5'i aşarsa sayıyı
+yayımlamadan çıkıyor.
+
+**Şerit askıda 6,0–12,0 N·m veriyor.** Yani %30'luk bir devir dengesizliği şeridin aralığının
+**içinde** kalıyor, alt ucunda değil — ve şeridin alt ucunu yakalamak için yalnız **%22–%24**
+dengesizlik yetiyor. **Bu bir kanal ve makale onu yok sayıyor.**
 
 (Uç çiftleri için önemsiz: rotor başına 0,077 N·m.)
 
