@@ -89,10 +89,21 @@ değil ve yazar bir lise öğrencisi, ama **bir yenilik iddiası için yayın ye
 > seyir sürüklemesi ve askı tepesiyle boyutlanan sürekli güç** üzerinden açık bir mimari
 > muhasebeyle, iki ölçekte ve üç boyutlandırma sözleşmesi altında.
 
-**Oosedo'nun dört rotorlu kuyruk üstüsüyle fark fizikseldir ve önemlidir:** ayrı dört rotor
-**tepki torkuyla** üçüncü ekseni üretebilir; bizimki her çift eşeksenli ve tork dengeli olduğu
-için üretemez. Bu, bizim **bilerek vazgeçtiğimiz** bir şey (gyroskopik moment ve tepki torku
-gitsin diye) ve bedeli şerittir. O takas literatürde bulunamadı.
+**Oosedo'nun dört rotorlu kuyruk üstüsüyle fark bir SEÇİMDİR, bir fizik sınırı değil.**
+
+> **DÜZELTME, Tur 47.** Bu satır önce şöyle yazılmıştı: *"ayrı dört rotor tepki torkuyla
+> üçüncü ekseni üretebilir; bizimki her çift eşeksenli ve tork dengeli olduğu için
+> **üretemez**."* **İkinci yarısı yanlıştı.** Eşeksenli bir çift de üretebilir — iki rotoru
+> farklı devirlerde döndürmek yeter, ve §2.9 her rotorun kendi elektrik makinesinde olduğunu
+> söylüyor. Zhang ve ark. 2012 (`cfd/ica20120400001_12673514.pdf`) tam olarak bunu yapıyor:
+> *"Roll motion is controlled by the **differential velocity of the two motors**."*
+> Ayrıntı: `paper/roll-axis-finding.md`.
+
+Doğrusu: bizimki her çifti **tork dengeli işletmeyi seçiyor**, böylece tepki torkunu kontrol
+kanalı olarak harcamıyor, ve ekseni şeride veriyor. Kazanılan şey tork dengesi ve nominal sıfır
+net açısal momentum; ödenen şey bir kanal. **Bu takasın kendisi — kanalı bilerek bırakıp bedelini
+tek bir hareketli yüzeyle ödemek — literatürde bulunamadı**; bulunan şey tersi, yani kanalın
+kullanılması (Zhang 2012) ya da slipstream içinde kumanda yüzeyleri (Novlit 2014).
 
 ## 4. Neyi değiştiriyor
 

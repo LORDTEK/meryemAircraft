@@ -15,6 +15,14 @@ Qwen bağımsız olarak), gyroskopik momentin mekanizma sayılması (ChatGPT —
 mekanizma değil; düzyazıya taşındı), ve kalkış marjı bağımlılığının sayfada hiç
 geçmemesi (Grok).
 
+**Tur 47 düzeltmesi — yatış ekseni.** ChatGPT *"yatış pervanelerle ÜRETİLEMEZ"* cümlesinin
+tepki torkunu atladığını gösterdi; §2.9 her rotorun **kendi elektrik makinesinde** olduğunu
+söylüyor, dolayısıyla diferansiyel devir gövde ekseni etrafında net tork verir. Zhang ve ark.
+2012 (`cfd/ica20120400001_12673514.pdf`) bunu **birincil kontrol kanalı** olarak kullanıyor.
+Qwen ayrıca §2.10'un askı paragrafındaki *"thirty-degree bank"* ifadesinin aslında bir **yön
+değişimi** olduğunu gösterdi. İddia daraltıldı: **fiziksel imkânsızlık değil, tasarım seçimi.**
+Ayrıntı ve alıntılar: `paper/roll-axis-finding.md`.
+
 ---
 
 ## The combination
@@ -89,14 +97,18 @@ sizing is audited, and it does not make the tip pairs a dedicated lift system.
 **The claim is narrower than it may appear, and the boundary matters.**
 
 This is not a configuration in which nothing moves. Roll cannot be produced by the
-propellers at all: every pair is coaxial and torque-balanced by construction, so every
-thrust vector is parallel to the body axis and no combination of settings produces a
-rolling moment. Roll is the one axis that requires an aerodynamic device, and that
-device is the only moving aerodynamic surface on the aircraft — a variable-extension
-strip on the lower surface, modulated rather than switched, which also pitches the nose
-down by a small increment when it is deployed. The strip is part of the configuration
-and is named here rather than later, because a claim about eliminated mechanisms that
-omitted it would be false.
+propellers' **thrust**: every thrust vector is parallel to the body axis, so no combination
+of thrust settings produces a moment about that axis. It **could** be produced by their
+**reaction torque** — each rotor carries its own electrical machine, and running the two
+rotors of a coaxial pair at different speeds leaves a net torque about the body axis, which
+is a channel the tail-sitter literature uses. This configuration declines it: every pair is
+operated torque-balanced, so no reaction torque is spent on control, and the axis is assigned
+to an aerodynamic device instead. That is a design constraint, not a physical impossibility,
+and what declining it costs is not counted here. The device is the only moving aerodynamic
+surface on the aircraft — a variable-extension strip on the lower surface, modulated rather
+than switched, which also pitches the nose down by a small increment when it is deployed. The
+strip is part of the configuration and is named here rather than later, because a claim about
+eliminated mechanisms that omitted it would be false.
 
 Nor does a fixed-pitch propeller serve two regimes for nothing. The nose pair holds one
 orientation, which is the architectural claim, but it also holds one blade geometry across a
@@ -122,7 +134,10 @@ and Section 11 charges them.
 | İddia | Kaynak |
 |---|---|
 | Kaçış koşulu: tek donanım, tek yönelim, tampondan tepe | v7 özeti, satır 55 |
-| Yatış eşeksenli çiftlerle üretilemez; her itki vektörü gövde eksenine paralel | §2.10, satır 811–813 |
+| Her itki vektörü gövde eksenine paralel; itkiden yatış momenti yok | §2.10, satır 810–812 |
+| Tepki torku bir yatış kanalıdır; her rotor kendi elektrik makinesinde | §2.9, satır 784–785 |
+| Kuyruk üstü literatürü bu kanalı kullanıyor | Zhang ve ark. 2012, `cfd/ica20120400001_12673514.pdf`: *"Roll motion is controlled by the differential velocity of the two motors"* |
+| Kaynağın *"roll cannot be produced by propellers at all"* cümlesi **daraltıldı** | §2.10, satır 813–814 aşırı iddia; `paper/roll-axis-finding.md` |
 | Şerit "uçaktaki tek hareketli aerodinamik yüzey" | §2.10, satır 815–816 |
 | Şerit **modüle ediliyor**, açılıp kapanmıyor | §2.10, satır 818 |
 | Şerit burnu aşağı yunuslatıyor | §2.10, ΔC_m 0,005–0,032 |

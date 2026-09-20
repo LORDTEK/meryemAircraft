@@ -8,6 +8,13 @@ boşluğu olarak konuyor, bir başarım boşluğu olarak değil · *"inşa gere�
 Adım 7 ve Adım 9'un *"what is new"* cümlelerinin **dayanağı burası** · çağdaş manzara
 NASA belgesinden **birinci elden**, hatırlanarak değil.
 
+**Tur 47 eklemesi.** Yazarın yüklediği iki belge birinci elden okundu ve *"zaten dolu olan"*
+bölümüne girdi: **Novlit ve ark. 2014** (eşeksenli karşıt dönüşlü kuyruk üstü MAV — tork
+dengeleme gerekçesi, slipstream içinde elevon ve rudder, ve **eksen adlarının askıda yer
+değiştirmesi**) ve **Zhang ve ark. 2012** (aynı mimaride **diferansiyel devirle yatış**).
+İkincisi, boşluk paragrafındaki *"a torque-balanced coaxial pair cannot produce a rolling moment
+by any setting"* cümlesini **çürüttü**; cümle bir seçim ifadesine çevrildi.
+
 ---
 
 ## The gap
@@ -107,13 +114,15 @@ outside its configuration, and this paper does not conclude it. **Some of the di
 real, internal, and are inherited here.** A tail-sitting vertical descent is genuinely harder
 than a runway landing. A tail-sitting aircraft on the ground is more exposed to crosswind than a
 conventional one. And a set of propellers whose thrust vectors are all parallel to the body axis
-cannot produce a rolling moment — a limitation that applies to the configuration described later
-exactly as it applied to its predecessors, and one this paper addresses rather than avoids.
+produces no rolling moment by any combination of thrust settings — which applies to the
+configuration described later exactly as it applied to its predecessors, and which this paper
+addresses rather than avoids.
 
 What the record does show is that **the obstacle that ended the flying was mechanical**, and
 that one of the documented handling obstacles — the pilot's spatial orientation and workload —
 is removed by an uncrewed aircraft. **The others are not removed by anything.** Precise hovering,
-ground gusts and the absent rolling moment are configuration facts, and they are inherited.
+ground gusts and the absence of a thrust-borne rolling moment are configuration facts, and they
+are inherited.
 
 Three things are available now that were not: electric drive on each individual rotor,
 sensor-based attitude reference, and enough onboard computation that stability need not come
@@ -134,7 +143,24 @@ operated without control surfaces, with experimental verification, was reported 
 
 **Coaxial contra-rotating propulsion on a tail-sitter is established**, proposed specifically to
 remove the reaction torque a single propeller imposes, at the cost of an extra motor and the
-coaxial arrangement.
+coaxial arrangement. A coaxial contra-rotating tail-sitting micro air vehicle reported in 2014
+states the same purpose in the same terms: *"a pair of 10 inches coaxial contra rotating
+propellers is mounted to compensate each other's torque."*
+
+**The established answer to hover control on such a configuration is a surface in the
+slipstream**, and it is worth naming because this paper refuses it. That 2014 vehicle places
+*"elevon and rudder … immersed in the propeller slip stream to provide three axis control moments
+in hover."* The answer works, costs little, and is the one a reader will reasonably expect.
+
+**And the reaction-torque channel this paper declines is established as a control channel.** A
+coaxial contra-rotating tail-sitter reported in 2012 balances rotor torque *"by the inverse
+rotating of the two rotors"* and then unbalances it on purpose to steer: its published control
+scheme assigns *"differential velocity of the two motors"* to yaw in the vertical mode and to
+roll in the horizontal one. **Those are the same physical channel under two names** — a moment
+about the propeller axis, which stands vertical in hover and horizontal in cruise — and
+independently driven rotors make it available to any coaxial pair. **Using it is a choice, and
+so is declining it**, which is what separates this configuration's control problem from a
+physical impossibility.
 
 **A blended-wing-body tail-sitter with contra-rotating propulsion, aimed at disaster response,
 is established**, reported in 2025 with vortex-lattice and RANS analysis of its planform,
@@ -159,10 +185,12 @@ mechanism — carrying no aerodynamic control surfaces beyond a single moving de
 through a buffered series hybrid, and **audited explicitly against carried hover mass, exposed
 cruise drag and hover-sized continuous power**, at two scales and under three sizing contracts.
 
-Each of those choices costs something, and **the giving-up is the part that is not free**: a
-torque-balanced coaxial pair cannot produce a rolling moment by any setting, which the quadrotor
-tail-sitters can. What that costs, and what the rest of the combination costs, is what the paper
-is for.
+Each of those choices costs something, and **the giving-up is the part that is not free**. A
+quadrotor tail-sitter produces a rolling moment from the reaction torque of four independently
+driven rotors; a coaxial pair can produce one the same way, by running its two rotors at different
+speeds. **Operating every pair torque-balanced spends that channel to buy the torque balance and
+the near-zero net angular momentum**, and leaves the axis to a single aerodynamic device. What
+that costs, and what the rest of the combination costs, is what the paper is for.
 
 **None of the elements is new**, and Section 7 says so. Tail-sitting aircraft are seventy years
 old and uncrewed ones are ordinary; blended wing bodies have been a standing subject of transport
@@ -194,6 +222,12 @@ presume an escape.
 | Dördünden üçü 1954 makinesine ve insan pilota itiraz | §1.2, satır 424–427 |
 | Miras alınan üç gerçek güçlük: dikey iniş, yanal rüzgâr, yatış momenti | §1.5, satır 481–488 |
 | Şimdi var olan üç şey: her rotorda elektrik tahrik, sensör tabanlı tutum, gövdeden gelmeyen kararlılık | §1.5, satır 497–501 |
+| Eşeksenli karşıt dönüşlü kuyruk üstü, gerekçe tork dengeleme | Novlit ve ark. 2014, `cfd/2014_0529_paper.pdf`: *"A pair of 10 inches coaxial contra rotating propellers is mounted to compensate each other's torque"* — **birinci elden** |
+| Askı kontrolünün yerleşik cevabı: slipstream içinde elevon ve rudder | Novlit ve ark. 2014, aynı belge: *"Elevon and rudder are immersed in the propeller slip stream to provide three axis control moments in hover"* — **birinci elden** |
+| Tepki torku yerleşik bir yatış kanalı; diferansiyel devirle | Zhang ve ark. 2012, `cfd/ica20120400001_12673514.pdf`, satır 128–130: *"It balances the anti-torque of the rotors by the inverse rotating of the two rotors"* — **birinci elden** |
+| Aynı kanal dikey kipte *yaw*, yatay kipte *roll* adını alıyor | Zhang 2012 **Tablo 2**, satır 159–165: Yaw/Vertical = *"Differential velocity of the two motors"*; Roll/Horizontal = aynı — **birinci elden** |
+| Eksen adlarının askıda yer değiştirmesi literatürde adlandırılmış | Novlit ve ark. 2014, satır 118–123: *"the definition of the roll and yaw angles are interchanged"* — **birinci elden** |
+| Kuadrotor kuyruk üstü yatışı bağımsız rotorların tepki torkundan üretir | Oosedo ve ark. 2013 (De Wagter 2018 içinden); Zhang 2012 aynı ilkeyi eşeksenli çiftte gösteriyor |
 | Üç öğenin hiçbiri yeni değil | `paper/v8/07-the-combination.md` açılışı |
 
 **Bu sayfada BİLEREK olmayanlar:** tek bir başarım sayısı, bu uçağa dair hiçbir tarif, ve

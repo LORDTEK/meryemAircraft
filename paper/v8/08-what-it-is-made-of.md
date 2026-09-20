@@ -7,6 +7,14 @@
 pervane verimi sayısı burada **yok** (Adım 7'de bir kez, defterde kalem olarak) ·
 askı tork artığı açık kalem olarak adlandırılıyor.
 
+**Tur 47 düzeltmesi — yatış ekseni.** ChatGPT *"yatış pervanelerle ÜRETİLEMEZ"* cümlesinin
+tepki torkunu atladığını gösterdi; §2.9 her rotorun **kendi elektrik makinesinde** olduğunu
+söylüyor, dolayısıyla diferansiyel devir gövde ekseni etrafında net tork verir. Zhang ve ark.
+2012 (`cfd/ica20120400001_12673514.pdf`) bunu **birincil kontrol kanalı** olarak kullanıyor.
+Qwen ayrıca §2.10'un askı paragrafındaki *"thirty-degree bank"* ifadesinin aslında bir **yön
+değişimi** olduğunu gösterdi. İddia daraltıldı: **fiziksel imkânsızlık değil, tasarım seçimi.**
+Ayrıntı ve alıntılar: `paper/roll-axis-finding.md`.
+
 ---
 
 ## What it is made of, and what still moves
@@ -34,10 +42,10 @@ angle and the longitudinal stability are one design variable seen from two direc
 
 Five propellers, and every one of them is a coaxial counter-rotating pair. The reason is narrow
 and worth stating as such: **reaction torque.** A single propeller applies to the airframe a
-torque equal and opposite to the one it applies to the air — about the yaw axis in hover and the
-roll axis in cruise — and that torque must be opposed continuously, either by a control surface,
-which costs drag, or by differential thrust, which costs a control channel. A counter-rotating
-pair does not produce it.
+torque equal and opposite to the one it applies to the air. It acts about the propeller axis,
+which on this aircraft is the body's longitudinal axis — the roll axis in body terms — in both
+regimes, and it must be opposed continuously, either by a control surface, which costs drag, or by
+differential thrust, which costs a control channel. A counter-rotating pair does not produce it.
 
 One pair sits at the nose, 1.20 m in diameter on the light design, and produces all propulsive
 thrust in both regimes. Four smaller pairs, 0.20 m in diameter, sit at the ends of rigid frames
@@ -77,9 +85,14 @@ transition.** That is a design assignment, not a demonstrated result: whether th
 produces is sufficient, and whether the aircraft trims through the rotation, are questions for
 Section 10.
 
-**Roll comes from neither.** Every pair is coaxial and nominally torque-balanced, so every thrust
-vector is parallel to the body axis and no combination of settings produces a rolling moment. Roll is
-produced instead by a strip on the lower surface: inclined at 45° in planform, running 120 % of
+**Roll comes from neither, and the reason is a choice rather than an impossibility.** Every thrust
+vector is parallel to the body axis, so no combination of thrust settings produces a moment about
+it. Reaction torque could produce one: each rotor has its own machine, so running the two rotors of
+a pair at different speeds leaves a net torque about that axis, and the tail-sitter literature uses
+exactly that channel. **This configuration declines it** — every pair is operated torque-balanced,
+so no reaction torque is spent on control — and assigns the axis to an aerodynamic device instead.
+What declining it costs is not counted in this work. Roll is produced instead by a strip on the
+lower surface: inclined at 45° in planform, running 120 % of
 root chord, reaching 67 % of semi-span, and standing 2 cm proud at its inboard end and 6 cm at
 its outboard end. **Extension is the control variable** — the strip is modulated, not switched —
 and deploying it also pitches the nose down by a small increment. Its inboard 46 % lies inside
@@ -135,16 +148,19 @@ rather than a property of the hardware, and it is stated as one.
 
 The torque balance within each pair is set exact at the cruise condition rather than at hover, so
 a small residual remains in hover. It acts about the propeller axis — the aircraft's longitudinal
-axis, which is the roll axis in body terms and stands vertical in the hover attitude, so it
-appears there as a change of heading. *(This paper fixes body-axis naming throughout; the earlier
-description of reaction torque as acting "about the yaw axis in hover" named the same axis by its
-earth-frame effect, and the two conventions are not mixed here.)*
+axis, which is the roll axis in body terms. *(This paper fixes body-axis naming throughout. That
+axis is the roll axis in both regimes; what changes is its orientation relative to the earth — it
+stands vertical in the hover attitude, where a moment about it appears as a change of heading, and
+horizontal in cruise, where it appears as a bank. The two conventions are not mixed here.)*
 
-That axis is the one the propellers cannot command at all, which is why the residual is a
-problem: the tip pairs cannot absorb it without roll authority the aircraft does not have in
-hover, and the strip works against dynamic pressure that the slipstream supplies over only part
-of its length at zero airspeed. Either the residual is small enough to be absorbed by the speed
-trim of the pairs — which this study has not shown — or a fourth duty falls on the strip.
+That axis is the one the configuration has chosen not to command with the propellers, which is why
+the residual is awkward: the tip pairs cannot absorb it by thrust differential, because their thrust
+vectors are parallel to that axis too, and the strip works against dynamic pressure that the
+slipstream supplies over only part of its length at zero airspeed. What is left is the channel the
+configuration set aside — the speed trim of the pairs, which is a reaction-torque command and not a
+thrust one. Either the residual is small enough to be absorbed that way, which this study has not
+shown and which would mean the architecture spends a little of the channel it declined, or a fourth
+duty falls on the strip.
 
 **The fixed geometry of the tip pairs leaves two admissible cruise states, and only one of them
 is physically closed.** Unable to feather, the pairs must either turn at the zero-shaft-torque
@@ -185,7 +201,8 @@ particular installation would reach.
 | Tampon 1,8 kg, MTOW'un %3,6'sı | §2.9, satır 792–793 |
 | Burun çifti 1,20 m, uç çiftleri 0,20 m, 16,2 N, 335 W, dörtte 1,34 kW | §2.10, satır 796–799 |
 | Yunuslama kolu 0,71 m, sapma kolu 1,726 m, oran 2,43 | §2.10, satır 805–808 |
-| Yatış eşeksenli çiftlerle üretilemez | §2.10, satır 811–813 |
+| Her itki vektörü gövde eksenine paralel; itkiyle yatış momenti yok | §2.10, satır 810–812 |
+| Kaynağın *"roll cannot be produced by propellers at all"* cümlesi **daraltıldı** — tepki torku bir kanal; her rotorun kendi makinesi var | §2.10, satır 813–814 aşırı iddia; §2.9, satır 784–785; Zhang 2012 `cfd/ica20120400001_12673514.pdf`; `paper/roll-axis-finding.md` |
 | Şerit: alt yüzey, 45°, kök veterinin %120'si, açıklığın %67'si, 2→6 cm | §2.10, satır 816–818 |
 | Şerit modüle ediliyor; burnu aşağı yunuslatıyor | §2.10, satır 818; ΔC_m §3.17 |
 | Slipstream içinde %46, serbest akışta %54 | §2.10, satır 821–823 |

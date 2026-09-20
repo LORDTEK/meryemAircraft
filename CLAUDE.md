@@ -47,10 +47,34 @@ Bir kez yazıldı, 4.2 ile çelişti ve makalenin kendi tezini inkâr etti.
 bir cümle yazdım: *"hareket eden mekanizma yok", "hiçbir aerodinamik kumanda
 yüzeyi yok", "her eksendeki her moment diferansiyel itkiden".* Üçü de **yanlış.**
 
-**Yatış (roll) eşeksenli pervanelerle ÜRETİLEMEZ.** §2.10 bunu türetiyor: her
-çift eşeksenli ve tork dengeli, hiçbir ayar yatış momenti vermiyor. Yatışı alt
-yüzeydeki **değişken uzantılı şerit** sağlıyor ve makale ona *"uçaktaki tek
-hareketli aerodinamik yüzey"* diyor.
+**Yatış (roll) itki vektörlerinden ÜRETİLEMEZ** — hepsi gövde eksenine paralel,
+dolayısıyla hiçbir itki ayarı X_b etrafında moment vermiyor. Yatışı alt yüzeydeki
+**değişken uzantılı şerit** sağlıyor ve makale ona *"uçaktaki tek hareketli
+aerodinamik yüzey"* diyor.
+
+> **DÜZELTME, Tur 47 — bu maddenin kendisi fazla iddialıydı.** Önceki hâli *"yatış
+> eşeksenli pervanelerle üretilemez"* diyordu. **Yanlış.** §2.9 her rotorun **kendi
+> elektrik makinesinde** olduğunu söylüyor; iki karşıt rotor farklı devirlerde
+> döndürülürse torkları birbirini götürmez ve net tork X_b etrafındadır. Burun
+> rotoru başına askıda ≈ 20 N·m; %30 dengesizlik **6 N·m** verir, şeridin askıdaki
+> alt ucuyla (6–12 N·m) aynı mertebe. Ve literatür bu kanalı **kullanıyor**:
+> Zhang ve ark. 2012, eşeksenli çift rotorlu kuyruk üstüde *"Roll motion is
+> controlled by the **differential velocity of the two motors**"* diyor
+> (`cfd/ica20120400001_12673514.pdf`). Ayrıca makale kendisiyle de çelişiyordu:
+> §2.9 askı tork artığı için *"the **speed trim of the pairs**"* diyor.
+>
+> **Doğru ifade:** yatış itkiden üretilemez, **tepki torkundan üretilebilir**, ve bu
+> yapılandırma onu kontrol kanalı olarak **kullanmamayı seçer.** *"Fiziksel
+> imkânsızlık"* değil, **tasarım kısıtı.** Bedeli — itki asimetrisi, verim, rotor
+> ataletinden gelen yecikme — **sayılmadı;** açık kalem.
+
+**EKSENLER ASKI İLE SEYİR ARASINDA GÖREV DEĞİŞTİRİR.** Askıda burun yukarıdayken
+X_b dikeydir. Dolayısıyla: sağ/sol uç çifti (gövde sapması) askıda **bank** yapar;
+şerit (gövde yatışı) askıda **yön** değiştirir. §2.10'un *"enough for a thirty-degree
+bank"* cümlesi askı paragrafındadır ve **yanlıştır** — şerit askıda bank değil yön
+verir. Literatür bunu 2014'te adlandırmış: *"the definition of the roll and yaw angles
+are **interchanged**"* (Wang ve ark., `cfd/2014_0529_paper.pdf`).
+**Askı ile seyir eksen adları asla karıştırılmaz.**
 
 **Doğru iddia dar olanıdır:**
 

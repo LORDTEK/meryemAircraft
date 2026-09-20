@@ -110,15 +110,76 @@ diyor. **İkisi aynı anda doğru olamaz.**
 
 ---
 
+---
+
+## DOĞRULAMA — iki belge, birinci elden okundu
+
+**Tarih: 2026-09-20.** Yazar iki PDF'i depoya yükledi; ikisi de `pdftotext` ile açıldı ve
+alıntılar dosyadan alındı. Hatırlanarak değil.
+
+### Zhang ve ark. 2012 — `cfd/ica20120400001_12673514.pdf`
+
+Eşeksenli karşıt dönüşlü kuyruk üstü. **HATA 2'yi doğrudan doğruluyor:**
+
+> *"It balances the **anti-torque of the rotors by the inverse rotating of the two rotors**, to
+> stabilize the flight attitude."* (satır 128–130)
+
+— yani tork dengesi bizimkiyle aynı gerekçeyle kuruluyor. **Ve sonra o dengeyi bir kontrol
+kanalı olarak kullanıyor.** Belgenin Tablo 2'si (satır 159–165), aynen:
+
+| | **Vertical Mode** | **Horizontal Mode** |
+|---|---|---|
+| Yaw Motion | **Differential velocity of the two motors** | Rudde[r] |
+| Pitch Motion | Stabilizer | Stabilizer |
+| Roll Motion | Rudde[r] | **Differential velocity of the two motors** |
+| VTOL | Increase or decrease the combined thrust of the two motors | – |
+
+**Bu tek tablo iki hatayı birden kanıtlıyor:**
+
+1. **HATA 2.** Eşeksenli, karşıt dönüşlü, tork dengeli bir çift, iki rotoru farklı devirlerde
+   döndürülerek gövde ekseni etrafında moment üretir — ve bu uçakta **her iki kipte de birincil
+   kanaldır.** *"Pervanelerle üretilemez"* cümlesi yanlıştır.
+2. **HATA 1.** **Aynı fiziksel kanal** dikey kipte *"yaw"*, yatay kipte *"roll"* diye
+   adlandırılıyor. Eksen adı değişiyor, eksen değişmiyor. Qwen'in bulgusu literatürde
+   adı konmuş hâlde duruyor.
+
+Düzyazıda da aynısı: *"In horizontal flight … **Roll motion is controlled by the differential
+velocity of the two motors**"* (satır 128–129, sağ sütun).
+
+### Novlit ve ark. 2014 — `cfd/2014_0529_paper.pdf`
+
+Eşeksenli karşıt dönüşlü kuyruk üstü MAV. **HATA 1'i doğruluyor ve ayrıca Adım 1'e girdi:**
+
+> *"A pair of 10 inches coaxial contra rotating propellers is mounted to **compensate each
+> other's torque**."* (satır 58–60)
+>
+> *"**Elevon and rudder are immersed in the propeller slip stream** to provide three axis
+> control moments in hover."*
+
+— askı kontrolünün yerleşik cevabı budur ve biz onu reddediyoruz. Ve eksen adlandırması:
+
+> *"…the definition of the **roll and yaw angles are interchanged.** The roll angle now
+> represents the angle between the horizontal surface and the connecting line of the right and
+> left wingtips, while the yaw angle represents the rotation around the centerline of the MAV
+> fuselage."*
+
+**Bu, Qwen'in bulgusunun literatürdeki karşılığıdır.** Eksenlerin askıda görev değiştirmesi
+bilinen bir şeydir ve kuyruk üstü literatürü adını koymuştur. Bizim §2.10'umuz iki anlaşmayı
+karıştırdı; kaynak karıştırmıyor.
+
+---
+
 ## Neyi etkiliyor
 
 | Yer | Ne değişiyor |
 |---|---|
-| `CLAUDE.md` §0.1 | *"Yatış eşeksenli pervanelerle ÜRETİLEMEZ"* — **kuralın kendisi bu hatayı taşıyor.** Yazarın onayına sunuluyor |
-| §2.10 | İki cümle: *"cannot be produced at all"* ve *"thirty-degree bank"* |
-| Adım 7 | Sınır paragrafı |
-| Adım 8 | Yatış paragrafı ve askı tork artığı |
-| Adım 5 | Askıda gösterilmeyenler listesi |
+| `CLAUDE.md` §0.1 | **DÜZELTİLDİ** (yazar onayladı, Tur 47): yatış itkiden üretilemez, **tepki torkundan üretilebilir**, yapılandırma onu kullanmamayı **seçer** |
+| §2.10 (v7) | İki cümle hatalı: *"cannot be produced at all"* ve *"thirty-degree bank"*. v7 yayımlanmış kayıt olarak duruyor; düzeltme v8'de |
+| Adım 7 | **DÜZELTİLDİ** — sınır paragrafı yeniden yazıldı, kaynak satırı Zhang 2012 |
+| Adım 8 | **DÜZELTİLDİ** — yatış paragrafı, eksen adlandırması, askı tork artığı paragrafı |
+| Adım 5 | **Gerek yok** — Adım 5'te yatış iddiası hiç geçmiyor (arandı) |
+| Adım 1 | **EKLENDİ** — Novlit 2014 ve Zhang 2012 "zaten dolu olan" bölümüne girdi; boşluk cümlesindeki *"cannot produce a rolling moment by any setting"* daraltıldı |
+| `paper/prior-art-finding.md` | **DÜZELTİLDİ** — *"O takas literatürde bulunamadı"* paragrafındaki *"üretemez"* yanlıştı |
 
 ## Bunun uçağa etkisi — zayıflatmıyor, güçlendiriyor
 
