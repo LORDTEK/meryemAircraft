@@ -1,17 +1,22 @@
-# Round 46 — you falsified the gap, and you were right. Plus a boundary on the source rule, because it is costing more than it should.
+# Round 46 — you falsified the gap and you were right; a boundary on the source rule; and step 5, unreviewed
 
 ---
 
 ## 0. Verify what you are reading
 
-`LORDTEK/meryemAircraft`, branch `claude/ecstatic-cori-6w30at`, commit **`2f09538`**.
+`LORDTEK/meryemAircraft`, branch `claude/ecstatic-cori-6w30at`, commit **`d4db690`**.
 
 ```
 paper/v8/01-the-gap.md             SHA-256 1cf73e40120f0c93d1e36a5028780ae3af0d9ea8386fd6a62726c3b249124b00
+paper/v8/05-the-first-half.md      SHA-256 a20ced694cba23fade532021d0fe10d1f642cd9c387206c602f2a98898ac72f3
 paper/v8/07-the-combination.md     SHA-256 1359dde5687358ff90002cccf195e94955bc70bcc5d580d5c2be58a53ea3c739
 paper/v8/09-what-is-not-claimed.md SHA-256 e402350b84dcada3c993c69a9770e94abc4eef5b737cf19bf61b4161ff8a3f7d
 paper/prior-art-finding.md         SHA-256 a52c7b86f8e1ab6fec7d40e546bb3fa21b19b6464ddba496d2a12009027389a5
 ```
+
+**Two things are in front of you this round, as usual: a page that has been through your
+criticism, and a page that has not.** Section 5 is the mature one — step 1, rewritten after you
+falsified it. Section 6 is the fresh one — **step 5, first writing, never reviewed.**
 
 **The documents you linked are in the repository**, under `cfd/`: the two NASA V/STOL reviews,
 the DelftaCopter paper, and the SkySwift paper.
@@ -205,7 +210,168 @@ Recorded in the project file, because the cost was real:
 
 ---
 
-## 6. What I am asking of you
+## 6. **Step 5 — the first half, first writing, not yet reviewed**
+
+**What it is for.** The first of the two halves the combination is made of: operation without a
+runway, against the fixed-wing family, on that axis only.
+
+**ChatGPT's Round 45 condition is what the page is built around**, and it is worth repeating
+because it changed the shape of the section:
+
+> *"Don't make Step 5 'prove' that your aircraft has vertical capability yet. It should
+> establish the fixed-wing opponent and the mission-level capability requirement, then say what
+> is sized versus demonstrated."*
+
+So the page does four things and refuses a fifth.
+
+**It fixes the axis and refuses the other one in its first paragraph.** Nothing is claimed
+against fixed-wing aircraft on range or cruise efficiency, where the runway-launched aeroplane
+is the better machine and pays none of Section 2's charges.
+
+**It states the requirement in its stronger form before claiming to meet it.** A catapult also
+leaves without a runway; what it does not do is bring the aircraft *back* to the same unprepared
+site, and it does not travel. The requirement is therefore that the aircraft carries everything
+needed to depart and recover, and **the site supplies nothing — including the reaction surface
+for a landing gear.** A net, a cradle, a prepared strip or a recovery vehicle each fail it.
+
+**It gives the saving to its source rather than to this paper.** The inversion — landing
+structure that is also control structure — has precedent in the NASA record: *"dispensing with a
+conventional landing gear improved the empty weight fraction for these VATOL aircraft."*
+
+**And the sized-versus-demonstrated split is the centre of the page, not a closing caveat.**
+Four things are named as not demonstrated, and none is softened:
+
+1. **The aircraft leaves the ground on its control propellers.** The primary propulsor is sized
+   at thrust equal to weight and no more; the margin comes from the tip pairs, which compete for
+   it with the attitude authority.
+2. **The vertical descent has not been analysed** — whether the descent profile enters the
+   vortex ring state is open.
+3. **Neither has the landing transition**, and the page says why the forward model cannot be
+   reused: going out, the rotation builds dynamic pressure while it turns; coming back, lift is
+   leaving while the thrust vector has not yet returned to vertical. **No figure in this paper
+   describes the landing transition.**
+4. **Crosswind exposure on the ground is inherited, not removed.** The stance base is the answer
+   offered, and it is a parameter rather than a proof.
+
+**And the historical credit is kept to exactly what it covers.** Removing the pilot disposes of
+the spatial-orientation objection — height above ground is a sensor measurement now — **and
+nothing else.** Precise hovering, ground gusts and the descent are not disposed of by removing
+the pilot, and the page says so in those words.
+
+---
+
+## 7. Step 5, first writing
+
+> ### The first half: operation without a runway
+>
+> ### The opponent, and the axis
+>
+> On this axis the alternative is the fixed-wing aircraft, and the comparison runs one way only.
+> **Nothing here is claimed against fixed-wing aircraft on range or cruise efficiency**, where a
+> runway-launched aeroplane that never bought vertical capability pays none of the charges of
+> Section 2 and is the better machine. The claim is confined to the one thing that family cannot
+> do: leave from, and return to, a site that has not been prepared.
+>
+> ### What the requirement actually is
+>
+> "Vertical take-off" is a weaker requirement than the one the missions impose, and stating the
+> stronger one first prevents the claim from being read as easier than it is.
+>
+> A catapult-launched fixed-wing aircraft also leaves without a runway. What it does not do is
+> **come back** to the same unprepared site, and it does not travel without the launcher. The two
+> applications this work is aimed at — wildfire observation and response, and cargo delivery to
+> places without a runway — need the aircraft to arrive somewhere that has no infrastructure, and
+> to leave again.
+>
+> So the requirement is: **the aircraft carries everything it needs to depart and recover, the
+> site supplies nothing, and what the site supplies nothing of includes the landing gear's
+> reaction surface.** A net, a catapult, a cradle, a prepared strip or a recovery vehicle each
+> fail it.
+>
+> ### How the configuration meets it
+>
+> The aircraft stands on its tail, with its longitudinal axis vertical, in its own storage
+> attitude. **No launch equipment is present.** It rests on five points: the four lower ends of
+> the tip frames and the aft end of a keel running along the centreline.
+>
+> **Those five points are not added hardware.** The tip frames are the landing structure, and
+> they are also the structure that carries the attitude propellers and sets their moment arm. One
+> structure serves three purposes and is charged to the mass budget once.
+>
+> **The saving has precedent and it is not this paper's observation.** Reviewing the tail-sitters
+> of the 1950s, NASA recorded that *"dispensing with a conventional landing gear improved the
+> empty weight fraction for these VATOL aircraft"*, while noting that some form of gear was still
+> required on the tail surfaces. The present arrangement takes that benefit and extends it by
+> giving the same structure the control duty as well.
+>
+> **And the stance base is a parameter rather than a constraint.** Moving the frame ends further
+> outboard widens the base against ground wind without altering the planform, the propulsion or
+> the control architecture — and because the same displacement lengthens the control moment arm,
+> both benefits arrive from one change. The reference geometry is one point on that trade; an
+> operator with a stronger ground-wind requirement can take another.
+>
+> ### What is sized, and what is not demonstrated
+>
+> This is the part of the section that decides whether the rest of it can be trusted.
+>
+> **Sized.** The vertical phase is sized: hover power from momentum theory at thrust equal to
+> weight, the buffer that supplies the difference between that peak and the cruise demand, the
+> tip-frame lengths that set both the stance base and the control arms, and the structure that
+> carries the landing loads. Those numbers exist, they close, and Section 10 reports the closure
+> together with the margin it has.
+>
+> **Not demonstrated, and the list is not short.**
+>
+> **The aircraft leaves the ground on its control propellers.** Hover power is sized at thrust
+> equal to weight, so the primary propulsor supplies a thrust-to-weight ratio of exactly one and
+> no more. The take-off margin comes from the four tip pairs, which were sized from the moment
+> requirement rather than from weight support. That is the one place the configuration asks a
+> component to do a second job it was not sized for, and it means the take-off margin and the
+> attitude authority are drawn from the same four propellers and compete for it.
+>
+> **The vertical descent has not been analysed.** A rotor descending into its own wake can enter
+> the vortex ring state, in which thrust becomes erratic and adding power makes matters worse.
+> Whether this configuration's descent profile enters that region, and at what rate of descent,
+> is an open question in Section 14 rather than an answered one here.
+>
+> **Neither has the landing transition.** The forward rotation and the reverse are not symmetric
+> and must not be assumed to be. Going out, the rotation builds dynamic pressure while it turns,
+> so lift arrives to replace the vertical component of thrust as that component falls. Coming
+> back, the race runs backwards: dynamic pressure is falling while the aircraft is being turned,
+> so lift is leaving at the moment the thrust vector has not yet returned to vertical. **A model
+> built for the first case cannot be read for the second by changing a sign, and no figure in this
+> paper describes the landing transition.**
+>
+> **And one historical difficulty is inherited rather than removed.** A tail-sitting aircraft on
+> the ground is more exposed to crosswind than a conventional one. The stance base is the answer
+> this configuration offers, and it is a parameter rather than a proof.
+>
+> ### What the historical record does and does not give back
+>
+> One of the 1954 objections is genuinely removed and it should be named exactly. The XFY-1's
+> landing difficulty was attributed to a pilot judging a backwards vertical descent by looking
+> over his shoulder, to turbulence sensitivity and to reduced control power near touchdown.
+> **There is no pilot here, and height above ground is a sensor measurement rather than a human
+> estimate.** That disposes of the spatial-orientation objection and nothing else. **Precise
+> hovering, ground gusts and the descent itself are not disposed of by removing the pilot**, and
+> this section does not pretend otherwise.
+>
+> ### What this half costs
+>
+> Runway independence is not obtained free, and the charges appear later rather than here. The
+> tip frames that make the aircraft self-supporting are structure standing in the cruise
+> airstream, and Section 11 charges their drag. The attitude propellers they carry are exposed
+> for the whole cruise and cannot be feathered, and Section 11 charges that too. The buffer that
+> releases the engine from the hover peak is mass carried for the whole flight.
+>
+> **The second half — cruise carried on a wing rather than on rotors — is the subject of the next
+> section**, and the two are combined in Section 7.
+>
+> ---
+
+---
+
+## 8. What I am asking of you
 
 **Q1 — Is the narrowed gap defensible, or has it narrowed into a non-claim?** It now says: the
 route is occupied, the elements are old, the phenomenon we measured was known — what is not
@@ -225,14 +391,19 @@ not existing.
 
 **Q4 — Anything false**, in step 1 as rewritten, or in steps 7 and 9 as corrected.
 
-**Q5 — Steps 5 and 6 next.** All four of you said so last round and nothing since has changed
-it. Unless the falsified gap moves something.
+**Q5 — On step 5 specifically.** Three questions, and the third is the one that matters:
+does the page establish the requirement without claiming to have met it? Is the
+sized-versus-demonstrated split honest, or is anything hiding on the sized side that belongs on
+the other? **And is the four-item "not demonstrated" list complete — what is missing from it?**
+
+**Q6 — Step 6 next**, the second half: wing-borne cruise, opponent multirotors. Unless the
+falsified gap moves something.
 
 ---
 
-## 7. Where the work stands
+## 9. Where the work stands
 
-Seven steps written: 1, 2, 3, 4, 7, 8, 9. **The architecture is unchanged.** What changed this
+Eight steps written: 1, 2, 3, 4, **5**, 7, 8, 9. **The architecture is unchanged.** What changed this
 round is the size of the claim around it, and it changed in the direction the evidence pushed.
 
 Target remains *Journal of Aircraft* (AIAA), Full-Length Paper.
