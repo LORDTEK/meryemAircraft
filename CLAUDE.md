@@ -212,6 +212,50 @@ ne yaptın, ne buldun, ne umuyordun, hangi aşamadasın, hangi aşamalar için
   hasarıysa öyle işaretle.
 - Büyük aşama öncesi **parça–bütün–parça** okuma iste.
 
+### 2.1 Kaynak kuralı, ve onu taşınabilir kılan sınır. Tur 44–46.
+
+**Kural (Tur 44, yazar):** *"Herkes iddialarının kaynağını indirilebilir PDF bağlantı olarak
+versin. Ben de indirip GitHub'a yükleyeyim."* Yazar indirir, depoya girer, o andan sonra
+**herkes aynı dosyadan alıntılar.**
+
+**İki turda iki kez işe yaradı ve ikisinde de farklı yönde:**
+
+- **Tur 45:** dört okuyucu NASA sayıları için dört ayrı küme verdi. Belgeler yüklenip okununca
+  **üç ayrı belge** oldukları çıktı ve her biri kendi belgesi için doğruydu. **Bizim
+  sayılarımız doğrulandı.**
+- **Tur 46:** üç okuyucu Adım 1'in boşluk cümlesini çürüttü. Belgeler okununca **haklı
+  oldukları** çıktı. **Bizim iddiamız daraltıldı.**
+
+**Ama kural ağır.** Yazar: *"Bu şekilde olunca da çok iş çıkıyormuş."* Bazı bağlar
+indirilemedi, bazıları açılmadı. Taşınabilir olması için sınırı var:
+
+> **PDF yalnız bir iddiayı ÇÜRÜTEBİLECEK şeyler için istenir:**
+> **(a) öncelik ve yenilik iddiaları** — "bu daha önce yapılmadı" diyen her cümle,
+> **(b) sayılar** — tablodan alınan her değer,
+> **(c) birebir alıntılar.**
+>
+> **Görüş, yargı, yapı önerisi, üslup eleştirisi için PDF istenmez.** Bu turların çoğu
+> değeri oradan geliyor ve onlar kaynak gerektirmiyor.
+
+**Ve karşılığı verilir:** hangi belgeyi **o turda açtığını** söylemeyen bir sayı kullanılmaz.
+Açamadıysa sayı vermemesi istenir — çekinceli bir sayı, sayı olmamasından beterdir, çünkü
+kayda veri gibi girer.
+
+### 2.2 Yenilik iddiası yazmadan önce. Tur 46'nın bedeli.
+
+Adım 1'e *"1954'te bir kez uçuruldu ve tekrar ele alınmadı"* ve *"her mimari bunu propulsor'ü
+yeniden yönlendirerek yapar"* yazdım. **İkisi de yanlıştı** ve üç dış okuyucu bağımsız olarak
+yakaladı. İnsansız kuyruk üstü literatürü on yıldır sürüyor; kumanda yüzeysiz kuyruk üstü
+2013'te deneysel doğrulamayla bildirildi; BWB kuyruk üstü 2025'te afet müdahalesi için
+bildirildi; ve sabit hatvenin iki rejimde birden verimli olamaması **bilinen bir sonuç.**
+
+**Kural:** *"yapılmadı", "tek", "ilk", "tekrar ele alınmadı"* gibi her cümle için **önce
+aranır.** Bulunamaması aranmadığının kanıtı değildir; bu yüzden iddia **"bulunamadı"**
+biçiminde ve **aranan yer adlandırılarak** yazılır.
+
+**Ve boşluk iddiası daraldığında zayıflamaz.** Doğru biçim şudur: neyin zaten dolu olduğu
+**boşluktan önce** sayılır, sonra bulunmayan şey **bir arada ve bedeliyle** tarif edilir.
+
 ## 3. Doğrulama
 
 Hiçbir iddia denetlenmeden aktarılmaz — ne YZ'lerinki ne benimki.
