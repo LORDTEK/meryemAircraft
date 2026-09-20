@@ -87,12 +87,16 @@ demonstration."**
 
 Removing those eight leaves something narrower than a first reading of the abstract might
 suggest, and the narrower statement is the one the paper defends: **a configuration that
-combines runway-independent vertical operation with wing-borne cruise efficiency, and that
-reaches that combination with no mechanism that reorients a propulsor.**
+combines runway-independent vertical operation with wing-borne cruise efficiency, reaches that
+combination with no mechanism that reorients a propulsor, and reports what the combination
+costs.**
 
-Each half of that has a named opponent and neither half is a record. What is new is the
-conjunction and the means, and the means is what Sections 7 and 8 describe and what Section 11
-prices.
+Each half of that has a named opponent and neither half is a record. **Nor is the configuration
+claimed to be without precedent**: Section 1 sets out what is already established, including
+uncrewed tail-sitters, tail-sitters without control surfaces, coaxial contra-rotating
+tail-sitter propulsion, and blended-wing-body tail-sitters. **What this paper offers is the
+combination, the consequences of the choices inside it, and the accounting** — which is what
+Sections 7 and 8 describe and what Section 11 prices.
 
 ### One consequence for how the numbers that follow should be read
 

@@ -21,10 +21,11 @@ geçmemesi (Grok).
 
 None of the three elements is new.
 
-Tail-sitting aircraft were flown in the 1950s and abandoned for reasons the record
-states plainly. Blended wing bodies have been a standing subject of transport research
-for three decades. Series-hybrid propulsion is ordinary in small uncrewed aircraft.
-Each can be found on its own, in the literature and in hardware.
+Tail-sitting aircraft were flown in the 1950s and are ordinary among uncrewed aircraft today,
+including with blended-wing-body planforms and contra-rotating propulsion. Blended wing bodies
+have been a standing subject of transport research for three decades. Series-hybrid propulsion
+has established precedent in small uncrewed aircraft. **Each can be found on its own, and in
+combination, in the literature and in hardware** — Section 1 says where.
 
 What is new is that the three of them, taken together, satisfy the escape condition of
 Section 3 **in the propulsor that carries the aircraft** — and that they satisfy it with no

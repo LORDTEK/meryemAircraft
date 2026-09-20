@@ -7,6 +7,22 @@ Kod: `aero/nose_propeller.py`, `aero/nose_propeller_crossing.py`.
 
 ---
 
+## 0. ÖNEMLİ SINIR — bu olgu literatürde BİLİNİYOR
+
+Tur 46'da okunan De Wagter ve ark. 2018 (`cfd/Wagter_et_al_2018_Journal_of_Field_Robotics.pdf`)
+insansız kuyruk üstü literatürünü tarıyor ve şunu doğrudan söylüyor:
+
+> *"the fixed-pitch propellers make it **theoretically impossible** to be very efficient in both
+> hovering and forward flight."*
+
+Aynı belge kendi rotorunu *"a **compromise** between efficient hover and efficient forward
+flight"* diye tarif ediyor ve çapını o esasa göre seçiyor.
+
+**Dolayısıyla aşağıdaki hesabın bulduğu OLGU yeni değildir.** Yeni olan tek şey, o uzlaşmanın
+**bu mimari için nicelenmesi** ve boyutlandırma döngüsünden geçirilmesidir: makalenin kendi FM
+hedefinde η_p'nin ne çıktığı, zincire ne yaptığı, ve menzile ne yaptığı. **İddia buna göre
+yazılacak** — *"keşfettik"* değil, *"ölçtük ve faturaladık."*
+
 ## 1. Soru neydi
 
 Makale aynı **sabit hatveli** burun çiftine iki ayrı rejimden iki ayrı verim atfediyor:
