@@ -26,8 +26,8 @@ reviewing it.** That has happened twice in this project and cost a round each ti
 
 1. Your two roll-axis findings from last round — **both confirmed**, and the uploaded documents
    proved them more sharply than either of you argued.
-2. **An error I found in my own work while writing step 6.** It narrows a claim this paper has
-   been leaning on since v5. I am reporting it before you find it.
+2. **An error I found in my own work while writing step 6.** It narrows one of the paper's three
+   claims. I am reporting it before you find it.
 3. **Step 6 — the second half, first writing, never reviewed.**
 
 ---
@@ -245,10 +245,135 @@ against 50 kg, and Reynolds favours the larger); the compared quadrotor has an u
 matched — theirs is at best-range speed, ours at 1.49 × stall, which our own sizing section says is
 **not** our best lift-to-drag point.
 
-**The full text is in `paper/v8/06-the-second-half.md` at the hash above.** Its structure mirrors
-step 5: the opponent and the axis · what the requirement is · what the configuration does instead ·
-what the margin actually is, in one currency · three qualifications · what is sized and what is not
-demonstrated · what this half costs.
+Its structure mirrors step 5. **The full text follows**; it is also at
+`paper/v8/06-the-second-half.md` under the hash above.
+
+---
+
+### The second half: cruise carried on a wing
+
+#### The opponent, and the axis
+
+On this axis the alternative is the multirotor, and as in the previous section the comparison
+runs one way only. **Nothing here is claimed against fixed-wing aircraft.** A runway-launched
+aeroplane cruises more efficiently than this configuration and pays none of the charges of
+Section 2; that comparison is not made, and no result in this paper rests on it. The claim is
+confined to the one thing the multirotor family structurally lacks: **a surface that carries the
+cruise lift.**
+
+#### What the requirement is
+
+Section 5 established the first half: the aircraft must leave from and return to a site that
+supplies nothing. **A multirotor meets that requirement completely.** It is not a deficient
+machine and this section does not treat it as one; it is excellent at what it does and is
+limited by the price of doing it that way.
+
+What it does not meet is the second half of both missions. Wildfire observation and response,
+and cargo delivery to places without a runway, each require the aircraft to **cover distance
+after it has left the unprepared site**, and a vehicle with no wing buys every second of that
+distance with installed power. The consequence has been stated independently: surveying the
+field, one study concludes that multirotors are efficient in hover and suited to short-range
+missions, while vectored-thrust aircraft are efficient in cruise and suited to long-range ones.
+
+#### What the configuration does instead
+
+Cruise lift is carried by the blended wing body — the whole planform, since there is no
+separate fuselage — while the nose pair produces only the thrust needed to balance drag. **This
+is a structural difference rather than a margin.** Lift is carried on a surface or it is carried
+on rotors, and no sizing contract, no assumption in this paper and no choice available to a
+designer moves a vehicle between those two states. It is the one claim in this work that is a
+property of the configuration rather than of a calculation.
+
+#### What the margin actually is, in one currency
+
+The structural statement is worth little without a number, and the number has to be given in a
+single unit or it is not a comparison at all.
+
+The sizing set of Section 4 reports an **effective lift-to-drag ratio**, defined in its own
+nomenclature as `L/De = WV/P`: weight times speed over power. That is a system figure of merit,
+not a force ratio, and it already contains the propulsive efficiency of whatever produces the
+thrust. **A force ratio cannot be placed beside it.** Converting this configuration's
+aerodynamic lift-to-drag ratio into the same quantity is one line — in level cruise thrust
+equals drag and lift equals weight, so with shaft power `P = DV/η_p`,
+
+> **L/De = WV/P = (L/D) · η_p**
+
+and both factors are computed rather than assumed. The aerodynamic ratio is 8.80 to 10.82 across
+the zero-lift drag bracket, **with the tip frames and the free-wheeling attitude rotors already
+charged**; the propeller efficiency is 0.632 to 0.683 from a two-point blade-element solution of
+the actual nose blade at its actual hover and cruise conditions. The product is **5.56 to 7.39**.
+
+| | L/De |
+|---|---:|
+| This configuration, adverse corner | **5.56** |
+| This configuration, favourable corner | **7.39** |
+| Quadrotor, turboshaft | 4.9 |
+| Quadrotor, all-electric | 5.8 |
+
+**Against the quadrotor that uses the same kind of energy source, the sign holds at every
+corner**, by 14 to 51 percent. The margin is not fragile: closing it would require the
+propeller efficiency to fall to 0.557 against a computed worst case of 0.632.
+
+**Against the all-electric quadrotor in the same set it does not hold at the adverse corner**,
+and this is stated rather than arranged around. That vehicle reaches 5.8, above this
+configuration's 5.56. It buys the difference with 1 742 lb of battery and **nearly twice the
+gross weight for the same mission** — 7 221 lb against the turboshaft quadrotor's 3 678 lb —
+which is precisely the charge Section 2 describes and Section 4 tests. But on cruise efficiency
+taken alone, it is ahead of this configuration's worst case.
+
+**So the honest form of the second claim is narrower than the structural statement invites.**
+Wing-borne cruise is a different way of carrying lift, and it is worth 14 to 51 percent in this
+comparison — not a change of category. And what compresses it is not the wing. **It is this
+aircraft's own refusal of the variable-pitch hub**: at a propeller efficiency of 0.85 the same
+airframe would reach 7.48 to 9.20. The margin is a property of the propeller choice as much as
+of the architecture, and Section 11 charges it as such.
+
+#### Three qualifications, all of which run against this configuration
+
+They are given together because omitting any one of them would make the comparison look better
+than it is.
+
+**Scale.** The compared vehicles are 1 670 to 3 275 kg; the designs here are 50 kg and 1 000 kg.
+Reynolds number favours the larger aircraft, so the smaller design is at a disadvantage in this
+comparison rather than an advantage.
+
+**The quadrotor is a good quadrotor.** Its disc loading is 3.5 lb ft⁻², which is unusually low
+and unusually efficient. Nothing here is compared against a poor example.
+
+**The speeds are not matched.** The published figure is quoted at the best-range speed; this
+configuration's is at its chosen cruise condition, 1.49 times stall, which Section 10 states
+explicitly is **not** its best lift-to-drag point. Cruising at the best point would leave too
+little margin, and the ratio that the chosen condition gives is the one reported.
+
+#### What is sized, and what is not demonstrated
+
+**Sized.** The drag build-up and its bracket; the lift-to-drag ratio at the cruise condition
+from the drag polar; the propeller efficiency from blade-element momentum theory at two
+operating points; and the range that follows from the chain, link by link.
+
+**Not demonstrated.** **No part of this has been measured.** There is no wind-tunnel test and no
+flight test in this work, and the drag coefficient is a build-up with a declared bracket rather
+than a measurement. The planform's sweep, taper and thickness distributions were chosen rather
+than optimised. The span efficiency of 0.85 is an assumption which the paper's own calculation
+puts at 0.817 — optimistic by 3.9 percent. And **the aerodynamics above roughly ten degrees of
+incidence are not reliable for anyone on this class of configuration**: three methods of three
+fidelities depart at the same place, the highest of them against wind-tunnel measurement. That
+limit does not touch the cruise numbers above, which sit at a few degrees, but it bounds what
+this section may be read to support.
+
+#### What this half costs
+
+The wing that makes cruise efficient is carried through the vertical phase, where it produces
+nothing and presents the aircraft's largest surface to ground wind. The tailless planform that
+follows from having no boom constrains the sweep, because with no horizontal stabiliser the
+pitching moment must come from the distribution of lift along the body itself. And the
+fixed-pitch propeller that serves both regimes is the reason the margin above is 14 to 51
+percent rather than more. Section 11 charges all three.
+
+**The two halves are now on the table separately. Section 7 is where they are combined**, and
+the combination is what this paper is for.
+
+---
 
 **Deliberately absent from it, and I want to know if any of these is a mistake:**
 
@@ -313,7 +438,7 @@ does not close).
 
 ## 6. Where the work stands
 
-**Written:** steps 1–9 except step 6's review. **Not written:** 10, 11, 12, 13, 14.
+**Written:** steps 1 through 9. **Not written:** 10, 11, 12, 13, 14.
 
 **One contribution: the architecture** — a configuration that reaches the regime change with no
 mechanism that reorients a propulsor. The three-bill framework is the instrument that makes that
