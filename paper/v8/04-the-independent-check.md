@@ -55,59 +55,72 @@ one without.** None is known to the authors, and the invitation is meant literal
 
 ### The data
 
-The check uses a NASA study that sizes several VTOL architecture families against a single
-mission with common tools and common assumptions. It was conducted for its own purposes, has no
+The check uses a NASA study that sizes **five VTOL architecture families**, most in two
+propulsion variants — nine designs in all — against a single mission with common tools and
+common assumptions. It was conducted for its own purposes, has no
 relationship to the present work, and does not use the three-bill accounting of Section 2 or any
 framework derived from it. It is used here for three reasons, stated so that the choice is not
 merely the one that agreed: it holds the mission fixed across architecture families, it applies
 one set of tools to all of them, and it reports both quantities this prediction needs. The
 mission is 1 200 lb of payload over 75 nautical miles.
 
-| Configuration | Effective L/D | Design gross weight | Dedicated lift hardware |
+| Configuration | Effective L/D | Design gross weight | Dedicated lift group |
 |---|---:|---:|---|
 | Turboshaft quadrotor | 4.9 | 3 678 lb | none — the rotors serve both regimes |
-| Turbo-electric lift-plus-cruise | 8.5 | 7 271 lb | yes |
-| Tilt-wing | 8.6 | *(not reproduced here — see below)* | none — no dedicated lift group |
+| **Turbo-electric lift-plus-cruise** | **8.5** | **7 271 lb** | **yes** — eight lift motors and a cruise motor |
+| **Turbo-electric tilt-wing** | **8.6** | **6 584 lb** | **none** — eight proprotors, reoriented |
 
 ### The result
 
-**The lift-plus-cruise configuration's cruise efficiency is about three-quarters better than the
-quadrotor's — a factor of 1.74 — and it is nearly twice as heavy, a factor of 1.98.** That is the prediction, and it is worth
+**The primary comparison is the last two rows**, because they isolate the charge. The
+lift-plus-cruise and tilt-wing entries share the mission, the payload, the propulsion
+architecture and the presence of a cruising wing. **One carries a dedicated lift group and the
+other does not, and that is the only architectural difference between them.**
+
+**The tilt-wing is 1.2 % better in effective cruise efficiency and 9.4 % lighter.** The
+dedicated lift group buys no cruise-efficiency advantage at all here — it is marginally behind —
+and costs 687 lb of design gross weight.
+
+**The weight statement shows where the charge sits.** The lift-plus-cruise entry carries 2 670 lb
+of structure against the tilt-wing's 1 954 lb, a difference of 716 lb, while the tilt-wing
+carries 146 lb more propulsion — the mechanism giving some of it back. The net difference in
+empty weight is 679 lb. **That is the transfer property of Section 2, visible inside a weight
+breakdown this work did not produce.**
+
+**And the source states the second half of the prediction in its own words.** Discussing why the
+all-electric lift-plus-cruise design is the heaviest in the set, the study writes that the high
+cruise efficiency of the lift-plus-cruise type reduces battery weight compared with the
+quadrotor, *"but not enough to counter the increase in structure and propulsion weight."* That
+is the efficiency credit conceded and found insufficient, by the authors of the data rather than
+by the authors of the prediction.
+
+**The quadrotor row is retained as a contrast rather than as the test.** Against it the
+lift-plus-cruise configuration is about three-quarters better in cruise efficiency — a factor of
+1.74 — and nearly twice as heavy, a factor of 1.98. That is the prediction, and it is worth
 being explicit about why it is not a counter-example to it: the efficiency credit is exactly
 what the accounting says a dedicated lift system buys, and the weight charge is exactly what it
 says the buyer pays. The charge survives the credit.
 
-**The framework does not predict these numbers**; without the input fractions it predicts no
-magnitudes at all. What it predicts is that the amplified weight charge survives the efficiency
-credit, and on this pair it does.
+**But that contrast changes three things at once** — dedicated lift group, powertrain, and
+whether a cruise wing exists at all — so it supports a weaker proposition than the prediction as
+stated: that adding a wing and a lift group together still costs mass. Section 2 had already
+called that much obvious. **It is reported for scale, and the isolation test above is what
+carries the prediction.**
 
-**That pair is not a clean isolation of the charge, and the limitation is ours to state.** The
-quadrotor and the lift-plus-cruise entry differ in three ways at once: one carries a dedicated
-lift group and the other does not, but they also differ in powertrain, and one has a cruise wing
-while the other has none. The comparison therefore supports a weaker proposition than the
-prediction as stated — that adding a wing and a lift group together still costs mass — and
-Section 2 had already called that much obvious.
-
-**The comparison that would isolate the charge is the tilt-wing against the lift-plus-cruise
-entry**: both winged, both turbo-electric, one carrying a dedicated lift group and one not. That
-is the test this prediction deserves, and it requires the tilt-wing's design gross weight, which
-is why the table above leaves that cell empty rather than filling it. **The figure is not
-reproduced here because it has not been read from the source by the present authors.** Three
-independent readers of a draft of this section supplied three different values for it, and a
-fourth was returned by a literature search; that is reason enough to obtain the table rather
-than to quote a number. The cell is left open deliberately, and the isolation test is owed.
+**The framework does not predict any of these numbers**; without the input fractions it predicts
+no magnitudes. What it predicts is that the amplified weight charge survives the efficiency
+credit, and on the isolated pair it does so with the credit reduced to nothing.
 
 ### The tilt-wing is the instructive case
 
-The tilt-wing entry reaches an effective lift-to-drag ratio of 8.6, at least matching the best
-lift-plus-cruise entry in the set, while carrying **no dedicated lift group at all.** The margin
-over 8.5 is one tenth and nothing is claimed from its direction; what matters is that it is not
-lower.
+The tilt-wing is the entry that carries the isolation test above, and it is also the entry that
+denies this paper a claim it might otherwise be read as making.
 
-Two things follow, and the second is the more useful.
-
-**First, the architecture proposed later in this paper is not the only way to avoid the first
-charge.** The tilting family avoids it too, and an independent set says so.
+**The architecture proposed later in this paper is not the only way to avoid the first charge.**
+The tilting family avoids it too — it carries no dedicated lift group, it is the lighter of the
+two matched designs, and an independent set says so. The margin in cruise efficiency is one
+tenth and nothing is claimed from its direction; what matters is that the dedicated lift group
+does not buy an efficiency advantage to set against its mass.
 
 **Second, and this is what the row is actually for: the tilt-wing is the transfer property of
 Section 2 appearing in someone else's data.** It does not escape the accounting by avoiding the
@@ -146,6 +159,12 @@ aircraft.
 
 | İddia | Kaynak |
 |---|---|
+| **Tablo 3, Johnson & Silva 2022, s. 70 — birinci elden okundu** | `cfd/1521_Johnson & Silva_122721.pdf` |
+| Quadrotor TS 4,9 / 3 678 lb · L+C TE 8,5 / 7 271 lb · **Tiltwing TE 8,6 / 6 584 lb** | Tablo 3, doğrulandı |
+| Yapı: L+C 2 670 lb, Tiltwing 1 954 lb · Tahrik: 1 772 / 1 918 lb · Boş: 5 809 / 5 130 lb | Tablo 3 |
+| L+C TE tahriki: *"8x126 + 821"* — sekiz kaldırma motoru artı seyir motoru | Tablo 3, Power satırı |
+| *"but not enough to counter the increase in structure and propulsion weight"* | s. 70, Tablo 3'ün üstü |
+| *"five aircraft types so far"* — dört değil | s. 70 |
 | Öngörü: adanmış kaldırma sistemi brüt ağırlıkta ödenir ve verim kredisi bunu kurtarmaz | §3.1, satır 1108–1112 |
 | *"Verim kazancı gerçek ve yine de yetersiz"* — bariz savunmayı yasaklıyor | §3.1, satır 1112–1113 |
 | Ortak görev: 1 200 lb faydalı yük, 75 deniz mili | §3.1, satır 1115–1116 |
@@ -160,6 +179,30 @@ aircraft.
 
 **Aritmetik denetimi:** 8,5 / 4,9 = 1,735 → *"yaklaşık yüzde yetmiş daha iyi"* ✓ ·
 7 271 / 3 678 = 1,977 → *"neredeyse iki katı"* ✓.
+
+**Tur 45: sayılar birinci elden doğrulandı ve yalıtma testi yapıldı.**
+
+Yazar beş PDF'i depoya yükledi. `poppler-utils` kuruldu, Tablo 3 okundu. **Çelişkinin nedeni
+çıktı: dört okuyucu ÜÇ AYRI BELGE okumuş ve her biri kendi belgesi için birebir doğru
+aktarmış.** Grok 2018 AIAA'yı (o tabloda tiltwing sütunu yok ve 8,5 gerçekten elektrikli
+L+C'ye ait), ChatGPT ve Qwen 2022 makalesini, DeepSeek 2023 sunumunu. **Kaynak kuralı tam
+olarak işe yaradı.**
+
+**Bizim sayılarımız doğru çıktı** — §3.1'in 4,9 / 3 678 lb ve 8,5 / 7 271 lb'ı Tablo 3'te
+birebir var. Grok'un *"bir RVLT sürümü"* şüphesi haklıydı ama bizim sürümümüz doğru sürümdü.
+
+**Eksik hücre doldu ve sayfanın merkezi değişti.** Artık birincil karşılaştırma quadrotor
+değil, **lift+cruise'a karşı tiltwing**: ikisi de kanatlı, ikisi de turbo-elektrik, aynı görev,
+tek değişken adanmış kaldırma grubu. Tiltwing %1,2 daha verimli ve **%9,4 daha hafif.** Grok'un
+istediği temiz kontrol buydu; ChatGPT de bunu birincil yapmamızı söyledi.
+
+**Ve NASA öngörünün ikinci yarısını kendi sözleriyle söylüyor.** Ağırlık dökümü de aktarımı
+gösteriyor: L+C yapıda +716 lb, tiltwing tahrikte +146 lb geri veriyor.
+
+**ChatGPT haklıydı: "dört VTOL mimarisi" yanlış.** Makale *"five aircraft types so far"* diyor.
+Düzeltildi. Kayıt: `paper/nasa-numbers-open.md`.
+
+---
 
 **Tur 43'te düzeltilenler — merkezde bir mantık kusuru vardı.**
 
