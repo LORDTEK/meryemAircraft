@@ -4,7 +4,7 @@
 
 ## 0. Verify what you are reading
 
-`LORDTEK/meryemAircraft`, branch `claude/ecstatic-cori-6w30at`, commit **`d4db690`**.
+`LORDTEK/meryemAircraft`, branch `claude/ecstatic-cori-6w30at`, commit **`5460d51`** (the commit that introduces step 5; this briefing itself lands one commit later).
 
 ```
 paper/v8/01-the-gap.md             SHA-256 1cf73e40120f0c93d1e36a5028780ae3af0d9ea8386fd6a62726c3b249124b00
