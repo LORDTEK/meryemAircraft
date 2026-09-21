@@ -51,7 +51,7 @@ disc loading constant instead makes hover power grow linearly with weight, and S
 that.)* A modest dead-mass fraction becomes a large payload penalty.
 
 **This charge has been identified independently, and by a source with no interest in the present
-argument.** A NASA study sizing four VTOL architectures against a common mission with common
+argument.** A NASA study sizing five VTOL architecture families against a common mission with common
 tools found the lift-plus-cruise concepts the heaviest of the vehicles examined, and named the
 cause: not the cruise power draw, since the lift-plus-cruise effective lift-to-drag ratio is the
 higher of the set, but *"the extra empty weight items on board in hover."*
@@ -138,7 +138,7 @@ remedy reduces one and raises another.**
 |---|---|---|
 | Distributed electric lift rotors | 3 — the cruise engine no longer sizes to hover | 1 and 2 — many rotors and mounts, permanently carried and exposed |
 | Folding or retracting lift rotors | 2 — the exposed rotor is removed from cruise | 1 — mechanism, actuation, locking, a new failure mode |
-| Tilt-rotor, tilt-wing, tilt-nacelle | 1 — one propulsion group serves both regimes | mechanical complexity, gyroscopic coupling, a transition control problem — **not one of the three; see below** |
+| Tilt-rotor, tilt-wing, tilt-nacelle | 1 — one propulsion group serves both regimes | **Bill 3 is left standing** — with no store, the power plant is still sized by the hover peak — together with mechanical complexity, gyroscopic coupling and a transition control problem, which are **not among the three** |
 | Variable-pitch or feathering propulsors | 1 and 3 — one propulsor is retrimmed across two widely separated operating points instead of duplicated | 1 — pitch hub, actuation, and a new failure mode |
 | Higher disc loading, smaller rotors | 1 and 2 — smaller, lighter, cleaner rotors | 3 — hover power rises with √(DL) |
 | Lower disc loading, larger rotors | 3 — hover power falls | 1 and 2 — larger structure and exposed area |
@@ -161,10 +161,19 @@ gain for a five-percent mass penalty.** Bill 2 was converted almost exactly into
 
 ### What this accounting is for
 
-**The accounting is refuted by any remedy that removes one charge without raising another.**
-That is the test it has to survive, and the table above is where it would fail: every entry in
-it is a documented transfer, and a counter-example would be a move with an empty right-hand
-column.
+**The accounting is refuted by any remedy that reduces one charge while leaving the others no
+worse and adding no cost of its own.** That is the test it has to survive, and the table above is
+where it would fail: every entry in it is a documented transfer, and a counter-example would be a
+move whose right-hand column is genuinely empty.
+
+**Two clarifications keep that test from being either too easy or unfalsifiable.** A remedy that
+attacks one charge and simply leaves another standing is not a counter-example — the tilting row is
+the case, and it is written out there rather than left to be inferred. And a remedy whose cost
+falls **outside** the three charges is not a counter-example either, but the accounting only earns
+that if it names such costs rather than ignoring them; the tilting family's mechanism is named in
+the table for exactly that reason. **A framework that could absorb any cost by declaring it
+out-of-scope would be unfalsifiable**, so the costs outside the three are listed, not waved
+away.
 
 It also makes a prediction that can be checked without settling the architectural question at
 all: **where an arrangement pays one charge heavily in order to escape another, the ranking

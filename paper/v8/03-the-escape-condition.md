@@ -94,10 +94,13 @@ and the first is the one that most nearly contradicts the name:
   second row of the table is what carries the weight. A propulsor that lifts and then propels
   satisfies the condition. A propulsor that lifts and is then carried does not, whatever else it
   shares with the cruise system.
-- **Hardware used in both regimes for something other than thrust is permitted, and its cruise
-  drag is not eliminated.** Attitude devices are used throughout the flight, so their duty cycle
-  matches their presence and they fall outside Bill 1. They are nonetheless in the airstream. The
-  condition says nothing about them, which is not the same as their being free.
+- **Hardware used in both regimes for something other than propulsive thrust is permitted, and its
+  cruise drag is not eliminated.** *Cruise thrust in this paper means the thrust that balances
+  cruise drag.* Attitude devices produce thrust in cruise, but they produce no cruise thrust in
+  that sense; they are used throughout the flight, so their duty cycle matches their presence and
+  they fall outside Bill 1. **They remain in the airstream, so the second charge reaches them**,
+  and an architecture that carries them is a partial instantiation rather than a full one. The
+  condition permits them and does not make them free.
 - **Serving two regimes with one set of hardware has a price of its own.** Hardware that is not
   duplicated cannot be optimised twice: a propeller sized for hover thrust at zero forward speed
   is not the propeller a cruise design would choose, and if its geometry is fixed the compromise

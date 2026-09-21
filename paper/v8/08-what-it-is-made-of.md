@@ -40,7 +40,8 @@ angle and the longitudinal stability are one design variable seen from two direc
 
 ### The propulsion
 
-Five propellers, and every one of them is a coaxial counter-rotating pair. The reason is narrow
+**Five propeller stations, ten rotors:** every station is a coaxial counter-rotating pair. The
+reason is narrow
 and worth stating as such: **reaction torque.** A single propeller applies to the airframe a
 torque equal and opposite to the one it applies to the air. It acts about the propeller axis,
 which on this aircraft is the body's longitudinal axis — the roll axis in body terms — in both
@@ -50,9 +51,13 @@ differential thrust, which costs a control channel. A counter-rotating pair does
 One pair sits at the nose, 1.20 m in diameter on the light design, and produces all propulsive
 thrust in both regimes. Four smaller pairs, 0.20 m in diameter, sit at the ends of rigid frames
 projecting from the wing tips. Every pair is of **fixed geometry**: no cyclic pitch, no
-collective, no variable mechanism of any kind. Each rotor of each pair is driven by its own
-electric machine on a common axis, so the arrangement that repeatedly defeated the XB-35 —
-concentric shafts, a splitting gearbox, and the governors that synchronise them — is never built.
+collective, no variable-pitch hub and no mechanism that changes a rotor's orientation relative to
+the airframe. Shaft speed is commanded; blade geometry and orientation are not. Each rotor of each
+pair is driven by its own
+electric machine on a common axis, so **the splitting gearbox and the mechanical governors that
+synchronise it are not required** — the arrangement that repeatedly defeated the XB-35. This work
+makes no claim about the shafting: whether the two machines are stacked on the axis or arranged
+some other way is an implementation question it does not settle.
 
 The counter-rotating arrangement carries a second consequence that the transition analysis
 depends on. Because the two rotors of each pair carry equal and opposite angular momentum, **the
@@ -64,10 +69,15 @@ cancel. In a tilting architecture that term is present and must be designed for.
 
 A series hybrid: fuel to engine, engine to generator, generator to electric machines at the
 rotors. The engine is not mechanically connected to any rotor. It is an energy source, and that
-decoupling is what allows it to be sized by cruise rather than by hover. For the light design the
-continuous cruise requirement is 1.9 kW at the engine shaft and the engine is rated at 2.6 kW,
-while the hover requirement is 10.9 kW at the rotor. The difference is supplied for the vertical
-phase from a **1.8 kg battery buffer, 3.6 % of take-off mass.**
+decoupling is what allows it to be sized by cruise rather than by hover.
+
+**The separation the architecture depends on is that the continuous cruise requirement is several
+times smaller than the hover peak, and that the difference is supplied from a battery buffer for
+the vertical phase alone.** No wattage is quoted here. The figures published for this configuration
+were closed on a propeller efficiency this work has since replaced with a computed one, and the
+re-closed set belongs to Section 10 rather than to an inventory. **Quoting the superseded numbers
+beside a propulsion section that no longer assumes them is precisely the inconsistency this paper
+is trying not to commit.**
 
 ### What produces each moment
 
@@ -82,8 +92,10 @@ arm, and is not settled by the ratio alone.
 
 **The same differential-thrust system is what is assigned to rotate the airframe through
 transition.** That is a design assignment, not a demonstrated result: whether the moment it
-produces is sufficient, and whether the aircraft trims through the rotation, are questions for
-Section 10.
+produces is sufficient, and whether the aircraft trims through the rotation, are **not settled in
+this paper**: the moment is a sizing input to Section 10, but the trim through the rotation depends
+on the transition aerodynamics, and Section 14 says why those are not currently reliable for anyone
+on this class of configuration at the incidences the rotation passes through.
 
 **Roll comes from neither, and the reason is a choice rather than an impossibility.** Every thrust
 vector is parallel to the body axis, so no combination of thrust settings produces a moment about
@@ -121,9 +133,10 @@ reference and a flight computer are not optional equipment but part of the mecha
 preceding paragraphs describe. They are carried in the systems budget. The configuration
 replaces a pilot's workload with computation, and the computer is the part that does it.
 
-**The tip frames therefore do three jobs at once**, and this is the clearest instance in the
+**The tip frames therefore do four jobs at once**, and this is the clearest instance in the
 configuration of one structure carrying several duties: they are the landing gear, they set the
-control moment arms, and they carry the attitude rotors. Lengthening them to buy control
+control moment arms, they carry the attitude rotors, and — through the fairing described above —
+they are the aircraft's only vertical surface. Lengthening them to buy control
 authority widens the stance base against tipping in wind at the same time. They are also the
 structure that is exposed in cruise, and Section 11 charges them for it.
 
@@ -172,8 +185,12 @@ in Section 11.
 listing them. The nose pair meets all four parts of Section 3. The tip pairs meet none of the
 first three: they are carried through cruise producing moments rather than thrust, so they fail
 the second row of Section 3's table, and they are exposed while doing it. This is the partial
-instantiation Section 3 lists as its fourth failure mode, and the charge it re-opens is carried
-in Section 11.
+instantiation Section 3 lists as its **fourth** failure mode — meeting the condition where the
+aircraft is carried and failing it elsewhere — and the charge it re-opens is the second, carried in
+Section 11. *(They are not the second row of Section 3's table: that row concerns a propulsor that
+lifts and is then carried, and the tip pairs do not lift. They produce moments, and Section 3's
+permitted-cost clause places attitude devices outside the first charge while leaving them in the
+airstream.)*
 
 The free-wheeling state is physically determinate: the rotor settles where net shaft torque is
 zero. **The stopped state is not.** Stopping a rotor requires the stop to be produced by
@@ -197,8 +214,7 @@ particular installation would reach.
 | Sabit geometri: cyclic yok, collective yok | §2.9, satır 762 |
 | Her rotor kendi elektrik makinesinde; XB-35 dişli kutusu hiç kurulmuyor | §2.9, satır 784–786 |
 | Net açısal momentum nominal sıfır; gyroskopik moment yok | §2.9, satır 776–780 |
-| Seri hibrit; motor 1,9 kW gerek, 2,6 kW derece; askı 10,9 kW | §2.9, satır 788–792 |
-| Tampon 1,8 kg, MTOW'un %3,6'sı | §2.9, satır 792–793 |
+| **Enerji yolu sayıları SAYFADAN ÇIKARILDI** — 1,9 / 2,6 / 10,9 kW ve 1,8 kg yayımlanmış η_p = 0,80 zincirinindi; Adım 6 onu 0,632–0,683 ile değiştirdi. Grok iki kez yakaladı. Yeniden kapanmış küme Adım 10'un işi | `paper/chain-resolve-finding.md`; §2.9 satır 788–793 artık yalnız tarihî kayıt |
 | Burun çifti 1,20 m, uç çiftleri 0,20 m, 16,2 N, 335 W, dörtte 1,34 kW | §2.10, satır 796–799 |
 | Yunuslama kolu 0,71 m, sapma kolu 1,726 m, oran 2,43 | §2.10, satır 805–808 |
 | Her itki vektörü gövde eksenine paralel; itkiyle yatış momenti yok | §2.10, satır 810–812 |
@@ -207,7 +223,7 @@ particular installation would reach.
 | Şerit modüle ediliyor; burnu aşağı yunuslatıyor | §2.10, satır 818; ΔC_m §3.17 |
 | Slipstream içinde %46, serbest akışta %54 | §2.10, satır 821–823 |
 | Beş temas noktası: dört uç çerçevesi ucu + orta omurga | §2.11, satır 946–947; §3.12, satır 2103–2104 |
-| Uç çerçeveleri: iniş takımı + moment kolu + kumanda pervanesi | §2.11, satır 942–944 |
+| Uç çerçeveleri **dört** iş: iniş takımı + moment kolu + kumanda pervanesi + **fairing yoluyla tek dikey yüzey** | §2.11, satır 942–944 ve 899–903 (DeepSeek: fairing dördüncü iştir) |
 | Şerit iki yarım: bir yan yatış, ikisi birden hava freni | §1, satır 296–297 |
 | **Eyleyici sayısı bu çalışmada belirlenmiyor** | §1, satır 295–298 |
 | Tork dengesi seyirde tam, askıda artık kalıyor; trim edilişi belirlenmemiş | §2.9, satır 766–773; §4.6 |

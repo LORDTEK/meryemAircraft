@@ -73,19 +73,27 @@ mission is 1 200 lb of payload over 75 nautical miles.
 ### The result
 
 **The primary comparison is the last two rows**, because they isolate the charge. The
-lift-plus-cruise and tilt-wing entries share the mission, the payload, the propulsion
-architecture and the presence of a cruising wing. **One carries a dedicated lift group and the
-other does not, and that is the only architectural difference between them.**
+lift-plus-cruise and tilt-wing entries share the mission, the payload, the turbo-electric
+propulsion architecture and the presence of a cruising wing. **They are not identical in every
+other respect** — one stops its lift rotors in the airstream and drives a separate pusher, the
+other reorients its proprotors on a tilting wing — **but the difference the comparison turns on is
+that one carries a dedicated lift group through cruise and the other does not.** The comparison is
+the closest the published set comes to isolating that charge; it is not a controlled experiment.
 
-**The tilt-wing is 1.2 % better in effective cruise efficiency and 9.4 % lighter.** The
-dedicated lift group buys no cruise-efficiency advantage at all here — it is marginally behind —
-and costs 687 lb of design gross weight.
+**The tilt-wing is 1.2 % better in effective cruise efficiency and 9.4 % lighter.** The dedicated
+lift group buys no cruise-efficiency advantage at all here — it is marginally behind — and the
+design gross weights differ by 687 lb in the tilt-wing's favour. **That figure is the net
+difference between two architectures, not the measured mass of a lift group**, and the
+decomposition below is what makes it informative rather than merely large.
 
-**The weight statement shows where the charge sits.** The lift-plus-cruise entry carries 2 670 lb
-of structure against the tilt-wing's 1 954 lb, a difference of 716 lb, while the tilt-wing
-carries 146 lb more propulsion — the mechanism giving some of it back. The net difference in
-empty weight is 679 lb. **That is the transfer property of Section 2, visible inside a weight
-breakdown this work did not produce.**
+**The weight breakdown shows the transfer, and it does not close on the categories the table
+reports.** Of the empty-weight difference of 679 lb, structure accounts for 716 lb in the
+lift-plus-cruise entry's disfavour, propulsion returns 146 lb of it because the tilt-wing's
+mechanism is heavier, and battery returns a further 10 lb. **Those three categories account for
+580 lb of the 679**; the remaining 99 lb lies in empty-weight categories the published table does
+not break out, and this work does not know how it is distributed. **What the three reported
+categories do show is the transfer property of Section 2 — the mechanism giving part of the
+structural saving back — visible inside a weight breakdown this work did not produce.**
 
 **And the source states the second half of the prediction in its own words.** Discussing why the
 all-electric lift-plus-cruise design is the heaviest in the set, the study writes that the high

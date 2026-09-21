@@ -293,3 +293,122 @@ elverişli olup olmadığı bu çalışmanın çözmediği bir sorudur.**
    ediyor, ama Adım 10 yazılana kadar zarf doğru).
 3. **Qwen 1–9'un tam metnini istiyor; Grok her tur 1–9 yapıştırmaya karşı.** Bir kereye mahsus
    tam gönderim mi, yoksa Grok'un "tur başına bir adım" kuralı mı.
+
+---
+
+# Tur 50 — BÜTÜN okuması: yirmi iki dikiş kusuru, ve üçüncü propagasyon hatası
+
+**Yazar Adım 9'un hiç gönderilmediğini ve parça–bütün–parça'nın hiç uygulanmadığını yakaladı.
+Bütün gönderilince dördü birden dikişleri buldu.** Bu kayıt, hangisinin doğrulandığını ve
+hangisinin reddedildiğini tutar.
+
+## 1. BENİM HATAM, ve §3.1'in tam olarak tarif ettiği sınıftan — ÜÇÜNCÜ kez
+
+**ChatGPT, DeepSeek ve Qwen bağımsız olarak aynı sayıyı buldu.** Adım 6 şunu diyordu:
+
+> *"The span efficiency used throughout this section is the computed value, 0.817"*
+
+ve aynı sayfada:
+
+> *"L/D_max … 11.88 against 10.82, and 10.28 against 8.80"*
+
+**11,88 ve 10,28, e = 0,85 değerleridir.** e = 0,817 ile 11,65 ve 10,08 çıkar — ve ben bunları
+`aero/effective_ld.py` çıktısında **geçen tur kendim hesaplamıştım.** Betiği düzelttim,
+**düzyazıyı düzeltmedim.**
+
+> **§3.1 "emekliye ayrılan ifade depoda aranır" diyor. Sayılar için de gerekiyormuş.**
+> Bir betik düzeltildiğinde, o betiğin **çıktısını alıntılayan her düzyazı** aynı turda
+> yeniden okunur. Kural genişletildi.
+
+## 2. Grok'un iki bulgusu — ikisi de doğrulandı
+
+**(a) Adım 8'in bayat watt'ları.** 1,9 / 2,6 / 10,9 kW ve 1,8 kg / %3,6, η_p = 0,80 zincirinin
+sayıları. Adım 6'nın uçağı 0,632–0,683'te yaşıyor. **İkisi aynı anda güncel olamaz.**
+
+Grok'un asıl tespiti daha derin: *"bu bir kez yakalandı ve etiketlendi; birleştirilmiş metinde
+etiket yok."* **Doğru, ve sebebi benim.** Etiket Türkçe denetim tablosundaydı ve bütün
+paketi hazırlarken o tabloları **çıkardım.** Yani:
+
+> **Bir çekince yalnız Türkçe denetim tablosunda duruyorsa, İngilizce gövdede yok demektir.**
+> Okuyucu onu asla görmez. Sayılar sayfadan **çıkarıldı**; yeniden kapanmış küme Adım 10'un işi.
+
+**(b) *"Five propellers, and every one of them is a coaxial pair"*** — emekliye ayrılmış cümle
+geri gelmişti. *"Five propeller stations, ten rotors"* oldu.
+
+## 3. Adım 4'ün aritmetiği — bulgu doğru, SAYILARI yanlış
+
+ChatGPT ve DeepSeek ikisi de *"716 − 146 = 570, metin 679 diyor, 109 lb açık"* dedi.
+**İkisi de batarya satırını atlamış.** NASA Tablo 3'ten, birinci elden:
+
+| | L+C TE | Tiltwing TE | fark |
+|---|---:|---:|---:|
+| Yapı | 2.670 | 1.954 | **+716** |
+| Tahrik | 1.772 | 1.918 | **−146** |
+| Batarya | 254 | 244 | **+10** |
+| **toplam** | | | **580** |
+| Boş ağırlık | 5.809 | 5.130 | **679** |
+
+**Açık 109 değil, 99 lb** — ve Tablo 3'ün dökmediği kalemlerde. Sayfa artık dökümü tam
+veriyor ve 99 lb'nin nerede olduğunu **bilmediğini** söylüyor.
+
+Ayrıca ChatGPT'nin iki itirazı alındı: *"the only architectural difference"* fazla iddialıydı
+(biri rotorunu akışta durduruyor, öteki kanadını eğiyor — başka farklar da var), ve
+*"the dedicated lift group costs 687 lb"* nedenselliği tek donanım grubuna yüklüyordu.
+687 lb **iki mimari arasındaki net fark**, bir kaldırma grubunun ölçülmüş kütlesi değil.
+
+## 4. DeepSeek'in "zero-bill" bulgusu — öncülü yanlış, sonucu değerli
+
+DeepSeek: *"tilt üç faturadan sıfırını ödüyor, o hâlde ad yanlış."* **Öncül yanlış:** Adım 2'nin
+tablosu her çarenin neye **saldırdığını** ve ne **yarattığını** gösteriyor; saldırmadığı fatura
+ayakta kalıyor. Tilt Fatura 1'e saldırıyor, **Fatura 3'e saldırmıyor** — tamponu yok, güç
+kaynağı hâlâ askı tepesiyle boyutlanıyor. NASA'nın tiltwing'i bunu doğruluyor: *"a relatively
+small battery **just to enable emergency landing** after loss of turboshaft power"* (§5.5).
+
+**Ama belirsizlik gerçekti:** *"not one of the three"* ifadesi "net sıfır" diye okunabiliyordu.
+Satır artık **Fatura 3'ün ayakta kaldığını açıkça yazıyor**, ve ad savunulabilir hâle geliyor.
+
+**İkinci bulgusu da yarı doğru:** Adım 8'in uç çiftleri için *"Adım 3'ün ikinci satırı"* demesi
+**yanlış** — o satır kaldıran ve sonra taşınan bir propulsor'ü tarif ediyor; uç çiftleri
+kaldırmıyor. Düzeltildi: **dördüncü** başarısızlık kipi (kısmi gerçekleşme). Ve *"cruise thrust"*
+Adım 3'te **tanımlandı**: seyir sürüklemesini dengeleyen itki.
+
+## 5. Kabul edilen öteki dikişler
+
+| # | Bulgu | Kim |
+|---|---|---|
+| 1 | Adım 2 *"four VTOL architectures"* → **beş aile** (zaten Tur 45'te bilinip yapılmamıştı) | ChatGPT, Grok |
+| 2 | Adım 9 *"Cruise efficiency **and range** \| Multirotors"* — Adım 6 çok rotorluya karşı hiç menzil sayısı vermiyor | ChatGPT |
+| 3 | Adım 7 *"What is new is that…"* Adım 1'in hak ettiğinden geniş | ChatGPT |
+| 4 | Adım 7'nin mekanizma tablosundaki **elevon/rudder satırı** — kumanda yüzeyi rejim değiştiren bir mekanizma değil; çıkarıldı ve tablonun **ne saydığı** yazıldı | ChatGPT |
+| 5 | Adım 7 geçiş sınırını **kendisi** söylemeli, Adım 9'a bırakmamalı | DeepSeek, Grok |
+| 6 | Adım 8 *"no variable mechanism of any kind"* komut edilen devirle çelişiyor | ChatGPT, Grok |
+| 7 | Adım 8'in iç içe mil iddiası geri gelmişti; yeniden daraltıldı | ChatGPT |
+| 8 | Adım 8 trim sorusunu Adım 10'a yolluyordu; Adım 10 kütle döngüsü — **14'e** | Grok |
+| 9 | Adım 7 *"same job"* vs Adım 3'ün *"job"* reddi → **both duties** | Grok |
+| 10 | Uç çerçeveleri **üç** değil **dört** iş yapıyor (fairing dördüncü) | DeepSeek |
+| 11 | Adım 1 *"three of the four objections"* — kaynağın listesi daha uzun; cümle **silindi** | ChatGPT |
+| 12 | Adım 1 *"what is unoccupied is the corner"* ile *"the third route is occupied"* çelişiyordu | ChatGPT |
+| 13 | Adım 1'in yatış cümlesi Adım 7'nin tepki torku düzeltmesini **öncelemiyordu** | DeepSeek |
+| 14 | Adım 2'nin çürütülebilirlik cümlesi tilt satırıyla çelişiyordu | ChatGPT |
+| 15 | Adım 6'nın kapanış paragrafı hâlâ *"14 to 51 percent"* diyordu — atılan paletin zarfı | Grok |
+
+## 6. Reddedilen / alınmayan
+
+- **Qwen: *"başka çelişki yok, her iddia tutarlı."*** Alınmadı — on beş tane daha vardı ve
+  Qwen'in kendi bulduğu tek sayı dışında hiçbirini görmedi.
+- **DeepSeek: Adım 1'in 1954 anlatısı iki cümleye insin.** Oran meselesi, hata değil;
+  **yazara bırakıldı.**
+- **"Zero-bill condition" adının değiştirilmesi.** Tilt satırı düzeltilince ad savunulabilir
+  oluyor; yine de **yazara bırakıldı.**
+
+## 7. İki karar — dördü de aynı yerde
+
+**C_D0: tutarlı braket 0,0285–0,0381, yayımlanan 0,0248 değil.** Dördü de. Gerekçe: sweep o
+değeri **iki ucun da altına** koydu; Adım 6 zaten braketi kullanıyor; Adım 10'un onu
+kullanması makalenin kendi desteklemediğini ilan ettiği bir sayı üzerinde kapanmak olurdu.
+
+**Zarf kapalı döngüden geçebilir, ve mekanizması Grok'ta.** `baseline.py` **L/D'yi girdi olarak
+alıyor** — döngünün içinde dört geometri olmasına gerek yok. Matrisin dört köşesi dört girdi,
+dört kapanış, dört kütle, dört menzil. ChatGPT aynı şeyi 4 palet × 2 C_D0 = sekiz kapanış
+olarak söylüyor ve bir ihtimali ekliyor: **en iyi palet kapanıştan sonra en iyi kalmayabilir**,
+çünkü etkisi güç, kütle ve yakıt üzerinden yayılıyor. Öyle çıkarsa makale bir şey **öğrenir.**

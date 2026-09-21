@@ -171,7 +171,8 @@ and unusually efficient. Nothing here is compared against a poor example.
 figure is quoted at the best-range speed; this configuration's is at its chosen cruise condition,
 1.49 times stall, which Section 10 states explicitly is **not** its best lift-to-drag point. The
 best point lies at 1.26 times stall, and `L/D_max = 0.5√(πARe/C_D0)` exceeds the cruise ratio at
-both ends of the drag bracket — 11.88 against 10.82, and 10.28 against 8.80. **The reference is
+both ends of the drag bracket — 11.65 against 10.82, and 10.08 against 8.80, both at e = 0.817.
+**The reference is
 therefore given its best speed and this configuration is not given its best speed, and the margin
 is positive anyway.** The best point is not an available option — cruising there leaves too little
 margin above the stall — so this fixes a direction, not a magnitude.
@@ -218,8 +219,8 @@ The wing that makes cruise efficient is carried through the vertical phase, wher
 nothing and presents the aircraft's largest surface to ground wind. The tailless planform that
 follows from having no boom constrains the sweep, because with no horizontal stabiliser the
 pitching moment must come from the distribution of lift along the body itself. And the
-fixed-pitch propeller that serves both regimes is the reason the margin above is 14 to 51
-percent rather than more. Section 11 charges all three.
+fixed-pitch propeller that serves both regimes is the reason the margin above sits where it does
+rather than higher — at e = 0.85 the same airframe would reach 7.48 to 9.20. Section 11 charges all three.
 
 **The two halves are now on the table separately. Section 7 is where they are combined**, and
 the combination is what this paper is for.

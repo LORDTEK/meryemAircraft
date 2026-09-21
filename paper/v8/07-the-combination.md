@@ -35,17 +35,19 @@ have been a standing subject of transport research for three decades. Series-hyb
 has established precedent in small uncrewed aircraft. **Each can be found on its own, and in
 combination, in the literature and in hardware** — Section 1 says where.
 
-What is new is that the three of them, taken together, satisfy the escape condition of
-Section 3 **in the propulsor that carries the aircraft** — and that they satisfy it with no
-mechanism that reorients a propulsor. The assembly is not new because it is an assembly. It is
-new because of what it satisfies, and because of what it does not need in order to satisfy it.
+**What this paper contributes is that combination, the condition it is built to satisfy, and the
+price it pays for satisfying it.** The three elements, taken together, meet the escape condition
+of Section 3 **in the propulsor that carries the aircraft**, and they meet it with no mechanism
+that reorients a propulsor. The assembly is not offered as novel because it is an assembly. It is
+offered for what it satisfies, and for what it does not need in order to satisfy it — and Section 1
+has already set out how much of the ground is occupied.
 
 **The qualification in that sentence is not decoration, and it is made here rather than
 conceded later.** Section 3 lists partial instantiation among the ways an architecture can fail
 the condition: meeting it where the aircraft is carried and failing it elsewhere. That is this
-configuration's own case. The single nose pair meets all four parts — same hardware, same job,
-same orientation, hover peak from a buffer. The four attitude pairs do not: they are exposed in
-the cruise flow and they cannot be feathered, so they re-open the second charge. **The
+configuration's own case. The single nose pair meets all four parts — same hardware, both duties
+served, one orientation, hover peak from a buffer. The four attitude pairs do not: they are exposed
+in the cruise flow and they cannot be feathered, so they re-open the second charge. **The
 instantiation is therefore partial**, and reporting what the failing part costs is a substantial
 share of what Section 11 does.
 
@@ -74,7 +76,10 @@ relative to the airframe, and turning the propulsors is the case the condition e
 Here the end is reached by turning the thing the propulsors are already attached to, which
 leaves the orientation requirement intact.
 
-That single move is what removes the mechanism. The configuration therefore carries:
+That single move is what removes the mechanism. **The table below counts mechanism classes that
+exist in order to change regime**, which is why no aerodynamic control device appears in it: the
+strip of Section 8 is a control surface, not a means of changing regime, and counting its absence
+would be counting the wrong thing. The configuration therefore carries:
 
 | Mechanism | Where it is required | Present here |
 |---|---|---|
@@ -83,7 +88,6 @@ That single move is what removes the mechanism. The configuration therefore carr
 | Variable-pitch hub | Architectures that trim a rotor across two widely separated operating points, or feather a rotor unused in one regime | — |
 | Dedicated lift rotors | Lift-plus-cruise architectures | — |
 | Rotor stowing, indexing or stopping mechanism | Architectures that remove dedicated lift rotors from the cruise flow by such means | — |
-| Elevons, rudder, or any trailing-edge control surface | Conventional and blended-wing-body practice | — |
 
 Attitude is produced instead by differential thrust between fixed-pitch propellers: a
 single coaxial contra-rotating pair at the nose, and four small coaxial pairs at the
@@ -122,6 +126,15 @@ about reliability. What is offered is a **count**: the classes of mechanism that
 tilting architecture requires to change regime, and which this arrangement does not
 require. The actuator inventory that replaces them is the propulsion motors together
 with the strip.
+
+**One thing this section does not establish, and Section 9 holds it to that.** The arrangement
+described here requires no mechanism to change regime. **Whether this aircraft can actually perform
+the change is a separate question and is not settled anywhere in this paper**: whether the moment
+available is sufficient, and whether the aircraft trims through the rotation, depend on
+aerodynamics that — for the methods used here and the published comparisons against which they were
+checked — are not reliable above roughly ten degrees of incidence, which is inside the band the
+rotation passes through. **The mechanism claim is about hardware and survives that limit. The
+transition claim is not made.**
 
 What the combination costs is the subject of the sections that follow. It is not free:
 the attitude rotors that make the union controllable are themselves exposed in cruise,

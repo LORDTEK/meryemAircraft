@@ -28,7 +28,7 @@ alternative, and this paper's alternatives differ from axis to axis.
 
 | Axis | Opponent | Status |
 |---|---|---|
-| Cruise efficiency and range | Multirotors | **Claimed, and bounded.** Cruise lift is carried on a surface rather than on rotors, which no sizing contract changes. The *size* of the resulting advantage is a calculation, not a consequence of that fact, and Section 6 measures it against two published quadrotors in one common definition. |
+| Cruise efficiency | Multirotors | **Claimed, and bounded.** Cruise lift is carried on a surface rather than on rotors, which no sizing contract changes. The *size* of the resulting advantage is a calculation, not a consequence of that fact, and Section 6 measures it against two published quadrotors in one common definition. |
 | Operation without a runway | Fixed-wing aircraft | **Claimed**, in the sense stated below. |
 | The mechanism required to change regime | Tilting architectures | **Claimed.** This is the paper's contribution. |
 | Cruise efficiency and range | Other hybrids — lift-plus-cruise, tilt | **Not claimed, in either direction.** |
