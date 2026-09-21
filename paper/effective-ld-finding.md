@@ -189,3 +189,107 @@ etmediğimiz eksende.** Adım 11 ve 13'ün malzemesi, Adım 6'nın değil.
 **Dikkat:** *"Collective control is used, with hover tip speed 550 ft/sec and cruise tip speed
 300 ft/sec"* cümlesi **§5.5 Tiltwing'e** aittir. Quadrotor'a atfedilmez — bir kez yanlış
 atfetmeye çok yaklaştım.
+
+---
+
+# Tur 49 — dört okuyucunun ikinci turu, ve bir propagasyon hatası
+
+## 1. Kabul edilen ve doğrulanan bulgular
+
+**(a) *"Tasarımcı en iyisini alır"* fazla iddialıydı — ChatGPT, Grok, Qwen.**
+ChatGPT'nin gerekçesi belirleyici: tasarımcı en yüksek η_p'li paleti **ancak** seçim ölçütü
+askı FM kısıtı altındaki seyir verimiyse alır. Pala sayısı ve kesit yüklemesi aynı zamanda
+yapısal yükleri, akustiği, motor çalışma noktasını, rotor ataletini ve imalatı yönetiyor —
+**hiçbiri bu çalışmada modellenmiyor.** Cümle kaldırıldı; yerine iki okuma birden veriliyor.
+
+**(b) Manşet yüzdesi, metnin kendisinin *"seçilmez"* dediği paletten geliyordu — Grok.**
+Aritmetiği denetlendi, birebir doğru:
+
+| | vs 4,9 | vs 5,8 |
+|---|---|---|
+| İncelenen zarf, 5,56–7,39 | +%14 … +%51 | **−%4** … +%27 |
+| En iyi incelenen aile, 6,01–7,39 | +%23 … +%51 | **+%4** … +%27 |
+
+**En iyi ailede işaret her iki referansa karşı da korunuyor.** Sayfa artık iki satırı birden
+veriyor ve hiçbir köşeyi *"uçağın başarımı"* diye sunmuyor. Palet Adım 10'da sabitlenecek.
+
+**(c) Üç fazla genel cümle — ChatGPT.** Üçü de düzeltildi:
+
+| Yazılan | Sorun | Yazılan yeni hâli |
+|---|---|---|
+| *"A **rotorcraft's** discs must produce lift and propulsive force together"* | Rakip çok rotorlu; bileşik rotorlular ve gövdesi kaldıran helikopterler bunu çürütür | *"A **multirotor's** discs … throughout cruise"* |
+| *"the surface **costs no power** to do its part"* | İndüklenmiş sürükleme güçtür | *"the wing produces its lift **without a separate continuous power supply of its own**"* |
+| *"not reliable **for anyone** on this class of configuration"* | §2.2'nin yasakladığı evrensel iddia | *"**for the methods used here**, and for the published comparisons against which they were checked"* |
+
+**(d) Beşinci çekince — Grok (irtifa) ve ChatGPT (kapanış).** İkisi de alındı.
+Kaynak, birincil görevin *"5,000-ft altitude and ISA + 20°C"*'de uçulduğunu söylüyor
+(s. 385, birinci elden); bizimki tamamen deniz seviyesi. **Yönü iddia edilmiyor** — hesaplanmadı.
+Ve ChatGPT'nin ayrımı analiz zinciri çekincesine katlandı: NASA'nınki **kapanmış bir aracın**
+etkin oranı, bizimki **kapanıştan önce** belirlenmiş bir seyir noktasındaki çevrilmiş metrik.
+
+**(e) Hız uyuşmazlığının YÖNÜ — DeepSeek. İddia edilmedi, hesaplandı** (`aero/effective_ld.py`):
+
+| braket ucu | seyir L/D | L/D_max (e=0,850) | L/D_max (e=0,817) |
+|---|---:|---:|---:|
+| elverişli | 10,82 | 11,88 | 11,65 |
+| olumsuz | 8,80 | 10,28 | 10,08 |
+
+**L/D_max her köşede seyir L/D'sinin üstünde.** Yani referansa en iyi hızı veriliyor, bize
+verilmiyor, ve pay yine de pozitif. **Yön bu kadar; büyüklük iddia edilmiyor** — en iyi nokta
+stall'ın 1,26 katı ve orada uçmak marj bırakmıyor, dolayısıyla bir seçenek değil.
+
+**(f) Kanıt katmanları — ChatGPT.** *"The weight it pays … **is** the charge Section 2 describes
+and Section 4 tests"* bir yorumdu. *"…is **consistent with** the mass charge Section 2
+describes"* oldu; nedensel bağın kanıtı Adım 4'te, bu tabloda değil.
+
+## 2. Reddedilen
+
+**Qwen: *"beşinci çekince eksik değil, dördü kapsamlı."*** Alınmadı — iki bağımsız okuyucu
+(irtifa, kapanış) ve bir hesap (hız yönü) aksini gösterdi.
+
+## 3. Ve kimsenin göremeyeceği bir hata: PROPAGASYON
+
+**Adım 6'da *"farklı verim sınıfı"* ifadesini emekliye ayırdık. Adım 9'da hâlâ canlıydı:**
+
+> *"**Claimed.** A vehicle carrying its cruise lift on a wing is in a **different efficiency
+> class** from one carrying it on rotors, and no sizing contract moves a vehicle between those
+> classes."*
+
+**Dört okuyucunun hiçbiri göremezdi — ellerinde Adım 9 yoktu.** Bu, §0.2'nin tam olarak
+tarif ettiği hata sınıfı: *düzeltmenin kendisinin yayılmaması.* Bir ifadeyi emekliye ayırırken
+**deponun tamamında aranmadı.**
+
+**Kural eki:** bir ifade emekliye ayrıldığında, `grep -rn` ile **bütün v8 adımlarında** aranır
+ve her örneği aynı turda düzeltilir. Bu tur `grep` ile denetlendi; düzyazıda kalmadı.
+
+Adım 9 satırı artık: *"**Claimed, and bounded.** … The **size** of the resulting advantage is a
+calculation, not a consequence of that fact."* — yani yapısal önerme ile nicel önerme ayrı.
+
+## 4. Adım 9'a eklenen iki bölüm — DeepSeek
+
+**(a) Her iddianın neye BAĞLI OLMADIĞI.** Bir okuyucu birini reddettiğinde ötekilerin ayakta
+kalıp kalmadığını görebilsin diye. Ve en önemli satır: **mekanizma iddiası geçiş
+aerodinamiğine bağlı değildir** — o bir donanım envanteri ifadesidir — ama **uçağın geçişi
+yapabildiği iddiası bağlıdır**, ve Adım 7 o sınırın altında okunmalıdır.
+
+**(b) Fiyatlanmamış bedel, Adım 1'de değil burada da.** Tepki torku kanalını bırakmanın
+bedeli hiçbir yerde hesaplanmıyor; iddia mekanizma sınıfının elendiğidir, **elemenin dengede
+elverişli olup olmadığı bu çalışmanın çözmediği bir sorudur.**
+
+## 5. Adım 5'e üç düzeltme
+
+- *"the landing gear's **reaction surface**"* — ChatGPT haklı, zemin zaten tepki yüzeyidir.
+  *"the site supplies **no prepared launch or recovery infrastructure** of any kind"* oldu.
+- *"Those numbers exist, **they close**, and Section 10 reports the closure"* — Grok haklı:
+  Adım 5, Adım 10'un sonucunu önceden ilan edemez. *"Section 10 reports **whether** they close"*.
+- **Kapalı çevrim askı kontrolü** *"gösterilmedi"* listesine eklendi (ChatGPT) — ve bırakılan
+  tepki torku kanalıyla bağlandı.
+
+## 6. Yazara bırakılan üç karar
+
+1. **Açıklık verimi: 0,85 mi 0,817 mi** (Grok). Adım 10 kütleyi kapatmadan önce bir tanesi
+   seçilmeli; Adım 6'nın poları şu an iyimser olanı kullanıyor.
+2. **Palet ailesi: zarf (şimdi) mü, Adım 10'da seçilmiş tek palet mi** (ChatGPT B'yi tercih
+   ediyor, ama Adım 10 yazılana kadar zarf doğru).
+3. **Qwen 1–9'un tam metnini istiyor; Grok her tur 1–9 yapıştırmaya karşı.** Bir kereye mahsus
+   tam gönderim mi, yoksa Grok'un "tur başına bir adım" kuralı mı.

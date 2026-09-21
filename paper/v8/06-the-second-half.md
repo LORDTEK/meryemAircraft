@@ -60,9 +60,11 @@ the cruise condition the lift coefficient follows from `C_L = W/(qS)`, the drag 
 balances that drag. It supports none of the weight.
 
 That is the whole of the difference, and it is worth stating in those plain terms because the
-consequence is structural. **A rotorcraft's discs must produce the lift and the propulsive force
-together, for every second of the flight.** This aircraft separates them: a surface holds the
-aircraft up and a propeller pushes it along, and the surface costs no power to do its part.
+consequence is structural. **A multirotor's discs must produce the lift and the propulsive force
+together, throughout cruise.** This aircraft separates them: a surface holds the aircraft up and a
+propeller pushes it along, and **the wing produces its lift without a separate continuous power
+supply of its own** — the power the aircraft spends in cruise goes to overcoming drag, of which
+the lift's share is the induced part.
 Lift is carried on a surface or it is carried on rotors, and no sizing contract, no assumption
 in this paper and no choice available to a designer moves a vehicle between those two states.
 
@@ -100,48 +102,60 @@ designer does not get to choose where in it the real aircraft lands.
 The cruise propeller efficiency is **0.632 to 0.683** across the nose-blade families that meet
 the hover figure of merit — two and three blades per rotor, at two target section lift
 coefficients, each solved at its hover and its cruise condition. That spread is **not
-uncertainty**: it is a design choice this study did not fix, and a designer building the aircraft
-would take the best of them.
+uncertainty**: it is a design variable this study has not fixed.
 
 | L/De | η_p 0.632 | η_p 0.683 |
 |---|---:|---:|
-| **L/D 8.80** (adverse drag) | **5.56** | 6.01 |
-| **L/D 10.82** (favourable drag) | 6.84 | **7.39** |
+| **L/D 8.80** (adverse drag) | 5.56 | 6.01 |
+| **L/D 10.82** (favourable drag) | 6.84 | 7.39 |
 
-**5.56 and 7.39 are the bounding corners of that product, not two simulated operating points.**
-Each is reachable — the drag bracket and the blade family are independent — but the low corner
-pairs the worst drag outcome with the blade a designer would not choose.
+**These are the bounding corners of a product, not four simulated aircraft.** Two readings follow
+and both are given, because choosing between them requires something this section does not have:
+
+- **Examined envelope, 5.56 to 7.39.** Every corner is reachable, since the drag bracket and the
+  blade family are independent.
+- **Best examined blade family, 6.01 to 7.39.** The highest efficiency among the families
+  examined is 0.683; holding it and sweeping only the drag bracket gives this range.
+
+**Whether 0.683 is the blade a designer would actually choose is not settled here**, and saying
+so is the point. It is the best of the four *on cruise efficiency under the hover figure-of-merit
+constraint*. Blade count and section loading also govern structural loads, acoustics, the motor
+operating point, rotor inertia and manufacture, and **none of those is modelled in this work**.
+Section 10 is where one blade is carried into a closed sizing loop; until then this section stays
+at envelope level and does not present any corner as the aircraft's performance.
 
 ### What the comparison gives, against both published quadrotors
 
 The sizing set contains two quadrotors for the same mission, and **neither is treated here as the
 primary one.**
 
-| | L/De | Margin against 5.56 – 7.39 |
-|---|---:|---|
-| Quadrotor, turboshaft | 4.9 | **+14 % … +51 %** |
-| Quadrotor, all-electric | 5.8 | **−4 % … +27 %** |
+| | L/De | vs examined envelope 5.56 – 7.39 | vs best examined family 6.01 – 7.39 |
+|---|---:|---|---|
+| Quadrotor, turboshaft | 4.9 | +14 % … +51 % | **+23 % … +51 %** |
+| Quadrotor, all-electric | 5.8 | −4 % … +27 % | **+4 % … +27 %** |
 
-**Against the turboshaft quadrotor the sign holds at every corner.** Closing it would need the
-propeller efficiency to fall to 0.557, against 0.632 for the least efficient blade family
-examined.
+**Against the turboshaft quadrotor the sign holds at every corner of both readings.** Closing it
+would need the propeller efficiency to fall to 0.557, against 0.632 for the least efficient blade
+family examined.
 
 **Against the all-electric quadrotor it does not hold at the low corner**, and that result is
 reported as a result rather than as a caveat. That vehicle reaches 5.8 — above this
 configuration's 5.56 — and it buys the difference with 1 742 lb of battery and nearly twice the
-gross weight for the same mission, 7 221 lb against 3 678 lb. **The weight it pays for that
-efficiency is the charge Section 2 describes and Section 4 tests**, so the entry illustrates the
-framework rather than contradicting it. On cruise efficiency taken alone, it is nonetheless
-ahead of this configuration's low corner.
+gross weight for the same mission, 7 221 lb against 3 678 lb. **That higher gross weight is
+consistent with the mass charge Section 2 describes**, and Section 4 is where the independent
+sizing evidence for it is set out — the comparison in this table does not establish the causal
+link by itself. On cruise efficiency taken alone, the entry is ahead of this configuration's low
+corner, and whether it is ahead of the best examined blade family depends on the drag bracket.
 
-**So the second claim is narrower than the structural statement invites.** Carrying cruise lift
-on a wing is worth **14 to 51 percent against the turboshaft reference and does not uniformly
-beat the all-electric one** — a measurable advantage, not a change of category. And what
+**So the second claim is narrower than the structural statement invites.** Carrying cruise lift on
+a wing is worth **roughly a quarter to a half against the turboshaft reference, and against the
+all-electric one it ranges from slightly behind to comfortably ahead depending on the drag outcome
+and the blade** — a measurable advantage, not a change of category. And what
 compresses it is not the wing. **It is this aircraft's own refusal of the variable-pitch hub:**
 at a propeller efficiency of 0.85 the same airframe reaches 7.48 to 9.20. Section 11 charges it
 there.
 
-### Four qualifications, all of which run against this configuration
+### Five qualifications, and every one of them runs against this configuration
 
 They are given together because omitting any one of them would make the comparison look better
 than it is.
@@ -153,18 +167,31 @@ comparison rather than an advantage.
 **The quadrotor is a good quadrotor.** Its disc loading is 3.5 lb ft⁻², which is unusually low
 and unusually efficient. Nothing here is compared against a poor example.
 
-**The speeds are not matched.** The published figure is quoted at the best-range speed; this
-configuration's is at its chosen cruise condition, 1.49 times stall, which Section 10 states
-explicitly is **not** its best lift-to-drag point. Cruising at the best point would leave too
-little margin, and the ratio that the chosen condition gives is the one reported.
+**The speeds are not matched, and the direction of that mismatch is calculable.** The published
+figure is quoted at the best-range speed; this configuration's is at its chosen cruise condition,
+1.49 times stall, which Section 10 states explicitly is **not** its best lift-to-drag point. The
+best point lies at 1.26 times stall, and `L/D_max = 0.5√(πARe/C_D0)` exceeds the cruise ratio at
+both ends of the drag bracket — 11.88 against 10.82, and 10.28 against 8.80. **The reference is
+therefore given its best speed and this configuration is not given its best speed, and the margin
+is positive anyway.** The best point is not an available option — cruising there leaves too little
+margin above the stall — so this fixes a direction, not a magnitude.
+
+**The atmospheres are not matched.** The published sizing mission is flown at *"5,000-ft altitude
+and ISA + 20°C"*; every number in this work is at sea level, with a sea-level drag polar and a
+sea-level blade solution. **The direction of that mismatch is not claimed here**, because it has
+not been computed: the altitude sweep in this work measured the effect on hover power and on
+propeller efficiency, not on a cruise comparison at a re-trimmed best-range speed.
 
 **The analysis chains are not matched, and this is the qualification that bounds what the
 comparison can be called.** The published value is the output of an integrated conceptual-design
 system with a comprehensive rotor analysis behind its rotor performance. The value here is
 assembled from a drag build-up, a drag polar at a prescribed cruise condition, and a separate
-blade-element propeller solution. **This is a comparison of two independently produced figures
-in a common definition, not a controlled numerical reproduction**, and nothing in it should be
-read as validation of either.
+blade-element propeller solution. There is a second difference inside that one: **the published
+value is the effective ratio of a fully sized vehicle, while the value here is a converted
+performance metric at a prescribed cruise condition, taken before the sizing closure Section 10
+reports.** So this is a comparison of two independently produced figures in a common definition,
+not a controlled numerical reproduction, and nothing in it should be read as validation of either,
+or as a completed aircraft-level comparison.
 
 ### What is sized, and what is not demonstrated
 
@@ -176,11 +203,12 @@ operating points; and the range that follows from the chain, link by link.
 flight test in this work, and the drag coefficient is a build-up with a declared bracket rather
 than a measurement. The planform's sweep, taper and thickness distributions were chosen rather
 than optimised. The span efficiency of 0.85 is an assumption which the paper's own calculation
-puts at 0.817 — optimistic by 3.9 percent. And **the aerodynamics above roughly ten degrees of
-incidence are not reliable for anyone on this class of configuration**: three methods of three
-fidelities depart at the same place, the highest of them against wind-tunnel measurement. That
-limit does not touch the cruise numbers above, which sit at a few degrees, but it bounds what
-this section may be read to support.
+puts at 0.817 — optimistic by 3.9 percent. And **for the methods used here, and for the published
+comparisons against which they were checked, the aerodynamic predictions diverge above roughly ten
+degrees of incidence**: three methods of three fidelities depart at the same place, the highest of
+them against wind-tunnel measurement. That is a statement about these methods on this class of
+configuration, not about what any method could achieve. It does not touch the cruise numbers
+above, which sit at a few degrees, but it bounds what this section may be read to support.
 
 ### What this half costs
 

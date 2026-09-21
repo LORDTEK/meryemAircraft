@@ -28,7 +28,7 @@ alternative, and this paper's alternatives differ from axis to axis.
 
 | Axis | Opponent | Status |
 |---|---|---|
-| Cruise efficiency and range | Multirotors | **Claimed.** A vehicle carrying its cruise lift on a wing is in a different efficiency class from one carrying it on rotors, and no sizing contract moves a vehicle between those classes. |
+| Cruise efficiency and range | Multirotors | **Claimed, and bounded.** Cruise lift is carried on a surface rather than on rotors, which no sizing contract changes. The *size* of the resulting advantage is a calculation, not a consequence of that fact, and Section 6 measures it against two published quadrotors in one common definition. |
 | Operation without a runway | Fixed-wing aircraft | **Claimed**, in the sense stated below. |
 | The mechanism required to change regime | Tilting architectures | **Claimed.** This is the paper's contribution. |
 | Cruise efficiency and range | Other hybrids — lift-plus-cruise, tilt | **Not claimed, in either direction.** |
@@ -40,6 +40,40 @@ quoted one of those orderings as a result would be reporting its own choice of c
 range claim is made against the tilting or lift-plus-cruise families in either direction**, and
 a reader who finds one implied anywhere in this paper should treat it as an error rather than
 as a claim.
+
+### What each claim does not depend on
+
+A reader who rejects one of these claims should be able to see immediately which of the others
+survive, and the dependencies are short enough to list.
+
+| Claim | Does not depend on |
+|---|---|
+| Operation without a runway | the drag bracket, the propeller efficiency, the battery gap, the transition aerodynamics |
+| Cruise lift carried on a surface | the sizing contract, the transition aerodynamics |
+| The **size** of the cruise-efficiency margin | — it depends on both the drag bracket and the blade family, and Section 6 reports it as a range rather than a number |
+| Elimination of the propulsor-reorientation mechanism class | the drag bracket, the sizing contract, the range result, **and the transition aerodynamics** |
+
+**The last row carries a distinction that matters more than the others.** The mechanism claim is
+a statement about what hardware is present, and it is settled by the inventory in Section 8. **The
+separate claim that this aircraft can actually perform the regime change is not settled**, and it
+depends on exactly the aerodynamics that Sections 6 and 14 describe as unreliable above roughly
+ten degrees of incidence — the band the rotation passes through. **Section 7 should be read under
+that limit**: it describes an arrangement that requires no reorienting mechanism, not a
+demonstration that the arrangement transitions.
+
+### One cost of the contribution that is named and not priced
+
+The mechanism claim has a price this work does not compute, and it belongs here rather than only
+in Section 1.
+
+**This configuration declines a control channel that comparable aircraft use.** The two rotors of
+a coaxial pair have independent machines and could be run at different speeds, producing a moment
+about the body's longitudinal axis; the tail-sitter literature uses exactly that. Here every pair
+is operated torque-balanced instead, and the axis is assigned to the strip. **What that refusal
+costs — in thrust asymmetry, in propulsive efficiency, and in response time set by rotor inertia —
+is not computed anywhere in this paper.** The claim is that the mechanism class is eliminated.
+**Whether eliminating it is favourable on balance is a question this work does not settle**, and
+quantifying it would require a control-allocation study rather than a single torque figure.
 
 ### Eight things this paper does not claim
 

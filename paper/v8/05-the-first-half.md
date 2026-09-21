@@ -31,10 +31,11 @@ applications this work is aimed at — wildfire observation and response, and ca
 places without a runway — need the aircraft to arrive somewhere that has no infrastructure, and
 to leave again.
 
-So the requirement is: **the aircraft carries everything it needs to depart and recover, the
-site supplies nothing, and what the site supplies nothing of includes the landing gear's
-reaction surface.** A net, a catapult, a cradle, a prepared strip or a recovery vehicle each
-fail it.
+So the requirement is: **the aircraft carries everything it needs to depart and recover, and the
+site supplies no prepared launch or recovery infrastructure of any kind.** The ground is the only
+thing the site provides, and it provides it unprepared. A net, a catapult, a cradle, a prepared
+strip or a recovery vehicle each fail that test — including the ones that fail it only on the
+recovery half.
 
 ### How the configuration meets it
 
@@ -65,8 +66,8 @@ This is the part of the section that decides whether the rest of it can be trust
 **Sized.** The vertical phase is sized: hover power from momentum theory at thrust equal to
 weight, the buffer that supplies the difference between that peak and the cruise demand, the
 tip-frame lengths that set both the stance base and the control arms, and the structure that
-carries the landing loads. Those numbers exist, they close, and Section 10 reports the closure
-together with the margin it has.
+carries the landing loads. Those numbers exist and Section 10 reports **whether** they close, and
+with what margin. This section does not assert the outcome of a calculation it does not contain.
 
 **Not demonstrated, and the list is not short.**
 
@@ -89,6 +90,15 @@ back, the race runs backwards: dynamic pressure is falling while the aircraft is
 so lift is leaving at the moment the thrust vector has not yet returned to vertical. **A model
 built for the first case cannot be read for the second by changing a sign, and no figure in this
 paper describes the landing transition.**
+
+**Hover attitude control is sized but not demonstrated as a closed loop.** The moments available
+about each axis are computed, but no control allocation has been closed around them and nothing
+has been simulated or flown. That gap is wider than it looks, because this configuration
+deliberately declines a control channel that comparable aircraft use: the two rotors of a coaxial
+pair could be run at different speeds to produce a reaction torque about the body's longitudinal
+axis, and here every pair is operated torque-balanced instead, leaving that axis to the strip.
+**What that refusal costs in authority and in response time is not computed**, and Section 14
+carries it.
 
 **And one historical difficulty is inherited rather than removed.** A tail-sitting aircraft on
 the ground is more exposed to crosswind than a conventional one. The stance base is the answer

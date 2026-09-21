@@ -45,3 +45,22 @@ EN KOTU KOSE DENETIMI -- pay hangi noktada kapanir?
   gereken eta_p, olumsuz uctaki L/D = 8,80 ile: 0.557
   hesaplanan en dusuk eta_p                   : 0.632
   marj                                        : 0.075
+
+==================================================================
+HIZ UYUSMAZLIGININ YONU -- iddia edilmedi, hesaplandi
+==================================================================
+
+braket ucu    seyir L/D    L/D_max    L/D_max
+              (Tablo 9)    e=0,850    e=0,817
+----------------------------------------------
+elverisli         10.82      11.88      11.65
+olumsuz            8.80      10.28      10.08
+
+L/D_max her kosede seyir L/D'sinin USTUNDE mi? EVET
+
+Yani DeepSeek hakli: en iyi noktamizda ucsaydik L/De ARTARDI.
+Cekince bizim ALEYHIMIZE calisiyor, ve pay yine de pozitif.
+
+AMA yon bu kadar; BUYUKLUK iddia edilmiyor. En iyi L/D noktasi
+stall'in 1,26 kati (§2.12) ve orada ucmak marj birakmiyor --
+o yuzden o sayi bir SECENEK degil, yalniz bir yon gostergesi.

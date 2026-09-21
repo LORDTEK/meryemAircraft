@@ -42,6 +42,8 @@ GIRDILER -- hepsi depodaki dosyalardan, hicbiri uydurma:
   eta_p: paper/chain-resolve-finding.md -- iki noktali BEMT sonucu.
 """
 
+import math
+
 # --- Girdiler ---------------------------------------------------------------
 
 LD = {                      # paper-v7.md satir 1511, Tablo 9
@@ -132,3 +134,55 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+# ---------------------------------------------------------------------------
+# Tur 49 eki: DeepSeek'in "hiz uyusmazliginin YONU" iddiasi.
+#
+# Iddia: karsilastirma NASA'ya EN IYI MENZIL HIZINI veriyor, bize ise
+# secilmis seyir noktamizi (1,49 x stall), ki §2.12 bunun en iyi L/D
+# noktasi OLMADIGINI soyluyor. Dolayisiyla cekince BIZIM ALEYHIMIZE.
+#
+# Iddia edilmedi, HESAPLANDI: L/D_max = 0,5 sqrt(pi AR e / C_D0)
+# (§2.12, satir 973). Seyir L/D'si Tablo 9'dan.
+AR_HAFIF = 6.03          # §2.8, satir 752
+E_VARSAYIM = 0.85        # §2.12; makalenin kendi hesabi 0,817 (§4.5)
+E_HESAP = 0.817
+
+CD0_BRAKET = {"elverisli": 0.0285, "olumsuz": 0.0381}   # §3.6 Tablo 9
+LD_SEYIR = {"elverisli": 10.82, "olumsuz": 8.80}
+
+
+def ld_max(cd0, e, ar=AR_HAFIF):
+    return 0.5 * (math.pi * ar * e / cd0) ** 0.5
+
+
+def hiz_yonu():
+    print()
+    print("=" * 66)
+    print("HIZ UYUSMAZLIGININ YONU -- iddia edilmedi, hesaplandi")
+    print("=" * 66)
+    print()
+    print("%-12s %10s %10s %10s" % ("braket ucu", "seyir L/D", "L/D_max", "L/D_max"))
+    print("%-12s %10s %10s %10s" % ("", "(Tablo 9)", "e=0,850", "e=0,817"))
+    print("-" * 46)
+    for k in ("elverisli", "olumsuz"):
+        print("%-12s %10.2f %10.2f %10.2f"
+              % (k, LD_SEYIR[k], ld_max(CD0_BRAKET[k], E_VARSAYIM),
+                 ld_max(CD0_BRAKET[k], E_HESAP)))
+    print()
+    tum = all(ld_max(CD0_BRAKET[k], e) > LD_SEYIR[k]
+              for k in CD0_BRAKET for e in (E_VARSAYIM, E_HESAP))
+    print("L/D_max her kosede seyir L/D'sinin USTUNDE mi? %s" % ("EVET" if tum else "HAYIR"))
+    print()
+    if tum:
+        print("Yani DeepSeek hakli: en iyi noktamizda ucsaydik L/De ARTARDI.")
+        print("Cekince bizim ALEYHIMIZE calisiyor, ve pay yine de pozitif.")
+        print()
+        print("AMA yon bu kadar; BUYUKLUK iddia edilmiyor. En iyi L/D noktasi")
+        print("stall'in 1,26 kati (§2.12) ve orada ucmak marj birakmiyor --")
+        print("o yuzden o sayi bir SECENEK degil, yalniz bir yon gostergesi.")
+
+
+if __name__ == "__main__":
+    hiz_yonu()
