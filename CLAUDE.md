@@ -331,6 +331,14 @@ güncelmiş gibi durdu.
 > demektir.** Makaleye girecek her nitelendirme **gövdeye** yazılır. Türkçe tablo
 > yazarın denetimi içindir, okuyucunun uyarısı için değil.
 
+### 3.2 Ertelenmiş kararlar unutulmaz. Tur 50.
+
+Yazar: *"Ben unutabilirim sen sağa sola notunu al."*
+
+> **`paper/deferred-decisions.md`** — yazarın açıkça *"sonraya"* dediği her şey oraya yazılır,
+> ve **her tur sonunda o listeye bakılır.** Şu an açık olan ikisi: **kısaltma/oran** (10–14
+> yazıldıktan sonra, tek seferde) ve **"zero-bill condition" adı.**
+
 ## 4. Depo
 
 - Geliştirme dalı: `claude/ecstatic-cori-6w30at`. `main` de güncel tutulur.
