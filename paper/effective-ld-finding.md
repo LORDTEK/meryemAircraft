@@ -516,3 +516,114 @@ and η_p separately. This mechanism is correct."* **Yanlış**, ve ChatGPT ile G
 olarak bu. Ardından menzil denklemini on beş kez tekrarlayan bir döngüye girdi ve kendi
 tekrarının içinde cevabı taşıdığı hâlde (*"η_chain includes η_p"*) sonucu çıkaramadı.
 **Onayı kullanılmadı.**
+
+---
+
+# Tur 52 — Adım 10'un denetimi: ALTINCI propagasyon hatası, ve o da benim
+
+## 1. Reddettiğim karşılaştırmayı iki adım sonra kendim yaptım
+
+Adım 6'nın *"bilerek olmayanlar"* listesi şunu diyor:
+
+> **Çok rotorluya karşı hiçbir MENZİL sayısı.** Bu çalışmada boyutlandırılmış bir çok rotorlu
+> yok; menzil karşılaştırması iddia edilse **uydurma** olurdu.
+
+Ve Adım 9'un tablosundan *"and range"* ifadesini geçen tur çıkardım. **Sonra Adım 10'a şunu
+yazdım:**
+
+> ~~*"Even the lowest of them, 927 km, is not a number the rotorcraft family reaches."*~~
+
+**Grok:** *"That sentence is the comparison, without a number on the other side. Delete it, or
+replace it with a cited published endurance from a named vehicle. Do not let 927 km become a
+ranking."* ChatGPT bağımsız olarak aynı yere işaret etti.
+
+**Altıncı propagasyon hatası, ve en utanç verici olanı:** iddiayı iki adımdan kaldırıp üçüncüde
+yeniden kurdum. Cümle çıkarıldı; yerine menzillerin **kapalı döngü değerleri** olarak taşındığı
+ve hiçbir sıralama kurmadığı yazıldı.
+
+## 2. Grok'un iki yapısal bulgusu
+
+**(a) *"On these assumptions the architecture closes"* yalnız HAFİF hat için doğru.**
+`aero/closure.py` ağır tasarımı çalıştırmıyor (denetlendi: sıfır atıf). Ağır hat sayfada yalnız
+5,1 s dönüş süresiyle görünüyordu — sanki bu döngüden geçmiş gibi. Cümle *"for the **light**
+design, which is the only one carried through this loop"* oldu, ve dönüş sürelerine *"both times
+were sized on the reference geometry at its published mass; the closure above does not re-derive
+them"* notu eklendi.
+
+**(b) L/D girdi olarak donduruluyor; 57,5 kg'da C_L yükselir mi?** **Hayır, ve nedeni
+görünür kılındı.** Döngü **kanat yüklemesini** sabit tutuyor (`S = MTOW/25,3`), dolayısıyla kanat
+alanı kütleyle büyüyor ve seyir kaldırma katsayısı **dört kapanışta da tam 0,450**:
+
+| MTOW | S | C_L |
+|---|---|---|
+| 49,35 kg | 1,951 m² | 0,4502 |
+| 52,34 kg | 2,069 m² | 0,4502 |
+| 57,51 kg | 2,273 m² | 0,4502 |
+
+Grok'un endişesi geçersiz **ama sorusu doğruydu** — bir hakem aynısını sorardı. Sayfa artık kuralı
+açıkça yazıyor ve alternatifin (kanat *alanını* sabitlemek) köşeleri iyimser yapacağını söylüyor.
+
+## 3. DeepSeek'in sayısal tutarsızlığı — ve beklenenden büyük çıktı
+
+*"Adım 6 alt ucu 8,80 diyor, Adım 10 8,79."* Denetlendi: `drag_sweep.ld(0.0381) = **8,79024**`.
+Yani **8,79 doğru yuvarlama**, ve v7'nin Tablo 9'u 8,80 basmış.
+
+**Ama etkisi tek haneden fazlaydı:** Adım 6'nın çarpım matrisi *yuvarlanmış* 8,80'den
+hesaplanıyordu. Hassas değerle:
+
+| | önce | sonra |
+|---|---|---|
+| B köşesi (8,79024 × 0,683) | 6,01 | **6,00** |
+| turboşaft quadrotor'a karşı zarf | +%14 … +%51 | **+%13 … +%51** |
+| en iyi aile | +%23 … +%51 | **+%22 … +%51** |
+| elektrik quadrotor'a karşı, en iyi aile | +%4 … +%27 | **+%3 … +%27** |
+| η_p = 0,85 olsaydı | 7,48–9,20 | **7,47–9,20** |
+
+`effective_ld.py` artık hassas değerleri kullanıyor ve payları bir ondalıkla basıyor.
+
+## 4. DeepSeek'in motor gerekçesi benimkinden keskin — alındı
+
+Ben *"motor seyir gücüyle boyutlanıyor, kütle yalnız tahrik kesrinden hissediyor"* demiştim.
+DeepSeek daha keskinini verdi ve doğru:
+
+> **Motor, döngünün İKİ KEZ ücretlendirdiği tek çıktı.** Seyir gücü `W·V/(L/D)/η` — L/D ve η
+> doğrudan içinde, **ve W'nin kendisi onları kütle döngüsünden zaten soğurmuş bir kapanış
+> çıktısı.** Menzil doğrudan taşıyor ama kütle geri beslemesinden kaçıyor, çünkü yakıt kesri
+> sabit. Kütle yalnız tahrik kesrinden hissediyor. **Yalnız motor çarpımı görüyor** — %46,1 >
+> %33,0 > %9,9 sıralaması bundan.
+
+## 5. Kabul edilen öteki düzeltmeler
+
+| Düzeltme | Kim |
+|---|---|
+| *"the architecture closes"* → *"the analytical sizing loop closes for this architecture"* | ChatGPT |
+| *"if none exists, the architecture does not close"* → *"the declared sizing package does not close"* | ChatGPT |
+| Yayılım tanımı yazıldı: **(max − min)/min** | ChatGPT |
+| *"most favourable case that can be constructed"* ve *"floor"* fazla genişti → *"within the finite-moment dynamic model… whether a real aircraft loses 5,4 m, more, or less is not settled by anything here"* | ChatGPT |
+| **Hüküm önce:** *"only the second carries rotational dynamics, and that one does not support a zero altitude loss"* — okuyucu sayfayı yarıda bıraksa bile | Grok |
+| *"no transition time to optimise"* → *"**in this point-mass model** there is no…"* | Grok |
+| *"three to one"* → dört yüzde ayrı ayrı; **2,8×** menzilde, **2,4×** kütlede | Grok, ChatGPT |
+| Faydalı yük **girdi**, MTOW çıktı — nedensel yön düzeltildi | DeepSeek |
+| 0,0248'in **yalnız kuruluş sınamasında** geçtiği yazıldı | DeepSeek |
+| *"50 kg ve 1000 kg"* → *"of order 50 kg and 1 000 kg — Section 10 closes the light one between 52 and 58 kg"* | DeepSeek |
+
+**Kazanç-büyümesinin açıklaması için DeepSeek'in cümlesi yerine KAYNAĞIN kendi cümlesi alındı:**
+*"What the kinematic model omits is not the difficulty of turning the aircraft but the trajectory
+the aircraft flies while it is being turned"* (§3.15). Kendi açıklamamı uydurmadım.
+
+## 6. DeepSeek'in defter uyarısı — Adım 11 yazılmadan kaydedilmeli
+
+> *"Adım 10 zaten şunları yükledi: uç çerçeve ve serbest dönen rotor sürüklemesi (L/D braketinin
+> içinde), sabit hatve uzlaşması (η_p aralığının içinde), burulma bedeli (0,817'nin içinde),
+> ve hepsinin kütle/güç sonuçları (MTOW'un içinde). **Defter bunları TEKRAR eklerse, bu düz
+> yazıda yapılan aynı çift sayımdır.**"*
+
+**Defterin işi dar olmalı:** kapanışın sayılarının **neyi zaten içerdiğini** çözmek, ve **neyi
+içermediğini** adlandırmak (tepki torku kanalını bırakmanın bedeli, 5,4 m geçiş tabanı, şeridin
+eyleyici kütlesi, uç çiftlerine bağlı kalkış marjı). `paper/deferred-decisions.md`'ye yazıldı.
+
+## 7. Qwen
+
+Q1–Q3 kullanışlıydı; kuruluş sınamasını bir güç olarak adlandırması yerindeydi. **Q4 ve Q5 yine
+döngüye girdi** — aynı paragrafı beş altı kez tekrarlayıp *"OK, I think I'm overcomplicating
+this"* diyerek yeniden başladı. Bu, üst üste ikinci tur.

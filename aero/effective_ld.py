@@ -46,11 +46,16 @@ import math
 
 # --- Girdiler ---------------------------------------------------------------
 
-LD = {                      # paper-v7.md satir 1511, Tablo 9
-    "temiz govde":        13.40,   # satir 1502
+# DIKKAT -- Tur 52'de duzeltildi. Once Tablo 9'un YUVARLANMIS degerleri
+# (8,80 / 10,82) kullaniliyordu; carpim matrisi de onlardan cikiyordu.
+# drag_sweep.zincir() hassas degerleri veriyor: 8,79024 ve 10,81908.
+# Fark tek basina kucuk ama B kosesini 6,01'den 6,00'e tasiyor, ve
+# Adim 10 ile Adim 6'nin ayni L/D'yi yazmasini saglar.
+LD = {
+    "temiz govde":        13.40,   # paper-v7.md satir 1502
     "yayimlanmis varsayim": 11.88,
-    "bracket elverisli":  10.82,
-    "bracket olumsuz":     8.80,
+    "bracket elverisli":  10.81908,   # drag_sweep.ld(0.0285)
+    "bracket olumsuz":     8.79024,   # drag_sweep.ld(0.0381)
 }
 
 ETA_P = {                   # paper/chain-resolve-finding.md
@@ -102,9 +107,9 @@ def main():
     print("SAVUNULABILIR ARALIK (rotorlari faturalanmis L/D x hesaplanan eta_p):")
     print("  L/De = %.2f ... %.2f" % (alt, ust))
     print()
-    print("  turbosaft quadrotor'a karsi (%.1f): +%.0f %% ... +%.0f %%"
+    print("  turbosaft quadrotor'a karsi (%.1f): +%.1f %% ... +%.1f %%"
           % (q, 100 * (alt / q - 1), 100 * (ust / q - 1)))
-    print("  elektrik quadrotor'a karsi  (%.1f): +%.0f %% ... +%.0f %%"
+    print("  elektrik quadrotor'a karsi  (%.1f): %+.1f %% ... %+.1f %%"
           % (qe, 100 * (alt / qe - 1), 100 * (ust / qe - 1)))
     print()
     print("KARSILASTIRMA -- makalenin simdiye kadar kullandigi cift:")
@@ -153,7 +158,7 @@ AR_HAFIF = 6.03          # §2.8, satir 752
 E_HESAP = 0.817          # aero/drag_sweep.py:40 ile ayni
 
 CD0_BRAKET = {"elverisli": 0.0285, "olumsuz": 0.0381}   # §3.6 Tablo 9
-LD_SEYIR = {"elverisli": 10.82, "olumsuz": 8.80}
+LD_SEYIR = {"elverisli": 10.81908, "olumsuz": 8.79024}
 
 
 def ld_max(cd0, e, ar=AR_HAFIF):

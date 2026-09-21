@@ -17,20 +17,20 @@ Bu yapilandirma -- her L/D, her eta_p:
   L/D 13.40                    10.72        9.15        8.47   <- temiz govde
   L/D 11.88                     9.50        8.11        7.51   <- yayimlanmis varsayim
   L/D 10.82                     8.66        7.39        6.84   <- bracket elverisli
-  L/D  8.80                     7.04        6.01        5.56   <- bracket olumsuz
+  L/D  8.79                     7.03        6.00        5.56   <- bracket olumsuz
 
 SAVUNULABILIR ARALIK (rotorlari faturalanmis L/D x hesaplanan eta_p):
   L/De = 5.56 ... 7.39
 
-  turbosaft quadrotor'a karsi (4.9): +14 % ... +51 %
-  elektrik quadrotor'a karsi  (5.8): +-4 % ... +27 %
+  turbosaft quadrotor'a karsi (4.9): +13.4 % ... +50.8 %
+  elektrik quadrotor'a karsi  (5.8): -4.2 % ... +27.4 %
 
 KARSILASTIRMA -- makalenin simdiye kadar kullandigi cift:
   aerodinamik  8,80--10,82  vs  L/De 4,9  ->  +80 % ... +121 %
-  AYNI BIRIMDE 5,56-- 7,39  vs  L/De 4,9  ->  +14 % ... +51 %
+  AYNI BIRIMDE 5,56-- 7,39  vs  L/De 4,9  ->  +13 % ... +51 %
 
 Yani ayni birime cevrilince pay ciddi bicimde DARALIYOR:
-  ~iki kat -> +14..+51 % (turbosaft quadrotor).
+  ~iki kat -> +13..+51 % (turbosaft quadrotor).
 
 VE BIR KOSEDE ISARET DEGISIYOR. Bunu yumusatma:
   olumsuz kosemiz   L/De = 5.56
@@ -54,7 +54,7 @@ braket ucu      seyir L/D      L/D_max
                 (Tablo 9)      e=0,817
 --------------------------------------
 elverisli           10.82        11.65
-olumsuz              8.80        10.08
+olumsuz              8.79        10.08
 
 Iki sutun da e = 0,817 ile: ayni polar, tek fark hiz noktasi.
 

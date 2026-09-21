@@ -95,7 +95,7 @@ already contained the electrical chain, that derivation would count it twice.
 
 **Neither factor is a single number, and they are two different kinds of spread.**
 
-The aerodynamic ratio is **8.80 to 10.82**, with the tip frames and the free-wheeling attitude
+The aerodynamic ratio is **8.79 to 10.82**, with the tip frames and the free-wheeling attitude
 rotors already charged. That spread is **uncertainty**: it is the zero-lift drag bracket, and a
 designer does not get to choose where in it the real aircraft lands.
 
@@ -106,7 +106,7 @@ uncertainty**: it is a design variable this study has not fixed.
 
 | L/De | η_p 0.632 | η_p 0.683 |
 |---|---:|---:|
-| **L/D 8.80** (adverse drag) | 5.56 | 6.01 |
+| **L/D 8.79** (adverse drag) | 5.56 | 6.00 |
 | **L/D 10.82** (favourable drag) | 6.84 | 7.39 |
 
 **These are the bounding corners of a product, not four simulated aircraft.** Two readings follow
@@ -115,7 +115,7 @@ and both are given, because choosing between them requires something this sectio
 - **Examined envelope, 5.56 to 7.39.** These are the bounding combinations permitted by two
   independent model inputs. **They are not four demonstrated aircraft states**, and nothing here
   shows that a built aircraft would land simultaneously on both bounds.
-- **Best examined blade family, 6.01 to 7.39.** The highest efficiency among the families
+- **Best examined blade family, 6.00 to 7.39.** The highest efficiency among the families
   examined is 0.683; holding it and sweeping only the drag bracket gives this range.
 
 **Whether 0.683 is the blade a designer would actually choose is not settled here**, and saying
@@ -130,10 +130,10 @@ at envelope level and does not present any corner as the aircraft's performance.
 The sizing set contains two quadrotors for the same mission, and **neither is treated here as the
 primary one.**
 
-| | L/De | vs examined envelope 5.56 – 7.39 | vs best examined family 6.01 – 7.39 |
+| | L/De | vs examined envelope 5.56 – 7.39 | vs best examined family 6.00 – 7.39 |
 |---|---:|---|---|
-| Quadrotor, turboshaft | 4.9 | +14 % … +51 % | **+23 % … +51 %** |
-| Quadrotor, all-electric | 5.8 | −4 % … +27 % | **+4 % … +27 %** |
+| Quadrotor, turboshaft | 4.9 | +13 % … +51 % | **+22 % … +51 %** |
+| Quadrotor, all-electric | 5.8 | −4 % … +27 % | **+3 % … +27 %** |
 
 **Against the turboshaft quadrotor the sign holds at every corner of both readings.** Closing it
 would need the propeller efficiency to fall to 0.557, against 0.632 for the least efficient blade
@@ -153,7 +153,7 @@ a wing is worth **roughly a quarter to a half against the turboshaft reference, 
 all-electric one it ranges from slightly behind to comfortably ahead depending on the drag outcome
 and the blade** — a measurable advantage, not a change of category. And what
 compresses it is not the wing. **It is this aircraft's own refusal of the variable-pitch hub:**
-at a propeller efficiency of 0.85 the same airframe reaches 7.48 to 9.20. Section 11 charges it
+at a propeller efficiency of 0.85 the same airframe reaches 7.47 to 9.20. Section 11 charges it
 there.
 
 ### Five qualifications, and every one of them runs against this configuration
@@ -161,7 +161,8 @@ there.
 They are given together because omitting any one of them would make the comparison look better
 than it is.
 
-**Scale.** The compared vehicles are 1 670 to 3 275 kg; the designs here are 50 kg and 1 000 kg.
+**Scale.** The compared vehicles are 1 670 to 3 275 kg; the designs here are of order 50 kg and
+1 000 kg — Section 10 closes the light one between 52 and 58 kg across the same bracket.
 Reynolds number favours the larger aircraft, so the smaller design is at a disadvantage in this
 comparison rather than an advantage.
 
@@ -172,7 +173,7 @@ and unusually efficient. Nothing here is compared against a poor example.
 figure is quoted at the best-range speed; this configuration's is at its chosen cruise condition,
 1.49 times stall, which Section 10 states explicitly is **not** its best lift-to-drag point. The
 best point lies at 1.26 times stall, and `L/D_max = 0.5√(πARe/C_D0)` exceeds the cruise ratio at
-both ends of the drag bracket — 11.65 against 10.82, and 10.08 against 8.80, both at e = 0.817.
+both ends of the drag bracket — 11.65 against 10.82, and 10.08 against 8.79, both at e = 0.817.
 **The reference is
 therefore given its best speed and this configuration is not given its best speed, and the margin
 is positive anyway.** The best point is not an available option — cruising there leaves too little
@@ -248,7 +249,8 @@ the combination is what this paper is for.
 | Sayı **Vbr**'de, yani *"best-range speed"* | aynı belge s. 386: *"Cruise is flown at best-range speed (Vbr, 99% high side)"* — **birinci elden** |
 | Quadrotor elektrik L/De 5,8; DGW 7.221 lb; batarya 1.742 lb | NASA Tablo 3, s. 70 — **birinci elden** |
 | Payın kapanması için gereken η_p = 0,557; hesaplanan en kötü 0,632 | `aero/effective-ld-result.txt` |
-| η_p = 0,85 olsaydı L/De 7,48–9,20 | aynı betik, `lde(8.80, .85)` ve `lde(10.82, .85)` |
+| η_p = 0,85 olsaydı L/De 7,47–9,20 | aynı betik, `lde(8.79024, .85)` ve `lde(10.81908, .85)` |
+| **L/D hassas değerleri 8,79024 / 10,81908**; Tablo 9 yuvarlanmış 8,80 basıyor. Tur 52'de hassas değerlere geçildi, B köşesi 6,01 → **6,00** | `aero/drag_sweep.py:ld()`; DeepSeek 8,79/8,80 tutarsızlığını yakaladı |
 | Karşılaştırılan araçlar 1.670–3.275 kg | NASA Tablo 3, DGW satırı |
 | Seyir 1,49 × stall, **en iyi L/D noktası değil**; L/D_max 25,3 m/s'de, stall'ın 1,26 katı | §2.12, satır 971–977 |
 | Hiçbir rüzgâr tüneli, hiçbir uçuş denemesi yok | §4.4, satır 2549 |

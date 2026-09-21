@@ -38,6 +38,26 @@ Bunlar karar değil, **yapılmamış iş.** Adım 14'ün malzemesi.
 - **İrtifa.** Hesaplar deniz seviyesinde; NASA karşılaştırması 5.000 ft + ISA+20°C'de.
   Seyir karşılaştırmasına etkisinin **yönü hesaplanmadı.**
 
+## Adım 11 yazılmadan önce okunacak — DeepSeek'in çift sayım uyarısı, Tur 52
+
+Adım 10'un sayıları şunları **zaten** içeriyor:
+
+| Kalem | Nerede |
+|---|---|
+| Uç çerçeve sürüklemesi + serbest dönen rotorlar | L/D braketinin içinde (8,79–10,82) |
+| Sabit hatve uzlaşması | η_p aralığının içinde (0,632–0,683) |
+| Burulma bedeli | açıklık veriminin içinde (0,817) |
+| Hepsinin kütle ve güç sonuçları | MTOW'un içinde (52,3–57,5 kg) |
+
+> **Defter bunları TEKRAR eklerse, ChatGPT ve Grok'un döngüde yakaladığı çift sayımın düz yazı
+> hâlidir.** Defterin işi: kapanışın sayılarının **neyi zaten içerdiğini çözmek**, ve **neyi
+> içermediğini adlandırmak** — tepki torku kanalını bırakmanın bedeli, 5,4 m geçiş tabanı,
+> şeridin eyleyici kütlesi, uç çiftlerine bağlı kalkış marjı.
+>
+> **Özellikle sabit hatve:** *"ve sabit hatve uzlaşması %X'e mal oluyor"* denmez. Denecek olan:
+> *"yayımlanan zincirin varsaydığı 0,80'e karşı hesaplanan 0,632–0,683 sabit hatve uzlaşmasını
+> yansıtıyor; bu çalışma onu kaynak başına ayrıştırmıyor."*
+
 ## Süreç kalemleri
 
 - Zenodo DOI, başlık (≤12 kelime), özet (100–200 kelime)
