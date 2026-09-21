@@ -68,13 +68,30 @@ effective ratio of Section 6 already contains the propeller efficiency; it is th
 which the multirotor comparison is made, and it is not an input to a loop whose own chain supplies
 that efficiency separately.
 
-**One consequence of the sizing rules keeps that ratio consistent as the mass moves, and it is
-worth making visible.** The loop holds wing loading fixed, so wing area grows with take-off mass
-and the cruise lift coefficient is unchanged across all four closures — **0.450 at every one of
-them.** The lift-to-drag ratio is therefore an input that remains valid at the closed mass rather
-than one frozen at a mass the loop has left behind. Had wing **area** been held fixed instead, the lift
-coefficient would have risen with the closed mass, the induced term would have moved against the
-heavier closures, and the drag corners would be optimistic as reported.
+**The sizing rules that keep that ratio valid as the mass moves are worth stating, because they
+also say what the four closures are geometrically.** The loop holds **wing loading, disc loading
+and aspect ratio** fixed, so area, span and disc diameter follow the mass: across the four
+closures the wing area runs 1.98 to 2.27 m², the span 3.45 to 3.70 m, and the nose disc diameter
+1.20 to 1.29 m. **The cruise lift coefficient is unchanged at 0.450 in every one of them**, so the
+lift-to-drag ratio is an input that stays valid at the closed mass rather than one frozen at a mass
+the loop has left behind. Had wing **area** been held fixed instead, the lift coefficient would
+have risen with the closed mass, the induced term would have moved against the heavier closures,
+and the drag corners would be optimistic as reported.
+
+**Two things the loop does not scale, and a reader comparing this section with Section 8 should
+know which is which.** The tip-frame length and the strip are not sizing variables here. They were
+set on the reference geometry, and **the control moment arms of Section 8 are therefore reference
+values that this closure does not re-derive.** Section 8 describes one aeroplane; this section
+describes what its sizing rules give at four sets of inputs. **These are the same configuration at
+four closed masses rather than four configurations** — but anything that depends on the arms is
+carried at the reference geometry and is not an output of the loop.
+
+**The drag polar is likewise a fixed input, and it is worth saying what that costs.** Chord grows
+with area, so the chord Reynolds number rises about **7 %** across the closure range. On a
+turbulent-flat-plate scaling, C_D0 ∝ Re^−0.2, that is a **1.4 %** change in the zero-lift
+coefficient — against a bracket whose two ends differ by **34 %**. The polar is therefore not
+re-solved per closure. **The claim made above is that C_L is unchanged, not that C_D0 is exactly
+so.**
 
 ### The construction is checked before it is used
 
@@ -157,8 +174,9 @@ aircraft is supported through the manoeuvre rather than falling through it. **En
 rotation while already climbing removes the loss entirely**: at a 5 m s⁻¹ entry climb the
 altitude loss is zero at both reference rotation times — **two seconds for the light design and
 5.1 seconds for the heavy one** — and it stays zero at every thrust-to-weight ratio from 1.066
-down to 1.00. *(Both times were sized on the reference geometry at its published mass; the closure
-above does not re-derive them, and a reader should not read them as outputs of it.)* Nothing in that result requires the tip pairs
+down to 1.00. *(Both times, and the thrust-to-weight figures with them, were established on the
+reference geometry at its published mass. The closure above does not re-derive any of them, and
+none of them is an output of it.)* Nothing in that result requires the tip pairs
 to contribute lift once the climb is acquired.
 
 **In this point-mass model there is no transition time to optimise**, which is a simplification
@@ -172,7 +190,9 @@ point-mass model prescribes the attitude and therefore cannot charge for the tra
 aircraft flies while it is being rotated into that attitude. Solved instead with rotational
 dynamics and a finite control moment — **and with the aerodynamic pitching moment set to
 exactly zero, so that nothing favourable is borrowed** — the light design **loses 5.4 m at the
-same reference condition where the point-mass model reports none.**
+same reference condition where the point-mass model reports none.** *(That figure, like the
+rotation times, belongs to the reference geometry at its published mass; the closure above does
+not re-derive it either.)*
 
 **The loss is not an artefact of the controller.** It is unchanged across linear, bang-bang and
 smooth reference profiles; it appears without the control moment ever saturating; and it grows
@@ -184,9 +204,10 @@ can actually fly, not closer.
 
 **So the zero-altitude-loss result is a property of the model that produced it.** What replaces
 it is not a prediction: the aerodynamic pitching moment that would make it one is precisely the
-quantity Section 14 reports as unavailable — **for the methods used here, and for the published
-comparisons against which they were checked**, the predictions diverge above roughly ten degrees
-of incidence, and the rotation passes through that band. With
+quantity Section 14 reports as **not predicted reliably** — the moment exists; what is missing is
+a method that predicts it. **For the methods used here, and for the published comparisons against
+which they were checked**, the predictions diverge above roughly ten degrees of incidence, which
+is the band the rotation passes through. With
 a borrowed moment the outcome depends on which moment is borrowed, and the spread is wide
 enough that **no number from it is reportable** — some models complete the rotation, some
 saturate the tip pairs, and some tumble. **That spread is itself the finding.** What survives is

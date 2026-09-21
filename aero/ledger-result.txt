@@ -1,0 +1,51 @@
+ADIM 11 -- DEFTER: KAPANISIN ICINDE NE VAR
+==========================================================================
+
+FATURA 2 -- C_D0 braketinin dokumu (hicbiri eklenmiyor, ayrilyor)
+
+                    elverisli      olumsuz
+------------------------------------------
+temiz yuzey            0.0073       0.0142
+gobek                  0.0015       0.0022
+UC CERCEVELERI         0.0043       0.0047
+ROTORLAR               0.0154       0.0169
+toplam                 0.0285       0.0381
+
+  elverisli  askı donanimi = 0.0197  ->  C_D0'in %69'i
+  olumsuz    askı donanimi = 0.0217  ->  C_D0'in %57'i
+
+  Ayni sey L/D olarak (drag_sweep.zincir):
+    elverisli  temiz govde  20.55 -> ucak  10.82   (korunan %53, Fatura 2 = %47)
+    olumsuz    temiz govde  14.29 -> ucak   8.79   (korunan %62, Fatura 2 = %38)
+
+  DIKKAT: Fatura 2 ELVERISLI ucta DAHA AGIR. Temiz govde temizlendikce
+  sabit rotor terimi toplamin daha buyuk bir kesri oluyor.
+
+AYRISTIRILAMAYAN: girisim. Kalemler ayri ayri hesaplandi; rotor-yapi
+ve rotor-kanat girisimi MODELLENMEDI ve bir kaleme yazilmadi.
+
+SABIT HATVE UZLASMASI -- eta_p acigi (ayristirilamaz)
+  yayimlanan 0.800 -> hesaplanan 0.683   acik %14.6
+  yayimlanan 0.800 -> hesaplanan 0.632   acik %21.0
+  Bu acik burulma / kesit suruklemesi / akis acisi diye BOLUNMEDI.
+
+FATURA 1 ve 3 -- kapanisin bos kutle kesrinin dokumu
+
+       MTOW    govde aviyonik   tahrik   TAMPON    f_bos motor kW
+------------------------------------------------------------------
+A      57.5    0.300    0.080    0.198    0.036    0.614     5.17
+B      55.8    0.300    0.080    0.191    0.036    0.607     4.65
+C      53.5    0.300    0.080    0.181    0.036    0.597     3.91
+D      52.3    0.300    0.080    0.176    0.036    0.592     3.54
+------------------------------------------------------------------
+
+FATURA 1 bu mimaride ayri bir kaldirma grubu DEGIL -- tampondur:
+  tampon kesri 0,036 sabit; 1.9 - 2.1 kg arasi
+
+FATURA 3 motordan kaldirildi ama ELEKTRIK YOLUNDAN kaldirilmadi:
+  A: motor 5.17 kW (seyirle boyutlandi) ama askı 12.53 kW elektrik yolundan geciyor -> orani 2.4x
+  D: motor 3.54 kW (seyirle boyutlandi) ama askı 11.40 kW elektrik yolundan geciyor -> orani 3.2x
+
+  Tahrik kesri iki parcali: sabit 0.108 + kurulu guc / 1.0 kW/kg / MTOW
+    A: sabit 0.108 + guce bagli 0.090 = 0.198
+    D: sabit 0.108 + guce bagli 0.068 = 0.176
