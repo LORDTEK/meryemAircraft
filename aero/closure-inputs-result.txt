@@ -1,0 +1,29 @@
+ADIM 10'UN GIRDI YUVASI
+======================================================================
+
+KURULUS SINAMASI -- gorev_ile(0,80) yayimlanan GOREV'i verir mi?
+  eta_zincir   hesaplanan 0.17620   yayimlanan 0.17600   sapma 0.11 %
+  eta_seyir    hesaplanan 0.72100   yayimlanan 0.72100   sapma 0.00 %
+  ok -- kurulus dogrulandi, her iki terim de %1'in icinde.
+
+DORT KAPANIS -- her biri IKI fiziksel nicelikle beslenir:
+
+     C_D0        eta_p         L/D  eta_zincir   eta_seyir
+------------------------------------------------------------
+A    0.0381      0.632        8.80     0.13920     0.56959
+B    0.0381      0.683        8.80     0.15043     0.61555
+C    0.0285      0.632       10.82     0.13920     0.56959
+D    0.0285      0.683       10.82     0.15043     0.61555
+------------------------------------------------------------
+
+DIKKAT: L/D sutununa AERODINAMIK oran girer (8,80 / 10,82),
+        L/De (5,56 / 6,01 / 6,84 / 7,39) DEGIL. L/De yalniz
+        Adim 6'nin cok rotorlu karsilastirmasinin birimidir;
+        boyutlandirma dongusunun girdisi degildir.
+
+DeepSeek'in iki sorusunun yaniti:
+  1) eta_p bir GIRDI, dongu degiskeni degil -- baseline.py pervane
+     boyutlandirmiyor, verimi GOREV sozlugunden aliyor.
+  2) Motor boyutu dort kapanista DEGISIR, cunku P_seyir eta_seyir'e
+     bagli ve eta_seyir eta_p ile olcekleniyor. Adim 10 motor
+     buyuklugunun yayilimini da raporlayacak.

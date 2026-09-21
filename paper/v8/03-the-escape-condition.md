@@ -27,7 +27,7 @@ charge appears:
 |---|---|
 | **Different hardware** | Bills 1 and 2. The unused set is carried for the whole flight and, if exposed, drags. |
 | **Same hardware, but it serves only one duty** | Bills 1 and 2 again. A propulsor that lifts and is then carried is a dedicated lift group under another name, whatever it shares with the cruise system. |
-| **Same hardware, both duties, different orientation** | The tilting family. The mechanism that changes the orientation is itself mass, complexity and a control problem through the turn. |
+| **Same hardware, both duties, different orientation** | The tilting family. **Bill 3 is left standing unless a store supplies the hover peak**, and the mechanism that changes the orientation is itself mass, complexity and a control problem through the turn. |
 | **Same hardware, both duties, one orientation, different sizing point** | Bill 3 — unless the hover peak is supplied from somewhere other than the continuously installed power. |
 
 Read downwards, the table is a list of ways to pay. Read as a conjunction, it is a condition.
@@ -98,9 +98,13 @@ and the first is the one that most nearly contradicts the name:
   cruise drag is not eliminated.** *Cruise thrust in this paper means the thrust that balances
   cruise drag.* Attitude devices produce thrust in cruise, but they produce no cruise thrust in
   that sense; they are used throughout the flight, so their duty cycle matches their presence and
-  they fall outside Bill 1. **They remain in the airstream, so the second charge reaches them**,
-  and an architecture that carries them is a partial instantiation rather than a full one. The
-  condition permits them and does not make them free.
+  they fall outside Bill 1. **They remain in the airstream, so the second charge reaches them.**
+  Those are two different statements and the distinction matters: **the condition is about the
+  propulsor that carries the aircraft, so attitude hardware does not violate it — but the charges
+  are about everything the aircraft carries, so Bill 2 reaches that hardware anyway.** An
+  architecture in that position is a partial instantiation: it satisfies the condition where the
+  condition applies and still pays one of the three elsewhere. The condition permits such hardware
+  and does not make it free.
 - **Serving two regimes with one set of hardware has a price of its own.** Hardware that is not
   duplicated cannot be optimised twice: a propeller sized for hover thrust at zero forward speed
   is not the propeller a cruise design would choose, and if its geometry is fixed the compromise

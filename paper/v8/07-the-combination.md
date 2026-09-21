@@ -35,8 +35,8 @@ have been a standing subject of transport research for three decades. Series-hyb
 has established precedent in small uncrewed aircraft. **Each can be found on its own, and in
 combination, in the literature and in hardware** — Section 1 says where.
 
-**What this paper contributes is that combination, the condition it is built to satisfy, and the
-price it pays for satisfying it.** The three elements, taken together, meet the escape condition
+**What this paper contributes is that combination, the condition its primary propulsor is designed
+to satisfy, and the price the configuration pays for pursuing it.** The three elements, taken together, meet the escape condition
 of Section 3 **in the propulsor that carries the aircraft**, and they meet it with no mechanism
 that reorients a propulsor. The assembly is not offered as novel because it is an assembly. It is
 offered for what it satisfies, and for what it does not need in order to satisfy it — and Section 1
@@ -77,9 +77,9 @@ Here the end is reached by turning the thing the propulsors are already attached
 leaves the orientation requirement intact.
 
 That single move is what removes the mechanism. **The table below counts mechanism classes that
-exist in order to change regime**, which is why no aerodynamic control device appears in it: the
-strip of Section 8 is a control surface, not a means of changing regime, and counting its absence
-would be counting the wrong thing. The configuration therefore carries:
+exist in order to change regime, or to take a rotor out of one regime's flow**, which is why no
+aerodynamic control device appears in it: the strip of Section 8 is a control surface, not a means
+of changing regime, and counting its absence would be counting the wrong thing. The configuration therefore carries:
 
 | Mechanism | Where it is required | Present here |
 |---|---|---|

@@ -43,9 +43,10 @@ The aircraft stands on its tail, with its longitudinal axis vertical, in its own
 attitude. **No launch equipment is present.** It rests on five points: the four lower ends of
 the tip frames and the aft end of a keel running along the centreline.
 
-**Those five points are not added hardware.** The tip frames are the landing structure, and
-they are also the structure that carries the attitude propellers and sets their moment arm. One
-structure serves three purposes and is charged to the mass budget once.
+**Those five points are not added hardware.** The tip frames are the landing structure, they are
+also the structure that carries the attitude propellers and sets their moment arm, and their
+fairing is the aircraft's only vertical surface. **One structure serves four purposes and is
+charged to the mass budget once** — Section 8 gives the fairing's sizing.
 
 **The saving has precedent and it is not this paper's observation.** Reviewing the tail-sitters
 of the 1950s, NASA recorded that *"dispensing with a conventional landing gear improved the

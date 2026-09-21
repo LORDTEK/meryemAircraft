@@ -112,8 +112,9 @@ uncertainty**: it is a design variable this study has not fixed.
 **These are the bounding corners of a product, not four simulated aircraft.** Two readings follow
 and both are given, because choosing between them requires something this section does not have:
 
-- **Examined envelope, 5.56 to 7.39.** Every corner is reachable, since the drag bracket and the
-  blade family are independent.
+- **Examined envelope, 5.56 to 7.39.** These are the bounding combinations permitted by two
+  independent model inputs. **They are not four demonstrated aircraft states**, and nothing here
+  shows that a built aircraft would land simultaneously on both bounds.
 - **Best examined blade family, 6.01 to 7.39.** The highest efficiency among the families
   examined is 0.683; holding it and sweeping only the drag bracket gives this range.
 

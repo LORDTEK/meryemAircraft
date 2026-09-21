@@ -166,14 +166,22 @@ worse and adding no cost of its own.** That is the test it has to survive, and t
 where it would fail: every entry in it is a documented transfer, and a counter-example would be a
 move whose right-hand column is genuinely empty.
 
-**Two clarifications keep that test from being either too easy or unfalsifiable.** A remedy that
+**Stated positively, so that the test can actually be run: a counter-example is a remedy that
+reduces one of the three charges, leaves the other two no worse, and whose own cost is either
+absent or demonstrably smaller than the reduction — measured in the same currency.** That last
+clause is what makes the test usable rather than rhetorical: mass against mass, cruise drag against
+cruise drag, installed continuous power against installed continuous power. **The accounting claims
+transfer. It does not claim that every architecture is equally good**, and a remedy that is simply
+a better bargain in one currency refutes it.
+
+**Two clarifications keep the test from being either too easy or unfalsifiable.** A remedy that
 attacks one charge and simply leaves another standing is not a counter-example — the tilting row is
 the case, and it is written out there rather than left to be inferred. And a remedy whose cost
-falls **outside** the three charges is not a counter-example either, but the accounting only earns
-that if it names such costs rather than ignoring them; the tilting family's mechanism is named in
-the table for exactly that reason. **A framework that could absorb any cost by declaring it
-out-of-scope would be unfalsifiable**, so the costs outside the three are listed, not waved
-away.
+falls **outside** the three charges does not refute the accounting, because the accounting is about
+those three; **but it is not thereby exempt from being counted.** The tilting family's mechanism is
+named in the table for exactly that reason, and it is the reader's to weigh against what the
+remedy buys. **A framework that could absorb any cost by declaring it out-of-scope would be
+unfalsifiable**, so the costs outside the three are listed, not waved away.
 
 It also makes a prediction that can be checked without settling the architectural question at
 all: **where an arrangement pays one charge heavily in order to escape another, the ranking

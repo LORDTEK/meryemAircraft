@@ -412,3 +412,107 @@ alıyor** — döngünün içinde dört geometri olmasına gerek yok. Matrisin d
 dört kapanış, dört kütle, dört menzil. ChatGPT aynı şeyi 4 palet × 2 C_D0 = sekiz kapanış
 olarak söylüyor ve bir ihtimali ekliyor: **en iyi palet kapanıştan sonra en iyi kalmayabilir**,
 çünkü etkisi güç, kütle ve yakıt üzerinden yayılıyor. Öyle çıkarsa makale bir şey **öğrenir.**
+
+
+---
+
+# Tur 51 — Adım 10'un girdi yuvasında bir çift sayım, ve beşinci propagasyon hatası
+
+## 1. ChatGPT ve Grok bağımsız olarak aynı hatayı buldu: ADIM 10'UN PLANI YANLIŞTI
+
+Tur 54 metninde planı şöyle yazdım:
+
+> *"L/De matrisinin dört köşesi, L/D'yi girdi alan `baseline.py`'ye dört girdi olarak taşınır."*
+
+**İkisi de bunun çift sayım olacağını söyledi. Kod denetlendi; haklılar.**
+
+### Tuzak 1 — L/De'yi L/D yuvasına koymak
+
+```
+baseline.py:126   R = f_yakit × E* × eta_zincir × (L/D) / g
+baseline.py:43    eta_zincir = 0.176 = 0.2202 × 0.80
+```
+
+`eta_zincir` **zaten pervaneyi içeriyor.** `L/De = (L/D)·η_p`'yi L/D yuvasına koymak η_p ile
+**iki kez** çarpmak olurdu.
+
+### Tuzak 2 — kimsenin görmediği, ve daha sinsi olan
+
+Döngüde **iki** verim parametresi var:
+
+```
+baseline.py:111   P_seyir = W × V / LD / eta_seyir      <- MOTORU boyutlandırır
+baseline.py:126   R       = ... eta_zincir × (LD) ...   <- MENZİLİ verir
+```
+
+`eta_seyir = 0,721` de pervaneyi içeriyor — §2.12'nin 1,7 kW'ından geri çözülmüş.
+**Yalnız `eta_zincir` ölçeklenseydi, motor ESKİ pervaneye göre boyutlanır, menzil YENİ
+pervaneye göre hesaplanırdı.** Kapanış kendi içinde tutarsız olurdu — ve bu tam olarak bu
+projenin tekrar tekrar düştüğü hata sınıfı, bu kez boyutlandırma döngüsünün içinde.
+
+### Doğrusu zaten depodaydı
+
+`chain_resolve.gorev_ile(eta_p)` iki terimi de ölçekliyor:
+
+```python
+g["eta_zincir"] = ZINCIR_PERVANESIZ * eta_p
+g["eta_seyir"]  = BL.GOREV["eta_seyir"] * eta_p / ETA_P_MAKALE
+```
+
+**Yani mekanizma doğruydu, benim tarifim yanlıştı.** `aero/closure_inputs.py` bunu sabitliyor
+ve bir kuruluş sınamasıyla koruyor: `gorev_ile(0,80)` yayımlanan GOREV'i %0,11 içinde yeniden
+üretiyor; üretmezse betik duruyor.
+
+| | C_D0 | η_p | **L/D** | eta_zincir | eta_seyir |
+|---|---:|---:|---:|---:|---:|
+| A | 0,0381 | 0,632 | **8,80** | 0,13920 | 0,56959 |
+| B | 0,0381 | 0,683 | **8,80** | 0,15043 | 0,61555 |
+| C | 0,0285 | 0,632 | **10,82** | 0,13920 | 0,56959 |
+| D | 0,0285 | 0,683 | **10,82** | 0,15043 | 0,61555 |
+
+**L/D sütununa aerodinamik oran girer.** L/De yalnız Adım 6'nın çok rotorlu karşılaştırmasının
+birimidir; boyutlandırma döngüsünün girdisi değildir.
+
+**DeepSeek'in iki doğrulama sorusunun yanıtı, koddan:** η_p bir **girdi**, döngü değişkeni
+değil — `baseline.py` pervane boyutlandırmıyor. Ve **motor boyutu dört kapanışta değişir**,
+çünkü `P_seyir` `eta_seyir`'e bağlı; Adım 10 motor büyüklüğünün yayılımını da raporlayacak.
+
+## 2. Beşinci propagasyon hatası — DeepSeek buldu
+
+Adım 8'de uç çerçevelerini *"üç iş"*ten **dört işe** çıkardım. **Adım 5 hâlâ *"three purposes"*
+diyordu.** Yani düzeltmenin kendisi yayılmadı — aynı tur içinde. §3.1'in beşinci örneği.
+
+## 3. Öteki kabul edilenler
+
+| Bulgu | Kim |
+|---|---|
+| Adım 7 *"the condition it is built to satisfy"* tam kaçışı ima ediyordu; uçak **kısmi** gerçekleşme → *"the condition **its primary propulsor** is designed to satisfy… the price the configuration pays for **pursuing** it"* | ChatGPT |
+| Adım 6 *"every corner is **reachable**"* → *"bounding combinations permitted by two independent model inputs… **not four demonstrated aircraft states**"* | ChatGPT, Grok |
+| Adım 3'ün **ters tablosunda** tilt satırı Fatura 3'ü anmıyordu — Adım 2 düzeltildi, Adım 3 kalmıştı | DeepSeek |
+| Çürütülebilirlik **olumlu** biçimde yazılmalı: neyin sayılacağı | Grok |
+| Mekanizma tablosu başlığı değişken hatve satırını kapsamıyordu → *"or to take a rotor out of one regime's flow"* | DeepSeek |
+| Kısmi gerçekleşmenin **koşul** hakkında değil **faturalar** hakkında olduğu netleştirildi | Qwen |
+
+**Çürütülebilirliğin yeni hâli, Grok'un istediği olumlu ifade:**
+
+> *"a counter-example is a remedy that reduces one of the three charges, leaves the other two no
+> worse, and whose own cost is either absent or demonstrably smaller than the reduction —
+> **measured in the same currency**."*
+
+Aynı para birimi kuralı testi kullanılabilir kılıyor: kütleye karşı kütle, sürüklemeye karşı
+sürükleme. DeepSeek'in *"dış maliyetler testten dışlanınca test çok zayıflıyor"* itirazı da
+bununla karşılanıyor.
+
+## 4. Zaten düzeltilmiş olanlar — okuyucular eski metne bakmış
+
+- **DeepSeek #2:** *"izin verilen maliyetler maddesi 'koşul onlar hakkında bir şey söylemiyor'
+  diyor."* **O cümle geçen tur zaten kaldırılmıştı.**
+- **Grok:** *"Adım 6'nın kapanış cümlesi hâlâ 14–51 diyorsa…"* — şartlı söyledi, demiyor.
+
+## 5. Qwen
+
+Tur 51'de Adım 10 mekanizmasını **onayladı** — *"The sizing loop takes L/De as an input, not L/D
+and η_p separately. This mechanism is correct."* **Yanlış**, ve ChatGPT ile Grok'un bulduğu tam
+olarak bu. Ardından menzil denklemini on beş kez tekrarlayan bir döngüye girdi ve kendi
+tekrarının içinde cevabı taşıdığı hâlde (*"η_chain includes η_p"*) sonucu çıkaramadı.
+**Onayı kullanılmadı.**
