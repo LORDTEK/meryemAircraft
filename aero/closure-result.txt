@@ -1,0 +1,34 @@
+ADIM 10 -- BOYUTLANDIRMA DONGUSUNUN ANALITIK KAPANISI
+==============================================================================
+
+KURULUS SINAMASI -- yayimlanan varsayim yayimlanan ucagi vermeli
+  MTOW     hesaplanan    49.35   yayimlanan    50.10    -1.5 %  ok
+  LD       hesaplanan    11.88   yayimlanan    11.88    -0.0 %  ok
+  menzil   hesaplanan  1584.88   yayimlanan  1583.00    +0.1 %  ok
+  kurulus dogrulandi.
+
+DORT KAPANIS -- braket uzerinde, yayimlanan 0,0248 DISARIDA
+
+    C_D0     eta_p       L/D     MTOW    f_bos   P_askı    motor    menzil
+                                   kg                kW       kW        km
+------------------------------------------------------------------------------
+A   0.0381   0.632      8.79     57.5    0.614    12.53     5.17       927
+B   0.0381   0.683      8.79     55.8    0.607    12.17     4.65      1002
+C   0.0285   0.632     10.82     53.5    0.597    11.66     3.91      1141
+D   0.0285   0.683     10.82     52.3    0.592    11.40     3.54      1233
+------------------------------------------------------------------------------
+
+YAYILIMLAR (dort kapanis boyunca)
+  kalkis kutlesi        52.34 -    57.51 kg    yayilim   9.9 %
+  menzil               926.77 -  1232.73 km    yayilim  33.0 %
+  motor derecesi         3.54 -     5.17 kW    yayilim  46.1 %
+  askı gucu             11.40 -    12.53 kW    yayilim   9.9 %
+  faydali yuk payi       0.23 -     0.25       yayilim   9.9 %
+
+HANGI GIRDI DAHA BASKIN?
+  surukleme braketi (ayni palet)   MTOW  -6.9 %   menzil  +23.1 %
+  palet ailesi (ayni surukleme)    MTOW  -2.9 %   menzil   +8.1 %
+
+En iyi palet ailesi (eta_p 0,683) kapanistan SONRA da en iyi mi?
+  olumsuz      alt eta_p menzil    927 km / ust   1002 km  ->  EVET
+  elverisli    alt eta_p menzil   1141 km / ust   1233 km  ->  EVET
