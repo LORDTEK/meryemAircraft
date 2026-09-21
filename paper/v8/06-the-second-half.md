@@ -202,8 +202,10 @@ operating points; and the range that follows from the chain, link by link.
 **Not demonstrated.** **No part of this has been measured.** There is no wind-tunnel test and no
 flight test in this work, and the drag coefficient is a build-up with a declared bracket rather
 than a measurement. The planform's sweep, taper and thickness distributions were chosen rather
-than optimised. The span efficiency of 0.85 is an assumption which the paper's own calculation
-puts at 0.817 — optimistic by 3.9 percent. And **for the methods used here, and for the published
+than optimised. **The span efficiency used throughout this section is the computed value, 0.817,
+not the assumed 0.85** — a vortex-lattice solution of the trimmed planform, and 3.9 percent below
+the assumption, so the lift-to-drag figures above carry the calculated penalty rather than the
+optimistic estimate. And **for the methods used here, and for the published
 comparisons against which they were checked, the aerodynamic predictions diverge above roughly ten
 degrees of incidence**: three methods of three fidelities depart at the same place, the highest of
 them against wind-tunnel measurement. That is a statement about these methods on this class of
@@ -249,7 +251,8 @@ the combination is what this paper is for.
 | Seyir 1,49 × stall, **en iyi L/D noktası değil**; L/D_max 25,3 m/s'de, stall'ın 1,26 katı | §2.12, satır 971–977 |
 | Hiçbir rüzgâr tüneli, hiçbir uçuş denemesi yok | §4.4, satır 2549 |
 | Planform süpürme/incelme/kalınlık **seçildi, optimize edilmedi** | §4.5, satır 2656–2658 |
-| Açıklık verimi 0,85 varsayım; hesabı 0,817, **%3,9 iyimser** | §4.5, satır 2658–2660 |
+| **Açıklık verimi 0,817 KULLANILIYOR**, 0,85 değil — braketin üç L/D'si de bu değerden | `aero/drag_sweep.py:40` `E_SPAN = 0.817`; kuruluş sınaması yayımlanan temiz gövde 13,44'ü %0,33 içinde yeniden üretiyor |
+| 0,817 hesaplanmış değer, varsayımın %3,9 altında | §4.5, satır 2658–2660; kaynağı `paper-v5-supp.md` satır 130–134, trimli −9° washout VLM çözümü |
 | On derece üstünde üç yöntem üç aslılıkta sapıyor; en yükseği ölçüme karşı | §3.17, satır 2400–2408; §4.4, satır 2647–2650 |
 | Kuyruksuz planform süpürmeyi kısıtlıyor; yunuslama momenti gövdeden | §2.8, satır 741–743 |
 

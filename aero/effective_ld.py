@@ -146,8 +146,11 @@ if __name__ == "__main__":
 # Iddia edilmedi, HESAPLANDI: L/D_max = 0,5 sqrt(pi AR e / C_D0)
 # (§2.12, satir 973). Seyir L/D'si Tablo 9'dan.
 AR_HAFIF = 6.03          # §2.8, satir 752
-E_VARSAYIM = 0.85        # §2.12; makalenin kendi hesabi 0,817 (§4.5)
-E_HESAP = 0.817
+# DIKKAT -- Tur 50'de denetlendi: drag_sweep.py:40 E_SPAN = 0.817 kullaniyor,
+# yani Tablo 9'un UC L/D degeri de (11,88 / 10,82 / 8,80) HESAPLANMIS aciklik
+# verimiyle uretildi, varsayilan 0,85 ile DEGIL. Dolayisiyla L/D_max'i 0,85 ile
+# hesaplayip Tablo 9'a karsi koymak elmayla armut karsilastirmaktir. Tek e: 0,817.
+E_HESAP = 0.817          # aero/drag_sweep.py:40 ile ayni
 
 CD0_BRAKET = {"elverisli": 0.0285, "olumsuz": 0.0381}   # §3.6 Tablo 9
 LD_SEYIR = {"elverisli": 10.82, "olumsuz": 8.80}
@@ -163,16 +166,16 @@ def hiz_yonu():
     print("HIZ UYUSMAZLIGININ YONU -- iddia edilmedi, hesaplandi")
     print("=" * 66)
     print()
-    print("%-12s %10s %10s %10s" % ("braket ucu", "seyir L/D", "L/D_max", "L/D_max"))
-    print("%-12s %10s %10s %10s" % ("", "(Tablo 9)", "e=0,850", "e=0,817"))
-    print("-" * 46)
+    print("%-12s %12s %12s" % ("braket ucu", "seyir L/D", "L/D_max"))
+    print("%-12s %12s %12s" % ("", "(Tablo 9)", "e=0,817"))
+    print("-" * 38)
     for k in ("elverisli", "olumsuz"):
-        print("%-12s %10.2f %10.2f %10.2f"
-              % (k, LD_SEYIR[k], ld_max(CD0_BRAKET[k], E_VARSAYIM),
-                 ld_max(CD0_BRAKET[k], E_HESAP)))
+        print("%-12s %12.2f %12.2f"
+              % (k, LD_SEYIR[k], ld_max(CD0_BRAKET[k], E_HESAP)))
     print()
-    tum = all(ld_max(CD0_BRAKET[k], e) > LD_SEYIR[k]
-              for k in CD0_BRAKET for e in (E_VARSAYIM, E_HESAP))
+    print("Iki sutun da e = 0,817 ile: ayni polar, tek fark hiz noktasi.")
+    print()
+    tum = all(ld_max(CD0_BRAKET[k], E_HESAP) > LD_SEYIR[k] for k in CD0_BRAKET)
     print("L/D_max her kosede seyir L/D'sinin USTUNDE mi? %s" % ("EVET" if tum else "HAYIR"))
     print()
     if tum:

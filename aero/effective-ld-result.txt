@@ -50,11 +50,13 @@ EN KOTU KOSE DENETIMI -- pay hangi noktada kapanir?
 HIZ UYUSMAZLIGININ YONU -- iddia edilmedi, hesaplandi
 ==================================================================
 
-braket ucu    seyir L/D    L/D_max    L/D_max
-              (Tablo 9)    e=0,850    e=0,817
-----------------------------------------------
-elverisli         10.82      11.88      11.65
-olumsuz            8.80      10.28      10.08
+braket ucu      seyir L/D      L/D_max
+                (Tablo 9)      e=0,817
+--------------------------------------
+elverisli           10.82        11.65
+olumsuz              8.80        10.08
+
+Iki sutun da e = 0,817 ile: ayni polar, tek fark hiz noktasi.
 
 L/D_max her kosede seyir L/D'sinin USTUNDE mi? EVET
 
