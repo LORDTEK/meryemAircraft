@@ -294,6 +294,24 @@ Hiçbir iddia denetlenmeden aktarılmaz — ne YZ'lerinki ne benimki.
   sına.** Sessizce boş dönen bir denetim, hiç olmayandan beterdir; bu bir kez
   oldu.
 
+### 3.1 Emekliye ayrılan ifade DEPONUN TAMAMINDA aranır. Tur 49.
+
+Adım 6'da *"different efficiency class"* ifadesini emekliye ayırdım ve gerekçesini
+yazdım. **Adım 9'da aynı ifade canlı kaldı** ve üstelik makalenin iddia tablosunda,
+*"Claimed"* satırında duruyordu. Dört dış okuyucunun hiçbiri göremezdi — ellerinde
+Adım 9 yoktu.
+
+Bu §0.2'nin hata sınıfının yeni bir biçimi: orada **düzeltme yeni bir çelişki
+doğuruyordu**, burada **düzeltme hiç yayılmadı.** İkisi de "düzeltirken denetle"
+ailesinden.
+
+> **Kural:** bir ifade, bir sayı ya da bir iddia emekliye ayrıldığında, aynı turda
+> `grep -rn` ile **bütün v8 adımlarında ve bütün bulgu kayıtlarında** aranır. Her
+> örneği düzeltilir. "Değiştirdim" demeden önce arama çıktısı görülür.
+>
+> Aynısı sayılar için zaten var (`verify.py`'nin bayat değer listesi). **İfadeler
+> için yoktu.** Yeni bir ifade emekliye ayrıldığında o listeye de eklenmeli.
+
 ## 4. Depo
 
 - Geliştirme dalı: `claude/ecstatic-cori-6w30at`. `main` de güncel tutulur.
