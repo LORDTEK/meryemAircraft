@@ -7,6 +7,17 @@ eksende.** Adım 5'in simetriği.
 (§0, birinci yasak hata) · *"inşa gereği"* geçmiyor · **boyutlandırıldı / gösterilmedi**
 ayrımı Adım 5'teki gibi ortada · karşılaştırma **tek bir birimde** yapılıyor.
 
+**Tur 48, dört okuyucudan sonra — beş değişiklik.** (1) η_p aralığının **tarifi yanlıştı**
+(ChatGPT): 0,632–0,683 tek paletin iki noktası değil, **dört palet ailesinin** yayılımı.
+(2) Braket artık **çarpım matrisi** olarak veriliyor ve iki yayılım türü ayrılıyor:
+sürükleme **belirsizlik**, palet ailesi **sabitlenmemiş tasarım seçimi**. (3) İki quadrotor
+**eşit** sunuluyor; *"birincil karşılaştırma"* kalktı (ChatGPT, Grok, DeepSeek). (4) `P`'nin
+hangi güç olduğu **sayfanın içinde** kanıtlanıyor — Grok elektrik satırı için haklı olarak
+sordu; kaynak **batarya kapasitesi** türevinde ayrımı yapıyor, yani soru **bizim lehimize**
+kapanıyor. (5) **Dördüncü çekince** eklendi (ChatGPT): analiz zincirleri eşleşmiyor.
+**Reddedilen:** DeepSeek'in *"quadrotor'un iki görevli uzlaşması yok"* çekincesi —
+kaynak §6.3 quadrotor'un askı ve seyir arasında tam da o uzlaşmayı yaptığını gösteriyor.
+
 **Bu sayfa yazılırken bir hesap yapıldı ve bir iddia daraldı.** Makale çok rotorlu
 karşılaştırmasını iki **farklı türden** sayıyla yapıyordu: NASA'nın *etkin* L/De = 4,9'u ile
 bizim *aerodinamik* 8,8–10,8'imiz. İkisi aynı birime çevrilince pay **+%80…+%121'den
@@ -42,58 +53,95 @@ missions, while vectored-thrust aircraft are efficient in cruise and suited to l
 
 ### What the configuration does instead
 
-Cruise lift is carried by the blended wing body — the whole planform, since there is no
-separate fuselage — while the nose pair produces only the thrust needed to balance drag. **This
-is a structural difference rather than a margin.** Lift is carried on a surface or it is carried
-on rotors, and no sizing contract, no assumption in this paper and no choice available to a
-designer moves a vehicle between those two states. It is the one claim in this work that is a
-property of the configuration rather than of a calculation.
+**Cruise lift is carried by the airframe itself.** There is no separate fuselage: the whole
+planform is the wing, so every part of the body that is carried is also a part that lifts. At
+the cruise condition the lift coefficient follows from `C_L = W/(qS)`, the drag from
+`C_D = C_D0 + C_L²/(πARe)`, and the nose pair is left with one job — producing the thrust that
+balances that drag. It supports none of the weight.
+
+That is the whole of the difference, and it is worth stating in those plain terms because the
+consequence is structural. **A rotorcraft's discs must produce the lift and the propulsive force
+together, for every second of the flight.** This aircraft separates them: a surface holds the
+aircraft up and a propeller pushes it along, and the surface costs no power to do its part.
+Lift is carried on a surface or it is carried on rotors, and no sizing contract, no assumption
+in this paper and no choice available to a designer moves a vehicle between those two states.
+
+**But the size of the resulting advantage is a calculation, not a consequence of that
+statement**, and the two must not be run together. The rest of this section is the calculation,
+and it gives a smaller number than the structural statement invites.
 
 ### What the margin actually is, in one currency
-
-The structural statement is worth little without a number, and the number has to be given in a
-single unit or it is not a comparison at all.
 
 The sizing set of Section 4 reports an **effective lift-to-drag ratio**, defined in its own
 nomenclature as `L/De = WV/P`: weight times speed over power. That is a system figure of merit,
 not a force ratio, and it already contains the propulsive efficiency of whatever produces the
-thrust. **A force ratio cannot be placed beside it.** Converting this configuration's
-aerodynamic lift-to-drag ratio into the same quantity is one line — in level cruise thrust
-equals drag and lift equals weight, so with shaft power `P = DV/η_p`,
+thrust. **A force ratio cannot be placed beside it.**
+
+Converting this configuration's aerodynamic ratio into the same quantity is one line: in level
+cruise thrust equals drag and lift equals weight, so with shaft power `P = DV/η_p`,
 
 > **L/De = WV/P = (L/D) · η_p**
 
-and both factors are computed rather than assumed. The aerodynamic ratio is 8.80 to 10.82 across
-the zero-lift drag bracket, **with the tip frames and the free-wheeling attitude rotors already
-charged**; the propeller efficiency is 0.632 to 0.683 from a two-point blade-element solution of
-the actual nose blade at its actual hover and cruise conditions. The product is **5.56 to 7.39**.
+**Which power `P` denotes is not assumed here**, because reading it as electrical power rather
+than shaft power would make this configuration's figure incomparable with the published one. The
+source settles it in its hover formulation: hover power is written `Ph = W√(W/2ρA)/FM`, with the
+figure of merit already applied — shaft power — and the propulsion-system efficiency applied
+separately outside it. The cruise formulation uses the same separation, writing cruise energy as
+`Pc/ηc` with `Pc = WV/(L/De)`. That separation appears in the source's **battery-capacity**
+derivation, so it holds for the all-electric entries as well as the shaft-driven ones: if `L/De`
+already contained the electrical chain, that derivation would count it twice.
 
-| | L/De |
-|---|---:|
-| This configuration, adverse corner | **5.56** |
-| This configuration, favourable corner | **7.39** |
-| Quadrotor, turboshaft | 4.9 |
-| Quadrotor, all-electric | 5.8 |
+**Neither factor is a single number, and they are two different kinds of spread.**
 
-**Against the quadrotor that uses the same kind of energy source, the sign holds at every
-corner**, by 14 to 51 percent. The margin is not fragile: closing it would require the
-propeller efficiency to fall to 0.557 against a computed worst case of 0.632.
+The aerodynamic ratio is **8.80 to 10.82**, with the tip frames and the free-wheeling attitude
+rotors already charged. That spread is **uncertainty**: it is the zero-lift drag bracket, and a
+designer does not get to choose where in it the real aircraft lands.
 
-**Against the all-electric quadrotor in the same set it does not hold at the adverse corner**,
-and this is stated rather than arranged around. That vehicle reaches 5.8, above this
-configuration's 5.56. It buys the difference with 1 742 lb of battery and **nearly twice the
-gross weight for the same mission** — 7 221 lb against the turboshaft quadrotor's 3 678 lb —
-which is precisely the charge Section 2 describes and Section 4 tests. But on cruise efficiency
-taken alone, it is ahead of this configuration's worst case.
+The cruise propeller efficiency is **0.632 to 0.683** across the nose-blade families that meet
+the hover figure of merit — two and three blades per rotor, at two target section lift
+coefficients, each solved at its hover and its cruise condition. That spread is **not
+uncertainty**: it is a design choice this study did not fix, and a designer building the aircraft
+would take the best of them.
 
-**So the honest form of the second claim is narrower than the structural statement invites.**
-Wing-borne cruise is a different way of carrying lift, and it is worth 14 to 51 percent in this
-comparison — not a change of category. And what compresses it is not the wing. **It is this
-aircraft's own refusal of the variable-pitch hub**: at a propeller efficiency of 0.85 the same
-airframe would reach 7.48 to 9.20. The margin is a property of the propeller choice as much as
-of the architecture, and Section 11 charges it as such.
+| L/De | η_p 0.632 | η_p 0.683 |
+|---|---:|---:|
+| **L/D 8.80** (adverse drag) | **5.56** | 6.01 |
+| **L/D 10.82** (favourable drag) | 6.84 | **7.39** |
 
-### Three qualifications, all of which run against this configuration
+**5.56 and 7.39 are the bounding corners of that product, not two simulated operating points.**
+Each is reachable — the drag bracket and the blade family are independent — but the low corner
+pairs the worst drag outcome with the blade a designer would not choose.
+
+### What the comparison gives, against both published quadrotors
+
+The sizing set contains two quadrotors for the same mission, and **neither is treated here as the
+primary one.**
+
+| | L/De | Margin against 5.56 – 7.39 |
+|---|---:|---|
+| Quadrotor, turboshaft | 4.9 | **+14 % … +51 %** |
+| Quadrotor, all-electric | 5.8 | **−4 % … +27 %** |
+
+**Against the turboshaft quadrotor the sign holds at every corner.** Closing it would need the
+propeller efficiency to fall to 0.557, against 0.632 for the least efficient blade family
+examined.
+
+**Against the all-electric quadrotor it does not hold at the low corner**, and that result is
+reported as a result rather than as a caveat. That vehicle reaches 5.8 — above this
+configuration's 5.56 — and it buys the difference with 1 742 lb of battery and nearly twice the
+gross weight for the same mission, 7 221 lb against 3 678 lb. **The weight it pays for that
+efficiency is the charge Section 2 describes and Section 4 tests**, so the entry illustrates the
+framework rather than contradicting it. On cruise efficiency taken alone, it is nonetheless
+ahead of this configuration's low corner.
+
+**So the second claim is narrower than the structural statement invites.** Carrying cruise lift
+on a wing is worth **14 to 51 percent against the turboshaft reference and does not uniformly
+beat the all-electric one** — a measurable advantage, not a change of category. And what
+compresses it is not the wing. **It is this aircraft's own refusal of the variable-pitch hub:**
+at a propeller efficiency of 0.85 the same airframe reaches 7.48 to 9.20. Section 11 charges it
+there.
+
+### Four qualifications, all of which run against this configuration
 
 They are given together because omitting any one of them would make the comparison look better
 than it is.
@@ -109,6 +157,14 @@ and unusually efficient. Nothing here is compared against a poor example.
 configuration's is at its chosen cruise condition, 1.49 times stall, which Section 10 states
 explicitly is **not** its best lift-to-drag point. Cruising at the best point would leave too
 little margin, and the ratio that the chosen condition gives is the one reported.
+
+**The analysis chains are not matched, and this is the qualification that bounds what the
+comparison can be called.** The published value is the output of an integrated conceptual-design
+system with a comprehensive rotor analysis behind its rotor performance. The value here is
+assembled from a drag build-up, a drag polar at a prescribed cruise condition, and a separate
+blade-element propeller solution. **This is a comparison of two independently produced figures
+in a common definition, not a controlled numerical reproduction**, and nothing in it should be
+read as validation of either.
 
 ### What is sized, and what is not demonstrated
 
@@ -152,7 +208,10 @@ the combination is what this paper is for.
 | **L/De propulsor verimini İÇERİR** (η_h/FM simetrisinden kanıtlandı) | aynı belge, denklem 2 (s. 645) ve denklem 3 (s. 658); `paper/effective-ld-finding.md` §2 |
 | Aerodinamik L/D 8,80–10,82, rotorlar ve uç çerçeveleri **faturalanmış** | §3.6 Tablo 9, satır 1511; *"the tip frames and the free-wheeling rotors charged to this configuration alone"* satır 1500; braket §3.10 / Ek S1 |
 | η_p = 0,632–0,683, iki noktalı BEMT | `paper/nose-pair-finding.md`, `paper/chain-resolve-finding.md` |
-| **L/De = 5,56–7,39** | `aero/effective_ld.py`, `aero/effective-ld-result.txt` |
+| **L/De çarpım matrisi: 5,56 · 6,01 · 6,84 · 7,39** | `aero/effective_ld.py`, `aero/effective-ld-result.txt` |
+| Sürükleme yayılımı **belirsizlik**, palet ailesi **seçim** | C_D0 braketi §3.10/Ek S1; palet ailesi `aero/nose_propeller_crossing.py` — 2 ve 3 pala × c_l 0,55 ve 0,70, dördü de FM = 0,599 tutturuyor |
+| `L/De`'deki P **mil gücüdür**; ayrım kaynağın **batarya kapasitesi** türevinde | Johnson & Silva denklem (1)–(3), s. 640–658: `Ecap = Ecruise + Ehover + Ereserve`, sonra `Ecruise = (Pc/ηc)·t`, ve askıda `Ph = W√(W/2ρA)/FM` ile η_h **dışarıda** — **birinci elden** |
+| NASA aracı NDARC (boyutlandırma) + CAMRAD II / CHARM (rotor) ile üretildi | aynı belge §2.1 ve §2.2, satır 189–211 — **birinci elden** |
 | Quadrotor turboşaft L/De 4,9; DGW 3.678 lb; disk yüklemesi 3,5 lb/ft² | NASA Tablo 3, s. 70 — **birinci elden** |
 | Sayı **Vbr**'de, yani *"best-range speed"* | aynı belge s. 386: *"Cruise is flown at best-range speed (Vbr, 99% high side)"* — **birinci elden** |
 | Quadrotor elektrik L/De 5,8; DGW 7.221 lb; batarya 1.742 lb | NASA Tablo 3, s. 70 — **birinci elden** |

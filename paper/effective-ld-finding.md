@@ -103,3 +103,89 @@ düşük**, yani karşımızdaki quadrotor **iyi** bir quadrotor. Ve onların sa
 
 **Üç çekincenin üçü de karşı tarafın lehine.** Bu yüzden hiçbiri payı büyütmek için
 kullanılmaz; yalnız karşılaştırmanın ne kadar kaba olduğunu söylemek için yazılır.
+
+---
+
+# Tur 48 — dört okuyucunun denetimi, ve iki kaynak denetimi
+
+**Dördü de çevrimi onayladı.** ChatGPT belgeyi o turda açtı ve Cambridge kopyasının bağını verdi;
+Grok açıkça *"bu tur hiçbir PDF açmadım, cebiri yargılıyorum"* dedi; DeepSeek ve Qwen de
+açamadıklarını söyledi. **§2.1'in karşılığı çalıştı:** kimse açmadığı belgeden sayı vermedi.
+
+## 1. Grok'un `P` itirazı — haklı soru, ama cevap bizim lehimize
+
+> *"Turboşaft quadrotor için mil okuması doğal olan. Elektrik 5,8 için **tehlikeli** olan:
+> o 5,8 `WV/P_batarya` ise, bizim 5,56–7,39'umuz aynı birimde değil."*
+
+**Soru meşru ve kaynaktan kapanıyor. Ama Grok'un endişesi ters yönde.** Kaynağın ayrımı tam da
+**batarya kapasitesi** türevinde yapılıyor (s. 640–655):
+
+> `Ecap = Ecruise + Ehover + Ereserve`  (1)
+>
+> `Ecruise = (Pc/ηc) × time = WR/((L/De) ηc)`  (2)
+
+**Yani elektrikli araçlar için L/De açıkça η_c'nin YUKARISINDA.** L/De batarya gücünü içerseydi,
+NASA kendi batarya boyutlandırmasında zinciri **iki kez** saymış olurdu. Elektrik satırı, kanıtın
+en güçlü olduğu satırdır — en zayıf olduğu değil.
+
+Grok'un kendi çekincesi doğru uygulandı: *"Do not guess the sign."* Sayıyı tahmin etmedik, belgeyi
+açtık.
+
+## 2. ChatGPT'nin η_p tarifi itirazı — HAKLI, ve düzeltildi
+
+> *"'0,632–0,683, gerçek burun paletinin gerçek askı ve seyir koşullarındaki iki noktalı
+> çözümünden' — bu tarif yeterince doğru değil."*
+
+**Haklı.** `aero/nose_propeller_crossing.py` çıktısı:
+
+| pala | c_l | η |
+|---|---|---:|
+| 2 | 0,55 | 0,648 |
+| 2 | 0,70 | **0,683** |
+| 3 | 0,55 | **0,632** |
+| 3 | 0,70 | 0,643 |
+
+Aralık **dört palet ailesinin** yayılımıdır. *"İki nokta"* her paletin askı ve seyirde ayrı
+çözülmesini anlatıyor — aralığın kaynağını değil. Cümle ikisini birbirine karıştırıyordu.
+
+**Ve düzeltme bir şey daha açtı, ki üç okuyucu da braket eşleştirmesini sorgulamıştı:**
+
+> **İki yayılım aynı türden değil.** C_D0 braketi **belirsizliktir** — tasarımcı gerçek uçağın
+> nereye düşeceğini seçemez. Palet ailesi **sabitlenmemiş bir tasarım seçimidir** — tasarımcı
+> en iyisini alır. İkisini tek bir *"olumsuz köşe"* diye sunmak, seçilmeyecek bir paleti
+> belirsizlikmiş gibi göstermektir.
+
+Sayfa artık çarpım matrisini veriyor (5,56 · 6,01 · 6,84 · 7,39) ve iki türü adlandırıyor.
+
+## 3. DeepSeek'in dördüncü çekincesi — REDDEDİLDİ, kaynak tersini söylüyor
+
+> *"Çok rotorlunun tahrik kayıpları bizimkinden küçüktür, çünkü **iki görevli uzlaşması yoktur.**"*
+
+**Yanlış.** Kaynak §6.3, *"Trim of multi-rotor aircraft"* (satır 723–733), quadrotor'un askı ile
+seyir arasında tam da o uzlaşmayı yaptığını gösteriyor:
+
+> *"For the quadrotor, **both collective and rotor speed control were considered.** … Edgewise
+> rotor flight has reduced induced power … followed by power increasing with speed as the
+> parasite power increases. … With rotor speed control and fixed collective, the rotor rpm
+> follows the power variation with speed, while the rotor C_T/σ increases with speed initially
+> and then decreases. **The increase in C_T/σ might be limited by maximum blade loading, perhaps
+> requiring a smaller design C_T/σ at hover (hence larger blade area).**"*
+
+Son cümle bir iki-rejim uzlaşmasının tarifidir. Quadrotor rotorları **da** hem askı hem seyir
+yapıyor. Çekince alınmadı.
+
+**Yerine ChatGPT'nin dördüncü çekincesi alındı** — analiz zincirleri eşleşmiyor — ve doğrulandı:
+kaynak §2.1 boyutlandırma için **NDARC**, §2.2 rotor için **CAMRAD II / CHARM** kullandığını
+söylüyor (satır 189–211). Bizimki sürükleme dökümü + polar + ayrı BEMT.
+
+## 4. Kenarda bulunan, ve 11/13. adıma ait
+
+Aynı denetim sırasında: **tiltwing (L/De 8,6) collective kontrol kullanıyor ve uç hızını askıda
+550 ft/s'den seyirde 300 ft/s'ye düşürüyor** (§5.5, satır 590–592, birinci elden). Bunlar tam
+olarak bu mimarinin reddettiği **iki ayar.** 8,6'ya karşı 5,56–7,39, değişken hatve göbeğini
+reddetmenin bedelinin dolaysız bir ölçüsüdür — **ve tiltlere karşı menzil/verim iddia
+etmediğimiz eksende.** Adım 11 ve 13'ün malzemesi, Adım 6'nın değil.
+
+**Dikkat:** *"Collective control is used, with hover tip speed 550 ft/sec and cruise tip speed
+300 ft/sec"* cümlesi **§5.5 Tiltwing'e** aittir. Quadrotor'a atfedilmez — bir kez yanlış
+atfetmeye çok yaklaştım.

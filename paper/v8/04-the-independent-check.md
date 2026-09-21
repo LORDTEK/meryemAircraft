@@ -153,6 +153,13 @@ measure the thing its authors are advocating should be shown working on somethin
 That is what this section does, and it is the reason it appears here rather than after the
 aircraft.
 
+**The instrument is now fixed, and it is not modified again.** Sections 2 and 3 defined what any
+architecture in this corner pays and what escaping it would require; this section tested one
+falsifiable consequence of that definition on data produced by other people for other aircraft.
+**Everything that follows is measured with it rather than added to it.** The next two sections
+describe the two capabilities the mission asks for, one at a time and each against the family
+that structurally lacks it, before Section 7 asks whether one aircraft can hold both.
+
 ---
 
 ## Yazarın denetimi için — bu sayfadaki her olgusal yüklem ve kaynağı
