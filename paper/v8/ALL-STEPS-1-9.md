@@ -16,11 +16,12 @@ vertically, hover, and work from confined sites. Their limit is the converse: wi
 every second of flight is bought with installed power, so range and endurance stay modest and
 worsen as the vehicle grows.
 
-**Neither family is deficient.** Each is excellent at what it does and is limited by the price
-of doing it that way. What is unoccupied is the corner where both capabilities are wanted at
-once, and the two applications this work is aimed at sit in that corner: **wildfire observation
-and response, and cargo delivery to places without a runway.** Both want to leave from an
-unprepared site and then cover distance.
+**Neither family is deficient.** Each is excellent at what it does and is limited by the price of
+doing it that way. **The corner where both capabilities are wanted at once is where the two
+applications this work is aimed at sit** — wildfire observation and response, and cargo delivery to
+places without a runway — and both want to leave from an unprepared site and then cover distance.
+**That corner is not empty**, as the rest of this section sets out; what is unsettled is which
+price an architecture in it must pay, and whether one arrangement pays less than it appears to.
 
 ### The demand has been continuous for seventy years
 
@@ -83,10 +84,10 @@ And the reason testing ended is recorded identically in both reviews:
 > *"Six transitions to conventional flight were successfully completed **before testing was
 > curtailed because of engine and gear-box reliability problems**."*
 
-The pilot workload was real, separately documented and severe. **But it is not what curtailed
-the testing, and three of the four recorded objections are objections to 1954 machinery and to
-a human pilot rather than to the configuration**: actuator response rate, gearbox reliability,
-and a spatial-orientation problem that exists only because someone is sitting in the aircraft.
+The pilot workload was real, separately documented and severe. **But it is not what curtailed the
+testing.** The reviews record a longer list of handling and control difficulties than this section
+reproduces, and no attempt is made here to sort them into those that would and would not recur —
+what the record settles is the cause of the curtailment, and that cause was mechanical.
 
 ### What the history does not excuse
 
@@ -95,9 +96,11 @@ outside its configuration, and this paper does not conclude it. **Some of the di
 real, internal, and are inherited here.** A tail-sitting vertical descent is genuinely harder
 than a runway landing. A tail-sitting aircraft on the ground is more exposed to crosswind than a
 conventional one. And a set of propellers whose thrust vectors are all parallel to the body axis
-produces no rolling moment by any combination of thrust settings — which applies to the
-configuration described later exactly as it applied to its predecessors, and which this paper
-addresses rather than avoids.
+produces no rolling moment **by any combination of thrust settings** — which applies to the
+configuration described later exactly as it applied to its predecessors. **The reaction-torque
+channel that other coaxial tail-sitters use about that same axis is a separate matter, and it is a
+choice this configuration declines rather than a limit it inherits; Section 7 says so and Section 9
+says what declining it leaves uncounted.**
 
 What the record does show is that **the obstacle that ended the flying was mechanical**, and
 that one of the documented handling obstacles — the pilot's spatial orientation and workload —
@@ -224,7 +227,7 @@ disc loading constant instead makes hover power grow linearly with weight, and S
 that.)* A modest dead-mass fraction becomes a large payload penalty.
 
 **This charge has been identified independently, and by a source with no interest in the present
-argument.** A NASA study sizing four VTOL architectures against a common mission with common
+argument.** A NASA study sizing five VTOL architecture families against a common mission with common
 tools found the lift-plus-cruise concepts the heaviest of the vehicles examined, and named the
 cause: not the cruise power draw, since the lift-plus-cruise effective lift-to-drag ratio is the
 higher of the set, but *"the extra empty weight items on board in hover."*
@@ -311,7 +314,7 @@ remedy reduces one and raises another.**
 |---|---|---|
 | Distributed electric lift rotors | 3 — the cruise engine no longer sizes to hover | 1 and 2 — many rotors and mounts, permanently carried and exposed |
 | Folding or retracting lift rotors | 2 — the exposed rotor is removed from cruise | 1 — mechanism, actuation, locking, a new failure mode |
-| Tilt-rotor, tilt-wing, tilt-nacelle | 1 — one propulsion group serves both regimes | mechanical complexity, gyroscopic coupling, a transition control problem — **not one of the three; see below** |
+| Tilt-rotor, tilt-wing, tilt-nacelle | 1 — one propulsion group serves both regimes | **Bill 3 is left standing** — with no store, the power plant is still sized by the hover peak — together with mechanical complexity, gyroscopic coupling and a transition control problem, which are **not among the three** |
 | Variable-pitch or feathering propulsors | 1 and 3 — one propulsor is retrimmed across two widely separated operating points instead of duplicated | 1 — pitch hub, actuation, and a new failure mode |
 | Higher disc loading, smaller rotors | 1 and 2 — smaller, lighter, cleaner rotors | 3 — hover power rises with √(DL) |
 | Lower disc loading, larger rotors | 3 — hover power falls | 1 and 2 — larger structure and exposed area |
@@ -334,10 +337,19 @@ gain for a five-percent mass penalty.** Bill 2 was converted almost exactly into
 
 ### What this accounting is for
 
-**The accounting is refuted by any remedy that removes one charge without raising another.**
-That is the test it has to survive, and the table above is where it would fail: every entry in
-it is a documented transfer, and a counter-example would be a move with an empty right-hand
-column.
+**The accounting is refuted by any remedy that reduces one charge while leaving the others no
+worse and adding no cost of its own.** That is the test it has to survive, and the table above is
+where it would fail: every entry in it is a documented transfer, and a counter-example would be a
+move whose right-hand column is genuinely empty.
+
+**Two clarifications keep that test from being either too easy or unfalsifiable.** A remedy that
+attacks one charge and simply leaves another standing is not a counter-example — the tilting row is
+the case, and it is written out there rather than left to be inferred. And a remedy whose cost
+falls **outside** the three charges is not a counter-example either, but the accounting only earns
+that if it names such costs rather than ignoring them; the tilting family's mechanism is named in
+the table for exactly that reason. **A framework that could absorb any cost by declaring it
+out-of-scope would be unfalsifiable**, so the costs outside the three are listed, not waved
+away.
 
 It also makes a prediction that can be checked without settling the architectural question at
 all: **where an arrangement pays one charge heavily in order to escape another, the ranking
@@ -438,10 +450,13 @@ and the first is the one that most nearly contradicts the name:
   second row of the table is what carries the weight. A propulsor that lifts and then propels
   satisfies the condition. A propulsor that lifts and is then carried does not, whatever else it
   shares with the cruise system.
-- **Hardware used in both regimes for something other than thrust is permitted, and its cruise
-  drag is not eliminated.** Attitude devices are used throughout the flight, so their duty cycle
-  matches their presence and they fall outside Bill 1. They are nonetheless in the airstream. The
-  condition says nothing about them, which is not the same as their being free.
+- **Hardware used in both regimes for something other than propulsive thrust is permitted, and its
+  cruise drag is not eliminated.** *Cruise thrust in this paper means the thrust that balances
+  cruise drag.* Attitude devices produce thrust in cruise, but they produce no cruise thrust in
+  that sense; they are used throughout the flight, so their duty cycle matches their presence and
+  they fall outside Bill 1. **They remain in the airstream, so the second charge reaches them**,
+  and an architecture that carries them is a partial instantiation rather than a full one. The
+  condition permits them and does not make them free.
 - **Serving two regimes with one set of hardware has a price of its own.** Hardware that is not
   duplicated cannot be optimised twice: a propeller sized for hover thrust at zero forward speed
   is not the propeller a cruise design would choose, and if its geometry is fixed the compromise
@@ -560,19 +575,27 @@ mission is 1 200 lb of payload over 75 nautical miles.
 ### The result
 
 **The primary comparison is the last two rows**, because they isolate the charge. The
-lift-plus-cruise and tilt-wing entries share the mission, the payload, the propulsion
-architecture and the presence of a cruising wing. **One carries a dedicated lift group and the
-other does not, and that is the only architectural difference between them.**
+lift-plus-cruise and tilt-wing entries share the mission, the payload, the turbo-electric
+propulsion architecture and the presence of a cruising wing. **They are not identical in every
+other respect** — one stops its lift rotors in the airstream and drives a separate pusher, the
+other reorients its proprotors on a tilting wing — **but the difference the comparison turns on is
+that one carries a dedicated lift group through cruise and the other does not.** The comparison is
+the closest the published set comes to isolating that charge; it is not a controlled experiment.
 
-**The tilt-wing is 1.2 % better in effective cruise efficiency and 9.4 % lighter.** The
-dedicated lift group buys no cruise-efficiency advantage at all here — it is marginally behind —
-and costs 687 lb of design gross weight.
+**The tilt-wing is 1.2 % better in effective cruise efficiency and 9.4 % lighter.** The dedicated
+lift group buys no cruise-efficiency advantage at all here — it is marginally behind — and the
+design gross weights differ by 687 lb in the tilt-wing's favour. **That figure is the net
+difference between two architectures, not the measured mass of a lift group**, and the
+decomposition below is what makes it informative rather than merely large.
 
-**The weight statement shows where the charge sits.** The lift-plus-cruise entry carries 2 670 lb
-of structure against the tilt-wing's 1 954 lb, a difference of 716 lb, while the tilt-wing
-carries 146 lb more propulsion — the mechanism giving some of it back. The net difference in
-empty weight is 679 lb. **That is the transfer property of Section 2, visible inside a weight
-breakdown this work did not produce.**
+**The weight breakdown shows the transfer, and it does not close on the categories the table
+reports.** Of the empty-weight difference of 679 lb, structure accounts for 716 lb in the
+lift-plus-cruise entry's disfavour, propulsion returns 146 lb of it because the tilt-wing's
+mechanism is heavier, and battery returns a further 10 lb. **Those three categories account for
+580 lb of the 679**; the remaining 99 lb lies in empty-weight categories the published table does
+not break out, and this work does not know how it is distributed. **What the three reported
+categories do show is the transfer property of Section 2 — the mechanism giving part of the
+structural saving back — visible inside a weight breakdown this work did not produce.**
 
 **And the source states the second half of the prediction in its own words.** Discussing why the
 all-electric lift-plus-cruise design is the heaviest in the set, the study writes that the high
@@ -911,7 +934,8 @@ and unusually efficient. Nothing here is compared against a poor example.
 figure is quoted at the best-range speed; this configuration's is at its chosen cruise condition,
 1.49 times stall, which Section 10 states explicitly is **not** its best lift-to-drag point. The
 best point lies at 1.26 times stall, and `L/D_max = 0.5√(πARe/C_D0)` exceeds the cruise ratio at
-both ends of the drag bracket — 11.88 against 10.82, and 10.28 against 8.80. **The reference is
+both ends of the drag bracket — 11.65 against 10.82, and 10.08 against 8.80, both at e = 0.817.
+**The reference is
 therefore given its best speed and this configuration is not given its best speed, and the margin
 is positive anyway.** The best point is not an available option — cruising there leaves too little
 margin above the stall — so this fixes a direction, not a magnitude.
@@ -958,8 +982,8 @@ The wing that makes cruise efficient is carried through the vertical phase, wher
 nothing and presents the aircraft's largest surface to ground wind. The tailless planform that
 follows from having no boom constrains the sweep, because with no horizontal stabiliser the
 pitching moment must come from the distribution of lift along the body itself. And the
-fixed-pitch propeller that serves both regimes is the reason the margin above is 14 to 51
-percent rather than more. Section 11 charges all three.
+fixed-pitch propeller that serves both regimes is the reason the margin above sits where it does
+rather than higher — at e = 0.85 the same airframe would reach 7.48 to 9.20. Section 11 charges all three.
 
 **The two halves are now on the table separately. Section 7 is where they are combined**, and
 the combination is what this paper is for.
@@ -976,17 +1000,19 @@ have been a standing subject of transport research for three decades. Series-hyb
 has established precedent in small uncrewed aircraft. **Each can be found on its own, and in
 combination, in the literature and in hardware** — Section 1 says where.
 
-What is new is that the three of them, taken together, satisfy the escape condition of
-Section 3 **in the propulsor that carries the aircraft** — and that they satisfy it with no
-mechanism that reorients a propulsor. The assembly is not new because it is an assembly. It is
-new because of what it satisfies, and because of what it does not need in order to satisfy it.
+**What this paper contributes is that combination, the condition it is built to satisfy, and the
+price it pays for satisfying it.** The three elements, taken together, meet the escape condition
+of Section 3 **in the propulsor that carries the aircraft**, and they meet it with no mechanism
+that reorients a propulsor. The assembly is not offered as novel because it is an assembly. It is
+offered for what it satisfies, and for what it does not need in order to satisfy it — and Section 1
+has already set out how much of the ground is occupied.
 
 **The qualification in that sentence is not decoration, and it is made here rather than
 conceded later.** Section 3 lists partial instantiation among the ways an architecture can fail
 the condition: meeting it where the aircraft is carried and failing it elsewhere. That is this
-configuration's own case. The single nose pair meets all four parts — same hardware, same job,
-same orientation, hover peak from a buffer. The four attitude pairs do not: they are exposed in
-the cruise flow and they cannot be feathered, so they re-open the second charge. **The
+configuration's own case. The single nose pair meets all four parts — same hardware, both duties
+served, one orientation, hover peak from a buffer. The four attitude pairs do not: they are exposed
+in the cruise flow and they cannot be feathered, so they re-open the second charge. **The
 instantiation is therefore partial**, and reporting what the failing part costs is a substantial
 share of what Section 11 does.
 
@@ -1015,7 +1041,10 @@ relative to the airframe, and turning the propulsors is the case the condition e
 Here the end is reached by turning the thing the propulsors are already attached to, which
 leaves the orientation requirement intact.
 
-That single move is what removes the mechanism. The configuration therefore carries:
+That single move is what removes the mechanism. **The table below counts mechanism classes that
+exist in order to change regime**, which is why no aerodynamic control device appears in it: the
+strip of Section 8 is a control surface, not a means of changing regime, and counting its absence
+would be counting the wrong thing. The configuration therefore carries:
 
 | Mechanism | Where it is required | Present here |
 |---|---|---|
@@ -1024,7 +1053,6 @@ That single move is what removes the mechanism. The configuration therefore carr
 | Variable-pitch hub | Architectures that trim a rotor across two widely separated operating points, or feather a rotor unused in one regime | — |
 | Dedicated lift rotors | Lift-plus-cruise architectures | — |
 | Rotor stowing, indexing or stopping mechanism | Architectures that remove dedicated lift rotors from the cruise flow by such means | — |
-| Elevons, rudder, or any trailing-edge control surface | Conventional and blended-wing-body practice | — |
 
 Attitude is produced instead by differential thrust between fixed-pitch propellers: a
 single coaxial contra-rotating pair at the nose, and four small coaxial pairs at the
@@ -1064,6 +1092,15 @@ tilting architecture requires to change regime, and which this arrangement does 
 require. The actuator inventory that replaces them is the propulsion motors together
 with the strip.
 
+**One thing this section does not establish, and Section 9 holds it to that.** The arrangement
+described here requires no mechanism to change regime. **Whether this aircraft can actually perform
+the change is a separate question and is not settled anywhere in this paper**: whether the moment
+available is sufficient, and whether the aircraft trims through the rotation, depend on
+aerodynamics that — for the methods used here and the published comparisons against which they were
+checked — are not reliable above roughly ten degrees of incidence, which is inside the band the
+rotation passes through. **The mechanism claim is about hardware and survives that limit. The
+transition claim is not made.**
+
 What the combination costs is the subject of the sections that follow. It is not free:
 the attitude rotors that make the union controllable are themselves exposed in cruise,
 and Section 11 charges them.
@@ -1093,7 +1130,8 @@ angle and the longitudinal stability are one design variable seen from two direc
 
 ### The propulsion
 
-Five propellers, and every one of them is a coaxial counter-rotating pair. The reason is narrow
+**Five propeller stations, ten rotors:** every station is a coaxial counter-rotating pair. The
+reason is narrow
 and worth stating as such: **reaction torque.** A single propeller applies to the airframe a
 torque equal and opposite to the one it applies to the air. It acts about the propeller axis,
 which on this aircraft is the body's longitudinal axis — the roll axis in body terms — in both
@@ -1103,9 +1141,13 @@ differential thrust, which costs a control channel. A counter-rotating pair does
 One pair sits at the nose, 1.20 m in diameter on the light design, and produces all propulsive
 thrust in both regimes. Four smaller pairs, 0.20 m in diameter, sit at the ends of rigid frames
 projecting from the wing tips. Every pair is of **fixed geometry**: no cyclic pitch, no
-collective, no variable mechanism of any kind. Each rotor of each pair is driven by its own
-electric machine on a common axis, so the arrangement that repeatedly defeated the XB-35 —
-concentric shafts, a splitting gearbox, and the governors that synchronise them — is never built.
+collective, no variable-pitch hub and no mechanism that changes a rotor's orientation relative to
+the airframe. Shaft speed is commanded; blade geometry and orientation are not. Each rotor of each
+pair is driven by its own
+electric machine on a common axis, so **the splitting gearbox and the mechanical governors that
+synchronise it are not required** — the arrangement that repeatedly defeated the XB-35. This work
+makes no claim about the shafting: whether the two machines are stacked on the axis or arranged
+some other way is an implementation question it does not settle.
 
 The counter-rotating arrangement carries a second consequence that the transition analysis
 depends on. Because the two rotors of each pair carry equal and opposite angular momentum, **the
@@ -1117,10 +1159,15 @@ cancel. In a tilting architecture that term is present and must be designed for.
 
 A series hybrid: fuel to engine, engine to generator, generator to electric machines at the
 rotors. The engine is not mechanically connected to any rotor. It is an energy source, and that
-decoupling is what allows it to be sized by cruise rather than by hover. For the light design the
-continuous cruise requirement is 1.9 kW at the engine shaft and the engine is rated at 2.6 kW,
-while the hover requirement is 10.9 kW at the rotor. The difference is supplied for the vertical
-phase from a **1.8 kg battery buffer, 3.6 % of take-off mass.**
+decoupling is what allows it to be sized by cruise rather than by hover.
+
+**The separation the architecture depends on is that the continuous cruise requirement is several
+times smaller than the hover peak, and that the difference is supplied from a battery buffer for
+the vertical phase alone.** No wattage is quoted here. The figures published for this configuration
+were closed on a propeller efficiency this work has since replaced with a computed one, and the
+re-closed set belongs to Section 10 rather than to an inventory. **Quoting the superseded numbers
+beside a propulsion section that no longer assumes them is precisely the inconsistency this paper
+is trying not to commit.**
 
 ### What produces each moment
 
@@ -1135,8 +1182,10 @@ arm, and is not settled by the ratio alone.
 
 **The same differential-thrust system is what is assigned to rotate the airframe through
 transition.** That is a design assignment, not a demonstrated result: whether the moment it
-produces is sufficient, and whether the aircraft trims through the rotation, are questions for
-Section 10.
+produces is sufficient, and whether the aircraft trims through the rotation, are **not settled in
+this paper**: the moment is a sizing input to Section 10, but the trim through the rotation depends
+on the transition aerodynamics, and Section 14 says why those are not currently reliable for anyone
+on this class of configuration at the incidences the rotation passes through.
 
 **Roll comes from neither, and the reason is a choice rather than an impossibility.** Every thrust
 vector is parallel to the body axis, so no combination of thrust settings produces a moment about
@@ -1174,9 +1223,10 @@ reference and a flight computer are not optional equipment but part of the mecha
 preceding paragraphs describe. They are carried in the systems budget. The configuration
 replaces a pilot's workload with computation, and the computer is the part that does it.
 
-**The tip frames therefore do three jobs at once**, and this is the clearest instance in the
+**The tip frames therefore do four jobs at once**, and this is the clearest instance in the
 configuration of one structure carrying several duties: they are the landing gear, they set the
-control moment arms, and they carry the attitude rotors. Lengthening them to buy control
+control moment arms, they carry the attitude rotors, and — through the fairing described above —
+they are the aircraft's only vertical surface. Lengthening them to buy control
 authority widens the stance base against tipping in wind at the same time. They are also the
 structure that is exposed in cruise, and Section 11 charges them for it.
 
@@ -1225,8 +1275,12 @@ in Section 11.
 listing them. The nose pair meets all four parts of Section 3. The tip pairs meet none of the
 first three: they are carried through cruise producing moments rather than thrust, so they fail
 the second row of Section 3's table, and they are exposed while doing it. This is the partial
-instantiation Section 3 lists as its fourth failure mode, and the charge it re-opens is carried
-in Section 11.
+instantiation Section 3 lists as its **fourth** failure mode — meeting the condition where the
+aircraft is carried and failing it elsewhere — and the charge it re-opens is the second, carried in
+Section 11. *(They are not the second row of Section 3's table: that row concerns a propulsor that
+lifts and is then carried, and the tip pairs do not lift. They produce moments, and Section 3's
+permitted-cost clause places attitude devices outside the first charge while leaving them in the
+airstream.)*
 
 The free-wheeling state is physically determinate: the rotor settles where net shaft torque is
 zero. **The stopped state is not.** Stopping a rotor requires the stop to be produced by
@@ -1257,7 +1311,7 @@ alternative, and this paper's alternatives differ from axis to axis.
 
 | Axis | Opponent | Status |
 |---|---|---|
-| Cruise efficiency and range | Multirotors | **Claimed, and bounded.** Cruise lift is carried on a surface rather than on rotors, which no sizing contract changes. The *size* of the resulting advantage is a calculation, not a consequence of that fact, and Section 6 measures it against two published quadrotors in one common definition. |
+| Cruise efficiency | Multirotors | **Claimed, and bounded.** Cruise lift is carried on a surface rather than on rotors, which no sizing contract changes. The *size* of the resulting advantage is a calculation, not a consequence of that fact, and Section 6 measures it against two published quadrotors in one common definition. |
 | Operation without a runway | Fixed-wing aircraft | **Claimed**, in the sense stated below. |
 | The mechanism required to change regime | Tilting architectures | **Claimed.** This is the paper's contribution. |
 | Cruise efficiency and range | Other hybrids — lift-plus-cruise, tilt | **Not claimed, in either direction.** |

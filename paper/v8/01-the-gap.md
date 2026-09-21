@@ -35,11 +35,12 @@ vertically, hover, and work from confined sites. Their limit is the converse: wi
 every second of flight is bought with installed power, so range and endurance stay modest and
 worsen as the vehicle grows.
 
-**Neither family is deficient.** Each is excellent at what it does and is limited by the price
-of doing it that way. What is unoccupied is the corner where both capabilities are wanted at
-once, and the two applications this work is aimed at sit in that corner: **wildfire observation
-and response, and cargo delivery to places without a runway.** Both want to leave from an
-unprepared site and then cover distance.
+**Neither family is deficient.** Each is excellent at what it does and is limited by the price of
+doing it that way. **The corner where both capabilities are wanted at once is where the two
+applications this work is aimed at sit** — wildfire observation and response, and cargo delivery to
+places without a runway — and both want to leave from an unprepared site and then cover distance.
+**That corner is not empty**, as the rest of this section sets out; what is unsettled is which
+price an architecture in it must pay, and whether one arrangement pays less than it appears to.
 
 ### The demand has been continuous for seventy years
 
@@ -102,10 +103,10 @@ And the reason testing ended is recorded identically in both reviews:
 > *"Six transitions to conventional flight were successfully completed **before testing was
 > curtailed because of engine and gear-box reliability problems**."*
 
-The pilot workload was real, separately documented and severe. **But it is not what curtailed
-the testing, and three of the four recorded objections are objections to 1954 machinery and to
-a human pilot rather than to the configuration**: actuator response rate, gearbox reliability,
-and a spatial-orientation problem that exists only because someone is sitting in the aircraft.
+The pilot workload was real, separately documented and severe. **But it is not what curtailed the
+testing.** The reviews record a longer list of handling and control difficulties than this section
+reproduces, and no attempt is made here to sort them into those that would and would not recur —
+what the record settles is the cause of the curtailment, and that cause was mechanical.
 
 ### What the history does not excuse
 
@@ -114,9 +115,11 @@ outside its configuration, and this paper does not conclude it. **Some of the di
 real, internal, and are inherited here.** A tail-sitting vertical descent is genuinely harder
 than a runway landing. A tail-sitting aircraft on the ground is more exposed to crosswind than a
 conventional one. And a set of propellers whose thrust vectors are all parallel to the body axis
-produces no rolling moment by any combination of thrust settings — which applies to the
-configuration described later exactly as it applied to its predecessors, and which this paper
-addresses rather than avoids.
+produces no rolling moment **by any combination of thrust settings** — which applies to the
+configuration described later exactly as it applied to its predecessors. **The reaction-torque
+channel that other coaxial tail-sitters use about that same axis is a separate matter, and it is a
+choice this configuration declines rather than a limit it inherits; Section 7 says so and Section 9
+says what declining it leaves uncounted.**
 
 What the record does show is that **the obstacle that ended the flying was mechanical**, and
 that one of the documented handling obstacles — the pilot's spatial orientation and workload —
