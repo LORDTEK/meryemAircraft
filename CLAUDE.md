@@ -312,6 +312,25 @@ ailesinden.
 > Aynısı sayılar için zaten var (`verify.py`'nin bayat değer listesi). **İfadeler
 > için yoktu.** Yeni bir ifade emekliye ayrıldığında o listeye de eklenmeli.
 
+**GENİŞLETME, Tur 50 — aynı sınıf ÜÇÜNCÜ kez, ve bu kez bir betik yüzünden.**
+Adım 6'ya *"e = 0,817 kullanılıyor"* yazdım, ama aynı sayfadaki L/D_max sayıları
+11,88 ve 10,28 idi — yani **e = 0,85 değerleri.** Doğrusu 11,65 ve 10,08, ve bunları
+bir tur önce **kendim hesaplamıştım.** Betiği düzelttim; **düzyazıyı düzeltmedim.**
+Üç dış okuyucu bağımsız olarak yakaladı.
+
+> **Bir betik düzeltildiğinde, o betiğin çıktısını alıntılayan HER düzyazı aynı turda
+> yeniden okunur.** Betik artık doğru olduğu için sayının doğru olduğunu varsayma;
+> sayı düzyazıya **elle** kopyalanmıştı ve orada kalır.
+
+**VE ÇEKİNCENİN YERİ. Grok, Tur 50.** Adım 8'in bayat watt'ları bir kez yakalanıp
+etiketlenmişti — ama etiket **Türkçe denetim tablosundaydı.** Dış okuyuculara giden
+pakette o tablolar çıkarılıyor, dolayısıyla okuyucu etiketi **hiç görmedi** ve sayılar
+güncelmiş gibi durdu.
+
+> **Bir çekince yalnız Türkçe denetim tablosunda duruyorsa, İngilizce gövdede yok
+> demektir.** Makaleye girecek her nitelendirme **gövdeye** yazılır. Türkçe tablo
+> yazarın denetimi içindir, okuyucunun uyarısı için değil.
+
 ## 4. Depo
 
 - Geliştirme dalı: `claude/ecstatic-cori-6w30at`. `main` de güncel tutulur.
