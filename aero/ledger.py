@@ -69,12 +69,15 @@ def main():
     print()
 
     # L/D karsiligi
-    print("  Ayni sey L/D olarak (drag_sweep.zincir):")
+    print("  Ayni sey L/D olarak -- TEMIZ GOVDE = toplam EKSI gobek, cerceve, rotor")
+    print("  (DUZELTME Tur 53: olumsuz ucta cikarilanlar da x1,1 tasiyor.")
+    print("   Once marjsiz cikariliyordu ve temiz govde 14,29 gorunuyordu;")
+    print("   dogrusu 15,24. Kapanisa etkisi YOK, carpan bir orandir.)")
     for u, c in (("elverisli", CD0["elverisli"]), ("olumsuz", CD0["olumsuz"])):
-        temiz, carpan = DS.zincir(c)
-        print("    %-10s temiz govde %6.2f -> ucak %6.2f   (korunan %%%.0f, "
-              "Fatura 2 = %%%.0f)" % (u, temiz, temiz * carpan,
-                                      100 * carpan, 100 * (1 - carpan)))
+        temiz, carpan = DS.zincir(c, pay=PAY[u])
+        print("    %-10s temiz govde %6.2f -> ucak %6.2f   (korunan %%%.1f, "
+              "temiz-disi terimler = %%%.1f)" % (u, temiz, temiz * carpan,
+                                                 100 * carpan, 100 * (1 - carpan)))
     print()
     print("  DIKKAT: Fatura 2 ELVERISLI ucta DAHA AGIR. Temiz govde temizlendikce")
     print("  sabit rotor terimi toplamin daha buyuk bir kesri oluyor.")
@@ -131,6 +134,29 @@ def main():
         guc_payi = (r["motor_kW"] / BL.OZGUL_GUC) / r["MTOW"]
         print("    %s: sabit %.3f + guce bagli %.3f = %.3f"
               % (k, BL.F_TAHRIK_SABIT, guc_payi, r["f_tahrik"]))
+    print()
+
+    # ---- TAMPON: bir GIRDI, bir sonuc degil (Grok, Tur 53) ---------------
+    print("TAMPON DENETIMI -- Grok: '3,6 % hala MTOW'un kesri mi?'")
+    print("  Kod: f_tampon MIMARI alani, dongude MTOW'un kesri olarak")
+    print("  uygulanyor. Ama HICBIR YERDE aski enerjisinden turetilmiyor.")
+    print("  Boyutsal olarak tutarli: sabit disk yuklemesinde A ~ W, yani")
+    print("  P_aski ~ W^1.0, aski enerjisi ~ W, sabit kesir dogru mertebe.")
+    print("  AMA tamponun karsiladigi sey P_aski EKSI motorun verebildigi:")
+    print()
+    print("  %-3s %9s %9s %11s %10s" % ("", "acik kW", "acik kW/kg", "tampon kg", "MTOW"))
+    oran = []
+    for k in "ABCD":
+        r = satir[k]
+        acik = r["P_hover"] - r["motor_kW"]
+        okg = acik / r["MTOW"]
+        oran.append(okg)
+        print("  %-3s %9.2f %9.4f %11.2f %10.1f"
+              % (k, acik, okg, 0.036 * r["MTOW"], r["MTOW"]))
+    print()
+    print("  Acik kW/kg %.4f - %.4f, yayilim %%%.0f. Sabit kesir bunu IZLEMIYOR:"
+          % (min(oran), max(oran), 100 * (max(oran) / min(oran) - 1)))
+    print("  en cok tampon gereken kose (D) en kucuk tamponu aliyor.")
 
 
 if __name__ == "__main__":

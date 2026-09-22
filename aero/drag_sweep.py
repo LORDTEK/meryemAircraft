@@ -50,9 +50,22 @@ def ld(cd0):
     return CL / (cd0 + C_DI)
 
 
-def zincir(cd0_toplam, rotorlu=True):
-    """Verilen toplam C_D0 -> (temiz govde L/D, A'nin carpani)."""
-    cikar = CERCEVE + (ROTOR if rotorlu else 0.0)
+def zincir(cd0_toplam, rotorlu=True, pay=1.0):
+    """Verilen toplam C_D0 -> (temiz govde L/D, A'nin carpani).
+
+    DUZELTME, Tur 53. Grok ve DeepSeek bagimsiz olarak ayni hatayi buldu:
+    olumsuz uctaki toplam ZATEN x1,1 marj tasiyor, ama bu fonksiyon cerceve
+    ve rotoru MARJSIZ degerleriyle cikariyordu. Az cikarinca temiz govde
+    fazla kirli goruluyor ve clean L/D dusuk cikiyordu (14,29; dogrusu 15,26).
+
+    KAPANISA ETKISI YOKTU: carpan = ld(toplam)/ld(temiz) ve boyutlandir()
+    LD = LD_temiz * carpan yapiyor, yani carpim ld(toplam)'a sadelesiyor.
+    Hatali olan YALNIZ raporlanan temiz govde orani ve ondan turetilen
+    "korunan yuzde" idi -- ikisi de Adim 11'de.
+
+    pay: o uca uygulanan marj (olumsuz uc 1,1; oteki uclar 1,0).
+    """
+    cikar = (CERCEVE + (ROTOR if rotorlu else 0.0)) * pay
     return ld(cd0_toplam - cikar), ld(cd0_toplam) / ld(cd0_toplam - cikar)
 
 
