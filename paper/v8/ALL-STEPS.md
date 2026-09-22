@@ -1668,9 +1668,11 @@ the closed numbers, and how large it is there.**
 ### What this section does, and the one thing it must not do
 
 **It attributes. It does not add.** Every cost named below is already inside the closure of
-Section 10 — in the drag bracket, in the propeller efficiency, in the empty-mass fraction, in
-the engine rating. **Adding any of them again would be double counting**, and the numbers that
-follow are decompositions of quantities already reported rather than new charges on top of them.
+Section 10 — in the drag bracket, in the propeller efficiency, in the empty-mass fraction, in the
+engine rating. **No new physical cost term is introduced here.** The shares, ratios and
+percentages below are new calculations, but each is a decomposition or a derived measure of a
+quantity the closure already reported, and adding any of them again as a separate charge would be
+double counting.
 
 **Two kinds of item appear, and the difference is stated rather than smoothed over.** Some
 costs were computed per source and can be split: the drag build-up has named terms, and the
@@ -1678,10 +1680,15 @@ mass fractions were solved separately. Others are inside a single computed quant
 study did not separate them**; saying otherwise would invent a decomposition that was never
 performed. Each is marked.
 
-**And there is no single figure for what the architecture costs.** The three charges are in
-three different currencies — kilograms, drag counts, installed kilowatts — and a reader who
-wants one number would have to be given a weighting this work has no basis for choosing. **The
-ledger reports three quantities and refuses to collapse them.**
+**And there is no single figure for what the architecture costs.** The three charges are in three
+different currencies — kilograms, drag counts, installed kilowatts — and **no scalar aggregate is
+defined, because this study has no defensible weighting between them.**
+
+**The refusal has an address, and saying where it points is what keeps it from reading as an
+unfinished cost section.** These three quantities become one number only under a sizing contract,
+and that is Section 13: **the total is the contract, not a property of the aircraft.** For a
+specific mission a designer weights them against that mission's own constraints. **Reporting them
+is this paper's job; the weighting belongs to whoever has the mission.**
 
 ### Bill 2 — the drag of hover hardware, inside the bracket
 
@@ -1695,25 +1702,45 @@ The zero-lift drag coefficient of Section 10 is a build-up with named terms. Spl
 | **Attitude rotors, free-wheeling** | **0.0154** | **0.0169** |
 | Total | 0.0285 | 0.0381 |
 
-*(The adverse end carries a ten percent margin applied to the whole build-up, which is why
-every term differs between the columns.)*
+*(The two columns differ for two separate reasons, and a reader dividing cells should know which
+is which. The clean surface and the hub are where the drag bracket itself lives, so their base
+values differ between the ends. On top of that, the adverse end carries a ten percent margin
+applied to the whole build-up. The frames and rotors have the same base value at both ends and
+differ only by that margin. **No line item at the adverse end is an independent measurement**, and
+they should not be subtracted from one another as if they were.)*
 
-**The hover hardware is 69 percent of the zero-lift drag at the favourable end and 57 percent
-at the adverse one.** The frames and the rotors they carry are the majority of the aircraft's
-zero-lift drag in both cases, and the rotors alone are more than half of it at the favourable
-end. **That is Bill 2 on this aircraft, in the terms Section 2 defined it.**
+**The hardware exposed by the vertical-phase layout is 69 percent of the zero-lift drag at the
+favourable end and 57 percent at the adverse one.** The frames and the rotors they carry are the
+majority of the aircraft's zero-lift drag in both cases, and the rotors alone are more than half
+of it at the favourable end. **That is Bill 2 on this aircraft, in the terms Section 2 defined
+it** — and the phrase is "exposed by the vertical-phase layout" rather than "dedicated lift group",
+because Section 7 is precisely the claim that there is no dedicated lift group here.
 
-The same statement as a lift-to-drag ratio: removing the frames and the rotors gives a
-clean-body ratio of **20.55** at the favourable end and **14.29** at the adverse one, against
-the aircraft's **10.82** and **8.79**. **The configuration retains 53 percent of its clean-body
-lift-to-drag ratio at the favourable end and 62 percent at the adverse one.**
+**The tip-frame term is an attribution, not a marginal removal cost.** Section 8 gives the frames
+four duties: landing gear, control moment arms, rotor support, and the fairing that is the
+aircraft's only vertical surface. Their drag is charged to the hover-related hardware set because
+that is the set the ledger is decomposing; **it is not a claim that this drag would disappear if
+the vertical phase did**, since the landing and directional duties would still have to be met
+somehow.
 
-**That ordering is the opposite of the one intuition offers, and it is worth stating plainly.**
-Bill 2 is *heavier* where the rest of the aircraft is cleaner. The rotor term barely moves
-between the two ends, while the clean surface nearly doubles; so at the favourable end a
-near-constant charge is levied against a smaller total, and it takes a larger share. **An
-architecture that improved its clean-body drag without touching its exposed rotors would find
-this charge growing as a fraction, not shrinking.**
+The same statement as a lift-to-drag ratio. **Removing all three non-clean-body terms — the hub
+and small items, the tip frames and the free-wheeling rotors** — gives a clean-body ratio of
+**20.55** at the favourable end and **15.24** at the adverse one, against the aircraft's **10.82**
+and **8.79**. **The configuration retains 52.6 percent of its clean-body lift-to-drag ratio at the
+favourable end and 57.7 percent at the adverse one**, so the non-clean-body terms remove 47.4 and
+42.3 percent respectively, with the frames and rotors the large majority of what is removed.
+
+**That ordering is the opposite of the one intuition offers, and the word that carries it has to
+be exact.** Bill 2 has a **larger fractional burden where the clean-body drag is lower.** In
+absolute counts it runs the other way — the frames and rotors are 0.0197 at the favourable end and
+0.0216 at the adverse one — but the clean surface nearly doubles between the ends while that
+charge moves by a tenth, so a near-constant charge is levied against a smaller total and takes a
+larger share of it. **An architecture that improved its clean-body drag without touching its
+exposed rotors would find this charge growing as a fraction, not shrinking.**
+
+**This is a statement about position within the drag bracket at one scale.** Section 12 asks a
+different question — how the same charge behaves as the aircraft changes size — and the two
+answers are about different axes rather than in tension.
 
 **One term inside Bill 2 is not separated, and it is not small in principle.** The build-up
 computes each item on its own. **Rotor–structure and rotor–wing interference is not modelled
@@ -1722,19 +1749,21 @@ assuming negligible rotor–structure interaction *"always predicts higher lift 
 were experimentally observed"*; this build-up is such a calculation, and the bracket's upper margin
 is the only provision made for it.
 
-### The price of fixed pitch, inside the propeller efficiency
+### The cruise-efficiency gap under fixed pitch
 
-Section 10's closures run at a cruise propeller efficiency of 0.632 to 0.683, against the 0.80
-the published chain assumed. **That gap — 14.6 percent at the better blade and 21.0 percent at
-the worse — is the price of refusing the variable-pitch hub**, paid by one blade geometry
-serving a hovering condition and a cruising one.
+Section 10's closures run at a cruise propeller efficiency of 0.632 to 0.683, against the 0.80 the
+published chain assumed. **Relative to that assumption the four fixed-blade closures are 14.6
+percent lower at the better blade and 21.0 percent lower at the worse.**
 
-**It is not decomposed, and it should not be read as though it were.** How much of the gap is
-blade twist, how much is section drag at the cruise inflow angle, and how much is the operating
-point itself, this work does not say. **The statement the ledger can make is that the computed
-efficiency is what a blade meeting the hover figure of merit delivers in cruise, and that the
-published assumption was optimistic by that margin.** Anything finer would be a decomposition
-that was never performed.
+**The ledger does not attribute the whole of that gap to the absence of variable pitch**, and the
+distinction matters. What has been shown is that a blade meeting the hover figure of merit
+delivers 0.632 to 0.683 in cruise, and that the published assumption was optimistic by that
+margin. **No variable-pitch counterfactual was computed**, so nothing here establishes that a
+variable-pitch hub would recover the whole difference to 0.80.
+
+**Nor is the gap decomposed.** How much of it is blade twist, how much is section drag at the
+cruise inflow angle, and how much is the operating point itself, this work does not say. Anything
+finer would be a decomposition that was never performed.
 
 ### Bill 1 — carried mass, and what it is on this configuration
 
@@ -1750,9 +1779,18 @@ Whether that trade is favourable is what the closure tests, and the closure is w
 is: the engine it buys is 3.54 to 5.17 kW rather than one sized by a hover peak of 11.4 to
 12.5 kW.
 
-The rest of the empty-mass fraction, for completeness, is airframe 0.300 and avionics 0.080,
-both held common across architectures by Section 10's construction, and propulsion 0.176 to
-0.198.
+**The buffer fraction is an input to the loop, not a result of it**, and the closure does not
+re-derive it from the hover energy the four corners actually need. Dimensionally a fixed fraction
+is the right form: at constant disc loading the disc area grows with weight, so hover power is
+linear in weight and hover energy with it. **But what the buffer supplies is the hover power minus
+what the engine can deliver, and that deficit is not linear.** Across the four closures it runs
+from 0.128 to 0.150 kW per kilogram — a spread of 17 percent — while the buffer fraction is held
+at 3.6 percent throughout. **The corner that needs the most buffer per kilogram is given the
+smallest buffer**, and that is a declared assumption of the closure rather than an outcome of it.
+
+The rest of the empty-mass fraction, for completeness: airframe 0.300 and avionics 0.080 are
+**construction constants held common across the three architectures** so that Section 13 compares
+like with like — they are not results of this ledger — and propulsion runs 0.176 to 0.198.
 
 ### Bill 3 — released from the engine, and not from the electrical path
 
@@ -1791,13 +1829,17 @@ study has not posed, and the other is a term the study's method is known to unde
 
 ### What the ledger amounts to
 
-**Three charges, three currencies, no total.** Bill 2 takes 38 to 47 percent of the clean-body
-lift-to-drag ratio and is the majority of the zero-lift drag. Bill 1 appears as a 3.6 percent
-buffer rather than a lift group. Bill 3 is divided by 2.4 to 3.2 at the engine and is not
-divided at all on the electrical path. **Refusing the variable-pitch hub costs 14.6 to 21.0
-percent of cruise propeller efficiency.**
+**Three charges, three currencies, no total.** The non-clean-body drag terms remove 42.3 to 47.4
+percent of the clean-body lift-to-drag ratio, and the hardware exposed by the vertical-phase
+layout is the majority of the zero-lift drag. Bill 1 appears as a 3.6 percent buffer rather than a
+lift group. Bill 3 is divided by 2.4 to 3.2 at the engine and is not divided at all on the
+electrical path. **The cruise propeller efficiency sits 14.6 to 21.0 percent below the published
+assumption under fixed pitch.**
 
-**None of those numbers is new here.** Every one was already inside a quantity Section 10
+**No charge on this page is a new one.** Every figure was already inside a quantity Section 10
 reported, and this section's only work has been to say which part of which quantity it was.
-Section 12 asks whether the three separate with scale, and Section 13 asks what happens to the
-comparison when the sizing contract changes.
+
+**And every one of them belongs to one scale.** The four closures vary the drag uncertainty and
+the blade-family choice at the reference size; **they do not establish how the three charges
+behave as the aircraft changes size.** Section 12 tests that separation directly, and Section 13
+asks what happens to the comparison when the sizing contract changes.
