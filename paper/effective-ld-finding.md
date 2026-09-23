@@ -627,3 +627,45 @@ eyleyici kütlesi, uç çiftlerine bağlı kalkış marjı). `paper/deferred-dec
 Q1–Q3 kullanışlıydı; kuruluş sınamasını bir güç olarak adlandırması yerindeydi. **Q4 ve Q5 yine
 döngüye girdi** — aynı paragrafı beş altı kez tekrarlayıp *"OK, I think I'm overcomplicating
 this"* diyerek yeniden başladı. Bu, üst üste ikinci tur.
+
+---
+
+# Tur 54 — Adım 12 yazılırken: iskeletin vaadi daraldı
+
+## 1. Fatura 1 ölçekte SINANAMIYOR — tampon her iki ölçekte de girdi
+
+İskelet Adım 12'ye *"üç para biriminin gerçekten üç olduğunun kanıtı"* diyordu. v7 §3.9 *"the
+mass bill rises"* diyor ve tamponu %3,6 → %4,0 veriyor.
+
+**Denetlendi: ikisi de girdi.** `aero/mass.py` tamponu `m_pil` parametresi olarak alıyor
+(varsayılan 1,8 kg); `baseline.py` `f_tampon` olarak. **Hiçbir kod tamponu askı enerjisinden
+türetmiyor.** Adım 11'de Grok'un şüphesiyle hafif ölçek için bulunan şey, ağır ölçekte de aynı.
+
+**Sonuç:** %3,6 → %4,0 iki seçim arasındaki fark, bir ölçekleme sonucu değil. **Üç faturadan
+yalnız ikisi ölçekte sınanabiliyor** — Fatura 2 düşüyor (hesaplandı), Fatura 3 %5 içinde tutuluyor
+(tasarım kuralıyla). Ayrışma bu ikisi arasında gösteriliyor; Fatura 1 sınanmamış.
+
+**Ve kabuk kütlesi yerine konmuyor:** gövde her mimarinin taşıdığı yapıdır, Adım 2'nin Fatura 1'i
+değil. Onu *"kütle faturası"* saymak tanımı sınava uydurmak olurdu.
+
+**Tamponu türetmek mümkün ama yapılmadı** — o, batarya özgül gücü sorusuna, yani Adım 14'ün 3,8×
+paragrafına girer. Grok'un şartı korunuyor.
+
+## 2. v7'nin üç haneli uyumu doğrulanamadı
+
+v7 §3.9: *"solidity falls from 0.075 to 0.044 … Their product, 1.73 × 1.78 = 3.08, is the
+predicted ratio; the computed ratio is 3.04."*
+
+- 0,075 / 0,044 = **1,70**, 1,73 değil. Çarpım **3,03**, 3,08 değil.
+- 0,075 ve 0,044 **hiçbir betik çıktısında yok** — yalnız v7 düzyazısında (`grep` ile arandı).
+- v7'nin kendisi hesaplanan oranın aralık boyunca 2,08–4,40 oynadığını söylüyor.
+
+**Adım 12 üç haneli uyumu iddia etmiyor.** Mekanizma, yön ve mertebe veriliyor; oran *"yaklaşık
+üç"*. §4 gereği gövdede *"v7 şöyle diyordu"* anlatısı yok; tutarsızlık yalnız burada kayıtlı.
+
+## 3. Ağır tasarım menzili hiç verilmiyor
+
+Elimizdeki her ağır menzil bir bakımdan kısmi: 1.814 km (rotor yüklenmemiş, η_p 0,80), 1.571 km
+(rotor yüklenmiş, η_p 0,80), 1.398–1.517 km (η_p yeniden çözülmüş, rotor yüklenmemiş). **İkisini
+birden taşıyan kapanış yok.** Adım 12'nin ihtiyacı da yok — ayrışma güçler, yüklemeler ve
+sürükleme terimleriyle gösteriliyor.

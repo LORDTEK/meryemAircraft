@@ -35,6 +35,10 @@ Bunlar karar değil, **yapılmamış iş.** Adım 14'ün malzemesi.
 - **İniş geçişi.** İleri geçişle simetrik değil; hiçbir şekil tarif etmiyor.
 - **Geçiş yunuslama momenti.** Üç yöntem üç aslılıkta ~10° üstünde sapıyor; ölçüme ait.
 - **Motor yerleşimi, hava alışı, soğutma.** Makalede hiç yok (arandı).
+- **Tamponu askı enerjisinden türetmek.** Tampon her iki ölçekte de GİRDİ (%3,6 / %4,0);
+  hiçbir kod onu askı enerjisinden türetmiyor. Bu yüzden Fatura 1 ölçekte sınanamıyor (Adım 12)
+  ve hafif ölçekte açık kW/kg %17 oynarken sabit kalıyor (Adım 11). Türetmek batarya özgül gücü
+  sorusuna girer — **Adım 14'ün 3,8× paragrafıyla birlikte ele alınmalı.**
 - **İrtifa.** Hesaplar deniz seviyesinde; NASA karşılaştırması 5.000 ft + ISA+20°C'de.
   Seyir karşılaştırmasına etkisinin **yönü hesaplanmadı.**
 
