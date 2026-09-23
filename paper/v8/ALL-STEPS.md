@@ -179,8 +179,11 @@ that costs, and what the rest of the combination costs, is what the paper is for
 **None of the elements is new**, and Section 7 says so. Tail-sitting aircraft are seventy years
 old and uncrewed ones are ordinary; blended wing bodies have been a standing subject of transport
 research for three decades; series-hybrid propulsion has established precedent in small uncrewed
-aircraft. **What this paper offers is the combination, the consequences of the choices inside it,
-and an accounting of what they cost** — not a claim that the route was waiting to be found.
+aircraft. **The contribution is the architecture: a configuration arranged to change regime by
+rotating the airframe rather than its propulsors, and so carrying no mechanism that reorients a
+propulsor.** The combination, the consequences of the choices inside it, and an accounting of what
+they cost are how that contribution is presented and priced — not a claim that the route was
+waiting to be found.
 
 Section 2 states the cost that any architecture in this corner pays, in terms that do not
 presume an escape.
@@ -1436,9 +1439,9 @@ with no mechanism that reorients a propulsor, and an account of what the combina
 Each half of that has a named opponent and neither half is a record. **Nor is the configuration
 claimed to be without precedent**: Section 1 sets out what is already established, including
 uncrewed tail-sitters, tail-sitters without control surfaces, coaxial contra-rotating
-tail-sitter propulsion, and blended-wing-body tail-sitters. **What this paper offers is the
-combination, the consequences of the choices inside it, and the accounting** — which is what
-Sections 7 and 8 describe and what Section 11 prices.
+tail-sitter propulsion, and blended-wing-body tail-sitters. **The contribution is the
+architecture, and the paper presents it as the combination, the consequences of the choices inside
+it, and the accounting** — which is what Sections 7 and 8 describe and what Section 11 prices.
 
 ### One consequence for how the numbers that follow should be read
 
@@ -1450,6 +1453,9 @@ what it demands of anyone who uses the framework afterwards.
 ---
 
 ## Analytical closure of the sizing loop
+
+This section prices the arrangement of Sections 7 and 8 on a declared package; it does not bear on
+the count of mechanism classes, which rests on the inventory of those sections alone.
 
 **Closing a sizing loop mathematically is not the same thing as closing an aircraft
 physically.** This section does the first. What it produces is a set of consistent numbers
@@ -1673,7 +1679,8 @@ where it is made.
 
 Section 2 named three charges that any architecture in this corner pays. Section 10 closed a
 sizing loop. **This section puts the two together: it says where each charge appears inside
-the closed numbers, and how large it is there.**
+the closed numbers, and how large it is there.** Like the closure, the ledger prices the
+arrangement; the count of mechanism classes is not an entry in it.
 
 ### What this section does, and the one thing it must not do
 
@@ -1870,7 +1877,8 @@ Section 11 decomposed the three charges on one aircraft, at one size. **This sec
 different question: are they three quantities, or one quantity under three names?** The test is
 to change the size of the aircraft and see whether they move together. If they did, the framework
 of Section 2 would be a single cost described three ways, and a ledger in three currencies would be
-a ledger in one.
+a ledger in one. Either answer leaves the mechanism claim where it was; that claim rests on the
+inventory of Sections 7 and 8.
 
 **The test is deliberately weak, and it is stated at its own strength.** It can show that two
 charges are not locked together within this model. It cannot show that they are independent in
@@ -2092,7 +2100,9 @@ consequence: where one architecture pays less of one charge and more of another,
 on how the charges are weighed. **A sizing contract is one such weighing.** It fixes what is held
 equal between the architectures being compared, and what is held equal decides how a difference in
 mass is set against a difference in cruise efficiency. This section applies three contracts to three
-architectures at each of the four closures of Section 10.
+architectures at each of the four closures of Section 10. **The mechanism claim is not a ranking
+and is not at stake here**; what is at stake is how the price computed in Sections 10 and 11 enters
+a comparison with other architectures.
 
 ### Three contracts, and what each holds equal
 
