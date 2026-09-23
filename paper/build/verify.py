@@ -185,6 +185,16 @@ if _g:
         esit("Adim 10 %s, ust uc (en agir kapanis)" % _ad, _f(_m_hi), _v[_i + 1], tol=0.006)
     esit("ESKI alt uc 1.98 denetimi GECEMIYOR (ayrim sinamasi)",
          1.0 if abs(_S(_m_lo) - 1.98) / 1.98 > 0.006 else 0.0, 1.0, tol=0.001)
+    # Tur 60: uc donanimi referans boyutta kalsaydi terimin kuculmesi
+    _u = re.search(r"smaller across the four closures — ([\d.]+) to ([\d.]+) of zero-lift drag", _a10)
+    _k_lo = 0.0197 * (1 - 1.979 / _S(_m_lo))    # D, elverisli uc
+    _k_hi = 0.0216 * (1 - 1.979 / _S(_m_hi))    # A, olumsuz uc
+    if _u:
+        esit("Adim 10 uc donanimi, en kucuk Delta C_D0", _k_lo, float(_u.group(1)), tol=0.06)
+        esit("Adim 10 uc donanimi, en buyuk Delta C_D0", _k_hi, float(_u.group(2)), tol=0.03)
+    else:
+        print("  ** Adim 10 uc donanimi cumlesi BULUNAMADI, BU BIR KUSURDUR")
+        hatalar.append(("Adim 10 uc donanimi cumlesi", 0, 0, 1))
 else:
     print("  ** Adim 10 geometri cumlesi BULUNAMADI, BU BIR KUSURDUR")
     hatalar.append(("Adim 10 geometri cumlesi", 0, 0, 1))
