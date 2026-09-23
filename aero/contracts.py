@@ -22,7 +22,8 @@ TABAN (her biri ilan edilir, hicbiri olculmedi):
   * B'nin ek tahrik grubu %10, C'nin egme mekanizmasi %5: parametre.
 
 DUYARLILIK: (a) hepsi A'nin eta_p'si (karsi-olgusal), (b) B'nin ek grubu
-%5 / %15, (c) B'nin cezasi carpan yerine SABIT C_D artisi olarak.
+%5 / %15, (c) B'nin cezasi carpan yerine SABIT C_D artisi olarak, (d) rakipler
+tamponsuz ve motorlari askiya boyutlu (yalniz yon icin; Adim 13 kullanmaz).
 
 Sonuc: aero/contracts-result.txt
 """
@@ -50,13 +51,16 @@ def b_artis_carpani(ld_temiz):
     return cd_temiz / (cd_temiz + dcd)
 
 
-def kos(cd0, eta_A, eta_BC=0.80, f_grup=0.10, b_artis=False):
+def kos(cd0, eta_A, eta_BC=0.80, f_grup=0.10, b_artis=False, tampon_rakip=True):
     pay = 1.1 if abs(cd0 - 0.0381) < 1e-9 else 1.0
     ld_temiz, a_carpan = DS.zincir(cd0, rotorlu=True, pay=pay)
     ms = BL.mimariler(f_kaldirma_grubu=f_grup, f_tampon=0.036)
     ms[0].LD_carpan = a_carpan
     ms[1].LD_carpan = b_artis_carpani(ld_temiz) if b_artis else B_CARPAN
     ms[2].LD_carpan = 1.00
+    if not tampon_rakip:                 # (d) rakipler tamponsuz, motor askiya boyutlu
+        for m in ms[1:]:
+            m.f_tampon, m.motor_hover = 0.0, True
     gs = (gorev_ile(eta_A), gorev_ile(eta_BC), gorev_ile(eta_BC))
     ref = BL.boyutlandir(ms[0], ld_temiz, g=gs[0])
     m_yakit = BL.ORTAK["f_yakit"] * ref["MTOW"]
@@ -77,9 +81,9 @@ def fark(out, s, i):
 
 def kapanis_tablosu(etiket, **kw):
     print(etiket)
-    print("%-3s %-7s %-6s | %8s %8s %8s | %8s %8s %8s | %8s %8s"
+    print("%-3s %-7s %-6s | %8s %8s %8s | %8s %8s %8s | %8s %8s | %7s"
           % ("", "C_D0", "eta_A", "B/A s1", "B/A s2", "B/A s3",
-             "C/A s1", "C/A s2", "C/A s3", "mB/mA", "mC/mA"))
+             "C/A s1", "C/A s2", "C/A s3", "mB/mA", "mC/mA", "kayma"))
     satirlar = []
     for k, dk, ek in KAPANISLAR:
         cd0, eA = CD0[dk], ETA_P[ek]
@@ -89,17 +93,23 @@ def kapanis_tablosu(etiket, **kw):
         mb = out[(1, 1)]["MTOW"] / out[(1, 0)]["MTOW"]
         mc = out[(1, 2)]["MTOW"] / out[(1, 0)]["MTOW"]
         satirlar.append((k, fb, fc, mb, mc))
-        print("%-3s %-7.4f %-6.3f | %+7.1f%% %+7.1f%% %+7.1f%% | %+7.1f%% %+7.1f%% %+7.1f%% | %8.3f %8.3f"
-              % (k, cd0, eA, *fb, *fc, mb, mc))
+        print("%-3s %-7.4f %-6.3f | %+7.1f%% %+7.1f%% %+7.1f%% | %+7.1f%% %+7.1f%% %+7.1f%% | %8.3f %8.3f | %7.1f"
+              % (k, cd0, eA, *fb, *fc, mb, mc, fb[0] - fb[2]))
     return satirlar
 
 
 def isaret_ozeti(satirlar, ad):
     for j, isim in ((1, "B"), (2, "C")):
         for s in range(3):
-            v = [r[j][s] for r in satirlar]
+            v = [r[j][s] for r in satirlar if r[j][s] == r[j][s]]
+            kap = sum(1 for r in satirlar if r[j][s] != r[j][s])
+            if not v:
+                print("   %s, sozlesme %d: HICBIR KAPANISTA KAPANMADI" % (isim, s + 1))
+                continue
             ok = "B onde" if all(x > 0 for x in v) else (
                 "A onde" if all(x < 0 for x in v) else "ISARET DEGISIYOR")
+            if kap:
+                ok += "  (%d kapanista rakip KAPANMADI)" % kap
             print("   %s, sozlesme %d: %+6.1f .. %+6.1f %%  -> %s"
                   % (isim if isim == "B" else "C", s + 1, min(v), max(v),
                      ok.replace("B onde", "%s onde" % isim)))
@@ -186,3 +196,14 @@ if __name__ == "__main__":
     t = kapanis_tablosu("(c) B'nin cezasi SABIT C_D artisi (13/17'nin temiz L/D 17'deki degeri)",
                         b_artis=True)
     isaret_ozeti(t, "c")
+
+    print("=" * 96)
+    print("(d) RAKIPLER TAMPONSUZ -- motor askiya boyutlu (Fatura 3 ortak TUTULMAZSA)")
+    print("    Adim 13'te KULLANILMIYOR: A'nin %3,6'lik tamponu Adim 14'un sorusu.")
+    print("    Yalniz YON icin: ortak tampon secimi kimin aleyhine?")
+    t = kapanis_tablosu("", tampon_rakip=False)
+    for k, dk, ek in KAPANISLAR:
+        _, _, out = kos(CD0[dk], ETA_P[ek], tampon_rakip=False)
+        print("  %s  MTOW (s1): A %.1f  B %.1f  C %.1f kg" % (k, out[(1, 0)]["MTOW"],
+              out[(1, 1)]["MTOW"], out[(1, 2)]["MTOW"]))
+    isaret_ozeti(t, "d")
