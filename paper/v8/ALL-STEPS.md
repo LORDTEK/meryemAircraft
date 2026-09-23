@@ -1057,7 +1057,7 @@ of them supplies it alone:
   so that it is sized by cruise rather than by a condition holding for about two percent
   of the flight.
 
-The change of regime is then made by **rotating the airframe**. The propulsors hold
+The configuration is arranged to change regime by **rotating the airframe**. The propulsors hold
 their orientation relative to the body from take-off to cruise; what changes is the
 orientation of the body relative to the flight path. A tilting architecture reaches the
 same end by turning its propulsors instead, which requires a pivot and an actuator and
@@ -1299,14 +1299,14 @@ the aircraft's zero-lift drag. Both ends are computed rather than assumed and th
 in Section 11.
 
 **These are the parts that fail the escape condition**, and naming them here is the point of
-listing them. The nose pair meets all four parts of Section 3. The tip pairs meet none of the
-first three: they are carried through cruise producing moments rather than thrust, so they fail
-the second row of Section 3's table, and they are exposed while doing it. This is the partial
+listing them. The nose pair meets all four parts of Section 3. The tip pairs do not: they hold
+one orientation, but they are carried through cruise producing moments rather than cruise thrust,
+which is the first of Section 3's failure modes, and they are exposed while doing it. This is the partial
 instantiation Section 3 lists as its **fourth** failure mode — meeting the condition where the
 aircraft is carried and failing it elsewhere — and the charge it re-opens is the second, carried in
-Section 11. *(They are not the second row of Section 3's table: that row concerns a propulsor that
-lifts and is then carried, and the tip pairs do not lift. They produce moments, and Section 3's
-permitted-cost clause places attitude devices outside the first charge while leaving them in the
+Section 11. *(They are not the second row of Section 3's table: that row concerns a propulsor whose
+duty is to lift and which is then carried. The tip pairs are sized for moments; they add the
+take-off margin (Section 5), but they were not sized for weight support, and Section 3's permitted-cost clause places attitude devices outside the first charge while leaving them in the
 airstream.)*
 
 The free-wheeling state is physically determinate: the rotor settles where net shaft torque is
@@ -1366,7 +1366,7 @@ survive, and the dependencies are short enough to list.
 | Elimination of the propulsor-reorientation mechanism class | the drag bracket, the propeller efficiency, the sizing contract, the range result, the energy store, **and the transition aerodynamics** |
 
 **The last row carries a distinction that matters more than the others.** The mechanism claim is
-a statement about what hardware is present, and it is settled by the inventory in Section 8. **The
+a statement about what hardware is present, and it is settled by the inventory of Sections 7 and 8. **The
 separate claim that this aircraft can actually perform the regime change is not settled**, and it
 depends on exactly the aerodynamics that Sections 6 and 14 describe as unreliable above roughly
 ten degrees of incidence — the band the rotation passes through. **Section 7 should be read under
@@ -1511,8 +1511,8 @@ that efficiency separately.
 **The sizing rules that keep that ratio valid as the mass moves are worth stating, because they
 also say what the four closures are geometrically.** The loop holds **wing loading, disc loading
 and aspect ratio** fixed, so area, span and disc diameter follow the mass: across the four
-closures the wing area runs 1.98 to 2.27 m², the span 3.45 to 3.70 m, and the nose disc diameter
-1.20 to 1.29 m. **The cruise lift coefficient is unchanged at 0.450 in every one of them**, so the
+closures the wing area runs 2.07 to 2.27 m², the span 3.53 to 3.70 m, and the nose disc diameter
+1.23 to 1.29 m. **The cruise lift coefficient is unchanged at 0.450 in every one of them**, so the
 lift-to-drag ratio is an input that stays valid at the closed mass rather than one frozen at a mass
 the loop has left behind. Had wing **area** been held fixed instead, the lift coefficient would
 have risen with the closed mass, the induced term would have moved against the heavier closures,
@@ -1807,7 +1807,7 @@ is the right form: at constant disc loading the disc area grows with weight, so 
 linear in weight and hover energy with it. **But what the buffer supplies is the hover demand less
 what the engine can deliver, and that deficit is not linear.** Taken at the electrical bus, where
 the buffer sits — rotor shaft power divided by the machine and power-electronics efficiencies, less
-the engine's shaft power times the generator's — it runs from 0.168 to 0.188 kW per kilogram across
+the engine's shaft power times the generator's — it runs from 0.168 to 0.188 kW per kilogram of take-off mass across
 the four closures, a spread of 12 percent, while the buffer fraction is held at 3.6 percent
 throughout. **The corner that needs the most buffer per kilogram is given the
 smallest buffer**, and that is a declared assumption of the closure rather than an outcome of it.
@@ -1890,16 +1890,16 @@ changes. The two answers are about different variables and do not bear on each o
 
 ### What is compared, and why it is these two points
 
-**Section 10 closed only the light design, at 52.3 to 57.5 kg. No closure was run at 1 000 kg**, and
+**Section 10 closed only the light configuration, at 52.3 to 57.5 kg. No closure was run at 1 000 kg**, and
 none could be run on the same footing: the heavy design has neither a drag bracket nor a structural
 closure (both below). A scale comparison therefore cannot be made from Section 10's closures. **It
-is made between the two reference designs, 50 kg and 1 000 kg, sized by one method, and both ends are
-taken from that pair.** Taking one end from Section 10 and the other from the reference pair would manufacture a scale
+is made between the two reference designs, 50 kg and 1 000 kg, sized by one method, and both ends are taken from that pair.** In this section *the light design* and *the heavy design* mean
+those two reference designs. Taking one end from Section 10 and the other from the reference pair would manufacture a scale
 change that is really a propeller-efficiency update applied to one end only.
 
 **The quantities used are ones Section 10 did not replace.** Disc loading is a sizing rule
-Section 10 holds. The buffer fraction is an input to its loop. The free-wheeling rotor term is the
-value Section 10 carries at both ends of its bracket at 50 kg, and it is computed here at 1 000 kg by
+Section 10 holds. The buffer fraction is an input to its loop. The free-wheeling rotor term is the value Section 10 carries at both ends of its bracket at 50 kg,
+before the ten percent margin of the adverse end (Section 11), and it is computed here at 1 000 kg by
 the same method. **The total zero-lift drag, the propeller efficiency, the range and the closed mass
 are not used.** No heavy-design range is quoted: the figures available for it either omit the
 free-wheeling rotor charge or carry an assumed rather than a computed propeller efficiency, and none
@@ -1928,7 +1928,9 @@ a factor of twenty in mass by a single sizing choice.
 **The measure Section 11 uses for Bill 3 — rotor-shaft hover power divided by engine shaft rating, a
 ratio of installed hardware rather than a deficit — carries a second quantity, and it does not travel
 as cleanly.** The ratio is 4.19 at the light design and 3.98 at the
-heavy, a change of 5 percent. But the engine is sized by cruise, not by disc loading, and **the two
+heavy, a change of 5 percent. *(Section 11's 2.4 to 3.2 is the same ratio at the four closures; their
+cruise engines, 3.54 to 5.17 kW, are larger than the light reference design's 2.6 kW, and the engine
+rating is a quantity Section 10 did replace. This paragraph compares the reference pair only.)* But the engine is sized by cruise, not by disc loading, and **the two
 reference designs do not use the same engine margin**: the engine is rated at 1.53 times cruise
 electrical power at 50 kg and 1.39 times at 1 000 kg. With the light design's margin at both sizes the
 heavy engine would be 60.0 kW and the ratio 3.61, a change of 14 percent. **The Bill 3 ratio therefore
@@ -2316,8 +2318,8 @@ then what is not known.
 **Every closure in Section 10 carries a buffer of 3.6 percent of take-off mass.** That figure is an
 input, not a result (Sections 11 and 12). What it implies can be computed. Taken at the electrical bus,
 where the buffer sits — the rotor demand divided by the machine and power-electronics efficiencies, less
-what the engine delivers through its generator — **the four closures ask the buffer for 4.7 to 5.2 kW
-per kilogram to hover, and 5.5 to 6.1 kW per kilogram to leave the ground** with the tip pairs at full
+what the engine delivers through its generator — **the four closures ask the buffer for 4.7 to 5.2 kW per kilogram of buffer to hover, and 5.5 to 6.1
+kW per kilogram of buffer to leave the ground** with the tip pairs at full
 thrust, which is where the take-off margin comes from (Section 5).
 
 **What has been measured is a fraction of that, and the figures available are of three different
@@ -2365,7 +2367,7 @@ its price depends on a component whose required performance has not been demonst
 ### What the obstacle reaches, and what it does not
 
 **It reaches every number that describes this aircraft at Section 10's masses.** The closed masses of
-52 to 58 kg and the 13 kg payload assume the store. The ranges of 927 to 1 233 km survive the
+52.3 to 57.5 kg and the 13 kg payload assume the store. The ranges of 927 to 1 233 km survive the
 re-closure only because the fuel fraction is held, on an aircraft three-quarters heavier; they do not
 survive as 13 kg carried that far on a store that has been built. The vertical phase that Section 5
 reports as sized was sized with this store in it. And Section 13's orderings were computed with the
@@ -2411,8 +2413,8 @@ all.
 
 **The loop closes; the aircraft is not shown to.** At the energy store the paper can name the gap
 exactly, in specific power and in take-off mass. Everywhere else it can name only what would settle the
-question. **The architecture claim — that the regime change is made with no mechanism that reorients a
-propulsor — is a count of hardware, and nothing in this section reaches it.** What this section reaches
+question. **The architecture claim — that the configuration is arranged to change regime with no mechanism that
+reorients a propulsor — is a count of hardware, and nothing in this section reaches it.** What this section reaches
 is the aircraft, and the paper has not claimed the aircraft.
 
 The last section returns to the four axes of Section 9 and states what is claimed on each.
@@ -2448,7 +2450,8 @@ aircraft on range or cruise efficiency, where they are the better machines.
 
 ### The mechanism required to change regime, against tilting architectures — the contribution
 
-**The regime change is made by rotating the airframe rather than the propulsors.** The propulsors hold
+**The configuration is arranged to change regime by rotating the airframe rather than the
+propulsors.** The propulsors hold
 their orientation relative to the body from take-off to cruise, and so the configuration carries **no
 mechanism that reorients a propulsor** — nor any of the other mechanism classes that architectures use
 to change regime or to take a rotor out of one regime's flow: no pivot, no nacelle or rotor-group

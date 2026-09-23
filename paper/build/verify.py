@@ -161,6 +161,34 @@ except Exception as _h:                    # pragma: no cover
     print("  ** ATLANDI, BU BIR KUSURDUR (%s: %s)" % (type(_h).__name__, _h))
     _atlanan_blok = True
 
+# --------------------------------------- Adim 10 kapanis geometrisi (Tur 59)
+# TUR 59 -- Adim 10 "wing area runs 1.98 to 2.27 m2, the span 3.45 to 3.70 m,
+# nose disc 1.20 to 1.29 m" diyordu. Alt uclar 50 kg REFERANS geometrisiydi;
+# en hafif kapanis 52,34 kg. Hic denetlenmiyordu. Simdi metindeki araligi
+# kapanis kutlelerinden ve tutulan kurallardan yeniden hesaplar, ve eski
+# alt ucun (1.98) bu denetimi GECEMEDIGINI ayrica sinar.
+print("\n=== Adim 10 kapanis geometrisi " + "=" * 28)
+_k = open("/home/user/meryemAircraft/aero/closure-result.txt", encoding="utf-8").read()
+_m = re.search(r"kalkis kutlesi\s+([\d.]+)\s*-\s*([\d.]+)", _k)
+_m_lo, _m_hi = float(_m.group(1)), float(_m.group(2))
+_a10 = open(glob.glob("/home/user/meryemAircraft/paper/v8/10-*.md")[0], encoding="utf-8").read()
+_a10 = re.sub(r"\s+", " ", _a10)
+_g = re.search(r"wing area runs ([\d.]+) to ([\d.]+) m², the span ([\d.]+) to ([\d.]+) m, "
+               r"and the nose disc diameter ([\d.]+) to ([\d.]+) m", _a10)
+_S = lambda m: m / 25.3
+_b = lambda m: math.sqrt(6.03 * _S(m))
+_D = lambda m: math.sqrt(4 * m / 44.2 / math.pi)
+if _g:
+    _v = [float(x) for x in _g.groups()]
+    for _ad, _f, _i in (("alan", _S, 0), ("aciklik", _b, 2), ("burun diski", _D, 4)):
+        esit("Adim 10 %s, alt uc (en hafif kapanis)" % _ad, _f(_m_lo), _v[_i], tol=0.006)
+        esit("Adim 10 %s, ust uc (en agir kapanis)" % _ad, _f(_m_hi), _v[_i + 1], tol=0.006)
+    esit("ESKI alt uc 1.98 denetimi GECEMIYOR (ayrim sinamasi)",
+         1.0 if abs(_S(_m_lo) - 1.98) / 1.98 > 0.006 else 0.0, 1.0, tol=0.001)
+else:
+    print("  ** Adim 10 geometri cumlesi BULUNAMADI, BU BIR KUSURDUR")
+    hatalar.append(("Adim 10 geometri cumlesi", 0, 0, 1))
+
 # ---------------------------------------------- Tablo 15 (3.9) tutarliligi
 print("\n=== Tablo 15 " + "=" * 45)
 # metinde tam yuzdeye yuvarli — tolerans yarim puan
