@@ -799,3 +799,47 @@ ALL-STEPS.md'yi de yakaladı.
 
 1–11'in İngilizce gövdelerinde niteliksiz *"50 kg"* **yok.** Adım 6 zaten köprü kuruyor
 (*"Section 10 closes the light one between 52 and 58 kg"*); Adım 10'daki 50,1 inşa sınamasında.
+
+---
+
+# Tur 55 (devam) — Adım 13 yazıldı: sıralama sözleşmeye ait, ama tersine dönme zarfın yarısında
+
+## 1. Yeni hesap: `aero/contracts.py`
+
+Adım 10'un dört kapanışının her birinde üç mimari × üç sözleşme. A'nın sütunu Adım 10'u birebir
+üretiyor (üretmezse betik durur). Taban: A η_p hesaplanmış (0,632/0,683), B ve C 0,80 (varsayım;
+`chain_resolve.py`'nin mimariye özgü gerekçesi); tampon %3,6 hepsinde, motor seyre boyutlu hepsinde
+(Fatura 3 ortak); B 13/17 ve %10 kaldırma grubu; C 1,00 ve %5 eğme.
+
+**Sonuç (B/A menzil farkı):** sabit kesir +55…+84 %, sabit yakıt +28…+54 %, sabit MTOW −13…+7 %.
+Salınım 67–77 puan. **Sabit MTOW'da işaret zarfın içinde değişiyor:** üst palet ailesinde A önde,
+altta B önde. Tilt her yerde +93…+141 % önde (sınır). Kütle: B %38–43 ağır → A %27–30 hafif.
+
+**Duyarlılık:** kaldırma grubu %5 → A hiçbir yerde önde değil; %15 → sabit MTOW'da her yerde önde;
+hepsi aynı η_p → sabit MTOW'da her yerde önde; B cezası sabit artış → taban ile aynı desen.
+
+## 2. v7'den farkı ve nedeni (gövdede yok, §4)
+
+v7 Tablo 9: B/A +24…+45 % (sabit kesir), kütle üstünlüğü %32–36 — hepsi η_p 0,80 tabanında.
+Hesaplanmış η_p A'nın seyir gücünü ve motorunu büyütüyor (itki kesri 0,176–0,198), B ve C 0,80'de
+kalıyor; olumsuz uçta ×1,1 pay. Menzil açığı büyüdü, kütle üstünlüğü küçüldü. §0.7: sayı tez değil.
+
+## 3. Yayılım (§3.1)
+
+- **Adım 2'nin öngörüsü** *"will reverse when the sizing rule changes"* idi. Adım 13 tersine dönmeyi
+  dört kapanışın ikisinde buldu. Cümle *"will move … toward the lighter arrangement … and can
+  reverse"* oldu. **Bu, sınanmadan sonra daraltmadır** — okuyuculara açıkça soruluyor.
+- **Adım 9** *"it reverses across the three contracts"* → sözleşmeyle oynuyor, bir sözleşmede işaret
+  zarfın içinde değişiyor, ölçülmemiş bir kesre bağlı; tilt bir sınır. **Sayı konmadı** — iskelet
+  Adım 9'u *"hiçbir sayıdan önce"* diye tanımlıyor; ilk düzeltmede "some seventy points" yazmıştım,
+  çıkardım.
+- **Adım 10** *"where it is made and where it reverses"* → *"where it is made"*.
+- **CLAUDE.md §0** eksen tablosu ve 24–45 / 32–36 notu.
+- `v8_stale.py`'ye dört emekli ifade eklendi (22 değer).
+
+## 4. Kendi yakaladıklarım
+
+- Adım 13'ün ilk yazımında tilt için *"not behind on either count"* — **yanlış**, tilt %0,5–5,4 ağır.
+  Doğrusu: takas var ama çok dengesiz; sabit MTOW bile tilt'i %93–130 önde bırakıyor.
+- **Adım 2'de sarkan atıf:** *"the doctoral study whose wind-tunnel campaign supplies Table 1"* — v8'de
+  numaralı tablo yok. *"is quoted above"* oldu.

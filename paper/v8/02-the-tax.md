@@ -152,7 +152,7 @@ the moves whose transfers are documented, and a remedy absent from it is not the
 cancel a charge.
 
 **One of these transfers has direct experimental support, and it is worth more than the table.**
-In the doctoral study whose wind-tunnel campaign supplies Table 1 — and in that document rather
+In the doctoral study whose wind-tunnel campaign is quoted above — and in that document rather
 than in the journal article by the same author, which reports a different comparison — a
 retraction system removed thirty percent of the airframe's drag; the same work then costed it. Applied to a passenger eVTOL, with the mechanism assessed
 at five percent of vehicle mass, maximum range rose from 119 km to 121 km — **a two-kilometre
@@ -184,9 +184,10 @@ remedy buys. **A framework that could absorb any cost by declaring it out-of-sco
 unfalsifiable**, so the costs outside the three are listed, not waved away.
 
 It also makes a prediction that can be checked without settling the architectural question at
-all: **where an arrangement pays one charge heavily in order to escape another, the ranking
-against a differently-balanced arrangement will reverse when the sizing rule changes.** Section
-13 tests that prediction on this configuration, and Section 4 tests a different consequence
+all: **where an arrangement pays one charge heavily in order to escape another, its ranking
+against a differently-balanced arrangement will move when the sizing rule changes — toward the
+lighter arrangement as the rule weights mass more — and can reverse.** Section 13 tests both the
+movement and the reversal on this configuration, and Section 4 tests a different consequence
 against a sizing study this work did not produce.
 
 **The moves in the table are partial remedies: each accepts the duty-cycle mismatch and then

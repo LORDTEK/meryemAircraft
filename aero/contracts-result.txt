@@ -1,0 +1,113 @@
+ADIM 13 -- UC MIMARI, UC SOZLESME, ADIM 10'UN DORT KAPANISI
+================================================================================================
+Taban: A eta_p hesaplanmis (0,632/0,683); B ve C 0,80 varsayim; tampon %3,6
+hepsinde; B ek grup %10; C egme %5, L/D carpani 1,00 (ideallestirilmis).
+Sozlesme 2 ve 3'te yakit kutlesi / MTOW, A'nin o kapanistaki degeri.
+
+SINAMA: A'nin kapanislari Adim 10'un tablosunu uretmeli
+  A  closure.py 57.51 kg 927 km   bu betik 57.51 kg 927 km
+  B  closure.py 55.85 kg 1002 km   bu betik 55.85 kg 1002 km
+  C  closure.py 53.51 kg 1141 km   bu betik 53.51 kg 1141 km
+  D  closure.py 52.34 kg 1233 km   bu betik 52.34 kg 1233 km
+  ayni.
+
+AYRINTI -- her kapanista MTOW (kg), L/D, menzil (km)
+  kapanis A (C_D0 0.0381, eta_A 0.632, temiz L/D 15.24; yakit 9.20 kg; MTOW_A 57.5 kg)
+    s1 sabit kesir  kuyruk ustu  57.5 kg L/D  8.79   927 km | lift+cruise  80.0 kg L/D 11.66  1556 km | tilt         57.8 kg L/D 15.24  2034 km
+    s2 sabit yakit  kuyruk ustu  57.5 kg L/D  8.79   927 km | lift+cruise  68.9 kg L/D 11.66  1299 km | tilt         57.7 kg L/D 15.24  2029 km
+    s3 sabit MTOW   kuyruk ustu  57.5 kg L/D  8.79   927 km | lift+cruise  57.5 kg L/D 11.66   937 km | tilt         57.5 kg L/D 15.24  2021 km
+  kapanis B (C_D0 0.0381, eta_A 0.683, temiz L/D 15.24; yakit 8.94 kg; MTOW_A 55.8 kg)
+    s1 sabit kesir  kuyruk ustu  55.8 kg L/D  8.79  1002 km | lift+cruise  80.0 kg L/D 11.66  1556 km | tilt         57.8 kg L/D 15.24  2034 km
+    s2 sabit yakit  kuyruk ustu  55.8 kg L/D  8.79  1002 km | lift+cruise  68.0 kg L/D 11.66  1277 km | tilt         57.0 kg L/D 15.24  1994 km
+    s3 sabit MTOW   kuyruk ustu  55.8 kg L/D  8.79  1002 km | lift+cruise  55.8 kg L/D 11.66   871 km | tilt         55.8 kg L/D 15.24  1936 km
+  kapanis C (C_D0 0.0285, eta_A 0.632, temiz L/D 20.55; yakit 8.56 kg; MTOW_A 53.5 kg)
+    s1 sabit kesir  kuyruk ustu  53.5 kg L/D 10.82  1141 km | lift+cruise  73.8 kg L/D 15.72  2098 km | tilt         55.2 kg L/D 20.55  2743 km
+    s2 sabit yakit  kuyruk ustu  53.5 kg L/D 10.82  1141 km | lift+cruise  64.1 kg L/D 15.72  1751 km | tilt         54.5 kg L/D 20.55  2693 km
+    s3 sabit MTOW   kuyruk ustu  53.5 kg L/D 10.82  1141 km | lift+cruise  53.5 kg L/D 15.72  1224 km | tilt         53.5 kg L/D 20.55  2618 km
+  kapanis D (C_D0 0.0285, eta_A 0.683, temiz L/D 20.55; yakit 8.37 kg; MTOW_A 52.3 kg)
+    s1 sabit kesir  kuyruk ustu  52.3 kg L/D 10.82  1233 km | lift+cruise  73.8 kg L/D 15.72  2098 km | tilt         55.2 kg L/D 20.55  2743 km
+    s2 sabit yakit  kuyruk ustu  52.3 kg L/D 10.82  1233 km | lift+cruise  63.6 kg L/D 15.72  1727 km | tilt         54.0 kg L/D 20.55  2657 km
+    s3 sabit MTOW   kuyruk ustu  52.3 kg L/D 10.82  1233 km | lift+cruise  52.3 kg L/D 15.72  1152 km | tilt         52.3 kg L/D 20.55  2524 km
+
+================================================================================================
+TABAN -- menzil farki A'ya gore; mB/mA sozlesme 1'de kutle orani
+    C_D0    eta_A  |   B/A s1   B/A s2   B/A s3 |   C/A s1   C/A s2   C/A s3 |    mB/mA    mC/mA
+A   0.0381  0.632  |   +67.8%   +40.2%    +1.1% |  +119.5%  +118.9%  +118.1% |    1.392    1.005
+B   0.0381  0.683  |   +55.3%   +27.5%   -13.0% |  +103.1%   +99.1%   +93.3% |    1.433    1.034
+C   0.0285  0.632  |   +83.9%   +53.5%    +7.3% |  +140.5%  +136.1%  +129.5% |    1.378    1.031
+D   0.0285  0.683  |   +70.2%   +40.1%    -6.5% |  +122.5%  +115.6%  +104.8% |    1.409    1.054
+   B, sozlesme 1:  +55.3 ..  +83.9 %  -> B onde
+   B, sozlesme 2:  +27.5 ..  +53.5 %  -> B onde
+   B, sozlesme 3:  -13.0 ..   +7.3 %  -> ISARET DEGISIYOR
+   C, sozlesme 1: +103.1 .. +140.5 %  -> C onde
+   C, sozlesme 2:  +99.1 .. +136.1 %  -> C onde
+   C, sozlesme 3:  +93.3 .. +129.5 %  -> C onde
+
+SALINIM -- sozlesme 1'den 3'e, A'ya dogru (yuzde puan)
+  A  B/A  +67.8 ->   +1.1  ( 66.8 puan)   C/A +119.5 -> +118.1  (  1.4 puan)   A, B'den %28.2, C'den %0.5 hafif (s1)
+  B  B/A  +55.3 ->  -13.0  ( 68.3 puan)   C/A +103.1 ->  +93.3  (  9.8 puan)   A, B'den %30.2, C'den %3.3 hafif (s1)
+  C  B/A  +83.9 ->   +7.3  ( 76.6 puan)   C/A +140.5 -> +129.5  ( 11.0 puan)   A, B'den %27.4, C'den %3.0 hafif (s1)
+  D  B/A  +70.2 ->   -6.5  ( 76.7 puan)   C/A +122.5 -> +104.8  ( 17.8 puan)   A, B'den %29.0, C'den %5.1 hafif (s1)
+
+KUTLE BILESENLERI, sozlesme 1 (bos kutle kesri)
+  A  kuyruk ustu f_bos 0.614 f_tahrik 0.198 motor 5.17 kW   lift+cruise f_bos 0.678 f_tahrik 0.162 motor 4.29 kW   tilt f_bos 0.615 f_tahrik 0.149 motor 2.37 kW
+  B  kuyruk ustu f_bos 0.607 f_tahrik 0.191 motor 4.65 kW   lift+cruise f_bos 0.678 f_tahrik 0.162 motor 4.29 kW   tilt f_bos 0.615 f_tahrik 0.149 motor 2.37 kW
+  C  kuyruk ustu f_bos 0.597 f_tahrik 0.181 motor 3.91 kW   lift+cruise f_bos 0.664 f_tahrik 0.148 motor 2.93 kW   tilt f_bos 0.604 f_tahrik 0.138 motor 1.68 kW
+  D  kuyruk ustu f_bos 0.592 f_tahrik 0.176 motor 3.54 kW   lift+cruise f_bos 0.664 f_tahrik 0.148 motor 2.93 kW   tilt f_bos 0.604 f_tahrik 0.138 motor 1.68 kW
+
+================================================================================================
+(a) KARSI-OLGUSAL -- B ve C de A'nin eta_p'sini oder
+    |   B/A s1   B/A s2   B/A s3 |   C/A s1   C/A s2   C/A s3
+A   |   +32.6%    +5.8%   -32.0% |   +73.4%   +68.0%   +60.5%
+B   |   +32.6%    +5.7%   -33.3% |   +73.4%   +66.9%   +57.4%
+C   |   +45.3%   +17.4%   -24.8% |   +90.0%   +82.7%   +71.7%
+D   |   +45.3%   +17.2%   -26.4% |   +90.0%   +81.6%   +68.6%
+   B, sozlesme 1:  +32.6 ..  +45.3 %  -> B onde
+   B, sozlesme 2:   +5.7 ..  +17.4 %  -> B onde
+   B, sozlesme 3:  -33.3 ..  -24.8 %  -> A onde
+   C, sozlesme 1:  +73.4 ..  +90.0 %  -> C onde
+   C, sozlesme 2:  +66.9 ..  +82.7 %  -> C onde
+   C, sozlesme 3:  +57.4 ..  +71.7 %  -> C onde
+
+================================================================================================
+(b) B'nin ek tahrik grubu %5
+    C_D0    eta_A  |   B/A s1   B/A s2   B/A s3 |   C/A s1   C/A s2   C/A s3 |    mB/mA    mC/mA
+A   0.0381  0.632  |   +67.8%   +61.9%   +53.5% |  +119.5%  +118.9%  +118.1% |    1.064    1.005
+B   0.0381  0.683  |   +55.3%   +47.3%   +35.5% |  +103.1%   +99.1%   +93.3% |    1.096    1.034
+C   0.0285  0.632  |   +83.9%   +76.3%   +64.7% |  +140.5%  +136.1%  +129.5% |    1.074    1.031
+D   0.0285  0.683  |   +70.2%   +61.0%   +46.6% |  +122.5%  +115.6%  +104.8% |    1.098    1.054
+   B, sozlesme 1:  +55.3 ..  +83.9 %  -> B onde
+   B, sozlesme 2:  +47.3 ..  +76.3 %  -> B onde
+   B, sozlesme 3:  +35.5 ..  +64.7 %  -> B onde
+   C, sozlesme 1: +103.1 .. +140.5 %  -> C onde
+   C, sozlesme 2:  +99.1 .. +136.1 %  -> C onde
+   C, sozlesme 3:  +93.3 .. +129.5 %  -> C onde
+
+================================================================================================
+(b) B'nin ek tahrik grubu %15
+    C_D0    eta_A  |   B/A s1   B/A s2   B/A s3 |   C/A s1   C/A s2   C/A s3 |    mB/mA    mC/mA
+A   0.0381  0.632  |   +67.8%   +18.4%   -51.4% |  +119.5%  +118.9%  +118.1% |    2.011    1.005
+B   0.0381  0.683  |   +55.3%    +7.7%   -61.5% |  +103.1%   +99.1%   +93.3% |    2.071    1.034
+C   0.0285  0.632  |   +83.9%   +30.7%   -50.2% |  +140.5%  +136.1%  +129.5% |    1.924    1.031
+D   0.0285  0.683  |   +70.2%   +19.3%   -59.7% |  +122.5%  +115.6%  +104.8% |    1.967    1.054
+   B, sozlesme 1:  +55.3 ..  +83.9 %  -> B onde
+   B, sozlesme 2:   +7.7 ..  +30.7 %  -> B onde
+   B, sozlesme 3:  -61.5 ..  -50.2 %  -> A onde
+   C, sozlesme 1: +103.1 .. +140.5 %  -> C onde
+   C, sozlesme 2:  +99.1 .. +136.1 %  -> C onde
+   C, sozlesme 3:  +93.3 .. +129.5 %  -> C onde
+
+================================================================================================
+(c) B'nin cezasi SABIT C_D artisi (13/17'nin temiz L/D 17'deki degeri)
+    C_D0    eta_A  |   B/A s1   B/A s2   B/A s3 |   C/A s1   C/A s2   C/A s3 |    mB/mA    mC/mA
+A   0.0381  0.632  |   +72.0%   +44.3%    +5.0% |  +119.5%  +118.9%  +118.1% |    1.381    1.005
+B   0.0381  0.683  |   +59.2%   +31.2%    -9.5% |  +103.1%   +99.1%   +93.3% |    1.422    1.034
+C   0.0285  0.632  |   +75.3%   +45.4%    +0.1% |  +140.5%  +136.1%  +129.5% |    1.394    1.031
+D   0.0285  0.683  |   +62.2%   +32.8%   -12.9% |  +122.5%  +115.6%  +104.8% |    1.425    1.054
+   B, sozlesme 1:  +59.2 ..  +75.3 %  -> B onde
+   B, sozlesme 2:  +31.2 ..  +45.4 %  -> B onde
+   B, sozlesme 3:  -12.9 ..   +5.0 %  -> ISARET DEGISIYOR
+   C, sozlesme 1: +103.1 .. +140.5 %  -> C onde
+   C, sozlesme 2:  +99.1 .. +136.1 %  -> C onde
+   C, sozlesme 3:  +93.3 .. +129.5 %  -> C onde
+

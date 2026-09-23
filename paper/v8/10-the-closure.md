@@ -231,7 +231,7 @@ that Section 14 tests.
 multirotor is sized in this work, so no range comparison is made against one — Section 6 compares
 the two families in cruise efficiency and says why it stops there. The comparison against the
 other hybrid architectures depends on the sizing contract and belongs to Section 13, which is
-where it is made and where it reverses.
+where it is made.
 
 ---
 

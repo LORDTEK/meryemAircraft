@@ -34,9 +34,11 @@ alternative, and this paper's alternatives differ from axis to axis.
 | Cruise efficiency and range | Other hybrids — lift-plus-cruise, tilt | **Not claimed, in either direction.** |
 
 **The fourth row is the important one**, and the reason it is a refusal rather than a result is
-the paper's own central finding: against the other hybrids the ranking depends on the sizing
-contract, and it reverses across the three contracts reported in Section 13. A paper that
-quoted one of those orderings as a result would be reporting its own choice of contract. **No
+the paper's own finding in Section 13. Against lift-plus-cruise the ordering depends on the sizing
+contract: across the three contracts it moves substantially, and under one of them its sign changes
+inside the envelope and turns on a mass fraction of the competitor that is not measured. A paper that quoted one of those orderings as a result would be reporting its own choice of
+contract. Against the tilting family the competitor can be modelled here only as a bound that pays no
+cruise penalty, and an ordering against a bound is not a result. **No
 range claim is made against the tilting or lift-plus-cruise families in either direction**, and
 a reader who finds one implied anywhere in this paper should treat it as an error rather than
 as a claim.
@@ -148,7 +150,7 @@ what it demands of anyone who uses the framework afterwards.
 | Dört eksen, dört ayrı rakip | `CLAUDE.md` §0 tablosu |
 | Kanatla taşıma ile rotorla taşıma ayrı verim sınıfı; sözleşme sınıf değiştirmez | §4.2, satır 2498–2502 |
 | Öteki hibritlere karşı menzil iddiası **yok**, iki yönde de | §4.2, satır 2513–2517; §3.6, satır 1563–1566 |
-| Sıralama sözleşmeye göre tersine dönüyor | §3.6; `paper/chain-resolve-finding.md` |
+| Lift+cruise'a karşı sıralama sözleşmeyle ~70 puan oynuyor; sabit MTOW'da işaret zarfın içinde değişiyor ve B'nin ölçülmemiş kaldırma grubu kesrine bağlı; tilt yalnız bir sınır olarak modellenebiliyor | Adım 13; `aero/contracts-result.txt` (**Tur 55'da güncellendi** — önceki hâli *"tersine dönüyor"* idi, v7 §3.6'ya dayanıyordu) |
 | Sabit kanatlı menzilde rakip değil; hibrit bandın iki kenarı | §4.2, satır 2482–2489 |
 | Elenen şey bir **mekanizma sınıfı**, "hiç hareketli parça yok" değil | `CLAUDE.md` §0.1; §1, satır 289–293 |
 | Şerit tek hareketli aerodinamik yüzey ve burnu aşağı yunuslatıyor | §2.10, satır 815–818; §3.17 |

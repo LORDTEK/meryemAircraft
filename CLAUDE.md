@@ -13,7 +13,7 @@ Aşağıdaki dört satır projenin omurgasıdır ve her metin, her düzeltme, he
 | **Menzil / seyir verimi** | **Çok rotorlu (quadcopter)** | **Yeniyoruz. Yeter.** |
 | **Piste ihtiyaç / dikey iniş kalkış** | **Sabit kanatlı** | **Yeniyoruz. İnşa gereği.** |
 | **Mekanik ve kontrol basitliği** | **Tilt mimarileri** | **Asıl katkı bu.** |
-| Menzil, öteki hibritlere karşı | Lift+cruise, tilt | **İDDİA EDİLMİYOR.** Sözleşmeye göre tersine döner. |
+| Menzil, öteki hibritlere karşı | Lift+cruise, tilt | **İDDİA EDİLMİYOR.** Sözleşmeye göre oynar; lift+cruise'a karşı bir sözleşmede işaret zarfın içinde değişir (Adım 13). Tilt yalnız sınır olarak modellenebiliyor. |
 
 **Yapılmayacak iki hata — ikisini de yaptım, ikisi de yazar tarafından
 yakalandı:**
@@ -33,7 +33,9 @@ aynı rejim geçişi, dönen hiçbir mekanizma olmadan, kumanda yüzeyi olmadan,
 değişken hatve olmadan — yalnız sabit hatveli pervanelerin diferansiyel
 itkisiyle. Katkı budur.
 
-**Sayılar değişmez.** Menzil açığı 24–45 %, kütle üstünlüğü 32–36 %, bunların
+**Sayılar değişmez.** *(Tur 55 notu: aşağıdaki 24–45 / 32–36 v7'nin η_p 0,80 tabanıdır. v8 Adım 13,
+hesaplanmış η_p tabanında: sabit yakıt kesrinde lift+cruise %55–84 önde, kütle üstünlüğü %27–30.
+"Değişmez" = çerçeve değişince sayı eğilmez; hesap değişince sayı değişir.)* Menzil açığı 24–45 %, kütle üstünlüğü 32–36 %, bunların
 hepsi dürüstçe raporlanmaya devam eder. Değişen şey **neyin iddia edildiğidir.**
 Öteki hibritlere karşı menzil sıralaması bir boyutlandırma sonucudur, tez
 değildir.
