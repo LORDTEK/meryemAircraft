@@ -1,0 +1,68 @@
+ADIM 14 -- TAMPON, BARA TABANINDA, ADIM 10'UN DORT KAPANISI
+========================================================================================
+
+1. ADIM 10'UN KAPANISLARI HANGI OZGUL GUCU VARSAYIYOR? (tampon %3,6)
+        MTOW   P_aski    motor    tampon | bara aski   sp aski | bara kalk   sp kalk |    acik/kg
+          kg   kW mil   kW mil        kg |        kW     kW/kg |        kW     kW/kg | bara kW/kg
+A      57.51    12.53     5.17     2.070 |      9.68      4.68 |     11.44      5.53 |     0.1683
+B      55.85    12.17     4.65     2.010 |      9.74      4.84 |     11.45      5.70 |     0.1744
+C      53.51    11.66     3.91     1.926 |      9.82      5.10 |     11.46      5.95 |     0.1835
+D      52.34    11.40     3.54     1.884 |      9.86      5.23 |     11.47      6.09 |     0.1884
+  gereken ozgul guc: aski 4.68-5.23, kalkis 5.53-6.09 kW/kg
+  24S1P surekli                      0.724 kW/kg -> kalkis talebi bunun 7.6-8.4 kati
+  24S4P surekli                      0.892 kW/kg -> kalkis talebi bunun 6.2-6.8 kati
+  24S1P 10,68C, isil pay 4,9 C       1.490 kW/kg -> kalkis talebi bunun 3.7-4.1 kati
+  NIAC tasarim varsayimi             4.000 kW/kg -> kalkis talebi bunun 1.4-1.5 kati
+  bara acigi / kg (aski): 0.1683-0.1884 kW/kg, yayilim 11.9 %
+  (KARSILASTIRMA: mil - mil cikarmasi 0.1279-0.1503, yayilim 17.4 % -- Adim 11'in eski sayisi)
+
+2. SINAMA -- dongu, tamponu ozgul guctan turetince Adim 10'u uretmeli
+  A  sp 5.527 -> MTOW 57.505 kg (Adim 10: 57.505), tampon %3.60
+  B  sp 5.695 -> MTOW 55.846 kg (Adim 10: 55.846), tampon %3.60
+  C  sp 5.949 -> MTOW 53.513 kg (Adim 10: 53.513), tampon %3.60
+  D  sp 6.086 -> MTOW 52.338 kg (Adim 10: 52.338), tampon %3.60
+  ayni.
+
+3. OLCULMUS OZGUL GUCTE DONGU (kalkis talebi, yakit kesri sabit -> menzil degismez)
+    | ozgul guc                                  MTOW kg tampon kg  tampon % vs Adim10
+A   | 0.724 24S1P surekli                      KAPANMADI
+A   | 0.892 24S4P surekli                          333.5     74.39      22.3   +479.9%
+A   | 1.490 24S1P 10,68C, isil pay 4,9 C           101.2     13.51      13.4    +75.9%
+A   | 4.000 NIAC tasarim varsayimi                  61.2      3.05       5.0     +6.5%
+B   | 0.724 24S1P surekli                      KAPANMADI
+B   | 0.892 24S4P surekli                          334.0     76.77      23.0   +498.0%
+B   | 1.490 24S1P 10,68C, isil pay 4,9 C            99.1     13.64      13.8    +77.5%
+B   | 4.000 NIAC tasarim varsayimi                  59.8      3.06       5.1     +7.0%
+C   | 0.724 24S1P surekli                      KAPANMADI
+C   | 0.892 24S4P surekli                          334.8     80.38      24.0   +525.6%
+C   | 1.490 24S1P 10,68C, isil pay 4,9 C            96.2     13.82      14.4    +79.7%
+C   | 4.000 NIAC tasarim varsayimi                  57.7      3.09       5.4     +7.8%
+D   | 0.724 24S1P surekli                      KAPANMADI
+D   | 0.892 24S4P surekli                          335.2     82.32      24.6   +540.4%
+D   | 1.490 24S1P 10,68C, isil pay 4,9 C            94.6     13.92      14.7    +80.8%
+D   | 4.000 NIAC tasarim varsayimi                  56.6      3.10       5.5     +8.2%
+
+   ayni, YALNIZ ASKI talebiyle (uc ciftleri tampondan beslenmezse):
+A   | 0.724 24S1P surekli                      440.0 kg, tampon %23.3
+A   | 0.892 24S4P surekli                      177.3 kg, tampon %18.9
+A   | 1.490 24S1P 10,68C, isil pay 4,9 C       87.2 kg, tampon %11.3
+B   | 0.724 24S1P surekli                      465.7 kg, tampon %24.1
+B   | 0.892 24S4P surekli                      177.4 kg, tampon %19.6
+B   | 1.490 24S1P 10,68C, isil pay 4,9 C       85.7 kg, tampon %11.7
+C   | 0.724 24S1P surekli                      510.8 kg, tampon %25.3
+C   | 0.892 24S4P surekli                      177.6 kg, tampon %20.6
+C   | 1.490 24S1P 10,68C, isil pay 4,9 C       83.5 kg, tampon %12.3
+D   | 0.724 24S1P surekli                      538.9 kg, tampon %26.0
+D   | 0.892 24S4P surekli                      177.7 kg, tampon %21.1
+D   | 1.490 24S1P 10,68C, isil pay 4,9 C       82.3 kg, tampon %12.6
+
+4. MTOW ADIM 10'DA TUTULURSA FAYDALI YUK (13 kg idi), kalkis talebi
+  A  MTOW 57.5  |  0.724:  -0.7 kg (tampon 15.8)  |  0.892:   2.2 kg (tampon 12.8)  |  1.490:   7.4 kg (tampon 7.7)
+  B  MTOW 55.8  |  0.724:  -0.8 kg (tampon 15.8)  |  0.892:   2.2 kg (tampon 12.8)  |  1.490:   7.3 kg (tampon 7.7)
+  C  MTOW 53.5  |  0.724:  -0.9 kg (tampon 15.8)  |  0.892:   2.1 kg (tampon 12.8)  |  1.490:   7.2 kg (tampon 7.7)
+  D  MTOW 52.3  |  0.724:  -1.0 kg (tampon 15.8)  |  0.892:   2.0 kg (tampon 12.9)  |  1.490:   7.2 kg (tampon 7.7)
+
+5. ADIM 12'NIN YAYIMLANMIS CIFTI, BARA TABANINDA (aski)
+  hafif  bara talebi   10.13 kW, kg basina 0.2022 kW/kg   (mil-mil: 0.1657)
+  agir   bara talebi  198.50 kW, kg basina 0.1985 kW/kg   (mil-mil: 0.1619)
+  degisim -1.8 %
