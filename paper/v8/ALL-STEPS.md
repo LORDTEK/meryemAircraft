@@ -588,15 +588,15 @@ merely the one that agreed: it holds the mission fixed across architecture famil
 one set of tools to all of them, and it reports both quantities this prediction needs. The
 mission is 1 200 lb of payload over 75 nautical miles.
 
-| Configuration | Effective L/D | Design gross weight | Dedicated lift group |
-|---|---:|---:|---|
-| Turboshaft quadrotor | 4.9 | 3 678 lb | none — the rotors serve both regimes |
-| **Turbo-electric lift-plus-cruise** | **8.5** | **7 271 lb** | **yes** — eight lift motors and a cruise motor |
-| **Turbo-electric tilt-wing** | **8.6** | **6 584 lb** | **none** — eight proprotors, reoriented |
+Three of the nine designs matter here. The turboshaft quadrotor reaches an effective lift-to-drag ratio of
+4.9 at a design gross weight of 3 678 lb, with no dedicated lift group: its rotors serve both regimes.
+**The turbo-electric lift-plus-cruise design reaches 8.5 at 7 271 lb and carries a dedicated lift group —
+eight lift motors beside its cruise motor. The turbo-electric tilt-wing reaches 8.6 at 6 584 lb with none:
+eight proprotors, reoriented.**
 
 ### The result
 
-**The primary comparison is the last two rows**, because they isolate the charge. The
+**The primary comparison is the last two designs**, because they isolate the charge. The
 lift-plus-cruise and tilt-wing entries share the mission, the payload, the turbo-electric
 propulsion architecture and the presence of a cruising wing. **They are not identical in every
 other respect** — one stops its lift rotors in the airstream and drives a separate pusher, the
@@ -608,16 +608,11 @@ the closest the published set comes to isolating that charge; it is not a contro
 lift group buys no cruise-efficiency advantage at all here — it is marginally behind — and the
 design gross weights differ by 687 lb in the tilt-wing's favour. **That figure is the net
 difference between two architectures, not the measured mass of a lift group**, and the
-decomposition below is what makes it informative rather than merely large.
+published weight breakdown is what makes it informative rather than merely large.
 
-**The weight breakdown shows the transfer, and it does not close on the categories the table
-reports.** Of the empty-weight difference of 679 lb, structure accounts for 716 lb in the
-lift-plus-cruise entry's disfavour, propulsion returns 146 lb of it because the tilt-wing's
-mechanism is heavier, and battery returns a further 10 lb. **Those three categories account for
-580 lb of the 679**; the remaining 99 lb lies in empty-weight categories the published table does
-not break out, and this work does not know how it is distributed. **What the three reported
-categories do show is the transfer property of Section 2 — the mechanism giving part of the
-structural saving back — visible inside a weight breakdown this work did not produce.**
+**The published weight breakdown shows the transfer property of Section 2 — the mechanism giving part
+of the structural saving back — inside a breakdown this work did not produce**, although the categories
+it reports do not account for the whole difference (Supplement S4).
 
 **And the source states the second half of the prediction in its own words.** Discussing why the
 all-electric lift-plus-cruise design is the heaviest in the set, the study writes that the high
@@ -626,18 +621,8 @@ quadrotor, *"but not enough to counter the increase in structure and propulsion 
 is the efficiency credit conceded and found insufficient, by the authors of the data rather than
 by the authors of the prediction.
 
-**The quadrotor row is retained as a contrast rather than as the test.** Against it the
-lift-plus-cruise configuration is about three-quarters better in cruise efficiency — a factor of
-1.74 — and nearly twice as heavy, a factor of 1.98. That is the prediction, and it is worth
-being explicit about why it is not a counter-example to it: the efficiency credit is exactly
-what the accounting says a dedicated lift system buys, and the weight charge is exactly what it
-says the buyer pays. The charge survives the credit.
-
-**But that contrast changes three things at once** — dedicated lift group, powertrain, and
-whether a cruise wing exists at all — so it supports a weaker proposition than the prediction as
-stated: that adding a wing and a lift group together still costs mass. Section 2 had already
-called that much obvious. **It is reported for scale, and the isolation test above is what
-carries the prediction.**
+**The quadrotor is reported for scale, not as the test**: against it the lift-plus-cruise design
+changes three things at once, and the contrast is in Supplement S4.
 
 **The framework does not predict any of these numbers**; without the input fractions it predicts
 no magnitudes. What it predicts is that the amplified weight charge survives the efficiency
@@ -654,11 +639,11 @@ two matched designs, and an independent set says so. The margin in cruise effici
 tenth and nothing is claimed from its direction; what matters is that the dedicated lift group
 does not buy an efficiency advantage to set against its mass.
 
-**Second, and this is what the row is actually for: the tilt-wing is the transfer property of
+**Second, and this is what the entry is actually for: the tilt-wing is the transfer property of
 Section 2 appearing in someone else's data.** It does not escape the accounting by avoiding the
 mass charge; it *moves* the charge — to the mechanism that reorients its propulsors, with the
 actuation, the gyroscopic coupling and the transition control problem that Section 2 assigns to
-that family. The row therefore does two jobs: it denies this paper a uniqueness it has not
+that family. The entry therefore does two jobs: it denies this paper a uniqueness it has not
 earned, and it confirms the property the accounting is built on. What separates the tilting
 family from the configuration described later is not this axis; it is what each pays, and a
 sizing study does not settle that.
@@ -2382,8 +2367,9 @@ listed with what would settle it.
 - **the electrical path at peak** — component sizing and thermal analysis;
 - **the airframe's mass** — structural sizing, then a built article;
 - **the strip and the fairing** — measurement of both surfaces, and sizing of the actuation;
-- **closed-loop hover control**, including the declined reaction-torque channel and the hover torque
-  residual — a control-allocation study, then simulation;
+- **closed-loop hover control**, including the declined reaction-torque channel, the hover torque
+  residual, and the allocation of the tip pairs between take-off margin and attitude authority, which
+  compete for the same propellers — a control-allocation study, then simulation;
 - **vertical descent and the landing transition** — analysis not yet done;
 - **ground handling and landing loads** — analysis not yet done;
 - **the competitor's lift-group mass** — measured inventories of lift-plus-cruise aircraft of this class;

@@ -24,6 +24,7 @@ from v8_stale import govde  # noqa: E402
 
 def duz(s):
     s = s.replace("*", "").replace("’", "'").replace("\\|", "|")
+    s = re.sub(r"(?m)^[ \t]*>[ \t]?", "", s)   # Tur 63: alinti bloklari satir basinda '>' tasir
     return re.sub(r"\s+", " ", s).strip().lower()
 
 

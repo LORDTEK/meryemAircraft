@@ -1139,3 +1139,26 @@ satırına işaret ediyordu — gövdede sarkık kalacaktı. Rakam gövdeye yaz�
 
 **Çekince listesi:** 35 ekleme (hepsi doğrulandı), Adım 8 cümlesi tamlandı, 5 ruh cümlesi (benim önerim) → 140 satır.
 Çıkarma önerileri (Grok 3, Qwen 2) uygulanmadı — DeepSeek karşı.
+
+---
+
+# Tur 63 — Tur 62 metnine dört cevap; "sonuç teyit edilmeden kapanmaz" kuralı
+
+**Yazar:** uygulanan eylemin **sonucu** gösterilmeli ve teyit edilmeli; yanlış anlama olabilir (CLAUDE.md §2.3).
+
+**Grok, uygulanan bir kısaltmada gerçek kayıp buldu:** Adım 14'ün listesinde kapalı döngü askı kontrolü maddesinden *"the
+allocation of the tip pairs between take-off margin and attitude authority, which compete for the same propellers"* düşmüştü —
+Adım 5 ve 7'nin tartıştığı "ikinci iş". **Benim hatam**: tabloyu listeye çevirirken bir hücrenin üç parçasından birini
+atladım. Geri kondu.
+
+**Qwen:** Adım 11 kapanışından çıkan cümle çekince listesinde değildi; özü açılışta (*"No new physical cost term is introduced
+here."*) → listeye eklendi.
+
+**Uygulandı (beşimiz):** N2 (Adım 4 tablosu düzyazıya) ve N4 (ağırlık dökümü + quadrotor karşıtlığı Ek S4'e; gövdede
+sonuç ve *"categories do not account for the whole difference"*). Tablo gidince iki *"the row"* işaretçisi *"the entry"* oldu.
+
+**Denetim düzeltmesi:** `v8_caveats.py` alıntı bloklarındaki satır başı `>` işaretini görmüyordu; Adım 3'ün koşul cümlesi
+yanlışlıkla eksik görünüyordu. Düzeltildi.
+
+**Tuhaflık:** DeepSeek'in cevabı Q4'te *"I am not DeepSeek"* diyor ve kendi eski görüşünü üçüncü şahısla anıyor. Oyu B2'de
+tek bölüme döndü. Kayda geçti; yazara söylenecek.

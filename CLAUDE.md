@@ -323,6 +323,13 @@ dahil herkesin hemfikir olduğu kısaltmalar uygulansın."*
 - **Uygulama eşiği: dört okuyucu + ben.** Biri bile karşıysa uygulanmaz, geri sorulur. Karar yine yazarındır;
   yazar okuyucu cevaplarını kendisi okumaz, **bana yapıştırır** — bu yüzden yazara verilen özet eksiksiz ve dürüst
   olmak zorunda: kim ne dedi, ne uygulandı, ne neden uygulanmadı, benim hatalarım.
+- **Uygulanan bir kısaltma, sonucu herkes tarafından teyit edilene kadar KAPANMAZ.** Yazar, Tur 63: *"'Herkes
+  hemfikir oldu ve Adım 15'in uzun olduğuna hükmettik. 2000 kelimeden 30 kelimeye düşürdüm. Bu konuyu artık
+  kapatıyorum.' Böyle çalışma olmaz. Bütün emekler zayi olur. Hemfikir olarak yapılan eylemin sonucunu da göstermen
+  gerekiyor. Sonuç derken kaç kelimeye indiği değil elbette. Olur da bir yanlış anlama olmuş olabilir çünkü."*
+  Döngü: **hemfikir → uygulandı → sonuç birebir gösterildi → her okuyucu teyit etti → kapandı.** Biri kayıp ya da
+  güç değişimi bulursa düzeltilir ve düzeltilmiş hâli yeniden teyide gider. (İlk örnek: Tur 62'de Adım 14'ün
+  listesinden bir yan cümle düşmüştü; Grok yakaladı.) Yazara verilen özette de sonuç anlatılır, sayı değil.
 - **Uygulanan her kısaltma bir sonraki tur metninde önce/sonra birebir gösterilir.** Taşınan malzeme
   `paper/v8/supplement.md`'ye aynen gider; gövdede bulgusu ve sınırı kalır.
 

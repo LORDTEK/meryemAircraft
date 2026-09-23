@@ -5,6 +5,38 @@ Dergi kuralı: ek yalnız destekler; gövde tek başına yetmek zorunda — bu y
 
 ---
 
+## S4. The independent check: the table, the weight breakdown, and the quadrotor contrast (from Section 4)
+
+| Configuration | Effective L/D | Design gross weight | Dedicated lift group |
+|---|---:|---:|---|
+| Turboshaft quadrotor | 4.9 | 3 678 lb | none — the rotors serve both regimes |
+| **Turbo-electric lift-plus-cruise** | **8.5** | **7 271 lb** | **yes** — eight lift motors and a cruise motor |
+| **Turbo-electric tilt-wing** | **8.6** | **6 584 lb** | **none** — eight proprotors, reoriented |
+
+**The weight breakdown shows the transfer, and it does not close on the categories the table
+reports.** Of the empty-weight difference of 679 lb, structure accounts for 716 lb in the
+lift-plus-cruise entry's disfavour, propulsion returns 146 lb of it because the tilt-wing's
+mechanism is heavier, and battery returns a further 10 lb. **Those three categories account for
+580 lb of the 679**; the remaining 99 lb lies in empty-weight categories the published table does
+not break out, and this work does not know how it is distributed. **What the three reported
+categories do show is the transfer property of Section 2 — the mechanism giving part of the
+structural saving back — visible inside a weight breakdown this work did not produce.**
+
+**The quadrotor row is retained as a contrast rather than as the test.** Against it the
+lift-plus-cruise configuration is about three-quarters better in cruise efficiency — a factor of
+1.74 — and nearly twice as heavy, a factor of 1.98. That is the prediction, and it is worth
+being explicit about why it is not a counter-example to it: the efficiency credit is exactly
+what the accounting says a dedicated lift system buys, and the weight charge is exactly what it
+says the buyer pays. The charge survives the credit.
+
+**But that contrast changes three things at once** — dedicated lift group, powertrain, and
+whether a cruise wing exists at all — so it supports a weaker proposition than the prediction as
+stated: that adding a wing and a lift group together still costs mass. Section 2 had already
+called that much obvious. **It is reported for scale, and the isolation test above is what
+carries the prediction.**
+
+---
+
 ## S13. Sensitivity of the lift-plus-cruise comparison (from Section 13)
 
 | Case | Fixed fuel fraction | Fixed fuel mass | Fixed take-off mass | Shift, first to third |

@@ -125,8 +125,9 @@ listed with what would settle it.
 - **the electrical path at peak** — component sizing and thermal analysis;
 - **the airframe's mass** — structural sizing, then a built article;
 - **the strip and the fairing** — measurement of both surfaces, and sizing of the actuation;
-- **closed-loop hover control**, including the declined reaction-torque channel and the hover torque
-  residual — a control-allocation study, then simulation;
+- **closed-loop hover control**, including the declined reaction-torque channel, the hover torque
+  residual, and the allocation of the tip pairs between take-off margin and attitude authority, which
+  compete for the same propellers — a control-allocation study, then simulation;
 - **vertical descent and the landing transition** — analysis not yet done;
 - **ground handling and landing loads** — analysis not yet done;
 - **the competitor's lift-group mass** — measured inventories of lift-plus-cruise aircraft of this class;
@@ -159,6 +160,7 @@ The last section returns to the four axes of Section 9 and states what is claime
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 63:** Tur 62 listesinde *"allocation of the tip pairs between take-off margin and attitude authority"* düşmüştü — Grok yakaladı; geri kondu (Adım 5 ve 7'nin *"ikinci iş"*i) | Ek S14'ün ilgili satırı |
 | **Tur 61:** bilinmeyenler tablosu Ek S14'e taşındı; gövdede her kalem ve onu neyin çözeceği (dört okuyucu + Claude hemfikir, A6) | `paper/v8/supplement.md` S14 |
 | **Tur 60:** tablo başlığı *"per kilogram of buffer"*; *"50 kg reference geometry"*, *"1 000 kg reference design"* | Grok, terim birliği |
 | **Tur 59:** *"arranged to change regime"*; 52,3–57,5 kg; kW/kg **tampon kütlesi başına** | Grok (A, D), Qwen |

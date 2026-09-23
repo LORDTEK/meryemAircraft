@@ -114,3 +114,44 @@ eleştirir. **Uygulama eşiği: dört okuyucu + ben.** (CLAUDE.md §2.3 eki.)
 |---|---:|---:|
 | Kelime (gövdeler) | 30 096 | **28 515** (−1 581, %5,3) |
 | Tablo | 16 | **12** |
+
+---
+
+# Tur 62 cevapları → Tur 63
+
+**Yeni kural (yazar):** uygulanan bir değişiklik, **sonucu herkes tarafından teyit edilene kadar kapanmaz** (CLAUDE.md §2.3).
+
+## Tur 62'de uygulananların teyidi
+
+| Değişiklik | G | C | D | Q | Durum |
+|---|---|---|---|---|---|
+| Adım 1 ret/katkı sırası | ✓ | ✓ | ✓ | ✓ | **Kapandı** |
+| Adım 9 bağımlılık düzyazısı | ✓ | ✓ | ✓ | ✓ | **Kapandı** |
+| Adım 10 yayılım cümlesi | ✓ | ✓ | ✓ | ✓ | **Kapandı** |
+| Adım 11 kapanış | ✓ | ✓ | ✓ | koşullu: *"No charge on this page is a new one"* korunmuyor | Özü açılışta: *"No new physical cost term is introduced here."* → **çekince listesine eklendi**; Qwen'e teyide |
+| Adım 13 → Ek S13 + sarkık atıf | ✓ | ✓ | ✓ | ✓ | **Kapandı** |
+| Adım 14 → Ek S14 + liste | **✗ — bir yan cümle düştü** (uç çiftlerinin kalkış payı ile tutum yetkisi arasındaki paylaşımı) | ✓ | ✓ | ✓ | **Geri kondu**; yeniden teyide |
+| Adım 15 kısa kapanış | ✓ (liste cümle olarak kaldı, tolere) | ✓ | ✓ | ✓ | **Kapandı** |
+
+## Oylar (G C D Q K)
+
+| # | Konu | G | C | D | Q | K | Sonuç |
+|---|---|---|---|---|---|---|---|
+| Biçim | Çekince birebir denetlenir; sıkıştırılırsa aynı commit'te güncellenir, eski/yeni gösterilir; güç insan gözüyle | ✓ | ✓ | ✓ (+insan denetimi) | ✓ | ✓ | **Karar** |
+| B2 | 2–4 tek bölüm, üç alt bölüm | ✓ | ✓ | ✓ (fikir değiştirdi) | ✓ | ✓ | **Karar** |
+| B4 | Tepki torku: ev 8, 7'de seçim cümlesi, 1 ve 15'te yan cümle | ✓ | ✓ | ✓ | ✓ | ✓ | **Karar** — metin işaretçileri taslakla gösterilecek |
+| B5 | "Geçiş gösterilmedi": ev 7; 10 sayı; 9 işaret | ✓ | ✓ | ✓ | ✓ (fikir değiştirdi) | ✓ | **Karar** — taslakla gösterilecek |
+| — | Adım 14 kapanıştan önce kendi bölümü | ✓ | ✓ | ✓ | ✓ | ✓ | **Karar** |
+| — | Adım 9 dağıtılmaz; sekiz ret evinde söyleniyorsa kısalır | ✓ | ✓ (fikir değiştirdi) | ✓ | — | ✓ | Yakın; Qwen açık |
+| N2 | Adım 4 tablosu → düzyazı | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı** → teyide |
+| N4 | Adım 4 ağırlık dökümü + quadrotor karşıtlığı → Ek S4 | ✓ | ✓ | ✓ | ✓ (sonuç cümlesi kalsın) | ✓ | **Uygulandı** → teyide |
+| N1 | Adım 3 tablosu → dört cümle | ✓ (parantez kalsın) | ✓ ama *"complexity"* ölçülmedi; *"case"* | ✓ | ✓ | ✓ | Ifade değişti → **yeni taslak** teyide |
+| N3 | 1954 sıkıştırma | ✓ | ✓ | ✓ | ✓ | ✓ | Yön karar; **taslak** teyide (uygulanmadı) |
+| B1 | "Sorunsuzluk" dilimi | 9 + 8'in çözülmemiş kalanı; başarısız parçalar 7+8'de | benimki | benimki | benimki | **Grok'un dilimine geçtim** | Açık — Grok'un dilimi soruluyor |
+| B6 | Sabit hatve açığı | **✗** — sayı 11'de, reddiyle | 6 | 6 | 6 (fikir değiştirdi) | **Grok'un ayrımına geçtim**: olgu 6'da, sayı ve ret 11'de | Açık — öneri soruluyor |
+| B7 | İki tablo yeri | 2 + 9 | **2 + 11** | 2 + 9 | **9 + 11** | 2 + 9 | Açık |
+| #4 | *"removes the mechanism"* → *"removes the need for the mechanism"* | — | öneren | — | — | ✓ | Soruluyor |
+
+**Korunan cümleler:** Qwen'in Adım 11 cümlesi çekinceye; Grok (Adım 7 dönüş çifti), DeepSeek (Adım 3 koşul, Adım 8 *"These are
+the parts that fail"*), Qwen (Adım 2 köken cümlesi) ruh listesine. Grok'un Adım 6 menteşesini çıkarma önerisi oy birliği değil
+(ChatGPT koruyor) → kaldı. Toplam 145.
