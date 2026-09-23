@@ -1897,11 +1897,12 @@ is made between the two reference designs, 50 kg and 1 000 kg, sized by one meth
 those two reference designs. Taking one end from Section 10 and the other from the reference pair would manufacture a scale
 change that is really a propeller-efficiency update applied to one end only.
 
-**The quantities used are ones Section 10 did not replace.** Disc loading is a sizing rule
+**The quantities used are, with one exception, ones Section 10 did not replace.** Disc loading is a sizing rule
 Section 10 holds. The buffer fraction is an input to its loop. The free-wheeling rotor term is the value Section 10 carries at both ends of its bracket at 50 kg,
 before the ten percent margin of the adverse end (Section 11), and it is computed here at 1 000 kg by
 the same method. **The total zero-lift drag, the propeller efficiency, the range and the closed mass
-are not used.** No heavy-design range is quoted: the figures available for it either omit the
+are not used.** The exception is the engine rating inside the Bill 3 ratio, which Section 10 did replace; it is
+taken from the reference pair and said so where it is used. No heavy-design range is quoted: the figures available for it either omit the
 free-wheeling rotor charge or carry an assumed rather than a computed propeller efficiency, and none
 carries both.
 
