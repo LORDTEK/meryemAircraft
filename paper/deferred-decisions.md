@@ -85,9 +85,23 @@ Adım 10'un sayıları şunları **zaten** içeriyor:
 - Baskın mimari ağırlıksız sıralanır (ChatGPT): ağırlık yalnız bir mimari bir faturada az, ötekinde
   çok ödediğinde gerekir.
 
+## Adım 14 yazılmadan önce okunacak — Tur 56
+
+Grok: *"Then write 14. The battery gap, the transition moment, and the low-Re polar now have a section
+that is allowed to be unfinished."* Adım 14'ün malzemesi, birikmiş hâliyle:
+
+- **Batarya / tampon özgül gücü (3,8×)** — tek paragraf, tek ev (iskelet kararı). Tamponu askı
+  enerjisinden türetmek burada; Adım 12'nin Fatura 1–3 bağlaşımı da buraya bağlanır.
+- **Geçiş yunuslama momenti** — ~10° üstünde üç yöntem sapıyor.
+- **Düşük Re kesit sürüklemesi** — 0,0154 ve Adım 12'nin ölçek sonucu buna dayanıyor; iki yönlü.
+- **Lift+cruise'un kaldırma grubu kesri** — Adım 13'te işareti belirleyen, *"en çok ölçülmeye değer"*.
+- Tepki torku kanalını bırakmanın bedeli, kapalı çevrim kontrol, girdap halkası, iniş geçişi, motor
+  yerleşimi/soğutma, irtifa (yukarıdaki açık kalemler).
+
 ## Süreç kalemleri
 
 - Zenodo DOI, başlık (≤12 kelime), özet (100–200 kelime)
+- **Veri erişilebilirliği:** Adım 13'ün duyarlılık durumları ve bütün betikler makaleden atıf yapılabilir olmalı (arşivlenmiş depo, DOI) — DeepSeek, Tur 56. Adım 13'ün tablosu zaten gövdede.
 - Şekillerin 600 dpi yeniden dışa aktarımı, üstyazılar 20–25 kelimeye
 - Boş `presentation/` ve `video/` dizinleri
 - Ulaşılamayan commit `942bf452…` için GitHub gc

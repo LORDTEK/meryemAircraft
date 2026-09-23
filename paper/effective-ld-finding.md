@@ -843,3 +843,50 @@ kalıyor; olumsuz uçta ×1,1 pay. Menzil açığı büyüdü, kütle üstünlü
   Doğrusu: takas var ama çok dengesiz; sabit MTOW bile tilt'i %93–130 önde bırakıyor.
 - **Adım 2'de sarkan atıf:** *"the doctoral study whose wind-tunnel campaign supplies Table 1"* — v8'de
   numaralı tablo yok. *"is quoted above"* oldu.
+
+---
+
+# Tur 56 — Tur 55 metnine (external-review-59) dört yanıt
+
+**Dördü de:** Reynolds ayrıştırması adil; Fatura 1'in Fatura 3'e kilitlenmesi sağlam ve *"aynı
+fatura"* demek değil; Adım 2'nin daraltılması **düzeltme, kale taşıma değil**; Adım 13 bildirilmeye
+değer, ama sıralama olarak değil; üç yükümlülük doğru.
+
+## Uygulananlar
+
+| Ne | Kim |
+|---|---|
+| Reynolds bulgusu *"within the blade-element and section-polar model"*; ayrıştırma, nedensellik değil | ChatGPT, DeepSeek, Grok |
+| *"in the section polars used here"* bulgu cümlesinin içinde | Grok |
+| *"the whole of the fall, and a little more"* → *"18 percent above"* | DeepSeek |
+| Düşük Re belirsizliği iki yönlü; hafif terim daha belirsiz; Adım 11'e çekince | DeepSeek |
+| Aralık uçları fiziksel sınır değil | DeepSeek |
+| Fatura 1–3 *"bağlaşık, özdeş değil"*; bağlaşım Adım 3'ün iddiası | DeepSeek (pozitif ifade) + ChatGPT/Grok/Qwen (sınır) |
+| *"requires only two charges that are not locked together"* | ChatGPT |
+| Adım 2 öngörüsü koşullu biçim (*"break even"*) | ChatGPT, Qwen |
+| Fatura 3 ortak = soru seçimi, yönü **hesaplandı** (aleyhimize; rakipler tamponsuz: B 381 kg, s3'te kapanmıyor) ve neden kullanılmadığı (A'nın tamponu Adım 14'ün sorusu) | Grok, ChatGPT, DeepSeek |
+| Rakipler *"bu planform artı iki ek"* | Grok |
+| Tilt 93–141'in her cümlesinde *"bound"* | Grok |
+| *"Carry the audit"* rakip sütunları için karşılanmıyor; temel/asimetri beyanı buna katlandı | Grok, DeepSeek |
+| Tüm sözleşmelerde kararlı sıralama bildirilebilir | DeepSeek |
+| İşaret bir parametre sonucudur, en çok ölçülmeye değer | Qwen |
+| Duyarlılık tablosuna kayma sütunu; (d) durumu betiğe | kendi denetimim |
+
+## Reddedilen / düzeltilen iddialar
+
+- **DeepSeek: kayma "hesaplanan–varsayılan asimetriye dayanıklı".** Denetlendi: pervane ve sürükleme
+  tabanına dayanıklı (65–77 puan) ama **kaldırma grubuna değil** (14–134). "Some seventy points"
+  sonuç cümlesinden çıktı; kayma, kütle farkının kendisi.
+- **DeepSeek: "L/D'ler farklı tabanda".** İkisi de aynı temiz gövde üzerinde aerodinamik oran; η_p
+  aynı cümlede ayrı veriliyor. Yalnız uçlar adlandırıldı.
+- **DeepSeek: Adım 2'ye "bu cümlenin eski hâli şöyleydi" yazılsın.** Reddedildi: CLAUDE.md §4 — dergi
+  gövdesinde önceki sürüm anlatısı yok. Daraltma Türkçe başlıkta ve burada kayıtlı.
+- **DeepSeek: 0,0154 "zincirdeki en belirsiz nicelik".** Fazla geniş (temiz yüzey braketi de geniş).
+  *"İki rotor teriminden daha belirsiz olanı"* yazıldı.
+
+## Kendi bulgum: Adım 2'nin başlığı Adım 12 ile çelişiyordu
+
+*"The charges behave as one quantity in three currencies"* — Adım 12 tam tersini sınıyor ve *"not one
+quantity under two names"* diyor. Okuyucuların elinde Adım 2 yoktu, göremezlerdi. İskeletin niyeti
+*"üç bağlaşık fatura"*. Başlık *"The charges are coupled: remedies move cost between them"* oldu.
+§0.2 sınıfı: bir sonuç yazıldığında, **onu önceden tarif eden başlıklar** da açılıp okunur.

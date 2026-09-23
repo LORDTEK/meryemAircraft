@@ -1,6 +1,17 @@
 # Step 13 — Rankings belong to contracts
 
-**v8 taslağı, birinci yazım (Tur 55).** İskeletin 13. adımı: *"Sıralamalar sözleşmeye aittir — ve
+**v8 taslağı, ikinci yazım (Tur 56).** Dört okuyucunun Tur 55 yanıtları işlendi: Fatura 3'ü ortak
+tutmanın bir soru seçimi olduğu ve yönü (Grok, ChatGPT, DeepSeek — yön **hesaplandı**, (d) durumu:
+aleyhimize); rakiplerin *"bu planform artı iki ek"* olduğu (Grok); 93–141'in her geçtiği cümlede
+*"bound"* (Grok); *"carry the audit"* rakip sütunları için karşılanmıyor (Grok) ve temel/asimetri
+beyanı ona katlandı (DeepSeek'in dördüncü yükümlülüğü); tüm sözleşmelerde kararlı sıralama
+bildirilebilir (DeepSeek); işaret bir parametre sonucudur, en çok ölçülmeye değer olan odur (Qwen).
+**DeepSeek'in "kayma asimetriye dayanıklı" iddiası denetlendi: pervane ve sürükleme tabanına dayanıklı
+(65–77 puan), kaldırma grubuna değil (14–134 puan).** "Some seventy points" sonuç cümlesinden çıktı.
+DeepSeek'in *"L/D'ler farklı tabanda"* itirazı reddedildi: ikisi de aynı temiz gövde üzerinde
+aerodinamik oran; yalnız uçlar adlandırıldı.
+
+**Birinci yazım (Tur 55).** İskeletin 13. adımı: *"Sıralamalar sözleşmeye aittir — ve
 çerçevenin kullanıcısından ne istediği: denetimi taşı, sözleşmeni adlandır, çıplak sıralama verme."*
 (Qwen'in Tur 34'te bulduğu ve buraya katlanan madde.)
 
@@ -69,10 +80,24 @@ them it is asking. This paper has no mission that would decide, and does not cho
 
 **Three architectures fly the same mission**: 13 kg of payload at 30 m s⁻¹, with the same wing
 loading, disc loading and aspect ratio, the same airframe and avionics fractions, and the same fuel
-and energy chain apart from the propeller. **All three carry the same buffered series-hybrid power
-system** — a buffer of 3.6 percent of take-off mass and an engine sized by cruise — so Bill 3 is held
-common, and what the comparison measures is mass and cruise drag. This configuration is the first
-architecture; the others are a lift-plus-cruise layout and a tilting one.
+and energy chain apart from the propeller. **The competitors are therefore this planform with two
+add-ons**, not independently designed aircraft of their families. **All three carry the same buffered
+series-hybrid power system** — a buffer of 3.6 percent of take-off mass and an engine sized by cruise —
+so Bill 3 is held common, and what the comparison measures is mass and cruise drag. This configuration
+is the first architecture; the others are a lift-plus-cruise layout and a tilting one.
+
+**Holding Bill 3 common is a choice of question, and it has a direction.** It is made so that the
+contract can be seen acting on a mass difference against a cruise-efficiency difference; it is not a
+claim that those families would use this power system, and the tilting family as Section 2 describes
+it has no store at all. **The choice runs against this configuration.** Given no buffer and an engine
+sized by hover instead, the lift-plus-cruise layout closes at 381 kg, falls 11 to 23 percent behind
+under a fixed fuel mass, and does not close at all under a fixed take-off mass; the tilt bound falls
+75 to 98 percent behind under a fixed take-off mass, or does not close. **Under a fixed fuel fraction
+the lift-plus-cruise lead is unchanged, at 55 to 84 percent, although the aircraft is now seven times
+heavier** — the first contract's blindness to mass, made visible. **That comparison is not
+used**, because it would set competitors without a store against this configuration with one — a
+buffer of 3.6 percent whose feasibility is the item Section 14 examines. Until that item is settled,
+the common store is the neutral choice.
 
 **The basis is not symmetric, and each asymmetry is stated with its direction.**
 
@@ -97,8 +122,9 @@ architecture; the others are a lift-plus-cruise layout and a tilting one.
 **The two architectures trade one charge against another.** Closed under a fixed fuel fraction, the
 lift-plus-cruise layout is **38 to 43 percent heavier** — its lift group, amplified by the mass loop,
 partly offset by this configuration's larger engine — so this configuration is **27 to 30 percent
-lighter**. In return the lift-plus-cruise layout cruises at a lift-to-drag ratio of 11.66 to 15.72
-against 8.79 to 10.82, with a propeller at 0.80 against 0.632 to 0.683.
+lighter**. In return the lift-plus-cruise layout cruises at a lift-to-drag ratio of 11.66 at the
+adverse end of the drag bracket and 15.72 at the favourable end, against 8.79 and 10.82 — both
+aerodynamic ratios on the same clean airframe — with a propeller at 0.80 against 0.632 to 0.683.
 
 Range of the lift-plus-cruise layout relative to this configuration:
 
@@ -114,8 +140,8 @@ lift-plus-cruise layout flies 55 to 84 percent further. Under a fixed fuel mass 
 as a divisor, and its lead falls to 28 to 54 percent. Under a fixed take-off mass it enters as fuel not
 carried, and **the lift-plus-cruise layout lands between 13 percent short of this configuration's
 range and 7 percent beyond it.** Moving from the
-first contract to the third shifts the comparison by **67 to 77 percentage points at every closure**,
-and always toward the lighter aircraft.
+first contract to the third shifts the comparison by **67 to 77 percentage points at every closure**
+at the declared lift-group fraction, and always toward the lighter aircraft.
 
 **The sign itself changes inside the envelope under the third contract.** This configuration is
 ahead at the two closures with the higher-efficiency blade family and behind at the two with the lower.
@@ -124,7 +150,7 @@ be a statement about the contract.**
 
 ### Against the tilting layout: a bound, not a ranking
 
-**The tilting layout, as modelled, leads under every contract at every closure — by 93 to 141
+**The tilting layout, modelled as a bound, leads under every contract at every closure — by 93 to 141
 percent.** Moving from the first contract to the third shifts the comparison by 1 to 18 points toward
 this configuration, and nowhere near a reversal.
 
@@ -132,7 +158,8 @@ this configuration, and nowhere near a reversal.
 this configuration, and it cruises at the clean airframe's lift-to-drag ratio with a propeller at 0.80:
 it is credited with no nacelle drag, no pivot fairing, and no penalty for flying hover-sized rotors as
 cruise propellers. **Even the contract that weights mass most** — a fixed take-off mass, in which every
-kilogram of tilt mechanism is a kilogram of fuel not carried — **leaves it 93 to 130 percent ahead.**
+kilogram of tilt mechanism is a kilogram of fuel not carried — **leaves the bound 93 to 130 percent
+ahead.**
 The contract moves the comparison, as Section 12 says it must where there is a trade; none of the
 three moves it far enough to matter. A ranking against a competitor modelled as a bound is not a
 ranking, and **no range claim is made against the tilting family in either direction.**
@@ -151,16 +178,16 @@ can reverse.** Both parts can now be checked.
   tilt bound.**
 
 **Where the reversal falls is decided by quantities this study has not measured or not fixed.** In
-the case above it is the blade family, which Section 10 leaves open. Across the sensitivity cases in
-the repository it is the competitor's lift-group mass and the propeller basis:
+the case above it is the blade family, which Section 10 leaves open. Across the sensitivity cases below
+it is the competitor's lift-group mass and the propeller basis:
 
-| Case | Fixed fuel fraction | Fixed fuel mass | Fixed take-off mass |
-|---|---:|---:|---:|
-| As above | +55 to +84 % | +28 to +54 % | −13 to +7 % |
-| Lift group 5 % of take-off mass | +55 to +84 % | +47 to +76 % | +36 to +65 % |
-| Lift group 15 % of take-off mass | +55 to +84 % | +8 to +31 % | −62 to −50 % |
-| All three at this configuration's propeller efficiency | +33 to +45 % | +6 to +17 % | −33 to −25 % |
-| Lift-plus-cruise drag as a fixed increment, not a ratio | +59 to +75 % | +31 to +45 % | −13 to +5 % |
+| Case | Fixed fuel fraction | Fixed fuel mass | Fixed take-off mass | Shift, first to third |
+|---|---:|---:|---:|---:|
+| As above | +55 to +84 % | +28 to +54 % | −13 to +7 % | 67 to 77 points |
+| Lift group 5 % of take-off mass | +55 to +84 % | +47 to +76 % | +36 to +65 % | 14 to 24 points |
+| Lift group 15 % of take-off mass | +55 to +84 % | +8 to +31 % | −62 to −50 % | 117 to 134 points |
+| All three at this configuration's propeller efficiency | +33 to +45 % | +6 to +17 % | −33 to −25 % | 65 to 72 points |
+| Lift-plus-cruise drag as a fixed increment, not a ratio | +59 to +75 % | +31 to +45 % | −13 to +5 % | 67 to 75 points |
 
 *(Range of the lift-plus-cruise layout relative to this configuration, across the four closures.)*
 
@@ -169,23 +196,36 @@ closure; with a heavier one this configuration leads under a fixed take-off mass
 Giving all three the same propeller efficiency also produces a reversal at every closure. **Which
 architecture ranks first under a fixed take-off mass is therefore decided, in this model, by a mass
 fraction of the competitor that this study has not measured** — and the fixed-fuel-fraction column,
-where mass does not enter, does not move with it at all.
+where mass does not enter, does not move with it at all. **Put plainly, the sign under a fixed take-off
+mass is not a result about the architectures; it is a result about that parameter**, and it is the
+one most worth measuring.
+
+**The size of the shift behaves the same way.** It barely moves when the propeller or drag basis is
+changed — 65 to 77 points across those cases — because those asymmetries enter all three contracts
+alike. It moves a great deal with the lift group, from 14 to 134 points, because the shift *is* the
+mass difference being counted. **What is robust is that the shift exists and runs toward the lighter
+aircraft; its size is the size of the mass difference.**
 
 ### What the framework asks of whoever uses it
 
 A framework that says every remedy transfers a charge rather than removing it takes something from
 its user in return. **It asks for three things, and this paper holds itself to them.**
 
-**Carry the audit.** State each charge in its own currency — kilograms, drag counts, installed
-kilowatts — before any aggregate, as Section 11 does. An aggregate that arrives without its parts
-cannot be checked, and the parts are where the comparison is decided.
+**Carry the audit, for every column.** State each charge in its own currency — kilograms, drag
+counts, installed kilowatts — before any aggregate, and state the basis of the comparison with its
+asymmetries and their directions. An aggregate that arrives without its parts cannot be checked, and
+the parts are where the comparison is decided. **This paper meets that for its own column** (Section
+11) **and not for the competitors'**, whose kilograms and drag counts here are parameters and transferred
+ratios rather than an audit — which is one more reason no ranking against them is offered.
 
 **Name the contract.** A comparison of architectures is a comparison under a contract. The contract is
 chosen by the mission rather than by the analyst, and a comparison that does not state one has chosen
 one silently.
 
 **Refuse the bare ranking.** Report an ordering only with the contract it was computed under, and,
-where its sign depends on an unmeasured quantity, with that quantity named. Applied to this paper's
+where its sign depends on an unmeasured quantity, with that quantity named. An ordering that holds
+under every contract examined may be reported as such — that is a stronger statement than any one
+contract gives, and it still names the contracts. Applied to this paper's
 own numbers, the rule is the fourth row of Section 9: **no range claim is made against lift-plus-cruise
 or tilting layouts**, because the ordering against the first depends on the contract and on the
 competitor's lift-group mass, and the ordering against the second is against a bound.
@@ -204,9 +244,9 @@ is used here.
 
 **And nothing here ranks architectures for a mission.** Which contract a mission implies, and which
 architecture it then favours, is the user's question. What this section establishes is narrower: **the
-same aircraft, under three reasonable contracts, give orderings against lift-plus-cruise that differ
-by some seventy points and, inside the envelope, in sign** — so the ordering is not a property of the
-architectures alone.
+same aircraft, under three reasonable contracts, give orderings against lift-plus-cruise that move by
+tens of percentage points and, inside the envelope, change sign** — so the ordering is not a property
+of the architectures alone.
 
 ---
 
@@ -233,6 +273,9 @@ architectures alone.
 | Duyarlılık tablosu (beş satır) | aynı, (a), (b) %5, (b) %15, (c) |
 | Adım 2'nin öngörüsü | Adım 2 satır 186–189 (**bu turda daraltıldı**, aşağıda) |
 | Adım 9'un dördüncü satırı | Adım 9 satır 28–43 (**bu turda güncellendi**) |
+| Rakipler tamponsuz: B 380,9 kg; s2 −23,2…−11,4; s3 kapanmıyor; tilt s3 −98,2…−75,2 ya da kapanmıyor; s1 değişmez; B/A kütle 6,6–7,3 | `contracts-result.txt`, (d) bloğu |
+| Kayma: taban 66,8–76,7; %5 → 14,3–23,5; %15 → 116,8–134,1; aynı η 64,6–71,7; artış 67,0–75,2 | aynı, `kayma` sütunu |
+| Adım 2'nin tilt'i depolamasız (*"Bill 3 is left standing … with no store"*) | Adım 2 tablosu |
 
 **Bu sayfada BİLEREK olmayanlar:**
 

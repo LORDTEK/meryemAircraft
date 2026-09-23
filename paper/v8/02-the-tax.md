@@ -9,6 +9,15 @@ koşuluna atıf yapıyor.
 *"bana bir çerçeve gösterildi"* değil *"sıradakini değerlendirmek için gereken aleti aldım"*
 demeli.
 
+
+**Tur 56 düzeltmesi.** Başlık *"The charges behave as one quantity in three currencies"* idi; Adım 12
+tam tersini sınayıp *"not one quantity under two names"* sonucuna varıyor. İskeletin niyeti *"üç
+bağlaşık fatura; her çare aktarır"*. Başlık *"The charges are coupled: remedies move cost between
+them"* oldu ve ChatGPT'nin cümlesi eklendi (*"distinct accounting quantities, not assumed to be
+independent physical causes"*). Öngörü cümlesi ChatGPT/Qwen'in koşullu biçimine getirildi (*"will
+reverse where that reweighting carries it past the point at which the two break even"*). Dört okuyucu
+da daraltmayı *"düzeltme, kale taşıma değil"* buldu.
+
 ---
 
 ## The tax
@@ -129,10 +138,13 @@ unused, for an hour. And the consequence propagates: sizing by hover means an ov
 or a battery that must deliver a peak it will rarely be asked for, or both — and whichever is
 chosen, the extra installed capacity is mass, which returns to Bill 1.
 
-### The charges behave as one quantity in three currencies
+### The charges are coupled: remedies move cost between them
 
 The three charges are not independent problems with independent fixes. **Each known partial
-remedy reduces one and raises another.**
+remedy reduces one and raises another.** They are three distinct accounting quantities — kilograms,
+drag counts, installed kilowatts — and they are not assumed to be independent physical causes: a
+remedy can move a requirement from one currency into another. Whether a change of size moves them
+together, which would make them one quantity under three names, is tested in Section 12.
 
 | Move | Bill it attacks | Bill it creates |
 |---|---|---|
@@ -186,7 +198,8 @@ unfalsifiable**, so the costs outside the three are listed, not waved away.
 It also makes a prediction that can be checked without settling the architectural question at
 all: **where an arrangement pays one charge heavily in order to escape another, its ranking
 against a differently-balanced arrangement will move when the sizing rule changes — toward the
-lighter arrangement as the rule weights mass more — and can reverse.** Section 13 tests both the
+lighter arrangement as the rule weights mass more — and will reverse where that reweighting carries
+it past the point at which the two break even.** Section 13 tests both the
 movement and the reversal on this configuration, and Section 4 tests a different consequence
 against a sizing study this work did not produce.
 

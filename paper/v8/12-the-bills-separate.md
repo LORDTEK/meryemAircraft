@@ -1,6 +1,16 @@
 # Step 12 — Scale does not lock two of the charges together; the third is not tested
 
-**v8 taslağı, ikinci yazım (Tur 55).** İskeletin 12. adımı: *"Üç para biriminin gerçekten üç
+**v8 taslağı, üçüncü yazım (Tur 56).** Tur 55 yanıtları: Reynolds bulgusu **modelin içinde bir
+ayrıştırma**, nedensel iddia değil (DeepSeek) ve *"in this polar"* bulgu cümlesinin içinde (Grok,
+ChatGPT); *"the whole of the fall"* → *"18 percent above"* (DeepSeek); düşük Re belirsizliği **iki
+yönlü** ve hafif terim 0,0154 **daha belirsiz olanı** — Adım 10–11 onu taşıyor (DeepSeek; Adım 11'e
+çekince eklendi); aralığın uçları fiziksel sınır değil (DeepSeek); Fatura 1–3 **bağlaşık, özdeş değil**
+(dördü de; DeepSeek'in "bağlaşım bir sonuçtur" önerisi ChatGPT/Grok'un "özdeşlik değil" sınırıyla
+birlikte alındı); *"requires only two non-locked charges"* (ChatGPT). **Kendi bulgum:** Adım 2'nin
+başlığı *"The charges behave as one quantity in three currencies"* idi — Adım 12'nin sonucuyla
+doğrudan çelişiyordu; iskeletin *"üç bağlaşık fatura"* niyetine göre düzeltildi.
+
+**İkinci yazım (Tur 55).** İskeletin 12. adımı: *"Üç para biriminin gerçekten üç
 olduğunun, tek niceliğin üç adı olmadığının kanıtı."*
 
 **Birinci yazım bu vaadi daraltmıştı** (tampon her iki ölçekte de girdi; üç faturadan yalnız
@@ -114,7 +124,7 @@ design photographed from further away. **Much above 1 000 kg a single nose pair 
 the disc loading**, and a second would have to be added — which the architecture permits, since
 every pair is torque-balanced on its own.
 
-### Bill 2 — the rotor term falls, and the reason is Reynolds number
+### Bill 2 — the rotor term falls, and in this model Reynolds number accounts for it
 
 **Only the rotor term of Bill 2 is computed at both sizes.** The frame term enters both reference
 designs as the same multiplier on clean lift-to-drag ratio, by construction, so it cannot show a scale
@@ -127,8 +137,10 @@ designed to the same section lift coefficient gives **0.0068 — 0.44 of the lig
 blade designs swept, design section lift coefficient 0.55 to 0.85, the heavy term runs from **0.0045
 to 0.0100**, and every design in that range meets the heavy design's hover requirement with margin — a
 figure of merit of 0.75 to 0.77 against the 0.599 required. At 50 kg the hover requirement selects the
-blade; at 1 000 kg nothing selects within the interval, and its ends are the ends of the sweep. **At
-every point in it the heavy charge is between 0.29 and 0.65 of the light one.**
+blade; at 1 000 kg nothing selects within the interval, and its ends are the ends of the swept blade
+family, not a physical bound. **At every point in it, and in the section polars used here, the heavy
+charge is between 0.29 and 0.65 of the light one** — a direction that is the ordinary one and a factor
+that is not a measurement, for the reason given below.
 
 **The mechanism is not the obvious one, and it is not the one a dimensional argument suggests.**
 Three candidates can be excluded directly:
@@ -144,18 +156,25 @@ Three candidates can be excluded directly:
 - **Solidity.** The heavy blade is not thinner; it is fuller — **0.100 against 0.075** for blades
   designed to the same section lift coefficient.
 
-**What moves is the section Reynolds number.** In the free-wheeling state the median blade-section
-Reynolds number rises from about 8 × 10⁴ at 50 kg to 5.6 × 10⁵ at 1 000 kg, a factor of 6.8, because
-the chords are longer and the flight speed higher. **Evaluating the heavy blade with its section
-Reynolds number scaled down to the light rotor's returns 0.0181 — 1.18 times the light charge.** At
-equal Reynolds number the heavy rotor would pay slightly more, as its fuller blade suggests; the whole
-of the fall, and a little more, comes from the lower section drag at the higher Reynolds number.
+**Within the blade-element and section-polar model, the section Reynolds number accounts for the
+fall.** In the free-wheeling state the median blade-section Reynolds number rises from about 8 × 10⁴
+at 50 kg to 5.6 × 10⁵ at 1 000 kg, a factor of 6.8, because the chords are longer and the flight speed
+higher. **Evaluating the heavy blade with its section Reynolds number scaled down to the light rotor's
+returns 0.0181 — 18 percent above the light charge.** At equal Reynolds number the fuller heavy blade
+would pay more, not less. Reynolds number is not an independent variable — it follows from the chord
+and the speed each rotor has — so this is a decomposition inside the model rather than a causal claim
+beyond it: for the chords and speeds these two designs have, the fall is what lower section drag at a
+higher Reynolds number gives.
 
-**That places a condition on the result.** The fall rests on how section drag changes between 8 × 10⁴
-and 5.6 × 10⁵, which is taken from the section polars used for every rotor in this work rather than
-measured, and the light end lies below a Reynolds number of 10⁵, where section drag is hardest to
-predict. The direction — lower section drag at higher Reynolds number — is the ordinary one. **The size of the fall is as good
-as the section model at the low end.**
+**That places a condition on the result, and it runs both ways.** The fall rests on how section drag
+changes between 8 × 10⁴ and 5.6 × 10⁵, which is taken from the section polars used for every rotor in
+this work rather than measured, and the light end lies below a Reynolds number of 10⁵, where section
+drag is hardest to predict. **The direction — lower section drag at higher Reynolds number — is the
+ordinary one; the size of the fall is as good as the section model at the low end.** If the light
+blade's real section drag is higher than the polars give, the light charge is larger and the fall is
+larger; if it is lower, the fall is smaller — the heavy end, at the higher Reynolds number, being the
+better predicted of the two. **Of the two rotor terms, the light one is therefore the
+less certain — and it is the one Sections 10 and 11 carry.**
 
 **The result does not touch the structural question.** It comes from blade-element solutions on two
 sized rotors at their own conditions; it would remain a result even if the heavy airframe were shown
@@ -189,6 +208,14 @@ hover and engine powers and of an assumed specific power or energy.** On this ai
 the form of the device that releases Bill 3 from the engine, as Section 3 anticipated, and **whether
 the two are separable here is not established.**
 
+**What is established is that they are coupled here, and that is Section 3's claim rather than a
+defect found in it.** The buffer is the conversion the fourth part of the escape condition permits:
+kilowatts of hover peak paid in kilograms of store. **Coupling is not identity.** The buffer is
+measured in kilograms and the engine in kilowatts, linked by a specific power that is itself an
+assumption; and the coupling belongs to an aircraft that meets the escape condition, not to the
+framework — a lift-plus-cruise aircraft pays a lift group whose mass is not a function of its cruise
+engine.
+
 **Nor is the structural mass a substitute.** The shell-mass exponent governs how the airframe
 fraction scales, and it is unmeasured; but the airframe is not Bill 1 as Section 2 defines it — it
 is the structure every architecture carries — and treating it as the mass bill would change the
@@ -198,8 +225,8 @@ item Section 14 examines and does not resolve.
 ### What the comparison establishes
 
 **Under a twentyfold change of mass, the rotor term of Bill 2 falls to between 0.29 and 0.65 of its
-light-design value, while specific hover power changes by one percent and the Bill 3 ratio by 5 to 14
-percent.** The flatness of Bill 3 is imposed by a sizing rule; the finding is that Bill 2 moved anyway,
+light-design value in the section polars used here, while specific hover power changes by one percent
+and the Bill 3 ratio by 5 to 14 percent.** The flatness of Bill 3 is imposed by a sizing rule; the finding is that Bill 2 moved anyway,
 by more than the Bill 3 ratio at every point in the heavy interval and under either engine margin.
 **Within this model, the two are therefore not one quantity under two names.**
 
@@ -237,7 +264,8 @@ escapes the classical scaling objection by fixing disc loading; the rotation doe
 number could rank architectures whatever weight each charge was given. **Because at least two of them
 are not locked together, a comparison of architectures cannot in general be reduced to a number that
 does not depend on how the charges are weighed: where one architecture pays less of one charge and
-more of another, the ranking depends on the weighting.** The argument requires only two. A third
+more of another, the ranking depends on the weighting.** The argument requires only two charges that
+are not locked together; the third need not be shown separate for the conclusion to hold. A third
 shown to be separate would strengthen it; a third shown to be locked to one of the others would
 leave it standing.
 
@@ -268,6 +296,7 @@ Section 10 only.
 | **Dolgunluk 0,075 → 0,100 (artıyor)** | aynı; ×1,33 |
 | **Medyan kesit Re 8,2×10⁴ → 5,6×10⁵ (×6,8); hafif Re'de ağır palet 0,0181 = hafifin 1,18 katı** | aynı, Re deneyi |
 | Kesit kutupları NeuralFoil, NACA 0012 — ölçülmedi | `aero/tip_propeller.py` `kesit_kuvvet`, satır 57 ve 80–85 |
+| Düşük Re belirsizliği iki yönlü: hafif terim eşit-Re deneyinde Re ile monoton (düşük Re → büyük terim) | `heavy-rotor-result.txt`: 0,0068 (Re 5,6×10⁵) → 0,0181 (hafif Re'ye indirilmiş) |
 | Ağır tasarımın sürükleme braketi yok | v7 §3.8 satır 1750–1754 |
 | Ağır yapısal kapanış belirlenmemiş; kabuk üssü ölçülmedi | v7 §3.8 satır 1690–1698 |
 | Tampon %3,6 ve %4,0 İKİSİ DE GİRDİ | `aero/mass.py` `m_pil` parametresi; `baseline.py` `f_tampon`; türeten kod yok |

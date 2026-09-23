@@ -64,6 +64,11 @@ applied to the whole build-up. The frames and rotors have the same base value at
 differ only by that margin. **No line item at the adverse end is an independent measurement**, and
 they should not be subtracted from one another as if they were.)*
 
+**The rotor line rests on section drag at low Reynolds number.** It is a blade-element result for
+blades whose sections run near a Reynolds number of 8 × 10⁴ in the free-wheeling state, on section
+polars that are computed rather than measured, and section drag is hardest to predict in that range.
+Section 12 shows how strongly the term depends on it.
+
 **The hardware exposed by the vertical-phase layout is 69 percent of the zero-lift drag at the
 favourable end and 57 percent at the adverse one.** The frames and the rotors they carry are the
 majority of the aircraft's zero-lift drag in both cases, and the rotors alone are more than half
