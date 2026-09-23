@@ -63,3 +63,54 @@ olarak sorunsuz olduğu. Tur 61'de düzeltilip yeniden soruluyor. Eşlemenin ken
 | C1 | A1'in onayı: çerçeve orantılı mı kısalsın? |
 | C2 | **Ruh ile öncelik sınırı arasındaki gerilim.** Adım 1 *"not a claim that the route was waiting to be found"* diyor (Tur 46'da üç okuyucunun boşluk iddiasını çürütmesinden sonra). Yazarın Tur 61 duruşu *"görülememişi görmüş olmak"*. Kavrayış **yüklem genişletilmeden** nasıl taşınır? Okuyuculara da soruluyor. |
 | C3 | *"Ürünün sorunsuzluğu"* hangi adımlar? (B1) |
+
+---
+
+# Tur 61 — dört okuyucu da cevap verdi; ilk kısaltma kümesi uygulandı
+
+**Yeni kural (yazar, Tur 62 mesajı):** ben de bir okuyucuyum; görüşümü her turda yazarım ve okuyucular onu da
+eleştirir. **Uygulama eşiği: dört okuyucu + ben.** (CLAUDE.md §2.3 eki.)
+
+## Oylar (G = Grok, C = ChatGPT, D = DeepSeek, Q = Qwen, K = Claude)
+
+| # | Konu | G | C | D | Q | K | Sonuç |
+|---|---|---|---|---|---|---|---|
+| A1 | Çerçeve orantılı kısalır, işlevleri korunur | ✓ | ✓ | ✓ | ✓ | ✓ | **Karara bağlandı** (C1 kapandı) |
+| A2 | Adım 7 + 8 tek bölüm (birleştirme) | ✓ | ✓ | ✓ | ✓ | ✓ | **Karar**; 8'in bir kısmının "sorunsuzluk"a gidip gitmeyeceği B1'de |
+| A3 | Adım 15 kısa kapanış | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı** (1 023 → 337) |
+| A4 | Tek evler (2, 9, 9+13, 3, 7, 14, 1, 11) | ✓ | ✓ | ✓ | ✓ | ✓ | **Adım 11 ve 15'te uygulandı**; öteki işaretçiler sonraki kümede |
+| A5 | Gövdede kalmalı | ✓ | ✓ | ✓ | ✓ | ✓ | Karar |
+| A6 | Eke taşınabilir | ✓ | ✓ | ✓ | ✓ | ✓ | **Üçü uygulandı**: 10 yayılım → cümle; 13 duyarlılık → Ek S13; 14 bilinmeyenler → Ek S14 (gövdede liste). 1954 ve Adım 4 kısmı sonraki kümede |
+| A7 | Altı tablo gövdede | ✓ | ✓ | ✓ | ✓ | ✓ | Karar |
+| A8 | Tur 59 düzeltmeleri | ✓ | ✓ | ✓ | ✓ | ✓ | Kapandı |
+| A9 | Çekince listesi | ✓ | ✓ (*"denetim listesi, birebir zorunluluk değil"*) | ✓ | ✓ | ✓ | Karar; biçim ilkesi aşağıda |
+| — | Adım 9 bağımlılık tablosu → düzyazı | ✓ | ✓ | ✓ (Tur 61) | ✓ | ✓ | **Uygulandı** |
+| — | Adım 3 ve 4 tabloları gövdede değil | ✓ | ✓ | ✓ | ✓ | ✓ | **Karar**; düzyazıya çevirme sonraki kümede (dikkat isteyen yeniden yazım) |
+| C2 | Adım 1: ret cümlesi katkıdan önce, paragraf katkıyla biter | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı** (yüklem değişmedi) |
+| B1 | "Ürünün sorunsuzluğu" | 8+9 | 9 + köprü | 8+9 | 9 (8 7'de kalır) | 9 + 8'in "ne hâlâ hareket ediyor / ne başarısız / ne çözülmedi" kısmı | Ortak çekirdek: **9 orada, 12–13 orada değil** (dördü). 8'in yeri açık |
+| B2 | 2–4 | tek bölüm | tek bölüm | **üç bölüm** | tek bölüm | tek bölüm | 4–1; **DeepSeek karşı** → uygulanmaz, geri soruluyor |
+| B3 | 5 ve 6 | iki bölüm | iki | iki | iki | iki | **Karar** |
+| B4 | Tepki torku evi | 8 (+1, 7 birer cümle) | 8 (7 bir cümle) | 7 ve 8 | 8 (7 cümle, 9 sınır) | 8, 7'de seçim cümlesi | Yakın uzlaşı: **8 ev, 7'de bir cümle**; DeepSeek'in *"7 seçimi söyler, 8 sonucu"* bununla uyumlu mu — soruluyor |
+| B5 | "Geçiş gösterilmedi" evi | 7 (+10 sayı) | 7 (9 sınır, 10 sayı) | 9 (+10, 7 ayrım) | 9 (+10, 7 işaret) | **7** | 3–2; açık |
+| B6 | Sabit hatve açığı evi | 11 | 6 | 6 | 11 | **6** | 3–2; açık |
+| B7 | Açık iki tablo yeri | 2 + 9 dört eksen | 2 + 11 döküm | 9 dört eksen + 2 | 9 dört eksen + 11 döküm | **2 + 9 dört eksen** | 2: G C D K (4); 9 dört eksen: G D Q K (4); 11 döküm: C Q (2). Çoğunluk 2 + 9; oy birliği yok |
+
+## Çekince listesi — Tur 61
+
+- Okuyucuların *"eksik"* dediği **35 satır eklendi** (Grok 5, DeepSeek 13, ChatGPT 1, Qwen 18; örtüşenler birleşti), hepsi
+  metinde doğrulandı. Grok'un parça uyarısıyla Adım 8'in cümlesi tamlandı. **Toplam 135 çekince + 5 ruh cümlesi = 140.**
+- **Çıkarma önerileri uygulanmadı:** Grok 3 satır (Adım 7 *"not decoration"*, Adım 3 tekrar, Adım 15'in iki satırı), Qwen 2
+  satır (Adım 10 *"spread is the finding"*, Adım 14 *"for the first item"*). DeepSeek *"hiçbiri yük taşımaz değil"* dedi → oy
+  birliği yok. (Adım 15'in iki satırı kısa kapanışta zaten korundu.)
+- **Biçim ilkesi (ChatGPT'nin ayrımına benim cevabım):** denetim birebir kalır; bir çekince sıkıştırılırsa **aynı
+  commit'te** listedeki satır yeni cümleyle güncellenir ve bir sonraki turda eski/yeni yan yana gösterilir. Böylece hem
+  sıkıştırma mümkün hem de hiçbir çekince sessizce düşmez.
+- **Ruh cümleleri (benim önerim):** beş cümle — Adım 1 katkı cümlesi, Adım 6 menteşe cümlesi (ChatGPT), Adım 7'nin katkı
+  cümlesi (Grok), Adım 7 *"That single move is what removes the mechanism."*, Adım 15 son cümlesi. Aynı denetim.
+
+## Ölçü
+
+| | Tur 60 | Tur 61 kümesinden sonra |
+|---|---:|---:|
+| Kelime (gövdeler) | 30 096 | **28 515** (−1 581, %5,3) |
+| Tablo | 16 | **12** |

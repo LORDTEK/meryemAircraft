@@ -183,18 +183,8 @@ can reverse.** Both parts can now be checked.
   tilt bound.**
 
 **Where the reversal falls is decided by quantities this study has not measured or not fixed.** In
-the case above it is the blade family, which Section 10 leaves open. Across the sensitivity cases below
-it is the competitor's lift-group mass and the propeller basis:
-
-| Case | Fixed fuel fraction | Fixed fuel mass | Fixed take-off mass | Shift, first to third |
-|---|---:|---:|---:|---:|
-| As above | +55 to +84 % | +28 to +54 % | −13 to +7 % | 67 to 77 points |
-| Lift group 5 % of take-off mass | +55 to +84 % | +47 to +76 % | +36 to +65 % | 14 to 24 points |
-| Lift group 15 % of take-off mass | +55 to +84 % | +8 to +31 % | −62 to −50 % | 117 to 134 points |
-| All three at this configuration's propeller efficiency | +33 to +45 % | +6 to +17 % | −33 to −25 % | 65 to 72 points |
-| Lift-plus-cruise drag as a fixed increment, not a ratio | +59 to +75 % | +31 to +45 % | −13 to +5 % | 67 to 75 points |
-
-*(Range of the lift-plus-cruise layout relative to this configuration, across the four closures.)*
+the case above it is the blade family, which Section 10 leaves open. Across the sensitivity cases
+(the full table is Supplement S13) it is the competitor's lift-group mass and the propeller basis.
 
 **With a lighter lift group the lift-plus-cruise layout leads under all three contracts at every
 closure; with a heavier one this configuration leads under a fixed take-off mass at every closure.**
@@ -241,8 +231,9 @@ competitor's lift-group mass, and the ordering against the second is against a b
 transferred from another airframe or an idealisation; their propeller efficiency is assumed; their
 architecture-specific mass is a parameter. This configuration's drag and propeller efficiency are
 computed. **Comparing computed figures against assumed ones favours whichever is assumed more
-optimistically**. In propeller efficiency that is both competitors, and the table above shows the
-size of it; in drag it is the tilting layout, by construction.
+optimistically**. In propeller efficiency that is both competitors, and the sensitivity case that gives all
+three this configuration's propeller efficiency shows the size of it: under the first contract the
+lift-plus-cruise layout falls from +55 to +84 percent to +33 to +45 percent (Supplement S13); in drag it is the tilting layout, by construction.
 
 **The comparison is at one size.** Section 12's 1 000 kg reference design has no closure, and none of its figures
 is used here.
@@ -259,6 +250,7 @@ of the architectures alone.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 61:** duyarlılık tablosu Ek S13'e taşındı (dört okuyucu + Claude hemfikir, A6); gövdede 14–134 puan ve işaret cümleleri kaldı. Taşıma sırasında *"the table above shows the size of it"* sarkık kaldı — taşınan tablonun satırıydı; rakam (+55…+84 → +33…+45 %) gövdeye yazıldı | `aero/contracts-result.txt`; `paper/v8/supplement.md` S13 |
 | **Tur 60:** tilt paragrafı *"a size, not an order"* — sınırın payı, gerçek tilt'in seyir cezalarının doldurması gereken alan; doldurma hesaplanmadı | ChatGPT; `aero/contracts-result.txt` |
 | **Tur 58, P3:** mekanizma iddiası bir sıralama değil, burada söz konusu değil | Adım 9 bağımlılık tablosu (*"sizing contract"*); Adım 15 |
 | Menzil R = (E* η/g)(L/D)(m_yakıt/MTOW); üç sözleşmenin tanımı | `aero/baseline.py` satır 216–230 (yorum bloğu), `menzil_ver`, `sabit_yakit`, `sabit_MTOW` |

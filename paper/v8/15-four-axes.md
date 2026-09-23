@@ -20,90 +20,34 @@ Ve **Adım 6 hâlâ *"It is this aircraft's own refusal of the variable-pitch hu
 
 ## Four axes, and where the paper stops
 
-The paper makes claims on four axes, against four different opponents, and on each it stops where its
-evidence stops. They are restated here in the order Section 9 gave them, with what each now rests on.
+The paper makes its claims on four axes, against four opponents (Section 9), and on each it stops where
+its evidence stops.
 
-### Cruise efficiency, against multirotors — claimed, and bounded
+**Cruise efficiency, against multirotors — claimed, and bounded.** Cruise lift is carried on a surface
+rather than on rotors. The size of the advantage is a calculation, not a consequence of that statement:
+positive throughout against one published quadrotor, and from slightly behind to comfortably ahead against
+the other (Section 6). Nothing is claimed against multirotors on vertical capability.
 
-**Cruise lift is carried on a surface rather than on rotors**, and no sizing contract or assumption in
-this paper moves the configuration out of that state. That is the structural claim, and it stands.
-**The size of the advantage is a calculation, not a consequence of it.** Made in one common definition
-against two published quadrotors, it is positive throughout against one of them; against the other it
-runs from slightly behind to comfortably ahead, depending on the drag outcome and the blade. **What
-compresses it is the cruise efficiency of the fixed-pitch blade**, not the wing. The comparison
-is between independently produced figures, not a controlled reproduction, and it is not claimed as
-more. Nothing is claimed against multirotors on vertical capability, where they are the better machines.
+**Operation without a runway, against fixed-wing aircraft — claimed as sized, not demonstrated.** The
+vertical phase was sized with an energy store whose required performance the sources consulted here do not
+report as built (Section 14). Nothing is claimed against fixed-wing aircraft on range or cruise efficiency.
 
-### Operation without a runway, against fixed-wing aircraft — claimed as sized, not demonstrated
+**The mechanism required to change regime, against tilting architectures — the contribution.** The
+configuration is arranged to change regime by rotating the airframe rather than the propulsors, and so
+carries none of the mechanism classes Section 7 counts: no pivot, no nacelle or rotor-group actuator, no
+variable-pitch hub, no dedicated lift rotors, and no rotor stowing, indexing or stopping mechanism. Roll
+comes from the strip; the reaction-torque channel the coaxial pairs could provide is declined, and what
+declining it costs is not computed. **This is a count of mechanism classes, not a claim that nothing moves, and not a
+claim of mechanical simplicity or reliability.** Whether this aircraft completes the rotation is a separate
+question, and it is not settled here.
 
-**The aircraft stands on its own tail, carries everything it needs to leave and to return, and asks
-the site for nothing but ground.** The structure it stands on is the structure that carries its control
-propellers. That is a property of the arrangement. **What is sized rather than shown is that it can do
-so at the masses reported**: the vertical phase was sized with an energy store whose required
-performance the sources consulted here do not report as built, and with a store that has been built the
-sizing loop closes only for a heavier aircraft — and at the unit pack's continuous rating not at all. **By construction,
-in this paper, means by the sizing, never by demonstration.** Nothing is claimed against fixed-wing
-aircraft on range or cruise efficiency, where they are the better machines.
+**Range, against the other hybrids — not claimed, in either direction.** The ordering belongs to the sizing
+contract (Section 13).
 
-### The mechanism required to change regime, against tilting architectures — the contribution
-
-**The configuration is arranged to change regime by rotating the airframe rather than the
-propulsors.** The propulsors hold
-their orientation relative to the body from take-off to cruise, and so the configuration carries **no
-mechanism that reorients a propulsor** — nor any of the other mechanism classes that architectures use
-to change regime or to take a rotor out of one regime's flow: no pivot, no nacelle or rotor-group
-actuator, no variable-pitch hub, no dedicated lift rotors, and no rotor stowing, indexing or stopping
-mechanism. Pitch and yaw come
-from differential thrust between fixed-pitch propellers. **Roll does not come from the propellers**: the
-configuration declines the reaction-torque channel its coaxial pairs could provide and assigns that
-axis to a single moving aerodynamic surface, the strip; what declining the channel costs is not
-computed. The actuator inventory is the propulsion motors together with the strip.
-
-**This is a count of mechanism classes, not a claim that nothing moves, and not a claim of mechanical
-simplicity or reliability**, none of which was measured. It rests on the inventory of Sections 7 and 8.
-It does not rest on the drag bracket, the propeller efficiency, the sizing contract, the range result,
-the energy store, or the transition aerodynamics (Section 9). **Whether this aircraft completes the
-rotation is a separate question, and it is not settled here**; the arrangement requires no mechanism to
-change regime, and the paper does not claim that it has been shown to change regime.
-
-**The escape condition is met where the aircraft is carried and not everywhere.** The nose pair serves
-both regimes in one orientation with the hover peak drawn from a store; the attitude pairs are carried
-through cruise producing moments rather than cruise thrust, and the drag they add is reported rather than
-absorbed.
-
-### Range, against the other hybrids — not claimed, in either direction
-
-**Against lift-plus-cruise the ordering belongs to the sizing contract.** It moves substantially across
-the three contracts examined, and under one of them its sign changes inside the envelope and turns on a
-mass fraction of the competitor that has not been measured. **Against the tilting family the competitor
-could be modelled here only as a bound that pays no cruise penalty**, and an ordering against a bound is
-not a result. A reader who finds a range claim against either family anywhere in this paper should read
-it as an error.
-
-### What holds the four together
-
-**The claims are made through an accounting, and the accounting is what makes them checkable.** Hybrid
-vertical-take-off aircraft pay for runway independence in three currencies — hover hardware carried
-through cruise, its drag when exposed, and continuous power sized by the hover peak. The currencies are
-coupled, and every known partial remedy moves cost between them. An escape condition states what an
-architecture would have to do to incur none of the three as named; this configuration meets it in the
-propulsor that carries the aircraft and pays the rest, and the ledger reports each charge in its own
-currency rather than as one number. **At least two of the charges are not locked together, and so,
-where architectures trade one charge against another, a ranking is a weighting and belongs to the
-contract that makes it.**
-
-### Where the paper stops
-
-**The sizing loop closes on a declared package; the aircraft is not shown to close.** The first obstacle
-is known and named: the energy store. The rest are listed with what would settle them — the pitching
-moment through the transition, section drag at low Reynolds number, the airframe's mass, hover control,
-the descent, and the items this work does not contain at all; Section 14 gives the full list. Nothing
-in this work addresses certification.
-
-What the paper offers, and defends, is narrower than a first reading might take it to be: **a
-configuration sized to combine runway-independent vertical operation with wing-borne cruise efficiency,
-arranged to do so with no mechanism that reorients a propulsor, and an account of what the combination
-costs.**
+**The loop closes; the aircraft is not shown to.** Section 14 lists what would settle the rest; nothing in
+this work addresses certification. What the paper offers is **a configuration sized to combine
+runway-independent vertical operation with wing-borne cruise efficiency, arranged to do so with no mechanism
+that reorients a propulsor, and an account of what the combination costs.**
 
 ---
 
@@ -111,6 +55,7 @@ costs.**
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 61 — kısa kapanış** (dört okuyucu + Claude hemfikir, A3): 1 023 → ~330 kelime. Kalan her yüklem aşağıdaki satırlarda kaynağıyla; çıkarılanlar kendi evlerinde: çerçeve özeti Adım 2–3, kısmi gerçekleşme Adım 3/7/8, *"by construction"* Adım 9, bağımsız üretilmiş rakamlar Adım 6 | `paper/v8-shortening-consensus.md` A3, A4 |
 | **Tur 60:** *"rather than cruise thrust"* | Grok |
 | **Tur 59:** *"The configuration is arranged to change regime by rotating the airframe"* — Grok Adım 14'ü yakaladı; aynı fiil burada da vardı | Adım 1 (P1) |
 | Dört eksen, dört rakip, sıralama | Adım 9 tablosu |

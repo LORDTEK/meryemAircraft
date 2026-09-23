@@ -8,7 +8,10 @@ adımda. Üçü hafif yeniden ifadeydi; metindeki birebir hâliyle yazıldı.
 çıkarıldığı ya da başka bir adıma taşındığı ancak **yazarın kararıyla** kaydedilir.
 
 **Biçim:** `…` birden çok parçayı ayırır; her parça aynı adımda bulunmalı. Karşılaştırma büyük/küçük harfe ve
-boşluğa duyarsız. `G` = Grok, `D` = DeepSeek.
+boşluğa duyarsız. `G` = Grok, `D` = DeepSeek, `C` = ChatGPT, `Q` = Qwen, `K` = Claude.
+
+**Tur 61 eklemeleri:** okuyucuların *"eksik"* dediği 35 satır (hepsi metinde doğrulandı) ve Grok'un parça uyarısıyla Adım 8'in tam cümlesi.
+**Çıkarma önerileri** (Grok: 3 satır, Qwen: 2 satır) **uygulanmadı** — DeepSeek hiçbirini çıkarmaz dedi, oy birliği yok.
 
 | Adım | Çekince | Öneren |
 |---:|---|---|
@@ -56,7 +59,7 @@ boşluğa duyarsız. `G` = Grok, `D` = DeepSeek.
 | 7 | The mechanism claim is about hardware and survives that limit. The transition claim is not made. | G |
 | 7 | The qualification in that sentence is not decoration | D |
 | 8 | What declining it costs is not counted in this work. | G |
-| 8 | The stopped state is not. | G |
+| 8 | The free-wheeling state is physically determinate: the rotor settles where net shaft torque is zero. The stopped state is not. | G |
 | 8 | should be read as the state Section 11 defines rather than as the state a particular installation would reach. | D |
 | 8 | How many actuators that is, this study does not fix. | D |
 | 9 | No range claim is made against the tilting or lift-plus-cruise families in either direction. | G |
@@ -112,3 +115,51 @@ boşluğa duyarsız. `G` = Grok, `D` = DeepSeek.
 | 14 | They are not a structural closure at 100 kg | D |
 | 15 | This is a count of mechanism classes, not a claim that nothing moves, and not a claim of mechanical simplicity or reliability | D |
 | 15 | Whether this aircraft completes the rotation is a separate question, and it is not settled here | D |
+| 1 | What is not established is the combination taken together with its price. | G |
+| 7 | What this paper contributes is that combination, the condition its primary propulsor is designed to satisfy, and the price the configuration pays for pursuing it. | G |
+| 9 | It is not a list of the study's open questions. | G |
+| 13 | The mechanism claim is not a ranking and is not at stake here | G |
+| 10 | This section prices the arrangement of Sections 7 and 8 on a declared package; it does not bear on the count of mechanism classes, which rests on the inventory of those sections alone. | G |
+| 6 | The compared vehicles are 1 670 to 3 275 kg | D |
+| 6 | Reynolds number favours the larger aircraft | D |
+| 6 | The quadrotor is a good quadrotor. | D |
+| 6 | Nothing here is compared against a poor example. | D |
+| 6 | The speeds are not matched, and the direction of that mismatch is calculable. | D |
+| 6 | The atmospheres are not matched. | D |
+| 6 | The analysis chains are not matched, and this is the qualification that bounds what the comparison can be called. | D |
+| 6 | The best point is not an available option | D |
+| 6 | so this fixes a direction, not a magnitude | D+Q |
+| 10 | the control moment arms of Section 8 are therefore reference values that this closure does not re-derive | D |
+| 11 | The corner that needs the most buffer per kilogram is given the smallest buffer | D |
+| 11 | that is a declared assumption of the closure rather than an outcome of it | D |
+| 12 | Much above 1 000 kg a single nose pair can no longer hold | D |
+| 3 | It is not a claim that anything satisfies it, not a claim that anything satisfying it would fly, and not a claim that satisfying it is desirable. | C+Q |
+| 1 | What follows is therefore not a claim to an empty field. | Q |
+| 1 | The route is not claimed to have been waiting to be found. | Q+G |
+| 2 | The table is not a census of the field; it lists the moves whose transfers are documented, and a remedy absent from it is not thereby claimed to cancel a charge. | Q |
+| 4 | The framework does not predict any of these numbers; without the input fractions it predicts no magnitudes. | Q |
+| 4 | The prediction is also mission-dependent, and the page would be weaker for hiding it. | Q |
+| 5 | This section does not assert the outcome of a calculation it does not contain. | Q |
+| 6 | The reference is therefore given its best speed and this configuration is not given its best speed, and the margin is positive anyway. | Q |
+| 7 | The assembly is not offered as novel because it is an assembly. | Q |
+| 8 | Either the residual is small enough to be absorbed that way, which this study has not shown and which would mean the architecture spends a little of the channel it declined, or a fourth duty falls on the strip. | Q |
+| 9 | It does not claim that the aircraft flies. | Q |
+| 10 | The published zero-lift value of 0.0248 is not used. | Q |
+| 11 | No line item at the adverse end is an independent measurement, and they should not be subtracted from one another as if they were. | Q |
+| 12 | A change from 3.6 to 4.0 percent is a change between two choices, not a scaling result, and it cannot be offered as evidence that Bill 1 moves with size in either direction. | Q |
+| 13 | The competitors are therefore this planform with two add-ons, not independently designed aircraft of their families. | Q |
+| 13 | And nothing here ranks architectures for a mission. | Q |
+| 14 | The ranges of 927 to 1 233 km survive the re-closure only because the fuel fraction is held, on an aircraft three-quarters heavier; they do not survive as 13 kg carried that far on a store that has been built. | Q |
+
+## Ruh cümleleri (Tur 61, Claude'un önerisi)
+
+Çekince listesi aşırı iddiaya karşı korur; bu liste **ters yöne** karşı korur: kısaltmada kavrayışı taşıyan cümlenin
+kaybolmasına (CLAUDE.md §0.8). Aynı denetimle sınanır.
+
+| Adım | Cümle | Öneren |
+|---:|---|---|
+| 1 | The contribution is the architecture: a configuration arranged to change regime by rotating the airframe rather than its propulsors, and so carrying no mechanism that reorients a propulsor. | K |
+| 6 | The two halves are now on the table separately. Section 7 is where they are combined, and the combination is what this paper is for. | C |
+| 7 | What this paper contributes is that combination, the condition its primary propulsor is designed to satisfy, and the price the configuration pays for pursuing it. | G |
+| 7 | That single move is what removes the mechanism. | K |
+| 15 | What the paper offers is a configuration sized to combine runway-independent vertical operation with wing-borne cruise efficiency, arranged to do so with no mechanism that reorients a propulsor, and an account of what the combination costs. | K |

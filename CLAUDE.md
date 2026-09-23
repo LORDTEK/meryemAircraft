@@ -314,6 +314,18 @@ biçiminde ve **aranan yer adlandırılarak** yazılır.
 - Tutulan belge: `paper/v8-shortening-consensus.md` (hemfikir / ayrışan / açık).
 - **Kesilemeyecek çekinceler:** `paper/v8-caveats.md`, denetimi `paper/build/v8_caveats.py`.
 
+**Ek, Tur 62 (yazar):** *"Her metinde elbette kendi görüşlerin de olsun. … senin görüşlerin hakkında da fikir beyan
+etsinler. Yoksa sadece kendi kendilerini yargılarlarsa, sen bana eşdeğer gibi olursun ki hoş değil."* Ve: *"Sen de
+dahil herkesin hemfikir olduğu kısaltmalar uygulansın."*
+
+- **Ben de bir okuyucuyum, hakem değilim.** Her tur metninde her açık madde için **kendi görüşüm ve gerekçem**
+  yazılır ve okuyuculardan **benim görüşümü de eleştirmeleri** istenir. Oylama tablosunda ben de bir sütunum.
+- **Uygulama eşiği: dört okuyucu + ben.** Biri bile karşıysa uygulanmaz, geri sorulur. Karar yine yazarındır;
+  yazar okuyucu cevaplarını kendisi okumaz, **bana yapıştırır** — bu yüzden yazara verilen özet eksiksiz ve dürüst
+  olmak zorunda: kim ne dedi, ne uygulandı, ne neden uygulanmadı, benim hatalarım.
+- **Uygulanan her kısaltma bir sonraki tur metninde önce/sonra birebir gösterilir.** Taşınan malzeme
+  `paper/v8/supplement.md`'ye aynen gider; gövdede bulgusu ve sınırı kalır.
+
 ## 3. Doğrulama
 
 Hiçbir iddia denetlenmeden aktarılmaz — ne YZ'lerinki ne benimki.

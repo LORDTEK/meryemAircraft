@@ -1120,3 +1120,22 @@ birebir hâline getirildi; ikisi ortak → 100 satır). `paper/v8-caveats.md` + 
 için Adım 9'un dört eksen tablosunu düşürüyor. Uzlaşı altı.
 
 Uzlaşı ve ayrışmalar: `paper/v8-shortening-consensus.md` (A1–A9, B1–B8, C1–C3).
+
+---
+
+# Tur 62 — Tur 61 metnine dört cevap; ilk kısaltma kümesi (dört okuyucu + Claude hemfikir)
+
+**Yazar:** *"Her metinde elbette kendi görüşlerin de olsun … Sen de dahil herkesin hemfikir olduğu kısaltmalar uygulansın."*
+→ CLAUDE.md §2.3 eki. Yazar cevapları okumuyor, bana yapıştırıyor.
+
+**Dördü de tam cevap verdi** (ChatGPT ve Qwen bu kez görevi yaptı). Oylar: `v8-shortening-consensus.md`, Tur 61 bölümü.
+
+**Uygulanan (beşimiz hemfikir):** Adım 15 kısa kapanış (1 023 → 337); Adım 10 yayılım tablosu → cümle; Adım 13 duyarlılık
+tablosu → Ek S13; Adım 14 bilinmeyenler tablosu → Ek S14 (gövdede liste); Adım 11 kapanışı açılışı tekrar etmiyor; Adım 9
+bağımlılık tablosu → düzyazı; Adım 1 ret cümlesi katkıdan önce. **30 096 → 28 515 kelime, 16 → 12 tablo.**
+
+**Uygularken bulunan (§0.2):** Adım 13'te *"the table above shows the size of it"* taşınan duyarlılık tablosunun bir
+satırına işaret ediyordu — gövdede sarkık kalacaktı. Rakam gövdeye yazıldı (+55…+84 → +33…+45 %).
+
+**Çekince listesi:** 35 ekleme (hepsi doğrulandı), Adım 8 cümlesi tamlandı, 5 ruh cümlesi (benim önerim) → 140 satır.
+Çıkarma önerileri (Grok 3, Qwen 2) uygulanmadı — DeepSeek karşı.

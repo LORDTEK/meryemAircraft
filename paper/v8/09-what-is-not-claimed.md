@@ -46,16 +46,17 @@ as a claim.
 ### What each claim does not depend on
 
 A reader who rejects one of these claims should be able to see immediately which of the others
-survive, and the dependencies are short enough to list.
+survive, and the dependencies are short enough to state.
 
-| Claim | Does not depend on |
-|---|---|
-| Operation without a runway | the drag bracket, the propeller efficiency, the transition aerodynamics — **but it does depend on the energy store**: the vertical phase is sized with one, and Section 14 examines whether it exists |
-| Cruise lift carried on a surface | the sizing contract, the transition aerodynamics |
-| The **size** of the cruise-efficiency margin | — it depends on both the drag bracket and the blade family, and Section 6 reports it as a range rather than a number |
-| Elimination of the propulsor-reorientation mechanism class | the drag bracket, the propeller efficiency, the sizing contract, the range result, the energy store, **and the transition aerodynamics** |
+**Operation without a runway** does not depend on the drag bracket, the propeller efficiency or the
+transition aerodynamics — **but it does depend on the energy store**: the vertical phase is sized with one,
+and Section 14 examines whether it exists. **Cruise lift carried on a surface** does not depend on the sizing
+contract or the transition aerodynamics. The **size** of the cruise-efficiency margin depends on both the
+drag bracket and the blade family, and Section 6 reports it as a range rather than a number. **Elimination
+of the propulsor-reorientation mechanism class** does not depend on the drag bracket, the propeller
+efficiency, the sizing contract, the range result or the energy store — **nor on the transition aerodynamics**.
 
-**The last row carries a distinction that matters more than the others.** The mechanism claim is
+**The last of these carries a distinction that matters more than the others.** The mechanism claim is
 a statement about what hardware is present, and it is settled by the inventory of Sections 7 and 8. **The
 separate claim that this aircraft can actually perform the regime change is not settled**, and it
 depends on exactly the aerodynamics that Sections 6 and 14 describe as unreliable above roughly
@@ -146,6 +147,7 @@ what it demands of anyone who uses the framework afterwards.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 61:** bağımlılık tablosu düzyazıya (dört okuyucu + Claude hemfikir); dört satır aynen, *"The last row"* → *"The last of these"* | `v8-shortening-consensus.md` |
 | **Tur 60:** *"rather than cruise thrust"* | Grok; Adım 3 (*"no cruise thrust in that sense"*) |
 | **Tur 59:** *"the inventory of Sections 7 and 8"* — Adım 10, 12, 15 ile aynı ifade | Grok, DeepSeek |
 | **Tur 58:** *"The contribution is the architecture, and the paper presents it as …"* — P1 ile tutarlılık için | Adım 1 (P1); CLAUDE.md §0.6 |

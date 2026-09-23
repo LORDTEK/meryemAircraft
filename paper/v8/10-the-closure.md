@@ -128,15 +128,9 @@ architecture — and for the 50 kg design, which is the only one carried through
 **Payload is an input, fixed at 13 kg; take-off mass is the output.** The closure returns 52.3 to
 57.5 kg, and the payload fraction that follows runs from **0.25 down to 0.23**.
 
-**The spreads are not alike, and the difference is the useful part.** *Spread here is
-(max − min)/min, so every figure is auditable from the table above.*
-
-| | spread across the four |
-|---|---|
-| Take-off mass | **9.9 %** |
-| Hover power | **9.9 %** |
-| Range | **33.0 %** |
-| Engine rating | **46.1 %** |
+**The spreads are not alike, and the difference is the useful part.** Across the four, the spread
+— (max − min)/min, auditable from the table above — is **9.9 percent** in take-off mass and in hover
+power, **33.0 percent** in range and **46.1 percent** in engine rating.
 
 **Engine rating is the most sensitive output in this envelope and mass is the least, and the
 ordering follows from where each input enters.** Cruise power is W·V/(L/D)/η, so it carries the
@@ -246,6 +240,7 @@ where it is made.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 61:** yayılım tablosu tek cümleye indi (dört okuyucu + Claude hemfikir, A6); dört sayı aynen | `aero/closure-result.txt` YAYILIMLAR |
 | **Tur 60:** üç ölçeklenmeyen şey (uç disk çapı eklendi); çerçeve+rotor katsayıları S_ref 1,979 m² üzerinde — sabit tutmak donanımı kanatla büyütmek demek; referans boyutta kalsa %4–13, 0,0009–0,0028 küçülürdü, kapanış almıyor; terim birliği | Grok; `aero/closure.py`, `closure-result.txt`; `aero/tip_propeller.py` S_REF; `verify.py` iki yeni kontrol |
 | **Tur 59:** kapanış geometrisi 2,07–2,27 m², 3,53–3,70 m, 1,23–1,29 m — eski alt uçlar (1,98 / 3,45 / 1,20) **50 kg referans geometrisiydi**, kapanış değil | `aero/closure.py` GEOMETRI bloğu, `closure-result.txt`; `verify.py` Adım 10 geometri denetimi (eski alt ucu reddeder) |
 | **Tur 58, P3:** bu bölüm düzeni fiyatlıyor; mekanizma sayımı yalnız envantere dayanıyor | Adım 9 bağımlılık tablosu; Adım 15 (*"It rests on the inventory of Sections 7 and 8"*) |

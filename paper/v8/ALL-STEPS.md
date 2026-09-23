@@ -179,11 +179,11 @@ that costs, and what the rest of the combination costs, is what the paper is for
 **None of the elements is new**, and Section 7 says so. Tail-sitting aircraft are seventy years
 old and uncrewed ones are ordinary; blended wing bodies have been a standing subject of transport
 research for three decades; series-hybrid propulsion has established precedent in small uncrewed
-aircraft. **The contribution is the architecture: a configuration arranged to change regime by
-rotating the airframe rather than its propulsors, and so carrying no mechanism that reorients a
-propulsor.** The combination, the consequences of the choices inside it, and an accounting of what
-they cost are how that contribution is presented and priced — not a claim that the route was
-waiting to be found.
+aircraft. The route is not claimed to have been waiting to be found. **The contribution is the
+architecture: a configuration arranged to change regime by rotating the airframe rather than its
+propulsors, and so carrying no mechanism that reorients a propulsor.** The combination, the
+consequences of the choices inside it, and an accounting of what they cost are how that contribution
+is presented and priced.
 
 Section 2 states the cost that any architecture in this corner pays, in terms that do not
 presume an escape.
@@ -1356,16 +1356,17 @@ as a claim.
 ### What each claim does not depend on
 
 A reader who rejects one of these claims should be able to see immediately which of the others
-survive, and the dependencies are short enough to list.
+survive, and the dependencies are short enough to state.
 
-| Claim | Does not depend on |
-|---|---|
-| Operation without a runway | the drag bracket, the propeller efficiency, the transition aerodynamics — **but it does depend on the energy store**: the vertical phase is sized with one, and Section 14 examines whether it exists |
-| Cruise lift carried on a surface | the sizing contract, the transition aerodynamics |
-| The **size** of the cruise-efficiency margin | — it depends on both the drag bracket and the blade family, and Section 6 reports it as a range rather than a number |
-| Elimination of the propulsor-reorientation mechanism class | the drag bracket, the propeller efficiency, the sizing contract, the range result, the energy store, **and the transition aerodynamics** |
+**Operation without a runway** does not depend on the drag bracket, the propeller efficiency or the
+transition aerodynamics — **but it does depend on the energy store**: the vertical phase is sized with one,
+and Section 14 examines whether it exists. **Cruise lift carried on a surface** does not depend on the sizing
+contract or the transition aerodynamics. The **size** of the cruise-efficiency margin depends on both the
+drag bracket and the blade family, and Section 6 reports it as a range rather than a number. **Elimination
+of the propulsor-reorientation mechanism class** does not depend on the drag bracket, the propeller
+efficiency, the sizing contract, the range result or the energy store — **nor on the transition aerodynamics**.
 
-**The last row carries a distinction that matters more than the others.** The mechanism claim is
+**The last of these carries a distinction that matters more than the others.** The mechanism claim is
 a statement about what hardware is present, and it is settled by the inventory of Sections 7 and 8. **The
 separate claim that this aircraft can actually perform the regime change is not settled**, and it
 depends on exactly the aerodynamics that Sections 6 and 14 describe as unreliable above roughly
@@ -1565,15 +1566,9 @@ architecture — and for the 50 kg design, which is the only one carried through
 **Payload is an input, fixed at 13 kg; take-off mass is the output.** The closure returns 52.3 to
 57.5 kg, and the payload fraction that follows runs from **0.25 down to 0.23**.
 
-**The spreads are not alike, and the difference is the useful part.** *Spread here is
-(max − min)/min, so every figure is auditable from the table above.*
-
-| | spread across the four |
-|---|---|
-| Take-off mass | **9.9 %** |
-| Hover power | **9.9 %** |
-| Range | **33.0 %** |
-| Engine rating | **46.1 %** |
+**The spreads are not alike, and the difference is the useful part.** Across the four, the spread
+— (max − min)/min, auditable from the table above — is **9.9 percent** in take-off mass and in hover
+power, **33.0 percent** in range and **46.1 percent** in engine rating.
 
 **Engine rating is the most sensitive output in this envelope and mass is the least, and the
 ordering follows from where each input enters.** Cruise power is W·V/(L/D)/η, so it carries the
@@ -1858,15 +1853,12 @@ study has not posed, and the other is a term the study's method is known to unde
 
 ### What the ledger amounts to
 
-**Three charges, three currencies, no total.** The non-clean-body drag terms remove 42.3 to 47.4
+The non-clean-body drag terms remove 42.3 to 47.4
 percent of the clean-body lift-to-drag ratio, and the hardware exposed by the vertical-phase
 layout is the majority of the zero-lift drag. Bill 1 appears as a 3.6 percent buffer rather than a
 lift group. Bill 3 is divided by 2.4 to 3.2 at the engine and is not divided at all on the
 electrical path. **The cruise propeller efficiency sits 14.6 to 21.0 percent below the published
 assumption under fixed pitch.**
-
-**No charge on this page is a new one.** Every figure was already inside a quantity Section 10
-reported, and this section's only work has been to say which part of which quantity it was.
 
 **And every one of them belongs to one scale.** The four closures vary the drag uncertainty and
 the blade-family choice at the reference size; **they do not establish how the three charges
@@ -2240,18 +2232,8 @@ can reverse.** Both parts can now be checked.
   tilt bound.**
 
 **Where the reversal falls is decided by quantities this study has not measured or not fixed.** In
-the case above it is the blade family, which Section 10 leaves open. Across the sensitivity cases below
-it is the competitor's lift-group mass and the propeller basis:
-
-| Case | Fixed fuel fraction | Fixed fuel mass | Fixed take-off mass | Shift, first to third |
-|---|---:|---:|---:|---:|
-| As above | +55 to +84 % | +28 to +54 % | −13 to +7 % | 67 to 77 points |
-| Lift group 5 % of take-off mass | +55 to +84 % | +47 to +76 % | +36 to +65 % | 14 to 24 points |
-| Lift group 15 % of take-off mass | +55 to +84 % | +8 to +31 % | −62 to −50 % | 117 to 134 points |
-| All three at this configuration's propeller efficiency | +33 to +45 % | +6 to +17 % | −33 to −25 % | 65 to 72 points |
-| Lift-plus-cruise drag as a fixed increment, not a ratio | +59 to +75 % | +31 to +45 % | −13 to +5 % | 67 to 75 points |
-
-*(Range of the lift-plus-cruise layout relative to this configuration, across the four closures.)*
+the case above it is the blade family, which Section 10 leaves open. Across the sensitivity cases
+(the full table is Supplement S13) it is the competitor's lift-group mass and the propeller basis.
 
 **With a lighter lift group the lift-plus-cruise layout leads under all three contracts at every
 closure; with a heavier one this configuration leads under a fixed take-off mass at every closure.**
@@ -2298,8 +2280,9 @@ competitor's lift-group mass, and the ordering against the second is against a b
 transferred from another airframe or an idealisation; their propeller efficiency is assumed; their
 architecture-specific mass is a parameter. This configuration's drag and propeller efficiency are
 computed. **Comparing computed figures against assumed ones favours whichever is assumed more
-optimistically**. In propeller efficiency that is both competitors, and the table above shows the
-size of it; in drag it is the tilting layout, by construction.
+optimistically**. In propeller efficiency that is both competitors, and the sensitivity case that gives all
+three this configuration's propeller efficiency shows the size of it: under the first contract the
+lift-plus-cruise layout falls from +55 to +84 percent to +33 to +45 percent (Supplement S13); in drag it is the tilting layout, by construction.
 
 **The comparison is at one size.** Section 12's 1 000 kg reference design has no closure, and none of its figures
 is used here.
@@ -2389,25 +2372,26 @@ masses, which the store does reach.
 
 ### Then what is not known
 
-The remaining items are not known obstacles; they are questions this work has not answered. They are
-grouped by what would settle them.
+The remaining items are not known obstacles; they are questions this work has not answered. Each is
+listed with what would settle it.
 
-| Item | Bears on | What would settle it |
-|---|---|---|
-| **The pitching moment through the transition.** Three methods of three fidelities diverge above about ten degrees of incidence; the rotation passes through that band, peaking near 18 to 22 degrees on the 50 kg reference geometry, with the inboard half of the wing in the slipstream at a much lower effective incidence. | Whether the aircraft trims through the rotation (Sections 7 and 10) | **Validated aerodynamic data**: a measurement of the outboard wing's pitching moment to about 22 degrees at low dynamic pressure and of trim at the attached-flow end of the rotation, or a higher-fidelity method validated against one |
-| **Section drag at low Reynolds number.** The attitude rotors' free-wheeling charge rests on section polars below a Reynolds number of 10⁵, and the uncertainty runs both ways. | The 0.0154 rotor term in every closure (Sections 10 and 11) and the size of Bill 2's fall with scale (Section 12) | **Validated data**: the drag of a free-wheeling attitude rotor, or of its sections, at about 8 × 10⁴, or a method validated there |
-| **The tip pairs' other cruise state.** Free-wheeling is determinate and computed; stopped is a family of states whose means and azimuth are not fixed (Section 8). | Whether a lower-drag cruise state is available, and at what mechanism cost | **Analysis**, or a measurement of one stopped state |
-| **The buffer's energy, not only its power.** The store is sized here by power. Whether it also holds the energy for the vertical phases and their reserves, and how it is recharged in cruise, depends on a hover duration this work does not fix; at the bench rate the unit pack emptied in about four minutes. | Whether the store sized by power is also large enough | **Analysis** against a defined mission profile |
-| **The electrical path at peak.** Machines, power electronics, wiring and their cooling carry the full take-off demand; they enter the loop as a mass fraction, not as components sized for that peak and its heat. | Whether the path that delivers the buffer's power exists at the mass assumed | **Component sizing and thermal analysis** |
-| **The airframe's mass.** It enters the loop as a construction constant, thirty percent of take-off mass (Section 11). A component build-up at the reference mass leaves room for the 13 kg payload only if the average shell areal density stays at or below 1.78 kg m⁻², against 1.50 assumed; the build-up carries a contingency rather than a structural sizing, and it has not been re-run at Section 10's closed masses, still less at the masses the store re-closure returns. At the 1 000 kg reference design the shell-mass exponent is not measured at all. | Every closed mass | **Structural sizing** (analysis), then a **built article** (measurement) |
-| **The strip and the fairing.** The strip's effect on this planform is computed, not measured, and its actuation is carried in the systems budget without being sized (Section 11); the fairing is sized against a published stability criterion, and the side force it develops is not measured. | The strip: the body roll axis, which appears as bank in cruise and as a change of heading in hover (Section 8). The fairing: directional stability in cruise | **Measurement** of both surfaces; **sizing** of the actuation |
-| **Closed-loop hover control**, including the cost of declining the reaction-torque channel, the absorption of the hover torque residual left by trimming each pair's torque balance at cruise (Section 8), and the allocation of the tip pairs between take-off margin and attitude authority, which compete for the same propellers. | Whether hover is controllable with the authority computed (Sections 5 and 8) | **Analysis not yet done**: a control-allocation study, then simulation |
-| **Vertical descent and the landing transition.** Neither is analysed; the vortex ring state is not assessed, and the landing transition is not the take-off transition run backwards. | Whether the aircraft can come down as it went up (Section 5) | **Analysis not yet done** |
-| **Ground handling and landing loads.** The stance base is a parameter against static crosswind (Section 5); the response to a landing with lateral velocity or on uneven ground, and handling between flights, are not assessed. | Operation from unprepared sites | **Analysis not yet done** |
-| **The competitor's lift-group mass.** It decides the sign of the fixed-take-off-mass ordering in Section 13. | Section 13's sensitivity, not a claim | **Measured inventories** of lift-plus-cruise aircraft of this class |
-| **Engine installation** — bay, intake, exhaust, cooling. | Mass, drag and packaging | **Absent from this work entirely** |
-| **Blade-family selection.** The criteria that would choose among the blade families — structural loads, acoustics, the motor operating point, rotor inertia, manufacture — are not modelled (Section 10). | Which point of the envelope the aircraft occupies | **Analysis not yet done** |
-| **Atmosphere.** Every number here is at sea level; the configuration's own altitude sensitivity has been computed for hover power and propeller efficiency, its effect on the Section 6 comparison has not. | The comparison in Section 6, made against a mission flown at altitude | **Analysis**: the direction of the effect has not been computed |
+- **the pitching moment through the transition** — validated aerodynamic data;
+- **section drag at low Reynolds number** — validated data, or a method validated there;
+- **the tip pairs' stopped cruise state** — analysis, or a measurement of one stopped state;
+- **the buffer's energy, not only its power** — analysis against a defined mission profile;
+- **the electrical path at peak** — component sizing and thermal analysis;
+- **the airframe's mass** — structural sizing, then a built article;
+- **the strip and the fairing** — measurement of both surfaces, and sizing of the actuation;
+- **closed-loop hover control**, including the declined reaction-torque channel and the hover torque
+  residual — a control-allocation study, then simulation;
+- **vertical descent and the landing transition** — analysis not yet done;
+- **ground handling and landing loads** — analysis not yet done;
+- **the competitor's lift-group mass** — measured inventories of lift-plus-cruise aircraft of this class;
+- **engine installation** — absent from this work entirely;
+- **blade-family selection** — analysis not yet done;
+- **atmosphere** — analysis; the direction of its effect on the Section 6 comparison has not been computed.
+
+*(What each item bears on is in the full table, Supplement S14.)*
 
 **None of these is a small correction to a known quantity.** Two of them need validated data rather
 than more of the computation already done: the transition moment, because three methods have been
@@ -2430,87 +2414,31 @@ The last section returns to the four axes of Section 9 and states what is claime
 
 ## Four axes, and where the paper stops
 
-The paper makes claims on four axes, against four different opponents, and on each it stops where its
-evidence stops. They are restated here in the order Section 9 gave them, with what each now rests on.
+The paper makes its claims on four axes, against four opponents (Section 9), and on each it stops where
+its evidence stops.
 
-### Cruise efficiency, against multirotors — claimed, and bounded
+**Cruise efficiency, against multirotors — claimed, and bounded.** Cruise lift is carried on a surface
+rather than on rotors. The size of the advantage is a calculation, not a consequence of that statement:
+positive throughout against one published quadrotor, and from slightly behind to comfortably ahead against
+the other (Section 6). Nothing is claimed against multirotors on vertical capability.
 
-**Cruise lift is carried on a surface rather than on rotors**, and no sizing contract or assumption in
-this paper moves the configuration out of that state. That is the structural claim, and it stands.
-**The size of the advantage is a calculation, not a consequence of it.** Made in one common definition
-against two published quadrotors, it is positive throughout against one of them; against the other it
-runs from slightly behind to comfortably ahead, depending on the drag outcome and the blade. **What
-compresses it is the cruise efficiency of the fixed-pitch blade**, not the wing. The comparison
-is between independently produced figures, not a controlled reproduction, and it is not claimed as
-more. Nothing is claimed against multirotors on vertical capability, where they are the better machines.
+**Operation without a runway, against fixed-wing aircraft — claimed as sized, not demonstrated.** The
+vertical phase was sized with an energy store whose required performance the sources consulted here do not
+report as built (Section 14). Nothing is claimed against fixed-wing aircraft on range or cruise efficiency.
 
-### Operation without a runway, against fixed-wing aircraft — claimed as sized, not demonstrated
+**The mechanism required to change regime, against tilting architectures — the contribution.** The
+configuration is arranged to change regime by rotating the airframe rather than the propulsors, and so
+carries none of the mechanism classes Section 7 counts: no pivot, no nacelle or rotor-group actuator, no
+variable-pitch hub, no dedicated lift rotors, and no rotor stowing, indexing or stopping mechanism. Roll
+comes from the strip; the reaction-torque channel the coaxial pairs could provide is declined, and what
+declining it costs is not computed. **This is a count of mechanism classes, not a claim that nothing moves, and not a
+claim of mechanical simplicity or reliability.** Whether this aircraft completes the rotation is a separate
+question, and it is not settled here.
 
-**The aircraft stands on its own tail, carries everything it needs to leave and to return, and asks
-the site for nothing but ground.** The structure it stands on is the structure that carries its control
-propellers. That is a property of the arrangement. **What is sized rather than shown is that it can do
-so at the masses reported**: the vertical phase was sized with an energy store whose required
-performance the sources consulted here do not report as built, and with a store that has been built the
-sizing loop closes only for a heavier aircraft — and at the unit pack's continuous rating not at all. **By construction,
-in this paper, means by the sizing, never by demonstration.** Nothing is claimed against fixed-wing
-aircraft on range or cruise efficiency, where they are the better machines.
+**Range, against the other hybrids — not claimed, in either direction.** The ordering belongs to the sizing
+contract (Section 13).
 
-### The mechanism required to change regime, against tilting architectures — the contribution
-
-**The configuration is arranged to change regime by rotating the airframe rather than the
-propulsors.** The propulsors hold
-their orientation relative to the body from take-off to cruise, and so the configuration carries **no
-mechanism that reorients a propulsor** — nor any of the other mechanism classes that architectures use
-to change regime or to take a rotor out of one regime's flow: no pivot, no nacelle or rotor-group
-actuator, no variable-pitch hub, no dedicated lift rotors, and no rotor stowing, indexing or stopping
-mechanism. Pitch and yaw come
-from differential thrust between fixed-pitch propellers. **Roll does not come from the propellers**: the
-configuration declines the reaction-torque channel its coaxial pairs could provide and assigns that
-axis to a single moving aerodynamic surface, the strip; what declining the channel costs is not
-computed. The actuator inventory is the propulsion motors together with the strip.
-
-**This is a count of mechanism classes, not a claim that nothing moves, and not a claim of mechanical
-simplicity or reliability**, none of which was measured. It rests on the inventory of Sections 7 and 8.
-It does not rest on the drag bracket, the propeller efficiency, the sizing contract, the range result,
-the energy store, or the transition aerodynamics (Section 9). **Whether this aircraft completes the
-rotation is a separate question, and it is not settled here**; the arrangement requires no mechanism to
-change regime, and the paper does not claim that it has been shown to change regime.
-
-**The escape condition is met where the aircraft is carried and not everywhere.** The nose pair serves
-both regimes in one orientation with the hover peak drawn from a store; the attitude pairs are carried
-through cruise producing moments rather than cruise thrust, and the drag they add is reported rather than
-absorbed.
-
-### Range, against the other hybrids — not claimed, in either direction
-
-**Against lift-plus-cruise the ordering belongs to the sizing contract.** It moves substantially across
-the three contracts examined, and under one of them its sign changes inside the envelope and turns on a
-mass fraction of the competitor that has not been measured. **Against the tilting family the competitor
-could be modelled here only as a bound that pays no cruise penalty**, and an ordering against a bound is
-not a result. A reader who finds a range claim against either family anywhere in this paper should read
-it as an error.
-
-### What holds the four together
-
-**The claims are made through an accounting, and the accounting is what makes them checkable.** Hybrid
-vertical-take-off aircraft pay for runway independence in three currencies — hover hardware carried
-through cruise, its drag when exposed, and continuous power sized by the hover peak. The currencies are
-coupled, and every known partial remedy moves cost between them. An escape condition states what an
-architecture would have to do to incur none of the three as named; this configuration meets it in the
-propulsor that carries the aircraft and pays the rest, and the ledger reports each charge in its own
-currency rather than as one number. **At least two of the charges are not locked together, and so,
-where architectures trade one charge against another, a ranking is a weighting and belongs to the
-contract that makes it.**
-
-### Where the paper stops
-
-**The sizing loop closes on a declared package; the aircraft is not shown to close.** The first obstacle
-is known and named: the energy store. The rest are listed with what would settle them — the pitching
-moment through the transition, section drag at low Reynolds number, the airframe's mass, hover control,
-the descent, and the items this work does not contain at all; Section 14 gives the full list. Nothing
-in this work addresses certification.
-
-What the paper offers, and defends, is narrower than a first reading might take it to be: **a
-configuration sized to combine runway-independent vertical operation with wing-borne cruise efficiency,
-arranged to do so with no mechanism that reorients a propulsor, and an account of what the combination
-costs.**
+**The loop closes; the aircraft is not shown to.** Section 14 lists what would settle the rest; nothing in
+this work addresses certification. What the paper offers is **a configuration sized to combine
+runway-independent vertical operation with wing-borne cruise efficiency, arranged to do so with no mechanism
+that reorients a propulsor, and an account of what the combination costs.**

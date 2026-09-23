@@ -193,15 +193,12 @@ study has not posed, and the other is a term the study's method is known to unde
 
 ### What the ledger amounts to
 
-**Three charges, three currencies, no total.** The non-clean-body drag terms remove 42.3 to 47.4
+The non-clean-body drag terms remove 42.3 to 47.4
 percent of the clean-body lift-to-drag ratio, and the hardware exposed by the vertical-phase
 layout is the majority of the zero-lift drag. Bill 1 appears as a 3.6 percent buffer rather than a
 lift group. Bill 3 is divided by 2.4 to 3.2 at the engine and is not divided at all on the
 electrical path. **The cruise propeller efficiency sits 14.6 to 21.0 percent below the published
 assumption under fixed pitch.**
-
-**No charge on this page is a new one.** Every figure was already inside a quantity Section 10
-reported, and this section's only work has been to say which part of which quantity it was.
 
 **And every one of them belongs to one scale.** The four closures vary the drag uncertainty and
 the blade-family choice at the reference size; **they do not establish how the three charges
@@ -214,6 +211,7 @@ changes, and Section 13 asks what happens to the comparison when the sizing cont
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 61:** kapanış açılışı tekrar etmiyor — *"Three charges, three currencies, no total"* ve *"No charge on this page is a new one"* çıktı; açılıştaki *"It attributes. It does not add."* ve *"no scalar aggregate"* duruyor (A4) | bu bölümün açılışı |
 | **Tur 60:** *"50 kg reference geometry"* | terim birliği |
 | **Tur 59:** 0,168–0,188 kW/kg **kalkış kütlesi başına** (Adım 14'ün 4,7–5,2'si tampon kütlesi başına; 0,168/0,036 = 4,67) | Qwen; `aero/buffer-result.txt` |
 | **Tur 58, P3:** defter düzeni fiyatlıyor; sayım bir kalem değil | Adım 9 bağımlılık tablosu; bu bölümün *"It attributes. It does not add."* |

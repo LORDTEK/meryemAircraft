@@ -115,25 +115,26 @@ masses, which the store does reach.
 
 ### Then what is not known
 
-The remaining items are not known obstacles; they are questions this work has not answered. They are
-grouped by what would settle them.
+The remaining items are not known obstacles; they are questions this work has not answered. Each is
+listed with what would settle it.
 
-| Item | Bears on | What would settle it |
-|---|---|---|
-| **The pitching moment through the transition.** Three methods of three fidelities diverge above about ten degrees of incidence; the rotation passes through that band, peaking near 18 to 22 degrees on the 50 kg reference geometry, with the inboard half of the wing in the slipstream at a much lower effective incidence. | Whether the aircraft trims through the rotation (Sections 7 and 10) | **Validated aerodynamic data**: a measurement of the outboard wing's pitching moment to about 22 degrees at low dynamic pressure and of trim at the attached-flow end of the rotation, or a higher-fidelity method validated against one |
-| **Section drag at low Reynolds number.** The attitude rotors' free-wheeling charge rests on section polars below a Reynolds number of 10⁵, and the uncertainty runs both ways. | The 0.0154 rotor term in every closure (Sections 10 and 11) and the size of Bill 2's fall with scale (Section 12) | **Validated data**: the drag of a free-wheeling attitude rotor, or of its sections, at about 8 × 10⁴, or a method validated there |
-| **The tip pairs' other cruise state.** Free-wheeling is determinate and computed; stopped is a family of states whose means and azimuth are not fixed (Section 8). | Whether a lower-drag cruise state is available, and at what mechanism cost | **Analysis**, or a measurement of one stopped state |
-| **The buffer's energy, not only its power.** The store is sized here by power. Whether it also holds the energy for the vertical phases and their reserves, and how it is recharged in cruise, depends on a hover duration this work does not fix; at the bench rate the unit pack emptied in about four minutes. | Whether the store sized by power is also large enough | **Analysis** against a defined mission profile |
-| **The electrical path at peak.** Machines, power electronics, wiring and their cooling carry the full take-off demand; they enter the loop as a mass fraction, not as components sized for that peak and its heat. | Whether the path that delivers the buffer's power exists at the mass assumed | **Component sizing and thermal analysis** |
-| **The airframe's mass.** It enters the loop as a construction constant, thirty percent of take-off mass (Section 11). A component build-up at the reference mass leaves room for the 13 kg payload only if the average shell areal density stays at or below 1.78 kg m⁻², against 1.50 assumed; the build-up carries a contingency rather than a structural sizing, and it has not been re-run at Section 10's closed masses, still less at the masses the store re-closure returns. At the 1 000 kg reference design the shell-mass exponent is not measured at all. | Every closed mass | **Structural sizing** (analysis), then a **built article** (measurement) |
-| **The strip and the fairing.** The strip's effect on this planform is computed, not measured, and its actuation is carried in the systems budget without being sized (Section 11); the fairing is sized against a published stability criterion, and the side force it develops is not measured. | The strip: the body roll axis, which appears as bank in cruise and as a change of heading in hover (Section 8). The fairing: directional stability in cruise | **Measurement** of both surfaces; **sizing** of the actuation |
-| **Closed-loop hover control**, including the cost of declining the reaction-torque channel, the absorption of the hover torque residual left by trimming each pair's torque balance at cruise (Section 8), and the allocation of the tip pairs between take-off margin and attitude authority, which compete for the same propellers. | Whether hover is controllable with the authority computed (Sections 5 and 8) | **Analysis not yet done**: a control-allocation study, then simulation |
-| **Vertical descent and the landing transition.** Neither is analysed; the vortex ring state is not assessed, and the landing transition is not the take-off transition run backwards. | Whether the aircraft can come down as it went up (Section 5) | **Analysis not yet done** |
-| **Ground handling and landing loads.** The stance base is a parameter against static crosswind (Section 5); the response to a landing with lateral velocity or on uneven ground, and handling between flights, are not assessed. | Operation from unprepared sites | **Analysis not yet done** |
-| **The competitor's lift-group mass.** It decides the sign of the fixed-take-off-mass ordering in Section 13. | Section 13's sensitivity, not a claim | **Measured inventories** of lift-plus-cruise aircraft of this class |
-| **Engine installation** — bay, intake, exhaust, cooling. | Mass, drag and packaging | **Absent from this work entirely** |
-| **Blade-family selection.** The criteria that would choose among the blade families — structural loads, acoustics, the motor operating point, rotor inertia, manufacture — are not modelled (Section 10). | Which point of the envelope the aircraft occupies | **Analysis not yet done** |
-| **Atmosphere.** Every number here is at sea level; the configuration's own altitude sensitivity has been computed for hover power and propeller efficiency, its effect on the Section 6 comparison has not. | The comparison in Section 6, made against a mission flown at altitude | **Analysis**: the direction of the effect has not been computed |
+- **the pitching moment through the transition** — validated aerodynamic data;
+- **section drag at low Reynolds number** — validated data, or a method validated there;
+- **the tip pairs' stopped cruise state** — analysis, or a measurement of one stopped state;
+- **the buffer's energy, not only its power** — analysis against a defined mission profile;
+- **the electrical path at peak** — component sizing and thermal analysis;
+- **the airframe's mass** — structural sizing, then a built article;
+- **the strip and the fairing** — measurement of both surfaces, and sizing of the actuation;
+- **closed-loop hover control**, including the declined reaction-torque channel and the hover torque
+  residual — a control-allocation study, then simulation;
+- **vertical descent and the landing transition** — analysis not yet done;
+- **ground handling and landing loads** — analysis not yet done;
+- **the competitor's lift-group mass** — measured inventories of lift-plus-cruise aircraft of this class;
+- **engine installation** — absent from this work entirely;
+- **blade-family selection** — analysis not yet done;
+- **atmosphere** — analysis; the direction of its effect on the Section 6 comparison has not been computed.
+
+*(What each item bears on is in the full table, Supplement S14.)*
 
 **None of these is a small correction to a known quantity.** Two of them need validated data rather
 than more of the computation already done: the transition moment, because three methods have been
@@ -158,6 +159,7 @@ The last section returns to the four axes of Section 9 and states what is claime
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 61:** bilinmeyenler tablosu Ek S14'e taşındı; gövdede her kalem ve onu neyin çözeceği (dört okuyucu + Claude hemfikir, A6) | `paper/v8/supplement.md` S14 |
 | **Tur 60:** tablo başlığı *"per kilogram of buffer"*; *"50 kg reference geometry"*, *"1 000 kg reference design"* | Grok, terim birliği |
 | **Tur 59:** *"arranged to change regime"*; 52,3–57,5 kg; kW/kg **tampon kütlesi başına** | Grok (A, D), Qwen |
 | Kapanışlar %3,6 tampon taşıyor; tampon girdi | `closure.py` (`f_tampon=0.036`); Adım 11–12 |
