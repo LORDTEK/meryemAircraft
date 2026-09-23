@@ -77,9 +77,8 @@ Here the end is reached by turning the thing the propulsors are already attached
 leaves the orientation requirement intact.
 
 That single move is what removes the need for the mechanism. **The table below counts mechanism classes that
-exist in order to change regime, or to take a rotor out of one regime's flow**, which is why no
-aerodynamic control device appears in it: the strip of Section 8 is a control surface, not a means
-of changing regime, and counting its absence would be counting the wrong thing. The configuration therefore carries:
+exist in order to change regime, or to take a rotor out of one regime's flow.** The strip of Section 8 is a
+control surface, of a different class, and is named below and in Section 8 rather than in the table. The configuration therefore carries:
 
 | Mechanism | Where it is required | Present here |
 |---|---|---|
@@ -102,19 +101,15 @@ sizing is audited, and it does not make the tip pairs a dedicated lift system.
 
 This is not a configuration in which nothing moves. Roll cannot be produced by the
 propellers' **thrust**: every thrust vector is parallel to the body axis, so no combination
-of thrust settings produces a moment about that axis. It **could** be produced by their
-**reaction torque** — each rotor carries its own electrical machine, and running the two
-rotors of a coaxial pair at different speeds leaves a net torque about the body axis, which
-is a channel the tail-sitter literature uses. This configuration declines it: every pair is
-operated torque-balanced, so no reaction torque is spent on control, and the axis is assigned
-to an aerodynamic device instead. That is a design constraint, not a physical impossibility,
-and what declining it costs is not counted here. The device is the only moving aerodynamic
+of thrust settings produces a moment about that axis. It **could** be produced by their **reaction
+torque**, and this configuration declines that channel by design (Section 8), assigning the axis to an aerodynamic
+device instead. The device is the only moving aerodynamic
 surface on the aircraft — a variable-extension strip on the lower surface, modulated rather
 than switched, which also pitches the nose down by a small increment when it is deployed. The
 strip is part of the configuration and is named here rather than later, because a claim about
 eliminated mechanisms that omitted it would be false.
 
-Nor does a fixed-pitch propeller serve two regimes for nothing. The nose pair holds one
+A fixed-pitch propeller that serves two regimes pays for it. The nose pair holds one
 orientation, which is the architectural claim, but it also holds one blade geometry across a
 hovering condition and a cruising one, and no single fixed-pitch blade is at its best in both.
 That is a price of refusing the variable-pitch hub rather than an argument against refusing it,
@@ -136,9 +131,8 @@ checked — are not reliable above roughly ten degrees of incidence, which is in
 rotation passes through. **The mechanism claim is about hardware and survives that limit. The
 transition claim is not made.**
 
-What the combination costs is the subject of the sections that follow. It is not free:
-the attitude rotors that make the union controllable are themselves exposed in cruise,
-and Section 11 charges them.
+The combination carries costs: the attitude rotors that make the union controllable are themselves
+exposed in cruise, and Section 11 charges them.
 
 ---
 
@@ -146,6 +140,7 @@ and Section 11 charges them.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 66 — B4 (3.2) ve ses geçişi V1, V2, V6** (dört okuyucu + Claude): tepki torku tek cümle (*"could"* + *"by design"* = tasarım kısıtı, fiziksel imkânsızlık değil); şerit dışlaması kural olarak; *"pays for it"*; *"carries costs"*. **V3 ve V5 kaldı** (herkes korudu), **V4 kaldı** (Grok: olumlu hâli koşulun karşılandığını ima ediyordu — uç çiftleri karşılamıyor) | Adım 8; ChatGPT'nin A–D kuralı |
 | **Tur 64:** *"removes the mechanism"* → *"removes the need for the mechanism"* (ChatGPT önerdi; beşimiz hemfikir) — bir şey sökülmüş gibi okunmasın; korunan liste aynı commit'te güncellendi | `v8-caveats.md` ruh listesi |
 | **Tur 59:** *"The configuration is arranged to change regime by rotating the airframe"* — P1 fiili | Adım 1 (P1); Grok'un Adım 14 işaretinin yayılması |
 | Kaçış koşulu: tek donanım, tek yönelim, tampondan tepe | v7 özeti, satır 55 |

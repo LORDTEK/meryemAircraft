@@ -95,10 +95,8 @@ paper describes the landing transition.**
 
 **Hover attitude control is sized but not demonstrated as a closed loop.** The moments available
 about each axis are computed, but no control allocation has been closed around them and nothing
-has been simulated or flown. That gap is wider than it looks, because this configuration
-deliberately declines a control channel that comparable aircraft use: the two rotors of a coaxial
-pair could be run at different speeds to produce a reaction torque about the body's longitudinal
-axis, and here every pair is operated torque-balanced instead, leaving that axis to the strip.
+has been simulated or flown. That gap is wider than it looks, because this configuration declines the reaction-torque channel that comparable
+aircraft use about the body's longitudinal axis (Section 8), leaving that axis to the strip.
 **What that refusal costs in authority and in response time is not computed**, and Section 14
 carries it.
 
@@ -133,6 +131,7 @@ section**, and the two are combined in Section 7.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 66 — B4 (3.1):** tepki torku kanalının açıklaması Adım 8'e; burada işaretçi ve *"not computed"* sınırı (dört okuyucu + Claude) | Adım 8 |
 | **Tur 60:** *"50 kg reference geometry"* — terim birliği | Adım 8 tanımı |
 | Beş temas noktası: dört uç çerçevesi ucu + orta omurga | §2.11, satır 946–948 |
 | Uç çerçeveleri pervaneler için eklenmedi; **iniş yapısıdır** | §2.11, satır 937 |

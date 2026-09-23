@@ -131,6 +131,8 @@ listed with what would settle it.
 - **vertical descent and the landing transition** — analysis not yet done;
 - **ground handling and landing loads** — analysis not yet done;
 - **the competitor's lift-group mass** — measured inventories of lift-plus-cruise aircraft of this class;
+- **rotor–structure and rotor–wing interference** — inside Bill 2 in principle, absent from the build-up and not
+  modelled; analysis not yet done;
 - **engine installation** — absent from this work entirely;
 - **blade-family selection** — analysis not yet done;
 - **atmosphere** — analysis; the direction of its effect on the Section 6 comparison has not been computed.
@@ -160,6 +162,7 @@ The last section returns to the four axes of Section 9 and states what is claime
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 66:** listeye rotor–yapı ve rotor–kanat girişimi eklendi (Adım 11'in tablosundan; Adım 14'te eksikti) | Adım 11 sınır cümlesi; Ek S11 |
 | **Tur 63:** Tur 62 listesinde *"allocation of the tip pairs between take-off margin and attitude authority"* düşmüştü — Grok yakaladı; geri kondu (Adım 5 ve 7'nin *"ikinci iş"*i) | Ek S14'ün ilgili satırı |
 | **Tur 61:** bilinmeyenler tablosu Ek S14'e taşındı; gövdede her kalem ve onu neyin çözeceği (dört okuyucu + Claude hemfikir, A6) | `paper/v8/supplement.md` S14 |
 | **Tur 60:** tablo başlığı *"per kilogram of buffer"*; *"50 kg reference geometry"*, *"1 000 kg reference design"* | Grok, terim birliği |

@@ -66,14 +66,8 @@ demonstration that the arrangement transitions.
 
 ### One cost of the contribution that is named and not priced
 
-The mechanism claim has a price this work does not compute, and it belongs here rather than only
-in Section 1.
-
-**This configuration declines a control channel that comparable aircraft use.** The two rotors of
-a coaxial pair have independent machines and could be run at different speeds, producing a moment
-about the body's longitudinal axis; the tail-sitter literature uses exactly that. Here every pair
-is operated torque-balanced instead, and the axis is assigned to the strip. **What that refusal
-costs — in thrust asymmetry, in propulsive efficiency, and in response time set by rotor inertia —
+The mechanism claim has a price this work does not compute. **This configuration declines the reaction-torque
+channel that comparable aircraft use for roll (Section 8). What that refusal costs — in thrust asymmetry, in propulsive efficiency, and in response time set by rotor inertia —
 is not computed anywhere in this paper.** The claim is that the mechanism class is eliminated.
 **Whether eliminating it is favourable on balance is a question this work does not settle**, and
 quantifying it would require a control-allocation study rather than a single torque figure.
@@ -147,6 +141,7 @@ what it demands of anyone who uses the framework afterwards.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 66 — B4 (3.3):** yalnız sınır; üç bedel (itki asimetrisi, verim, rotor ataleti) burada kaldı (Grok); *"one price"* değil *"a price"* (Qwen: *"one"* tüketici okunabilir) | Adım 8 |
 | **Tur 61:** bağımlılık tablosu düzyazıya (dört okuyucu + Claude hemfikir); dört satır aynen, *"The last row"* → *"The last of these"* | `v8-shortening-consensus.md` |
 | **Tur 60:** *"rather than cruise thrust"* | Grok; Adım 3 (*"no cruise thrust in that sense"*) |
 | **Tur 59:** *"the inventory of Sections 7 and 8"* — Adım 10, 12, 15 ile aynı ifade | Grok, DeepSeek |

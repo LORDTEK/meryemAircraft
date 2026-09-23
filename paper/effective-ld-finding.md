@@ -1204,3 +1204,19 @@ kelime payı argüman ağırlığı değildir. Ses geçişi kuralı (A–D) Chat
 **Taslak olarak sunuldu (uygulanmadı):** B4 tek ev — Adım 5 işaretçi, Adım 7 tek cümle, Adım 9 yalnız sınır; Adım 7 ses önerileri
 V1–V6 (V3 ve V5'e karşıyım, gerekçeli); dokuzuncu tablo için melez öneri (tablo S11'e, Adım 11'de bir sınır cümlesi, borçlar
 Adım 14'te — birleştirmede yalnız rotor–yapı ve rotor–kanat girişimi eksik çıktı).
+
+---
+
+# Tur 66 — Tur 65 metnine dört cevap
+
+**Kapandı:** Adım 2 (*"mechanical complexity"*) — dördü de teyit etti.
+
+**Uygulandı (dört okuyucu + Claude):** B4 — Adım 5 işaretçi, Adım 7 tek cümle, Adım 9 yalnız sınır (Qwen: *"one price"* → *"a price"*);
+Adım 7 ses geçişi V1, V2, V6; dokuzuncu tablo melez çözümle Ek S11'e (Grok: *"None of these is a ledger entry"*; Qwen ve ChatGPT:
+*"the allocation of the take-off margin against attitude authority"*); Adım 14'e rotor–yapı/kanat girişimi eklendi.
+
+**Uygulanmadı:** V3 ve V5 (herkes korudu); **V4 — Grok'un itirazıyla görüşümü değiştirdim**: *"the condition is met by the set"*
+uçağın koşulu karşıladığını ima ediyor; uç çiftleri karşılamıyor. ChatGPT'nin *"set by rotor inertia"* uyarısı: ifade özgün metinde
+de böyle, değişmedi — not edildi. Grok V2 için *"pays in efficiency in at least one of them"* ifadesini tercih ediyor — soruldu.
+
+**B5 ölçümü:** *"geçiş gösterilmedi"* Adım 7'de tam; Adım 8 ve 9 gerekçeyi tekrar ediyor → taslak (uygulanmadı).

@@ -170,15 +170,11 @@ propulsion occupies, **0.108 is fixed and 0.068 to 0.090 scales with installed p
 The items above are inside Section 10's numbers. **These are not**, and a reader should not
 take the closure's convergence as covering them.
 
-| Item | Status |
-|---|---|
-| **The cost of declining the reaction-torque channel** | Not computed. Thrust asymmetry, propulsive efficiency and the lag set by rotor inertia; quantifying it requires a control-allocation study rather than a torque figure. |
-| **The transition altitude result** | 5.4 m in the finite-moment model at the 50 kg reference geometry — **a result, not a charge**, and not a term in any sizing loop here. |
-| **The strip's actuation** | Carried in the systems budget without sizing the mechanism. The number of actuators is not fixed by this study. |
-| **The take-off margin** | Drawn from the tip pairs, because the nose pair is sized at thrust equal to weight. It competes with attitude authority and neither is closed against the other. |
-| **Landing transition, vortex ring state, closed-loop hover control** | Not analysed. |
-| **Engine installation — bay, intake, exhaust, cooling** | Absent from this work entirely. |
-| **Rotor–structure and rotor–wing interference** | Inside Bill 2 in principle, absent from the build-up in practice. |
+The closure does not contain the cost of declining the reaction-torque channel, the sizing of the strip's
+actuation, the allocation of the take-off margin against attitude authority, the landing transition, the vortex
+ring state, closed-loop hover control, engine installation, or rotor–structure and rotor–wing interference. **None
+of these is a ledger entry; Section 14 lists them.** The transition altitude result (5.4 m) is a result, not a
+charge, and is not a term in any sizing loop (the table is Supplement S11).
 
 **The first and the last are the two that would most change the numbers above if they were
 computed**, and neither is a small correction to a known quantity: one is a control problem the
@@ -204,6 +200,7 @@ changes, and Section 13 asks what happens to the comparison when the sizing cont
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 66 — dokuzuncu tablo (melez):** tablo Ek S11'e; gövdede sınır cümlesi — *"None of these is a ledger entry"* (Grok: her kalemi *"debt"* diye adlandırmak Qwen'in ayrımını bulanıklaştırırdı); *"the allocation of the take-off margin against attitude authority"* (Qwen, ChatGPT: marjın kendisi boyutlanmış, kapanmayan paylaşım); *"The first and the last…"* kaldı | Ek S11; Adım 14 listesi |
 | **Tur 64 — B7** (beşimiz hemfikir; Grok ve Qwen'in şartıyla): C_D0 döküm tablosu düzyazıya — **her rakam** (temiz yüzey, göbek, çerçeve, rotor, toplam, iki uç) ve iki sütun notu aynen kaldı; tablo Ek S11'e | `aero/drag_sweep.py`; Ek S11 |
 | **Tur 61:** kapanış açılışı tekrar etmiyor — *"Three charges, three currencies, no total"* ve *"No charge on this page is a new one"* çıktı; açılıştaki *"It attributes. It does not add."* ve *"no scalar aggregate"* duruyor (A4) | bu bölümün açılışı |
 | **Tur 60:** *"50 kg reference geometry"* | terim birliği |

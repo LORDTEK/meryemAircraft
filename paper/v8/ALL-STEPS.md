@@ -732,10 +732,8 @@ paper describes the landing transition.**
 
 **Hover attitude control is sized but not demonstrated as a closed loop.** The moments available
 about each axis are computed, but no control allocation has been closed around them and nothing
-has been simulated or flown. That gap is wider than it looks, because this configuration
-deliberately declines a control channel that comparable aircraft use: the two rotors of a coaxial
-pair could be run at different speeds to produce a reaction torque about the body's longitudinal
-axis, and here every pair is operated torque-balanced instead, leaving that axis to the strip.
+has been simulated or flown. That gap is wider than it looks, because this configuration declines the reaction-torque channel that comparable
+aircraft use about the body's longitudinal axis (Section 8), leaving that axis to the strip.
 **What that refusal costs in authority and in response time is not computed**, and Section 14
 carries it.
 
@@ -1022,9 +1020,8 @@ Here the end is reached by turning the thing the propulsors are already attached
 leaves the orientation requirement intact.
 
 That single move is what removes the need for the mechanism. **The table below counts mechanism classes that
-exist in order to change regime, or to take a rotor out of one regime's flow**, which is why no
-aerodynamic control device appears in it: the strip of Section 8 is a control surface, not a means
-of changing regime, and counting its absence would be counting the wrong thing. The configuration therefore carries:
+exist in order to change regime, or to take a rotor out of one regime's flow.** The strip of Section 8 is a
+control surface, of a different class, and is named below and in Section 8 rather than in the table. The configuration therefore carries:
 
 | Mechanism | Where it is required | Present here |
 |---|---|---|
@@ -1047,19 +1044,15 @@ sizing is audited, and it does not make the tip pairs a dedicated lift system.
 
 This is not a configuration in which nothing moves. Roll cannot be produced by the
 propellers' **thrust**: every thrust vector is parallel to the body axis, so no combination
-of thrust settings produces a moment about that axis. It **could** be produced by their
-**reaction torque** — each rotor carries its own electrical machine, and running the two
-rotors of a coaxial pair at different speeds leaves a net torque about the body axis, which
-is a channel the tail-sitter literature uses. This configuration declines it: every pair is
-operated torque-balanced, so no reaction torque is spent on control, and the axis is assigned
-to an aerodynamic device instead. That is a design constraint, not a physical impossibility,
-and what declining it costs is not counted here. The device is the only moving aerodynamic
+of thrust settings produces a moment about that axis. It **could** be produced by their **reaction
+torque**, and this configuration declines that channel by design (Section 8), assigning the axis to an aerodynamic
+device instead. The device is the only moving aerodynamic
 surface on the aircraft — a variable-extension strip on the lower surface, modulated rather
 than switched, which also pitches the nose down by a small increment when it is deployed. The
 strip is part of the configuration and is named here rather than later, because a claim about
 eliminated mechanisms that omitted it would be false.
 
-Nor does a fixed-pitch propeller serve two regimes for nothing. The nose pair holds one
+A fixed-pitch propeller that serves two regimes pays for it. The nose pair holds one
 orientation, which is the architectural claim, but it also holds one blade geometry across a
 hovering condition and a cruising one, and no single fixed-pitch blade is at its best in both.
 That is a price of refusing the variable-pitch hub rather than an argument against refusing it,
@@ -1081,9 +1074,8 @@ checked — are not reliable above roughly ten degrees of incidence, which is in
 rotation passes through. **The mechanism claim is about hardware and survives that limit. The
 transition claim is not made.**
 
-What the combination costs is the subject of the sections that follow. It is not free:
-the attitude rotors that make the union controllable are themselves exposed in cruise,
-and Section 11 charges them.
+The combination carries costs: the attitude rotors that make the union controllable are themselves
+exposed in cruise, and Section 11 charges them.
 
 ---
 
@@ -1329,14 +1321,8 @@ demonstration that the arrangement transitions.
 
 ### One cost of the contribution that is named and not priced
 
-The mechanism claim has a price this work does not compute, and it belongs here rather than only
-in Section 1.
-
-**This configuration declines a control channel that comparable aircraft use.** The two rotors of
-a coaxial pair have independent machines and could be run at different speeds, producing a moment
-about the body's longitudinal axis; the tail-sitter literature uses exactly that. Here every pair
-is operated torque-balanced instead, and the axis is assigned to the strip. **What that refusal
-costs — in thrust asymmetry, in propulsive efficiency, and in response time set by rotor inertia —
+The mechanism claim has a price this work does not compute. **This configuration declines the reaction-torque
+channel that comparable aircraft use for roll (Section 8). What that refusal costs — in thrust asymmetry, in propulsive efficiency, and in response time set by rotor inertia —
 is not computed anywhere in this paper.** The claim is that the mechanism class is eliminated.
 **Whether eliminating it is favourable on balance is a question this work does not settle**, and
 quantifying it would require a control-allocation study rather than a single torque figure.
@@ -1783,15 +1769,11 @@ propulsion occupies, **0.108 is fixed and 0.068 to 0.090 scales with installed p
 The items above are inside Section 10's numbers. **These are not**, and a reader should not
 take the closure's convergence as covering them.
 
-| Item | Status |
-|---|---|
-| **The cost of declining the reaction-torque channel** | Not computed. Thrust asymmetry, propulsive efficiency and the lag set by rotor inertia; quantifying it requires a control-allocation study rather than a torque figure. |
-| **The transition altitude result** | 5.4 m in the finite-moment model at the 50 kg reference geometry — **a result, not a charge**, and not a term in any sizing loop here. |
-| **The strip's actuation** | Carried in the systems budget without sizing the mechanism. The number of actuators is not fixed by this study. |
-| **The take-off margin** | Drawn from the tip pairs, because the nose pair is sized at thrust equal to weight. It competes with attitude authority and neither is closed against the other. |
-| **Landing transition, vortex ring state, closed-loop hover control** | Not analysed. |
-| **Engine installation — bay, intake, exhaust, cooling** | Absent from this work entirely. |
-| **Rotor–structure and rotor–wing interference** | Inside Bill 2 in principle, absent from the build-up in practice. |
+The closure does not contain the cost of declining the reaction-torque channel, the sizing of the strip's
+actuation, the allocation of the take-off margin against attitude authority, the landing transition, the vortex
+ring state, closed-loop hover control, engine installation, or rotor–structure and rotor–wing interference. **None
+of these is a ledger entry; Section 14 lists them.** The transition altitude result (5.4 m) is a result, not a
+charge, and is not a term in any sizing loop (the table is Supplement S11).
 
 **The first and the last are the two that would most change the numbers above if they were
 computed**, and neither is a small correction to a known quantity: one is a control problem the
@@ -2334,6 +2316,8 @@ listed with what would settle it.
 - **vertical descent and the landing transition** — analysis not yet done;
 - **ground handling and landing loads** — analysis not yet done;
 - **the competitor's lift-group mass** — measured inventories of lift-plus-cruise aircraft of this class;
+- **rotor–structure and rotor–wing interference** — inside Bill 2 in principle, absent from the build-up and not
+  modelled; analysis not yet done;
 - **engine installation** — absent from this work entirely;
 - **blade-family selection** — analysis not yet done;
 - **atmosphere** — analysis; the direction of its effect on the Section 6 comparison has not been computed.
