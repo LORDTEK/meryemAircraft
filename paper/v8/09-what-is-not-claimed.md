@@ -50,7 +50,7 @@ survive, and the dependencies are short enough to list.
 
 | Claim | Does not depend on |
 |---|---|
-| Operation without a runway | the drag bracket, the propeller efficiency, the battery gap, the transition aerodynamics |
+| Operation without a runway | the drag bracket, the propeller efficiency, the transition aerodynamics — **but it does depend on the energy store**: the vertical phase is sized with one, and Section 14 examines whether it exists |
 | Cruise lift carried on a surface | the sizing contract, the transition aerodynamics |
 | The **size** of the cruise-efficiency margin | — it depends on both the drag bracket and the blade family, and Section 6 reports it as a range rather than a number |
 | Elimination of the propulsor-reorientation mechanism class | the drag bracket, the sizing contract, the range result, **and the transition aerodynamics** |

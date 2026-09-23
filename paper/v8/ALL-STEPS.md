@@ -934,9 +934,10 @@ corner, and whether it is ahead of the best examined blade family depends on the
 a wing is worth **roughly a quarter to a half against the turboshaft reference, and against the
 all-electric one it ranges from slightly behind to comfortably ahead depending on the drag outcome
 and the blade** — a measurable advantage, not a change of category. And what
-compresses it is not the wing. **It is this aircraft's own refusal of the variable-pitch hub:**
-at a propeller efficiency of 0.85 the same airframe reaches 7.47 to 9.20. Section 11 charges it
-there.
+compresses it is not the wing. **It is the cruise efficiency this aircraft's fixed-pitch blade
+delivers:** at a propeller efficiency of 0.85 the same airframe reaches 7.47 to 9.20. Whether a
+variable-pitch hub would recover that difference is not computed; Section 11 reports the gap and
+declines to attribute all of it to the hub.
 
 ### Five qualifications, and every one of them runs against this configuration
 
@@ -1354,7 +1355,7 @@ survive, and the dependencies are short enough to list.
 
 | Claim | Does not depend on |
 |---|---|
-| Operation without a runway | the drag bracket, the propeller efficiency, the battery gap, the transition aerodynamics |
+| Operation without a runway | the drag bracket, the propeller efficiency, the transition aerodynamics — **but it does depend on the energy store**: the vertical phase is sized with one, and Section 14 examines whether it exists |
 | Cruise lift carried on a surface | the sizing contract, the transition aerodynamics |
 | The **size** of the cruise-efficiency margin | — it depends on both the drag bracket and the blade family, and Section 6 reports it as a range rather than a number |
 | Elimination of the propulsor-reorientation mechanism class | the drag bracket, the sizing contract, the range result, **and the transition aerodynamics** |
@@ -2403,3 +2404,89 @@ propulsor — is a count of hardware, and nothing in this section reaches it.** 
 is the aircraft, and the paper has not claimed the aircraft.
 
 The last section returns to the four axes of Section 9 and states what is claimed on each.
+
+---
+
+## Four axes, and where the paper stops
+
+The paper makes claims on four axes, against four different opponents, and on each it stops where its
+evidence stops. They are restated here in the order Section 9 gave them, with what each now rests on.
+
+### Cruise efficiency, against multirotors — claimed, and bounded
+
+**Cruise lift is carried on a surface rather than on rotors**, and no sizing contract or assumption in
+this paper moves the configuration out of that state. That is the structural claim, and it stands.
+**The size of the advantage is a calculation, not a consequence of it.** Made in one common definition
+against two published quadrotors, it is positive throughout against one of them; against the other it
+runs from slightly behind to comfortably ahead, depending on the drag outcome and the blade. **What
+compresses it is the cruise efficiency of the fixed-pitch blade**, not the wing. The comparison
+is between independently produced figures, not a controlled reproduction, and it is not claimed as
+more. Nothing is claimed against multirotors on vertical capability, where they are the better machines.
+
+### Operation without a runway, against fixed-wing aircraft — claimed as sized, not demonstrated
+
+**The aircraft stands on its own tail, carries everything it needs to leave and to return, and asks
+the site for nothing but ground.** The structure it stands on is the structure that carries its control
+propellers. That is a property of the arrangement. **What is sized rather than shown is that it can do
+so at the masses reported**: the vertical phase was sized with an energy store whose required
+performance the sources consulted here do not report as built, and with a store that has been built the
+sizing loop closes only for a heavier aircraft — and at one of the measured continuous ratings not at
+all. **By construction,
+in this paper, means by the sizing, never by demonstration.** Nothing is claimed against fixed-wing
+aircraft on range or cruise efficiency, where they are the better machines.
+
+### The mechanism required to change regime, against tilting architectures — the contribution
+
+**The regime change is made by rotating the airframe rather than the propulsors.** The propulsors hold
+their orientation relative to the body from take-off to cruise, and so the configuration carries **no
+mechanism that reorients a propulsor**: no pivot, no nacelle or rotor-group actuator, no variable-pitch
+hub, no dedicated lift rotors, and no rotor stowing, indexing or stopping mechanism. Pitch and yaw come
+from differential thrust between fixed-pitch propellers. **Roll does not come from the propellers**: the
+configuration declines the reaction-torque channel its coaxial pairs could provide and assigns that
+axis to a single moving aerodynamic surface, the strip; what declining the channel costs is not
+computed. The actuator inventory is the propulsion motors together with the strip.
+
+**This is a count of mechanism classes, not a claim that nothing moves, and not a claim of mechanical
+simplicity or reliability**, none of which was measured. It rests on the inventory of Sections 7 and 8.
+It does not rest on the drag bracket, the propeller efficiency, the sizing contract, the energy store,
+or the transition aerodynamics. **Whether this aircraft completes the
+rotation is a separate question, and it is not settled here**; the arrangement requires no mechanism to
+change regime, and the paper does not claim that it has been shown to change regime.
+
+**The escape condition is met where the aircraft is carried and not everywhere.** The nose pair serves
+both regimes in one orientation with the hover peak drawn from a store; the attitude pairs are carried
+through cruise producing moments rather than thrust, and the drag they add is reported rather than
+absorbed.
+
+### Range, against the other hybrids — not claimed, in either direction
+
+**Against lift-plus-cruise the ordering belongs to the sizing contract.** It moves substantially across
+the three contracts examined, and under one of them its sign changes inside the envelope and turns on a
+mass fraction of the competitor that has not been measured. **Against the tilting family the competitor
+could be modelled here only as a bound that pays no cruise penalty**, and an ordering against a bound is
+not a result. A reader who finds a range claim against either family anywhere in this paper should read
+it as an error.
+
+### What holds the four together
+
+**The claims are made through an accounting, and the accounting is what makes them checkable.** Hybrid
+vertical-take-off aircraft pay for runway independence in three currencies — hover hardware carried
+through cruise, its drag when exposed, and continuous power sized by the hover peak. The currencies are
+coupled, and every known partial remedy moves cost between them. An escape condition states what an
+architecture would have to do to incur none of the three as named; this configuration meets it in the
+propulsor that carries the aircraft and pays the rest, and the ledger reports each charge in its own
+currency rather than as one number. **At least two of the charges are not locked together, and so,
+where architectures trade one charge against another, a ranking is a weighting and belongs to the
+contract that makes it.**
+
+### Where the paper stops
+
+**The sizing loop closes on a declared package; the aircraft is not shown to close.** The first obstacle
+is known and named: the energy store. The rest are listed with what would settle them — the pitching
+moment through the transition, section drag at low Reynolds number, the airframe's mass, hover control,
+the descent, and the items this work does not contain at all.
+
+What the paper offers, and defends, is narrower than a first reading might take it to be: **a
+configuration that combines runway-independent vertical operation with wing-borne cruise efficiency,
+reaches that combination with no mechanism that reorients a propulsor, and reports what the combination
+costs.**

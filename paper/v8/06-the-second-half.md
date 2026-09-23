@@ -152,9 +152,10 @@ corner, and whether it is ahead of the best examined blade family depends on the
 a wing is worth **roughly a quarter to a half against the turboshaft reference, and against the
 all-electric one it ranges from slightly behind to comfortably ahead depending on the drag outcome
 and the blade** — a measurable advantage, not a change of category. And what
-compresses it is not the wing. **It is this aircraft's own refusal of the variable-pitch hub:**
-at a propeller efficiency of 0.85 the same airframe reaches 7.47 to 9.20. Section 11 charges it
-there.
+compresses it is not the wing. **It is the cruise efficiency this aircraft's fixed-pitch blade
+delivers:** at a propeller efficiency of 0.85 the same airframe reaches 7.47 to 9.20. Whether a
+variable-pitch hub would recover that difference is not computed; Section 11 reports the gap and
+declines to attribute all of it to the hub.
 
 ### Five qualifications, and every one of them runs against this configuration
 

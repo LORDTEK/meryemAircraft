@@ -54,6 +54,8 @@ EMEKLI = {
     "381 kg": "Tur 57: motor istasyon karisikligi; dogru istasyonla lift+cruise kapanmiyor",
     "Until that item is settled": "Tur 57: Adim 14 sonrasi 'notr' degil; 'ayni varsayim'",
     "What the obstacle does not touch": "Tur 57: 'reaches, and what it does not'",
+    "own refusal of the variable-pitch hub": "Tur 57: Adim 6'da kalmisti; asiri atif (ChatGPT, Tur 53)",
+    "the battery gap, the transition": "Tur 57: pist iddiasi depoya bagli (Adim 14)",
     "different efficiency class": "Tur 49: emekliye ayrildi, Adim 9'da canli kalmisti",
     "14.29": "Tur 53: temiz govde L/D, drag_sweep.zincir pay hatasi; dogrusu 15.24",
     "10.28": "Tur 50: e = 0,85 ile L/D_max; e = 0,817 ile 10.08",

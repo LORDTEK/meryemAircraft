@@ -978,3 +978,30 @@ sınırı sözleşme 1'de 520 kg (~10×), menzil önü değişmeden; sözleşme 
   (şerit ve fairing ölçülmedi) ve tabloya girdi.
 - **DeepSeek: 4,19 "understated"; ortak istasyonda ~5,33.** Oran hatalı değil, **tanımsızdı**: rotor mili
   askı / motor mili derece bir donanım oranıdır. Etiketlendi (ChatGPT'nin 1. seçeneği).
+
+---
+
+# Tur 57 (devam) — oran incelemesi, son bölüm, ve son bölümün açtığı iki eski çelişki
+
+**Yazar:** *"Kısaltma işi şimdilik yapılmayacak. Mutmain olmadan kısaltma olmayacak. Oran işini yap. Adım 9
+için dört ekseni tekrarla. Son bölümü yaz."*
+
+## Oran (`paper/v8-proportion.md`)
+
+Katkının net cümlesi metnin **%57**'sinde ilk kez geçiyor; Adım 7 (birleştirme) %4,8; hesaplar (10–14)
+%42,5 ve mekanizmaya neredeyse hiç dönmüyor; Adım 12 en uzun (%10). §0.6 çerçeve adımlarının boyunu
+koruduğu için teşhis kesmeye değil **yerleştirmeye** yönelik: P1 (Adım 1'e katkı cümlesi), P3 (10–13'e yer
+cümlesi) öneri; P2 (son bölüm katkıyı merkeze koyar) uygulandı. Kısaltma yok.
+
+## Son bölüm (Adım 15)
+
+Adım 9'un dört ekseni sırasıyla, her biri neye dayandığıyla; sayı yok, atıf yok; katkı üçüncü eksende
+merkezde. §0.2 denetiminde beş kendi hatam düzeltildi (sürekli anma, *"whose cost"*, *"nothing else in
+the paper"*, *"a ranking is a weighting"* evrenselliği, Adım 6'dan taşınan aşırı atıf).
+
+## Son bölümü yazmak iki eski çelişkiyi açtı
+
+1. **Adım 9'un bağımlılık tablosu:** pist iddiası *"does not depend on … the battery gap"*. Adım 14 dikey
+   evrenin bu depoyla boyutlandığını gösterdi. Düzeltildi: *"it does depend on the energy store"*.
+2. **Adım 6:** *"It is this aircraft's own refusal of the variable-pitch hub"* — Tur 53'te ChatGPT'nin Adım
+   11'de yakaladığı aşırı atıf Adım 6'ya yayılmamıştı (§3.1, bir kez daha). Düzeltildi; emekli listesinde.

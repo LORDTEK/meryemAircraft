@@ -10,7 +10,8 @@ Burası o not. **Her tur sonunda bu listeye bakılır.**
 
 | # | Konu | Durum | Kim gündeme getirdi |
 |---|---|---|---|
-| **E1** | **Kısaltma / oran.** Adım 1'in 1954 XFV-1 / XFY-1 anlatısı (~800 kelime) boşluk iddiası daraldıktan sonra "dekoratif" hâle geldi. Ayrıca 2 ile 4 arasında, ve 3'ün izin verilen maliyetler listesi ile 7'nin "koşulun söylemedikleri" arasında yineleme var. | **ERTELENDİ.** Yazar, Tur 50: *"Kısaltma en son yapacağız şimdi değil."* 10–14 yazıldıktan sonra tek seferde yapılacak. | DeepSeek, Grok |
+| **E1** | **Kısaltma.** Adım 1'in 1954 anlatısı (~800 kelime); 2–4 arası ve 3'ün izin verilen maliyetleri ile 7'nin *"koşulun söylemedikleri"* arası yineleme; Adım 12'nin uzunluğu/kanıt oranı (`v8-proportion.md` O4). Gövde dergi sınırının ~3 katı (O5). | **ERTELENDİ.** Yazar, Tur 57: *"Kısaltma işi şimdilik yapılmayacak. Mutmain olmadan kısaltma olmayacak."* | DeepSeek, Grok |
+| **E3** | **Oran önerileri** (`paper/v8-proportion.md`). **P1:** Adım 1'e katkının tek cümlesi (katkının adı %57'den ~%7'ye) — Adım 1 ve 9'un onaylı *"combination, consequences, accounting"* üçlüsüne dokunur. **P3:** Adım 10–13'ün açılışına katkıya göre yerini söyleyen tek cümle. (P2 uygulandı: son bölüm katkıyı merkeze koyuyor; P4 önerilmiyor.) | **YAZARIN KARARI.** Oran işi Tur 57'de yapıldı; öneriler okuyuculara da soruldu. | kendi incelemem |
 | **E2** | **"Zero-bill condition" adı.** Ad sayısal, koşul yapısal. Adım 2'nin tilt satırı düzeltilince (Fatura 3 ayakta kalıyor) ad savunulabilir hâle geldi, ama gerginlik duruyor. Alternatifler: *"the single-propulsor condition"*, *"the no-reorientation condition"*. | **ERTELENDİ.** Yazar, Tur 50: *"Ad konusu da sonraya bırakılabilir."* | DeepSeek, Grok |
 
 ## Karara bağlanmış — kayıt için
