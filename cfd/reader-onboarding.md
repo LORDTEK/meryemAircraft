@@ -171,7 +171,7 @@ The paper is being built as **fifteen step files**; **Step N is Section N**, and
 
 The author's own outline of the argument, which the steps follow: *introduction · the current state · the
 solution to one problem · the solution to the other · **combining the solutions** (a move of its own, not a
-by-product) · why the result holds · the calculations · conclusion.*
+by-product) · the soundness of the resulting product · the calculations · conclusion.*
 
 ---
 

@@ -1097,3 +1097,26 @@ ones Section 10 did not replace"*. Metni kurmadan önce düzeltilen pasajları y
 | Adım 7'ye ileri atıf (hangi kip Adım 8'de) | DeepSeek | **Alınmadı** — Adım 7'nin gerekçesi (açıkta, yatırılamıyor) Adım 8 ile tutarlı; kısaltma öncesi ekleme yapılmıyor | — |
 | Adım 12 Bill 3 paragrafı kapanış sonucu olarak alıntılanamaz | Grok | Metin zaten *"This paragraph compares the reference pair only"* diyor | — |
 | Tekrar kayıtları | üçü | Kayıt | `v8-proportion.md` |
+
+---
+
+# Tur 61 — Tur 60 metnine (kısaltma hazırlığı) yanıtlar; yazarın yöntem ve ruh kararı
+
+**Yazar, Tur 61:** tur metinleri yalnız değişiklikleri taşır; kısaltma doğrudan yapılmaz; herkesin önerisi herkese
+yan yana sunulur; önce hemfikir olunanlar; ve *"bu makalenin ruhu"* yazarın sunduğu üstünlüktür — *"'yet another'
+hesap kitap işi"* değil; *"Hesap kısmını neden yaptık? Q1 için."* → CLAUDE.md §0.8, §2.3.
+
+**Cevap verenler:** Grok ve DeepSeek tam; **ChatGPT ve Qwen yalnız dosyaları aldıklarını söyledi**, görev beklediler.
+Tur 61 metni en başta *"This is a task. Please answer it now"* diyor.
+
+**Denetim:** iki okuyucunun 102 çekince alıntısının hepsi metinde, adıyla verilen adımda (üçü hafif yeniden ifade →
+birebir hâline getirildi; ikisi ortak → 100 satır). `paper/v8-caveats.md` + `paper/build/v8_caveats.py` (`--sina`).
+
+**Benim hatam, bu turda bulundu:** yazarın akış öğesi *"ortaya çıkan ürünün sorunsuzluğu"*nu Tur 57'den beri
+*"why the result holds"* diye çevirmişim. DeepSeek bu başlığın altına ölçek ve sözleşme bulgularını koydu. Doğrusu
+*"the soundness of the resulting product"*. Başlangıç metni düzeltildi; Tur 61'de açıkça yazıldı.
+
+**Benim uzlaşı özetimde bir hata daha, göndermeden önce bulundu:** tablolarda yedi uzlaşı yazmıştım; Grok sekize inmek
+için Adım 9'un dört eksen tablosunu düşürüyor. Uzlaşı altı.
+
+Uzlaşı ve ayrışmalar: `paper/v8-shortening-consensus.md` (A1–A9, B1–B8, C1–C3).

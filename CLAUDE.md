@@ -219,6 +219,23 @@ edilir.
 **Yine de sayı tahmin edilmez.** Grok'un uyarısı geçerli: *"Do not guess the sign."*
 Hesabın işareti hesaptan önce söylenmez.
 
+### 0.8 Makalenin ruhu. Yazarın duruşu, Tur 61.
+
+> *"Yazarın (yani benim) özellikle sunmuş olduğu üstünlük olarak belirttiği şey bu makalenin ruhu olmak
+> zorunda. Yoksa 'yet another' hesap kitap işi olmasını istemiyorum. Görülememişi görmüş olmanın haklı
+> gururunu taşıyorum. Hesap kısmını neden yaptık? Q1 için."*
+
+**Sonuç:** makale bir hesap makalesi değil, **bir kavrayışın sunumudur.** Hesaplar o kavrayışı Q1 hakemi
+önünde **denetlenebilir ve inandırıcı** kılmak için vardır; kendi başlarına amaç değildir. Kısaltmada, yapıda
+ve seste merkez mimaridir.
+
+**Ama ruh, yüklemi genişletmez.** §0.1–0.3'ün dar gücü aynen durur: *"arranged to"*, mekanizma sınıfı sayımı,
+basitlik iddiası yok, öncelik iddiası yalnız *"bulunamadı"* biçiminde (§2.2). Kavrayışı taşıyan şey
+**yerleşim, sıra ve ses**tir; daha güçlü bir cümle değil. Daha güçlü cümle, Tur 46'da daraltılan boşluk
+iddiasını yeniden açar ve bizi masadan attırır. **Açık gerilim (yazara soruldu, Tur 61):** Adım 1'in
+*"not a claim that the route was waiting to be found"* ifadesi ile yazarın *"görülememişi görmüş olmak"*
+duruşu.
+
 ## 1. Yazışma ve üslup
 
 - Kullanıcıyla **Türkçe**. Öteki YZ'lere (ChatGPT, Grok, DeepSeek, Qwen)
@@ -284,6 +301,19 @@ biçiminde ve **aranan yer adlandırılarak** yazılır.
 **Ve boşluk iddiası daraldığında zayıflamaz.** Doğru biçim şudur: neyin zaten dolu olduğu
 **boşluktan önce** sayılır, sonra bulunmayan şey **bir arada ve bedeliyle** tarif edilir.
 
+### 2.3 Tur metninin biçimi ve kısaltma yöntemi. Yazar, Tur 61.
+
+> *"Bundan sonraki metinlerde tüm içeriği boca etmemize gerek yok. … İteratif gidebiliriz, dolayısıyla
+> değişiklikleri sunmakla yetinebiliriz. Kısaltmaları doğrudan yapmayacağız. Herkesin fikrini herkese
+> sunup herkesin görüşünü alacağız. … Hemfikir olunan hususların işlenmesine öncelik verilebilir."*
+
+- **Tur metni yalnız değişiklikleri taşır.** Tam metin okuyucuların penceresinde zaten var (son tam metin
+  hangi turdaysa ona atıf yapılır, commit karmasıyla). Yeni pencere açan okuyucu için `cfd/reader-onboarding.md`.
+- **Kısaltma doğrudan yapılmaz.** Her okuyucunun önerisi öteki okuyuculara **yan yana** sunulur; görüş alınır.
+- **Önce hemfikir olunanlar işlenir**; ayrışanlar herkese geri sorulur. Karar yazarındır.
+- Tutulan belge: `paper/v8-shortening-consensus.md` (hemfikir / ayrışan / açık).
+- **Kesilemeyecek çekinceler:** `paper/v8-caveats.md`, denetimi `paper/build/v8_caveats.py`.
+
 ## 3. Doğrulama
 
 Hiçbir iddia denetlenmeden aktarılmaz — ne YZ'lerinki ne benimki.
@@ -292,6 +322,8 @@ Hiçbir iddia denetlenmeden aktarılmaz — ne YZ'lerinki ne benimki.
   değer listesi (yalnız v7 bölümleri).
 - `paper/build/v8_stale.py` — v8 İngilizce gövdelerinde emekli ifade/sayı
   denetimi; `--sina` eski hatayı yakaladığını sınar. `v8_all_steps.py` ALL-STEPS.md'yi kurar.
+- `paper/build/v8_caveats.py` — kesilemeyecek çekincelerin (`paper/v8-caveats.md`) hâlâ kendi
+  adımlarında durduğunu sınar; `--sina` silinen bir çekinceyi yakaladığını sınar.
 - `paper/build/links.py` — bağ dokusu: işaretçiler çözülüyor mu, **doğru
   yere mi** çözülüyor, tablo/şekil atıfları tutuyor mu.
 - Bir denetim yazdığında **eski hatayı geri koyup yakalayıp yakalamadığını

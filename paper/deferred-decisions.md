@@ -19,6 +19,7 @@ Burası o not. **Her tur sonunda bu listeye bakılır.**
 |---|---|---|---|
 | K7 | Oran önerileri P1 ve P3 (E3) | **Uygulandı.** Yazar, Tur 58: *"P1 ve P3'ü uygula."* P1 Adım 1'e; üçlü Adım 9'da da *"The contribution is the architecture, and the paper presents it as …"* biçimine getirildi. P3 Adım 10–13'e; onaylı taslakların üçü, bir alt satırdaki metni tekrarlamamak için kısaltıldı (bkz. `effective-ld-finding.md`, Tur 58 uygulaması) | 58 |
 | K8 | **Kısaltmaya geçiş** (E1) | Yazar, Tur 60: *"Yavaş yavaş kısaltmaya geçelim. … Bir sonraki adımda bir tur daha dönelim kısaltmadan önce ön hazırlık olsun diye."* Tur 60 = kısaltma **hazırlık** turu; kesim yok. Ve bütün okuyucular yeni sohbet penceresinde başlıyor (`cfd/reader-onboarding.md`) | 60 |
+| K9 | **Tur metni biçimi ve kısaltma yöntemi; makalenin ruhu** | Yazar, Tur 61 — CLAUDE.md §0.8, §2.3. Açık kalan: çerçevenin orantılı kısalması (C1), ruh ile Adım 1'in öncelik cümlesi arasındaki gerilim (C2), *"ürünün sorunsuzluğu"*nun adımları (C3) — `v8-shortening-consensus.md` | 61 |
 | K1 | Açıklık verimi | **0,817** — ve denetimde zaten kullanıldığı çıktı (`drag_sweep.py:40`) | 50 |
 | K2 | Palet ailesi | **Zarf olarak kalsın.** Mekanizma: `baseline.py` L/D'yi girdi alıyor, dört köşe = dört kapanış | 50 |
 | K3 | Adım 10'un C_D0'ı | **Tutarlı braket 0,0285–0,0381.** Yayımlanan 0,0248 braketin iki ucunun da altında | 50, dördü de hemfikir |
