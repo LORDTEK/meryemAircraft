@@ -30,7 +30,7 @@ def duz(s):
 def liste():
     out = []
     for L in open(os.path.join(KOK, "paper", "v8-caveats.md"), encoding="utf-8"):
-        m = re.match(r"^\| (\d+) \| (.+) \| ([GD+]+) \|$", L.rstrip("\n"))
+        m = re.match(r"^\| (\d+) \| (.+) \| ([GDCQK+]+) \|$", L.rstrip("\n"))
         if m:
             out.append((int(m.group(1)), m.group(2), m.group(3)))
     return out
