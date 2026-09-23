@@ -56,7 +56,7 @@ survive, and the dependencies are short enough to list.
 | Elimination of the propulsor-reorientation mechanism class | the drag bracket, the propeller efficiency, the sizing contract, the range result, the energy store, **and the transition aerodynamics** |
 
 **The last row carries a distinction that matters more than the others.** The mechanism claim is
-a statement about what hardware is present, and it is settled by the inventory in Section 8. **The
+a statement about what hardware is present, and it is settled by the inventory of Sections 7 and 8. **The
 separate claim that this aircraft can actually perform the regime change is not settled**, and it
 depends on exactly the aerodynamics that Sections 6 and 14 describe as unreliable above roughly
 ten degrees of incidence — the band the rotation passes through. **Section 7 should be read under
@@ -146,6 +146,7 @@ what it demands of anyone who uses the framework afterwards.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 59:** *"the inventory of Sections 7 and 8"* — Adım 10, 12, 15 ile aynı ifade | Grok, DeepSeek |
 | **Tur 58:** *"The contribution is the architecture, and the paper presents it as …"* — P1 ile tutarlılık için | Adım 1 (P1); CLAUDE.md §0.6 |
 | Dört eksen, dört ayrı rakip | `CLAUDE.md` §0 tablosu |
 | Kanatla taşıma ile rotorla taşıma ayrı verim sınıfı; sözleşme sınıf değiştirmez | §4.2, satır 2498–2502 |

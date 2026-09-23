@@ -61,6 +61,15 @@ EMEKLI = {
     "configuration that\ncombines runway-independent": "Tur 58: 'sized to combine' (ChatGPT)",
     "configuration that combines runway-independent": "Tur 58: ayni",
     "one of the measured continuous ratings": "Tur 58: 'the unit pack's continuous rating' (DeepSeek)",
+    "1.98 to 2.27": "Tur 59: alt uc 50 kg referans geometrisi; kapanislar 2.07-2.27 (Grok'un 8/10 isaretiyle)",
+    "3.45 to 3.70": "Tur 59: ayni; 3.53-3.70",
+    "1.20 to 1.29": "Tur 59: ayni; 1.23-1.29",
+    "regime change is made": "Tur 59: P1'in emekli fiili; 'arranged to change regime' (Grok)",
+    "change of regime is then made": "Tur 59: ayni, Adim 7",
+    "tip pairs do not lift": "Tur 59: Adim 5 ile celisiyor; kalkis payini uc ciftleri veriyor",
+    "so they fail the second row": "Tur 59: ayni paragrafta 'not the second row' (DeepSeek); birinci basarisizlik kipi",
+    "inventory in Section 8": "Tur 59: 'Sections 7 and 8' (Grok, DeepSeek)",
+    "masses of 52 to 58 kg": "Tur 59: 52.3-57.5 (Grok)",
     "different efficiency class": "Tur 49: emekliye ayrildi, Adim 9'da canli kalmisti",
     "14.29": "Tur 53: temiz govde L/D, drag_sweep.zincir pay hatasi; dogrusu 15.24",
     "10.28": "Tur 50: e = 0,85 ile L/D_max; e = 0,817 ile 10.08",
@@ -80,8 +89,9 @@ def govde(metin):
 def tara(adlar_metinler):
     bulunan = []
     for ad, metin in adlar_metinler:
+        duz = re.sub(r"\s+", " ", metin)   # Tur 59: satir kirilmasi aramayi kacirmasin
         for k, neden in EMEKLI.items():
-            if k in metin:
+            if re.sub(r"\s+", " ", k) in duz:
                 bulunan.append((ad, k, neden))
     return bulunan
 

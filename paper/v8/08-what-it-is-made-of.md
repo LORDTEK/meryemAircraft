@@ -183,14 +183,14 @@ the aircraft's zero-lift drag. Both ends are computed rather than assumed and th
 in Section 11.
 
 **These are the parts that fail the escape condition**, and naming them here is the point of
-listing them. The nose pair meets all four parts of Section 3. The tip pairs meet none of the
-first three: they are carried through cruise producing moments rather than thrust, so they fail
-the second row of Section 3's table, and they are exposed while doing it. This is the partial
+listing them. The nose pair meets all four parts of Section 3. The tip pairs do not: they hold
+one orientation, but they are carried through cruise producing moments rather than cruise thrust,
+which is the first of Section 3's failure modes, and they are exposed while doing it. This is the partial
 instantiation Section 3 lists as its **fourth** failure mode — meeting the condition where the
 aircraft is carried and failing it elsewhere — and the charge it re-opens is the second, carried in
-Section 11. *(They are not the second row of Section 3's table: that row concerns a propulsor that
-lifts and is then carried, and the tip pairs do not lift. They produce moments, and Section 3's
-permitted-cost clause places attitude devices outside the first charge while leaving them in the
+Section 11. *(They are not the second row of Section 3's table: that row concerns a propulsor whose
+duty is to lift and which is then carried. The tip pairs are sized for moments; they add the
+take-off margin (Section 5), but they were not sized for weight support, and Section 3's permitted-cost clause places attitude devices outside the first charge while leaving them in the
 airstream.)*
 
 The free-wheeling state is physically determinate: the rotor settles where net shaft torque is
@@ -207,6 +207,7 @@ particular installation would reach.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 59:** uç çiftleri tek yönelimde duruyor ama seyirde itki değil moment üretiyor → Adım 3'ün **birinci** başarısızlık kipi (eski metin aynı paragrafta hem "ikinci satırı başarısız" hem "ikinci satır değil" diyordu — DeepSeek); kalkış payını veriyorlar ama ağırlık desteğine boyutlanmadılar (eski *"do not lift"* Adım 5 ile çelişiyordu — denetimde bulundu) | Adım 3 başarısızlık kipleri 1–4; Adım 5 satır 76–80 |
 | Süpürme 45° kökten 38,3° uca, firar kenarı 25°, değişim <7° | §2.8, satır 729–733 |
 | Kalınlık %25→%12, veter 0,970→0,236 m | §2.8, satır 731–732 |
 | Açıklık 3,453 m, alan 1,979 m², AR 6,03 | §2.8, satır 750–752 |

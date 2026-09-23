@@ -74,8 +74,8 @@ that efficiency separately.
 **The sizing rules that keep that ratio valid as the mass moves are worth stating, because they
 also say what the four closures are geometrically.** The loop holds **wing loading, disc loading
 and aspect ratio** fixed, so area, span and disc diameter follow the mass: across the four
-closures the wing area runs 1.98 to 2.27 m², the span 3.45 to 3.70 m, and the nose disc diameter
-1.20 to 1.29 m. **The cruise lift coefficient is unchanged at 0.450 in every one of them**, so the
+closures the wing area runs 2.07 to 2.27 m², the span 3.53 to 3.70 m, and the nose disc diameter
+1.23 to 1.29 m. **The cruise lift coefficient is unchanged at 0.450 in every one of them**, so the
 lift-to-drag ratio is an input that stays valid at the closed mass rather than one frozen at a mass
 the loop has left behind. Had wing **area** been held fixed instead, the lift coefficient would
 have risen with the closed mass, the induced term would have moved against the heavier closures,
@@ -242,6 +242,7 @@ where it is made.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 59:** kapanış geometrisi 2,07–2,27 m², 3,53–3,70 m, 1,23–1,29 m — eski alt uçlar (1,98 / 3,45 / 1,20) **50 kg referans geometrisiydi**, kapanış değil | `aero/closure.py` GEOMETRI bloğu, `closure-result.txt`; `verify.py` Adım 10 geometri denetimi (eski alt ucu reddeder) |
 | **Tur 58, P3:** bu bölüm düzeni fiyatlıyor; mekanizma sayımı yalnız envantere dayanıyor | Adım 9 bağımlılık tablosu; Adım 15 (*"It rests on the inventory of Sections 7 and 8"*) |
 | MTOW = m_faydalı/(1 − f_boş − f_enerji); f_boş kurulu güce, güç MTOW^1.5'e bağlı | §2.12; `aero/baseline.py:boyutlandir`, satır 104–124 |
 | Tutarlı braket 0,0285–0,0381, rotor terimi iki uçta da 0,0154 | `aero/drag_sweep.py` satır 41–48 ve docstring |

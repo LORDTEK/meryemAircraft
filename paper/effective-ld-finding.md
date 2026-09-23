@@ -1042,3 +1042,31 @@ Adım 14'ün *"the loop closes"* ifadesi tutuyor.
 | Adım 11 | *"… attributes that price to the three charges; it adds none."* | *"Like the closure, the ledger prices the arrangement; the count of mechanism classes is not an entry in it."* | *"It attributes. It does not add."* iki satır aşağıda zaten var; taslak katkıya yeri söylemiyordu |
 | Adım 12 | *"This section tests whether … three quantities or one; it does not bear on the mechanism claim."* | *"Either answer leaves the mechanism claim where it was; that claim rests on the inventory of Sections 7 and 8."* | İlk yarı bölümün açılış sorusunu tekrarlıyordu |
 | Adım 13 | *"… the mechanism claim is not a ranking and is not at stake here."* | Özü aynı; *"how the price computed in Sections 10 and 11 enters a comparison"* | — |
+
+---
+
+# Tur 59 — Tur 58 metnine (external-review-62, on beş adımın tamamı) yanıtlar
+
+**Grok, DeepSeek, Qwen tam yanıt verdi; ChatGPT yalnız dosyayı aldığını ve ne denetleyeceğini yazdı, bulgu
+vermedi.** Üçü de: argüman akıyor; P1 *"arranged to"* doğru güçte; P3 cümleleri iddia eklemiyor; Adım 7
+birleştirme hamlesini taşıyor, büyütülmemeli; yasak eksenlerde ihlal yok.
+
+| Ne | Kim | Denetim | Yapılan |
+|---|---|---|---|
+| **Kapanış geometrisi** — Adım 8'in tek planformu ile Adım 10'un dört alanı | Grok (C; yalnız çerçeve sorunu sandı) | **Gerçek hata, benim.** Adım 10'un alt uçları (1,98 m², 3,45 m, 1,20 m) **50 kg referans geometrisi**; en hafif kapanış 52,34 kg → 2,07 / 3,53 / 1,23. Hiçbir betik basmıyordu, hiçbir denetim sınamıyordu | Düzeltildi; `closure.py` artık basıyor; `verify.py`'de 7 yeni kontrol (eski alt ucu reddeder) → 52 kontrol |
+| Adım 14 *"the regime change is made"* — P1'in emekli ettiği fiil | Grok (A) | Doğru; **Adım 15'te de ve Adım 7'de de vardı** (Grok yalnız 14'ü gördü) | Üçü de *"arranged to change regime"* |
+| Adım 9 *"Section 8"* / öteki adımlar *"Sections 7 and 8"* | Grok (B), DeepSeek (2.3) | Doğru — geçen tur açık bıraktığım uç | Adım 9 eşitlendi |
+| Adım 14 *"52 to 58 kg"* | Grok (D) | Doğru | *"52.3 to 57.5 kg"* |
+| **Adım 8 aynı paragrafta kendisiyle çelişiyor**: ana cümle *"fail the second row"*, parantez *"not the second row"* | DeepSeek (2.1) | Doğru. **Ve denetimde ikinci bir çelişki çıktı:** parantezin *"the tip pairs do not lift"* ifadesi Adım 5 ile çelişiyor — kalkış payını uç çiftleri veriyor. Ayrıca *"meet none of the first three"* yanlıştı: tek yönelimde duruyorlar | Birinci başarısızlık kipi; *"sized for moments; they add the take-off margin (Section 5), but were not sized for weight support"* |
+| Bill 3 oranı: Adım 11 2,4–3,2, Adım 12 4,19 | DeepSeek (2.2, 2.4) | Doğru — iki farklı uçak, aynı *"light design"* etiketi. 4,19 = 10,9/2,6 (50 kg referans); Adım 12 kendi *"Section 10'un değiştirmediği nicelikler"* kuralına rağmen motor derecesini kullanıyordu | Adım 12 *light/heavy design*'ı referans çifti olarak tanımlıyor; 4,19'un yanında Adım 11'in 2,4–3,2'si ve farkın nedeni |
+| kW/kg iki farklı paydayla | Qwen | Doğru (0,168/0,036 = 4,67) | *"of take-off mass"* / *"of buffer"* |
+| Adım 12 rotor terimi 0,0154, Adım 11 tablosunda 0,0169 | Qwen | Adım 11'in notu açıklıyor ama Adım 12 tek başına okunmuyordu | *"before the ten percent margin of the adverse end"* |
+| Adım 3 *"zero of the three"* alıntılanırsa | Grok (E) | **Alınmadı** — aynı paragrafın bir sonraki cümlesi *"It does not mean an architecture that costs nothing"* | — |
+| Adım 11 Fatura 2 başlığı ile tablo (göbek dahil) | DeepSeek | **Alınmadı** — tablo C_D0'ın tamamını bölüyor, kalın satırlar Fatura 2; %69/57 göbeği içermiyor | — |
+| Adım 1 *"cover distance"* | DeepSeek (kendisi ihlal değil diyor) | **Alınmadı** — görevin ihtiyacı, karşılaştırma değil | — |
+| Tekrar listeleri (tepki torku 7 adımda, kısmi gerçekleşme, geçiş gösterilmedi …) | Grok, DeepSeek, Qwen | Kayıt — kısaltma ertelendi (E1) | `v8-proportion.md` §5'e eklendi |
+| İzleme listesi: Adım 10 nokta-kütle *"zero altitude loss"*, Adım 6 L/D_e tablosu, Adım 13 yüzdeleri | Grok | Hepsi zaten bağlamlı | — |
+
+**Ders (§3.1 bir kez daha):** geometri aralığı elle yazılmıştı ve 50 kg tasarımdan kalan alt uç hiçbir
+denetimden geçmiyordu. Grok yalnız iki bölümün birbirine iki uçak gibi okunabileceğini söyledi; sayıyı
+yeniden hesaplayınca alt ucun kapanışa hiç ait olmadığı çıktı.

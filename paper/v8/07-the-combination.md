@@ -66,7 +66,7 @@ of them supplies it alone:
   so that it is sized by cruise rather than by a condition holding for about two percent
   of the flight.
 
-The change of regime is then made by **rotating the airframe**. The propulsors hold
+The configuration is arranged to change regime by **rotating the airframe**. The propulsors hold
 their orientation relative to the body from take-off to cruise; what changes is the
 orientation of the body relative to the flight path. A tilting architecture reaches the
 same end by turning its propulsors instead, which requires a pivot and an actuator and
@@ -146,6 +146,7 @@ and Section 11 charges them.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 59:** *"The configuration is arranged to change regime by rotating the airframe"* — P1 fiili | Adım 1 (P1); Grok'un Adım 14 işaretinin yayılması |
 | Kaçış koşulu: tek donanım, tek yönelim, tampondan tepe | v7 özeti, satır 55 |
 | Her itki vektörü gövde eksenine paralel; itkiden yatış momenti yok | §2.10, satır 810–812 |
 | Tepki torku bir yatış kanalıdır; her rotor kendi elektrik makinesinde | §2.9, satır 784–785 |

@@ -25,6 +25,16 @@ YAYILIMLAR (dort kapanis boyunca)
   askı gucu             11.40 -    12.53 kW    yayilim   9.9 %
   faydali yuk payi       0.23 -     0.25       yayilim   9.9 %
 
+GEOMETRI -- tutulan kurallar: kanat yuklemesi 25.3 kg/m2, disk yuklemesi 44.2 kg/m2, AR 6.03, V 30 m/s
+  A   MTOW  57.51 kg   alan 2.273 m2   aciklik 3.702 m   burun diski 1.287 m   C_L 0.450
+  B   MTOW  55.85 kg   alan 2.207 m2   aciklik 3.648 m   burun diski 1.268 m   C_L 0.450
+  C   MTOW  53.51 kg   alan 2.115 m2   aciklik 3.571 m   burun diski 1.242 m   C_L 0.450
+  D   MTOW  52.34 kg   alan 2.069 m2   aciklik 3.532 m   burun diski 1.228 m   C_L 0.450
+  alan          2.069 -  2.273 m2
+  aciklik       3.532 -  3.702 m
+  burun diski   1.228 -  1.287 m
+  (50 kg referans: alan 1.976 m2, aciklik 3.452 m, disk 1.200 m -- KAPANIS DEGIL)
+
 HANGI GIRDI DAHA BASKIN?
   surukleme braketi (ayni palet)   MTOW  -6.9 %   menzil  +23.1 %
   palet ailesi (ayni surukleme)    MTOW  -2.9 %   menzil   +8.1 %

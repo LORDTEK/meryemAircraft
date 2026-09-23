@@ -146,7 +146,7 @@ is the right form: at constant disc loading the disc area grows with weight, so 
 linear in weight and hover energy with it. **But what the buffer supplies is the hover demand less
 what the engine can deliver, and that deficit is not linear.** Taken at the electrical bus, where
 the buffer sits — rotor shaft power divided by the machine and power-electronics efficiencies, less
-the engine's shaft power times the generator's — it runs from 0.168 to 0.188 kW per kilogram across
+the engine's shaft power times the generator's — it runs from 0.168 to 0.188 kW per kilogram of take-off mass across
 the four closures, a spread of 12 percent, while the buffer fraction is held at 3.6 percent
 throughout. **The corner that needs the most buffer per kilogram is given the
 smallest buffer**, and that is a declared assumption of the closure rather than an outcome of it.
@@ -214,6 +214,7 @@ changes, and Section 13 asks what happens to the comparison when the sizing cont
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 59:** 0,168–0,188 kW/kg **kalkış kütlesi başına** (Adım 14'ün 4,7–5,2'si tampon kütlesi başına; 0,168/0,036 = 4,67) | Qwen; `aero/buffer-result.txt` |
 | **Tur 58, P3:** defter düzeni fiyatlıyor; sayım bir kalem değil | Adım 9 bağımlılık tablosu; bu bölümün *"It attributes. It does not add."* |
 | C_D0 dökümü: temiz yüzey, göbek, çerçeveler, rotorlar | `aero/drag_sweep.py` satır 41–48; `aero/ledger.py` |
 | Askı donanımı C_D0'in %69'u (elverişli) / %57'si (olumsuz) | `aero/ledger-result.txt` |

@@ -73,16 +73,16 @@ changes. The two answers are about different variables and do not bear on each o
 
 ### What is compared, and why it is these two points
 
-**Section 10 closed only the light design, at 52.3 to 57.5 kg. No closure was run at 1 000 kg**, and
+**Section 10 closed only the light configuration, at 52.3 to 57.5 kg. No closure was run at 1 000 kg**, and
 none could be run on the same footing: the heavy design has neither a drag bracket nor a structural
 closure (both below). A scale comparison therefore cannot be made from Section 10's closures. **It
-is made between the two reference designs, 50 kg and 1 000 kg, sized by one method, and both ends are
-taken from that pair.** Taking one end from Section 10 and the other from the reference pair would manufacture a scale
+is made between the two reference designs, 50 kg and 1 000 kg, sized by one method, and both ends are taken from that pair.** In this section *the light design* and *the heavy design* mean
+those two reference designs. Taking one end from Section 10 and the other from the reference pair would manufacture a scale
 change that is really a propeller-efficiency update applied to one end only.
 
 **The quantities used are ones Section 10 did not replace.** Disc loading is a sizing rule
-Section 10 holds. The buffer fraction is an input to its loop. The free-wheeling rotor term is the
-value Section 10 carries at both ends of its bracket at 50 kg, and it is computed here at 1 000 kg by
+Section 10 holds. The buffer fraction is an input to its loop. The free-wheeling rotor term is the value Section 10 carries at both ends of its bracket at 50 kg,
+before the ten percent margin of the adverse end (Section 11), and it is computed here at 1 000 kg by
 the same method. **The total zero-lift drag, the propeller efficiency, the range and the closed mass
 are not used.** No heavy-design range is quoted: the figures available for it either omit the
 free-wheeling rotor charge or carry an assumed rather than a computed propeller efficiency, and none
@@ -111,7 +111,9 @@ a factor of twenty in mass by a single sizing choice.
 **The measure Section 11 uses for Bill 3 — rotor-shaft hover power divided by engine shaft rating, a
 ratio of installed hardware rather than a deficit — carries a second quantity, and it does not travel
 as cleanly.** The ratio is 4.19 at the light design and 3.98 at the
-heavy, a change of 5 percent. But the engine is sized by cruise, not by disc loading, and **the two
+heavy, a change of 5 percent. *(Section 11's 2.4 to 3.2 is the same ratio at the four closures; their
+cruise engines, 3.54 to 5.17 kW, are larger than the light reference design's 2.6 kW, and the engine
+rating is a quantity Section 10 did replace. This paragraph compares the reference pair only.)* But the engine is sized by cruise, not by disc loading, and **the two
 reference designs do not use the same engine margin**: the engine is rated at 1.53 times cruise
 electrical power at 50 kg and 1.39 times at 1 000 kg. With the light design's margin at both sizes the
 heavy engine would be 60.0 kW and the ratio 3.61, a change of 14 percent. **The Bill 3 ratio therefore
@@ -280,6 +282,7 @@ Section 10 only.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 59:** bu bölümde *light/heavy design* = 50 kg ve 1000 kg referans tasarımları; 4,19 referans çiftinde (10,9 kW / 2,6 kW), Adım 11'in 2,4–3,2'si kapanışlarda; rotor terimi kenar payından önce | DeepSeek (2.2, 2.4), Qwen; `aero/baseline.py` yorum bloğu (2,6/1,7 = 1,53); Adım 11 tablo notu |
 | **Tur 58, P3:** her iki cevap da mekanizma iddiasını yerinde bırakır; iddia envantere dayanır | Adım 9 bağımlılık tablosu; Adım 15 |
 | Adım 10 yalnız hafif tasarımı kapattı, 52,3–57,5 kg; 1000 kg'da kapanış yok | `aero/closure-result.txt`; Adım 10 satır 109–111 |
 | Disk yüklemesi 44,2 / 43,7 kg/m², %1,1 fark | v7 §3.9 satır 1768; §3.8 Tablo 13 |

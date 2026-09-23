@@ -47,7 +47,8 @@ aircraft on range or cruise efficiency, where they are the better machines.
 
 ### The mechanism required to change regime, against tilting architectures — the contribution
 
-**The regime change is made by rotating the airframe rather than the propulsors.** The propulsors hold
+**The configuration is arranged to change regime by rotating the airframe rather than the
+propulsors.** The propulsors hold
 their orientation relative to the body from take-off to cruise, and so the configuration carries **no
 mechanism that reorients a propulsor** — nor any of the other mechanism classes that architectures use
 to change regime or to take a rotor out of one regime's flow: no pivot, no nacelle or rotor-group
@@ -110,6 +111,7 @@ costs.**
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 59:** *"The configuration is arranged to change regime by rotating the airframe"* — Grok Adım 14'ü yakaladı; aynı fiil burada da vardı | Adım 1 (P1) |
 | Dört eksen, dört rakip, sıralama | Adım 9 tablosu |
 | Seyir kaldırması yüzeyde; hiçbir sözleşme bunu değiştirmez | Adım 6 (*"no sizing contract … moves a vehicle between those two states"*) |
 | Üstünlük hesap; iki yayımlanmış quadrotor; turboşafta karşı pozitif, tam elektriğe karşı *"slightly behind to comfortably ahead"* | Adım 6, *"What the margin actually is"* |

@@ -93,3 +93,11 @@ sayılıyor (`v8-budget.md`). Gövde ~28 700 kelime + 16 tablo ≈ 31 900–39 9
 Önceki turlardan birikmiş adaylar: Adım 1'in 1954 anlatısı (~800 kelime, DeepSeek/Grok); 2 ile 4 arası ve 3'ün
 izin verilen maliyetleri ile 7'nin *"koşulun söylemedikleri"* arası yineleme; **O4**. Karar yazarın,
 ve yazar *"mutmain olmadan"* demedi.
+
+**Tur 59, okuyucuların tekrar kayıtları (kısaltma zamanı için, uygulanmıyor):** tepki torku kanalının
+reddi 1, 5, 7, 8, 9, 14, 15'te aynı güçte (Grok: *"said too often at the same strength"*); kısmi gerçekleşme
+3, 7, 8, 9, 11, 15; geçiş gösterilmedi 1, 5, 7, 8, 9, 10, 14, 15; %2 görev çevrimi 2, 3, 11, 15; mekanizma
+sınıfı listesi 7 ve 15; 5 ile 6'nın koşut yapısı; 11'in açılışı ile kapanışı; 14'ün son alt bölümü ile
+15'in *"Where the paper stops"*; sabit hatve açığı 6, 11, 12 (DeepSeek); 1954 anlatısı (DeepSeek, yine).
+Grok: *"Adım 9'dan sonra makale 12 000 kelime boyunca başka bir nesneye dönüşüyor"* — P3 onu fiyat olarak
+etiketliyor ama uzunluk duruyor.

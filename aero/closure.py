@@ -116,6 +116,32 @@ def main():
         print("  %-18s %8.2f - %8.2f %-3s   yayilim %5.1f %%" % (ad2, lo, hi, bir, pct))
     print()
 
+    # GEOMETRI (Tur 59). Adim 10 metni alan/aciklik/disk araliklarinin ALT
+    # uclarini 50 kg referans geometrisinden (1,979 m2, 3,453 m, 1,20 m)
+    # almisti; en hafif kapanis 52,3 kg. Buradan basilir, elle kopyalanmaz.
+    AR = 6.03                     # Adim 8 / v7 2.8: referans en-boy orani
+    WS, DL = BL.GOREV["kanat_yuklemesi"], BL.GOREV["disk_yuklemesi"]
+    q = 0.5 * BL.RHO * BL.GOREV["V"] ** 2
+    print("GEOMETRI -- tutulan kurallar: kanat yuklemesi %.1f kg/m2, disk yuklemesi"
+          " %.1f kg/m2, AR %.2f, V %.0f m/s" % (WS, DL, AR, BL.GOREV["V"]))
+    geo = {}
+    for ad in sorted(sonuc):
+        r = sonuc[ad]
+        if r.get("kapanmadi"):
+            continue
+        S = r["MTOW"] / WS
+        geo[ad] = (S, (AR * S) ** 0.5, (4 * r["MTOW"] / DL / 3.141592653589793) ** 0.5,
+                   r["MTOW"] * BL.G / (q * S))
+        print("  %-3s MTOW %6.2f kg   alan %5.3f m2   aciklik %5.3f m   burun diski %5.3f m   C_L %.3f"
+              % ((ad, r["MTOW"]) + geo[ad]))
+    for i, (ad2, bir) in enumerate((("alan", "m2"), ("aciklik", "m"), ("burun diski", "m"))):
+        v = [g[i] for g in geo.values()]
+        print("  %-12s %6.3f - %6.3f %s" % (ad2, min(v), max(v), bir))
+    S0 = 50.0 / WS
+    print("  (50 kg referans: alan %.3f m2, aciklik %.3f m, disk %.3f m -- KAPANIS DEGIL)"
+          % (S0, (AR * S0) ** 0.5, (4 * 50.0 / DL / 3.141592653589793) ** 0.5))
+    print()
+
     print("HANGI GIRDI DAHA BASKIN?")
     for etiket, cift in (("surukleme braketi (ayni palet)", ("A", "C")),
                          ("palet ailesi (ayni surukleme)", ("A", "B"))):

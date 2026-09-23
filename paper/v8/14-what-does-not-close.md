@@ -51,8 +51,8 @@ then what is not known.
 **Every closure in Section 10 carries a buffer of 3.6 percent of take-off mass.** That figure is an
 input, not a result (Sections 11 and 12). What it implies can be computed. Taken at the electrical bus,
 where the buffer sits — the rotor demand divided by the machine and power-electronics efficiencies, less
-what the engine delivers through its generator — **the four closures ask the buffer for 4.7 to 5.2 kW
-per kilogram to hover, and 5.5 to 6.1 kW per kilogram to leave the ground** with the tip pairs at full
+what the engine delivers through its generator — **the four closures ask the buffer for 4.7 to 5.2 kW per kilogram of buffer to hover, and 5.5 to 6.1
+kW per kilogram of buffer to leave the ground** with the tip pairs at full
 thrust, which is where the take-off margin comes from (Section 5).
 
 **What has been measured is a fraction of that, and the figures available are of three different
@@ -100,7 +100,7 @@ its price depends on a component whose required performance has not been demonst
 ### What the obstacle reaches, and what it does not
 
 **It reaches every number that describes this aircraft at Section 10's masses.** The closed masses of
-52 to 58 kg and the 13 kg payload assume the store. The ranges of 927 to 1 233 km survive the
+52.3 to 57.5 kg and the 13 kg payload assume the store. The ranges of 927 to 1 233 km survive the
 re-closure only because the fuel fraction is held, on an aircraft three-quarters heavier; they do not
 survive as 13 kg carried that far on a store that has been built. The vertical phase that Section 5
 reports as sized was sized with this store in it. And Section 13's orderings were computed with the
@@ -146,8 +146,8 @@ all.
 
 **The loop closes; the aircraft is not shown to.** At the energy store the paper can name the gap
 exactly, in specific power and in take-off mass. Everywhere else it can name only what would settle the
-question. **The architecture claim — that the regime change is made with no mechanism that reorients a
-propulsor — is a count of hardware, and nothing in this section reaches it.** What this section reaches
+question. **The architecture claim — that the configuration is arranged to change regime with no mechanism that
+reorients a propulsor — is a count of hardware, and nothing in this section reaches it.** What this section reaches
 is the aircraft, and the paper has not claimed the aircraft.
 
 The last section returns to the four axes of Section 9 and states what is claimed on each.
@@ -158,6 +158,7 @@ The last section returns to the four axes of Section 9 and states what is claime
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 59:** *"arranged to change regime"*; 52,3–57,5 kg; kW/kg **tampon kütlesi başına** | Grok (A, D), Qwen |
 | Kapanışlar %3,6 tampon taşıyor; tampon girdi | `closure.py` (`f_tampon=0.036`); Adım 11–12 |
 | Bara kuralı: P_mil/(0,92×0,95) − P_motor×0,90 | `aero/thrust.py` satır 21–30 ve 168–170; `aero/buffer.py` |
 | Aşkı 4,68–5,23, kalkış 5,53–6,09 kW/kg | `buffer-result.txt` §1 |
