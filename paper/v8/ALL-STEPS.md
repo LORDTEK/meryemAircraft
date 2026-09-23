@@ -1052,7 +1052,7 @@ than switched, which also pitches the nose down by a small increment when it is 
 strip is part of the configuration and is named here rather than later, because a claim about
 eliminated mechanisms that omitted it would be false.
 
-A fixed-pitch propeller that serves two regimes pays for it. The nose pair holds one
+A fixed-pitch propeller that serves two regimes pays in efficiency in at least one of them. The nose pair holds one
 orientation, which is the architectural claim, but it also holds one blade geometry across a
 hovering condition and a cruising one, and no single fixed-pitch blade is at its best in both.
 That is a price of refusing the variable-pitch hub rather than an argument against refusing it,
@@ -1153,12 +1153,9 @@ actually has depends on the available thrust differential and on allocation as w
 arm, and is not settled by the ratio alone.
 
 **The same differential-thrust system is what is assigned to rotate the airframe through
-transition.** That is a design assignment, not a demonstrated result: whether the moment it
-produces is sufficient, and whether the aircraft trims through the rotation, are **not settled in
-this paper**: the moment is a sizing input to Section 10, but the trim through the rotation depends
-on the transition aerodynamics, and Section 14 says why those are not reliable — for the methods used
-here and the published comparisons against which they were checked — at the incidences the rotation
-passes through.
+transition.** That is a design
+assignment, not a demonstrated result (Section 7): the moment it produces is a sizing input to Section 10,
+and whether it suffices and whether the aircraft trims through the rotation are **not settled in this paper**.
 
 **Roll comes from neither, and the reason is a choice rather than an impossibility.** Every thrust
 vector is parallel to the body axis, so no combination of thrust settings produces a moment about
@@ -1313,11 +1310,7 @@ efficiency, the sizing contract, the range result or the energy store — **nor 
 
 **The last of these carries a distinction that matters more than the others.** The mechanism claim is
 a statement about what hardware is present, and it is settled by the inventory of Sections 7 and 8. **The
-separate claim that this aircraft can actually perform the regime change is not settled**, and it
-depends on exactly the aerodynamics that Sections 6 and 14 describe as unreliable above roughly
-ten degrees of incidence — the band the rotation passes through. **Section 7 should be read under
-that limit**: it describes an arrangement that requires no reorienting mechanism, not a
-demonstration that the arrangement transitions.
+separate claim that this aircraft can actually perform the regime change is not settled** (Section 7).
 
 ### One cost of the contribution that is named and not priced
 

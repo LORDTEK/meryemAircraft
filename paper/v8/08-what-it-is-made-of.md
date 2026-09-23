@@ -91,12 +91,9 @@ actually has depends on the available thrust differential and on allocation as w
 arm, and is not settled by the ratio alone.
 
 **The same differential-thrust system is what is assigned to rotate the airframe through
-transition.** That is a design assignment, not a demonstrated result: whether the moment it
-produces is sufficient, and whether the aircraft trims through the rotation, are **not settled in
-this paper**: the moment is a sizing input to Section 10, but the trim through the rotation depends
-on the transition aerodynamics, and Section 14 says why those are not reliable — for the methods used
-here and the published comparisons against which they were checked — at the incidences the rotation
-passes through.
+transition.** That is a design
+assignment, not a demonstrated result (Section 7): the moment it produces is a sizing input to Section 10,
+and whether it suffices and whether the aircraft trims through the rotation are **not settled in this paper**.
 
 **Roll comes from neither, and the reason is a choice rather than an impossibility.** Every thrust
 vector is parallel to the body axis, so no combination of thrust settings produces a moment about
@@ -206,6 +203,7 @@ particular installation would reach.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 67 — B5 (3.1)** (dört okuyucu + Claude): aerodinamik gerekçe ve on derece bandı Adım 7'de (ev) ve 14'te; burada atama, *"not a demonstrated result"*, Adım 10 girdisi ve *"not settled"* kaldı | Adım 7 |
 | **Tur 60:** *"50 kg reference design"* tanımı buradan; parantez sadeleşti — ikinci satırın dar tarifi çıktı | ChatGPT, DeepSeek (terim), Grok, DeepSeek (parantez) |
 | **Tur 59:** uç çiftleri tek yönelimde duruyor ama seyirde itki değil moment üretiyor → Adım 3'ün **birinci** başarısızlık kipi (eski metin aynı paragrafta hem "ikinci satırı başarısız" hem "ikinci satır değil" diyordu — DeepSeek); kalkış payını veriyorlar ama ağırlık desteğine boyutlanmadılar (eski *"do not lift"* Adım 5 ile çelişiyordu — denetimde bulundu) | Adım 3 başarısızlık kipleri 1–4; Adım 5 satır 76–80 |
 | Süpürme 45° kökten 38,3° uca, firar kenarı 25°, değişim <7° | §2.8, satır 729–733 |

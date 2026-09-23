@@ -58,11 +58,7 @@ efficiency, the sizing contract, the range result or the energy store — **nor 
 
 **The last of these carries a distinction that matters more than the others.** The mechanism claim is
 a statement about what hardware is present, and it is settled by the inventory of Sections 7 and 8. **The
-separate claim that this aircraft can actually perform the regime change is not settled**, and it
-depends on exactly the aerodynamics that Sections 6 and 14 describe as unreliable above roughly
-ten degrees of incidence — the band the rotation passes through. **Section 7 should be read under
-that limit**: it describes an arrangement that requires no reorienting mechanism, not a
-demonstration that the arrangement transitions.
+separate claim that this aircraft can actually perform the regime change is not settled** (Section 7).
 
 ### One cost of the contribution that is named and not priced
 
@@ -141,6 +137,7 @@ what it demands of anyone who uses the framework afterwards.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 67 — B5 (3.2)** (dört okuyucu + Claude): gerekçe Adım 7'de; *"Section 7 should be read under that limit"* çıktı — katkı bölümünü sonradan zayıf okutan savunmacı ses (Tur 64 ölçümü); iki korunan cümle kaldı | Adım 7 |
 | **Tur 66 — B4 (3.3):** yalnız sınır; üç bedel (itki asimetrisi, verim, rotor ataleti) burada kaldı (Grok); *"one price"* değil *"a price"* (Qwen: *"one"* tüketici okunabilir) | Adım 8 |
 | **Tur 61:** bağımlılık tablosu düzyazıya (dört okuyucu + Claude hemfikir); dört satır aynen, *"The last row"* → *"The last of these"* | `v8-shortening-consensus.md` |
 | **Tur 60:** *"rather than cruise thrust"* | Grok; Adım 3 (*"no cruise thrust in that sense"*) |

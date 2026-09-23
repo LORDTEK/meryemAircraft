@@ -334,6 +334,10 @@ dahil herkesin hemfikir olduğu kısaltmalar uygulansın."*
   Döngü: **hemfikir → uygulandı → sonuç birebir gösterildi → her okuyucu teyit etti → kapandı.** Biri kayıp ya da
   güç değişimi bulursa düzeltilir ve düzeltilmiş hâli yeniden teyide gider. (İlk örnek: Tur 62'de Adım 14'ün
   listesinden bir yan cümle düşmüştü; Grok yakaladı.) Yazara verilen özette de sonuç anlatılır, sayı değil.
+- **Okuyucuların kendi önerileri de istenir.** Yazar, Tur 67: *"Onların da önerileri varsa onlar da söylesinler. Neden
+  olmasın? Belki faydalı fikirler çıkar."* Her tur metni, sorulan sorulardan bağımsız olarak **açık bir öneri bölümü**
+  taşır (kısaltma, taşıma, yeniden yazım, yapı, fikir — gerekçeli). Gelen öneriler bir sonraki turda herkese **yan
+  yana** sunulur ve benim görüşümle birlikte oylanır.
 - **Uygulanan her kısaltma bir sonraki tur metninde önce/sonra birebir gösterilir.** Taşınan malzeme
   `paper/v8/supplement.md`'ye aynen gider; gövdede bulgusu ve sınırı kalır.
 

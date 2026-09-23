@@ -109,7 +109,7 @@ than switched, which also pitches the nose down by a small increment when it is 
 strip is part of the configuration and is named here rather than later, because a claim about
 eliminated mechanisms that omitted it would be false.
 
-A fixed-pitch propeller that serves two regimes pays for it. The nose pair holds one
+A fixed-pitch propeller that serves two regimes pays in efficiency in at least one of them. The nose pair holds one
 orientation, which is the architectural claim, but it also holds one blade geometry across a
 hovering condition and a cruising one, and no single fixed-pitch blade is at its best in both.
 That is a price of refusing the variable-pitch hub rather than an argument against refusing it,
@@ -140,6 +140,7 @@ exposed in cruise, and Section 11 charges them.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 67 — V2, Grok'un ifadesi** (dört okuyucu + Claude): *"pays in efficiency in at least one of them"* — bedelin birimini adlandırıyor, sayı eklemiyor; Adım 3'ün *"the compromise is paid in efficiency"* cümlesiyle aynı güçte (Qwen) | Adım 3 |
 | **Tur 66 — B4 (3.2) ve ses geçişi V1, V2, V6** (dört okuyucu + Claude): tepki torku tek cümle (*"could"* + *"by design"* = tasarım kısıtı, fiziksel imkânsızlık değil); şerit dışlaması kural olarak; *"pays for it"*; *"carries costs"*. **V3 ve V5 kaldı** (herkes korudu), **V4 kaldı** (Grok: olumlu hâli koşulun karşılandığını ima ediyordu — uç çiftleri karşılamıyor) | Adım 8; ChatGPT'nin A–D kuralı |
 | **Tur 64:** *"removes the mechanism"* → *"removes the need for the mechanism"* (ChatGPT önerdi; beşimiz hemfikir) — bir şey sökülmüş gibi okunmasın; korunan liste aynı commit'te güncellendi | `v8-caveats.md` ruh listesi |
 | **Tur 59:** *"The configuration is arranged to change regime by rotating the airframe"* — P1 fiili | Adım 1 (P1); Grok'un Adım 14 işaretinin yayılması |
