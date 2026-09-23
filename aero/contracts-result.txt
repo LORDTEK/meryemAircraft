@@ -117,18 +117,18 @@ D   0.0285  0.683  |   +62.2%   +32.8%   -12.9% |  +122.5%  +115.6%  +104.8% |  
     Yalniz YON icin: ortak tampon secimi kimin aleyhine?
 
     C_D0    eta_A  |   B/A s1   B/A s2   B/A s3 |   C/A s1   C/A s2   C/A s3 |    mB/mA    mC/mA |   kayma
-A   0.0381  0.632  |   +67.8%   -15.6%    +nan% |  +119.5%   +38.8%   -75.2% |    6.624    2.687 |     nan
-B   0.0381  0.683  |   +55.3%   -23.2%    +nan% |  +103.1%   +26.2%   -85.6% |    6.821    2.767 |     nan
-C   0.0285  0.632  |   +83.9%   -11.4%    +nan% |  +140.5%   +45.7%   -98.2% |    7.119    2.888 |     nan
-D   0.0285  0.683  |   +70.2%   -19.1%    +nan% |  +122.5%   +33.0%    +nan% |    7.278    2.953 |     nan
-  A  MTOW (s1): A 57.5  B 380.9  C 154.5 kg
-  B  MTOW (s1): A 55.8  B 380.9  C 154.5 kg
-  C  MTOW (s1): A 53.5  B 380.9  C 154.5 kg
-  D  MTOW (s1): A 52.3  B 380.9  C 154.5 kg
-   B, sozlesme 1:  +55.3 ..  +83.9 %  -> B onde
-   B, sozlesme 2:  -23.2 ..  -11.4 %  -> A onde
+A   0.0381  0.632  |    +nan%   -41.3%    +nan% |  +119.5%    +5.2%    +nan% |      nan    9.036 |     nan
+B   0.0381  0.683  |    +nan%   -46.6%    +nan% |  +103.1%    -4.3%    +nan% |      nan    9.304 |     nan
+C   0.0285  0.632  |    +nan%   -38.4%    +nan% |  +140.5%   +10.4%    +nan% |      nan    9.710 |     nan
+D   0.0285  0.683  |    +nan%   -43.7%    +nan% |  +122.5%    +0.8%    +nan% |      nan    9.928 |     nan
+  A  MTOW (s1): A 57.5 kg  B KAPANMADI  C 519.6 kg
+  B  MTOW (s1): A 55.8 kg  B KAPANMADI  C 519.6 kg
+  C  MTOW (s1): A 53.5 kg  B KAPANMADI  C 519.6 kg
+  D  MTOW (s1): A 52.3 kg  B KAPANMADI  C 519.6 kg
+   B, sozlesme 1: HICBIR KAPANISTA KAPANMADI
+   B, sozlesme 2:  -46.6 ..  -38.4 %  -> A onde
    B, sozlesme 3: HICBIR KAPANISTA KAPANMADI
    C, sozlesme 1: +103.1 .. +140.5 %  -> C onde
-   C, sozlesme 2:  +26.2 ..  +45.7 %  -> C onde
-   C, sozlesme 3:  -98.2 ..  -75.2 %  -> A onde  (1 kapanista rakip KAPANMADI)
+   C, sozlesme 2:   -4.3 ..  +10.4 %  -> ISARET DEGISIYOR
+   C, sozlesme 3: HICBIR KAPANISTA KAPANMADI
 
