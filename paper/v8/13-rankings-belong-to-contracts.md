@@ -90,14 +90,15 @@ is the first architecture; the others are a lift-plus-cruise layout and a tiltin
 contract can be seen acting on a mass difference against a cruise-efficiency difference; it is not a
 claim that those families would use this power system, and the tilting family as Section 2 describes
 it has no store at all. **The choice runs against this configuration.** Given no buffer and an engine
-sized by hover instead, the lift-plus-cruise layout closes at 381 kg, falls 11 to 23 percent behind
-under a fixed fuel mass, and does not close at all under a fixed take-off mass; the tilt bound falls
-75 to 98 percent behind under a fixed take-off mass, or does not close. **Under a fixed fuel fraction
-the lift-plus-cruise lead is unchanged, at 55 to 84 percent, although the aircraft is now seven times
-heavier** — the first contract's blindness to mass, made visible. **That comparison is not
-used**, because it would set competitors without a store against this configuration with one — a
-buffer of 3.6 percent whose feasibility is the item Section 14 examines. Until that item is settled,
-the common store is the neutral choice.
+rated to deliver the hover demand through the generator, the power electronics and the machines
+instead, the lift-plus-cruise layout does not close under a fixed fuel fraction or a fixed take-off
+mass, and under a fixed fuel mass falls 38 to 47 percent behind; the tilt bound does not close under a
+fixed take-off mass. **Under a fixed fuel fraction the tilt bound closes at 520 kg — about ten times
+this configuration's mass — with its range lead unchanged at 103 to 141 percent**: the first
+contract's blindness to mass, made visible. **That comparison is not used**, because it would set
+competitors without a store against this configuration with one — a buffer of 3.6 percent whose
+feasibility is the item Section 14 examines. Whatever that store turns out to cost, holding it common
+charges all three the same assumption.
 
 **The basis is not symmetric, and each asymmetry is stated with its direction.**
 
@@ -273,7 +274,7 @@ of the architectures alone.
 | Duyarlılık tablosu (beş satır) | aynı, (a), (b) %5, (b) %15, (c) |
 | Adım 2'nin öngörüsü | Adım 2 satır 186–189 (**bu turda daraltıldı**, aşağıda) |
 | Adım 9'un dördüncü satırı | Adım 9 satır 28–43 (**bu turda güncellendi**) |
-| Rakipler tamponsuz: B 380,9 kg; s2 −23,2…−11,4; s3 kapanmıyor; tilt s3 −98,2…−75,2 ya da kapanmıyor; s1 değişmez; B/A kütle 6,6–7,3 | `contracts-result.txt`, (d) bloğu |
+| Rakipler tamponsuz, motor askıyı bara üzerinden besleyecek şekilde (÷0,92×0,95×0,90): B s1 ve s3'te kapanmıyor, s2 −46,6…−38,4; tilt s1 519,6 kg (×9,0–9,9), menzil +103…+141 değişmez; s2 −4,3…+10,4; s3 kapanmıyor. **Tur 57 düzeltmesi:** önceki 380,9 kg / −23…−11 motoru rotor milindeki askı gücüne EŞİT alıyordu (`baseline.py` `motor_hover` yolu, istasyon karışıklığı — DeepSeek'in *"baseline.py'yi denetle"* önerisiyle bulundu) | `contracts-result.txt`, (d) bloğu; `baseline.py` `motor_hover_carpan` |
 | Kayma: taban 66,8–76,7; %5 → 14,3–23,5; %15 → 116,8–134,1; aynı η 64,6–71,7; artış 67,0–75,2 | aynı, `kayma` sütunu |
 | Adım 2'nin tilt'i depolamasız (*"Bill 3 is left standing … with no store"*) | Adım 2 tablosu |
 

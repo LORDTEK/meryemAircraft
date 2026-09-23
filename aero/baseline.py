@@ -77,7 +77,15 @@ F_TAHRIK_SABIT = 0.108
 
 
 class Mimari:
-    """Bir mimarinin ortaktan FARKLARI. Her alan bir gerekce tasir."""
+    """Bir mimarinin ortaktan FARKLARI. Her alan bir gerekce tasir.
+
+    TUR 57 NOTU -- motor_hover_carpan. motor_hover=True iken motor derecesi
+    P_hover'a ESIT aliniyordu: rotor MILI gucu ile motor MILI derecesi
+    ayni istasyonmus gibi. Seri hibritte motor -> jenerator (0,90) -> bara
+    -> guc elektronigi (0,95) -> makine (0,92) -> rotor mili; yani motor
+    mili = P_hover / 0,7866. Varsayilan 1,0 eski davranisi (v7'nin
+    tablolarini) korur; contracts.py (d) durumu dogru carpani verir.
+    """
 
     def __init__(self, ad, f_tampon, LD_carpan, motor_hover,
                  f_ek=0.0, ek_ad="", eta_carpan=1.0, f_govde_ek=0.0,
@@ -109,7 +117,7 @@ def boyutlandir(m, LD_temiz, g=GOREV, tur=60):
         W = MTOW * G
         P_hover = W ** 1.5 / (g["eta_hover"] * math.sqrt(2 * RHO * A))
         P_seyir = W * g["V"] / LD / eta_s
-        P_kurulu = P_hover if m.motor_hover else P_seyir * g["motor_pay"]
+        P_kurulu = (P_hover * getattr(m, "motor_hover_carpan", 1.0)) if m.motor_hover else P_seyir * g["motor_pay"]
         f_tahrik = F_TAHRIK_SABIT + (P_kurulu / 1000.0) / OZGUL_GUC / MTOW
         f_bos = (f_govde + ORTAK["f_aviyonik"] + f_tahrik
                  + m.f_tampon + m.f_ek)
@@ -241,7 +249,7 @@ def sabit_MTOW(m, LD_temiz, MTOW, g=GOREV):
     W = MTOW * G
     P_hover = W ** 1.5 / (g["eta_hover"] * math.sqrt(2 * RHO * A))
     P_seyir = W * g["V"] / LD / eta_s
-    P_kurulu = P_hover if m.motor_hover else P_seyir * g["motor_pay"]
+    P_kurulu = (P_hover * getattr(m, "motor_hover_carpan", 1.0)) if m.motor_hover else P_seyir * g["motor_pay"]
     f_tahrik = F_TAHRIK_SABIT + (P_kurulu / 1000.0) / OZGUL_GUC / MTOW
     f_bos = (ORTAK["f_govde"] + m.f_govde_ek + ORTAK["f_aviyonik"]
              + f_tahrik + m.f_tampon + m.f_ek)
@@ -261,7 +269,7 @@ def sabit_yakit(m, LD_temiz, m_yakit, g=GOREV, tur=200):
         W = MTOW * G
         P_hover = W ** 1.5 / (g["eta_hover"] * math.sqrt(2 * RHO * A))
         P_seyir = W * g["V"] / LD / eta_s
-        P_kurulu = P_hover if m.motor_hover else P_seyir * g["motor_pay"]
+        P_kurulu = (P_hover * getattr(m, "motor_hover_carpan", 1.0)) if m.motor_hover else P_seyir * g["motor_pay"]
         f_tahrik = F_TAHRIK_SABIT + (P_kurulu / 1000.0) / OZGUL_GUC / MTOW
         f_bos = (ORTAK["f_govde"] + m.f_govde_ek + ORTAK["f_aviyonik"]
                  + f_tahrik + m.f_tampon + m.f_ek)

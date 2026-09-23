@@ -932,3 +932,49 @@ eklendi. **§3.1 sınıfı: bir düzeltme (v7'nin istasyon kuralı) yeni yazıla
 - 4 kW/kg satırı +6,5 aşağı yuvarlanmalıydı (+6…+8).
 - Kapanış paragrafında *"a factor of about four"* — 3,8×'in tek evi kuralını çiğniyordu; çıkarıldı.
 - Kabuk yoğunluğu: *"meets it"* değil *"leaves room for the 13 kg payload"* (`mass.py`'nin kırılma tanımı).
+
+---
+
+# Tur 57 — Tur 56 metnine (external-review-60) dört yanıt
+
+**Dördü de:** tampon paragrafının gücü doğru; *"the aircraft exists"* fazla (ChatGPT, Qwen, DeepSeek;
+Grok: *"loop sensitivity, not a second aircraft"*); mekanizma iddiası depodan bağımsız; Adım 2'nin
+başlığı ve koşullu öngörüsü 12–13 ile tutarlı.
+
+## Uygulananlar
+
+| Ne | Kim |
+|---|---|
+| *"the aircraft exists"* → *"the loop closes"*; yeniden kapanış paketin duyarlılığı, 100 kg'da yapısal kapanış değil; %30 gövde iki kat kütlede kanıtlanmamış | ChatGPT, Qwen, DeepSeek, Grok |
+| Anma türleri farklı: tepe talep / tezgâh ortalaması / sürekli / tasarım varsayımı; 3,7–4,1 tepe-tezgâh oranı | Grok, ChatGPT |
+| Hangi kural: kanat/disk yüklemesi ve AR sabit → L/D ve menzil taşınıyor | DeepSeek |
+| Depo **neye ulaşıyor**: kapalı kütleler ve 13 kg; 927–1233 km yalnız yakıt kesri tutulduğu için; Adım 5'in dikey evresi; Adım 13 | Grok, DeepSeek |
+| Adım 6: **oran olarak** etkilenmez; uçak karşılaştırması olarak Adım 10'un kütlelerini anlatır | Grok |
+| Defter dönüşümü ucuz depoda kaydetti, burada gerçek fiyatı | DeepSeek |
+| Tablo: tampon enerjisi (4 dk), elektrik yolu tepe/ısıl, şerit+fairing, durdurulmuş hâl, yer işletimi/iniş yükleri; gövde satırı analiz + inşa | Grok, ChatGPT, Qwen, DeepSeek |
+| *"measurement"* → *"validated data"* | ChatGPT |
+| İstasyon etiketleri: Adım 10 tablosu, Adım 11 ve 12'nin Fatura 3 oranı (*"a ratio of installed hardware"*); Adım 11'in *"the buffer supplies the difference"* cümlesi kaldırıldı | Grok, ChatGPT, DeepSeek |
+| Adım 2: *"break even"* tanımlandı | DeepSeek |
+| Adım 13: *"Until that item is settled, … neutral"* → *"holding it common charges all three the same assumption"* | Grok (açmadan, tek cümle) |
+
+## Denetimin bulduğu: `baseline.py`'de ikinci istasyon karışıklığı (DeepSeek'in önerisiyle)
+
+DeepSeek: *"Worth a one-line audit of the script."* Denetlendi: `motor_hover=True` yolunda motor derecesi
+**rotor milindeki askı gücüne eşit** alınıyordu. Seri hibritte motor mili = askı / (0,92×0,95×0,90) =
+askı × 1,27. Bu yol yalnız Adım 13'ün (d) durumunu (tamponsuz rakipler) etkiliyor.
+`motor_hover_carpan` eklendi (varsayılan 1,0 — v7 tablolarını korur; verify 45/45).
+
+**Düzeltilmiş (d):** lift+cruise sözleşme 1 ve 3'te **kapanmıyor**, sözleşme 2'de %38–47 geride; tilt
+sınırı sözleşme 1'de 520 kg (~10×), menzil önü değişmeden; sözleşme 3'te kapanmıyor. (Eski: 381 kg,
+−23…−11.) Yön aynı, büyüklük daha keskin. Tur 56 metnindeki 381 kg bu yüzden yanlıştı.
+
+## Reddedilen / düzeltilen
+
+- **DeepSeek: pist iddiası depoya bağlı değil** ("sized, not demonstrated"). Kısmen yanlış: dikey evre
+  **bu depoyla** boyutlandı; ölçülmüş depoda yalnız daha ağır pakete boyutlu. Adım 14 bunu söylüyor.
+- **Qwen'in iki "Step 8" alıntısı** (*"the quantity a future measurement must return is ΔC_L"*, *"whether
+  such a fairing develops the side force"*) **v8'de yok, v7'den** (v7 satır 836). "Step 2.9 / 3.4"
+  pasajları da v7'nin §2.9/§3.4'ü. Qwen yine bilgi tabanındaki v7'yi okudu. **Öz yine de doğru**
+  (şerit ve fairing ölçülmedi) ve tabloya girdi.
+- **DeepSeek: 4,19 "understated"; ortak istasyonda ~5,33.** Oran hatalı değil, **tanımsızdı**: rotor mili
+  askı / motor mili derece bir donanım oranıdır. Etiketlendi (ChatGPT'nin 1. seçeneği).

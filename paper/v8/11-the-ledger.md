@@ -159,10 +159,11 @@ like with like — they are not results of this ledger — and propulsion runs 0
 **This is the charge the architecture attacks most directly, and it is also the one where the
 release is partial.**
 
-The engine is sized by cruise: **3.54 to 5.17 kW**. The hover requirement is **11.4 to
-12.5 kW**. The buffer supplies the difference for the vertical phase, and the ratio between the
-two is **2.4 to 3.2** — that is the factor by which the continuously installed power plant is
-smaller than the peak the aircraft must produce.
+The engine is sized by cruise: **3.54 to 5.17 kW** of shaft rating. The hover requirement is
+**11.4 to 12.5 kW** at the rotor shaft. The ratio between the two is **2.4 to 3.2** — a ratio of
+installed hardware, the factor by which the continuously installed power plant is smaller than the
+peak the rotors must absorb. **It is not the buffer's burden**, which is taken at the electrical bus
+rather than as the difference of these two shaft figures, and which Section 14 computes.
 
 **But the full hover power passes through the electrical path, and that path is sized by it.**
 Machines, power electronics and wiring between the buffer and the rotors carry 11.4 to 12.5 kW

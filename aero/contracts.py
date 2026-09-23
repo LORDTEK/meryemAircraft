@@ -61,6 +61,8 @@ def kos(cd0, eta_A, eta_BC=0.80, f_grup=0.10, b_artis=False, tampon_rakip=True):
     if not tampon_rakip:                 # (d) rakipler tamponsuz, motor askiya boyutlu
         for m in ms[1:]:
             m.f_tampon, m.motor_hover = 0.0, True
+            # motor MILI, rotor milindeki askiyi bara uzerinden besler (Tur 57)
+            m.motor_hover_carpan = 1.0 / (0.92 * 0.95 * 0.90)
     gs = (gorev_ile(eta_A), gorev_ile(eta_BC), gorev_ile(eta_BC))
     ref = BL.boyutlandir(ms[0], ld_temiz, g=gs[0])
     m_yakit = BL.ORTAK["f_yakit"] * ref["MTOW"]
@@ -90,8 +92,9 @@ def kapanis_tablosu(etiket, **kw):
         _, ref, out = kos(cd0, eA, **kw)
         fb = [fark(out, s, 1) for s in (1, 2, 3)]
         fc = [fark(out, s, 2) for s in (1, 2, 3)]
-        mb = out[(1, 1)]["MTOW"] / out[(1, 0)]["MTOW"]
-        mc = out[(1, 2)]["MTOW"] / out[(1, 0)]["MTOW"]
+        nan = float("nan")
+        mb = nan if out[(1, 1)].get("kapanmadi") else out[(1, 1)]["MTOW"] / out[(1, 0)]["MTOW"]
+        mc = nan if out[(1, 2)].get("kapanmadi") else out[(1, 2)]["MTOW"] / out[(1, 0)]["MTOW"]
         satirlar.append((k, fb, fc, mb, mc))
         print("%-3s %-7.4f %-6.3f | %+7.1f%% %+7.1f%% %+7.1f%% | %+7.1f%% %+7.1f%% %+7.1f%% | %8.3f %8.3f | %7.1f"
               % (k, cd0, eA, *fb, *fc, mb, mc, fb[0] - fb[2]))
@@ -204,6 +207,6 @@ if __name__ == "__main__":
     t = kapanis_tablosu("", tampon_rakip=False)
     for k, dk, ek in KAPANISLAR:
         _, _, out = kos(CD0[dk], ETA_P[ek], tampon_rakip=False)
-        print("  %s  MTOW (s1): A %.1f  B %.1f  C %.1f kg" % (k, out[(1, 0)]["MTOW"],
-              out[(1, 1)]["MTOW"], out[(1, 2)]["MTOW"]))
+        f = lambda r: "KAPANMADI" if r.get("kapanmadi") else "%.1f kg" % r["MTOW"]
+        print("  %s  MTOW (s1): A %s  B %s  C %s" % (k, f(out[(1, 0)]), f(out[(1, 1)]), f(out[(1, 2)])))
     isaret_ozeti(t, "d")

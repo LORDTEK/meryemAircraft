@@ -110,7 +110,7 @@ bracket.
 architecture — and for the **light** design, which is the only one carried through this loop; the
 heavy design appears below only through a transition time computed elsewhere.
 
-| | C_D0 | η_p | L/D | MTOW | Empty fraction | Hover power | Engine | Range |
+| | C_D0 | η_p | L/D | MTOW | Empty fraction | Hover power, rotor shaft | Engine rating, shaft | Range |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
 | **A** | 0.0381 | 0.632 | 8.79 | 57.5 kg | 0.614 | 12.53 kW | 5.17 kW | 927 km |
 | **B** | 0.0381 | 0.683 | 8.79 | 55.8 kg | 0.607 | 12.17 kW | 4.65 kW | 1 002 km |

@@ -199,7 +199,8 @@ It also makes a prediction that can be checked without settling the architectura
 all: **where an arrangement pays one charge heavily in order to escape another, its ranking
 against a differently-balanced arrangement will move when the sizing rule changes — toward the
 lighter arrangement as the rule weights mass more — and will reverse where that reweighting carries
-it past the point at which the two break even.** Section 13 tests both the
+it past the point at which the two break even, where the mass difference as the contract counts it and
+the cruise-efficiency difference cancel in the range.** Section 13 tests both the
 movement and the reversal on this configuration, and Section 4 tests a different consequence
 against a sizing study this work did not produce.
 

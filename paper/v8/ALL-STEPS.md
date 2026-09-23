@@ -366,7 +366,8 @@ It also makes a prediction that can be checked without settling the architectura
 all: **where an arrangement pays one charge heavily in order to escape another, its ranking
 against a differently-balanced arrangement will move when the sizing rule changes — toward the
 lighter arrangement as the rule weights mass more — and will reverse where that reweighting carries
-it past the point at which the two break even.** Section 13 tests both the
+it past the point at which the two break even, where the mass difference as the contract counts it and
+the cruise-efficiency difference cancel in the range.** Section 13 tests both the
 movement and the reversal on this configuration, and Section 4 tests a different consequence
 against a sizing study this work did not produce.
 
@@ -1541,7 +1542,7 @@ bracket.
 architecture — and for the **light** design, which is the only one carried through this loop; the
 heavy design appears below only through a transition time computed elsewhere.
 
-| | C_D0 | η_p | L/D | MTOW | Empty fraction | Hover power | Engine | Range |
+| | C_D0 | η_p | L/D | MTOW | Empty fraction | Hover power, rotor shaft | Engine rating, shaft | Range |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
 | **A** | 0.0381 | 0.632 | 8.79 | 57.5 kg | 0.614 | 12.53 kW | 5.17 kW | 927 km |
 | **B** | 0.0381 | 0.683 | 8.79 | 55.8 kg | 0.607 | 12.17 kW | 4.65 kW | 1 002 km |
@@ -1811,10 +1812,11 @@ like with like — they are not results of this ledger — and propulsion runs 0
 **This is the charge the architecture attacks most directly, and it is also the one where the
 release is partial.**
 
-The engine is sized by cruise: **3.54 to 5.17 kW**. The hover requirement is **11.4 to
-12.5 kW**. The buffer supplies the difference for the vertical phase, and the ratio between the
-two is **2.4 to 3.2** — that is the factor by which the continuously installed power plant is
-smaller than the peak the aircraft must produce.
+The engine is sized by cruise: **3.54 to 5.17 kW** of shaft rating. The hover requirement is
+**11.4 to 12.5 kW** at the rotor shaft. The ratio between the two is **2.4 to 3.2** — a ratio of
+installed hardware, the factor by which the continuously installed power plant is smaller than the
+peak the rotors must absorb. **It is not the buffer's burden**, which is taken at the electrical bus
+rather than as the difference of these two shaft figures, and which Section 14 computes.
 
 **But the full hover power passes through the electrical path, and that path is sized by it.**
 Machines, power electronics and wiring between the buffer and the rotors carry 11.4 to 12.5 kW
@@ -1913,8 +1915,9 @@ classical result.**
 What it establishes is narrower and still useful: the hover side of Bill 3 *can* be held flat across
 a factor of twenty in mass by a single sizing choice.
 
-**The measure Section 11 uses for Bill 3 — hover power divided by engine rating — carries a second
-quantity, and it does not travel as cleanly.** The ratio is 4.19 at the light design and 3.98 at the
+**The measure Section 11 uses for Bill 3 — rotor-shaft hover power divided by engine shaft rating, a
+ratio of installed hardware rather than a deficit — carries a second quantity, and it does not travel
+as cleanly.** The ratio is 4.19 at the light design and 3.98 at the
 heavy, a change of 5 percent. But the engine is sized by cruise, not by disc loading, and **the two
 reference designs do not use the same engine margin**: the engine is rated at 1.53 times cruise
 electrical power at 50 kg and 1.39 times at 1 000 kg. With the light design's margin at both sizes the
@@ -2127,14 +2130,15 @@ is the first architecture; the others are a lift-plus-cruise layout and a tiltin
 contract can be seen acting on a mass difference against a cruise-efficiency difference; it is not a
 claim that those families would use this power system, and the tilting family as Section 2 describes
 it has no store at all. **The choice runs against this configuration.** Given no buffer and an engine
-sized by hover instead, the lift-plus-cruise layout closes at 381 kg, falls 11 to 23 percent behind
-under a fixed fuel mass, and does not close at all under a fixed take-off mass; the tilt bound falls
-75 to 98 percent behind under a fixed take-off mass, or does not close. **Under a fixed fuel fraction
-the lift-plus-cruise lead is unchanged, at 55 to 84 percent, although the aircraft is now seven times
-heavier** — the first contract's blindness to mass, made visible. **That comparison is not
-used**, because it would set competitors without a store against this configuration with one — a
-buffer of 3.6 percent whose feasibility is the item Section 14 examines. Until that item is settled,
-the common store is the neutral choice.
+rated to deliver the hover demand through the generator, the power electronics and the machines
+instead, the lift-plus-cruise layout does not close under a fixed fuel fraction or a fixed take-off
+mass, and under a fixed fuel mass falls 38 to 47 percent behind; the tilt bound does not close under a
+fixed take-off mass. **Under a fixed fuel fraction the tilt bound closes at 520 kg — about ten times
+this configuration's mass — with its range lead unchanged at 103 to 141 percent**: the first
+contract's blindness to mass, made visible. **That comparison is not used**, because it would set
+competitors without a store against this configuration with one — a buffer of 3.6 percent whose
+feasibility is the item Section 14 examines. Whatever that store turns out to cost, holding it common
+charges all three the same assumption.
 
 **The basis is not symmetric, and each asymmetry is stated with its direction.**
 
@@ -2304,49 +2308,63 @@ what the engine delivers through its generator — **the four closures ask the b
 per kilogram to hover, and 5.5 to 6.1 kW per kilogram to leave the ground** with the tip pairs at full
 thrust, which is where the take-off margin comes from (Section 5).
 
-**What has been measured is a fraction of that.** A 24-series nickel–cobalt–manganese pack designed,
-bench-tested and flown in a 210 kg-class electric VTOL aircraft is rated, as a flight system, at
-0.892 kW per kilogram continuous; its 13.5 kg unit pack, discharged on the bench at its highest tested
-rate of 10.68C, delivered on average about 1.5 kW per kilogram and reached 55.1 °C against the 60 °C
-limit its authors adopted. A NASA-funded design study adopts 4 kW per kilogram and describes that
-figure as about twice that of existing batteries. **The take-off demand of Section 10's closures is 3.7
-to 4.1 times the highest of the measured rates, and 6.2 to 6.8 times the flight system's continuous
-rating**; hover alone is 3.1 to 3.5 times the highest measured rate. **The package Section 10 closes on
-does not exist with any store the sources consulted here report as built.**
+**What has been measured is a fraction of that, and the figures available are of three different
+kinds.** A 24-series nickel–cobalt–manganese pack designed, bench-tested and flown in a 210 kg-class
+electric VTOL aircraft is rated, as a flown system, at 0.892 kW per kilogram continuous; its 13.5 kg
+unit pack, discharged on the bench at its highest tested rate of 10.68C, delivered on average about
+1.5 kW per kilogram for about four minutes and reached 55.1 °C against the 60 °C limit its authors
+adopted. A NASA-funded design study adopts 4 kW per kilogram and describes that figure as about twice
+that of existing batteries. **The take-off demand of Section 10's closures is 3.7 to 4.1 times the
+bench rate — the highest of the measured figures — and 6.2 to 6.8 times the flown system's continuous
+rating**; hover alone is 3.1 to 3.5 times the bench rate. The comparison is between unlike ratings: a
+peak demand held through the vertical phases, a bench average over minutes, a continuous rating, and a
+design assumption. **The gap is real on every one of them; the factor quoted is peak demand against
+bench average.** The package Section 10 closes on does not exist with any store the sources consulted
+here report as built.
 
-**Closing the loop on a measured store does not make the aircraft impossible; it makes it a different
-aircraft.** Deriving the buffer inside the loop from the take-off demand at a given specific power, and
-holding the fuel fraction so that range is unchanged:
+**Closing the loop on a measured store is a sensitivity of that package, not a second aircraft.** The
+buffer is derived inside the loop from the take-off demand at a given specific power; everything else is
+Section 10's — the same fractions, including an airframe at thirty percent of take-off mass, and the same
+wing loading, disc loading and aspect ratio, so the lift-to-drag ratio is carried unchanged and, with the
+fuel fraction held, so is the range. **These masses are the Section 10 package with one input changed.
+They are not a structural closure at 100 kg**, and whether the airframe fraction holds at twice the mass
+it was set at is not established.
 
 | Buffer specific power | Take-off mass | Buffer | Change from Section 10 |
 |---|---:|---:|---:|
 | As Section 10 implies — 5.5 to 6.1 kW kg⁻¹ | 52.3 to 57.5 kg | 3.6 % | — |
 | 4 kW kg⁻¹, the design-study assumption | 56.6 to 61.2 kg | 5.0 to 5.5 % | +6 to +8 % |
-| About 1.5 kW kg⁻¹, the highest measured rate | 94.6 to 101.2 kg | 13.4 to 14.7 % | **+76 to +81 %** |
-| 0.892 kW kg⁻¹, the flight system's continuous rating | about 335 kg | 22 to 25 % | set by nearness to non-closure |
+| About 1.5 kW kg⁻¹, the unit pack's bench rate | 94.6 to 101.2 kg | 13.4 to 14.7 % | **+76 to +81 %** |
+| 0.892 kW kg⁻¹, the flown system's continuous rating | about 335 kg | 22 to 25 % | set by nearness to non-closure |
 | 0.724 kW kg⁻¹, the unit pack's continuous rating | **does not close** | — | — |
 
-**At the highest measured rate the aircraft exists and is three-quarters heavier**, with a buffer of
-about fourteen percent of take-off mass rather than 3.6. Held instead at Section 10's closed masses, it
-carries a payload of about 7 kg rather than 13. At the flight system's continuous rating the loop only
-just closes, and the mass it returns is set by how near the loop is to not closing rather than by
-anything about the aircraft. At the unit pack's continuous rating it does not close at all.
+**At the bench rate the loop closes about three-quarters heavier**, with a buffer of about fourteen
+percent of take-off mass rather than 3.6. If Section 10's take-off masses are retained instead, the
+payload falls to about 7 kg rather than 13. At the flown system's continuous rating the loop only just
+closes, and the mass it returns is set by how near the loop is to not closing rather than by anything
+about the aircraft. At the unit pack's continuous rating it does not close at all.
 
 **This is where the coupling Section 12 found is paid.** The buffer is the conversion the escape
-condition permits — kilowatts of hover peak paid in kilograms of store — and at a measured specific
-power the conversion costs thirteen to fifteen percent of take-off mass instead of 3.6. **The escape
-from Bill 3 is real in the sense Section 3 defined it, and its price depends on a component whose
-required performance has not been demonstrated.** Section 13 holds the store common to all three
-architectures at 3.6 percent; how its orderings would move with a measured store is not computed.
+condition permits — kilowatts of hover peak paid in kilograms of store. Section 11's ledger records that
+conversion at the assumed store; at a measured specific power it costs thirteen to fifteen percent of
+take-off mass instead of 3.6. **The escape from Bill 3 is real in the sense Section 3 defined it, and
+its price depends on a component whose required performance has not been demonstrated.**
 
-### What the obstacle does not touch
+### What the obstacle reaches, and what it does not
 
-**The mechanism claim does not depend on it.** Sections 7 and 8 count the classes of mechanism that a
+**It reaches every number that describes this aircraft at Section 10's masses.** The closed masses of
+52 to 58 kg and the 13 kg payload assume the store. The ranges of 927 to 1 233 km survive the
+re-closure only because the fuel fraction is held, on an aircraft three-quarters heavier; they do not
+survive as 13 kg carried that far on a store that has been built. The vertical phase that Section 5
+reports as sized was sized with this store in it. And Section 13's orderings were computed with the
+store held common at 3.6 percent; how they would move with a measured store is not computed.
+
+**It does not reach the mechanism claim.** Sections 7 and 8 count the classes of mechanism that a
 tilting architecture needs to change regime and this one does not; that is a statement about hardware,
-and a heavier store changes none of it. **The cruise-efficiency comparison of Section 6 does not depend
-on it either**: it is made in effective lift-to-drag ratio, a ratio of aerodynamic and propulsive
-efficiencies that the buffer's mass does not enter. **What the obstacle bears on is whether this
-aircraft, at these numbers, can be built** — which the paper does not claim.
+and a heavier store adds no pivot. **Nor does it reach the cruise-efficiency comparison of Section 6
+as a ratio**: effective lift-to-drag ratio combines aerodynamic and propulsive efficiencies and has no
+mass in it. As a comparison of aircraft, that section describes the configuration at Section 10's
+masses, which the store does reach.
 
 ### Then what is not known
 
@@ -2355,28 +2373,33 @@ grouped by what would settle them.
 
 | Item | Bears on | What would settle it |
 |---|---|---|
-| **The pitching moment through the transition.** Three methods of three fidelities diverge above about ten degrees of incidence; the rotation passes through that band, peaking near 18 to 22 degrees on the reference geometry, with the inboard half of the wing in the slipstream at a much lower effective incidence. | Whether the aircraft trims through the rotation (Sections 7 and 10) | **Measurement**: the outboard wing's pitching moment to about 22 degrees at low dynamic pressure, and trim at the attached-flow end of the rotation |
-| **Section drag at low Reynolds number.** The attitude rotors' free-wheeling charge rests on section polars below a Reynolds number of 10⁵, and the uncertainty runs both ways. | The 0.0154 rotor term in every closure (Sections 10 and 11) and the size of Bill 2's fall with scale (Section 12) | **Measurement**: the drag of a free-wheeling attitude rotor, or of its sections, at about 8 × 10⁴ |
-| **The airframe's mass.** It enters the loop as a construction constant, thirty percent of take-off mass (Section 11). A component build-up at the reference mass leaves room for the 13 kg payload only if the average shell areal density stays at or below 1.78 kg m⁻², against 1.50 assumed; the build-up carries a contingency rather than a structural sizing, and it has not been re-run at Section 10's closed masses. At the heavy design the shell-mass exponent is not measured at all. | Every closed mass | **Structural sizing**, then a built article |
-| **The competitor's lift-group mass.** It decides the sign of the fixed-take-off-mass ordering in Section 13. | Section 13's sensitivity, not a claim | **Measured inventories** of lift-plus-cruise aircraft of this class |
+| **The pitching moment through the transition.** Three methods of three fidelities diverge above about ten degrees of incidence; the rotation passes through that band, peaking near 18 to 22 degrees on the reference geometry, with the inboard half of the wing in the slipstream at a much lower effective incidence. | Whether the aircraft trims through the rotation (Sections 7 and 10) | **Validated aerodynamic data**: a measurement of the outboard wing's pitching moment to about 22 degrees at low dynamic pressure and of trim at the attached-flow end of the rotation, or a higher-fidelity method validated against one |
+| **Section drag at low Reynolds number.** The attitude rotors' free-wheeling charge rests on section polars below a Reynolds number of 10⁵, and the uncertainty runs both ways. | The 0.0154 rotor term in every closure (Sections 10 and 11) and the size of Bill 2's fall with scale (Section 12) | **Validated data**: the drag of a free-wheeling attitude rotor, or of its sections, at about 8 × 10⁴, or a method validated there |
+| **The tip pairs' other cruise state.** Free-wheeling is determinate and computed; stopped is a family of states whose means and azimuth are not fixed (Section 8). | Whether a lower-drag cruise state is available, and at what mechanism cost | **Analysis**, or a measurement of one stopped state |
+| **The buffer's energy, not only its power.** The store is sized here by power. Whether it also holds the energy for the vertical phases and their reserves, and how it is recharged in cruise, depends on a hover duration this work does not fix; at the bench rate the unit pack emptied in about four minutes. | Whether the store sized by power is also large enough | **Analysis** against a defined mission profile |
+| **The electrical path at peak.** Machines, power electronics, wiring and their cooling carry the full take-off demand; they enter the loop as a mass fraction, not as components sized for that peak and its heat. | Whether the path that delivers the buffer's power exists at the mass assumed | **Component sizing and thermal analysis** |
+| **The airframe's mass.** It enters the loop as a construction constant, thirty percent of take-off mass (Section 11). A component build-up at the reference mass leaves room for the 13 kg payload only if the average shell areal density stays at or below 1.78 kg m⁻², against 1.50 assumed; the build-up carries a contingency rather than a structural sizing, and it has not been re-run at Section 10's closed masses, still less at the masses the store re-closure returns. At the heavy design the shell-mass exponent is not measured at all. | Every closed mass | **Structural sizing** (analysis), then a **built article** (measurement) |
+| **The strip and the fairing.** The strip's effect on this planform is computed, not measured, and its actuation is carried in the systems budget without being sized (Section 11); the fairing is sized against a published stability criterion, and the side force it develops is not measured. | The strip: the body roll axis, which appears as bank in cruise and as a change of heading in hover (Section 8). The fairing: directional stability in cruise | **Measurement** of both surfaces; **sizing** of the actuation |
 | **Closed-loop hover control**, including the cost of declining the reaction-torque channel, and the allocation of the tip pairs between take-off margin and attitude authority, which compete for the same propellers. | Whether hover is controllable with the authority computed (Sections 5 and 8) | **Analysis not yet done**: a control-allocation study, then simulation |
 | **Vertical descent and the landing transition.** Neither is analysed; the vortex ring state is not assessed, and the landing transition is not the take-off transition run backwards. | Whether the aircraft can come down as it went up (Section 5) | **Analysis not yet done** |
+| **Ground handling and landing loads.** The stance base is a parameter against static crosswind (Section 5); the response to a landing with lateral velocity or on uneven ground, and handling between flights, are not assessed. | Operation from unprepared sites | **Analysis not yet done** |
+| **The competitor's lift-group mass.** It decides the sign of the fixed-take-off-mass ordering in Section 13. | Section 13's sensitivity, not a claim | **Measured inventories** of lift-plus-cruise aircraft of this class |
 | **Engine installation** — bay, intake, exhaust, cooling. | Mass, drag and packaging | **Absent from this work entirely** |
 | **Atmosphere.** Every number here is at sea level. | The comparison in Section 6, made against a mission flown at altitude | **Analysis**: the direction of the effect has not been computed |
 
-**None of these is a small correction to a known quantity.** Two of them belong to measurement rather
-than to more computation: the transition moment, because three methods have been tried against it and
-disagree, and the low-Reynolds section drag, because the one method used here is least reliable exactly
-there. Two — hover control and the descent — are analyses this study has not posed. One — the engine
-installation — is not in the work at all.
+**None of these is a small correction to a known quantity.** Two of them need validated data rather
+than more of the computation already done: the transition moment, because three methods have been
+tried against it and disagree, and the low-Reynolds section drag, because the one method used here is
+least reliable exactly there. Several — hover control, the descent, the buffer's energy, the electrical
+path — are analyses this study has not posed. One — the engine installation — is not in the work at
+all.
 
 ### What this section amounts to
 
 **The loop closes; the aircraft is not shown to.** At the energy store the paper can name the gap
 exactly, in specific power and in take-off mass. Everywhere else it can name only what would settle the
-question. **The architecture
-claim — that the regime change is made with no mechanism that reorients a propulsor — is a count of
-hardware, and nothing in this section reaches it.** What this section reaches is the aircraft, and the
-paper has not claimed the aircraft.
+question. **The architecture claim — that the regime change is made with no mechanism that reorients a
+propulsor — is a count of hardware, and nothing in this section reaches it.** What this section reaches
+is the aircraft, and the paper has not claimed the aircraft.
 
 The last section returns to the four axes of Section 9 and states what is claimed on each.

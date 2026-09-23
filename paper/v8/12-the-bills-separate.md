@@ -107,8 +107,9 @@ classical result.**
 What it establishes is narrower and still useful: the hover side of Bill 3 *can* be held flat across
 a factor of twenty in mass by a single sizing choice.
 
-**The measure Section 11 uses for Bill 3 — hover power divided by engine rating — carries a second
-quantity, and it does not travel as cleanly.** The ratio is 4.19 at the light design and 3.98 at the
+**The measure Section 11 uses for Bill 3 — rotor-shaft hover power divided by engine shaft rating, a
+ratio of installed hardware rather than a deficit — carries a second quantity, and it does not travel
+as cleanly.** The ratio is 4.19 at the light design and 3.98 at the
 heavy, a change of 5 percent. But the engine is sized by cruise, not by disc loading, and **the two
 reference designs do not use the same engine margin**: the engine is rated at 1.53 times cruise
 electrical power at 50 kg and 1.39 times at 1 000 kg. With the light design's margin at both sizes the
