@@ -195,9 +195,9 @@ Bill 1 moves with size in either direction.
 
 **A derivation is available without settling what specific power a store can deliver, and it is
 stated here because it shows why it is not used.** If the buffer is sized to supply the hover deficit
-— hover power less engine rating — at a specific power that is the same at both sizes, its mass
-fraction follows the deficit per kilogram: 0.166 kW kg⁻¹ at 50 kg and 0.162 at 1 000 kg, a fall of
-about 2 percent. **But that derivation makes the buffer a function of the hover power and the engine
+— the hover demand at the electrical bus less what the engine delivers there — at a specific power
+that is the same at both sizes, its mass fraction follows the deficit per kilogram: 0.202 kW kg⁻¹ at
+50 kg and 0.199 at 1 000 kg, a fall of about 2 percent. **But that derivation makes the buffer a function of the hover power and the engine
 rating, which are the two quantities that measure Bill 3.** A buffer derived that way is locked to
 Bill 3 by the derivation itself, and comparing the two across scale would test the derivation, not
 whether they are separate. Sizing the buffer by energy instead adds a hover duration, which is a
@@ -300,7 +300,7 @@ Section 10 only.
 | Ağır tasarımın sürükleme braketi yok | v7 §3.8 satır 1750–1754 |
 | Ağır yapısal kapanış belirlenmemiş; kabuk üssü ölçülmedi | v7 §3.8 satır 1690–1698 |
 | Tampon %3,6 ve %4,0 İKİSİ DE GİRDİ | `aero/mass.py` `m_pil` parametresi; `baseline.py` `f_tampon`; türeten kod yok |
-| Açık/kg 0,166 → 0,162, düşüş %2,3 (yayımlanmış paylarla) | hesaplandı: (10,9−2,6)/50,1 ve (216,2−54,3)/1000 |
+| Açık/kg **bara tabanında** 0,202 → 0,199, düşüş %1,8 (yayımlanmış paylarla) (**Tur 56'da düzeltildi:** önceki 0,166 → 0,162 mil−mil çıkarmasıydı) | `aero/buffer-result.txt` §5 |
 | Tampon "Fatura 3'ü motordan kurtaran aygıt" — Adım 3 önceden söyledi | Adım 3 satır 73–79; Adım 11 satır 129–132 |
 | Sabit hatve açığı hafif %14,6–21,0, ağır %16,4–22,9 (**birinci yazımda 23,0 idi; betik 22,9 veriyor** — 1 − 0,616/0,80 yuvarlanmış η'dan) — **her ikisi yayımlanmış seyir itkisinde** (L/D 12,0 ve 13,6) | `aero/nose-propeller-crossing.txt`, `aero/nose-propeller-heavy.txt`; `nose_propeller.py` satır 156, `nose_propeller_heavy.py` satır 24 |
 | **Geçiş: 2 s → ~220 kW (~%100); 5,1 s → ~13 kW (%6)** — v7 Tablo 15 (221,5 / 13,4) **hiçbir betik çıktısında yok**; onarılan `rotation.py`: 5,1 s'de üçgen profil 127,0 N/çift → 4 çift × 6486 W × (127,0/200,1)^1,5 = **13,1 kW**; ×(5,1/2)³ → **217,6 kW (%101)**. Tablo %2 içinde tutuyor; gövdede yuvarlatıldı | v7 satır 1842–1849; `aero/rotation.py` (bu tur onarıldı) |

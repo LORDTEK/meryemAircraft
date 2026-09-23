@@ -142,10 +142,12 @@ is: the engine it buys is 3.54 to 5.17 kW rather than one sized by a hover peak 
 **The buffer fraction is an input to the loop, not a result of it**, and the closure does not
 re-derive it from the hover energy the four corners actually need. Dimensionally a fixed fraction
 is the right form: at constant disc loading the disc area grows with weight, so hover power is
-linear in weight and hover energy with it. **But what the buffer supplies is the hover power minus
-what the engine can deliver, and that deficit is not linear.** Across the four closures it runs
-from 0.128 to 0.150 kW per kilogram — a spread of 17 percent — while the buffer fraction is held
-at 3.6 percent throughout. **The corner that needs the most buffer per kilogram is given the
+linear in weight and hover energy with it. **But what the buffer supplies is the hover demand less
+what the engine can deliver, and that deficit is not linear.** Taken at the electrical bus, where
+the buffer sits — rotor shaft power divided by the machine and power-electronics efficiencies, less
+the engine's shaft power times the generator's — it runs from 0.168 to 0.188 kW per kilogram across
+the four closures, a spread of 12 percent, while the buffer fraction is held at 3.6 percent
+throughout. **The corner that needs the most buffer per kilogram is given the
 smallest buffer**, and that is a declared assumption of the closure rather than an outcome of it.
 
 The rest of the empty-mass fraction, for completeness: airframe 0.300 and avionics 0.080 are
@@ -214,7 +216,7 @@ changes, and Section 13 asks what happens to the comparison when the sizing cont
 | Askı donanımı C_D0'in %69'u (elverişli) / %57'si (olumsuz) | `aero/ledger-result.txt` |
 | Temiz gövde L/D **20,55 / 15,24**; uçak 10,82 / 8,79; korunan %52,6 / %57,7 | `drag_sweep.zincir(cd0, pay=...)`; `ledger-result.txt` |
 | **DÜZELTME, Tur 53 — Grok ve DeepSeek bağımsız olarak buldu.** `zincir()` olumsuz uçta marjsız çerçeve+rotor çıkarıyordu; az çıkarınca temiz gövde 14,29 görünüyordu, doğrusu 15,24. **Kapanışa etkisi YOK** — `carpan` bir orandır ve `LD_temiz × carpan = ld(toplam)` olarak sadeleşir; dört kapanış birebir aynı | `aero/drag_sweep.py:zincir` docstring; doğrulandı |
-| Tampon bir **GİRDİ**; açık kW/kg 0,128–0,150 arası, yayılım %17; sabit %3,6 bunu izlemiyor | `aero/ledger-result.txt` tampon denetimi (Grok sordu) |
+| Tampon bir **GİRDİ**; açık **bara tabanında** 0,168–0,188 kW/kg, yayılım %12; sabit %3,6 bunu izlemiyor (**Tur 56'da düzeltildi:** önceki 0,128–0,150 / %17 rotor milinden motor milini çıkarıyordu — v7'nin `thrust.py`'de düzelttiği istasyon karışıklığı) | `aero/ledger-result.txt` tampon denetimi (Grok sordu); `aero/buffer-result.txt` §1 |
 | Gövde 0,300 ve aviyonik 0,080 **kuruluş sabiti**, defter sonucu değil | `baseline.py` `ORTAK`; üç mimaride de ortak |
 | **Fatura 2 elverişli uçta DAHA AĞIR** — sabit rotor terimi küçülen toplamın daha büyük kesri | aynı çıktı; gerekçe dökümden doğrudan |
 | Olumsuz uca **bütün döküme** %10 pay uygulanıyor | `drag_sweep.py` satır 48: `UST = (...) * 1.1` |

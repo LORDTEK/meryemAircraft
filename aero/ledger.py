@@ -143,12 +143,16 @@ def main():
     print("  Boyutsal olarak tutarli: sabit disk yuklemesinde A ~ W, yani")
     print("  P_aski ~ W^1.0, aski enerjisi ~ W, sabit kesir dogru mertebe.")
     print("  AMA tamponun karsiladigi sey P_aski EKSI motorun verebildigi:")
+    print("  TUR 56 DUZELTMESI: bu fark ELEKTRIK BARASINDA alinir (buffer.py,")
+    print("  thrust.py): P_mil/(0,92 x 0,95) - P_motor x 0,90. Onceki surum")
+    print("  rotor milinden motor milini cikariyordu -- v7'nin kendi duzelttigi")
+    print("  istasyon karisikligi (0,128-0,150, yayilim %17 idi).")
     print()
     print("  %-3s %9s %9s %11s %10s" % ("", "acik kW", "acik kW/kg", "tampon kg", "MTOW"))
     oran = []
     for k in "ABCD":
         r = satir[k]
-        acik = r["P_hover"] - r["motor_kW"]
+        acik = r["P_hover"] / (0.92 * 0.95) - r["motor_kW"] * 0.90
         okg = acik / r["MTOW"]
         oran.append(okg)
         print("  %-3s %9.2f %9.4f %11.2f %10.1f"

@@ -59,12 +59,16 @@ TAMPON DENETIMI -- Grok: '3,6 % hala MTOW'un kesri mi?'
   Boyutsal olarak tutarli: sabit disk yuklemesinde A ~ W, yani
   P_aski ~ W^1.0, aski enerjisi ~ W, sabit kesir dogru mertebe.
   AMA tamponun karsiladigi sey P_aski EKSI motorun verebildigi:
+  TUR 56 DUZELTMESI: bu fark ELEKTRIK BARASINDA alinir (buffer.py,
+  thrust.py): P_mil/(0,92 x 0,95) - P_motor x 0,90. Onceki surum
+  rotor milinden motor milini cikariyordu -- v7'nin kendi duzelttigi
+  istasyon karisikligi (0,128-0,150, yayilim %17 idi).
 
         acik kW acik kW/kg   tampon kg       MTOW
-  A        7.36    0.1279        2.07       57.5
-  B        7.52    0.1347        2.01       55.8
-  C        7.75    0.1448        1.93       53.5
-  D        7.86    0.1503        1.88       52.3
+  A        9.68    0.1683        2.07       57.5
+  B        9.74    0.1744        2.01       55.8
+  C        9.82    0.1835        1.93       53.5
+  D        9.86    0.1884        1.88       52.3
 
-  Acik kW/kg 0.1279 - 0.1503, yayilim %17. Sabit kesir bunu IZLEMIYOR:
+  Acik kW/kg 0.1683 - 0.1884, yayilim %12. Sabit kesir bunu IZLEMIYOR:
   en cok tampon gereken kose (D) en kucuk tamponu aliyor.

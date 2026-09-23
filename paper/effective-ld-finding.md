@@ -890,3 +890,45 @@ değer, ama sıralama olarak değil; üç yükümlülük doğru.
 quantity under two names"* diyor. Okuyucuların elinde Adım 2 yoktu, göremezlerdi. İskeletin niyeti
 *"üç bağlaşık fatura"*. Başlık *"The charges are coupled: remedies move cost between them"* oldu.
 §0.2 sınıfı: bir sonuç yazıldığında, **onu önceden tarif eden başlıklar** da açılıp okunur.
+
+---
+
+# Tur 56 (devam) — Adım 14 yazıldı; tampon bara tabanında, ve bir istasyon karışıklığı geri gelmişti
+
+## 1. `aero/buffer.py`
+
+Adım 10'un dört kapanışında tampon talebi **bara tabanında** (`thrust.py`'nin kuralı: P_mil/(0,92×0,95)
+− P_motor×0,90). Kapanışların ima ettiği özgül güç: askı 4,68–5,23, kalkış 5,53–6,09 kW/kg. Tampon
+özgül güçten döngü içinde türetilince döngü Adım 10'u birebir üretiyor (sınama).
+
+Ölçülmüş özgül güçte (Yu ve ark. 2026, bu tur PDF'ten okundu): 1,49 kW/kg → 94,6–101,2 kg (+%76–81),
+tampon %13,4–14,7; 0,892 → ~335 kg (kapanmamaya yakın); 0,724 → kapanmıyor; 4,0 (Barrett NIAC) →
+56,6–61,2 kg. Sabit MTOW'da faydalı yük 1,49'da ~7 kg.
+
+**3,8× → 3,7–4,1×** (kalkış/1,49). v7'nin 3,8'i yayımlanmış tasarımdaydı (5,63/1,5).
+
+## 2. İstasyon karışıklığı v8'e geri gelmişti (kendi bulgum)
+
+v7, `thrust.py`'de *"(10,9 − 2,6)/1,8 rotor milinden motor milini çıkarıyor"* diye 4,61'i 5,63'e
+düzeltmişti. **Ama Adım 11'in açık sayısı (`ledger.py`) ve Adım 12'nin Fatura 1 türetimi aynı mil−mil
+çıkarmasını yapıyordu.** Bara tabanında: Adım 11 0,168–0,188 kW/kg (%12; önce 0,128–0,150, %17), Adım 12
+0,202 → 0,199 (önce 0,166 → 0,162). Sonuçlar (en çok tampon isteyen köşe en az tamponu alıyor; ölçekle
+~%2) değişmedi. `ledger.py` düzeltildi, iki adım ve Türkçe tabloları güncellendi, emekli listesine
+eklendi. **§3.1 sınıfı: bir düzeltme (v7'nin istasyon kuralı) yeni yazılan koda yayılmamıştı.**
+
+## 3. Kaynak
+
+- Yu ve ark. 2026 (*Batteries* 12:317): Tablo 3 — 724 W/kg (24S1P, 110 A), 892 W/kg (24S4P, 4×110 A'dan
+  hesaplanmış); 10,68C: 1394,3 Wh, 4 dk 09 s, 13,5 kg → **1,49 kW/kg türetildi**; 55,1 °C, sınır 60 °C.
+- **v7'nin *"the highest rate yet measured on a flown pack"* ifadesi kaynağa uymuyor**: 1,5 kW/kg tezgâhtaki
+  24S1P'de; uçan 24S4P. *"yet"* aranmamış (§2.2). v8 gövdesinde yok; emekli listesinde.
+- Barrett ve ark. 2023: *"the specific power (4 kW/kg) is about twice that of existing batteries"* — birebir.
+
+## 4. Adım 14'ün ilk yazımında kendi yakaladıklarım (§0.2)
+
+- *"Section 13 … none of its orderings rests on this item"* — yanlış; tampon ağırlaşınca sıralamalar
+  kayabilir, hesaplanmadı.
+- Düşük Re için *"yöntemler denendi ve çelişiyor"* — yanlış; tek yöntem kullanıldı.
+- 4 kW/kg satırı +6,5 aşağı yuvarlanmalıydı (+6…+8).
+- Kapanış paragrafında *"a factor of about four"* — 3,8×'in tek evi kuralını çiğniyordu; çıkarıldı.
+- Kabuk yoğunluğu: *"meets it"* değil *"leaves room for the 13 kg payload"* (`mass.py`'nin kırılma tanımı).

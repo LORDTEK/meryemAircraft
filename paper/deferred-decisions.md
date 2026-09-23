@@ -36,7 +36,7 @@ Bunlar karar değil, **yapılmamış iş.** Adım 14'ün malzemesi.
 - **İniş geçişi.** İleri geçişle simetrik değil; hiçbir şekil tarif etmiyor.
 - **Geçiş yunuslama momenti.** Üç yöntem üç aslılıkta ~10° üstünde sapıyor; ölçüme ait.
 - **Motor yerleşimi, hava alışı, soğutma.** Makalede hiç yok (arandı).
-- **Tamponu askı enerjisinden türetmek.** Tampon her iki ölçekte de GİRDİ (%3,6 / %4,0);
+- **(Tur 56: Adım 14'te yapıldı — `aero/buffer.py`, bara tabanında, döngünün içinde.)** **Tamponu askı enerjisinden türetmek.** Tampon her iki ölçekte de GİRDİ (%3,6 / %4,0);
   hiçbir kod onu askı enerjisinden türetmiyor. Bu yüzden Fatura 1 ölçekte sınanamıyor (Adım 12)
   ve hafif ölçekte açık kW/kg %17 oynarken sabit kalıyor (Adım 11). Türetmek batarya özgül gücü
   sorusuna girer — **Adım 14'ün 3,8× paragrafıyla birlikte ele alınmalı.**
@@ -85,7 +85,7 @@ Adım 10'un sayıları şunları **zaten** içeriyor:
 - Baskın mimari ağırlıksız sıralanır (ChatGPT): ağırlık yalnız bir mimari bir faturada az, ötekinde
   çok ödediğinde gerekir.
 
-## Adım 14 yazılmadan önce okunacak — Tur 56
+## Adım 14 yazılmadan önce okunacak — Tur 56 · **UYGULANDI** (Adım 14, aynı tur)
 
 Grok: *"Then write 14. The battery gap, the transition moment, and the low-Re polar now have a section
 that is allowed to be unfinished."* Adım 14'ün malzemesi, birikmiş hâliyle:
@@ -97,6 +97,12 @@ that is allowed to be unfinished."* Adım 14'ün malzemesi, birikmiş hâliyle:
 - **Lift+cruise'un kaldırma grubu kesri** — Adım 13'te işareti belirleyen, *"en çok ölçülmeye değer"*.
 - Tepki torku kanalını bırakmanın bedeli, kapalı çevrim kontrol, girdap halkası, iniş geçişi, motor
   yerleşimi/soğutma, irtifa (yukarıdaki açık kalemler).
+
+## Son bölüm yazılmadan önce — Tur 56
+
+- İskelet: *"Dört eksende dur — yeni hesap yok, atıf yok."* Adım 9'un dört ekseni, her birinde ne
+  iddia edildiği. Adım 14'ün son cümlesi oraya devrediyor.
+- **E1 (kısaltma/oran)** bundan sonra: yazar *"10–14 yazıldıktan sonra tek seferde"* dedi. 14 yazıldı.
 
 ## Süreç kalemleri
 
