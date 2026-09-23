@@ -87,7 +87,7 @@ if __name__ == "__main__":
             if ad in yapilan:
                 continue
             vaka = os.path.join(KOK, ad)
-            duzlevha.kur(vaka, "kOmegaSST")
+            flat_plate.kur(vaka, "kOmegaSST")
             duzenle(vaka, deg)
             print("[%s] cozuluyor" % ad, flush=True)
             r = subprocess.run(["bash", "-c", KOS % vaka])

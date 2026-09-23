@@ -1841,12 +1841,12 @@ reported, and this section's only work has been to say which part of which quant
 
 **And every one of them belongs to one scale.** The four closures vary the drag uncertainty and
 the blade-family choice at the reference size; **they do not establish how the three charges
-behave as the aircraft changes size.** Section 12 tests that separation directly, and Section 13
-asks what happens to the comparison when the sizing contract changes.
+behave as the aircraft changes size.** Section 12 asks whether they move together when the size
+changes, and Section 13 asks what happens to the comparison when the sizing contract changes.
 
 ---
 
-## The charges separate with scale, and one of them cannot be tested
+## Scale does not lock two of the charges together; the third is not tested
 
 Section 11 decomposed the three charges on one aircraft, at one size. **This section asks a
 different question: are they three quantities, or one quantity under three names?** The test is
@@ -1854,46 +1854,59 @@ to change the size of the aircraft and see whether they move together. If they d
 of Section 2 would be a single cost described three ways, and a ledger in three currencies would be
 a ledger in one.
 
+**The test is deliberately weak, and it is stated at its own strength.** It can show that two
+charges are not locked together within this model. It cannot show that they are independent in
+general, and it is not offered as doing so.
+
 **This is a different axis from the one Section 11 examined.** There, Bill 2's share of the
 zero-lift drag was compared at the two ends of the drag bracket, at a fixed size. Here the size
 changes. The two answers are about different variables and do not bear on each other.
 
 ### What is compared, and why it is these two points
 
-**The comparison is between the two published reference designs, 50 kg and 1 000 kg, sized by
-one method.** It is not between the four closures of Section 10, which vary the drag uncertainty
-and the blade family at a single size and are not a scale study.
+**Section 10 closed only the light design, at 52.3 to 57.5 kg. No closure was run at 1 000 kg**, and
+none could be run on the same footing: the heavy design has neither a drag bracket nor a structural
+closure (both below). A scale comparison therefore cannot be made from Section 10's closures. **It
+is made between the two reference designs, 50 kg and 1 000 kg, sized by one method, and both ends are
+taken from that pair.** Taking one end from Section 10 and the other from the reference pair would manufacture a scale
+change that is really a propeller-efficiency update applied to one end only.
 
-**The pair can be used even though Section 10 superseded some of what was published, because the
-quantities this section needs are not among the superseded ones.** The free-wheeling rotor term
-is the same value Section 10 carries at both ends of its bracket. Disc loading is a sizing rule
-Section 10 holds. The buffer fraction is an input to Section 10's loop. **The quantities Section 10
-replaced — the total zero-lift drag, the propeller efficiency, the range and the closed mass — are
-not used here**, and no heavy-design range is quoted for that reason: every figure available for
-it is partial in one respect or another.
+**The quantities used are ones Section 10 did not replace.** Disc loading is a sizing rule
+Section 10 holds. The buffer fraction is an input to its loop. The free-wheeling rotor term is the
+value Section 10 carries at both ends of its bracket at 50 kg, and it is computed here at 1 000 kg by
+the same method. **The total zero-lift drag, the propeller efficiency, the range and the closed mass
+are not used.** No heavy-design range is quoted: the figures available for it either omit the
+free-wheeling rotor charge or carry an assumed rather than a computed propeller efficiency, and none
+carries both.
 
-**Two conditions travel with the heavy design and are stated here rather than later.** It has no
-drag bracket; it stands on a single zero-lift coefficient with no equivalent bound. And **its
-structural closure is undetermined**: shell mass scales with wetted area while take-off mass scales
-with volume, so the structural fraction depends on how areal density grows with size, and that
-exponent has not been measured. **The comparison below uses powers, loadings and drag terms; it
-does not use the structure**, which is why it can be made at all.
+**Two conditions travel with the heavy design.** It has no drag bracket; it stands on a single
+zero-lift coefficient with no equivalent bound. And **its structural closure is undetermined**: shell
+mass scales with wetted area while take-off mass scales with volume, so the structural fraction
+depends on how areal density grows with size, and that exponent has not been measured. **The
+comparison below uses powers, loadings and drag terms; it does not use the structure**, which is why
+it can be made at all.
 
-### Bill 3 — held nearly flat, and held there by a sizing rule
+### Bill 3 — held nearly flat by a sizing rule, which is not a finding about Bill 3
 
-**Disc loading is held constant**: 44.2 kg m⁻² at 50 kg and 43.7 at 1 000 kg. Specific hover power
-depends only on disc loading, so fixing it fixes hover power per unit weight — **0.218 kW kg⁻¹ at
-the light design and 0.216 at the heavy**, a ratio of 0.99. Hover power rises from 10.9 kW to
-216.2 kW, a factor of 19.8 against a mass factor of 20. **Hover power grows linearly with mass
-rather than as the L^3.5 of the classical result.**
+**Disc loading is held at approximately the same value**: 44.2 kg m⁻² at 50 kg and 43.7 at
+1 000 kg, one percent apart. At a given figure of merit, specific hover power depends only on disc
+loading, so holding it holds hover power per unit weight — **0.218 kW kg⁻¹ at the light design and
+0.216 at the heavy**, within one percent. Hover power rises from 10.9 kW to 216.2 kW, a factor of 19.8
+against a mass factor of 20. **Hover power grows linearly with mass rather than as the L^3.5 of the
+classical result.**
 
-The engine, sized by cruise, moves slightly more, because the heavy design cruises faster at a
-better lift-to-drag ratio. **The ratio of hover power to engine rating is 4.19 at the light design
-and 3.98 at the heavy — a change of 5 percent.**
+**That near-constancy is a property of the constant-disc-loading rule, not a finding about Bill 3.**
+What it establishes is narrower and still useful: the hover side of Bill 3 *can* be held flat across
+a factor of twenty in mass by a single sizing choice.
 
-**That near-constancy is a consequence of a design rule, not a finding about Bill 3**, and it has
-to be read that way. What it does establish is narrower and still useful: Bill 3 *can* be held
-nearly flat across a factor of twenty in mass by a single sizing choice.
+**The measure Section 11 uses for Bill 3 — hover power divided by engine rating — carries a second
+quantity, and it does not travel as cleanly.** The ratio is 4.19 at the light design and 3.98 at the
+heavy, a change of 5 percent. But the engine is sized by cruise, not by disc loading, and **the two
+reference designs do not use the same engine margin**: the engine is rated at 1.53 times cruise
+electrical power at 50 kg and 1.39 times at 1 000 kg. With the light design's margin at both sizes the
+heavy engine would be 60.0 kW and the ratio 3.61, a change of 14 percent. **The Bill 3 ratio therefore
+moves by between 5 and 14 percent across the factor of twenty, depending on an engine margin the
+sizing rule does not set.**
 
 **The rule has a price, and it is paid in geometry.** Holding disc loading constant makes disc area
 grow as L³ rather than L², so the nose propeller grows faster than the airframe. Wing loading rises
@@ -1903,39 +1916,56 @@ design photographed from further away. **Much above 1 000 kg a single nose pair 
 the disc loading**, and a second would have to be added — which the architecture permits, since
 every pair is torque-balanced on its own.
 
-### Bill 2 — falls to between a quarter and a half, and this is the computed result
+### Bill 2 — the rotor term falls, and the reason is Reynolds number
 
-**The free-wheeling rotor term falls from 0.0154 at 50 kg to 0.0051 at 1 000 kg.** The heavy value
-is not pinned: across the blade designs that meet the heavy design's hover requirement it runs from
-0.0035 to 0.0074, and 0.0051 is the interior value the sizing was run at. **At every point in that
-interval the heavy charge is between a quarter and a half of the light one** — 0.23 at one end,
-0.48 at the other.
+**Only the rotor term of Bill 2 is computed at both sizes.** The frame term enters both reference
+designs as the same multiplier on clean lift-to-drag ratio, by construction, so it cannot show a scale
+effect in either direction.
 
-**The mechanism is not the obvious one.** The obvious explanation is that the wing outgrows the
-discs. It does not: the eight tip discs total 0.251 m² against 1.98 m² of wing at 50 kg, and
-2.82 m² against 22.24 m² at 1 000 kg — **a disc-to-wing area ratio of 0.127 at both sizes.** What
-the charge follows is
+**The rotor term is computed by one method at both sizes**: the blade designed for its own hover
+thrust at the same design tip speed, the hub at the same fraction of the radius, and the free-wheeling
+state solved at each design's own cruise speed. At 50 kg it is **0.0154**. At 1 000 kg the blade
+designed to the same section lift coefficient gives **0.0068 — 0.44 of the light value.** Across the
+blade designs swept, design section lift coefficient 0.55 to 0.85, the heavy term runs from **0.0045
+to 0.0100**, and every design in that range meets the heavy design's hover requirement with margin — a
+figure of merit of 0.75 to 0.77 against the 0.599 required. At 50 kg the hover requirement selects the
+blade; at 1 000 kg nothing selects within the interval, and its ends are the ends of the sweep. **At
+every point in it the heavy charge is between 0.29 and 0.65 of the light one.**
 
-> ΔC_D0 ∝ σ R² / (q S)
+**The mechanism is not the obvious one, and it is not the one a dimensional argument suggests.**
+Three candidates can be excluded directly:
 
-in which R²/S is the constant just quoted, so **only two terms move**: the blade solidity σ falls,
-because the larger rotor meets its thrust with proportionally less blade, and the cruise dynamic
-pressure q rises, because the heavy design cruises at 40 m s⁻¹ rather than 30. **The charge falls
-because the blade thins and the reference dynamic pressure rises, not because the wing outgrows
-the disc.**
+- **Geometry.** The eight tip discs total 0.251 m² against 1.98 m² of wing at 50 kg, and 2.82 m²
+  against 22.24 m² at 1 000 kg — **a disc-to-wing area ratio of 0.127 at both sizes.** The wing does
+  not outgrow the discs.
+- **Dynamic pressure.** A rotor turning freely at zero shaft torque settles at a rotational speed
+  proportional to the flight speed, so its axial force scales with dynamic pressure and a coefficient
+  referenced to that pressure does not. Solving the heavy blade's free-wheeling state at 30 and at
+  40 m s⁻¹ confirms it: the coefficient changes by **9 percent** — itself a Reynolds-number effect —
+  not by the 44 percent a dynamic-pressure scaling would give.
+- **Solidity.** The heavy blade is not thinner; it is fuller — **0.100 against 0.075** for blades
+  designed to the same section lift coefficient.
 
-**How closely the two terms predict the computed ratio is not claimed here.** The two terms give a
-ratio of about three; the computed ratio at the interior value is also about three; but the
-computed ratio moves from 2.1 to 4.4 across the heavy interval, so any closer agreement would be an
-agreement at a point that no criterion selects. **What holds everywhere in the interval is the
-mechanism, the direction, and the order of magnitude.**
+**What moves is the section Reynolds number.** In the free-wheeling state the median blade-section
+Reynolds number rises from about 8 × 10⁴ at 50 kg to 5.6 × 10⁵ at 1 000 kg, a factor of 6.8, because
+the chords are longer and the flight speed higher. **Evaluating the heavy blade with its section
+Reynolds number scaled down to the light rotor's returns 0.0181 — 1.18 times the light charge.** At
+equal Reynolds number the heavy rotor would pay slightly more, as its fuller blade suggests; the whole
+of the fall, and a little more, comes from the lower section drag at the higher Reynolds number.
 
-**This result does not touch the structural question at all.** It comes from blade-element
-solutions on two sized rotors and from the two cruise speeds; it would remain a result even if
-the heavy airframe were shown not to close. **And it means the light design is the harder case for
-Bill 2**, which is the opposite of the usual expectation for a tail-sitter.
+**That places a condition on the result.** The fall rests on how section drag changes between 8 × 10⁴
+and 5.6 × 10⁵, which is taken from the section polars used for every rotor in this work rather than
+measured, and the light end lies below a Reynolds number of 10⁵, where section drag is hardest to
+predict. The direction — lower section drag at higher Reynolds number — is the ordinary one. **The size of the fall is as good
+as the section model at the low end.**
 
-### Bill 1 — cannot be tested with what this work contains
+**The result does not touch the structural question.** It comes from blade-element solutions on two
+sized rotors at their own conditions; it would remain a result even if the heavy airframe were shown
+not to close. **For the rotor term, the light design is the harder case.** That statement is not
+extended to Bill 2 as a whole, because the frame term is not computed at the heavy design and the
+heavy design has no drag bracket.
+
+### Bill 1 — not tested, and the one available derivation would not test it
 
 **On this configuration Bill 1 appears as the energy buffer**, as Section 11 set out, since there is
 no dedicated lift group to charge. The buffer is 3.6 percent of take-off mass at 50 kg and 4.0
@@ -1943,56 +1973,75 @@ percent at 1 000 kg.
 
 **Both of those figures are inputs.** Neither is derived from the hover energy the aircraft needs;
 each was chosen for its design point and carried into the sizing. **A change from 3.6 to 4.0 percent
-is therefore a change between two choices, not a scaling result**, and it cannot be offered as
-evidence that Bill 1 moves with size in either direction.
+is a change between two choices, not a scaling result**, and it cannot be offered as evidence that
+Bill 1 moves with size in either direction.
+
+**A derivation is available without settling what specific power a store can deliver, and it is
+stated here because it shows why it is not used.** If the buffer is sized to supply the hover deficit
+— hover power less engine rating — at a specific power that is the same at both sizes, its mass
+fraction follows the deficit per kilogram: 0.166 kW kg⁻¹ at 50 kg and 0.162 at 1 000 kg, a fall of
+about 2 percent. **But that derivation makes the buffer a function of the hover power and the engine
+rating, which are the two quantities that measure Bill 3.** A buffer derived that way is locked to
+Bill 3 by the derivation itself, and comparing the two across scale would test the derivation, not
+whether they are separate. Sizing the buffer by energy instead adds a hover duration, which is a
+mission choice, and changes nothing in that argument.
+
+**No quantity computed in this work gives a buffer requirement at scale that is independent of the
+hover and engine powers and of an assumed specific power or energy.** On this aircraft Bill 1 takes
+the form of the device that releases Bill 3 from the engine, as Section 3 anticipated, and **whether
+the two are separable here is not established.**
 
 **Nor is the structural mass a substitute.** The shell-mass exponent governs how the airframe
 fraction scales, and it is unmeasured; but the airframe is not Bill 1 as Section 2 defines it — it
 is the structure every architecture carries — and treating it as the mass bill would change the
-definition to fit the test.
-
-**Deriving the buffer from the hover energy is possible in principle and is not attempted here.**
-Doing it properly means asking what specific power a store of that mass must deliver, and that is
-the item Section 14 examines and does not resolve. This section stops short of it deliberately.
+definition to fit the test. What specific power a store of the required mass must deliver is the
+item Section 14 examines and does not resolve.
 
 ### What the comparison establishes
 
-**Separability is shown between two of the three charges, and not the third.** Bill 2 falls to
-between a quarter and a half of its light-design value while Bill 3 is held within 5 percent by a
-single sizing rule. **Two quantities that respond that differently to the same change of size are
-not one quantity under two names.** That is the finding, and it holds wherever in the heavy
-interval the rotor term falls.
+**Under a twentyfold change of mass, the rotor term of Bill 2 falls to between 0.29 and 0.65 of its
+light-design value, while specific hover power changes by one percent and the Bill 3 ratio by 5 to 14
+percent.** The flatness of Bill 3 is imposed by a sizing rule; the finding is that Bill 2 moved anyway,
+by more than the Bill 3 ratio at every point in the heavy interval and under either engine margin.
+**Within this model, the two are therefore not one quantity under two names.**
 
-**Bill 1 is untested at scale**, for the reason given above, and nothing here should be read as
-showing it separates from the other two — or as showing that it does not.
+**Bill 1 is not tested**, for the reason given above, and nothing here should be read as showing
+that it separates from the other two — or as showing that it does not.
 
-**And the evidence is one pair of design points, computed by one method.** It is consistent with
-the separability Section 2 asserts; it is not a verification of separability as a general property,
-which a single instantiation cannot supply.
+**And the evidence is one pair of design points, computed by one method, with the Bill 2 result
+resting on a section-drag model at low Reynolds number.** It is consistent with the separability
+Section 2 asserts; it is not a verification of separability as a general property, which a single
+instantiation cannot supply.
 
 ### Two costs that scale does not relieve
 
 Neither is one of the three charges, and both are reported because a section about what scale does
 to this aircraft would be incomplete without them.
 
-**The fixed-pitch gap does not close with size; it widens slightly.** Against the 0.80 the
-published chain assumed, the computed cruise propeller efficiency is 14.6 to 21.0 percent lower at
-the light design and **16.4 to 23.0 percent lower at the heavy one.** Refusing the variable-pitch
-hub costs as much or more at the larger size.
+**The cruise-efficiency gap under fixed pitch does not close with size; it widens slightly.**
+Computed at each reference design's cruise thrust, a nose-pair blade that meets the hover requirement
+delivers a cruise efficiency 14.6 to 21.0 percent below the 0.80 assumed at the light design and
+**16.4 to 22.9 percent below it at the heavy one.** As in Section 11, no variable-pitch counterfactual
+was computed, so this is not a measure of what refusing the hub costs; it is a measure of what a fixed
+blade that hovers delivers in cruise, and that does not improve with size.
 
 **The transition is where the square–cube relation is paid in full.** The moment needed to rotate
 the aircraft follows M = Iα with I ∝ mL², so the moment required for a fixed rotation time grows
 much faster than the aircraft. **Rotating the heavy design in the light design's two seconds would
-demand 221.5 kW from the tip propellers — 102 percent of hover power**, which is not available. At
-5.1 seconds the demand falls to 13.4 kW, 6 percent of hover power, and that is the heavy design's
-rotation time. **A larger aircraft of this type turns more slowly, and must.** Hover power escapes
-the classical scaling objection by fixing disc loading; the rotation does not escape it.
+demand about 220 kW from the tip propellers — roughly the whole of hover power**, which is not
+available. At 5.1 seconds, the heavy design's rotation time, the demand falls to about 13 kW, 6
+percent of hover power. **A larger aircraft of this type turns more slowly, and must.** Hover power
+escapes the classical scaling objection by fixing disc loading; the rotation does not escape it.
 
 ### Why this section sits between the ledger and the contracts
 
-**The argument of the next section depends on this one.** If the three charges were one quantity,
-a single number could rank architectures regardless of how the charges were weighed. **Because at
-least two of them move independently, any ranking must say how they were weighed** — and a sizing
-contract is exactly such a weighing. Section 13 shows what happens to the ranking when the contract
-changes, and it can do so only because this section has shown that there is more than one thing
-being weighed.
+**The next section needs only what this one shows.** If the three charges were one quantity, a single
+number could rank architectures whatever weight each charge was given. **Because at least two of them
+are not locked together, a comparison of architectures cannot in general be reduced to a number that
+does not depend on how the charges are weighed: where one architecture pays less of one charge and
+more of another, the ranking depends on the weighting.** The argument requires only two. A third
+shown to be separate would strengthen it; a third shown to be locked to one of the others would
+leave it standing.
+
+Section 13 examines what the choice of sizing contract does to a ranking, on the light closures of
+Section 10 only.
