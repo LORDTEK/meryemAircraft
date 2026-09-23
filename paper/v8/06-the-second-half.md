@@ -223,7 +223,7 @@ nothing and presents the aircraft's largest surface to ground wind. The tailless
 follows from having no boom constrains the sweep, because with no horizontal stabiliser the
 pitching moment must come from the distribution of lift along the body itself. And the
 fixed-pitch propeller that serves both regimes is the reason the margin above sits where it does
-rather than higher — at e = 0.85 the same airframe would reach 7.48 to 9.20. Section 11 charges all three.
+rather than higher — at a propeller efficiency η_p = 0.85 the same airframe would reach 7.47 to 9.20. Section 11 charges all three.
 
 **The two halves are now on the table separately. Section 7 is where they are combined**, and
 the combination is what this paper is for.

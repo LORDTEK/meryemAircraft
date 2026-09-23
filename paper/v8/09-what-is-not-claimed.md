@@ -53,7 +53,7 @@ survive, and the dependencies are short enough to list.
 | Operation without a runway | the drag bracket, the propeller efficiency, the transition aerodynamics — **but it does depend on the energy store**: the vertical phase is sized with one, and Section 14 examines whether it exists |
 | Cruise lift carried on a surface | the sizing contract, the transition aerodynamics |
 | The **size** of the cruise-efficiency margin | — it depends on both the drag bracket and the blade family, and Section 6 reports it as a range rather than a number |
-| Elimination of the propulsor-reorientation mechanism class | the drag bracket, the sizing contract, the range result, **and the transition aerodynamics** |
+| Elimination of the propulsor-reorientation mechanism class | the drag bracket, the propeller efficiency, the sizing contract, the range result, the energy store, **and the transition aerodynamics** |
 
 **The last row carries a distinction that matters more than the others.** The mechanism claim is
 a statement about what hardware is present, and it is settled by the inventory in Section 8. **The
@@ -122,10 +122,9 @@ demonstration."**
 ### What the claims that remain amount to
 
 Removing those eight leaves something narrower than a first reading of the abstract might
-suggest, and the narrower statement is the one the paper defends: **a configuration that
-combines runway-independent vertical operation with wing-borne cruise efficiency, reaches that
-combination with no mechanism that reorients a propulsor, and reports what the combination
-costs.**
+suggest, and the narrower statement is the one the paper defends: **a configuration sized to
+combine runway-independent vertical operation with wing-borne cruise efficiency, arranged to do so
+with no mechanism that reorients a propulsor, and an account of what the combination costs.**
 
 Each half of that has a named opponent and neither half is a record. **Nor is the configuration
 claimed to be without precedent**: Section 1 sets out what is already established, including

@@ -94,8 +94,9 @@ arm, and is not settled by the ratio alone.
 transition.** That is a design assignment, not a demonstrated result: whether the moment it
 produces is sufficient, and whether the aircraft trims through the rotation, are **not settled in
 this paper**: the moment is a sizing input to Section 10, but the trim through the rotation depends
-on the transition aerodynamics, and Section 14 says why those are not currently reliable for anyone
-on this class of configuration at the incidences the rotation passes through.
+on the transition aerodynamics, and Section 14 says why those are not reliable — for the methods used
+here and the published comparisons against which they were checked — at the incidences the rotation
+passes through.
 
 **Roll comes from neither, and the reason is a choice rather than an impossibility.** Every thrust
 vector is parallel to the body axis, so no combination of thrust settings produces a moment about

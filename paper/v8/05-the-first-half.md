@@ -65,7 +65,8 @@ operator with a stronger ground-wind requirement can take another.
 This is the part of the section that decides whether the rest of it can be trusted.
 
 **Sized.** The vertical phase is sized: hover power from momentum theory at thrust equal to
-weight, the buffer that supplies the difference between that peak and the cruise demand, the
+weight, the buffer that supplies what the engine cannot deliver of that peak — at a specific power
+Section 14 examines — the
 tip-frame lengths that set both the stance base and the control arms, and the structure that
 carries the landing loads. Those numbers exist and Section 10 reports **whether** they close, and
 with what margin. This section does not assert the outcome of a calculation it does not contain.

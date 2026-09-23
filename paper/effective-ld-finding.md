@@ -1005,3 +1005,29 @@ the paper"*, *"a ranking is a weighting"* evrenselliği, Adım 6'dan taşınan a
    evrenin bu depoyla boyutlandığını gösterdi. Düzeltildi: *"it does depend on the energy store"*.
 2. **Adım 6:** *"It is this aircraft's own refusal of the variable-pitch hub"* — Tur 53'te ChatGPT'nin Adım
    11'de yakaladığı aşırı atıf Adım 6'ya yayılmamıştı (§3.1, bir kez daha). Düzeltildi; emekli listesinde.
+
+---
+
+# Tur 58 — Tur 57 metnine (external-review-61) dört yanıt
+
+**Dördü de:** Adım 15 kaynaklarına sadık; mekanizma ekseni dar gücünde; P1 ve P3 doğru; Adım 7 büyütülmesin;
+Adım 14'ün *"the loop closes"* ifadesi tutuyor.
+
+| Ne | Kim | Yapılan |
+|---|---|---|
+| Kapanış cümlesi *"combines runway-independent vertical operation"* → boyutlandı, gösterilmedi | ChatGPT (*"mandatory"*) | Adım 15 **ve Adım 9**: *"sized to combine … arranged to do so … and an account of what the combination costs"* |
+| Adım 9 ile 15'in "bağlı değil" listeleri farklı | Grok, DeepSeek | İkisi de: sürükleme, η_p, sözleşme, menzil sonucu, depo, geçiş aerodinamiği |
+| Adım 8'de *"for anyone on this class of configuration"* — emekli evrensel geri gelmiş | Grok | *"for the methods used here and the published comparisons against which they were checked"* |
+| Adım 6: *"at e = 0.85 … 7.48"* — gösterim çarpışması ve süpürülmemiş 7,48 | Grok, DeepSeek | *"η_p = 0.85 … 7.47"* |
+| Adım 15 mekanizma listesi: değişken hatve ve özel kaldırma rotorları "yeniden yönlendirme" değil | Grok | *"— nor any of the other mechanism classes that architectures use to change regime or to take a rotor out of one regime's flow"* |
+| *"one of the measured continuous ratings"* belirsiz | DeepSeek | *"the unit pack's continuous rating"* |
+| Adım 5: *"the difference between that peak and the cruise demand"* + depo çekincesi | DeepSeek | *"what the engine cannot deliver of that peak — at a specific power Section 14 examines"* |
+| Adım 15 bilinmeyenleri sıkıştırıyor | DeepSeek | *"Section 14 gives the full list"*; sertifikasyon tek cümle |
+| Tabloya: palet ailesi seçim ölçütleri | ChatGPT | satır eklendi (Adım 10'un kendi listesi) |
+| Tabloya: askı tork artığı | Qwen (bu kez v8'den, doğru) | hover-control satırına |
+| İrtifa satırı: kendi duyarlılığı hesaplandı, Adım 6 karşılaştırmasına etkisi hesaplanmadı | DeepSeek | eklendi |
+| 335 kg satırına marjinallik | DeepSeek | **Alınmadı** — tablo ve metin zaten *"set by nearness to non-closure"* ve *"only just closes"* diyor |
+| Dört ekseni Adım 1/2'de adlandırmak | DeepSeek (isteğe bağlı) | **Alınmadı** — iskelet yazarın; P1 ile birlikte yazara soruluyor |
+| P1, P3 | dördü de *"evet"* | **Yazarın kararı (E3)**; taslak cümleler yazara sunuldu |
+
+**Qwen bu tur yalnız v8 metninden çalıştı** ve Adım 8'den doğru bir kalem (askı tork artığı) getirdi.

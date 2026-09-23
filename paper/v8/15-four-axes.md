@@ -41,8 +41,7 @@ the site for nothing but ground.** The structure it stands on is the structure t
 propellers. That is a property of the arrangement. **What is sized rather than shown is that it can do
 so at the masses reported**: the vertical phase was sized with an energy store whose required
 performance the sources consulted here do not report as built, and with a store that has been built the
-sizing loop closes only for a heavier aircraft — and at one of the measured continuous ratings not at
-all. **By construction,
+sizing loop closes only for a heavier aircraft — and at the unit pack's continuous rating not at all. **By construction,
 in this paper, means by the sizing, never by demonstration.** Nothing is claimed against fixed-wing
 aircraft on range or cruise efficiency, where they are the better machines.
 
@@ -50,8 +49,10 @@ aircraft on range or cruise efficiency, where they are the better machines.
 
 **The regime change is made by rotating the airframe rather than the propulsors.** The propulsors hold
 their orientation relative to the body from take-off to cruise, and so the configuration carries **no
-mechanism that reorients a propulsor**: no pivot, no nacelle or rotor-group actuator, no variable-pitch
-hub, no dedicated lift rotors, and no rotor stowing, indexing or stopping mechanism. Pitch and yaw come
+mechanism that reorients a propulsor** — nor any of the other mechanism classes that architectures use
+to change regime or to take a rotor out of one regime's flow: no pivot, no nacelle or rotor-group
+actuator, no variable-pitch hub, no dedicated lift rotors, and no rotor stowing, indexing or stopping
+mechanism. Pitch and yaw come
 from differential thrust between fixed-pitch propellers. **Roll does not come from the propellers**: the
 configuration declines the reaction-torque channel its coaxial pairs could provide and assigns that
 axis to a single moving aerodynamic surface, the strip; what declining the channel costs is not
@@ -59,8 +60,8 @@ computed. The actuator inventory is the propulsion motors together with the stri
 
 **This is a count of mechanism classes, not a claim that nothing moves, and not a claim of mechanical
 simplicity or reliability**, none of which was measured. It rests on the inventory of Sections 7 and 8.
-It does not rest on the drag bracket, the propeller efficiency, the sizing contract, the energy store,
-or the transition aerodynamics. **Whether this aircraft completes the
+It does not rest on the drag bracket, the propeller efficiency, the sizing contract, the range result,
+the energy store, or the transition aerodynamics (Section 9). **Whether this aircraft completes the
 rotation is a separate question, and it is not settled here**; the arrangement requires no mechanism to
 change regime, and the paper does not claim that it has been shown to change regime.
 
@@ -95,11 +96,12 @@ contract that makes it.**
 **The sizing loop closes on a declared package; the aircraft is not shown to close.** The first obstacle
 is known and named: the energy store. The rest are listed with what would settle them — the pitching
 moment through the transition, section drag at low Reynolds number, the airframe's mass, hover control,
-the descent, and the items this work does not contain at all.
+the descent, and the items this work does not contain at all; Section 14 gives the full list. Nothing
+in this work addresses certification.
 
 What the paper offers, and defends, is narrower than a first reading might take it to be: **a
-configuration that combines runway-independent vertical operation with wing-borne cruise efficiency,
-reaches that combination with no mechanism that reorients a propulsor, and reports what the combination
+configuration sized to combine runway-independent vertical operation with wing-borne cruise efficiency,
+arranged to do so with no mechanism that reorients a propulsor, and an account of what the combination
 costs.**
 
 ---
