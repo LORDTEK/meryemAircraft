@@ -196,8 +196,8 @@ reported, and this section's only work has been to say which part of which quant
 
 **And every one of them belongs to one scale.** The four closures vary the drag uncertainty and
 the blade-family choice at the reference size; **they do not establish how the three charges
-behave as the aircraft changes size.** Section 12 tests that separation directly, and Section 13
-asks what happens to the comparison when the sizing contract changes.
+behave as the aircraft changes size.** Section 12 asks whether they move together when the size
+changes, and Section 13 asks what happens to the comparison when the sizing contract changes.
 
 ---
 

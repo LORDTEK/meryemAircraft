@@ -120,22 +120,38 @@ esit("cap/aciklik: agir", 5.40 / 11.55, 0.47, tol=0.02)
 # goruldu. Cozum tek sayiyi degistirmek degil -- degistirmek BIZIM
 # LEHIMIZE olurdu -- kuralin agir hatta hic baglamadigini kabul edip
 # aralik rapor etmekti. Denetim de artik araligi sinar.
+# TUR 55 -- BU DENETIM HATAYI YAKALAMIYOR, YENIDEN URETIYORDU. Betigin
+# kendisiyle ayni varsayilan argumanlarla cagiriyordu: sifir_tork(c, th)
+# dengeyi 30 m/s'de cozuyor (V=V_SEYIR tanim aninda baglanmis), dcd0 ise
+# 40 m/s'nin q'suna boluyordu; hover_tasarla hafif rotorun 2100 rad/s
+# tasarim devrini agir rotora uyguluyordu (tasarim uc hizi 703 m/s).
+# Denetim ayni hatayi tekrarladigi icin 0,0035-0,0074'u "dogruladi".
+# Artik duzeltilmis kurulumu sinar VE eski kurulumun bu beklentiyi
+# KARSILAMADIGINI da sinar -- ayrimi yapamayan bir denetim denetim degildir.
 print("\n=== agir uc rotoru araligi " + "=" * 32)
 try:
     sys.path.insert(0, "/home/user/meryemAircraft/aero")
     import heavy_rotor as _A, tip_propeller as _U
-    _, _T = _A.agir_ayarla()
-    _d = []
-    for _cl in (0.55, 0.85):               # yalniz iki uc; digerleri arada
-        _c, _th = _U.hover_tasarla(cl_hedef=_cl, T_hedef=_T)
-        _om, _T2 = _U.sifir_tork(_c, _th)
-        if _om:
-            _d.append(_U.dcd0(_T2))
+
+    def _uclar(eski):
+        _, _T, _om_t, _V = _A.agir_ayarla(eski)
+        _d = []
+        for _cl in (0.55, 0.85):           # yalniz iki uc; digerleri arada
+            _c, _th = _U.hover_tasarla(cl_hedef=_cl, om=_om_t, T_hedef=_T)
+            _om, _T2 = _U.sifir_tork(_c, _th, V=_V)
+            if _om:
+                _d.append(_U.dcd0(_T2))
+        return _d
+
+    _d = _uclar(False)
     if len(_d) == 2:
-        esit("agir rotor yuku, ust uc", max(_d), 0.0074, tol=0.03)
-        esit("agir rotor yuku, alt uc", min(_d), 0.0035, tol=0.03)
-        esit("tasinan 0,0051 aralik icinde",
-             1.0 if min(_d) <= 0.0051 <= max(_d) else 0.0, 1.0, tol=0.001)
+        esit("agir rotor yuku, ust uc", max(_d), 0.0100, tol=0.03)
+        esit("agir rotor yuku, alt uc", min(_d), 0.0045, tol=0.03)
+        esit("agir/hafif, ust uc", max(_d) / 0.01535, 0.65, tol=0.03)
+        esit("agir/hafif, alt uc", min(_d) / 0.01535, 0.29, tol=0.03)
+        _e = _uclar(True)
+        esit("ESKI kurulum beklentiyi KARSILAMIYOR (ayrim sinamasi)",
+             1.0 if abs(max(_e) - 0.0100) / 0.0100 > 0.03 else 0.0, 1.0, tol=0.001)
     else:
         print("  -- atlandi: sifir tork cozulmedi")
 except Exception as _h:                    # pragma: no cover

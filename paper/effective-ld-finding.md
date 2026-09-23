@@ -669,3 +669,133 @@ Elimizdeki her ağır menzil bir bakımdan kısmi: 1.814 km (rotor yüklenmemiş
 (rotor yüklenmiş, η_p 0,80), 1.398–1.517 km (η_p yeniden çözülmüş, rotor yüklenmemiş). **İkisini
 birden taşıyan kapanış yok.** Adım 12'nin ihtiyacı da yok — ayrışma güçler, yüklemeler ve
 sürükleme terimleriyle gösteriliyor.
+
+---
+
+# Tur 55 — Adım 12'nin dört okuyucu yanıtı: Fatura 2'nin mekanizması bir hesap hatasıydı
+
+## 1. Ağır rotor terimi üç kurulum hatasıyla hesaplanmıştı (DeepSeek'in işaretiyle bulundu)
+
+**DeepSeek:** *"For a fixed rotor, blade drag scales with q, and C_D0 = drag / (q S) is
+q-independent. The formula implies that C_D0 falls with q."* Formülün türetimi açık değil dedi.
+
+**Denetlendi ve haklı çıktı.** `aero/heavy_rotor.py` `tip_propeller`'ın modül sabitlerini ağır
+değerlerle değiştirip aynı fonksiyonları çağırıyordu. Üç değer modül sabitinden gelmiyordu:
+
+| | Ne olmuştu | Etkisi |
+|---|---|---|
+| 1 | `sifir_tork(c, th, V=V_SEYIR)` — varsayılan argüman **tanım anında** 30 m/s'ye bağlı. Denge 30 m/s'de çözüldü, `dcd0()` ise 40 m/s'nin q'suna böldü | terim ~×0,56 küçük; **"q artar, fatura düşer" mekanizmasının imzası** |
+| 2 | `hover_tasarla(..., om=2100.0)` — hafif rotorun tasarım devri. 0,67 m'de **703 m/s tasarım uç hızı**; palet askıda **uç Mach 0,92–1,09** | veter küçük; **"dolgunluk 0,075 → 0,044 düşer" teriminin imzası** |
+| 3 | `r_h = 0,15 R` ithal anında 0,015 m; R değişince güncellenmedi | göbek %4,5 R |
+
+**`--eski` bayrağı eski kurulumu aynen üretiyor:** c_l 0,70'te 0,00505 (≈ 0,0051), aralık
+0,00350–0,00740 — v7'nin sayıları birebir. Hata geri konunca yakalanıyor.
+
+**Düzeltilmiş kurulum** (aynı tasarım uç hızı 210 m/s, göbek 0,15 R, denge 40 m/s'de):
+
+| c_l | FM | askı Mach | dolgunluk | ΔC_D0 | /hafif |
+|---|---|---|---|---|---|
+| 0,55 | 0,768 | 0,67 | 0,1122 | 0,01003 | 0,65 |
+| 0,68 | 0,769 | 0,66 | 0,0999 | 0,00681 | 0,44 |
+| 0,85 | 0,751 | 0,65 | 0,0878 | 0,00447 | 0,29 |
+
+**Mekanizma deneyi (c_l 0,68):**
+- **q:** aynı ağır palet 30 → 40 m/s: 0,00748 → 0,00681, **−%9**. q ölçeklemesi −%44 verirdi.
+  Sıfır torkta serbest dönen rotorun devri hızla orantılı; kuvvet q ile ölçekleniyor, **q sadeleşiyor.**
+  Kalan −%9 Reynolds etkisi.
+- **Dolgunluk:** 0,0754 → 0,0999, **×1,33 — artıyor.**
+- **Reynolds:** medyan kesit Re 81.689 → 556.336, ×6,81. Ağır palet hafif hattın Re'sine
+  indirilince 0,0181 = **hafifin 1,18 katı.** Düşüşün tamamı (ve biraz fazlası) Reynolds'tan.
+
+**Sonuç:** Fatura 2'nin rotor terimi ölçekle **hâlâ düşüyor** (0,29–0,65), ama mekanizma
+**tamamen değişti** ve sonuç artık **düşük Re'deki kesit sürüklemesi modeline** (NeuralFoil,
+NACA 0012, ölçülmedi) dayanıyor. Hafif uç 10⁵'in altında.
+
+**Etkilenen v7 yerleri (dondurulmuş kayıt, düzeltilmedi):** §3.8 Tablo 14 (0,0051, C_D0 0,0251,
+L/D 11,78, 1.077 kg, 1.571 km), §3.8 *"figure of merit is 0.65 to 0.66"*, §3.9 mekanizma paragrafı
+ve 3,04/3,08 uyumu. **Zenodo'daki sürüm bu hatayı taşıyor** → `deferred-decisions.md`.
+
+## 2. `verify.py` hatayı YENİDEN ÜRETİYORDU
+
+Ağır rotor denetimi betikle aynı varsayılan argümanlarla çağırıyordu (`sifir_tork(_c, _th)`,
+`hover_tasarla(cl_hedef=_cl, T_hedef=_T)`), dolayısıyla aynı hatayı tekrarlayıp 0,0035–0,0074'ü
+"doğruluyordu." §3'ün *"sessizce boş dönen denetim"* sınıfının akrabası: **boş dönmüyor, yanlışı
+onaylıyor.** Düzeltildi; artık düzeltilmiş kurulumu sınıyor **ve eski kurulumun bu beklentiyi
+karşılamadığını da** sınıyor. 45 kontrol, 0 sapma.
+
+## 3. Yeniden adlandırma commit'i betikleri kırmıştı (kendi bulgum)
+
+`d2c181c` (*"Bütün depo İngilizce adlandırmaya geçirildi"*) ithalleri değiştirmiş, çağrıları
+bırakmış: `rotation.py` (`kutle.butce` ×2), `roll.py` ve `yaw.py` (`donme.dagilim`),
+`cfd/plate/{model_discriminate,schemes,omega_wall}.py` (`duzlevha.kur`). **Hepsi NameError.**
+Onarıldı; `rotation.py`, `roll.py`, `yaw.py` koşuldu (çıkış 0). `cfd/plate` OpenFOAM ister,
+yalnız derlendi.
+
+**Tablo 15 (221,5 / 65,6 / 27,7 / 13,4 kW) hiçbir betik çıktısında yok.** Onarılan `rotation.py`:
+5,1 s'de üçgen profil 127,0 N/çift → 4 × 6486 W × (127,0/200,1)^1,5 = **13,1 kW**; ×(5,1/2)³ →
+**217,6 kW (%101)**. Tablo %2 içinde tutuyor; Adım 12 gövdesinde **yuvarlatıldı** (~220 / ~13 kW).
+
+## 4. Fatura 3 oranı motor payı taşıyor (Grok'un işaretiyle; benim ihmalim)
+
+**Grok:** *"The 5 percent is hover/engine, which also moves with cruise L/D and speed; that is a
+second rule riding along."*
+
+Daha kötüsü: iki yayımlanmış tasarımın motor payı **aynı değil** — 2,6/1,7 = **1,53** ve
+54,3/39,2 = **1,39**. `aero/baseline.py` satır 447–461 bunu **zaten kaydetmişti** (*"makale bunu
+hiçbir yerde söylemiyor"*). Adım 12'yi yazarken taşımadım — §3.1'in *"çekince yalnız Türkçe
+yerde duruyorsa İngilizce gövdede yok demektir"* sınıfı, bu kez kaynak bir betik yorumu.
+
+Eşit payla ağır motor 60,0 kW, oran 3,61, değişim **%14**. Gövde artık **%5–14** diyor.
+
+## 5. Fatura 1 türetimi (DeepSeek, Qwen)
+
+**DeepSeek:** sabit özgül güçte tampon kesri açık/kg'yi izler, %1,6 düşer, *"cannot be tested"*
+yanlış. **Aritmetik eksik:** yalnız açık kesrini (1−1/4,19 → 1−1/3,98) almış, askı/kg'nin
+0,2176 → 0,2162 değişimini atlamış. Doğrusu (10,9−2,6)/50,1 = 0,1657 → (216,2−54,3)/1000 = 0,1619,
+**−%2,3.** Ayrıca *"multiplied by hover duration … divided by specific power"* boyutsal olarak
+tutarsız (enerji / özgül güç = kg·s).
+
+**Qwen:** türetim mümkün ama önemsiz — Fatura 1'i Fatura 3'ü düz tutan kuralla düz tutar.
+
+**Benim vardığım daha keskin hâl:** türetim tamponu **askı gücü ile motor derecesinin**, yani
+Fatura 3'ü ölçen **iki niceliğin fonksiyonu** yapıyor. Böyle türetilen tampon Fatura 3'e
+**türetimin kendisiyle kilitli**; ölçek karşılaştırması ayrışmayı değil türetimi sınar. Adım 3 ve
+11 zaten *"yapılandırma bir güç faturasını kütle faturasına çeviriyor"* diyordu — bu, o cümlenin
+ölçekteki sonucu. Gövde: *"whether the two are separable here is not established."*
+
+## 6. Reddedilenler
+
+- **DeepSeek Q2, "Fatura 2 fiziksel, Fatura 3 sözleşmesel":** Fatura 2'nin terimleri de tasarım
+  seçimi (palet, seyir hızı; şimdi Reynolds, yani veter ve hız). Ayrıca *"W^1.5"* sabit disk
+  alanının üssü; geometrik benzerlikte askı gücü W^(7/6).
+- **ChatGPT'nin "yayımlanmış ölçek karşılaştırmasına birincil kaynak" notu:** gövde artık
+  3,08'i hiç anmıyor; düştü.
+
+## 7. Uygulananlar (kim)
+
+| Ne | Kim |
+|---|---|
+| Başlık: *"Scale does not lock two of the charges together; the third is not tested"* | ChatGPT (önerisi daraltıldı) |
+| *"kilitlenmeme"*, *"independent"* değil | ChatGPT |
+| Devir: *"any ranking must"* → *"where one architecture pays less of one charge and more of another"* | ChatGPT |
+| *"The argument requires only two"* | DeepSeek, Qwen, Grok |
+| İki uç yayımlanmış çift; Adım 10 köprüsü | Grok, DeepSeek |
+| Disk yüklemesi *"approximately"*, %1 | DeepSeek |
+| *"cruises faster at a better L/D"* çıkarıldı (ağır L/D temeli) | DeepSeek |
+| Farkla başla, düzlükle değil | Qwen |
+| *"harder case"* yalnız rotor terimi; *"usual expectation"* çıkarıldı | Grok |
+| Ağır menzil gerekçesi somut | Qwen |
+| Sabit hatve açığı 23,0 → **22,9** (betik) | kendi denetimim |
+| *"Refusing the variable-pitch hub costs as much or more"* — **ChatGPT'nin Tur 53'te Adım 11'de yakaladığı aşırı atıf Adım 12'de tekrar etmişti** (§3.1 yayılma); Adım 11'in dili getirildi, emekli listesine eklendi | kendi denetimim |
+| Adım 11 devri: *"tests that separation directly"* → *"asks whether they move together"* | kendi denetimim |
+
+## 8. `paper/build/v8_stale.py` — yeni
+
+§3.1 v8 için makineye devredildi: 17 emekli ifade/sayı, İngilizce gövdeler + ALL-STEPS. `--sina`
+eski Adım 12'yi (d64d4ea) tarıyor ve **10 emekli değer yakalıyor**; ilk koşuda yeniden kurulmamış
+ALL-STEPS.md'yi de yakaladı.
+
+## 9. "50 kg" taraması (DeepSeek)
+
+1–11'in İngilizce gövdelerinde niteliksiz *"50 kg"* **yok.** Adım 6 zaten köprü kuruyor
+(*"Section 10 closes the light one between 52 and 58 kg"*); Adım 10'daki 50,1 inşa sınamasında.

@@ -46,7 +46,7 @@ HEDEFLER = (
 
 
 def atalet_z():
-    kal = donme.dagilim()
+    kal = rotation.dagilim()
     M = sum(k[0] for k in kal)
     xg = sum(k[0] * k[1] for k in kal) / M
     Izz = sum(m * ((x - xg) ** 2 + y * y) for m, x, y, z, I0 in kal)

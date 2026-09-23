@@ -11,6 +11,7 @@ Burası o not. **Her tur sonunda bu listeye bakılır.**
 | # | Konu | Durum | Kim gündeme getirdi |
 |---|---|---|---|
 | **E1** | **Kısaltma / oran.** Adım 1'in 1954 XFV-1 / XFY-1 anlatısı (~800 kelime) boşluk iddiası daraldıktan sonra "dekoratif" hâle geldi. Ayrıca 2 ile 4 arasında, ve 3'ün izin verilen maliyetler listesi ile 7'nin "koşulun söylemedikleri" arasında yineleme var. | **ERTELENDİ.** Yazar, Tur 50: *"Kısaltma en son yapacağız şimdi değil."* 10–14 yazıldıktan sonra tek seferde yapılacak. | DeepSeek, Grok |
+| **E3** | **Zenodo'daki v7 ağır rotor hatasını taşıyor.** §3.8 Tablo 14 (0,0051 → 1.571 km, L/D 11,78), §3.8 *"FM 0.65 to 0.66"*, §3.9 mekanizma (*"solidity falls … dynamic pressure rises"*) ve 3,04/3,08 uyumu — üçü de `heavy_rotor.py`'nin kurulum hatasından. Doğrusu: 0,0045–0,0100, mekanizma Reynolds. v8 bunları kullanmıyor; ama **yayımlanmış kayıt yanlış.** Düzeltme notu / yeni Zenodo sürümü? | **YAZARIN KARARI.** Tur 55'te bulundu, henüz sorulmadı. | DeepSeek'in işareti; hata benim denetimimde |
 | **E2** | **"Zero-bill condition" adı.** Ad sayısal, koşul yapısal. Adım 2'nin tilt satırı düzeltilince (Fatura 3 ayakta kalıyor) ad savunulabilir hâle geldi, ama gerginlik duruyor. Alternatifler: *"the single-propulsor condition"*, *"the no-reorientation condition"*. | **ERTELENDİ.** Yazar, Tur 50: *"Ad konusu da sonraya bırakılabilir."* | DeepSeek, Grok |
 
 ## Karara bağlanmış — kayıt için
@@ -39,6 +40,11 @@ Bunlar karar değil, **yapılmamış iş.** Adım 14'ün malzemesi.
   hiçbir kod onu askı enerjisinden türetmiyor. Bu yüzden Fatura 1 ölçekte sınanamıyor (Adım 12)
   ve hafif ölçekte açık kW/kg %17 oynarken sabit kalıyor (Adım 11). Türetmek batarya özgül gücü
   sorusuna girer — **Adım 14'ün 3,8× paragrafıyla birlikte ele alınmalı.**
+- **Düşük Reynolds'ta kesit sürüklemesi.** Adım 12'nin Fatura 2 ölçek sonucu tamamen Reynolds'tan
+  (8×10⁴ → 5,6×10⁵); kesit kutupları NeuralFoil/NACA 0012, **ölçülmedi.** Hafif rotorun 0,0154'ü de
+  aynı rejimde. Düşüşün **büyüklüğü** bu modele bağlı; yön sıradan. Tur 55.
+- **Referans çiftin motor payı 1,53 / 1,39.** Gerekçesi yok; Adım 12'nin Fatura 3 oranını %5–14
+  arasında oynatıyor. `baseline.py` satır 447–461. Tur 55.
 - **İrtifa.** Hesaplar deniz seviyesinde; NASA karşılaştırması 5.000 ft + ISA+20°C'de.
   Seyir karşılaştırmasına etkisinin **yönü hesaplanmadı.**
 
@@ -61,6 +67,16 @@ Adım 10'un sayıları şunları **zaten** içeriyor:
 > **Özellikle sabit hatve:** *"ve sabit hatve uzlaşması %X'e mal oluyor"* denmez. Denecek olan:
 > *"yayımlanan zincirin varsaydığı 0,80'e karşı hesaplanan 0,632–0,683 sabit hatve uzlaşmasını
 > yansıtıyor; bu çalışma onu kaynak başına ayrıştırmıyor."*
+
+## Adım 13 yazılmadan önce okunacak — Tur 55
+
+- **Yalnız hafif dört kapanış zarfı üzerinde** (Grok). Ağır menzil girmez — 13'ün 1.814 km'yi anması,
+  Adım 12'nin reddettiği kısmi sayıyı geri getirir.
+- **13 "kütle faturası devrilen şeydir" iddiasını MİRAS ALAMAZ** (Grok): sözleşmeler yakıt kesrini,
+  yakıt kütlesini ve kalkış kütlesini tartar; bunlar Fatura 2'ye karşı Fatura 3 değildir. Adım 12'nin
+  devri yalnız *"sıralama ağırlıklandırmaya bağlı"* diyor.
+- Baskın mimari ağırlıksız sıralanır (ChatGPT): ağırlık yalnız bir mimari bir faturada az, ötekinde
+  çok ödediğinde gerekir.
 
 ## Süreç kalemleri
 

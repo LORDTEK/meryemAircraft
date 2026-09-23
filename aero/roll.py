@@ -74,7 +74,7 @@ def atalet_x(olcek=1.0):
     I_xx'e y^2 girdiginden bu dogrudur (±y ayni y^2). Uc motorlari da
     ±z'de simetriktir, z^2 ayni.
     """
-    kal = donme.dagilim(olcek=olcek)
+    kal = rotation.dagilim(olcek=olcek)
     M = sum(k[0] for k in kal)
     Ixx = sum(m * (y * y + z * z) for m, x, y, z, I0 in kal)
     return M, Ixx

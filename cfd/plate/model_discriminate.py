@@ -53,7 +53,7 @@ if __name__ == "__main__":
             if m in yapilan:
                 continue
             vaka = os.path.join(KOK, m)
-            duzlevha.kur(vaka, m)
+            flat_plate.kur(vaka, m)
             print("[%s] cozuluyor" % m, flush=True)
             r = subprocess.run(["bash", "-c", KOS % vaka])
             if r.returncode != 0:

@@ -286,8 +286,10 @@ biçiminde ve **aranan yer adlandırılarak** yazılır.
 
 Hiçbir iddia denetlenmeden aktarılmaz — ne YZ'lerinki ne benimki.
 
-- `paper/build/verify.py` — sayısal denetim (43 kontrol) + yasaklı bayat
-  değer listesi.
+- `paper/build/verify.py` — sayısal denetim (45 kontrol) + yasaklı bayat
+  değer listesi (yalnız v7 bölümleri).
+- `paper/build/v8_stale.py` — v8 İngilizce gövdelerinde emekli ifade/sayı
+  denetimi; `--sina` eski hatayı yakaladığını sınar. `v8_all_steps.py` ALL-STEPS.md'yi kurar.
 - `paper/build/links.py` — bağ dokusu: işaretçiler çözülüyor mu, **doğru
   yere mi** çözülüyor, tablo/şekil atıfları tutuyor mu.
 - Bir denetim yazdığında **eski hatayı geri koyup yakalayıp yakalamadığını
@@ -338,6 +340,19 @@ Yazar: *"Ben unutabilirim sen sağa sola notunu al."*
 > **`paper/deferred-decisions.md`** — yazarın açıkça *"sonraya"* dediği her şey oraya yazılır,
 > ve **her tur sonunda o listeye bakılır.** Şu an açık olan ikisi: **kısaltma/oran** (10–14
 > yazıldıktan sonra, tek seferde) ve **"zero-bill condition" adı.**
+
+### 3.3 Bir modülü başka ölçekte koşturmak. Tur 55.
+
+`aero/heavy_rotor.py`, `tip_propeller`'ın modül sabitlerini ağır değerlerle değiştirip aynı
+fonksiyonları çağırıyordu. **Üç değer değişmedi:** varsayılan argüman (`V=V_SEYIR`, tanım anında
+bağlanır), imzadaki sabit (`om=2100.0`), ithal anında türetilmiş sabit (`r_h`). Ağır rotor terimi
+yanlış mekanizmayla v7'ye, Zenodo'ya ve Adım 12'ye girdi. **`verify.py` aynı çağrıyı yaptığı için
+hatayı doğruladı.** DeepSeek'in bir fizik sorusu (*"sabit rotorda q sadeleşmeli"*) açtı.
+
+> **Kural:** bir betik başka bir modülü başka koşulda koşturuyorsa, çağrılan fonksiyonların
+> kullandığı **her koşul değeri çıktının başına basılır** (hız, devir, göbek, referans alan).
+> Ve denetlediği hesabı aynı çağrıyla tekrarlayan bir denetim denetim değildir: **eski hatayı
+> REDDETTİĞİ ayrıca sınanır.**
 
 ## 4. Depo
 

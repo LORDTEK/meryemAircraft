@@ -1,0 +1,93 @@
+# -*- coding: utf-8 -*-
+"""v8 ADIMLARININ INGILIZCE GOVDELERINDE EMEKLI IFADE VE SAYI DENETIMI.
+
+NEDEN VAR (CLAUDE.md §3.1). verify.py'nin bayat deger listesi yalniz v7'nin
+bolumlerini tariyor. v8'de emekli ifadeler bugune kadar elle, grep ile
+araniyordu; Tur 49'da "different efficiency class" Adim 9'da canli kaldi,
+Tur 50'de duzeltilen betigin eski sayisi duzyazida kaldi. Bir ifade ya da
+sayi emekliye ayrildiginda BURAYA eklenir, gerekcesi ve turuyla.
+
+Taranan: paper/v8/NN-*.md dosyalarinin Ingilizce govdesi (ilk "## " baslik
+ile "## Yazarın denetimi" arasi) ve ALL-STEPS.md. Turkce denetim tablolari
+eski degerleri BILEREK alintilar; taranmazlar.
+
+--sina: onceki commit'teki Adim 12 govdesini (Tur 55 oncesi) tarar ve
+en az bir emekli degeri YAKALAMASI gerekir. Yakalamazsa denetim bozuktur.
+"""
+import glob
+import os
+import re
+import subprocess
+import sys
+
+KOK = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+EMEKLI = {
+    "0.0051": "Tur 55: agir rotor terimi kurulum hatasiyla (30 m/s dengesi, 40 m/s q'su; "
+              "703 m/s tasarim uc hizi). Dogrusu 0.0068 (c_l 0,68), aralik 0.0045-0.0100",
+    "0.0035": "Tur 55: eski agir aralik alt ucu (ayni hata)",
+    "0.0074": "Tur 55: eski agir aralik ust ucu (ayni hata)",
+    "a quarter and a half": "Tur 55: eski oran araligi 0,23-0,48; dogrusu 0,29-0,65",
+    "blade thins": "Tur 55: emekli mekanizma -- dolgunluk artiyor (0,075 -> 0,100)",
+    "σ R²": "Tur 55: emekli formul dC_D0 ~ sigma R^2/(qS); q sifir torkta sadelesir",
+    "1.73 × 1.78": "Tur 54/55: izlenemeyen uc haneli uyum",
+    "3.08": "Tur 54/55: izlenemeyen uc haneli uyum",
+    "usual expectation": "Tur 55: kaynaksiz genelleme (Grok'un isaretiyle)",
+    "move independently": "Tur 55: 'kilitlenmeme' gosterildi, bagimsizlik degil (ChatGPT)",
+    "any ranking must": "Tur 55: fazla evrensel; baskin mimari tartisiz siralanir (ChatGPT)",
+    "16.4 to 23.0": "Tur 55: betik 22,9 veriyor",
+    "variable-pitch hub costs": "Tur 53/55: acik gobege atfedilemez; karsi-olgusal hesaplanmadi (ChatGPT)",
+    "different efficiency class": "Tur 49: emekliye ayrildi, Adim 9'da canli kalmisti",
+    "14.29": "Tur 53: temiz govde L/D, drag_sweep.zincir pay hatasi; dogrusu 15.24",
+    "10.28": "Tur 50: e = 0,85 ile L/D_max; e = 0,817 ile 10.08",
+    "range of a fixed-wing": "CLAUDE.md §0.3: sabit kanatla menzilde yarisilmaz",
+    "general architectural superiority": "CLAUDE.md §0: bu cumle bir daha yazilmaz",
+}
+
+
+def govde(metin):
+    m = re.search(r"^## (?!Yazar)", metin, re.M)
+    t = re.search(r"^## Yazarın denetimi", metin, re.M)
+    if not m:
+        return ""
+    return metin[m.start():t.start() if t else len(metin)]
+
+
+def tara(adlar_metinler):
+    bulunan = []
+    for ad, metin in adlar_metinler:
+        for k, neden in EMEKLI.items():
+            if k in metin:
+                bulunan.append((ad, k, neden))
+    return bulunan
+
+
+def dosyalar():
+    out = []
+    for f in sorted(glob.glob(os.path.join(KOK, "paper", "v8", "[0-9][0-9]-*.md"))):
+        out.append((os.path.basename(f), govde(open(f, encoding="utf-8").read())))
+    hepsi = os.path.join(KOK, "paper", "v8", "ALL-STEPS.md")
+    if os.path.exists(hepsi):
+        out.append(("ALL-STEPS.md", open(hepsi, encoding="utf-8").read()))
+    return out
+
+
+if __name__ == "__main__":
+    if "--sina" in sys.argv:
+        eski = subprocess.run(
+            ["git", "-C", KOK, "show", "d64d4ea:paper/v8/12-the-bills-separate.md"],
+            capture_output=True, text=True, check=True).stdout
+        b = tara([("12 (d64d4ea, Tur 55 oncesi)", govde(eski))])
+        print("SINAMA: eski Adim 12 govdesinde %d emekli deger yakalandi" % len(b))
+        for ad, k, _ in b:
+            print("   yakalandi: %r" % k)
+        if not b:
+            sys.exit("!! Denetim eski hatayi YAKALAMADI -- denetim bozuk.")
+    b = tara(dosyalar())
+    print("=== v8 EMEKLI IFADE/SAYI DENETIMI ===")
+    if b:
+        for ad, k, n in b:
+            print("  !! %s icinde %r -- %s" % (ad, k, n))
+        sys.exit("Emekli deger bulundu.")
+    print("  ok  %d emekli degerin hicbiri %d govdede gecmiyor."
+          % (len(EMEKLI), len(dosyalar())))

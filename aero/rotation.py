@@ -62,7 +62,7 @@ def dagilim(r=None, olcek=1.0, n=120):
 
     Iy_kendi: kalemin KENDI merkezinden gecen aciklik ekseni etrafindaki
     atalet momenti (yayili kalemler icin sifirdan farkli)."""
-    r = r or kutle.butce(yaz=False, olcek=olcek)
+    r = r or mass.butce(yaz=False, olcek=olcek)
     ist, yari, _ = istasyonlar(n=n)
     kok = P["kokVeter"] * olcek
     K = r["kalem"]
@@ -220,7 +220,7 @@ def FoM_geri(T, P_W, D, es_eksenli_verim=1.0):
 
 def rapor(ad, MTOW, t_r, P_hover_kW, D_uc, post, T_makale, P_uc_W, olcek=1.0,
           **kw):
-    r = kutle.butce(yaz=False, MTOW=MTOW, P_hover_kW=P_hover_kW,
+    r = mass.butce(yaz=False, MTOW=MTOW, P_hover_kW=P_hover_kW,
                     D_uc=D_uc / olcek, post=post / olcek, olcek=olcek, **kw)
     kal = dagilim(r, olcek)
     M, xg, Iyy = atalet(kal)
