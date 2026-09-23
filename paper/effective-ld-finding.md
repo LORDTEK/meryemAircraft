@@ -19,7 +19,7 @@ as a measured margin"* diye uyarıyor. **Uyarı doğru ama yetersiz:** bir okuyu
 
 ## 2. Çevrim — ve neden meşru olduğunun kanıtı
 
-Johnson & Silva'nın gösterim listesi (s. 94, `cfd/1521_Johnson & Silva_122721.pdf`):
+Johnson & Silva'nın gösterim listesi (s. 94, `references/1521_Johnson & Silva_122721.pdf`):
 
 > `L/De   aircraft effective lift-to-drag ratio, WV/P`
 

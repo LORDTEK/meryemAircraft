@@ -10,7 +10,7 @@ askı tork artığı açık kalem olarak adlandırılıyor.
 **Tur 47 düzeltmesi — yatış ekseni.** ChatGPT *"yatış pervanelerle ÜRETİLEMEZ"* cümlesinin
 tepki torkunu atladığını gösterdi; §2.9 her rotorun **kendi elektrik makinesinde** olduğunu
 söylüyor, dolayısıyla diferansiyel devir gövde ekseni etrafında net tork verir. Zhang ve ark.
-2012 (`cfd/ica20120400001_12673514.pdf`) bunu **birincil kontrol kanalı** olarak kullanıyor.
+2012 (`references/ica20120400001_12673514.pdf`) bunu **birincil kontrol kanalı** olarak kullanıyor.
 Qwen ayrıca §2.10'un askı paragrafındaki *"thirty-degree bank"* ifadesinin aslında bir **yön
 değişimi** olduğunu gösterdi. İddia daraltıldı: **fiziksel imkânsızlık değil, tasarım seçimi.**
 Ayrıntı ve alıntılar: `paper/roll-axis-finding.md`.
@@ -220,7 +220,7 @@ particular installation would reach.
 | Burun çifti 1,20 m, uç çiftleri 0,20 m, 16,2 N, 335 W, dörtte 1,34 kW | §2.10, satır 796–799 |
 | Yunuslama kolu 0,71 m, sapma kolu 1,726 m, oran 2,43 | §2.10, satır 805–808 |
 | Her itki vektörü gövde eksenine paralel; itkiyle yatış momenti yok | §2.10, satır 810–812 |
-| Kaynağın *"roll cannot be produced by propellers at all"* cümlesi **daraltıldı** — tepki torku bir kanal; her rotorun kendi makinesi var | §2.10, satır 813–814 aşırı iddia; §2.9, satır 784–785; Zhang 2012 `cfd/ica20120400001_12673514.pdf`; `paper/roll-axis-finding.md` |
+| Kaynağın *"roll cannot be produced by propellers at all"* cümlesi **daraltıldı** — tepki torku bir kanal; her rotorun kendi makinesi var | §2.10, satır 813–814 aşırı iddia; §2.9, satır 784–785; Zhang 2012 `references/ica20120400001_12673514.pdf`; `paper/roll-axis-finding.md` |
 | Şerit: alt yüzey, 45°, kök veterinin %120'si, açıklığın %67'si, 2→6 cm | §2.10, satır 816–818 |
 | Şerit modüle ediliyor; burnu aşağı yunuslatıyor | §2.10, satır 818; ΔC_m §3.17 |
 | Slipstream içinde %46, serbest akışta %54 | §2.10, satır 821–823 |

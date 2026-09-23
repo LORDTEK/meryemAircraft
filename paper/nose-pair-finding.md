@@ -9,7 +9,7 @@ Kod: `aero/nose_propeller.py`, `aero/nose_propeller_crossing.py`.
 
 ## 0. ÖNEMLİ SINIR — bu olgu literatürde BİLİNİYOR
 
-Tur 46'da okunan De Wagter ve ark. 2018 (`cfd/Wagter_et_al_2018_Journal_of_Field_Robotics.pdf`)
+Tur 46'da okunan De Wagter ve ark. 2018 (`references/Wagter_et_al_2018_Journal_of_Field_Robotics.pdf`)
 insansız kuyruk üstü literatürünü tarıyor ve şunu doğrudan söylüyor:
 
 > *"the fixed-pitch propellers make it **theoretically impossible** to be very efficient in both

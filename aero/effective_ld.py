@@ -64,7 +64,7 @@ ETA_P = {                   # paper/chain-resolve-finding.md
     "hesaplanan alt":      0.632,
 }
 
-NASA = {                    # cfd/1521_Johnson & Silva_122721.pdf, Tablo 3, s. 70
+NASA = {                    # references/1521_Johnson & Silva_122721.pdf, Tablo 3, s. 70
     "Quadrotor, turbosaft":   4.9,
     "Quadrotor, elektrik":    5.8,
     "QSMR, turbosaft":        5.4,

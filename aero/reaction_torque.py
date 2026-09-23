@@ -6,7 +6,7 @@ all" cumlesinin TEPKI TORKUNU atladigini gosterdi. §2.9 her rotorun kendi
 elektrik makinesinde oldugunu soyluyor; iki karsit rotor farkli devirlerde
 dondurulurse torklari birbirini goturmez ve net tork govde ekseni (X_b)
 etrafindadir. Zhang ve ark. 2012 bunu BIRINCIL kontrol kanali olarak
-kullaniyor (cfd/ica20120400001_12673514.pdf, Tablo 2).
+kullaniyor (references/ica20120400001_12673514.pdf, Tablo 2).
 
 Soru: o kanal ne kadar buyuk? Serit askida 6,0--12,0 N.m veriyor (§2.10).
 Tepki torku ayni mertebede mi, yoksa ihmal edilebilir mi?

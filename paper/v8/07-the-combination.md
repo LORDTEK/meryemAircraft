@@ -18,7 +18,7 @@ geçmemesi (Grok).
 **Tur 47 düzeltmesi — yatış ekseni.** ChatGPT *"yatış pervanelerle ÜRETİLEMEZ"* cümlesinin
 tepki torkunu atladığını gösterdi; §2.9 her rotorun **kendi elektrik makinesinde** olduğunu
 söylüyor, dolayısıyla diferansiyel devir gövde ekseni etrafında net tork verir. Zhang ve ark.
-2012 (`cfd/ica20120400001_12673514.pdf`) bunu **birincil kontrol kanalı** olarak kullanıyor.
+2012 (`references/ica20120400001_12673514.pdf`) bunu **birincil kontrol kanalı** olarak kullanıyor.
 Qwen ayrıca §2.10'un askı paragrafındaki *"thirty-degree bank"* ifadesinin aslında bir **yön
 değişimi** olduğunu gösterdi. İddia daraltıldı: **fiziksel imkânsızlık değil, tasarım seçimi.**
 Ayrıntı ve alıntılar: `paper/roll-axis-finding.md`.
@@ -151,7 +151,7 @@ and Section 11 charges them.
 | Kaçış koşulu: tek donanım, tek yönelim, tampondan tepe | v7 özeti, satır 55 |
 | Her itki vektörü gövde eksenine paralel; itkiden yatış momenti yok | §2.10, satır 810–812 |
 | Tepki torku bir yatış kanalıdır; her rotor kendi elektrik makinesinde | §2.9, satır 784–785 |
-| Kuyruk üstü literatürü bu kanalı kullanıyor | Zhang ve ark. 2012, `cfd/ica20120400001_12673514.pdf`: *"Roll motion is controlled by the differential velocity of the two motors"* |
+| Kuyruk üstü literatürü bu kanalı kullanıyor | Zhang ve ark. 2012, `references/ica20120400001_12673514.pdf`: *"Roll motion is controlled by the differential velocity of the two motors"* |
 | Kaynağın *"roll cannot be produced by propellers at all"* cümlesi **daraltıldı** | §2.10, satır 813–814 aşırı iddia; `paper/roll-axis-finding.md` |
 | Şerit "uçaktaki tek hareketli aerodinamik yüzey" | §2.10, satır 815–816 |
 | Şerit **modüle ediliyor**, açılıp kapanmıyor | §2.10, satır 818 |

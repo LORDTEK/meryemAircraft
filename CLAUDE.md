@@ -64,7 +64,7 @@ aerodinamik yüzey"* diyor.
 > aralığının (6–12 N·m) **içinde.** Ve literatür bu kanalı **kullanıyor**:
 > Zhang ve ark. 2012, eşeksenli çift rotorlu kuyruk üstüde *"Roll motion is
 > controlled by the **differential velocity of the two motors**"* diyor
-> (`cfd/ica20120400001_12673514.pdf`). Ayrıca makale kendisiyle de çelişiyordu:
+> (`references/ica20120400001_12673514.pdf`). Ayrıca makale kendisiyle de çelişiyordu:
 > §2.9 askı tork artığı için *"the **speed trim of the pairs**"* diyor.
 >
 > **Doğru ifade:** yatış itkiden üretilemez, **tepki torkundan üretilebilir**, ve bu
@@ -77,7 +77,7 @@ X_b dikeydir. Dolayısıyla: sağ/sol uç çifti (gövde sapması) askıda **ban
 şerit (gövde yatışı) askıda **yön** değiştirir. §2.10'un *"enough for a thirty-degree
 bank"* cümlesi askı paragrafındadır ve **yanlıştır** — şerit askıda bank değil yön
 verir. Literatür bunu 2014'te adlandırmış: *"the definition of the roll and yaw angles
-are **interchanged**"* (Wang ve ark., `cfd/2014_0529_paper.pdf`).
+are **interchanged**"* (Wang ve ark., `references/2014_0529_paper.pdf`).
 **Askı ile seyir eksen adları asla karıştırılmaz.**
 
 **Doğru iddia dar olanıdır:**
@@ -307,6 +307,10 @@ biçiminde ve **aranan yer adlandırılarak** yazılır.
 > değişiklikleri sunmakla yetinebiliriz. Kısaltmaları doğrudan yapmayacağız. Herkesin fikrini herkese
 > sunup herkesin görüşünü alacağız. … Hemfikir olunan hususların işlenmesine öncelik verilebilir."*
 
+- **Dosya düzeni (yazar, Tur 65 — "kolayca güncel soru dosyasına erişebileyim"):** `cfd/` kökünde yalnız **güncel
+  tur metni** ve `reader-onboarding.md` durur; yeni tur yazılınca bir öncekisi **aynı commit'te**
+  `cfd/arsiv-dis-gorus/`'a taşınır ve `cfd/README.md`'nin başındaki işaretçi güncellenir. Kaynak PDF'ler
+  `references/`'e gider; `cfd/source/` CFD kodunun açtığı dosyalardır, yerinde kalır.
 - **Tur metni yalnız değişiklikleri taşır.** Tam metin okuyucuların penceresinde zaten var (son tam metin
   hangi turdaysa ona atıf yapılır, commit karmasıyla). Yeni pencere açan okuyucu için `cfd/reader-onboarding.md`.
 - **Kısaltma doğrudan yapılmaz.** Her okuyucunun önerisi öteki okuyuculara **yan yana** sunulur; görüş alınır.

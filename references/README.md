@@ -110,3 +110,23 @@ olduğunu söyler.
   bakılacak**, dosya adına güvenilmeyecek.
 - Yeni kaynak eklenirken bu tabloya bir satır eklenmeli; yoksa altı ay
   sonra dosyanın neden orada olduğu bilinmez.
+
+## `cfd/`'den taşınanlar (Tur 65)
+
+Yazarın yüklediği ve bir süre `cfd/` kökünde duran kaynaklar buraya taşındı. Depodaki bütün atıflar yeni yola
+güncellendi (arşivdeki eski tur metinleri hariç — onlar yazıldıkları anın kaydıdır).
+
+| Dosya | Ne |
+|---|---|
+| `1521_Johnson & Silva_122721.pdf` | NASA kavram araçları; Adım 4'ün Tablo 3'ü (`aero/effective_ld.py`) |
+| `div-class-title-nasa-concept-vehicles-and-the-engineering-of-advanced-air-mobility-aircraft-div.pdf` | Aynı makalenin Cambridge kopyası (`paper/nasa-numbers-open.md`) |
+| `ica20120400001_12673514.pdf` | Zhang ve ark. 2012, eşeksenli kuyruk üstü; tepki torku kanalı (`aero/reaction_torque.py`, CLAUDE.md §0.1) |
+| `2014_0529_paper.pdf` | Wang ve ark. 2014; askıda yatış/sapma adlarının yer değiştirmesi (CLAUDE.md §0.1) |
+| `Wagter_et_al_2018_Journal_of_Field_Robotics.pdf` | De Wagter ve ark. 2018, DelftaCopter kuyruk üstü İHA (`paper/prior-art-finding.md`) |
+| `Design+of+Flying+Wing+Tail+Sitter+Contra-Rotating+Propeller+VTOL+Sky+Swift+V1.0+UAV_Final.pdf` | Sky Swift V1.0 — uçan kanat kuyruk üstü, karşıt dönen pervaneli VTOL İHA tasarımı |
+| `202305-Multi-Tiltrotor-Publication.pdf` | Pollard ve ark. 2023 sunumu (`paper/nasa-numbers-open.md`) |
+| `20180006683.pdf` | Silva, Johnson ve ark. 2018 AIAA — VTOL kentsel hava ulaşımı kavram araçları (`paper/nasa-numbers-open.md`) |
+| `NASA-TM-20210017971.pdf` | Whiteside ve ark. — tiltwing kavram aracı tasarım raporu (`paper/nasa-numbers-open.md`) |
+| `19810010574.pdf` ve `NASA-Historical-Overview-of-STOL-VTOL-Aircraft.pdf` | **Aynı belge, iki kopya:** NASA TM-81280, *V/STOL Aircraft Historical Technology Overview* |
+| `19840014464.pdf` | NASA TM-85938, Anderson ve Nelms, *V/STOL Concepts in the United States — Past, Present, and Future* |
+

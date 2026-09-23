@@ -162,7 +162,7 @@ that structurally lacks it, before Section 7 asks whether one aircraft can hold 
 |---|---|
 | **Tur 64:** *"It is reported for scale, and the isolation test above is what carries the prediction"* özü geri (Qwen'in şartı) | Ek S4 |
 | **Tur 63 — N2 ve N4** (dört okuyucu + Claude hemfikir): tablo düzyazıya (sayılar aynen); ağırlık dökümü paragrafı ve quadrotor karşıtlığı Ek S4'e aynen; gövdede aktarımın sonucu (Qwen'in şartı) ve *"kategoriler farkın tamamını açıklamıyor"* çekincesi kaldı | Johnson & Silva 2022 Tablo 3; `paper/v8/supplement.md` S4 |
-| **Tablo 3, Johnson & Silva 2022, s. 70 — birinci elden okundu** | `cfd/1521_Johnson & Silva_122721.pdf` |
+| **Tablo 3, Johnson & Silva 2022, s. 70 — birinci elden okundu** | `references/1521_Johnson & Silva_122721.pdf` |
 | Quadrotor TS 4,9 / 3 678 lb · L+C TE 8,5 / 7 271 lb · **Tiltwing TE 8,6 / 6 584 lb** | Tablo 3, doğrulandı |
 | Yapı: L+C 2 670 lb, Tiltwing 1 954 lb · Tahrik: 1 772 / 1 918 lb · Boş: 5 809 / 5 130 lb | Tablo 3 |
 | L+C TE tahriki: *"8x126 + 821"* — sekiz kaldırma motoru artı seyir motoru | Tablo 3, Power satırı |

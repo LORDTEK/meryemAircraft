@@ -108,8 +108,8 @@ olarak anılabilir.
 
 ## 7. Depodaki belgeler
 
-`cfd/1521_Johnson & Silva_122721.pdf` — **2022, Tablo 3, s. 70. Ana kaynak.**
-`cfd/div-class-title-...-div.pdf` — aynı makalenin Cambridge kopyası.
-`cfd/20180006683.pdf` — Silva ve ark. 2018 AIAA, Tablo 3 s. 11–12.
-`cfd/202305-Multi-Tiltrotor-Publication.pdf` — Pollard ve ark. 2023 sunumu, s. 19.
-`cfd/NASA-TM-20210017971.pdf` — Whiteside ve ark., tiltwing tasarım raporu.
+`references/1521_Johnson & Silva_122721.pdf` — **2022, Tablo 3, s. 70. Ana kaynak.**
+`references/div-class-title-...-div.pdf` — aynı makalenin Cambridge kopyası.
+`references/20180006683.pdf` — Silva ve ark. 2018 AIAA, Tablo 3 s. 11–12.
+`references/202305-Multi-Tiltrotor-Publication.pdf` — Pollard ve ark. 2023 sunumu, s. 19.
+`references/NASA-TM-20210017971.pdf` — Whiteside ve ark., tiltwing tasarım raporu.

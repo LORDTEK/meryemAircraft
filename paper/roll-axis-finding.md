@@ -128,7 +128,7 @@ diyor. **İkisi aynı anda doğru olamaz.**
 **Tarih: 2026-09-20.** Yazar iki PDF'i depoya yükledi; ikisi de `pdftotext` ile açıldı ve
 alıntılar dosyadan alındı. Hatırlanarak değil.
 
-### Zhang ve ark. 2012 — `cfd/ica20120400001_12673514.pdf`
+### Zhang ve ark. 2012 — `references/ica20120400001_12673514.pdf`
 
 Eşeksenli karşıt dönüşlü kuyruk üstü. **HATA 2'yi doğrudan doğruluyor:**
 
@@ -157,7 +157,7 @@ kanalı olarak kullanıyor.** Belgenin Tablo 2'si (satır 159–165), aynen:
 Düzyazıda da aynısı: *"In horizontal flight … **Roll motion is controlled by the differential
 velocity of the two motors**"* (satır 128–129, sağ sütun).
 
-### Novlit ve ark. 2014 — `cfd/2014_0529_paper.pdf`
+### Novlit ve ark. 2014 — `references/2014_0529_paper.pdf`
 
 Eşeksenli karşıt dönüşlü kuyruk üstü MAV. **HATA 1'i doğruluyor ve ayrıca Adım 1'e girdi:**
 

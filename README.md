@@ -113,7 +113,8 @@ figures/        The twelve figures
   source/         Parametric geometry model
   build/          Scripts that produce the figures and the transition simulation
   output/         Publication-ready png / svg
-cfd/            OpenFOAM setups, the validation record, and the external-review rounds
+cfd/            OpenFOAM setups, the validation record, the current external-review round and the reader onboarding text
+  arsiv-dis-gorus/  Every earlier external-review round
 patent/         Texts and drawings of the Turkish patent application (in Turkish)
 design/         Design record — every decision with the reasoning held at the time
 references/     Record of the literature read
@@ -160,7 +161,7 @@ Chromium lives elsewhere, point to it with `CHROME_PATH`.
 
 Before submission the paper was read round by round by **four mutually independent
 language models**, and the text of every round is kept under
-[`cfd/external-review-*.md`](cfd/). This is not a validation; it is a **bug hunt**, and the
+[`cfd/arsiv-dis-gorus/`](cfd/arsiv-dis-gorus/) (the current round is in [`cfd/`](cfd/)). This is not a validation; it is a **bug hunt**, and the
 hunt is on the record — what was found was not only corrected but written down, with what
 was wrong and why, in `aero/README.md`. Claims that collapsed during the process include:
 that the pitching moment was 2TL rather than 4TL; that placing the centre of gravity by

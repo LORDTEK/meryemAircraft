@@ -26,7 +26,7 @@ ve
 ## 2. Okunan iki belge
 
 ### De Wagter ve ark. 2018, *Journal of Field Robotics* — DelftaCopter
-`cfd/Wagter_et_al_2018_Journal_of_Field_Robotics.pdf`, birinci elden okundu.
+`references/Wagter_et_al_2018_Journal_of_Field_Robotics.pdf`, birinci elden okundu.
 
 Giriş bölümü **tam olarak bizim tasarım uzayımızın literatür taraması.** İçinde:
 
@@ -50,7 +50,7 @@ between efficient hover and efficient forward flight,"* 1 m çap *"bir uzlaşma 
 > döngüsünden geçirmekti.** İddia buna göre daraltılacak.
 
 ### Pathak 2025, *Journal of Informatics Education and Research* — SkySwift V1.0
-`cfd/Design+of+Flying+Wing+Tail+Sitter+Contra-Rotating+Propeller+VTOL+Sky+Swift+V1.0+UAV_Final.pdf`
+`references/Design+of+Flying+Wing+Tail+Sitter+Contra-Rotating+Propeller+VTOL+Sky+Swift+V1.0+UAV_Final.pdf`
 
 Başlık ve özet **rahatsız edici derecede yakın:** *"hybrid flying-wing tailsitter UAV designed
 specifically for **disaster management and rapid response** … The airframe is a **blended
@@ -95,7 +95,7 @@ değil ve yazar bir lise öğrencisi, ama **bir yenilik iddiası için yayın ye
 > üçüncü ekseni üretebilir; bizimki her çift eşeksenli ve tork dengeli olduğu için
 > **üretemez**."* **İkinci yarısı yanlıştı.** Eşeksenli bir çift de üretebilir — iki rotoru
 > farklı devirlerde döndürmek yeter, ve §2.9 her rotorun kendi elektrik makinesinde olduğunu
-> söylüyor. Zhang ve ark. 2012 (`cfd/ica20120400001_12673514.pdf`) tam olarak bunu yapıyor:
+> söylüyor. Zhang ve ark. 2012 (`references/ica20120400001_12673514.pdf`) tam olarak bunu yapıyor:
 > *"Roll motion is controlled by the **differential velocity of the two motors**."*
 > Ayrıntı: `paper/roll-axis-finding.md`.
 
