@@ -11,13 +11,13 @@ Burası o not. **Her tur sonunda bu listeye bakılır.**
 | # | Konu | Durum | Kim gündeme getirdi |
 |---|---|---|---|
 | **E1** | **Kısaltma.** Adım 1'in 1954 anlatısı (~800 kelime); 2–4 arası ve 3'ün izin verilen maliyetleri ile 7'nin *"koşulun söylemedikleri"* arası yineleme; Adım 12'nin uzunluğu/kanıt oranı (`v8-proportion.md` O4). Gövde dergi sınırının ~3 katı (O5). | **ERTELENDİ.** Yazar, Tur 57: *"Kısaltma işi şimdilik yapılmayacak. Mutmain olmadan kısaltma olmayacak."* | DeepSeek, Grok |
-| **E3** | **Oran önerileri** (`paper/v8-proportion.md`). **P1:** Adım 1'e katkının tek cümlesi (katkının adı %57'den ~%7'ye) — Adım 1 ve 9'un onaylı *"combination, consequences, accounting"* üçlüsüne dokunur. **P3:** Adım 10–13'ün açılışına katkıya göre yerini söyleyen tek cümle. (P2 uygulandı: son bölüm katkıyı merkeze koyuyor; P4 önerilmiyor.) | **YAZARIN KARARI.** Oran işi Tur 57'de yapıldı; öneriler okuyuculara da soruldu. | kendi incelemem |
 | **E2** | **"Zero-bill condition" adı.** Ad sayısal, koşul yapısal. Adım 2'nin tilt satırı düzeltilince (Fatura 3 ayakta kalıyor) ad savunulabilir hâle geldi, ama gerginlik duruyor. Alternatifler: *"the single-propulsor condition"*, *"the no-reorientation condition"*. | **ERTELENDİ.** Yazar, Tur 50: *"Ad konusu da sonraya bırakılabilir."* | DeepSeek, Grok |
 
 ## Karara bağlanmış — kayıt için
 
 | # | Konu | Karar | Tur |
 |---|---|---|---|
+| K7 | Oran önerileri P1 ve P3 (E3) | **Uygulandı.** Yazar, Tur 58: *"P1 ve P3'ü uygula."* P1 Adım 1'e; üçlü Adım 9'da da *"The contribution is the architecture, and the paper presents it as …"* biçimine getirildi. P3 Adım 10–13'e; onaylı taslakların üçü, bir alt satırdaki metni tekrarlamamak için kısaltıldı (bkz. `effective-ld-finding.md`, Tur 58 uygulaması) | 58 |
 | K1 | Açıklık verimi | **0,817** — ve denetimde zaten kullanıldığı çıktı (`drag_sweep.py:40`) | 50 |
 | K2 | Palet ailesi | **Zarf olarak kalsın.** Mekanizma: `baseline.py` L/D'yi girdi alıyor, dört köşe = dört kapanış | 50 |
 | K3 | Adım 10'un C_D0'ı | **Tutarlı braket 0,0285–0,0381.** Yayımlanan 0,0248 braketin iki ucunun da altında | 50, dördü de hemfikir |

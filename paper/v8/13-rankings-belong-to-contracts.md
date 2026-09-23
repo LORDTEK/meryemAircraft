@@ -50,7 +50,9 @@ consequence: where one architecture pays less of one charge and more of another,
 on how the charges are weighed. **A sizing contract is one such weighing.** It fixes what is held
 equal between the architectures being compared, and what is held equal decides how a difference in
 mass is set against a difference in cruise efficiency. This section applies three contracts to three
-architectures at each of the four closures of Section 10.
+architectures at each of the four closures of Section 10. **The mechanism claim is not a ranking
+and is not at stake here**; what is at stake is how the price computed in Sections 10 and 11 enters
+a comparison with other architectures.
 
 ### Three contracts, and what each holds equal
 
@@ -255,6 +257,7 @@ of the architectures alone.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 58, P3:** mekanizma iddiası bir sıralama değil, burada söz konusu değil | Adım 9 bağımlılık tablosu (*"sizing contract"*); Adım 15 |
 | Menzil R = (E* η/g)(L/D)(m_yakıt/MTOW); üç sözleşmenin tanımı | `aero/baseline.py` satır 216–230 (yorum bloğu), `menzil_ver`, `sabit_yakit`, `sabit_MTOW` |
 | A'nın sütunu Adım 10'u birebir üretiyor (57,51 / 55,85 / 53,51 / 52,34 kg) | `aero/contracts-result.txt`, SINAMA bloğu |
 | Sabit yakıt kütlesi 8,4–9,2 kg (A'nın kapanışlarındaki %16) | aynı, AYRINTI: 9,20 / 8,94 / 8,56 / 8,37 kg |

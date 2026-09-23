@@ -60,7 +60,8 @@ Section 11 decomposed the three charges on one aircraft, at one size. **This sec
 different question: are they three quantities, or one quantity under three names?** The test is
 to change the size of the aircraft and see whether they move together. If they did, the framework
 of Section 2 would be a single cost described three ways, and a ledger in three currencies would be
-a ledger in one.
+a ledger in one. Either answer leaves the mechanism claim where it was; that claim rests on the
+inventory of Sections 7 and 8.
 
 **The test is deliberately weak, and it is stated at its own strength.** It can show that two
 charges are not locked together within this model. It cannot show that they are independent in
@@ -279,6 +280,7 @@ Section 10 only.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 58, P3:** her iki cevap da mekanizma iddiasını yerinde bırakır; iddia envantere dayanır | Adım 9 bağımlılık tablosu; Adım 15 |
 | Adım 10 yalnız hafif tasarımı kapattı, 52,3–57,5 kg; 1000 kg'da kapanış yok | `aero/closure-result.txt`; Adım 10 satır 109–111 |
 | Disk yüklemesi 44,2 / 43,7 kg/m², %1,1 fark | v7 §3.9 satır 1768; §3.8 Tablo 13 |
 | Askı gücü 10,9 → 216,2 kW, ×19,8 vs kütle ×20 | v7 §3.9 satır 1769–1771 |

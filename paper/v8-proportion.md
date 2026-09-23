@@ -83,9 +83,9 @@ sayılıyor (`v8-budget.md`). Gövde ~28 700 kelime + 16 tablo ≈ 31 900–39 9
 
 | # | Öneri | Etkisi | Durum |
 |---|---|---|---|
-| **P1** | Adım 1'in son paragrafına katkının tek cümlesi: *"The contribution is the architecture: …"* (§0.3 ifadesi), mevcut üçlüden önce | Katkının adı %57'den ~%7'ye gelir | **Öneri.** Adım 1'in ve 9'un *"combination, consequences, accounting"* üçlüsü okuyucularla onaylanmıştı; değiştirmek iddia yapısına dokunur |
+| **P1** | Adım 1'in son paragrafına katkının tek cümlesi: *"The contribution is the architecture: …"* (§0.3 ifadesi), mevcut üçlüden önce | Katkının adı %57'den ~%7'ye gelir | **Uygulandı, Tur 58** (yazarın kararı). Üçlü Adım 9'da da katkının sunuluş biçimi olarak yeniden yazıldı |
 | **P2** | Son bölüm (Adım 15) mekanizma eksenini **katkı** olarak merkeze koyar | Metin katkıyla kapanır | **Uygulandı** (bu tur) |
-| **P3** | Adım 10–13'ün her birinin açılışına tek cümle: bu hesabın katkıya göre yeri (katkıyı değil bedelini ölçtüğü) | O3'ü kapatır, ~4 × 30 kelime | **Öneri** |
+| **P3** | Adım 10–13'ün her birinin açılışına tek cümle: bu hesabın katkıya göre yeri (katkıyı değil bedelini ölçtüğü) | O3'ü kapatır, ~4 × 30 kelime | **Uygulandı, Tur 58** (yazarın kararı) |
 | **P4** | Adım 7'yi büyütmek | O2 | **Önerilmiyor.** Kısalık güç olabilir; uzatmak oranı düzeltmek için metin şişirmek olur |
 
 ## 5. Kısaltma zamanı geldiğinde (uygulanmıyor, kayıt)

@@ -18,7 +18,8 @@ kalır"*) · sıralama yok, Adım 13'ün işi.
 
 Section 2 named three charges that any architecture in this corner pays. Section 10 closed a
 sizing loop. **This section puts the two together: it says where each charge appears inside
-the closed numbers, and how large it is there.**
+the closed numbers, and how large it is there.** Like the closure, the ledger prices the
+arrangement; the count of mechanism classes is not an entry in it.
 
 ### What this section does, and the one thing it must not do
 
@@ -213,6 +214,7 @@ changes, and Section 13 asks what happens to the comparison when the sizing cont
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 58, P3:** defter düzeni fiyatlıyor; sayım bir kalem değil | Adım 9 bağımlılık tablosu; bu bölümün *"It attributes. It does not add."* |
 | C_D0 dökümü: temiz yüzey, göbek, çerçeveler, rotorlar | `aero/drag_sweep.py` satır 41–48; `aero/ledger.py` |
 | Askı donanımı C_D0'in %69'u (elverişli) / %57'si (olumsuz) | `aero/ledger-result.txt` |
 | Temiz gövde L/D **20,55 / 15,24**; uçak 10,82 / 8,79; korunan %52,6 / %57,7 | `drag_sweep.zincir(cd0, pay=...)`; `ledger-result.txt` |

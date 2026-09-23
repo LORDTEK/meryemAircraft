@@ -1031,3 +1031,14 @@ Adım 14'ün *"the loop closes"* ifadesi tutuyor.
 | P1, P3 | dördü de *"evet"* | **Yazarın kararı (E3)**; taslak cümleler yazara sunuldu |
 
 **Qwen bu tur yalnız v8 metninden çalıştı** ve Adım 8'den doğru bir kalem (askı tork artığı) getirdi.
+
+## Tur 58 uygulaması — P1 ve P3 (yazarın kararı: *"P1 ve P3'ü uygula"*)
+
+| Yer | Onaylı taslak | Yazılan | Neden farklı |
+|---|---|---|---|
+| Adım 1 sonu | *"The contribution is the architecture: a configuration that changes regime by rotating …"* | *"… a configuration **arranged to** change regime by rotating the airframe rather than its propulsors, and so carrying no mechanism that reorients a propulsor."* + üçlü *"are how that contribution is presented and priced"* | *"changes regime"* geçişin gösterildiğini ima ediyordu; Adım 7 ve 15 bunu iddia etmiyor (§0.2) |
+| Adım 9 | — | Üçlü: *"The contribution is the architecture, and the paper presents it as the combination, …"* | **Yayılma (§3.1):** Adım 9 aynı üçlüyü katkı diye söylüyordu; P1'le çelişirdi |
+| Adım 10 | *"… it does not prove the count, and it does not show the aircraft can be built."* | *"… it does not bear on the count of mechanism classes, which rests on the inventory of those sections alone."* | *"Can be built"* bir alt cümlede zaten var; *"the count"* bağlamsız okunuyordu |
+| Adım 11 | *"… attributes that price to the three charges; it adds none."* | *"Like the closure, the ledger prices the arrangement; the count of mechanism classes is not an entry in it."* | *"It attributes. It does not add."* iki satır aşağıda zaten var; taslak katkıya yeri söylemiyordu |
+| Adım 12 | *"This section tests whether … three quantities or one; it does not bear on the mechanism claim."* | *"Either answer leaves the mechanism claim where it was; that claim rests on the inventory of Sections 7 and 8."* | İlk yarı bölümün açılış sorusunu tekrarlıyordu |
+| Adım 13 | *"… the mechanism claim is not a ranking and is not at stake here."* | Özü aynı; *"how the price computed in Sections 10 and 11 enters a comparison"* | — |

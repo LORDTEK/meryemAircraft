@@ -129,9 +129,9 @@ with no mechanism that reorients a propulsor, and an account of what the combina
 Each half of that has a named opponent and neither half is a record. **Nor is the configuration
 claimed to be without precedent**: Section 1 sets out what is already established, including
 uncrewed tail-sitters, tail-sitters without control surfaces, coaxial contra-rotating
-tail-sitter propulsion, and blended-wing-body tail-sitters. **What this paper offers is the
-combination, the consequences of the choices inside it, and the accounting** — which is what
-Sections 7 and 8 describe and what Section 11 prices.
+tail-sitter propulsion, and blended-wing-body tail-sitters. **The contribution is the
+architecture, and the paper presents it as the combination, the consequences of the choices inside
+it, and the accounting** — which is what Sections 7 and 8 describe and what Section 11 prices.
 
 ### One consequence for how the numbers that follow should be read
 
@@ -146,6 +146,7 @@ what it demands of anyone who uses the framework afterwards.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 58:** *"The contribution is the architecture, and the paper presents it as …"* — P1 ile tutarlılık için | Adım 1 (P1); CLAUDE.md §0.6 |
 | Dört eksen, dört ayrı rakip | `CLAUDE.md` §0 tablosu |
 | Kanatla taşıma ile rotorla taşıma ayrı verim sınıfı; sözleşme sınıf değiştirmez | §4.2, satır 2498–2502 |
 | Öteki hibritlere karşı menzil iddiası **yok**, iki yönde de | §4.2, satır 2513–2517; §3.6, satır 1563–1566 |

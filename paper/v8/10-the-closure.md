@@ -17,6 +17,9 @@ dört kapanışı çalıştırıyor.
 
 ## Analytical closure of the sizing loop
 
+This section prices the arrangement of Sections 7 and 8 on a declared package; it does not bear on
+the count of mechanism classes, which rests on the inventory of those sections alone.
+
 **Closing a sizing loop mathematically is not the same thing as closing an aircraft
 physically.** This section does the first. What it produces is a set of consistent numbers
 on a declared set of assumptions: if the assumptions hold, these masses, powers and ranges
@@ -239,6 +242,7 @@ where it is made.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 58, P3:** bu bölüm düzeni fiyatlıyor; mekanizma sayımı yalnız envantere dayanıyor | Adım 9 bağımlılık tablosu; Adım 15 (*"It rests on the inventory of Sections 7 and 8"*) |
 | MTOW = m_faydalı/(1 − f_boş − f_enerji); f_boş kurulu güce, güç MTOW^1.5'e bağlı | §2.12; `aero/baseline.py:boyutlandir`, satır 104–124 |
 | Tutarlı braket 0,0285–0,0381, rotor terimi iki uçta da 0,0154 | `aero/drag_sweep.py` satır 41–48 ve docstring |
 | Yayımlanan 0,0248 **iki ucun da altında** | aynı betik, *"IKI UCUN DA ALTINDA"* çıktı satırı |

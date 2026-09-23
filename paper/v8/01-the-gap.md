@@ -198,8 +198,11 @@ that costs, and what the rest of the combination costs, is what the paper is for
 **None of the elements is new**, and Section 7 says so. Tail-sitting aircraft are seventy years
 old and uncrewed ones are ordinary; blended wing bodies have been a standing subject of transport
 research for three decades; series-hybrid propulsion has established precedent in small uncrewed
-aircraft. **What this paper offers is the combination, the consequences of the choices inside it,
-and an accounting of what they cost** — not a claim that the route was waiting to be found.
+aircraft. **The contribution is the architecture: a configuration arranged to change regime by
+rotating the airframe rather than its propulsors, and so carrying no mechanism that reorients a
+propulsor.** The combination, the consequences of the choices inside it, and an accounting of what
+they cost are how that contribution is presented and priced — not a claim that the route was
+waiting to be found.
 
 Section 2 states the cost that any architecture in this corner pays, in terms that do not
 presume an escape.
@@ -210,6 +213,7 @@ presume an escape.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 58, P1:** katkı mimaridir — gövde döner, propulsor dönmez; yeniden yönlendiren mekanizma yok; üçlü katkının sunuluş/fiyatlanış biçimi | Adım 7 satır 69 (*"rotating the airframe"*); Adım 7 tablosu; Adım 15; CLAUDE.md §0.6. *"arranged to"*: geçişin tamamlanması iddia edilmiyor (Adım 7, 15) |
 | Sabit kanatlının sınırı altyapısal; pist, mancınık, eşdeğeri | §1, satır 152–157 |
 | Rotorlunun sınırı: kanat yok, her saniye kurulu güçle ödeniyor | §1, satır 159–163 |
 | Yetmiş yıl: 1950'ler kuyruk üstü, 1960'lar tilt-wing, 1980'ler tilt-rotor, 2010'lar hibrit | §1, satır 167–172 |
