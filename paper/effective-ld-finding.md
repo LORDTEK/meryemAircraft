@@ -1070,3 +1070,8 @@ birleştirme hamlesini taşıyor, büyütülmemeli; yasak eksenlerde ihlal yok.
 **Ders (§3.1 bir kez daha):** geometri aralığı elle yazılmıştı ve 50 kg tasarımdan kalan alt uç hiçbir
 denetimden geçmiyordu. Grok yalnız iki bölümün birbirine iki uçak gibi okunabileceğini söyledi; sayıyı
 yeniden hesaplayınca alt ucun kapanışa hiç ait olmadığı çıktı.
+
+**Tur 59, metin hazırlanırken — düzeltmenin yan hasarı (§0.2):** Adım 12'ye eklediğim parantez *"the
+engine rating is a quantity Section 10 did replace"* diyordu; aynı bölümün kuralı *"The quantities used are
+ones Section 10 did not replace"*. Metni kurmadan önce düzeltilen pasajları yeniden okurken bulundu. Kural
+*"with one exception"* oldu ve istisna adıyla yazıldı.
