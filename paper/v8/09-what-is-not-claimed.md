@@ -100,7 +100,7 @@ readers who convert one into the other are not quoting this paper.
 
 **5. It does not claim that the escape condition is fully instantiated.** The condition is met
 in the propulsor that carries the aircraft and is not met in the attitude system, which is
-carried through cruise producing moments rather than thrust. Section 3 names that case as
+carried through cruise producing moments rather than cruise thrust. Section 3 names that case as
 partial instantiation, and the charge it re-opens is reported rather than absorbed.
 
 **6. It does not claim that satisfying the condition makes an aircraft better.** The condition
@@ -146,6 +146,7 @@ what it demands of anyone who uses the framework afterwards.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 60:** *"rather than cruise thrust"* | Grok; Adım 3 (*"no cruise thrust in that sense"*) |
 | **Tur 59:** *"the inventory of Sections 7 and 8"* — Adım 10, 12, 15 ile aynı ifade | Grok, DeepSeek |
 | **Tur 58:** *"The contribution is the architecture, and the paper presents it as …"* — P1 ile tutarlılık için | Adım 1 (P1); CLAUDE.md §0.6 |
 | Dört eksen, dört ayrı rakip | `CLAUDE.md` §0 tablosu |

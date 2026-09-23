@@ -68,7 +68,7 @@ change regime, and the paper does not claim that it has been shown to change reg
 
 **The escape condition is met where the aircraft is carried and not everywhere.** The nose pair serves
 both regimes in one orientation with the hover peak drawn from a store; the attitude pairs are carried
-through cruise producing moments rather than thrust, and the drag they add is reported rather than
+through cruise producing moments rather than cruise thrust, and the drag they add is reported rather than
 absorbed.
 
 ### Range, against the other hybrids — not claimed, in either direction
@@ -111,6 +111,7 @@ costs.**
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 60:** *"rather than cruise thrust"* | Grok |
 | **Tur 59:** *"The configuration is arranged to change regime by rotating the airframe"* — Grok Adım 14'ü yakaladı; aynı fiil burada da vardı | Adım 1 (P1) |
 | Dört eksen, dört rakip, sıralama | Adım 9 tablosu |
 | Seyir kaldırması yüzeyde; hiçbir sözleşme bunu değiştirmez | Adım 6 (*"no sizing contract … moves a vehicle between those two states"*) |

@@ -1075,3 +1075,25 @@ yeniden hesaplayınca alt ucun kapanışa hiç ait olmadığı çıktı.
 engine rating is a quantity Section 10 did replace"* diyordu; aynı bölümün kuralı *"The quantities used are
 ones Section 10 did not replace"*. Metni kurmadan önce düzeltilen pasajları yeniden okurken bulundu. Kural
 *"with one exception"* oldu ve istisna adıyla yazıldı.
+
+---
+
+# Tur 60 — Tur 59 metnine (external-review-63) yanıtlar: Grok, ChatGPT, DeepSeek
+
+**Üçü de:** Tur 59 düzeltmeleri kaynaklarına sadık; geometri, 4,19 / 2,4–3,2 ayrımı, *"arranged to"* doğru.
+**ChatGPT bu tur tam yanıt verdi** (geçen turun altı sorusu dahil). Yeni matematiksel çelişki yok.
+
+| Ne | Kim | Denetim | Yapılan |
+|---|---|---|---|
+| **Adım 3 ile Adım 8 çelişiyor**: Adım 3 *"attitude hardware does not violate it"*, Adım 8 uç çiftleri birinci başarısızlık kipine düşüyor | DeepSeek | Doğru — ve Adım 7 ile 8 de uç çiftlerini başarısız parça sayıyor; aykırı olan Adım 3 | Adım 3: taşıyan propulsor'ün koşulu karşılamasını engellemez, ama birinci kipe düşer; mimari kısmi |
+| **Uç donanımı ölçeklenmiyor** — Adım 10 alanı/açıklığı büyütüyor, uç diskleri ve çerçeveler sabit | Grok | Doğru, **ve bir katman daha derinde:** çerçeve+rotor terimleri S_ref = 1,979 m² üzerinde katsayı; kapanışlarda sabit tutulmaları donanımı kanatla büyütmek demek. Referans boyutta kalsa %4–13 küçülürlerdi (0,0009–0,0028). İşaret kapanışın lehine; kapanış almıyor | Adım 10: üç ölçeklenmeyen şey + bir paragraf; `closure.py` basıyor, `verify.py` iki kontrol (54) |
+| *"light design"* adımdan adıma farklı uçak | ChatGPT, DeepSeek | Doğru: Adım 8/10'da 50 kg referans, bir yerde kapanışlar, Adım 12'de yerel tanım | Adım 8 *"the 50 kg reference design"*'ı tanımlıyor; 5, 10, 11, 13, 14 buna bağlandı; çıplak *light/heavy design* yalnız Adım 12'de, yerel tanımıyla |
+| Adım 13 tilt paragrafı sıralama dili taşıyor (*"leads under every contract"*) | ChatGPT | Mantıken savunulur, ama §0'ın dördüncü ekseni bakımından en açık artık risk | *"What the bound gives is a size, not an order"*: pay, gerçek tilt'in seyir cezalarının doldurması gereken alan; doldurma hesaplanmadı |
+| Adım 15 *"moments rather than thrust"* — askıda itki üretiyorlar | Grok | Doğru; **Adım 9'da da aynısı** | ikisi de *"cruise thrust"* |
+| Adım 8 parantezi ikinci satırı dar tarif ediyor; ve *ne olmadıklarını* anlatıyor | DeepSeek, Grok | Doğru | Parantez yalnız ne olduklarını söylüyor |
+| Adım 14 tablo birimi | Grok | Doğru | *"per kilogram of buffer"* |
+| Adım 6 *"52 and 58"* | DeepSeek | Doğru | 52,3–57,5 |
+| Adım 12: *"1 % saf ölçek sonucu, ayrışma argümanı ona dayansın"* | DeepSeek | **Alınmadı** — Adım 12'nin kendisi %1'in *"a property of the constant-disc-loading rule, not a finding about Bill 3"* olduğunu söylüyor; öneri bununla çelişirdi | — |
+| Adım 7'ye ileri atıf (hangi kip Adım 8'de) | DeepSeek | **Alınmadı** — Adım 7'nin gerekçesi (açıkta, yatırılamıyor) Adım 8 ile tutarlı; kısaltma öncesi ekleme yapılmıyor | — |
+| Adım 12 Bill 3 paragrafı kapanış sonucu olarak alıntılanamaz | Grok | Metin zaten *"This paragraph compares the reference pair only"* diyor | — |
+| Tekrar kayıtları | üçü | Kayıt | `v8-proportion.md` |

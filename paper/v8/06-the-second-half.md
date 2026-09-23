@@ -163,7 +163,7 @@ They are given together because omitting any one of them would make the comparis
 than it is.
 
 **Scale.** The compared vehicles are 1 670 to 3 275 kg; the designs here are of order 50 kg and
-1 000 kg — Section 10 closes the light one between 52 and 58 kg across the same bracket.
+1 000 kg — Section 10 closes the light one between 52.3 and 57.5 kg across the same bracket.
 Reynolds number favours the larger aircraft, so the smaller design is at a disadvantage in this
 comparison rather than an advantage.
 
@@ -234,6 +234,7 @@ the combination is what this paper is for.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 60:** 52,3–57,5 kg | DeepSeek; `aero/closure-result.txt` |
 | Çok rotorlu piste ihtiyaç duymuyor; eksik makine değil | §1, satır 160–163 |
 | Kanatsız araç her saniyeyi kurulu güçle satın alıyor | §1, satır 161–163 |
 | *"Multirotors are efficient in hover and suited to short-range missions…"* | §4.2, satır 2478–2481 |

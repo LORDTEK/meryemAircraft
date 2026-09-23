@@ -57,7 +57,7 @@ giving the same structure the control duty as well.
 **And the stance base is a parameter rather than a constraint.** Moving the frame ends further
 outboard widens the base against ground wind without altering the planform, the propulsion or
 the control architecture — and because the same displacement lengthens the control moment arm,
-both benefits arrive from one change. The reference geometry is one point on that trade; an
+both benefits arrive from one change. The 50 kg reference geometry is one point on that trade; an
 operator with a stronger ground-wind requirement can take another.
 
 ### What is sized, and what is not demonstrated
@@ -133,6 +133,7 @@ section**, and the two are combined in Section 7.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 60:** *"50 kg reference geometry"* — terim birliği | Adım 8 tanımı |
 | Beş temas noktası: dört uç çerçevesi ucu + orta omurga | §2.11, satır 946–948 |
 | Uç çerçeveleri pervaneler için eklenmedi; **iniş yapısıdır** | §2.11, satır 937 |
 | *"Dispensing with a conventional landing gear improved the empty weight fraction"* | §2.11, satır 940–942, kaynak [2] |

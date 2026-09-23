@@ -137,6 +137,16 @@ def main():
     for i, (ad2, bir) in enumerate((("alan", "m2"), ("aciklik", "m"), ("burun diski", "m"))):
         v = [g[i] for g in geo.values()]
         print("  %-12s %6.3f - %6.3f %s" % (ad2, min(v), max(v), bir))
+    # Tur 60 (Grok): cerceve ve rotor surukleme terimleri S_REF = 1,979 m2
+    # uzerinde katsayidir ve kapanislarda DEGISMEDEN tasinir -- bu, uc
+    # donanimini kanatla birlikte buyutmek demektir. Donanim referans
+    # boyutunda kalsaydi terim S_REF/S ile kuculurdu. Kapanis bunu ALMIYOR.
+    S_REF = 1.979
+    UC = {"A": 0.0216, "B": 0.0216, "C": 0.0197, "D": 0.0197}   # cerceve+rotor, uca gore (Adim 11)
+    print("  uc donanimi referans boyutta kalsaydi (S_ref %.3f m2): cerceve+rotor terimi" % S_REF)
+    for ad in sorted(geo):
+        k = 1 - S_REF / geo[ad][0]
+        print("    %-3s -%4.1f %%   Delta C_D0 = -%.4f" % (ad, 100 * k, UC[ad] * k))
     S0 = 50.0 / WS
     print("  (50 kg referans: alan %.3f m2, aciklik %.3f m, disk %.3f m -- KAPANIS DEGIL)"
           % (S0, (AR * S0) ** 0.5, (4 * 50.0 / DL / 3.141592653589793) ** 0.5))

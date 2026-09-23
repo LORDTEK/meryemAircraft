@@ -81,13 +81,19 @@ the loop has left behind. Had wing **area** been held fixed instead, the lift co
 have risen with the closed mass, the induced term would have moved against the heavier closures,
 and the drag corners would be optimistic as reported.
 
-**Two things the loop does not scale, and a reader comparing this section with Section 8 should
-know which is which.** The tip-frame length and the strip are not sizing variables here. They were
-set on the reference geometry, and **the control moment arms of Section 8 are therefore reference
+**Three things the loop does not scale, and a reader comparing this section with Section 8 should
+know which is which.** The tip-frame length, the tip-disc diameter and the strip are not sizing
+variables here. They were set on the reference geometry — the 50 kg reference design of Section 8 — and **the control moment arms of Section 8 are therefore reference
 values that this closure does not re-derive.** Section 8 describes one aeroplane; this section
 describes what its sizing rules give at four sets of inputs. **These are the same configuration at
 four closed masses rather than four configurations** — but anything that depends on the arms is
 carried at the reference geometry and is not an output of the loop.
+
+**The frame and rotor drag terms are carried the same way.** They are coefficients on the reference
+wing area of 1.979 m², and holding them unchanged across the closures is the same as letting that
+hardware grow with the wing. Held at its reference size instead, it would give terms 4 to 13 percent
+smaller across the four closures — 0.0009 to 0.0028 of zero-lift drag. **The closures do not take that
+reduction, and it has not been run through the loop.**
 
 **The drag polar is likewise a fixed input, and it is worth saying what that costs.** Chord grows
 with area, so the chord Reynolds number rises about **7 %** across the closure range. On a
@@ -110,8 +116,7 @@ bracket.
 ### The four closures
 
 **All four converge.** On these assumptions the analytical sizing loop closes for this
-architecture — and for the **light** design, which is the only one carried through this loop; the
-heavy design appears below only through a transition time computed elsewhere.
+architecture — and for the 50 kg design, which is the only one carried through this loop; the 1 000 kg reference design appears below only through a transition time computed elsewhere.
 
 | | C_D0 | η_p | L/D | MTOW | Empty fraction | Hover power, rotor shaft | Engine rating, shaft | Range |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
@@ -175,8 +180,7 @@ two-degree-of-freedom point mass and driving the body angle kinematically from z
 degrees, the altitude lost during the rotation falls as the rotation is made slower — the
 aircraft is supported through the manoeuvre rather than falling through it. **Entering the
 rotation while already climbing removes the loss entirely**: at a 5 m s⁻¹ entry climb the
-altitude loss is zero at both reference rotation times — **two seconds for the light design and
-5.1 seconds for the heavy one** — and it stays zero at every thrust-to-weight ratio from 1.066
+altitude loss is zero at both reference rotation times — **two seconds for the 50 kg reference design and 5.1 seconds for the 1 000 kg one** — and it stays zero at every thrust-to-weight ratio from 1.066
 down to 1.00. *(Both times, and the thrust-to-weight figures with them, were established on the
 reference geometry at its published mass. The closure above does not re-derive any of them, and
 none of them is an output of it.)* Nothing in that result requires the tip pairs
@@ -192,7 +196,7 @@ the actuator can do rather than by a balance between competing penalties.
 point-mass model prescribes the attitude and therefore cannot charge for the trajectory the
 aircraft flies while it is being rotated into that attitude. Solved instead with rotational
 dynamics and a finite control moment — **and with the aerodynamic pitching moment set to
-exactly zero, so that nothing favourable is borrowed** — the light design **loses 5.4 m at the
+exactly zero, so that nothing favourable is borrowed** — the 50 kg reference design **loses 5.4 m at the
 same reference condition where the point-mass model reports none.** *(That figure, like the
 rotation times, belongs to the reference geometry at its published mass; the closure above does
 not re-derive it either.)*
@@ -242,6 +246,7 @@ where it is made.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 60:** üç ölçeklenmeyen şey (uç disk çapı eklendi); çerçeve+rotor katsayıları S_ref 1,979 m² üzerinde — sabit tutmak donanımı kanatla büyütmek demek; referans boyutta kalsa %4–13, 0,0009–0,0028 küçülürdü, kapanış almıyor; terim birliği | Grok; `aero/closure.py`, `closure-result.txt`; `aero/tip_propeller.py` S_REF; `verify.py` iki yeni kontrol |
 | **Tur 59:** kapanış geometrisi 2,07–2,27 m², 3,53–3,70 m, 1,23–1,29 m — eski alt uçlar (1,98 / 3,45 / 1,20) **50 kg referans geometrisiydi**, kapanış değil | `aero/closure.py` GEOMETRI bloğu, `closure-result.txt`; `verify.py` Adım 10 geometri denetimi (eski alt ucu reddeder) |
 | **Tur 58, P3:** bu bölüm düzeni fiyatlıyor; mekanizma sayımı yalnız envantere dayanıyor | Adım 9 bağımlılık tablosu; Adım 15 (*"It rests on the inventory of Sections 7 and 8"*) |
 | MTOW = m_faydalı/(1 − f_boş − f_enerji); f_boş kurulu güce, güç MTOW^1.5'e bağlı | §2.12; `aero/baseline.py:boyutlandir`, satır 104–124 |

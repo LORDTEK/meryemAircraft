@@ -99,12 +99,13 @@ and the first is the one that most nearly contradicts the name:
   cruise drag.* Attitude devices produce thrust in cruise, but they produce no cruise thrust in
   that sense; they are used throughout the flight, so their duty cycle matches their presence and
   they fall outside Bill 1. **They remain in the airstream, so the second charge reaches them.**
-  Those are two different statements and the distinction matters: **the condition is about the
-  propulsor that carries the aircraft, so attitude hardware does not violate it — but the charges
-  are about everything the aircraft carries, so Bill 2 reaches that hardware anyway.** An
-  architecture in that position is a partial instantiation: it satisfies the condition where the
-  condition applies and still pays one of the three elsewhere. The condition permits such hardware
-  and does not make it free.
+  Those are two different statements and the distinction matters: **attitude hardware does not
+  stop the propulsor that carries the aircraft from meeting the condition, but it is carried through
+  cruise without producing cruise thrust, which is the first failure mode below — and the charges
+  are about everything the aircraft carries, so Bill 2 reaches it.** An architecture in that
+  position is a partial instantiation, the fourth failure mode: it meets the condition where it
+  carries the aircraft and still pays one of the three elsewhere. The condition permits such
+  hardware outside the first charge and does not make it free.
 - **Serving two regimes with one set of hardware has a price of its own.** Hardware that is not
   duplicated cannot be optimised twice: a propeller sized for hover thrust at zero forward speed
   is not the propeller a cruise design would choose, and if its geometry is fixed the compromise
@@ -164,6 +165,7 @@ appeared.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 60:** tutum donanımı taşıyan propulsor'ün koşulu karşılamasını engellemez, ama seyirde seyir itkisi üretmeden taşınır → birinci başarısızlık kipi; mimari kısmi gerçekleşme (dördüncü kip). Eski *"does not violate it"* Adım 7/8 ile çelişiyordu | DeepSeek; bu bölümün başarısızlık kipleri 1 ve 4 |
 | Üç gevşetme ve her birinin doğurduğu fatura | §2.6, satır 671–677 |
 | Koşulun dört parçası: aynı donanım, aynı iş, aynı yönelim, tampondan tepe | §2.6, satır 679–684; §2.12, satır 2785–2788 |
 | *"Sıfır fatura"* adı katı okunur: bu üç faturadan sıfır, bedelsiz mimari değil | §2.6, satır 684–686 |

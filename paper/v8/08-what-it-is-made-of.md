@@ -29,8 +29,8 @@ carries payload and produces lift. Leading-edge sweep varies continuously along 
 the trailing edge is held at 25°, so the realised sweep runs from 45° at the root to 38.3° at the
 tip — a variation of under seven degrees, with the crescent character coming from the curvature of
 the leading edge rather than from a large change in sweep. Thickness runs from 25 % of chord at
-the root to 12 % at the tip, and chord from 0.970 m to 0.236 m. For the light design the span is
-3.453 m, the wing area 1.979 m², and the aspect ratio 6.03.
+the root to 12 % at the tip, and chord from 0.970 m to 0.236 m. For the 50 kg reference design — the design this inventory describes; Section 10 re-closes it at
+four masses, and Section 12 sets it beside a 1 000 kg reference design — the span is 3.453 m, the wing area 1.979 m², and the aspect ratio 6.03.
 
 Sweep is not a free parameter here, and the reason is structural to the configuration rather than
 aerodynamic preference. The aircraft is tailless. With no horizontal stabiliser on a boom, the
@@ -48,7 +48,7 @@ which on this aircraft is the body's longitudinal axis — the roll axis in body
 regimes, and it must be opposed continuously, either by a control surface, which costs drag, or by
 differential thrust, which costs a control channel. A counter-rotating pair does not produce it.
 
-One pair sits at the nose, 1.20 m in diameter on the light design, and produces all propulsive
+One pair sits at the nose, 1.20 m in diameter on the 50 kg reference design, and produces all propulsive
 thrust in both regimes. Four smaller pairs, 0.20 m in diameter, sit at the ends of rigid frames
 projecting from the wing tips. Every pair is of **fixed geometry**: no cyclic pitch, no
 collective, no variable-pitch hub and no mechanism that changes a rotor's orientation relative to
@@ -188,10 +188,9 @@ one orientation, but they are carried through cruise producing moments rather th
 which is the first of Section 3's failure modes, and they are exposed while doing it. This is the partial
 instantiation Section 3 lists as its **fourth** failure mode — meeting the condition where the
 aircraft is carried and failing it elsewhere — and the charge it re-opens is the second, carried in
-Section 11. *(They are not the second row of Section 3's table: that row concerns a propulsor whose
-duty is to lift and which is then carried. The tip pairs are sized for moments; they add the
-take-off margin (Section 5), but they were not sized for weight support, and Section 3's permitted-cost clause places attitude devices outside the first charge while leaving them in the
-airstream.)*
+Section 11. *(They are sized for moments and used for them in both regimes; they add the take-off
+margin (Section 5) but were not sized for weight support. Section 3's permitted-cost clause
+therefore places them outside the first charge while leaving them in the airstream.)*
 
 The free-wheeling state is physically determinate: the rotor settles where net shaft torque is
 zero. **The stopped state is not.** Stopping a rotor requires the stop to be produced by
@@ -207,6 +206,7 @@ particular installation would reach.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 60:** *"50 kg reference design"* tanımı buradan; parantez sadeleşti — ikinci satırın dar tarifi çıktı | ChatGPT, DeepSeek (terim), Grok, DeepSeek (parantez) |
 | **Tur 59:** uç çiftleri tek yönelimde duruyor ama seyirde itki değil moment üretiyor → Adım 3'ün **birinci** başarısızlık kipi (eski metin aynı paragrafta hem "ikinci satırı başarısız" hem "ikinci satır değil" diyordu — DeepSeek); kalkış payını veriyorlar ama ağırlık desteğine boyutlanmadılar (eski *"do not lift"* Adım 5 ile çelişiyordu — denetimde bulundu) | Adım 3 başarısızlık kipleri 1–4; Adım 5 satır 76–80 |
 | Süpürme 45° kökten 38,3° uca, firar kenarı 25°, değişim <7° | §2.8, satır 729–733 |
 | Kalınlık %25→%12, veter 0,970→0,236 m | §2.8, satır 731–732 |

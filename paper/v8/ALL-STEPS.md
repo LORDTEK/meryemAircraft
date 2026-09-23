@@ -472,12 +472,13 @@ and the first is the one that most nearly contradicts the name:
   cruise drag.* Attitude devices produce thrust in cruise, but they produce no cruise thrust in
   that sense; they are used throughout the flight, so their duty cycle matches their presence and
   they fall outside Bill 1. **They remain in the airstream, so the second charge reaches them.**
-  Those are two different statements and the distinction matters: **the condition is about the
-  propulsor that carries the aircraft, so attitude hardware does not violate it — but the charges
-  are about everything the aircraft carries, so Bill 2 reaches that hardware anyway.** An
-  architecture in that position is a partial instantiation: it satisfies the condition where the
-  condition applies and still pays one of the three elsewhere. The condition permits such hardware
-  and does not make it free.
+  Those are two different statements and the distinction matters: **attitude hardware does not
+  stop the propulsor that carries the aircraft from meeting the condition, but it is carried through
+  cruise without producing cruise thrust, which is the first failure mode below — and the charges
+  are about everything the aircraft carries, so Bill 2 reaches it.** An architecture in that
+  position is a partial instantiation, the fourth failure mode: it meets the condition where it
+  carries the aircraft and still pays one of the three elsewhere. The condition permits such
+  hardware outside the first charge and does not make it free.
 - **Serving two regimes with one set of hardware has a price of its own.** Hardware that is not
   duplicated cannot be optimised twice: a propeller sized for hover thrust at zero forward speed
   is not the propeller a cruise design would choose, and if its geometry is fixed the compromise
@@ -740,7 +741,7 @@ giving the same structure the control duty as well.
 **And the stance base is a parameter rather than a constraint.** Moving the frame ends further
 outboard widens the base against ground wind without altering the planform, the propulsion or
 the control architecture — and because the same displacement lengthens the control moment arm,
-both benefits arrive from one change. The reference geometry is one point on that trade; an
+both benefits arrive from one change. The 50 kg reference geometry is one point on that trade; an
 operator with a stronger ground-wind requirement can take another.
 
 ### What is sized, and what is not demonstrated
@@ -949,7 +950,7 @@ They are given together because omitting any one of them would make the comparis
 than it is.
 
 **Scale.** The compared vehicles are 1 670 to 3 275 kg; the designs here are of order 50 kg and
-1 000 kg — Section 10 closes the light one between 52 and 58 kg across the same bracket.
+1 000 kg — Section 10 closes the light one between 52.3 and 57.5 kg across the same bracket.
 Reynolds number favours the larger aircraft, so the smaller design is at a disadvantage in this
 comparison rather than an advantage.
 
@@ -1145,8 +1146,8 @@ carries payload and produces lift. Leading-edge sweep varies continuously along 
 the trailing edge is held at 25°, so the realised sweep runs from 45° at the root to 38.3° at the
 tip — a variation of under seven degrees, with the crescent character coming from the curvature of
 the leading edge rather than from a large change in sweep. Thickness runs from 25 % of chord at
-the root to 12 % at the tip, and chord from 0.970 m to 0.236 m. For the light design the span is
-3.453 m, the wing area 1.979 m², and the aspect ratio 6.03.
+the root to 12 % at the tip, and chord from 0.970 m to 0.236 m. For the 50 kg reference design — the design this inventory describes; Section 10 re-closes it at
+four masses, and Section 12 sets it beside a 1 000 kg reference design — the span is 3.453 m, the wing area 1.979 m², and the aspect ratio 6.03.
 
 Sweep is not a free parameter here, and the reason is structural to the configuration rather than
 aerodynamic preference. The aircraft is tailless. With no horizontal stabiliser on a boom, the
@@ -1164,7 +1165,7 @@ which on this aircraft is the body's longitudinal axis — the roll axis in body
 regimes, and it must be opposed continuously, either by a control surface, which costs drag, or by
 differential thrust, which costs a control channel. A counter-rotating pair does not produce it.
 
-One pair sits at the nose, 1.20 m in diameter on the light design, and produces all propulsive
+One pair sits at the nose, 1.20 m in diameter on the 50 kg reference design, and produces all propulsive
 thrust in both regimes. Four smaller pairs, 0.20 m in diameter, sit at the ends of rigid frames
 projecting from the wing tips. Every pair is of **fixed geometry**: no cyclic pitch, no
 collective, no variable-pitch hub and no mechanism that changes a rotor's orientation relative to
@@ -1304,10 +1305,9 @@ one orientation, but they are carried through cruise producing moments rather th
 which is the first of Section 3's failure modes, and they are exposed while doing it. This is the partial
 instantiation Section 3 lists as its **fourth** failure mode — meeting the condition where the
 aircraft is carried and failing it elsewhere — and the charge it re-opens is the second, carried in
-Section 11. *(They are not the second row of Section 3's table: that row concerns a propulsor whose
-duty is to lift and which is then carried. The tip pairs are sized for moments; they add the
-take-off margin (Section 5), but they were not sized for weight support, and Section 3's permitted-cost clause places attitude devices outside the first charge while leaving them in the
-airstream.)*
+Section 11. *(They are sized for moments and used for them in both regimes; they add the take-off
+margin (Section 5) but were not sized for weight support. Section 3's permitted-cost clause
+therefore places them outside the first charge while leaving them in the airstream.)*
 
 The free-wheeling state is physically determinate: the rotor settles where net shaft torque is
 zero. **The stopped state is not.** Stopping a rotor requires the stop to be produced by
@@ -1410,7 +1410,7 @@ readers who convert one into the other are not quoting this paper.
 
 **5. It does not claim that the escape condition is fully instantiated.** The condition is met
 in the propulsor that carries the aircraft and is not met in the attitude system, which is
-carried through cruise producing moments rather than thrust. Section 3 names that case as
+carried through cruise producing moments rather than cruise thrust. Section 3 names that case as
 partial instantiation, and the charge it re-opens is reported rather than absorbed.
 
 **6. It does not claim that satisfying the condition makes an aircraft better.** The condition
@@ -1518,13 +1518,19 @@ the loop has left behind. Had wing **area** been held fixed instead, the lift co
 have risen with the closed mass, the induced term would have moved against the heavier closures,
 and the drag corners would be optimistic as reported.
 
-**Two things the loop does not scale, and a reader comparing this section with Section 8 should
-know which is which.** The tip-frame length and the strip are not sizing variables here. They were
-set on the reference geometry, and **the control moment arms of Section 8 are therefore reference
+**Three things the loop does not scale, and a reader comparing this section with Section 8 should
+know which is which.** The tip-frame length, the tip-disc diameter and the strip are not sizing
+variables here. They were set on the reference geometry — the 50 kg reference design of Section 8 — and **the control moment arms of Section 8 are therefore reference
 values that this closure does not re-derive.** Section 8 describes one aeroplane; this section
 describes what its sizing rules give at four sets of inputs. **These are the same configuration at
 four closed masses rather than four configurations** — but anything that depends on the arms is
 carried at the reference geometry and is not an output of the loop.
+
+**The frame and rotor drag terms are carried the same way.** They are coefficients on the reference
+wing area of 1.979 m², and holding them unchanged across the closures is the same as letting that
+hardware grow with the wing. Held at its reference size instead, it would give terms 4 to 13 percent
+smaller across the four closures — 0.0009 to 0.0028 of zero-lift drag. **The closures do not take that
+reduction, and it has not been run through the loop.**
 
 **The drag polar is likewise a fixed input, and it is worth saying what that costs.** Chord grows
 with area, so the chord Reynolds number rises about **7 %** across the closure range. On a
@@ -1547,8 +1553,7 @@ bracket.
 ### The four closures
 
 **All four converge.** On these assumptions the analytical sizing loop closes for this
-architecture — and for the **light** design, which is the only one carried through this loop; the
-heavy design appears below only through a transition time computed elsewhere.
+architecture — and for the 50 kg design, which is the only one carried through this loop; the 1 000 kg reference design appears below only through a transition time computed elsewhere.
 
 | | C_D0 | η_p | L/D | MTOW | Empty fraction | Hover power, rotor shaft | Engine rating, shaft | Range |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
@@ -1612,8 +1617,7 @@ two-degree-of-freedom point mass and driving the body angle kinematically from z
 degrees, the altitude lost during the rotation falls as the rotation is made slower — the
 aircraft is supported through the manoeuvre rather than falling through it. **Entering the
 rotation while already climbing removes the loss entirely**: at a 5 m s⁻¹ entry climb the
-altitude loss is zero at both reference rotation times — **two seconds for the light design and
-5.1 seconds for the heavy one** — and it stays zero at every thrust-to-weight ratio from 1.066
+altitude loss is zero at both reference rotation times — **two seconds for the 50 kg reference design and 5.1 seconds for the 1 000 kg one** — and it stays zero at every thrust-to-weight ratio from 1.066
 down to 1.00. *(Both times, and the thrust-to-weight figures with them, were established on the
 reference geometry at its published mass. The closure above does not re-derive any of them, and
 none of them is an output of it.)* Nothing in that result requires the tip pairs
@@ -1629,7 +1633,7 @@ the actuator can do rather than by a balance between competing penalties.
 point-mass model prescribes the attitude and therefore cannot charge for the trajectory the
 aircraft flies while it is being rotated into that attitude. Solved instead with rotational
 dynamics and a finite control moment — **and with the aerodynamic pitching moment set to
-exactly zero, so that nothing favourable is borrowed** — the light design **loses 5.4 m at the
+exactly zero, so that nothing favourable is borrowed** — the 50 kg reference design **loses 5.4 m at the
 same reference condition where the point-mass model reports none.** *(That figure, like the
 rotation times, belongs to the reference geometry at its published mass; the closure above does
 not re-derive it either.)*
@@ -1841,7 +1845,7 @@ take the closure's convergence as covering them.
 | Item | Status |
 |---|---|
 | **The cost of declining the reaction-torque channel** | Not computed. Thrust asymmetry, propulsive efficiency and the lag set by rotor inertia; quantifying it requires a control-allocation study rather than a torque figure. |
-| **The transition altitude result** | 5.4 m in the finite-moment model at the reference geometry — **a result, not a charge**, and not a term in any sizing loop here. |
+| **The transition altitude result** | 5.4 m in the finite-moment model at the 50 kg reference geometry — **a result, not a charge**, and not a term in any sizing loop here. |
 | **The strip's actuation** | Carried in the systems budget without sizing the mechanism. The number of actuators is not fixed by this study. |
 | **The take-off margin** | Drawn from the tip pairs, because the nose pair is sized at thrust equal to weight. It competes with attitude authority and neither is closed against the other. |
 | **Landing transition, vortex ring state, closed-loop hover control** | Not analysed. |
@@ -2206,16 +2210,18 @@ be a statement about the contract.**
 
 ### Against the tilting layout: a bound, not a ranking
 
-**The tilting layout, modelled as a bound, leads under every contract at every closure — by 93 to 141
-percent.** Moving from the first contract to the third shifts the comparison by 1 to 18 points toward
-this configuration, and nowhere near a reversal.
+**What the bound gives is a size, not an order.** A tilting layout credited with no cruise penalty
+at all is 93 to 141 percent ahead of this configuration under every contract at every closure, and
+moving from the first contract to the third shifts that by 1 to 18 points toward this configuration. **That margin is the room
+a real tilting aircraft's cruise penalties would have to fill** — nacelle drag, pivot fairing,
+hover-sized rotors flown as cruise propellers — none of which is modelled here, and how much of it
+they fill is not computed.
 
 **There is a trade, but it is lopsided.** The tilting layout closes 0.5 to 5.4 percent heavier than
 this configuration, and it cruises at the clean airframe's lift-to-drag ratio with a propeller at 0.80:
 it is credited with no nacelle drag, no pivot fairing, and no penalty for flying hover-sized rotors as
 cruise propellers. **Even the contract that weights mass most** — a fixed take-off mass, in which every
-kilogram of tilt mechanism is a kilogram of fuel not carried — **leaves the bound 93 to 130 percent
-ahead.**
+kilogram of tilt mechanism is a kilogram of fuel not carried — **leaves the bound's margin at 93 to 130 percent.**
 The contract moves the comparison, as Section 12 says it must where there is a trade; none of the
 three moves it far enough to matter. A ranking against a competitor modelled as a bound is not a
 ranking, and **no range claim is made against the tilting family in either direction.**
@@ -2295,7 +2301,7 @@ computed. **Comparing computed figures against assumed ones favours whichever is
 optimistically**. In propeller efficiency that is both competitors, and the table above shows the
 size of it; in drag it is the tilting layout, by construction.
 
-**The comparison is at one size.** Section 12's heavy design has no closure, and none of its figures
+**The comparison is at one size.** Section 12's 1 000 kg reference design has no closure, and none of its figures
 is used here.
 
 **And nothing here ranks architectures for a mission.** Which contract a mission implies, and which
@@ -2345,7 +2351,7 @@ fuel fraction held, so is the range. **These masses are the Section 10 package w
 They are not a structural closure at 100 kg**, and whether the airframe fraction holds at twice the mass
 it was set at is not established.
 
-| Buffer specific power | Take-off mass | Buffer | Change from Section 10 |
+| Buffer specific power, per kilogram of buffer | Take-off mass | Buffer | Change from Section 10 |
 |---|---:|---:|---:|
 | As Section 10 implies — 5.5 to 6.1 kW kg⁻¹ | 52.3 to 57.5 kg | 3.6 % | — |
 | 4 kW kg⁻¹, the design-study assumption | 56.6 to 61.2 kg | 5.0 to 5.5 % | +6 to +8 % |
@@ -2388,12 +2394,12 @@ grouped by what would settle them.
 
 | Item | Bears on | What would settle it |
 |---|---|---|
-| **The pitching moment through the transition.** Three methods of three fidelities diverge above about ten degrees of incidence; the rotation passes through that band, peaking near 18 to 22 degrees on the reference geometry, with the inboard half of the wing in the slipstream at a much lower effective incidence. | Whether the aircraft trims through the rotation (Sections 7 and 10) | **Validated aerodynamic data**: a measurement of the outboard wing's pitching moment to about 22 degrees at low dynamic pressure and of trim at the attached-flow end of the rotation, or a higher-fidelity method validated against one |
+| **The pitching moment through the transition.** Three methods of three fidelities diverge above about ten degrees of incidence; the rotation passes through that band, peaking near 18 to 22 degrees on the 50 kg reference geometry, with the inboard half of the wing in the slipstream at a much lower effective incidence. | Whether the aircraft trims through the rotation (Sections 7 and 10) | **Validated aerodynamic data**: a measurement of the outboard wing's pitching moment to about 22 degrees at low dynamic pressure and of trim at the attached-flow end of the rotation, or a higher-fidelity method validated against one |
 | **Section drag at low Reynolds number.** The attitude rotors' free-wheeling charge rests on section polars below a Reynolds number of 10⁵, and the uncertainty runs both ways. | The 0.0154 rotor term in every closure (Sections 10 and 11) and the size of Bill 2's fall with scale (Section 12) | **Validated data**: the drag of a free-wheeling attitude rotor, or of its sections, at about 8 × 10⁴, or a method validated there |
 | **The tip pairs' other cruise state.** Free-wheeling is determinate and computed; stopped is a family of states whose means and azimuth are not fixed (Section 8). | Whether a lower-drag cruise state is available, and at what mechanism cost | **Analysis**, or a measurement of one stopped state |
 | **The buffer's energy, not only its power.** The store is sized here by power. Whether it also holds the energy for the vertical phases and their reserves, and how it is recharged in cruise, depends on a hover duration this work does not fix; at the bench rate the unit pack emptied in about four minutes. | Whether the store sized by power is also large enough | **Analysis** against a defined mission profile |
 | **The electrical path at peak.** Machines, power electronics, wiring and their cooling carry the full take-off demand; they enter the loop as a mass fraction, not as components sized for that peak and its heat. | Whether the path that delivers the buffer's power exists at the mass assumed | **Component sizing and thermal analysis** |
-| **The airframe's mass.** It enters the loop as a construction constant, thirty percent of take-off mass (Section 11). A component build-up at the reference mass leaves room for the 13 kg payload only if the average shell areal density stays at or below 1.78 kg m⁻², against 1.50 assumed; the build-up carries a contingency rather than a structural sizing, and it has not been re-run at Section 10's closed masses, still less at the masses the store re-closure returns. At the heavy design the shell-mass exponent is not measured at all. | Every closed mass | **Structural sizing** (analysis), then a **built article** (measurement) |
+| **The airframe's mass.** It enters the loop as a construction constant, thirty percent of take-off mass (Section 11). A component build-up at the reference mass leaves room for the 13 kg payload only if the average shell areal density stays at or below 1.78 kg m⁻², against 1.50 assumed; the build-up carries a contingency rather than a structural sizing, and it has not been re-run at Section 10's closed masses, still less at the masses the store re-closure returns. At the 1 000 kg reference design the shell-mass exponent is not measured at all. | Every closed mass | **Structural sizing** (analysis), then a **built article** (measurement) |
 | **The strip and the fairing.** The strip's effect on this planform is computed, not measured, and its actuation is carried in the systems budget without being sized (Section 11); the fairing is sized against a published stability criterion, and the side force it develops is not measured. | The strip: the body roll axis, which appears as bank in cruise and as a change of heading in hover (Section 8). The fairing: directional stability in cruise | **Measurement** of both surfaces; **sizing** of the actuation |
 | **Closed-loop hover control**, including the cost of declining the reaction-torque channel, the absorption of the hover torque residual left by trimming each pair's torque balance at cruise (Section 8), and the allocation of the tip pairs between take-off margin and attitude authority, which compete for the same propellers. | Whether hover is controllable with the authority computed (Sections 5 and 8) | **Analysis not yet done**: a control-allocation study, then simulation |
 | **Vertical descent and the landing transition.** Neither is analysed; the vortex ring state is not assessed, and the landing transition is not the take-off transition run backwards. | Whether the aircraft can come down as it went up (Section 5) | **Analysis not yet done** |
@@ -2472,7 +2478,7 @@ change regime, and the paper does not claim that it has been shown to change reg
 
 **The escape condition is met where the aircraft is carried and not everywhere.** The nose pair serves
 both regimes in one orientation with the hover peak drawn from a store; the attitude pairs are carried
-through cruise producing moments rather than thrust, and the drag they add is reported rather than
+through cruise producing moments rather than cruise thrust, and the drag they add is reported rather than
 absorbed.
 
 ### Range, against the other hybrids — not claimed, in either direction

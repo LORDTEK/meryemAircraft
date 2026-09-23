@@ -180,7 +180,7 @@ take the closure's convergence as covering them.
 | Item | Status |
 |---|---|
 | **The cost of declining the reaction-torque channel** | Not computed. Thrust asymmetry, propulsive efficiency and the lag set by rotor inertia; quantifying it requires a control-allocation study rather than a torque figure. |
-| **The transition altitude result** | 5.4 m in the finite-moment model at the reference geometry — **a result, not a charge**, and not a term in any sizing loop here. |
+| **The transition altitude result** | 5.4 m in the finite-moment model at the 50 kg reference geometry — **a result, not a charge**, and not a term in any sizing loop here. |
 | **The strip's actuation** | Carried in the systems budget without sizing the mechanism. The number of actuators is not fixed by this study. |
 | **The take-off margin** | Drawn from the tip pairs, because the nose pair is sized at thrust equal to weight. It competes with attitude authority and neither is closed against the other. |
 | **Landing transition, vortex ring state, closed-loop hover control** | Not analysed. |
@@ -214,6 +214,7 @@ changes, and Section 13 asks what happens to the comparison when the sizing cont
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 60:** *"50 kg reference geometry"* | terim birliği |
 | **Tur 59:** 0,168–0,188 kW/kg **kalkış kütlesi başına** (Adım 14'ün 4,7–5,2'si tampon kütlesi başına; 0,168/0,036 = 4,67) | Qwen; `aero/buffer-result.txt` |
 | **Tur 58, P3:** defter düzeni fiyatlıyor; sayım bir kalem değil | Adım 9 bağımlılık tablosu; bu bölümün *"It attributes. It does not add."* |
 | C_D0 dökümü: temiz yüzey, göbek, çerçeveler, rotorlar | `aero/drag_sweep.py` satır 41–48; `aero/ledger.py` |

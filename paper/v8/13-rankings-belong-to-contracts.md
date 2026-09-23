@@ -153,16 +153,18 @@ be a statement about the contract.**
 
 ### Against the tilting layout: a bound, not a ranking
 
-**The tilting layout, modelled as a bound, leads under every contract at every closure — by 93 to 141
-percent.** Moving from the first contract to the third shifts the comparison by 1 to 18 points toward
-this configuration, and nowhere near a reversal.
+**What the bound gives is a size, not an order.** A tilting layout credited with no cruise penalty
+at all is 93 to 141 percent ahead of this configuration under every contract at every closure, and
+moving from the first contract to the third shifts that by 1 to 18 points toward this configuration. **That margin is the room
+a real tilting aircraft's cruise penalties would have to fill** — nacelle drag, pivot fairing,
+hover-sized rotors flown as cruise propellers — none of which is modelled here, and how much of it
+they fill is not computed.
 
 **There is a trade, but it is lopsided.** The tilting layout closes 0.5 to 5.4 percent heavier than
 this configuration, and it cruises at the clean airframe's lift-to-drag ratio with a propeller at 0.80:
 it is credited with no nacelle drag, no pivot fairing, and no penalty for flying hover-sized rotors as
 cruise propellers. **Even the contract that weights mass most** — a fixed take-off mass, in which every
-kilogram of tilt mechanism is a kilogram of fuel not carried — **leaves the bound 93 to 130 percent
-ahead.**
+kilogram of tilt mechanism is a kilogram of fuel not carried — **leaves the bound's margin at 93 to 130 percent.**
 The contract moves the comparison, as Section 12 says it must where there is a trade; none of the
 three moves it far enough to matter. A ranking against a competitor modelled as a bound is not a
 ranking, and **no range claim is made against the tilting family in either direction.**
@@ -242,7 +244,7 @@ computed. **Comparing computed figures against assumed ones favours whichever is
 optimistically**. In propeller efficiency that is both competitors, and the table above shows the
 size of it; in drag it is the tilting layout, by construction.
 
-**The comparison is at one size.** Section 12's heavy design has no closure, and none of its figures
+**The comparison is at one size.** Section 12's 1 000 kg reference design has no closure, and none of its figures
 is used here.
 
 **And nothing here ranks architectures for a mission.** Which contract a mission implies, and which
@@ -257,6 +259,7 @@ of the architectures alone.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 60:** tilt paragrafı *"a size, not an order"* — sınırın payı, gerçek tilt'in seyir cezalarının doldurması gereken alan; doldurma hesaplanmadı | ChatGPT; `aero/contracts-result.txt` |
 | **Tur 58, P3:** mekanizma iddiası bir sıralama değil, burada söz konusu değil | Adım 9 bağımlılık tablosu (*"sizing contract"*); Adım 15 |
 | Menzil R = (E* η/g)(L/D)(m_yakıt/MTOW); üç sözleşmenin tanımı | `aero/baseline.py` satır 216–230 (yorum bloğu), `menzil_ver`, `sabit_yakit`, `sabit_MTOW` |
 | A'nın sütunu Adım 10'u birebir üretiyor (57,51 / 55,85 / 53,51 / 52,34 kg) | `aero/contracts-result.txt`, SINAMA bloğu |

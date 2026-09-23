@@ -33,6 +33,11 @@ GEOMETRI -- tutulan kurallar: kanat yuklemesi 25.3 kg/m2, disk yuklemesi 44.2 kg
   alan          2.069 -  2.273 m2
   aciklik       3.532 -  3.702 m
   burun diski   1.228 -  1.287 m
+  uc donanimi referans boyutta kalsaydi (S_ref 1.979 m2): cerceve+rotor terimi
+    A   -12.9 %   Delta C_D0 = -0.0028
+    B   -10.3 %   Delta C_D0 = -0.0022
+    C   - 6.4 %   Delta C_D0 = -0.0013
+    D   - 4.3 %   Delta C_D0 = -0.0009
   (50 kg referans: alan 1.976 m2, aciklik 3.452 m, disk 1.200 m -- KAPANIS DEGIL)
 
 HANGI GIRDI DAHA BASKIN?
