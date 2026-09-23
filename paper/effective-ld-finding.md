@@ -1185,3 +1185,22 @@ DeepSeek bu tur kendi adıyla cevap verdi ve geçen turki karışıklığı düz
 
 **Yazarın sorusu — ruh yerinde mi:** ölçüm — katkı %5,8'de adlandırılıyor; ama ağırlık hâlâ hesaplarda (10–14 %42, 7–8 %13)
 ve **cümlelerin %45'i olumsuz** kurulmuş; birleştirme adımında (7) %50, Adım 9'da %61, kapanışta %72. Okuyuculara soruldu.
+
+---
+
+# Tur 65 — Tur 64 metnine dört cevap; cfd/ düzeni
+
+**Düzen (yazar):** `cfd/` kökünde yalnız güncel tur metni ve başlangıç metni; eski turlar `cfd/arsiv-dis-gorus/`; kaynak PDF'ler
+`references/`. Toplu yol güncellemesi `cfd/README.md` atıflarını da yanlışlıkla `references/`'e çevirmişti (`references/README.md`
+listede olduğu için) — aynı commit'te geri alındı. İki PDF'in aynı NASA belgesi (TM-81280) olduğu not edildi.
+
+**Teyit:** Tur 64'ün beş sonucu dördünce teyit edildi → kapandı. **Dört okuyucu da cevaba adıyla başladı.**
+
+**Uygulandı (beşimiz):** Adım 2'den *"mechanical complexity"* çıktı.
+
+**Ruh:** dördü de ölçüme katıldı. ChatGPT: *"ruh kaybolmamış; retorik ağırlık merkezi henüz ruhun olduğu yere taşınmamış"*;
+kelime payı argüman ağırlığı değildir. Ses geçişi kuralı (A–D) ChatGPT'nin.
+
+**Taslak olarak sunuldu (uygulanmadı):** B4 tek ev — Adım 5 işaretçi, Adım 7 tek cümle, Adım 9 yalnız sınır; Adım 7 ses önerileri
+V1–V6 (V3 ve V5'e karşıyım, gerekçeli); dokuzuncu tablo için melez öneri (tablo S11'e, Adım 11'de bir sınır cümlesi, borçlar
+Adım 14'te — birleştirmede yalnız rotor–yapı ve rotor–kanat girişimi eksik çıktı).
