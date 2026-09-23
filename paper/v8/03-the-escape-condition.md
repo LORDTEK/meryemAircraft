@@ -21,18 +21,18 @@ thing it will be used to measure.
 
 The charges exist because the two regimes are served by hardware that is **not the same hardware,
 not serving both duties, and not held in one orientation.** Depart from any one of those and a
-charge appears:
+charge appears. **Different hardware** costs Bills 1 and 2: the unused set is carried for the whole
+flight and, if exposed, drags. **The same hardware serving only one duty** costs them again: a
+propulsor that lifts and is then carried is a dedicated lift group under another name, whatever it
+shares with the cruise system. **The same hardware serving both duties in a different orientation**
+is the tilting family: Bill 3 is left standing unless a store supplies the hover peak, and the
+mechanism that changes the orientation adds mass and introduces a control problem through the turn.
+**The same hardware, both duties, one orientation, but a different sizing point** leaves Bill 3 —
+unless the hover peak is supplied from somewhere other than the continuously installed power.
 
-| Departure | What it costs |
-|---|---|
-| **Different hardware** | Bills 1 and 2. The unused set is carried for the whole flight and, if exposed, drags. |
-| **Same hardware, but it serves only one duty** | Bills 1 and 2 again. A propulsor that lifts and is then carried is a dedicated lift group under another name, whatever it shares with the cruise system. |
-| **Same hardware, both duties, different orientation** | The tilting family. **Bill 3 is left standing unless a store supplies the hover peak**, and the mechanism that changes the orientation is itself mass, complexity and a control problem through the turn. |
-| **Same hardware, both duties, one orientation, different sizing point** | Bill 3 — unless the hover peak is supplied from somewhere other than the continuously installed power. |
+Read one at a time, these are ways to pay. Read as a conjunction, they are a condition.
 
-Read downwards, the table is a list of ways to pay. Read as a conjunction, it is a condition.
-
-*(The second row is stated separately rather than folded into the first because it does real
+*(The second departure is stated separately rather than folded into the first because it does real
 work later: a propulsor that produces a little thrust in cruise is not thereby serving both
 duties, and the distinction decides which parts of a configuration meet the condition and which
 do not. "Serving both duties" is the accurate form; hover thrust and cruise thrust are not the
@@ -47,7 +47,7 @@ and calling them one would be loose.)*
 > a store rather than from permanently installed continuous power.**
 
 Four parts: **same hardware, both duties, one orientation, hover peak from a store.** The first
-three come from the first three rows of the table; the fourth comes from the fourth.
+three come from the first three departures; the fourth comes from the fourth.
 
 Two things in that sentence are choices rather than derivations, and are marked as such. The
 table requires only *one orientation relative to the airframe*; **how** an architecture keeps
@@ -91,7 +91,7 @@ and the first is the one that most nearly contradicts the name:
   three charges and the condition does not eliminate it; it is priced where the transition is
   analysed. Saying otherwise would let a candidate win that line by wording.
 - **Hardware installed for the vertical phase is permitted if it serves both duties**, and the
-  second row of the table is what carries the weight. A propulsor that lifts and then propels
+  second departure is what carries the weight. A propulsor that lifts and then propels
   satisfies the condition. A propulsor that lifts and is then carried does not, whatever else it
   shares with the cruise system.
 - **Hardware used in both regimes for something other than propulsive thrust is permitted, and its
@@ -148,10 +148,8 @@ configuration satisfies the condition is the subject of Sections 5 to 7; and wha
 configuration pays instead is the subject of Section 11, which is the longest of the three
 answers because it is the one most likely to be wrong.
 
-One consequence is worth stating now, because it shapes everything after it. The second row of
-the inverted table — same hardware, different orientation — is refused by a means other than the
-one the field has adopted. A tilting architecture accepts that row and buys its way out of the
-first with a mechanism. **An architecture that reorients a propulsor does not satisfy the condition as written**, because
+One consequence is worth stating now, because it shapes everything after it. The third departure — same hardware, both duties, different orientation — is refused by a means other than the
+one the field has adopted. A tilting architecture accepts that departure and buys its way out of the first with a mechanism. **An architecture that reorients a propulsor does not satisfy the condition as written**, because
 the condition requires one orientation relative to the airframe. **Whether such an architecture
 might avoid the three charges by some other route is a separate question this paper does not
 settle** — the condition is a definition, not a law, and it can be too narrow without being
@@ -165,6 +163,8 @@ appeared.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 64 — N1 uygulanırken bulunan eski hata:** *"The second row of the inverted table — same hardware, different orientation"* — farklı yönelim **üçüncü** satırdı; *"tek görev"* satırı sonradan araya girince atıf bayat kalmış. *"The third departure — same hardware, both duties, different orientation"* | bu bölümün dört ayrılışı |
+| **Tur 64 — N1** (beşimiz hemfikir): tablo dört cümleye; *"complexity"* çıktı (ölçülmedi — ChatGPT); *"row"* → *"departure"* (dört yerde); ikinci ayrılışın gerekçe parantezi kaldı | Ek S3 |
 | **Tur 60:** tutum donanımı taşıyan propulsor'ün koşulu karşılamasını engellemez, ama seyirde seyir itkisi üretmeden taşınır → birinci başarısızlık kipi; mimari kısmi gerçekleşme (dördüncü kip). Eski *"does not violate it"* Adım 7/8 ile çelişiyordu | DeepSeek; bu bölümün başarısızlık kipleri 1 ve 4 |
 | Üç gevşetme ve her birinin doğurduğu fatura | §2.6, satır 671–677 |
 | Koşulun dört parçası: aynı donanım, aynı iş, aynı yönelim, tampondan tepe | §2.6, satır 679–684; §2.12, satır 2785–2788 |

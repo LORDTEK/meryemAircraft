@@ -1162,3 +1162,26 @@ yanlışlıkla eksik görünüyordu. Düzeltildi.
 
 **Tuhaflık:** DeepSeek'in cevabı Q4'te *"I am not DeepSeek"* diyor ve kendi eski görüşünü üçüncü şahısla anıyor. Oyu B2'de
 tek bölüme döndü. Kayda geçti; yazara söylenecek.
+
+---
+
+# Tur 64 — Tur 63 metnine dört cevap; ikinci teyit turu
+
+**Teyit:** Adım 14 onarımı, Adım 11 (Qwen'in şartı), N2, ağırlık dökümü taşıması, işaretçi düzeltmeleri → dördü de ✓,
+**kapandı**. Quadrotor karşıtlığı: Qwen'in şartı (*"the isolation test above is what carries the prediction"* özü) →
+geri kondu, yeniden teyide.
+
+**Karara bağlananlar (beşimiz):** B1 (Grok'un dilimi), B6 (olgu 6'da; sayı ve ret 11'de), B7 (Adım 2 aktarım + Adım 9 dört
+eksen tabloları gövdede; Adım 11 dökümü **her rakamıyla** düzyazıya — Grok ve Qwen'in şartı; ChatGPT itirazını geri çekti),
+*"removes the need for the mechanism"*, N1, N3 (Qwen'in *"the only one of those documented obstacles"* düzeltmesiyle).
+
+**Uygulandı:** hepsi; önce/sonra Tur 64 metninde.
+
+**Uygularken bulunan eski hata:** Adım 3 *"The second row of the inverted table — same hardware, different orientation"*
+diyordu; farklı yönelim üçüncü satırdı (*"tek görev"* satırı sonradan araya girmiş, atıf bayat kalmış). Düzeltildi.
+
+**DeepSeek'in N1 uyarısı yanlış atıf:** *"gyroscopic coupling"* Adım 3'te değil Adım 2'deydi (Grok doğru söyledi).
+DeepSeek bu tur kendi adıyla cevap verdi ve geçen turki karışıklığı düzeltti.
+
+**Yazarın sorusu — ruh yerinde mi:** ölçüm — katkı %5,8'de adlandırılıyor; ama ağırlık hâlâ hesaplarda (10–14 %42, 7–8 %13)
+ve **cümlelerin %45'i olumsuz** kurulmuş; birleştirme adımında (7) %50, Adım 9'da %61, kapanışta %72. Okuyuculara soruldu.

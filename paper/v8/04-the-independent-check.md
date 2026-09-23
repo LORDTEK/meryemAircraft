@@ -97,8 +97,9 @@ quadrotor, *"but not enough to counter the increase in structure and propulsion 
 is the efficiency credit conceded and found insufficient, by the authors of the data rather than
 by the authors of the prediction.
 
-**The quadrotor is reported for scale, not as the test**: against it the lift-plus-cruise design
-changes three things at once, and the contrast is in Supplement S4.
+**The quadrotor is reported for scale, and the isolation test above is what carries the
+prediction**: against it the lift-plus-cruise design changes three things at once, and the contrast is in
+Supplement S4.
 
 **The framework does not predict any of these numbers**; without the input fractions it predicts
 no magnitudes. What it predicts is that the amplified weight charge survives the efficiency
@@ -159,6 +160,7 @@ that structurally lacks it, before Section 7 asks whether one aircraft can hold 
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 64:** *"It is reported for scale, and the isolation test above is what carries the prediction"* özü geri (Qwen'in şartı) | Ek S4 |
 | **Tur 63 — N2 ve N4** (dört okuyucu + Claude hemfikir): tablo düzyazıya (sayılar aynen); ağırlık dökümü paragrafı ve quadrotor karşıtlığı Ek S4'e aynen; gövdede aktarımın sonucu (Qwen'in şartı) ve *"kategoriler farkın tamamını açıklamıyor"* çekincesi kaldı | Johnson & Silva 2022 Tablo 3; `paper/v8/supplement.md` S4 |
 | **Tablo 3, Johnson & Silva 2022, s. 70 — birinci elden okundu** | `cfd/1521_Johnson & Silva_122721.pdf` |
 | Quadrotor TS 4,9 / 3 678 lb · L+C TE 8,5 / 7 271 lb · **Tiltwing TE 8,6 / 6 584 lb** | Tablo 3, doğrulandı |

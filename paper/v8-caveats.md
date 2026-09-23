@@ -151,6 +151,10 @@ boşluğa duyarsız. `G` = Grok, `D` = DeepSeek, `C` = ChatGPT, `Q` = Qwen, `K` 
 | 13 | And nothing here ranks architectures for a mission. | Q |
 | 14 | The ranges of 927 to 1 233 km survive the re-closure only because the fuel fraction is held, on an aircraft three-quarters heavier; they do not survive as 13 kg carried that far on a store that has been built. | Q |
 | 11 | No new physical cost term is introduced here. | Q |
+| 11 | Every cost named below is already inside the closure of Section 10. | Q |
+| 6 | variable-pitch hub would recover that difference is not computed; Section 11 reports the gap and declines to attribute all of it to the hub | Q |
+| 4 | The quadrotor is reported for scale, and the isolation test above is what carries the prediction | Q |
+| 1 | they are the only one of those documented obstacles an uncrewed aircraft removes | Q |
 
 ## Ruh cümleleri (Tur 61, Claude'un önerisi)
 
@@ -162,9 +166,10 @@ kaybolmasına (CLAUDE.md §0.8). Aynı denetimle sınanır.
 | 1 | The contribution is the architecture: a configuration arranged to change regime by rotating the airframe rather than its propulsors, and so carrying no mechanism that reorients a propulsor. | K |
 | 6 | The two halves are now on the table separately. Section 7 is where they are combined, and the combination is what this paper is for. | C |
 | 7 | What this paper contributes is that combination, the condition its primary propulsor is designed to satisfy, and the price the configuration pays for pursuing it. | G |
-| 7 | That single move is what removes the mechanism. | K |
+| 7 | That single move is what removes the need for the mechanism. | K+C |
 | 15 | What the paper offers is a configuration sized to combine runway-independent vertical operation with wing-borne cruise efficiency, arranged to do so with no mechanism that reorients a propulsor, and an account of what the combination costs. | K |
 | 7 | The configuration is arranged to change regime by rotating the airframe. The propulsors hold their orientation relative to the body from take-off to cruise; what changes is the orientation of the body relative to the flight path. | G |
 | 3 | An architecture does not incur the three charges if the propulsors that carry the weight…produce both the hover thrust and the cruise…is supplied from a store rather than from permanently installed continuous power | D |
 | 8 | These are the parts that fail the escape condition | D |
 | 2 | is the origin of all three charges below | Q |
+| 2 | A claim that one architecture escapes a cost shared by the others is only meaningful if the cost is stated first, in terms that do not presume the escape. | G |

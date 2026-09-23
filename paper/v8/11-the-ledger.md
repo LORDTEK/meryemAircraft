@@ -48,18 +48,11 @@ is this paper's job; the weighting belongs to whoever has the mission.**
 
 ### Bill 2 — the drag of hover hardware, inside the bracket
 
-The zero-lift drag coefficient of Section 10 is a build-up with named terms. Splitting it:
+The zero-lift drag coefficient of Section 10 is a build-up with named terms. At the favourable end it is 0.0073 for the clean wetted surface, 0.0015 for the hub and small items,
+**0.0043 for the tip frames and 0.0154 for the free-wheeling attitude rotors**, 0.0285 in all; at the
+adverse end the same terms are 0.0142, 0.0022, **0.0047 and 0.0169**, 0.0381 in all.
 
-| | favourable end | adverse end |
-|---|---:|---:|
-| Clean wetted surface | 0.0073 | 0.0142 |
-| Hub and small items | 0.0015 | 0.0022 |
-| **Tip frames** | **0.0043** | **0.0047** |
-| **Attitude rotors, free-wheeling** | **0.0154** | **0.0169** |
-| Total | 0.0285 | 0.0381 |
-
-*(The two columns differ for two separate reasons, and a reader dividing cells should know which
-is which. The clean surface and the hub are where the drag bracket itself lives, so their base
+*(The two ends differ for two separate reasons, and a reader dividing one term by another should know which is which. The clean surface and the hub are where the drag bracket itself lives, so their base
 values differ between the ends. On top of that, the adverse end carries a ten percent margin
 applied to the whole build-up. The frames and rotors have the same base value at both ends and
 differ only by that margin. **No line item at the adverse end is an independent measurement**, and
@@ -211,6 +204,7 @@ changes, and Section 13 asks what happens to the comparison when the sizing cont
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 64 — B7** (beşimiz hemfikir; Grok ve Qwen'in şartıyla): C_D0 döküm tablosu düzyazıya — **her rakam** (temiz yüzey, göbek, çerçeve, rotor, toplam, iki uç) ve iki sütun notu aynen kaldı; tablo Ek S11'e | `aero/drag_sweep.py`; Ek S11 |
 | **Tur 61:** kapanış açılışı tekrar etmiyor — *"Three charges, three currencies, no total"* ve *"No charge on this page is a new one"* çıktı; açılıştaki *"It attributes. It does not add."* ve *"no scalar aggregate"* duruyor (A4) | bu bölümün açılışı |
 | **Tur 60:** *"50 kg reference geometry"* | terim birliği |
 | **Tur 59:** 0,168–0,188 kW/kg **kalkış kütlesi başına** (Adım 14'ün 4,7–5,2'si tampon kütlesi başına; 0,168/0,036 = 4,67) | Qwen; `aero/buffer-result.txt` |

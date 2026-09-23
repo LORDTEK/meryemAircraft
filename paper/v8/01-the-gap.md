@@ -79,58 +79,27 @@ problem through a regime in which the aircraft is neither a rotorcraft nor an ae
 **Those are mechanical and control requirements rather than aerodynamic ones**, and that
 distinction is what this paper is built on.
 
-### The third route is established, and its history is not what it is usually taken to be
+### The third route is established, and some of its difficulties are inherited
 
-There is a third way to put one set of propulsors into both regimes without reorienting them:
-**point the thrust line at the ground and let the whole aircraft rotate.** It is neither new nor
-untried nor abandoned. Two American prototypes flew it in 1954, **and uncrewed tail-sitters have
-revisited it continuously since.** The Lockheed XFV-1 never
-completed the cycle. The Convair XFY-1 did: it flew vertically in August 1954, and six
-transitions to conventional flight were completed.
+There is a third way to put one set of propulsors into both regimes without reorienting them: **point the
+thrust line at the ground and let the whole aircraft rotate.** It is neither new nor untried nor abandoned.
+The Convair XFY-1 flew it in 1954 and completed six transitions to conventional flight *"before testing was
+curtailed because of engine and gear-box reliability problems"*, and uncrewed tail-sitters have revisited the
+route continuously since. The pilot's spatial orientation and workload, recorded for that programme, were real
+and severe, **but they are not what curtailed the testing**, and they are the only one of those documented
+obstacles an uncrewed aircraft removes.
 
-**Why that programme stopped matters, because the usual account is wrong.** Two NASA reviews of
-United States V/STOL development — one written largely from the reviewer's own flight-test
-experience — judge the configuration itself favourably, calling it a *"good configuration
-arrangement for low- and high-speed compatibility."* What they judge poorly is the machinery and
-the cockpit around it: *"poor mechanical control system features including low actuator response
-rate"*, difficulty hovering precisely over a spot, tip-over tendencies on the ground in gusty
-air. The landing difficulty is attributed to *"the unusual spatial orientation where the pilot
-looked over his shoulder and down"*, to turbulence sensitivity, and to reduced control power
-near touchdown.
+**Some of the difficulties were real, internal, and are inherited here.** A tail-sitting vertical descent is
+harder than a runway landing; a tail-sitter on the ground is more exposed to crosswind; and propellers whose
+thrust vectors are all parallel to the body axis produce no rolling moment **by any combination of thrust
+settings**. The reaction-torque channel that other coaxial tail-sitters use about that axis is a choice this
+configuration declines rather than a limit it inherits (Sections 7 and 8). Precise hovering, ground gusts and
+the absence of a thrust-borne rolling moment are configuration facts, and they are inherited.
 
-And the reason testing ended is recorded identically in both reviews:
-
-> *"Six transitions to conventional flight were successfully completed **before testing was
-> curtailed because of engine and gear-box reliability problems**."*
-
-The pilot workload was real, separately documented and severe. **But it is not what curtailed the
-testing.** The reviews record a longer list of handling and control difficulties than this section
-reproduces, and no attempt is made here to sort them into those that would and would not recur —
-what the record settles is the cause of the curtailment, and that cause was mechanical.
-
-### What the history does not excuse
-
-It would be too convenient to conclude that every one of those programmes ended for reasons
-outside its configuration, and this paper does not conclude it. **Some of the difficulties were
-real, internal, and are inherited here.** A tail-sitting vertical descent is genuinely harder
-than a runway landing. A tail-sitting aircraft on the ground is more exposed to crosswind than a
-conventional one. And a set of propellers whose thrust vectors are all parallel to the body axis
-produces no rolling moment **by any combination of thrust settings** — which applies to the
-configuration described later exactly as it applied to its predecessors. **The reaction-torque
-channel that other coaxial tail-sitters use about that same axis is a separate matter, and it is a
-choice this configuration declines rather than a limit it inherits; Section 7 says so and Section 9
-says what declining it leaves uncounted.**
-
-What the record does show is that **the obstacle that ended the flying was mechanical**, and
-that one of the documented handling obstacles — the pilot's spatial orientation and workload —
-is removed by an uncrewed aircraft. **The others are not removed by anything.** Precise hovering,
-ground gusts and the absence of a thrust-borne rolling moment are configuration facts, and they
-are inherited.
-
-Three things are available now that were not: electric drive on each individual rotor,
-sensor-based attitude reference, and enough onboard computation that stability need not come
-from the airframe alone. **The uncrewed tail-sitter literature has been exploiting exactly those
-three for over a decade**, which is why the gap below is not a historical one.
+Three things are available now that were not: electric drive on each individual rotor, sensor-based attitude
+reference, and enough onboard computation that stability need not come from the airframe alone. **The uncrewed
+tail-sitter literature has been exploiting exactly those three for over a decade**, which is why the gap below is
+not a historical one.
 
 ### What is already occupied, stated before the gap
 
@@ -213,6 +182,7 @@ presume an escape.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 64 — N3** (beşimiz hemfikir; Qwen'in *"the only one of those documented obstacles"* düzeltmesiyle): iki alt bölüm bire; XFV-1, NASA incelemelerinin değerlendirmeleri ve güçlük listesi, *"the usual account is wrong"* Ek S1'e aynen | Ek S1; Adım 5 *"That disposes of the spatial-orientation objection and nothing else"* |
 | **Tur 61:** ret cümlesi katkıdan önceye alındı; paragraf katkıyla bitiyor (dört okuyucu + Claude aynı yönde; Grok ve Qwen neredeyse aynı metni önerdi). Yüklem değişmedi | CLAUDE.md §0.8; `v8-shortening-consensus.md` C2 |
 | **Tur 58, P1:** katkı mimaridir — gövde döner, propulsor dönmez; yeniden yönlendiren mekanizma yok; üçlü katkının sunuluş/fiyatlanış biçimi | Adım 7 satır 69 (*"rotating the airframe"*); Adım 7 tablosu; Adım 15; CLAUDE.md §0.6. *"arranged to"*: geçişin tamamlanması iddia edilmiyor (Adım 7, 15) |
 | Sabit kanatlının sınırı altyapısal; pist, mancınık, eşdeğeri | §1, satır 152–157 |

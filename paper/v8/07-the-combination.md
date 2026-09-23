@@ -76,7 +76,7 @@ relative to the airframe, and turning the propulsors is the case the condition e
 Here the end is reached by turning the thing the propulsors are already attached to, which
 leaves the orientation requirement intact.
 
-That single move is what removes the mechanism. **The table below counts mechanism classes that
+That single move is what removes the need for the mechanism. **The table below counts mechanism classes that
 exist in order to change regime, or to take a rotor out of one regime's flow**, which is why no
 aerodynamic control device appears in it: the strip of Section 8 is a control surface, not a means
 of changing regime, and counting its absence would be counting the wrong thing. The configuration therefore carries:
@@ -146,6 +146,7 @@ and Section 11 charges them.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 64:** *"removes the mechanism"* → *"removes the need for the mechanism"* (ChatGPT önerdi; beşimiz hemfikir) — bir şey sökülmüş gibi okunmasın; korunan liste aynı commit'te güncellendi | `v8-caveats.md` ruh listesi |
 | **Tur 59:** *"The configuration is arranged to change regime by rotating the airframe"* — P1 fiili | Adım 1 (P1); Grok'un Adım 14 işaretinin yayılması |
 | Kaçış koşulu: tek donanım, tek yönelim, tampondan tepe | v7 özeti, satır 55 |
 | Her itki vektörü gövde eksenine paralel; itkiden yatış momenti yok | §2.10, satır 810–812 |

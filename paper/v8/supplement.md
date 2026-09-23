@@ -5,6 +5,74 @@ Dergi kuralı: ek yalnız destekler; gövde tek başına yetmek zorunda — bu y
 
 ---
 
+## S1. The 1954 programmes and the reviews of them (from Section 1)
+
+#### The third route is established, and its history is not what it is usually taken to be
+
+There is a third way to put one set of propulsors into both regimes without reorienting them:
+**point the thrust line at the ground and let the whole aircraft rotate.** It is neither new nor
+untried nor abandoned. Two American prototypes flew it in 1954, **and uncrewed tail-sitters have
+revisited it continuously since.** The Lockheed XFV-1 never
+completed the cycle. The Convair XFY-1 did: it flew vertically in August 1954, and six
+transitions to conventional flight were completed.
+
+**Why that programme stopped matters, because the usual account is wrong.** Two NASA reviews of
+United States V/STOL development — one written largely from the reviewer's own flight-test
+experience — judge the configuration itself favourably, calling it a *"good configuration
+arrangement for low- and high-speed compatibility."* What they judge poorly is the machinery and
+the cockpit around it: *"poor mechanical control system features including low actuator response
+rate"*, difficulty hovering precisely over a spot, tip-over tendencies on the ground in gusty
+air. The landing difficulty is attributed to *"the unusual spatial orientation where the pilot
+looked over his shoulder and down"*, to turbulence sensitivity, and to reduced control power
+near touchdown.
+
+And the reason testing ended is recorded identically in both reviews:
+
+> *"Six transitions to conventional flight were successfully completed **before testing was
+> curtailed because of engine and gear-box reliability problems**."*
+
+The pilot workload was real, separately documented and severe. **But it is not what curtailed the
+testing.** The reviews record a longer list of handling and control difficulties than this section
+reproduces, and no attempt is made here to sort them into those that would and would not recur —
+what the record settles is the cause of the curtailment, and that cause was mechanical.
+
+#### What the history does not excuse
+
+It would be too convenient to conclude that every one of those programmes ended for reasons
+outside its configuration, and this paper does not conclude it. **Some of the difficulties were
+real, internal, and are inherited here.** A tail-sitting vertical descent is genuinely harder
+than a runway landing. A tail-sitting aircraft on the ground is more exposed to crosswind than a
+conventional one. And a set of propellers whose thrust vectors are all parallel to the body axis
+produces no rolling moment **by any combination of thrust settings** — which applies to the
+configuration described later exactly as it applied to its predecessors. **The reaction-torque
+channel that other coaxial tail-sitters use about that same axis is a separate matter, and it is a
+choice this configuration declines rather than a limit it inherits; Section 7 says so and Section 9
+says what declining it leaves uncounted.**
+
+What the record does show is that **the obstacle that ended the flying was mechanical**, and
+that one of the documented handling obstacles — the pilot's spatial orientation and workload —
+is removed by an uncrewed aircraft. **The others are not removed by anything.** Precise hovering,
+ground gusts and the absence of a thrust-borne rolling moment are configuration facts, and they
+are inherited.
+
+Three things are available now that were not: electric drive on each individual rotor,
+sensor-based attitude reference, and enough onboard computation that stability need not come
+from the airframe alone. **The uncrewed tail-sitter literature has been exploiting exactly those
+three for over a decade**, which is why the gap below is not a historical one.
+
+---
+
+## S3. The departures as a table (from Section 3)
+
+| Departure | What it costs |
+|---|---|
+| **Different hardware** | Bills 1 and 2. The unused set is carried for the whole flight and, if exposed, drags. |
+| **Same hardware, but it serves only one duty** | Bills 1 and 2 again. A propulsor that lifts and is then carried is a dedicated lift group under another name, whatever it shares with the cruise system. |
+| **Same hardware, both duties, different orientation** | The tilting family. **Bill 3 is left standing unless a store supplies the hover peak**, and the mechanism that changes the orientation is itself mass, complexity and a control problem through the turn. |
+| **Same hardware, both duties, one orientation, different sizing point** | Bill 3 — unless the hover peak is supplied from somewhere other than the continuously installed power. |
+
+---
+
 ## S4. The independent check: the table, the weight breakdown, and the quadrotor contrast (from Section 4)
 
 | Configuration | Effective L/D | Design gross weight | Dedicated lift group |
@@ -34,6 +102,18 @@ whether a cruise wing exists at all — so it supports a weaker proposition than
 stated: that adding a wing and a lift group together still costs mass. Section 2 had already
 called that much obvious. **It is reported for scale, and the isolation test above is what
 carries the prediction.**
+
+---
+
+## S11. The zero-lift drag build-up as a table (from Section 11)
+
+| | favourable end | adverse end |
+|---|---:|---:|
+| Clean wetted surface | 0.0073 | 0.0142 |
+| Hub and small items | 0.0015 | 0.0022 |
+| **Tip frames** | **0.0043** | **0.0047** |
+| **Attitude rotors, free-wheeling** | **0.0154** | **0.0169** |
+| Total | 0.0285 | 0.0381 |
 
 ---
 

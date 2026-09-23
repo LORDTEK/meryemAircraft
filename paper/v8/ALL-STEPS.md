@@ -60,58 +60,27 @@ problem through a regime in which the aircraft is neither a rotorcraft nor an ae
 **Those are mechanical and control requirements rather than aerodynamic ones**, and that
 distinction is what this paper is built on.
 
-### The third route is established, and its history is not what it is usually taken to be
+### The third route is established, and some of its difficulties are inherited
 
-There is a third way to put one set of propulsors into both regimes without reorienting them:
-**point the thrust line at the ground and let the whole aircraft rotate.** It is neither new nor
-untried nor abandoned. Two American prototypes flew it in 1954, **and uncrewed tail-sitters have
-revisited it continuously since.** The Lockheed XFV-1 never
-completed the cycle. The Convair XFY-1 did: it flew vertically in August 1954, and six
-transitions to conventional flight were completed.
+There is a third way to put one set of propulsors into both regimes without reorienting them: **point the
+thrust line at the ground and let the whole aircraft rotate.** It is neither new nor untried nor abandoned.
+The Convair XFY-1 flew it in 1954 and completed six transitions to conventional flight *"before testing was
+curtailed because of engine and gear-box reliability problems"*, and uncrewed tail-sitters have revisited the
+route continuously since. The pilot's spatial orientation and workload, recorded for that programme, were real
+and severe, **but they are not what curtailed the testing**, and they are the only one of those documented
+obstacles an uncrewed aircraft removes.
 
-**Why that programme stopped matters, because the usual account is wrong.** Two NASA reviews of
-United States V/STOL development — one written largely from the reviewer's own flight-test
-experience — judge the configuration itself favourably, calling it a *"good configuration
-arrangement for low- and high-speed compatibility."* What they judge poorly is the machinery and
-the cockpit around it: *"poor mechanical control system features including low actuator response
-rate"*, difficulty hovering precisely over a spot, tip-over tendencies on the ground in gusty
-air. The landing difficulty is attributed to *"the unusual spatial orientation where the pilot
-looked over his shoulder and down"*, to turbulence sensitivity, and to reduced control power
-near touchdown.
+**Some of the difficulties were real, internal, and are inherited here.** A tail-sitting vertical descent is
+harder than a runway landing; a tail-sitter on the ground is more exposed to crosswind; and propellers whose
+thrust vectors are all parallel to the body axis produce no rolling moment **by any combination of thrust
+settings**. The reaction-torque channel that other coaxial tail-sitters use about that axis is a choice this
+configuration declines rather than a limit it inherits (Sections 7 and 8). Precise hovering, ground gusts and
+the absence of a thrust-borne rolling moment are configuration facts, and they are inherited.
 
-And the reason testing ended is recorded identically in both reviews:
-
-> *"Six transitions to conventional flight were successfully completed **before testing was
-> curtailed because of engine and gear-box reliability problems**."*
-
-The pilot workload was real, separately documented and severe. **But it is not what curtailed the
-testing.** The reviews record a longer list of handling and control difficulties than this section
-reproduces, and no attempt is made here to sort them into those that would and would not recur —
-what the record settles is the cause of the curtailment, and that cause was mechanical.
-
-### What the history does not excuse
-
-It would be too convenient to conclude that every one of those programmes ended for reasons
-outside its configuration, and this paper does not conclude it. **Some of the difficulties were
-real, internal, and are inherited here.** A tail-sitting vertical descent is genuinely harder
-than a runway landing. A tail-sitting aircraft on the ground is more exposed to crosswind than a
-conventional one. And a set of propellers whose thrust vectors are all parallel to the body axis
-produces no rolling moment **by any combination of thrust settings** — which applies to the
-configuration described later exactly as it applied to its predecessors. **The reaction-torque
-channel that other coaxial tail-sitters use about that same axis is a separate matter, and it is a
-choice this configuration declines rather than a limit it inherits; Section 7 says so and Section 9
-says what declining it leaves uncounted.**
-
-What the record does show is that **the obstacle that ended the flying was mechanical**, and
-that one of the documented handling obstacles — the pilot's spatial orientation and workload —
-is removed by an uncrewed aircraft. **The others are not removed by anything.** Precise hovering,
-ground gusts and the absence of a thrust-borne rolling moment are configuration facts, and they
-are inherited.
-
-Three things are available now that were not: electric drive on each individual rotor,
-sensor-based attitude reference, and enough onboard computation that stability need not come
-from the airframe alone. **The uncrewed tail-sitter literature has been exploiting exactly those
-three for over a decade**, which is why the gap below is not a historical one.
+Three things are available now that were not: electric drive on each individual rotor, sensor-based attitude
+reference, and enough onboard computation that stability need not come from the airframe alone. **The uncrewed
+tail-sitter literature has been exploiting exactly those three for over a decade**, which is why the gap below is
+not a historical one.
 
 ### What is already occupied, stated before the gap
 
@@ -394,18 +363,18 @@ thing it will be used to measure.
 
 The charges exist because the two regimes are served by hardware that is **not the same hardware,
 not serving both duties, and not held in one orientation.** Depart from any one of those and a
-charge appears:
+charge appears. **Different hardware** costs Bills 1 and 2: the unused set is carried for the whole
+flight and, if exposed, drags. **The same hardware serving only one duty** costs them again: a
+propulsor that lifts and is then carried is a dedicated lift group under another name, whatever it
+shares with the cruise system. **The same hardware serving both duties in a different orientation**
+is the tilting family: Bill 3 is left standing unless a store supplies the hover peak, and the
+mechanism that changes the orientation adds mass and introduces a control problem through the turn.
+**The same hardware, both duties, one orientation, but a different sizing point** leaves Bill 3 —
+unless the hover peak is supplied from somewhere other than the continuously installed power.
 
-| Departure | What it costs |
-|---|---|
-| **Different hardware** | Bills 1 and 2. The unused set is carried for the whole flight and, if exposed, drags. |
-| **Same hardware, but it serves only one duty** | Bills 1 and 2 again. A propulsor that lifts and is then carried is a dedicated lift group under another name, whatever it shares with the cruise system. |
-| **Same hardware, both duties, different orientation** | The tilting family. **Bill 3 is left standing unless a store supplies the hover peak**, and the mechanism that changes the orientation is itself mass, complexity and a control problem through the turn. |
-| **Same hardware, both duties, one orientation, different sizing point** | Bill 3 — unless the hover peak is supplied from somewhere other than the continuously installed power. |
+Read one at a time, these are ways to pay. Read as a conjunction, they are a condition.
 
-Read downwards, the table is a list of ways to pay. Read as a conjunction, it is a condition.
-
-*(The second row is stated separately rather than folded into the first because it does real
+*(The second departure is stated separately rather than folded into the first because it does real
 work later: a propulsor that produces a little thrust in cruise is not thereby serving both
 duties, and the distinction decides which parts of a configuration meet the condition and which
 do not. "Serving both duties" is the accurate form; hover thrust and cruise thrust are not the
@@ -420,7 +389,7 @@ and calling them one would be loose.)*
 > a store rather than from permanently installed continuous power.**
 
 Four parts: **same hardware, both duties, one orientation, hover peak from a store.** The first
-three come from the first three rows of the table; the fourth comes from the fourth.
+three come from the first three departures; the fourth comes from the fourth.
 
 Two things in that sentence are choices rather than derivations, and are marked as such. The
 table requires only *one orientation relative to the airframe*; **how** an architecture keeps
@@ -464,7 +433,7 @@ and the first is the one that most nearly contradicts the name:
   three charges and the condition does not eliminate it; it is priced where the transition is
   analysed. Saying otherwise would let a candidate win that line by wording.
 - **Hardware installed for the vertical phase is permitted if it serves both duties**, and the
-  second row of the table is what carries the weight. A propulsor that lifts and then propels
+  second departure is what carries the weight. A propulsor that lifts and then propels
   satisfies the condition. A propulsor that lifts and is then carried does not, whatever else it
   shares with the cruise system.
 - **Hardware used in both regimes for something other than propulsive thrust is permitted, and its
@@ -521,10 +490,8 @@ configuration satisfies the condition is the subject of Sections 5 to 7; and wha
 configuration pays instead is the subject of Section 11, which is the longest of the three
 answers because it is the one most likely to be wrong.
 
-One consequence is worth stating now, because it shapes everything after it. The second row of
-the inverted table — same hardware, different orientation — is refused by a means other than the
-one the field has adopted. A tilting architecture accepts that row and buys its way out of the
-first with a mechanism. **An architecture that reorients a propulsor does not satisfy the condition as written**, because
+One consequence is worth stating now, because it shapes everything after it. The third departure — same hardware, both duties, different orientation — is refused by a means other than the
+one the field has adopted. A tilting architecture accepts that departure and buys its way out of the first with a mechanism. **An architecture that reorients a propulsor does not satisfy the condition as written**, because
 the condition requires one orientation relative to the airframe. **Whether such an architecture
 might avoid the three charges by some other route is a separate question this paper does not
 settle** — the condition is a definition, not a law, and it can be too narrow without being
@@ -621,8 +588,9 @@ quadrotor, *"but not enough to counter the increase in structure and propulsion 
 is the efficiency credit conceded and found insufficient, by the authors of the data rather than
 by the authors of the prediction.
 
-**The quadrotor is reported for scale, not as the test**: against it the lift-plus-cruise design
-changes three things at once, and the contrast is in Supplement S4.
+**The quadrotor is reported for scale, and the isolation test above is what carries the
+prediction**: against it the lift-plus-cruise design changes three things at once, and the contrast is in
+Supplement S4.
 
 **The framework does not predict any of these numbers**; without the input fractions it predicts
 no magnitudes. What it predicts is that the amplified weight charge survives the efficiency
@@ -1053,7 +1021,7 @@ relative to the airframe, and turning the propulsors is the case the condition e
 Here the end is reached by turning the thing the propulsors are already attached to, which
 leaves the orientation requirement intact.
 
-That single move is what removes the mechanism. **The table below counts mechanism classes that
+That single move is what removes the need for the mechanism. **The table below counts mechanism classes that
 exist in order to change regime, or to take a rotor out of one regime's flow**, which is why no
 aerodynamic control device appears in it: the strip of Section 8 is a control surface, not a means
 of changing regime, and counting its absence would be counting the wrong thing. The configuration therefore carries:
@@ -1693,18 +1661,11 @@ is this paper's job; the weighting belongs to whoever has the mission.**
 
 ### Bill 2 — the drag of hover hardware, inside the bracket
 
-The zero-lift drag coefficient of Section 10 is a build-up with named terms. Splitting it:
+The zero-lift drag coefficient of Section 10 is a build-up with named terms. At the favourable end it is 0.0073 for the clean wetted surface, 0.0015 for the hub and small items,
+**0.0043 for the tip frames and 0.0154 for the free-wheeling attitude rotors**, 0.0285 in all; at the
+adverse end the same terms are 0.0142, 0.0022, **0.0047 and 0.0169**, 0.0381 in all.
 
-| | favourable end | adverse end |
-|---|---:|---:|
-| Clean wetted surface | 0.0073 | 0.0142 |
-| Hub and small items | 0.0015 | 0.0022 |
-| **Tip frames** | **0.0043** | **0.0047** |
-| **Attitude rotors, free-wheeling** | **0.0154** | **0.0169** |
-| Total | 0.0285 | 0.0381 |
-
-*(The two columns differ for two separate reasons, and a reader dividing cells should know which
-is which. The clean surface and the hub are where the drag bracket itself lives, so their base
+*(The two ends differ for two separate reasons, and a reader dividing one term by another should know which is which. The clean surface and the hub are where the drag bracket itself lives, so their base
 values differ between the ends. On top of that, the adverse end carries a ten percent margin
 applied to the whole build-up. The frames and rotors have the same base value at both ends and
 differ only by that margin. **No line item at the adverse end is an independent measurement**, and
