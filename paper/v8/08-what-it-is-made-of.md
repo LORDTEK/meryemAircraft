@@ -179,7 +179,7 @@ condition or be stopped, and the difference between those two states is a substa
 the aircraft's zero-lift drag. Both ends are computed rather than assumed and the charge appears
 in Section 11.
 
-**These are the parts that fail the escape condition**, and naming them here is the point of
+**The tip pairs are the parts that fail the escape condition**, and naming them here is the point of
 listing them. The nose pair meets all four parts of Section 3. The tip pairs do not: they hold
 one orientation, but they are carried through cruise producing moments rather than cruise thrust,
 which is the first of Section 3's failure modes, and they are exposed while doing it. This is the partial
@@ -203,6 +203,7 @@ particular installation would reach.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 70:** *"These are the parts…"* → *"The tip pairs are the parts that fail the escape condition"* (DeepSeek; dört okuyucu + Claude). Birleştirilmiş görünümde cümle *"What moves"*tan sonra geliyor; *these* yanlış öncüle bağlanıyordu. Korunan liste aynı commit'te | Tur 69 metni §3 |
 | **Tur 67 — B5 (3.1)** (dört okuyucu + Claude): aerodinamik gerekçe ve on derece bandı Adım 7'de (ev) ve 14'te; burada atama, *"not a demonstrated result"*, Adım 10 girdisi ve *"not settled"* kaldı | Adım 7 |
 | **Tur 60:** *"50 kg reference design"* tanımı buradan; parantez sadeleşti — ikinci satırın dar tarifi çıktı | ChatGPT, DeepSeek (terim), Grok, DeepSeek (parantez) |
 | **Tur 59:** uç çiftleri tek yönelimde duruyor ama seyirde itki değil moment üretiyor → Adım 3'ün **birinci** başarısızlık kipi (eski metin aynı paragrafta hem "ikinci satırı başarısız" hem "ikinci satır değil" diyordu — DeepSeek); kalkış payını veriyorlar ama ağırlık desteğine boyutlanmadılar (eski *"do not lift"* Adım 5 ile çelişiyordu — denetimde bulundu) | Adım 3 başarısızlık kipleri 1–4; Adım 5 satır 76–80 |

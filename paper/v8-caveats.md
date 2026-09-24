@@ -171,6 +171,6 @@ kaybolmasına (CLAUDE.md §0.8). Aynı denetimle sınanır.
 | 15 | What the paper offers is a configuration sized to combine runway-independent vertical operation with wing-borne cruise efficiency, arranged to do so with no mechanism that reorients a propulsor, and an account of what the combination costs. | K |
 | 7 | The configuration is arranged to change regime by rotating the airframe. The propulsors hold their orientation relative to the body from take-off to cruise; what changes is the orientation of the body relative to the flight path. | G |
 | 3 | An architecture does not incur the three charges if the propulsors that carry the weight…produce both the hover thrust and the cruise…is supplied from a store rather than from permanently installed continuous power | D |
-| 8 | These are the parts that fail the escape condition | D |
+| 8 | The tip pairs are the parts that fail the escape condition | D |
 | 2 | is the origin of all three charges below | Q |
 | 2 | A claim that one architecture escapes a cost shared by the others is only meaningful if the cost is stated first, in terms that do not presume the escape. | G |

@@ -13,7 +13,7 @@ general, and it is not offered as doing so.
 ### What is compared, and why it is these two points
 
 ⟦**The test is the 50 kg and 1 000 kg reference designs, sized by one method, not Section 10's closures. No closure was
-run at 1 000 kg.** In this section *the light design* and *the heavy design* mean those two reference designs. **The
+run at 1 000 kg, and none could be run on the same footing.** In this section *the light design* and *the heavy design* mean those two reference designs. **The
 comparison uses powers, loadings and the rotor drag term; the heavy design has no drag bracket and no structural closure
 — the exponent that would give one has not been measured — and no heavy-design range is quoted.**⟧
 
@@ -63,7 +63,7 @@ that is not a measurement, for the reason given below.
 Three candidates can be excluded directly (geometry, dynamic pressure and solidity; Supplement S12).
 
 ⟦**Within the blade-element and section-polar model, the section Reynolds number accounts for the fall:** in the
-free-wheeling state the median rises from about 8 × 10⁴ at 50 kg to 5.6 × 10⁵ at 1 000 kg, a factor of 6.8.⟧ Reynolds number is not an independent variable — it follows from the chord
+free-wheeling state the median blade-section Reynolds number rises from about 8 × 10⁴ at 50 kg to 5.6 × 10⁵ at 1 000 kg, a factor of 6.8.⟧ Reynolds number is not an independent variable — it follows from the chord
 and the speed each rotor has — so this is a decomposition inside the model rather than a causal claim
 beyond it.
 

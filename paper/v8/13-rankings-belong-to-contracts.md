@@ -64,8 +64,7 @@ where E* is the fuel's specific energy and η the energy chain, propeller includ
 contracts differ only in the last factor.
 
 - **Fixed fuel fraction.** Every architecture carries sixteen percent of its own take-off mass as
-  fuel. **Take-off mass cancels from range**, which is then set by L/D and the chain alone. A
-  heavier architecture shows its mass in the take-off-mass column and nowhere in the range column.
+  fuel. **Take-off mass cancels from range**, which is then set by L/D and the chain alone.
 - **Fixed fuel mass.** Every architecture carries the fuel this configuration carries at the same
   closure — 8.4 to 9.2 kg. **Range is divided by take-off mass**, so a heavier aircraft flies the
   same fuel less far.
@@ -161,9 +160,7 @@ hover-sized rotors flown as cruise propellers — none of which is modelled here
 they fill is not computed.
 
 **There is a trade, but it is lopsided.** The tilting layout closes 0.5 to 5.4 percent heavier than
-this configuration, and it cruises at the clean airframe's lift-to-drag ratio with a propeller at 0.80:
-it is credited with no nacelle drag, no pivot fairing, and no penalty for flying hover-sized rotors as
-cruise propellers. **Even the contract that weights mass most** — a fixed take-off mass, in which every
+this configuration, and it cruises at the clean airframe's lift-to-drag ratio with a propeller at 0.80. **Even the contract that weights mass most** — a fixed take-off mass, in which every
 kilogram of tilt mechanism is a kilogram of fuel not carried — **leaves the bound's margin at 93 to 130 percent.**
 The contract moves the comparison, as Section 12 says it must where there is a trade; none of the
 three moves it far enough to matter. A ranking against a competitor modelled as a bound is not a
@@ -195,10 +192,7 @@ where mass does not enter, does not move with it at all. **Put plainly, the sign
 mass is not a result about the architectures; it is a result about that parameter**, and it is the
 one most worth measuring.
 
-**The size of the shift behaves the same way.** It barely moves when the propeller or drag basis is
-changed — 65 to 77 points across those cases — because those asymmetries enter all three contracts
-alike. It moves a great deal with the lift group, from 14 to 134 points, because the shift *is* the
-mass difference being counted. **What is robust is that the shift exists and runs toward the lighter
+**The size of the shift behaves the same way.** **What is robust is that the shift exists and runs toward the lighter
 aircraft; its size is the size of the mass difference.**
 
 ### What the framework asks of whoever uses it
@@ -208,22 +202,16 @@ its user in return. **It asks for three things, and this paper holds itself to t
 
 **Carry the audit, for every column.** State each charge in its own currency — kilograms, drag
 counts, installed kilowatts — before any aggregate, and state the basis of the comparison with its
-asymmetries and their directions. An aggregate that arrives without its parts cannot be checked, and
-the parts are where the comparison is decided. **This paper meets that for its own column** (Section
+asymmetries and their directions. **This paper meets that for its own column** (Section
 11) **and not for the competitors'**, whose kilograms and drag counts here are parameters and transferred
-ratios rather than an audit — which is one more reason no ranking against them is offered.
+ratios rather than an audit.
 
 **Name the contract.** A comparison of architectures is a comparison under a contract. The contract is
 chosen by the mission rather than by the analyst, and a comparison that does not state one has chosen
 one silently.
 
 **Refuse the bare ranking.** Report an ordering only with the contract it was computed under, and,
-where its sign depends on an unmeasured quantity, with that quantity named. An ordering that holds
-under every contract examined may be reported as such — that is a stronger statement than any one
-contract gives, and it still names the contracts. Applied to this paper's
-own numbers, the rule is the fourth row of Section 9: **no range claim is made against lift-plus-cruise
-or tilting layouts**, because the ordering against the first depends on the contract and on the
-competitor's lift-group mass, and the ordering against the second is against a bound.
+where its sign depends on an unmeasured quantity, with that quantity named.
 
 ### What this section does not establish
 
@@ -250,6 +238,7 @@ of the architectures alone.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 70:** Tur 69 taslağı uygulandı, iki istisnayla: 520 kg cümlesi **kaldı** (Grok'un vetosu: bu adımın kendi bulgusu, ve *"That comparison is not used"* öncülü); 0,80 gerekçeleri ve *"The contract is chosen by the mission…"* **kaldı** (Grok, Qwen). Kaybı olan her paragraf Ek S13'te aynen | Tur 69 metni §5 |
 | **Tur 61:** duyarlılık tablosu Ek S13'e taşındı (dört okuyucu + Claude hemfikir, A6); gövdede 14–134 puan ve işaret cümleleri kaldı. Taşıma sırasında *"the table above shows the size of it"* sarkık kaldı — taşınan tablonun satırıydı; rakam (+55…+84 → +33…+45 %) gövdeye yazıldı | `aero/contracts-result.txt`; `paper/v8/supplement.md` S13 |
 | **Tur 60:** tilt paragrafı *"a size, not an order"* — sınırın payı, gerçek tilt'in seyir cezalarının doldurması gereken alan; doldurma hesaplanmadı | ChatGPT; `aero/contracts-result.txt` |
 | **Tur 58, P3:** mekanizma iddiası bir sıralama değil, burada söz konusu değil | Adım 9 bağımlılık tablosu (*"sizing contract"*); Adım 15 |

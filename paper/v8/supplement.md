@@ -162,6 +162,14 @@ taken from the reference pair and said so where it is used. No heavy-design rang
 free-wheeling rotor charge or carry an assumed rather than a computed propeller efficiency, and none
 carries both.
 
+
+**Two conditions travel with the heavy design.** It has no drag bracket; it stands on a single
+zero-lift coefficient with no equivalent bound. And **its structural closure is undetermined**: shell
+mass scales with wetted area while take-off mass scales with volume, so the structural fraction
+depends on how areal density grows with size, and that exponent has not been measured. **The
+comparison below uses powers, loadings and drag terms; it does not use the structure**, which is why
+it can be made at all.
+
 #### Bill 3 — held nearly flat by a sizing rule, which is not a finding about Bill 3
 
 **The measure Section 11 uses for Bill 3 — rotor-shaft hover power divided by engine shaft rating, a
@@ -313,6 +321,61 @@ leave it standing.
 | Lift-plus-cruise drag as a fixed increment, not a ratio | +59 to +75 % | +31 to +45 % | −13 to +5 % | 67 to 75 points |
 
 *(Range of the lift-plus-cruise layout relative to this configuration, across the four closures.)*
+
+
+### Section 13's paragraphs as they stood before compression
+
+Every paragraph of Section 13 that lost a sentence or a clause in compression is given here in full, verbatim.
+
+#### Three contracts, and what each holds equal
+
+- **Fixed fuel fraction.** Every architecture carries sixteen percent of its own take-off mass as
+  fuel. **Take-off mass cancels from range**, which is then set by L/D and the chain alone. A
+  heavier architecture shows its mass in the take-off-mass column and nowhere in the range column.
+- **Fixed fuel mass.** Every architecture carries the fuel this configuration carries at the same
+  closure — 8.4 to 9.2 kg. **Range is divided by take-off mass**, so a heavier aircraft flies the
+  same fuel less far.
+- **Fixed take-off mass and payload.** Every architecture is held to this configuration's closed
+  mass and its 13 kg payload. **Fuel is what remains after the empty mass**, so every kilogram of
+  architecture-specific hardware is a kilogram of fuel not carried.
+
+#### Against the tilting layout: a bound, not a ranking
+
+**There is a trade, but it is lopsided.** The tilting layout closes 0.5 to 5.4 percent heavier than
+this configuration, and it cruises at the clean airframe's lift-to-drag ratio with a propeller at 0.80:
+it is credited with no nacelle drag, no pivot fairing, and no penalty for flying hover-sized rotors as
+cruise propellers. **Even the contract that weights mass most** — a fixed take-off mass, in which every
+kilogram of tilt mechanism is a kilogram of fuel not carried — **leaves the bound's margin at 93 to 130 percent.**
+The contract moves the comparison, as Section 12 says it must where there is a trade; none of the
+three moves it far enough to matter. A ranking against a competitor modelled as a bound is not a
+ranking, and **no range claim is made against the tilting family in either direction.**
+The claim this paper makes against that family is about mechanism (Sections 7 and 8), and nothing in
+this section bears on it.
+
+#### Section 2's prediction, tested
+
+**The size of the shift behaves the same way.** It barely moves when the propeller or drag basis is
+changed — 65 to 77 points across those cases — because those asymmetries enter all three contracts
+alike. It moves a great deal with the lift group, from 14 to 134 points, because the shift *is* the
+mass difference being counted. **What is robust is that the shift exists and runs toward the lighter
+aircraft; its size is the size of the mass difference.**
+
+#### What the framework asks of whoever uses it
+
+**Carry the audit, for every column.** State each charge in its own currency — kilograms, drag
+counts, installed kilowatts — before any aggregate, and state the basis of the comparison with its
+asymmetries and their directions. An aggregate that arrives without its parts cannot be checked, and
+the parts are where the comparison is decided. **This paper meets that for its own column** (Section
+11) **and not for the competitors'**, whose kilograms and drag counts here are parameters and transferred
+ratios rather than an audit — which is one more reason no ranking against them is offered.
+
+**Refuse the bare ranking.** Report an ordering only with the contract it was computed under, and,
+where its sign depends on an unmeasured quantity, with that quantity named. An ordering that holds
+under every contract examined may be reported as such — that is a stronger statement than any one
+contract gives, and it still names the contracts. Applied to this paper's
+own numbers, the rule is the fourth row of Section 9: **no range claim is made against lift-plus-cruise
+or tilting layouts**, because the ordering against the first depends on the contract and on the
+competitor's lift-group mass, and the ordering against the second is against a bound.
 
 ---
 
