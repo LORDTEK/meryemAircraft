@@ -5,9 +5,9 @@ Kaynak adim dosyalaridir; bu betik hicbir kaynak cumleyi degistirmez. Yaptigi uc
   1. Adimlari dokuz bolumun altina dizer (B1, B2, B3, Adim 14 kendi bolumu).
   2. Adim 8'i B1'e gore boler: envanter + "These are the parts that fail" birlestirme
      bolumunde; "What this inventory does not settle" kalani saglamlik bolumunde.
-  3. "Section N" atiflarini yeni numaralara cevirir. Ayni bolume dusen coklu atiflar
-     ("Sections 7 and 8" -> "Section 5") birlestirilir ve EKLEM listesine yazilir: fiil
-     uyumu gibi duzeltmeler kaynakta yapilmaz, gosterilip oylanir.
+  3. "Section N" atiflarini yeni numaralara cevirir (Tur 69: Adim 7 -> 5.1, Adim 8 -> 5.2;
+     "Sections 7 and 8" -> "Sections 5.1 and 5.2", fiil uyumu bozulmaz). Ayni numaraya
+     dusen coklu atif ya da kendi alt bolumune atif EKLEM listesine yazilir.
 
 Denetim: 150 korunan cumlenin hepsi gorunumde aranir; bulunmayan varsa cikis kodu 1.
 """
@@ -21,7 +21,7 @@ V8 = os.path.join(KOK, "paper", "v8")
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from v8_caveats import duz, liste  # noqa: E402
 
-HARITA = {1: "1", 2: "2.1", 3: "2.2", 4: "2.3", 5: "3", 6: "4", 7: "5", 8: "5", 9: "6",
+HARITA = {1: "1", 2: "2.1", 3: "2.2", 4: "2.3", 5: "3", 6: "4", 7: "5.1", 8: "5.2", 9: "6",
           10: "7.1", 11: "7.2", 12: "7.3", 13: "7.4", 14: "8", 15: "9"}
 EVDEKI = {1: "1", 2: "2", 3: "2", 4: "2", 5: "3", 6: "4", 7: "5", 8: "5", 9: "6",
           10: "7", 11: "7", 12: "7", 13: "7", 14: "8", 15: "9"}
@@ -68,7 +68,7 @@ def cevir(metin, adim, kaydet=True):
         out = m.group(1) + " " + yeni[0]
         for s, y in zip(seps, yeni[1:]):
             out += s + y
-        if kaydet and any(EVDEKI[n] == EVDEKI[adim] for n in nums) and EVDEKI[adim] not in ("7", "2"):
+        if kaydet and any(HARITA[n] == HARITA[adim] for n in nums):
             eklemler.append((adim, m.group(0), out + "  (kendi bolumune atif)"))
         return out
     return ATIF.sub(f, metin)
@@ -148,9 +148,9 @@ print("EKLEM (%d) — kaynakta degistirilmedi, gosterilecek:" % len(eklemler))
 for a, e, y in eklemler:
     print("   Adim %2d: %-28s -> %s" % (a, e, y))
 kalan_atif = set(re.findall(r"Sections? (\d+(?:\.\d)?)", metin))
-gecerli = {"1", "2", "3", "4", "5", "6", "7", "8", "9"} | {"2.1", "2.2", "2.3"} | {"7.%d" % i for i in range(1, 5)}
+gecerli = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "2.1", "2.2", "2.3", "5.1", "5.2"} | {"7.%d" % i for i in range(1, 5)}
 print("cozulmeyen atif:", sorted(kalan_atif - gecerli) or "yok")
 if eksik:
     print("EKSIK KORUNAN CUMLE:", eksik)
     sys.exit(1)
-print("  ok  150 korunan cumlenin hepsi gorunumde.")
+print("  ok  %d korunan cumlenin hepsi gorunumde." % len(liste()))
