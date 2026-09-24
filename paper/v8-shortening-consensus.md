@@ -186,3 +186,28 @@ Aşağıdaki özet o kayıtlardan.
 | Yazarın çerçevesi | En az 6–8 tur daha makul adım; okuyucuların çözümleri; olmazsa yenilik anlatılarının dışındaki hesap kısımları yontulur (`deferred-decisions.md` E4) |
 | Claude'un yeni görüşü | Tutma listesi: adım adım, herhangi birinin listesindeki kalır, gerisi eke aynen; önce hesap kısımları — **oylamaya** |
 | Durum | Okuyuculara soruldu (Tur 67 metni §3); çözümler Tur 68'de yan yana |
+
+---
+
+# Tur 68 — hız çözümleri yan yana
+
+| | Grok | ChatGPT | DeepSeek | Qwen | K |
+|---|---|---|---|---|---|
+| Birim | adım | adım | adım | bölüm | adım |
+| Yöntem | taslak | işlev sınıflama + en kısa sadık ifade | tutma listesi | korunan listelere karşı taslak | taslak (plan §6) |
+| Önce yapıyı birleştir | evet | evet (en güçlü önerisi) | — | — | evet, üretilmiş görünüm |
+| Hesap sırası | 12, 13, 11, 10 | 10, 11, 12, 13, 14 | 10, 11, 12, 13, 14 | 10, 11, 12, 13 | 12, 13, 11, 10 |
+| Adım 7–8 | bu blokta yok | en sonda ses geçişi | hesaplara kadar küçük birim; sonra 5–8 tutma listesiyle | en son | bu blokta yok |
+| Kelime hedefi | yok | ölçüt değil | — | var (~3 000) | yok (yazar) |
+
+**Beşimizin ortak noktası (yön kararı, metin değişikliği değil):** önce hesaplar; birim bütün bir adım; 7–8 önce açılmaz;
+taşınan malzeme eke aynen. **Ayrışan:** yöntem (taslak 4 / tutma listesi 1), yapının önce birleşmesi (2 evet, 2 sessiz),
+sıra, Qwen'in kelime hedefi (yazarın kararıyla çelişiyor). **Tutma listesi:** Claude geri çekti. **Karar yazarın.**
+
+**Açık öneriler (Tur 68 metni §7, oylamaya):** yapı birleştirme (G, C) · altı şekil (G) · yapılandırma şekli (D) · Adım 12
+dışlamaları ve eşit-Re denetimi eke (G, D, Q) + düşük Re sınırının korunan listeye eklenmesi (K) · Adım 2 açılış cümlesi ilk
+cümle (G) · 7–8 taslağı yok (G) · Adım 11 taslağında korunacaklar (G) · iddia omurgası (C) · paragraf başına tek iş (C) ·
+7 500 ölçüt değil (C) · ek = gölge makale (C) · Adım 10 ilk geçiş modeli (D) · üç katman kuralı (D) · 10+11 birleşimi (Q) ·
+ruh cümleleri bölüm başı/sonu (Q) · tanım tablosu (Q).
+
+**v7 şekilleri:** Şekil 11 v8'in geri aldığı üç ifadeyi taşıyor → kural önerisi oylamada.

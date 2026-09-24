@@ -400,6 +400,12 @@ güncelmiş gibi durdu.
 > demektir.** Makaleye girecek her nitelendirme **gövdeye** yazılır. Türkçe tablo
 > yazarın denetimi içindir, okuyucunun uyarısı için değil.
 
+**GENİŞLETME, Tur 68 — şekil etiketi de metindir.** v7'nin Şekil 11'i v8'in geri aldığı üç ifadeyi taşıyor
+(*"nothing on the aircraft rotates relative to it"*, *"no altitude loss"*, *"reverse of transition"* —
+`figures/build/mkfig11.py`). Şekiller hiçbir tur metnine girmediği için hiçbir okuyucu göremezdi; emekli ifade taraması
+da şekilleri kapsamıyor. **Kural:** bir v7 şekli v8'e ancak etiketi, alt başlığı ve altyazısı korunan cümlelere ve emekli
+ifade listesine karşı metin gibi denetlendikten sonra girer; girdiği anda `v8_stale.py` taramasına eklenir.
+
 ### 3.2 Ertelenmiş kararlar unutulmaz. Tur 50.
 
 Yazar: *"Ben unutabilirim sen sağa sola notunu al."*

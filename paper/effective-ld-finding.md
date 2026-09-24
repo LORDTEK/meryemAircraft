@@ -1246,3 +1246,46 @@ kaydı, okuyuculardan hız için **kendi çözümleri**. Benim görüşüm (ele�
 gövdede kalması gerekeni yazar (bulgusu, sınırı, makalenin başka yerde andığı her sayı); herhangi birinin listesindeki kalır;
 gerisi eke **aynen** gider; önce/sonra gösterilir, teyit edilir. Güvenlik aynı (tek itiraz cümleyi tutar), birim büyür. Önce
 hesap kısımlarında. Zayıf yanı: taşır ama yeniden yazmaz; eklem onarımları ayrıca gösterilmeli. Kayıt: `deferred-decisions.md` E4.
+
+---
+
+# Tur 68 — Tur 67 metnine dört cevap; hız için çözümler
+
+**Kapandı (dördü de teyit):** V2 (Grok'un ifadesi) ve B5 (Adım 8, 9). Grok: geliş açısı bandı Adım 8'e geri dönmesin.
+
+**Hız çözümleri:**
+- **Grok:** tutma listesine karşı (*"The unit grew; the veto did not"*). Önce yapıyı birleştir (başlık ve dosya birleşimi,
+  ifade değişmeden); sonra her tur bir hesap adımının sıkıştırılmış taslağı, sıra 12, 13, 11, 10 (10 en çok atıf alan, en
+  sona); taslak her korunan cümleyi ve başka adımın andığı her sayıyı tutar; veto: düşen sayı ya da güçlenen yüklem → kaynak
+  cümle aynen döner. 7–8 bu blokta açılmaz. Bütçe yok.
+- **ChatGPT:** tutma listesine karşı (*"a union of five people's anxieties"*); yerine **işlev** korunur, en kısa sadık ifade
+  gövdede kalır. Bağımlılık haritası, üç katman (gövde / ek / silinebilir), önce yapıyı birleştir, 10–14 sırayla, sonra
+  eklemler, en sonda ses geçişi. 7 500 ara ölçüt değil.
+- **DeepSeek:** tutma listesini destekledi, zorunlu taban (korunan listeler) ve sabit sıra (10–14, **sonra 5–8**) ile; üç
+  başarısızlık noktası: toplu atlama, gövdenin iddiaya dönmesi, eklemlerin pahalı olması.
+- **Qwen:** tutma listesine karşı (*"a skeleton, not a paper"*); bölüm taslağı, korunan listelere karşı yazılır, tek veto
+  taslağı düşürür — **ama hedef kelime sayısıyla** (10–13 için ~3 000): yazarın reddettiği bütçe.
+
+**Benim görüşüm değişti:** tutma listesini geri çektim (üç okuyucunun gerekçesi doğru). Yerine dördünden birer parça alan
+plan (Tur 68 metni §6): yapı **üretilmiş görünüm** olarak birleşir (kaynak adım dosyaları; denetimler değişmez); her hesap
+adımından önce bağımlılık haritası; taslağı ben yazarım, okuyucu tarifinden; **taslak yeni yüklem eklemez** (her cümle kaynak
+cümle, yalnız silmeyle kısalmış kaynak cümle ya da olgu söylemeyen bağlantı); Grok'un vetosu; sıra 12, 13, 11, 10; 5–8
+bu blokta açılmaz, sonrası yazarın kararı; bütçe yok; şekil tabloyu değiştirir, çoğaltmaz.
+
+**Denetimde bulunanlar (okuyuculara düzeltme olarak):** korunan liste **150** (140 + 10) — Grok ve DeepSeek 145, Qwen 135
+dedi; Adım 12 **2 974** kelime ve Tur 60'tan beri **aynı** (Qwen ~2 500); ChatGPT tutma listesini yazara maletti; Grok'un
+*"the loop closes; the package is not shown to exist"* alıntısı metinde yok (Adım 10: *"It does not establish that the
+package exists"*; 14/15: *"The loop closes; the aircraft is not shown to"*); Grok P5 yazara *"until the calculations have
+been cut"* dedirtti — yazarın sözü sıra koymuyor; Qwen P4'ün tanım tekrarı: tanımın tek evi Tur 60'tan beri Adım 8.
+
+**Yeni bulgu — v7 şekilleri olduğu gibi kullanılamaz.** v7'nin 12 şekli `figures/output/`'ta; v8'de şekil yok. **Şekil 11**
+(beş evre) v8'in geri aldığı üç ifade taşıyor: alt başlık *"nothing on the aircraft rotates relative to it"* (şerit
+hareketli — Adım 7: *"the only moving aerodynamic surface"*; §0.1'in aşırı iddiası); geçiş paneli *"no altitude loss"*
+(Adım 10: nokta kütle modelinin özelliği; sonlu momentli model 5,4 m kaybediyor); iniş paneli *"reverse of transition"*
+(Adım 5: *"not symmetric … no figure in this paper describes the landing transition"* — korunan cümleyle çelişir). Kaynak:
+`figures/build/mkfig11.py` satır 25, 27, 52. Ayrıca v7 gövdesi (satır 2121–2122) *"Nothing on the aircraft rotates
+relative to the aircraft at any point in it"* diyor. v7'ye dokunulmaz (K6); kural önerisi: v7 şekli v8'e ancak etiketleri
+metin gibi denetlendikten sonra girer.
+
+**Adım 12'nin düşük Re sınırı korunmuyor:** *"Of the two rotor terms, the light one is therefore the less certain — and it
+is the one Sections 10 and 11 carry"* listede değil (Grok P3 bunu tutmak istiyor) → eklenmesi önerildi (oylamaya).
