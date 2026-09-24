@@ -155,6 +155,7 @@ boşluğa duyarsız. `G` = Grok, `D` = DeepSeek, `C` = ChatGPT, `Q` = Qwen, `K` 
 | 6 | variable-pitch hub would recover that difference is not computed; Section 11 reports the gap and declines to attribute all of it to the hub | Q |
 | 4 | The quadrotor is reported for scale, and the isolation test above is what carries the prediction | Q |
 | 1 | they are the only one of those documented obstacles an uncrewed aircraft removes | Q |
+| 12 | Of the two rotor terms, the light one is therefore the less certain — and it is the one Sections 10 and 11 carry. | G+K |
 
 ## Ruh cümleleri (Tur 61, Claude'un önerisi)
 
