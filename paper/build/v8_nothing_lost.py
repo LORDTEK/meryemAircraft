@@ -7,7 +7,7 @@ simdiki govdede ya da paper/v8/supplement.md'de AYNEN (bosluk ve * farki haric) 
 """
 import glob, os, re, subprocess, sys
 KOK = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-ONCE = {12: "c9fcdd7", 13: "c9fcdd7"}   # kisaltmadan onceki commit
+ONCE = {11: "65ae7de", 12: "c9fcdd7", 13: "c9fcdd7"}   # kisaltmadan onceki commit
 
 
 def govde(s):
@@ -22,7 +22,13 @@ def duz(x):
 def cumleler(x):
     x = re.sub(r"(?m)^#+ .*$", "", x)
     x = re.sub(r"(?m)^\s*- ", "", x)
-    return [c.strip() for c in re.split(r"(?<=[.!?])\s+(?=[A-Z(*])", duz(x)) if len(c.strip()) > 3]
+    out = []
+    for p in re.split(r"\n\s*\n", x):               # once paragraf, sonra cumle
+        if p.lstrip().startswith("|"):               # tablo: satir satir
+            out += [duz(L) for L in p.splitlines() if L.strip() and not re.match(r"^\|[-: |]+\|$", L.strip())]
+            continue
+        out += [c.strip() for c in re.split(r"(?<=[.!?])\s+(?=[A-Z(*])", duz(p)) if len(c.strip()) > 3]
+    return out
 
 
 ek = duz(re.sub(r"(?m)^\s*- ", "", open(os.path.join(KOK, "paper", "v8", "supplement.md"), encoding="utf-8").read()))

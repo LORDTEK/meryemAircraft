@@ -1351,3 +1351,20 @@ DeepSeek ve Grok'un 13.2/13.3 yeniden yazımları korunan cümle düşürdüğü
 silme, 2 144 → 2 002).
 
 **Gövde:** 26 389 (Tur 67: 27 689).
+
+---
+
+# Tur 71 — Tur 70 metnine dört cevap
+
+**Teyit (dördü):** 2.1–2.4 → kapandı. **Karar (beşimiz):** D/R etiketi; ek bölümlerinde kaynak adım + tur; şekillerde dönüş
+süresi/irtifa kaybına Adım 10 atfı; kaçış koşulu şekli sonraya, yazarın kararı.
+
+**Uygulandı:** Adım 13 ikinci geçiş S2–S5; **S1'e DeepSeek vetosu** → sözleşme tanımı aynen geri (2 200 → 2 147). Adım 11
+birinci geçiş 11.1, 11.3, 11.4; **11.2'ye veto** (DeepSeek, ChatGPT) → kaynak kaldı (2 144 → 2 044). S11 ve S13'e kaybı olan
+paragraflar tam; `v8_nothing_lost.py` 11–13'ü kapsıyor, tabloyu satır satır okuyor.
+
+**Taslak:** Adım 11 ikinci geçiş (a, b, c silme; d yeniden yazım) 2 044 → 1 957. Qwen RW-11A alınmadı (korunan cümleyi düşürüyor).
+**Adım 10 bağımlılık haritası** (Qwen P1, Grok P10) — taslak gelecek tur.
+
+**Qwen P3 — hesap:** hesap adımları 8 679, geri kalan 17 571 (çerçeve 5 723, yenilik anlatıları 5–8 6 931). **Hesaplar sıfıra
+inse bile gövde hedefin iki katından fazla.** Yazara soruldu.

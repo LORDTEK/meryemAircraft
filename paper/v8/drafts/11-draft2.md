@@ -1,19 +1,3 @@
-# Step 11 — The ledger
-
-**v8 taslağı, birinci yazım.** İskeletin 11. adımı.
-
-**Kapsam Grok ve DeepSeek tarafından, Tur 52'de birlikte konuldu ve kabul edildi:**
-defter **atıf yapar, eklemez.** Adım 10'un sayıları uç çerçeve sürüklemesini, sabit hatve
-uzlaşmasını, burulma bedelini ve hepsinin kütle sonuçlarını **zaten içeriyor**; defter
-bunları tekrar eklerse `closure_inputs.py`'de yakalanan çift sayımın düzyazı hâli olur.
-
-**Kural denetimi:** hiçbir kalem eklenmiyor, **ayrılıyor** · DeepSeek'in ayrımı korunuyor
-(ayrıştırılabilir / ayrıştırılamaz) · **tek bir "mimarinin bedeli" sayısı verilmiyor** ve
-neden verilmediği yazılıyor · **3,8× burada GEÇMİYOR** (Grok: *"o paket 14'te tek paragraf
-kalır"*) · sıralama yok, Adım 13'ün işi.
-
----
-
 ## The ledger
 
 Section 2 named three charges that any architecture in this corner pays. Section 10 closed a
@@ -40,8 +24,7 @@ performed. Each is marked.
 different currencies — kilograms, drag counts, installed kilowatts — and **no scalar aggregate is
 defined, because this study has no defensible weighting between them.**
 
-**The refusal has an address, and saying where it points is what keeps it from reading as an
-unfinished cost section.** These three quantities become one number only under a sizing contract,
+These three quantities become one number only under a sizing contract,
 and that is Section 13: **the total is the contract, not a property of the aircraft.** **Reporting them
 is this paper's job; the weighting belongs to whoever has the mission.**
 
@@ -58,8 +41,7 @@ differ only by that margin. **No line item at the adverse end is an independent 
 they should not be subtracted from one another as if they were.)*
 
 **The rotor line rests on section drag at low Reynolds number.** It is a blade-element result for
-blades whose sections run near a Reynolds number of 8 × 10⁴ in the free-wheeling state, on section
-polars that are computed rather than measured, and section drag is hardest to predict in that range.
+blades whose sections run near a Reynolds number of 8 × 10⁴ in the free-wheeling state, on section polars that are computed rather than measured.
 Section 12 shows how strongly the term depends on it.
 
 **The hardware exposed by the vertical-phase layout is 69 percent of the zero-lift drag at the
@@ -69,19 +51,12 @@ of it at the favourable end. **That is Bill 2 on this aircraft, in the terms Sec
 it** — and the phrase is "exposed by the vertical-phase layout" rather than "dedicated lift group",
 because Section 7 is precisely the claim that there is no dedicated lift group here.
 
-**The tip-frame term is an attribution, not a marginal removal cost.** Section 8 gives the frames
-four duties: landing gear, control moment arms, rotor support, and the fairing that is the
-aircraft's only vertical surface. Their drag is charged to the hover-related hardware set because
+**The tip-frame term is an attribution, not a marginal removal cost.** Their drag is charged to the hover-related hardware set because
 that is the set the ledger is decomposing; **it is not a claim that this drag would disappear if
 the vertical phase did**, since the landing and directional duties would still have to be met
 somehow.
 
-The same statement as a lift-to-drag ratio. **Removing all three non-clean-body terms — the hub
-and small items, the tip frames and the free-wheeling rotors** — gives a clean-body ratio of
-**20.55** at the favourable end and **15.24** at the adverse one, against the aircraft's **10.82**
-and **8.79**. **The configuration retains 52.6 percent of its clean-body lift-to-drag ratio at the
-favourable end and 57.7 percent at the adverse one**, so the non-clean-body terms remove 47.4 and
-42.3 percent respectively, with the frames and rotors the large majority of what is removed.
+⟦**Removing the hub and small items, the tip frames and the free-wheeling rotors gives a clean-body lift-to-drag ratio of 20.55 at the favourable end and 15.24 at the adverse one**, against the aircraft's 10.82 and 8.79: **the configuration retains 52.6 and 57.7 percent**, so the non-clean-body terms remove 47.4 and 42.3 percent, with the frames and rotors the large majority.⟧
 
 **That ordering is the opposite of the one intuition offers, and the word that carries it has to
 be exact.** Bill 2 has a **larger fractional burden where the clean-body drag is lower.** In
@@ -184,44 +159,3 @@ study has not posed, and the other is a term the study's method is known to unde
 the blade-family choice at the reference size; **they do not establish how the three charges
 behave as the aircraft changes size.** Section 12 asks whether they move together when the size
 changes, and Section 13 asks what happens to the comparison when the sizing contract changes.
-
----
-
-## Yazarın denetimi için — bu sayfadaki her olgusal yüklem ve kaynağı
-
-| İddia | Kaynak |
-|---|---|
-| **Tur 71:** birinci geçiş 11.1, 11.3, 11.4 uygulandı (dört okuyucu + Claude); **11.2'ye veto** (DeepSeek, ChatGPT; Grok geri koyma istedi) → Reynolds cümlesi aynen kaldı. Kaybı olan paragraflar Ek S11'de | Tur 70 metni §4 |
-| **Tur 66 — dokuzuncu tablo (melez):** tablo Ek S11'e; gövdede sınır cümlesi — *"None of these is a ledger entry"* (Grok: her kalemi *"debt"* diye adlandırmak Qwen'in ayrımını bulanıklaştırırdı); *"the allocation of the take-off margin against attitude authority"* (Qwen, ChatGPT: marjın kendisi boyutlanmış, kapanmayan paylaşım); *"The first and the last…"* kaldı | Ek S11; Adım 14 listesi |
-| **Tur 64 — B7** (beşimiz hemfikir; Grok ve Qwen'in şartıyla): C_D0 döküm tablosu düzyazıya — **her rakam** (temiz yüzey, göbek, çerçeve, rotor, toplam, iki uç) ve iki sütun notu aynen kaldı; tablo Ek S11'e | `aero/drag_sweep.py`; Ek S11 |
-| **Tur 61:** kapanış açılışı tekrar etmiyor — *"Three charges, three currencies, no total"* ve *"No charge on this page is a new one"* çıktı; açılıştaki *"It attributes. It does not add."* ve *"no scalar aggregate"* duruyor (A4) | bu bölümün açılışı |
-| **Tur 60:** *"50 kg reference geometry"* | terim birliği |
-| **Tur 59:** 0,168–0,188 kW/kg **kalkış kütlesi başına** (Adım 14'ün 4,7–5,2'si tampon kütlesi başına; 0,168/0,036 = 4,67) | Qwen; `aero/buffer-result.txt` |
-| **Tur 58, P3:** defter düzeni fiyatlıyor; sayım bir kalem değil | Adım 9 bağımlılık tablosu; bu bölümün *"It attributes. It does not add."* |
-| C_D0 dökümü: temiz yüzey, göbek, çerçeveler, rotorlar | `aero/drag_sweep.py` satır 41–48; `aero/ledger.py` |
-| Askı donanımı C_D0'in %69'u (elverişli) / %57'si (olumsuz) | `aero/ledger-result.txt` |
-| Temiz gövde L/D **20,55 / 15,24**; uçak 10,82 / 8,79; korunan %52,6 / %57,7 | `drag_sweep.zincir(cd0, pay=...)`; `ledger-result.txt` |
-| **DÜZELTME, Tur 53 — Grok ve DeepSeek bağımsız olarak buldu.** `zincir()` olumsuz uçta marjsız çerçeve+rotor çıkarıyordu; az çıkarınca temiz gövde 14,29 görünüyordu, doğrusu 15,24. **Kapanışa etkisi YOK** — `carpan` bir orandır ve `LD_temiz × carpan = ld(toplam)` olarak sadeleşir; dört kapanış birebir aynı | `aero/drag_sweep.py:zincir` docstring; doğrulandı |
-| Tampon bir **GİRDİ**; açık **bara tabanında** 0,168–0,188 kW/kg, yayılım %12; sabit %3,6 bunu izlemiyor (**Tur 56'da düzeltildi:** önceki 0,128–0,150 / %17 rotor milinden motor milini çıkarıyordu — v7'nin `thrust.py`'de düzelttiği istasyon karışıklığı) | `aero/ledger-result.txt` tampon denetimi (Grok sordu); `aero/buffer-result.txt` §1 |
-| Gövde 0,300 ve aviyonik 0,080 **kuruluş sabiti**, defter sonucu değil | `baseline.py` `ORTAK`; üç mimaride de ortak |
-| **Fatura 2 elverişli uçta DAHA AĞIR** — sabit rotor terimi küçülen toplamın daha büyük kesri | aynı çıktı; gerekçe dökümden doğrudan |
-| Olumsuz uca **bütün döküme** %10 pay uygulanıyor | `drag_sweep.py` satır 48: `UST = (...) * 1.1` |
-| Girişim modellenmedi; rüzgâr tüneli bulgusu | Adım 2, §2.3'ten: *"always predict higher lift and lower drag"* |
-| η_p açığı %14,6 (0,683) ve %21,0 (0,632) | `aero/ledger-result.txt` |
-| Açık kaynak başına **bölünmedi** | `nose_propeller_crossing.py` tek η veriyor, ayrışım yok |
-| Tampon %3,6; 1,9–2,1 kg | `baseline.py` `f_tampon=0.036`; `ledger-result.txt` |
-| Tamponun Fatura 1 karakteri taşıdığı **önceden** söylenmişti | Adım 3, izin verilen maliyetler, birinci madde |
-| Gövde 0,300 · aviyonik 0,080 · tahrik 0,176–0,198 | `baseline.py` `ORTAK`; `ledger-result.txt` |
-| Motor 3,54–5,17 kW; askı 11,4–12,5 kW; oran 2,4–3,2 | `aero/closure-result.txt` ve `ledger-result.txt` |
-| Tahrik kesri: sabit 0,108 + güce bağlı 0,068–0,090 | `baseline.py` `F_TAHRIK_SABIT`; `ledger-result.txt` |
-| Elektrik yolu askı gücüyle boyutlanıyor, motor değil | Adım 3, izin verilen maliyetler, ikinci madde |
-| Kapanışta olmayanlar listesi | `paper/deferred-decisions.md` açık teknik kalemler |
-| 5,4 m bir **sonuç**, bir kalem değil; referans geometride | Adım 10, geçiş bölümü |
-
-**Bu sayfada BİLEREK olmayanlar:**
-
-- **Hiçbir YENİ kalem.** Sayfanın tamamı Adım 10'un sayılarının içini söküyor. Grok ve
-  DeepSeek'in şartı: *"Adım 10'un kapattığı bir kilogramı bile ekleme."*
-- **Tek bir "mimarinin bedeli" sayısı.** Üç para birimi var; ağırlıklandırma dayanağı yok.
-- **3,8× ve batarya paketi.** Adım 14'ün tek paragrafı (Grok'un şartı).
-- **Hiçbir sıralama.** B ve C ile karşılaştırma Adım 13'ün işi.

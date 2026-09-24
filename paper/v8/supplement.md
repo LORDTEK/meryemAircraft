@@ -127,6 +127,39 @@ carries the prediction.**
 | **Engine installation — bay, intake, exhaust, cooling** | Absent from this work entirely. |
 | **Rotor–structure and rotor–wing interference** | Inside Bill 2 in principle, absent from the build-up in practice. |
 
+### Section 11's paragraphs as they stood before compression
+
+Every paragraph of Section 11 that lost a sentence or a clause in compression is given here in full, verbatim (Round 71).
+
+#### What this section does, and the one thing it must not do
+
+**The refusal has an address, and saying where it points is what keeps it from reading as an
+unfinished cost section.** These three quantities become one number only under a sizing contract,
+and that is Section 13: **the total is the contract, not a property of the aircraft.** For a
+specific mission a designer weights them against that mission's own constraints. **Reporting them
+is this paper's job; the weighting belongs to whoever has the mission.**
+
+#### The cruise-efficiency gap under fixed pitch
+
+**Nor is the gap decomposed.** How much of it is blade twist, how much is section drag at the
+cruise inflow angle, and how much is the operating point itself, this work does not say. Anything
+finer would be a decomposition that was never performed.
+
+#### What the ledger amounts to
+
+The non-clean-body drag terms remove 42.3 to 47.4
+percent of the clean-body lift-to-drag ratio, and the hardware exposed by the vertical-phase
+layout is the majority of the zero-lift drag. Bill 1 appears as a 3.6 percent buffer rather than a
+lift group. Bill 3 is divided by 2.4 to 3.2 at the engine and is not divided at all on the
+electrical path. **The cruise propeller efficiency sits 14.6 to 21.0 percent below the published
+assumption under fixed pitch.**
+
+**And every one of them belongs to one scale.** The four closures vary the drag uncertainty and
+the blade-family choice at the reference size; **they do not establish how the three charges
+behave as the aircraft changes size.** Section 12 asks whether they move together when the size
+changes, and Section 13 asks what happens to the comparison when the sizing contract changes.
+
+
 ---
 
 ## S12. Section 12's paragraphs as they stood before compression (from Section 12)
@@ -376,6 +409,54 @@ contract gives, and it still names the contracts. Applied to this paper's
 own numbers, the rule is the fourth row of Section 9: **no range claim is made against lift-plus-cruise
 or tilting layouts**, because the ordering against the first depends on the contract and on the
 competitor's lift-group mass, and the ordering against the second is against a bound.
+
+*(Round 71, second pass)*
+
+Section 12 showed that at least two of the three charges are not locked together, and drew the
+consequence: where one architecture pays less of one charge and more of another, a ranking depends
+on how the charges are weighed. **A sizing contract is one such weighing.** It fixes what is held
+equal between the architectures being compared, and what is held equal decides how a difference in
+mass is set against a difference in cruise efficiency. This section applies three contracts to three
+architectures at each of the four closures of Section 10. **The mechanism claim is not a ranking
+and is not at stake here**; what is at stake is how the price computed in Sections 10 and 11 enters
+a comparison with other architectures.
+
+#### Against lift-plus-cruise: a trade, and the contract sets the exchange rate
+
+**Under a fixed fuel fraction the mass difference does not reach the range column**, and the
+lift-plus-cruise layout flies 55 to 84 percent further. Under a fixed fuel mass the difference enters
+as a divisor, and its lead falls to 28 to 54 percent. Under a fixed take-off mass it enters as fuel not
+carried, and **the lift-plus-cruise layout lands between 13 percent short of this configuration's
+range and 7 percent beyond it.** Moving from the
+first contract to the third shifts the comparison by **67 to 77 percentage points at every closure**
+at the declared lift-group fraction, and always toward the lighter aircraft.
+
+#### Section 2's prediction, tested
+
+**With a lighter lift group the lift-plus-cruise layout leads under all three contracts at every
+closure; with a heavier one this configuration leads under a fixed take-off mass at every closure.**
+Giving all three the same propeller efficiency also produces a reversal at every closure. **Which
+architecture ranks first under a fixed take-off mass is therefore decided, in this model, by a mass
+fraction of the competitor that this study has not measured** — and the fixed-fuel-fraction column,
+where mass does not enter, does not move with it at all. **Put plainly, the sign under a fixed take-off
+mass is not a result about the architectures; it is a result about that parameter**, and it is the
+one most worth measuring.
+
+#### What the framework asks of whoever uses it
+
+**Name the contract.** A comparison of architectures is a comparison under a contract. The contract is
+chosen by the mission rather than by the analyst, and a comparison that does not state one has chosen
+one silently.
+
+#### What this section does not establish
+
+**The competitors are modelled at a coarser level than this configuration.** Their drag is a ratio
+transferred from another airframe or an idealisation; their propeller efficiency is assumed; their
+architecture-specific mass is a parameter. This configuration's drag and propeller efficiency are
+computed. **Comparing computed figures against assumed ones favours whichever is assumed more
+optimistically**. In propeller efficiency that is both competitors, and the sensitivity case that gives all
+three this configuration's propeller efficiency shows the size of it: under the first contract the
+lift-plus-cruise layout falls from +55 to +84 percent to +33 to +45 percent (Supplement S13); in drag it is the tilting layout, by construction.
 
 ---
 
