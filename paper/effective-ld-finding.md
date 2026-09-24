@@ -1328,3 +1328,26 @@ dayandığı bağlaşım cümlelerini düşürüyor); Qwen'in *"Why this section
 uygulanan kural cümlesi çıktı (retin evi Adım 9 ve 15). Ek S13'e aynen gidecek.
 
 **Yazar notu uygulanışı:** Grok notu okuyucu metnine yine yazılmadı; seçimlerin gerekçesi tabloda.
+
+---
+
+# Tur 70 — Tur 69 metnine dört cevap
+
+**Teyit (dördü):** Adım 12 birinci geçiş + S12; on iki eklem → **kapandı**. Şekil kararları (şekil–iddia denetimi, hedef
+taraftan atıf denetimi, Şekil 11'in Grok P8'e göre yeniden kurulması, DeepSeek şekilleri yalnız yerine geçerek, Adım 11
+sınır cümlesi bölünmesi) → **kapandı**.
+
+**Uygulandı (dördü + Claude):** Adım 8 korunan cümle → *"The tip pairs are the parts that fail the escape condition"*
+(Qwen oyunu değiştirdi; Grok kendi önerisini geri çekti). Adım 12 ikinci geçiş R1–R5, D1, D2 + Grok'un iki geri koyması
+(2 152 → 1 885). Adım 13 birinci geçiş, **Grok'un 13.2 vetosuyla** (520 kg cümlesi kaldı) ve 13.3 ile *"The contract is
+chosen by the mission…"* geri kalarak (2 398 → 2 200).
+
+**Hatalarım:** (1) Adım 12 kaydına *"değişen paragrafların özgün hâli zaten S12'de"* yazdım — *"Two conditions travel…"*
+yoktu; yeni `v8_nothing_lost.py` ilk koşuda yakaladı, eklendi. (2) Birleştirici eski Adım 8 cümlesine bağlıydı; zincirde
+hata görülmeden commit edildi, bir commit bayat görünüm taşıdı; bir sonraki commit'te düzeldi.
+
+**Taslak (uygulanmadı):** Adım 13 ikinci geçiş (Qwen RW-13A–D, ChatGPT'nin tek cümlesi + iki cümle; 2 200 → 2 116);
+DeepSeek ve Grok'un 13.2/13.3 yeniden yazımları korunan cümle düşürdüğü için alınmadı. Adım 11 birinci taslak (yalnız
+silme, 2 144 → 2 002).
+
+**Gövde:** 26 389 (Tur 67: 27 689).

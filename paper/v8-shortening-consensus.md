@@ -227,3 +227,15 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | 10+11 birleşimi | ✗ | ✗ | ✗ | geri çekti | ✗ | **Kapandı** (yok) |
 | Tanım tablosu | ✗ | ✗ | ✗ | geri çekti | ✗ | **Kapandı** (yok) |
 | v7 şekil kuralı | ✓ | ✓ (+ şekil–iddia denetimi) | ✓ | ✓ | ✓ | **Kapandı**; ChatGPT eki oylamada |
+
+# Tur 70
+
+| Kalem | G | C | D | Q | K | Durum |
+|---|---|---|---|---|---|---|
+| Adım 12 uygulaması + S12, eklemler | ✓ | ✓ | ✓ | ✓ | — | **Kapandı** |
+| Adım 8 eklemi | DeepSeek'in | DeepSeek'in | kendi | DeepSeek'in (değişti) | DeepSeek'in | **Uygulandı** → teyide |
+| Adım 12 ikinci geçiş | ✓ (+2 geri koyma) | ✓ | ✓ | ✓ (+1) | ✓ | **Uygulandı** → teyide |
+| Adım 13 birinci geçiş | **13.2 veto**; 13.3, 13.6 geri koy | ✓ | ✓ | ✓ (13.6 notu) | ✓ | **Veto dışı uygulandı** → teyide |
+| D/R etiketi (ChatGPT) | — | öneren | — | — | ✓ | Oylamada |
+| Ek başlığı: kaynak adım + tur (DeepSeek) | — | — | öneren | — | ✓ | Oylamada |
+| Ek kuralı: kaybı olan paragraf tam (Qwen) | — | — | — | öneren | ✓ | **Uygulandı** (S12, S13) + `v8_nothing_lost.py` |
