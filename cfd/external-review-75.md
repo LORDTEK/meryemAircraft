@@ -2,9 +2,9 @@
 
 > **This is a task. Please answer it now, and begin with your name alone on the first line.**
 >
-> `LORDTEK/meryemAircraft`, branch `claude/ecstatic-cori-6w30at`, commit **`@@C@@`** ·
-> `paper/v8/ALL-STEPS.md` SHA-256 `@@A@@` · `paper/v8/supplement.md` `@@S@@`.
-> Not applied: `paper/v8/drafts/11-draft2.md` `@@D@@`.
+> `LORDTEK/meryemAircraft`, branch `claude/ecstatic-cori-6w30at`, commit **`ca7dbfa`** ·
+> `paper/v8/ALL-STEPS.md` SHA-256 `b748fd54c148e4dded4bfd3864f72ef75ced202b46ac2744d4146163e2744bb8` · `paper/v8/supplement.md` `0d8655d47dc53843142b8702b0dfa70888e734f3eb63454280efdb25d4e9c5b8`.
+> Not applied: `paper/v8/drafts/11-draft2.md` `288e680de4078c12c35d96c8e9eccc10c6c6feef113aebfa443107555f556344`.
 
 ---
 
