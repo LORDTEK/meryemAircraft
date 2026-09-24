@@ -340,6 +340,12 @@ dahil herkesin hemfikir olduğu kısaltmalar uygulansın."*
   yana** sunulur ve benim görüşümle birlikte oylanır.
 - **Uygulanan her kısaltma bir sonraki tur metninde önce/sonra birebir gösterilir.** Taşınan malzeme
   `paper/v8/supplement.md`'ye aynen gider; gövdede bulgusu ve sınırı kalır.
+- **Hız sorunu budamayla çözülmez.** Yazar, Tur 67: *"Ama çözüm senin sunduğun gibi budamak olamaz. … Ama ben en az 6-8
+  tur daha makul adımları tercih ediyorum. Belki onlardan güzel fikirler gelir bu arada. Olmazsa da artık, getirmiş olduğum
+  eşsiz yenilik anlatılarının dışında kalan hesap kısımları yontmada yeteneğinizi gösterirsiniz :D"* Ben her bölüme kelime
+  bütçesi koyup işe birleştirme bölümünden, yani kalpten başlamayı önermiştim. **Kelime sayısı kesimin sürücüsü olmaz;
+  yontulacaksa önce yenilik anlatılarının dışındaki hesap kısımları yontulur.** Hız için okuyucuların çözümleri istenir;
+  yedek yol `paper/deferred-decisions.md` E4'te.
 
 ## 3. Doğrulama
 

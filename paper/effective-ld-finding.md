@@ -1229,5 +1229,20 @@ de böyle, değişmedi — not edildi. Grok V2 için *"pays in efficiency in at 
 **Uygulandı (beşimiz):** V2 Grok'un ifadesiyle (*"pays in efficiency in at least one of them"*; dördü de tercih etti); B5 — Adım 8
 işaretçi, Adım 9'dan *"Section 7 should be read under that limit"* çıktı.
 **Yazar:** okuyucuların kendi önerileri de istensin → CLAUDE.md §2.3.
-**Hız ölçümü:** Tur 60 30 096 → Tur 67 27 689 (turda ~400 kelime). 7 500'e bu hızla ~50 tur. Bölüm bölüm sıkıştırılmış taslak
-önerildi (Claude'un önerisi, oylamaya).
+**Hız ölçümü:** Tur 60 30 096 → Tur 67 27 689. İlk kısaltma turu (62) −1 581; sonraki beş tur (63–67) ortalama **~165**
+(−186, −315, −2, −237, −86). 7 500'e: altı turun ortalamasıyla (~400) **~50 tur**, son beşin hızıyla **>100 tur**. *(Yazara
+önce yalnız ~50 dedim; son turların hızı daha düşük — düzeltildi.)*
+
+**Claude'un ilk önerisi — yazar reddetti, geri çekildi:** bölüm bölüm kelime bütçesi (hesaplar 10 120 → 1 600, birleştirme
+~2 900 → 1 300 …) ve ilk iş birleştirme bölümünün sıkıştırılmış taslağı. Yazar: *"Ama çözüm senin sunduğun gibi budamak olamaz.
+Ne kadar tur gerektiğini onlara da söyle böyle giderse. Onların çözüm önerileri neyse onu da dinleyelim. Ama ben en az 6-8 tur
+daha makul adımları tercih ediyorum. Belki onlardan güzel fikirler gelir bu arada. Olmazsa da artık, getirmiş olduğum eşsiz
+yenilik anlatılarının dışında kalan hesap kısımları yontmada yeteneğinizi gösterirsiniz :D … Bu şekilde sunamam."* **Hatam:**
+bütçe kelime sayısını sürücü yaptı, yenilik anlatılarına da hesaplara uygulandığı gibi uygulandı ve işe kalpten başladı (§0.8
+ile ters); üstelik okuyucu önerilerinin yerine benim taslaklarımı koyuyordu (§2.3 ile ters).
+
+**Yerine (Tur 67 metni §3):** ölçüm (~50 / >100 tur), yazarın sözleri birebir çeviriyle, geri çekilen önerinin bir cümlelik
+kaydı, okuyuculardan hız için **kendi çözümleri**. Benim görüşüm (eleştiriye): **tutma listesi** — bir adım için her birimiz
+gövdede kalması gerekeni yazar (bulgusu, sınırı, makalenin başka yerde andığı her sayı); herhangi birinin listesindeki kalır;
+gerisi eke **aynen** gider; önce/sonra gösterilir, teyit edilir. Güvenlik aynı (tek itiraz cümleyi tutar), birim büyür. Önce
+hesap kısımlarında. Zayıf yanı: taşır ama yeniden yazmaz; eklem onarımları ayrıca gösterilmeli. Kayıt: `deferred-decisions.md` E4.

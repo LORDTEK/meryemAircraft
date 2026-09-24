@@ -1,4 +1,4 @@
-# Round 67 — everything from last round closed; three agreed changes applied; a proposal to change the pace, and an open floor for your own proposals
+# Round 67 — everything from last round closed; three agreed changes applied; the pace, and your solutions to it; an open floor for your own proposals
 
 > **This is a task. Please answer it now, and begin with your name alone on the first line.**
 >
@@ -43,47 +43,42 @@ The aerodynamic reason and the ten-degree band now live in Step 7 (home) and Ste
 
 ---
 
-## 3. The pace — a proposal of mine, for your criticism
+## 3. The pace — fifty rounds or more at this rate; the author's position; your solutions
 
-**The measurement.** Since Round 60 the body has gone from 30 096 to **27 689 words** — about 400 words a round. The working
-target is about **7 500**. At this pace that is **some fifty more rounds.** Every cut so far has been safe because each was
-small, agreed and shown. That also means the method cannot, on its own, reach the target. **The steps also still exist as
-fifteen separate files.** The structure we agreed has not been built: framework in one section, 7 + 8 as the combining
-section, Step 9 with the unsettled part of 8 as the soundness section, and Step 14 on its own before the close.
+**The measurement.** Since Round 60 the body has gone from 30 096 to **27 689 words**: 1 581 in the first round of cuts, and
+about 165 a round in the five since. The working target is about **7 500**. **If we go on like this, that is some fifty more
+rounds at the average of these six, and more than a hundred at the pace of the last five.** The structure we agreed has not
+been assembled yet either; the fifteen steps are still separate files.
 
-**My proposal: move from sentence edits to section drafts, one section at a time.** For each section I would write a
-compressed draft from its source steps and run both automated checks on it (the 140 caveats and the 10 insight sentences).
-I would show it to you **in full, beside the source**, with every sentence that was dropped listed and its home named. It
-replaces the steps only when all five of us confirm the result. The same four-stage rule applies (agreed, applied, shown,
-confirmed), only at the scale of a section.
+**The author has seen the problem too.** In the author's words, translated:
 
-**Which section first: the combining section (Steps 7 + 8).** It is the heart of the paper. Its single homes (B1, B4, B5)
-and its voice pass are now settled. ChatGPT said the next test is *"whether Step 7 shows the architectural move to the reader
-before its price"*, and a draft of this section is exactly that test.
+> *"All right, there is a pace problem, and I had already seen it myself. But the solution cannot be pruning, the way you
+> presented it. Tell them, too, how many rounds it will take if it goes on like this. Let us hear their solutions, whatever
+> they are. But I prefer at least six to eight more rounds of reasonable steps. Perhaps good ideas will come from them in the
+> meantime. If not, then you will all show your skill at whittling down the calculation parts that lie outside the unique
+> innovation narratives I brought :D"*
 
-**A rough budget, to be criticised rather than accepted.** The author's rule is that the coarse flow comes first and budgets
-after. The flow is now agreed, so this is the stage for budgets:
+**What I had proposed, and why I withdraw it.** The version of this section that the author declined, and that did not reach
+you, proposed a word budget for every section and a compressed draft of the combining section as the first step. I withdraw
+it, and not only because it was declined. A budget makes a word count the driver of every cut; mine applied one to the
+innovation narratives as to the calculations, and began with the combining section, the heart of the paper. It would also
+have put my drafts where your proposals belong.
 
-| Section | Source steps | Now | Proposed |
-|---|---|---:|---:|
-| Introduction | 1 | 1 689 | 700 |
-| The charges, the condition, an independent check | 2, 3, 4 | 5 723 | 1 500 |
-| One problem solved: operation without a runway | 5 | 1 222 | 500 |
-| The other solved: cruise carried on a wing | 6 | 2 230 | 800 |
-| **Combining the solutions** | 7 + the inventory of 8 | ~2 900 | **1 300** |
-| The soundness of the resulting product | 9 + the unsettled remainder of 8 | ~2 000 | 500 |
-| The calculations | 10, 11, 12, 13 | 10 120 | 1 600 |
-| What does not close | 14 | 1 503 | 400 |
-| Conclusion | 15 | 337 | 300 |
-| **Total** | | **27 689** | **7 600** |
+**My view now — criticise it as you would another reader's.**
 
-*(The "~" rows split Step 8, 2 197 words, between the two sections by estimate; Steps 7 + 8 + 9 are 4 865 words together.)*
+- *The words are where the author points.* The calculations, Steps 10 to 13, are 10 120 words, **37 %** of the body. The two
+  solutions and their combination, Steps 5 to 8, are 6 929 words, **25 %**.
+- *One idea, about how we decide rather than what we cut.* Today each change is a sentence or a single table, and it moves
+  only when all five of us say yes. A reasonable step could use a larger unit with the same safety. For one of the fifteen steps at a
+  time, each of us lists what must stay in the body: its finding, its limit, and every number the rest of the paper cites.
+  **Whatever is on anyone's list stays.** The rest moves to the supplement verbatim, so no work is lost, and the result is
+  shown before and after and confirmed as now. One objection still keeps a sentence; only the unit grows. If it is tried, I
+  would try it on the calculation parts first, for the reason the author gives.
+- *Its weakness, as I see it:* it moves text but does not rewrite it, so what stays will need its joins repaired, and those
+  repairs must be shown like any other change.
 
-**The shape of this budget is itself an argument, and I want it attacked.** The calculations take the deepest cut (to about
-16 % of their present length), and the combining section the shallowest relative to its role. That follows the author's
-statement that the calculations exist to make the insight checkable for a Q1 reviewer. The risk is the one the journal names:
-the article must stand on its own, so whatever leaves the calculations for the supplement must leave its finding and its
-limit behind in the body.
+**What I am asking.** Your own solution to the pace: a method, an order, a different unit, a structural idea — anything, with
+its reason. Next round every solution, mine included, goes to all five of us side by side, and the author decides.
 
 ---
 
@@ -101,9 +96,8 @@ shown to all five of us side by side, with my position, and voted on under the s
 ## 5. What I am asking
 
 1. **Confirm 2.1, 2.2 and 2.3**, one line each.
-2. **The pace proposal (Section 3):** section drafts one at a time — agree or not? The combining section first — agree or not?
-3. **The budget:** attack it. Which rows are wrong, and in which direction? In particular: is 1 600 words enough for the
-   calculations to keep the paper checkable, and is 1 300 right for the combining section?
-4. **Your own proposals (Section 4).**
+2. **The pace (Section 3):** your own solution, with its reason. And criticise mine: what would the keep-list lose, and where
+   would it fail?
+3. **Your own proposals (Section 4).**
 
 **Sources.** None of this needs a source.

@@ -155,3 +155,34 @@ eleştirir. **Uygulama eşiği: dört okuyucu + ben.** (CLAUDE.md §2.3 eki.)
 **Korunan cümleler:** Qwen'in Adım 11 cümlesi çekinceye; Grok (Adım 7 dönüş çifti), DeepSeek (Adım 3 koşul, Adım 8 *"These are
 the parts that fail"*), Qwen (Adım 2 köken cümlesi) ruh listesine. Grok'un Adım 6 menteşesini çıkarma önerisi oy birliği değil
 (ChatGPT koruyor) → kaldı. Toplam 145.
+
+---
+
+# Tur 63–67 — durum
+
+**Bu belge Tur 63'ten sonra güncellenmemişti** (benim eksiğim; turların ayrıntısı `effective-ld-finding.md`'de, Tur 63–67).
+Aşağıdaki özet o kayıtlardan.
+
+| Kalem | Durum |
+|---|---|
+| Adım 14 onarımı, Adım 11 (Qwen'in şartı), N2, N4, işaretçiler | **Kapandı** (Tur 64) |
+| B1 (Grok'un dilimi), B6 (olgu 6'da; sayı ve ret 11'de), B7 (Adım 2 + Adım 9 tabloları gövdede) | **Karar** (Tur 64). B1 yapı kurulurken uygulanacak; B6'nın yerleşimi metinde zaten böyle (%14,6–21,0 yalnız Adım 11'de); B7'nin Adım 11 kısmı bir alt satırda |
+| Adım 4 Qwen şartı, Adım 11 dökümü düzyazıya, N1, N3, *"removes the need for the mechanism"* | Uygulandı Tur 64 → **kapandı** Tur 65 |
+| Adım 2 *"mechanical complexity"* | Uygulandı Tur 65 → **kapandı** Tur 66 |
+| B4 tek ev (Adım 5, 7, 9); ses V1, V6; dokuzuncu tablo Ek S11'e; Adım 14'e girişim | Uygulandı Tur 66 → **kapandı** Tur 67 |
+| Ses V3, V5 | **Uygulanmadı** — herkes korudu |
+| Ses V4 | **Uygulanmadı** — Grok'un itirazı; ben görüş değiştirdim |
+| V2 (Grok'un ifadesi), B5 (Adım 8 ve 9) | Uygulandı Tur 67 → **teyitte** (Tur 67 metni §2) |
+| Adım 9 dağıtılmaz; sekiz ret evinde söyleniyorsa kısalır | **Açık** — Tur 63'te Qwen'in oyu yok |
+| A4'ün kalan tek-ev işaretçileri (görev çevrimi vb.) | **Açık** |
+| Tablo sayısı | **8** (hedef) |
+
+## Hız — Tur 67
+
+| | |
+|---|---|
+| Ölçüm | 30 096 → 27 689. Tur 62 −1 581; Tur 63–67 ortalama ~165. 7 500'e: ~50 tur (ortalama), >100 tur (son beş) |
+| Claude'un ilk önerisi | Bölüm bütçesi + birleştirme bölümü önce — **yazar reddetti** (*"çözüm senin sunduğun gibi budamak olamaz"*), geri çekildi |
+| Yazarın çerçevesi | En az 6–8 tur daha makul adım; okuyucuların çözümleri; olmazsa yenilik anlatılarının dışındaki hesap kısımları yontulur (`deferred-decisions.md` E4) |
+| Claude'un yeni görüşü | Tutma listesi: adım adım, herhangi birinin listesindeki kalır, gerisi eke aynen; önce hesap kısımları — **oylamaya** |
+| Durum | Okuyuculara soruldu (Tur 67 metni §3); çözümler Tur 68'de yan yana |
