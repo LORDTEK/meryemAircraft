@@ -211,3 +211,6 @@ cümle (G) · 7–8 taslağı yok (G) · Adım 11 taslağında korunacaklar (G) 
 ruh cümleleri bölüm başı/sonu (Q) · tanım tablosu (Q).
 
 **v7 şekilleri:** Şekil 11 v8'in geri aldığı üç ifadeyi taşıyor → kural önerisi oylamada.
+
+**Yazarın kararı:** plan onaylandı (Tur 68). Ürünler Tur 68 metni §7'de: birleştirilmiş görünüm (uygulanmadı — kaynak
+değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).

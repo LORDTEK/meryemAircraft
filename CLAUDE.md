@@ -346,6 +346,11 @@ dahil herkesin hemfikir olduğu kısaltmalar uygulansın."*
   bütçesi koyup işe birleştirme bölümünden, yani kalpten başlamayı önermiştim. **Kelime sayısı kesimin sürücüsü olmaz;
   yontulacaksa önce yenilik anlatılarının dışındaki hesap kısımları yontulur.** Hız için okuyucuların çözümleri istenir;
   yedek yol `paper/deferred-decisions.md` E4'te.
+- **Plan (yazar onayı, Tur 68).** Yapı üretilmiş görünüm olarak birleşir (`paper/build/v8_assemble.py` →
+  `paper/v8/ASSEMBLED.md`; kaynak adım dosyaları). Hesap adımları taslakla kısalır: **taslak yeni yüklem eklemez**, her
+  cümle kaynak cümlenin yalnız silmeyle kısalmış hâlidir (`paper/build/v8_draft_check.py`); **silme de anlamı ters
+  çevirebilir** — silinen olumsuzluk/niteleyici reddedilir. Yazar: *"Grok'un kısaltma konusunda önerileri bazen daha
+  isabetli de olabilir."* — kısaltma tariflerinde Grok'un önerisi ağırlıklı okunur; eşik ve veto değişmez.
 
 ## 3. Doğrulama
 
@@ -357,6 +362,8 @@ Hiçbir iddia denetlenmeden aktarılmaz — ne YZ'lerinki ne benimki.
   denetimi; `--sina` eski hatayı yakaladığını sınar. `v8_all_steps.py` ALL-STEPS.md'yi kurar.
 - `paper/build/v8_caveats.py` — kesilemeyecek çekincelerin (`paper/v8-caveats.md`) hâlâ kendi
   adımlarında durduğunu sınar; `--sina` silinen bir çekinceyi yakaladığını sınar.
+- `paper/build/v8_assemble.py` — birleştirilmiş görünüm; 150 korunan cümle görünümde mi (`--sina`).
+- `paper/build/v8_draft_check.py NN` — taslak yalnız silmeyle mi türedi, olumsuzluk silinmiş mi (`--sina`).
 - `paper/build/links.py` — bağ dokusu: işaretçiler çözülüyor mu, **doğru
   yere mi** çözülüyor, tablo/şekil atıfları tutuyor mu.
 - Bir denetim yazdığında **eski hatayı geri koyup yakalayıp yakalamadığını

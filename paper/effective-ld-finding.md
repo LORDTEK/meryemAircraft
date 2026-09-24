@@ -1289,3 +1289,17 @@ metin gibi denetlendikten sonra girer.
 
 **Adım 12'nin düşük Re sınırı korunmuyor:** *"Of the two rotor terms, the light one is therefore the less certain — and it
 is the one Sections 10 and 11 carry"* listede değil (Grok P3 bunu tutmak istiyor) → eklenmesi önerildi (oylamaya).
+
+**Yazarın kararı (Tur 68, gönderilmeden önce):** plan **(b)** — oylamaya gönderilmeden onaylandı: *"b şıkkı."* Ayrıca yazar:
+*"Grok dil modeli olarak kısa anlatımlı metinlerle … daha çok geliştirildi. Dolayısıyla Grok'un kısaltma konusunda önerileri
+bazen daha isabetli de olabilir."* → Adım 12 taslağında Grok P3'ün tarifi esas alındı; okuyucu metnine bu not **yazılmadı**
+(öteki okuyucuları Grok'a yaslanmaya itmesin diye; eşik ve veto aynen).
+
+**İlk iki ürün (uygulanmadı, gösterildi):**
+- `paper/v8/ASSEMBLED.md` (`paper/build/v8_assemble.py`): dokuz bölüm, adım 8 B1'e göre bölündü, atıflar yeniden
+  numaralandı; 150 korunan cümle görünümde (yeni numaralarla); `--sina` silineni yakalıyor; 12 eklem listelendi
+  (7 × *"Sections 7 and 8"* → *"Section 5"*, ikisi fiil uyumunu bozuyor; 5 kendi bölümüne atıf).
+- `paper/v8/drafts/12-draft.md` (`paper/build/v8_draft_check.py`): 2 973 → 2 151 kelime; 27 cümle çıktı (Ek S12'ye aynen),
+  13 kısaldı, 76 aynen. **Yalnız silme** kuralı mekanik denetleniyor. **Öğrenilen:** silme de anlamı ters çevirebilir
+  (*"Coupling is not identity"* → *"is identity"*) — denetim silinen olumsuzluk/niteleyiciyi reddediyor; `--sina` ile
+  sınandı; kendi taslağımda iki silmeyi yakaladı (*"without settling…"*, *"less"* içeren tanım) → geri kondu.
