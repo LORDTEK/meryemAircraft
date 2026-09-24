@@ -156,6 +156,7 @@ boşluğa duyarsız. `G` = Grok, `D` = DeepSeek, `C` = ChatGPT, `Q` = Qwen, `K` 
 | 4 | The quadrotor is reported for scale, and the isolation test above is what carries the prediction | Q |
 | 1 | they are the only one of those documented obstacles an uncrewed aircraft removes | Q |
 | 12 | Of the two rotor terms, the light one is therefore the less certain — and it is the one Sections 10 and 11 carry. | G+K |
+| 10 | the question is asked in two models, only the second of which carries rotational dynamics, and that one does not support a zero altitude loss | C+G+D+Q+K |
 
 ## Ruh cümleleri (Tur 61, Claude'un önerisi)
 

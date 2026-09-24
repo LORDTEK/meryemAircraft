@@ -105,6 +105,32 @@ carries the prediction.**
 
 ---
 
+## S10. Section 10's paragraphs as they stood before compression (from Section 10, Round 73)
+
+Every paragraph of Section 10 that lost a sentence or a clause in compression is given here in full, verbatim.
+
+#### The inputs, and why there are four closures rather than one
+
+**The sizing rules that keep that ratio valid as the mass moves are worth stating, because they
+also say what the four closures are geometrically.** The loop holds **wing loading, disc loading
+and aspect ratio** fixed, so area, span and disc diameter follow the mass: across the four
+closures the wing area runs 2.07 to 2.27 m², the span 3.53 to 3.70 m, and the nose disc diameter
+1.23 to 1.29 m. **The cruise lift coefficient is unchanged at 0.450 in every one of them**, so the
+lift-to-drag ratio is an input that stays valid at the closed mass rather than one frozen at a mass
+the loop has left behind. Had wing **area** been held fixed instead, the lift coefficient would
+have risen with the closed mass, the induced term would have moved against the heavier closures,
+and the drag corners would be optimistic as reported.
+
+#### The transition, and this is where the section turns
+
+**In this point-mass model there is no transition time to optimise**, which is a simplification
+rather than a trade.
+The control moment required scales as 1/t_r² and the control power as 1/t_r³, and the altitude
+loss falls with t_r as well: all three point the same way, so the rotation time is set by what
+the actuator can do rather than by a balance between competing penalties.
+
+---
+
 ## S11. The zero-lift drag build-up as a table (from Section 11)
 
 | | favourable end | adverse end |
@@ -181,6 +207,16 @@ and small items, the tip frames and the free-wheeling rotors** — gives a clean
 and **8.79**. **The configuration retains 52.6 percent of its clean-body lift-to-drag ratio at the
 favourable end and 57.7 percent at the adverse one**, so the non-clean-body terms remove 47.4 and
 42.3 percent respectively, with the frames and rotors the large majority of what is removed.
+
+*(Round 73)*
+
+#### What the closure does not contain at all
+
+The closure does not contain the cost of declining the reaction-torque channel, the sizing of the strip's
+actuation, the allocation of the take-off margin against attitude authority, the landing transition, the vortex
+ring state, closed-loop hover control, engine installation, or rotor–structure and rotor–wing interference. **None
+of these is a ledger entry; Section 14 lists them.** The transition altitude result (5.4 m) is a result, not a
+charge, and is not a term in any sizing loop (the table is Supplement S11).
 
 ---
 

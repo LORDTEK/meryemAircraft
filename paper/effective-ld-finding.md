@@ -1388,3 +1388,21 @@ charge"* modelini yitirmiş (S11 tablosunda vardı) → nitelemenin geri konmas�
 
 **Yöntem sorusu:** yalnız silme adım başına %7–12 → gövde ~24 000'de biter; korunan cümle tabanı ~2 200 kelime. Önerim:
 bölüm bölüm yeniden kurma (R, cümle cümle veto), önce Adım 4'te deneme, veto edilen hataları say.
+
+---
+
+# Tur 73 — Tur 72 metnine dört cevap; yöntem önerileri yazara
+
+**Teyit (dördü):** Adım 11 ikinci geçiş → kapandı. **Uygulandı (dördü + Claude):** Adım 11'de 5,4 m cümlesine model ve
+geometri; Adım 10 hüküm cümlesi korunan listede (152); Adım 10'dan 10.2 ve 10.4 (2 601 → ~2 520). **Veto:** 10.1 ve 10.5
+(ChatGPT), 10.3 (ChatGPT, Grok) → kaynak kaldı. S10 açıldı.
+
+**Yöntem (yazar: "önerileri ve kendi önerini yaz, ona göre karar vereyim"):**
+- Dördü de Adım 4'te yeniden kurma denemesine evet.
+- ChatGPT: "anlam envanteri" (söylenmesi / gösterilmesi / nitelenmesi / söylenmemesi gereken); her cümleye P/D/J/R etiketi;
+  beş geçme koşulu; hedef %50–70.
+- Grok: yalnız deneme, yaygınlaştırma kararı sonuca bağlı; durma ölçütü (güçlenen yüklem ya da düşen NASA sayısı → dur;
+  iki+ kırık öncül → yöntem hazır değil); birim "bir bulgu bloğu"; sıra 10 → 2–4 → 9, 14 → 1 → 5–6 → 7–8 en son.
+- DeepSeek: cümle cümle iz tablosu (özgün, taslak, durum, varış, korunan kayıt); çok adımda geçen her sayıya eşitlik taraması.
+- Qwen: "yeni olgu yok" sınıflaması (korunan / atıf alan sayı-tanım-çekince / olgu söylemeyen bağlantı); etiketsiz özet cümle
+  en sıkı vetoya; 2–4 tek bölüm olarak yeniden kurulsun (B2).

@@ -77,9 +77,7 @@ and aspect ratio** fixed, so area, span and disc diameter follow the mass: acros
 closures the wing area runs 2.07 to 2.27 m², the span 3.53 to 3.70 m, and the nose disc diameter
 1.23 to 1.29 m. **The cruise lift coefficient is unchanged at 0.450 in every one of them**, so the
 lift-to-drag ratio is an input that stays valid at the closed mass rather than one frozen at a mass
-the loop has left behind. Had wing **area** been held fixed instead, the lift coefficient would
-have risen with the closed mass, the induced term would have moved against the heavier closures,
-and the drag corners would be optimistic as reported.
+the loop has left behind.
 
 **Three things the loop does not scale, and a reader comparing this section with Section 8 should
 know which is which.** The tip-frame length, the tip-disc diameter and the strip are not sizing
@@ -180,12 +178,6 @@ reference geometry at its published mass. The closure above does not re-derive a
 none of them is an output of it.)* Nothing in that result requires the tip pairs
 to contribute lift once the climb is acquired.
 
-**In this point-mass model there is no transition time to optimise**, which is a simplification
-rather than a trade.
-The control moment required scales as 1/t_r² and the control power as 1/t_r³, and the altitude
-loss falls with t_r as well: all three point the same way, so the rotation time is set by what
-the actuator can do rather than by a balance between competing penalties.
-
 **The second model removes the result, and this is the sharper of the two limitations.** The
 point-mass model prescribes the attitude and therefore cannot charge for the trajectory the
 aircraft flies while it is being rotated into that attitude. Solved instead with rotational
@@ -240,6 +232,7 @@ where it is made.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 73:** birinci geçişten 10.2 (alan sabit tutulsaydı karşı-olgusu) ve 10.4 (nokta kütle modelinde optimize edilecek süre yok paragrafı) uygulandı — dört okuyucu + Claude. **10.1, 10.3, 10.5 vetolandı** (ChatGPT; 10.3'e Grok da) → kaynak kaldı. Hüküm cümlesi korunan listeye | Tur 72 metni §4 |
 | **Tur 61:** yayılım tablosu tek cümleye indi (dört okuyucu + Claude hemfikir, A6); dört sayı aynen | `aero/closure-result.txt` YAYILIMLAR |
 | **Tur 60:** üç ölçeklenmeyen şey (uç disk çapı eklendi); çerçeve+rotor katsayıları S_ref 1,979 m² üzerinde — sabit tutmak donanımı kanatla büyütmek demek; referans boyutta kalsa %4–13, 0,0009–0,0028 küçülürdü, kapanış almıyor; terim birliği | Grok; `aero/closure.py`, `closure-result.txt`; `aero/tip_propeller.py` S_REF; `verify.py` iki yeni kontrol |
 | **Tur 59:** kapanış geometrisi 2,07–2,27 m², 3,53–3,70 m, 1,23–1,29 m — eski alt uçlar (1,98 / 3,45 / 1,20) **50 kg referans geometrisiydi**, kapanış değil | `aero/closure.py` GEOMETRI bloğu, `closure-result.txt`; `verify.py` Adım 10 geometri denetimi (eski alt ucu reddeder) |

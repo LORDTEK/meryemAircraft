@@ -162,8 +162,7 @@ take the closure's convergence as covering them.
 The closure does not contain the cost of declining the reaction-torque channel, the sizing of the strip's
 actuation, the allocation of the take-off margin against attitude authority, the landing transition, the vortex
 ring state, closed-loop hover control, engine installation, or rotor–structure and rotor–wing interference. **None
-of these is a ledger entry; Section 14 lists them.** The transition altitude result (5.4 m) is a result, not a
-charge, and is not a term in any sizing loop (the table is Supplement S11).
+of these is a ledger entry; Section 14 lists them.** The transition altitude result (5.4 m, in the finite-moment model at the 50 kg reference geometry) is a result, not a charge, and is not a term in any sizing loop (the table is Supplement S11).
 
 **The first and the last are the two that would most change the numbers above if they were
 computed**, and neither is a small correction to a known quantity: one is a control problem the
@@ -182,6 +181,7 @@ changes, and Section 13 asks what happens to the comparison when the sizing cont
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 73:** 5,4 m cümlesine model ve geometri geri kondu (ChatGPT'nin model kilidi; dört okuyucu + Claude). Kaynak: S11 tablosunun özgün satırı | Tur 72 metni §3 |
 | **Tur 72:** ikinci geçiş (a) *"The refusal has an address…"* silindi, (b) dört görev cümlesi silindi (ilk geçiş Adım 8'de), (c) *"and section drag is hardest to predict in that range"* silindi (Adım 12'de duruyor), (d) L/D paragrafı tek cümle (R). Dört okuyucu + Claude. 2 044 → 1 957 | Tur 71 metni §3 |
 | **Tur 71:** birinci geçiş 11.1, 11.3, 11.4 uygulandı (dört okuyucu + Claude); **11.2'ye veto** (DeepSeek, ChatGPT; Grok geri koyma istedi) → Reynolds cümlesi aynen kaldı. Kaybı olan paragraflar Ek S11'de | Tur 70 metni §4 |
 | **Tur 66 — dokuzuncu tablo (melez):** tablo Ek S11'e; gövdede sınır cümlesi — *"None of these is a ledger entry"* (Grok: her kalemi *"debt"* diye adlandırmak Qwen'in ayrımını bulanıklaştırırdı); *"the allocation of the take-off margin against attitude authority"* (Qwen, ChatGPT: marjın kendisi boyutlanmış, kapanmayan paylaşım); *"The first and the last…"* kaldı | Ek S11; Adım 14 listesi |
