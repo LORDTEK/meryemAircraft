@@ -103,7 +103,7 @@ parca.append("### 5.1 %s\n\n%s" % (ad, alt(b)))
 ad8, b8 = adim_metni(8, 3)
 p8 = b8.split("\n\n")
 kes = next(i for i, p in enumerate(p8) if p.startswith("### What this inventory does not settle"))
-basarisiz = next(i for i, p in enumerate(p8) if p.startswith("**These are the parts that fail"))
+basarisiz = next(i for i, p in enumerate(p8) if p.startswith("**The tip pairs are the parts that fail"))
 envanter = p8[:kes] + [p8[basarisiz]]
 kalan = [p for i, p in enumerate(p8[kes:], kes) if i != basarisiz]
 parca.append("### 5.2 %s\n\n%s" % (ad8, alt("\n\n".join(envanter))))
@@ -142,7 +142,7 @@ for adim, q, _ in liste():
             eksik.append((adim, q[:70]))
 govdeler = sum(len(govde(n).split()) for n in range(1, 16))
 print("ASSEMBLED.md: %d kelime (adim govdeleri %d; fark = yeni basliklar)" % (len(metin.split()), govdeler))
-print("Adim 8 bolunmesi: envanter %d paragraf + 'parts that fail' -> 5.2; kalan %d paragraf -> 6.1"
+print("Adim 8 bolunmesi: envanter %d paragraf + 'tip pairs … fail' -> 5.2; kalan %d paragraf -> 6.1"
       % (kes, len(kalan) - 1))
 print("EKLEM (%d) — kaynakta degistirilmedi, gosterilecek:" % len(eklemler))
 for a, e, y in eklemler:

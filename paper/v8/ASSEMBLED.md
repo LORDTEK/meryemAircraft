@@ -1204,7 +1204,7 @@ brake. The actuator inventory is therefore the propulsion motors plus the strip'
 **How many actuators that is, this study does not fix.** The systems budget carries the
 actuation without sizing the mechanism, and naming a number here would be inventing one.
 
-**These are the parts that fail the escape condition**, and naming them here is the point of
+**The tip pairs are the parts that fail the escape condition**, and naming them here is the point of
 listing them. The nose pair meets all four parts of Section 2.2. The tip pairs do not: they hold
 one orientation, but they are carried through cruise producing moments rather than cruise thrust,
 which is the first of Section 2.2's failure modes, and they are exposed while doing it. This is the partial
@@ -1791,18 +1791,10 @@ general, and it is not offered as doing so.
 
 #### What is compared, and why it is these two points
 
-**Section 7.1 closed only the light configuration, at 52.3 to 57.5 kg. No closure was run at 1 000 kg**, and
-none could be run on the same footing. A scale comparison therefore cannot be made from Section 7.1's closures. **It
-is made between the two reference designs, 50 kg and 1 000 kg, sized by one method, and both ends are taken from that pair.** In this section *the light design* and *the heavy design* mean
-those two reference designs. **The total zero-lift drag, the propeller efficiency, the range and the closed mass
-are not used.** No heavy-design range is quoted.
-
-**Two conditions travel with the heavy design.** It has no drag bracket; it stands on a single
-zero-lift coefficient with no equivalent bound. And **its structural closure is undetermined**: shell
-mass scales with wetted area while take-off mass scales with volume, so the structural fraction
-depends on how areal density grows with size, and that exponent has not been measured. **The
-comparison below uses powers, loadings and drag terms; it does not use the structure**, which is why
-it can be made at all.
+**The test is the 50 kg and 1 000 kg reference designs, sized by one method, not Section 7.1's closures. No closure was
+run at 1 000 kg, and none could be run on the same footing.** In this section *the light design* and *the heavy design* mean those two reference designs. **The
+comparison uses powers, loadings and the rotor drag term; the heavy design has no drag bracket and no structural closure
+— the exponent that would give one has not been measured — and no heavy-design range is quoted.**
 
 #### Bill 3 — held nearly flat by a sizing rule, which is not a finding about Bill 3
 
@@ -1820,10 +1812,8 @@ a factor of twenty in mass by a single sizing choice.
 **The measure Section 7.2 uses for Bill 3 — rotor-shaft hover power divided by engine shaft rating, a
 ratio of installed hardware rather than a deficit — carries a second quantity, and it does not travel
 as cleanly.** The ratio is 4.19 at the light design and 3.98 at the
-heavy, a change of 5 percent. *(Section 7.2's 2.4 to 3.2 is the same ratio at the four closures. This paragraph compares the reference pair only.)* But the engine is sized by cruise, not by disc loading, and **the two
-reference designs do not use the same engine margin**: the engine is rated at 1.53 times cruise
-electrical power at 50 kg and 1.39 times at 1 000 kg. With the light design's margin at both sizes the
-heavy engine would be 60.0 kW and the ratio 3.61, a change of 14 percent. **The Bill 3 ratio therefore
+heavy, a change of 5 percent. *(Section 7.2's 2.4 to 3.2 is the same ratio at the four closures. This paragraph compares the reference pair only.)* The engine is sized by cruise, and **the two designs use different margins**: 1.53 times cruise electrical power at
+50 kg, 1.39 at 1 000 kg. At the light design's margin the heavy engine would be 60.0 kW, ratio 3.61 — 14 percent. **The Bill 3 ratio therefore
 moves by between 5 and 14 percent across the factor of twenty, depending on an engine margin the
 sizing rule does not set.**
 
@@ -1851,10 +1841,8 @@ that is not a measurement, for the reason given below.
 **The mechanism is not the obvious one, and it is not the one a dimensional argument suggests.**
 Three candidates can be excluded directly (geometry, dynamic pressure and solidity; Supplement S12).
 
-**Within the blade-element and section-polar model, the section Reynolds number accounts for the
-fall.** In the free-wheeling state the median blade-section Reynolds number rises from about 8 × 10⁴
-at 50 kg to 5.6 × 10⁵ at 1 000 kg, a factor of 6.8, because the chords are longer and the flight speed
-higher. Reynolds number is not an independent variable — it follows from the chord
+**Within the blade-element and section-polar model, the section Reynolds number accounts for the fall:** in the
+free-wheeling state the median blade-section Reynolds number rises from about 8 × 10⁴ at 50 kg to 5.6 × 10⁵ at 1 000 kg, a factor of 6.8. Reynolds number is not an independent variable — it follows from the chord
 and the speed each rotor has — so this is a decomposition inside the model rather than a causal claim
 beyond it.
 
@@ -1881,13 +1869,8 @@ percent at 1 000 kg.
 is a change between two choices, not a scaling result**, and it cannot be offered as evidence that
 Bill 1 moves with size in either direction.
 
-**A derivation is available without settling what specific power a store can deliver, and it is
-stated here because it shows why it is not used.** If the buffer is sized to supply the hover deficit
-— the hover demand at the electrical bus less what the engine delivers there — at a specific power
-that is the same at both sizes, its mass fraction follows the deficit per kilogram. **But that derivation makes the buffer a function of the hover power and the engine
-rating, which are the two quantities that measure Bill 3.** A buffer derived that way is locked to
-Bill 3 by the derivation itself, and comparing the two across scale would test the derivation, not
-whether they are separate.
+**A buffer sized to the hover deficit at the same specific power at both sizes would track hover power and engine
+rating, which are the Bill 3 measures, so that derivation cannot test whether Bill 1 separates.**
 
 **No quantity computed in this work gives a buffer requirement at scale that is independent of the
 hover and engine powers and of an assumed specific power or energy.** On this aircraft Bill 1 takes
@@ -1900,9 +1883,6 @@ measured in kilograms and the engine in kilowatts, linked by a specific power th
 assumption; and the coupling belongs to an aircraft that meets the escape condition, not to the
 framework — a lift-plus-cruise aircraft pays a lift group whose mass is not a function of its cruise
 engine.
-
-What specific power a store of the required mass must deliver is the
-item Section 8 examines and does not resolve.
 
 #### What the comparison establishes
 
@@ -1928,16 +1908,14 @@ delivers a cruise efficiency 14.6 to 21.0 percent below the 0.80 assumed at the 
 **16.4 to 22.9 percent below it at the heavy one.** As in Section 7.2, no variable-pitch counterfactual
 was computed, so this is not a measure of what refusing the hub costs.
 
-**The transition is where the square–cube relation is paid in full.** The moment needed to rotate
-the aircraft follows M = Iα with I ∝ mL², so the moment required for a fixed rotation time grows
-much faster than the aircraft. **Rotating the heavy design in the light design's two seconds would
+**The transition is where the square–cube relation is paid in full.** The moment for a fixed rotation time grows as mL². **Rotating the heavy design in the light design's two seconds would
 demand about 220 kW from the tip propellers — roughly the whole of hover power**, which is not
 available. At 5.1 seconds, the heavy design's rotation time, the demand falls to about 13 kW, 6
 percent of hover power. **A larger aircraft of this type turns more slowly, and must.**
 
 #### Why this section sits between the ledger and the contracts
 
-**The next section needs only what this one shows.** If the three charges were one quantity, a single
+If the three charges were one quantity, a single
 number could rank architectures whatever weight each charge was given. **Because at least two of them
 are not locked together, a comparison of architectures cannot in general be reduced to a number that
 does not depend on how the charges are weighed: where one architecture pays less of one charge and
@@ -1968,8 +1946,7 @@ where E* is the fuel's specific energy and η the energy chain, propeller includ
 contracts differ only in the last factor.
 
 - **Fixed fuel fraction.** Every architecture carries sixteen percent of its own take-off mass as
-  fuel. **Take-off mass cancels from range**, which is then set by L/D and the chain alone. A
-  heavier architecture shows its mass in the take-off-mass column and nowhere in the range column.
+  fuel. **Take-off mass cancels from range**, which is then set by L/D and the chain alone.
 - **Fixed fuel mass.** Every architecture carries the fuel this configuration carries at the same
   closure — 8.4 to 9.2 kg. **Range is divided by take-off mass**, so a heavier aircraft flies the
   same fuel less far.
@@ -2065,9 +2042,7 @@ hover-sized rotors flown as cruise propellers — none of which is modelled here
 they fill is not computed.
 
 **There is a trade, but it is lopsided.** The tilting layout closes 0.5 to 5.4 percent heavier than
-this configuration, and it cruises at the clean airframe's lift-to-drag ratio with a propeller at 0.80:
-it is credited with no nacelle drag, no pivot fairing, and no penalty for flying hover-sized rotors as
-cruise propellers. **Even the contract that weights mass most** — a fixed take-off mass, in which every
+this configuration, and it cruises at the clean airframe's lift-to-drag ratio with a propeller at 0.80. **Even the contract that weights mass most** — a fixed take-off mass, in which every
 kilogram of tilt mechanism is a kilogram of fuel not carried — **leaves the bound's margin at 93 to 130 percent.**
 The contract moves the comparison, as Section 7.3 says it must where there is a trade; none of the
 three moves it far enough to matter. A ranking against a competitor modelled as a bound is not a
@@ -2099,10 +2074,7 @@ where mass does not enter, does not move with it at all. **Put plainly, the sign
 mass is not a result about the architectures; it is a result about that parameter**, and it is the
 one most worth measuring.
 
-**The size of the shift behaves the same way.** It barely moves when the propeller or drag basis is
-changed — 65 to 77 points across those cases — because those asymmetries enter all three contracts
-alike. It moves a great deal with the lift group, from 14 to 134 points, because the shift *is* the
-mass difference being counted. **What is robust is that the shift exists and runs toward the lighter
+**The size of the shift behaves the same way.** **What is robust is that the shift exists and runs toward the lighter
 aircraft; its size is the size of the mass difference.**
 
 #### What the framework asks of whoever uses it
@@ -2112,22 +2084,16 @@ its user in return. **It asks for three things, and this paper holds itself to t
 
 **Carry the audit, for every column.** State each charge in its own currency — kilograms, drag
 counts, installed kilowatts — before any aggregate, and state the basis of the comparison with its
-asymmetries and their directions. An aggregate that arrives without its parts cannot be checked, and
-the parts are where the comparison is decided. **This paper meets that for its own column** (Section
+asymmetries and their directions. **This paper meets that for its own column** (Section
 11) **and not for the competitors'**, whose kilograms and drag counts here are parameters and transferred
-ratios rather than an audit — which is one more reason no ranking against them is offered.
+ratios rather than an audit.
 
 **Name the contract.** A comparison of architectures is a comparison under a contract. The contract is
 chosen by the mission rather than by the analyst, and a comparison that does not state one has chosen
 one silently.
 
 **Refuse the bare ranking.** Report an ordering only with the contract it was computed under, and,
-where its sign depends on an unmeasured quantity, with that quantity named. An ordering that holds
-under every contract examined may be reported as such — that is a stronger statement than any one
-contract gives, and it still names the contracts. Applied to this paper's
-own numbers, the rule is the fourth row of Section 6: **no range claim is made against lift-plus-cruise
-or tilting layouts**, because the ordering against the first depends on the contract and on the
-competitor's lift-group mass, and the ordering against the second is against a bound.
+where its sign depends on an unmeasured quantity, with that quantity named.
 
 #### What this section does not establish
 
