@@ -1,4 +1,4 @@
-> **GÜNCEL DIŞ GÖRÜŞ TURU → [`external-review-75.md`](external-review-75.md)** · yeni pencere açan okuyucu için
+> **GÜNCEL DIŞ GÖRÜŞ TURU → [`external-review-76.md`](external-review-76.md)** · yeni pencere açan okuyucu için
 > [`reader-onboarding.md`](reader-onboarding.md) · önceki bütün turlar [`arsiv-dis-gorus/`](arsiv-dis-gorus/).
 > *(Düzen, Tur 65: bu dizinin kökünde yalnız güncel tur metni ve başlangıç metni durur; yeni tur gelince bir öncekisi
 > arşive gider. Kaynak PDF'ler `references/`'te; `source/` altındakiler CFD kodunun açtığı dosyalar, yerinde kalır.)*
