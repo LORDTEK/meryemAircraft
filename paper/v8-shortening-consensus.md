@@ -214,3 +214,16 @@ ruh cümleleri bölüm başı/sonu (Q) · tanım tablosu (Q).
 
 **Yazarın kararı:** plan onaylandı (Tur 68). Ürünler Tur 68 metni §7'de: birleştirilmiş görünüm (uygulanmadı — kaynak
 değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
+
+# Tur 69
+
+| Kalem | G | C | D | Q | K | Durum |
+|---|---|---|---|---|---|---|
+| Adım 12 taslağı (veto) | yok | yok | yok | yok | — | **Uygulandı** → teyide |
+| Düşük Re sınır cümlesi korunsun | ✓ | ✓ | ✓ | ✓ | ✓ | **Eklendi** (151) |
+| Adım 8 bölünmesi | ✓ | ✓ | ✓ | ✓ | ✓ | **Kapandı** |
+| On iki eklem | onar (5.1/5.2) | onar | onar (5.1/5.2) | onar (regex) | 5.1/5.2 | **Görünümde onarıldı** → teyide |
+| "These are the parts…" eklemi | kendi bağlantısı | olduğu gibi | "The tip pairs are…" | olduğu gibi | DeepSeek | **Açık** |
+| 10+11 birleşimi | ✗ | ✗ | ✗ | geri çekti | ✗ | **Kapandı** (yok) |
+| Tanım tablosu | ✗ | ✗ | ✗ | geri çekti | ✗ | **Kapandı** (yok) |
+| v7 şekil kuralı | ✓ | ✓ (+ şekil–iddia denetimi) | ✓ | ✓ | ✓ | **Kapandı**; ChatGPT eki oylamada |

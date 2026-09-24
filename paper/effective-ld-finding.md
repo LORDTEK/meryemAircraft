@@ -1303,3 +1303,28 @@ bazen daha isabetli de olabilir."* → Adım 12 taslağında Grok P3'ün tarifi 
   13 kısaldı, 76 aynen. **Yalnız silme** kuralı mekanik denetleniyor. **Öğrenilen:** silme de anlamı ters çevirebilir
   (*"Coupling is not identity"* → *"is identity"*) — denetim silinen olumsuzluk/niteleyiciyi reddediyor; `--sina` ile
   sınandı; kendi taslağımda iki silmeyi yakaladı (*"without settling…"*, *"less"* içeren tanım) → geri kondu.
+
+---
+
+# Tur 69 — Tur 68 metnine dört cevap
+
+**Kararlar (dördü + Claude):** Adım 12 taslağına **veto yok** → uygulandı (2 973 → 2 152), kaybı olan her paragraf Ek S12'de
+aynen; düşük Re sınır cümlesi korunan listede (151); Adım 8 bölünmesi kabul; 10+11 birleşimi yok; tanım tablosu yok; ruh
+cümlesi konumu yalnız son ses geçişinde sınama; şekil tabloyu değiştirir; v7 şekil kuralı kabul.
+
+**Eklemler:** DeepSeek ve Grok'un önerisiyle görünümde Adım 7 → 5.1, Adım 8 → 5.2; on iki eklemin hepsi çözüldü (fiil
+uyumu, kendine atıf). Qwen'in regex önerisi gereksizleşti.
+
+**Açık:** *"These are the parts that fail the escape condition"* (korunan) — DeepSeek: *"The tip pairs are the parts…"*;
+Grok: *"Of the hardware just listed, these are…"*; ChatGPT, Qwen: olduğu gibi. Claude: DeepSeek'inki.
+
+**Adım 12 ikinci geçiş (taslak, uygulanmadı):** okuyucu yeniden yazımları — R1 Grok (+ Claude: *sized by one method*, kapsam
+cümlesi, ölçülmemiş üstel), R2 DeepSeek, R3 DeepSeek (+ *in the free-wheeling state*), R4 Grok, R5 Grok, D1 ve D2 ChatGPT →
+2 152 → 1 873. Alınmayanlar ve gerekçeleri: ChatGPT'nin kendi çekince koyduğu mekanizma cümlesi (daha güçlü); üç "genel
+değil" cümlesinin birleşmesi (üç ayrı şeyi koruyor); Qwen'in Bill 1 yeniden yazımı (*"by definition"* daha güçlü; Adım 14'ün
+dayandığı bağlaşım cümlelerini düşürüyor); Qwen'in *"Why this section sits"* yeniden yazımı (kapsam cümlesini düşürüyor).
+
+**Adım 13 ilk taslak (yalnız silme):** 2 398 → 2 117 (−%12); 14 korunan cümle; tek yargı: Adım 9'un dördüncü satırına
+uygulanan kural cümlesi çıktı (retin evi Adım 9 ve 15). Ek S13'e aynen gidecek.
+
+**Yazar notu uygulanışı:** Grok notu okuyucu metnine yine yazılmadı; seçimlerin gerekçesi tabloda.
