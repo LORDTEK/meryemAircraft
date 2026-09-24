@@ -351,6 +351,12 @@ dahil herkesin hemfikir olduğu kısaltmalar uygulansın."*
   cümle kaynak cümlenin yalnız silmeyle kısalmış hâlidir (`paper/build/v8_draft_check.py`); **silme de anlamı ters
   çevirebilir** — silinen olumsuzluk/niteleyici reddedilir. Yazar: *"Grok'un kısaltma konusunda önerileri bazen daha
   isabetli de olabilir."* — kısaltma tariflerinde Grok'un önerisi ağırlıklı okunur; eşik ve veto değişmez.
+- **Kısaltma HER YERDEN (yazar, Tur 72).** Qwen'in hesabı (hesaplar sıfıra inse bile gövde hedefin iki katı) yazara
+  gitti: *"Gerçekçi olmak durumundayız. Evet haklısınız, uyarıyı yapan arkadaşlar da sen de hepiniz haklısınız.
+  Kısaltacaksak heryerden kısalacak. Tamam, o şekilde ilerleyelim lütfen."* → Adım 5–8 artık kısaltmanın dışında
+  değil. Ruh kuralı durur: kavrayış yerleşim, sıra ve sesle taşınır; on ruh cümlesi korunur. Sıra: önce hesaplar, sonra
+  çerçeve, sonra gerisi. **Ölçüm (Tur 72):** yalnız silme adım başına %7–12; bu yolla gövde ~24 000'de biter. Hedef
+  yöntemle ancak **yeniden kurma** (recomposition) ile — önce bir bölümde deneme, veto sayılır (Tur 72 metni §5).
 
 ## 3. Doğrulama
 

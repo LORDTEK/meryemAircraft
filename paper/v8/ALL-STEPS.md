@@ -1632,8 +1632,7 @@ performed. Each is marked.
 different currencies — kilograms, drag counts, installed kilowatts — and **no scalar aggregate is
 defined, because this study has no defensible weighting between them.**
 
-**The refusal has an address, and saying where it points is what keeps it from reading as an
-unfinished cost section.** These three quantities become one number only under a sizing contract,
+These three quantities become one number only under a sizing contract,
 and that is Section 13: **the total is the contract, not a property of the aircraft.** **Reporting them
 is this paper's job; the weighting belongs to whoever has the mission.**
 
@@ -1650,8 +1649,7 @@ differ only by that margin. **No line item at the adverse end is an independent 
 they should not be subtracted from one another as if they were.)*
 
 **The rotor line rests on section drag at low Reynolds number.** It is a blade-element result for
-blades whose sections run near a Reynolds number of 8 × 10⁴ in the free-wheeling state, on section
-polars that are computed rather than measured, and section drag is hardest to predict in that range.
+blades whose sections run near a Reynolds number of 8 × 10⁴ in the free-wheeling state, on section polars that are computed rather than measured.
 Section 12 shows how strongly the term depends on it.
 
 **The hardware exposed by the vertical-phase layout is 69 percent of the zero-lift drag at the
@@ -1661,19 +1659,12 @@ of it at the favourable end. **That is Bill 2 on this aircraft, in the terms Sec
 it** — and the phrase is "exposed by the vertical-phase layout" rather than "dedicated lift group",
 because Section 7 is precisely the claim that there is no dedicated lift group here.
 
-**The tip-frame term is an attribution, not a marginal removal cost.** Section 8 gives the frames
-four duties: landing gear, control moment arms, rotor support, and the fairing that is the
-aircraft's only vertical surface. Their drag is charged to the hover-related hardware set because
+**The tip-frame term is an attribution, not a marginal removal cost.** Their drag is charged to the hover-related hardware set because
 that is the set the ledger is decomposing; **it is not a claim that this drag would disappear if
 the vertical phase did**, since the landing and directional duties would still have to be met
 somehow.
 
-The same statement as a lift-to-drag ratio. **Removing all three non-clean-body terms — the hub
-and small items, the tip frames and the free-wheeling rotors** — gives a clean-body ratio of
-**20.55** at the favourable end and **15.24** at the adverse one, against the aircraft's **10.82**
-and **8.79**. **The configuration retains 52.6 percent of its clean-body lift-to-drag ratio at the
-favourable end and 57.7 percent at the adverse one**, so the non-clean-body terms remove 47.4 and
-42.3 percent respectively, with the frames and rotors the large majority of what is removed.
+**Removing the hub and small items, the tip frames and the free-wheeling rotors gives a clean-body lift-to-drag ratio of 20.55 at the favourable end and 15.24 at the adverse one**, against the aircraft's 10.82 and 8.79: **the configuration retains 52.6 and 57.7 percent**, so the non-clean-body terms remove 47.4 and 42.3 percent, with the frames and rotors the large majority.
 
 **That ordering is the opposite of the one intuition offers, and the word that carries it has to
 be exact.** Bill 2 has a **larger fractional burden where the clean-body drag is lower.** In

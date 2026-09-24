@@ -1368,3 +1368,23 @@ paragraflar tam; `v8_nothing_lost.py` 11–13'ü kapsıyor, tabloyu satır satı
 
 **Qwen P3 — hesap:** hesap adımları 8 679, geri kalan 17 571 (çerçeve 5 723, yenilik anlatıları 5–8 6 931). **Hesaplar sıfıra
 inse bile gövde hedefin iki katından fazla.** Yazara soruldu.
+
+---
+
+# Tur 72 — Tur 71 metnine dört cevap; yazarın kararı
+
+**Yazar:** *"Gerçekçi olmak durumundayız. … Kısaltacaksak heryerden kısalacak. Tamam, o şekilde ilerleyelim lütfen."*
+
+**Teyit (dördü):** 2.1–2.3 → kapandı. **Uygulandı (dördü + Claude):** Adım 11 ikinci geçiş (a)–(d), 2 044 → 1 957; S11'e 4
+paragraf. **Karar:** ilk geçiş sınaması kalıcı; olumsuz cümle sayımı yalnız tanı; harita taslaktan bir tur önce; "Section 10"
+cümlelerinin nesnesi denetlenir.
+
+**ChatGPT'nin model kilidi gerçek bir durum buldu:** Adım 11 *"The transition altitude result (5.4 m) is a result, not a
+charge"* modelini yitirmiş (S11 tablosunda vardı) → nitelemenin geri konması oylamada.
+
+**Adım 10:** okuyucu harita eklerinin çoğu Adım 10'da ve taslak koruyor; Grok/DeepSeek'in bazıları (tampon %3,6, yakıt kesri
+%16, disk yükü 44, motor seyirle, kalkış payı, 50 kg'daki palet seçimi) Adım 10'da **yok** — evleri 5, 7, 11–14. Taslak
+(yalnız silme) 2 601 → 2 403; `verify.py`'nin ayrıştırdığı iki cümle dokunulmadı; hüküm cümlesinin korunması önerildi.
+
+**Yöntem sorusu:** yalnız silme adım başına %7–12 → gövde ~24 000'de biter; korunan cümle tabanı ~2 200 kelime. Önerim:
+bölüm bölüm yeniden kurma (R, cümle cümle veto), önce Adım 4'te deneme, veto edilen hataları say.

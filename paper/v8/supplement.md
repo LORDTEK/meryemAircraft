@@ -159,6 +159,28 @@ the blade-family choice at the reference size; **they do not establish how the t
 behave as the aircraft changes size.** Section 12 asks whether they move together when the size
 changes, and Section 13 asks what happens to the comparison when the sizing contract changes.
 
+*(Round 72, second pass)*
+
+#### Bill 2 — the drag of hover hardware, inside the bracket
+
+**The rotor line rests on section drag at low Reynolds number.** It is a blade-element result for
+blades whose sections run near a Reynolds number of 8 × 10⁴ in the free-wheeling state, on section
+polars that are computed rather than measured, and section drag is hardest to predict in that range.
+Section 12 shows how strongly the term depends on it.
+
+**The tip-frame term is an attribution, not a marginal removal cost.** Section 8 gives the frames
+four duties: landing gear, control moment arms, rotor support, and the fairing that is the
+aircraft's only vertical surface. Their drag is charged to the hover-related hardware set because
+that is the set the ledger is decomposing; **it is not a claim that this drag would disappear if
+the vertical phase did**, since the landing and directional duties would still have to be met
+somehow.
+
+The same statement as a lift-to-drag ratio. **Removing all three non-clean-body terms — the hub
+and small items, the tip frames and the free-wheeling rotors** — gives a clean-body ratio of
+**20.55** at the favourable end and **15.24** at the adverse one, against the aircraft's **10.82**
+and **8.79**. **The configuration retains 52.6 percent of its clean-body lift-to-drag ratio at the
+favourable end and 57.7 percent at the adverse one**, so the non-clean-body terms remove 47.4 and
+42.3 percent respectively, with the frames and rotors the large majority of what is removed.
 
 ---
 
