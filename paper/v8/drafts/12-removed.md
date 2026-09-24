@@ -1,0 +1,57 @@
+# Adım 12 taslağı — kaynaktan çıkan ve kısalan her cümle (üretildi: v8_draft_check.py)
+
+Çıkan cümleler taslak uygulanırsa Ek S12'ye **aynen** gider.
+
+- **KISALDI:** If they did, the framework of Section 2 would be a single cost described three ways, and a ledger in three currencies would be a ledger in one.
+  - *silinen:* and a ledger in three currencies would be a ledger in one
+- **ÇIKTI:** This is a different axis from the one Section 11 examined.
+- **ÇIKTI:** There, Bill 2's share of the zero-lift drag was compared at the two ends of the drag bracket, at a fixed size.
+- **ÇIKTI:** Here the size changes.
+- **ÇIKTI:** The two answers are about different variables and do not bear on each other.
+- **KISALDI:** No closure was run at 1 000 kg, and none could be run on the same footing: the heavy design has neither a drag bracket nor a structural closure (both below).
+  - *silinen:* the heavy design has neither a drag bracket nor a structural closure both below
+- **ÇIKTI:** Taking one end from Section 10 and the other from the reference pair would manufacture a scale change that is really a propeller-efficiency update applied to one end only.
+- **ÇIKTI:** The quantities used are, with one exception, ones Section 10 did not replace.
+- **ÇIKTI:** Disc loading is a sizing rule Section 10 holds.
+- **ÇIKTI:** The buffer fraction is an input to its loop.
+- **ÇIKTI:** The free-wheeling rotor term is the value Section 10 carries at both ends of its bracket at 50 kg, before the ten percent margin of the adverse end (Section 11), and it is computed here at 1 000 kg by the same method.
+- **ÇIKTI:** The exception is the engine rating inside the Bill 3 ratio, which Section 10 did replace; it is taken from the reference pair and said so where it is used.
+- **KISALDI:** No heavy-design range is quoted: the figures available for it either omit the free-wheeling rotor charge or carry an assumed rather than a computed propeller efficiency, and none carries both.
+  - *silinen:* the figures available for it either omit the free wheeling rotor charge or carry an assumed rather than a computed propeller efficiency and none carries both
+- **KISALDI:** (Section 11's 2.4 to 3.2 is the same ratio at the four closures; their cruise engines, 3.54 to 5.17 kW, are larger than the light reference design's 2.6 kW, and the engine rating is a quantity Section 10 did replace.
+  - *silinen:* their cruise engines 3.54 to 5.17 kw are larger than the light reference design's 2.6 kw and the engine rating is a quantity section 10 did replace
+- **KISALDI:** Wing loading rises from 25.3 to 45.0 kg m⁻², span grows by a factor of 3.35 and the main propeller by 4.50, and the ratio of propeller diameter to span rises from 0.35 to 0.47.
+  - *silinen:* wing loading rises from 25.3 to 45.0 kg m⁻² span grows by a factor of 3.35 and main propeller by 4.50 and the
+- **ÇIKTI:** The heavy design is not the light design photographed from further away.
+- **KISALDI:** The rotor term is computed by one method at both sizes: the blade designed for its own hover thrust at the same design tip speed, the hub at the same fraction of the radius, and the free-wheeling state solved at each design's own cruise speed.
+  - *silinen:* the blade designed for its own hover thrust at the same design tip speed the hub at the same fraction of the radius and the free wheeling state solved at each design's own cruise speed
+- **KISALDI:** Across the blade designs swept, design section lift coefficient 0.55 to 0.85, the heavy term runs from 0.0045 to 0.0100, and every design in that range meets the heavy design's hover requirement with margin — a figure of merit of 0.75 to 0.77 against the 0.599 required.
+  - *silinen:* and every design in that range meets the heavy design's hover requirement with margin a figure of merit of 0.75 to 0.77 against the 0.599 required
+- **KISALDI:** Three candidates can be excluded directly: - Geometry.
+  - *silinen:* geometry
+- **ÇIKTI:** The eight tip discs total 0.251 m² against 1.98 m² of wing at 50 kg, and 2.82 m² against 22.24 m² at 1 000 kg — a disc-to-wing area ratio of 0.127 at both sizes.
+- **ÇIKTI:** The wing does not outgrow the discs. - Dynamic pressure.
+- **ÇIKTI:** A rotor turning freely at zero shaft torque settles at a rotational speed proportional to the flight speed, so its axial force scales with dynamic pressure and a coefficient referenced to that pressure does not.
+- **ÇIKTI:** Solving the heavy blade's free-wheeling state at 30 and at 40 m s⁻¹ confirms it: the coefficient changes by 9 percent — itself a Reynolds-number effect — not by the 44 percent a dynamic-pressure scaling would give. - Solidity.
+- **ÇIKTI:** The heavy blade is not thinner; it is fuller — 0.100 against 0.075 for blades designed to the same section lift coefficient.
+- **ÇIKTI:** Evaluating the heavy blade with its section Reynolds number scaled down to the light rotor's returns 0.0181 — 18 percent above the light charge.
+- **ÇIKTI:** At equal Reynolds number the fuller heavy blade would pay more, not less.
+- **KISALDI:** Reynolds number is not an independent variable — it follows from the chord and the speed each rotor has — so this is a decomposition inside the model rather than a causal claim beyond it: for the chords and speeds these two designs have, the fall is what lower section drag at a higher Reynolds number gives.
+  - *silinen:* for the chords and speeds these two designs have the fall is what lower section drag at a higher reynolds number gives
+- **KISALDI:** If the light blade's real section drag is higher than the polars give, the light charge is larger and the fall is larger; if it is lower, the fall is smaller — the heavy end, at the higher Reynolds number, being the better predicted of the two.
+  - *silinen:* the heavy end at the higher reynolds number being the better predicted of the two
+- **ÇIKTI:** The result does not touch the structural question.
+- **ÇIKTI:** It comes from blade-element solutions on two sized rotors at their own conditions; it would remain a result even if the heavy airframe were shown not to close.
+- **KISALDI:** Neither is derived from the hover energy the aircraft needs; each was chosen for its design point and carried into the sizing.
+  - *silinen:* each was chosen for its design point and carried into the sizing
+- **KISALDI:** If the buffer is sized to supply the hover deficit — the hover demand at the electrical bus less what the engine delivers there — at a specific power that is the same at both sizes, its mass fraction follows the deficit per kilogram: 0.202 kW kg⁻¹ at 50 kg and 0.199 at 1 000 kg, a fall of about 2 percent.
+  - *silinen:* 0.202 kw kg⁻¹ at 50 kg and 0.199 at 1 000 kg a fall of about 2 percent
+- **ÇIKTI:** Sizing the buffer by energy instead adds a hover duration, which is a mission choice, and changes nothing in that argument.
+- **ÇIKTI:** The buffer is the conversion the fourth part of the escape condition permits: kilowatts of hover peak paid in kilograms of store.
+- **ÇIKTI:** Nor is the structural mass a substitute.
+- **ÇIKTI:** The shell-mass exponent governs how the airframe fraction scales, and it is unmeasured; but the airframe is not Bill 1 as Section 2 defines it — it is the structure every architecture carries — and treating it as the mass bill would change the definition to fit the test.
+- **ÇIKTI:** Neither is one of the three charges, and both are reported because a section about what scale does to this aircraft would be incomplete without them.
+- **KISALDI:** As in Section 11, no variable-pitch counterfactual was computed, so this is not a measure of what refusing the hub costs; it is a measure of what a fixed blade that hovers delivers in cruise, and that does not improve with size.
+  - *silinen:* it is a measure of what a fixed blade that hovers delivers in cruise and that does not improve with size
+- **ÇIKTI:** Hover power escapes the classical scaling objection by fixing disc loading; the rotation does not escape it.
+- **ÇIKTI:** A third shown to be separate would strengthen it; a third shown to be locked to one of the others would leave it standing.
