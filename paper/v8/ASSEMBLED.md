@@ -1440,9 +1440,7 @@ and aspect ratio** fixed, so area, span and disc diameter follow the mass: acros
 closures the wing area runs 2.07 to 2.27 m², the span 3.53 to 3.70 m, and the nose disc diameter
 1.23 to 1.29 m. **The cruise lift coefficient is unchanged at 0.450 in every one of them**, so the
 lift-to-drag ratio is an input that stays valid at the closed mass rather than one frozen at a mass
-the loop has left behind. Had wing **area** been held fixed instead, the lift coefficient would
-have risen with the closed mass, the induced term would have moved against the heavier closures,
-and the drag corners would be optimistic as reported.
+the loop has left behind.
 
 **Three things the loop does not scale, and a reader comparing this section with Section 5.2 should
 know which is which.** The tip-frame length, the tip-disc diameter and the strip are not sizing
@@ -1542,12 +1540,6 @@ down to 1.00. *(Both times, and the thrust-to-weight figures with them, were est
 reference geometry at its published mass. The closure above does not re-derive any of them, and
 none of them is an output of it.)* Nothing in that result requires the tip pairs
 to contribute lift once the climb is acquired.
-
-**In this point-mass model there is no transition time to optimise**, which is a simplification
-rather than a trade.
-The control moment required scales as 1/t_r² and the control power as 1/t_r³, and the altitude
-loss falls with t_r as well: all three point the same way, so the rotation time is set by what
-the actuator can do rather than by a balance between competing penalties.
 
 **The second model removes the result, and this is the sharper of the two limitations.** The
 point-mass model prescribes the attitude and therefore cannot charge for the trajectory the
@@ -1745,8 +1737,7 @@ take the closure's convergence as covering them.
 The closure does not contain the cost of declining the reaction-torque channel, the sizing of the strip's
 actuation, the allocation of the take-off margin against attitude authority, the landing transition, the vortex
 ring state, closed-loop hover control, engine installation, or rotor–structure and rotor–wing interference. **None
-of these is a ledger entry; Section 8 lists them.** The transition altitude result (5.4 m) is a result, not a
-charge, and is not a term in any sizing loop (the table is Supplement S11).
+of these is a ledger entry; Section 8 lists them.** The transition altitude result (5.4 m, in the finite-moment model at the 50 kg reference geometry) is a result, not a charge, and is not a term in any sizing loop (the table is Supplement S11).
 
 **The first and the last are the two that would most change the numbers above if they were
 computed**, and neither is a small correction to a known quantity: one is a control problem the
