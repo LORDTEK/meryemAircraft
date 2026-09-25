@@ -156,7 +156,7 @@ three charges, and the table names such a cost in words rather than by a bill's 
 |---|---|---|
 | Distributed electric lift rotors | 3 — the cruise engine no longer sizes to hover | 1 and 2 — many rotors and mounts, permanently carried and exposed |
 | Folding or retracting lift rotors | 2 — the exposed rotor is removed from cruise | 1 — mechanism, actuation, locking; and a new failure mode, not among the three |
-| Tilt-rotor, tilt-wing, tilt-nacelle | 1 — one propulsion group serves both regimes | kilograms, not Bill 1 — the pivot and its actuators; **Bill 3 is left standing** — with no store, the power plant is still sized by the hover peak; and gyroscopic coupling and a transition control problem, which are **not among the three** |
+| Tilt-rotor, tilt-wing, tilt-nacelle | 1 — one propulsion group serves both regimes | kilograms, not Bill 1 — the pivot and its actuators; **Bill 3**, imposed or left standing according to how the architecture the move modifies supplies its hover peak — with no store, the power plant is sized by the hover peak; and gyroscopic coupling and a transition control problem, which are **not among the three** |
 | Variable-pitch or feathering propulsors | 1 and 3 — one propulsor is retrimmed across two widely separated operating points instead of duplicated | kilograms, not Bill 1 — pitch hub and actuation; and a new failure mode, not among the three |
 | Higher disc loading, smaller rotors | 1 and 2 — smaller, lighter, cleaner rotors | 3 — hover power rises with √(DL) |
 | Lower disc loading, larger rotors | 3 — hover power falls | 1 and 2 — larger structure and exposed area |
@@ -194,14 +194,22 @@ cruise drag, installed continuous power against installed continuous power. **Th
 transfer. It does not claim that every architecture is equally good**, and a remedy that is simply
 a better bargain in one currency refutes it.
 
-**Two clarifications keep the test from being either too easy or unfalsifiable.** A remedy that
-attacks one charge and simply leaves another standing is not a counter-example — the tilting row is
-the case, and it is written out there rather than left to be inferred. And a remedy whose cost
+**Two clarifications keep the test from being either too easy or unfalsifiable.** **"No worse" is
+judged against the architecture the move modifies.** A charge that architecture already paid, left as
+it was, is no worse; a charge it did not pay, imposed by the move, is worse, and the move is then a
+transfer. And a remedy whose cost
 falls **outside** the three charges does not refute the accounting, because the accounting is about
 those three; **but it is not thereby exempt from being counted.** The tilting family's mechanism is
 named in the table for exactly that reason, and it is the reader's to weigh against what the
 remedy buys. **A framework that could absorb any cost by declaring it out-of-scope would be
 unfalsifiable**, so the costs outside the three are listed, not waved away.
+
+**The tilting row needs both clarifications.** If the architecture it modifies supplies its hover peak
+from a store, tilting without one imposes Bill 3 and the row is a transfer. If that architecture
+already sizes its continuous plant by the hover peak, tilting leaves Bill 3 no worse; then, where the
+mechanism's kilograms are fewer than those of the lift group it removes, what keeps the row from
+refuting the accounting is the part of its cost that falls outside the three — which is why that part
+is listed.
 
 It also makes a prediction that can be checked without settling the architectural question at
 all: **where an arrangement pays one charge heavily in order to escape another, its ranking
@@ -224,6 +232,7 @@ any aircraft.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 81 (içerik):** S-5 — 2F'de taban adlandırıldı (S5-1: "No worse" değiştirilen mimariye göre), eğme satırı iki kollu koşullu (S5-2, son cümleciği korunan), eğme hücresi "imposed or left standing" (S5-3). Dört okuyucu + Claude. Emekli: "is not a counter-example — the tilting row", "Bill 3 is left standing" | Tur 80 metni §2 |
 | **Tur 80 (içerik değişikliği, kısaltma değil):** fatura ile para birimi ayrıldı — 2E'ye A′ paragrafı; tablo başlığı H; katlama (C5), eğme (B′), hatve göbeği (C4) hücreleri; "One row" paragrafı (C). Dört okuyucu + Claude, Tur 79 paketi. Gerekçe: pivot kilogramı 3B, S4 (146 lb) ve Adım 4'te vardı, tablo satırı "üç birimin hiçbirinde ödemez" diyordu. Emekli: *"does not pay in any of the three currencies"* | Tur 79 metni §2 |
 | **Tur 65:** tilt satırından *"mechanical complexity,"* çıktı — ölçülmedi; Adım 3'ten aynı gerekçeyle çıkmıştı (dört okuyucu + Claude hemfikir). Mekanizmanın bedeli düzyazıda duruyor: *"a pivot, an actuator, the gyroscopic coupling of a reorienting mass, and a control problem through the turn"* | bu bölümün tabloyu izleyen paragrafı |
 | Dikey faz uçuşun ~%2'si; bir saatlik görevde ~bir dakika | §2.1, satır 524–527 |

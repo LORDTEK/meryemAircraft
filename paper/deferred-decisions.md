@@ -113,6 +113,12 @@ that is allowed to be unfinished."* Adım 14'ün malzemesi, birikmiş hâliyle:
 - *"the separability Section 2 asserts"* → *"the distinctness Section 2 asserts"*. Adım 2 üç ayrı **muhasebe** niceliği
   söylüyor ve *"not assumed to be independent physical causes"* diyor; ayrılabilirlik Adım 12'nin sorusu.
 
+## S-5'in iki açık olgusu — Tur 81 (Qwen P3; Grok ve ChatGPT'nin şartı)
+
+S5-2 (Adım 2, 2F) **koşullu** yazıldı çünkü şu ikisi denetlenmedi; sonraki bir taslak bunları sessizce çözemez:
+1. NASA'nın *structure* / *propulsion* kategorilerinin üç faturaya nasıl eşlendiği (S4: 716 / 146 / 10 lb).
+2. Eşleştirilmiş turbo-elektrik çiftin sürekli gücünü askı tepesine göre mi boyutladığı; depo var mı (Qwen "yok" dedi — belge açılmadı, kullanılmadı).
+
 ## Adım 11 bir sonraki açılışında — Tur 79 (Qwen P2, not)
 
 - Tampon cümlesi (d) sözlüğüyle sıkılaştırılabilir: *"It is not Bill 1 (it is not lift-subsystem mass), but it is paid in the

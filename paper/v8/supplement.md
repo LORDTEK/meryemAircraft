@@ -68,7 +68,7 @@ three for over a decade**, which is why the gap below is not a historical one.
 |---|---|
 | **Different hardware** | Bills 1 and 2. The unused set is carried for the whole flight and, if exposed, drags. |
 | **Same hardware, but it serves only one duty** | Bills 1 and 2 again. A propulsor that lifts and is then carried is a dedicated lift group under another name, whatever it shares with the cruise system. |
-| **Same hardware, both duties, different orientation** | The tilting family. **Bill 3 is left standing unless a store supplies the hover peak**, and the mechanism that changes the orientation is itself mass, complexity and a control problem through the turn. |
+| **Same hardware, both duties, different orientation** | The tilting family. **Bill 3 is incurred unless a store supplies the hover peak**, and the mechanism that changes the orientation adds mass and introduces a control problem through the turn. |
 | **Same hardware, both duties, one orientation, different sizing point** | Bill 3 — unless the hover peak is supplied from somewhere other than the continuously installed power. |
 
 ---
@@ -107,6 +107,8 @@ carries the prediction.**
 ### Section 4 as it stood before recomposition (frozen snapshot, Round 76)
 
 The whole of Section 4 before the recomposition pilot, verbatim.
+
+*Note, outside the frozen text: the body of Section 4 has changed since this copy was frozen. Where this copy reads "moves the charge", the body now reads "moves the cost".*
 
 An accounting proposed by the same people who then use it to argue for a configuration invites
 one obvious objection: that the charges were chosen because a particular aircraft happens not to

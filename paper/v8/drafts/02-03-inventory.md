@@ -179,3 +179,11 @@ Applied (four readers + Claude): A′, H, C5, B′, C4, C in `02-the-tax.md`; St
 in any of the three currencies"*, *"moves* the charge"*. P29 six-row check on the assembled view: passes. Step 2 2 263 → 2 433
 words (content change). S-5 wording S5-1..S5-4 in the Round 80 text §2; baseline = the architecture the move modifies (all
 four); diagnosis conditional only (Grok, ChatGPT). 3B draft after S-5.
+
+## Round 81 — S-5 applied; pre-draft invariant extended
+
+Applied (four + Claude): S5-1..S5-4; S3 row propagated (and the Round 65 "complexity" removed there); S5-2's last clause
+protected (156); S4 frozen copy carries a note outside the frozen text. **Pre-draft invariant (every table):** row → modified
+architecture → cost → currency → bill or outside → where defined. **3B trace columns:** charge / currency / outside flag;
+relative-word flag (*left standing*, *still*); qualification lost; cross-step flag. To vote: S5-1′ (*left no larger* /
+*enlarged*), protection of S5-2's condition, Step 4 *"The tilt-wing is consistent with the transfer property"*.

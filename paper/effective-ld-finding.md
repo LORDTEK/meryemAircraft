@@ -1519,3 +1519,13 @@ kopyası eski "moves the charge"ı taşıyor — tasarım gereği; not düşüls
 "turbo-elektrik çiftte depo yok" dedi — kaynak açılmadı, kullanılmadı. Önerilen sözcükler S5-1..S5-4 (ChatGPT'nin sırası:
 taban → no worse → sınıflama → sınama). S5-4: 3B'de "left standing" yerine "incurred" (göreli kelime mutlak işte) — Grok ve
 Qwen "aynı cümle" istemişti; farklı kelimenin bu kaygıyı karşılayıp karşılamadığı soruldu. Qwen P3 + koruma önerisi.
+
+# Tur 81 — Tur 80 metnine dört cevap; (d) kapandı, S-5 uygulandı
+
+**Teyit:** (d) dört okuyucu + Claude → KAPANDI. S4 dondurulmuş kopyaya dış not (tur numarası yok — ek dergiye gider).
+**S-5 oybirliği:** S5-1..4 ve S5-2'nin son cümleciğini koruma → uygulandı (156; emekli 63). S5-3 dilbilgisi Grok'un biçimiyle.
+**Kendi hatam:** Tur 65'te emekli edilen "complexity" Ek S3'te kalmıştı (eki taramamışım); S5-4'ü S3'e yayarken yakalandı.
+**Oylamada:** ChatGPT'nin S5-1 boşluğu (azalan ve büyüyen fatura tanımsız) → "left no larger / enlarged"; koruma S5-2'nin
+koşuluna genişlesin mi (C, Q evet; G, D cümlecik); Qwen P2 çapraz okuma Adım 4'te "The tilt-wing is the transfer property"
+cümlesini buldu — #18'den güçlü → "is consistent with" önerisi. Step 11'in korunan "left standing on the electrical system"ı
+göndergesini taşıyor, değişmedi. 3B taslağı S-5 teyidinden sonra (Grok P31).

@@ -83,6 +83,9 @@ EMEKLI = {
     "range of a fixed-wing": "CLAUDE.md §0.3: sabit kanatla menzilde yarisilmaz",
     "general architectural superiority": "CLAUDE.md §0: bu cumle bir daha yazilmaz",
     "does not pay in any of the three currencies": "Tur 80: pivot kilogramla odeniyor (3B, S4); 'pays part of its cost in none' (Grok P26)",
+    "is not a counter-example — the tilting row": "Tur 81: kosulsuz muafiyet; taban adlandirildi (S5-1, Grok P30)",
+    "Bill 3 is left standing": "Tur 81: tabansiz goreli ifade; 2E'de 'imposed or left standing', 3B'de 'incurred' (S5-3/4, Grok P30)",
+    "itself mass, complexity": "Tur 81: 'complexity' Tur 65'te emekli; S3'te kalmisti (Claude'un Tur 65 kacirmasi)",
     "moves* the charge": "Tur 80: mekanizma fatura degil, maliyet (Qwen; dort okuyucu)",
 }
 

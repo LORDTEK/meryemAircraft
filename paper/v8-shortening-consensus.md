@@ -258,3 +258,8 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | (d) paketi A′ B′ C C4 C5 H | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı** (Tur 80); teyide |
 | Adım 4 "moves the cost" | ✓ | ✓ | ✓ | öneren | ✓ | **Uygulandı** (Tur 80); teyide |
 | S-5 taban = değiştirilen mimari | ✓ | ✓ | ✓ | ✓ | ✓ | Kabul; sözcükler S5-1..4 oylamada |
+| (d) teyit | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI** (Tur 81) |
+| S5-1..S5-4 + S5-2 son cümleciği korunan | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı** (Tur 81); teyide |
+| S5-1′ "left no larger / enlarged" (C'nin boşluğu) | — | işaret | — | — | öneren | Oylamada |
+| Koruma S5-2 koşuluna | cümlecik | öneren | cümlecik | öneren | ✓ | Oylamada |
+| Adım 4 "is consistent with the transfer property" (Q P2 okuması) | — | — | — | bulan | öneren | Oylamada |

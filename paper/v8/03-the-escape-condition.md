@@ -25,7 +25,7 @@ charge appears. **Different hardware** costs Bills 1 and 2: the unused set is ca
 flight and, if exposed, drags. **The same hardware serving only one duty** costs them again: a
 propulsor that lifts and is then carried is a dedicated lift group under another name, whatever it
 shares with the cruise system. **The same hardware serving both duties in a different orientation**
-is the tilting family: Bill 3 is left standing unless a store supplies the hover peak, and the
+is the tilting family: Bill 3 is incurred unless a store supplies the hover peak, and the
 mechanism that changes the orientation adds mass and introduces a control problem through the turn.
 **The same hardware, both duties, one orientation, but a different sizing point** leaves Bill 3 —
 unless the hover peak is supplied from somewhere other than the continuously installed power.
@@ -163,6 +163,7 @@ appeared.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 81:** 3B üçüncü sapma "left standing" → "incurred" (S5-4; dört okuyucu + Claude): 3B tabana göre karşılaştırmıyor, ne ödendiğini söylüyor. Ek S3 aynı değişiklik + Tur 65'te emekli "complexity" (kaçırılmıştı) | Tur 80 metni §2 |
 | **Tur 64 — N1 uygulanırken bulunan eski hata:** *"The second row of the inverted table — same hardware, different orientation"* — farklı yönelim **üçüncü** satırdı; *"tek görev"* satırı sonradan araya girince atıf bayat kalmış. *"The third departure — same hardware, both duties, different orientation"* | bu bölümün dört ayrılışı |
 | **Tur 64 — N1** (beşimiz hemfikir): tablo dört cümleye; *"complexity"* çıktı (ölçülmedi — ChatGPT); *"row"* → *"departure"* (dört yerde); ikinci ayrılışın gerekçe parantezi kaldı | Ek S3 |
 | **Tur 60:** tutum donanımı taşıyan propulsor'ün koşulu karşılamasını engellemez, ama seyirde seyir itkisi üretmeden taşınır → birinci başarısızlık kipi; mimari kısmi gerçekleşme (dördüncü kip). Eski *"does not violate it"* Adım 7/8 ile çelişiyordu | DeepSeek; bu bölümün başarısızlık kipleri 1 ve 4 |
