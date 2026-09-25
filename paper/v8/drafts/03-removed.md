@@ -2,10 +2,11 @@
 
 Çıkan cümleler taslak uygulanırsa Ek S3'ye **aynen** gider.
 
-- **ÇIKTI:** The charges exist because the two regimes are served by hardware that is not the same hardware, not serving both duties, and not held in one orientation.
-- **ÇIKTI:** Depart from any one of those and a charge appears.
-- **KISALDI:** Different hardware costs Bills 1 and 2: the unused set is carried for the whole flight and, if exposed, drags.
-  - *silinen:* the unused set is carried for the whole flight and if exposed drags
-- **ÇIKTI:** The same hardware, both duties, one orientation, but a different sizing point leaves Bill 3 — unless the hover peak is supplied from somewhere other than the continuously installed power.
-- **KISALDI:** (The second departure is stated separately rather than folded into the first because it does real work later: a propulsor that produces a little thrust in cruise is not thereby serving both duties, and the distinction decides which parts of a configuration meet the condition and which do not. "Serving both duties" is the accurate form; hover thrust and cruise thrust are not the same job in any ordinary engineering sense — one supports weight, the other balances drag — and calling them one would be loose.) > An architecture does not incur the three charges if the propulsors that carry the weight, > held in one orientation relative to the airframe, produce both the hover thrust and the cruise > thrust, and if the difference between the hover peak and the cruise demand is supplied from > a store rather than from permanently installed continuous power.
-  - *silinen:* rather than folded into the first and calling them one would be loose
+- **ÇIKTI:** The previous section listed moves that redistribute the three charges.
+- **ÇIKTI:** This one asks a different question: what would an architecture have to do in order not to incur them at all?
+- **KISALDI:** The answer is a definition, derived by inverting the table rather than by describing any aircraft, and it is stated here before any configuration is offered so that the standard is not taken from the thing it will be used to measure.
+  - *silinen:* rather than by describing any aircraft
+- **KISALDI:** Two things in that sentence are choices rather than derivations, and are marked as such.
+  - *silinen:* and are marked as such
+- **ÇIKTI:** The table requires only one orientation relative to the airframe; how an architecture keeps that while changing flight regime — by rotating the whole body, or otherwise — is not in the table, and is treated as exposition rather than as part of the definition.
+- **ÇIKTI:** And the table's last row permits the peak to come from any source other than the continuously installed power; a store is the narrower reading used here, because it is what the configuration examined later uses and because a narrower condition is easier to fail.
