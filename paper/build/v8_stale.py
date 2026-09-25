@@ -89,6 +89,9 @@ EMEKLI = {
     "tilt-wing is the transfer property": "Tur 82: #18 ile ayni daraltma; 'is consistent with' (Grok P32)",
     "The charges exist because the two regimes": "Tur 84: S-6 -- uc ozellik, dort sapma; R1 dort sayar (DeepSeek: geri gelmesin)",
     "sizing point leaves Bill 3": "Tur 84: goreli kelime; 'incurs' (R6)",
+    "zero-bill condition": "Tur 86: E2 yazarin karari -- ad dusuruldu; bir kez geciyordu, hic kullanilmiyordu",
+    "into a mass one": "Tur 86: S-8 -- depo fatura degil; 'a cost in kilograms' (Adim 3, 9, 11)",
+    "charges that refusal against": "Tur 86: S-8 -- mekanizma fatura degil; 'sets that refusal against'",
     "moves* the charge": "Tur 80: mekanizma fatura degil, maliyet (Qwen; dort okuyucu)",
 }
 

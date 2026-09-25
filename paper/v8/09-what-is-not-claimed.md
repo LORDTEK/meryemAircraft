@@ -100,7 +100,7 @@ uncontrollable, or unsuited to its mission, and the accounting says nothing agai
 possibility.
 
 **7. It does not claim that the trades inside the escape are favourable.** Moving the hover
-peak onto a store converts a power-system charge into a mass one; serving two regimes with one
+peak onto a store converts a power-system charge into a cost in kilograms; serving two regimes with one
 set of fixed-geometry propellers costs efficiency in at least one of them. Both are computed,
 neither is asserted to be worth paying, and the ledger reports them whichever way they fall.
 
@@ -137,6 +137,7 @@ what it demands of anyone who uses the framework afterwards.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 86 (S-8, dört okuyucu + Claude):** "converts a power-system charge into a mass one" → "into a cost in kilograms" — A′'ye göre depo fatura değil; aynı ifade Adım 3, 9, 11'de birlikte düzeltildi | Tur 85 metni §5 |
 | **Tur 67 — B5 (3.2)** (dört okuyucu + Claude): gerekçe Adım 7'de; *"Section 7 should be read under that limit"* çıktı — katkı bölümünü sonradan zayıf okutan savunmacı ses (Tur 64 ölçümü); iki korunan cümle kaldı | Adım 7 |
 | **Tur 66 — B4 (3.3):** yalnız sınır; üç bedel (itki asimetrisi, verim, rotor ataleti) burada kaldı (Grok); *"one price"* değil *"a price"* (Qwen: *"one"* tüketici okunabilir) | Adım 8 |
 | **Tur 61:** bağımlılık tablosu düzyazıya (dört okuyucu + Claude hemfikir); dört satır aynen, *"The last row"* → *"The last of these"* | `v8-shortening-consensus.md` |

@@ -210,3 +210,12 @@ word collisions — D5 *"a mass one"* → *"a cost in kilograms"* (also Steps 9 
 E2: "zero-bill condition" named once, never used; recommendation to the author: drop. **Repaired references log (DeepSeek):**
 3C *"The table requires"* → *"The inversion requires"*; *"is not in the table"* → *"is not in the inversion"*; *"the table's
 last row permits"* → *"the fourth departure's exception lets"* (S-7).
+
+## Round 86 — 3D and E2 applied; 3E/3F drafted; reference scan built
+
+3D applied (four + Claude) → 797 words; E2 (author): name dropped, consequential deletion "Six of them:" (not voted; shown).
+S-8 in Steps 9 and 11 applied. Protected 158 (3A sentence). Open before 3D closes: electrical path → "Bill 3 on the
+electrical path" (Grok P39). Lexical gate Step 3: 12 technical ✓, 2 bookkeeping ✓, 1 open (3.1), 1 mode-4 wording (locked).
+`v8_refs.py` + `paper/v8-refs-reviewed.md` (22): first run caught Step 13 "the tilt row" (table moved to S13).
+3F draft 279 → 229: **S-9** ("Those" = wrong three), **S-10** ("longest" false: 11 = 1 968; 6 = 2 230; 5–7 = 4 732),
+S-2 applied as R, F3/F5 D. Stop-rule question put to readers (source defects vs draft-made breaks).

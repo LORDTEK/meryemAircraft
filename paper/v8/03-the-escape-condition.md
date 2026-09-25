@@ -56,23 +56,20 @@ uses and because a narrower condition is easier to fail.
 
 ### What the condition does not say, and this matters more than what it says
 
-The condition is named below the **zero-bill condition**, and the name has to be read exactly.
-**It means zero of the three charges as Section 2 defines them** — the mass of a dedicated lift
-subsystem, the cruise drag of hover hardware left exposed, and continuous power installed to a
-hover peak. **It does not mean an architecture that costs nothing, and it does not mean an
+The condition has to be read exactly.
+**It means zero of the three charges as Section 2 defines them.** **It does not mean an architecture that costs nothing, and it does not mean an
 architecture that carries nothing for the vertical phase.** A definition that placed every
 conceivable cost inside the thing to be escaped would be unfalsifiable, and an architecture
 built to satisfy it would win by construction rather than by performance.
 
-So the costs the condition permits are named here, before any candidate is examined. Six of them,
-and the first is the one that most nearly contradicts the name:
+The costs the condition permits are named here, before any candidate is examined. Six of them:
 
 - **A store is permitted, and it has the same duty-cycle character as Bill 1.** The fourth part
   moves the hover peak off the continuous power plant and onto a store; that store delivers its
   peak for two percent of the flight and is carried for the rest. It is not Bill 1 as Section 2
   defines it — it is not lift-subsystem mass — **but it is mass carried for a duty that is
-  briefly needed, which is the same complaint Bill 1 makes.** The condition converts a power-
-  system charge into a mass one and claims only that the three charges as named are not incurred.
+  briefly needed, which is the same complaint Bill 1 makes.** The condition converts a power-system
+  charge into a cost in kilograms and claims only that the three charges as named are not incurred.
   **It does not claim the trade is favourable.** Whether the store is lighter than the continuous
   power it displaces is a sizing result and is computed, not asserted.
 - **Releasing the engine is not releasing the electrical path.** The fourth part frees the
@@ -81,22 +78,20 @@ and the first is the one that most nearly contradicts the name:
   it. **That is a charge the condition does not remove**, and it is carried in the ledger rather
   than in this definition.
 - **Rotating the airframe is permitted and is not priced here.** The condition refuses
-  architectures that reorient a propulsor, and charges that refusal against the mechanism a tilt
+  architectures that reorient a propulsor, and sets that refusal against the mechanism a tilt
   requires. **An architecture that instead rotates its whole body faces the same physical
   problem** — a ninety-degree change of the thrust axis relative to the flight path, with the
   moments, the authority and the control through the turn that implies. It is not one of the
   three charges and the condition does not eliminate it; it is priced where the transition is
   analysed. Saying otherwise would let a candidate win that line by wording.
 - **Hardware installed for the vertical phase is permitted if it serves both duties**, and the
-  second departure is what carries the weight. A propulsor that lifts and then propels
-  satisfies the condition. A propulsor that lifts and is then carried does not, whatever else it
-  shares with the cruise system.
+  second departure is what carries the weight.
 - **Hardware used in both regimes for something other than propulsive thrust is permitted, and its
   cruise drag is not eliminated.** *Cruise thrust in this paper means the thrust that balances
   cruise drag.* Attitude devices produce thrust in cruise, but they produce no cruise thrust in
   that sense; they are used throughout the flight, so their duty cycle matches their presence and
   they fall outside Bill 1. **They remain in the airstream, so the second charge reaches them.**
-  Those are two different statements and the distinction matters: **attitude hardware does not
+  **Attitude hardware does not
   stop the propulsor that carries the aircraft from meeting the condition, but it is carried through
   cruise without producing cruise thrust, which is the first failure mode below — and the charges
   are about everything the aircraft carries, so Bill 2 reaches it.** An architecture in that
@@ -160,6 +155,7 @@ appeared.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 86 (yeniden kurma, 3D; E2):** 880 → 797. D2 (A′ evi), D3, D4, D7 (3B evi), D8; **S-8** D5 "a mass one" → "a cost in kilograms" (Adım 9 ve 11 de), D6 "charges that refusal" → "sets". **E2 yazarın kararı:** "zero-bill condition" adı düştü → "The condition has to be read exactly."; "the first most nearly contradicts the name" gönderge kaybetti → silindi ("Six of them:"; bilgi ilk maddede). Dört okuyucu + Claude. Özgün 3D Ek S3'te donmuş | Tur 85 metni |
 | **Tur 85 (yeniden kurma, 3A ve 3C):** 3A 77 → 60 (A1 çıktı — evi 2F; A2 R — gönderge; A3 D — evi 2F); 3C 196 → 190 (C3 D; C4, C5 R — **S-7**: Tur 64'te 3B tablosu S3'e taşınınca 3C'deki "the table" 2E tablosuna işaret eder olmuştu). Kör okuma dördünde geçti. Dört okuyucu + Claude. Özgünler Ek S3'te donmuş | Tur 84 metni |
 | **Tur 84 (yeniden kurma, 3B):** 271 → 247 kelime. R1 (dört özellik; "because" → "wherever" — kaynağın S-6 sayım hatasının **esaslı onarımı**, üslup değil), R6 ("leaves" → "incurs"), D3 (Fatura 1–2 açıklaması, iki ev kuralı), D8, D9. Kör okuma dördünde de geçti. Dört okuyucu + Claude. Özgün 3B Ek S3'te donmuş | Tur 83 metni |
 | **Tur 81:** 3B üçüncü sapma "left standing" → "incurred" (S5-4; dört okuyucu + Claude): 3B tabana göre karşılaştırmıyor, ne ödendiğini söylüyor. Ek S3 aynı değişiklik + Tur 65'te emekli "complexity" (kaçırılmıştı) | Tur 80 metni §2 |

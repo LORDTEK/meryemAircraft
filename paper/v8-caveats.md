@@ -175,6 +175,7 @@ kaybolmasına (CLAUDE.md §0.8). Aynı denetimle sınanır.
 | 7 | That single move is what removes the need for the mechanism. | K+C |
 | 15 | What the paper offers is a configuration sized to combine runway-independent vertical operation with wing-borne cruise efficiency, arranged to do so with no mechanism that reorients a propulsor, and an account of what the combination costs. | K |
 | 7 | The configuration is arranged to change regime by rotating the airframe. The propulsors hold their orientation relative to the body from take-off to cruise; what changes is the orientation of the body relative to the flight path. | G |
+| 3 | The answer is a definition, derived by inverting the table, and it is stated here before any configuration is offered so that the standard is not taken from the thing it will be used to measure. | G+C+D+Q+K |
 | 3 | Read one at a time, these are ways to pay. Read as a conjunction, they are a condition. | G+C+D+Q+K |
 | 3 | An architecture does not incur the three charges if the propulsors that carry the weight…produce both the hover thrust and the cruise…is supplied from a store rather than from permanently installed continuous power | D |
 | 8 | The tip pairs are the parts that fail the escape condition | D |

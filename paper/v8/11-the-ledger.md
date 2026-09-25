@@ -117,7 +117,7 @@ percent of take-off mass, 1.9 to 2.1 kg across the four closures.**
 **Section 3 said in advance that this would happen and refused to call it free.** The buffer is
 not lift-subsystem mass, so it is not Bill 1 as Section 2 defines it — but it is mass carried
 for the whole flight to serve a demand that lasts about two percent of it, which is the
-complaint Bill 1 makes. **The architecture converts a power-system charge into a mass one.**
+complaint Bill 1 makes. **The architecture converts a power-system charge into a cost in kilograms.**
 Whether that trade is favourable is what the closure tests, and the closure is where the answer
 is: the engine it buys is 3.54 to 5.17 kW rather than one sized by a hover peak of 11.4 to
 12.5 kW.
@@ -181,6 +181,7 @@ changes, and Section 13 asks what happens to the comparison when the sizing cont
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 86 (S-8, dört okuyucu + Claude):** "converts a power-system charge into a mass one" → "into a cost in kilograms" — A′'ye göre depo fatura değil; aynı ifade Adım 3, 9, 11'de birlikte düzeltildi | Tur 85 metni §5 |
 | **Tur 73:** 5,4 m cümlesine model ve geometri geri kondu (ChatGPT'nin model kilidi; dört okuyucu + Claude). Kaynak: S11 tablosunun özgün satırı | Tur 72 metni §3 |
 | **Tur 72:** ikinci geçiş (a) *"The refusal has an address…"* silindi, (b) dört görev cümlesi silindi (ilk geçiş Adım 8'de), (c) *"and section drag is hardest to predict in that range"* silindi (Adım 12'de duruyor), (d) L/D paragrafı tek cümle (R). Dört okuyucu + Claude. 2 044 → 1 957 | Tur 71 metni §3 |
 | **Tur 71:** birinci geçiş 11.1, 11.3, 11.4 uygulandı (dört okuyucu + Claude); **11.2'ye veto** (DeepSeek, ChatGPT; Grok geri koyma istedi) → Reynolds cümlesi aynen kaldı. Kaybı olan paragraflar Ek S11'de | Tur 70 metni §4 |

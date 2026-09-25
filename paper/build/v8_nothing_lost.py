@@ -7,6 +7,12 @@ simdiki govdede ya da paper/v8/supplement.md'de AYNEN (bosluk ve * farki haric) 
 """
 import glob, os, re, subprocess, sys
 KOK = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# Tur 86: kisaltma DEGIL, oylanmis icerik duzeltmesi -- eski cumle bilerek emekli edildi (emekli listesinde);
+# yeni hali govdede aranir. Eski cumle eke konmaz (emekli ifadeyi dergiye tasimamak icin).
+DEGISTI = {
+    "The architecture converts a power-system charge into a mass one.":
+        "The architecture converts a power-system charge into a cost in kilograms.",
+}
 ONCE = {3: "46b9628", 4: "8c4d712", 10: "024005c", 11: "65ae7de", 12: "c9fcdd7", 13: "c9fcdd7"}   # kisaltmadan onceki commit
 
 
@@ -40,6 +46,11 @@ for n, c in ONCE.items():
     eski = subprocess.run(["git", "-C", KOK, "show", "%s:%s" % (c, yol)], capture_output=True, text=True, check=True).stdout
     simdi = duz(re.sub(r"(?m)^\s*- ", "", govde(open(os.path.join(KOK, yol), encoding="utf-8").read())))   # Tur 84: madde imi eski metinde siliniyordu, simdikinde de silinmeli
     for k in cumleler(govde(eski)):
+        if k in DEGISTI:
+            if duz(DEGISTI[k]) not in simdi:
+                kayip += 1
+                print("  KAYIP Adim %d (degisen cumlenin yeni hali yok): %s" % (n, DEGISTI[k][:100]))
+            continue
         if k not in simdi and k not in ek:
             kayip += 1
             print("  KAYIP Adim %d: %s" % (n, k[:110]))

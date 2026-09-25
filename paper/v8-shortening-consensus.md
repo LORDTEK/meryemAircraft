@@ -276,3 +276,11 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | 3A cümlesi korunan (C P1) | — | öneren | — | — | ✓ | Oylamada |
 | 3A "the table of Section 2" (Q P2) | karşı | "kurtarılabilir" | — | öneren | karşı | Çapraz görüşe (Tur 85 §6) |
 | 3D D2–D8; S-8 (Adım 3, 9, 11) | — | — | — | — | öneren | Kör okuma + oylama |
+| 3A/3C teyit; 3A cümlesi korunan | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI**; 158 |
+| Qwen P2 "table of Section 2" | karşı | karşı | karşı | geri çekti | karşı | **Kapandı, uygulanmadı** |
+| E2 adı düşür | ✓ | ✓ | ✓ | ✓ | öneren | **Yazar karar verdi; uygulandı** |
+| 3D D2–D8; S-8 (3, 9, 11) | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı** (Tur 86); teyide |
+| Elektrik yolu "Bill 3" (G P39) | öneren | — | Bill 3 okudu | "hangi fatura belirsiz" | ✓ | Oylamada |
+| Koruma ölçütü (dördünün ortak yazımı) | ✓ | ✓ | ✓ | ✓ | öneren | Teyide |
+| Adım 13 "tilt row" + "charges all three" | — | — | — | — | öneren | Oylamada |
+| 3F F1–F5; S-9, S-10; durma kuralı sorusu | — | — | — | — | öneren | Kör okuma + oylama |

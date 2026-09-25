@@ -1563,3 +1563,14 @@ S-7 kapandı. **3D taslağı:** 880 → 815 (−%7). **S-8:** fatura/birim denet
 charge into a mass one" (Adım 3, 9, 11; A′'ye göre depo fatura değil, kilogram maliyeti) ve "charges that refusal against the
 mechanism" (C'ye göre mekanizma fatura değil). **E2:** "zero-bill condition" adı bir kez geçiyor, hiç kullanılmıyor → yazara
 öneri: düşür. Oylamada: ChatGPT P1 (3A cümlesini koru), Qwen P2 ("the table of Section 2" — benim görüşüm hayır).
+
+# Tur 86 — Tur 85 metnine dört cevap; yazar: "Tamam adı düşür."
+
+**Oybirliği + yazar:** 3A/3C teyit → kapandı; 3A yöntem cümlesi korunan (158); Qwen P2'yi geri çekti; E2 → ad düştü (emekli).
+3D D2–D8 ve S-8 (Adım 3, 9, 11) uygulandı (3D 880 → 797). E2'nin sonucu olarak "the first most nearly contradicts the name"
+göndergesiz kaldı → oylanmamış bir silme ("Six of them:"), veto hakkıyla gösterildi. nothing_lost'a "oylanmış içerik
+değişikliği" haritası: emekli ifade eke taşınmaz, yeni cümle gövdede aranır (sınandı). **Yeni araç** `v8_refs.py` (iki katmanın
+otomatik olanı): ilk koşuda Adım 13'te "the tilt row" bayat atfını yakaladı. **3F:** S-9 (korunan cümledeki üç "değil" ile
+cevaplanan üç soru aynı değil — "Those" yanlış gönderge), S-10 ("the longest of the three answers" yanlış). **Kendi hatam:**
+S-7'yi durma kuralının "bir kırık gönderge" hakkı olarak saydım; kural taslağın kırdığını sayar, kaynağın kusurunu değil
+(#18 gibi). Okuyuculara soruldu; biri öyle okumazsa 3F durur.
