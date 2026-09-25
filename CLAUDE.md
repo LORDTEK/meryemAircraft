@@ -357,6 +357,11 @@ dahil herkesin hemfikir olduğu kısaltmalar uygulansın."*
   değil. Ruh kuralı durur: kavrayış yerleşim, sıra ve sesle taşınır; on ruh cümlesi korunur. Sıra: önce hesaplar, sonra
   çerçeve, sonra gerisi. **Ölçüm (Tur 72):** yalnız silme adım başına %7–12; bu yolla gövde ~24 000'de biter. Hedef
   yöntemle ancak **yeniden kurma** (recomposition) ile — önce bir bölümde deneme, veto sayılır (Tur 72 metni §5).
+- **Yeniden kurma yöntemi (yazar, Tur 73).** *"Yapayzekaların metin kısaltmada iyi olmadığını biliyorum. Dolayısıyla biraz
+  zaman alacak ama olacak Allah'ın izniyle."* Birleşik öneri okuyuculara sunuldu; **kabul ederlerse başlanır.** Kurallar:
+  birim bir bulgu bloğu; önce anlam envanteri (söylenecek / gösterilecek / nitelenecek / söylenmeyecek) okuyucu teyidiyle;
+  her cümle P/D/J/R etiketli, etiketsiz = R, R cümle cümle vetolu; iz tablosu; özgün adım eke tam; durma: güçlenen yüklem
+  ya da düşen sayı → dur, iki+ kırık öncül → hazır değil; sıra 4 → 2–3 (tek bölüm) → 9, 14 → 1 → 5–6 → 7–8 en son.
 
 ## 3. Doğrulama
 
