@@ -7,7 +7,7 @@ simdiki govdede ya da paper/v8/supplement.md'de AYNEN (bosluk ve * farki haric) 
 """
 import glob, os, re, subprocess, sys
 KOK = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-ONCE = {10: "024005c", 11: "65ae7de", 12: "c9fcdd7", 13: "c9fcdd7"}   # kisaltmadan onceki commit
+ONCE = {4: "8c4d712", 10: "024005c", 11: "65ae7de", 12: "c9fcdd7", 13: "c9fcdd7"}   # kisaltmadan onceki commit
 
 
 def govde(s):

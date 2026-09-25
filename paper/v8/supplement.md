@@ -103,6 +103,153 @@ stated: that adding a wing and a lift group together still costs mass. Section 2
 called that much obvious. **It is reported for scale, and the isolation test above is what
 carries the prediction.**
 
+
+### Section 4 as it stood before recomposition (frozen snapshot, Round 76)
+
+The whole of Section 4 before the recomposition pilot, verbatim.
+
+An accounting proposed by the same people who then use it to argue for a configuration invites
+one obvious objection: that the charges were chosen because a particular aircraft happens not to
+pay them. The objection arises at the title, not at the ledger, so it is answered here — before
+any configuration is described — and it is answered in the only way that settles anything, by
+testing a prediction the accounting makes against numbers this work did not produce.
+
+**What follows is not a test of the whole framework.** It checks one falsifiable consequence on
+one independent data set. That is a narrow thing, and it is stated narrowly.
+
+#### The prediction, stated before the data
+
+**The prediction has two halves, and only the first is a derivation.** Saying so is what makes
+the check worth running.
+
+> **First half, derived from Section 2.** A configuration carrying a dedicated lift system pays
+> for it in gross weight, and the payment is amplified: additional empty mass enters through a
+> multiplier that grows as the empty-mass fraction rises, and the same increment is charged
+> again in hover.
+>
+> **Second half, not derived.** That the cruise efficiency the arrangement buys does not cover
+> that payment. Section 2 predicts the charge and the amplification; **it does not prove that
+> the credit must lose.** A dedicated lift system raises the empty-mass fraction and may lower
+> the energy fraction at the same time, and which wins is a closure result rather than a
+> consequence of the accounting.
+
+The check tests the second half on independent data, with the first half supplying the reason to
+expect the outcome: the weight charge is amplified by a multiplier, while the efficiency credit
+enters linearly through the cruise lift-to-drag ratio.
+
+That distinction decides what a failure would mean. **If some data set showed the credit covering
+the charge, Bill 1 would not be refuted** — the mass would still have been paid. What would be
+refuted is the expectation that the amplified charge outweighs the linear credit, and that is
+worth testing precisely because it could go either way.
+
+**The prediction is also mission-dependent**, and the page would be weaker for hiding it. The
+mass charge of carried lift hardware is roughly fixed; the efficiency credit accumulates with
+distance. A long enough mission is where the credit is most likely to cover the charge, and the
+mission used below is short. **The counter-set is therefore a common-mission sizing study at
+longer range in which a dedicated-lift configuration is both more efficient and no heavier than
+one without.** None is known to the authors, and the invitation is meant literally.
+
+#### The data
+
+The check uses a NASA study that sizes **five VTOL architecture families**, most in two
+propulsion variants — nine designs in all — against a single mission with common tools and
+common assumptions. It was conducted for its own purposes, has no
+relationship to the present work, and does not use the three-bill accounting of Section 2 or any
+framework derived from it. It is used here for three reasons, stated so that the choice is not
+merely the one that agreed: it holds the mission fixed across architecture families, it applies
+one set of tools to all of them, and it reports both quantities this prediction needs. The
+mission is 1 200 lb of payload over 75 nautical miles.
+
+Three of the nine designs matter here. The turboshaft quadrotor reaches an effective lift-to-drag ratio of
+4.9 at a design gross weight of 3 678 lb, with no dedicated lift group: its rotors serve both regimes.
+**The turbo-electric lift-plus-cruise design reaches 8.5 at 7 271 lb and carries a dedicated lift group —
+eight lift motors beside its cruise motor. The turbo-electric tilt-wing reaches 8.6 at 6 584 lb with none:
+eight proprotors, reoriented.**
+
+#### The result
+
+**The primary comparison is the last two designs**, because they isolate the charge. The
+lift-plus-cruise and tilt-wing entries share the mission, the payload, the turbo-electric
+propulsion architecture and the presence of a cruising wing. **They are not identical in every
+other respect** — one stops its lift rotors in the airstream and drives a separate pusher, the
+other reorients its proprotors on a tilting wing — **but the difference the comparison turns on is
+that one carries a dedicated lift group through cruise and the other does not.** The comparison is
+the closest the published set comes to isolating that charge; it is not a controlled experiment.
+
+**The tilt-wing is 1.2 % better in effective cruise efficiency and 9.4 % lighter.** The dedicated
+lift group buys no cruise-efficiency advantage at all here — it is marginally behind — and the
+design gross weights differ by 687 lb in the tilt-wing's favour. **That figure is the net
+difference between two architectures, not the measured mass of a lift group**, and the
+published weight breakdown is what makes it informative rather than merely large.
+
+**The published weight breakdown shows the transfer property of Section 2 — the mechanism giving part
+of the structural saving back — inside a breakdown this work did not produce**, although the categories
+it reports do not account for the whole difference (Supplement S4).
+
+**And the source states the second half of the prediction in its own words.** Discussing why the
+all-electric lift-plus-cruise design is the heaviest in the set, the study writes that the high
+cruise efficiency of the lift-plus-cruise type reduces battery weight compared with the
+quadrotor, *"but not enough to counter the increase in structure and propulsion weight."* That
+is the efficiency credit conceded and found insufficient, by the authors of the data rather than
+by the authors of the prediction.
+
+**The quadrotor is reported for scale, and the isolation test above is what carries the
+prediction**: against it the lift-plus-cruise design changes three things at once, and the contrast is in
+Supplement S4.
+
+**The framework does not predict any of these numbers**; without the input fractions it predicts
+no magnitudes. What it predicts is that the amplified weight charge survives the efficiency
+credit, and on the isolated pair it does so with the credit reduced to nothing.
+
+#### The tilt-wing is the instructive case
+
+The tilt-wing is the entry that carries the isolation test above, and it is also the entry that
+denies this paper a claim it might otherwise be read as making.
+
+**The architecture proposed later in this paper is not the only way to avoid the first charge.**
+The tilting family avoids it too — it carries no dedicated lift group, it is the lighter of the
+two matched designs, and an independent set says so. The margin in cruise efficiency is one
+tenth and nothing is claimed from its direction; what matters is that the dedicated lift group
+does not buy an efficiency advantage to set against its mass.
+
+**Second, and this is what the entry is actually for: the tilt-wing is the transfer property of
+Section 2 appearing in someone else's data.** It does not escape the accounting by avoiding the
+mass charge; it *moves* the charge — to the mechanism that reorients its propulsors, with the
+actuation, the gyroscopic coupling and the transition control problem that Section 2 assigns to
+that family. The entry therefore does two jobs: it denies this paper a uniqueness it has not
+earned, and it confirms the property the accounting is built on. What separates the tilting
+family from the configuration described later is not this axis; it is what each pays, and a
+sizing study does not settle that.
+
+#### What this check does and does not establish
+
+It establishes that one prediction of the accounting holds on data produced elsewhere, for
+purposes unrelated to this argument. That is the whole of it.
+
+**It does not establish that the accounting is complete**, that the three charges are the only
+costs an architecture pays, or that avoiding them makes an aircraft better. The accounting says
+an architecture that avoids the three is cheaper in those three currencies and nothing more; a
+configuration may avoid all three and still be unbuildable, uncontrollable, or unsuited to its
+mission. Sections 10 and 14 are about exactly that possibility for the configuration proposed
+here.
+
+**It does not establish anything about the configuration this paper proposes**, which has not
+yet been described, and which is not in the study used here. A reader who wants to know whether
+the accounting flatters that configuration will have to wait for Section 11, where it is applied
+to it and where the answer is not uniformly favourable.
+
+What the check is for is narrower and comes earlier: **an instrument whose first use is to
+measure the thing its authors are advocating should be shown working on something else first.**
+That is what this section does, and it is the reason it appears here rather than after the
+aircraft.
+
+**The instrument is now fixed, and it is not modified again.** Sections 2 and 3 defined what any
+architecture in this corner pays and what escaping it would require; this section tested one
+falsifiable consequence of that definition on data produced by other people for other aircraft.
+**Everything that follows is measured with it rather than added to it.** The next two sections
+describe the two capabilities the mission asks for, one at a time and each against the family
+that structurally lacks it, before Section 7 asks whether one aircraft can hold both.
+
 ---
 
 ## S10. Section 10's paragraphs as they stood before compression (from Section 10, Round 73)
