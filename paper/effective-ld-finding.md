@@ -1406,3 +1406,18 @@ geometri; Adım 10 hüküm cümlesi korunan listede (152); Adım 10'dan 10.2 ve 
 - DeepSeek: cümle cümle iz tablosu (özgün, taslak, durum, varış, korunan kayıt); çok adımda geçen her sayıya eşitlik taraması.
 - Qwen: "yeni olgu yok" sınıflaması (korunan / atıf alan sayı-tanım-çekince / olgu söylemeyen bağlantı); etiketsiz özet cümle
   en sıkı vetoya; 2–4 tek bölüm olarak yeniden kurulsun (B2).
+
+---
+
+# Tur 74 — Tur 73 metnine dört cevap; yöntem kabul, deneme başladı
+
+**Teyit (dördü):** 1.1–1.3 → kapandı. **Yöntem:** dördü de değişikliklerle kabul etti; yazarın şartı sağlandı. Ayrışan yerlerde
+**katı olan** alındı: bulgu bloğu = bulgu + asgari yerel kanıt + nitelik (ChatGPT); 2–4 blok blok (Grok); envanter tablo +
+dış bağımlılıklar (Qwen) + herkes satır ekleyebilir (DeepSeek); J'nin tanımı ve fiil listesi (ChatGPT, Qwen); her R için yüklem
+defteri (ChatGPT); iz tablosunda kanıt rolü ve sayı nesnesi (ChatGPT, Grok); S4 dondurulur; sıra envanter → iz → taslak.
+**Durma:** güçlenen yüklem; gereken sayının düşmesi; modelini yitiren sayı; uydurulmuş nedensellik; yeri değişen ilk geçiş;
+"sıkışmış ama inanılmaz"; ikinci kırık öncül. DeepSeek'in "düşen sayıda bir onarım turu" önerisi alınmadı (üç okuyucu daha katı)
+— DeepSeek'e soruldu. Yüzde ölçüt değil.
+
+**Adım 4 envanteri** (`paper/v8/drafts/04-inventory.md`), altı blok. **Kendi hatam, envanterde:** B1'in çıkarımsal kanıtına
+*"so the aircraft cannot have shaped it"* yazmıştım — kaynağın değil benim çıkarımım, daha güçlü; kaynak cümleyle değiştirildi.
