@@ -1434,3 +1434,15 @@ tablosu (`04-trace.md`, 51 kaynak cümle), yüklem defteri. **Sonuç: 1 586 → 
 5 kaynak cümle (geçiş/tekrar) çıktı. D/P cümlelerinin hepsi silmeyle türedi, olumsuzluk silinmedi; korunanlar tam.
 **Bulgu:** envanter neredeyse her şeyi yerinde tutuyor; yeniden kurma Adım 4'ten %17 aldı, %50–70 değil. Kazanç tekrarı
 bol bölümlerden gelecek. Metinde iki sayma hatamı (R cümle sayısı, cümle numarası) göndermeden düzelttim.
+
+---
+
+# Tur 76 — Tur 75 metnine dört cevap; Adım 4 denemesinin sonucu
+
+**Kör okuma:** dördü de bulgu, kapsam ve sınırı doğru buldu. ChatGPT taslakta olmayan 716/146/10'u yazdı (envanterden
+bulaşma). **R:** #2, #10, #15, #28 dördü de kabul; **#18'e ChatGPT vetosu** ("shows" → "is consistent with"; sayılar kalsın) →
+kaynak cümle döndü; daraltılmış hâli oylamada. **DeepSeek:** B6'da nitelik düşmüştü (kaynak 44–45) → geri. **Durma koşulu
+ateşlenmedi** (ChatGPT "güçlenen yüklem" dedi; ama "shows" kaynağın kendi sözü — envanter kaynaktaki sorunu ortaya çıkardı).
+
+**Uygulandı:** Adım 4 = yeniden kurulmuş metin, 1 586 → 1 339 (−%16); özgün Adım 4 donmuş hâliyle S4'te; nothing-lost 4'ü kapsıyor.
+**Sıradaki:** Adım 2–3 için tek envanter, blok blok taslak. Korunacak aday: araç sabit cümleleri (G, Q, D evet; C'ye soruldu).
