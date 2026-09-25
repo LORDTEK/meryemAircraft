@@ -2,7 +2,7 @@
 
 > **This is a task. Please answer it now, and begin with your name alone on the first line.**
 >
-> `LORDTEK/meryemAircraft`, branch `claude/ecstatic-cori-6w30at`. The inventory is
+> `LORDTEK/meryemAircraft`, branch `claude/ecstatic-cori-6w30at`, commit **`be64559`**. The inventory is
 > `paper/v8/drafts/02-03-inventory.md`, and its new section is *"Round 78 — decisions, and what the Bill 1 test found"*.
 > Steps 2 and 3 are unchanged since `f425af4`. **Everything this round depends on is quoted in full below**, so you can
 > answer without opening the file.
