@@ -172,3 +172,10 @@ ChatGPT's pre-draft invariant run on the table as the package would leave it: si
 plant by hover (unchecked), *left standing* = *no worse*, and Step 4's *"giving part of the structural saving back"* has the
 form of 2F's counter-example in kilograms. The row then stands only on *"a remedy whose cost falls outside the three charges
 does not refute the accounting"*. Unchecked: NASA category mapping; plant sizing. **No 3B draft until S-5 is settled.**
+
+## Round 80 — (d) applied; S-5 wording to vote
+
+Applied (four readers + Claude): A′, H, C5, B′, C4, C in `02-the-tax.md`; Step 4 *"moves the cost"*. Retired: *"does not pay
+in any of the three currencies"*, *"moves* the charge"*. P29 six-row check on the assembled view: passes. Step 2 2 263 → 2 433
+words (content change). S-5 wording S5-1..S5-4 in the Round 80 text §2; baseline = the architecture the move modifies (all
+four); diagnosis conditional only (Grok, ChatGPT). 3B draft after S-5.

@@ -1508,3 +1508,14 @@ paylaştığını söylüyor. İkisi de sürekli gücü askıya göre boyutluyor
 kendi *"giving part of the structural saving back"* ifadesi 2F'nin karşı-örnek tanımının kilogramdaki biçimi. Satırı ayakta
 tutan yalnız *"cost falls outside the three charges"* maddesi. Çürüme iddiası yok; iki şey denetlenmedi. **3B taslağı S-5
 çözülene dek yok** (ChatGPT). Küçük düzeltmeler: Qwen buffer/tilt karıştırdı; "accounting claims transfer".
+
+# Tur 80 — Tur 79 metnine dört cevap; (d) paketi ve Adım 4'teki tek kelime uygulandı
+
+**Oybirliği (4 + Claude):** A′, B′, C, C4, C5, H ve "moves the cost". Uygulandı; Adım 2 2 263 → 2 433 kelime (içerik
+değişikliği). Emekli listesine iki ifade (60). Grok P29: altı satır birleşik görünümde geçiyor. S4'teki dondurulmuş Adım 4
+kopyası eski "moves the charge"ı taşıyor — tasarım gereği; not düşülsün mü okuyuculara soruldu.
+
+**S-5:** taban = değiştirilen mimari (dördü). Tanı yalnız koşullu (Grok, ChatGPT; DeepSeek ve Qwen bulgu gibi yazdı). Qwen
+"turbo-elektrik çiftte depo yok" dedi — kaynak açılmadı, kullanılmadı. Önerilen sözcükler S5-1..S5-4 (ChatGPT'nin sırası:
+taban → no worse → sınıflama → sınama). S5-4: 3B'de "left standing" yerine "incurred" (göreli kelime mutlak işte) — Grok ve
+Qwen "aynı cümle" istemişti; farklı kelimenin bu kaygıyı karşılayıp karşılamadığı soruldu. Qwen P3 + koruma önerisi.

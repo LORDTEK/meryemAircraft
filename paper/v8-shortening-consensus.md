@@ -255,3 +255,6 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | (d) içerik A, B, C | ✓ | ✓ | ✓ | ✓ | öneren | Kabul; sözcük paketi A′ B′ C C4 C5 H oylamada (Tur 79) |
 | Adım 4 "moves the charge" → "moves the cost" (Qwen) | bırak | tutarlı | doğru | öneren | ✓ | Oylamada (Tur 79) |
 | S-5 taban: değiştirilen mimari (D, Q, K) | aday listesi | 2F'den türet | öneren | öneren | ✓ | Oylamada; 3B taslağı bekliyor |
+| (d) paketi A′ B′ C C4 C5 H | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı** (Tur 80); teyide |
+| Adım 4 "moves the cost" | ✓ | ✓ | ✓ | öneren | ✓ | **Uygulandı** (Tur 80); teyide |
+| S-5 taban = değiştirilen mimari | ✓ | ✓ | ✓ | ✓ | ✓ | Kabul; sözcükler S5-1..4 oylamada |

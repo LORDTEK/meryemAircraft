@@ -146,20 +146,28 @@ drag counts, installed kilowatts — and they are not assumed to be independent 
 remedy can move a requirement from one currency into another. Whether a change of size moves them
 together, which would make them one quantity under three names, is tested in Section 12.
 
-| Move | Bill it attacks | Bill it creates |
+**A charge and its currency are not the same thing.** The mismatch of the root is the origin of all three charges; each
+charge is one specific payment, not the name of the currency it is paid in. Bill 1, as this accounting uses it, is the mass
+of a dedicated lift subsystem; Bill 2, the cruise drag of hover hardware left exposed; Bill 3, continuous power installed
+to a hover peak. A remedy's own cost can fall in kilograms, drag counts or installed kilowatts without being one of the
+three charges, and the table names such a cost in words rather than by a bill's number.
+
+| Move | Bill it attacks | What it creates — a bill by its number, any other cost in words |
 |---|---|---|
 | Distributed electric lift rotors | 3 — the cruise engine no longer sizes to hover | 1 and 2 — many rotors and mounts, permanently carried and exposed |
-| Folding or retracting lift rotors | 2 — the exposed rotor is removed from cruise | 1 — mechanism, actuation, locking, a new failure mode |
-| Tilt-rotor, tilt-wing, tilt-nacelle | 1 — one propulsion group serves both regimes | **Bill 3 is left standing** — with no store, the power plant is still sized by the hover peak — together with gyroscopic coupling and a transition control problem, which are **not among the three** |
-| Variable-pitch or feathering propulsors | 1 and 3 — one propulsor is retrimmed across two widely separated operating points instead of duplicated | 1 — pitch hub, actuation, and a new failure mode |
+| Folding or retracting lift rotors | 2 — the exposed rotor is removed from cruise | 1 — mechanism, actuation, locking; and a new failure mode, not among the three |
+| Tilt-rotor, tilt-wing, tilt-nacelle | 1 — one propulsion group serves both regimes | kilograms, not Bill 1 — the pivot and its actuators; **Bill 3 is left standing** — with no store, the power plant is still sized by the hover peak; and gyroscopic coupling and a transition control problem, which are **not among the three** |
+| Variable-pitch or feathering propulsors | 1 and 3 — one propulsor is retrimmed across two widely separated operating points instead of duplicated | kilograms, not Bill 1 — pitch hub and actuation; and a new failure mode, not among the three |
 | Higher disc loading, smaller rotors | 1 and 2 — smaller, lighter, cleaner rotors | 3 — hover power rises with √(DL) |
 | Lower disc loading, larger rotors | 3 — hover power falls | 1 and 2 — larger structure and exposed area |
 
-**One row does not pay in any of the three currencies, and that is not an oversight.** What a
+**One row pays part of its cost in none of the three currencies, and that is not an oversight.** What a
 tilting architecture buys its unified propulsion group with is a mechanism — a pivot, an
 actuator, the gyroscopic coupling of a reorienting mass, and a control problem through the turn.
-That is a cost, but it is not one of the three charges this accounting tracks, and the next
-section says why it is treated separately. **The table is not a census of the field**; it lists
+The pivot and the actuator are paid in kilograms, although they are not lift-subsystem mass; the
+coupling and the control problem are paid in none of the three. That part is a cost, but it is not
+one of the three charges this accounting tracks, and the next section says why it is treated
+separately. **The table is not a census of the field**; it lists
 the moves whose transfers are documented, and a remedy absent from it is not thereby claimed to
 cancel a charge.
 
@@ -216,6 +224,7 @@ any aircraft.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 80 (içerik değişikliği, kısaltma değil):** fatura ile para birimi ayrıldı — 2E'ye A′ paragrafı; tablo başlığı H; katlama (C5), eğme (B′), hatve göbeği (C4) hücreleri; "One row" paragrafı (C). Dört okuyucu + Claude, Tur 79 paketi. Gerekçe: pivot kilogramı 3B, S4 (146 lb) ve Adım 4'te vardı, tablo satırı "üç birimin hiçbirinde ödemez" diyordu. Emekli: *"does not pay in any of the three currencies"* | Tur 79 metni §2 |
 | **Tur 65:** tilt satırından *"mechanical complexity,"* çıktı — ölçülmedi; Adım 3'ten aynı gerekçeyle çıkmıştı (dört okuyucu + Claude hemfikir). Mekanizmanın bedeli düzyazıda duruyor: *"a pivot, an actuator, the gyroscopic coupling of a reorienting mass, and a control problem through the turn"* | bu bölümün tabloyu izleyen paragrafı |
 | Dikey faz uçuşun ~%2'si; bir saatlik görevde ~bir dakika | §2.1, satır 524–527 |
 | Uyumsuzluk üç faturanın da kökeni; kalite sorunu değil | §2.1, satır 531–534 |

@@ -82,6 +82,8 @@ EMEKLI = {
     "10.28": "Tur 50: e = 0,85 ile L/D_max; e = 0,817 ile 10.08",
     "range of a fixed-wing": "CLAUDE.md §0.3: sabit kanatla menzilde yarisilmaz",
     "general architectural superiority": "CLAUDE.md §0: bu cumle bir daha yazilmaz",
+    "does not pay in any of the three currencies": "Tur 80: pivot kilogramla odeniyor (3B, S4); 'pays part of its cost in none' (Grok P26)",
+    "moves* the charge": "Tur 80: mekanizma fatura degil, maliyet (Qwen; dort okuyucu)",
 }
 
 
