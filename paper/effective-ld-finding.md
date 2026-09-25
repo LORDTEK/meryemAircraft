@@ -1446,3 +1446,29 @@ ateşlenmedi** (ChatGPT "güçlenen yüklem" dedi; ama "shows" kaynağın kendi 
 
 **Uygulandı:** Adım 4 = yeniden kurulmuş metin, 1 586 → 1 339 (−%16); özgün Adım 4 donmuş hâliyle S4'te; nothing-lost 4'ü kapsıyor.
 **Sıradaki:** Adım 2–3 için tek envanter, blok blok taslak. Korunacak aday: araç sabit cümleleri (G, Q, D evet; C'ye soruldu).
+
+
+# Tur 77 — Tur 76 metnine dört cevap; Adım 4 kapanışa, Adım 2–3 envanteri
+
+**Yazar:** *"Süreci şimdi bırakmak çok saçma olur. Adımları, planladığımı şekilde işleyelim."* Hedef sorusu adımlar
+bitince (E4).
+
+**Oylar:** 2.1 ve 2.2 dördü de teyit. 3.1 (#18 daraltılmış, 580/679/99 gövdede) dördü de evet → uygulandı. 3.2 (iki
+"araç sabit" cümlesi korunan) dördü de evet → uygulandı, korunan 154. **Grok P23:** 687 (tasarım brüt ağırlık farkı) ile
+679 (boş ağırlık farkı) birleştirilmiş görünümde tek paragrafta, karışmıyor. Adım 4 1 356 kelime (−%15).
+
+**Adım 2–3 envanteri** (`paper/v8/drafts/02-03-inventory.md`): 12 blok; Ev (Grok P22), yineleme durumu (ChatGPT;
+DeepSeek "neyin yinelemesi"), 3B birincil hedef (Qwen P1), 3E ve 3C'nin dört parçası kilitli (Qwen P3 genişletildi —
+Adım 7 dört parçayı kendi sözüyle sayıyor). Qwen'in "Adım 15 de atıf yapıyor" dediği yanlış (arandı). Yineleme kuralı:
+Grok P22 varsayılan, ChatGPT'nin "gerekli yineleme"si ancak işini adlandırırsa.
+
+**Envanterin kaynakta bulduğu üç sorun (uygulanmadı, okuyuculara):** **S-1** tablonun mekanizma satırları tek kurala
+uymuyor — katlama ve hatve göbeği Fatura 1, eğme mekanizması "üçünün dışında". Görev döngüsü kuralında tuhaf satır eğme;
+kaldırma alt sistemi kütlesi kuralında (makale bunu 3D'de ve Adım 11'de zaten uyguluyor) tuhaf satır hatve göbeği. Benim
+görüşüm (c): hatve göbeği satırı düzelir, eğme satırı mekanizma kütlesinin Fatura 1'in görev döngüsü karakterini
+taşıdığını açıkça söyler; Adım 4'e dokunmaz. **Kendi hatam:** ilk yazımda (a) dedim; Adım 4'ün eğme paragrafını
+okuyunca (a)'nın kapanmakta olan Adım 4'ü üç yerde yeniden açtığını ve makalenin zaten ikinci kuralı kullandığını
+gördüm. **S-2** 3F'de "the first" belirsiz. **S-3** Adım 12'nin "separability Section 2 asserts"ı Adım 2'den güçlü olabilir.
+
+**Koruma önerisi (Claude):** *"Whether an architecture can decline the mismatch itself, rather than redistribute its
+consequences, is a different question"* — hesap bölümünde kavrayışı taşıyan cümle.

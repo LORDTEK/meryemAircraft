@@ -239,3 +239,9 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | D/R etiketi (ChatGPT) | — | öneren | — | — | ✓ | Oylamada |
 | Ek başlığı: kaynak adım + tur (DeepSeek) | — | — | öneren | — | ✓ | Oylamada |
 | Ek kuralı: kaybı olan paragraf tam (Qwen) | — | — | — | öneren | ✓ | **Uygulandı** (S12, S13) + `v8_nothing_lost.py` |
+| Adım 4 #18 daraltılmış (ChatGPT, Tur 76) | ✓ | öneren | ✓ | ✓ | ✓ | **Uygulandı** (Tur 77); teyide |
+| İki "araç sabit" cümlesi korunan (G P20, Q P2, D) | öneren | ✓ | öneren | öneren | ✓ | **Uygulandı** (154); teyide |
+| Adım 2–3 tek envanter, blok blok taslak | ✓ | ✓ | ✓ | ✓ | ✓ | **Envanter Tur 77 metninde**, teyide |
+| Yineleme kuralı: iki ev = kesim, işini adlandıran hariç (G P22 + C) | öneren | öneren | — | — | ✓ | Oylamada (Tur 77) |
+| "decline the mismatch" cümlesi korunan (Claude) | — | — | — | — | öneren | Oylamada (Tur 77) |
+| S-1 tablo mekanizma satırları, (c) (Claude) | — | — | — | — | öneren | Görüş istendi (Tur 77) |
