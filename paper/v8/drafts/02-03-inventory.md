@@ -194,3 +194,10 @@ relative-word flag (*left standing*, *still*); qualification lost; cross-step fl
 draft in `03-draft.md` (3B only; 247 words, −9 %). R1 (four properties; *wherever* for *because*), R6 (*leaves* → *incurs*),
 D3 (gloss), D8, D9. **S-6:** the source names three properties and lists four departures; R1 repairs it inside 3B. The
 expected restatement saving in 3B was over-estimated: Qwen P2 (Round 78) keeps 2E and 3B as two views.
+
+## Round 84 — 3B applied; 3A and 3C drafted
+
+3B applied (four + Claude; blind reading passed ×4); original frozen in S3; nothing-lost covers Step 3 (tool bug fixed: bullet
+marks stripped on one side only). 3B↔3C: one-to-one; 3C's fourth part **narrower** (store), marked so. 3A draft 77 → 60
+(A1 removed — home 2F; A2 R — antecedent; A3 D — home 2F). 3C 196 → 190 (C3 D; C4, C5 R — **S-7**: "the table" in 3C has
+pointed at 2E's table since the 3B table moved to S3 in Round 64). Pivot protection: G, C, K yes; Q, D asked.

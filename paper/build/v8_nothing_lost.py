@@ -7,7 +7,7 @@ simdiki govdede ya da paper/v8/supplement.md'de AYNEN (bosluk ve * farki haric) 
 """
 import glob, os, re, subprocess, sys
 KOK = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-ONCE = {4: "8c4d712", 10: "024005c", 11: "65ae7de", 12: "c9fcdd7", 13: "c9fcdd7"}   # kisaltmadan onceki commit
+ONCE = {3: "46b9628", 4: "8c4d712", 10: "024005c", 11: "65ae7de", 12: "c9fcdd7", 13: "c9fcdd7"}   # kisaltmadan onceki commit
 
 
 def govde(s):
@@ -38,7 +38,7 @@ kayip = 0
 for n, c in ONCE.items():
     yol = os.path.relpath(glob.glob(os.path.join(KOK, "paper", "v8", "%02d-*.md" % n))[0], KOK)
     eski = subprocess.run(["git", "-C", KOK, "show", "%s:%s" % (c, yol)], capture_output=True, text=True, check=True).stdout
-    simdi = duz(govde(open(os.path.join(KOK, yol), encoding="utf-8").read()))
+    simdi = duz(re.sub(r"(?m)^\s*- ", "", govde(open(os.path.join(KOK, yol), encoding="utf-8").read())))   # Tur 84: madde imi eski metinde siliniyordu, simdikinde de silinmeli
     for k in cumleler(govde(eski)):
         if k not in simdi and k not in ek:
             kayip += 1

@@ -268,3 +268,6 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | 3.1 "left no larger / enlarged" | tek etikete karşı | ✓ | ✓ | ✓ | öneren | Grok'a geri soruldu (yüksek disk yükü satırı) |
 | 3.1 üç cümle | ✓ (iki cevap) | ✓ | ✓ | ✓ | öneren | **Uygulandı** (Tur 83); teyide |
 | 3B taslağı R1, R6, D3, D8, D9; S-6 | — | — | — | — | öneren | Kör okuma + oylama (Tur 83) |
+| 3B R1 R6 D3 D8 D9 | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı** (Tur 84); teyide |
+| Pivot cümlesi korunan (G P35, C D) | öneren | öneren | — | "gerekmez" (T82) | ✓ | Oylamada |
+| 3A A1 A2 A3; 3C C3 C4 C5 (S-7) | — | — | — | — | öneren | Kör okuma + oylama (Tur 84) |

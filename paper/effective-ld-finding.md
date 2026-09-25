@@ -1546,3 +1546,11 @@ S4 notu teyit → kapandı. **3B:** donmuş kopya (271 kelime), kör okuma için
 sayım hatasını (S-6: üç özellik, dört sapma) onarıyor; R6 "leaves" → "incurs". **Dürüst beklenti:** 3B'de beklenen büyük
 yineleme yok — Qwen'in Tur 78 P2'si 2E ile 3B'yi iki görünüm olarak tuttu; tilt sapmasına dokunulmadı. Qwen P1'in alıntısı
 metinde yok (düzeltildi). Qwen P2: bulguda dur — S-6 için okuyuculara soruldu.
+
+# Tur 84 — Tur 83 metnine dört cevap; 3B uygulandı, 3A ve 3C kör okumaya
+
+**Oybirliği:** S-5 kapandı (3.1 teyit). 3B R1, R6, D3, D8, D9 → uygulandı (271 → 247); kör okuma dördünde geçti; S-6 R1 ile
+kapandı (dördü "durmaz"). Özgün 3B Ek S3'te donmuş. **Kendi hatam (araçta):** nothing_lost madde imlerini yalnız eski metinde
+siliyordu — yalnız yanlış alarm üretebilir, kaçırma değil; düzeltildi, iki yönlü sınandı. Emekli 66. 3B↔3C eşleme bire bir;
+3C'nin dördüncü parçası bilerek dar. **3A/3C:** 3A 77 → 60; 3C'de **S-7** — Tur 64'te 3B tablosu S3'e taşınınca 3C'deki
+"the table" 2E tablosuna işaret eder hâle gelmiş (kırık gönderge, turda onarıldı, sayıldı). Pivot koruması: G, C, K evet.

@@ -19,25 +19,24 @@ thing it will be used to measure.
 
 ### Inverting the table
 
-The charges exist because the two regimes are served by hardware that is **not the same hardware,
-not serving both duties, and not held in one orientation.** Depart from any one of those and a
-charge appears. **Different hardware** costs Bills 1 and 2: the unused set is carried for the whole
-flight and, if exposed, drags. **The same hardware serving only one duty** costs them again: a
-propulsor that lifts and is then carried is a dedicated lift group under another name, whatever it
-shares with the cruise system. **The same hardware serving both duties in a different orientation**
-is the tilting family: Bill 3 is incurred unless a store supplies the hover peak, and the
-mechanism that changes the orientation adds mass and introduces a control problem through the turn.
-**The same hardware, both duties, one orientation, but a different sizing point** leaves Bill 3 —
-unless the hover peak is supplied from somewhere other than the continuously installed power.
+**A charge appears wherever the two regimes are served by hardware that departs from one of four
+things: the same hardware, serving both duties, held in one orientation, with the hover peak supplied
+other than by its continuously installed power.** **Different hardware** costs Bills 1 and 2. **The
+same hardware serving only one duty** costs them again: a propulsor that lifts and is then carried is
+a dedicated lift group under another name, whatever it shares with the cruise system. **The same
+hardware serving both duties in a different orientation** is the tilting family: Bill 3 is incurred
+unless a store supplies the hover peak, and the mechanism that changes the orientation adds mass and
+introduces a control problem through the turn. **The same hardware, both duties, one orientation, but
+a different sizing point** incurs Bill 3 — unless the hover peak is supplied from somewhere other than
+the continuously installed power.
 
 Read one at a time, these are ways to pay. Read as a conjunction, they are a condition.
 
-*(The second departure is stated separately rather than folded into the first because it does real
-work later: a propulsor that produces a little thrust in cruise is not thereby serving both
-duties, and the distinction decides which parts of a configuration meet the condition and which
-do not. "Serving both duties" is the accurate form; hover thrust and cruise thrust are not the
-same **job** in any ordinary engineering sense — one supports weight, the other balances drag —
-and calling them one would be loose.)*
+*(The second departure is stated separately because it does real work later: a propulsor that
+produces a little thrust in cruise is not thereby serving both duties, and the distinction decides
+which parts of a configuration meet the condition and which do not. "Serving both duties" is the
+accurate form; hover thrust and cruise thrust are not the same **job** in any ordinary engineering
+sense — one supports weight, the other balances drag.)*
 
 ### The condition
 
@@ -163,6 +162,7 @@ appeared.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 84 (yeniden kurma, 3B):** 271 → 247 kelime. R1 (dört özellik; "because" → "wherever" — kaynağın S-6 sayım hatasının **esaslı onarımı**, üslup değil), R6 ("leaves" → "incurs"), D3 (Fatura 1–2 açıklaması, iki ev kuralı), D8, D9. Kör okuma dördünde de geçti. Dört okuyucu + Claude. Özgün 3B Ek S3'te donmuş | Tur 83 metni |
 | **Tur 81:** 3B üçüncü sapma "left standing" → "incurred" (S5-4; dört okuyucu + Claude): 3B tabana göre karşılaştırmıyor, ne ödendiğini söylüyor. Ek S3 aynı değişiklik + Tur 65'te emekli "complexity" (kaçırılmıştı) | Tur 80 metni §2 |
 | **Tur 64 — N1 uygulanırken bulunan eski hata:** *"The second row of the inverted table — same hardware, different orientation"* — farklı yönelim **üçüncü** satırdı; *"tek görev"* satırı sonradan araya girince atıf bayat kalmış. *"The third departure — same hardware, both duties, different orientation"* | bu bölümün dört ayrılışı |
 | **Tur 64 — N1** (beşimiz hemfikir): tablo dört cümleye; *"complexity"* çıktı (ölçülmedi — ChatGPT); *"row"* → *"departure"* (dört yerde); ikinci ayrılışın gerekçe parantezi kaldı | Ek S3 |
