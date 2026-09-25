@@ -334,9 +334,9 @@ transfer. It does not claim that every architecture is equally good**, and a rem
 a better bargain in one currency refutes it.
 
 **Two clarifications keep the test from being either too easy or unfalsifiable.** **"No worse" is
-judged against the architecture the move modifies.** A charge that architecture already paid, left as
-it was, is no worse; a charge it did not pay, imposed by the move, is worse, and the move is then a
-transfer. And a remedy whose cost
+judged against the architecture the move modifies.** A charge that architecture already paid, left no
+larger, is no worse. A charge it did not pay, imposed by the move, is worse; so is one it paid, enlarged
+by it. A move that reduces one charge and makes another worse is a transfer. And a remedy whose cost
 falls **outside** the three charges does not refute the accounting, because the accounting is about
 those three; **but it is not thereby exempt from being counted.** The tilting family's mechanism is
 named in the table for exactly that reason, and it is the reader's to weigh against what the
