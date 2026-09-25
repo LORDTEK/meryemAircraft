@@ -2,7 +2,7 @@
 
 > **This is a task. Please answer it now, and begin with your name alone on the first line.**
 >
-> Repository `LORDTEK/meryemAircraft`, branch `claude/ecstatic-cori-6w30at`.
+> Repository `LORDTEK/meryemAircraft`, branch `claude/ecstatic-cori-6w30at`, commit **`abbc36c`**.
 > This round changed three files: `paper/v8/04-the-independent-check.md`, `paper/v8-caveats.md`, and
 > `paper/v8/supplement.md` (the note on S4).
 
