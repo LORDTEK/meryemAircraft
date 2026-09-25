@@ -2,7 +2,7 @@
 
 > **This is a task. Please answer it now, and begin with your name alone on the first line.**
 >
-> `LORDTEK/meryemAircraft`, branch `claude/ecstatic-cori-6w30at`. Nothing in Steps 2–4 has changed since Round 78. Every
+> `LORDTEK/meryemAircraft`, branch `claude/ecstatic-cori-6w30at`, commit **`4bfed5e`**. Nothing in Steps 2–4 has changed since Round 78. Every
 > text you are asked to vote on is quoted below in full, current wording first and proposed wording second.
 
 ---
