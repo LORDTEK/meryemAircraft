@@ -284,3 +284,7 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Koruma ölçütü (dördünün ortak yazımı) | ✓ | ✓ | ✓ | ✓ | öneren | Teyide |
 | Adım 13 "tilt row" + "charges all three" | — | — | — | — | öneren | Oylamada |
 | 3F F1–F5; S-9, S-10; durma kuralı sorusu | — | — | — | — | öneren | Kör okuma + oylama |
+| 3D kapanış; elektrik yolu; 3F; Adım 13 iki ifade | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı / kapandı** (Tur 87) |
+| Koruma ölçütü; durma kuralı (köken S/R) | ✓ | ✓ | ✓ | ✓ | ✓ | **Yöntem belgesinde** |
+| Adım 10 "account for" | — | — | — | Q P2 taraması | öneren | Oylamada |
+| 2A–2D A1 B1 C1 D1 D2 (S-13) D3 (S-14) | — | — | — | — | öneren | Kör okuma + oylama |

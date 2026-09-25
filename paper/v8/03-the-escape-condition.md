@@ -75,8 +75,8 @@ The costs the condition permits are named here, before any candidate is examined
 - **Releasing the engine is not releasing the electrical path.** The fourth part frees the
   continuous *power plant* from the hover peak. Everything between the store and the rotors —
   machines, power electronics, wiring — still passes the full hover power and is still sized by
-  it. **That is a charge the condition does not remove**, and it is carried in the ledger rather
-  than in this definition.
+  it. **That is Bill 3 on the electrical path, and the condition does not remove it**; it is carried
+  in the ledger rather than in this definition.
 - **Rotating the airframe is permitted and is not priced here.** The condition refuses
   architectures that reorient a propulsor, and sets that refusal against the mechanism a tilt
   requires. **An architecture that instead rotates its whole body faces the same physical
@@ -133,21 +133,18 @@ reported only the first half would be reporting the condition rather than the ai
 
 The condition is a statement about what an architecture would have to be. **It is not a claim
 that anything satisfies it, not a claim that anything satisfying it would fly, and not a claim
-that satisfying it is desirable.** Those are three separate questions and they are answered
+that satisfying it is desirable.** Three questions follow from it, and they are answered
 separately: whether the accounting behind the condition survives contact with an independent
 sizing study is tested in the next section, against data this work did not produce; whether any
 configuration satisfies the condition is the subject of Sections 5 to 7; and what such a
-configuration pays instead is the subject of Section 11, which is the longest of the three
-answers because it is the one most likely to be wrong.
+configuration pays instead is the subject of Section 11, the answer most likely to be wrong.
 
-One consequence is worth stating now, because it shapes everything after it. The third departure — same hardware, both duties, different orientation — is refused by a means other than the
-one the field has adopted. A tilting architecture accepts that departure and buys its way out of the first with a mechanism. **An architecture that reorients a propulsor does not satisfy the condition as written**, because
+One consequence is worth stating now, because it shapes everything after it. The third departure is refused by a means other than the
+one the field has adopted. A tilting architecture accepts that departure and buys its way out of the first departure with a mechanism. **An architecture that reorients a propulsor does not satisfy the condition as written**, because
 the condition requires one orientation relative to the airframe. **Whether such an architecture
 might avoid the three charges by some other route is a separate question this paper does not
 settle** — the condition is a definition, not a law, and it can be too narrow without being
-wrong. What it is not is retrofitted: it is stated here so that when a configuration is offered
-later, the reader can check the claim against a standard fixed before the configuration
-appeared.
+wrong.
 
 ---
 
@@ -155,6 +152,7 @@ appeared.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 87 (yeniden kurma, 3F; P39):** 3F 279 → 229 — F1 (S-9: "Those" yanlış üçlüye işaret ediyordu → "Three questions follow from it"), F2 (S-10: "the longest of the three answers" yanlış → "the answer most likely to be wrong"), F3 (3B evi), F4 (S-2 "the first departure"), F5 (3A evi, korunan). Elektrik yolu: "a charge" → "Bill 3 on the electrical path" (Adım 11'in korunan cümlesiyle). Dört okuyucu + Claude. 3E kilitli, değişmedi. Özgün 3F Ek S3'te donmuş | Tur 86 metni |
 | **Tur 86 (yeniden kurma, 3D; E2):** 880 → 797. D2 (A′ evi), D3, D4, D7 (3B evi), D8; **S-8** D5 "a mass one" → "a cost in kilograms" (Adım 9 ve 11 de), D6 "charges that refusal" → "sets". **E2 yazarın kararı:** "zero-bill condition" adı düştü → "The condition has to be read exactly."; "the first most nearly contradicts the name" gönderge kaybetti → silindi ("Six of them:"; bilgi ilk maddede). Dört okuyucu + Claude. Özgün 3D Ek S3'te donmuş | Tur 85 metni |
 | **Tur 85 (yeniden kurma, 3A ve 3C):** 3A 77 → 60 (A1 çıktı — evi 2F; A2 R — gönderge; A3 D — evi 2F); 3C 196 → 190 (C3 D; C4, C5 R — **S-7**: Tur 64'te 3B tablosu S3'e taşınınca 3C'deki "the table" 2E tablosuna işaret eder olmuştu). Kör okuma dördünde geçti. Dört okuyucu + Claude. Özgünler Ek S3'te donmuş | Tur 84 metni |
 | **Tur 84 (yeniden kurma, 3B):** 271 → 247 kelime. R1 (dört özellik; "because" → "wherever" — kaynağın S-6 sayım hatasının **esaslı onarımı**, üslup değil), R6 ("leaves" → "incurs"), D3 (Fatura 1–2 açıklaması, iki ev kuralı), D8, D9. Kör okuma dördünde de geçti. Dört okuyucu + Claude. Özgün 3B Ek S3'te donmuş | Tur 83 metni |

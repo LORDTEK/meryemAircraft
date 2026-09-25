@@ -95,7 +95,7 @@ this configuration's mass — with its range lead unchanged at 103 to 141 percen
 contract's blindness to mass, made visible. **That comparison is not used**, because it would set
 competitors without a store against this configuration with one — a buffer of 3.6 percent whose
 feasibility is the item Section 14 examines. Whatever that store turns out to cost, holding it common
-charges all three the same assumption.
+puts the same assumption on all three.
 
 **The basis is not symmetric, and each asymmetry is stated with its direction.**
 
@@ -106,7 +106,7 @@ charges all three the same assumption.
   locked parallel to the flow — **transferred from a different airframe**, and assuming lift rotors
   stopped and aligned in cruise, which takes an indexing mechanism (Section 7) whose mass is not
   separately charged. **The tilting layout carries no cruise drag penalty at all.** That is an
-  idealisation in its favour, and it is deliberate: it makes the tilt row a bound.
+  idealisation in its favour, and it is deliberate: it makes the tilting layout a bound.
 - **Propeller efficiency.** This configuration uses the computed 0.632 and 0.683 of Section 10. The
   other two use 0.80 — the lift-plus-cruise layout because its cruise propeller does nothing else,
   the tilting layout because it has a variable-pitch hub. **Both are assumed, not computed**, and the
@@ -212,6 +212,7 @@ of the architectures alone.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 87 (dört okuyucu + Claude):** "it makes the tilt row a bound" → "the tilting layout" (gövde tablosunda tilt satırı yok; karşılaştırma S13'te — `v8_refs.py` ilk koşuda yakaladı); "charges all three the same assumption" → "puts the same assumption on all three" (fatura sözcüğü genel fiil olarak, A′) | Tur 86 metni §5 |
 | **Tur 71:** ikinci geçiş S1–S5 uygulandı (Qwen RW-13A–D, ChatGPT'nin tek cümlesi); **S1'de DeepSeek'in vetosu:** sözleşme tanımı (*"It fixes what is held equal…"*) aynen geri | Tur 70 metni §3 |
 | **Tur 70:** Tur 69 taslağı uygulandı, iki istisnayla: 520 kg cümlesi **kaldı** (Grok'un vetosu: bu adımın kendi bulgusu, ve *"That comparison is not used"* öncülü); 0,80 gerekçeleri ve *"The contract is chosen by the mission…"* **kaldı** (Grok, Qwen). Kaybı olan her paragraf Ek S13'te aynen | Tur 69 metni §5 |
 | **Tur 61:** duyarlılık tablosu Ek S13'e taşındı (dört okuyucu + Claude hemfikir, A6); gövdede 14–134 puan ve işaret cümleleri kaldı. Taşıma sırasında *"the table above shows the size of it"* sarkık kaldı — taşınan tablonun satırıydı; rakam (+55…+84 → +33…+45 %) gövdeye yazıldı | `aero/contracts-result.txt`; `paper/v8/supplement.md` S13 |

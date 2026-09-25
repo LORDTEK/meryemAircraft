@@ -10,6 +10,10 @@ KOK = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))
 # Tur 86: kisaltma DEGIL, oylanmis icerik duzeltmesi -- eski cumle bilerek emekli edildi (emekli listesinde);
 # yeni hali govdede aranir. Eski cumle eke konmaz (emekli ifadeyi dergiye tasimamak icin).
 DEGISTI = {
+    "That is an idealisation in its favour, and it is deliberate: it makes the tilt row a bound.":
+        "That is an idealisation in its favour, and it is deliberate: it makes the tilting layout a bound.",
+    "Whatever that store turns out to cost, holding it common charges all three the same assumption.":
+        "Whatever that store turns out to cost, holding it common puts the same assumption on all three.",
     "The architecture converts a power-system charge into a mass one.":
         "The architecture converts a power-system charge into a cost in kilograms.",
 }

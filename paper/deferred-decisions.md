@@ -120,6 +120,12 @@ S5-2 (Adım 2, 2F) **koşullu** yazıldı çünkü şu ikisi denetlenmedi; sonra
 2. Eşleştirilmiş turbo-elektrik çiftin sürekli gücünü askı tepesine göre mi boyutladığı; depo var mı (Qwen "yok" dedi — belge açılmadı, kullanılmadı).
    **Bu ikisi denetlendiğinde S5-2 yeniden okunur** (DeepSeek, Tur 82): koşul kalıcı değil, açık olduğu için koşul.
 
+## Adım 3E mod 4 sözcüğü — Tur 87 (Grok P42, DeepSeek, Qwen P3)
+
+*"the part that fails re-opens the charge it fails"* gevşek: bir parça koşulun bir **parçasını** başarısız kılar, bu bir
+**faturayı** yeniden açar. 3E kilitli (Qwen P3); kilit kalkarsa önerilen yön: *"…re-opens the charge that part of the
+condition prevents"* (oylanmadı).
+
 ## Adım 11 bir sonraki açılışında — Tur 79 (Qwen P2, not)
 
 - Tampon cümlesi (d) sözlüğüyle sıkılaştırılabilir: *"It is not Bill 1 (it is not lift-subsystem mass), but it is paid in the

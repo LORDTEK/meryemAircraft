@@ -350,6 +350,14 @@ dahil herkesin hemfikir olduğu kısaltmalar uygulansın."*
   diğer okuyucular da fikir üzerine beyanatları olsun. Yani birbirlerinin olumlu/olumsuz görüşlerine de bir şey söylemek
   isterlerse çekinmesinler."* Her tur metni, ayrışan ya da tek kalan görüşleri **adıyla ve yan yana** koyar ve öteki
   okuyuculardan o görüşlere (yalnız bana değil) cevap ister. İkna olmayan okuyucunun gerekçesi öbürlerine açıkça sorulur.
+- **Koruma ölçütü (Tur 87, dört okuyucu + Claude):** *"A sentence is protected when removing it silently would change a
+  claim, a limit or a derivation that later text depends on: a derived statement would read as asserted, or a limited claim
+  as broader. Being load-bearing for the structure alone is not enough."*
+- **Durma kuralı neyi sayar (Tur 87, dört okuyucu + Claude; ChatGPT'nin yazımı):** *"The stop rule counts unresolved or
+  newly introduced defects in the current draft. A defect found in the frozen source is recorded and repaired under its own
+  trace; it does not count as a draft failure unless the recomposition introduces or fails to repair it."* İz tablosunda her
+  bulgu **köken** alanı taşır: **S** (kaynak kusuru) / **R** (yeniden kurmanın kırdığı). Kaynak kusurları
+  `paper/v8-source-defects.md`'de. Tur 84'te S-7'yi durma hakkından saymam yanlıştı.
 - **Plan (yazar onayı, Tur 68).** Yapı üretilmiş görünüm olarak birleşir (`paper/build/v8_assemble.py` →
   `paper/v8/ASSEMBLED.md`; kaynak adım dosyaları). Hesap adımları taslakla kısalır: **taslak yeni yüklem eklemez**, her
   cümle kaynak cümlenin yalnız silmeyle kısalmış hâlidir (`paper/build/v8_draft_check.py`); **silme de anlamı ters

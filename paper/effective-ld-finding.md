@@ -1574,3 +1574,12 @@ otomatik olanı): ilk koşuda Adım 13'te "the tilt row" bayat atfını yakalad�
 cevaplanan üç soru aynı değil — "Those" yanlış gönderge), S-10 ("the longest of the three answers" yanlış). **Kendi hatam:**
 S-7'yi durma kuralının "bir kırık gönderge" hakkı olarak saydım; kural taslağın kırdığını sayar, kaynağın kusurunu değil
 (#18 gibi). Okuyuculara soruldu; biri öyle okumazsa 3F durur.
+
+# Tur 87 — Tur 86 metnine dört cevap; Adım 3 bitti, Adım 2 başladı
+
+**Oybirliği:** 3D kapandı ("Six of them:" vetosuz); elektrik yolu "Bill 3 on the electrical path"; 3F F1–F5; Adım 13 iki ifade;
+koruma ölçütü ve durma kuralı (köken S/R) yöntem belgesine; kaynak kusuru kütüğü (12 kayıt, hiçbiri R; üçü taşıma artığı).
+**Adım 3: 1 874 → 1 698 (−%9).** Qwen P2 "charge" taraması: tek genel fiil Adım 10'da ("cannot charge for") → oylamada.
+**Adım 2 (2A–2D):** 1 281 → 1 233 (−%4); ilk geçişler, dört korunan cümle — kesilecek az. **S-13:** "returns to Bill 1" A′ ile
+çelişiyor (Tur 77 envanterimde de aynı hata vardı). **S-14:** kuyruk üstü "beşte bir" ölçümü v5'ten beri kaynaksız; depoda
+belge ya da hesap yok → daraltıldı, kaynak istendi, gelmezse silinecek.

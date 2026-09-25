@@ -92,6 +92,10 @@ EMEKLI = {
     "zero-bill condition": "Tur 86: E2 yazarin karari -- ad dusuruldu; bir kez geciyordu, hic kullanilmiyordu",
     "into a mass one": "Tur 86: S-8 -- depo fatura degil; 'a cost in kilograms' (Adim 3, 9, 11)",
     "charges that refusal against": "Tur 86: S-8 -- mekanizma fatura degil; 'sets that refusal against'",
+    "Those are three separate questions": "Tur 87: S-9 -- yanlis gonderge",
+    "longest of the three answers": "Tur 87: S-10 -- yanlis (11: 1 968; 6: 2 230)",
+    "the tilt row a bound": "Tur 87: Adim 13 govde tablosunda tilt satiri yok",
+    "charges all three the same": "Tur 87: fatura sozcugu genel fiil (A')",
     "moves* the charge": "Tur 80: mekanizma fatura degil, maliyet (Qwen; dort okuyucu)",
 }
 

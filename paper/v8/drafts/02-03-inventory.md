@@ -219,3 +219,11 @@ electrical path" (Grok P39). Lexical gate Step 3: 12 technical ✓, 2 bookkeepin
 `v8_refs.py` + `paper/v8-refs-reviewed.md` (22): first run caught Step 13 "the tilt row" (table moved to S13).
 3F draft 279 → 229: **S-9** ("Those" = wrong three), **S-10** ("longest" false: 11 = 1 968; 6 = 2 230; 5–7 = 4 732),
 S-2 applied as R, F3/F5 D. Stop-rule question put to readers (source defects vs draft-made breaks).
+
+## Round 87 — Step 3 recomposed; 2A–2D drafted
+
+Step 3: 1 874 → 1 698 (−9 %); 3F, electrical path, Step 13 phrases applied (four + Claude). Method rules written (protection
+criterion; stop rule with origin S/R); source-defect log `paper/v8-source-defects.md`. Charge sweep across all steps: one
+generic verb (Step 10 "cannot charge for"). 2A–2D draft 1 281 → 1 233: A1 R, B1 D, C1 D, D1 D ("often the largest",
+unsourced), **S-13** D2 ("returns to Bill 1" contradicts A′ — my own Round 77 inventory had it too), **S-14** D3 (the
+tail-sitter "one fifth" uncited since v5; no document in references/, no computation) — source requested; delete if none.

@@ -195,6 +195,30 @@ build-up and their drag in the ledger; the exclusion does not reach them.**
 
 ---
 
+### "What follows from the condition" as it stood before recomposition (frozen snapshot)
+
+*Note, outside the frozen text: two statements in this copy were found to be wrong and are corrected in the body. "Those are three separate questions" pointed at three denials, only one of which is among the three questions then answered; and Section 11 is not the longest of the three answers.*
+
+The condition is a statement about what an architecture would have to be. **It is not a claim
+that anything satisfies it, not a claim that anything satisfying it would fly, and not a claim
+that satisfying it is desirable.** Those are three separate questions and they are answered
+separately: whether the accounting behind the condition survives contact with an independent
+sizing study is tested in the next section, against data this work did not produce; whether any
+configuration satisfies the condition is the subject of Sections 5 to 7; and what such a
+configuration pays instead is the subject of Section 11, which is the longest of the three
+answers because it is the one most likely to be wrong.
+
+One consequence is worth stating now, because it shapes everything after it. The third departure — same hardware, both duties, different orientation — is refused by a means other than the
+one the field has adopted. A tilting architecture accepts that departure and buys its way out of the first with a mechanism. **An architecture that reorients a propulsor does not satisfy the condition as written**, because
+the condition requires one orientation relative to the airframe. **Whether such an architecture
+might avoid the three charges by some other route is a separate question this paper does not
+settle** — the condition is a definition, not a law, and it can be too narrow without being
+wrong. What it is not is retrofitted: it is stated here so that when a configuration is offered
+later, the reader can check the claim against a standard fixed before the configuration
+appeared.
+
+---
+
 ## S4. The independent check: the table, the weight breakdown, and the quadrotor contrast (from Section 4)
 
 | Configuration | Effective L/D | Design gross weight | Dedicated lift group |
