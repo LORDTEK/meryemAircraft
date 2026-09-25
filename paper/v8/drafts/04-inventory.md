@@ -19,3 +19,22 @@ E1 = numerical evidence, E2 = inferential evidence (why the numbers support the 
 | Step 6 | *"The sizing set of Section 4 reports an effective lift-to-drag ratio"* — the identity of the NASA set as **the sizing set**; and *"Section 4 is where the independent sizing evidence for [the mass charge] is set out"* |
 | Steps 1, 2 | Name the same NASA study on their own; they do not depend on Step 4's wording |
 | Step 11 | Pointed to by Step 4 (*"where it is applied … not uniformly favourable"*); does not cite back |
+
+## Additions, Round 75 (all four readers confirmed the six blocks and added rows)
+
+| Block | Added by | Addition |
+|---|---|---|
+| Outbound | Grok | **Step 6** compares against the quadrotor's **4.9** (3 678 lb): it must stay a body number (it does — B3). |
+| Outbound | Qwen | **Step 2**: *"Section 4 tests a different consequence against a sizing study this work did not produce."* |
+| B2, E2 | DeepSeek | *"The mass charge of carried lift hardware is roughly fixed; the efficiency credit accumulates with distance. A long enough mission is where the credit is most likely to cover the charge, and the mission used below is short."* |
+| B2, E2 | Grok | The amplification argument must stay visible in the body; if it goes wholly to S4, that is *compressed but unbelievable*. |
+| B3, qualify | Grok | Only three of the nine designs are used, and the reason is stated (the isolated pair; the quadrotor for scale). Must not say: the other six were set aside because they disagreed. |
+| B3, must not say | ChatGPT | That the study independently validates, tests, endorses, or was designed to test this paper's accounting — *independent data* is not *independent validation*. |
+| B4, must not say | ChatGPT | That the 1.2 % efficiency difference explains the 687 lb difference. That the breakdown *proves* the Section 2 mechanism: it is an external observation consistent with the transfer property, not a controlled test. |
+| B4, must not say | Grok | That the 679 lb breakdown or its 716 / 146 / 10 / 580 / 99 lb trail was produced by this work. |
+| B4, qualify | Qwen | The quadrotor contrast changes three things at once, and *"the charge survives the credit"*. Both are carried in the body by existing sentences (*"against it the lift-plus-cruise design changes three things at once"*; *"the amplified weight charge survives the efficiency credit"*); the full contrast is in S4. |
+| B5, must not say (halt level) | Grok | That the one-tenth margin (8.6 against 8.5) ranks the tilting family against the proposed configuration. |
+| B5, must not say | ChatGPT | That the tilt-wing eliminates the cost or pays no corresponding mechanism cost — it *moves* the charge. |
+| B6, must say | DeepSeek | *"The instrument is now fixed, and it is not modified again."* *"Everything that follows is measured with it rather than added to it."* — candidates for protection after the pilot. The bridge to Sections 5–7, as a transition. |
+| B6, must not say | ChatGPT | That the prediction validates the accounting generally, or the magnitude of the charges. |
+| Method | ChatGPT | Every E2 entry is either a source statement or a marked inference, and an inference never enters the body except as R. |
