@@ -263,3 +263,6 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | S5-1′ "left no larger / enlarged" (C'nin boşluğu) | — | işaret | — | — | öneren | Oylamada |
 | Koruma S5-2 koşuluna | cümlecik | öneren | cümlecik | öneren | ✓ | Oylamada |
 | Adım 4 "is consistent with the transfer property" (Q P2 okuması) | — | — | — | bulan | öneren | Oylamada |
+| S5 paketi teyit | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI** (Tur 82) |
+| 3.2 koruma koşulu kapsar / 3.3 Adım 4 "consistent with" | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı** (Tur 82); teyide |
+| 3.1 "left no larger / enlarged" | tek etikete karşı | ✓ | ✓ | ✓ | öneren | Grok'a geri soruldu (yüksek disk yükü satırı) |

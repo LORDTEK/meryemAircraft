@@ -86,6 +86,7 @@ EMEKLI = {
     "is not a counter-example — the tilting row": "Tur 81: kosulsuz muafiyet; taban adlandirildi (S5-1, Grok P30)",
     "Bill 3 is left standing": "Tur 81: tabansiz goreli ifade; 2E'de 'imposed or left standing', 3B'de 'incurred' (S5-3/4, Grok P30)",
     "itself mass, complexity": "Tur 81: 'complexity' Tur 65'te emekli; S3'te kalmisti (Claude'un Tur 65 kacirmasi)",
+    "tilt-wing is the transfer property": "Tur 82: #18 ile ayni daraltma; 'is consistent with' (Grok P32)",
     "moves* the charge": "Tur 80: mekanizma fatura degil, maliyet (Qwen; dort okuyucu)",
 }
 

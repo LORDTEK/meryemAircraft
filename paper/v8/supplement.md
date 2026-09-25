@@ -108,7 +108,7 @@ carries the prediction.**
 
 The whole of Section 4 before the recomposition pilot, verbatim.
 
-*Note, outside the frozen text: the body of Section 4 has changed since this copy was frozen. Where this copy reads "moves the charge", the body now reads "moves the cost".*
+*Note, outside the frozen text: the body of Section 4 has changed since this copy was frozen. Where this copy reads "moves the charge", the body now reads "moves the cost"; where it reads "the tilt-wing is the transfer property of Section 2", the body now reads "is consistent with the transfer property of Section 2".*
 
 An accounting proposed by the same people who then use it to argue for a configuration invites
 one obvious objection: that the charges were chosen because a particular aircraft happens not to

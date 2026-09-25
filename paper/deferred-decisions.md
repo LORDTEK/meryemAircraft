@@ -118,6 +118,7 @@ that is allowed to be unfinished."* Adım 14'ün malzemesi, birikmiş hâliyle:
 S5-2 (Adım 2, 2F) **koşullu** yazıldı çünkü şu ikisi denetlenmedi; sonraki bir taslak bunları sessizce çözemez:
 1. NASA'nın *structure* / *propulsion* kategorilerinin üç faturaya nasıl eşlendiği (S4: 716 / 146 / 10 lb).
 2. Eşleştirilmiş turbo-elektrik çiftin sürekli gücünü askı tepesine göre mi boyutladığı; depo var mı (Qwen "yok" dedi — belge açılmadı, kullanılmadı).
+   **Bu ikisi denetlendiğinde S5-2 yeniden okunur** (DeepSeek, Tur 82): koşul kalıcı değil, açık olduğu için koşul.
 
 ## Adım 11 bir sonraki açılışında — Tur 79 (Qwen P2, not)
 

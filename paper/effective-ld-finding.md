@@ -1529,3 +1529,12 @@ Qwen "aynı cümle" istemişti; farklı kelimenin bu kaygıyı karşılayıp kar
 koşuluna genişlesin mi (C, Q evet; G, D cümlecik); Qwen P2 çapraz okuma Adım 4'te "The tilt-wing is the transfer property"
 cümlesini buldu — #18'den güçlü → "is consistent with" önerisi. Step 11'in korunan "left standing on the electrical system"ı
 göndergesini taşıyor, değişmedi. 3B taslağı S-5 teyidinden sonra (Grok P31).
+
+# Tur 82 — Tur 81 metnine dört cevap; S-5 kapandı
+
+**Teyit (4 + Claude):** S5-1..4, S3, "complexity" → KAPANDI. **Uygulandı (oybirliği):** 3.2 korumanın koşulu kapsaması (156,
+tek birim); 3.3 Adım 4 "The tilt-wing is consistent with the transfer property of Section 2, in someone else's data" (emekli 64,
+S4 notu genişledi). **3.1:** üç okuyucu tek cümleyi kabul; Grok "büyütülen fatura aktarım değil, aynı faturada kötü pazarlık"
+dedi. **Benim itirazım:** S5-1 bir faturayı azaltan hamleye uygulanıyor; büyüyen başka fatura. Tablonun yüksek disk yükü satırı
+(1 ve 2'yi azaltır, zaten ödenen 3'ü büyütür) Grok'un bölmesiyle aktarım olmaz; 2E "every entry … a documented transfer" diyor.
+Üç cümlelik aynı içerik Grok'a ve ötekilere soruldu. 3B, 3.1 kaynağa girince aynı tur başlar (Grok P33).
