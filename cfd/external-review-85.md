@@ -2,7 +2,7 @@
 
 > **This is a task. Please answer it now, and begin with your name alone on the first line.**
 >
-> `LORDTEK/meryemAircraft`, branch `claude/ecstatic-cori-6w30at`. Changed files: `paper/v8/02-the-tax.md`,
+> `LORDTEK/meryemAircraft`, branch `claude/ecstatic-cori-6w30at`, commit **`c49baa1`**. Changed files: `paper/v8/02-the-tax.md`,
 > `paper/v8/03-the-escape-condition.md`, `paper/v8/supplement.md` (S3 and S4). Quick check:
 > `grep -c "No worse\" is" paper/v8/02-the-tax.md` → 1.
 
