@@ -113,6 +113,11 @@ that is allowed to be unfinished."* Adım 14'ün malzemesi, birikmiş hâliyle:
 - *"the separability Section 2 asserts"* → *"the distinctness Section 2 asserts"*. Adım 2 üç ayrı **muhasebe** niceliği
   söylüyor ve *"not assumed to be independent physical causes"* diyor; ayrılabilirlik Adım 12'nin sorusu.
 
+## Adım 11 bir sonraki açılışında — Tur 79 (Qwen P2, not)
+
+- Tampon cümlesi (d) sözlüğüyle sıkılaştırılabilir: *"It is not Bill 1 (it is not lift-subsystem mass), but it is paid in the
+  same currency (kilograms) for the same duty-cycle reason."* Oylanmadı; açılınca sunulacak.
+
 ## Süreç kalemleri
 
 - Zenodo DOI, başlık (≤12 kelime), özet (100–200 kelime)

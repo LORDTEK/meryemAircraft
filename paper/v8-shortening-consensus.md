@@ -252,3 +252,6 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | S-2 "first departure" / S-3 "distinctness" | ✓ | ✓ | ✓ | ✓ | öneren | **Kabul**; S-2 taslakta, S-3 Adım 12 açılınca |
 | P24 fatura adı → tanım bayrağı (G) / kural tahsis sınaması (C) | öneren | öneren | — | — | ✓ | İz tablosunda sütun olacak |
 | 2E ile 3B: muhasebe / mimari görünüm, tek J (Qwen P2) | — | — | — | öneren | ✓ | 3B taslağında |
+| (d) içerik A, B, C | ✓ | ✓ | ✓ | ✓ | öneren | Kabul; sözcük paketi A′ B′ C C4 C5 H oylamada (Tur 79) |
+| Adım 4 "moves the charge" → "moves the cost" (Qwen) | bırak | tutarlı | doğru | öneren | ✓ | Oylamada (Tur 79) |
+| S-5 taban: değiştirilen mimari (D, Q, K) | aday listesi | 2F'den türet | öneren | öneren | ✓ | Oylamada; 3B taslağı bekliyor |

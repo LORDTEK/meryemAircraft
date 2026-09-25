@@ -160,3 +160,15 @@ are in one currency, so 2F's positive test is runnable on it: in the published b
 remedy that *"simply leaves another standing is not a counter-example — the tilting row is the case"*. **Those two sentences
 turn on whether *left standing* is *no worse*, and the text does not say against which baseline.** Claude has not checked how
 the NASA categories map onto the charges. Open.
+
+## Round 79 — (d) content agreed by all four; final wording package to vote
+
+Content of A, B, C: all four accept. Grok's two conditions (definition must not read as 2A's; *"1 in kilograms"* repeats the
+mix) → nothing applied; package **A′, B′, C, C4 (pitch-hub cell), C5 (folding cell), H (header)** in the Round 79 text §2.
+ChatGPT's pre-draft invariant run on the table as the package would leave it: six rows pass except the tilt row's Bill 3
+(S-5). Step 4 *"moves the charge"* → *"moves the cost"* (Qwen) to vote (Grok: loose; ChatGPT, DeepSeek: fine).
+
+**S-5 sharpened:** Step 4's isolated pair shares *"the turbo-electric propulsion architecture"*. If both size continuous
+plant by hover (unchecked), *left standing* = *no worse*, and Step 4's *"giving part of the structural saving back"* has the
+form of 2F's counter-example in kilograms. The row then stands only on *"a remedy whose cost falls outside the three charges
+does not refute the accounting"*. Unchecked: NASA category mapping; plant sizing. **No 3B draft until S-5 is settled.**

@@ -1492,3 +1492,19 @@ Qwen'in hatve göbeği ayrımı satırın yazılışına uymuyor, S-3'te Adım 1
 
 **S-5 (soru):** 2F'nin olumlu sınaması "no worse" diyor, açıklaması "leaves another standing is not a counter-example" — hangi
 tabana göre söylenmiyor; Adım 4'ün tilt-wing verisi (146 / 716 lb) sınamayı koşulabilir kılıyor. Bulgu değil, soru.
+
+# Tur 79 — Tur 78 metnine dört cevap; (d) içerikte oybirliği, sözcükte Grok'un iki şartı
+
+**(d):** A, B, C içeriğini dördü de kabul. Grok: tanım 2A'nınki gibi okunmasın, kök faturalardan üstün sıralansın; B'deki
+*"1 in kilograms"* reddi (tabloda 1 hep Fatura 1 demek). DeepSeek ve Grok başlığın değişmesini istedi. → **Hiçbir şey
+uygulanmadı** (Tur 76 emsali); son paket A′, B′, C, C4, C5, H oylamada. ChatGPT'nin fatura/birim değişmezi tabloya
+koşuldu: tilt satırının Fatura 3'ü dışında altı satır geçiyor.
+
+**Adım 4, tek kelime:** Qwen "moves the charge" (d)'den sonra yanlış; Grok "gevşek, yanlış değil, bırak"; ChatGPT ve DeepSeek
+"tutarlı". Benim görüşüm: Qwen'in teşhisi doğru → "moves the cost", kapanmış adımı tek kelimeyle açar, oybirliği gerek.
+
+**S-5 keskinleşti (kendi eksiğim Tur 78'de):** Adım 4 eşleştirilmiş çiftin *"turbo-electric propulsion architecture"*ı
+paylaştığını söylüyor. İkisi de sürekli gücü askıya göre boyutluyorsa (denetlemedim) "left standing" = "no worse" ve Adım 4'ün
+kendi *"giving part of the structural saving back"* ifadesi 2F'nin karşı-örnek tanımının kilogramdaki biçimi. Satırı ayakta
+tutan yalnız *"cost falls outside the three charges"* maddesi. Çürüme iddiası yok; iki şey denetlenmedi. **3B taslağı S-5
+çözülene dek yok** (ChatGPT). Küçük düzeltmeler: Qwen buffer/tilt karıştırdı; "accounting claims transfer".
