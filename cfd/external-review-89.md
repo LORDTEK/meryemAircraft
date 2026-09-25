@@ -2,7 +2,7 @@
 
 > **This is a task. Please answer it now, and begin with your name alone on the first line.**
 >
-> `LORDTEK/meryemAircraft`, branch `claude/ecstatic-cori-6w30at`, commit **`COMMIT`**.
+> `LORDTEK/meryemAircraft`, branch `claude/ecstatic-cori-6w30at`, commit **`09a33bc`**.
 > - The 3D draft: `paper/v8/drafts/03-draft.md`. Only 3D differs from Step 3.
 > - The 3D snapshot: `paper/v8/drafts/03D-snapshot.md`, 880 words, SHA-256 beginning `e14d9915fc4a913d`.
 >
