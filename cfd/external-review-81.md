@@ -2,7 +2,7 @@
 
 > **This is a task. Please answer it now, and begin with your name alone on the first line.**
 >
-> `LORDTEK/meryemAircraft`, branch `claude/ecstatic-cori-6w30at`. The inventory is
+> `LORDTEK/meryemAircraft`, branch `claude/ecstatic-cori-6w30at`, commit **`3e04aa6`**. The inventory is
 > `paper/v8/drafts/02-03-inventory.md`. The two source steps are unchanged since `f425af4`, with SHA-256 values
 > `02-the-tax.md` `ce0503fb…4665591` and `03-the-escape-condition.md` `9b16a4d8…6016330`. You can check your copy with
 > `grep -c "Inverting the table" paper/v8/03-the-escape-condition.md`, which should print 1.
