@@ -2,7 +2,7 @@
 
 > **This is a task. Please answer it now, and begin with your name alone on the first line.**
 >
-> `LORDTEK/meryemAircraft`, branch `claude/ecstatic-cori-6w30at`.
+> `LORDTEK/meryemAircraft`, branch `claude/ecstatic-cori-6w30at`, commit **`86548d8`**.
 > - Draft: `paper/v8/drafts/03-draft.md`. Only 3B differs from the source.
 > - Snapshot: `paper/v8/drafts/03B-snapshot.md`, taken from the current Step 3, which already contains S5-4 (Grok P34).
 >   It is 271 words; the first 16 hex characters of its SHA-256 are `4ca6fe342462244c`.
