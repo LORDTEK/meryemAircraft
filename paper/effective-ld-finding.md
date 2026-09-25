@@ -1538,3 +1538,11 @@ S4 notu genişledi). **3.1:** üç okuyucu tek cümleyi kabul; Grok "büyütüle
 dedi. **Benim itirazım:** S5-1 bir faturayı azaltan hamleye uygulanıyor; büyüyen başka fatura. Tablonun yüksek disk yükü satırı
 (1 ve 2'yi azaltır, zaten ödenen 3'ü büyütür) Grok'un bölmesiyle aktarım olmaz; 2E "every entry … a documented transfer" diyor.
 Üç cümlelik aynı içerik Grok'a ve ötekilere soruldu. 3B, 3.1 kaynağa girince aynı tur başlar (Grok P33).
+
+# Tur 83 — Tur 82 metnine dört cevap (Grok iki kez); S-5 kapanışa, 3B başladı
+
+**3.1:** üç cümlelik biçim dördü + Claude → uygulandı (Grok yüksek disk yükü satırıyla kendi ayrımını geri çekti). 3.2, 3.3,
+S4 notu teyit → kapandı. **3B:** donmuş kopya (271 kelime), kör okuma için taslak (247, −%9), iz tablosu. R1 kaynağın kendi
+sayım hatasını (S-6: üç özellik, dört sapma) onarıyor; R6 "leaves" → "incurs". **Dürüst beklenti:** 3B'de beklenen büyük
+yineleme yok — Qwen'in Tur 78 P2'si 2E ile 3B'yi iki görünüm olarak tuttu; tilt sapmasına dokunulmadı. Qwen P1'in alıntısı
+metinde yok (düzeltildi). Qwen P2: bulguda dur — S-6 için okuyuculara soruldu.

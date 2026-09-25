@@ -195,9 +195,9 @@ transfer. It does not claim that every architecture is equally good**, and a rem
 a better bargain in one currency refutes it.
 
 **Two clarifications keep the test from being either too easy or unfalsifiable.** **"No worse" is
-judged against the architecture the move modifies.** A charge that architecture already paid, left as
-it was, is no worse; a charge it did not pay, imposed by the move, is worse, and the move is then a
-transfer. And a remedy whose cost
+judged against the architecture the move modifies.** A charge that architecture already paid, left no
+larger, is no worse. A charge it did not pay, imposed by the move, is worse; so is one it paid, enlarged
+by it. A move that reduces one charge and makes another worse is a transfer. And a remedy whose cost
 falls **outside** the three charges does not refute the accounting, because the accounting is about
 those three; **but it is not thereby exempt from being counted.** The tilting family's mechanism is
 named in the table for exactly that reason, and it is the reader's to weigh against what the
@@ -232,6 +232,7 @@ any aircraft.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 83 (içerik):** S5-1'in tanımı üç cümle — "left no larger" (azalan dahil), "imposed … so is one it paid, enlarged by it", aktarım yalnız "reduces one charge and makes another worse" birleşimi. Dört okuyucu + Claude (Grok ilk ayrımını yüksek disk yükü satırıyla geri çekti) | Tur 82 metni §3 |
 | **Tur 81 (içerik):** S-5 — 2F'de taban adlandırıldı (S5-1: "No worse" değiştirilen mimariye göre), eğme satırı iki kollu koşullu (S5-2, son cümleciği korunan), eğme hücresi "imposed or left standing" (S5-3). Dört okuyucu + Claude. Emekli: "is not a counter-example — the tilting row", "Bill 3 is left standing" | Tur 80 metni §2 |
 | **Tur 80 (içerik değişikliği, kısaltma değil):** fatura ile para birimi ayrıldı — 2E'ye A′ paragrafı; tablo başlığı H; katlama (C5), eğme (B′), hatve göbeği (C4) hücreleri; "One row" paragrafı (C). Dört okuyucu + Claude, Tur 79 paketi. Gerekçe: pivot kilogramı 3B, S4 (146 lb) ve Adım 4'te vardı, tablo satırı "üç birimin hiçbirinde ödemez" diyordu. Emekli: *"does not pay in any of the three currencies"* | Tur 79 metni §2 |
 | **Tur 65:** tilt satırından *"mechanical complexity,"* çıktı — ölçülmedi; Adım 3'ten aynı gerekçeyle çıkmıştı (dört okuyucu + Claude hemfikir). Mekanizmanın bedeli düzyazıda duruyor: *"a pivot, an actuator, the gyroscopic coupling of a reorienting mass, and a control problem through the turn"* | bu bölümün tabloyu izleyen paragrafı |

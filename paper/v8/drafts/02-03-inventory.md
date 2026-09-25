@@ -187,3 +187,10 @@ protected (156); S4 frozen copy carries a note outside the frozen text. **Pre-dr
 architecture → cost → currency → bill or outside → where defined. **3B trace columns:** charge / currency / outside flag;
 relative-word flag (*left standing*, *still*); qualification lost; cross-step flag. To vote: S5-1′ (*left no larger* /
 *enlarged*), protection of S5-2's condition, Step 4 *"The tilt-wing is consistent with the transfer property"*.
+
+## Round 83 — 3.1 applied; 3B snapshot, draft, trace
+
+3.1 three-sentence form applied (four + Claude). 3B snapshot `03B-snapshot.md` (271 words, sha256 `4ca6fe342462244c…`),
+draft in `03-draft.md` (3B only; 247 words, −9 %). R1 (four properties; *wherever* for *because*), R6 (*leaves* → *incurs*),
+D3 (gloss), D8, D9. **S-6:** the source names three properties and lists four departures; R1 repairs it inside 3B. The
+expected restatement saving in 3B was over-estimated: Qwen P2 (Round 78) keeps 2E and 3B as two views.
