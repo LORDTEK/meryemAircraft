@@ -1421,3 +1421,16 @@ defteri (ChatGPT); iz tablosunda kanıt rolü ve sayı nesnesi (ChatGPT, Grok); 
 
 **Adım 4 envanteri** (`paper/v8/drafts/04-inventory.md`), altı blok. **Kendi hatam, envanterde:** B1'in çıkarımsal kanıtına
 *"so the aircraft cannot have shaped it"* yazmıştım — kaynağın değil benim çıkarımım, daha güçlü; kaynak cümleyle değiştirildi.
+
+---
+
+# Tur 75 — Tur 74 metnine dört cevap; Adım 4 denemesi
+
+**Yöntem:** beşimiz kabul; DeepSeek onarım turu önerisini geri çekti. **Envanter:** altı blok dördünce teyit; eklenen satırlar
+(Grok, ChatGPT, DeepSeek, Qwen) envanterde. Qwen'in iki eki gövdedeki mevcut cümlelerle zaten taşınıyor.
+
+**Deneme ürünleri (uygulanmadı):** dondurulmuş kopya (`04-snapshot.md`), etiketli taslak (`04-pilot.py` → `04-draft.md`), iz
+tablosu (`04-trace.md`, 51 kaynak cümle), yüklem defteri. **Sonuç: 1 586 → 1 323 (−%17)**; D 724, P 378, R 216 kelime (5 cümle);
+5 kaynak cümle (geçiş/tekrar) çıktı. D/P cümlelerinin hepsi silmeyle türedi, olumsuzluk silinmedi; korunanlar tam.
+**Bulgu:** envanter neredeyse her şeyi yerinde tutuyor; yeniden kurma Adım 4'ten %17 aldı, %50–70 değil. Kazanç tekrarı
+bol bölümlerden gelecek. Metinde iki sayma hatamı (R cümle sayısı, cümle numarası) göndermeden düzelttim.
