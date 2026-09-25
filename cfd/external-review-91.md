@@ -2,7 +2,7 @@
 
 > **This is a task. Please answer it now, and begin with your name alone on the first line.**
 >
-> `LORDTEK/meryemAircraft`, branch `claude/ecstatic-cori-6w30at`, commit **`COMMIT`**.
+> `LORDTEK/meryemAircraft`, branch `claude/ecstatic-cori-6w30at`, commit **`274f04f`**.
 >
 > - Draft: `paper/v8/drafts/02-draft.md` (only 2A–2D differ).
 > - Snapshot: `paper/v8/drafts/02AD-snapshot.md`, 1 281 words, SHA-256 `68da64c8c9405406…`.
