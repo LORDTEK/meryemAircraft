@@ -159,6 +159,7 @@ boşluğa duyarsız. `G` = Grok, `D` = DeepSeek, `C` = ChatGPT, `Q` = Qwen, `K` 
 | 10 | the question is asked in two models, only the second of which carries rotational dynamics, and that one does not support a zero altitude loss | C+G+D+Q+K |
 | 4 | The instrument is now fixed, and it is not modified again. | G+C+D+Q+K |
 | 4 | Everything that follows is measured with it rather than added to it. | G+C+D+Q+K |
+| 2 | Whether an architecture can decline the mismatch itself, rather than redistribute its consequences, is a different question | G+C+D+Q+K |
 
 ## Ruh cümleleri (Tur 61, Claude'un önerisi)
 

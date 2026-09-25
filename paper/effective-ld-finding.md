@@ -1472,3 +1472,23 @@ gördüm. **S-2** 3F'de "the first" belirsiz. **S-3** Adım 12'nin "separability
 
 **Koruma önerisi (Claude):** *"Whether an architecture can decline the mismatch itself, rather than redistribute its
 consequences, is a different question"* — hesap bölümünde kavrayışı taşıyan cümle.
+
+# Tur 78 — Tur 77 metnine dört cevap; Adım 4 kapandı; S-1 derinleşti
+
+**Oybirliği (4 + Claude):** Adım 4 teyit → **KAPANDI**. Yineleme kuralı; "stated before any configuration" evi 3A; P3 kilidi
+3C'nin dört parçasına; S-2 "the first departure"; S-3 Adım 12 açılınca "distinctness"; **"decline" cümlesi korunan (155).**
+
+**S-1:** Grok (c) ama "2A'dan çıkıyormuş gibi yapma", uygulama kısaltma içinde değil; DeepSeek ve Qwen (c); **ChatGPT HOLD**:
+Adım 2 Fatura 1'i açıkça kaldırma alt sistemi kütlesi diye tanımlıyor mu? **Denetim:** tanımlamıyor (örnekle tanımlıyor; açık
+ifade yalnız 3D ve Adım 11'de, ikisi de "Section 2 böyle tanımlar" diyor). **Daha derini:** metin iki sözlük kullanıyor —
+**fatura** (belirli ödeme) ve **para birimi** (kg, sürükleme, kW; 2E'nin kendi tanımı). Tablonun sağ sütunu ikisini karıştırıyor:
+hatve göbeği satırı birimi yazıyor, eğme satırı faturayı yazıp pivot kilogramlarını atlıyor (3B "adds mass"; S4 146 lb). Dolayısıyla
+*"One row does not pay in any of the three currencies"* (a), (b), (c)'nin hepsinde yanlış. **Aday (d):** fatura ile birimi ayır
+(2E'de üç değişiklik, önce/sonra Tur 78 metninde). **Taslak yok, (d) çözülene dek.**
+
+**Kendi hatam (Tur 77):** (a) "Adım 4'ü üç yerde yeniden açar" dedim — yanlış; Adım 4 zaten mekanizmanın kütle ödediğini
+söylüyor, çelişen şu anki eğme satırı. 146 lb kendi kurduğum S4'teydi. **Okuyucu hataları:** Grok "One row stays true" (değil);
+Qwen'in hatve göbeği ayrımı satırın yazılışına uymuyor, S-3'te Adım 12'nin bulgusunu ters yazdı.
+
+**S-5 (soru):** 2F'nin olumlu sınaması "no worse" diyor, açıklaması "leaves another standing is not a counter-example" — hangi
+tabana göre söylenmiyor; Adım 4'ün tilt-wing verisi (146 / 716 lb) sınamayı koşulabilir kılıyor. Bulgu değil, soru.

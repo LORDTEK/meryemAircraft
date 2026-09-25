@@ -245,3 +245,10 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Yineleme kuralı: iki ev = kesim, işini adlandıran hariç (G P22 + C) | öneren | öneren | — | — | ✓ | Oylamada (Tur 77) |
 | "decline the mismatch" cümlesi korunan (Claude) | — | — | — | — | öneren | Oylamada (Tur 77) |
 | S-1 tablo mekanizma satırları, (c) (Claude) | — | — | — | — | öneren | Görüş istendi (Tur 77) |
+| Adım 4 kapanış (3.1, 3.2, 687/679) | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI** (Tur 78) |
+| Yineleme kuralı (G P22 + C) | ✓ | ✓ | ✓ | ✓ | ✓ | **Kabul** (envanterde) |
+| "decline the mismatch" korunan | ✓ | ✓ | ✓ | ✓ | öneren | **Uygulandı** (155) |
+| S-1 (c) | ✓ (uygulama sonra) | HOLD | ✓ | ✓ | (d)'ye geçti | Açık → (d) oylamada (Tur 78) |
+| S-2 "first departure" / S-3 "distinctness" | ✓ | ✓ | ✓ | ✓ | öneren | **Kabul**; S-2 taslakta, S-3 Adım 12 açılınca |
+| P24 fatura adı → tanım bayrağı (G) / kural tahsis sınaması (C) | öneren | öneren | — | — | ✓ | İz tablosunda sütun olacak |
+| 2E ile 3B: muhasebe / mimari görünüm, tek J (Qwen P2) | — | — | — | öneren | ✓ | 3B taslağında |

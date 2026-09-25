@@ -97,3 +97,66 @@ Section 12. *"Asserts separability"* may be stronger than Section 2. Step 12 is 
 | Qwen P2 — the qualification-lost column made permanent; a lost qualification must point to where it is covered | trace column, for this and every later section |
 | Qwen P3 — the four failure modes locked | 3E row; extended to the four parts of 3C (Step 7 names them) |
 
+
+## Round 78 — decisions, and what the Bill 1 test found
+
+**Agreed by all four and Claude (applied to this inventory):** the restatement rule (default: two homes = cut; a second home
+stays only with a named job); *"stated before any configuration / not retrofitted"* — **home 3A**, 3F removable; the P3 lock
+covers the four parts of 3C; S-2 — *"the first"* is **the first departure**, named by an R sentence when 3F is drafted; S-3 —
+*"the distinctness Section 2 asserts"* when Step 12 is next opened (`paper/deferred-decisions.md`). **Protected (155):**
+*"Whether an architecture can decline the mismatch itself, rather than redistribute its consequences, is a different question"*.
+
+**Outbound row added (Grok):** Step 11, *"not lift-subsystem mass, so it is not Bill 1 as Section 2 defines it"*; with 3D's
+*"It is not Bill 1 as Section 2 defines it — it is not lift-subsystem mass"*, two sentences that say Section 2 defines Bill 1
+as lift-subsystem mass.
+
+**No drafting of Steps 2–3 until S-1 is settled** (ChatGPT HOLD; Grok P25).
+
+### ChatGPT's test: does Section 2 define Bill 1 as lift-subsystem mass?
+
+**Not explicitly.** 2B defines Bill 1 by its example — the lift-plus-cruise *"vertical group"*, which *"provides no required lift
+or thrust during cruise and is lifted anyway"* — and 2A confines the charges to *"architectures with a dedicated lift
+subsystem"*. The explicit phrase *"lift-subsystem mass"* appears only in 3D and Step 11, each saying that is how **Section 2**
+defines it. And 2B's structural paragraph charges to mass the structure that distributes *"lift or thrust"* — broader than a
+lift subsystem.
+
+**And the text uses two vocabularies.** 2E: *"three distinct accounting quantities — kilograms, drag counts, installed kilowatts
+… a remedy can move a requirement from one **currency** into another."* The **charges** are specific payments; the
+**currencies** are units. The table's right-hand column mixes them:
+
+| Row | Attacks | Creates, as written | Currency the created cost is paid in | That charge, by the lift-subsystem rule? | Who depends on it |
+|---|---|---|---|---|---|
+| Distributed electric lift rotors | 3 | 1 and 2 | kg; drag | yes; yes | — |
+| Folding or retracting | 2 | 1 — mechanism, actuation, locking, … | kg | yes (on the lift group) | the retraction experiment (2E) |
+| **Tilt** | 1 | Bill 3 standing; gyroscopic coupling, transition control *"not among the three"* | **kg for the pivot and actuators — absent from the row**; 3B: *"adds mass"*; S4: *"propulsion returns 146 lb of it because the tilt-wing's mechanism is heavier"* | no | Step 4 (*"moves the charge — to the mechanism"*; #18), Step 13, 3B, 3F |
+| **Variable pitch / feathering** | 1 and 3 | **1** — pitch hub, actuation, … | kg | **no** | Step 11 (no variable-pitch counterfactual) |
+| Higher disc loading | 1 and 2 | 3 | kW | yes | Step 12 |
+| Lower disc loading | 3 | 1 and 2 | kg; drag | yes where the rotors are a lift group | — |
+
+**The pitch-hub row writes the currency (*1* = kilograms); the tilt row writes the charge and omits the kilograms.** Hence
+*"One row does not pay in any of the three currencies"* is false under 2E's own definition of the currencies: the tilt
+row pays the pivot in kilograms (3B; S4). **This holds under (a), (b) and (c) alike.**
+
+**Claude's error, Round 77:** option (a) was said to reopen Step 4 in three places. Wrong: Step 4's sentences say the mass
+charge *moves to the mechanism* — the mechanism pays in kilograms. Step 4 contradicts the current tilt row, not (a). S4's
+146 lb was in a file Claude built.
+
+### Candidate (d): name the charge and the currency apart (not applied; Round 78 vote)
+
+Three changes, all in 2E. Before → after in the Round 78 text §3. Predicate ledger:
+
+| New predicate | Narrower / broader than the source? | Already in the text? |
+|---|---|---|
+| A charge and its currency are not the same thing | new distinction; narrows *"One row does not pay in any…"* | 2E names currencies; 3D and Step 11 use the charge |
+| Bill 1 is lift-subsystem mass, in Section 2 | makes 3D's and Step 11's *"as Section 2 defines it"* true | 3D, Step 11 |
+| The tilt pivot and actuators are paid in kilograms and are not lift-subsystem mass | admits a cost; against the configuration's side of the comparison, not for it | 3B *"adds mass"*; S4 146 lb; Step 4 *"moves the charge"* |
+| In the right-hand column a number names the currency | describes the table | pitch-hub row already does it |
+
+### S-5 (a question, not a finding): does 2F's own test hold up against Step 4's tilt-wing?
+
+Under (d) — and already today, since S4's kilograms are data — the tilt-wing's mechanism mass and the lift group it replaces
+are in one currency, so 2F's positive test is runnable on it: in the published breakdown the mechanism returns 146 lb of a
+716 lb structural difference. 2F's positive form asks that the other two charges be *"no worse"*; its clarification says a
+remedy that *"simply leaves another standing is not a counter-example — the tilting row is the case"*. **Those two sentences
+turn on whether *left standing* is *no worse*, and the text does not say against which baseline.** Claude has not checked how
+the NASA categories map onto the charges. Open.

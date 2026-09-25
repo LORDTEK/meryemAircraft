@@ -36,6 +36,7 @@ It establishes that one prediction of the accounting holds on data produced else
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 78: KAPANDI.** 3.1, 3.2 ve 687 / 679 nesne denetimi dört okuyucu tarafından teyit edildi (Grok, ChatGPT, DeepSeek, Qwen). Adım 4 1 356 kelime. *(Açık kalan tek bağ: Adım 2'nin S-1 / S-5 sonucu 2E'yi değiştirirse Adım 4'ün eğme paragrafıyla tutarlılığı yeniden okunur.)* | Tur 77 metni §1 |
 | **Tur 77:** #18 daraltılmış hâliyle (ChatGPT: *"is consistent with"*; 580 / 679 / 99 lb gövdede) — dört okuyucu + Claude. İki "araç sabit" cümlesi korunan listeye | Tur 76 metni §3 |
 | **Tur 76:** yeniden kurma denemesi uygulandı (Tur 75 taslağı). R2, R10, R15, R28 dört okuyucu + Claude; **R18'e ChatGPT vetosu** ("shows" → "is consistent with" önerisi) → kaynak cümle 30 aynen; **DeepSeek'in B6 açığı** → kaynak 44–45 aynen geri. Özgün Adım 4 donmuş hâliyle Ek S4'te | Tur 75 metni; `paper/v8/drafts/04-*` |
 | **Tur 64:** *"It is reported for scale, and the isolation test above is what carries the prediction"* özü geri (Qwen'in şartı) | Ek S4 |
