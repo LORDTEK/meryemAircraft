@@ -434,8 +434,8 @@ The costs the condition permits are named here, before any candidate is examined
 - **Releasing the engine is not releasing the electrical path.** The fourth part frees the
   continuous *power plant* from the hover peak. Everything between the store and the rotors —
   machines, power electronics, wiring — still passes the full hover power and is still sized by
-  it. **That is a charge the condition does not remove**, and it is carried in the ledger rather
-  than in this definition.
+  it. **That is Bill 3 on the electrical path, and the condition does not remove it**; it is carried
+  in the ledger rather than in this definition.
 - **Rotating the airframe is permitted and is not priced here.** The condition refuses
   architectures that reorient a propulsor, and sets that refusal against the mechanism a tilt
   requires. **An architecture that instead rotates its whole body faces the same physical
@@ -492,21 +492,18 @@ reported only the first half would be reporting the condition rather than the ai
 
 The condition is a statement about what an architecture would have to be. **It is not a claim
 that anything satisfies it, not a claim that anything satisfying it would fly, and not a claim
-that satisfying it is desirable.** Those are three separate questions and they are answered
+that satisfying it is desirable.** Three questions follow from it, and they are answered
 separately: whether the accounting behind the condition survives contact with an independent
 sizing study is tested in the next section, against data this work did not produce; whether any
 configuration satisfies the condition is the subject of Sections 3 to 5.1; and what such a
-configuration pays instead is the subject of Section 7.2, which is the longest of the three
-answers because it is the one most likely to be wrong.
+configuration pays instead is the subject of Section 7.2, the answer most likely to be wrong.
 
-One consequence is worth stating now, because it shapes everything after it. The third departure — same hardware, both duties, different orientation — is refused by a means other than the
-one the field has adopted. A tilting architecture accepts that departure and buys its way out of the first with a mechanism. **An architecture that reorients a propulsor does not satisfy the condition as written**, because
+One consequence is worth stating now, because it shapes everything after it. The third departure is refused by a means other than the
+one the field has adopted. A tilting architecture accepts that departure and buys its way out of the first departure with a mechanism. **An architecture that reorients a propulsor does not satisfy the condition as written**, because
 the condition requires one orientation relative to the airframe. **Whether such an architecture
 might avoid the three charges by some other route is a separate question this paper does not
 settle** — the condition is a definition, not a law, and it can be too narrow without being
-wrong. What it is not is retrofitted: it is stated here so that when a configuration is offered
-later, the reader can check the claim against a standard fixed before the configuration
-appeared.
+wrong.
 
 ### 2.3 An independent quantitative check
 
@@ -1834,7 +1831,7 @@ this configuration's mass — with its range lead unchanged at 103 to 141 percen
 contract's blindness to mass, made visible. **That comparison is not used**, because it would set
 competitors without a store against this configuration with one — a buffer of 3.6 percent whose
 feasibility is the item Section 8 examines. Whatever that store turns out to cost, holding it common
-charges all three the same assumption.
+puts the same assumption on all three.
 
 **The basis is not symmetric, and each asymmetry is stated with its direction.**
 
@@ -1845,7 +1842,7 @@ charges all three the same assumption.
   locked parallel to the flow — **transferred from a different airframe**, and assuming lift rotors
   stopped and aligned in cruise, which takes an indexing mechanism (Section 5.1) whose mass is not
   separately charged. **The tilting layout carries no cruise drag penalty at all.** That is an
-  idealisation in its favour, and it is deliberate: it makes the tilt row a bound.
+  idealisation in its favour, and it is deliberate: it makes the tilting layout a bound.
 - **Propeller efficiency.** This configuration uses the computed 0.632 and 0.683 of Section 7.1. The
   other two use 0.80 — the lift-plus-cruise layout because its cruise propeller does nothing else,
   the tilting layout because it has a variable-pitch hub. **Both are assumed, not computed**, and the
