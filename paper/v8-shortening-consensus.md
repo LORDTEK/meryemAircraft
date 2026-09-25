@@ -271,3 +271,8 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | 3B R1 R6 D3 D8 D9 | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı** (Tur 84); teyide |
 | Pivot cümlesi korunan (G P35, C D) | öneren | öneren | — | "gerekmez" (T82) | ✓ | Oylamada |
 | 3A A1 A2 A3; 3C C3 C4 C5 (S-7) | — | — | — | — | öneren | Kör okuma + oylama (Tur 84) |
+| 3A A1–A3, 3C C3–C5 | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı** (Tur 85); teyide |
+| Pivot korunan | ✓ | ✓ | ✓ | ✓ (değiştirdi) | ✓ | **Uygulandı** (157) |
+| 3A cümlesi korunan (C P1) | — | öneren | — | — | ✓ | Oylamada |
+| 3A "the table of Section 2" (Q P2) | karşı | "kurtarılabilir" | — | öneren | karşı | Çapraz görüşe (Tur 85 §6) |
+| 3D D2–D8; S-8 (Adım 3, 9, 11) | — | — | — | — | öneren | Kör okuma + oylama |

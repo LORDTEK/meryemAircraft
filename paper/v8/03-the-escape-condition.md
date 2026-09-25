@@ -11,11 +11,9 @@
 
 ## The escape condition
 
-The previous section listed moves that redistribute the three charges. This one asks a different
-question: what would an architecture have to do in order not to incur them at all? The answer is
-a **definition**, derived by inverting the table rather than by describing any aircraft, and it
-is stated here before any configuration is offered so that the standard is not taken from the
-thing it will be used to measure.
+This section asks what an architecture would have to do in order not to incur the three charges at
+all. The answer is a **definition**, derived by inverting the table, and it is stated here before any
+configuration is offered so that the standard is not taken from the thing it will be used to measure.
 
 ### Inverting the table
 
@@ -48,11 +46,11 @@ sense — one supports weight, the other balances drag.)*
 Four parts: **same hardware, both duties, one orientation, hover peak from a store.** The first
 three come from the first three departures; the fourth comes from the fourth.
 
-Two things in that sentence are choices rather than derivations, and are marked as such. The
-table requires only *one orientation relative to the airframe*; **how** an architecture keeps
+Two things in that sentence are choices rather than derivations. The
+inversion requires only *one orientation relative to the airframe*; **how** an architecture keeps
 that while changing flight regime — by rotating the whole body, or otherwise — is not in the
-table, and is treated as exposition rather than as part of the definition. And the table's last
-row permits the peak to come from **any** source other than the continuously installed power; a
+inversion, and is treated as exposition rather than as part of the definition. And the fourth
+departure's exception lets the peak come from **any** source other than the continuously installed power; a
 store is the narrower reading used here, because it is what the configuration examined later
 uses and because a narrower condition is easier to fail.
 
@@ -162,6 +160,7 @@ appeared.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 85 (yeniden kurma, 3A ve 3C):** 3A 77 → 60 (A1 çıktı — evi 2F; A2 R — gönderge; A3 D — evi 2F); 3C 196 → 190 (C3 D; C4, C5 R — **S-7**: Tur 64'te 3B tablosu S3'e taşınınca 3C'deki "the table" 2E tablosuna işaret eder olmuştu). Kör okuma dördünde geçti. Dört okuyucu + Claude. Özgünler Ek S3'te donmuş | Tur 84 metni |
 | **Tur 84 (yeniden kurma, 3B):** 271 → 247 kelime. R1 (dört özellik; "because" → "wherever" — kaynağın S-6 sayım hatasının **esaslı onarımı**, üslup değil), R6 ("leaves" → "incurs"), D3 (Fatura 1–2 açıklaması, iki ev kuralı), D8, D9. Kör okuma dördünde de geçti. Dört okuyucu + Claude. Özgün 3B Ek S3'te donmuş | Tur 83 metni |
 | **Tur 81:** 3B üçüncü sapma "left standing" → "incurred" (S5-4; dört okuyucu + Claude): 3B tabana göre karşılaştırmıyor, ne ödendiğini söylüyor. Ek S3 aynı değişiklik + Tur 65'te emekli "complexity" (kaçırılmıştı) | Tur 80 metni §2 |
 | **Tur 64 — N1 uygulanırken bulunan eski hata:** *"The second row of the inverted table — same hardware, different orientation"* — farklı yönelim **üçüncü** satırdı; *"tek görev"* satırı sonradan araya girince atıf bayat kalmış. *"The third departure — same hardware, both duties, different orientation"* | bu bölümün dört ayrılışı |

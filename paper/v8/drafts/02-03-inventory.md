@@ -201,3 +201,12 @@ expected restatement saving in 3B was over-estimated: Qwen P2 (Round 78) keeps 2
 marks stripped on one side only). 3B↔3C: one-to-one; 3C's fourth part **narrower** (store), marked so. 3A draft 77 → 60
 (A1 removed — home 2F; A2 R — antecedent; A3 D — home 2F). 3C 196 → 190 (C3 D; C4, C5 R — **S-7**: "the table" in 3C has
 pointed at 2E's table since the 3B table moved to S3 in Round 64). Pivot protection: G, C, K yes; Q, D asked.
+
+## Round 85 — 3A, 3C applied; pivot protected; 3D drafted
+
+3A/3C applied (four + Claude); originals frozen in S3; pivot protected (157; Qwen changed position). Qwen P1 verified: 3D's
+"second departure" resolves to 3B. 3D snapshot 880 → draft 815 (−7 %): D2 gloss (home A′), D3, D4, D7 (home 3B), D8; **S-8**
+word collisions — D5 *"a mass one"* → *"a cost in kilograms"* (also Steps 9 and 11), D6 *"charges that refusal"* → *"sets"*.
+E2: "zero-bill condition" named once, never used; recommendation to the author: drop. **Repaired references log (DeepSeek):**
+3C *"The table requires"* → *"The inversion requires"*; *"is not in the table"* → *"is not in the inversion"*; *"the table's
+last row permits"* → *"the fourth departure's exception lets"* (S-7).

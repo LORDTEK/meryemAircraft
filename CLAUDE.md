@@ -346,6 +346,10 @@ dahil herkesin hemfikir olduğu kısaltmalar uygulansın."*
   bütçesi koyup işe birleştirme bölümünden, yani kalpten başlamayı önermiştim. **Kelime sayısı kesimin sürücüsü olmaz;
   yontulacaksa önce yenilik anlatılarının dışındaki hesap kısımları yontulur.** Hız için okuyucuların çözümleri istenir;
   yedek yol `paper/deferred-decisions.md` E4'te.
+- **Okuyucular birbirine de cevap verir (yazar, Tur 85).** *"Mesela bir okuyucu ikna olmadı diyelim bir an için. Onunla
+  diğer okuyucular da fikir üzerine beyanatları olsun. Yani birbirlerinin olumlu/olumsuz görüşlerine de bir şey söylemek
+  isterlerse çekinmesinler."* Her tur metni, ayrışan ya da tek kalan görüşleri **adıyla ve yan yana** koyar ve öteki
+  okuyuculardan o görüşlere (yalnız bana değil) cevap ister. İkna olmayan okuyucunun gerekçesi öbürlerine açıkça sorulur.
 - **Plan (yazar onayı, Tur 68).** Yapı üretilmiş görünüm olarak birleşir (`paper/build/v8_assemble.py` →
   `paper/v8/ASSEMBLED.md`; kaynak adım dosyaları). Hesap adımları taslakla kısalır: **taslak yeni yüklem eklemez**, her
   cümle kaynak cümlenin yalnız silmeyle kısalmış hâlidir (`paper/build/v8_draft_check.py`); **silme de anlamı ters

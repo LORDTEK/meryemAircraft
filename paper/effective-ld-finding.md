@@ -1554,3 +1554,12 @@ kapandı (dördü "durmaz"). Özgün 3B Ek S3'te donmuş. **Kendi hatam (araçta
 siliyordu — yalnız yanlış alarm üretebilir, kaçırma değil; düzeltildi, iki yönlü sınandı. Emekli 66. 3B↔3C eşleme bire bir;
 3C'nin dördüncü parçası bilerek dar. **3A/3C:** 3A 77 → 60; 3C'de **S-7** — Tur 64'te 3B tablosu S3'e taşınınca 3C'deki
 "the table" 2E tablosuna işaret eder hâle gelmiş (kırık gönderge, turda onarıldı, sayıldı). Pivot koruması: G, C, K evet.
+
+# Tur 85 — Tur 84 metnine dört cevap; 3A, 3C uygulandı; yazarın yeni kuralı
+
+**Yazar:** okuyucular birbirinin görüşlerine de cevap versin (CLAUDE.md §2.3'e yazıldı; tur metninde §6).
+**Oybirliği:** 3B teyit → kapandı; pivot korunan (157; Qwen gerekçesiyle görüş değiştirdi); A1–A3, C3–C5 → uygulandı;
+S-7 kapandı. **3D taslağı:** 880 → 815 (−%7). **S-8:** fatura/birim denetimi iki çakışma buldu — "converts a power-system
+charge into a mass one" (Adım 3, 9, 11; A′'ye göre depo fatura değil, kilogram maliyeti) ve "charges that refusal against the
+mechanism" (C'ye göre mekanizma fatura değil). **E2:** "zero-bill condition" adı bir kez geçiyor, hiç kullanılmıyor → yazara
+öneri: düşür. Oylamada: ChatGPT P1 (3A cümlesini koru), Qwen P2 ("the table of Section 2" — benim görüşüm hayır).
