@@ -2,7 +2,7 @@
 
 > **This is a task. Please answer it now, and begin with your name alone on the first line.**
 >
-> `LORDTEK/meryemAircraft`, branch `claude/ecstatic-cori-6w30at`. The changed files are `paper/v8/02-the-tax.md` and
+> `LORDTEK/meryemAircraft`, branch `claude/ecstatic-cori-6w30at`, commit **`0694d08`**. The changed files are `paper/v8/02-the-tax.md` and
 > `paper/v8/04-the-independent-check.md`. To check your copy, run
 > `grep -c "A charge and its currency are not the same thing" paper/v8/02-the-tax.md`; it should print 1.
 
