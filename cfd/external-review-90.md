@@ -2,7 +2,7 @@
 
 > **This is a task. Please answer it now, and begin with your name alone on the first line.**
 >
-> `LORDTEK/meryemAircraft`, branch `claude/ecstatic-cori-6w30at`, commit **`COMMIT`**.
+> `LORDTEK/meryemAircraft`, branch `claude/ecstatic-cori-6w30at`, commit **`a9472f4`**.
 >
 > - Draft: `paper/v8/drafts/03-draft.md`. Only 3F differs from the step, and 3E is unchanged.
 > - Snapshot: `paper/v8/drafts/03EF-snapshot.md`.
