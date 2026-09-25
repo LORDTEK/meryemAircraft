@@ -414,23 +414,20 @@ uses and because a narrower condition is easier to fail.
 
 ### What the condition does not say, and this matters more than what it says
 
-The condition is named below the **zero-bill condition**, and the name has to be read exactly.
-**It means zero of the three charges as Section 2 defines them** — the mass of a dedicated lift
-subsystem, the cruise drag of hover hardware left exposed, and continuous power installed to a
-hover peak. **It does not mean an architecture that costs nothing, and it does not mean an
+The condition has to be read exactly.
+**It means zero of the three charges as Section 2 defines them.** **It does not mean an architecture that costs nothing, and it does not mean an
 architecture that carries nothing for the vertical phase.** A definition that placed every
 conceivable cost inside the thing to be escaped would be unfalsifiable, and an architecture
 built to satisfy it would win by construction rather than by performance.
 
-So the costs the condition permits are named here, before any candidate is examined. Six of them,
-and the first is the one that most nearly contradicts the name:
+The costs the condition permits are named here, before any candidate is examined. Six of them:
 
 - **A store is permitted, and it has the same duty-cycle character as Bill 1.** The fourth part
   moves the hover peak off the continuous power plant and onto a store; that store delivers its
   peak for two percent of the flight and is carried for the rest. It is not Bill 1 as Section 2
   defines it — it is not lift-subsystem mass — **but it is mass carried for a duty that is
-  briefly needed, which is the same complaint Bill 1 makes.** The condition converts a power-
-  system charge into a mass one and claims only that the three charges as named are not incurred.
+  briefly needed, which is the same complaint Bill 1 makes.** The condition converts a power-system
+  charge into a cost in kilograms and claims only that the three charges as named are not incurred.
   **It does not claim the trade is favourable.** Whether the store is lighter than the continuous
   power it displaces is a sizing result and is computed, not asserted.
 - **Releasing the engine is not releasing the electrical path.** The fourth part frees the
@@ -439,22 +436,20 @@ and the first is the one that most nearly contradicts the name:
   it. **That is a charge the condition does not remove**, and it is carried in the ledger rather
   than in this definition.
 - **Rotating the airframe is permitted and is not priced here.** The condition refuses
-  architectures that reorient a propulsor, and charges that refusal against the mechanism a tilt
+  architectures that reorient a propulsor, and sets that refusal against the mechanism a tilt
   requires. **An architecture that instead rotates its whole body faces the same physical
   problem** — a ninety-degree change of the thrust axis relative to the flight path, with the
   moments, the authority and the control through the turn that implies. It is not one of the
   three charges and the condition does not eliminate it; it is priced where the transition is
   analysed. Saying otherwise would let a candidate win that line by wording.
 - **Hardware installed for the vertical phase is permitted if it serves both duties**, and the
-  second departure is what carries the weight. A propulsor that lifts and then propels
-  satisfies the condition. A propulsor that lifts and is then carried does not, whatever else it
-  shares with the cruise system.
+  second departure is what carries the weight.
 - **Hardware used in both regimes for something other than propulsive thrust is permitted, and its
   cruise drag is not eliminated.** *Cruise thrust in this paper means the thrust that balances
   cruise drag.* Attitude devices produce thrust in cruise, but they produce no cruise thrust in
   that sense; they are used throughout the flight, so their duty cycle matches their presence and
   they fall outside Bill 1. **They remain in the airstream, so the second charge reaches them.**
-  Those are two different statements and the distinction matters: **attitude hardware does not
+  **Attitude hardware does not
   stop the propulsor that carries the aircraft from meeting the condition, but it is carried through
   cruise without producing cruise thrust, which is the first failure mode below — and the charges
   are about everything the aircraft carries, so Bill 2 reaches it.** An architecture in that
@@ -1241,7 +1236,7 @@ uncontrollable, or unsuited to its mission, and the accounting says nothing agai
 possibility.
 
 **7. It does not claim that the trades inside the escape are favourable.** Moving the hover
-peak onto a store converts a power-system charge into a mass one; serving two regimes with one
+peak onto a store converts a power-system charge into a cost in kilograms; serving two regimes with one
 set of fixed-geometry propellers costs efficiency in at least one of them. Both are computed,
 neither is asserted to be worth paying, and the ledger reports them whichever way they fall.
 
@@ -1590,7 +1585,7 @@ percent of take-off mass, 1.9 to 2.1 kg across the four closures.**
 **Section 3 said in advance that this would happen and refused to call it free.** The buffer is
 not lift-subsystem mass, so it is not Bill 1 as Section 2 defines it — but it is mass carried
 for the whole flight to serve a demand that lasts about two percent of it, which is the
-complaint Bill 1 makes. **The architecture converts a power-system charge into a mass one.**
+complaint Bill 1 makes. **The architecture converts a power-system charge into a cost in kilograms.**
 Whether that trade is favourable is what the closure tests, and the closure is where the answer
 is: the engine it buys is 3.54 to 5.17 kW rather than one sized by a hover peak of 11.4 to
 12.5 kW.
