@@ -1,7 +1,7 @@
 # Reader onboarding — for a reader starting a new conversation
 
 > **Version check (Qwen P1, Round 92; corrected in Round 93).** This version was rewritten in Round 91 and last updated in
-> Round 96. An older copy (Round 61, sent in Round 64) stated Step 13's contract results **in the reverse direction**: it
+> Round 97. An older copy (Round 61, sent in Round 64) stated Step 13's contract results **in the reverse direction**: it
 > gave this configuration's range as 55 to 84 percent ahead of the lift-plus-cruise layout. **The older copy has no
 > version box at all; if yours does not begin with this box, it is the old one: do not use it.** In the repository:
 > `grep -c "Version check (Qwen P1" cfd/reader-onboarding.md` prints **more than 0** for this version and **0** for the old one.
@@ -214,22 +214,19 @@ The body is about **26 000 words**, and the journal's working target is **about 
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 96.**
+**Round 97.**
 
 | Block | State |
 |---|---|
-| Step 4 | recomposed and closed (1 586 → 1 356) |
-| Step 3 | recomposed and closed (1 874 → 1 698) |
-| Step 2 | recomposed, with its last pieces awaiting confirmation. It went **2 263 → 2 487**, because content repairs added more than recomposition removed. |
-| Step 9 | recomposed and closed (1 388 → 1 339) |
-| Step 14 | recomposed and confirmed. One repair of my own to vote (R-6: the S-20 sentence says the vertical-phase duration is not computed, but Section 2 gives about a minute) |
-| Step 1 | recomposed; *"No field sustains…"* and *"several are in service"* removed, awaiting confirmation. Open: the 1B heading ("The demand has been continuous…") |
-| Step 5 | recomposed; signpost removed, tip-over sentence reworded and protected, awaiting confirmation |
-| Step 6 | recomposed (6A, 6B, 6G removed; S-26 heading), awaiting confirmation. To vote: S-27 with a pointer repair (R-4), the 6D removal with a pointer repair (R-5); divided: S-28 |
-| Step 7 | inventory sent (Round 96) — the combination, the heart of the paper |
+| Steps 4, 3, 9, 14 | recomposed and closed (Step 14's R-6 repair awaiting confirmation) |
+| Step 2 | recomposed, with its last pieces awaiting confirmation |
+| Step 1 | recomposed; heading changed to "The problem has been attacked for seventy years"; S-29 (series-hybrid precedent) to vote — the sources contradict "established precedent" |
+| Step 5 | recomposed, awaiting confirmation |
+| Step 6 | recomposed; **the author widened the cruise axis to helicopters** (S-27, result mixed); carrying it through Steps 6, 9, 10 and 15 to vote |
+| Step 7 | inventory confirmed; 7A applied; 7G and 7L divided |
 | Next | Step 8, last |
 
-**The body is about 25 770 words.** Recomposition gains a few percent per block. In Steps 2 and 3 its main product was
+**The body is about 25 835 words.** Recomposition gains a few percent per block. In Steps 2 and 3 its main product was
 defects found in the source and repaired. The author will review the target when the steps are done.
 
 **Tools the round texts mention:**
