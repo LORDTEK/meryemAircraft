@@ -490,6 +490,12 @@ dahil herkesin hemfikir olduğu kısaltmalar uygulansın."*
   hüküm istenen **her metin** (güncel adım gövdesi, taslak, komşu cümleler, kaynak paragrafı) tur metnine **tam** girer; depo
   bağı yalnız doğrulama içindir, okuma yolu değildir. Doğrulama satırı bir satırdır. (Tur 109 ve 111'de iki kez "dosyayı açın"
   dedim; okuyucular eski metinlerden çalıştı.)
+- **Tur 113'te kabul (dört okuyucu + Claude):** **dış kanıt kimliği kuralı** (ChatGPT) — bağımsız bir veri kümesinin kimliği,
+  seçim gerekçesi, karşılaştırma nüfusu ve kökeni **tek evde** durur; öteki bölümler bulgusunu tüketir, evi yeniden kurmaz (NASA
+  çalışması: ev Adım 4; Adım 1 rotaları, Adım 2 bir bulguyu tüketir, ileri işaretçiyle). **Yalıtım çifti kuralı** (ChatGPT) —
+  *"When an external comparison is used as the evidentiary test of a prediction, the body must retain the identities of the
+  compared objects, the common basis on which they are comparable, and the qualification that the comparison is not controlled.
+  Moving any one of these to the supplement while leaving the numerical result in the body is a halt condition."*
 
 ## 3. Doğrulama
 

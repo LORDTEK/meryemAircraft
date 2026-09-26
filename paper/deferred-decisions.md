@@ -269,3 +269,7 @@ Adım 4 yeniden kurulurken seçilir (şimdi Adım 1, 2, 4'te).
 Adım 2 Fatura 1 alıntısını tutar. **Adım 1'de ne kalacağı açık** — Grok: en çok işaretçi; DeepSeek: gereken alıntı + işaretçi;
 ChatGPT: gerekiyorsa bağlamsal tanıtım; Qwen: tanıtım ve beş aile. Adım 1 yeniden kurulurken karara bağlanır.
 
+**Tur 114 — çerçeve bitti.** Adım 2: 1 786 (NASA işaretçisi ve S-42 dahil) · Adım 3: 1 351 (C-kısa dahil) · Adım 4: **1 268**
+(1 351'den; M1, M2). Çerçeve 4 405, plan 1 750. Taban ölçüm olarak kaydedildi (Qwen P3, DeepSeek); bütçe yazarın (E8).
+Sırada mimari: 9 → 1 → 5–6 → 7–8 → 15 (Tur 73 sırası).
+

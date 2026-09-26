@@ -55,8 +55,7 @@ Hybrid VTOL aircraft occupy that corner today. **This paper does
 not dispute that they work.** What matters for the argument is *how* each changes between the
 two regimes, because that is where the families differ from one another.
 
-A NASA study that sizes five VTOL architecture families to one mission describes the two
-relevant routes in its own terms.
+The NASA sizing study used in Section 4 describes the two relevant routes in its own terms.
 
 **The lift-plus-cruise route keeps two sets of hardware and switches between them.** In that
 study the configuration is a stopping-rotor compound with three flight modes — helicopter mode
@@ -179,6 +178,7 @@ presume an escape.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 114 — NASA çalışmasının tek evi Adım 4** (P88, dış kanıt kimliği kuralı; Tur 113, dört okuyucu + Claude): "A NASA study that sizes five VTOL architecture families to one mission describes …" → "The NASA sizing study used in Section 4 describes …" (ileri işaretçi); iki rota paragrafı Adım 1'in kendi kullanımı olarak kalır (Grok P94: üçüncü tasarım, görev sayısı ya da üç neden buraya girmez) | Tur 113 metni §6 |
 | **Tur 98 (dört okuyucu + Claude):** S-29 — 1G "series-hybrid propulsion has been flown in a crewed motor glider and designed for small uncrewed aircraft" (Schoemann 2014 s. 25–26; Merical ve ark. 2014 özeti). Özgün Ek S1'de | `references/Schoemann-2014_…pdf` |
 | **Tur 97 (dört okuyucu + Claude):** 1B başlığı "The problem has been attacked for seventy years" (çaba ihtiyacın kanıtı değil) | Tur 96 metni §5 |
 | **Tur 96 (dört okuyucu + Claude):** "No field sustains that level of effort against a need that is not real." çıktı (evrensel çıkarım; ihtiyacı 1A söylüyor); "and several are in service" çıktı (insansız hibrit için hizmette kaynağı yok; V-22 insanlı tanık — reddedildi). Özgün 1C paragrafı Ek S1'de | Tur 95 metni §4 |

@@ -28,3 +28,7 @@ Ek S14'te birim ya da nesne değişirse ikisi ayrı ayrı denetlenir.
 
 **Rakip nicelik çifti (Tur 110; DeepSeek, dört okuyucu + Claude).** Rakibin kaldırma grubu kütle kesri ve seyir pervane verimi
 her iz tablosunda **çift** olarak geçer; biri taşınır ya da değişirse öteki de aynı işlemi görür (S-38).
+
+**Adım 4'ün oranları (Tur 114; Grok P92, dört okuyucu + Claude).** **1.2 %** ve **9.4 %** sayı eşleme denetimine *"tilt-wing
+lift-plus-cruise'a karşı, aynı çalışma (J&S 2022), etkin L/D ve tasarım brüt ağırlığı"* kimliğiyle girer; Adım 6'nın döner kanatlı
+L/De noktalarıyla aynı nesne değildir.

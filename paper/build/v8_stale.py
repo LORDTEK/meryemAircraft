@@ -161,6 +161,8 @@ EMEKLI = {
     "the next section says why it is treated separately": "Tur 111: S-41 -- Adim 3 bunu soylemiyor",
     "feathered, folded or aligned away": "Tur 112: S-42 -- Bacchini'nin geri cekmesi katliyor; T3'un katlama satiri (Grok P89)",
     "the motors and the beams that carry them": "Tur 112: S-42 -- kaynak kirisler icin 'limited' diyor (s. 141)",
+    "A NASA study that sizes five VTOL architecture families": "Tur 114: calismanin tek evi Adim 4 (P88, dis kanit kimligi; Qwen R113-P2 ileri isaretci)",
+    "A NASA study sizing five VTOL architecture families": "Tur 114: calismanin tek evi Adim 4 (P88)",
 }
 
 

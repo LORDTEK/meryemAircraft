@@ -1004,6 +1004,14 @@ that structurally lacks it, before Section 7 asks whether one aircraft can hold 
 
 ---
 
+### Three sentences of Section 4 moved in the length pass
+
+The accounting says an architecture that avoids the three is cheaper in those three currencies and nothing more; a configuration may avoid all three and still be unbuildable, uncontrollable, or unsuited to its mission. Sections 10 and 14 are about exactly that possibility for the configuration proposed here.
+
+The next two sections describe the two capabilities the mission asks for, one at a time and each against the family that structurally lacks it, before Section 7 asks whether one aircraft can hold both.
+
+---
+
 ## S5. Section 5 (from Section 5)
 
 ### Three paragraphs of Section 5 as they stood before recomposition (frozen snapshot)

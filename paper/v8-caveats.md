@@ -202,6 +202,8 @@ kaybolmasına (CLAUDE.md §0.8). Aynı denetimle sınanır.
 | 3 | Four parts: same hardware, both duties, one orientation, hover peak from a store. | Q+G+C+D+K |
 | 2 | a counter-example is a remedy that reduces one of the three charges, leaves the other two no worse, and whose own cost is either absent or demonstrably smaller than the reduction — measured in the same currency | Q+G+C+D+K |
 | 2 | "No worse" is judged against the architecture the move modifies. | Q+G+C+D+K |
+| 4 | It is used for three reasons, stated so that the choice is not merely the one that agreed | Q+G+C+D+K |
+| 4 | None is known to the authors. | Q+G+C+D+K |
 
 **Yazar kararıyla eke taşınan korunan cümleler (kural (iii), CLAUDE.md §2.4; `v8_caveats.py` ekte durduğunu sınar):**
 
@@ -211,3 +213,5 @@ kaybolmasına (CLAUDE.md §0.8). Aynı denetimle sınanır.
 | S11 | No line item at the adverse end is an independent measurement, and they should not be subtracted from one another as if they were. | E9 |
 
 *Tanım kaydı (Tur 111; Qwen P1, dört okuyucu + Claude): son beş Q+G+C+D+K satırı çerçevenin tanım cümleleri; kök (satır "is the origin of all three charges below") ve koşul zaten korunuyordu.*
+
+*P71 birimi (Tur 114; DeepSeek, dört okuyucu + Claude): Adım 4'ün "The instrument is now fixed, and it is not modified again." ve "Everything that follows is measured with it rather than added to it." cümleleri birlikte kalır ya da birlikte gider.*
