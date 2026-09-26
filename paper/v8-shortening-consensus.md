@@ -386,4 +386,14 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Gövde-yalnız yorumlanabilirlik kuralı | ✓ | ✓ | (açık oy yok) | ✓ | ✓ | DeepSeek'in açık oyu bekleniyor |
 | Yeni: Adım 7 notunu koru (DeepSeek); ChatGPT'nin yönetici cümlesi; kapanış + üç fatura sütunu (ChatGPT) | — | — | — | — | — | Oylamaya |
 | **Yazar kararı (Tur 101): uzunluk planı** — 12 000; 5 tablo + 4 şekil; bölüm bütçeleri; esnek sonuç cümlesi; yorumlanabilirlik kuralı | — | — | — | — | — | **Karar** (CLAUDE.md §2.4) |
-| T1–T5 taslakları; F1–F4 planı; fig08 etiketi; fig12a modeli; R-7 onarımı; Adım 7 notu korunsun (DeepSeek); ChatGPT'nin yönetici cümlesi | — | — | — | — | öneren | Oylamada |
+| T1–T5 taslakları; F1–F4 planı; fig08 etiketi; fig12a modeli; R-7 onarımı; Adım 7 notu korunsun (DeepSeek); ChatGPT'nin yönetici cümlesi | ✓ | ✓ | ✓ | ✓ | ✓ | **Tur 101 oybirliği → Tur 102'de uygulandı; teyide** |
+| T4 dipnot sözcükleri (dört öneri birleşti: G, C, D, K; Q kısa hâli kabul) | ✓ | ✓ | ✓ | ✓ | öneren | **Uygulandı, teyide** |
+| F4 eke (Grok (b)) | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı: 5 tablo + 3 şekil, 11 750** |
+| fig09 "deploys on–off" → "its extension is modulated, not switched" (Adım 8 ile çelişki; Tur 102 şekil denetimi) | — | — | — | — | öneren | Teyide |
+| F2 sayıları (23.0 / 55.9 N m; 433 Pa; 0.67→0.47 m) gövdede yok; adlar (main propeller / control pairs → nose / tip pairs); başlıklar | — | — | — | — | öneren | Oylamada |
+| F1 = fig05 (yazarın bilgisi: üç görünüş, 2 m); fig06 eke; eksenler altyazıda mı panelde mi | — | — | — | — | öneren | Oylamada |
+| Qwen P1 (T4 altyazısı L/De'nin statüsünü söyler); P2 (her hesap adımından önce dışa giden harita — 11–14 üretildi); P3 (F3 veri tablosu ekte) | — | — | — | öneren | ✓ | Oylamada |
+| Grok P70 (F3 yalnız Tablo 3); ChatGPT: "A number may move to the supplement; its meaning may not" + sayı kimliğine model/geometri | öneren (P70) | öneren | — | — | ✓ | Oylamada |
+| Adım 15 koşulu korunsun (R-7'nin cümlesi) | — | — | — | — | öneren | Oylamada |
+| Korunan cümle eke yalnız nitelediği sonuçla birlikte ve yazar kararıyla gider (Claude) | — | — | — | — | öneren | Oylamada |
+| **Adım 10 sonuç cümleli taslak** (`drafts/10-recomposed.md`, ~890 kelime; 204 korunan) — beş liste yan yana | — | — | — | — | öneren | **Oylamada; R cümleleri tek tek vetolu** |

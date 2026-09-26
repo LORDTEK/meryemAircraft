@@ -28,9 +28,9 @@ alternative, and this paper's alternatives differ from axis to axis.
 
 | Axis | Opponent | Status |
 |---|---|---|
-| Cruise efficiency | Rotorcraft: multirotors and helicopters | **Claimed against multirotors, and bounded; against helicopters the published comparison is mixed and no advantage is claimed.** Cruise lift is carried on a surface rather than on rotors, which no sizing contract changes. The *size* of the resulting advantage is a calculation, not a consequence of that fact, and Section 6 measures it against two published quadrotors in one common definition. |
-| Operation without a runway | Fixed-wing aircraft | **Claimed**, in the sense stated below. |
-| The mechanism required to change regime | Tilting architectures | **Claimed.** This is the paper's contribution. |
+| Cruise efficiency | Rotorcraft: multirotors and helicopters | **Claimed against multirotors, and bounded; against helicopters the published comparison is mixed and no advantage is claimed.** Cruise lift is carried on a surface rather than on rotors, which no sizing contract changes. The *size* of the resulting advantage is a calculation, not a consequence of that fact (Section 6). |
+| Operation without a runway | Fixed-wing aircraft | **Claimed as sized, not demonstrated** (Sections 5, 14). |
+| The mechanism required to change regime | Tilting architectures | **Claimed.** This is the paper's contribution — a count of mechanism classes (Section 7), not a claim of mechanical simplicity or reliability. |
 | Cruise efficiency and range | Other hybrids — lift-plus-cruise, tilt | **Not claimed, in either direction.** |
 
 **The fourth row is the important one**, and the reason it is a refusal rather than a result is
@@ -135,6 +135,7 @@ what it demands of anyone who uses the framework afterwards.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 102 (Tur 101 oybirliği; T1):** tablo gövdenin eksen tablosu oldu — 1. satırdan "and Section 6 measures it against two published quadrotors in one common definition" çıktı (Şekil 3 taşıyor), "(Section 6)" işaretçisi; 2. satır "Claimed as sized, not demonstrated (Sections 5, 14)"; 3. satır sayım/basitlik sınırı. Korunan kalın cümle aynen. Özgün tablo Ek S9'da | `drafts/objects.md` T1 |
 | **Tur 99:** eksen satırı korunan (168; dört okuyucu + Claude) | Adım 15 |
 | **Tur 98 (dört okuyucu + Claude; E5):** tablo satırı "Rotorcraft: multirotors and helicopters | Claimed against multirotors, and bounded; against helicopters the published comparison is mixed and no advantage is claimed."; 2. madde "against rotorcraft". Özgün Ek S9'da | Adım 6D S-27 |
 | **Tur 93 (yeniden kurma, 9E):** 2. madde — "The multirotor family is the opponent on cruise efficiency only." çıktı (9B tablosunu ve 1. maddenin kaldırılan eksen cümlesiyle aynı türden yinelemeyi taşıyordu; dört okuyucu + Claude). Özgün Ek S9'da | Tur 92 metni §2 |

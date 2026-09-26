@@ -428,7 +428,7 @@ dahil herkesin hemfikir olduğu kısaltmalar uygulansın."*
 
 - **Hedef: 12 000 kelime toplam** — dergi şekil ve tabloyu da kelime sayar (`paper/v8-budget.md`: 200 / 450 / 700).
 - **Plan (E6):** 5 tablo (1 750) + 4 şekil (1 300) + düzyazı 8 500 + özet/terimler 400 = 11 950. Bölüm bütçeleri: 1: 850,
-  2: 750, 3: 650, 4: 350, 5: 600, 6: 850, 7: 900, 8: 900, 9: 400, 10–13: 1 550, 14: 450, 15: 250. Pay gerekirse F4 eke.
+  2: 750, 3: 650, 4: 350, 5: 600, 6: 850, 7: 900, 8: 900, 9: 400, 10–13: 1 550, 14: 450, 15: 250. **F4 eke gitti (Tur 101, dört okuyucu + Claude): 5 tablo + 3 şekil, toplam 11 750.**
 - **Sonuç cümlesi:** yöntemin adı zorunlu; sınır yalnız gerçekten varsa yazılır; ek işaretçisi. Katı şablon yok.
 - **Gövde-yalnız yorumlanabilirlik kuralı (ChatGPT):** *"A calculation result may remain in the body only if the body itself
   retains the minimum definition, model qualification and comparison needed to interpret that result. Audit detail may move
@@ -437,6 +437,10 @@ dahil herkesin hemfikir olduğu kısaltmalar uygulansın."*
 - **Sıra:** nesneler → Adım 10'un dışa giden sayı haritası (`paper/build/v8_outbound.py`) → hesap (10–14) → çerçeve (2–4) →
   mimari (1, 5–9, 15) en son; o sırada mimari dondurulur.
 - **Yeni denetim:** gövdedeki her sonuç sayısı ekteki çalışmada aynı değer, birim ve nesneyle; betik işaretler, insan okur.
+- **Bu aşamanın yönetici cümlesi (Tur 101; ChatGPT, dört okuyucu + Claude):** *"Move the working, not the evidence; move the
+  derivation, not the qualification; move the audit trail, not the result."* Şekil etiketi de iddia yüzeyidir: v8'e girecek
+  her şeklin betiği `v8_stale.py` `SEKILLER` listesine girer (emekli ifade + P56). **Oyda (Tur 102):** ChatGPT'nin
+  *"A number may move to the supplement; its meaning may not"* eki ve sayı kimliğine *model/geometri*nin eklenmesi.
 
 ## 3. Doğrulama
 

@@ -1130,9 +1130,9 @@ alternative, and this paper's alternatives differ from axis to axis.
 
 | Axis | Opponent | Status |
 |---|---|---|
-| Cruise efficiency | Rotorcraft: multirotors and helicopters | **Claimed against multirotors, and bounded; against helicopters the published comparison is mixed and no advantage is claimed.** Cruise lift is carried on a surface rather than on rotors, which no sizing contract changes. The *size* of the resulting advantage is a calculation, not a consequence of that fact, and Section 4 measures it against two published quadrotors in one common definition. |
-| Operation without a runway | Fixed-wing aircraft | **Claimed**, in the sense stated below. |
-| The mechanism required to change regime | Tilting architectures | **Claimed.** This is the paper's contribution. |
+| Cruise efficiency | Rotorcraft: multirotors and helicopters | **Claimed against multirotors, and bounded; against helicopters the published comparison is mixed and no advantage is claimed.** Cruise lift is carried on a surface rather than on rotors, which no sizing contract changes. The *size* of the resulting advantage is a calculation, not a consequence of that fact (Section 4). |
+| Operation without a runway | Fixed-wing aircraft | **Claimed as sized, not demonstrated** (Sections 3, 8). |
+| The mechanism required to change regime | Tilting architectures | **Claimed.** This is the paper's contribution — a count of mechanism classes (Section 5.1), not a claim of mechanical simplicity or reliability. |
 | Cruise efficiency and range | Other hybrids — lift-plus-cruise, tilt | **Not claimed, in either direction.** |
 
 **The fourth row is the important one**, and the reason it is a refusal rather than a result is
@@ -1334,12 +1334,15 @@ bracket.
 **All four converge.** On these assumptions the analytical sizing loop closes for this
 architecture — and for the 50 kg design, which is the only one carried through this loop; the 1 000 kg reference design appears below only through a transition time computed elsewhere.
 
-| | C_D0 | η_p | L/D | MTOW | Empty fraction | Hover power, rotor shaft | Engine rating, shaft | Range |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| **A** | 0.0381 | 0.632 | 8.79 | 57.5 kg | 0.614 | 12.53 kW | 5.17 kW | 927 km |
-| **B** | 0.0381 | 0.683 | 8.79 | 55.8 kg | 0.607 | 12.17 kW | 4.65 kW | 1 002 km |
-| **C** | 0.0285 | 0.632 | 10.82 | 53.5 kg | 0.597 | 11.66 kW | 3.91 kW | 1 141 km |
-| **D** | 0.0285 | 0.683 | 10.82 | 52.3 kg | 0.592 | 11.40 kW | 3.54 kW | 1 233 km |
+| | C_D0 | η_p | L/D | L/De | MTOW | Empty fraction | Hover power, rotor shaft | Engine rating, shaft | Range |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| **A** | 0.0381 | 0.632 | 8.79 | 5.56 | 57.5 kg | 0.614 | 12.53 kW | 5.17 kW | 927 km |
+| **B** | 0.0381 | 0.683 | 8.79 | 6.00 | 55.8 kg | 0.607 | 12.17 kW | 4.65 kW | 1 002 km |
+| **C** | 0.0285 | 0.632 | 10.82 | 6.84 | 53.5 kg | 0.597 | 11.66 kW | 3.91 kW | 1 141 km |
+| **D** | 0.0285 | 0.683 | 10.82 | 7.39 | 52.3 kg | 0.592 | 11.40 kW | 3.54 kW | 1 233 km |
+
+*L/De = L/D × η_p at the cruise condition; the loop holds both factors fixed, so the closure changes neither. The four
+L/De values are the bounding corners of that product, carried into the closures as inputs, not four simulated aircraft.*
 
 **Payload is an input, fixed at 13 kg; take-off mass is the output.** The closure returns 52.3 to
 57.5 kg, and the payload fraction that follows runs from **0.25 down to 0.23**.
@@ -1837,10 +1840,10 @@ Range of the lift-plus-cruise layout relative to this configuration:
 
 | Closure (Section 7.1) | Fixed fuel fraction | Fixed fuel mass | Fixed take-off mass |
 |---|---:|---:|---:|
-| Adverse drag, lower blade family | +67.8 % | +40.2 % | +1.1 % |
-| Adverse drag, upper blade family | +55.3 % | +27.5 % | **−13.0 %** |
-| Favourable drag, lower blade family | +83.9 % | +53.5 % | +7.3 % |
-| Favourable drag, upper blade family | +70.2 % | +40.1 % | **−6.5 %** |
+| A | +67.8 % | +40.2 % | +1.1 % |
+| B | +55.3 % | +27.5 % | **−13.0 %** |
+| C | +83.9 % | +53.5 % | +7.3 % |
+| D | +70.2 % | +40.1 % | **−6.5 %** |
 
 **Against this configuration the lift-plus-cruise layout is 55 to 84 percent ahead under the first contract**, where the mass difference does not reach the range column; 28 to 54 percent under the second, where it enters as a divisor; and **between 13 percent short and 7 percent ahead under the third**, where it enters as fuel not carried. **The shift from first to third is 67 to 77 percentage points at every closure**, at the declared lift-group fraction, and always toward the lighter aircraft.
 
@@ -2051,7 +2054,8 @@ report as built (Section 8). Nothing is claimed against fixed-wing aircraft on r
 **The mechanism required to change regime, against tilting architectures — the contribution.** The
 configuration is arranged to change regime by rotating the airframe rather than the propulsors, and so
 carries none of the mechanism classes Section 5.1 counts: no pivot, no nacelle or rotor-group actuator, no
-variable-pitch hub, no dedicated lift rotors, and no rotor stowing, indexing or stopping mechanism. Roll
+variable-pitch hub, no dedicated lift rotors, and — while the tip pairs free-wheel or are held by motor torque — no
+rotor stowing, indexing or stopping mechanism (Section 5.1's note). Roll
 comes from the strip; the reaction-torque channel the coaxial pairs could provide is declined, and what
 declining it costs is not computed. **This is a count of mechanism classes, not a claim that nothing moves, and not a
 claim of mechanical simplicity or reliability.** Whether this aircraft completes the rotation is a separate

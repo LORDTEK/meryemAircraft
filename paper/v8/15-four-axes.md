@@ -35,7 +35,8 @@ report as built (Section 14). Nothing is claimed against fixed-wing aircraft on 
 **The mechanism required to change regime, against tilting architectures — the contribution.** The
 configuration is arranged to change regime by rotating the airframe rather than the propulsors, and so
 carries none of the mechanism classes Section 7 counts: no pivot, no nacelle or rotor-group actuator, no
-variable-pitch hub, no dedicated lift rotors, and no rotor stowing, indexing or stopping mechanism. Roll
+variable-pitch hub, no dedicated lift rotors, and — while the tip pairs free-wheel or are held by motor torque — no
+rotor stowing, indexing or stopping mechanism (Section 7's note). Roll
 comes from the strip; the reaction-torque channel the coaxial pairs could provide is declined, and what
 declining it costs is not computed. **This is a count of mechanism classes, not a claim that nothing moves, and not a
 claim of mechanical simplicity or reliability.** Whether this aircraft completes the rotation is a separate
@@ -55,6 +56,7 @@ that reorients a propulsor, and an account of what the combination costs.**
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 102 (Tur 101 oybirliği; R-7):** "and — while the tip pairs free-wheel or are held by motor torque — no rotor stowing, indexing or stopping mechanism (Section 7's note)"; koşulsuz biçim emekli. Özgün paragraf Ek S15'te | Adım 7 notu; S-33 |
 | **Tur 98 (dört okuyucu + Claude; E5):** "Cruise efficiency, against rotorcraft — claimed against multirotors, and bounded; mixed against helicopters."; "Nothing is claimed against rotorcraft on vertical capability." | Adım 6D, 9 |
 | **Tur 61 — kısa kapanış** (dört okuyucu + Claude hemfikir, A3): 1 023 → ~330 kelime. Kalan her yüklem aşağıdaki satırlarda kaynağıyla; çıkarılanlar kendi evlerinde: çerçeve özeti Adım 2–3, kısmi gerçekleşme Adım 3/7/8, *"by construction"* Adım 9, bağımsız üretilmiş rakamlar Adım 6 | `paper/v8-shortening-consensus.md` A3, A4 |
 | **Tur 60:** *"rather than cruise thrust"* | Grok |

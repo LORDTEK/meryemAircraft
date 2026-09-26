@@ -128,10 +128,10 @@ Range of the lift-plus-cruise layout relative to this configuration:
 
 | Closure (Section 10) | Fixed fuel fraction | Fixed fuel mass | Fixed take-off mass |
 |---|---:|---:|---:|
-| Adverse drag, lower blade family | +67.8 % | +40.2 % | +1.1 % |
-| Adverse drag, upper blade family | +55.3 % | +27.5 % | **−13.0 %** |
-| Favourable drag, lower blade family | +83.9 % | +53.5 % | +7.3 % |
-| Favourable drag, upper blade family | +70.2 % | +40.1 % | **−6.5 %** |
+| A | +67.8 % | +40.2 % | +1.1 % |
+| B | +55.3 % | +27.5 % | **−13.0 %** |
+| C | +83.9 % | +53.5 % | +7.3 % |
+| D | +70.2 % | +40.1 % | **−6.5 %** |
 
 **Against this configuration the lift-plus-cruise layout is 55 to 84 percent ahead under the first contract**, where the mass difference does not reach the range column; 28 to 54 percent under the second, where it enters as a divisor; and **between 13 percent short and 7 percent ahead under the third**, where it enters as fuel not carried. **The shift from first to third is 67 to 77 percentage points at every closure**, at the declared lift-group fraction, and always toward the lighter aircraft.
 
@@ -212,6 +212,7 @@ of the architectures alone.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 102 (Tur 101 oybirliği; T5):** satır adları A–D (Adım 10 tablosuyla eşleşir): adverse/lower = A, adverse/upper = B, favourable/lower = C, favourable/upper = D. Özgün tablo Ek S13'te | Adım 10 tablosu |
 | **Tur 90 (dört okuyucu + Claude):** "every remedy transfers a charge rather than removing it" → "every remedy moves cost rather than removing it" — S-16'nın kopyası; 2F ile birebir | Tur 89 metni §2 |
 | **Tur 87 (dört okuyucu + Claude):** "it makes the tilt row a bound" → "the tilting layout" (gövde tablosunda tilt satırı yok; karşılaştırma S13'te — `v8_refs.py` ilk koşuda yakaladı); "charges all three the same assumption" → "puts the same assumption on all three" (fatura sözcüğü genel fiil olarak, A′) | Tur 86 metni §5 |
 | **Tur 71:** ikinci geçiş S1–S5 uygulandı (Qwen RW-13A–D, ChatGPT'nin tek cümlesi); **S1'de DeepSeek'in vetosu:** sözleşme tanımı (*"It fixes what is held equal…"*) aynen geri | Tur 70 metni §3 |

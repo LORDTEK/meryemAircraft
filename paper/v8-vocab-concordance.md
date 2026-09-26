@@ -123,7 +123,7 @@
 | 13 | transferred | This paper meets that for its own column (Section 11) and not for the competitors', whose kilograms and drag counts here are parameters and transferred ratios rather than an audit. |
 | 13 | transferred | The competitors are modelled at a coarser level than this configuration: their drag is a ratio transferred from another airframe or an idealisation, their propeller efficiency is assumed, and their architecture-specific mass is a parameter, while this configuration's drag and propeller efficiency are computed. |
 
-## rakip ailesi (rotorcraft / multirotor / quadrotor / helicopter) — 28 gecis
+## rakip ailesi (rotorcraft / multirotor / quadrotor / helicopter) — 27 gecis
 
 | Adim | Sozcuk | Cumle |
 |---|---|---|
@@ -148,7 +148,6 @@
 | 06 | quadrotors | The qualifications below apply to these entries as they do to the quadrotors. |
 | 06 | quadrotor | The quadrotor is a good quadrotor. |
 | 09 | helicopters, multirotors, rotorcraft | \| Axis \| Opponent \| Status \| \|---\|---\|---\| \| Cruise efficiency \| Rotorcraft: multirotors and helicopters \| Claimed against multirotors, and bounded; against helicopters the published comparison is mixed and no advantage is claimed. |
-| 09 | quadrotors | The size of the resulting advantage is a calculation, not a consequence of that fact, and Section 6 measures it against two published quadrotors in one common definition. |
 | 09 | rotorcraft | It does not claim vertical capability against rotorcraft. |
 | 10 | rotorcraft | The effective ratio of Section 6 already contains the propeller efficiency; it is the currency in which the rotorcraft comparison is made, and it is not an input to a loop whose own chain supplies that efficiency separately. |
 | 10 | helicopter, multirotor | No multirotor or helicopter is sized in this work, so no range comparison is made against either — Section 6 compares the two families in cruise efficiency and says why it stops there. |
@@ -156,7 +155,7 @@
 | 15 | quadrotor | The size of the advantage is a calculation, not a consequence of that statement: positive throughout against one published quadrotor, and from slightly behind to comfortably ahead against the other (Section 6). |
 | 15 | rotorcraft | Nothing is claimed against rotorcraft on vertical capability. |
 
-## mekanizma / gecis (mechanism / transition) — 71 gecis
+## mekanizma / gecis (mechanism / transition) — 72 gecis
 
 | Adim | Sozcuk | Cumle |
 |---|---|---|
@@ -197,6 +196,7 @@
 | 08 | mechanism | The systems budget carries the actuation without sizing the mechanism, and naming a number here would be inventing one. |
 | 08 | mechanism | An untrimmed hover torque, with no trim mechanism identified. |
 | 09 | mechanism | \| \| The mechanism required to change regime \| Tilting architectures \| Claimed. |
+| 09 | mechanism | This is the paper's contribution — a count of mechanism classes (Section 7), not a claim of mechanical simplicity or reliability. |
 | 09 | transition | Operation without a runway does not depend on the drag bracket, the propeller efficiency or the transition aerodynamics — but it does depend on the energy store: the vertical phase is sized with one, and Section 14 examines whether it exists. |
 | 09 | transition | Cruise lift carried on a surface does not depend on the sizing contract or the transition aerodynamics. |
 | 09 | mechanism, transition | Elimination of the propulsor-reorientation mechanism class does not depend on the drag bracket, the propeller efficiency, the sizing contract, the range result or the energy store — nor on the transition aerodynamics. |
@@ -228,7 +228,7 @@
 | 14 | transition | Two of them need validated data rather than more of the computation already done: the transition moment, because three methods have been tried against it and disagree, and the low-Reynolds section drag, because the one method used here is least reliable exactly there. |
 | 14 | mechanism | The architecture claim — that the configuration is arranged to change regime with no mechanism that reorients a propulsor — is a count of hardware, and nothing in this section reaches it. |
 | 15 | mechanism | The mechanism required to change regime, against tilting architectures — the contribution. |
-| 15 | mechanism | The configuration is arranged to change regime by rotating the airframe rather than the propulsors, and so carries none of the mechanism classes Section 7 counts: no pivot, no nacelle or rotor-group actuator, no variable-pitch hub, no dedicated lift rotors, and no rotor stowing, indexing or stopping mechanism. |
+| 15 | mechanism | The configuration is arranged to change regime by rotating the airframe rather than the propulsors, and so carries none of the mechanism classes Section 7 counts: no pivot, no nacelle or rotor-group actuator, no variable-pitch hub, no dedicated lift rotors, and — while the tip pairs free-wheel or are held by motor torque — no rotor stowing, indexing or stopping mechanism (Section 7's note). |
 | 15 | mechanism | This is a count of mechanism classes, not a claim that nothing moves, and not a claim of mechanical simplicity or reliability. |
 | 15 | mechanism | What the paper offers is a configuration sized to combine runway-independent vertical operation with wing-borne cruise efficiency, arranged to do so with no mechanism that reorients a propulsor, and an account of what the combination costs. --- |
 

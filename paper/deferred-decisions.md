@@ -179,5 +179,8 @@ düzeltmeleri:** gövdede Adım 3 ve Adım 4 tablosu yok (ChatGPT'nin "Merge A"s
 zaten olmuş); Qwen'in şablon örneği VLM açıklık verimine on derece sınırını bağlıyor, oysa Adım 6F o sınırın seyir sayılarına
 değmediğini söylüyor (katı şablonun boş "sınır" yuvasını yanlış doldurma riski); ChatGPT'nin son tablosu Adım 14'ü dışarıda
 bırakıyor ve üst ucu 12 000'i aşıyor; ChatGPT'nin "kapanış + üç fatura" sütununda Fatura 1 bir girdi (%3,6 sabit) — sonuç
-sütunu gibi okunur, korunan "The buffer fraction is an input to the loop, not a result of it" ile gerilimli. **Yazarın kararı
-bekleniyor.**
+sütunu gibi okunur, korunan "The buffer fraction is an input to the loop, not a result of it" ile gerilimli. **Yazar Tur 101'de
+karar verdi: "Önerine göre git."**
+**Tur 102 (Tur 101 oyları, sekizi de oybirliği):** T1, T4 (+ dipnot), T5, fig08 etiketi + şekil denetimi, **F4 eke** (→ 5 tablo +
+3 şekil, **toplam 11 750**), R-7, Adım 7 notu korunur, yönetici cümle. **F1 — yazarın bilgisi:** Şekil 5 = (a) üstten, planform,
+(b) önden, (c) yandan kesit, 2 m ölçek çubuğu; Şekil 6 = serbest görünüş, 1 m ölçek çubuğu. Öneri okuyuculara (Tur 102 metni).

@@ -1,4 +1,9 @@
-# v8 — the body's objects: five tables, four figures (draft, Round 101)
+# v8 — the body's objects: five tables, three figures (Round 101 drafts; Round 101 votes applied in Round 102)
+
+**Round 101 votes, all eight unanimous (four readers + Claude):** T1, T4 with a footnote, T5, fig08's roll label and the
+figure scan, F4 to the supplement, R-7, the Step 7 note protected, the governing sentence. **Applied in the step files:**
+T1 → Step 9's table; T4 → Step 10's table (L/De column + footnote); T5 → Step 13's row labels. **Budget: 5 tables (1 750) +
+3 figures (1 100) + prose 8 500 + abstract/nomenclature 400 = 11 750.**
 
 **The author's decision (Round 101):** *"Önerine göre git."* The length plan is Claude's reconciled budget:
 - 12 000 words in all, text and objects together;
@@ -79,10 +84,10 @@ The only change is the row labels: "Adverse drag, lower blade family" becomes A,
 
 | # | What | Source | Width | Status |
 |---|---|---|---|---|
-| F1 | The configuration in hover and in cruise, with the body axes named | v7 `fig05-three-views` / `fig06-general-view` (rendered images; their labels cannot be scanned as text) | double, 450 | **the author to look at**; axis names must follow Step 8's body-axis convention |
-| F2 | Tip frames, moment arms and the strip | v7 `fig08-moment-arms` + `fig09-strip-slipstream` | double, 450 | **fig08 carries a forbidden label** — see below |
+| F1 | The configuration | v7 `fig05-three-views` (`figures/build/mkfig.py`) | double, 450 | **the author's information (Round 102):** (a) top view, planform; (b) front view; (c) side view, section; 2 m scale bar. fig06 (general view, 1 m bar) is the other candidate. **Proposal: F1 = fig05; fig06 to the supplement.** See below |
+| F2 | Tip frames, moment arms and the strip | v8 drafts `mkfig_v8_f2a.py` (from fig08) + `mkfig_v8_f2b.py` (from fig09) → `figures/output/v8-draft-f2a-moment-arms.png`, `v8-draft-f2b-strip-slipstream.png` | double, 450 | roll label repaired (voted); **fig09 contradicts Step 8** — see below |
 | F3 | Effective L/De: closures A–D against the published rotorcraft and hybrids | **new draft**: `figures/build/mkfig_v8_f3.py` → `figures/output/v8-draft-f3-effective-LD.png` | single, 200 | drafted from verified numbers only (Step 6 corners; Johnson & Silva Table 3) |
-| F4 | The transition | v7 `fig12a-transition-rotation-time` | single, 200 | **fig12a plots the wrong model** — see below |
+| ~~F4~~ | The transition | v7 `fig12a-transition-rotation-time` | — | **to the supplement (Round 101, unanimous)**; the body keeps 5.4 m in words |
 
 **Two findings from auditing the v7 figures (the rule of Round 68: a figure is text).**
 - **fig08, the roll label.** It reads *"M_x = y F_z − z F_y = 0 identically, at every thrust setting"*. This is the thrust-only
@@ -105,9 +110,52 @@ rotorcraft and hybrids of one sizing study."*
 | | Words |
 |---|---:|
 | T1 450 + T2 200 + T3 450 + T4 450 + T5 200 | 1 750 |
-| F1 450 + F2 450 + F3 200 + F4 200 | 1 300 |
+| F1 450 + F2 450 + F3 200 (F4 to the supplement) | 1 100 |
 | Prose (by section, E6) | 8 500 |
 | Abstract and nomenclature | 400 |
-| **Total** | **11 950** |
+| **Total** | **11 750** |
 
-If F4 goes to the supplement, the total is 11 750.
+---
+
+## Round 102 — the figure audit continued (a figure is text)
+
+**F2a (from fig08).** The roll line now reads *"M_x = 0 from thrust at every setting; reaction torque could produce it, and is
+declined"* (voted). v7's fig08 is untouched: it is the published record. The v8 figure is a copy with that one change.
+
+**F2b (from fig09) — a contradiction with the body, found this round.** fig09's note reads *"The strip is on the lower surface,
+inclined at 45°, and **deploys on–off**."* Step 8 says: *"**Extension is the control variable** — the strip is modulated, not
+switched."* The v8 copy reads *"…inclined at 45°, and its extension is modulated, not switched."* — Step 8's words. To confirm.
+"deploys on–off" is added to the retired phrases, so the figure scan now catches it.
+
+**Other figure findings, to vote:**
+- **Numbers on F2 that the body does not carry.** fig08: *2TL_p = 23.0 N m* and *2TL_y = 55.9 N m* (tip-pair thrust 16.2 N ×
+  the arms; 16.2 N sits only in Step 8's audit table). fig09: *q = T/A = 433 Pa* and *slipstream boundary 0.67 m → 0.47 m*.
+  Under the number-match check, each must be in the body or in the supplement working. Proposal: remove the two moments
+  from F2a (the body gives the arms and their ratio, 2.43, which is what the figure is for); put 433 Pa and the slipstream
+  contraction in S8's working.
+- **Names.** fig08 says *"thrust pair (all propulsion)"* and *"control pairs"*; fig09 says *"main propeller"*. Step 8 says *nose
+  pair* and *tip pairs*. Proposal: the figures take Step 8's names.
+- **Titles.** fig08 and fig09 carry titles; F3 has none. A journal figure carries a caption. Proposal: titles go, captions carry
+  the words.
+- **Not checked:** fig09 draws the planform from its own sweep parameters (35° at the tip); Step 8 gives the realised sweep as
+  45° at the root to 38.3° at the tip. It is a schematic, but I have not verified that it is a faithful one.
+
+**F1 (from fig05).** The author's information: three panels — (a) top view, planform; (b) front view; (c) side view, section — and
+a 2 m scale bar; fig06 is a general view with a 1 m bar. I looked at both. fig05 carries only the panel names and the bar.
+- It is the **50 kg reference design** (span 3.453 m). The closures run 3.53 to 3.70 m. The caption must say "reference design".
+- It shows the cruise attitude only. The paper's idea is that the same airframe stands nose-up in hover.
+- It names no body axes. The original F1 plan asked for them (Step 8's convention).
+
+Proposal: **F1 = fig05; fig06 to the supplement.** Draft caption (24 words): *"The 50 kg reference design: (a) top view,
+planform; (b) front view; (c) side view, section. In hover the same airframe stands nose-up."* The body axes are either
+named in the caption or drawn on panel (c) — to vote. Adding arrows means re-rendering fig05.
+
+**New proposals from Round 101, to vote:**
+- Qwen P1: T4's caption names L/De's status (*"L/De is the product L/D × η_p at the cruise condition, an input, not a closure
+  output"*).
+- Qwen P2: `v8_outbound.py` is run for every calculation step before it is drafted. **Done for Steps 11–14 this round**
+  (`drafts/11-…14-outbound-map.md`); the proposal is to make it a rule.
+- Qwen P3: Figure 3's data table (the nine Table 3 entries and the four closures) in the supplement.
+- Grok P70: F3's points are Table 3 only; a point from any other source is a new source-opening, not a caption edit.
+- ChatGPT: *"A number may move to the supplement; its meaning may not."* And a number's identity is value + unit + object +
+  **model or geometry where it applies**.

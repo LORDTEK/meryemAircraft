@@ -867,6 +867,15 @@ readers who convert one into the other are not quoting this paper.
 | The mechanism required to change regime | Tilting architectures | **Claimed.** This is the paper's contribution. |
 | Cruise efficiency and range | Other hybrids — lift-plus-cruise, tilt | **Not claimed, in either direction.** |
 
+### The axis table of Section 9 as it stood before it became the body's axis table (frozen snapshot)
+
+| Axis | Opponent | Status |
+|---|---|---|
+| Cruise efficiency | Rotorcraft: multirotors and helicopters | **Claimed against multirotors, and bounded; against helicopters the published comparison is mixed and no advantage is claimed.** Cruise lift is carried on a surface rather than on rotors, which no sizing contract changes. The *size* of the resulting advantage is a calculation, not a consequence of that fact, and Section 6 measures it against two published quadrotors in one common definition. |
+| Operation without a runway | Fixed-wing aircraft | **Claimed**, in the sense stated below. |
+| The mechanism required to change regime | Tilting architectures | **Claimed.** This is the paper's contribution. |
+| Cruise efficiency and range | Other hybrids — lift-plus-cruise, tilt | **Not claimed, in either direction.** |
+
 ---
 
 ## S10. Section 10's paragraphs as they stood before compression (from Section 10, Round 73)
@@ -905,6 +914,15 @@ multirotor is sized in this work, so no range comparison is made against one —
 the two families in cruise efficiency and says why it stops there. The comparison against the
 other hybrid architectures depends on the sizing contract and belongs to Section 13, which is
 where it is made.
+
+### The closure table of Section 10 as it stood before the L/De column was added (frozen snapshot)
+
+| | C_D0 | η_p | L/D | MTOW | Empty fraction | Hover power, rotor shaft | Engine rating, shaft | Range |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| **A** | 0.0381 | 0.632 | 8.79 | 57.5 kg | 0.614 | 12.53 kW | 5.17 kW | 927 km |
+| **B** | 0.0381 | 0.683 | 8.79 | 55.8 kg | 0.607 | 12.17 kW | 4.65 kW | 1 002 km |
+| **C** | 0.0285 | 0.632 | 10.82 | 53.5 kg | 0.597 | 11.66 kW | 3.91 kW | 1 141 km |
+| **D** | 0.0285 | 0.683 | 10.82 | 52.3 kg | 0.592 | 11.40 kW | 3.54 kW | 1 233 km |
 
 ---
 
@@ -1293,6 +1311,15 @@ optimistically**. In propeller efficiency that is both competitors, and the sens
 three this configuration's propeller efficiency shows the size of it: under the first contract the
 lift-plus-cruise layout falls from +55 to +84 percent to +33 to +45 percent (Supplement S13); in drag it is the tilting layout, by construction.
 
+### The contracts table of Section 13 as it stood before its rows were labelled A–D (frozen snapshot)
+
+| Closure (Section 10) | Fixed fuel fraction | Fixed fuel mass | Fixed take-off mass |
+|---|---:|---:|---:|
+| Adverse drag, lower blade family | +67.8 % | +40.2 % | +1.1 % |
+| Adverse drag, upper blade family | +55.3 % | +27.5 % | **−13.0 %** |
+| Favourable drag, lower blade family | +83.9 % | +53.5 % | +7.3 % |
+| Favourable drag, upper blade family | +70.2 % | +40.1 % | **−6.5 %** |
+
 ---
 
 ## S14. What is not known, what each item bears on, and what would settle it (from Section 14)
@@ -1354,3 +1381,18 @@ peak demand held through the vertical phases, a bench average over minutes, a co
 design assumption. **The gap is real on every one of them; the factor quoted is peak demand against
 bench average.** The package Section 10 closes on does not exist with any store the sources consulted
 here report as built.
+
+---
+
+## S15. Section 15 (from Section 15)
+
+### The mechanism paragraph of Section 15 as it stood before its stopping condition was carried in (frozen snapshot)
+
+**The mechanism required to change regime, against tilting architectures — the contribution.** The
+configuration is arranged to change regime by rotating the airframe rather than the propulsors, and so
+carries none of the mechanism classes Section 7 counts: no pivot, no nacelle or rotor-group actuator, no
+variable-pitch hub, no dedicated lift rotors, and no rotor stowing, indexing or stopping mechanism. Roll
+comes from the strip; the reaction-torque channel the coaxial pairs could provide is declined, and what
+declining it costs is not computed. **This is a count of mechanism classes, not a claim that nothing moves, and not a
+claim of mechanical simplicity or reliability.** Whether this aircraft completes the rotation is a separate
+question, and it is not settled here.

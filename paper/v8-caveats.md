@@ -192,3 +192,5 @@ kaybolmasına (CLAUDE.md §0.8). Aynı denetimle sınanır.
 | 14 | this aircraft's vertical phases occupy about a minute in all (Section 2), and how long each draws the peak is not computed here | C+G+D+Q+K |
 | 9 | Claimed against multirotors, and bounded; against helicopters the published comparison is mixed and no advantage is claimed. | C+G+D+Q+K |
 | 8 | That is a design assignment, not a demonstrated result | G+C+D+Q+K |
+| 7 | The stopping class is absent if the tip pairs free-wheel in cruise or are held stopped by motor torque; a brake or a mechanical lock would add it. | D+G+C+Q+K |
+| 15 | while the tip pairs free-wheel or are held by motor torque — no rotor stowing, indexing or stopping mechanism | K |

@@ -141,6 +141,12 @@ EMEKLI = {
     "Quoting the superseded numbers": "Tur 99: S-32",
     "precesses nominally nothing": "Tur 100: S-30 -- ChatGPT'nin sozcugu; konu jiroskopik moment (Grok P67)",
     "no stopping mechanism": "Tur 100: S-33 -- kosulsuz bicim (Grok P65)",
+    "and no rotor stowing, indexing or stopping mechanism": "Tur 102: R-7 -- Adim 15'in kosulsuz bicimi; kosul "
+        "cumlenin icinde (Adim 7 notu)",
+    "identically, at every thrust setting": "Tur 102: v7 Sekil 8 etiketi -- itkiden sifir, ama tepki torku kanali "
+        "(reddedilen) dusmus (CLAUDE.md 0.1; P56)",
+    "deploys on–off": "Tur 102: v7 Sekil 9 etiketi -- Adim 8 'modulated, not switched' diyor",
+    "deploys on-off": "Tur 102: ayni, ASCII tire",
 }
 
 
@@ -162,6 +168,27 @@ def yalniz_tara(adlar_metinler):
             if k in duz and ad not in tuple(yer) + ("ALL-STEPS.md",):
                 bulunan.append((ad, k, yer))
     return bulunan
+
+
+# Tur 101 (dort okuyucu + Claude): sekil etiketi de metindir (Tur 68 kurali) -- P56 ve emekli ifade denetimi v8
+# sekil betiklerine uzanir. Taranan: betigin dize sabitleri (ast), modul belge dizesi HARIC -- belge dizesi eski
+# etiketi bilerek alintilar. Bir v7 sekli v8'e girecekse once v8 kopyasi buraya eklenir.
+SEKILLER = ["figures/build/mkfig_v8_f2a.py", "figures/build/mkfig_v8_f2b.py", "figures/build/mkfig_v8_f3.py"]
+
+
+def etiketler(kaynak):
+    import ast
+    agac = ast.parse(kaynak)
+    belge = ast.get_docstring(agac, clean=False)
+    out = []
+    for d in ast.walk(agac):
+        if isinstance(d, ast.Constant) and isinstance(d.value, str) and d.value != belge:
+            out.append(d.value)
+    return re.sub(r"\s+", " ", " ".join(out))
+
+
+def sekil_dosyalari():
+    return [(os.path.basename(f), etiketler(open(os.path.join(KOK, f), encoding="utf-8").read())) for f in SEKILLER]
 
 
 def govde(metin):
@@ -209,13 +236,25 @@ if __name__ == "__main__":
         print("SINAMA: yalniz-adim ifadesi baska adimda %d kez yakalandi" % len(y))
         if not y:
             sys.exit("!! Yalniz-adim denetimi YAKALAMADI -- denetim bozuk.")
-    y = yalniz_tara(dosyalar())
+    if "--sina" in sys.argv:
+        eski = [(f, etiketler(open(os.path.join(KOK, "figures", "build", f), encoding="utf-8").read()))
+                for f in ("mkfig08.py", "mkfig09.py")]
+        b = tara(eski)
+        print("SINAMA: v7 Sekil 8 ve 9 betiklerinde %d emekli etiket yakalandi" % len(b))
+        for ad, k, _ in b:
+            print("   yakalandi: %s %r" % (ad, k))
+        if len(set(ad for ad, _, _ in b)) < 2:
+            sys.exit("!! Sekil denetimi v7 etiketlerini YAKALAMADI -- denetim bozuk.")
+        y = yalniz_tara([("mkfig-sina.py", etiketler('ax.text(0,0,"no rolling moment by any combination of thrust settings")'))])
+        if not y:
+            sys.exit("!! Sekil yalniz-adim denetimi YAKALAMADI -- denetim bozuk.")
+    y = yalniz_tara(dosyalar() + sekil_dosyalari())
     if y:
         for ad, k, yer in y:
             print("  !! %s icinde %r -- yalniz %s'de durabilir" % (ad, k, ", ".join(yer)))
         sys.exit("Yalniz-adim ifadesi yerinden cikti.")
-    b = tara(dosyalar())
-    print("=== v8 EMEKLI IFADE/SAYI DENETIMI ===")
+    b = tara(dosyalar() + sekil_dosyalari())
+    print("=== v8 EMEKLI IFADE/SAYI DENETIMI (govdeler + %d sekil betigi) ===" % len(SEKILLER))
     if b:
         for ad, k, n in b:
             print("  !! %s icinde %r -- %s" % (ad, k, n))
