@@ -179,8 +179,7 @@ percent.
 **An architecture that provides the vertical phase with a dedicated lift subsystem therefore
 carries it for fifty times as long as it uses it.** This is not an implementation defect and it
 cannot be removed by making the subsystem better, because it is a statement about duty cycle
-rather than about quality: a lighter lift rotor is still carried for the whole flight, and a
-cleaner lift rotor is still carried for the whole flight. **The mismatch between how long a
+rather than about quality: a lighter or cleaner lift rotor is still carried for the whole flight. **The mismatch between how long a
 component is needed and how long it is present is the origin of all three charges below.**
 
 The statement is deliberately confined to architectures with a dedicated lift subsystem, because
@@ -208,8 +207,7 @@ cause: not the cruise power draw, since the lift-plus-cruise effective lift-to-d
 higher of the set, but *"the extra empty weight items on board in hover."*
 
 **That finding separates the two things this paper is at pains to keep separate.** The
-lift-plus-cruise vehicle is *aerodynamically better* than the alternatives — its cruise
-efficiency is higher, and the study says so — and it is nevertheless the heaviest, because of
+lift-plus-cruise vehicle is *aerodynamically better* than the alternatives and it is nevertheless the heaviest, because of
 hardware carried in order to hover. That is Bill 1 stated by an independent source in its own
 terms: not a failure of engineering, but the cost of an architecture.
 
@@ -234,8 +232,7 @@ hardware that cannot be feathered, folded or aligned away, **because its cost is
 
 Two further measurements support the direction. Characterisation of a quadplane found the
 highest lift and least drag in fixed-wing mode at both cruise airspeeds, with drag in the hybrid
-regime exceeding either pure mode through adverse flow interaction; and — a point that bears on
-how such aircraft are designed — that a simulation assuming negligible rotor–structure
+regime exceeding either pure mode through adverse flow interaction; and that a simulation assuming negligible rotor–structure
 interaction *"always predicts higher lift and lower drag than were experimentally observed."*
 Separately, a study of twenty-six stationary lift propellers held edge-on found their drag
 scaling with frontal area and the square of airspeed, with hover powertrain components adding
@@ -247,7 +244,7 @@ unit time in cruise — so it grows with exactly the quantity the aircraft exist
 
 #### Bill 3 — power system sizing
 
-The third payment is the least visible and often the largest. A VTOL aircraft must install
+The third payment is the least visible. A VTOL aircraft must install
 enough power to hover, but it draws that power only during the two percent of the flight in
 which it hovers. The ratio between the two demands follows from the governing equations rather
 than from any design choice. Taking hover power from momentum theory and cruise power from the
@@ -270,15 +267,12 @@ A vehicle with a disc loading of 100 N m⁻², a cruise lift-to-drag ratio of 15
 of 30 m s⁻¹ needs **between three and four times** as much power to hover as to cruise: the
 geometric terms alone give 3.2, and the efficiency ratio η_p/η_h carries it to about four when
 the cruise propeller is roughly a quarter more efficient than the hover rotor. Raising the disc
-loading raises the ratio as its square root. The prediction is borne out in flight: a
-carbon-fibre tail-sitter reported in the literature measures its level-flight power consumption
-at one fifth of its hover power, which is the ratio this expression gives for an aircraft of
-that class.
+loading raises the ratio as its square root.
 
 The power system is therefore sized by a condition that holds for a minute and is then carried,
 unused, for an hour. And the consequence propagates: sizing by hover means an oversized engine,
 or a battery that must deliver a peak it will rarely be asked for, or both — and whichever is
-chosen, the extra installed capacity is mass, which returns to Bill 1.
+chosen, the extra installed capacity is mass: a cost in kilograms, though not Bill 1.
 
 #### The charges are coupled: remedies move cost between them
 
@@ -1423,7 +1417,7 @@ none of them is an output of it.)* Nothing in that result requires the tip pairs
 to contribute lift once the climb is acquired.
 
 **The second model removes the result, and this is the sharper of the two limitations.** The
-point-mass model prescribes the attitude and therefore cannot charge for the trajectory the
+point-mass model prescribes the attitude and therefore cannot account for the trajectory the
 aircraft flies while it is being rotated into that attitude. Solved instead with rotational
 dynamics and a finite control moment — **and with the aerodynamic pitching moment set to
 exactly zero, so that nothing favourable is borrowed** — the 50 kg reference design **loses 5.4 m at the
