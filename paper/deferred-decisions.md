@@ -265,3 +265,7 @@ gibi okunuyor. Dergi eki / depo denetim arşivi ayrılırken **donmuş kopyalar 
 yeniden dağıtımı E8 gereği yazarın, 1–9 ve 15 bitince. **O3 / Grok P88 / Qwen P3:** NASA beş aile çalışmasının tek tanıtım evi
 Adım 4 yeniden kurulurken seçilir (şimdi Adım 1, 2, 4'te).
 
+**Tur 112 — NASA beş aile çalışmasının evi (P88; dört okuyucu + Claude): Adım 4** (kimlik, seçim gerekçesi, sayılar, sınama).
+Adım 2 Fatura 1 alıntısını tutar. **Adım 1'de ne kalacağı açık** — Grok: en çok işaretçi; DeepSeek: gereken alıntı + işaretçi;
+ChatGPT: gerekiyorsa bağlamsal tanıtım; Qwen: tanıtım ve beş aile. Adım 1 yeniden kurulurken karara bağlanır.
+

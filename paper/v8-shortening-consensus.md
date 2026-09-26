@@ -453,3 +453,8 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | ChatGPT D24 "mainly" — kaynak denetimi (veto değil) → **S-42** (kaynak kirişler için "limited" diyor) | — | öneren | — | — | ✓ doğrulandı (s. 141) | Onarım önerisi oya |
 | R-8 (Adım 3 sıra göndergeleri; "exception" öncülü S3'e gitti) | — | — | — | — | benim hatam | Onarım önerisi oya |
 | Yeni: ChatGPT tanım kapsamı kuralı; DeepSeek O5 (tahmin paragrafı S2'ye + yeni işaretçi cümle), O6 (altı bedel kısalsın — cümle adı yok); Grok D14 parantezi; Grok P87 (**S-40 onarımıyla uygulandı**), P88 (= O3); Qwen P1 (taban sayıları kayda), P2 (Bacchini çifti izde) | — | — | — | — | — | Oylamada |
+| **Tur 111 cevapları:** Adım 2–3 ve J18 teyit (kapandı); S-42 onarımı; tanım kapsamı kuralı (ChatGPT); O5, O6 (DeepSeek geri çekti), D14 (Grok geri çekti) hayır; Qwen P2 Bacchini çifti; P88 — NASA çalışmasının kanıt evi Adım 4 | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı / kabul (Tur 112)** |
+| R-8 onarımı: yalnız dördüncü sapma cümlesi | ✓ | ✓ | ✓ (liste tercih) | **hayır — dört sapma cümlesi geri** | Qwen'e dönüyorum: dördü geri | **Ayrışık — iki seçenek herkese** |
+| NASA çalışmasının Adım 1'de kalanı | en çok işaretçi | gerekiyorsa bağlamsal tanıtım | yalnız gereken alıntı + işaretçi | tanıtım ve beş aile | Adım 1 kurulurken | Açık |
+| Adım 4 listeleri | dosyayı açamadı | dosyayı açamadı (HOLD) | dosyayı açamadı (Tur 76–80 metni) | dosyayı açamadı (Tur 60 metni) | — | **Kullanılamaz: benim hatam, metin eklenmedi → Tur 112'de ek olarak** |
+| Yeni: dış kanıt kimliği kuralı (ChatGPT); P89 (**S-42 ile uygulandı**), P90 (**zaten kayıtlı**, CLAUDE §2.4); Qwen P1 sapma/koşul izi (R-8 ile birlikte), Qwen P2 Adım 4 çürütülebilirlik (**zaten korunan**) | — | — | — | — | — | Oylamada / bilgi |

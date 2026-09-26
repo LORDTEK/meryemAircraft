@@ -481,6 +481,10 @@ dahil herkesin hemfikir olduğu kısaltmalar uygulansın."*
   compress either by removing the boundary that tells the reader what the accounting or condition does not establish."* — Adım 4
   için de. **Taslak göndermeden önce `v8_refs.py` ve `v8_draft_check.py --taslak` koşturulur** (R-8: sıra göndergeleri taşınan
   cümlelere bağlıydı, uygulamadan sonra yakalandı).
+- **Tur 111'de kabul (dört okuyucu + Claude):** **tanım kapsamı kuralı** (ChatGPT) — *"whenever a protected definition is cited
+  later by section number, the later section must inherit the definition's exact scope, not merely its noun."* Sayı kimliğinin
+  çerçeve karşılığı. **Okuyucu dosya açamıyorsa metin tur metnine eklenir** (Tur 111: dört okuyucunun dördü de Adım 4'ü açamadı
+  ve eski metinlerden liste verdi — benim hatam; Grok bir tur önce açamadığını söylemişti).
 
 ## 3. Doğrulama
 
