@@ -31,18 +31,14 @@ kayıt: `paper/effective-ld-finding.md`. **Sayfa düzeltilmiş sayıyla yazıld�
 ### The opponent, and the axis
 
 On this axis the alternative is the multirotor, and as in the previous section the comparison
-runs one way only. **Nothing here is claimed against fixed-wing aircraft.** A runway-launched
-aeroplane cruises more efficiently than this configuration and pays none of the charges of
-Section 2; that comparison is not made, and no result in this paper rests on it. The claim is
+runs one way only. **Nothing here is claimed against fixed-wing aircraft.** The claim is
 confined to the one thing the multirotor family structurally lacks: **a surface that carries the
 cruise lift.**
 
 ### What the requirement is
 
 Section 5 established the first half: the aircraft must leave from and return to a site that
-supplies nothing. **A multirotor meets that requirement completely.** It is not a deficient
-machine and this section does not treat it as one; it is excellent at what it does and is
-limited by the price of doing it that way.
+supplies nothing. **A multirotor meets that requirement completely.**
 
 What it does not meet is the second half of both missions. Wildfire observation and response,
 and cargo delivery to places without a runway, each require the aircraft to **cover distance
@@ -157,7 +153,7 @@ delivers:** at a propeller efficiency of 0.85 the same airframe reaches 7.47 to 
 variable-pitch hub would recover that difference is not computed; Section 11 reports the gap and
 declines to attribute all of it to the hub.
 
-### Five qualifications, and every one of them runs against this configuration
+### Five qualifications: three run against this configuration, one has no computed direction, and one bounds what the comparison can be called
 
 They are given together because omitting any one of them would make the comparison look better
 than it is.
@@ -223,7 +219,7 @@ nothing and presents the aircraft's largest surface to ground wind. The tailless
 follows from having no boom constrains the sweep, because with no horizontal stabiliser the
 pitching moment must come from the distribution of lift along the body itself. And the
 fixed-pitch propeller that serves both regimes is the reason the margin above sits where it does
-rather than higher — at a propeller efficiency η_p = 0.85 the same airframe would reach 7.47 to 9.20. Section 11 charges all three.
+rather than higher. Section 11 charges all three.
 
 **The two halves are now on the table separately. Section 7 is where they are combined**, and
 the combination is what this paper is for.
@@ -234,6 +230,7 @@ the combination is what this paper is for.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 96 (yeniden kurma; dört okuyucu + Claude):** envanter ve yön sütunu teyit edildi. 6A yinelemesi ("A runway-launched aeroplane…"), 6B yinelemesi ("It is not a deficient machine…"), 6G'deki ikinci 7,47–9,20 çıktı; S-26 başlığı onarıldı. **Uygulanmadı:** S-27 (R-4 gönderge), 6D zayıf silme (R-5 "They"), S-28 (ayrışık). Özgün paragraflar Ek S6'da | J&S Tablo 3, PDF s. 70 |
 | **Tur 60:** 52,3–57,5 kg | DeepSeek; `aero/closure-result.txt` |
 | Çok rotorlu piste ihtiyaç duymuyor; eksik makine değil | §1, satır 160–163 |
 | Kanatsız araç her saniyeyi kurulu güçle satın alıyor | §1, satır 161–163 |

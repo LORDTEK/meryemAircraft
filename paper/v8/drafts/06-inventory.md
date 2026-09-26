@@ -69,3 +69,12 @@ Section 3 = Step 5 (the first half), Section 10 (closure masses; the cruise poin
   after a paragraph that treats both as equal. The all-electric one is at 3 lb ft⁻² (Table 3).
   - Proposal: *"Their disc loadings are 3.5 and 3 lb ft⁻², which are unusually low and unusually efficient."* The
     protected *"The quadrotor is a good quadrotor."* would need its own vote if it becomes plural.
+
+## Round 96
+
+Inventory and direction column confirmed (four + Claude). Applied: 6A, 6B, 6G removals; S-26 heading. **Not applied:** S-27
+(agreed, but the voted wording's *"The same table"* would have pointed at this paper's comparison table — R-4, caught by
+`v8_refs.py`, reverted); the weak 6D removal (agreed, but it would leave *"They are not four demonstrated aircraft states"*
+pointing at a label — R-5); S-28 (divided). Grok P60: 6C's *"Lift is carried on a surface or it is carried on rotors"* stays
+a description of this paper's split, not a claim that rotor-borne cruise cannot reach 7.2; S-27 is the lock (Qwen P1 asks the
+same trace link). Qwen P2: all nine Table 3 values are in `paper/v8-evidence.md`.

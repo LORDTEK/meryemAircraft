@@ -296,8 +296,13 @@ kuralı uygulayarak bulundu.
 **Sayı tutarlılığı adımı (Tur 95; DeepSeek, ChatGPT'nin genişletmesi; dört okuyucu + Claude).** Bir cümle sayılmış bir
 listeye öğe ekler, çıkarır, böler ya da birleştirirse, yakındaki her sayı (*"three kinds"*, *"four parts"*, *"one historical
 difficulty"*) ve o listeyi sayan her cümle değişiklik uygulanmadan önce yeniden okunur. Grok P51'in ikizi: P51 sonraki cümlenin
-göstericilerini, bu paragrafın sayılarını okur. Örnek: R-3. (ChatGPT'nin "böler ya da birleştirirse" genişletmesi Tur 95'te
-teyide.)
+göstericilerini, bu paragrafın sayılarını okur. Örnek: R-3. (Genişletilmiş biçim Tur 96'da dört okuyucu + Claude.)
+
+**Tanık kapsamı denetimi (Tur 96; ChatGPT; dört okuyucu + Claude).** Bir kaynak bir uçak sınıfı hakkındaki cümleyi
+destekliyorsa, tanığın cümlenin söz ettiği **aynı nüfusa ve kapsama** ait olduğu denetlenir. Örnek: insansız uçuşla açılan
+bir paragrafa insanlı V-22 tanığı önerdim; üç okuyucu reddetti. **Kaynak-sonuç işareti (DeepSeek):** açılan her kaynak için
+kaynağın kendi sonucunun alıntılanan rakamla ilişkisi `paper/v8-evidence.md`'de kaydedilir (destekler / niteler / yumuşatır /
+çelişir / söylemiyor — ChatGPT'nin değerleri).
 
 ### 2.2 Yenilik iddiası yazmadan önce. Tur 46'nın bedeli.
 

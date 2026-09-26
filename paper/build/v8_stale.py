@@ -120,6 +120,11 @@ EMEKLI = {
     "tilt-rotors from the 1950s": "Tur 95: S-23'un ilk hali -- sira bozuk, sureklilik iddiasi",
     "a battery's pulse current limit can exceed": "Tur 95: S-20 genislemesi -- iki kat tek modul ornegi",
     "The XFY-1's landing difficulty": "Tur 95: S-25 -- inceleme 'these tail-sitter designs' diyor",
+    "No field sustains that level of effort": "Tur 96: evrensel cikarim -- bes okur + Claude cikardi",
+    "and several are in service": "Tur 96: kaynaksiz; insansiz hibrit hizmette kaynagi yok",
+    "decides whether the rest of it can be trusted": "Tur 96: kanitlanmayan degerlendirme (5D isaret cumlesi)",
+    "every one of them runs against this configuration": "Tur 96: S-26 -- bestan ucu aleyhte (Grok P59)",
+    "more exposed to crosswind and to uneven ground": "Tur 96: S-24 ara hali -- 'one difficulty' sayimiyla celisiyordu",
 }
 
 

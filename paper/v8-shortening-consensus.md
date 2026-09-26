@@ -333,3 +333,13 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | 5D işaret cümlesi | çıkar | çıkar | tut | çıkar | zayıf aday | **Ayrışık** |
 | Adım 6 envanteri; S-26, S-27, S-28; üç yineleme | — | — | — | — | öneren | Teyide / oylamada |
 | Tanık kapsamı denetimi (ChatGPT); kaynak-sonuç işareti (DeepSeek) | — | öneren | öneren | — | ✓ | Oylamada |
+| Tur 95'te uygulananlar (1B, S-20 daraltma, S-24, S-25, 163–164, sayı kuralı, P56) | ✓ | ✓ | ✓ | ✓ | ✓ | **Teyit edildi** (Tur 96) |
+| Geniş sayı kuralı; tanık kapsamı; kaynak-sonuç işareti; P57 korunan; P58; Qwen P1 | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı** (Tur 96) |
+| 3.1 devrilme cümlesi; 3.2 "the weight benefit"; 4.1 "No field" çıkar; 4.2 "in service" çıkar; 4.3 işaret çıkar | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı** (Tur 96); teyide |
+| Qwen 1D güncel biçim | — | — | — | ✓ | — | **Kapandı** |
+| Adım 6 envanteri + yön sütunu; 6A, 6B, 6G silme; S-26 | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı** (Tur 96); teyide |
+| S-27 (helikopterler) | ✓ | ✓ ("at") | ✓ | ✓ | ✓ | Kabul; **R-4 gönderge** yakalandı → oylamada |
+| 6D zayıf silme | ✓ | ✓ | ✓ | ✓ | ✓ | Kabul; **R-5 "They"** yakalandı → oylamada |
+| S-28 | tekil | kaynağa özgü (yanlış atıf) | çoğul | çoğul | öneren | **Ayrışık** |
+| S-27 korunan (DeepSeek); Grok P59–P60; ChatGPT tablo bütünlüğü; Qwen P1–P2 | — | — | — | — | — | Oylamada / kayıt |
+| Adım 7 envanteri; 7A, 7G, 7L adayları; S-29; R-6 | — | — | — | — | öneren | Teyide / oylamada |

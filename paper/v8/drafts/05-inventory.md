@@ -54,3 +54,8 @@ S-24. **Qwen P1 (trace):** every ground-operation sentence (stance base, crosswi
 5B's unprepared-site requirement. **Count question (the new count-consistency step, applied to itself):** 5D's item is headed
 *"one historical difficulty"* and now names crosswind and uneven ground; the source makes them two causes of one difficulty,
 tip-over.
+
+## Round 96
+
+Signpost removed (DeepSeek withdrew); 5D reworded to *"more prone than a conventional one to tip over, in crosswind and on
+uneven ground"* and protected (165); *"the weight benefit"*.

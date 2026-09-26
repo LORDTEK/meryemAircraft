@@ -30,3 +30,19 @@ Düzeyler: **verified** (belge açıldı, sayı birebir) · **attributed but unv
 | 5 | XFY-1 satırı: "Tip-over tendencies noted when on ground in gusty air. Difficult to hover precisely over a spot. Control power about all axes reduced in ground effect. … Gust sensitivity bothersome to pilot during takeoff and landing phases." | verified (Tur 94–95) | `references/19810010574.pdf` | — |
 | 6 | J&S 2022 Tablo 3 tam: L/De QSMR 5.4 (TS) / 6.0 (E); side-by-side 5.9 / 7.2; quadrotor 4.9 / 5.8; L+C 8.5 (TE) / 7.9 (E); tiltwing 8.6 (TE). Disk yüklemesi quadrotor 3.5 (TS) / 3 (E) lb/ft² | verified (Tur 95) | `references/1521_Johnson & Silva_122721.pdf`, PDF s. 70 | gövde yalnız quadrotor ikisini alıyor; L+C ve tiltwing Adım 4 gövdesinde; **helikopterler hiçbir yerde yok → S-27** |
 | 6 | Bacchini & Cestino 2019: "The multirotor is more efficient in hover. The vectored thrust jet is more efficient in cruise and has a higher range. The lift + cruise is a compromise." Sonuç: "Long-range missions cannot be accomplished by multirotors" | verified (Tur 95) | `references/Bacchini-Cestino-2019_…Aerospace.pdf`, özet ve sonuç | "vectored thrust" örneği Lilium (dönen kanallı fanlar) — tanık kanat için, mekanizma için değil; kayıt |
+
+## Kaynak-sonuç işareti (Tur 96; DeepSeek, ChatGPT'nin değerleri; dört okuyucu + Claude)
+
+Açılan her kaynağın **kendi** sonucu ya da hemen çevresi, gövdedeki alıntıya göre ne yapıyor.
+
+| Kaynak | Gövdenin aldığı | Kaynağın kendi sonucu / çevresi | İlişki | Gövdede |
+|---|---|---|---|---|
+| Bacchini tezi s. 183 | Bill 2 → Bill 1 dönüşümü | hız kazancı ("the great advantage") | niteler | S-18 ile alındı |
+| Barrett 2023 s. 16, 34–35 | 4 kW/kg, "about twice that of existing batteries" | 3 kW/kg literatürde; darbe akımı; "may be possible … using existing technology"; askı ≤ 20 s | **yumuşatır** | S-19, S-20 ile alındı |
+| Yu 2025 | 0.724 / 0.892 kW/kg; 10.68C; 55.1 °C | uçuşta kullanılan sistem | destekler | — |
+| De Wagter 2018 | "theoretically impossible"; DelftaCopter "a compromise" | DelftaCopter değişken hatveli; değişken hatve çare, iki eyleyici ve kütle bedeli | **niteler** | S-22 ile alındı |
+| NASA 1984 inceleme | boş ağırlık kazancı; üç iniş güçlüğü | takım düşük çöküş hızıyla sınırlı; engebeli zeminde devrilme; güçlük "these tail-sitter designs"in | **niteler** | S-24, S-25 ile alındı |
+| NASA 1981 inceleme | XFY-1 altı geçiş; motor ve dişli kutusu | XFY-1 satırı: devrilme, hassas askı, yer etkisinde düşük kontrol gücü | destekler | — |
+| J&S 2022 Tablo 3 | quadrotor 4.9 / 5.8; L+C 8.5; tiltwing 8.6 | helikopterler 5.4–7.2 (yan yana elektrikli 7.2, kanatsız); L+C elektrikli 7.9 | **niteler** | S-27 oylamada (R-4 göndergesiyle); L+C ve tiltwing Adım 4'te |
+| Bacchini & Cestino 2019 | çok rotorlu kısa menzil, "vectored thrust" seyirde verimli | "The lift + cruise is a compromise"; vectored thrust örneği Lilium (dönen fanlar) | destekler | — |
+| Bacchini tezi s. 49, 53, 68 | (önerildi, alınmadı) V-22 hizmette | insanlı | **kapsam dışı** (tanık kapsamı) | alınmadı |

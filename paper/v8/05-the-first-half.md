@@ -52,7 +52,7 @@ charged to the mass budget once** — Section 8 gives the fairing's sizing.
 of the 1950s, NASA recorded that *"dispensing with a conventional landing gear improved the
 empty weight fraction for these VATOL aircraft"*, while noting that some form of gear was still
 required on the tail surfaces, that such gear was limited to low sink rates, and that tip-over was
-*"a constant worry in gusty air and on uneven ground, particularly with the propellers turning."* The present arrangement takes that benefit and extends it by
+*"a constant worry in gusty air and on uneven ground, particularly with the propellers turning."* The present arrangement takes the weight benefit and extends it by
 giving the same structure the control duty as well.
 
 **And the stance base is a parameter rather than a constraint.** Moving the frame ends further
@@ -62,8 +62,6 @@ both benefits arrive from one change. The 50 kg reference geometry is one point 
 operator with a stronger ground-wind requirement can take another.
 
 ### What is sized, and what is not demonstrated
-
-This is the part of the section that decides whether the rest of it can be trusted.
 
 **Sized.** The vertical phase is sized: hover power from momentum theory at thrust equal to
 weight, the buffer that supplies what the engine cannot deliver of that peak — at a specific power
@@ -102,7 +100,7 @@ aircraft use about the body's longitudinal axis (Section 8), leaving that axis t
 carries it.
 
 **And one historical difficulty is inherited rather than removed.** A tail-sitting aircraft on
-the ground is more exposed to crosswind and to uneven ground than a conventional one. The stance base is the answer
+the ground is more prone than a conventional one to tip over, in crosswind and on uneven ground. The stance base is the answer
 this configuration offers, and it is a parameter rather than a proof.
 
 ### What the historical record does and does not give back
@@ -132,6 +130,7 @@ section**, and the two are combined in Section 7.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 96 (dört okuyucu + Claude):** 5D işaret cümlesi çıktı (DeepSeek itirazını geri çekti); 5D devrilme cümlesi — "more prone than a conventional one to tip over, in crosswind and on uneven ground" (sayı kuralı: "one historical difficulty", iki koşul) ve korunan (165); 5C "takes the weight benefit" (P51). Özgün paragraflar Ek S5'te | Tur 95 metni §3, §4.3 |
 | **Tur 95 (yeniden kurma; dört okuyucu + Claude):** envanter teyit edildi. S-24 — 5C alıntısı sürdürüldü ("that such gear was limited to low sink rates, and that tip-over was 'a constant worry in gusty air and on uneven ground, particularly with the propellers turning.'"), 5D'ye "and to uneven ground"; S-25 — "The landing difficulty of the 1950s tail-sitters was attributed…"; "What that refusal costs … is not computed" korunan (164). **Açık:** 5D işaret cümlesi (üçü çıkar, DeepSeek tut). Özgün paragraflar Ek S5'te | NASA 19840014464 "In retrospect" paragrafı; 19810010574 XFY-1 satırı |
 | **Tur 66 — B4 (3.1):** tepki torku kanalının açıklaması Adım 8'e; burada işaretçi ve *"not computed"* sınırı (dört okuyucu + Claude) | Adım 8 |
 | **Tur 60:** *"50 kg reference geometry"* — terim birliği | Adım 8 tanımı |

@@ -1678,3 +1678,15 @@ duruyor); "several are in service" (V-22'yi üçü reddetti — insansız paragr
 sütunuyla, Qwen P2): S-26 başlık "beşinin hepsi aleyhte" diyor, metin üçü için diyor; **S-27** J&S Tablo 3 tam okundu —
 yan yana elektrikli helikopter L/De 7,2, kanatsız, zarfımızın üst kısmında, makalede hiç yok; S-28 disk yüklemesi yalnız
 turboşaftın.
+
+# Tur 96 — Tur 95 metnine dört cevap
+
+**Teyit:** Tur 95'te uygulananların hepsi; Qwen 1D'nin güncel biçimini sonunda teyit etti. **Oybirliğiyle uygulandı:** 1B
+"No field sustains…" ve 1C "and several are in service" çıktı; 5D işaret cümlesi çıktı (DeepSeek geri çekti); 5D devrilme
+cümlesi (sayı kuralıyla) ve korunan (165); "the weight benefit"; Adım 6'da 6A, 6B, 6G yinelemeleri ve S-26 başlığı; geniş sayı
+kuralı, tanık kapsamı denetimi, kaynak-sonuç işareti (kanıt dosyasında tablo). **Uygulanırken yakalanan iki R:** R-4 — S-27
+cümlesinin "The same table" göndergesi bizim tabloya bağlanıyordu (`v8_refs.py` yakaladı), geri alındı; R-5 — 6D silmesinden
+sonra "They" yalnız etikete kalıyordu. **Ayrışık:** S-28 — ChatGPT'nin önerisi "good quadrotor"u J&S'ye atfediyor, oysa
+ifade kaynakta yok (bizim). **Kendi hatam R-6:** S-20 cümlesine "bu uçağın dikey fazlarının süresi hesaplanmadı" yazdım;
+Adım 2 "on the order of a minute" diyor — §0.2 ihlali. **Adım 7 envanteri** (kalp): üç yineleme adayı; S-29 seri hibrit
+emsali için kaynak yok (Adım 1 ile 7 birbirine işaret ediyor).

@@ -28,12 +28,11 @@ price an architecture in it must pay, and whether one arrangement pays less than
 Tail-sitting prototypes and the first tilt-rotor flew in the 1950s, vectored-thrust and tilt-wing
 aircraft in the 1960s, and a broad family of hybrid vertical take-off and landing uncrewed
 aircraft since roughly 2010. Different nations, services and propulsion philosophies have
-attacked the same problem for seventy years. **No field sustains that level of effort against a
-need that is not real.**
+attacked the same problem for seventy years.
 
 ### What the contemporary answers do, and how each changes regime
 
-Hybrid VTOL aircraft occupy that corner today, and several are in service. **This paper does
+Hybrid VTOL aircraft occupy that corner today. **This paper does
 not dispute that they work.** What matters for the argument is *how* each changes between the
 two regimes, because that is where the families differ from one another.
 
@@ -562,7 +561,7 @@ charged to the mass budget once** — Section 8 gives the fairing's sizing.
 of the 1950s, NASA recorded that *"dispensing with a conventional landing gear improved the
 empty weight fraction for these VATOL aircraft"*, while noting that some form of gear was still
 required on the tail surfaces, that such gear was limited to low sink rates, and that tip-over was
-*"a constant worry in gusty air and on uneven ground, particularly with the propellers turning."* The present arrangement takes that benefit and extends it by
+*"a constant worry in gusty air and on uneven ground, particularly with the propellers turning."* The present arrangement takes the weight benefit and extends it by
 giving the same structure the control duty as well.
 
 **And the stance base is a parameter rather than a constraint.** Moving the frame ends further
@@ -572,8 +571,6 @@ both benefits arrive from one change. The 50 kg reference geometry is one point 
 operator with a stronger ground-wind requirement can take another.
 
 ### What is sized, and what is not demonstrated
-
-This is the part of the section that decides whether the rest of it can be trusted.
 
 **Sized.** The vertical phase is sized: hover power from momentum theory at thrust equal to
 weight, the buffer that supplies what the engine cannot deliver of that peak — at a specific power
@@ -612,7 +609,7 @@ aircraft use about the body's longitudinal axis (Section 8), leaving that axis t
 carries it.
 
 **And one historical difficulty is inherited rather than removed.** A tail-sitting aircraft on
-the ground is more exposed to crosswind and to uneven ground than a conventional one. The stance base is the answer
+the ground is more prone than a conventional one to tip over, in crosswind and on uneven ground. The stance base is the answer
 this configuration offers, and it is a parameter rather than a proof.
 
 ### What the historical record does and does not give back
@@ -643,18 +640,14 @@ section**, and the two are combined in Section 7.
 ### The opponent, and the axis
 
 On this axis the alternative is the multirotor, and as in the previous section the comparison
-runs one way only. **Nothing here is claimed against fixed-wing aircraft.** A runway-launched
-aeroplane cruises more efficiently than this configuration and pays none of the charges of
-Section 2; that comparison is not made, and no result in this paper rests on it. The claim is
+runs one way only. **Nothing here is claimed against fixed-wing aircraft.** The claim is
 confined to the one thing the multirotor family structurally lacks: **a surface that carries the
 cruise lift.**
 
 ### What the requirement is
 
 Section 5 established the first half: the aircraft must leave from and return to a site that
-supplies nothing. **A multirotor meets that requirement completely.** It is not a deficient
-machine and this section does not treat it as one; it is excellent at what it does and is
-limited by the price of doing it that way.
+supplies nothing. **A multirotor meets that requirement completely.**
 
 What it does not meet is the second half of both missions. Wildfire observation and response,
 and cargo delivery to places without a runway, each require the aircraft to **cover distance
@@ -769,7 +762,7 @@ delivers:** at a propeller efficiency of 0.85 the same airframe reaches 7.47 to 
 variable-pitch hub would recover that difference is not computed; Section 11 reports the gap and
 declines to attribute all of it to the hub.
 
-### Five qualifications, and every one of them runs against this configuration
+### Five qualifications: three run against this configuration, one has no computed direction, and one bounds what the comparison can be called
 
 They are given together because omitting any one of them would make the comparison look better
 than it is.
@@ -835,7 +828,7 @@ nothing and presents the aircraft's largest surface to ground wind. The tailless
 follows from having no boom constrains the sweep, because with no horizontal stabiliser the
 pitching moment must come from the distribution of lift along the body itself. And the
 fixed-pitch propeller that serves both regimes is the reason the margin above sits where it does
-rather than higher — at a propeller efficiency η_p = 0.85 the same airframe would reach 7.47 to 9.20. Section 11 charges all three.
+rather than higher. Section 11 charges all three.
 
 **The two halves are now on the table separately. Section 7 is where they are combined**, and
 the combination is what this paper is for.

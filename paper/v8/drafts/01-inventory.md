@@ -61,3 +61,8 @@ aircraft). Body 1 679 → 1 667.
 more fitting home in Step 5E, not because "precise hovering" was unsupported or misnamed — the NASA sources support it.
 Still open: *"No field sustains…"* and *"several are in service"*. Qwen quoted the 1D protected sentence in its older S1 form a
 second time; the vote is counted for the current wording and Qwen is asked once more.
+
+## Round 96
+
+*"No field sustains…"* removed and *"and several are in service"* removed (four + Claude). **Own check:** the 1B heading still
+reads *"The demand has been continuous for seventy years"*; ChatGPT's argument (effort is not proof of need) applies to it too.

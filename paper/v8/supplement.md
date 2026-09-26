@@ -91,6 +91,12 @@ mechanism — carrying no aerodynamic control surfaces beyond a single moving de
 through a buffered series hybrid, and **audited explicitly against carried hover mass, exposed
 cruise drag and hover-sized continuous power**, at two scales and under three sizing contracts.
 
+### One more paragraph of Section 1 as it stood before recomposition (frozen snapshot)
+
+Hybrid VTOL aircraft occupy that corner today, and several are in service. **This paper does
+not dispute that they work.** What matters for the argument is *how* each changes between the
+two regimes, because that is where the families differ from one another.
+
 ---
 
 ## S2. Section 2 (from Section 2)
@@ -668,6 +674,37 @@ over his shoulder, to turbulence sensitivity and to reduced control power near t
 estimate.** That disposes of the spatial-orientation objection and nothing else. **Precise
 hovering, ground gusts and the descent itself are not disposed of by removing the pilot**, and
 this section does not pretend otherwise.
+
+### One more paragraph of Section 5 as it stood before recomposition (frozen snapshot)
+
+This is the part of the section that decides whether the rest of it can be trusted.
+
+---
+
+## S6. Section 6 (from Section 6)
+
+### Three paragraphs and a heading of Section 6 as they stood before recomposition (frozen snapshot)
+
+On this axis the alternative is the multirotor, and as in the previous section the comparison
+runs one way only. **Nothing here is claimed against fixed-wing aircraft.** A runway-launched
+aeroplane cruises more efficiently than this configuration and pays none of the charges of
+Section 2; that comparison is not made, and no result in this paper rests on it. The claim is
+confined to the one thing the multirotor family structurally lacks: **a surface that carries the
+cruise lift.**
+
+Section 5 established the first half: the aircraft must leave from and return to a site that
+supplies nothing. **A multirotor meets that requirement completely.** It is not a deficient
+machine and this section does not treat it as one; it is excellent at what it does and is
+limited by the price of doing it that way.
+
+The wing that makes cruise efficient is carried through the vertical phase, where it produces
+nothing and presents the aircraft's largest surface to ground wind. The tailless planform that
+follows from having no boom constrains the sweep, because with no horizontal stabiliser the
+pitching moment must come from the distribution of lift along the body itself. And the
+fixed-pitch propeller that serves both regimes is the reason the margin above sits where it does
+rather than higher — at a propeller efficiency η_p = 0.85 the same airframe would reach 7.47 to 9.20. Section 11 charges all three.
+
+Heading: *Five qualifications, and every one of them runs against this configuration*
 
 ---
 
