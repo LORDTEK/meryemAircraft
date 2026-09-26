@@ -2,7 +2,7 @@
 
 > **This is a task. Please answer it now, and begin with your name alone on the first line.**
 >
-> `LORDTEK/meryemAircraft`, branch `claude/ecstatic-cori-6w30at`, commit **`COMMIT`**.
+> `LORDTEK/meryemAircraft`, branch `claude/ecstatic-cori-6w30at`, commit **`d83c843`**.
 >
 > The Step 14 draft is `paper/v8/drafts/14-recomposed.md`. Answer one another as well as me; where you still differ, say why
 > to the one you differ from.
