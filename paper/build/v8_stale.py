@@ -139,6 +139,8 @@ EMEKLI = {
     "precesses nothing": "Tur 99: S-30 -- hiz trimi aci momentumu esitlemez",
     "The figures published for this configuration were closed": "Tur 99: S-32 -- govdede onceki surum anlatisi (CLAUDE 4)",
     "Quoting the superseded numbers": "Tur 99: S-32",
+    "precesses nominally nothing": "Tur 100: S-30 -- ChatGPT'nin sozcugu; konu jiroskopik moment (Grok P67)",
+    "no stopping mechanism": "Tur 100: S-33 -- kosulsuz bicim (Grok P65)",
 }
 
 

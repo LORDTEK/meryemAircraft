@@ -991,8 +991,9 @@ makes no claim about the shafting: whether the two machines are stacked on the a
 some other way is an implementation question it does not settle.
 
 The counter-rotating arrangement carries a second consequence that the transition analysis
-depends on. Because the two rotors of each pair carry equal and opposite angular momentum, **the
-net angular momentum of the propulsion system is nominally zero**: rotating the airframe through ninety degrees precesses nominally nothing, and no gyroscopic moment appears for the control system to cancel unless the pairs are speed-trimmed (below). In a tilting architecture that term is present and must be designed for.
+depends on. **At equal counter-rotating speeds, the net angular momentum of the propulsion system is nominally
+zero**: rotating the airframe through ninety degrees therefore produces no gyroscopic moment for the
+control system to cancel. If the pairs are speed-trimmed, that cancellation is no longer exact (below). In a tilting architecture that term is present and must be designed for.
 
 ### The energy path
 

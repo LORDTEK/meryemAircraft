@@ -191,3 +191,4 @@ kaybolmasına (CLAUDE.md §0.8). Aynı denetimle sınanır.
 | 6 | The same sizing set gives its two helicopter types at 5.4 to 7.2, and against them the result is mixed | D+G+C+Q+K |
 | 14 | this aircraft's vertical phases occupy about a minute in all (Section 2), and how long each draws the peak is not computed here | C+G+D+Q+K |
 | 9 | Claimed against multirotors, and bounded; against helicopters the published comparison is mixed and no advantage is claimed. | C+G+D+Q+K |
+| 8 | That is a design assignment, not a demonstrated result | G+C+D+Q+K |

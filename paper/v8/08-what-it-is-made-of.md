@@ -60,8 +60,9 @@ makes no claim about the shafting: whether the two machines are stacked on the a
 some other way is an implementation question it does not settle.
 
 The counter-rotating arrangement carries a second consequence that the transition analysis
-depends on. Because the two rotors of each pair carry equal and opposite angular momentum, **the
-net angular momentum of the propulsion system is nominally zero**: rotating the airframe through ninety degrees precesses nominally nothing, and no gyroscopic moment appears for the control system to cancel unless the pairs are speed-trimmed (below). In a tilting architecture that term is present and must be designed for.
+depends on. **At equal counter-rotating speeds, the net angular momentum of the propulsion system is nominally
+zero**: rotating the airframe through ninety degrees therefore produces no gyroscopic moment for the
+control system to cancel. If the pairs are speed-trimmed, that cancellation is no longer exact (below). In a tilting architecture that term is present and must be designed for.
 
 ### The energy path
 
@@ -190,6 +191,7 @@ brake or a lock rather than motor holding torque, the count of Section 7 would g
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 100 (dört okuyucu + Claude):** S-30 ChatGPT'nin sözcükleriyle — "At equal counter-rotating speeds, the net angular momentum of the propulsion system is nominally zero: rotating the airframe through ninety degrees therefore produces no gyroscopic moment for the control system to cancel. If the pairs are speed-trimmed, that cancellation is no longer exact (below)." ("precesses" yanlış nesneyi adlandırıyordu). 8D "That is a design assignment, not a demonstrated result" korunan (169). Adım 7 notu olduğu gibi kaldı (ChatGPT yeterli buldu) | Tur 99 metni §2–§4 |
 | **Tur 99 (yeniden kurma; dört okuyucu + Claude):** envanter teyit edildi. 8E "It stands on its tail…" ve "four jobs" paragrafı çıktı (Adım 5C yinelemesi). S-30 "precesses nominally nothing, and no gyroscopic moment appears … unless the pairs are speed-trimmed (below)" (ChatGPT daha kesin bir sözcük öneriyor — oylamada); S-31 XB-35 kısmı çıktı (kaynaksız); S-32 "No wattage is quoted here; the closed powers are Section 10's." (önceki sürüm anlatısı çıktı); S-33 8G'ye durdurma cümlesi. Özgün paragraflar Ek S8'de | Tur 98 metni §3 |
 | **Tur 70:** *"These are the parts…"* → *"The tip pairs are the parts that fail the escape condition"* (DeepSeek; dört okuyucu + Claude). Birleştirilmiş görünümde cümle *"What moves"*tan sonra geliyor; *these* yanlış öncüle bağlanıyordu. Korunan liste aynı commit'te | Tur 69 metni §3 |
 | **Tur 67 — B5 (3.1)** (dört okuyucu + Claude): aerodinamik gerekçe ve on derece bandı Adım 7'de (ev) ve 14'te; burada atama, *"not a demonstrated result"*, Adım 10 girdisi ve *"not settled"* kaldı | Adım 7 |

@@ -365,3 +365,6 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | P-i; 4.3 (Grok inceltmesi) | değiştirme | değiştirme | değiştirme | değiştirme | değiştirme | **Kapandı** |
 | S-30 ChatGPT sözcüğü; Adım 7 notunun sözcükleri | — | öneren | — | — | — | Oylamada / teyide |
 | Koşullu envanter kuralı (ChatGPT); Grok P65–P66; DeepSeek durdurulmuş durum işareti, rakip sayımı denetimi; Qwen P2 küresel sözcük denetimi | — | — | — | — | — | Oylamada |
+| Tur 99'da uygulananlar (Adım 8, Adım 7 notu, 7D, 168, sözcük kilidi) | ✓ | ✓ | ✓ | ✓ | ✓ | **Teyit edildi** (Tur 100); Adım 7 notu kaldı |
+| S-30 ChatGPT sözcüğü; koşullu envanter kuralı; P65; P66 korunan (169); stopped-state işareti; küresel sözcük dizini (liste, geçti/kaldı yok) | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı** (Tur 100) |
+| Hedef ve yol (E6) | 10–12k gövde; iki paket | ~10–10,5k gövde, 12k tavan | 7 500 gövde (şekil/tablo ayrı) | 10k gövde; önce mimari dışı | 7 500 kayıtlı hedef şekil/tabloyla 12k'dan türetildi | **Yazara** |

@@ -1724,3 +1724,11 @@ than motor holding torque, the count of Section 7 would gain a class" ve **Adım
 kilidi CLAUDE.md'ye. P-i ve Grok'un S-27 inceltmesi kapandı (değişiklik yok). **Bütün blokların envanteri bitti.** Gövde
 25 797 kelime — yeniden kurma kelimeyi pek azaltmadı; asıl ürün S-1…S-33 dizisindeki kaynak kusurları ve R-1…R-6. Yazarın Tur 77 kararı
 ("adımları bitirince tekrar bakarız") sırası geldi.
+
+# Tur 100 — Tur 99 metnine dört cevap; yazar: "Evet önerileri alalım bakalım."
+
+**Teyit:** Tur 99'un hepsi; Adım 7 notu ChatGPT'nin şartını karşılıyor. **Oybirliğiyle uygulandı:** S-30 ChatGPT'nin sözcükleriyle
+(jiroskopik moment, "precesses" değil); koşullu envanter kuralı; P65–P67 emekli; 8D atama cümlesi korunan (169); **sözcük dizini**
+`paper/build/v8_vocab.py` → `paper/v8-vocab-concordance.md` (liste; geçti/kaldı yok; öz sınamalı). **Hedef:** dört öneri
+yazara; üçü dergi sınırını yalnız metin sanıyor — sınır şekil ve tabloyu da sayıyor (v8-budget.md). Tur metni yazarın
+paket kararından sonra.

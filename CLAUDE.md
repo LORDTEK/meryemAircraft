@@ -322,6 +322,10 @@ bile olsa. Örnek: S-27 (J&S Tablo 3'teki helikopterler).
 aile düzeyinde ifade (→ *rotorcraft*), belirli referans (kalır: iki quadrotor, quadrotor kuyruk üstüleri), kaynak alıntısı
 (dokunulmaz). Eksen değişince her ifade bu üçe göre sınıflanır.
 
+**Koşullu envanter kuralı (Tur 100; ChatGPT; dört okuyucu + Claude).** Bir donanım sınıfı envanterinde bir öğenin varlığı
+çözülmemiş bir işletim durumuna ya da uygulama seçimine bağlıysa, o öğe kesin olarak "yok" sayılmaz; koşul envanterin
+evinde ve ona dayanan her sayımda görünür. Örnek: S-33 (uç rotorların durdurma aracı).
+
 ### 2.2 Yenilik iddiası yazmadan önce. Tur 46'nın bedeli.
 
 Adım 1'e *"1954'te bir kez uçuruldu ve tekrar ele alınmadı"* ve *"her mimari bunu propulsor'ü
