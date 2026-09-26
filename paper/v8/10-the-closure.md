@@ -123,7 +123,8 @@ architecture — and for the 50 kg design, which is the only one carried through
 | **C** | 0.0285 | 0.632 | 10.82 | 6.84 | 53.5 kg | 0.597 | 11.66 kW | 3.91 kW | 1 141 km |
 | **D** | 0.0285 | 0.683 | 10.82 | 7.39 | 52.3 kg | 0.592 | 11.40 kW | 3.54 kW | 1 233 km |
 
-*L/De = L/D × η_p at the cruise condition; the loop holds both factors fixed, so the closure changes neither. The four
+*L/De = L/D × η_p at the cruise condition; the loop holds both factors fixed
+within each closure, so the closure changes neither. The four
 L/De values are the bounding corners of that product, carried into the closures as inputs, not four simulated aircraft.*
 
 **Payload is an input, fixed at 13 kg; take-off mass is the output.** The closure returns 52.3 to
@@ -234,7 +235,9 @@ where it is made.
 
 | İddia | Kaynak |
 |---|---|
-| **Tur 102 (Tur 101 oybirliği; T4):** tabloya L/De sütunu (5,56 / 6,00 / 6,84 / 7,39 = L/D × η_p) ve dipnot: "L/De = L/D × η_p at the cruise condition; the loop holds both factors fixed, so the closure changes neither. The four L/De values are the bounding corners of that product, carried into the closures as inputs, not four simulated aircraft." (G, C, D, K önerileri birleşti — teyide). Adım 6'nın köşe tablosu Adım 6 yeniden kurulurken taşınır. Özgün tablo Ek S10'da | Adım 6 köşe tablosu; `drafts/objects.md` T4 |
+| **Tur 103 (Tur 102: ChatGPT ve DeepSeek inceltmesi; Grok ve Qwen aynı okumayı yazdı — teyide):** dipnot "the loop holds both factors fixed within each closure" — L/D köşeden köşeye değişir (sürükleme braketi), döngü onu yeniden yazmaz | Tur 102 cevapları |
+| **Tur 102 (Tur 101 oybirliği; T4):** tabloya L/De sütunu (5,56 / 6,00 / 6,84 / 7,39 = L/D × η_p) ve dipnot: "L/De = L/D × η_p at the cruise condition; the loop holds both factors fixed
+within each closure, so the closure changes neither. The four L/De values are the bounding corners of that product, carried into the closures as inputs, not four simulated aircraft." (G, C, D, K önerileri birleşti — teyide). Adım 6'nın köşe tablosu Adım 6 yeniden kurulurken taşınır. Özgün tablo Ek S10'da | Adım 6 köşe tablosu; `drafts/objects.md` T4 |
 | **Tur 98 (dört okuyucu + Claude; E5):** "the rotorcraft comparison"; "No multirotor or helicopter is sized in this work, so no range comparison is made against either". Özgün Ek S10'da | Adım 6 |
 | **Tur 88 (dört okuyucu + Claude):** "cannot charge for the trajectory" → "cannot account for" — fatura sözcüğü genel fiil (A′; Qwen P2 taraması) | Tur 87 metni §2 |
 | **Tur 73:** birinci geçişten 10.2 (alan sabit tutulsaydı karşı-olgusu) ve 10.4 (nokta kütle modelinde optimize edilecek süre yok paragrafı) uygulandı — dört okuyucu + Claude. **10.1, 10.3, 10.5 vetolandı** (ChatGPT; 10.3'e Grok da) → kaynak kaldı. Hüküm cümlesi korunan listeye | Tur 72 metni §4 |

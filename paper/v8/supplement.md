@@ -830,6 +830,12 @@ one. Neither the means nor the azimuth is fixed by this study, and the drag figu
 stopped condition should be read as the state Section 11 defines rather than as the state a
 particular installation would reach.
 
+### The dynamic pressure behind the strip in hover (for Figure 2b)
+
+In hover the strip's inboard part works in the nose pair's slipstream, where the dynamic pressure is set by disc loading:
+q = T/A. For the 50 kg reference design, with the nose pair's hover thrust over its disc area (D = 1.20 m), this is
+**433.7 Pa**, the dynamic pressure of a 26.6 m s⁻¹ freestream (`aero/roll.py`, hover block). Figure 2b gives it as 434 Pa; v7 printed 433, a truncation.
+
 ---
 
 ## S9. Section 9 (from Section 9)

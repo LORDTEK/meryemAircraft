@@ -184,3 +184,15 @@ karar verdi: "Önerine göre git."**
 **Tur 102 (Tur 101 oyları, sekizi de oybirliği):** T1, T4 (+ dipnot), T5, fig08 etiketi + şekil denetimi, **F4 eke** (→ 5 tablo +
 3 şekil, **toplam 11 750**), R-7, Adım 7 notu korunur, yönetici cümle. **F1 — yazarın bilgisi:** Şekil 5 = (a) üstten, planform,
 (b) önden, (c) yandan kesit, 2 m ölçek çubuğu; Şekil 6 = serbest görünüş, 1 m ölçek çubuğu. Öneri okuyuculara (Tur 102 metni).
+
+## E7 — Korunan cümle, nitelediği sonuçla birlikte eke gidebilir mi (Tur 102) · **YAZAR KARARI BEKLENİYOR**
+
+**Soru:** Adım 10–13 bugün ~8 000 kelime, hedef 1 550; korunan kelimeler tek başına 729. Adım 10 taslağı ~915 kelime, 204'ü
+korunan. Önerilen kural (iii): *"A protected sentence may move to the supplement only together with the result it qualifies,
+and only by the author's decision."* Gövdede kalan bir sonucun niteleyicisi taşınamaz.
+**Oylar (Tur 102):** kural için dört okuyucu + Claude evet. Adım 10'da iki aday:
+- **R16 + P17** (donanım sürüklemesi referans boyutta tutulsaydı 0,0009–0,0028 düşerdi; kapanış bunu almıyor) — dört okuyucu +
+  Claude taşınmasına evet → **yazarın kararına.**
+- **J32 + P33** (ödünç momentle sonuçların dağılması; *"That spread is itself the finding"*) — Grok, ChatGPT, Qwen, Claude evet;
+  **DeepSeek hayır** (dağılım olmadan okuyucu neden sayı verilmediğini göremez) → gövdede kalır, okuyuculara geri soruldu.
+

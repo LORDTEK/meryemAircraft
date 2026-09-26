@@ -193,4 +193,4 @@ kaybolmasına (CLAUDE.md §0.8). Aynı denetimle sınanır.
 | 9 | Claimed against multirotors, and bounded; against helicopters the published comparison is mixed and no advantage is claimed. | C+G+D+Q+K |
 | 8 | That is a design assignment, not a demonstrated result | G+C+D+Q+K |
 | 7 | The stopping class is absent if the tip pairs free-wheel in cruise or are held stopped by motor torque; a brake or a mechanical lock would add it. | D+G+C+Q+K |
-| 15 | while the tip pairs free-wheel or are held by motor torque — no rotor stowing, indexing or stopping mechanism | K |
+| 15 | while the tip pairs free-wheel or are held by motor torque — no rotor stowing, indexing or stopping mechanism | K+G+C+D+Q |

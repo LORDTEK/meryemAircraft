@@ -159,3 +159,20 @@ named in the caption or drawn on panel (c) — to vote. Adding arrows means re-r
 - Grok P70: F3's points are Table 3 only; a point from any other source is a new source-opening, not a caption edit.
 - ChatGPT: *"A number may move to the supplement; its meaning may not."* And a number's identity is value + unit + object +
   **model or geometry where it applies**.
+
+---
+
+## Round 103 — the Round 102 votes applied (all four + Claude)
+
+- **F1:** `figures/build/mkfig_v8_f1.py` → `figures/output/v8-draft-f1-three-views.png`: v7's fig05 unchanged, with x_b (forward) and
+  z_b (down) drawn on panel (c) per Step 8's body-axis naming; y_b not drawn. fig06 → supplement. Caption as drafted.
+- **F2a:** the two N m values gone; *"2.43 × the pitch arm"* (Step 8's words) kept; *nose pair (all propulsive thrust)*, *tip
+  pairs*; no title.
+- **F2b:** *"nose pair"*; no title; 433 → **434 Pa** (`aero/roll.py` gives 433.7; v7 truncated), its home is Supplement S8. The
+  slipstream boundary 0.67 → 0.47 m has **no derivation in the repository** → S-37, open.
+- **fig09's sweep (Grok P72, DeepSeek, Qwen P4) — no mismatch.** fig09 uses the planform law of `aero/planform.py` (45° at the
+  root falling linearly to 35° at the convergence station, cropped at 67 %): at the crop the sweep is 45 − 10 × 0.67 = **38.3°**,
+  Step 8's figure. My Round 102 text called 35° "a tip value"; it is the law's parameter, not the tip. My error.
+- **F2 caption (draft, 23 words):** *"(a) Front view of the 50 kg reference design: tip-pair arms for pitch and yaw. (b) View from
+  below: the strip and the nose-pair slipstream."*
+- **Qwen P1** is met by the T4 footnote; no caption sentence (Grok, DeepSeek, Qwen, Claude; ChatGPT did not vote).

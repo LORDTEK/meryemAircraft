@@ -1,7 +1,7 @@
-# Step 10 as result sentences — first recomposed draft (Round 102, to vote)
+# Step 10 as result sentences — recomposed draft (Round 102; revised Round 103, to vote)
 
 **Nothing here has entered `10-the-closure.md`.** Source: the step file's English body, 2 354 words, 97 sentences, 13 protected.
-**This draft: about 890 words of prose (the table counted as an object), of which 204 are protected sentences.** Target for Steps 10–13 together: 1 550.
+**This draft: about 915 words of prose (the table counted as an object), of which 204 are protected sentences.** Round 103: source 83 restored (D29b); the T4 footnote reads *"within each closure"*; R16 + P17 await the author's decision on rule (iii). Target for Steps 10–13 together: 1 550.
 
 Tags: **P** protected, word for word · **D** one source sentence, shortened by deletion only · **J** two or more source
 sentences joined, by deletion and joining words only · **R** recomposed — new wording, vetoable sentence by sentence.
@@ -68,14 +68,15 @@ move the derivation, not the qualification; move the audit trail, not the result
 | **C** | 0.0285 | 0.632 | 10.82 | 6.84 | 53.5 kg | 0.597 | 11.66 kW | 3.91 kW | 1 141 km |
 | **D** | 0.0285 | 0.683 | 10.82 | 7.39 | 52.3 kg | 0.592 | 11.40 kW | 3.54 kW | 1 233 km |
 
-*L/De = L/D × η_p at the cruise condition; the loop holds both factors fixed, so the closure changes neither. The four
+*L/De = L/D × η_p at the cruise condition; the loop holds both factors fixed
+within each closure, so the closure changes neither. The four
 L/De values are the bounding corners of that product, carried into the closures as inputs, not four simulated aircraft.*
 
 [J21] **Payload is an input, fixed at 13 kg; take-off mass is the output**, and the payload fraction runs from 0.25 down to 0.23. [J24] **The blade that is best before the loop is still best after it**: at both ends of the drag bracket the higher-efficiency family closes to the longer range — **a result of the closure rather than an assumption carried into it.**
 
 ### The transition
 
-[J25] The sizing above says nothing about whether the aircraft can change regime. [P26] **The question is asked in two models, only the second of which carries rotational dynamics, and that one does not support a zero altitude loss.** [R27] Every transition figure here belongs to a reference design at its published mass and is not an output of the closure. In the first, a point-mass model with the body angle driven kinematically, a rotation entered in a 5 m s⁻¹ climb loses no altitude at either reference rotation time: 2 s for the 50 kg design and 5.1 s for the 1 000 kg one. [J28] Solved instead with rotational dynamics and a finite control moment, **and with the aerodynamic pitching moment set to exactly zero, so that nothing favourable is borrowed**, the 50 kg design **loses 5.4 m at the same reference condition.** [J29] The loss is not an artefact of the controller: it is unchanged across three reference profiles, appears without the control moment saturating, and grows as the gains are raised (Supplement S10). [P30] **So the zero-altitude-loss result is a property of the model that produced it.**
+[J25] The sizing above says nothing about whether the aircraft can change regime. [P26] **The question is asked in two models, only the second of which carries rotational dynamics, and that one does not support a zero altitude loss.** [R27] Every transition figure here belongs to a reference design at its published mass and is not an output of the closure. In the first, a point-mass model with the body angle driven kinematically, a rotation entered in a 5 m s⁻¹ climb loses no altitude at either reference rotation time: 2 s for the 50 kg design and 5.1 s for the 1 000 kg one. [J28] Solved instead with rotational dynamics and a finite control moment, **and with the aerodynamic pitching moment set to exactly zero, so that nothing favourable is borrowed**, the 50 kg design **loses 5.4 m at the same reference condition.** [J29] The loss is not an artefact of the controller: it is unchanged across three reference profiles, appears without the control moment saturating, and grows as the gains are raised (Supplement S10). [D29b] **What the kinematic model leaves out is not the difficulty of turning the aircraft but the trajectory the aircraft flies while it is being turned.** [P30] **So the zero-altitude-loss result is a property of the model that produced it.**
 
 [R31] What replaces it is not a prediction: the pitching moment that would make it one exists, but for the methods used here the predictions diverge above roughly ten degrees of incidence, the band the rotation passes through (Section 14). [J32] With a borrowed moment the spread is wide enough that no number from it is reportable: some models complete the rotation, some saturate the tip pairs, and some tumble. [P33] **That spread is itself the finding.** [P34] **Within the finite-moment dynamic model, with the aerodynamic moment set to zero, the manoeuvre costs altitude.** [P35] Whether a real aircraft loses 5.4 m, more, or less is not settled by anything here.
 
@@ -126,7 +127,7 @@ L/De values are the bounding corners of that product, carried into the closures 
 | 78–79 | The second model removes the result… cannot account for the trajectory… | S10 — **my least certain move**; see §5 |
 | 80–81 | Solved instead with rotational dynamics … 5.4 m … (reference geometry) | **J28** (the parenthesis is carried by R27) |
 | 81–82 | The loss is not an artefact of the controller … 17 m | **J29** (the three profile names and 17 m → S10) |
-| 83 | What the kinematic model leaves out… | S10 — **my least certain move**; see §5 |
+| 83 | What the kinematic model leaves out… | **D29b** — restored (Round 102: all four + Claude); its tail *"so tighter tracking … not closer"* → S10 |
 | 84 | So the zero-altitude-loss result… | **P30** |
 | 85–86 | What replaces it is not a prediction … the moment exists … ten degrees | **R31** (*"and for the published comparisons against which they were checked"* → S10; this narrows, it does not widen) |
 | 87 | With a borrowed moment … | **J32** |
@@ -156,9 +157,9 @@ L/De values are the bounding corners of that product, carried into the closures 
 
 ## 5. Where the draft is weakest, in my own view
 
-- **The mechanism of the verdict moved (sentences 79 and 83).** *"What the kinematic model leaves out is not the difficulty of
+- **(Round 103: resolved — restored by all five.)** **The mechanism of the verdict moved (sentences 79 and 83).** *"What the kinematic model leaves out is not the difficulty of
   turning the aircraft but the trajectory the aircraft flies while it is being turned."* No reader named it. It is the reason
   the two models differ, and a referee may ask for it. It costs about 45 words. I moved it for the budget; I am not sure I
   should have.
-- **About 890 words is not the target.** It is 38 % of the source; Steps 10–13 must reach 19 % together. 204 words are protected, and
+- **About 915 words is not the target.** It is 38 % of the source; Steps 10–13 must reach 19 % together. 204 words are protected, and
   most of the rest are the antecedents that protected sentences need to be read correctly.

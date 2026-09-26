@@ -439,8 +439,12 @@ dahil herkesin hemfikir olduğu kısaltmalar uygulansın."*
 - **Yeni denetim:** gövdedeki her sonuç sayısı ekteki çalışmada aynı değer, birim ve nesneyle; betik işaretler, insan okur.
 - **Bu aşamanın yönetici cümlesi (Tur 101; ChatGPT, dört okuyucu + Claude):** *"Move the working, not the evidence; move the
   derivation, not the qualification; move the audit trail, not the result."* Şekil etiketi de iddia yüzeyidir: v8'e girecek
-  her şeklin betiği `v8_stale.py` `SEKILLER` listesine girer (emekli ifade + P56). **Oyda (Tur 102):** ChatGPT'nin
-  *"A number may move to the supplement; its meaning may not"* eki ve sayı kimliğine *model/geometri*nin eklenmesi.
+  her şeklin betiği `v8_stale.py` `SEKILLER` listesine girer (emekli ifade + P56). **Kabul (Tur 102, dört okuyucu + Claude):**
+  *"A number may move to the supplement; its meaning may not."* Sayı kimliği = değer + birim + nesne + **model ya da
+  geometri** (uygulanıyorsa) — 5,4 m ancak *"sonlu momentli modelde, referans tasarımda"* anlamlıdır.
+- **Korunan cümle eke taşınabilir mi — kural (iii) (Tur 102; dört okuyucu + Claude oyladı, YAZAR KARARI BEKLİYOR, E7):**
+  *"A protected sentence may move to the supplement only together with the result it qualifies, and only by the author's
+  decision."* Fren: gövdede kalan bir sonucun niteleyicisi taşınamaz.
 
 ## 3. Doğrulama
 

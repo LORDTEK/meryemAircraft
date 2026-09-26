@@ -1,6 +1,7 @@
 """v8 Sekil 2a TASLAGI: v7 Sekil 8'in (mkfig08.py) kopyasi, tek degisiklikle (Tur 101, dort okuyucu + Claude):
 yatis satiri "= 0 identically, at every thrust setting" -> itkiden sifir; tepki torku uretebilir, reddedildi
-(CLAUDE.md 0.1, Tur 47; P56). v7 sekli dokunulmadan kalir (yayimlanmis kayit). Etiketler v8_stale.py taranir.
+(CLAUDE.md 0.1, Tur 47; P56). Tur 102 oylari (dort okuyucu + Claude): iki N m degeri cikti
+(16.2 N yalniz Adim 8 denetim tablosunda); adlar Adim 8'in (nose pair, tip pairs); baslik yok, altyazi tasir. v7 sekli dokunulmadan kalir (yayimlanmis kayit). Etiketler v8_stale.py taranir.
 """
 import matplotlib; matplotlib.use("Agg")
 import matplotlib.pyplot as plt
@@ -43,27 +44,24 @@ ax.text(0,0.87,"$D$ = 1.20 m",ha="center",fontsize=10.5,color=A,
         bbox=dict(fc="white",ec="none",pad=1.6))
 ax.text(-b2-0.34,L,"$d$ = 0.20 m",ha="right",va="center",fontsize=10.5,color=R)
 # etiketler
-ax.text(0,-0.68,"thrust pair\n(all propulsion)",ha="center",va="top",fontsize=10.5,color=A,linespacing=1.4)
-ax.text(-b2-0.34,-L,"control\npairs",ha="right",va="center",fontsize=10.5,color=R,linespacing=1.4)
+ax.text(0,-0.68,"nose pair\n(all propulsive thrust)",ha="center",va="top",fontsize=10.5,color=A,linespacing=1.4)
+ax.text(-b2-0.34,-L,"tip\npairs",ha="right",va="center",fontsize=10.5,color=R,linespacing=1.4)
 # ---- moment blogu: diyagramin ALTINDA ----
 ax.axhline(-2.04,xmin=0.03,xmax=0.97,color=GR,lw=0.9)
 ax.text(0,-2.22,"All thrust vectors are parallel to the body $x$ axis:   "
         r"$\mathbf{F}=(F_x,\,0,\,0)$",ha="center",va="top",fontsize=11.5,color=INK)
 ax.text(-1.30,-2.54,r"pitch",ha="left",va="top",fontsize=11,color=INK,fontweight="bold")
-ax.text(-0.62,-2.54,r"$M_y = z\,F_x$      upper vs lower pairs, arm $L_p$ = 0.71 m"
-        "\n" r"                   $2TL_p$ = 23.0 N m",
+ax.text(-0.62,-2.54,r"$M_y = z\,F_x$      upper vs lower pairs, arm $L_p$ = 0.71 m",
         ha="left",va="top",fontsize=11,color=INK,linespacing=1.5)
 ax.text(-1.30,-3.02,r"yaw",ha="left",va="top",fontsize=11,color=A,fontweight="bold")
 ax.text(-0.62,-3.02,r"$M_z = -y\,F_x$     left vs right pairs, arm $b/2$ = 1.726 m"
-        "\n" r"                   $2TL_y$ = 55.9 N m  —  2.43 $\times$ the pitch moment",
+        "\n" r"                   2.43 $\times$ the pitch arm",
         ha="left",va="top",fontsize=11,color=A,linespacing=1.5)
 ax.text(-1.30,-3.50,r"roll",ha="left",va="top",fontsize=11,color=R,fontweight="bold")
 ax.text(-0.62,-3.50,r"$M_x = 0$ from thrust at every setting;"
         "\n" "reaction torque could produce it, and is declined",
         ha="left",va="top",fontsize=11,color=R,linespacing=1.5)
 ax.set_xlim(-2.95,3.05); ax.set_ylim(-4.10,1.15); ax.set_aspect("equal"); ax.axis("off")
-ax.set_title("Propeller placement and moment arms — front view",
-             loc="left",fontsize=12.5,fontweight="bold",pad=6)
 fig.tight_layout()
 fig.savefig(OUT+"/v8-draft-f2a-moment-arms.png",dpi=300,bbox_inches="tight")
 print("yazildi: figures/output/v8-draft-f2a-moment-arms.png")

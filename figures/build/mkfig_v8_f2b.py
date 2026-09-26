@@ -1,6 +1,7 @@
 """v8 Sekil 2b TASLAGI: v7 Sekil 9'un (mkfig09.py) kopyasi, tek onarimla (Tur 102, okuyucu teyidine):
 "deploys on-off" -> "its extension is modulated, not switched" -- Adim 8 "Extension is the control variable -- the
-strip is modulated, not switched" diyor; v7 etiketi govdeyle celisiyordu (sekil denetimi, Tur 102). v7 sekli dokunulmaz.
+strip is modulated, not switched" diyor; v7 etiketi govdeyle celisiyordu (sekil denetimi, Tur 102). Tur 102 oylari: "main propeller" -> "nose pair"; baslik yok.
+0.67 -> 0.47 m iz siniri hicbir betikte turetilmiyor (S-37, acik). v7 sekli dokunulmaz.
 """
 import matplotlib; matplotlib.use("Agg")
 import matplotlib.pyplot as plt, numpy as np, math
@@ -62,7 +63,7 @@ for sd in (1,-1):
     ax.plot(sd*sx[outb],sz[outb],color=R,lw=5.0,solid_capstyle="round",zorder=6)
 ax.plot([xc,-xc],[zc,zc],"o",ms=8,mfc="white",mec=INK,mew=1.8,zorder=7)
 # etiketler
-ax.annotate("main propeller\n$D$ = 1.20 m",xy=(-0.44,-0.41),xytext=(-2.30,-0.60),
+ax.annotate("nose pair\n$D$ = 1.20 m",xy=(-0.44,-0.41),xytext=(-2.30,-0.60),
             fontsize=10.4,color=A,ha="left",va="center",linespacing=1.4,
             arrowprops=dict(arrowstyle="-",color=A,lw=0.9))
 ax.annotate("inboard 46 % of the strip lies inside\nthe slipstream  →  authority at zero\nairspeed, where $q_\\infty$ is nil",
@@ -83,10 +84,8 @@ ax.plot([half],[TE[-1]],"|",ms=11,color=MUT,mew=1.6)
 ax.text(half+0.06,TE[-1]+0.16,"tip\n$b/2$ = 1.73 m",ha="center",va="top",fontsize=9.6,
         color=MUT,linespacing=1.35)
 ax.set_xlim(-2.40,2.30); ax.set_ylim(2.45,-0.95); ax.set_aspect("equal"); ax.axis("off")
-ax.set_title("Roll strip and the main-propeller slipstream — view from below",
-             loc="left",fontsize=12.8,fontweight="bold",pad=8)
 ax.text(-2.40,2.62,"One device, two regimes. The strip is on the lower surface, inclined at 45°, "
         "and its extension is modulated, not switched.\nIn hover the slipstream supplies the dynamic pressure "
-        "($q = T/A$ = 433 Pa) that the freestream cannot.",
+        "($q = T/A$ = 434 Pa) that the freestream cannot.",
         fontsize=9.6,color=MUT,linespacing=1.7,va="top")
 fig.savefig(OUT+"/v8-draft-f2b-strip-slipstream.png",dpi=300,bbox_inches="tight"); print("yazildi: figures/output/v8-draft-f2b-strip-slipstream.png")

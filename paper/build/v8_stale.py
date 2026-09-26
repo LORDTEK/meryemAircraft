@@ -147,6 +147,10 @@ EMEKLI = {
         "(reddedilen) dusmus (CLAUDE.md 0.1; P56)",
     "deploys on–off": "Tur 102: v7 Sekil 9 etiketi -- Adim 8 'modulated, not switched' diyor",
     "deploys on-off": "Tur 102: ayni, ASCII tire",
+    "main propeller": "Tur 103: v7 Sekil 9 adi -- govde 'nose pair' der (Tur 102 oylari)",
+    "main-propeller": "Tur 103: ayni",
+    "control pairs": "Tur 103: v7 Sekil 8 adi -- govde 'tip pairs' der",
+    "2TL_p": "Tur 103: v7 Sekil 8'in N m degeri; 16.2 N govdede yok (S-36)",
 }
 
 
@@ -173,7 +177,8 @@ def yalniz_tara(adlar_metinler):
 # Tur 101 (dort okuyucu + Claude): sekil etiketi de metindir (Tur 68 kurali) -- P56 ve emekli ifade denetimi v8
 # sekil betiklerine uzanir. Taranan: betigin dize sabitleri (ast), modul belge dizesi HARIC -- belge dizesi eski
 # etiketi bilerek alintilar. Bir v7 sekli v8'e girecekse once v8 kopyasi buraya eklenir.
-SEKILLER = ["figures/build/mkfig_v8_f2a.py", "figures/build/mkfig_v8_f2b.py", "figures/build/mkfig_v8_f3.py"]
+SEKILLER = ["figures/build/mkfig_v8_f1.py", "figures/build/mkfig_v8_f2a.py", "figures/build/mkfig_v8_f2b.py",
+            "figures/build/mkfig_v8_f3.py"]
 
 
 def etiketler(kaynak):

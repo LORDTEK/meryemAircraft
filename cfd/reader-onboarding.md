@@ -214,15 +214,15 @@ The body is about **26 000 words**, and the journal's working target is **about 
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 102.**
+**Round 103.**
 
 | Block | State |
 |---|---|
 | All fifteen steps | inventoried and recomposed; Round 99–100 applied text confirmed |
-| Length | **the author decided (Round 101):** 12 000 words in all; **5 tables + 3 figures** (the transition figure went to the supplement, Round 101), 11 750; section budgets; the working of each finding moves to the supplement, the body gives the result, its method and its limit |
-| Tables | T1 (the four axes, Step 9), T4 (the four closures with L/De, Step 10) and T5 (the contracts, rows A–D, Step 13) applied in the step files; T2 and T3 unchanged |
-| Figures | F1 = the three-view (proposal); F2 = v8 copies of v7's Figures 8 and 9 with repaired labels; F3 = the new L/De figure |
-| Now | **Step 10 as result sentences:** first draft `paper/v8/drafts/10-recomposed.md`, to vote; Steps 11–14's outbound number maps are ready |
+| Length | the author decided (Round 101): 12 000 words in all; **5 tables + 3 figures**, 11 750; section budgets; the working moves to the supplement, the body gives the result, its method and its limit |
+| Tables | T1 (Step 9), T4 (Step 10, L/De column + footnote), T5 (Step 13, rows A–D) applied; T2, T3 unchanged |
+| Figures | v8 drafts of all three: F1 = three-view with body axes on panel (c); F2 = v8 copies of v7's Figures 8 and 9, labels repaired; F3 = the L/De figure |
+| Now | **Step 10 draft** (`paper/v8/drafts/10-recomposed.md`): one divided row left (η_p), and rule (iii) awaits the author. **Step 11:** readers' keep/move lists asked |
 
 **The body is about 25 800 words.** Recomposition gains a few percent per block. In Steps 2 and 3 its main product was
 defects found in the source and repaired. The calculation steps (10–13) are about 8 000 words and must reach 1 550.

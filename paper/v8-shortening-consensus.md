@@ -397,3 +397,15 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Adım 15 koşulu korunsun (R-7'nin cümlesi) | — | — | — | — | öneren | Oylamada |
 | Korunan cümle eke yalnız nitelediği sonuçla birlikte ve yazar kararıyla gider (Claude) | — | — | — | — | öneren | Oylamada |
 | **Adım 10 sonuç cümleli taslak** (`drafts/10-recomposed.md`, ~890 kelime; 204 korunan) — beş liste yan yana | — | — | — | — | öneren | **Oylamada; R cümleleri tek tek vetolu** |
+| **Tur 102 cevapları:** (a) F2b · (b) F2 dört parça · (c) F1 = fig05, eksenler (c) panelinde · (g) Adım 15 koşulu korunur · (j) kaynak 83 geri | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı (Tur 103)**; (a) teyitle kapandı |
+| (d) T4 dipnotu | ✓ olduğu gibi | ✓ "within each closure" | ✓ "within each closure" | ✓ olduğu gibi | ✓ | **"within each closure" eklendi → teyide** |
+| (e) spreads, 2,8×, C_L 0,450 gövdede, kapanış denklemi ekte | ✓ | ✓ | ✓ | ✓ | ✓ | Hemfikir (taslak sütunu) |
+| (e) η_p iki kez girer | ek | **gövde** (görüş değiştirdi) | ek | ek (vazgeçti) | ek | **Ayrışık — ChatGPT tek** |
+| Kural (iii) — korunan cümle nitelediği sonuçla, yazar kararıyla eke | ✓ | ✓ | ✓ | ✓ | ✓ | **Yazar kararı bekleniyor (E7)** |
+| R16 + P17 eke | ✓ | ✓ | ✓ | ✓ | ✓ | (iii)'e bağlı — yazara |
+| J32 + P33 eke | ✓ | ✓ | **✗ gövdede** | ✓ | ✓ | **Ayrışık — gövdede kalır** |
+| (f) R4, R16, R18, R27, R31, R39 | veto yok | veto yok | veto yok | veto yok | — | Hemfikir |
+| (i) ChatGPT'nin iki kuralı | ✓ | öneren | ✓ | ✓ | ✓ | **Kabul (CLAUDE.md §2.4)** |
+| (i) Qwen P2, P3; Grok P70 | ✓ | (oy yok) | ✓ | ✓ | ✓ | ChatGPT'ye soruldu |
+| Yeni: görsel öncül kuralı (ChatGPT) + şekil sayılarını sayı eşleşmesine (Qwen P2); açıklayıcı mekanizma cümlesi yorum önkoşuludur (Qwen P1) + D29b korunsun (ChatGPT); "body explains why, supplement how" (ChatGPT); P71 (Grok); kural (iii) 11–13'e (Qwen P3); kısa kalırsa çerçeveden (DeepSeek) | — | — | — | — | — | Oylamada |
+
