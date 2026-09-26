@@ -390,6 +390,8 @@ dahil herkesin hemfikir olduğu kısaltmalar uygulansın."*
   diğer okuyucular da fikir üzerine beyanatları olsun. Yani birbirlerinin olumlu/olumsuz görüşlerine de bir şey söylemek
   isterlerse çekinmesinler."* Her tur metni, ayrışan ya da tek kalan görüşleri **adıyla ve yan yana** koyar ve öteki
   okuyuculardan o görüşlere (yalnız bana değil) cevap ister. İkna olmayan okuyucunun gerekçesi öbürlerine açıkça sorulur.
+  **Yazar yineledi (Tur 106):** *"süregelen bir anlaşmazlık varsa yapayzekalar birbirlerinin fikirleri hakkında görüş
+  bildirebilirler"* — her tur metninde süren ayrışmalar ayrı bir bölümde, kim ne diyor adıyla, karşı gerekçeyle birlikte durur.
 - **Koruma ölçütü (Tur 87, dört okuyucu + Claude):** *"A sentence is protected when removing it silently would change a
   claim, a limit or a derivation that later text depends on: a derived statement would read as asserted, or a limited claim
   as broader. Being load-bearing for the structure alone is not enough."*

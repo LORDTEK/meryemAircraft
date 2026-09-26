@@ -210,7 +210,7 @@ oranla **≈ 3 250**; plan **1 550**. Adım 11 taslağı ~820 (kaynağın %43'ü
 taslaklarından sonra gerçek sayıyla; DeepSeek — hesap bütçesini ~2 500'e çıkar, farkı önce çerçeveden (2.1–2.3) al; Qwen — 12 ve 13
 %20–25'e inmeli, (iii) daha çok. Yazarın kararıyla hepsi bekletildi.
 
-## E9 — Adım 11'in kural (iii) adayı (Tur 105) · **YAZAR KARARI BEKLENİYOR**
+## E9 — Adım 11'in kural (iii) adayı (Tur 105) · **KARAR (Tur 106): "E9'u onaylıyorum, dökümle birlikte eke gitsin."**
 
 *"No line item at the adverse end is an independent measurement, and they should not be subtracted from one another as if
 they were."* Nitelediği kalem kalem sürükleme dökümü beş listede de Ek S11'e gidiyor; gövdede kalırsa okurun göremediği

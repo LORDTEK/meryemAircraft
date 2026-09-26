@@ -144,7 +144,6 @@ boşluğa duyarsız. `G` = Grok, `D` = DeepSeek, `C` = ChatGPT, `Q` = Qwen, `K` 
 | 8 | Either the residual is small enough to be absorbed that way, which this study has not shown and which would mean the architecture spends a little of the channel it declined, or a fourth duty falls on the strip. | Q |
 | 9 | It does not claim that the aircraft flies. | Q |
 | 10 | The published zero-lift value of 0.0248 is not used. | Q |
-| 11 | No line item at the adverse end is an independent measurement, and they should not be subtracted from one another as if they were. | Q |
 | 12 | A change from 3.6 to 4.0 percent is a change between two choices, not a scaling result, and it cannot be offered as evidence that Bill 1 moves with size in either direction. | Q |
 | 13 | The competitors are therefore this planform with two add-ons, not independently designed aircraft of their families. | Q |
 | 13 | And nothing here ranks architectures for a mission. | Q |
@@ -194,9 +193,11 @@ kaybolmasına (CLAUDE.md §0.8). Aynı denetimle sınanır.
 | 7 | The stopping class is absent if the tip pairs free-wheel in cruise or are held stopped by motor torque; a brake or a mechanical lock would add it. | D+G+C+Q+K |
 | 15 | while the tip pairs free-wheel or are held by motor torque — no rotor stowing, indexing or stopping mechanism | K+G+C+D+Q |
 | 10 | What the kinematic model leaves out is not the difficulty of turning the aircraft but the trajectory the aircraft flies while it is being turned. | C+Q+G+D+K |
+| 11 | Bill 2 therefore occupies a larger share where the clean-body drag is lower | D+G+C+Q+K |
 
 **Yazar kararıyla eke taşınan korunan cümleler (kural (iii), CLAUDE.md §2.4; `v8_caveats.py` ekte durduğunu sınar):**
 
 | Ek | Çekince | Karar |
 |---:|---|---|
 | S10 | The closures do not take that reduction, and it has not been run through the loop. | E7 |
+| S11 | No line item at the adverse end is an independent measurement, and they should not be subtracted from one another as if they were. | E9 |

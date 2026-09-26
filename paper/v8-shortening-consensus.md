@@ -423,4 +423,9 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Adım 11 (iii) adayı "No line item…" | ✓ | ✓ | ✓ | ✓ | ✓ | **Yazara (E9)** |
 | Yeni: R15 korunsun (DeepSeek); negatif niteleme denetim listesi (ChatGPT); P75, P76 (Grok); Adım 14 borç/kapsam bayrağı (Qwen R104-P2); açık tablosu (DeepSeek); DeepSeek'in Adım 10 işaretçisi — **olguyu ters söylüyor** | — | — | — | — | — | Oylamada |
 | Adım 12 ve 13 listeleri birlikte istendi | — | — | — | — | — | Açık |
+| **Tur 105 cevapları:** R15 "occupies", J18 teyit; R15 korunur; Adım 10 işaretçisi yok (DeepSeek geri çekti); negatif niteleme denetim listesi; P75, P76, Qwen R104-P2, açık tablosu | ✓ | ✓ | ✓ | ✓ | ✓ | **Kabul / uygulandı (Tur 106)** |
+| **Yazar kararı (Tur 106, E9):** "No line item…" dökümle birlikte S11'e | — | — | — | — | — | **Karar** |
+| **Adım 11 yeniden kuruldu** (1 969 → ~820); özgün Ek S11'de tam | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı → sonuç teyide** |
+| Adım 12 taslağı (~1 015, %57) ve Adım 13 taslağı (~1 205, %60) | — | — | — | — | öneren | **Oylamada; süren ayrışmalar adıyla okuyuculara (yazar, Tur 106)** |
+| Yeni: P77/Qwen R105-P1 çekirdek bulgu ilk satırda (uygulandı taslakta); P78; ChatGPT sözleşme kimliği; Qwen R105-P2 bilinen rastlantılar listesi; Qwen R105-P3 (=R104-P2) | — | — | — | — | — | Oylamada |
 

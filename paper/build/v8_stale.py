@@ -151,6 +151,9 @@ EMEKLI = {
     "main-propeller": "Tur 103: ayni",
     "control pairs": "Tur 103: v7 Sekil 8 adi -- govde 'tip pairs' der",
     "2TL_p": "Tur 103: v7 Sekil 8'in N m degeri; 16.2 N govdede yok (S-36)",
+    "total of the three": "Tur 106 (Grok P76; dort okuyucu + Claude): uc faturanin govde toplami yok -- P6/J7 kilidi",
+    "combined cost of the three bills": "Tur 106 (Grok P76): ayni",
+    "sum of the three bills": "Tur 106 (Grok P76): ayni",
 }
 
 
