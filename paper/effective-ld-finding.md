@@ -1732,3 +1732,10 @@ kilidi CLAUDE.md'ye. P-i ve Grok'un S-27 inceltmesi kapandı (değişiklik yok).
 `paper/build/v8_vocab.py` → `paper/v8-vocab-concordance.md` (liste; geçti/kaldı yok; öz sınamalı). **Hedef:** dört öneri
 yazara; üçü dergi sınırını yalnız metin sanıyor — sınır şekil ve tabloyu da sayıyor (v8-budget.md). Tur metni yazarın
 paket kararından sonra.
+
+# Tur 100 (ikinci kısım) — yazar: "12K'da tamamlayabiliriz"; öneriler herkese
+
+Yazarın yönlendirmesi (hesap çalışması eke, gövdede sonuç + ek işaretçisi; tablolar birleştirilsin) ve dört okuyucunun
+önerileri yan yana, benim ayrıntılı önerimle Tur 100 metnine girdi. **Kendi hatam (yazmadan önce yakaladım):** nesne
+bütçesini 3 550 yazmışım; doğrusu 3 100 (1 800 + 1 300). Qwen'in iki önerisi yerleşik kararlarla çelişiyor (Adım 1'in "zaten
+dolu" listesi Tur 46 kuralı; dokunulmayan küme 14 249 kelime) — okuyuculara açıkça soruldu.

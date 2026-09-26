@@ -162,3 +162,10 @@ yalnız metin sanıyor; `paper/v8-budget.md` (derginin kuralı): **şekil ve tab
 cümle 2 568 kelime. Mimari ve çerçeveye hiç dokunulmazsa (Qwen P1) yalnız o kısım 14 249 kelime — 10 000'e bile inilemez.
 **Paketler:** A = 7 500 metin (hepsi ~%29'a); C = ~9 000–9 500 metin + daha az nesne (mimari ~%60, çerçeve ~%35, hesap
 ~%15); B = mimari dokunulmaz, hesap %30, çerçeve %50 → ~15 800 metin + nesneler ≈ sınırın 1,7 katı.
+**Tur 100 — yazarın yönlendirmesi:** *"Metin ve tablolarla birlikte 12K'da tamamlayabiliriz … Bazı şeyler (elbette bulgunun
+çalışması gibi) eke taşınmak zorunda. Hesabın nasıl yapıldığı gerçekten makalede bulunmak zorunda mı acaba... Örneğin: 'CD değeri
+hesaplanmış olup 2.3 olarak bulunmuştur [Ek-1]' … tabloların mantıklı şekilde bir araya getirilebilecek yapılarının var
+olduğunu düşünüyorum."* → Claude'un ayrıntılı önerisi Tur 100 metninde (external-review-104): 4 tablo + 4 şekil ≈ 3 100;
+metin bütçesi 8 450 (bölüm bölüm); sonuç cümlesi biçimi (yöntem adı + değişen + sonuç + sınır + ek işaretçisi); gövde-yalnız
+yorumlanabilirlik kuralı (ChatGPT); ek ikiye (dergi eki / depo denetim arşivi); iş sırası nesneler → hesap → çerçeve → mimari;
+yeni denetim: gövdedeki her sonuç sayısı ekteki çalışmada aynı değerle bulunmalı. **Yazar okuyucu cevaplarından sonra karar verecek.**
