@@ -53,7 +53,7 @@ lifted anyway.
 
 Its cost is not linear. Mass growth feeds itself — MTOW = m_payload / (1 − f_empty − f_energy)
 puts additional empty mass through a multiplier that grows as the denominator shrinks — and in
-the vertical phase the same increment is charged a second time, because at a fixed disc area
+the vertical phase the same increment is counted a second time, because at a fixed disc area
 hover power scales with W^1.5. *(The exponent is a property of the scaling rule chosen: holding
 disc loading constant instead makes hover power grow linearly with weight, and Section 12 uses
 that.)* A modest dead-mass fraction becomes a large payload penalty.
@@ -132,10 +132,10 @@ unused, for an hour. And the consequence propagates: sizing by hover means an ov
 or a battery that must deliver a peak it will rarely be asked for, or both — and whichever is
 chosen, the extra installed capacity is mass: a cost in kilograms, though not Bill 1.
 
-### The charges are coupled: remedies move cost between them
+### The charges are coupled: remedies move cost, among the three charges or outside them
 
 The three charges are not independent problems with independent fixes. **Each known partial
-remedy reduces one and raises another.** They are three distinct accounting quantities — kilograms,
+remedy reduces one charge and pays for it, in another charge or in a cost outside the three.** They are three distinct accounting quantities — kilograms,
 drag counts, installed kilowatts — and they are not assumed to be independent physical causes: a
 remedy can move a requirement from one currency into another. Whether a change of size moves them
 together, which would make them one quantity under three names, is tested in Section 12.
@@ -175,10 +175,8 @@ gain for a five-percent mass penalty.** Bill 2 was converted almost exactly into
 
 ### What this accounting is for
 
-**The accounting is refuted by any remedy that reduces one charge while leaving the others no
-worse and adding no cost of its own.** That is the test it has to survive, and the table above is
-where it would fail: every entry in it is a documented transfer, and a counter-example would be a
-move whose right-hand column is genuinely empty.
+**The accounting is refuted by a counter-example, and the table above is where one would appear:**
+every entry in it moves cost rather than removing it.
 
 **Stated positively, so that the test can actually be run: a counter-example is a remedy that
 reduces one of the three charges, leaves the other two no worse, and whose own cost is either
@@ -191,7 +189,7 @@ a better bargain in one currency refutes it.
 **Two clarifications keep the test from being either too easy or unfalsifiable.** **"No worse" is
 judged against the architecture the move modifies.** A charge that architecture already paid, left no
 larger, is no worse. A charge it did not pay, imposed by the move, is worse; so is one it paid, enlarged
-by it. A move that reduces one charge and makes another worse is a transfer. And a remedy whose cost
+by it. A move that reduces one charge and makes another worse is a transfer between charges. And a remedy whose cost
 falls **outside** the three charges does not refute the accounting, because the accounting is about
 those three; **but it is not thereby exempt from being counted.** The tilting family's mechanism is
 named in the table for exactly that reason, and it is the reader's to weigh against what the
@@ -226,6 +224,7 @@ any aircraft.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 89 (içerik, S-15/S-16; dört okuyucu + Claude):** 2E "Each known partial remedy reduces one and raises another" → "reduces one charge and pays for it, in another charge or in a cost outside the three"; 2F ilk paragraf (iki farklı sınama) → "The accounting is refuted by a counter-example, and the table above is where one would appear: every entry in it moves cost rather than removing it."; 3.1 "…is a transfer between charges"; başlık "remedies move cost between them" → "…among the three charges or outside them" (dördü değişsin dedi; sözcük DeepSeek'inki, teyide); 2B "charged a second time" → "counted" | Tur 88 metni §2 |
 | **Tur 88 — S-14 silindi:** kuyruk üstü "beşte bir" cümlesi — dört okuyucunun koşulu ("gelecek tura kadar kaynak gelmezse sil") gerçekleşti; hiçbir okuyucu kaynak bulamadı (Grok aradı), depoda yok, yazara soruldu. Örnek oran (3,2; ~4) ona dayanmıyor. Yazar kaynağı bulursa geri gelir | Tur 87 metni §5 |
 | **Tur 88 (yeniden kurma, 2A–2D):** 1 281 → 1 233. A1 R ("lighter or cleaner"), B1 D, C1 D, D1 D ("often the largest" — kaynaksız), **S-13** D2 ("returns to Bill 1" → "a cost in kilograms, though not Bill 1"), **S-14** D3 ("borne out" → "points the same way"; ifadeyle eşleşme düştü; kaynak yok — gelmezse silinecek). Dört okuyucu + Claude. Özgün Ek S2'de donmuş | Tur 87 metni |
 | **Tur 83 (içerik):** S5-1'in tanımı üç cümle — "left no larger" (azalan dahil), "imposed … so is one it paid, enlarged by it", aktarım yalnız "reduces one charge and makes another worse" birleşimi. Dört okuyucu + Claude (Grok ilk ayrımını yüksek disk yükü satırıyla geri çekti) | Tur 82 metni §3 |

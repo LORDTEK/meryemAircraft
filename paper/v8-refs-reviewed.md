@@ -34,3 +34,4 @@ gövde tablosunda tilt satırı yok (karşılaştırma S13'e taşınmış); Tur 
 | 3 | Saying otherwise would let a candidate win that line by wording. - Hardwa | 3B, second departure (3D bullet; Qwen P1, Round 85) | Tur 88 |
 | 3 | The third departure is refused by a means other than the one the field h | 3B, third departure (Round 87) | Tur 88 |
 | 3 | A tilting architecture accepts that departure and buys its way out of the | 3B, first departure (S-2, Round 87) | Tur 88 |
+| 2 | The accounting is refuted by a counter-example, and the table above is w | 2E's table, above (Round 89) | Tur 89 |

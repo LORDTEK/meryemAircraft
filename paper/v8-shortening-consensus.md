@@ -291,3 +291,7 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Adım 3 kapanış; Adım 10 "account for"; 2A–2D | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı** (Tur 88); 2A–2D teyide |
 | S-14 sil (kaynak yoksa) | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı** (koşul gerçekleşti) |
 | S-15/S-16 seti; "counted" (2B, Adım 4) | — | — | D (counted) | — | öneren | Oylamada |
+| S-15/S-16 seti; "counted" (2B, Adım 4) | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı** (Tur 89); teyide |
+| 2E başlığı değişsin | ✓ | ✓ | ✓ | ✓ | ✓ | Uygulandı (DeepSeek'in sözcükleri); sözcük teyide |
+| Adım 13 "moves cost rather than removing it" | — | — | — | Q P1 taraması | öneren | Oylamada |
+| 2E–2F E1, E2, E3 (S-18), F1 | — | — | — | — | öneren | Kör okuma + oylama |

@@ -16,6 +16,14 @@ DEGISTI = {
         "Whatever that store turns out to cost, holding it common puts the same assumption on all three.",
     "The point-mass model prescribes the attitude and therefore cannot charge for the trajectory the aircraft flies while it is being rotated into that attitude.":
         "The point-mass model prescribes the attitude and therefore cannot account for the trajectory the aircraft flies while it is being rotated into that attitude.",
+    "Each known partial remedy reduces one and raises another.":
+        "Each known partial remedy reduces one charge and pays for it, in another charge or in a cost outside the three.",
+    "The accounting is refuted by any remedy that reduces one charge while leaving the others no worse and adding no cost of its own.":
+        "The accounting is refuted by a counter-example, and the table above is where one would appear: every entry in it moves cost rather than removing it.",
+    "That is the test it has to survive, and the table above is where it would fail: every entry in it is a documented transfer, and a counter-example would be a move whose right-hand column is genuinely empty.":
+        "The accounting is refuted by a counter-example, and the table above is where one would appear: every entry in it moves cost rather than removing it.",
+    "A move that reduces one charge and makes another worse is a transfer.":
+        "A move that reduces one charge and makes another worse is a transfer between charges.",
     "The architecture converts a power-system charge into a mass one.":
         "The architecture converts a power-system charge into a cost in kilograms.",
 }

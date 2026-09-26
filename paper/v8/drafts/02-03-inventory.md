@@ -236,3 +236,12 @@ v8_refs extended (supplement refs; relational-noun guard). **S-15:** 2F states a
 entry … a documented transfer" are false for the tilting row in S5-2's second branch; "transfer" has a narrow (3.1) and a
 broad (protected) sense. Proposals to vote; no 2E/2F draft until settled. "charged a second time" (2B) / "charged again in
 hover" (Step 4) → "counted" to vote.
+
+## Round 89 — S-15/S-16 applied; 2E–2F drafted
+
+Applied (four + Claude): 2E sentence, 2F first paragraph, 3.1 "transfer between charges", heading (wording DeepSeek's, to
+confirm), "counted" (2B, Step 4). Transfer sweep: S5-2 "the row is a transfer" (narrow, unlabelled) → F1; Step 13 "every
+remedy transfers a charge rather than removing it" (S-16 in another step) → vote. 2E–2F draft 1 257 → 1 280: E1 R ("paid
+in"), E2 D ("worth more than the table"), **S-18** E3 (the Bacchini thesis locates the retraction's "great advantage" in
+speed, +5 m/s; our paragraph quoted only the range half), F1 R. Evidence verified in the thesis this round (30 %, 5 %,
+119 → 121 km). Watch (Qwen): 2D "The quantities on the right" is anchored to the adjacent equation.

@@ -192,7 +192,7 @@ lifted anyway.
 
 Its cost is not linear. Mass growth feeds itself — MTOW = m_payload / (1 − f_empty − f_energy)
 puts additional empty mass through a multiplier that grows as the denominator shrinks — and in
-the vertical phase the same increment is charged a second time, because at a fixed disc area
+the vertical phase the same increment is counted a second time, because at a fixed disc area
 hover power scales with W^1.5. *(The exponent is a property of the scaling rule chosen: holding
 disc loading constant instead makes hover power grow linearly with weight, and Section 12 uses
 that.)* A modest dead-mass fraction becomes a large payload penalty.
@@ -271,10 +271,10 @@ unused, for an hour. And the consequence propagates: sizing by hover means an ov
 or a battery that must deliver a peak it will rarely be asked for, or both — and whichever is
 chosen, the extra installed capacity is mass: a cost in kilograms, though not Bill 1.
 
-### The charges are coupled: remedies move cost between them
+### The charges are coupled: remedies move cost, among the three charges or outside them
 
 The three charges are not independent problems with independent fixes. **Each known partial
-remedy reduces one and raises another.** They are three distinct accounting quantities — kilograms,
+remedy reduces one charge and pays for it, in another charge or in a cost outside the three.** They are three distinct accounting quantities — kilograms,
 drag counts, installed kilowatts — and they are not assumed to be independent physical causes: a
 remedy can move a requirement from one currency into another. Whether a change of size moves them
 together, which would make them one quantity under three names, is tested in Section 12.
@@ -314,10 +314,8 @@ gain for a five-percent mass penalty.** Bill 2 was converted almost exactly into
 
 ### What this accounting is for
 
-**The accounting is refuted by any remedy that reduces one charge while leaving the others no
-worse and adding no cost of its own.** That is the test it has to survive, and the table above is
-where it would fail: every entry in it is a documented transfer, and a counter-example would be a
-move whose right-hand column is genuinely empty.
+**The accounting is refuted by a counter-example, and the table above is where one would appear:**
+every entry in it moves cost rather than removing it.
 
 **Stated positively, so that the test can actually be run: a counter-example is a remedy that
 reduces one of the three charges, leaves the other two no worse, and whose own cost is either
@@ -330,7 +328,7 @@ a better bargain in one currency refutes it.
 **Two clarifications keep the test from being either too easy or unfalsifiable.** **"No worse" is
 judged against the architecture the move modifies.** A charge that architecture already paid, left no
 larger, is no worse. A charge it did not pay, imposed by the move, is worse; so is one it paid, enlarged
-by it. A move that reduces one charge and makes another worse is a transfer. And a remedy whose cost
+by it. A move that reduces one charge and makes another worse is a transfer between charges. And a remedy whose cost
 falls **outside** the three charges does not refute the accounting, because the accounting is about
 those three; **but it is not thereby exempt from being counted.** The tilting family's mechanism is
 named in the table for exactly that reason, and it is the reader's to weigh against what the
@@ -506,7 +504,7 @@ An accounting proposed by the same people who then use it invites one obvious ob
 
 **The prediction has two halves, and only the first is a derivation.**
 
-> **First half, derived from Section 2.** A configuration carrying a dedicated lift system pays for it in gross weight, and the payment is amplified: additional empty mass enters through a multiplier that grows as the empty-mass fraction rises, and the same increment is charged again in hover.
+> **First half, derived from Section 2.** A configuration carrying a dedicated lift system pays for it in gross weight, and the payment is amplified: additional empty mass enters through a multiplier that grows as the empty-mass fraction rises, and the same increment is counted again in hover.
 
 > **Second half, not derived.** That the cruise efficiency the arrangement buys does not cover that payment. Section 2 predicts the charge and the amplification; **it does not prove that the credit must lose.** A dedicated lift system raises the empty-mass fraction and may lower the energy fraction at the same time, and which wins is a closure result rather than a consequence of the accounting.
 

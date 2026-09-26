@@ -1593,3 +1593,13 @@ v7 kâğıdını denetliyor; v8'de bunu v8_assemble yapıyor. Turlar boyunca "li
 sonuç değişmedi; v8_assemble her turda geçti). **Yeni içerik bulguları (taslak yok, önce oylama):** S-15 (2F'de iki farklı
 çürütme sınaması), S-16 ("transfer"in dar ve geniş iki anlamı; tilt satırı S5-2'nin ikinci kolunda "reduces one and raises
 another"ı karşılamıyor). DeepSeek: "charged a second time" (2B, Adım 4) → "counted".
+
+# Tur 89 — Tur 88 metnine dört cevap; S-15/S-16 uygulandı
+
+**Oybirliği:** 2E cümlesi, 2F ilk paragraf, 3.1 "transfer between charges", "counted" (2B ve Adım 4); başlık dördünce değişsin
+dendi → DeepSeek'in sözcükleri (üç öneri among/beyond/outside diyordu), veto hakkıyla. ChatGPT'nin "removing a charge" önerisi
+uygulanmadı: S5-2'nin ikinci kolunda tilt Fatura 1'i gerçekten kaldırıyor, kaldırmadığı şey maliyet — öneri tam o satır için
+yanlış olurdu. **"Transfer" taraması:** S5-2'de etiketsiz dar anlam (F1) ve Adım 13'te S-16'nın kopyası ("every remedy
+transfers a charge rather than removing it") → oylamada. **2E–2F taslağı 1 257 → 1 280 (+23):** kısalmıyor. **S-18:** Bacchini
+tezini bu tur açtım; sayılar doğru ama tezin kendisi geri çekmenin "büyük avantajını" hızda buluyor (+5 m/s) — biz yalnız
+menzil yarısını alıntılamışız. Eklenen cümle bunu ve muhasebenin hızı fiyatlamadığını söylüyor.

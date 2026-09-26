@@ -102,6 +102,12 @@ EMEKLI = {
     "the ratio this expression gives": "Tur 88: S-14 -- hesaplanmamis eslesme (Grok P43)",
     "cannot charge for": "Tur 88: fatura sozcugu genel fiil (Adim 10)",
     "carbon-fibre tail-sitter": "Tur 88: S-14 -- kaynaksiz olcum silindi (kaynak bulunursa yazar karariyla doner)",
+    "reduces one and raises another": "Tur 89: S-16 -- tilt satiri S5-2'nin ikinci kolunda baska fatura artirmiyor",
+    "genuinely empty": "Tur 89: S-15 -- olumlu sinamadan siki ikinci sinama",
+    "every entry in it is a documented transfer": "Tur 89: S-16",
+    "move cost between them": "Tur 89: S-16 basligi (Grok P45)",
+    "charged a second time": "Tur 89: genel fiil; ikinci odeme askı gucunde",
+    "charged again in hover": "Tur 89: ayni (Adim 4)",
     "moves* the charge": "Tur 80: mekanizma fatura degil, maliyet (Qwen; dort okuyucu)",
 }
 

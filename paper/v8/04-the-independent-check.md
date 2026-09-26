@@ -16,7 +16,7 @@ An accounting proposed by the same people who then use it invites one obvious ob
 
 **The prediction has two halves, and only the first is a derivation.**
 
-> **First half, derived from Section 2.** A configuration carrying a dedicated lift system pays for it in gross weight, and the payment is amplified: additional empty mass enters through a multiplier that grows as the empty-mass fraction rises, and the same increment is charged again in hover.
+> **First half, derived from Section 2.** A configuration carrying a dedicated lift system pays for it in gross weight, and the payment is amplified: additional empty mass enters through a multiplier that grows as the empty-mass fraction rises, and the same increment is counted again in hover.
 
 > **Second half, not derived.** That the cruise efficiency the arrangement buys does not cover that payment. Section 2 predicts the charge and the amplification; **it does not prove that the credit must lose.** A dedicated lift system raises the empty-mass fraction and may lower the energy fraction at the same time, and which wins is a closure result rather than a consequence of the accounting.
 
@@ -36,6 +36,7 @@ It establishes that one prediction of the accounting holds on data produced else
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 89:** tek kelime — "charged again in hover" → "counted again in hover" (DeepSeek; dört okuyucu + Claude): ikinci ödeme askı gücünde, kütlede değil; genel fiil | Tur 88 metni §2 |
 | **Tur 82:** tek cümle — *"The tilt-wing is the transfer property of Section 2 appearing in someone else's data"* → *"is consistent with …, in someone else's data"* (Qwen P2 çapraz okuması; dört okuyucu + Claude). #18 ile aynı daraltma; S5-2 koşullu. S4 notu genişletildi | Tur 81 metni §3.3 |
 | **Tur 80:** tek kelime — *"moves the charge"* → *"moves the cost"* (Qwen; dört okuyucu + Claude). Adım 2'nin A′'sı mekanizmanın fatura değil maliyet olduğunu söylüyor. Başka *charge* kullanımları Fatura 1'in kendisi, değişmedi. S4'teki dondurulmuş kopya eski hâliyle duruyor (tasarım gereği) | Tur 79 metni §3 |
 | **Tur 78: KAPANDI.** 3.1, 3.2 ve 687 / 679 nesne denetimi dört okuyucu tarafından teyit edildi (Grok, ChatGPT, DeepSeek, Qwen). Adım 4 1 356 kelime. *(Açık kalan tek bağ: Adım 2'nin S-1 / S-5 sonucu 2E'yi değiştirirse Adım 4'ün eğme paragrafıyla tutarlılığı yeniden okunur.)* | Tur 77 metni §1 |
