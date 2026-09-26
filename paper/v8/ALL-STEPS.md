@@ -25,8 +25,8 @@ price an architecture in it must pay, and whether one arrangement pays less than
 
 ### The demand has been continuous for seventy years
 
-Tail-sitting prototypes flew in the 1950s, vectored-thrust and tilt-wing aircraft in the 1960s,
-tilt-rotors from the 1950s, and a broad family of hybrid vertical take-off and landing uncrewed
+Tail-sitting prototypes and the first tilt-rotor flew in the 1950s, vectored-thrust and tilt-wing
+aircraft in the 1960s, and a broad family of hybrid vertical take-off and landing uncrewed
 aircraft since roughly 2010. Different nations, services and propulsion philosophies have
 attacked the same problem for seventy years. **No field sustains that level of effort against a
 need that is not real.**
@@ -561,7 +561,8 @@ charged to the mass budget once** — Section 8 gives the fairing's sizing.
 **The saving has precedent and it is not this paper's observation.** Reviewing the tail-sitters
 of the 1950s, NASA recorded that *"dispensing with a conventional landing gear improved the
 empty weight fraction for these VATOL aircraft"*, while noting that some form of gear was still
-required on the tail surfaces. The present arrangement takes that benefit and extends it by
+required on the tail surfaces, that such gear was limited to low sink rates, and that tip-over was
+*"a constant worry in gusty air and on uneven ground, particularly with the propellers turning."* The present arrangement takes that benefit and extends it by
 giving the same structure the control duty as well.
 
 **And the stance base is a parameter rather than a constraint.** Moving the frame ends further
@@ -611,13 +612,13 @@ aircraft use about the body's longitudinal axis (Section 8), leaving that axis t
 carries it.
 
 **And one historical difficulty is inherited rather than removed.** A tail-sitting aircraft on
-the ground is more exposed to crosswind than a conventional one. The stance base is the answer
+the ground is more exposed to crosswind and to uneven ground than a conventional one. The stance base is the answer
 this configuration offers, and it is a parameter rather than a proof.
 
 ### What the historical record does and does not give back
 
-One of the 1954 objections is genuinely removed and it should be named exactly. The XFY-1's
-landing difficulty was attributed to a pilot judging a backwards vertical descent by looking
+One of the 1954 objections is genuinely removed and it should be named exactly. The landing
+difficulty of the 1950s tail-sitters was attributed to a pilot judging a backwards vertical descent by looking
 over his shoulder, to turbulence sensitivity and to reduced control power near touchdown.
 **There is no pilot here, and height above ground is a sensor measurement rather than a human
 estimate.** That disposes of the spatial-orientation objection and nothing else. **Precise
@@ -1972,8 +1973,8 @@ unit pack, discharged on the bench at its highest tested rate of 10.68C, deliver
 adopted. A NASA-funded design study adopts 4 kW per kilogram and describes that figure as about twice
 that of existing batteries. The same study notes lithium-polymer figures in the literature as high as
 3 kW per kilogram, which it cites rather than measures; against that figure the take-off demand is 1.8
-to 2.0 times. The study argues that, because a battery's pulse current limit can exceed its continuous
-limit by more than a factor of two, a pack with the required specific power may be possible with
+to 2.0 times. The study argues that, because pulse current limits can exceed continuous ones — by more
+than a factor of two in one commercial module it cites — a pack with the required specific power may be possible with
 existing technology; the study's hover lasts twenty seconds or less, and how long this aircraft's
 vertical phases draw the peak is not computed here. **The take-off demand of Section 10's closures is 3.7 to 4.1 times the
 bench rate — the highest figure obtained from a measurement — and 6.2 to 6.8 times the flown system's continuous
