@@ -17,3 +17,6 @@ Yeni bir çift eklenmeden önce iki bağlam da okunur.
 | 3.5 | 14 | askı talebi tezgâh oranının 3,1–3,5 katı | 6 | 3,5 lb ft⁻², elektrikli quadrotorun disk yüklemesi |
 | 22 | 14 | 22–25 % (yeniden kapanış tablosu, sürekli güç satırı) | 6 | +22 %, turboşaft quadrotora karşı fark (tablo) |
 | 25 | 14 | 22–25 % (aynı satır) | 8 | 25°, firar kenarı ok açısı |
+| 1.5 | 2 | W^1.5 üssü (sabit disk alanında askı gücü) | 10 | %1,5 kuruluş sınaması sapması |
+| 1.5 | 2 | W^1.5 üssü | 14 | 1.5 kW/kg, tezgâh ortalaması |
+| 3.2 | 2 | 3.2, örnek araç askı/seyir güç oranı | 12 | 2.4–3.2, dört kapanışta askı / motor oranı (Adım 11'in) |

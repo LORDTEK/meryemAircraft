@@ -2035,7 +2035,9 @@ of the architectures alone.
 | **Closed-loop hover control**, including the cost of declining the reaction-torque channel, the absorption of the hover torque residual left by trimming each pair's torque balance at cruise (Section 8), and the allocation of the tip pairs between take-off margin and attitude authority, which compete for the same propellers. | Whether hover is controllable with the authority computed (Sections 5 and 8) | **Analysis not yet done**: a control-allocation study, then simulation |
 | **Vertical descent and the landing transition.** Neither is analysed; the vortex ring state is not assessed, and the landing transition is not the take-off transition run backwards. | Whether the aircraft can come down as it went up (Section 5) | **Analysis not yet done** |
 | **Ground handling and landing loads.** The stance base is a parameter against static crosswind (Section 5); the response to a landing with lateral velocity or on uneven ground, and handling between flights, are not assessed. | Operation from unprepared sites | **Analysis not yet done** |
-| **The competitor's lift-group mass.** It decides the sign of the fixed-take-off-mass ordering in Section 13. | Section 13's sensitivity, not a claim | **Measured inventories** of lift-plus-cruise aircraft of this class |
+| **The competitor's lift-group mass.** It is one of the two assumed quantities that decide the sign of the fixed-take-off-mass ordering in Section 13; the other is the competitor's cruise propeller efficiency. | Section 13's sensitivity, not a claim | **Measured inventories** of lift-plus-cruise aircraft of this class |
+| **The competitor's cruise propeller efficiency.** Assumed at 0.80, not computed; with all three architectures at this configuration's propeller efficiency, this configuration leads under a fixed take-off mass at every closure (Supplement S13). | Section 13's sensitivity, not a claim | **Computation of that propeller at its operating point** |
+| **Rotor–structure and rotor–wing interference.** Inside Bill 2 in principle, absent from the build-up and not modelled (Section 11); the drag bracket's upper margin is the only provision made for it. | Bill 2, and so every closure | **Analysis not yet done** |
 | **Engine installation** — bay, intake, exhaust, cooling. | Mass, drag and packaging | **Absent from this work entirely** |
 | **Blade-family selection.** The criteria that would choose among the blade families — structural loads, acoustics, the motor operating point, rotor inertia, manufacture — are not modelled (Section 10). | Which point of the envelope the aircraft occupies | **Analysis not yet done** |
 | **Atmosphere.** Every number here is at sea level; the configuration's own altitude sensitivity has been computed for hover power and propeller efficiency, its effect on the Section 6 comparison has not. | The comparison in Section 6, made against a mission flown at altitude | **Analysis**: the direction of the effect has not been computed |
@@ -2080,6 +2082,125 @@ peak demand held through the vertical phases, a bench average over minutes, a co
 design assumption. **The gap is real on every one of them; the factor quoted is peak demand against
 bench average.** The package Section 10 closes on does not exist with any store the sources consulted
 here report as built.
+
+### Section 14 as it stood before recomposition into result sentences (frozen snapshot, complete)
+
+Section 10 closed the sizing loop on a declared package and said that whether an aircraft can be
+built to it is a different question. **This section is where that question is answered, and for the
+first item the answer is no.** Section 9 called this section a debt: questions the paper does not
+answer and that better evidence would. It is stated in that order — first the obstacle that is known,
+then what is not known.
+
+#### First, the known obstacle: the energy store
+
+**Every closure in Section 10 carries a buffer of 3.6 percent of take-off mass.** That figure is an
+input, not a result (Sections 11 and 12). What it implies can be computed. Taken at the electrical bus,
+where the buffer sits — the rotor demand divided by the machine and power-electronics efficiencies, less
+what the engine delivers through its generator — **the four closures ask the buffer for 4.7 to 5.2 kW per kilogram of buffer to hover, and 5.5 to 6.1
+kW per kilogram of buffer to leave the ground** with the tip pairs at full
+thrust, which is where the take-off margin comes from (Section 5).
+
+**What has been measured is a fraction of that, and the figures available are of four different
+kinds.** A 24-series nickel–cobalt–manganese pack designed, bench-tested and flown in a 210 kg-class
+electric VTOL aircraft is rated, as a flown system, at 0.892 kW per kilogram continuous; its 13.5 kg
+unit pack, discharged on the bench at its highest tested rate of 10.68C, delivered on average about
+1.5 kW per kilogram for about four minutes and reached 55.1 °C against the 60 °C limit its authors
+adopted. A NASA-funded design study adopts 4 kW per kilogram and describes that figure as about twice
+that of existing batteries. The same study notes lithium-polymer figures in the literature as high as
+3 kW per kilogram, which it cites rather than measures; against that figure the take-off demand is 1.8
+to 2.0 times. The study argues that, because pulse current limits can exceed continuous ones — by more
+than a factor of two in one commercial module it cites — a pack with the required specific power may be possible with
+existing technology; the study's hover lasts twenty seconds or less; this aircraft's vertical
+phases occupy about a minute in all (Section 2), and how long each draws the peak is not computed here. **The take-off demand of Section 10's closures is 3.7 to 4.1 times the
+bench rate — the highest figure obtained from a measurement — and 6.2 to 6.8 times the flown system's continuous
+rating**; hover alone is 3.1 to 3.5 times the bench rate. The comparison is between unlike ratings: a
+peak demand held through the vertical phases, a bench average over minutes, a continuous rating, a
+design assumption, and a literature figure the study cites without its rating. **The gap is real on every one of them; the factor quoted is peak demand against
+bench average.** The package Section 10 closes on does not exist with any store the sources consulted
+here report as built.
+
+**Closing the loop on a measured store is a sensitivity of that package, not a second aircraft.** The
+buffer is derived inside the loop from the take-off demand at a given specific power; everything else is
+Section 10's — the same fractions, including an airframe at thirty percent of take-off mass, and the same
+wing loading, disc loading and aspect ratio, so the lift-to-drag ratio is carried unchanged and, with the
+fuel fraction held, so is the range. **These masses are the Section 10 package with one input changed.
+They are not a structural closure at 100 kg**, and whether the airframe fraction holds at twice the mass
+it was set at is not established.
+
+| Buffer specific power, per kilogram of buffer | Take-off mass | Buffer | Change from Section 10 |
+|---|---:|---:|---:|
+| As Section 10 implies — 5.5 to 6.1 kW kg⁻¹ | 52.3 to 57.5 kg | 3.6 % | — |
+| 4 kW kg⁻¹, the design-study assumption | 56.6 to 61.2 kg | 5.0 to 5.5 % | +6 to +8 % |
+| About 1.5 kW kg⁻¹, the unit pack's bench rate | 94.6 to 101.2 kg | 13.4 to 14.7 % | **+76 to +81 %** |
+| 0.892 kW kg⁻¹, the flown system's continuous rating | about 335 kg | 22 to 25 % | set by nearness to non-closure |
+| 0.724 kW kg⁻¹, the unit pack's continuous rating | **does not close** | — | — |
+
+If Section 10's take-off masses are retained instead of re-closing at the bench rate, the
+payload falls to about 7 kg rather than 13. At the flown system's continuous rating the loop only just
+closes, and the mass it returns is set by how near the loop is to not closing rather than by anything
+about the aircraft. At the unit pack's continuous rating it does not close at all.
+
+**This is where the coupling Section 12 found is paid.** The buffer is the conversion the escape
+condition permits — kilowatts of hover peak paid in kilograms of store. Section 11's ledger records that
+conversion at the assumed store. **The escape from Bill 3 is real in the sense Section 3 defined it, and
+its price depends on a component whose required performance has not been demonstrated.**
+
+#### What the obstacle reaches, and what it does not
+
+**It reaches every number that describes this aircraft at Section 10's masses.** The closed masses of
+52.3 to 57.5 kg and the 13 kg payload assume the store. The ranges of 927 to 1 233 km survive the
+re-closure only because the fuel fraction is held, on an aircraft three-quarters heavier; they do not
+survive as 13 kg carried that far on a store that has been built. The vertical phase that Section 5
+reports as sized was sized with this store in it. And Section 13's orderings were computed with the
+store held common at 3.6 percent; how they would move with a measured store is not computed.
+
+**It does not reach the mechanism claim.** Sections 7 and 8 count the classes of mechanism that a
+tilting architecture needs to change regime and this one does not; that is a statement about hardware,
+and a heavier store adds no pivot. **Nor does it reach the cruise-efficiency comparison of Section 6
+as a ratio**: effective lift-to-drag ratio combines aerodynamic and propulsive efficiencies and has no
+mass in it. As a comparison of aircraft, that section describes the configuration at Section 10's
+masses, which the store does reach.
+
+#### Then what is not known
+
+The remaining items are not known obstacles; they are questions this work has not answered. Each is
+listed with what would settle it.
+
+- **the pitching moment through the transition** — validated aerodynamic data;
+- **section drag at low Reynolds number** — validated data, or a method validated there;
+- **the tip pairs' stopped cruise state** — analysis, or a measurement of one stopped state;
+- **the buffer's energy, not only its power** — analysis against a defined mission profile;
+- **the electrical path at peak** — component sizing and thermal analysis;
+- **the airframe's mass** — structural sizing, then a built article;
+- **the strip and the fairing** — measurement of both surfaces, and sizing of the actuation;
+- **closed-loop hover control**, including the declined reaction-torque channel, the hover torque
+  residual, and the allocation of the tip pairs between take-off margin and attitude authority, which
+  compete for the same propellers — a control-allocation study, then simulation;
+- **vertical descent and the landing transition** — analysis not yet done;
+- **ground handling and landing loads** — analysis not yet done;
+- **the competitor's lift-group mass** — measured inventories of lift-plus-cruise aircraft of this class;
+- **rotor–structure and rotor–wing interference** — inside Bill 2 in principle, absent from the build-up and not
+  modelled; analysis not yet done;
+- **engine installation** — absent from this work entirely;
+- **blade-family selection** — analysis not yet done;
+- **atmosphere** — analysis; the direction of its effect on the Section 6 comparison has not been computed.
+
+*(What each item bears on is in the full table, Supplement S14.)*
+
+**None of these is a small correction to a known quantity.** Two of them need validated data rather
+than more of the computation already done: the transition moment, because three methods have been
+tried against it and disagree, and the low-Reynolds section drag, because the one method used here is
+least reliable exactly there.
+
+#### What this section amounts to
+
+**The loop closes; the aircraft is not shown to.** At the energy store the paper can name the gap
+exactly, in specific power and in take-off mass. Everywhere else it can name only what would settle the
+question. **The architecture claim — that the configuration is arranged to change regime with no mechanism that
+reorients a propulsor — is a count of hardware, and nothing in this section reaches it.** What this section reaches
+is the aircraft, and the paper has not claimed the aircraft.
+
+The last section returns to the four axes of Section 9 and states what is claimed on each.
 
 ---
 

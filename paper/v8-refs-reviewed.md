@@ -35,3 +35,4 @@ gövde tablosunda tilt satırı yok (karşılaştırma S13'e taşınmış); Tur 
 | 3 | The third departure is refused by a means other than the one the field h | 3B, third departure (Round 87) | Tur 88 |
 | 3 | A tilting architecture accepts that departure and buys its way out of the | 3B, first departure (S-2, Round 87) | Tur 88 |
 | 2 | The accounting is refuted by a counter-example, and the table above is w | 2E's table, above (Round 89) | Tur 89 |
+| 14 | At the bench rate of about 1.5 kW per kilogram the loop closes at 94 | the re-closure table, in the frozen Section 14 inside S14 (to move to the clean journal supplement when the supplement is split) | Tur 109 |

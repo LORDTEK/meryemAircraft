@@ -438,4 +438,6 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | P28 son yan cümlesi | "the ones most worth measuring" tut | çıkar | "both are worth measuring" ya da çıkar | tut | kararsız | **Ayrışık — uzlaşmaya dek yan cümle yok** |
 | Yeni: puanlama kimliği denetimi (ChatGPT); P81 (uygulandı: emekli ifadeler); P82 + Qwen R107-P2 (engel önce — taslakta); Qwen R107-P1 (borç/kapsam — taslakta); bilinmeyenlere rakibin pervane verimi (Claude, S-38 yayılımı) | — | öneren | — | öneren | — | Oylamada |
 | **Adım 14 taslağı** (`drafts/14-recomposed.md`, ~1 145, %83) | — | — | — | — | öneren | **Oylamada** |
+| **Tur 108 cevapları:** S-38 ve J29 teyit; P28 yan cümlesi düşer (d koşuluyla, dördü); Adım 14'e veto yok; 16. bilinmeyen; adlar gövdede (ChatGPT ve DeepSeek görüş değiştirdi); depo figürü kimliği | ✓ | ✓ | ✓ | ✓ | ✓ | **Adım 14 uygulandı (Tur 109) → teyide** |
+| Yeni: J1 "…the answer is no: the required store performance is not demonstrated by the sources consulted here" (ChatGPT); D4 "the store figures" (Qwen); P83, P84 (Grok); Adım 15'te borç/kapsam denetimi (Qwen); iki rakip niceliği iz tablosunda çift (DeepSeek) | — | — | — | — | — | Oylamada |
 

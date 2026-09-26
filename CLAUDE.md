@@ -469,6 +469,10 @@ dahil herkesin hemfikir olduğu kısaltmalar uygulansın."*
   duyarlılık durumu ile geçerlidir. **Rastlantı kaydı** (Qwen R105-P2): `paper/v8-coincidences-reviewed.md`; `v8_outbound.py`
   işaretler, silmez. **P78 (Grok):** Adım 12 Fatura 1'i geri getirmez — ama Adım 1'in *"the last two of them at two scales"*
   ifadesi S-21'in doğru onarımıdır (Fatura 2 ve 3), emekliye ayrılmaz.
+- **Depo figürü kimliği (Tur 108; ChatGPT, dört okuyucu + Claude):** her depo sayısı değer + birim + puanlama türü (tepe /
+  tezgâh ortalaması / sürekli / tasarım varsayımı / alıntı) + kaynak + süre ile taşınır — bir denetim listesi, üçüncü koruma
+  ölçütü değil. **Engel önce, bilinmeyenler sonra** (Grok P82, Qwen): Adım 14 bilinen engelle açılır; her bilinmeyen bir soru
+  olarak ve adıyla gövdede durur, *"what would settle it"* ekte; hiçbir cümle *"cannot be built"* demez.
 
 ## 3. Doğrulama
 

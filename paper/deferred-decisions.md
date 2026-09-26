@@ -242,3 +242,7 @@ koşulu ve dört parçası, Fatura 1–3 tanımları, 2F çürütme testi ve tab
 long a component is needed and how long it is present is the origin of all three charges below."*). Adım 14 taslağı %83
 (korunan 240 kelime + 15 bilinmeyenin adları).
 
+**Tur 109 — hesap adımları (10–14) bitti.** 10: 954 · 11: 827 · 12: 1 001 · 13: 1 215 · 14: 1 153 → **5 150**; plan 2 000 (1 550 + 450).
+Düzyazı toplamı 19 960. P28'in *"most worth measuring"* rehberliği artık Adım 14'ün iki bilinmeyeninde: rakibin kaldırma grubu
+kütlesi ve seyir pervane verimi (DeepSeek, Tur 108 — yan cümle geri getirilmesin diye kayıt).
+
