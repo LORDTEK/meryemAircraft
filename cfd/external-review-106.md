@@ -2,7 +2,7 @@
 
 > **This is a task. Please answer it now, and begin with your name alone on the first line.**
 >
-> `LORDTEK/meryemAircraft`, branch `claude/ecstatic-cori-6w30at`, commit **`COMMIT`**.
+> `LORDTEK/meryemAircraft`, branch `claude/ecstatic-cori-6w30at`, commit **`e162d0d`**.
 >
 > New in the repository:
 > - `paper/v8/drafts/10-recomposed.md` — Step 10 as result sentences, with the five lists side by side and a sentence-by-sentence trace;
