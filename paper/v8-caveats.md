@@ -204,6 +204,9 @@ kaybolmasına (CLAUDE.md §0.8). Aynı denetimle sınanır.
 | 2 | "No worse" is judged against the architecture the move modifies. | Q+G+C+D+K |
 | 4 | It is used for three reasons, stated so that the choice is not merely the one that agreed | Q+G+C+D+K |
 | 4 | None is known to the authors. | Q+G+C+D+K |
+| 4 | And the source states the second half of the prediction in its own words, on a comparison the check does not use as its test. | G+C+D+Q+K |
+| 4 | but not enough to counter the increase in structure and propulsion weight. | G+C+D+Q+K |
+| 9 | A configuration may avoid all three and still be unbuildable, uncontrollable, or unsuited to its mission, and the accounting says nothing against that possibility. | G+C+D+Q+K |
 
 **Yazar kararıyla eke taşınan korunan cümleler (kural (iii), CLAUDE.md §2.4; `v8_caveats.py` ekte durduğunu sınar):**
 
@@ -215,3 +218,5 @@ kaybolmasına (CLAUDE.md §0.8). Aynı denetimle sınanır.
 *Tanım kaydı (Tur 111; Qwen P1, dört okuyucu + Claude): son beş Q+G+C+D+K satırı çerçevenin tanım cümleleri; kök (satır "is the origin of all three charges below") ve koşul zaten korunuyordu.*
 
 *P71 birimi (Tur 114; DeepSeek, dört okuyucu + Claude): Adım 4'ün "The instrument is now fixed, and it is not modified again." ve "Everything that follows is measured with it rather than added to it." cümleleri birlikte kalır ya da birlikte gider.*
+
+*Bölümler arası P71 (Tur 115; Grok P96, DeepSeek, dört okuyucu + Claude): Adım 9 madde 6'nın ikinci cümlesi, Adım 4'ün Ek S4'teki M1'inin gövdedeki taşıyıcısıdır; biri taşınırsa öbürü de gözden geçirilir.*

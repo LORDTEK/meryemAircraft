@@ -273,3 +273,8 @@ ChatGPT: gerekiyorsa bağlamsal tanıtım; Qwen: tanıtım ve beş aile. Adım 1
 (1 351'den; M1, M2). Çerçeve 4 405, plan 1 750. Taban ölçüm olarak kaydedildi (Qwen P3, DeepSeek); bütçe yazarın (E8).
 Sırada mimari: 9 → 1 → 5–6 → 7–8 → 15 (Tur 73 sırası).
 
+**Tur 115 — Adım 15 kurulurken:** savunulan cümle (*"a configuration sized to combine … and an account of what the combination
+costs"*) hem Adım 9'un sonunda hem Adım 15'in kapanışında; hangisinin evi olacağı o zaman (Grok, DeepSeek: Adım 9 çekirdeği;
+ChatGPT, Qwen: Adım 15'in kapanışı). Adım 15 T1'i yeniden kurmaz (kabul). **Yazara ses sorusu:** Adım 9 madde 2'nin *"would be
+absurd"*u, CLAUDE §0'daki yazar cümlesinin (*"Çok rotorluyla dikey iniş kalkışta yarışmak. Saçmadır."*) karşılığı.
+

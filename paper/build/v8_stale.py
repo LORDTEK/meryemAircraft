@@ -163,6 +163,7 @@ EMEKLI = {
     "the motors and the beams that carry them": "Tur 112: S-42 -- kaynak kirisler icin 'limited' diyor (s. 141)",
     "A NASA study that sizes five VTOL architecture families": "Tur 114: calismanin tek evi Adim 4 (P88, dis kanit kimligi; Qwen R113-P2 ileri isaretci)",
     "A NASA study sizing five VTOL architecture families": "Tur 114: calismanin tek evi Adim 4 (P88)",
+    "the second half of the prediction in its own words.": "Tur 115: S-43 -- kapsam yan cumlesi olmadan (Grok P95)",
 }
 
 

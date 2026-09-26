@@ -468,3 +468,9 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | O-a | hayır | "reject as a move" ama sözü geçen cümleyi O-a'sız alıntılıyor | hayır | hayır | hayır | Gövdede kalır (değişiklik yok); ChatGPT'ye teyit |
 | Yeni: P93 + DeepSeek (tanık kapsamı denetimi), ChatGPT (veri kümesi evi ≠ her iddianın tanığı), P94 (Adım 1 rota paragrafları büyümez), Qwen R113-P1 (kimlik/nüfus/köken izde işaretli), Qwen R113-P2 (ileri işaretçi — eski tanıtım ifadeleri emekli edilerek uygulandı), DeepSeek (S-43 cümlesi düzeltilince korunsun) | — | — | — | — | — | Oylamada |
 | Adım 9 listeleri (mimari aşaması başlıyor) | — | — | — | — | — | İstendi (metin tam, Ek A) |
+| **Tur 114 cevapları:** §1 teyit (C-kısa, Adım 4, NASA işaretçileri — kapandı); S-43 Grok'un sözcükleri + alıntıyla korunan; tanık kapsamı denetim maddesi; veri kümesi evi ≠ tanık kaydı; P94; Qwen iz işaretleri; Adım 9 madde 6 ikinci cümlesi korunan (bölümler arası P71, Grok P96/DeepSeek); T1'in evi Adım 9, Adım 15 tüketir | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı (Tur 115)** |
+| Adım 9 madde 2 "would be absurd" | cümle ya da sözcük çıksın | cümle çıksın | çıkabilir | yalnız "would be absurd" çıksın | yan cümle çıksın — **ama sözcük yazarın §0'daki "saçmadır"ı** | Okuyuculara + yazara (ses) |
+| Adım 9 açılış yerleşim cümlesi (D1) | taşı | S9'a taşı | "kalır" listesinde ve "kısaltılabilir" listesinde (çelişik) | ses — yazara | taşı | **Ayrışık** |
+| Adım 9 madde 4 "readers who convert…" (D2) | sil (ton) | sil | taşınabilir (vurgu) | **kalsın — etkin yasak** | taşı | **Ayrışık — Qwen'in gerekçesi öbürlerine** |
+| Adım 9 yeni adaylar N1–N4 (Claude) | — | — | — | — | öneren | Oylamada |
+| Savunulan cümle hem Adım 9'da hem Adım 15'te | Adım 9 çekirdek | Adım 15 sentez | Adım 9 çekirdek | Adım 15 kapanış | Adım 15 kurulurken karar | Açık |

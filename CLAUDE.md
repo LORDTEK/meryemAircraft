@@ -496,6 +496,10 @@ dahil herkesin hemfikir olduğu kısaltmalar uygulansın."*
   *"When an external comparison is used as the evidentiary test of a prediction, the body must retain the identities of the
   compared objects, the common basis on which they are comparable, and the qualification that the comparison is not controlled.
   Moving any one of these to the supplement while leaving the numerical result in the body is a halt condition."*
+- **Tur 114'te kabul (dört okuyucu + Claude):** **tanık kapsamı denetim maddesi** (Grok P93, DeepSeek) — bir veri kümesinden
+  alıntının karşılaştırdığı nesneler sınamanınkiler değilse cümle bunu söyler (S-43; seçici alıntıdan ayrı sınıf: doğru cümle,
+  yanlış karşılaştırma). **P94 (Grok):** Adım 1'in rota paragrafları üçüncü tasarım, görev sayısı ya da üç neden almaz. **T1'in
+  evi Adım 9; Adım 15 onu tüketir, yeniden kurmaz.** Bölümler arası P71: Adım 9 madde 6 ↔ Adım 4 M1 (Ek S4).
 
 ## 3. Doğrulama
 
