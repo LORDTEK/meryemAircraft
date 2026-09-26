@@ -145,8 +145,7 @@ that costs, and what the rest of the combination costs, is what the paper is for
 
 **None of the elements is new**, and Section 7 says so. Tail-sitting aircraft are seventy years
 old and uncrewed ones are ordinary; blended wing bodies have been a standing subject of transport
-research for three decades; series-hybrid propulsion has established precedent in small uncrewed
-aircraft. The route is not claimed to have been waiting to be found. **The contribution is the
+research for three decades; series-hybrid propulsion has been flown in a crewed motor glider and designed for small uncrewed aircraft. The route is not claimed to have been waiting to be found. **The contribution is the
 architecture: a configuration arranged to change regime by rotating the airframe rather than its
 propulsors, and so carrying no mechanism that reorients a propulsor.** The combination, the
 consequences of the choices inside it, and an accounting of what they cost are how that contribution
@@ -639,15 +638,15 @@ section**, and the two are combined in Section 7.
 
 ### The opponent, and the axis
 
-On this axis the alternative is the multirotor, and as in the previous section the comparison
+On this axis the alternative is the rotorcraft, multirotor and helicopter alike, and as in the previous section the comparison
 runs one way only. **Nothing here is claimed against fixed-wing aircraft.** The claim is
-confined to the one thing the multirotor family structurally lacks: **a surface that carries the
+confined to the one thing the rotorcraft family structurally lacks: **a surface that carries the
 cruise lift.**
 
 ### What the requirement is
 
 Section 5 established the first half: the aircraft must leave from and return to a site that
-supplies nothing. **A multirotor meets that requirement completely.**
+supplies nothing. **A rotorcraft meets that requirement completely.**
 
 What it does not meet is the second half of both missions. Wildfire observation and response,
 and cargo delivery to places without a runway, each require the aircraft to **cover distance
@@ -665,7 +664,7 @@ the cruise condition the lift coefficient follows from `C_L = W/(qS)`, the drag 
 balances that drag. It supports none of the weight.
 
 That is the whole of the difference, and it is worth stating in those plain terms because the
-consequence is structural. **A multirotor's discs must produce the lift and the propulsive force
+consequence is structural. **A rotorcraft's rotors must produce the lift and the propulsive force
 together, throughout cruise.** This aircraft separates them: a surface holds the aircraft up and a
 propeller pushes it along, and **the wing produces its lift without a separate continuous power
 supply of its own** — the power the aircraft spends in cruise goes to overcoming drag, of which
@@ -773,7 +772,7 @@ declines to attribute all of it to the hub.
 They are given together because omitting any one of them would make the comparison look better
 than it is.
 
-**Scale.** The compared vehicles are 1 670 to 3 275 kg; the designs here are of order 50 kg and
+**Scale.** The compared vehicles are 1 660 to 3 275 kg; the designs here are of order 50 kg and
 1 000 kg — Section 10 closes the light one between 52.3 and 57.5 kg across the same bracket.
 Reynolds number favours the larger aircraft, so the smaller design is at a disadvantage in this
 comparison rather than an advantage.
@@ -904,9 +903,7 @@ single coaxial contra-rotating pair at the nose, and four small coaxial pairs at
 ends of the tip frames, whose moment arms give pitch and yaw directly. The tip pairs are
 sized from the moment requirement rather than from weight support, but the thrust that sizing
 gives them also supplies the aircraft's entire take-off margin, because the nose pair is sized
-at thrust equal to weight and no more. That is the one place the configuration asks a component
-to do a second job it was not sized for; it is a dependency, it is reported as one where the
-sizing is audited, and it does not make the tip pairs a dedicated lift system.
+at thrust equal to weight and no more. This dual role is a dependency, reported as one where the sizing is audited, and it does not make the tip pairs a dedicated lift system.
 
 **The claim is narrower than it may appear, and the boundary matters.**
 
@@ -1148,7 +1145,7 @@ alternative, and this paper's alternatives differ from axis to axis.
 
 | Axis | Opponent | Status |
 |---|---|---|
-| Cruise efficiency | Multirotors | **Claimed, and bounded.** Cruise lift is carried on a surface rather than on rotors, which no sizing contract changes. The *size* of the resulting advantage is a calculation, not a consequence of that fact, and Section 6 measures it against two published quadrotors in one common definition. |
+| Cruise efficiency | Rotorcraft: multirotors and helicopters | **Claimed against multirotors, and bounded; against helicopters the published comparison is mixed and no advantage is claimed.** Cruise lift is carried on a surface rather than on rotors, which no sizing contract changes. The *size* of the resulting advantage is a calculation, not a consequence of that fact, and Section 6 measures it against two published quadrotors in one common definition. |
 | Operation without a runway | Fixed-wing aircraft | **Claimed**, in the sense stated below. |
 | The mechanism required to change regime | Tilting architectures | **Claimed.** This is the paper's contribution. |
 | Cruise efficiency and range | Other hybrids — lift-plus-cruise, tilt | **Not claimed, in either direction.** |
@@ -1194,7 +1191,7 @@ quantifying it would require a control-allocation study rather than a single tor
 claimed vertical capability pays none of the charges of Section 2, and nothing here competes
 with it on distance.
 
-**2. It does not claim vertical capability against multirotors.** That comparison runs the other
+**2. It does not claim vertical capability against rotorcraft.** That comparison runs the other
 way and would be absurd.
 
 **3. It does not claim that the aircraft has no moving parts.** What is eliminated is a *class
@@ -1304,7 +1301,7 @@ with the blade family in every closure reported here.
 
 **The reference point is the aerodynamic lift-to-drag ratio, not the effective one.** The
 effective ratio of Section 6 already contains the propeller efficiency; it is the currency in
-which the multirotor comparison is made, and it is not an input to a loop whose own chain supplies
+which the rotorcraft comparison is made, and it is not an input to a loop whose own chain supplies
 that efficiency separately.
 
 **The sizing rules that keep that ratio valid as the mass moves are worth stating, because they
@@ -1456,8 +1453,7 @@ should be read as a claim that the aircraft is buildable; the claim is narrower 
 the section's title makes — the loop closes analytically, on assumptions that are stated and
 that Section 14 tests.
 
-**And these range figures are carried forward as the closed-loop values, not as a ranking.** No
-multirotor is sized in this work, so no range comparison is made against one — Section 6 compares
+**And these range figures are carried forward as the closed-loop values, not as a ranking.** No multirotor or helicopter is sized in this work, so no range comparison is made against either — Section 6 compares
 the two families in cruise efficiency and says why it stops there. The comparison against the
 other hybrid architectures depends on the sizing contract and belongs to Section 13, which is
 where it is made.
@@ -2068,10 +2064,10 @@ The last section returns to the four axes of Section 9 and states what is claime
 The paper makes its claims on four axes, against four opponents (Section 9), and on each it stops where
 its evidence stops.
 
-**Cruise efficiency, against multirotors — claimed, and bounded.** Cruise lift is carried on a surface
+**Cruise efficiency, against rotorcraft — claimed against multirotors, and bounded; mixed against helicopters.** Cruise lift is carried on a surface
 rather than on rotors. The size of the advantage is a calculation, not a consequence of that statement:
 positive throughout against one published quadrotor, and from slightly behind to comfortably ahead against
-the other (Section 6). Nothing is claimed against multirotors on vertical capability.
+the other (Section 6). Nothing is claimed against rotorcraft on vertical capability.
 
 **Operation without a runway, against fixed-wing aircraft — claimed as sized, not demonstrated.** The
 vertical phase was sized with an energy store whose required performance the sources consulted here do not
