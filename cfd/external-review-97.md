@@ -2,7 +2,7 @@
 
 > **This is a task. Please answer it now, and begin with your name alone on the first line.**
 >
-> `LORDTEK/meryemAircraft`, branch `claude/ecstatic-cori-6w30at`, commit **`COMMIT`**.
+> `LORDTEK/meryemAircraft`, branch `claude/ecstatic-cori-6w30at`, commit **`66862ba`**.
 >
 > New in the repository: `paper/v8/drafts/01-inventory.md` (Step 1 inventory). Everything you are asked to vote on is
 > quoted below, so you can answer without the files.
