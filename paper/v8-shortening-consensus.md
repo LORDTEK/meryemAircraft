@@ -434,4 +434,8 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | ChatGPT'nin P27 yüklem denetimi → **S-38** (işaret iki parametreye bağlı; cümle birini adlandırıyor) | — | öneren | — | — | ✓ doğrulandı | Onarım önerisi oya |
 | P78: Adım 1'in "the last two of them at two scales" ifadesi emekliye ayrılmaz (S-21'in doğru onarımı) | öneren | — | — | — | ✓ | Grok'a bilgi |
 | Yeni: D31 korunsun (Grok P80, DeepSeek); P79; karşılaştırma kurgusu koruması (ChatGPT); D26b P27–P28 ile birim (DeepSeek); J13 "transferred…" korunsun (Claude) | — | — | — | — | — | Oylamada |
+| **Tur 107 cevapları:** Adım 12–13 teyit; S-38 onarımı (P27, P28 çekirdeği, Adım 9); D26b + P27 + P28 birim; J29 kısa biçim; D31 korunur (J30 değil); karşılaştırma kurgusu denetim listesi; "transferred from a different airframe" korunur | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı (Tur 108) → teyide**; J29'a düşen niteleyici geri eklendi (benim hatam) |
+| P28 son yan cümlesi | "the ones most worth measuring" tut | çıkar | "both are worth measuring" ya da çıkar | tut | kararsız | **Ayrışık — uzlaşmaya dek yan cümle yok** |
+| Yeni: puanlama kimliği denetimi (ChatGPT); P81 (uygulandı: emekli ifadeler); P82 + Qwen R107-P2 (engel önce — taslakta); Qwen R107-P1 (borç/kapsam — taslakta); bilinmeyenlere rakibin pervane verimi (Claude, S-38 yayılımı) | — | öneren | — | öneren | — | Oylamada |
+| **Adım 14 taslağı** (`drafts/14-recomposed.md`, ~1 145, %83) | — | — | — | — | öneren | **Oylamada** |
 

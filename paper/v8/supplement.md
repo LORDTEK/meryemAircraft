@@ -882,6 +882,13 @@ readers who convert one into the other are not quoting this paper.
 | The mechanism required to change regime | Tilting architectures | **Claimed.** This is the paper's contribution. |
 | Cruise efficiency and range | Other hybrids — lift-plus-cruise, tilt | **Not claimed, in either direction.** |
 
+### The fourth-row paragraph of Section 9 as it stood before S-38 was repaired (frozen snapshot)
+
+**The fourth row is the important one**, and the reason it is a refusal rather than a result is
+the paper's own finding in Section 13. Against lift-plus-cruise the ordering depends on the sizing
+contract: across the three contracts it moves substantially, and under one of them its sign changes
+inside the envelope and turns on a mass fraction of the competitor that is not measured.
+
 ---
 
 ## S10. Section 10's paragraphs as they stood before compression (from Section 10, Round 73)

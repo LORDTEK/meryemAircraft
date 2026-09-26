@@ -96,13 +96,13 @@ boşluğa duyarsız. `G` = Grok, `D` = DeepSeek, `C` = ChatGPT, `Q` = Qwen, `K` 
 | 13 | What the bound gives is a size, not an order. | G |
 | 13 | how much of it they fill is not computed | G |
 | 13 | A ranking against a competitor modelled as a bound is not a ranking, and no range claim is made against the tilting family in either direction. | G |
-| 13 | Which architecture ranks first under a fixed take-off mass is therefore decided, in this model, by a mass fraction of the competitor that this study has not measured. | G |
+| 13 | Which architecture ranks first under a fixed take-off mass is therefore decided, in this model, by quantities this study assumes for the competitor rather than measures: its lift-group mass fraction and its propeller efficiency. | D+G+C+Q+K |
 | 13 | These are three different questions, not three estimates of one answer. | D |
 | 13 | Holding Bill 3 common is a choice of question, and it has a direction | D |
 | 13 | The choice runs against this configuration. | D |
 | 13 | The tilting layout carries no cruise drag penalty at all. That is an idealisation in its favour. | D |
 | 13 | Neither figure is measured. | D |
-| 13 | The sign under a fixed take-off mass is not a result about the architectures; it is a result about that parameter. | D |
+| 13 | The sign under a fixed take-off mass is not a result about the architectures; it is a result about those quantities. | D+G+C+Q+K |
 | 13 | Comparing computed figures against assumed ones favours whichever is assumed more optimistically. | D |
 | 14 | The package Section 10 closes on does not exist with any store the sources consulted here report as built. | G |
 | 14 | It does not reach the mechanism claim. | G |
@@ -194,6 +194,9 @@ kaybolmasına (CLAUDE.md §0.8). Aynı denetimle sınanır.
 | 15 | while the tip pairs free-wheel or are held by motor torque — no rotor stowing, indexing or stopping mechanism | K+G+C+D+Q |
 | 10 | What the kinematic model leaves out is not the difficulty of turning the aircraft but the trajectory the aircraft flies while it is being turned. | C+Q+G+D+K |
 | 11 | Bill 2 therefore occupies a larger share where the clean-body drag is lower | D+G+C+Q+K |
+| 13 | With a lighter lift group the lift-plus-cruise layout leads under all three contracts at every closure; with a heavier one this configuration leads under a fixed take-off mass at every closure; with a common propeller efficiency a reversal appears at every closure. | D+G+C+Q+K |
+| 12 | A larger aircraft of this type turns more slowly, and must. | G+D+C+Q+K |
+| 13 | transferred from a different airframe | C+G+D+Q+K |
 
 **Yazar kararıyla eke taşınan korunan cümleler (kural (iii), CLAUDE.md §2.4; `v8_caveats.py` ekte durduğunu sınar):**
 

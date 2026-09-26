@@ -154,6 +154,9 @@ EMEKLI = {
     "total of the three": "Tur 106 (Grok P76; dort okuyucu + Claude): uc faturanin govde toplami yok -- P6/J7 kilidi",
     "combined cost of the three bills": "Tur 106 (Grok P76): ayni",
     "sum of the three bills": "Tur 106 (Grok P76): ayni",
+    "turns on a mass fraction of the competitor": "Tur 108: S-38 -- isareti iki nicelik belirliyor (kutle orani VE pervane verimi); Grok P81",
+    "by a mass fraction of the competitor that this study has not measured": "Tur 108: S-38",
+    "it is a result about that parameter": "Tur 108: S-38 -- tekil nesne",
 }
 
 

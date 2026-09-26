@@ -234,3 +234,11 @@ sayılardan söz eder. Dört okuyucu + Claude: yazara, kalem dökümüyle birlik
 ≈ **10 500**, %50'ye inerse ≈ **12 100**, 12–13 gibi %58'e inerse ≈ **13 400** olur; tablo + şekil + özet (3 450) eklenince
 makale 14 000–16 900 aralığına düşer, 12 000'e karşı. Karar yazarın; yeniden dağıtım 14 ve 15 bitince.
 
+**Tur 108 — okuyucuların çerçeveden verdiği örnekler (yeniden dağıtım günü için).** *Taşınabilir (bulgu mu hesap mı testi
+serbest bırakır):* Adım 2'nin örnek aracı (100 N m⁻², L/D 15, 30 m s⁻¹, geometrik 3,2) — **DeepSeek ve Qwen ayrı ayrı aynı
+örneği verdi**; gövdede sonuç cümlesi kalır (oran disk yüklemesi, L/D, seyir hızı ve iki verimle belirlenir, askı süresiyle değil).
+Grok: Bacchini geri çekme aritmetiği (%30 / %5 / 119→121 km). *Kalması gereken tanımlar:* A′ (fatura ≠ para birimi), kaçış
+koşulu ve dört parçası, Fatura 1–3 tanımları, 2F çürütme testi ve tabanı, Adım 2'nin kök cümlesi (*"The mismatch between how
+long a component is needed and how long it is present is the origin of all three charges below."*). Adım 14 taslağı %83
+(korunan 240 kelime + 15 bilinmeyenin adları).
+

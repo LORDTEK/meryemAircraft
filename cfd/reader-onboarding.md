@@ -214,15 +214,14 @@ The body is about **26 000 words**, and the journal's working target is **about 
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 107.**
+**Round 108.**
 
 | Block | State |
 |---|---|
-| Length | the author decided (Round 101): 12 000 words in all; 5 tables + 3 figures. Round 105: keep recomposing at the method's rate; redistribute later. **Measured (Round 107):** Steps 10–13 came to 50 % of their source, not 40 % |
-| Rule (iii) | approved by the author; used twice |
-| Steps 10–13 | **recomposed into result sentences**; originals in Supplements S10–S13 in full |
-| Open | S-38 (Step 13's P27–P28 and Step 9 name one of two parameters that decide the sign); the repair is to vote |
-| Next | Step 14 |
+| Length | the author decided (Round 101): 12 000 words in all; 5 tables + 3 figures. Round 105: keep recomposing, redistribute later. Measured: Steps 10–13 at 50 % of their source |
+| Steps 10–13 | recomposed into result sentences; originals in Supplements S10–S13 in full |
+| S-38 | repaired: the fixed-take-off-mass sign is decided by two assumed quantities of the competitor, its lift-group mass fraction and its propeller efficiency (Steps 9 and 13) |
+| Now | **Step 14 draft** (`paper/v8/drafts/14-recomposed.md`), to vote |
 
 **The body is about 20 200 words of prose** (tables not counted). Recomposition into result sentences took Step 10 to about 40 %
 of its length; the plan asks for 8 500 in all, and 1 550 for Steps 10–13 together. The earlier recomposition of Steps 1–9

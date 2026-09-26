@@ -36,7 +36,7 @@ alternative, and this paper's alternatives differ from axis to axis.
 **The fourth row is the important one**, and the reason it is a refusal rather than a result is
 the paper's own finding in Section 13. Against lift-plus-cruise the ordering depends on the sizing
 contract: across the three contracts it moves substantially, and under one of them its sign changes
-inside the envelope and turns on a mass fraction of the competitor that is not measured. A paper that quoted one of those orderings as a result would be reporting its own choice of
+inside the envelope and turns on quantities of the competitor that are assumed rather than measured. A paper that quoted one of those orderings as a result would be reporting its own choice of
 contract. Against the tilting family the competitor can be modelled here only as a bound that pays no
 cruise penalty, and an ordering against a bound is not a result. **No
 range claim is made against the tilting or lift-plus-cruise families in either direction**, and
@@ -135,6 +135,7 @@ what it demands of anyone who uses the framework afterwards.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 108 — S-38 (dört okuyucu + Claude):** "turns on a mass fraction of the competitor that is not measured" → "turns on quantities of the competitor that are assumed rather than measured" (Adım 13 P27 ile aynı nesne; Grok P81). Özgün Ek S9'da | S-38 |
 | **Tur 102 (Tur 101 oybirliği; T1):** tablo gövdenin eksen tablosu oldu — 1. satırdan "and Section 6 measures it against two published quadrotors in one common definition" çıktı (Şekil 3 taşıyor), "(Section 6)" işaretçisi; 2. satır "Claimed as sized, not demonstrated (Sections 5, 14)"; 3. satır sayım/basitlik sınırı. Korunan kalın cümle aynen. Özgün tablo Ek S9'da | `drafts/objects.md` T1 |
 | **Tur 99:** eksen satırı korunan (168; dört okuyucu + Claude) | Adım 15 |
 | **Tur 98 (dört okuyucu + Claude; E5):** tablo satırı "Rotorcraft: multirotors and helicopters | Claimed against multirotors, and bounded; against helicopters the published comparison is mixed and no advantage is claimed."; 2. madde "against rotorcraft". Özgün Ek S9'da | Adım 6D S-27 |

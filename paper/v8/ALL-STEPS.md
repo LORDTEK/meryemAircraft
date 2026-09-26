@@ -1146,7 +1146,7 @@ alternative, and this paper's alternatives differ from axis to axis.
 **The fourth row is the important one**, and the reason it is a refusal rather than a result is
 the paper's own finding in Section 13. Against lift-plus-cruise the ordering depends on the sizing
 contract: across the three contracts it moves substantially, and under one of them its sign changes
-inside the envelope and turns on a mass fraction of the competitor that is not measured. A paper that quoted one of those orderings as a result would be reporting its own choice of
+inside the envelope and turns on quantities of the competitor that are assumed rather than measured. A paper that quoted one of those orderings as a result would be reporting its own choice of
 contract. Against the tilting family the competitor can be modelled here only as a bound that pays no
 cruise penalty, and an ordering against a bound is not a result. **No
 range claim is made against the tilting or lift-plus-cruise families in either direction**, and
@@ -1352,7 +1352,7 @@ On this configuration Bill 1 appears as the energy buffer: 3.6 percent of take-o
 
 ### Two costs that scale does not relieve
 
-**The cruise-efficiency gap under fixed pitch widens slightly with size**: 14.6 to 21.0 percent below the 0.80 assumed at the light design and **16.4 to 22.9 percent below it at the heavy one**, and as in Section 11 no variable-pitch counterfactual was computed. **The transition is where the square–cube relation is paid in full**: rotating the heavy design in the light design's two seconds would demand about 220 kW from the tip propellers, roughly the whole of hover power; at its own 5.1 seconds the demand is about 13 kW. **A larger aircraft of this type turns more slowly, and must.**
+The fixed-pitch gap also widens slightly with size, to 16.4 to 22.9 percent at the heavy design (Supplement S12); as in Section 11, no variable-pitch counterfactual was computed. **The transition is where the square–cube relation is paid in full**: rotating the heavy design in the light design's two seconds would demand about 220 kW from the tip propellers, roughly the whole of hover power; at its own 5.1 seconds the demand is about 13 kW. **A larger aircraft of this type turns more slowly, and must.**
 
 ### Why this section sits between the ledger and the contracts
 
@@ -1397,7 +1397,7 @@ Range of the lift-plus-cruise layout relative to this configuration:
 
 Section 2 predicted that such a ranking will move when the sizing rule changes, and can reverse. **The movement holds everywhere**, against both competitors, toward the lighter arrangement as the contract weights mass more; **the reversal holds at two of the four closures against lift-plus-cruise, and at none against the tilt bound.**
 
-**Where the reversal falls is decided by quantities this study has not measured or not fixed**: the blade family in the base case, and across the sensitivity cases the competitor's lift-group mass and the propeller basis (Supplement S13). With a lighter lift group the lift-plus-cruise layout leads under all three contracts at every closure; with a heavier one this configuration leads under a fixed take-off mass at every closure; with a common propeller efficiency a reversal appears at every closure. **Which architecture ranks first under a fixed take-off mass is therefore decided, in this model, by a mass fraction of the competitor that this study has not measured.** **Put plainly, the sign under a fixed take-off mass is not a result about the architectures; it is a result about that parameter**, and it is the one most worth measuring. What is robust is that the shift exists and runs toward the lighter aircraft; its size is the size of the mass difference.
+**Where the reversal falls is decided by quantities this study has not measured or not fixed**: the blade family in the base case, and across the sensitivity cases the competitor's lift-group mass and the propeller basis (Supplement S13). With a lighter lift group the lift-plus-cruise layout leads under all three contracts at every closure; with a heavier one this configuration leads under a fixed take-off mass at every closure; with a common propeller efficiency a reversal appears at every closure. **Which architecture ranks first under a fixed take-off mass is therefore decided, in this model, by quantities this study assumes for the competitor rather than measures: its lift-group mass fraction and its propeller efficiency.** **Put plainly, the sign under a fixed take-off mass is not a result about the architectures; it is a result about those quantities.** What is robust is that the shift exists and runs toward the lighter aircraft; its size is the size of the mass difference.
 
 ### What the framework asks of whoever uses it
 
