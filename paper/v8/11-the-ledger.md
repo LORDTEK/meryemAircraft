@@ -26,7 +26,7 @@ In the zero-lift drag build-up behind Section 10's bracket (line items in Supple
 
 Removing the hub and small items, the tip frames and the free-wheeling rotors gives a clean-body lift-to-drag ratio of 20.55 at the favourable end and 15.24 at the adverse one, against the aircraft's 10.82 and 8.79: **the configuration retains 52.6 and 57.7 percent.** Bill 2 therefore occupies a larger share where the clean-body drag is lower, because a near-constant charge is set against a smaller total — a statement about position within the drag bracket at one scale, not about size (Section 12).
 
-**Rotor–structure and rotor–wing interference is not modelled and is not carried as a line.** Section 2's wind-tunnel source found that a simulation assuming negligible rotor–structure interaction predicts lower drag than was experimentally observed; this build-up is such a calculation, and the bracket's upper margin is the only provision made for it.
+**Rotor–structure and rotor–wing interference is not modelled and is not carried as a line.** Section 2 quotes a wind-tunnel finding that a simulation assuming negligible rotor–structure interaction *"always predicts higher lift and lower drag than were experimentally observed"*; this build-up is such a calculation, and the bracket's upper margin is the only provision made for it.
 
 ### The cruise-efficiency gap under fixed pitch
 
@@ -54,6 +54,7 @@ Section 10's convergence does not cover the cost of declining the reaction-torqu
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 111 — S-40** (Tur 110; dört okuyucu + Claude): J18 özgün cümlesine birebir döndü — "Section 2 quotes a wind-tunnel finding that … *"always predicts higher lift and lower drag than were experimentally observed"*; …". Tur 105'te J diye oylattığım "Section 2's wind-tunnel source found…" silme değildi ve bulguyu Bacchini'ye bağlıyordu (benim hatam) | Tur 110 metni §5 |
 | **Tur 106 — Adım 11 yeniden kuruldu** (Tur 103–105; dört okuyucu + Claude, R cümlelerine veto yok; R15 "occupies" ve J18 teyitli): `drafts/11-recomposed.md` uygulandı. Kalem kalem sürükleme dökümü ve korunan "No line item at the adverse end…" **birlikte Ek S11'de — kural (iii), yazar kararı (E9, Tur 106)**. R15 korunur. Özgün gövde Ek S11'de tam | `drafts/11-recomposed.md` §3 iz |
 | **Tur 86 (S-8, dört okuyucu + Claude):** "converts a power-system charge into a mass one" → "into a cost in kilograms" — A′'ye göre depo fatura değil; aynı ifade Adım 3, 9, 11'de birlikte düzeltildi | Tur 85 metni §5 |
 | **Tur 73:** 5,4 m cümlesine model ve geometri geri kondu (ChatGPT'nin model kilidi; dört okuyucu + Claude). Kaynak: S11 tablosunun özgün satırı | Tur 72 metni §3 |

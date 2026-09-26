@@ -37,7 +37,7 @@ DEGISTI = {
     "The comparison is between unlike ratings: a peak demand held through the vertical phases, a bench average over minutes, a continuous rating, and a design assumption.":
         "The comparison is between unlike ratings: a peak demand held through the vertical phases, a bench average over minutes, a continuous rating, a design assumption, and a literature figure the study cites without its rating.",
 }
-ONCE = {2: "d2ca894", 9: "eb22a83", 14: "9f4cfcb", 3: "46b9628", 4: "8c4d712", 10: "024005c", 11: "65ae7de", 12: "c9fcdd7", 13: "c9fcdd7", 1: "e4b6847", 5: "fc646cb", 6: "38d5324", 7: "555b73b", 8: "0b4b24f"}   # kisaltmadan onceki commit
+ONCE = {2: ("d2ca894", "68c1c39"), 9: "eb22a83", 14: "9f4cfcb", 3: ("46b9628", "68c1c39"), 4: "8c4d712", 10: "024005c", 11: "65ae7de", 12: "c9fcdd7", 13: "c9fcdd7", 1: "e4b6847", 5: "fc646cb", 6: "38d5324", 7: "555b73b", 8: "0b4b24f"}   # kisaltmadan onceki commit
 
 
 def govde(s):
@@ -65,7 +65,8 @@ ek = duz(re.sub(r"(?m)^\s*- ", "", open(os.path.join(KOK, "paper", "v8", "supple
 if "--sina" in sys.argv:
     ek = ek.replace("The heavy design is not the light design photographed from further away.", "")
 kayip = 0
-for n, c in ONCE.items():
+IKILI = [(n, c) for n, cs in ONCE.items() for c in (cs if isinstance(cs, tuple) else (cs,))]   # Tur 111: bir adim iki kez kisaltildiysa iki commit
+for n, c in IKILI:
     yol = os.path.relpath(glob.glob(os.path.join(KOK, "paper", "v8", "%02d-*.md" % n))[0], KOK)
     eski = subprocess.run(["git", "-C", KOK, "show", "%s:%s" % (c, yol)], capture_output=True, text=True, check=True).stdout
     simdi = duz(re.sub(r"(?m)^\s*- ", "", govde(open(os.path.join(KOK, yol), encoding="utf-8").read())))   # Tur 84: madde imi eski metinde siliniyordu, simdikinde de silinmeli

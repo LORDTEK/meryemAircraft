@@ -259,3 +259,9 @@ O3 NASA beş aile paragrafı (~80; tek evi Adım 4'te seçilsin).
 **Ek bölünmesi günü için (Tur 110):** Ek S2'nin donmuş kopyası Tur 88'de gövdeden **kaynaksız olduğu için** silinen kuyruk üstü
 "beşte bir" cümlesini taşıyor. İki okuyucu (ChatGPT, Qwen) onu "S2'ye taşınacak" diye önerdi — yani donmuş kopyalar dergi eki
 gibi okunuyor. Dergi eki / depo denetim arşivi ayrılırken **donmuş kopyalar arşive gider**; dergi ekine kaynaksız cümle girmez.
+
+**Tur 111 — çerçeve uygulandı.** Adım 2: 2 189 → **1 775** (O1 dahil; %81). Adım 3: 1 654 → **1 305** (%79). İkisi 3 080, plan
+1 400. **Qwen P1 (Tur 110):** 750 / 650 hedefini bırakıp tabanı (~1 800 / ~1 300) kaydetmek — ölçüm olarak kaydedildi; bütçe
+yeniden dağıtımı E8 gereği yazarın, 1–9 ve 15 bitince. **O3 / Grok P88 / Qwen P3:** NASA beş aile çalışmasının tek tanıtım evi
+Adım 4 yeniden kurulurken seçilir (şimdi Adım 1, 2, 4'te).
+

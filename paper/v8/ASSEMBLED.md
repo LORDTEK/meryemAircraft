@@ -161,129 +161,45 @@ presume an escape.
 
 ### 2.1 The tax
 
-A claim that one architecture escapes a cost shared by the others is only meaningful if the
-cost is stated first, in terms that do not presume the escape. This section states it. It is
-not a claim about any particular aircraft, and nothing in it is new physics; what it provides
-is the accounting that the rest of the paper is checked against.
+**A claim that one architecture escapes a cost shared by the others is only meaningful if the cost is stated first, in terms that do not presume the escape.** This section states it. It is not a claim about any particular aircraft, and nothing in it is new physics; what it provides is the accounting that the rest of the paper is checked against.
 
 #### The root: a duty cycle that does not match the hardware
 
-The vertical phase is short. For a mission of one hour, a take-off, a transition, a return
-transition and a landing occupy on the order of a minute — **roughly two percent of the flight.**
-Any hardware installed for that phase alone is carried through the remaining ninety-eight
-percent.
+For a mission of one hour, a take-off, a transition, a return transition and a landing occupy on the order of a minute — **roughly two percent of the flight.** **An architecture that provides the vertical phase with a dedicated lift subsystem therefore carries it for fifty times as long as it uses it.** This is not an implementation defect and it cannot be removed by making the subsystem better, because it is a statement about duty cycle rather than about quality. **The mismatch between how long a component is needed and how long it is present is the origin of all three charges below.**
 
-**An architecture that provides the vertical phase with a dedicated lift subsystem therefore
-carries it for fifty times as long as it uses it.** This is not an implementation defect and it
-cannot be removed by making the subsystem better, because it is a statement about duty cycle
-rather than about quality: a lighter or cleaner lift rotor is still carried for the whole flight. **The mismatch between how long a
-component is needed and how long it is present is the origin of all three charges below.**
-
-The statement is deliberately confined to architectures with a dedicated lift subsystem, because
-that is the family the charges describe. Whether any architecture avoids the mismatch — and what
-it pays instead — is the subject of the next section, and it is not settled here.
+The statement is deliberately confined to architectures with a dedicated lift subsystem, because that is the family the charges describe. Whether any architecture avoids the mismatch — and what it pays instead — is the subject of the next section, and it is not settled here.
 
 #### Bill 1 — mass
 
-The most direct payment is dead mass. A lift-plus-cruise aircraft carries two propulsion
-groups: rotors, motors, mounts, wiring and structural reinforcement for the vertical phase, and
-a separate propulsor for cruise. The vertical group provides no required lift or thrust during cruise and is
-lifted anyway.
+A lift-plus-cruise aircraft carries two propulsion groups: rotors, motors, mounts, wiring and structural reinforcement for the vertical phase, and a separate propulsor for cruise. The vertical group provides no required lift or thrust during cruise and is lifted anyway.
 
-Its cost is not linear. Mass growth feeds itself — MTOW = m_payload / (1 − f_empty − f_energy)
-puts additional empty mass through a multiplier that grows as the denominator shrinks — and in
-the vertical phase the same increment is counted a second time, because at a fixed disc area
-hover power scales with W^1.5. *(The exponent is a property of the scaling rule chosen: holding
-disc loading constant instead makes hover power grow linearly with weight, and Section 7.3 uses
-that.)* A modest dead-mass fraction becomes a large payload penalty.
+Its cost is not linear. Mass growth feeds itself — MTOW = m_payload / (1 − f_empty − f_energy) puts additional empty mass through a multiplier that grows as the denominator shrinks — and in the vertical phase the same increment is counted a second time, because at a fixed disc area hover power scales with W^1.5. *(The exponent is a property of the scaling rule chosen: holding disc loading constant instead makes hover power grow linearly with weight, and Section 7.3 uses that.)* A modest dead-mass fraction becomes a large payload penalty.
 
-**This charge has been identified independently, and by a source with no interest in the present
-argument.** A NASA study sizing five VTOL architecture families against a common mission with common
-tools found the lift-plus-cruise concepts the heaviest of the vehicles examined, and named the
-cause: not the cruise power draw, since the lift-plus-cruise effective lift-to-drag ratio is the
-higher of the set, but *"the extra empty weight items on board in hover."*
-
-**That finding separates the two things this paper is at pains to keep separate.** The
-lift-plus-cruise vehicle is *aerodynamically better* than the alternatives and it is nevertheless the heaviest, because of
-hardware carried in order to hover. That is Bill 1 stated by an independent source in its own
-terms: not a failure of engineering, but the cost of an architecture.
-
-A second NASA review gives the structural half as a general principle, drawn from a tilt-prop
-aircraft whose propeller separated in flight after a gearbox mounting fatigued: to transmit
-power safely to the extremities of the planform, *"very strong (and fatigue-resistant)
-structures must be incorporated with an obvious weight penalty."* Distributing lift or thrust
-across the span therefore obliges the structure that reaches it to keep transmitting power
-there — charged to mass, whether or not the distributed propulsors are running.
+**This charge has been identified independently, and by a source with no interest in the present argument.** A NASA study sizing five VTOL architecture families against a common mission with common tools found the lift-plus-cruise concepts the heaviest of the vehicles examined, and named the cause: not the cruise power draw, since the lift-plus-cruise effective lift-to-drag ratio is the higher of the set, but *"the extra empty weight items on board in hover."* That is Bill 1 stated by an independent source in its own terms: not a failure of engineering, but the cost of an architecture.
 
 #### Bill 2 — drag
 
-The second payment falls on architectures that leave hover hardware exposed in forward flight:
-rotors stopped in the airstream, the booms that carry them, and the interference between their
-wakes and the wing. Cruise drag has other sources on any aircraft; what is charged here is the
-part attributable to hardware retained for a phase that is over.
+The second payment falls on architectures that leave hover hardware exposed in forward flight: rotors stopped in the airstream, the booms that carry them, and the interference between their wakes and the wing. Cruise drag has other sources on any aircraft; what is charged here is the part attributable to hardware retained for a phase that is over.
 
-Wind-tunnel work on a hybrid airframe found that the difference between propellers parallel to
-the airflow and no propellers at all is modest, while *"the drag produced by the motors is
-significant."* The bill is charged mainly by the motors and the beams that carry them —
-hardware that cannot be feathered, folded or aligned away, **because its cost is its presence.**
+Wind-tunnel work on a hybrid airframe found that the difference between propellers parallel to the airflow and no propellers at all is modest, while *"the drag produced by the motors is significant."* The bill is charged mainly by the motors and the beams that carry them — hardware that cannot be feathered, folded or aligned away, **because its cost is its presence.** Wind-tunnel characterisation of a quadplane found drag in the hybrid regime exceeding either pure mode through adverse flow interaction, and that a simulation assuming negligible rotor–structure interaction *"always predicts higher lift and lower drag than were experimentally observed."*
 
-Two further measurements support the direction. Characterisation of a quadplane found the
-highest lift and least drag in fixed-wing mode at both cruise airspeeds, with drag in the hybrid
-regime exceeding either pure mode through adverse flow interaction; and that a simulation assuming negligible rotor–structure
-interaction *"always predicts higher lift and lower drag than were experimentally observed."*
-Separately, a study of twenty-six stationary lift propellers held edge-on found their drag
-scaling with frontal area and the square of airspeed, with hover powertrain components adding
-*"a significant amount of aerodynamic drag during forward flight"* in the absence of a stowing
-mechanism.
-
-**The important property of this charge is not its size but where it falls.** It is charged per
-unit time in cruise — so it grows with exactly the quantity the aircraft exists to maximise.
+**The important property of this charge is not its size but where it falls.** It is charged per unit time in cruise — so it grows with exactly the quantity the aircraft exists to maximise.
 
 #### Bill 3 — power system sizing
 
-The third payment is the least visible. A VTOL aircraft must install
-enough power to hover, but it draws that power only during the two percent of the flight in
-which it hovers. The ratio between the two demands follows from the governing equations rather
-than from any design choice. Taking hover power from momentum theory and cruise power from the
-drag polar,
-
-    P_hover / W  = √(DL / 2ρ) / η_h                 (DL = W/A, disc loading)
-    P_cruise / W = V / ( (L/D) η_p )
-
-so that
+A VTOL aircraft must install enough power to hover, but it draws that power only during the two percent of the flight in which it hovers. The ratio between the two demands follows from the governing equations rather than from any design choice (Supplement S2):
 
     P_hover / P_cruise = √(DL / 2ρ) · (L/D) / V · (η_p / η_h)
 
-**The quantities on the right come from the configuration and from the propulsion operating
-points, not from the duration of the hover phase.** That distinction matters and the efficiencies
-are the reason for it: η_h and η_p are not configuration constants, they depend on the propeller
-and on the condition it is run at, and Section 7.2 computes what happens when one fixed-pitch
-blade has to supply both.
+**The quantities on the right come from the configuration and from the propulsion operating points, not from the duration of the hover phase.** η_h and η_p are not configuration constants, they depend on the propeller and on the condition it is run at, and Section 7.2 computes what happens when one fixed-pitch blade has to supply both. Raising the disc loading raises the ratio as its square root.
 
-A vehicle with a disc loading of 100 N m⁻², a cruise lift-to-drag ratio of 15 and a cruise speed
-of 30 m s⁻¹ needs **between three and four times** as much power to hover as to cruise: the
-geometric terms alone give 3.2, and the efficiency ratio η_p/η_h carries it to about four when
-the cruise propeller is roughly a quarter more efficient than the hover rotor. Raising the disc
-loading raises the ratio as its square root.
-
-The power system is therefore sized by a condition that holds for a minute and is then carried,
-unused, for an hour. And the consequence propagates: sizing by hover means an oversized engine,
-or a battery that must deliver a peak it will rarely be asked for, or both — and whichever is
-chosen, the extra installed capacity is mass: a cost in kilograms, though not Bill 1.
+The power system is therefore sized by a condition that holds for a minute and is then carried, unused, for an hour. Sizing by hover means an oversized engine, or a battery that must deliver a peak it will rarely be asked for, or both — and whichever is chosen, the extra installed capacity is mass: a cost in kilograms, though not Bill 1.
 
 #### The charges are coupled: remedies move cost, among the three charges or outside them
 
-The three charges are not independent problems with independent fixes. **Each known partial
-remedy reduces one charge and pays for it, in another charge or in a cost outside the three.** They are three distinct accounting quantities, paid in kilograms,
-drag counts and installed kilowatts, and they are not assumed to be independent physical causes: a
-remedy can move a requirement from one currency into another. Whether a change of size moves them
-together, which would make them one quantity under three names, is tested in Section 7.3.
+The three charges are not independent problems with independent fixes. **Each known partial remedy reduces one charge and pays for it, in another charge or in a cost outside the three.** They are three distinct accounting quantities, paid in kilograms, drag counts and installed kilowatts, and they are not assumed to be independent physical causes: a remedy can move a requirement from one currency into another. Whether a change of size moves them together, which would make them one quantity under three names, is tested in Section 7.3.
 
-**A charge and its currency are not the same thing.** The mismatch of the root is the origin of all three charges; each
-charge is one specific payment, not the name of the currency it is paid in. Bill 1, as this accounting uses it, is the mass
-of a dedicated lift subsystem; Bill 2, the cruise drag of hover hardware left exposed; Bill 3, continuous power installed
-to a hover peak. A remedy's own cost can fall in kilograms, drag counts or installed kilowatts without being one of the
-three charges, and the table names such a cost in words rather than by a bill's number.
+**A charge and its currency are not the same thing.** The mismatch of the root is the origin of all three charges; each charge is one specific payment, not the name of the currency it is paid in. Bill 1, as this accounting uses it, is the mass of a dedicated lift subsystem; Bill 2, the cruise drag of hover hardware left exposed; Bill 3, continuous power installed to a hover peak. A remedy's own cost can fall in kilograms, drag counts or installed kilowatts without being one of the three charges, and the table names such a cost in words rather than by a bill's number.
 
 | Move | Bill it attacks | What it creates — a bill by its number, any other cost in words |
 |---|---|---|
@@ -294,96 +210,31 @@ three charges, and the table names such a cost in words rather than by a bill's 
 | Higher disc loading, smaller rotors | 1 and 2 — smaller, lighter, cleaner rotors | 3 — hover power rises with √(DL) |
 | Lower disc loading, larger rotors | 3 — hover power falls | 1 and 2 — larger structure and exposed area |
 
-**One row pays part of its cost in none of the three currencies, and that is not an oversight.** What a
-tilting architecture buys its unified propulsion group with is a mechanism — a pivot, an
-actuator, the gyroscopic coupling of a reorienting mass, and a control problem through the turn.
-The pivot and the actuator are paid in kilograms, although they are not lift-subsystem mass; the
-coupling and the control problem are paid in none of the three. That part is a cost, but it is not
-one of the three charges this accounting tracks, and the next section says why it is treated
-separately. **The table is not a census of the field**; it lists
-the moves whose transfers are documented, and a remedy absent from it is not thereby claimed to
-cancel a charge.
+**One row pays part of its cost in none of the three currencies, and that is not an oversight.** What a tilting architecture buys its unified propulsion group with is a mechanism — a pivot, an actuator, the gyroscopic coupling of a reorienting mass, and a control problem through the turn. The pivot and the actuator are paid in kilograms, although they are not lift-subsystem mass; the coupling and the control problem are paid in none of the three. That part is a cost, but it is not one of the three charges this accounting tracks. **The table is not a census of the field**; it lists the moves whose transfers are documented, and a remedy absent from it is not thereby claimed to cancel a charge.
 
-**One of these transfers has direct experimental support.**
-In the doctoral study whose wind-tunnel campaign is quoted above — and in that document rather
-than in the journal article by the same author, which reports a different comparison — a
-retraction system removed thirty percent of the airframe's drag; the same work then costed it. Applied to a passenger eVTOL, with the mechanism assessed
-at five percent of vehicle mass, maximum range rose from 119 km to 121 km — **a two-kilometre
-gain for a five-percent mass penalty.** The same work finds the retraction's advantage elsewhere — the speed that
-maximises range rose by 5 m/s — which is a performance this accounting does not price. Bill 2 was converted almost exactly into Bill 1, and
-**the transfer is the point rather than the small residue.**
+**One of these transfers has direct experimental support.** In the doctoral study whose wind-tunnel campaign is quoted above — and in that document rather than in the journal article by the same author, which reports a different comparison — a retraction system removed thirty percent of the airframe's drag; applied to a passenger eVTOL, with the mechanism assessed at five percent of vehicle mass, maximum range rose from 119 km to 121 km — **a two-kilometre gain for a five-percent mass penalty.** The same work finds the retraction's advantage elsewhere — the speed that maximises range rose by 5 m/s — which is a performance this accounting does not price. Bill 2 was converted almost exactly into Bill 1, and **the transfer is the point rather than the small residue.**
 
 #### What this accounting is for
 
-**The accounting is refuted by a counter-example, and the table above is where one would appear:**
-every entry in it moves cost rather than removing it.
+**The accounting is refuted by a counter-example, and the table above is where one would appear:** every entry in it moves cost rather than removing it.
 
-**Stated positively, so that the test can actually be run: a counter-example is a remedy that
-reduces one of the three charges, leaves the other two no worse, and whose own cost is either
-absent or demonstrably smaller than the reduction — measured in the same currency.** That last
-clause is what makes the test usable rather than rhetorical: mass against mass, cruise drag against
-cruise drag, installed continuous power against installed continuous power. **The accounting claims
-transfer. It does not claim that every architecture is equally good**, and a remedy that is simply
-a better bargain in one currency refutes it.
+**Stated positively, so that the test can actually be run: a counter-example is a remedy that reduces one of the three charges, leaves the other two no worse, and whose own cost is either absent or demonstrably smaller than the reduction — measured in the same currency.** **The accounting claims transfer. It does not claim that every architecture is equally good**, and a remedy that is simply a better bargain in one currency refutes it.
 
-**Two clarifications keep the test from being either too easy or unfalsifiable.** **"No worse" is
-judged against the architecture the move modifies.** A charge that architecture already paid, left no
-larger, is no worse. A charge it did not pay, imposed by the move, is worse; so is one it paid, enlarged
-by it. A move that reduces one charge and makes another worse is a transfer between charges. And a remedy whose cost
-falls **outside** the three charges does not refute the accounting, because the accounting is about
-those three; **but it is not thereby exempt from being counted.** The tilting family's mechanism is
-named in the table for exactly that reason, and it is the reader's to weigh against what the
-remedy buys. **A framework that could absorb any cost by declaring it out-of-scope would be
-unfalsifiable**, so the costs outside the three are listed, not waved away.
+**Two clarifications keep the test from being either too easy or unfalsifiable.** **"No worse" is judged against the architecture the move modifies.** A charge that architecture already paid, left no larger, is no worse. A charge it did not pay, imposed by the move, is worse; so is one it paid, enlarged by it. A move that reduces one charge and makes another worse is a transfer between charges. And a remedy whose cost falls **outside** the three charges does not refute the accounting, because the accounting is about those three; **but it is not thereby exempt from being counted.** **A framework that could absorb any cost by declaring it out-of-scope would be unfalsifiable**, so the costs outside the three are listed, not waved away.
 
-**The tilting row needs both clarifications.** If the architecture it modifies supplies its hover peak
-from a store, tilting without one imposes Bill 3 and the row is a transfer between charges. If that architecture
-already sizes its continuous plant by the hover peak, tilting leaves Bill 3 no worse; then, where the
-mechanism's kilograms are fewer than those of the lift group it removes, what keeps the row from
-refuting the accounting is the part of its cost that falls outside the three — which is why that part
-is listed.
+**The tilting row needs both clarifications.** If the architecture it modifies supplies its hover peak from a store, tilting without one imposes Bill 3 and the row is a transfer between charges. If that architecture already sizes its continuous plant by the hover peak, tilting leaves Bill 3 no worse; then, where the mechanism's kilograms are fewer than those of the lift group it removes, what keeps the row from refuting the accounting is the part of its cost that falls outside the three — which is why that part is listed.
 
-It also makes a prediction that can be checked without settling the architectural question at
-all: **where an arrangement pays one charge heavily in order to escape another, its ranking
-against a differently-balanced arrangement will move when the sizing rule changes — toward the
-lighter arrangement as the rule weights mass more — and will reverse where that reweighting carries
-it past the point at which the two break even, where the mass difference as the contract counts it and
-the cruise-efficiency difference cancel in the range.** Section 7.4 tests both the
-movement and the reversal on this configuration, and Section 2.3 tests a different consequence
-against a sizing study this work did not produce.
+It also makes a prediction that can be checked without settling the architectural question at all: **where an arrangement pays one charge heavily in order to escape another, its ranking against a differently-balanced arrangement will move when the sizing rule changes — toward the lighter arrangement as the rule weights mass more — and will reverse where that reweighting carries it past the point at which the two break even, where the mass difference as the contract counts it and the cruise-efficiency difference cancel in the range.** Section 7.4 tests both the movement and the reversal on this configuration, and Section 2.3 tests a different consequence against a sizing study this work did not produce.
 
-**The moves in the table are partial remedies: each accepts the duty-cycle mismatch and then
-redistributes what it costs.** Whether an architecture can decline the mismatch itself, rather
-than redistribute its consequences, is a different question, and the next section states the
-condition it would have to meet — a definition, derived from the table above rather than from
-any aircraft.
+**The moves in the table are partial remedies: each accepts the duty-cycle mismatch and then redistributes what it costs.** Whether an architecture can decline the mismatch itself, rather than redistribute its consequences, is a different question, and the next section states the condition it would have to meet — a definition, derived from the table above rather than from any aircraft.
 
 ### 2.2 The escape condition
 
-This section asks what an architecture would have to do in order not to incur the three charges at
-all. The answer is a **definition**, derived by inverting the table, and it is stated here before any
-configuration is offered so that the standard is not taken from the thing it will be used to measure.
+This section asks what an architecture would have to do in order not to incur the three charges at all. The answer is a **definition**, derived by inverting the table, and it is stated here before any configuration is offered so that the standard is not taken from the thing it will be used to measure.
 
 #### Inverting the table
 
-**A charge appears wherever the two regimes are served by hardware that departs from one of four
-things: the same hardware, serving both duties, held in one orientation, with the hover peak supplied
-other than by its continuously installed power.** **Different hardware** costs Bills 1 and 2. **The
-same hardware serving only one duty** costs them again: a propulsor that lifts and is then carried is
-a dedicated lift group under another name, whatever it shares with the cruise system. **The same
-hardware serving both duties in a different orientation** is the tilting family: Bill 3 is incurred
-unless a store supplies the hover peak, and the mechanism that changes the orientation adds mass and
-introduces a control problem through the turn. **The same hardware, both duties, one orientation, but
-a different sizing point** incurs Bill 3 — unless the hover peak is supplied from somewhere other than
-the continuously installed power.
-
-Read one at a time, these are ways to pay. Read as a conjunction, they are a condition.
-
-*(The second departure is stated separately because it does real work later: a propulsor that
-produces a little thrust in cruise is not thereby serving both duties, and the distinction decides
-which parts of a configuration meet the condition and which do not. "Serving both duties" is the
-accurate form; hover thrust and cruise thrust are not the same **job** in any ordinary engineering
-sense — one supports weight, the other balances drag.)*
+**A charge appears wherever the two regimes are served by hardware that departs from one of four things: the same hardware, serving both duties, held in one orientation, with the hover peak supplied other than by its continuously installed power.** What each departure costs is in Supplement S3. Read one at a time, these are ways to pay. Read as a conjunction, they are a condition.
 
 #### The condition
 
@@ -392,108 +243,41 @@ sense — one supports weight, the other balances drag.)*
 > thrust, and if the difference between the hover peak and the cruise demand is supplied from
 > a store rather than from permanently installed continuous power.**
 
-Four parts: **same hardware, both duties, one orientation, hover peak from a store.** The first
-three come from the first three departures; the fourth comes from the fourth.
+Four parts: **same hardware, both duties, one orientation, hover peak from a store.** The first three come from the first three departures; the fourth comes from the fourth.
 
-Two things in that sentence are choices rather than derivations. The
-inversion requires only *one orientation relative to the airframe*; **how** an architecture keeps
-that while changing flight regime — by rotating the whole body, or otherwise — is not in the
-inversion, and is treated as exposition rather than as part of the definition. And the fourth
-departure's exception lets the peak come from **any** source other than the continuously installed power; a
-store is the narrower reading used here, because it is what the configuration examined later
-uses and because a narrower condition is easier to fail.
+Two things in that sentence are choices rather than derivations. The inversion requires only *one orientation relative to the airframe*; **how** an architecture keeps that while changing flight regime — by rotating the whole body, or otherwise — is not in the inversion, and is treated as exposition rather than as part of the definition. And the fourth departure's exception lets the peak come from **any** source other than the continuously installed power; a store is the narrower reading used here, because it is what the configuration examined later uses and because a narrower condition is easier to fail.
 
 #### What the condition does not say, and this matters more than what it says
 
-The condition has to be read exactly.
-**It means zero of the three charges as Section 2.1 defines them.** **It does not mean an architecture that costs nothing, and it does not mean an
-architecture that carries nothing for the vertical phase.** A definition that placed every
-conceivable cost inside the thing to be escaped would be unfalsifiable, and an architecture
-built to satisfy it would win by construction rather than by performance.
+**It means zero of the three charges as Section 2.1 defines them.** **It does not mean an architecture that costs nothing, and it does not mean an architecture that carries nothing for the vertical phase.** A definition that placed every conceivable cost inside the thing to be escaped would be unfalsifiable, and an architecture built to satisfy it would win by construction rather than by performance.
 
 The costs the condition permits are named here, before any candidate is examined. Six of them:
 
-- **A store is permitted, and it has the same duty-cycle character as Bill 1.** The fourth part
-  moves the hover peak off the continuous power plant and onto a store; that store delivers its
-  peak for two percent of the flight and is carried for the rest. It is not Bill 1 as Section 2.1
-  defines it — it is not lift-subsystem mass — **but it is mass carried for a duty that is
-  briefly needed, which is the same complaint Bill 1 makes.** The condition converts a power-system
-  charge into a cost in kilograms and claims only that the three charges as named are not incurred.
-  **It does not claim the trade is favourable.** Whether the store is lighter than the continuous
-  power it displaces is a sizing result and is computed, not asserted.
-- **Releasing the engine is not releasing the electrical path.** The fourth part frees the
-  continuous *power plant* from the hover peak. Everything between the store and the rotors —
-  machines, power electronics, wiring — still passes the full hover power and is still sized by
-  it. **That is Bill 3 on the electrical path, and the condition does not remove it**; it is carried
-  in the ledger rather than in this definition.
-- **Rotating the airframe is permitted and is not priced here.** The condition refuses
-  architectures that reorient a propulsor, and sets that refusal against the mechanism a tilt
-  requires. **An architecture that instead rotates its whole body faces the same physical
-  problem** — a ninety-degree change of the thrust axis relative to the flight path, with the
-  moments, the authority and the control through the turn that implies. It is not one of the
-  three charges and the condition does not eliminate it; it is priced where the transition is
-  analysed. Saying otherwise would let a candidate win that line by wording.
-- **Hardware installed for the vertical phase is permitted if it serves both duties**, and the
-  second departure is what carries the weight.
-- **Hardware used in both regimes for something other than propulsive thrust is permitted, and its
-  cruise drag is not eliminated.** *Cruise thrust in this paper means the thrust that balances
-  cruise drag.* Attitude devices produce thrust in cruise, but they produce no cruise thrust in
-  that sense; they are used throughout the flight, so their duty cycle matches their presence and
-  they fall outside Bill 1. **They remain in the airstream, so the second charge reaches them.**
-  **Attitude hardware does not
-  stop the propulsor that carries the aircraft from meeting the condition, but it is carried through
-  cruise without producing cruise thrust, which is the first failure mode below — and the charges
-  are about everything the aircraft carries, so Bill 2 reaches it.** An architecture in that
-  position is a partial instantiation, the fourth failure mode: it meets the condition where it
-  carries the aircraft and still pays one of the three elsewhere. The condition permits such
-  hardware outside the first charge and does not make it free.
-- **Serving two regimes with one set of hardware has a price of its own.** Hardware that is not
-  duplicated cannot be optimised twice: a propeller sized for hover thrust at zero forward speed
-  is not the propeller a cruise design would choose, and if its geometry is fixed the compromise
-  is paid in efficiency. **The condition permits that cost and does not measure it.** Section 7.2
-  does.
+- **A store is permitted, and it has the same duty-cycle character as Bill 1.** It is not Bill 1 as Section 2.1 defines it — it is not lift-subsystem mass — **but it is mass carried for a duty that is briefly needed, which is the same complaint Bill 1 makes.** The condition converts a power-system charge into a cost in kilograms and claims only that the three charges as named are not incurred. **It does not claim the trade is favourable.** Whether the store is lighter than the continuous power it displaces is a sizing result and is computed, not asserted.
+- **Releasing the engine is not releasing the electrical path.** Everything between the store and the rotors — machines, power electronics, wiring — still passes the full hover power and is still sized by it. **That is Bill 3 on the electrical path, and the condition does not remove it**; it is carried in the ledger rather than in this definition.
+- **Rotating the airframe is permitted and is not priced here.** **An architecture that rotates its whole body faces the same physical problem** — a ninety-degree change of the thrust axis relative to the flight path, with the moments, the authority and the control through the turn that implies. It is not one of the three charges and the condition does not eliminate it; it is priced where the transition is analysed.
+- **Hardware installed for the vertical phase is permitted if it serves both duties**, and the second departure is what carries the weight.
+- **Hardware used in both regimes for something other than propulsive thrust is permitted, and its cruise drag is not eliminated.** *Cruise thrust in this paper means the thrust that balances cruise drag.* Attitude devices produce thrust in cruise, but they produce no cruise thrust in that sense; they are used throughout the flight, so their duty cycle matches their presence and they fall outside Bill 1. **They remain in the airstream, so the second charge reaches them.** **Attitude hardware does not stop the propulsor that carries the aircraft from meeting the condition, but it is carried through cruise without producing cruise thrust, which is the first failure mode below — and the charges are about everything the aircraft carries, so Bill 2 reaches it.** The condition permits such hardware outside the first charge and does not make it free.
+- **Serving two regimes with one set of hardware has a price of its own.** Hardware that is not duplicated cannot be optimised twice: a propeller sized for hover thrust at zero forward speed is not the propeller a cruise design would choose, and if its geometry is fixed the compromise is paid in efficiency. **The condition permits that cost and does not measure it.** Section 7.2 does.
 
-**One exclusion, stated narrowly.** Structure, surfaces and actuation present for reasons other
-than the vertical phase are not charged **as duty-cycle mismatch under this accounting** — a
-wing, a control device, a fairing that earns its place on a part already carried. That is a
-statement about which ledger they belong in, not a claim that they are free, and it does not
-apply to a part that would not exist but for the vertical phase. The tip frames are the case
-that tests it: they are landing gear because the aircraft stands on its tail, and they also
-carry the attitude propulsors and the directional fairing. **Their mass is charged in the
-build-up and their drag in the ledger; the exclusion does not reach them.**
+**One exclusion, stated narrowly.** Structure, surfaces and actuation present for reasons other than the vertical phase are not charged **as duty-cycle mismatch under this accounting**. That is a statement about which ledger they belong in, not a claim that they are free, and it does not apply to a part that would not exist but for the vertical phase. The tip frames are the case that tests it: they are landing gear because the aircraft stands on its tail. **Their mass is charged in the build-up and their drag in the ledger; the exclusion does not reach them.**
 
 #### The condition can fail, and how
 
-A definition worth stating is one an architecture can be shown not to meet, so the failure modes
-are explicit. An architecture fails the condition if **any** of the following holds:
+An architecture fails the condition if **any** of the following holds:
 
 1. It carries a propulsor through cruise that produces no cruise thrust.
 2. It changes the orientation of a propulsor relative to the airframe in order to change regime.
 3. Its continuously installed power is sized by the hover requirement rather than by cruise.
-4. It satisfies the first three only in part — for instance in its primary propulsor while a
-   secondary set fails them — in which case the instantiation is **partial**, and the part that
-   fails re-opens the charge it fails.
+4. It satisfies the first three only in part — for instance in its primary propulsor while a secondary set fails them — in which case the instantiation is **partial**, and the part that fails re-opens the charge it fails.
 
-The fourth is not a technicality, and it is the reason this list exists. **An architecture may
-meet the condition where it carries the aircraft and fail it elsewhere**, and a paper that
-reported only the first half would be reporting the condition rather than the aircraft.
+The fourth is not a technicality, and it is the reason this list exists. **An architecture may meet the condition where it carries the aircraft and fail it elsewhere**, and a paper that reported only the first half would be reporting the condition rather than the aircraft.
 
 #### What follows from the condition, and what does not
 
-The condition is a statement about what an architecture would have to be. **It is not a claim
-that anything satisfies it, not a claim that anything satisfying it would fly, and not a claim
-that satisfying it is desirable.** Three questions follow from it, and they are answered
-separately: whether the accounting behind the condition survives contact with an independent
-sizing study is tested in the next section, against data this work did not produce; whether any
-configuration satisfies the condition is the subject of Sections 3 to 5.1; and what such a
-configuration pays instead is the subject of Section 7.2, the answer most likely to be wrong.
+The condition is a statement about what an architecture would have to be. **It is not a claim that anything satisfies it, not a claim that anything satisfying it would fly, and not a claim that satisfying it is desirable.** Three questions follow from it, and they are answered separately: whether the accounting behind the condition survives contact with an independent sizing study is tested in the next section, against data this work did not produce; whether any configuration satisfies the condition is the subject of Sections 3 to 5.1; and what such a configuration pays instead is the subject of Section 7.2, the answer most likely to be wrong.
 
-One consequence is worth stating now, because it shapes everything after it. The third departure is refused by a means other than the
-one the field has adopted. A tilting architecture accepts that departure and buys its way out of the first departure with a mechanism. **An architecture that reorients a propulsor does not satisfy the condition as written**, because
-the condition requires one orientation relative to the airframe. **Whether such an architecture
-might avoid the three charges by some other route is a separate question this paper does not
-settle** — the condition is a definition, not a law, and it can be too narrow without being
-wrong.
+The third departure is refused by a means other than the one the field has adopted. A tilting architecture accepts that departure and buys its way out of the first departure with a mechanism. **An architecture that reorients a propulsor does not satisfy the condition as written**, because the condition requires one orientation relative to the airframe. **Whether such an architecture might avoid the three charges by some other route is a separate question this paper does not settle** — the condition is a definition, not a law, and it can be too narrow without being wrong.
 
 ### 2.3 An independent quantitative check
 
@@ -1287,7 +1071,7 @@ In the zero-lift drag build-up behind Section 7.1's bracket (line items in Suppl
 
 Removing the hub and small items, the tip frames and the free-wheeling rotors gives a clean-body lift-to-drag ratio of 20.55 at the favourable end and 15.24 at the adverse one, against the aircraft's 10.82 and 8.79: **the configuration retains 52.6 and 57.7 percent.** Bill 2 therefore occupies a larger share where the clean-body drag is lower, because a near-constant charge is set against a smaller total — a statement about position within the drag bracket at one scale, not about size (Section 7.3).
 
-**Rotor–structure and rotor–wing interference is not modelled and is not carried as a line.** Section 2.1's wind-tunnel source found that a simulation assuming negligible rotor–structure interaction predicts lower drag than was experimentally observed; this build-up is such a calculation, and the bracket's upper margin is the only provision made for it.
+**Rotor–structure and rotor–wing interference is not modelled and is not carried as a line.** Section 2.1 quotes a wind-tunnel finding that a simulation assuming negligible rotor–structure interaction *"always predicts higher lift and lower drag than were experimentally observed"*; this build-up is such a calculation, and the bracket's upper margin is the only provision made for it.
 
 #### The cruise-efficiency gap under fixed pitch
 

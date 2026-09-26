@@ -197,6 +197,11 @@ kaybolmasına (CLAUDE.md §0.8). Aynı denetimle sınanır.
 | 13 | With a lighter lift group the lift-plus-cruise layout leads under all three contracts at every closure; with a heavier one this configuration leads under a fixed take-off mass at every closure; with a common propeller efficiency a reversal appears at every closure. | D+G+C+Q+K |
 | 12 | A larger aircraft of this type turns more slowly, and must. | G+D+C+Q+K |
 | 13 | transferred from a different airframe | C+G+D+Q+K |
+| 2 | A charge and its currency are not the same thing. | Q+G+C+D+K |
+| 2 | Bill 1, as this accounting uses it, is the mass of a dedicated lift subsystem; Bill 2, the cruise drag of hover hardware left exposed; Bill 3, continuous power installed to a hover peak. | Q+G+C+D+K |
+| 3 | Four parts: same hardware, both duties, one orientation, hover peak from a store. | Q+G+C+D+K |
+| 2 | a counter-example is a remedy that reduces one of the three charges, leaves the other two no worse, and whose own cost is either absent or demonstrably smaller than the reduction — measured in the same currency | Q+G+C+D+K |
+| 2 | "No worse" is judged against the architecture the move modifies. | Q+G+C+D+K |
 
 **Yazar kararıyla eke taşınan korunan cümleler (kural (iii), CLAUDE.md §2.4; `v8_caveats.py` ekte durduğunu sınar):**
 
@@ -204,3 +209,5 @@ kaybolmasına (CLAUDE.md §0.8). Aynı denetimle sınanır.
 |---:|---|---|
 | S10 | The closures do not take that reduction, and it has not been run through the loop. | E7 |
 | S11 | No line item at the adverse end is an independent measurement, and they should not be subtracted from one another as if they were. | E9 |
+
+*Tanım kaydı (Tur 111; Qwen P1, dört okuyucu + Claude): son beş Q+G+C+D+K satırı çerçevenin tanım cümleleri; kök (satır "is the origin of all three charges below") ve koşul zaten korunuyordu.*

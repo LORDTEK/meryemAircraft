@@ -38,6 +38,7 @@ Açılan her kaynağın **kendi** sonucu ya da hemen çevresi, gövdedeki alınt
 | Kaynak | Gövdenin aldığı | Kaynağın kendi sonucu / çevresi | İlişki | Gövdede |
 |---|---|---|---|---|
 | Bacchini tezi s. 183 | Bill 2 → Bill 1 dönüşümü | hız kazancı ("the great advantage") | niteler | S-18 ile alındı |
+| Bacchini tezi s. 141 (Tur 111 açıldı; paragrafın tamamı okundu) | Fatura 2: "motorların ürettiği sürükleme önemli" | "We did not choose the motors paying attention to their size and their drag"; "the drag produced by the means [beams] is limited" | **çelişir** (kirişler) / **niteler** (motor seçimi) | S-42 |
 | Barrett 2023 s. 16, 34–35 | 4 kW/kg, "about twice that of existing batteries" | 3 kW/kg literatürde; darbe akımı; "may be possible … using existing technology"; askı ≤ 20 s | **yumuşatır** | S-19, S-20 ile alındı |
 | Yu 2025 | 0.724 / 0.892 kW/kg; 10.68C; 55.1 °C | uçuşta kullanılan sistem | destekler | — |
 | De Wagter 2018 | "theoretically impossible"; DelftaCopter "a compromise" | DelftaCopter değişken hatveli; değişken hatve çare, iki eyleyici ve kütle bedeli | **niteler** | S-22 ile alındı |

@@ -476,6 +476,11 @@ dahil herkesin hemfikir olduğu kısaltmalar uygulansın."*
 - **Tur 109'da kabul (dört okuyucu + Claude):** rakibin iki varsayılmış niceliği (kaldırma grubu kütlesi, pervane verimi) her
   izde **çift** (DeepSeek); Adım 14'ün J3 bantları ayrı nesne (Grok P84) — ikisi `v8-coincidences-reviewed.md`'de; Adım 15
   yazılırken Adım 14'ün on altı bilinmeyenine karşı **borç/kapsam denetimi** (Qwen R108-P2).
+- **Tur 110'da kabul (dört okuyucu + Claude):** **tanım kaydı** (Qwen P1) — çerçevenin beş tanım cümlesi korunan (`v8-caveats.md`);
+  **çerçeve kuralı** (ChatGPT): *"Compress Step 2 by moving working; compress Step 3 by removing explanatory repetition. Do not
+  compress either by removing the boundary that tells the reader what the accounting or condition does not establish."* — Adım 4
+  için de. **Taslak göndermeden önce `v8_refs.py` ve `v8_draft_check.py --taslak` koşturulur** (R-8: sıra göndergeleri taşınan
+  cümlelere bağlıydı, uygulamadan sonra yakalandı).
 
 ## 3. Doğrulama
 

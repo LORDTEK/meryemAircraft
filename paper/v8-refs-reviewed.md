@@ -29,10 +29,10 @@ gövde tablosunda tilt satırı yok (karşılaştırma S13'e taşınmış); Tur 
 | 13 | Across the sensitivity cases (the full table is Supplement S13) it is | Supplement S13 (named) | Tur 86 |
 | 14 | (What each item bears on is in the full table, Supplement S14.) | Supplement S14 (named) | Tur 86 |
 | 3 | (The second departure is stated separately because it does real work | 3B, second departure (Round 83–84) | Tur 88 |
-| 3 | The inversion requires only one orientation relative to the airframe; | 3B, "Inverting the table" (S-7, Round 84) | Tur 88 |
-| 3 | And the fourth departure's exception lets the peak come from any source | 3B, fourth departure's "unless" (S-7, Round 84) | Tur 88 |
-| 3 | Saying otherwise would let a candidate win that line by wording. - Hardwa | 3B, second departure (3D bullet; Qwen P1, Round 85) | Tur 88 |
-| 3 | The third departure is refused by a means other than the one the field h | 3B, third departure (Round 87) | Tur 88 |
-| 3 | A tilting architecture accepts that departure and buys its way out of the | 3B, first departure (S-2, Round 87) | Tur 88 |
+| 3 | The inversion requires only one orientation relative to the airframe; | 3B, "Inverting the table" (S-7, Round 84) | Tur 88; **Tur 111: ayrıntılı sapma cümleleri S3'e gitti, sıra artık "Inverting the table"daki dörtlü listeden — okuyucu teyidine** |
+| 3 | And the fourth departure's exception lets the peak come from any source | 3B, fourth departure's "unless" (S-7, Round 84) | Tur 88; **Tur 111: ayrıntılı sapma cümleleri S3'e gitti, sıra artık "Inverting the table"daki dörtlü listeden — okuyucu teyidine** |
+| 3 | It is not one of the three charges and the condition does not eliminate | the second departure — since Tur 111 resolved by the list of four in "Inverting the table" (the one-sentence departures are in S3's table) | Tur 111 (okuyucu teyidine) |
+| 3 | The third departure is refused by a means other than the one the field h | 3B, third departure (Round 87) | Tur 88; **Tur 111: ayrıntılı sapma cümleleri S3'e gitti, sıra artık "Inverting the table"daki dörtlü listeden — okuyucu teyidine** |
+| 3 | A tilting architecture accepts that departure and buys its way out of the | 3B, first departure (S-2, Round 87) | Tur 88; **Tur 111: ayrıntılı sapma cümleleri S3'e gitti, sıra artık "Inverting the table"daki dörtlü listeden — okuyucu teyidine** |
 | 2 | The accounting is refuted by a counter-example, and the table above is w | 2E's table, above (Round 89) | Tur 89 |
 | 14 | At the bench rate of about 1.5 kW per kilogram the loop closes at 94 | the re-closure table, in the frozen Section 14 inside S14 (to move to the clean journal supplement when the supplement is split) | Tur 109 |

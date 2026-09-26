@@ -157,6 +157,8 @@ EMEKLI = {
     "turns on a mass fraction of the competitor": "Tur 108: S-38 -- isareti iki nicelik belirliyor (kutle orani VE pervane verimi); Grok P81",
     "by a mass fraction of the competitor that this study has not measured": "Tur 108: S-38",
     "it is a result about that parameter": "Tur 108: S-38 -- tekil nesne",
+    "Section 2's wind-tunnel source": "Tur 111: S-40 -- quadplane simulasyon bulgusunu Bacchini'ye baglayan etiket (Grok P87)",
+    "the next section says why it is treated separately": "Tur 111: S-41 -- Adim 3 bunu soylemiyor",
 }
 
 
