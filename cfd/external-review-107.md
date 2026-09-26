@@ -2,7 +2,7 @@
 
 > **This is a task. Please answer it now, and begin with your name alone on the first line.**
 >
-> `LORDTEK/meryemAircraft`, branch `claude/ecstatic-cori-6w30at`, commit **`COMMIT`**.
+> `LORDTEK/meryemAircraft`, branch `claude/ecstatic-cori-6w30at`, commit **`6e46ded`**.
 >
 > New or changed:
 > - `figures/output/v8-draft-f1-three-views.png`, from `figures/build/mkfig_v8_f1.py`;
