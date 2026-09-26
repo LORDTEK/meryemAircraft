@@ -748,6 +748,12 @@ sizing evidence for it is set out — the comparison in this table does not esta
 link by itself. On cruise efficiency taken alone, the entry is ahead of this configuration's low
 corner, and whether it is ahead of the best examined blade family depends on the drag bracket.
 
+The same sizing set gives its two helicopter types at 5.4 to 7.2, and against them the result is
+mixed: this configuration is ahead of the turboshaft single-main-rotor helicopter at every corner,
+the two middle entries fall inside its envelope, and only its top corner is ahead of the
+all-electric side-by-side helicopter, which has no wing either. The qualifications below apply to
+these entries as they do to the quadrotors.
+
 **So the second claim is narrower than the structural statement invites.** Carrying cruise lift on
 a wing is worth **roughly a quarter to a half against the turboshaft reference, and against the
 all-electric one it ranges from slightly behind to comfortably ahead depending on the drag outcome
