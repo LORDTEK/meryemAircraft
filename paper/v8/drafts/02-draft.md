@@ -31,7 +31,7 @@ lifted anyway.
 
 Its cost is not linear. Mass growth feeds itself — MTOW = m_payload / (1 − f_empty − f_energy)
 puts additional empty mass through a multiplier that grows as the denominator shrinks — and in
-the vertical phase the same increment is charged a second time, because at a fixed disc area
+the vertical phase the same increment is counted a second time, because at a fixed disc area
 hover power scales with W^1.5. *(The exponent is a property of the scaling rule chosen: holding
 disc loading constant instead makes hover power grow linearly with weight, and Section 12 uses
 that.)* A modest dead-mass fraction becomes a large payload penalty.
@@ -103,20 +103,18 @@ A vehicle with a disc loading of 100 N m⁻², a cruise lift-to-drag ratio of 15
 of 30 m s⁻¹ needs **between three and four times** as much power to hover as to cruise: the
 geometric terms alone give 3.2, and the efficiency ratio η_p/η_h carries it to about four when
 the cruise propeller is roughly a quarter more efficient than the hover rotor. Raising the disc
-loading raises the ratio as its square root. A flight measurement points the same way: a
-carbon-fibre tail-sitter reported in the literature measures its level-flight power consumption
-at one fifth of its hover power.
+loading raises the ratio as its square root.
 
 The power system is therefore sized by a condition that holds for a minute and is then carried,
 unused, for an hour. And the consequence propagates: sizing by hover means an oversized engine,
 or a battery that must deliver a peak it will rarely be asked for, or both — and whichever is
 chosen, the extra installed capacity is mass: a cost in kilograms, though not Bill 1.
 
-### The charges are coupled: remedies move cost between them
+### The charges are coupled: remedies move cost, among the three charges or outside them
 
 The three charges are not independent problems with independent fixes. **Each known partial
-remedy reduces one and raises another.** They are three distinct accounting quantities — kilograms,
-drag counts, installed kilowatts — and they are not assumed to be independent physical causes: a
+remedy reduces one charge and pays for it, in another charge or in a cost outside the three.** They are three distinct accounting quantities, paid in kilograms,
+drag counts and installed kilowatts, and they are not assumed to be independent physical causes: a
 remedy can move a requirement from one currency into another. Whether a change of size moves them
 together, which would make them one quantity under three names, is tested in Section 12.
 
@@ -145,20 +143,19 @@ separately. **The table is not a census of the field**; it lists
 the moves whose transfers are documented, and a remedy absent from it is not thereby claimed to
 cancel a charge.
 
-**One of these transfers has direct experimental support, and it is worth more than the table.**
+**One of these transfers has direct experimental support.**
 In the doctoral study whose wind-tunnel campaign is quoted above — and in that document rather
 than in the journal article by the same author, which reports a different comparison — a
 retraction system removed thirty percent of the airframe's drag; the same work then costed it. Applied to a passenger eVTOL, with the mechanism assessed
 at five percent of vehicle mass, maximum range rose from 119 km to 121 km — **a two-kilometre
-gain for a five-percent mass penalty.** Bill 2 was converted almost exactly into Bill 1, and
+gain for a five-percent mass penalty.** The same work finds the retraction's advantage elsewhere — the speed that
+maximises range rose by 5 m/s — which is a performance this accounting does not price. Bill 2 was converted almost exactly into Bill 1, and
 **the transfer is the point rather than the small residue.**
 
 ### What this accounting is for
 
-**The accounting is refuted by any remedy that reduces one charge while leaving the others no
-worse and adding no cost of its own.** That is the test it has to survive, and the table above is
-where it would fail: every entry in it is a documented transfer, and a counter-example would be a
-move whose right-hand column is genuinely empty.
+**The accounting is refuted by a counter-example, and the table above is where one would appear:**
+every entry in it moves cost rather than removing it.
 
 **Stated positively, so that the test can actually be run: a counter-example is a remedy that
 reduces one of the three charges, leaves the other two no worse, and whose own cost is either
@@ -171,7 +168,7 @@ a better bargain in one currency refutes it.
 **Two clarifications keep the test from being either too easy or unfalsifiable.** **"No worse" is
 judged against the architecture the move modifies.** A charge that architecture already paid, left no
 larger, is no worse. A charge it did not pay, imposed by the move, is worse; so is one it paid, enlarged
-by it. A move that reduces one charge and makes another worse is a transfer. And a remedy whose cost
+by it. A move that reduces one charge and makes another worse is a transfer between charges. And a remedy whose cost
 falls **outside** the three charges does not refute the accounting, because the accounting is about
 those three; **but it is not thereby exempt from being counted.** The tilting family's mechanism is
 named in the table for exactly that reason, and it is the reader's to weigh against what the
@@ -179,7 +176,7 @@ remedy buys. **A framework that could absorb any cost by declaring it out-of-sco
 unfalsifiable**, so the costs outside the three are listed, not waved away.
 
 **The tilting row needs both clarifications.** If the architecture it modifies supplies its hover peak
-from a store, tilting without one imposes Bill 3 and the row is a transfer. If that architecture
+from a store, tilting without one imposes Bill 3 and the row is a transfer between charges. If that architecture
 already sizes its continuous plant by the hover peak, tilting leaves Bill 3 no worse; then, where the
 mechanism's kilograms are fewer than those of the lift group it removes, what keeps the row from
 refuting the accounting is the part of its cost that falls outside the three — which is why that part
