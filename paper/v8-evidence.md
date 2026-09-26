@@ -12,3 +12,8 @@ Düzeyler: **verified** (belge açıldı, sayı birebir) · **attributed but unv
 | 2E | "Bill 2 was converted almost exactly into Bill 1" | model-derived (makalenin okuması) | — | tek örnek; genelleme iddiası yok |
 | 2D | kuyruk üstü "beşte bir" | **unsupported → silindi (S-14)** | yok | — |
 | 2B–2C | NASA çalışmaları, rüzgâr tüneli, quadplane, 26 pervane | attributed but unverified (bu turlarda açılmadı) | Tur 45'te NASA belgeleri açılmıştı; kalanlar ilgili blok açılınca | — |
+| 14 | uçuşta kullanılan 24S paket: sistem 0.892 kW/kg sürekli; birim paket 0.724 kW/kg | verified (Tur 91) | `references/Yu-2025_24S-NCM-battery-eVTOL-IN-FLIGHT_Batteries.pdf` — "724 W/kg (110 A) · 892 W/kg (440 A)" | VS-210, 210 kg sınıfı eVTOL |
+| 14 | birim paket 10.68C, en yüksek 55.1 °C (60 °C sınırına 4.9 °C pay) | verified (Tur 91) | aynı belge | tezgâh deneyi |
+| 14 | ~1.5 kW/kg, ~4 dakika | model-derived (kaynağın akım, gerilim ve paket kütlesinden) | aynı belge | — |
+| 14 | NASA destekli tasarım çalışması 4 kW/kg, "about twice that of existing batteries" | attributed, bu turda açılmadı | — | Adım 14 taslaklanırken açılacak |
+

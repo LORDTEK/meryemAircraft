@@ -26,3 +26,19 @@ expectation carried over from Step 4.
 
 Step 6 (two quadrotors, one definition), Step 7 (the count; the strip named), Step 8 (reaction-torque channel declined;
 partial instantiation), Step 13 (contract dependence), Step 3 (partial instantiation), Step 1 (precedents).
+
+## Round 91 — decisions and additions
+
+- **Item 1:** the axis-assignment sentence removed (four + Claude). **Item 4:** removal agreed, but applying it would have
+  tied *"A count is not a reliability argument"* to the preceding *"Part count"* — a reversal (origin **R**, caught before
+  applying). R proposal to vote.
+- **9F precedent list: kept** (ChatGPT, DeepSeek, Qwen keep; Grok drop; Claude weak drop). Named job: *"makes the precedent
+  denial concrete at the boundary"* — the boundary section's own novelty limit (ChatGPT, Qwen).
+- **9B (DeepSeek, ChatGPT, Qwen):** the fourth row is a **refusal, not a finding**; Step 13 is the **home of the full
+  contract finding**, Step 9 carries only the summary the refusal rests on; the relation is *Step 13 → evidence → Step 9
+  boundary*, not a restatement. **Forward guard (Qwen P1):** when Step 13 changes, Step 9's summary is re-read against it.
+- **9C (Grok):** the mechanism claim and the regime-change claim stay **two sentences**; fusing them is a stronger predicate
+  and a halt.
+- **Evidence status (ChatGPT):** only sentences with an evidentiary origin are tagged; a claim-boundary sentence is not.
+- **Item 2's** *"The multirotor family is the opponent on cruise efficiency only"* is the same kind of restatement as item
+  1's → proposed symmetric removal (Round 91).

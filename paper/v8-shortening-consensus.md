@@ -299,3 +299,8 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | 2E E1 "paid in" | ✓ | veto (yanlış okuma) | ✓ | ✓ | öneren | ChatGPT'ye geri |
 | S-18 cümlesi korunan | P47 | — | öneren | P2 | ✓ | Oylamada |
 | Adım 9 envanteri | — | — | — | — | öneren | Teyide |
+| E1 "paid in"; S-18 korunan | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı** (Tur 91); teyide |
+| Adım 9: 1. madde yinelemesi çık | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı** (Tur 91) |
+| Adım 9: 4. madde (R-1 yakalandı) → R | ✓ (silme) | ✓ | ✓ | ✓ | öneren | R oylamada |
+| 9F emsal listesi | at | tut | tut | tut | zayıf at | **Kaldı** |
+| Adım 14 envanteri; üç aday; Bill 3 cümlesi korunan | — | — | — | — | öneren | Teyide / oylamada |

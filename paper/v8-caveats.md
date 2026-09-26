@@ -159,6 +159,7 @@ boşluğa duyarsız. `G` = Grok, `D` = DeepSeek, `C` = ChatGPT, `Q` = Qwen, `K` 
 | 10 | the question is asked in two models, only the second of which carries rotational dynamics, and that one does not support a zero altitude loss | C+G+D+Q+K |
 | 4 | The instrument is now fixed, and it is not modified again. | G+C+D+Q+K |
 | 4 | Everything that follows is measured with it rather than added to it. | G+C+D+Q+K |
+| 2 | The same work finds the retraction's advantage elsewhere — the speed that maximises range rose by 5 m/s — which is a performance this accounting does not price. | G+C+D+Q+K |
 | 2 | Whether an architecture can decline the mismatch itself, rather than redistribute its consequences, is a different question | G+C+D+Q+K |
 | 2 | If that architecture already sizes its continuous plant by the hover peak, tilting leaves Bill 3 no worse…what keeps the row from refuting the accounting is the part of its cost that falls outside the three — which is why that part is listed | G+C+D+Q+K |
 

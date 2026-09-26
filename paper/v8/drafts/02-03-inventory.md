@@ -251,3 +251,7 @@ speed, +5 m/s; our paragraph quoted only the range half), F1 R. Evidence verifie
 Heading kept (Qwen: heading and 2F carry different information — never merge). ChatGPT withdrew "removing a charge". E1 vetoed
 by ChatGPT on a misreading (took the draft for the source); asked back. Evidence file `paper/v8-evidence.md` (PDF pages);
 outside-the-three list `paper/v8-outside-the-three.md`. Protection of the S-18 sentence to vote. Next: Step 9 inventory.
+
+## Round 91
+
+E1 applied; S-18 protected (159). Step 2 closes after confirmation.

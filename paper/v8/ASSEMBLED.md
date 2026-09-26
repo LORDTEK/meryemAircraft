@@ -277,8 +277,8 @@ chosen, the extra installed capacity is mass: a cost in kilograms, though not Bi
 #### The charges are coupled: remedies move cost, among the three charges or outside them
 
 The three charges are not independent problems with independent fixes. **Each known partial
-remedy reduces one charge and pays for it, in another charge or in a cost outside the three.** They are three distinct accounting quantities — kilograms,
-drag counts, installed kilowatts — and they are not assumed to be independent physical causes: a
+remedy reduces one charge and pays for it, in another charge or in a cost outside the three.** They are three distinct accounting quantities, paid in kilograms,
+drag counts and installed kilowatts, and they are not assumed to be independent physical causes: a
 remedy can move a requirement from one currency into another. Whether a change of size moves them
 together, which would make them one quantity under three names, is tested in Section 7.3.
 
@@ -1189,8 +1189,7 @@ quantifying it would require a control-allocation study rather than a single tor
 
 #### Eight things this paper does not claim
 
-**1. It does not claim range against fixed-wing aircraft.** The vertical axis is where the
-fixed-wing family is the opponent; the range axis is not. A runway-launched aircraft that never
+**1. It does not claim range against fixed-wing aircraft.** A runway-launched aircraft that never
 claimed vertical capability pays none of the charges of Section 2.1, and nothing here competes
 with it on distance.
 

@@ -135,8 +135,8 @@ chosen, the extra installed capacity is mass: a cost in kilograms, though not Bi
 ### The charges are coupled: remedies move cost, among the three charges or outside them
 
 The three charges are not independent problems with independent fixes. **Each known partial
-remedy reduces one charge and pays for it, in another charge or in a cost outside the three.** They are three distinct accounting quantities — kilograms,
-drag counts, installed kilowatts — and they are not assumed to be independent physical causes: a
+remedy reduces one charge and pays for it, in another charge or in a cost outside the three.** They are three distinct accounting quantities, paid in kilograms,
+drag counts and installed kilowatts, and they are not assumed to be independent physical causes: a
 remedy can move a requirement from one currency into another. Whether a change of size moves them
 together, which would make them one quantity under three names, is tested in Section 12.
 
@@ -225,6 +225,7 @@ any aircraft.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 91:** E1 — "three distinct accounting quantities — kilograms, drag counts, installed kilowatts —" → "…paid in kilograms, drag counts and installed kilowatts" (ChatGPT yanlış okumayı düzeltip kabul etti; dört okuyucu + Claude). S-18 cümlesi korunan (159) | Tur 90 metni §2–3 |
 | **Tur 90 (yeniden kurma, 2E–2F):** E2 D ("and it is worth more than the table" — desteksiz karşılaştırma), **S-18** E3 (Bacchini tezinin kendi "great advantage"ı hız, +5 m/s; muhasebe hızı fiyatlamıyor — eklendi, doğrulandı), F1 ("transfer between charges"). Dört okuyucu + Claude. **E1 uygulanmadı:** ChatGPT taslağı mevcut metin sanıp veto etti; geri soruldu. Özgün Ek S2'de donmuş | Tur 89 metni |
 | **Tur 89 (içerik, S-15/S-16; dört okuyucu + Claude):** 2E "Each known partial remedy reduces one and raises another" → "reduces one charge and pays for it, in another charge or in a cost outside the three"; 2F ilk paragraf (iki farklı sınama) → "The accounting is refuted by a counter-example, and the table above is where one would appear: every entry in it moves cost rather than removing it."; 3.1 "…is a transfer between charges"; başlık "remedies move cost between them" → "…among the three charges or outside them" (dördü değişsin dedi; sözcük DeepSeek'inki, teyide); 2B "charged a second time" → "counted" | Tur 88 metni §2 |
 | **Tur 88 — S-14 silindi:** kuyruk üstü "beşte bir" cümlesi — dört okuyucunun koşulu ("gelecek tura kadar kaynak gelmezse sil") gerçekleşti; hiçbir okuyucu kaynak bulamadı (Grok aradı), depoda yok, yazara soruldu. Örnek oran (3,2; ~4) ona dayanmıyor. Yazar kaynağı bulursa geri gelir | Tur 87 metni §5 |

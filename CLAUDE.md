@@ -358,6 +358,11 @@ dahil herkesin hemfikir olduğu kısaltmalar uygulansın."*
   trace; it does not count as a draft failure unless the recomposition introduces or fails to repair it."* İz tablosunda her
   bulgu **köken** alanı taşır: **S** (kaynak kusuru) / **R** (yeniden kurmanın kırdığı). Kaynak kusurları
   `paper/v8-source-defects.md`'de. Tur 84'te S-7'yi durma hakkından saymam yanlıştı.
+- **Bir okuyucunun penceresi dolarsa (yazar, Tur 91).** *"Sohbet pencere dolarsa bir okuyucunun, sana haber vereceğim. O
+  esnada diğer okuyucuların cevaplarını da vereceğim. Ama sen de bana yeni pencereden başlayabilecek şey vereceksin."* →
+  `cfd/reader-onboarding.md` **her tur güncel tutulur** (§6 "Where the work stands" her tur yeniden yazılır). Yazar haber
+  verince: o okuyucuya **başlangıç metni + güncel tur metni** gider; okuyucunun gecikmeli cevabı gelince bir sonraki turda
+  işlenir. Uygulama eşiği değişmez: o okuyucunun oyu gelmeden oylanan madde uygulanmaz.
 - **Plan (yazar onayı, Tur 68).** Yapı üretilmiş görünüm olarak birleşir (`paper/build/v8_assemble.py` →
   `paper/v8/ASSEMBLED.md`; kaynak adım dosyaları). Hesap adımları taslakla kısalır: **taslak yeni yüklem eklemez**, her
   cümle kaynak cümlenin yalnız silmeyle kısalmış hâlidir (`paper/build/v8_draft_check.py`); **silme de anlamı ters

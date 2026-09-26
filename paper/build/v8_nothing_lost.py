@@ -26,10 +26,12 @@ DEGISTI = {
         "A move that reduces one charge and makes another worse is a transfer between charges.",
     "A framework that says every remedy transfers a charge rather than removing it takes something from its user in return.":
         "A framework that says every remedy moves cost rather than removing it takes something from its user in return.",
+    "They are three distinct accounting quantities — kilograms, drag counts, installed kilowatts — and they are not assumed to be independent physical causes: a remedy can move a requirement from one currency into another.":
+        "They are three distinct accounting quantities, paid in kilograms, drag counts and installed kilowatts, and they are not assumed to be independent physical causes: a remedy can move a requirement from one currency into another.",
     "The architecture converts a power-system charge into a mass one.":
         "The architecture converts a power-system charge into a cost in kilograms.",
 }
-ONCE = {2: "d2ca894", 3: "46b9628", 4: "8c4d712", 10: "024005c", 11: "65ae7de", 12: "c9fcdd7", 13: "c9fcdd7"}   # kisaltmadan onceki commit
+ONCE = {2: "d2ca894", 9: "eb22a83", 3: "46b9628", 4: "8c4d712", 10: "024005c", 11: "65ae7de", 12: "c9fcdd7", 13: "c9fcdd7"}   # kisaltmadan onceki commit
 
 
 def govde(s):

@@ -70,8 +70,7 @@ quantifying it would require a control-allocation study rather than a single tor
 
 ### Eight things this paper does not claim
 
-**1. It does not claim range against fixed-wing aircraft.** The vertical axis is where the
-fixed-wing family is the opponent; the range axis is not. A runway-launched aircraft that never
+**1. It does not claim range against fixed-wing aircraft.** A runway-launched aircraft that never
 claimed vertical capability pays none of the charges of Section 2, and nothing here competes
 with it on distance.
 
@@ -137,6 +136,7 @@ what it demands of anyone who uses the framework afterwards.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 91 (yeniden kurma, 9E):** 1. madde — "The vertical axis is where the fixed-wing family is the opponent; the range axis is not." çıktı (9B tablosunu yineliyordu; dört okuyucu + Claude). 4. maddenin silinmesi uygulanmadı: silinince "A count is not a reliability argument" hemen önceki "Part count"a bağlanıyor (köken R, uygulamadan yakalandı) → R önerisi oylamada. Özgün paragraf Ek S9'da | Tur 90 metni §4 |
 | **Tur 86 (S-8, dört okuyucu + Claude):** "converts a power-system charge into a mass one" → "into a cost in kilograms" — A′'ye göre depo fatura değil; aynı ifade Adım 3, 9, 11'de birlikte düzeltildi | Tur 85 metni §5 |
 | **Tur 67 — B5 (3.2)** (dört okuyucu + Claude): gerekçe Adım 7'de; *"Section 7 should be read under that limit"* çıktı — katkı bölümünü sonradan zayıf okutan savunmacı ses (Tur 64 ölçümü); iki korunan cümle kaldı | Adım 7 |
 | **Tur 66 — B4 (3.3):** yalnız sınır; üç bedel (itki asimetrisi, verim, rotor ataleti) burada kaldı (Grok); *"one price"* değil *"a price"* (Qwen: *"one"* tüketici okunabilir) | Adım 8 |

@@ -1613,3 +1613,14 @@ sanıp veto etti — gerekçesi aslında E1'i destekliyor; geri soruldu. **Adım
 Qwen P3 → `paper/v8-outside-the-three.md`. Koruma oyu: S-18 cümlesi (DeepSeek; Grok P47, Qwen P2). **Adım 9 envanteri**
 teyide: üç aday — 4. madde Adım 7'yi neredeyse aynen yineliyor; 1. madde tabloyu yineliyor; 9F'nin emsal listesi Adım 1'i
 yineliyor (bunda görüşüm zayıf).
+
+# Tur 91 — Tur 90 metnine dört cevap; yazar: pencere dolarsa yeni pencere başlangıç metni
+
+**Yazar:** okuyucu penceresi dolarsa haber verecek; bana yeni pencere başlangıç metni lazım → `cfd/reader-onboarding.md`
+yeniden yazıldı (Tur 61'den kalmaydı), §6 her tur güncellenecek; kural CLAUDE.md §2.3'te. **Kendi hatam (eski başlangıç
+metninde):** Adım 13'ün sözleşme sonuçlarını ters yönde veriyordu ("this configuration's range is +55 to +84 %…" — doğrusu
+lift+cruise önde); Tur 64'te dört okuyucuya gitmişti. Okuyuculara bildirildi.
+**Oybirliği:** E1 (ChatGPT yanlış okumasını kabul etti), S-18 korunan (159), Adım 9 1. madde yinelemesi çıktı (Ek S9).
+**R-1 (yeniden kurmanın ilk kendi kusuru, uygulanmadan yakalandı):** 4. maddedeki silme "A count is not a reliability
+argument"ı "Part count"a bağlayacaktı → R önerisi. 9F emsal listesi kaldı (üçü tut, Grok at). **Adım 14 envanteri** teyide;
+Yu 2025 PDF'i açıldı, batarya sayıları doğrulandı.

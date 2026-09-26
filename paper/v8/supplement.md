@@ -616,6 +616,17 @@ that structurally lacks it, before Section 7 asks whether one aircraft can hold 
 
 ---
 
+## S9. Section 9 (from Section 9)
+
+### "It does not claim range against fixed-wing aircraft" as it stood before recomposition (frozen snapshot)
+
+**1. It does not claim range against fixed-wing aircraft.** The vertical axis is where the
+fixed-wing family is the opponent; the range axis is not. A runway-launched aircraft that never
+claimed vertical capability pays none of the charges of Section 2, and nothing here competes
+with it on distance.
+
+---
+
 ## S10. Section 10's paragraphs as they stood before compression (from Section 10, Round 73)
 
 Every paragraph of Section 10 that lost a sentence or a clause in compression is given here in full, verbatim.
