@@ -111,6 +111,12 @@ EMEKLI = {
     "worth more than the table": "Tur 90: desteksiz karsilastirma (E2)",
     "every remedy transfers a charge": "Tur 90: S-16 kopyasi (Adim 13)",
     "moves* the charge": "Tur 80: mekanizma fatura degil, maliyet (Qwen; dort okuyucu)",
+    "tilt-rotors from the 1980s": "Tur 94: S-23 -- XV-3 1955, XV-15 1977 (NASA incelemesi)",
+    "at two scales and under three sizing contracts": "Tur 94: S-21 -- Bill 1 ikinci olcekte sinanmadi (Adim 12)",
+    "selects its diameter on exactly that basis": "Tur 94: S-22 -- DelftaCopter degisken hatveli; sabit hatve tanigi degil",
+    "configuration facts, and they are inherited": "Tur 94: 1D yinelemesi, listeyle uyusmuyordu",
+    "the highest of the measured figures": "Tur 94: 1,5 kW/kg olcumden turetildi -- 'obtained from a measurement'",
+    "of three different kinds": "Tur 94: R-3 -- S-19'dan sonra dort tur",
 }
 
 

@@ -183,3 +183,5 @@ kaybolmasına (CLAUDE.md §0.8). Aynı denetimle sınanır.
 | 8 | The tip pairs are the parts that fail the escape condition | D |
 | 2 | is the origin of all three charges below | Q |
 | 2 | A claim that one architecture escapes a cost shared by the others is only meaningful if the cost is stated first, in terms that do not presume the escape. | G |
+| 14 | The same study notes lithium-polymer figures in the literature as high as 3 kW per kilogram, which it cites rather than measures | C+D+G+Q+K |
+| 1 | The reaction-torque channel that other coaxial tail-sitters use about that axis is a choice this configuration declines rather than a limit it inherits | G+C+D+Q+K |

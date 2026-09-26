@@ -46,3 +46,11 @@ None: Step 1 opens the paper. It points forward to Sections 2, 7 and 8.
   weight of the mechanism."* This also documents, in someone else's words, one of the mechanism classes the paper counts.
 - **S-23 (1B).** *"tilt-rotors from the 1980s"*: the NASA review gives the XV-3 first hover in August 1955 and the XV-15
   in May 1977. My proposal: *"tilt-rotors from the 1950s"*, or name the two dates.
+
+## Round 94
+
+Inventory confirmed (four + Claude). Applied: 1D *"Precise hovering…"* removed; 1E opener removed; S-21, S-22, S-23
+repaired; the 1D declining sentence protected (162). Qwen P2 checked: the antecedent of *"What follows is therefore"* is
+1F's *"And the third route is occupied."*, untouched. **Open:** *"No field sustains…"* (Grok, DeepSeek, Qwen keep as voice;
+ChatGPT remove) and *"several are in service"* (four different remedies; a candidate source found in Bacchini, crewed
+aircraft). Body 1 679 → 1 667.

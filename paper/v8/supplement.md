@@ -60,6 +60,37 @@ sensor-based attitude reference, and enough onboard computation that stability n
 from the airframe alone. **The uncrewed tail-sitter literature has been exploiting exactly those
 three for over a decade**, which is why the gap below is not a historical one.
 
+### Five paragraphs of Section 1 as they stood before recomposition (frozen snapshot)
+
+Tail-sitting prototypes flew in the 1950s, vectored-thrust and tilt-wing aircraft in the 1960s,
+tilt-rotors from the 1980s, and a broad family of hybrid vertical take-off and landing uncrewed
+aircraft since roughly 2010. Different nations, services and propulsion philosophies have
+attacked the same problem for seventy years. **No field sustains that level of effort against a
+need that is not real.**
+
+**Some of the difficulties were real, internal, and are inherited here.** A tail-sitting vertical descent is
+harder than a runway landing; a tail-sitter on the ground is more exposed to crosswind; and propellers whose
+thrust vectors are all parallel to the body axis produce no rolling moment **by any combination of thrust
+settings**. The reaction-torque channel that other coaxial tail-sitters use about that axis is a choice this
+configuration declines rather than a limit it inherits (Sections 7 and 8). Precise hovering, ground gusts and
+the absence of a thrust-borne rolling moment are configuration facts, and they are inherited.
+
+It would be easy, and wrong, to present the third route as an empty field. **It is not**, and
+the paper is better for saying so first.
+
+**And the propeller compromise at the centre of this paper's own ledger is a known result, not a
+discovery.** The uncrewed tail-sitter literature states it directly: fixed-pitch propellers make
+it *"theoretically impossible to be very efficient in both hovering and forward flight."* A
+long-range tail-sitter reported in 2018 describes its own rotor as *"a compromise between
+efficient hover and efficient forward flight"* and selects its diameter on exactly that basis.
+
+**What is not established is the combination taken together with its price.** Specifically:
+a blended-wing-body tail-sitter in which *every* propulsor is a coaxial, torque-balanced pair —
+so that reaction torque and net angular momentum are given up along with the reorientation
+mechanism — carrying no aerodynamic control surfaces beyond a single moving device, powered
+through a buffered series hybrid, and **audited explicitly against carried hover mass, exposed
+cruise drag and hover-sized continuous power**, at two scales and under three sizing contracts.
+
 ---
 
 ## S2. Section 2 (from Section 2)
@@ -1099,3 +1130,20 @@ payload falls to about 7 kg rather than 13. At the flown system's continuous rat
 closes, and the mass it returns is set by how near the loop is to not closing rather than by anything
 about the aircraft. At the unit pack's continuous rating it does not close at all.
 
+### The paragraph on measured store figures as it stood before recomposition (frozen snapshot)
+
+**What has been measured is a fraction of that, and the figures available are of three different
+kinds.** A 24-series nickel–cobalt–manganese pack designed, bench-tested and flown in a 210 kg-class
+electric VTOL aircraft is rated, as a flown system, at 0.892 kW per kilogram continuous; its 13.5 kg
+unit pack, discharged on the bench at its highest tested rate of 10.68C, delivered on average about
+1.5 kW per kilogram for about four minutes and reached 55.1 °C against the 60 °C limit its authors
+adopted. A NASA-funded design study adopts 4 kW per kilogram and describes that figure as about twice
+that of existing batteries. The same study notes lithium-polymer figures in the literature as high as
+3 kW per kilogram, which it cites rather than measures; against that figure the take-off demand is 1.8
+to 2.0 times. **The take-off demand of Section 10's closures is 3.7 to 4.1 times the
+bench rate — the highest of the measured figures — and 6.2 to 6.8 times the flown system's continuous
+rating**; hover alone is 3.1 to 3.5 times the bench rate. The comparison is between unlike ratings: a
+peak demand held through the vertical phases, a bench average over minutes, a continuous rating, and a
+design assumption. **The gap is real on every one of them; the factor quoted is peak demand against
+bench average.** The package Section 10 closes on does not exist with any store the sources consulted
+here report as built.

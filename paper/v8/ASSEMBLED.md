@@ -29,7 +29,7 @@ price an architecture in it must pay, and whether one arrangement pays less than
 ### The demand has been continuous for seventy years
 
 Tail-sitting prototypes flew in the 1950s, vectored-thrust and tilt-wing aircraft in the 1960s,
-tilt-rotors from the 1980s, and a broad family of hybrid vertical take-off and landing uncrewed
+tilt-rotors from the 1950s, and a broad family of hybrid vertical take-off and landing uncrewed
 aircraft since roughly 2010. Different nations, services and propulsion philosophies have
 attacked the same problem for seventy years. **No field sustains that level of effort against a
 need that is not real.**
@@ -77,8 +77,7 @@ obstacles an uncrewed aircraft removes.
 harder than a runway landing; a tail-sitter on the ground is more exposed to crosswind; and propellers whose
 thrust vectors are all parallel to the body axis produce no rolling moment **by any combination of thrust
 settings**. The reaction-torque channel that other coaxial tail-sitters use about that axis is a choice this
-configuration declines rather than a limit it inherits (Sections 5.1 and 5.2). Precise hovering, ground gusts and
-the absence of a thrust-borne rolling moment are configuration facts, and they are inherited.
+configuration declines rather than a limit it inherits (Sections 5.1 and 5.2).
 
 Three things are available now that were not: electric drive on each individual rotor, sensor-based attitude
 reference, and enough onboard computation that stability need not come from the airframe alone. **The uncrewed
@@ -86,9 +85,6 @@ tail-sitter literature has been exploiting exactly those three for over a decade
 not a historical one.
 
 ### What is already occupied, stated before the gap
-
-It would be easy, and wrong, to present the third route as an empty field. **It is not**, and
-the paper is better for saying so first.
 
 **The route itself is established.** Uncrewed tail-sitters combining fixed-pitch rotors with a
 flying wing have been built and flown for more than a decade, beginning with quadrotor-plus-wing
@@ -125,8 +121,10 @@ winglets and transition.
 **And the propeller compromise at the centre of this paper's own ledger is a known result, not a
 discovery.** The uncrewed tail-sitter literature states it directly: fixed-pitch propellers make
 it *"theoretically impossible to be very efficient in both hovering and forward flight."* A
-long-range tail-sitter reported in 2018 describes its own rotor as *"a compromise between
-efficient hover and efficient forward flight"* and selects its diameter on exactly that basis.
+long-range tail-sitter reported in 2018 that uses a cyclic- and collective-pitch rotor still describes it
+as *"a compromise between efficient hover and efficient forward flight"* and selects its diameter on
+that basis; the same paper names variable pitch as the remedy for fixed-pitch propellers, at the cost of
+extra actuators and the weight of the mechanism.
 
 ### The gap, stated precisely
 
@@ -139,7 +137,8 @@ a blended-wing-body tail-sitter in which *every* propulsor is a coaxial, torque-
 so that reaction torque and net angular momentum are given up along with the reorientation
 mechanism — carrying no aerodynamic control surfaces beyond a single moving device, powered
 through a buffered series hybrid, and **audited explicitly against carried hover mass, exposed
-cruise drag and hover-sized continuous power**, at two scales and under three sizing contracts.
+cruise drag and hover-sized continuous power**, the last two of them at two scales, and under three sizing
+contracts.
 
 Each of those choices costs something, and **the giving-up is the part that is not free**. A
 quadrotor tail-sitter produces a rolling moment from the reaction torque of four independently
@@ -1950,7 +1949,7 @@ what the engine delivers through its generator — **the four closures ask the b
 kW per kilogram of buffer to leave the ground** with the tip pairs at full
 thrust, which is where the take-off margin comes from (Section 3).
 
-**What has been measured is a fraction of that, and the figures available are of three different
+**What has been measured is a fraction of that, and the figures available are of four different
 kinds.** A 24-series nickel–cobalt–manganese pack designed, bench-tested and flown in a 210 kg-class
 electric VTOL aircraft is rated, as a flown system, at 0.892 kW per kilogram continuous; its 13.5 kg
 unit pack, discharged on the bench at its highest tested rate of 10.68C, delivered on average about
@@ -1958,11 +1957,14 @@ unit pack, discharged on the bench at its highest tested rate of 10.68C, deliver
 adopted. A NASA-funded design study adopts 4 kW per kilogram and describes that figure as about twice
 that of existing batteries. The same study notes lithium-polymer figures in the literature as high as
 3 kW per kilogram, which it cites rather than measures; against that figure the take-off demand is 1.8
-to 2.0 times. **The take-off demand of Section 7.1's closures is 3.7 to 4.1 times the
-bench rate — the highest of the measured figures — and 6.2 to 6.8 times the flown system's continuous
+to 2.0 times. The study argues that, because a battery's pulse current limit can exceed its continuous
+limit by more than a factor of two, a pack with the required specific power may be possible with
+existing technology; the study's hover lasts twenty seconds or less, and how long this aircraft's
+vertical phases draw the peak is not computed here. **The take-off demand of Section 7.1's closures is 3.7 to 4.1 times the
+bench rate — the highest figure obtained from a measurement — and 6.2 to 6.8 times the flown system's continuous
 rating**; hover alone is 3.1 to 3.5 times the bench rate. The comparison is between unlike ratings: a
-peak demand held through the vertical phases, a bench average over minutes, a continuous rating, and a
-design assumption. **The gap is real on every one of them; the factor quoted is peak demand against
+peak demand held through the vertical phases, a bench average over minutes, a continuous rating, a
+design assumption, and a literature figure the study cites without its rating. **The gap is real on every one of them; the factor quoted is peak demand against
 bench average.** The package Section 7.1 closes on does not exist with any store the sources consulted
 here report as built.
 

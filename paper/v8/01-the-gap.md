@@ -45,7 +45,7 @@ price an architecture in it must pay, and whether one arrangement pays less than
 ### The demand has been continuous for seventy years
 
 Tail-sitting prototypes flew in the 1950s, vectored-thrust and tilt-wing aircraft in the 1960s,
-tilt-rotors from the 1980s, and a broad family of hybrid vertical take-off and landing uncrewed
+tilt-rotors from the 1950s, and a broad family of hybrid vertical take-off and landing uncrewed
 aircraft since roughly 2010. Different nations, services and propulsion philosophies have
 attacked the same problem for seventy years. **No field sustains that level of effort against a
 need that is not real.**
@@ -93,8 +93,7 @@ obstacles an uncrewed aircraft removes.
 harder than a runway landing; a tail-sitter on the ground is more exposed to crosswind; and propellers whose
 thrust vectors are all parallel to the body axis produce no rolling moment **by any combination of thrust
 settings**. The reaction-torque channel that other coaxial tail-sitters use about that axis is a choice this
-configuration declines rather than a limit it inherits (Sections 7 and 8). Precise hovering, ground gusts and
-the absence of a thrust-borne rolling moment are configuration facts, and they are inherited.
+configuration declines rather than a limit it inherits (Sections 7 and 8).
 
 Three things are available now that were not: electric drive on each individual rotor, sensor-based attitude
 reference, and enough onboard computation that stability need not come from the airframe alone. **The uncrewed
@@ -102,9 +101,6 @@ tail-sitter literature has been exploiting exactly those three for over a decade
 not a historical one.
 
 ### What is already occupied, stated before the gap
-
-It would be easy, and wrong, to present the third route as an empty field. **It is not**, and
-the paper is better for saying so first.
 
 **The route itself is established.** Uncrewed tail-sitters combining fixed-pitch rotors with a
 flying wing have been built and flown for more than a decade, beginning with quadrotor-plus-wing
@@ -141,8 +137,10 @@ winglets and transition.
 **And the propeller compromise at the centre of this paper's own ledger is a known result, not a
 discovery.** The uncrewed tail-sitter literature states it directly: fixed-pitch propellers make
 it *"theoretically impossible to be very efficient in both hovering and forward flight."* A
-long-range tail-sitter reported in 2018 describes its own rotor as *"a compromise between
-efficient hover and efficient forward flight"* and selects its diameter on exactly that basis.
+long-range tail-sitter reported in 2018 that uses a cyclic- and collective-pitch rotor still describes it
+as *"a compromise between efficient hover and efficient forward flight"* and selects its diameter on
+that basis; the same paper names variable pitch as the remedy for fixed-pitch propellers, at the cost of
+extra actuators and the weight of the mechanism.
 
 ### The gap, stated precisely
 
@@ -155,7 +153,8 @@ a blended-wing-body tail-sitter in which *every* propulsor is a coaxial, torque-
 so that reaction torque and net angular momentum are given up along with the reorientation
 mechanism — carrying no aerodynamic control surfaces beyond a single moving device, powered
 through a buffered series hybrid, and **audited explicitly against carried hover mass, exposed
-cruise drag and hover-sized continuous power**, at two scales and under three sizing contracts.
+cruise drag and hover-sized continuous power**, the last two of them at two scales, and under three sizing
+contracts.
 
 Each of those choices costs something, and **the giving-up is the part that is not free**. A
 quadrotor tail-sitter produces a rolling moment from the reaction torque of four independently
@@ -182,6 +181,7 @@ presume an escape.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 94 (yeniden kurma; dört okuyucu + Claude):** 1D "Precise hovering … inherited" çıktı (üçüncü "inherited", listeyle uyuşmuyordu); 1E açılışı ("It would be easy, and wrong …") çıktı; S-21 "the last two of them at two scales"; S-22 DelftaCopter'in cyclic+collective hatveli rotoru ve değişken hatvenin bedeli; S-23 "tilt-rotors from the 1950s". 1D reddetme cümlesi korunan (162). Özgün paragraflar Ek S1'de. **Açık:** "No field sustains…" (üçü tut, ChatGPT çıkar); "several are in service" (kaynak ya da yumuşatma — dört farklı öneri) | De Wagter 2018 (değişken hatve: "two extra actuators … added weight from the mechanisms"; "A diameter of 1 m was finally selected as a compromise"); NASA 19810010574 (XV-3 Ağustos 1955, XV-15 Mayıs 1977); Adım 12 "Bill 1 is not tested" |
 | **Tur 64 — N3** (beşimiz hemfikir; Qwen'in *"the only one of those documented obstacles"* düzeltmesiyle): iki alt bölüm bire; XFV-1, NASA incelemelerinin değerlendirmeleri ve güçlük listesi, *"the usual account is wrong"* Ek S1'e aynen | Ek S1; Adım 5 *"That disposes of the spatial-orientation objection and nothing else"* |
 | **Tur 61:** ret cümlesi katkıdan önceye alındı; paragraf katkıyla bitiyor (dört okuyucu + Claude aynı yönde; Grok ve Qwen neredeyse aynı metni önerdi). Yüklem değişmedi | CLAUDE.md §0.8; `v8-shortening-consensus.md` C2 |
 | **Tur 58, P1:** katkı mimaridir — gövde döner, propulsor dönmez; yeniden yönlendiren mekanizma yok; üçlü katkının sunuluş/fiyatlanış biçimi | Adım 7 satır 69 (*"rotating the airframe"*); Adım 7 tablosu; Adım 15; CLAUDE.md §0.6. *"arranged to"*: geçişin tamamlanması iddia edilmiyor (Adım 7, 15) |

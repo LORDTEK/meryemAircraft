@@ -1649,3 +1649,21 @@ Barrett'in kendi sonucu ("mevcut teknolojiyle mümkün olabilir", darbe akımı,
 Bill 1 ikinci ölçekte sınanmadı), S-22 (DelftaCopter sabit hatve uzlaşmasının tanığı olarak gösteriliyor, oysa rotoru
 değişken hatveli ve aynı makale değişken hatveyi çare olarak adlandırıyor), S-23 ("tilt-rotors from the 1980s" — XV-3 1955,
 XV-15 1977). İki yineleme adayı (1D "Precise hovering…", 1E açılışı).
+
+# Tur 94 — Tur 93 metnine dört cevap; yazar: Qwen'de yeni pencere açılmadı, olağan devam; ref. [60]'ı araştıracak
+
+**Teyit:** Tur 93'te uygulananlar (14D, Adım 9 2. madde, S-19) dört okuyucuca teyit edildi → **Adım 9 kapandı** (1 388 →
+1 339). Sürüm damgası kapandı. **Oybirliğiyle uygulandı:** R-3 ("four different kinds" + listeye literatür rakamı); S-20
+(Barrett'in "may be possible" sonucu, ChatGPT'nin "The study argues / the study's hover" göndergeleriyle); "the highest
+figure obtained from a measurement"; S-19 ve 1D reddetme cümlesi korunan (162); kaynak açma kuralı CLAUDE.md §2.1'e; Adım 14
+kanıt sütunu. **Adım 1:** envanter teyit edildi; 1D "Precise hovering…" ve 1E açılışı çıktı; S-21, S-22, S-23 onarıldı
+(1 679 → 1 667). **Ayrışık:** "No field sustains…" (üçü tut, ChatGPT çıkar); "several are in service" (dört farklı çare).
+Bacchini tezinde kaynak adayı bulundu (V-22, Harrier, F-35 — insanlı). **Qwen'in yanlış alıntısı:** 1D cümlesini metinde
+olmayan bir biçimle ("is a separate matter") aktardı — o biçim Ek S1'deki eski metin; oyu metnin kendisi için sayıldı.
+**Kendi denetimim (Tur 94):** 1D silme gerekçem yarı yanlıştı — "precise hovering" kaynakta var (XFY-1: "Difficult to hover
+precisely over a spot"); silme yineleme gerekçesiyle ayakta, precise hovering Adım 5E'de duruyor. S-23'ün uygulanmış hâli
+kronolojik sırayı bozuyor → yeni öneri. S-20 cümlesindeki "by more than a factor of two" Barrett'te tek bir modül örneğine
+dayanıyor → daraltma önerisi. **Adım 5 envanteri** gönderildi; kaynak açma kuralının yeni bloktaki ilk yakalaması S-24
+(NASA 1984: iniş takımı düşük çöküş hızı, engebeli zeminde devrilme alınmamış); S-25 (pilot güçlüğü XFY-1'e değil 1950'ler
+kuyruk üstülerine atfedilmiş).
+

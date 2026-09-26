@@ -40,3 +40,12 @@ verified (p. 16). Trace columns for the draft: debt vs scope flag (Qwen P2).
 R-2 applied with its repair; S-19 sentence entered (four + Claude). **R-3** (the S-19 sentence leaves "three different
 kinds" and the unlike-ratings list incomplete) and **S-20** (Barrett pp. 34–35: pulse limits, hover ≤ 20 s, "may be possible
 … using existing technology", not quoted) to vote. Trace columns: evidence status per battery figure (Qwen P2, DeepSeek).
+
+## Round 94
+
+R-3 and S-20 applied (four + Claude; ChatGPT's "The study argues / the study's hover" referents); "the highest figure
+obtained from a measurement"; S-19 sentence protected (161). **Trace column agreed (four + Claude):** evidence status per
+battery figure — 0.724 and 0.892 verified (ratings); ~1.5 model-derived from measured current, voltage and mass; 4 verified
+**as a design assumption**; 3 attributed; Barrett's "may be possible" an attributed conclusion, not a built pack. **Qwen P1
+(trace note):** pulse versus continuous rating is the specific mechanism left unposed; it depends on the vertical-phase
+duration, which 14G lists under the buffer's energy.

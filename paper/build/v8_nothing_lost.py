@@ -32,8 +32,12 @@ DEGISTI = {
         "The architecture converts a power-system charge into a cost in kilograms.",
     "If Section 10's take-off masses are retained instead, the payload falls to about 7 kg rather than 13.":
         "If Section 10's take-off masses are retained instead of re-closing at the bench rate, the payload falls to about 7 kg rather than 13.",
+    "What has been measured is a fraction of that, and the figures available are of three different kinds.":
+        "What has been measured is a fraction of that, and the figures available are of four different kinds.",
+    "The comparison is between unlike ratings: a peak demand held through the vertical phases, a bench average over minutes, a continuous rating, and a design assumption.":
+        "The comparison is between unlike ratings: a peak demand held through the vertical phases, a bench average over minutes, a continuous rating, a design assumption, and a literature figure the study cites without its rating.",
 }
-ONCE = {2: "d2ca894", 9: "eb22a83", 14: "9f4cfcb", 3: "46b9628", 4: "8c4d712", 10: "024005c", 11: "65ae7de", 12: "c9fcdd7", 13: "c9fcdd7"}   # kisaltmadan onceki commit
+ONCE = {2: "d2ca894", 9: "eb22a83", 14: "9f4cfcb", 3: "46b9628", 4: "8c4d712", 10: "024005c", 11: "65ae7de", 12: "c9fcdd7", 13: "c9fcdd7", 1: "e4b6847"}   # kisaltmadan onceki commit
 
 
 def govde(s):

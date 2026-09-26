@@ -314,3 +314,13 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Adım 14 izinde kanıt durumu sütunu | — | — | öneren | P2 | ✓ | Oylamada |
 | R-3 (14C "three kinds"); S-20 (Barrett sonucu) | — | — | — | — | öneren | Oylamada |
 | Adım 1 envanteri; S-21, S-22, S-23; iki yineleme | — | — | — | — | öneren | Teyide / oylamada |
+| 14D, Adım 9 2. madde, S-19 (uygulanan metin) | ✓ | ✓ | ✓ | ✓ | ✓ | **Teyit edildi** (Tur 94) → Adım 9 **kapandı** |
+| Sürüm damgası (pozitif denetim) | ✓ | ✓ | ✓ | ✓ | öneren | **Kapandı** |
+| R-3 "four kinds"; S-20 (ChatGPT'nin göndergeleriyle); "obtained from a measurement" | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı** (Tur 94); teyide |
+| S-19 cümlesi korunan; kaynak açma kuralı; Adım 14 kanıt sütunu | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı** (Tur 94) |
+| Adım 1 envanteri; 1D ve 1E silmeleri; 1D reddetme cümlesi korunan; S-21, S-22, S-23 | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı** (Tur 94); teyide |
+| 1B "No field sustains…" | tut | çıkar | tut | tut | ? | **Ayrışık** — geri soruldu |
+| 1C "several are in service" | yumuşat/kaynak | kaynak yoksa çıkar | "built and flown" | "some" | kaynak önerisi | **Ayrışık** — geri soruldu |
+| S-20 cümlesi korunan (DeepSeek); sayı tutarlılığı denetimi (DeepSeek); Grok P56 | — | — | öneren | — | ? | Oylamada |
+| Adım 5 envanteri; S-24, S-25; 5D işaret cümlesi; 5D "not computed" korunsun mu | — | — | — | — | öneren | Teyide / oylamada |
+| 1B sıra (S-23 sonrası); S-20 genişlemesi (tek modül); 1D'ye precise hovering | — | — | — | — | öneren | Oylamada (Claude'un kendi denetimi) |

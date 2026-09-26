@@ -286,6 +286,13 @@ indirilemedi, bazıları açılmadı. Taşınabilir olması için sınırı var:
 Açamadıysa sayı vermemesi istenir — çekinceli bir sayı, sayı olmamasından beterdir, çünkü
 kayda veri gibi girer.
 
+**Kaynak açma kuralı (Tur 94; DeepSeek, Qwen P1; dört okuyucu + Claude).** *"When a source is opened to verify a
+figure or a quotation, the paragraph around it and the source's own discussion or conclusion on the same quantity are
+read and recorded in the evidence file. A qualification or contrary figure found there is either quoted in the body or
+recorded as omitted, with the reason."* Gerekçe: dört seçici alıntı — S-18 (Bacchini, hız kazancı), S-19 (Barrett 3 kW/kg),
+S-20 (Barrett'in kendi "may be possible" sonucu), S-22 (DelftaCopter değişken hatveli). Son ikisi kural oylanmadan,
+kuralı uygulayarak bulundu.
+
 ### 2.2 Yenilik iddiası yazmadan önce. Tur 46'nın bedeli.
 
 Adım 1'e *"1954'te bir kez uçuruldu ve tekrar ele alınmadı"* ve *"her mimari bunu propulsor'ü
