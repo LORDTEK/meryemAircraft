@@ -28,6 +28,27 @@ def duz(s):
     return re.sub(r"\s+", " ", s).strip().lower()
 
 
+def tasinan():
+    """Tur 104: kural (iii), yazar karari (E7) -- korunan cumle nitedigi sonucla eke tasinabilir.
+    Satir bicimi: | S10 | cumle | E7 |. Cumle ekin o bolumunde durmali; durmuyorsa denetim bagirir."""
+    out = []
+    for L in open(os.path.join(KOK, "paper", "v8-caveats.md"), encoding="utf-8"):
+        m = re.match(r"^\| S(\d+) \| (.+) \| (E\d+) \|$", L.rstrip("\n"))
+        if m:
+            out.append((int(m.group(1)), m.group(2), m.group(3)))
+        elif re.match(r"^\| S\d+ \|", L):
+            sys.exit("!! v8-caveats.md tasinan satiri okunamadi (bicim): " + L.strip()[:120])
+    return out
+
+
+def ek_bolumleri():
+    t = open(os.path.join(KOK, "paper", "v8", "supplement.md"), encoding="utf-8").read()
+    d = {}
+    for m in re.finditer(r"^## S(\d+)\.(.*?)(?=^## S\d+\.|\Z)", t, re.M | re.S):
+        d[int(m.group(1))] = d.get(int(m.group(1)), "") + duz(m.group(0))
+    return d
+
+
 def liste():
     out = []
     for L in open(os.path.join(KOK, "paper", "v8-caveats.md"), encoding="utf-8"):
@@ -75,3 +96,15 @@ if __name__ == "__main__":
             print("  !! Adim %d (%s): %s" % (st, w, q[:110]))
         sys.exit("%d cekince govdede yok." % len(e))
     print("  ok  %d cekincenin hepsi kendi adiminda duruyor." % len(cek))
+    tas, ek = tasinan(), ek_bolumleri()
+    if "--sina" in sys.argv and tas:
+        st, q, _ = tas[0]
+        if not denetle([(st, q, "")], {st: ""}):
+            sys.exit("!! Tasinan cekince denetimi silinen cumleyi YAKALAMADI -- denetim bozuk.")
+        print("SINAMA: eke tasinan cekince bellekte silindi, denetim yakaladi")
+    e2 = denetle(tas, ek)
+    if e2:
+        for st, q, w in e2:
+            print("  !! Ek S%d (%s): %s" % (st, w, q[:110]))
+        sys.exit("%d eke tasinan cekince ekte yok." % len(e2))
+    print("  ok  %d cekince yazar karariyla eke tasindi ve ekte duruyor." % len(tas))

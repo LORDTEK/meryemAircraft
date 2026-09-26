@@ -2,7 +2,7 @@
 
 `paper/build/v8_vocab.py` uretir. **Gecti/kaldi yoktur**: her satir bir insanin (ve okuyucularin) anlam okumasi icindir. Kurallar betigin basinda.
 
-## ucret / para birimi (charge / currency) — 99 gecis
+## ucret / para birimi (charge / currency) — 97 gecis
 
 | Adim | Sozcuk | Cumle |
 |---|---|---|
@@ -76,8 +76,6 @@
 | 09 | charge | Section 3 names that case as partial instantiation, and the charge it re-opens is reported rather than absorbed. 6. |
 | 09 | charges | The condition concerns three specific charges. |
 | 09 | charge | Moving the hover peak onto a store converts a power-system charge into a cost in kilograms; serving two regimes with one set of fixed-geometry propellers costs efficiency in at least one of them. |
-| 10 | currency | The effective ratio of Section 6 already contains the propeller efficiency; it is the currency in which the rotorcraft comparison is made, and it is not an input to a loop whose own chain supplies that efficiency separately. |
-| 10 | charged | Only the engine is charged twice, and that is why 46.1 percent exceeds 33.0, which exceeds 9.9. |
 | 11 | charges | Section 2 named three charges that any architecture in this corner pays. |
 | 11 | charge | This section puts the two together: it says where each charge appears inside the closed numbers, and how large it is there. |
 | 11 | charge | The shares, ratios and percentages below are new calculations, but each is a decomposition or a derived measure of a quantity the closure already reported, and adding any of them again as a separate charge would be double counting. |
@@ -106,7 +104,7 @@
 | 13 | charge | Section 2 predicted that where an arrangement pays one charge heavily in order to escape another, its ranking against a differently-balanced arrangement will move when the sizing rule changes, and can reverse. |
 | 13 | charge, currency | Each comparison states every charge in its own currency before any aggregate, names its contract, and states its asymmetries and their directions; an ordering is reported only with the contract it was computed under and, where its sign depends on an unmeasured quantity, with that quantity named. |
 
-## transfer (dar / genis) — 12 gecis
+## transfer (dar / genis) — 11 gecis
 
 | Adim | Sozcuk | Cumle |
 |---|---|---|
@@ -118,12 +116,11 @@
 | 02 | transfer | If the architecture it modifies supplies its hover peak from a store, tilting without one imposes Bill 3 and the row is a transfer between charges. |
 | 04 | transfer | The published weight breakdown is consistent with the transfer property of Section 2 — the mechanism giving part of the structural saving back — inside a breakdown this work did not produce: its three reported categories account for 580 lb of the 679 lb empty-weight difference, and the remaining 99 lb lies in categories it does not break out (Supplement S4). |
 | 04 | transfer | The tilt-wing is consistent with the transfer property of Section 2, in someone else's data. |
-| 10 | transferable | What survives is not a transferable transition figure but a result for the model that was tested: within the finite-moment dynamic model, with the aerodynamic moment set to zero, the manoeuvre costs altitude. |
 | 13 | transferred | The lift-plus-cruise layout carries the ratio measured in the wind-tunnel campaign quoted in Section 2 — maximum lift-to-drag ratio about 17 clean and about 13 with the lift hardware installed and its propellers locked parallel to the flow — transferred from a different airframe, and assuming lift rotors stopped and aligned in cruise, which takes an indexing mechanism (Section 7) whose mass is not separately charged. |
 | 13 | transferred | This paper meets that for its own column (Section 11) and not for the competitors', whose kilograms and drag counts here are parameters and transferred ratios rather than an audit. |
 | 13 | transferred | The competitors are modelled at a coarser level than this configuration: their drag is a ratio transferred from another airframe or an idealisation, their propeller efficiency is assumed, and their architecture-specific mass is a parameter, while this configuration's drag and propeller efficiency are computed. |
 
-## rakip ailesi (rotorcraft / multirotor / quadrotor / helicopter) — 27 gecis
+## rakip ailesi (rotorcraft / multirotor / quadrotor / helicopter) — 26 gecis
 
 | Adim | Sozcuk | Cumle |
 |---|---|---|
@@ -149,13 +146,12 @@
 | 06 | quadrotor | The quadrotor is a good quadrotor. |
 | 09 | helicopters, multirotors, rotorcraft | \| Axis \| Opponent \| Status \| \|---\|---\|---\| \| Cruise efficiency \| Rotorcraft: multirotors and helicopters \| Claimed against multirotors, and bounded; against helicopters the published comparison is mixed and no advantage is claimed. |
 | 09 | rotorcraft | It does not claim vertical capability against rotorcraft. |
-| 10 | rotorcraft | The effective ratio of Section 6 already contains the propeller efficiency; it is the currency in which the rotorcraft comparison is made, and it is not an input to a loop whose own chain supplies that efficiency separately. |
-| 10 | helicopter, multirotor | No multirotor or helicopter is sized in this work, so no range comparison is made against either — Section 6 compares the two families in cruise efficiency and says why it stops there. |
+| 10 | rotorcraft | These ranges are carried forward as closed-loop values, not as a ranking: no rotorcraft is sized in this work, so no range comparison is made against one (Section 6 compares cruise efficiency), and the comparison with the other hybrids depends on the sizing contract (Section 13). --- |
 | 15 | helicopters, multirotors, rotorcraft | Cruise efficiency, against rotorcraft — claimed against multirotors, and bounded; mixed against helicopters. |
 | 15 | quadrotor | The size of the advantage is a calculation, not a consequence of that statement: positive throughout against one published quadrotor, and from slightly behind to comfortably ahead against the other (Section 6). |
 | 15 | rotorcraft | Nothing is claimed against rotorcraft on vertical capability. |
 
-## mekanizma / gecis (mechanism / transition) — 72 gecis
+## mekanizma / gecis (mechanism / transition) — 70 gecis
 
 | Adim | Sozcuk | Cumle |
 |---|---|---|
@@ -208,9 +204,7 @@
 | 09 | transition | The design sizes vertical operation and the transition; it does not demonstrate either. |
 | 09 | mechanism, transition | No aircraft has been built, no wind tunnel has been run on this geometry, and the transition analysis is a calculation whose assumptions are stated where it appears. "By construction" throughout this paper means "by the sizing", never "by demonstration." Removing those eight leaves something narrower than a first reading of the abstract might suggest, and the narrower statement is the one the paper defends: a configuration sized to combine runway-independent vertical operation with wing-borne cruise efficiency, arranged to do so with no mechanism that reorients a propulsor, and an account of what the combination costs. |
 | 10 | mechanism | This section prices the arrangement of Sections 7 and 8 on a declared package; it does not bear on the count of mechanism classes, which rests on the inventory of those sections alone. |
-| 10 | transition | On these assumptions the analytical sizing loop closes for this architecture — and for the 50 kg design, which is the only one carried through this loop; the 1 000 kg reference design appears below only through a transition time computed elsewhere. |
-| 10 | mechanism | The first model is shown anyway, because the mechanism it exposes is real and the reason the second model differs is the point. |
-| 10 | transition | What survives is not a transferable transition figure but a result for the model that was tested: within the finite-moment dynamic model, with the aerodynamic moment set to zero, the manoeuvre costs altitude. |
+| 10 | transition | Every transition figure here belongs to a reference design at its published mass and is not an output of the closure. |
 | 11 | mechanism | Like the closure, the ledger prices the arrangement; the count of mechanism classes is not an entry in it. |
 | 11 | transition | The closure does not contain the cost of declining the reaction-torque channel, the sizing of the strip's actuation, the allocation of the take-off margin against attitude authority, the landing transition, the vortex ring state, closed-loop hover control, engine installation, or rotor–structure and rotor–wing interference. |
 | 11 | transition | The transition altitude result (5.4 m, in the finite-moment model at the 50 kg reference geometry) is a result, not a charge, and is not a term in any sizing loop (the table is Supplement S11). |
