@@ -179,7 +179,7 @@ none of them is an output of it.)* Nothing in that result requires the tip pairs
 to contribute lift once the climb is acquired.
 
 **The second model removes the result, and this is the sharper of the two limitations.** The
-point-mass model prescribes the attitude and therefore cannot charge for the trajectory the
+point-mass model prescribes the attitude and therefore cannot account for the trajectory the
 aircraft flies while it is being rotated into that attitude. Solved instead with rotational
 dynamics and a finite control moment — **and with the aerodynamic pitching moment set to
 exactly zero, so that nothing favourable is borrowed** — the 50 kg reference design **loses 5.4 m at the
@@ -232,6 +232,7 @@ where it is made.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 88 (dört okuyucu + Claude):** "cannot charge for the trajectory" → "cannot account for" — fatura sözcüğü genel fiil (A′; Qwen P2 taraması) | Tur 87 metni §2 |
 | **Tur 73:** birinci geçişten 10.2 (alan sabit tutulsaydı karşı-olgusu) ve 10.4 (nokta kütle modelinde optimize edilecek süre yok paragrafı) uygulandı — dört okuyucu + Claude. **10.1, 10.3, 10.5 vetolandı** (ChatGPT; 10.3'e Grok da) → kaynak kaldı. Hüküm cümlesi korunan listeye | Tur 72 metni §4 |
 | **Tur 61:** yayılım tablosu tek cümleye indi (dört okuyucu + Claude hemfikir, A6); dört sayı aynen | `aero/closure-result.txt` YAYILIMLAR |
 | **Tur 60:** üç ölçeklenmeyen şey (uç disk çapı eklendi); çerçeve+rotor katsayıları S_ref 1,979 m² üzerinde — sabit tutmak donanımı kanatla büyütmek demek; referans boyutta kalsa %4–13, 0,0009–0,0028 küçülürdü, kapanış almıyor; terim birliği | Grok; `aero/closure.py`, `closure-result.txt`; `aero/tip_propeller.py` S_REF; `verify.py` iki yeni kontrol |

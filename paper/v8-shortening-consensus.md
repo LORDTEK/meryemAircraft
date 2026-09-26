@@ -288,3 +288,6 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Koruma ölçütü; durma kuralı (köken S/R) | ✓ | ✓ | ✓ | ✓ | ✓ | **Yöntem belgesinde** |
 | Adım 10 "account for" | — | — | — | Q P2 taraması | öneren | Oylamada |
 | 2A–2D A1 B1 C1 D1 D2 (S-13) D3 (S-14) | — | — | — | — | öneren | Kör okuma + oylama |
+| Adım 3 kapanış; Adım 10 "account for"; 2A–2D | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı** (Tur 88); 2A–2D teyide |
+| S-14 sil (kaynak yoksa) | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı** (koşul gerçekleşti) |
+| S-15/S-16 seti; "counted" (2B, Adım 4) | — | — | D (counted) | — | öneren | Oylamada |

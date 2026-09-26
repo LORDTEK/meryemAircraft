@@ -12,7 +12,10 @@ kor okumada elle denetlenir (Tur 86 karari: iki katman).
 import glob, os, re, sys
 KOK = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 V8 = os.path.join(KOK, "paper", "v8")
-ATIF = re.compile(r"\b(tables?|table's|rows?)\b", re.I)
+ATIF = re.compile(r"\b(tables?|table's|rows?)\b|\b(the inversion|(first|second|third|fourth) departure)", re.I)
+# Tur 88 (Qwen'in ikinci katmani, dort okuyucu): iliskisel adlar ELLE cozulur; cozulen her biri
+# gozden gecirilmis listeye girer ve betik onu kaymaya karsi korur. Yeni bir iliskisel ad
+# eklendikce bu desene eklenir.
 
 
 def duz(x):
@@ -46,11 +49,21 @@ yeni = []
 for n in range(1, 16):
     b = govde(n)
     if "--sina" in sys.argv and n == 3:
-        b += "\n\nThe table's last row permits nothing.\n"
+        b += "\n\nThe table's last row permits nothing. The fourth departure says nothing.\n"
     for c in atiflar(b):
         if not any(n == a and c.startswith(p) for a, p in gozden):
             yeni.append((n, c))
-print("=== TABLO / SATIR ATIF DENETIMI ===")
+# Tur 88 (DeepSeek): her "Supplement S#" atfi ekte var olan bir "## S#" bolumune cozulmeli.
+ek = open(os.path.join(V8, "supplement.md"), encoding="utf-8").read()
+bolumler = set(re.findall(r"(?m)^## (S\d+)\.", ek))
+for n in range(1, 16):
+    b = govde(n)
+    if "--sina" in sys.argv and n == 3:
+        b += "\n\nSee Supplement S99.\n"
+    for s_ in re.findall(r"Supplement (S\d+)", b):
+        if s_ not in bolumler:
+            yeni.append((n, "Supplement %s -- ekte boyle bir bolum yok" % s_))
+print("=== TABLO / SATIR / ILISKISEL AD / EK ATIF DENETIMI ===")
 for n, c in yeni:
     print("  !! Adim %d, gozden gecirilmemis atif: %s" % (n, c[:120]))
 if yeni:

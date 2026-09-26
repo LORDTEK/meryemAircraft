@@ -1,4 +1,4 @@
-# Tablo / satır atıfları — gözden geçirilmiş liste (Tur 86)
+# Tablo / satır / ilişkisel ad atıfları — gözden geçirilmiş liste (Tur 86; ilişkisel adlar Tur 88)
 
 `paper/build/v8_refs.py` bu listede olmayan her "table/row" atfını yakalar. Satır = adım | cümlenin başı | neye işaret
 ettiği | hangi turda bakıldı. **Adım 13'ün "it makes the tilt row a bound" cümlesi bilerek listede YOK** — Adım 13'ün
@@ -28,3 +28,9 @@ gövde tablosunda tilt satırı yok (karşılaştırma S13'e taşınmış); Tur 
 | 11 | The transition altitude result (5.4 m, in the finite-moment model at t | Supplement S11 (named) | Tur 86 |
 | 13 | Across the sensitivity cases (the full table is Supplement S13) it is | Supplement S13 (named) | Tur 86 |
 | 14 | (What each item bears on is in the full table, Supplement S14.) | Supplement S14 (named) | Tur 86 |
+| 3 | (The second departure is stated separately because it does real work | 3B, second departure (Round 83–84) | Tur 88 |
+| 3 | The inversion requires only one orientation relative to the airframe; | 3B, "Inverting the table" (S-7, Round 84) | Tur 88 |
+| 3 | And the fourth departure's exception lets the peak come from any source | 3B, fourth departure's "unless" (S-7, Round 84) | Tur 88 |
+| 3 | Saying otherwise would let a candidate win that line by wording. - Hardwa | 3B, second departure (3D bullet; Qwen P1, Round 85) | Tur 88 |
+| 3 | The third departure is refused by a means other than the one the field h | 3B, third departure (Round 87) | Tur 88 |
+| 3 | A tilting architecture accepts that departure and buys its way out of the | 3B, first departure (S-2, Round 87) | Tur 88 |

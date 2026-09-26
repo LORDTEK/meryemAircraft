@@ -391,6 +391,10 @@ Hiçbir iddia denetlenmeden aktarılmaz — ne YZ'lerinki ne benimki.
   kaybı olan her paragraf eke **tam** ve özgün başlığıyla gider.
 - `paper/build/links.py` — bağ dokusu: işaretçiler çözülüyor mu, **doğru
   yere mi** çözülüyor, tablo/şekil atıfları tutuyor mu.
+  **DİKKAT (Tur 88):** `links.py` **v7** kâğıdını (`paper-v7.md`) denetler, v8 adımlarını DEĞİL. v8'de "Section X"
+  çözülmesini `v8_assemble.py` ("cozulmeyen atif") denetler. Tur 88'e dek v8 için "links temiz" diye raporladığım v7'ydi.
+- `paper/build/v8_refs.py` — v8'de tablo/satır atıfları, elle çözülmüş ilişkisel adlar (*the inversion*, *the N-th
+  departure*) ve "Supplement S#" atıfları; gözden geçirilmiş liste `paper/v8-refs-reviewed.md` (`--sina`).
 - Bir denetim yazdığında **eski hatayı geri koyup yakalayıp yakalamadığını
   sına.** Sessizce boş dönen bir denetim, hiç olmayandan beterdir; bu bir kez
   oldu.

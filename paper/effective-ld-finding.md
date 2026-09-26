@@ -1583,3 +1583,13 @@ koruma ölçütü ve durma kuralı (köken S/R) yöntem belgesine; kaynak kusuru
 **Adım 2 (2A–2D):** 1 281 → 1 233 (−%4); ilk geçişler, dört korunan cümle — kesilecek az. **S-13:** "returns to Bill 1" A′ ile
 çelişiyor (Tur 77 envanterimde de aynı hata vardı). **S-14:** kuyruk üstü "beşte bir" ölçümü v5'ten beri kaynaksız; depoda
 belge ya da hesap yok → daraltıldı, kaynak istendi, gelmezse silinecek.
+
+# Tur 88 — Tur 87 metnine dört cevap; Adım 3 kapandı; S-14 silindi
+
+**Oybirliği:** Adım 3 kapandı; Adım 10 "account for"; 2A–2D (A1–D3) uygulandı, özgün yeni Ek S2'de. **S-14:** dört okuyucunun
+koşulu gerçekleşti (kaynak gelmedi; Grok aradı) → cümle silindi; yazar bulursa geri gelir. v8_refs genişledi (DeepSeek: ek
+atıfları; Qwen: ilişkisel adların korunması). **Kendi hatam:** Tur 87'de "links.py Section X'i denetliyor" dedim — links.py
+v7 kâğıdını denetliyor; v8'de bunu v8_assemble yapıyor. Turlar boyunca "links temiz" diye v8 için raporladığım v7'ydi (pratik
+sonuç değişmedi; v8_assemble her turda geçti). **Yeni içerik bulguları (taslak yok, önce oylama):** S-15 (2F'de iki farklı
+çürütme sınaması), S-16 ("transfer"in dar ve geniş iki anlamı; tilt satırı S5-2'nin ikinci kolunda "reduces one and raises
+another"ı karşılamıyor). DeepSeek: "charged a second time" (2B, Adım 4) → "counted".

@@ -96,6 +96,12 @@ EMEKLI = {
     "longest of the three answers": "Tur 87: S-10 -- yanlis (11: 1 968; 6: 2 230)",
     "the tilt row a bound": "Tur 87: Adim 13 govde tablosunda tilt satiri yok",
     "charges all three the same": "Tur 87: fatura sozcugu genel fiil (A')",
+    "often the largest": "Tur 88: kaynaksiz karsilastirma (D1)",
+    "which returns to Bill 1": "Tur 88: S-13 -- A' ile celisiyor",
+    "borne out in flight": "Tur 88: S-14 -- kaynaksiz dogrulama iddiasi (Grok P43)",
+    "the ratio this expression gives": "Tur 88: S-14 -- hesaplanmamis eslesme (Grok P43)",
+    "cannot charge for": "Tur 88: fatura sozcugu genel fiil (Adim 10)",
+    "carbon-fibre tail-sitter": "Tur 88: S-14 -- kaynaksiz olcum silindi (kaynak bulunursa yazar karariyla doner)",
     "moves* the charge": "Tur 80: mekanizma fatura degil, maliyet (Qwen; dort okuyucu)",
 }
 

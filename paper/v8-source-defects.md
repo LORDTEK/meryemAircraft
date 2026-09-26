@@ -17,7 +17,11 @@ açılırsa bu kusurlar geri gelmesin diye her birinin emekli ifadesi `v8_stale.
 | S-11 | 86–87 | Adım 13 | "the tilt row" — gövde tablosunda tilt satırı yok (S13'e taşınmış) | "the tilting layout" | S (taşıma artığı) |
 | S-12 | 86–87 | Adım 13 | "charges all three the same assumption" — fatura sözcüğü genel fiil | "puts the same assumption on all three" | S |
 | açık | 86 | Adım 3E mod 4 | "re-opens the charge it fails" gevşek (bir parça koşulun bir parçasını başarısız kılar, fatura yeniden açılır) | 3E kilitli; ertelendi | S |
-| aday | 87 | Adım 10 | "cannot charge for the trajectory" — fatura sözcüğü genel fiil | oylamada: "cannot account for" | S |
+| S-12b | 87–88 | Adım 10 | "cannot charge for the trajectory" — fatura sözcüğü genel fiil | "cannot account for" | S |
+| S-13 | 87–88 | Adım 2D | "the extra installed capacity is mass, which returns to Bill 1" — A′ ile çelişiyor (motor ve batarya kaldırma alt sistemi değil); Tur 77 envanterimde de vardı | "a cost in kilograms, though not Bill 1" | S |
+| S-14 | 87–88 | Adım 2D | kuyruk üstü "beşte bir" ölçümü v5'ten beri kaynaksız; "borne out" ve ifadeyle eşleşme hiç hesaplanmamış | önce daraltıldı, kaynak gelmeyince silindi | S |
+| aday S-15 | 88 | Adım 2F | ilk paragraf olumlu sınamadan sıkı bir sınama söylüyor ("adding no cost of its own", "right-hand column genuinely empty") | oylamada | S |
+| aday S-16 | 88 | Adım 2E, 2F | "Each known partial remedy reduces one and raises another" ve "every entry in it is a documented transfer", S5-2'nin ikinci kolunda tilt satırı için doğru değil | oylamada | S |
 
 **Kümelenme (Qwen):** 12 kusurun 3'ü **taşıma artığı** (S-7, S-11 ve ilk durumu S-1'in bir kısmı): bir tablo ya da paragraf
 başka yere taşındığında geride kalan atıf. `v8_refs.py` bunun için var.

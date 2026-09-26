@@ -14,10 +14,12 @@ DEGISTI = {
         "That is an idealisation in its favour, and it is deliberate: it makes the tilting layout a bound.",
     "Whatever that store turns out to cost, holding it common charges all three the same assumption.":
         "Whatever that store turns out to cost, holding it common puts the same assumption on all three.",
+    "The point-mass model prescribes the attitude and therefore cannot charge for the trajectory the aircraft flies while it is being rotated into that attitude.":
+        "The point-mass model prescribes the attitude and therefore cannot account for the trajectory the aircraft flies while it is being rotated into that attitude.",
     "The architecture converts a power-system charge into a mass one.":
         "The architecture converts a power-system charge into a cost in kilograms.",
 }
-ONCE = {3: "46b9628", 4: "8c4d712", 10: "024005c", 11: "65ae7de", 12: "c9fcdd7", 13: "c9fcdd7"}   # kisaltmadan onceki commit
+ONCE = {2: "d2ca894", 3: "46b9628", 4: "8c4d712", 10: "024005c", 11: "65ae7de", 12: "c9fcdd7", 13: "c9fcdd7"}   # kisaltmadan onceki commit
 
 
 def govde(s):

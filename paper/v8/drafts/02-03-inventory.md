@@ -227,3 +227,12 @@ criterion; stop rule with origin S/R); source-defect log `paper/v8-source-defect
 generic verb (Step 10 "cannot charge for"). 2A–2D draft 1 281 → 1 233: A1 R, B1 D, C1 D, D1 D ("often the largest",
 unsourced), **S-13** D2 ("returns to Bill 1" contradicts A′ — my own Round 77 inventory had it too), **S-14** D3 (the
 tail-sitter "one fifth" uncited since v5; no document in references/, no computation) — source requested; delete if none.
+
+## Round 88 — Step 3 closed; 2A–2D applied; S-14 deleted; S-15/S-16 found
+
+2A–2D applied (four + Claude); frozen in new Supplement S2. S-14 deleted (condition met: no source). Step 10 "account for".
+v8_refs extended (supplement refs; relational-noun guard). **S-15:** 2F states a stricter test ("no cost of its own",
+"genuinely empty") before the positive one. **S-16:** "Each known partial remedy reduces one and raises another" and "every
+entry … a documented transfer" are false for the tilting row in S5-2's second branch; "transfer" has a narrow (3.1) and a
+broad (protected) sense. Proposals to vote; no 2E/2F draft until settled. "charged a second time" (2B) / "charged again in
+hover" (Step 4) → "counted" to vote.
