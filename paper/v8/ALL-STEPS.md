@@ -1201,7 +1201,7 @@ claimed vertical capability pays none of the charges of Section 2, and nothing h
 with it on distance.
 
 **2. It does not claim vertical capability against multirotors.** That comparison runs the other
-way and would be absurd. The multirotor family is the opponent on cruise efficiency only.
+way and would be absurd.
 
 **3. It does not claim that the aircraft has no moving parts.** What is eliminated is a *class
 of mechanism* — the one that reorients a propulsor. The aircraft has a moving aerodynamic
@@ -1971,7 +1971,9 @@ electric VTOL aircraft is rated, as a flown system, at 0.892 kW per kilogram con
 unit pack, discharged on the bench at its highest tested rate of 10.68C, delivered on average about
 1.5 kW per kilogram for about four minutes and reached 55.1 °C against the 60 °C limit its authors
 adopted. A NASA-funded design study adopts 4 kW per kilogram and describes that figure as about twice
-that of existing batteries. **The take-off demand of Section 10's closures is 3.7 to 4.1 times the
+that of existing batteries. The same study notes lithium-polymer figures in the literature as high as
+3 kW per kilogram, which it cites rather than measures; against that figure the take-off demand is 1.8
+to 2.0 times. **The take-off demand of Section 10's closures is 3.7 to 4.1 times the
 bench rate — the highest of the measured figures — and 6.2 to 6.8 times the flown system's continuous
 rating**; hover alone is 3.1 to 3.5 times the bench rate. The comparison is between unlike ratings: a
 peak demand held through the vertical phases, a bench average over minutes, a continuous rating, and a
@@ -1995,8 +1997,7 @@ it was set at is not established.
 | 0.892 kW kg⁻¹, the flown system's continuous rating | about 335 kg | 22 to 25 % | set by nearness to non-closure |
 | 0.724 kW kg⁻¹, the unit pack's continuous rating | **does not close** | — | — |
 
-**At the bench rate the loop closes about three-quarters heavier**, with a buffer of about fourteen
-percent of take-off mass rather than 3.6. If Section 10's take-off masses are retained instead, the
+If Section 10's take-off masses are retained instead of re-closing at the bench rate, the
 payload falls to about 7 kg rather than 13. At the flown system's continuous rating the loop only just
 closes, and the mass it returns is set by how near the loop is to not closing rather than by anything
 about the aircraft. At the unit pack's continuous rating it does not close at all.
