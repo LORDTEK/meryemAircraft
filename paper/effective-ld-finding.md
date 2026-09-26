@@ -1667,3 +1667,14 @@ dayanıyor → daraltma önerisi. **Adım 5 envanteri** gönderildi; kaynak açm
 (NASA 1984: iniş takımı düşük çöküş hızı, engebeli zeminde devrilme alınmamış); S-25 (pilot güçlüğü XFY-1'e değil 1950'ler
 kuyruk üstülerine atfedilmiş).
 
+# Tur 95 — Tur 94 metnine dört cevap
+
+**Teyit:** Tur 94'te uygulananların hepsi. **Oybirliğiyle uygulandı:** 1B sırası; S-20 tek modüle daraltıldı; S-20 cümlesi ve
+Adım 5D "not computed" cümlesi korunan (164); S-24 ve S-25; sayı tutarlılığı adımı CLAUDE.md'ye; Grok P56 `v8_stale.py`'ye
+yalnız-adım denetimi olarak (öz sınamalı). 1D'ye precise hovering konmadı; gerekçem düzeltildi. **Ayrışık:** "No field
+sustains…" (üçü daraltılmış biçimi kabul, ChatGPT "need is real" çıkarımına da karşı — status quo, yani evrensel cümle,
+duruyor); "several are in service" (V-22'yi üçü reddetti — insansız paragrafa insanlı tanık; Qwen istiyor); 5D işaret cümlesi
+(DeepSeek tut). **Qwen** 1D korunan cümlesini ikinci kez eski S1 biçimiyle alıntıladı. **Adım 6 envanteri** (niteleme yönü
+sütunuyla, Qwen P2): S-26 başlık "beşinin hepsi aleyhte" diyor, metin üçü için diyor; **S-27** J&S Tablo 3 tam okundu —
+yan yana elektrikli helikopter L/De 7,2, kanatsız, zarfımızın üst kısmında, makalede hiç yok; S-28 disk yüklemesi yalnız
+turboşaftın.

@@ -54,3 +54,10 @@ repaired; the 1D declining sentence protected (162). Qwen P2 checked: the antece
 1F's *"And the third route is occupied."*, untouched. **Open:** *"No field sustains…"* (Grok, DeepSeek, Qwen keep as voice;
 ChatGPT remove) and *"several are in service"* (four different remedies; a candidate source found in Bacchini, crewed
 aircraft). Body 1 679 → 1 667.
+
+## Round 95
+
+1B reordered (four + Claude). **Corrected rationale for the 1D removal (ChatGPT):** removed because it duplicated a later and
+more fitting home in Step 5E, not because "precise hovering" was unsupported or misnamed — the NASA sources support it.
+Still open: *"No field sustains…"* and *"several are in service"*. Qwen quoted the 1D protected sentence in its older S1 form a
+second time; the vote is counted for the current wording and Qwen is asked once more.

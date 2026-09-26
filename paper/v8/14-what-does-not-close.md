@@ -63,8 +63,8 @@ unit pack, discharged on the bench at its highest tested rate of 10.68C, deliver
 adopted. A NASA-funded design study adopts 4 kW per kilogram and describes that figure as about twice
 that of existing batteries. The same study notes lithium-polymer figures in the literature as high as
 3 kW per kilogram, which it cites rather than measures; against that figure the take-off demand is 1.8
-to 2.0 times. The study argues that, because a battery's pulse current limit can exceed its continuous
-limit by more than a factor of two, a pack with the required specific power may be possible with
+to 2.0 times. The study argues that, because pulse current limits can exceed continuous ones — by more
+than a factor of two in one commercial module it cites — a pack with the required specific power may be possible with
 existing technology; the study's hover lasts twenty seconds or less, and how long this aircraft's
 vertical phases draw the peak is not computed here. **The take-off demand of Section 10's closures is 3.7 to 4.1 times the
 bench rate — the highest figure obtained from a measurement — and 6.2 to 6.8 times the flown system's continuous
@@ -163,6 +163,7 @@ The last section returns to the four axes of Section 9 and states what is claime
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 95 (14C; dört okuyucu + Claude):** S-20 daraltıldı — "because pulse current limits can exceed continuous ones — by more than a factor of two in one commercial module it cites —" (Barrett'in genel cümlesi yalnız "can have … higher"; iki kat tek modül örneği). S-20 cümlesi korunan (163) | Barrett PDF s. 34; Tur 94 metni §3.3 |
 | **Tur 94 (14C; dört okuyucu + Claude):** R-3 — "three different kinds" → "four", ve "unlike ratings" listesine "and a literature figure the study cites without its rating"; S-20 — Barrett'in kendi sonucu eklendi ("The study argues that … may be possible with existing technology; the study's hover lasts twenty seconds or less, and how long this aircraft's vertical phases draw the peak is not computed here"; "The study"/"the study's" ChatGPT'nin göndergesi); "the highest of the measured figures" → "the highest figure obtained from a measurement" (ChatGPT tercih etti, üçü itirazsız). S-19 cümlesi korunan (161). Özgün paragraf Ek S14'te | Barrett PDF s. 32, 34–35; Tur 93 metni §3–§4 |
 | **Tur 93 (yeniden kurma, 14C ve 14D; dört okuyucu + Claude):** 14D — "At the bench rate the loop closes about three-quarters heavier, with a buffer of about fourteen percent…" çıktı (tablonun üçüncü satırını yineliyordu); ardından gelen cümle "retained instead," → "retained instead of re-closing at the bench rate," (R-2 onarımı: "instead" silinen cümleye bağlıydı, Grok P51 okuması uygulamadan önce yakaladı). 14C — S-19: Barrett çalışmasının 3 kW/kg alıntısı gövdeye girdi, **alıntı olarak** (çalışma ölçmüyor, kendi kaynağı [60]'ı gösteriyor); 5,5–6,1 / 3 = 1,8–2,0 kat. Özgün 14D paragrafı Ek S14'te | Tur 92 metni §2–§3 |
 | **Tur 92 (yeniden kurma, 14E ve 14G; dört okuyucu + Claude):** 14E "at a measured specific power it costs thirteen to fifteen percent of take-off mass instead of 3.6" çıktı (tablonun üçüncü satırının üçüncü söylenişi); 14G son iki cümle çıktı (listede zaten etiketli). "The escape from Bill 3 is real…" korunan (160). Özgün paragraflar Ek S14'te | Tur 91 metni §3 |

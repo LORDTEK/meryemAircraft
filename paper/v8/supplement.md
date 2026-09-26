@@ -647,6 +647,30 @@ that structurally lacks it, before Section 7 asks whether one aircraft can hold 
 
 ---
 
+## S5. Section 5 (from Section 5)
+
+### Three paragraphs of Section 5 as they stood before recomposition (frozen snapshot)
+
+**The saving has precedent and it is not this paper's observation.** Reviewing the tail-sitters
+of the 1950s, NASA recorded that *"dispensing with a conventional landing gear improved the
+empty weight fraction for these VATOL aircraft"*, while noting that some form of gear was still
+required on the tail surfaces. The present arrangement takes that benefit and extends it by
+giving the same structure the control duty as well.
+
+**And one historical difficulty is inherited rather than removed.** A tail-sitting aircraft on
+the ground is more exposed to crosswind than a conventional one. The stance base is the answer
+this configuration offers, and it is a parameter rather than a proof.
+
+One of the 1954 objections is genuinely removed and it should be named exactly. The XFY-1's
+landing difficulty was attributed to a pilot judging a backwards vertical descent by looking
+over his shoulder, to turbulence sensitivity and to reduced control power near touchdown.
+**There is no pilot here, and height above ground is a sensor measurement rather than a human
+estimate.** That disposes of the spatial-orientation objection and nothing else. **Precise
+hovering, ground gusts and the descent itself are not disposed of by removing the pilot**, and
+this section does not pretend otherwise.
+
+---
+
 ## S9. Section 9 (from Section 9)
 
 ### "It does not claim range against fixed-wing aircraft" as it stood before recomposition (frozen snapshot)

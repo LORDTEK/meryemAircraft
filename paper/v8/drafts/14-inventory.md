@@ -49,3 +49,8 @@ battery figure — 0.724 and 0.892 verified (ratings); ~1.5 model-derived from m
 **as a design assumption**; 3 attributed; Barrett's "may be possible" an attributed conclusion, not a built pack. **Qwen P1
 (trace note):** pulse versus continuous rating is the specific mechanism left unposed; it depends on the vertical-phase
 duration, which 14G lists under the buffer's energy.
+
+## Round 95
+
+S-20 narrowed to one commercial module; S-20 sentence protected (163). **Grok P58:** precise hovering has one home, Step 5E;
+it must not reappear in 14G's unknowns as if newly noticed.

@@ -117,7 +117,28 @@ EMEKLI = {
     "configuration facts, and they are inherited": "Tur 94: 1D yinelemesi, listeyle uyusmuyordu",
     "the highest of the measured figures": "Tur 94: 1,5 kW/kg olcumden turetildi -- 'obtained from a measurement'",
     "of three different kinds": "Tur 94: R-3 -- S-19'dan sonra dort tur",
+    "tilt-rotors from the 1950s": "Tur 95: S-23'un ilk hali -- sira bozuk, sureklilik iddiasi",
+    "a battery's pulse current limit can exceed": "Tur 95: S-20 genislemesi -- iki kat tek modul ornegi",
+    "The XFY-1's landing difficulty": "Tur 95: S-25 -- inceleme 'these tail-sitter designs' diyor",
 }
+
+
+# Tur 95 (Grok P56; dort okuyucu + Claude): bu ifadeler YALNIZ adlandirilan adimda durabilir.
+# "by any combination of thrust settings" korunan reddetme cumlesinin yaninda (Adim 1) durur;
+# baska yerde niteleyicisiz tekrarlanirsa "fiziksel imkansizlik" okunur (CLAUDE.md 0.1).
+YALNIZ = {
+    "by any combination of thrust settings": "01-the-gap.md",
+}
+
+
+def yalniz_tara(adlar_metinler):
+    bulunan = []
+    for ad, metin in adlar_metinler:
+        duz = re.sub(r"\s+", " ", metin.replace("*", ""))
+        for k, yer in YALNIZ.items():
+            if k in duz and ad not in (yer, "ALL-STEPS.md"):
+                bulunan.append((ad, k, yer))
+    return bulunan
 
 
 def govde(metin):
@@ -159,6 +180,16 @@ if __name__ == "__main__":
             print("   yakalandi: %r" % k)
         if not b:
             sys.exit("!! Denetim eski hatayi YAKALAMADI -- denetim bozuk.")
+    if "--sina" in sys.argv:
+        y = yalniz_tara([("05-sina.md", "produce no rolling moment **by any combination of thrust\nsettings**.")])
+        print("SINAMA: yalniz-adim ifadesi baska adimda %d kez yakalandi" % len(y))
+        if not y:
+            sys.exit("!! Yalniz-adim denetimi YAKALAMADI -- denetim bozuk.")
+    y = yalniz_tara(dosyalar())
+    if y:
+        for ad, k, yer in y:
+            print("  !! %s icinde %r -- yalniz %s'de durabilir" % (ad, k, yer))
+        sys.exit("Yalniz-adim ifadesi yerinden cikti.")
     b = tara(dosyalar())
     print("=== v8 EMEKLI IFADE/SAYI DENETIMI ===")
     if b:
@@ -167,3 +198,4 @@ if __name__ == "__main__":
         sys.exit("Emekli deger bulundu.")
     print("  ok  %d emekli degerin hicbiri %d govdede gecmiyor."
           % (len(EMEKLI), len(dosyalar())))
+    print("  ok  %d yalniz-adim ifadesi yerinde." % len(YALNIZ))

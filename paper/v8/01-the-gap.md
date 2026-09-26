@@ -44,8 +44,8 @@ price an architecture in it must pay, and whether one arrangement pays less than
 
 ### The demand has been continuous for seventy years
 
-Tail-sitting prototypes flew in the 1950s, vectored-thrust and tilt-wing aircraft in the 1960s,
-tilt-rotors from the 1950s, and a broad family of hybrid vertical take-off and landing uncrewed
+Tail-sitting prototypes and the first tilt-rotor flew in the 1950s, vectored-thrust and tilt-wing
+aircraft in the 1960s, and a broad family of hybrid vertical take-off and landing uncrewed
 aircraft since roughly 2010. Different nations, services and propulsion philosophies have
 attacked the same problem for seventy years. **No field sustains that level of effort against a
 need that is not real.**
@@ -181,6 +181,7 @@ presume an escape.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 95 (dört okuyucu + Claude):** 1B sırası — "Tail-sitting prototypes and the first tilt-rotor flew in the 1950s, vectored-thrust and tilt-wing aircraft in the 1960s, and a broad family…" (S-23'ün uygulanmış hâli sırayı bozuyor ve süreklilik ima ediyordu). **1D gerekçesi düzeltildi:** "Precise hovering…" cümlesi yanlış maddeyi saydığı için değil (kaynakta var: XFY-1 "Difficult to hover precisely over a spot"), yineleme olduğu ve daha uygun evi Adım 5E olduğu için çıktı; 1D'ye geri konmadı (dört okuyucu + Claude). **Açık:** "No field sustains…" ve "several are in service" | NASA 19810010574 XFY-1 satırı; 19840014464 "In retrospect" paragrafı |
 | **Tur 94 (yeniden kurma; dört okuyucu + Claude):** 1D "Precise hovering … inherited" çıktı (üçüncü "inherited", listeyle uyuşmuyordu); 1E açılışı ("It would be easy, and wrong …") çıktı; S-21 "the last two of them at two scales"; S-22 DelftaCopter'in cyclic+collective hatveli rotoru ve değişken hatvenin bedeli; S-23 "tilt-rotors from the 1950s". 1D reddetme cümlesi korunan (162). Özgün paragraflar Ek S1'de. **Açık:** "No field sustains…" (üçü tut, ChatGPT çıkar); "several are in service" (kaynak ya da yumuşatma — dört farklı öneri) | De Wagter 2018 (değişken hatve: "two extra actuators … added weight from the mechanisms"; "A diameter of 1 m was finally selected as a compromise"); NASA 19810010574 (XV-3 Ağustos 1955, XV-15 Mayıs 1977); Adım 12 "Bill 1 is not tested" |
 | **Tur 64 — N3** (beşimiz hemfikir; Qwen'in *"the only one of those documented obstacles"* düzeltmesiyle): iki alt bölüm bire; XFV-1, NASA incelemelerinin değerlendirmeleri ve güçlük listesi, *"the usual account is wrong"* Ek S1'e aynen | Ek S1; Adım 5 *"That disposes of the spatial-orientation objection and nothing else"* |
 | **Tur 61:** ret cümlesi katkıdan önceye alındı; paragraf katkıyla bitiyor (dört okuyucu + Claude aynı yönde; Grok ve Qwen neredeyse aynı metni önerdi). Yüklem değişmedi | CLAUDE.md §0.8; `v8-shortening-consensus.md` C2 |

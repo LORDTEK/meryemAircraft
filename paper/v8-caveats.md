@@ -185,3 +185,5 @@ kaybolmasına (CLAUDE.md §0.8). Aynı denetimle sınanır.
 | 2 | A claim that one architecture escapes a cost shared by the others is only meaningful if the cost is stated first, in terms that do not presume the escape. | G |
 | 14 | The same study notes lithium-polymer figures in the literature as high as 3 kW per kilogram, which it cites rather than measures | C+D+G+Q+K |
 | 1 | The reaction-torque channel that other coaxial tail-sitters use about that axis is a choice this configuration declines rather than a limit it inherits | G+C+D+Q+K |
+| 14 | The study argues that, because pulse current limits can exceed continuous ones — by more than a factor of two in one commercial module it cites — a pack with the required specific power may be possible with existing technology | D+G+C+Q+K |
+| 5 | What that refusal costs in authority and in response time is not computed | G+C+D+Q+K |

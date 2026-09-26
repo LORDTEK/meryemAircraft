@@ -44,3 +44,13 @@ Section 2 (the charges), Section 8 (the tip frames, the fairing, the declined ch
   tail-sitter designs"*. The XFY-1's own entry lists gust sensitivity in take-off and landing and control power reduced in
   ground effect, but not the over-the-shoulder view.
   - Proposal: *"The landing difficulty of the 1950s tail-sitters was attributed to…"*.
+
+## Round 95
+
+Inventory confirmed (four + Claude). S-24 and S-25 applied; the 5D "not computed" sentence protected (164). Open: the 5D
+signpost (Grok, ChatGPT, Qwen remove; DeepSeek keep "until the final voice pass"). **Grok P57 (for the draft):** once S-24 is in,
+*uneven ground* is an inherited limit in 5D; a draft that keeps *unprepared site* in 5B and drops uneven ground from 5D undoes
+S-24. **Qwen P1 (trace):** every ground-operation sentence (stance base, crosswind, uneven ground) carries a flag tying it to
+5B's unprepared-site requirement. **Count question (the new count-consistency step, applied to itself):** 5D's item is headed
+*"one historical difficulty"* and now names crosswind and uneven ground; the source makes them two causes of one difficulty,
+tip-over.

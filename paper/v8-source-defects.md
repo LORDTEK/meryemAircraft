@@ -31,11 +31,14 @@ açılırsa bu kusurlar geri gelmesin diye her birinin emekli ifadesi `v8_stale.
 | **S-21** | 93 | Adım 1F | "audited explicitly against [üç fatura], at two scales" — Adım 12: ikinci ölçekte Bill 1 sınanmadı | **Tur 94: onarıldı** — "the last two of them at two scales" | S |
 | **S-22** | 93 | Adım 1E | DelftaCopter sabit hatve uzlaşmasının ikinci tanığı olarak alıntılanıyor; rotoru **değişken hatveli** (cyclic + collective) ve aynı makale değişken hatveyi o uzlaşmanın çaresi olarak, mekanizma bedeliyle adlandırıyor | **Tur 94: onarıldı** — rotorun ne olduğu ve değişken hatvenin bedeli söylendi | S |
 | **S-23** | 93 | Adım 1B | "tilt-rotors from the 1980s" — NASA incelemesi: XV-3 ilk askı Ağustos 1955, XV-15 Mayıs 1977 | **Tur 94: onarıldı** — "from the 1950s" | S |
-| aday S-24 | 94 | Adım 5C | NASA 1984 incelemesinden boş ağırlık kazancı alıntılanıyor; aynı paragrafın sonraki cümlesi — iniş takımları "limited to relatively low allowable sink rates", devrilme "a constant worry in gusty air and on uneven ground, particularly with the propellers turning" — alınmamış; bölümün şartı hazırlanmamış zemin | oylamada | S |
-| aday S-25 | 94 | Adım 5E | "The XFY-1's landing difficulty was attributed to…" — inceleme üç nedeni "these tail-sitter designs"e bağlıyor; XFY-1 satırı omuz üstü bakışı saymıyor | oylamada | S |
+| **S-24** | 94 | Adım 5C | NASA 1984 incelemesinden boş ağırlık kazancı alıntılanıyor; aynı paragrafın sonraki cümlesi — iniş takımları "limited to relatively low allowable sink rates", devrilme "a constant worry in gusty air and on uneven ground, particularly with the propellers turning" — alınmamış; bölümün şartı hazırlanmamış zemin | **Tur 95: onarıldı** — alıntı sürdürüldü, 5D'ye "and to uneven ground" | S |
+| **S-25** | 94 | Adım 5E | "The XFY-1's landing difficulty was attributed to…" — inceleme üç nedeni "these tail-sitter designs"e bağlıyor; XFY-1 satırı omuz üstü bakışı saymıyor | **Tur 95: onarıldı** — "The landing difficulty of the 1950s tail-sitters" | S |
+| aday S-26 | 95 | Adım 6E başlığı | "every one of them runs against this configuration" — metin beşten üçü için "aleyhte" diyor; atmosfer için yön "not claimed", analiz zinciri yönsüz | oylamada | S |
+| aday S-27 | 95 | Adım 6D | J&S Tablo 3 tam okundu: helikopterler 5.4–7.2 (yan yana elektrikli 7.2, zarfımızın üst kısmında, kanatsız) hiçbir yerde yok; 6C'nin "Lift is carried on a surface or it is carried on rotors" yapısal cümlesine doğrudan değiyor | oylamada | S |
+| aday S-28 | 95 | Adım 6E | "Its disc loading is 3.5 lb ft⁻²" yalnız turboşaft quadrotor; elektrikli 3 lb/ft² | oylamada | S |
 
 **Seçici alıntı kümesi (DeepSeek, Tur 94):** S-18 (Bacchini s. 183, hız kazancı), S-19 (Barrett s. 34, 3 kW/kg), S-20
-(Barrett s. 32, 34–35, "may be possible"), S-22 (De Wagter 2018, değişken hatve). Dördünde de kaynağın bir cümlesi alındı,
+(Barrett s. 32, 34–35, "may be possible"), S-22 (De Wagter 2018, değişken hatve), S-24 (NASA 1984, düşük çöküş hızı ve engebeli zemin). Beşinde de kaynağın bir cümlesi alındı,
 hemen yanındaki niteleme alınmadı. Kaynak açma kuralı (CLAUDE.md §2.1) bunun için.
 
 **Kümelenme (Qwen):** 12 kusurun 3'ü **taşıma artığı** (S-7, S-11 ve ilk durumu S-1'in bir kısmı): bir tablo ya da paragraf

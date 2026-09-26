@@ -324,3 +324,12 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | S-20 cümlesi korunan (DeepSeek); sayı tutarlılığı denetimi (DeepSeek); Grok P56 | — | — | öneren | — | ? | Oylamada |
 | Adım 5 envanteri; S-24, S-25; 5D işaret cümlesi; 5D "not computed" korunsun mu | — | — | — | — | öneren | Teyide / oylamada |
 | 1B sıra (S-23 sonrası); S-20 genişlemesi (tek modül); 1D'ye precise hovering | — | — | — | — | öneren | Oylamada (Claude'un kendi denetimi) |
+| Tur 94'te uygulananlar (14C R-3/S-20/(d); Adım 1 onarımları; 161–162) | ✓ | ✓ | ✓ | ✓ | ✓ | **Teyit edildi** (Tur 95) |
+| 3.1 precise hovering 1D'ye | hayır | hayır | hayır | hayır | hayır | **Kapandı** — gerekçe düzeltildi |
+| 3.2 1B sırası; 3.3 S-20 daraltma; S-20 korunan; 5D "not computed" korunan; S-24; S-25 | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı** (Tur 95); teyide |
+| Sayı tutarlılığı adımı; P56 denetimi | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı** (Tur 95) |
+| 1B "No field sustains…" daraltılmış biçim | ✓ | ✗ (kendi biçimi) | ✓ | ✓ | öneren | **Ayrışık** — status quo duruyor |
+| 1C "several are in service" | V-22 ✗; "built and flown" | V-22 ✗; kaynak yoksa çıkar | V-22 ✗; "built and flown" | V-22 ✓ | öneren (V-22) | **Ayrışık** |
+| 5D işaret cümlesi | çıkar | çıkar | tut | çıkar | zayıf aday | **Ayrışık** |
+| Adım 6 envanteri; S-26, S-27, S-28; üç yineleme | — | — | — | — | öneren | Teyide / oylamada |
+| Tanık kapsamı denetimi (ChatGPT); kaynak-sonuç işareti (DeepSeek) | — | öneren | öneren | — | ✓ | Oylamada |

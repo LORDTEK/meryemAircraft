@@ -293,6 +293,12 @@ recorded as omitted, with the reason."* Gerekçe: dört seçici alıntı — S-1
 S-20 (Barrett'in kendi "may be possible" sonucu), S-22 (DelftaCopter değişken hatveli). Son ikisi kural oylanmadan,
 kuralı uygulayarak bulundu.
 
+**Sayı tutarlılığı adımı (Tur 95; DeepSeek, ChatGPT'nin genişletmesi; dört okuyucu + Claude).** Bir cümle sayılmış bir
+listeye öğe ekler, çıkarır, böler ya da birleştirirse, yakındaki her sayı (*"three kinds"*, *"four parts"*, *"one historical
+difficulty"*) ve o listeyi sayan her cümle değişiklik uygulanmadan önce yeniden okunur. Grok P51'in ikizi: P51 sonraki cümlenin
+göstericilerini, bu paragrafın sayılarını okur. Örnek: R-3. (ChatGPT'nin "böler ya da birleştirirse" genişletmesi Tur 95'te
+teyide.)
+
 ### 2.2 Yenilik iddiası yazmadan önce. Tur 46'nın bedeli.
 
 Adım 1'e *"1954'te bir kez uçuruldu ve tekrar ele alınmadı"* ve *"her mimari bunu propulsor'ü
