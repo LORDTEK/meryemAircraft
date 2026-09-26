@@ -2,7 +2,7 @@
 
 > **This is a task. Please answer it now, and begin with your name alone on the first line.**
 >
-> `LORDTEK/meryemAircraft`, branch `claude/ecstatic-cori-6w30at`, commit **`COMMIT`**.
+> `LORDTEK/meryemAircraft`, branch `claude/ecstatic-cori-6w30at`, commit **`b9e1006`**.
 >
 > - Step 11 is recomposed in `paper/v8/11-the-ledger.md`; its original is in Supplement S11 in full.
 > - The drafts are `paper/v8/drafts/12-recomposed.md` and `13-recomposed.md`. Each has your lists side by side (§1), and a
