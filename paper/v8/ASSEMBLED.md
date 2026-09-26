@@ -1341,7 +1341,8 @@ architecture — and for the 50 kg design, which is the only one carried through
 | **C** | 0.0285 | 0.632 | 10.82 | 6.84 | 53.5 kg | 0.597 | 11.66 kW | 3.91 kW | 1 141 km |
 | **D** | 0.0285 | 0.683 | 10.82 | 7.39 | 52.3 kg | 0.592 | 11.40 kW | 3.54 kW | 1 233 km |
 
-*L/De = L/D × η_p at the cruise condition; the loop holds both factors fixed, so the closure changes neither. The four
+*L/De = L/D × η_p at the cruise condition; the loop holds both factors fixed
+within each closure, so the closure changes neither. The four
 L/De values are the bounding corners of that product, carried into the closures as inputs, not four simulated aircraft.*
 
 **Payload is an input, fixed at 13 kg; take-off mass is the output.** The closure returns 52.3 to
