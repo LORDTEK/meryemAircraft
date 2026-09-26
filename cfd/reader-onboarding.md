@@ -229,7 +229,7 @@ The body is about **26 000 words**, and the journal's working target is **about 
 | Step 7 | inventory sent (Round 96) — the combination, the heart of the paper |
 | Next | Step 8, last |
 
-**The body is about 25 810 words.** Recomposition gains a few percent per block. In Steps 2 and 3 its main product was
+**The body is about 25 770 words.** Recomposition gains a few percent per block. In Steps 2 and 3 its main product was
 defects found in the source and repaired. The author will review the target when the steps are done.
 
 **Tools the round texts mention:**

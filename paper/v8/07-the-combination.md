@@ -27,12 +27,7 @@ Ayrıntı ve alıntılar: `paper/roll-axis-finding.md`.
 
 ## The combination
 
-None of the three elements is new.
-
-Tail-sitting aircraft were flown in the 1950s and are ordinary among uncrewed aircraft today,
-including with blended-wing-body planforms and contra-rotating propulsion. Blended wing bodies
-have been a standing subject of transport research for three decades. Series-hybrid propulsion
-has established precedent in small uncrewed aircraft. **Each can be found on its own, and in
+None of the three elements is new. **Each can be found on its own, and in
 combination, in the literature and in hardware** — Section 1 says where.
 
 **What this paper contributes is that combination, the condition its primary propulsor is designed
@@ -140,6 +135,7 @@ exposed in cruise, and Section 11 charges them.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 97 (yeniden kurma; dört okuyucu + Claude):** envanter teyit edildi; 7A ortadaki üç cümle çıktı (Adım 1G'nin yinelemesi; ev 1G). **Uygulanmadı:** 7G (onarım biçimi ayrışık: "It" / "That" / "This dual role"); 7L (Grok ve Qwen çıkar, ChatGPT ve DeepSeek tut — köprü/kapanış). Özgün paragraflar Ek S7'de | Tur 96 metni §7 |
 | **Tur 67 — V2, Grok'un ifadesi** (dört okuyucu + Claude): *"pays in efficiency in at least one of them"* — bedelin birimini adlandırıyor, sayı eklemiyor; Adım 3'ün *"the compromise is paid in efficiency"* cümlesiyle aynı güçte (Qwen) | Adım 3 |
 | **Tur 66 — B4 (3.2) ve ses geçişi V1, V2, V6** (dört okuyucu + Claude): tepki torku tek cümle (*"could"* + *"by design"* = tasarım kısıtı, fiziksel imkânsızlık değil); şerit dışlaması kural olarak; *"pays for it"*; *"carries costs"*. **V3 ve V5 kaldı** (herkes korudu), **V4 kaldı** (Grok: olumlu hâli koşulun karşılandığını ima ediyordu — uç çiftleri karşılamıyor) | Adım 8; ChatGPT'nin A–D kuralı |
 | **Tur 64:** *"removes the mechanism"* → *"removes the need for the mechanism"* (ChatGPT önerdi; beşimiz hemfikir) — bir şey sökülmüş gibi okunmasın; korunan liste aynı commit'te güncellendi | `v8-caveats.md` ruh listesi |

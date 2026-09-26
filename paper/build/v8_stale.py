@@ -125,6 +125,9 @@ EMEKLI = {
     "decides whether the rest of it can be trusted": "Tur 96: kanitlanmayan degerlendirme (5D isaret cumlesi)",
     "every one of them runs against this configuration": "Tur 96: S-26 -- bestan ucu aleyhte (Grok P59)",
     "more exposed to crosswind and to uneven ground": "Tur 96: S-24 ara hali -- 'one difficulty' sayimiyla celisiyordu",
+    "unusually low and unusually efficient": "Tur 97: S-28 -- disk yuklemesi verimi tek basina gostermez; iki quadrotor",
+    "The demand has been continuous": "Tur 97: 1B basligi -- caba ihtiyacin kaniti degil",
+    "bounding combinations permitted by two independent": "Tur 97: 6D yinelemesi (R-5 ile)",
 }
 
 

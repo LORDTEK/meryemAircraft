@@ -138,3 +138,13 @@ condition prevents"* (oylanmadı).
 - Şekillerin 600 dpi yeniden dışa aktarımı, üstyazılar 20–25 kelimeye
 - Boş `presentation/` ve `video/` dizinleri
 - Ulaşılamayan commit `942bf452…` için GitHub gc
+
+## E5 — Helikopter ekseni ve "tüm hava araçlarından etkin" (yazar, Tur 97) · **YAZAR KARARI BEKLİYOR**
+
+Yazar: *"Helikopter için neden rakibimiz değil dedin? … Bu havaaracı … hareketli kanatlılardan (evet helikopterler de dahil)
+menzil olarak daha etkin. … Ospy22 diye çift rotorlu uçaktan ise basitlik ve relibility olarak daha avantajlı."* Claude'un
+cevabı (Tur 97, Türkçe rapor): (1) Adım 1A zaten "Rotorcraft and multirotors"ı tek aile sayıyor; S-27'nin "not extended to the
+helicopter" cümlesi bununla gerilimde — Claude'un hatası; (2) ama tek ortak ölçekli kaynakta (J&S Tablo 3) helikopterler
+L/De 5,4–7,2; bizim zarf 5,56–7,39 — yan yana elektrikli helikoptere karşı −23 %…+3 %; ölçek, hız ve zincir farkları yön
+olarak bizim aleyhimize ama hesaplanmadı; (3) güvenilirlik iddiası ölçülmedi (§0.1, Adım 9 madde 4); sayım iddiası duruyor.
+S-27 (R-4) bu karara bağlı olarak uygulanmadı.

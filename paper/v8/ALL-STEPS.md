@@ -23,7 +23,7 @@ places without a runway — and both want to leave from an unprepared site and t
 **That corner is not empty**, as the rest of this section sets out; what is unsettled is which
 price an architecture in it must pay, and whether one arrangement pays less than it appears to.
 
-### The demand has been continuous for seventy years
+### The problem has been attacked for seventy years
 
 Tail-sitting prototypes and the first tilt-rotor flew in the 1950s, vectored-thrust and tilt-wing
 aircraft in the 1960s, and a broad family of hybrid vertical take-off and landing uncrewed
@@ -717,8 +717,8 @@ uncertainty**: it is a design variable this study has not fixed.
 **These are the bounding corners of a product, not four simulated aircraft.** Two readings follow
 and both are given, because choosing between them requires something this section does not have:
 
-- **Examined envelope, 5.56 to 7.39.** These are the bounding combinations permitted by two
-  independent model inputs. **They are not four demonstrated aircraft states**, and nothing here
+- **Examined envelope, 5.56 to 7.39.** **The four corners are not demonstrated aircraft
+  states**, and nothing here
   shows that a built aircraft would land simultaneously on both bounds.
 - **Best examined blade family, 6.00 to 7.39.** The highest efficiency among the families
   examined is 0.683; holding it and sweeping only the drag bracket gives this range.
@@ -772,8 +772,8 @@ than it is.
 Reynolds number favours the larger aircraft, so the smaller design is at a disadvantage in this
 comparison rather than an advantage.
 
-**The quadrotor is a good quadrotor.** Its disc loading is 3.5 lb ft⁻², which is unusually low
-and unusually efficient. Nothing here is compared against a poor example.
+**The quadrotor is a good quadrotor.** Its disc loading is 3.5 lb ft⁻², and the all-electric one's
+is 3; both are unusually low. Nothing here is compared against a poor example.
 
 **The speeds are not matched, and the direction of that mismatch is calculable.** The published
 figure is quoted at the best-range speed; this configuration's is at its chosen cruise condition,
@@ -837,12 +837,7 @@ the combination is what this paper is for.
 
 ## The combination
 
-None of the three elements is new.
-
-Tail-sitting aircraft were flown in the 1950s and are ordinary among uncrewed aircraft today,
-including with blended-wing-body planforms and contra-rotating propulsion. Blended wing bodies
-have been a standing subject of transport research for three decades. Series-hybrid propulsion
-has established precedent in small uncrewed aircraft. **Each can be found on its own, and in
+None of the three elements is new. **Each can be found on its own, and in
 combination, in the literature and in hardware** — Section 1 says where.
 
 **What this paper contributes is that combination, the condition its primary propulsor is designed
@@ -1968,8 +1963,8 @@ that of existing batteries. The same study notes lithium-polymer figures in the 
 3 kW per kilogram, which it cites rather than measures; against that figure the take-off demand is 1.8
 to 2.0 times. The study argues that, because pulse current limits can exceed continuous ones — by more
 than a factor of two in one commercial module it cites — a pack with the required specific power may be possible with
-existing technology; the study's hover lasts twenty seconds or less, and how long this aircraft's
-vertical phases draw the peak is not computed here. **The take-off demand of Section 10's closures is 3.7 to 4.1 times the
+existing technology; the study's hover lasts twenty seconds or less; this aircraft's vertical
+phases occupy about a minute in all (Section 2), and how long each draws the peak is not computed here. **The take-off demand of Section 10's closures is 3.7 to 4.1 times the
 bench rate — the highest figure obtained from a measurement — and 6.2 to 6.8 times the flown system's continuous
 rating**; hover alone is 3.1 to 3.5 times the bench rate. The comparison is between unlike ratings: a
 peak demand held through the vertical phases, a bench average over minutes, a continuous rating, a

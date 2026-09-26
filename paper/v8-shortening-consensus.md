@@ -343,3 +343,9 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | S-28 | tekil | kaynağa özgü (yanlış atıf) | çoğul | çoğul | öneren | **Ayrışık** |
 | S-27 korunan (DeepSeek); Grok P59–P60; ChatGPT tablo bütünlüğü; Qwen P1–P2 | — | — | — | — | — | Oylamada / kayıt |
 | Adım 7 envanteri; 7A, 7G, 7L adayları; S-29; R-6 | — | — | — | — | öneren | Teyide / oylamada |
+| Tur 96'da uygulananlar; 5D (DeepSeek teyidi) | ✓ | ✓ | ✓ | ✓ | ✓ | **Teyit edildi** (Tur 97) |
+| R-5; R-6; S-28 ara öneri; 1B başlığı; 7A ortası; tablo bütünlüğü kuralı | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı** (Tur 97); teyide |
+| R-4 (S-27) | ✓ | ✓ | ✓ | ✓ | ✓ | Kabul — **yazar kararı bekliyor (E5)** |
+| 7G onarım biçimi | "It" | "It" | "It"/"That" | "This dual role" | "It" | **Ayrışık** |
+| 7L | çıkar | tut | tut | çıkar | çıkar (aday) | **Ayrışık** — duruyor |
+| R-6 cümlesi korunan (ChatGPT, Grok P62); P56'yı 7H varyantına genişlet (Grok P61, DeepSeek) | ✓ | ✓ | öneren | — | — | Oylamada |

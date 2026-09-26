@@ -304,6 +304,10 @@ bir paragrafa insanlı V-22 tanığı önerdim; üç okuyucu reddetti. **Kaynak-
 kaynağın kendi sonucunun alıntılanan rakamla ilişkisi `paper/v8-evidence.md`'de kaydedilir (destekler / niteler / yumuşatır /
 çelişir / söylemiyor — ChatGPT'nin değerleri).
 
+**Tablo bütünlüğü denetimi (Tur 97; ChatGPT; dört okuyucu + Claude).** Bir kaynak tablosu tam açılıp bir karşılaştırmayı
+sınırlamak için kullanıldığında, iddiaya değebilecek her satır hesaba katılır — yalnızca neden alınmadığını kaydetmek için
+bile olsa. Örnek: S-27 (J&S Tablo 3'teki helikopterler).
+
 ### 2.2 Yenilik iddiası yazmadan önce. Tur 46'nın bedeli.
 
 Adım 1'e *"1954'te bir kez uçuruldu ve tekrar ele alınmadı"* ve *"her mimari bunu propulsor'ü

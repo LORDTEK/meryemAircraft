@@ -1690,3 +1690,12 @@ sonra "They" yalnız etikete kalıyordu. **Ayrışık:** S-28 — ChatGPT'nin ö
 ifade kaynakta yok (bizim). **Kendi hatam R-6:** S-20 cümlesine "bu uçağın dikey fazlarının süresi hesaplanmadı" yazdım;
 Adım 2 "on the order of a minute" diyor — §0.2 ihlali. **Adım 7 envanteri** (kalp): üç yineleme adayı; S-29 seri hibrit
 emsali için kaynak yok (Adım 1 ile 7 birbirine işaret ediyor).
+
+# Tur 97 — Tur 96 metnine dört cevap; yazar: "Helikopter için neden rakibimiz değil dedin?"
+
+**Teyit:** Tur 96'nın hepsi. **Oybirliğiyle uygulandı:** R-5 (6D "The four corners…"), R-6 (S-20 cümlesinde "about a minute in
+all (Section 2)"), S-28 ara öneri, 1B başlığı "The problem has been attacked for seventy years", 7A ortadaki üç cümle, tablo
+bütünlüğü kuralı. **Uygulanmadı:** S-27/R-4 — dört okuyucu + Claude kabul etti ama **yazar helikopterleri menzil ekseninde rakip
+sayıyor** (E5); 7G onarım biçimi ayrışık; 7L ayrışık (duruyor). S-29: ChatGPT kaynak buldu (SAE 2014 ücretli; TUM tezi) —
+vekil 403 verdi, yazardan istendi. **Tur metni yazılmadı**: yazarın helikopter kararı S-27'yi ve belki §0 tablosunu
+değiştirecek.

@@ -706,6 +706,32 @@ rather than higher — at a propeller efficiency η_p = 0.85 the same airfra
 
 Heading: *Five qualifications, and every one of them runs against this configuration*
 
+
+### Two more passages of Section 6 as they stood before recomposition (frozen snapshot)
+
+- **Examined envelope, 5.56 to 7.39.** These are the bounding combinations permitted by two
+  independent model inputs. **They are not four demonstrated aircraft states**, and nothing here
+  shows that a built aircraft would land simultaneously on both bounds.
+- **Best examined blade family, 6.00 to 7.39.** The highest efficiency among the families
+  examined is 0.683; holding it and sweeping only the drag bracket gives this range.
+
+**The quadrotor is a good quadrotor.** Its disc loading is 3.5 lb ft⁻², which is unusually low
+and unusually efficient. Nothing here is compared against a poor example.
+
+---
+
+## S7. Section 7 (from Section 7)
+
+### The opening of Section 7 as it stood before recomposition (frozen snapshot)
+
+None of the three elements is new.
+
+Tail-sitting aircraft were flown in the 1950s and are ordinary among uncrewed aircraft today,
+including with blended-wing-body planforms and contra-rotating propulsion. Blended wing bodies
+have been a standing subject of transport research for three decades. Series-hybrid propulsion
+has established precedent in small uncrewed aircraft. **Each can be found on its own, and in
+combination, in the literature and in hardware** — Section 1 says where.
+
 ---
 
 ## S9. Section 9 (from Section 9)

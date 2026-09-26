@@ -108,8 +108,8 @@ uncertainty**: it is a design variable this study has not fixed.
 **These are the bounding corners of a product, not four simulated aircraft.** Two readings follow
 and both are given, because choosing between them requires something this section does not have:
 
-- **Examined envelope, 5.56 to 7.39.** These are the bounding combinations permitted by two
-  independent model inputs. **They are not four demonstrated aircraft states**, and nothing here
+- **Examined envelope, 5.56 to 7.39.** **The four corners are not demonstrated aircraft
+  states**, and nothing here
   shows that a built aircraft would land simultaneously on both bounds.
 - **Best examined blade family, 6.00 to 7.39.** The highest efficiency among the families
   examined is 0.683; holding it and sweeping only the drag bracket gives this range.
@@ -163,8 +163,8 @@ than it is.
 Reynolds number favours the larger aircraft, so the smaller design is at a disadvantage in this
 comparison rather than an advantage.
 
-**The quadrotor is a good quadrotor.** Its disc loading is 3.5 lb ft⁻², which is unusually low
-and unusually efficient. Nothing here is compared against a poor example.
+**The quadrotor is a good quadrotor.** Its disc loading is 3.5 lb ft⁻², and the all-electric one's
+is 3; both are unusually low. Nothing here is compared against a poor example.
 
 **The speeds are not matched, and the direction of that mismatch is calculable.** The published
 figure is quoted at the best-range speed; this configuration's is at its chosen cruise condition,
@@ -230,6 +230,7 @@ the combination is what this paper is for.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 97 (dört okuyucu + Claude):** R-5 — 6D zayıf silme "The four corners are not demonstrated aircraft states" onarımıyla uygulandı; S-28 — "Its disc loading is 3.5 lb ft⁻², and the all-electric one's is 3; both are unusually low" ("unusually efficient" çıktı; "good quadrotor" bizim ifademiz, J&S'de yok). **S-27 (R-4) yazar kararı bekliyor** (helikopter ekseni). Özgün paragraflar Ek S6'da | J&S Tablo 3 |
 | **Tur 96 (yeniden kurma; dört okuyucu + Claude):** envanter ve yön sütunu teyit edildi. 6A yinelemesi ("A runway-launched aeroplane…"), 6B yinelemesi ("It is not a deficient machine…"), 6G'deki ikinci 7,47–9,20 çıktı; S-26 başlığı onarıldı. **Uygulanmadı:** S-27 (R-4 gönderge), 6D zayıf silme (R-5 "They"), S-28 (ayrışık). Özgün paragraflar Ek S6'da | J&S Tablo 3, PDF s. 70 |
 | **Tur 60:** 52,3–57,5 kg | DeepSeek; `aero/closure-result.txt` |
 | Çok rotorlu piste ihtiyaç duymuyor; eksik makine değil | §1, satır 160–163 |
