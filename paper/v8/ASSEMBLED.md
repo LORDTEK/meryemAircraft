@@ -869,7 +869,8 @@ of them supplies it alone:
   carry, and vertical operation does not depend on a runway. That is the first half.
 - The **series-hybrid buffer** releases the continuous power plant from the hover peak,
   so that it is sized by cruise rather than by a condition holding for about two percent
-  of the flight.
+  of the flight. The series arrangement is used here for the electrical path it gives the buffered
+  hover peak, not because this study assumes it is the more efficient hybrid architecture.
 
 The configuration is arranged to change regime by **rotating the airframe**. The propulsors hold
 their orientation relative to the body from take-off to cruise; what changes is the
@@ -891,7 +892,10 @@ control surface, of a different class, and is named below and in Section 5.2 rat
 | Nacelle or rotor-group actuator | Tilting architectures | — |
 | Variable-pitch hub | Architectures that trim a rotor across two widely separated operating points, or feather a rotor unused in one regime | — |
 | Dedicated lift rotors | Lift-plus-cruise architectures | — |
-| Rotor stowing, indexing or stopping mechanism | Architectures that remove dedicated lift rotors from the cruise flow by such means | — |
+| Rotor stowing, indexing or stopping mechanism | Architectures that remove dedicated lift rotors from the cruise flow by such means | — (see note) |
+
+*Note.* The stopping class is absent if the tip pairs free-wheel in cruise or are held stopped by motor torque; a
+brake or a mechanical lock would add it. The means of stopping is not fixed by this study (Section 5.2).
 
 Attitude is produced instead by differential thrust between fixed-pitch propellers: a
 single coaxial contra-rotating pair at the nose, and four small coaxial pairs at the
@@ -975,15 +979,13 @@ collective, no variable-pitch hub and no mechanism that changes a rotor's orient
 the airframe. Shaft speed is commanded; blade geometry and orientation are not. Each rotor of each
 pair is driven by its own
 electric machine on a common axis, so **the splitting gearbox and the mechanical governors that
-synchronise it are not required** — the arrangement that repeatedly defeated the XB-35. This work
+synchronise it are not required**. This work
 makes no claim about the shafting: whether the two machines are stacked on the axis or arranged
 some other way is an implementation question it does not settle.
 
 The counter-rotating arrangement carries a second consequence that the transition analysis
 depends on. Because the two rotors of each pair carry equal and opposite angular momentum, **the
-net angular momentum of the propulsion system is nominally zero**: rotating the airframe through
-ninety degrees precesses nothing, and no gyroscopic moment appears for the control system to
-cancel. In a tilting architecture that term is present and must be designed for.
+net angular momentum of the propulsion system is nominally zero**: rotating the airframe through ninety degrees precesses nominally nothing, and no gyroscopic moment appears for the control system to cancel unless the pairs are speed-trimmed (below). In a tilting architecture that term is present and must be designed for.
 
 #### The energy path
 
@@ -993,11 +995,7 @@ decoupling is what allows it to be sized by cruise rather than by hover.
 
 **The separation the architecture depends on is that the continuous cruise requirement is several
 times smaller than the hover peak, and that the difference is supplied from a battery buffer for
-the vertical phase alone.** No wattage is quoted here. The figures published for this configuration
-were closed on a propeller efficiency this work has since replaced with a computed one, and the
-re-closed set belongs to Section 7.1 rather than to an inventory. **Quoting the superseded numbers
-beside a propulsion section that no longer assumes them is precisely the inconsistency this paper
-is trying not to commit.**
+the vertical phase alone.** No wattage is quoted here; the closed powers are Section 7.1's.
 
 #### What produces each moment
 
@@ -1033,8 +1031,7 @@ is why one device serves both regimes.
 #### What meets the ground
 
 The aircraft rests on five points: the four lower ends of the tip frames, and the aft end of a
-keel running along the centreline. It stands on its tail in its own storage attitude, with no
-launch equipment present.
+keel running along the centreline.
 
 **The frames carry a fairing, and it is not only a drag measure.** The frames are the only
 surfaces standing perpendicular to the wing plane, and a planar planform supplies no directional
@@ -1050,13 +1047,6 @@ differential thrust and by the strip, both of which are actively commanded — s
 reference and a flight computer are not optional equipment but part of the mechanism the
 preceding paragraphs describe. They are carried in the systems budget. The configuration
 replaces a pilot's workload with computation, and the computer is the part that does it.
-
-**The tip frames therefore do four jobs at once**, and this is the clearest instance in the
-configuration of one structure carrying several duties: they are the landing gear, they set the
-control moment arms, they carry the attitude rotors, and — through the fairing described above —
-they are the aircraft's only vertical surface. Lengthening them to buy control
-authority widens the stance base against tipping in wind at the same time. They are also the
-structure that is exposed in cruise, and Section 7.2 charges them for it.
 
 #### What moves
 
@@ -1117,7 +1107,8 @@ something — motor holding torque, an electrical brake, a mechanical lock — a
 fixed-pitch blade also has an azimuth, so "stopped" is a family of aerodynamic states rather than
 one. Neither the means nor the azimuth is fixed by this study, and the drag figure quoted for the
 stopped condition should be read as the state Section 7.2 defines rather than as the state a
-particular installation would reach.
+particular installation would reach. The free-wheeling state needs no stopping means; the stopped state does, and if it were a
+brake or a lock rather than motor holding torque, the count of Section 5.1 would gain a class.
 
 ### 6.2 What is not claimed
 
