@@ -34,6 +34,20 @@ def sayilar(metin):
     return sorted(set(m.group(1) for m in SAYI.finditer(duz)) - GURULTU)
 
 
+def rastlantilar():
+    """Tur 107: gozden gecirilmis rastlanti ciftleri {(sayi, kaynak, oteki)} -- paper/v8-coincidences-reviewed.md."""
+    yol = os.path.join(KOK, "paper", "v8-coincidences-reviewed.md")
+    out = set()
+    if os.path.exists(yol):
+        for L in open(yol, encoding="utf-8"):
+            m = re.match(r"^\| ([\d.]+) \| +(\d+) \|[^|]*\| +(\d+) \|", L)
+            if m:
+                a, b = "%02d" % int(m.group(2)), "%02d" % int(m.group(3))
+                out.add((m.group(1), a, b))
+                out.add((m.group(1), b, a))
+    return out
+
+
 def harita(n):
     a = adimlar()
     kaynak = "%02d" % n
@@ -62,7 +76,12 @@ if __name__ == "__main__":
         print("SINAMA: 52.3 -> Adim 14 %s" % ("bulundu" if tut else "BULUNAMADI"))
         if not tut:
             sys.exit("!! Harita bilinen gecisi bulamadi -- denetim bozuk.")
+        r = rastlantilar()
+        if ("53.5", "13", "10") not in r or ("53.5", "10", "13") not in r:
+            sys.exit("!! Rastlanti listesi okunamadi -- denetim bozuk.")
+        print("SINAMA: rastlanti listesi okundu (%d cift)" % (len(r) // 2))
     yol = os.path.join(KOK, "paper", "v8", "drafts", "%02d-outbound-map.md" % n)
+    rs = rastlantilar()
     with open(yol, "w", encoding="utf-8") as o:
         o.write("# Adim %d'den disa giden sayilar (uretilmis; `paper/build/v8_outbound.py %d`)\n\n" % (n, n))
         o.write("Adim %d'deki her sayi ve onu da tasiyan adimlar. Bir sayi eke giderse, listelenen adimlar "
@@ -70,5 +89,7 @@ if __name__ == "__main__":
         o.write("| Sayi | Adim %d'deki baglami | Baska adimlardaki baglami (rastlanti olabilir; insan okur) |\n|---|---|---|\n" % n)
         for s, c0, yer in h:
             o.write("| %s | …%s… | %s |\n" % (s, c0.replace("|", "/"),
-                    "<br>".join("**%s:** …%s…" % (k, c.replace("|", "/")) for k, c in yer)))
+                    "<br>".join("**%s:** …%s…%s" % (k, c.replace("|", "/"),
+                                " **[rastlantı — gözden geçirildi]**" if (s, "%02d" % n, k) in rs else "")
+                                for k, c in yer)))
     print("  %d sayi Adim %d disinda da geciyor; yazildi: %s" % (len(h), n, os.path.relpath(yol, KOK)))

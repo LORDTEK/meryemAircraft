@@ -216,3 +216,21 @@ taslaklarından sonra gerçek sayıyla; DeepSeek — hesap bütçesini ~2 500'e 
 they were."* Nitelediği kalem kalem sürükleme dökümü beş listede de Ek S11'e gidiyor; gövdede kalırsa okurun göremediği
 sayılardan söz eder. Dört okuyucu + Claude: yazara, kalem dökümüyle birlikte eke.
 
+**Tur 107 — açık tablosu (DeepSeek, Qwen R106-P2), ölçülen sayılarla.** Düzyazı kelimesi (tablolar hariç), korunan kelime:
+
+| Adım | Şimdi | Korunan | Bütçe (E6) | Durum |
+|---:|---:|---:|---:|---|
+| 10 | 954 | 208 | | sonuç cümleleriyle kuruldu |
+| 11 | 827 | 167 | | kuruldu |
+| 12 | 1 016 | 157 | | kuruldu |
+| 13 | 1 217 | 195 | | kuruldu |
+| **10–13** | **4 014** | 727 | **1 550** | kaynak 8 032'nin **%50'si**; plan +2 464 aşıyor; %40 varsayımı (3 213) +800 aşıyor |
+| 14 | 1 381 | 240 | 450 | sırada |
+| 1–9, 15 | 14 810 | 1 305 | 6 500 | henüz sonuç cümlesine inmedi |
+| **Toplam** | **20 205** | | **8 500** | |
+
+**Öngörü, düzeltilmiş:** Tur 104'teki 9 800, her adımın %40'a ineceği varsayımıydı. Hesap adımları ortalama **%50**'ye indi (10–11
+%40'ta, 12–13 %57–60'ta; korunan cümleler gövdede kalan bulguları niteliyor). Geri kalan 16 191 kelime %40'a inerse düzyazı
+≈ **10 500**, %50'ye inerse ≈ **12 100**, 12–13 gibi %58'e inerse ≈ **13 400** olur; tablo + şekil + özet (3 450) eklenince
+makale 14 000–16 900 aralığına düşer, 12 000'e karşı. Karar yazarın; yeniden dağıtım 14 ve 15 bitince.
+

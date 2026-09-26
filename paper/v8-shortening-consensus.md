@@ -428,4 +428,10 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | **Adım 11 yeniden kuruldu** (1 969 → ~820); özgün Ek S11'de tam | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı → sonuç teyide** |
 | Adım 12 taslağı (~1 015, %57) ve Adım 13 taslağı (~1 205, %60) | — | — | — | — | öneren | **Oylamada; süren ayrışmalar adıyla okuyuculara (yazar, Tur 106)** |
 | Yeni: P77/Qwen R105-P1 çekirdek bulgu ilk satırda (uygulandı taslakta); P78; ChatGPT sözleşme kimliği; Qwen R105-P2 bilinen rastlantılar listesi; Qwen R105-P3 (=R104-P2) | — | — | — | — | — | Oylamada |
+| **Tur 106 cevapları:** Adım 11 teyit; Adım 12 ve 13 taslaklarına veto yok; P9 kalır; J30 + D31 gövdede; R12 gövdede (sıkıştırılmış); J13 "transferred…" niteleyici, gövdede; sözleşme kimliği; rastlantı kaydı; P78 | ✓ | ✓ | ✓ | ✓ | ✓ | **Adım 11 kapandı; Adım 12 ve 13 uygulandı (Tur 107) → teyide** |
+| J29 (sabit hatve açığının büyümesi) | ek | ek | **gövde, kısa** | ek | gövde (taslak) | **Ayrışık — gövdede kalır; kısa biçim önerisi oya** |
+| Uzunluk beklentisi | %40 doğru; 5–8'e dokunma | oran hedef değil | ~3 000, önce çerçeveden | **fikir değiştirdi: %40–60 doğal taban; çerçeveden alma** | ölç, sonra dağıt | Yazara (E8, açık tablosu) |
+| ChatGPT'nin P27 yüklem denetimi → **S-38** (işaret iki parametreye bağlı; cümle birini adlandırıyor) | — | öneren | — | — | ✓ doğrulandı | Onarım önerisi oya |
+| P78: Adım 1'in "the last two of them at two scales" ifadesi emekliye ayrılmaz (S-21'in doğru onarımı) | öneren | — | — | — | ✓ | Grok'a bilgi |
+| Yeni: D31 korunsun (Grok P80, DeepSeek); P79; karşılaştırma kurgusu koruması (ChatGPT); D26b P27–P28 ile birim (DeepSeek); J13 "transferred…" korunsun (Claude) | — | — | — | — | — | Oylamada |
 

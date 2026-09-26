@@ -214,16 +214,17 @@ The body is about **26 000 words**, and the journal's working target is **about 
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 106.**
+**Round 107.**
 
 | Block | State |
 |---|---|
-| Length | the author decided (Round 101): 12 000 words in all; 5 tables + 3 figures. Round 105: keep recomposing at the method's rate; the author accepts about 9 800 words of prose for now |
-| Rule (iii) | approved by the author; used twice (Step 10: R16 + P17; Step 11: the line-item sentence with the line items) |
-| Steps 10 and 11 | **recomposed**; originals in Supplement S10 and S11 in full |
-| Now | **drafts of Steps 12 and 13** (`paper/v8/drafts/12-recomposed.md`, `13-recomposed.md`), to vote. Where readers still differ, they answer one another by name (the author, Round 106) |
+| Length | the author decided (Round 101): 12 000 words in all; 5 tables + 3 figures. Round 105: keep recomposing at the method's rate; redistribute later. **Measured (Round 107):** Steps 10–13 came to 50 % of their source, not 40 % |
+| Rule (iii) | approved by the author; used twice |
+| Steps 10–13 | **recomposed into result sentences**; originals in Supplements S10–S13 in full |
+| Open | S-38 (Step 13's P27–P28 and Step 9 name one of two parameters that decide the sign); the repair is to vote |
+| Next | Step 14 |
 
-**The body is about 21 700 words of prose** (tables not counted). Recomposition into result sentences took Step 10 to about 40 %
+**The body is about 20 200 words of prose** (tables not counted). Recomposition into result sentences took Step 10 to about 40 %
 of its length; the plan asks for 8 500 in all, and 1 550 for Steps 10–13 together. The earlier recomposition of Steps 1–9
 gained a few percent per block, and its main product was defects found in the source and repaired.
 

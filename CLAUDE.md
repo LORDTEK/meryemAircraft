@@ -465,6 +465,10 @@ dahil herkesin hemfikir olduğu kısaltmalar uygulansın."*
 - **Görsel öncül kuralı altyazıları da kapsar** (Tur 104, DeepSeek). **Para birimi bayrağı** (Qwen): maliyet adlandıran her
   cümle para birimini adlandırır; hiçbir cümle para birimleri arasında toplamaz. **Her hesap adımından önce dışa giden harita**
   (Qwen R101-P2; Tur 104'te ChatGPT'nin oyuyla oybirliği).
+- **Sözleşme kimliği (Tur 106; ChatGPT, dört okuyucu + Claude):** Adım 13'ün bir sayısı ancak yapılandırma + rakip + sözleşme +
+  duyarlılık durumu ile geçerlidir. **Rastlantı kaydı** (Qwen R105-P2): `paper/v8-coincidences-reviewed.md`; `v8_outbound.py`
+  işaretler, silmez. **P78 (Grok):** Adım 12 Fatura 1'i geri getirmez — ama Adım 1'in *"the last two of them at two scales"*
+  ifadesi S-21'in doğru onarımıdır (Fatura 2 ve 3), emekliye ayrılmaz.
 
 ## 3. Doğrulama
 
