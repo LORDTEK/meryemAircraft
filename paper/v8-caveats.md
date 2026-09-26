@@ -188,3 +188,4 @@ kaybolmasına (CLAUDE.md §0.8). Aynı denetimle sınanır.
 | 14 | The study argues that, because pulse current limits can exceed continuous ones — by more than a factor of two in one commercial module it cites — a pack with the required specific power may be possible with existing technology | D+G+C+Q+K |
 | 5 | What that refusal costs in authority and in response time is not computed | G+C+D+Q+K |
 | 5 | A tail-sitting aircraft on the ground is more prone than a conventional one to tip over, in crosswind and on uneven ground. | G+C+D+Q+K |
+| 6 | The same sizing set gives its two helicopter types at 5.4 to 7.2, and against them the result is mixed | D+G+C+Q+K |

@@ -139,7 +139,7 @@ condition prevents"* (oylanmadı).
 - Boş `presentation/` ve `video/` dizinleri
 - Ulaşılamayan commit `942bf452…` için GitHub gc
 
-## E5 — Helikopter ekseni ve "tüm hava araçlarından etkin" (yazar, Tur 97) · **YAZAR KARARI BEKLİYOR**
+## E5 — Helikopter ekseni ve "tüm hava araçlarından etkin" (yazar, Tur 97) · **KARAR: (b)** — *"b ile devam et, helikopterleri de rakip say"*; S-27 uygulandı, CLAUDE.md §0 güncellendi, yayılım okuyuculara
 
 Yazar: *"Helikopter için neden rakibimiz değil dedin? … Bu havaaracı … hareketli kanatlılardan (evet helikopterler de dahil)
 menzil olarak daha etkin. … Ospy22 diye çift rotorlu uçaktan ise basitlik ve relibility olarak daha avantajlı."* Claude'un

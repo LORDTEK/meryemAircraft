@@ -1699,3 +1699,8 @@ bütünlüğü kuralı. **Uygulanmadı:** S-27/R-4 — dört okuyucu + Claude ka
 sayıyor** (E5); 7G onarım biçimi ayrışık; 7L ayrışık (duruyor). S-29: ChatGPT kaynak buldu (SAE 2014 ücretli; TUM tezi) —
 vekil 403 verdi, yazardan istendi. **Tur metni yazılmadı**: yazarın helikopter kararı S-27'yi ve belki §0 tablosunu
 değiştirecek.
+**Yazar kararı (Tur 97, ikinci mesaj):** *"b ile devam et, helikopterleri de rakip say."* S-27 karışık sonuçla uygulandı; CLAUDE.md
+§0 tablosu güncellendi (döner kanatlılar: çok rotorlu ve helikopter). Yayılım dokuz yerde — okuyucu oyuna. Yazar Merical 2014
+özetini yapıştırdı: tasarım ve benzetim, donanım gösterimi gelecekte → 1G "established precedent" yumuşatılmalı. **Denetim
+kusuru:** `v8_caveats.py` öneren sütunu biçimsiz satırı (parantezli) sessizce atlıyordu — 166. satır görünmedi; artık
+biçimsiz satırda duruyor.

@@ -34,6 +34,9 @@ def liste():
         m = re.match(r"^\| (\d+) \| (.+) \| ([GDCQK+]+) \|$", L.rstrip("\n"))
         if m:
             out.append((int(m.group(1)), m.group(2), m.group(3)))
+        elif re.match(r"^\| \d+ \|", L):
+            # Tur 97: bicimi bozuk satir sessizce atlaniyordu (oneren sutununda parantez).
+            sys.exit("!! v8-caveats.md satiri okunamadi (bicim): " + L.strip()[:120])
     return out
 
 

@@ -349,3 +349,6 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | 7G onarım biçimi | "It" | "It" | "It"/"That" | "This dual role" | "It" | **Ayrışık** |
 | 7L | çıkar | tut | tut | çıkar | çıkar (aday) | **Ayrışık** — duruyor |
 | R-6 cümlesi korunan (ChatGPT, Grok P62); P56'yı 7H varyantına genişlet (Grok P61, DeepSeek) | ✓ | ✓ | öneren | — | — | Oylamada |
+| **Yazar kararı E5 (b):** helikopterler de rakip; S-27 "result is mixed" biçimiyle uygulandı, korunan (166) | — | — | — | — | uyguladı | Okuyucu teyidine |
+| Eksen yayılımı P-a … P-j (6A, 6B, 6C, 6E ölçek 1 660 kg, Adım 9 tablo ve madde 2, Adım 10, Adım 15) | — | — | — | — | öneren | Oylamada |
+| S-29: 1G "has been designed for small uncrewed aircraft" + Merical 2014 | — | — | — | — | öneren | Oylamada |

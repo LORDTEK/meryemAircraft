@@ -57,7 +57,7 @@ aimed at **wildfire observation and response** and **cargo delivery to places wi
 
 | Axis | Opponent | Standing |
 |---|---|---|
-| **Cruise efficiency** | Multirotors | **Claimed, and bounded.** The size of the margin is a calculation. In one measure it is 5.56 to 7.39 here, against 4.9 for a published turboshaft quadrotor and 5.8 for an all-electric one (Step 6). |
+| **Cruise efficiency** | Rotorcraft: multirotors **and helicopters** (the author's decision, Round 97) | **Claimed against multirotors, and bounded:** 5.56 to 7.39 here, against 4.9 for a published turboshaft quadrotor and 5.8 for an all-electric one (Step 6). **Against helicopters the result is mixed:** the same NASA table gives 5.4 to 7.2; ahead of the turboshaft single-main-rotor helicopter at every corner, and only the top corner ahead of the all-electric side-by-side helicopter (7.2). No superiority is claimed there. |
 | **Operation without a runway** | Fixed-wing aircraft | **Claimed as sized, not demonstrated.** It depends on an energy store whose required performance the sources consulted do not report as built (Step 14). |
 | **The mechanism required to change regime** | Tilting architectures | **The contribution.** |
 | **Range** | The other hybrids (lift-plus-cruise, tilting) | **Not claimed, in either direction.** The ordering belongs to the sizing contract (Step 13). |

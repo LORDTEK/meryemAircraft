@@ -10,7 +10,7 @@ Aşağıdaki dört satır projenin omurgasıdır ve her metin, her düzeltme, he
 
 | Eksen | Rakip | Durum |
 |---|---|---|
-| **Menzil / seyir verimi** | **Çok rotorlu (quadcopter)** | **Yeniyoruz. Yeter.** |
+| **Menzil / seyir verimi** | **Döner kanatlılar: çok rotorlu VE helikopter** (yazar, Tur 97) | **Çok rotorluya karşı yeniyoruz** (elektrikli quadrotora karşı en düşük köşe hariç). **Helikoptere karşı sonuç karışık** ve öyle yazılır (Adım 6D, S-27). Üstünlük iddiası yalnız kanıtın taşıdığı yerde. |
 | **Piste ihtiyaç / dikey iniş kalkış** | **Sabit kanatlı** | **Yeniyoruz. İnşa gereği.** |
 | **Mekanik ve kontrol basitliği** | **Tilt mimarileri** | **Asıl katkı bu.** |
 | Menzil, öteki hibritlere karşı | Lift+cruise, tilt | **İDDİA EDİLMİYOR.** Sözleşmeye göre oynar; lift+cruise'a karşı bir sözleşmede işaret zarfın içinde değişir (Adım 13). Tilt yalnız sınır olarak modellenebiliyor. |
@@ -42,6 +42,16 @@ değildir.
 
 **"Genel mimari üstünlük iddiası yoktur" gibi bir cümle bir daha yazılmaz.**
 Bir kez yazıldı, 4.2 ile çelişti ve makalenin kendi tezini inkâr etti.
+
+**Helikopter de rakip. Yazar, Tur 97.** *"Helikopter için neden rakibimiz değil dedin? Sadece 4 rotorlular mı rakibimiz
+olduğunu düşündün? … hareketli kanatlılardan (evet helikopterler de dahil) menzil olarak daha etkin."* Adım 1A zaten
+"Rotorcraft and multirotors"ı tek aile sayıyordu; ben tabloyu "quadcopter" diye dar okudum ve S-27'ye "not extended to the
+helicopter" yazdım. **Ama sayılar:** NASA Tablo 3'te (tek ortak birimli kaynak) helikopterler L/De 5,4–7,2; bizim zarf
+5,56–7,39 → turboşaft tek rotorluya karşı her köşede önde, ortadaki ikisi zarfın içinde, elektrikli yan yana rotorluya
+(7,2, kanatsız) karşı yalnız en üst köşe önde. Yazar (b)'yi seçti: *"helikopterleri de rakip say"* — eksen genişler, sonuç
+dürüstçe karışık yazılır, üstünlük iddiası yok. **"Tüm hava araçlarından daha etkin" denmez:** aynı tabloda lift+cruise ve
+tiltwing 7,9–8,6, zarfımızın tamamının üstünde; onlara karşı iddia mekanizmadır. **V-22'ye karşı güvenilirlik denmez**
+(ölçülmedi; on elektrik makinesi); mekanizma sınıfı sayımı denir.
 
 ### 0.1 Üçüncü iddianın SINIRI. Bunu da bir daha aşma.
 

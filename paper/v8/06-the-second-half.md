@@ -144,6 +144,12 @@ sizing evidence for it is set out — the comparison in this table does not esta
 link by itself. On cruise efficiency taken alone, the entry is ahead of this configuration's low
 corner, and whether it is ahead of the best examined blade family depends on the drag bracket.
 
+The same sizing set gives its two helicopter types at 5.4 to 7.2, and against them the result is
+mixed: this configuration is ahead of the turboshaft single-main-rotor helicopter at every corner,
+the two middle entries fall inside its envelope, and only its top corner is ahead of the
+all-electric side-by-side helicopter, which has no wing either. The qualifications below apply to
+these entries as they do to the quadrotors.
+
 **So the second claim is narrower than the structural statement invites.** Carrying cruise lift on
 a wing is worth **roughly a quarter to a half against the turboshaft reference, and against the
 all-electric one it ranges from slightly behind to comfortably ahead depending on the drag outcome
@@ -230,6 +236,7 @@ the combination is what this paper is for.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 97 — yazar kararı (b):** helikopterler de rakip. S-27 6D'ye: "The same sizing set gives its two helicopter types at 5.4 to 7.2, and against them the result is mixed: …" (turboşaft tek rotorluya karşı her köşede önde; ortadaki ikisi zarfın içinde; elektrikli yan yana rotorluya karşı yalnız en üst köşe); nitelemeler bunlara da uygulanıyor. Korunan (166). Eksen yayılımı (6A, 6B, 6C, 6E ölçek, Adım 9, 10, 15) okuyuculara | J&S Tablo 3 PDF s. 70; DGW: 3 951 / 5 980 / 3 665 / 5 547 lb |
 | **Tur 97 (dört okuyucu + Claude):** R-5 — 6D zayıf silme "The four corners are not demonstrated aircraft states" onarımıyla uygulandı; S-28 — "Its disc loading is 3.5 lb ft⁻², and the all-electric one's is 3; both are unusually low" ("unusually efficient" çıktı; "good quadrotor" bizim ifademiz, J&S'de yok). **S-27 (R-4) yazar kararı bekliyor** (helikopter ekseni). Özgün paragraflar Ek S6'da | J&S Tablo 3 |
 | **Tur 96 (yeniden kurma; dört okuyucu + Claude):** envanter ve yön sütunu teyit edildi. 6A yinelemesi ("A runway-launched aeroplane…"), 6B yinelemesi ("It is not a deficient machine…"), 6G'deki ikinci 7,47–9,20 çıktı; S-26 başlığı onarıldı. **Uygulanmadı:** S-27 (R-4 gönderge), 6D zayıf silme (R-5 "They"), S-28 (ayrışık). Özgün paragraflar Ek S6'da | J&S Tablo 3, PDF s. 70 |
 | **Tur 60:** 52,3–57,5 kg | DeepSeek; `aero/closure-result.txt` |
