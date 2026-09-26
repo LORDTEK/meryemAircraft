@@ -148,3 +148,10 @@ helicopter" cümlesi bununla gerilimde — Claude'un hatası; (2) ama tek ortak 
 L/De 5,4–7,2; bizim zarf 5,56–7,39 — yan yana elektrikli helikoptere karşı −23 %…+3 %; ölçek, hız ve zincir farkları yön
 olarak bizim aleyhimize ama hesaplanmadı; (3) güvenilirlik iddiası ölçülmedi (§0.1, Adım 9 madde 4); sayım iddiası duruyor.
 S-27 (R-4) bu karara bağlı olarak uygulanmadı.
+
+## E6 — Adımlar bitti: hedefe yeniden bakış (Tur 99) · **YAZARA SORULDU**
+
+Tur 77 yazar: *"Adımları bitirince geldiğimiz noktada tekrar bakarız."* Tur 98'de son blok (Adım 8) envanterden geçti. Gövde
+25 797 kelime (Tur 72: ~26 400; Tur 69: 26 852). Yeniden kurma kelimeyi pek azaltmadı; ürünü kaynak kusurları (S-1…S-33) ve
+yeniden kurmanın kendi kusurları (R-1…R-6). E4'ün yedek yolu (yenilik anlatıları dışındaki hesap kısımlarının yontulması) ve
+hedef derginin sınırı yazarın kararına.

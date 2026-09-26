@@ -59,7 +59,8 @@ of them supplies it alone:
   carry, and vertical operation does not depend on a runway. That is the first half.
 - The **series-hybrid buffer** releases the continuous power plant from the hover peak,
   so that it is sized by cruise rather than by a condition holding for about two percent
-  of the flight.
+  of the flight. The series arrangement is used here for the electrical path it gives the buffered
+  hover peak, not because this study assumes it is the more efficient hybrid architecture.
 
 The configuration is arranged to change regime by **rotating the airframe**. The propulsors hold
 their orientation relative to the body from take-off to cruise; what changes is the
@@ -81,7 +82,10 @@ control surface, of a different class, and is named below and in Section 8 rathe
 | Nacelle or rotor-group actuator | Tilting architectures | — |
 | Variable-pitch hub | Architectures that trim a rotor across two widely separated operating points, or feather a rotor unused in one regime | — |
 | Dedicated lift rotors | Lift-plus-cruise architectures | — |
-| Rotor stowing, indexing or stopping mechanism | Architectures that remove dedicated lift rotors from the cruise flow by such means | — |
+| Rotor stowing, indexing or stopping mechanism | Architectures that remove dedicated lift rotors from the cruise flow by such means | — (see note) |
+
+*Note.* The stopping class is absent if the tip pairs free-wheel in cruise or are held stopped by motor torque; a
+brake or a mechanical lock would add it. The means of stopping is not fixed by this study (Section 8).
 
 Attitude is produced instead by differential thrust between fixed-pitch propellers: a
 single coaxial contra-rotating pair at the nose, and four small coaxial pairs at the
@@ -133,6 +137,7 @@ exposed in cruise, and Section 11 charges them.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 99 (dört okuyucu + Claude):** S-33 — tablonun durdurma satırı "— (see note)" ve altına not: "The stopping class is absent if the tip pairs free-wheel in cruise or are held stopped by motor torque; a brake or a mechanical lock would add it. The means of stopping is not fixed by this study (Section 8)." (dördü de Adım 7'de nitelemeyi istedi; sözcükler Grok + Qwen birleşimi — teyide). 7D seri hibrit cümlesi (ChatGPT'nin sözcükleri). Özgün tablo Ek S7'de | Adım 8G |
 | **Tur 98 (dört okuyucu + Claude):** 7G — Adım 5D'nin birebir cümlesi çıktı; "This dual role is a dependency, reported as one where the sizing is audited, and it does not make the tip pairs a dedicated lift system." (Qwen'in göndergesi). 7L kalıyor (dört okuyucu + Claude; iz: köprü/kapanış, yineleme değil). Özgün Ek S7'de | Tur 97 metni §5 |
 | **Tur 97 (yeniden kurma; dört okuyucu + Claude):** envanter teyit edildi; 7A ortadaki üç cümle çıktı (Adım 1G'nin yinelemesi; ev 1G). **Uygulanmadı:** 7G (onarım biçimi ayrışık: "It" / "That" / "This dual role"); 7L (Grok ve Qwen çıkar, ChatGPT ve DeepSeek tut — köprü/kapanış). Özgün paragraflar Ek S7'de | Tur 96 metni §7 |
 | **Tur 67 — V2, Grok'un ifadesi** (dört okuyucu + Claude): *"pays in efficiency in at least one of them"* — bedelin birimini adlandırıyor, sayı eklemiyor; Adım 3'ün *"the compromise is paid in efficiency"* cümlesiyle aynı güçte (Qwen) | Adım 3 |

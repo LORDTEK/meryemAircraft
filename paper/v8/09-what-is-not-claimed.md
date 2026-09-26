@@ -135,6 +135,7 @@ what it demands of anyone who uses the framework afterwards.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 99:** eksen satırı korunan (168; dört okuyucu + Claude) | Adım 15 |
 | **Tur 98 (dört okuyucu + Claude; E5):** tablo satırı "Rotorcraft: multirotors and helicopters | Claimed against multirotors, and bounded; against helicopters the published comparison is mixed and no advantage is claimed."; 2. madde "against rotorcraft". Özgün Ek S9'da | Adım 6D S-27 |
 | **Tur 93 (yeniden kurma, 9E):** 2. madde — "The multirotor family is the opponent on cruise efficiency only." çıktı (9B tablosunu ve 1. maddenin kaldırılan eksen cümlesiyle aynı türden yinelemeyi taşıyordu; dört okuyucu + Claude). Özgün Ek S9'da | Tur 92 metni §2 |
 | **Tur 92 (yeniden kurma, 9E):** 4. madde — "What is offered is a count of mechanism classes…" çıktı, "A count is not a reliability argument" → "The count of mechanism classes in Section 7 is not a reliability argument" (R-1 onarımı; dört okuyucu + Claude). Özgün Ek S9'da | Tur 91 metni §2 |

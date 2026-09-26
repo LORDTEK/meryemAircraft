@@ -55,15 +55,13 @@ collective, no variable-pitch hub and no mechanism that changes a rotor's orient
 the airframe. Shaft speed is commanded; blade geometry and orientation are not. Each rotor of each
 pair is driven by its own
 electric machine on a common axis, so **the splitting gearbox and the mechanical governors that
-synchronise it are not required** — the arrangement that repeatedly defeated the XB-35. This work
+synchronise it are not required**. This work
 makes no claim about the shafting: whether the two machines are stacked on the axis or arranged
 some other way is an implementation question it does not settle.
 
 The counter-rotating arrangement carries a second consequence that the transition analysis
 depends on. Because the two rotors of each pair carry equal and opposite angular momentum, **the
-net angular momentum of the propulsion system is nominally zero**: rotating the airframe through
-ninety degrees precesses nothing, and no gyroscopic moment appears for the control system to
-cancel. In a tilting architecture that term is present and must be designed for.
+net angular momentum of the propulsion system is nominally zero**: rotating the airframe through ninety degrees precesses nominally nothing, and no gyroscopic moment appears for the control system to cancel unless the pairs are speed-trimmed (below). In a tilting architecture that term is present and must be designed for.
 
 ### The energy path
 
@@ -73,11 +71,7 @@ decoupling is what allows it to be sized by cruise rather than by hover.
 
 **The separation the architecture depends on is that the continuous cruise requirement is several
 times smaller than the hover peak, and that the difference is supplied from a battery buffer for
-the vertical phase alone.** No wattage is quoted here. The figures published for this configuration
-were closed on a propeller efficiency this work has since replaced with a computed one, and the
-re-closed set belongs to Section 10 rather than to an inventory. **Quoting the superseded numbers
-beside a propulsion section that no longer assumes them is precisely the inconsistency this paper
-is trying not to commit.**
+the vertical phase alone.** No wattage is quoted here; the closed powers are Section 10's.
 
 ### What produces each moment
 
@@ -113,8 +107,7 @@ is why one device serves both regimes.
 ### What meets the ground
 
 The aircraft rests on five points: the four lower ends of the tip frames, and the aft end of a
-keel running along the centreline. It stands on its tail in its own storage attitude, with no
-launch equipment present.
+keel running along the centreline.
 
 **The frames carry a fairing, and it is not only a drag measure.** The frames are the only
 surfaces standing perpendicular to the wing plane, and a planar planform supplies no directional
@@ -130,13 +123,6 @@ differential thrust and by the strip, both of which are actively commanded — s
 reference and a flight computer are not optional equipment but part of the mechanism the
 preceding paragraphs describe. They are carried in the systems budget. The configuration
 replaces a pilot's workload with computation, and the computer is the part that does it.
-
-**The tip frames therefore do four jobs at once**, and this is the clearest instance in the
-configuration of one structure carrying several duties: they are the landing gear, they set the
-control moment arms, they carry the attitude rotors, and — through the fairing described above —
-they are the aircraft's only vertical surface. Lengthening them to buy control
-authority widens the stance base against tipping in wind at the same time. They are also the
-structure that is exposed in cruise, and Section 11 charges them for it.
 
 ### What moves
 
@@ -195,7 +181,8 @@ something — motor holding torque, an electrical brake, a mechanical lock — a
 fixed-pitch blade also has an azimuth, so "stopped" is a family of aerodynamic states rather than
 one. Neither the means nor the azimuth is fixed by this study, and the drag figure quoted for the
 stopped condition should be read as the state Section 11 defines rather than as the state a
-particular installation would reach.
+particular installation would reach. The free-wheeling state needs no stopping means; the stopped state does, and if it were a
+brake or a lock rather than motor holding torque, the count of Section 7 would gain a class.
 
 ---
 
@@ -203,6 +190,7 @@ particular installation would reach.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 99 (yeniden kurma; dört okuyucu + Claude):** envanter teyit edildi. 8E "It stands on its tail…" ve "four jobs" paragrafı çıktı (Adım 5C yinelemesi). S-30 "precesses nominally nothing, and no gyroscopic moment appears … unless the pairs are speed-trimmed (below)" (ChatGPT daha kesin bir sözcük öneriyor — oylamada); S-31 XB-35 kısmı çıktı (kaynaksız); S-32 "No wattage is quoted here; the closed powers are Section 10's." (önceki sürüm anlatısı çıktı); S-33 8G'ye durdurma cümlesi. Özgün paragraflar Ek S8'de | Tur 98 metni §3 |
 | **Tur 70:** *"These are the parts…"* → *"The tip pairs are the parts that fail the escape condition"* (DeepSeek; dört okuyucu + Claude). Birleştirilmiş görünümde cümle *"What moves"*tan sonra geliyor; *these* yanlış öncüle bağlanıyordu. Korunan liste aynı commit'te | Tur 69 metni §3 |
 | **Tur 67 — B5 (3.1)** (dört okuyucu + Claude): aerodinamik gerekçe ve on derece bandı Adım 7'de (ev) ve 14'te; burada atama, *"not a demonstrated result"*, Adım 10 girdisi ve *"not settled"* kaldı | Adım 7 |
 | **Tur 60:** *"50 kg reference design"* tanımı buradan; parantez sadeleşti — ikinci satırın dar tarifi çıktı | ChatGPT, DeepSeek (terim), Grok, DeepSeek (parantez) |

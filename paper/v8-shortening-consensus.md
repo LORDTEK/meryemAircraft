@@ -360,3 +360,8 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Seri/paralel açıklama cümlesi (yer ve sözcük) | 7D ya da 8 | ilk geçtiği yer | 1G ya da 7 | 7 ya da 8 | öneren | Oylamada |
 | Sözcük kilidi (ChatGPT); eksen taraması (Grok P64, DeepSeek); Qwen P1 helikopter iz satırı | — | öneren | öneren | öneren | ✓ | Oylamada / kayıt |
 | Adım 8 envanteri; S-30–S-33; 8E iki aday | — | — | — | — | öneren | Teyide / oylamada |
+| Tur 98'de uygulananlar (P-a–P-h, S-29, 7G, 167, P56 varyantı) | ✓ | ✓ | ✓ | ✓ | ✓ | **Teyit edildi** (Tur 99) |
+| Adım 8 envanteri; 8E iki silme; S-30; S-31; S-32; S-33 (8G + Adım 7 notu); 7D seri cümlesi; Adım 9 satırı korunan (168); sözcük kilidi | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı** (Tur 99); teyide |
+| P-i; 4.3 (Grok inceltmesi) | değiştirme | değiştirme | değiştirme | değiştirme | değiştirme | **Kapandı** |
+| S-30 ChatGPT sözcüğü; Adım 7 notunun sözcükleri | — | öneren | — | — | — | Oylamada / teyide |
+| Koşullu envanter kuralı (ChatGPT); Grok P65–P66; DeepSeek durdurulmuş durum işareti, rakip sayımı denetimi; Qwen P2 küresel sözcük denetimi | — | — | — | — | — | Oylamada |

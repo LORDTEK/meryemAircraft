@@ -135,6 +135,10 @@ EMEKLI = {
     "No multirotor is sized in this work": "Tur 98: eksen genisledi -- 'No multirotor or helicopter'",
     "has established precedent in small uncrewed": "Tur 98: S-29 -- Schoemann 2014 s. 25 celisiyor",
     "asks a component to do a second job it was not sized for; it is a dependency": "Tur 98: 7G -- Adim 5D'nin birebir kopyasi; 'This dual role'",
+    "repeatedly defeated the XB-35": "Tur 99: S-31 -- kaynaksiz",
+    "precesses nothing": "Tur 99: S-30 -- hiz trimi aci momentumu esitlemez",
+    "The figures published for this configuration were closed": "Tur 99: S-32 -- govdede onceki surum anlatisi (CLAUDE 4)",
+    "Quoting the superseded numbers": "Tur 99: S-32",
 }
 
 

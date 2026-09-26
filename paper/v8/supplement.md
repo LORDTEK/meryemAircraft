@@ -770,6 +770,66 @@ at thrust equal to weight and no more. That is the one place the configuration a
 to do a second job it was not sized for; it is a dependency, it is reported as one where the
 sizing is audited, and it does not make the tip pairs a dedicated lift system.
 
+### The mechanism table of Section 7 as it stood before the stopping note (frozen snapshot)
+
+| Mechanism | Where it is required | Present here |
+|---|---|---|
+| Pivot or tilting joint | Tilting architectures | — |
+| Nacelle or rotor-group actuator | Tilting architectures | — |
+| Variable-pitch hub | Architectures that trim a rotor across two widely separated operating points, or feather a rotor unused in one regime | — |
+| Dedicated lift rotors | Lift-plus-cruise architectures | — |
+| Rotor stowing, indexing or stopping mechanism | Architectures that remove dedicated lift rotors from the cruise flow by such means | — |
+
+---
+
+## S8. Section 8 (from Section 8)
+
+### Six paragraphs of Section 8 as they stood before recomposition (frozen snapshot)
+
+One pair sits at the nose, 1.20 m in diameter on the 50 kg reference design, and produces all propulsive
+thrust in both regimes. Four smaller pairs, 0.20 m in diameter, sit at the ends of rigid frames
+projecting from the wing tips. Every pair is of **fixed geometry**: no cyclic pitch, no
+collective, no variable-pitch hub and no mechanism that changes a rotor's orientation relative to
+the airframe. Shaft speed is commanded; blade geometry and orientation are not. Each rotor of each
+pair is driven by its own
+electric machine on a common axis, so **the splitting gearbox and the mechanical governors that
+synchronise it are not required** — the arrangement that repeatedly defeated the XB-35. This work
+makes no claim about the shafting: whether the two machines are stacked on the axis or arranged
+some other way is an implementation question it does not settle.
+
+The counter-rotating arrangement carries a second consequence that the transition analysis
+depends on. Because the two rotors of each pair carry equal and opposite angular momentum, **the
+net angular momentum of the propulsion system is nominally zero**: rotating the airframe through
+ninety degrees precesses nothing, and no gyroscopic moment appears for the control system to
+cancel. In a tilting architecture that term is present and must be designed for.
+
+**The separation the architecture depends on is that the continuous cruise requirement is several
+times smaller than the hover peak, and that the difference is supplied from a battery buffer for
+the vertical phase alone.** No wattage is quoted here. The figures published for this configuration
+were closed on a propeller efficiency this work has since replaced with a computed one, and the
+re-closed set belongs to Section 10 rather than to an inventory. **Quoting the superseded numbers
+beside a propulsion section that no longer assumes them is precisely the inconsistency this paper
+is trying not to commit.**
+
+The aircraft rests on five points: the four lower ends of the tip frames, and the aft end of a
+keel running along the centreline. It stands on its tail in its own storage attitude, with no
+launch equipment present.
+
+**The tip frames therefore do four jobs at once**, and this is the clearest instance in the
+configuration of one structure carrying several duties: they are the landing gear, they set the
+control moment arms, they carry the attitude rotors, and — through the fairing described above —
+they are the aircraft's only vertical surface. Lengthening them to buy control
+authority widens the stance base against tipping in wind at the same time. They are also the
+structure that is exposed in cruise, and Section 11 charges them for it.
+
+The free-wheeling state is physically determinate: the rotor settles where net shaft torque is
+zero. **The stopped state is not.** Stopping a rotor requires the stop to be produced by
+something — motor holding torque, an electrical brake, a mechanical lock — and a stopped
+fixed-pitch blade also has an azimuth, so "stopped" is a family of aerodynamic states rather than
+one. Neither the means nor the azimuth is fixed by this study, and the drag figure quoted for the
+stopped condition should be read as the state Section 11 defines rather than as the state a
+particular installation would reach.
+
 ---
 
 ## S9. Section 9 (from Section 9)

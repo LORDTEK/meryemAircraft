@@ -1,7 +1,7 @@
 # Reader onboarding — for a reader starting a new conversation
 
 > **Version check (Qwen P1, Round 92; corrected in Round 93).** This version was rewritten in Round 91 and last updated in
-> Round 98. An older copy (Round 61, sent in Round 64) stated Step 13's contract results **in the reverse direction**: it
+> Round 99. An older copy (Round 61, sent in Round 64) stated Step 13's contract results **in the reverse direction**: it
 > gave this configuration's range as 55 to 84 percent ahead of the lift-plus-cruise layout. **The older copy has no
 > version box at all; if yours does not begin with this box, it is the old one: do not use it.** In the repository:
 > `grep -c "Version check (Qwen P1" cfd/reader-onboarding.md` prints **more than 0** for this version and **0** for the old one.
@@ -63,7 +63,7 @@ aimed at **wildfire observation and response** and **cargo delivery to places wi
 | **Range** | The other hybrids (lift-plus-cruise, tilting) | **Not claimed, in either direction.** The ordering belongs to the sizing contract (Step 13). |
 
 **There is one contribution: the architecture.** It is *"arranged to change regime by rotating the airframe rather than
-its propulsors"*. It carries none of five mechanism classes (Step 7):
+its propulsors"*. It carries none of five mechanism classes (Step 7) — the fifth, a rotor-stopping mechanism, only if the tip pairs free-wheel or are held by motor torque; a brake or lock would add it:
 
 - a pivot or tilting joint;
 - a nacelle or rotor-group actuator;
@@ -214,19 +214,16 @@ The body is about **26 000 words**, and the journal's working target is **about 
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 98.**
+**Round 99.**
 
 | Block | State |
 |---|---|
-| Steps 4, 3, 9, 14 | recomposed and closed; the Round 98 axis wording in Step 9 awaits confirmation |
-| Step 2 | recomposed, with its last pieces awaiting confirmation |
-| Step 1 | recomposed; the series-hybrid sentence repaired (S-29), awaiting confirmation |
-| Step 5 | recomposed |
-| Step 6 | recomposed; **cruise axis widened to rotorcraft** (multirotors claimed, helicopters mixed), awaiting confirmation. Divided: P-i |
-| Step 7 | recomposed (7A, 7G); 7L stays as the bridge to the ledger |
-| Step 8 | inventory sent (Round 98), with S-30 to S-33 — the last block |
+| All fifteen steps | inventoried. Steps 4, 3, 9, 14, 5 closed; Steps 1, 2, 6, 7, 8 recomposed with their last applied text awaiting confirmation |
+| Step 7 | the count is now conditional at one row: the stopping class is absent if the tip pairs free-wheel or are held by motor torque (S-33) |
+| Step 8 | recomposed: XB-35 clause and a previous-version narrative removed; angular momentum "nominally" zero unless the pairs are speed-trimmed |
+| Next | the author reviews the target (decided in Round 77) |
 
-**The body is about 25 850 words.** Recomposition gains a few percent per block. In Steps 2 and 3 its main product was
+**The body is about 25 800 words.** Recomposition gains a few percent per block. In Steps 2 and 3 its main product was
 defects found in the source and repaired. The author will review the target when the steps are done.
 
 **Tools the round texts mention:**

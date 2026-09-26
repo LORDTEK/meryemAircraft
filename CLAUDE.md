@@ -318,6 +318,10 @@ kaynağın kendi sonucunun alıntılanan rakamla ilişkisi `paper/v8-evidence.md
 sınırlamak için kullanıldığında, iddiaya değebilecek her satır hesaba katılır — yalnızca neden alınmadığını kaydetmek için
 bile olsa. Örnek: S-27 (J&S Tablo 3'teki helikopterler).
 
+**Rakip ailesi sözcük kilidi (Tur 99; ChatGPT; dört okuyucu + Claude).** "Multirotor" her geçişte üç türden biridir:
+aile düzeyinde ifade (→ *rotorcraft*), belirli referans (kalır: iki quadrotor, quadrotor kuyruk üstüleri), kaynak alıntısı
+(dokunulmaz). Eksen değişince her ifade bu üçe göre sınıflanır.
+
 ### 2.2 Yenilik iddiası yazmadan önce. Tur 46'nın bedeli.
 
 Adım 1'e *"1954'te bir kez uçuruldu ve tekrar ele alınmadı"* ve *"her mimari bunu propulsor'ü
