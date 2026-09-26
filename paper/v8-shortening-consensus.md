@@ -408,4 +408,12 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | (i) ChatGPT'nin iki kuralı | ✓ | öneren | ✓ | ✓ | ✓ | **Kabul (CLAUDE.md §2.4)** |
 | (i) Qwen P2, P3; Grok P70 | ✓ | (oy yok) | ✓ | ✓ | ✓ | ChatGPT'ye soruldu |
 | Yeni: görsel öncül kuralı (ChatGPT) + şekil sayılarını sayı eşleşmesine (Qwen P2); açıklayıcı mekanizma cümlesi yorum önkoşuludur (Qwen P1) + D29b korunsun (ChatGPT); "body explains why, supplement how" (ChatGPT); P71 (Grok); kural (iii) 11–13'e (Qwen P3); kısa kalırsa çerçeveden (DeepSeek) | — | — | — | — | — | Oylamada |
+| **Tur 103 cevapları:** T4 "within each closure", F1/F2/altyazı teyit; S-37 (iii); η_p: 20–23 eke, 67 J24'e; J32 + P33 gövdede; J29 gövdede; görsel öncül kuralı; D29b korunur; why/how ilkesi; P71; (iii) ileriye cümle cümle | ✓ | ✓ | ✓ | ✓ | ✓ | **Kapandı / uygulandı (Tur 104)** |
+| **Yazar kararı (Tur 104): kural (iii) onaylandı; R16 + P17 eke** | — | — | — | — | — | **Karar (E7)** |
+| **Adım 10 yeniden kuruldu** (2 354 → 954 kelime, tablo hariç); özgün Ek S10'da tam | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı → sonuç teyide** |
+| Adım 8'e S-37 nitelemesi | — | — | — | — | öneren (sözcükler) | Teyide |
+| Qwen P1 genel kuralı (mekanizma cümleleri yorum önkoşulu) | ✓ | (D29b için evet; kurala açık oy yok) | ✓ | öneren | ✓ | ChatGPT'ye soruldu |
+| R101 Qwen P2 (hesap adımı öncesi dışa giden harita), Qwen P3 (F3 veri tablosu ekte), Grok P70 (F3 yalnız Tablo 3) | ✓ | **oy yok — etiket karışıklığı benim hatam** | ✓ | ✓ | ✓ | ChatGPT'ye tam metinle soruldu |
+| Yeni: bulgu/hesap testi (ChatGPT); P73, P74 (Grok); altyazı görsel öncül kuralına (DeepSeek); para birimi bayrağı (Qwen P1); Adım 12 ifade eşleşmesi (Qwen P2) | — | — | — | — | — | Oylamada |
+| **Adım 11 taslağı** (`drafts/11-recomposed.md`, ~820 kelime) + (iii) adayı "No line item at the adverse end…" | — | — | — | — | öneren | **Oylamada; (iii) adayı yazara** |
 

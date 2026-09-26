@@ -71,7 +71,7 @@ for n, c in ONCE.items():
     simdi = duz(re.sub(r"(?m)^\s*- ", "", govde(open(os.path.join(KOK, yol), encoding="utf-8").read())))   # Tur 84: madde imi eski metinde siliniyordu, simdikinde de silinmeli
     for k in cumleler(govde(eski)):
         if k in DEGISTI:
-            if duz(DEGISTI[k]) not in simdi:
+            if duz(DEGISTI[k]) not in simdi and duz(DEGISTI[k]) not in ek:   # Tur 104: yeni hal de eke tasinabilir (Adim 10 dondurmasi)
                 kayip += 1
                 print("  KAYIP Adim %d (degisen cumlenin yeni hali yok): %s" % (n, DEGISTI[k][:100]))
             continue

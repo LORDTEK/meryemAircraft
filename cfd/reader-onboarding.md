@@ -214,18 +214,20 @@ The body is about **26 000 words**, and the journal's working target is **about 
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 103.**
+**Round 104.**
 
 | Block | State |
 |---|---|
 | All fifteen steps | inventoried and recomposed; Round 99–100 applied text confirmed |
-| Length | the author decided (Round 101): 12 000 words in all; **5 tables + 3 figures**, 11 750; section budgets; the working moves to the supplement, the body gives the result, its method and its limit |
-| Tables | T1 (Step 9), T4 (Step 10, L/De column + footnote), T5 (Step 13, rows A–D) applied; T2, T3 unchanged |
-| Figures | v8 drafts of all three: F1 = three-view with body axes on panel (c); F2 = v8 copies of v7's Figures 8 and 9, labels repaired; F3 = the L/De figure |
-| Now | **Step 10 draft** (`paper/v8/drafts/10-recomposed.md`): one divided row left (η_p), and rule (iii) awaits the author. **Step 11:** readers' keep/move lists asked |
+| Length | the author decided (Round 101): 12 000 words in all; 5 tables + 3 figures, 11 750; section budgets |
+| Rule (iii) | **the author approved it (Round 104):** a protected sentence may move to the supplement only together with the result it qualifies, and only by the author's decision |
+| Step 10 | **recomposed into result sentences** (2 354 → about 950 words); the original is in Supplement S10 in full |
+| Figures | v8 drafts of F1, F2, F3; S-37 (the slipstream boundary) qualified in Step 8, to be derived before submission |
+| Now | **Step 11 draft** (`paper/v8/drafts/11-recomposed.md`), to vote |
 
-**The body is about 25 800 words.** Recomposition gains a few percent per block. In Steps 2 and 3 its main product was
-defects found in the source and repaired. The calculation steps (10–13) are about 8 000 words and must reach 1 550.
+**The body is about 22 800 words of prose** (tables not counted). Recomposition into result sentences took Step 10 to about 40 %
+of its length; the plan asks for 8 500 in all, and 1 550 for Steps 10–13 together. The earlier recomposition of Steps 1–9
+gained a few percent per block, and its main product was defects found in the source and repaired.
 
 **Tools the round texts mention:**
 

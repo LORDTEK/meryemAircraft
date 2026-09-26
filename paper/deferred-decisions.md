@@ -185,7 +185,7 @@ karar verdi: "Önerine göre git."**
 3 şekil, **toplam 11 750**), R-7, Adım 7 notu korunur, yönetici cümle. **F1 — yazarın bilgisi:** Şekil 5 = (a) üstten, planform,
 (b) önden, (c) yandan kesit, 2 m ölçek çubuğu; Şekil 6 = serbest görünüş, 1 m ölçek çubuğu. Öneri okuyuculara (Tur 102 metni).
 
-## E7 — Korunan cümle, nitelediği sonuçla birlikte eke gidebilir mi (Tur 102) · **YAZAR KARARI BEKLENİYOR**
+## E7 — Korunan cümle, nitelediği sonuçla birlikte eke gidebilir mi (Tur 102) · **KARAR (Tur 104): "Kural (iii)'ü onaylıyorum, R16 + P17 eke gitsin."**
 
 **Soru:** Adım 10–13 bugün ~8 000 kelime, hedef 1 550; korunan kelimeler tek başına 729. Adım 10 taslağı ~915 kelime, 204'ü
 korunan. Önerilen kural (iii): *"A protected sentence may move to the supplement only together with the result it qualifies,
@@ -195,4 +195,14 @@ and only by the author's decision."* Gövdede kalan bir sonucun niteleyicisi ta�
   Claude taşınmasına evet → **yazarın kararına.**
 - **J32 + P33** (ödünç momentle sonuçların dağılması; *"That spread is itself the finding"*) — Grok, ChatGPT, Qwen, Claude evet;
   **DeepSeek hayır** (dağılım olmadan okuyucu neden sayı verilmediğini göremez) → gövdede kalır, okuyuculara geri soruldu.
+**Tur 103 cevapları:** J32 + P33 için Grok taşımayı geri çekti; ChatGPT ve Qwen de DeepSeek'e katıldı → gövdede kalır (oybirliği). **Tur 104: R16 + P17 Ek S10'da; Adım 10 yeniden kuruldu.**
 
+## E8 — Uzunluk öngörüsü, Adım 10'un gerçek oranıyla (Tur 104) · **YAZARA BİLGİ; karar gerekebilir**
+
+Adım 10 sonuç cümlelerine indirildi: 2 354 → 954 kelime (tablo hariç), kaynağın **%40'ı**. Bütün gövde bugün 22 823 kelime
+düzyazı. Aynı oran her adıma uygulanırsa düzyazı **≈ 9 800** olur; plan **8 500** (fark ≈ 1 300). Hesap adımları 10–13 aynı
+oranla **≈ 3 250**; plan **1 550**. Adım 11 taslağı ~820 (kaynağın %43'ü). Seçenekler, karar yazarın:
+- (a) Bölüm bütçelerini gerçek oranlara göre yeniden dağıtmak — 8 500 sabit kalırsa bir yerden ~1 300 daha.
+- (b) Kural (iii)'ü 11–13'te cümle cümle uygulamak (Qwen P3) — her taşıma yazar kararı.
+- (c) Toplam hedefi (12 000) derginin gerçek sınırına karşı yeniden denetlemek (`paper/target-journal.md`).
+Önerim: 11–13 taslakları bitince gerçek sayıyla (a) — tahminle değil.

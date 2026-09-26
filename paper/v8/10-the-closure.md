@@ -17,104 +17,21 @@ dört kapanışı çalıştırıyor.
 
 ## Analytical closure of the sizing loop
 
-This section prices the arrangement of Sections 7 and 8 on a declared package; it does not bear on
-the count of mechanism classes, which rests on the inventory of those sections alone.
+This section prices the arrangement of Sections 7 and 8 on a declared package; it does not bear on the count of mechanism classes, which rests on the inventory of those sections alone. **Closing a sizing loop mathematically is not the same thing as closing an aircraft physically.** This section does the first: what it produces is a set of consistent numbers on a declared set of assumptions.
 
-**Closing a sizing loop mathematically is not the same thing as closing an aircraft
-physically.** This section does the first. What it produces is a set of consistent numbers
-on a declared set of assumptions: if the assumptions hold, these masses, powers and ranges
-follow from one another without contradiction. Whether an aircraft can be built to them is a
-different question, and Section 14 is where the answer is not yet yes.
-
-### Why the loop has to be iterative
-
-The pieces depend on each other in a circle. Installed power sets the mass of the propulsion
-system; propulsion mass raises the take-off mass; take-off mass raises the power needed to
-hover; and the hover power is what sizes the installed power. The closure statement is
-
-> MTOW = m_payload / (1 − f_empty − f_energy)
-
-and f_empty contains a term proportional to installed power, which contains a term
-proportional to MTOW^1.5. **A fixed point is sought by iteration. If no fixed point exists, the
-declared sizing package does not close** — which is a statement about that package rather than
-about whether some other package could — and the calculation says so rather than returning a
-number.
+Installed power sets the propulsion mass, propulsion mass the take-off mass, and take-off mass the hover power that sizes the installed power; the take-off mass is found by iteration as the fixed point of that circle (Supplement S10). **If no fixed point exists, the declared sizing package does not close.**
 
 ### The inputs, and why there are four closures rather than one
 
-Two quantities entering the loop are not single values, and **they are not the same kind of
-quantity**, which is why they are carried separately rather than merged.
+**The zero-lift drag coefficient is uncertainty:** a consistent build-up places it between 0.0285 and 0.0381 (Section 11), and a designer does not choose where the real aircraft falls in that range. **The blade family is a design variable this study has not fixed:** four nose-blade families that meet the hover figure of merit span cruise propeller efficiencies of 0.632 to 0.683, and the study carries all four rather than pretending to have chosen. **The published zero-lift value of 0.0248 is not used**; the consistent build-up places it below both ends of the bracket, outside the supported range.
 
-**The zero-lift drag coefficient is uncertainty.** A consistent build-up places it between
-**0.0285 and 0.0381**, with the same rotor term at both ends. A designer does not choose where
-the real aircraft falls in that range.
+The loop holds wing loading, disc loading and aspect ratio fixed, so **the cruise lift coefficient is unchanged at 0.450 in every closure** (geometry in Supplement S10); the claim is that C_L is unchanged, not that C_D0 is exactly so. The tip frames, the tip discs and the strip are not sizing variables; they were set on the 50 kg reference design of Section 8, and **the control moment arms of Section 8 are therefore reference values that this closure does not re-derive.** **These are the same configuration at four closed masses rather than four configurations** — but anything that depends on the arms is carried at the reference geometry and is not an output of the loop.
 
-**The blade family is a design variable this study has not fixed.** Four nose-blade families
-meet the hover figure of merit, and their cruise propeller efficiencies span **0.632 to
-0.683**. A designer would choose one; the criteria that would decide the choice — structural
-loads, acoustics, the motor operating point, rotor inertia, manufacture — are not modelled
-here, so the study carries all four rather than pretending to have chosen.
-
-**The published zero-lift value of 0.0248 is not used.** The consistent build-up places it
-below both ends of the bracket, so it is not a conservative choice or an optimistic one; it is
-outside the supported range, and closing the loop on it would mean closing on a number this
-work has shown it cannot support.
-
-**Propeller efficiency enters the loop twice, and both entries move together.** It appears in
-the range expression, and it appears in the cruise power that sizes the engine. Scaling one
-without the other would size the engine on one propeller and compute the range on another, and
-the loop would be internally inconsistent while appearing to close. Both terms are scaled
-with the blade family in every closure reported here.
-
-**The reference point is the aerodynamic lift-to-drag ratio, not the effective one.** The
-effective ratio of Section 6 already contains the propeller efficiency; it is the currency in
-which the rotorcraft comparison is made, and it is not an input to a loop whose own chain supplies
-that efficiency separately.
-
-**The sizing rules that keep that ratio valid as the mass moves are worth stating, because they
-also say what the four closures are geometrically.** The loop holds **wing loading, disc loading
-and aspect ratio** fixed, so area, span and disc diameter follow the mass: across the four
-closures the wing area runs 2.07 to 2.27 m², the span 3.53 to 3.70 m, and the nose disc diameter
-1.23 to 1.29 m. **The cruise lift coefficient is unchanged at 0.450 in every one of them**, so the
-lift-to-drag ratio is an input that stays valid at the closed mass rather than one frozen at a mass
-the loop has left behind.
-
-**Three things the loop does not scale, and a reader comparing this section with Section 8 should
-know which is which.** The tip-frame length, the tip-disc diameter and the strip are not sizing
-variables here. They were set on the reference geometry — the 50 kg reference design of Section 8 — and **the control moment arms of Section 8 are therefore reference
-values that this closure does not re-derive.** Section 8 describes one aeroplane; this section
-describes what its sizing rules give at four sets of inputs. **These are the same configuration at
-four closed masses rather than four configurations** — but anything that depends on the arms is
-carried at the reference geometry and is not an output of the loop.
-
-**The frame and rotor drag terms are carried the same way.** They are coefficients on the reference
-wing area of 1.979 m², and holding them unchanged across the closures is the same as letting that
-hardware grow with the wing. Held at its reference size instead, it would give terms 4 to 13 percent
-smaller across the four closures — 0.0009 to 0.0028 of zero-lift drag. **The closures do not take that
-reduction, and it has not been run through the loop.**
-
-**The drag polar is likewise a fixed input, and it is worth saying what that costs.** Chord grows
-with area, so the chord Reynolds number rises about **7 %** across the closure range. On a
-turbulent-flat-plate scaling, C_D0 ∝ Re^−0.2, that is a **1.4 %** change in the zero-lift
-coefficient — against a bracket whose two ends differ by **34 %**. The polar is therefore not
-re-solved per closure. **The claim made above is that C_L is unchanged, not that C_D0 is exactly
-so.**
-
-### The construction is checked before it is used
-
-At the published assumption — the published drag coefficient with the rotor term omitted, and
-the published propeller efficiency — the construction returns a take-off mass of **49.4 kg**
-against the published 50.1, a cruise lift-to-drag ratio of **11.88** against 11.88, and a range
-of **1 585 km** against 1 583. **The largest deviation is 1.5 percent**, in mass. The
-construction reproduces the published aircraft, so the same construction run on the bracket is
-reporting a change of inputs rather than a change of method. **This check is the only place in
-this section where the published drag coefficient appears**; every closure reported below uses the
-bracket.
+Run on the published drag coefficient without the rotor term and the published propeller efficiency, the same construction reproduces the published aircraft within 1.5 percent (Supplement S10). That check is the only place in this section where the published value appears, so the closures report a change of inputs, not of method.
 
 ### The four closures
 
-**All four converge.** On these assumptions the analytical sizing loop closes for this
-architecture — and for the 50 kg design, which is the only one carried through this loop; the 1 000 kg reference design appears below only through a transition time computed elsewhere.
+**On these assumptions all four converge**, for the 50 kg design — the only one carried through this loop.
 
 | | C_D0 | η_p | L/D | L/De | MTOW | Empty fraction | Hover power, rotor shaft | Engine rating, shaft | Range |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
@@ -123,111 +40,21 @@ architecture — and for the 50 kg design, which is the only one carried through
 | **C** | 0.0285 | 0.632 | 10.82 | 6.84 | 53.5 kg | 0.597 | 11.66 kW | 3.91 kW | 1 141 km |
 | **D** | 0.0285 | 0.683 | 10.82 | 7.39 | 52.3 kg | 0.592 | 11.40 kW | 3.54 kW | 1 233 km |
 
-*L/De = L/D × η_p at the cruise condition; the loop holds both factors fixed
-within each closure, so the closure changes neither. The four
-L/De values are the bounding corners of that product, carried into the closures as inputs, not four simulated aircraft.*
+*L/De = L/D × η_p at the cruise condition; the loop holds both factors fixed within each closure, so the closure changes
+neither. The four L/De values are the bounding corners of that product, carried into the closures as inputs, not four
+simulated aircraft.*
 
-**Payload is an input, fixed at 13 kg; take-off mass is the output.** The closure returns 52.3 to
-57.5 kg, and the payload fraction that follows runs from **0.25 down to 0.23**.
+**Payload is an input, fixed at 13 kg; take-off mass is the output**, and the payload fraction runs from 0.25 down to 0.23. **The blade that is best before the loop is still best after it.** There was no reason to assume so: propeller efficiency propagates through cruise power into engine size, engine size into mass, and mass back into hover power, and a loop can reverse a local ranking. At both ends of the drag bracket the higher-efficiency family closes to the longer range — **a result of the closure rather than an assumption carried into it.**
 
-**The spreads are not alike, and the difference is the useful part.** Across the four, the spread
-— (max − min)/min, auditable from the table above — is **9.9 percent** in take-off mass and in hover
-power, **33.0 percent** in range and **46.1 percent** in engine rating.
+### The transition
 
-**Engine rating is the most sensitive output in this envelope and mass is the least, and the
-ordering follows from where each input enters.** Cruise power is W·V/(L/D)/η, so it carries the
-drag bracket and the blade family directly — **and W is itself a closure output that has already
-absorbed them through the mass loop.** Range carries them directly but escapes the mass feedback,
-because the fuel fraction is fixed. Mass feels them only through the propulsion fraction, which is
-a minority of the empty mass. **Only the engine is charged twice**, and that is why 46.1 percent
-exceeds 33.0, which exceeds 9.9. This is a sensitivity property of the declared envelope, not
-evidence that engine sizing is intrinsically unstable.
+The sizing above says nothing about whether the aircraft can change regime. **The question is asked in two models, only the second of which carries rotational dynamics, and that one does not support a zero altitude loss.** Every transition figure here belongs to a reference design at its published mass and is not an output of the closure. In the first, a point-mass model with the body angle driven kinematically, a rotation entered in a 5 m s⁻¹ climb loses no altitude at either reference rotation time: 2 s for the 50 kg design and 5.1 s for the 1 000 kg one. Solved instead with rotational dynamics and a finite control moment, **and with the aerodynamic pitching moment set to exactly zero, so that nothing favourable is borrowed**, the 50 kg design **loses 5.4 m at the same reference condition.** The loss is not an artefact of the controller: it is unchanged across three reference profiles, appears without the control moment saturating, and grows as the gains are raised (Supplement S10). **What the kinematic model leaves out is not the difficulty of turning the aircraft but the trajectory the aircraft flies while it is being turned.** **So the zero-altitude-loss result is a property of the model that produced it.**
 
-### Which input matters, and one question the closure answers
-
-**The drag bracket dominates the blade family, and the four percentages are worth printing rather
-than one ratio.** Holding the blade and moving across the drag bracket changes the mass by
-**6.9 %** and the range by **23.1 %**. Holding the drag and moving across the blade families
-changes the mass by **2.9 %** and the range by **8.1 %**. The drag uncertainty therefore produces
-about **2.8 times** the range variation of the blade-family choice and about **2.4 times** the
-mass variation.
-
-**The thing the study has not measured moves the answer more than the thing it has not chosen.**
-That is a statement about which of the two open questions is more consequential to resolve, not
-about the intrinsic importance of drag against blade design.
-
-**And the blade that is best before the loop is still best after it.** There was no reason to
-assume so: propeller efficiency propagates through cruise power into engine size, engine size
-into mass, and mass back into hover power, and a loop can reverse a local ranking. It does not
-here — at both ends of the drag bracket the higher-efficiency family closes to the longer
-range. **That is a result of the closure rather than an assumption carried into it**, and it
-is reported because the opposite outcome would have been reported too.
-
-### The transition, and this is where the section turns
-
-The sizing above says nothing about whether the aircraft can change regime. **The verdict comes
-first so that it cannot be missed: the question is asked in two models, only the second of which
-carries rotational dynamics, and that one does not support a zero altitude loss.** The first model
-is shown anyway, because the mechanism it exposes is real and the reason the second model differs
-is the point.
-
-**The first model is kinematically favourable, and the zero-loss result is valid within it.** Treating the aircraft as a
-two-degree-of-freedom point mass and driving the body angle kinematically from zero to ninety
-degrees, the altitude lost during the rotation falls as the rotation is made slower — the
-aircraft is supported through the manoeuvre rather than falling through it. **Entering the
-rotation while already climbing removes the loss entirely**: at a 5 m s⁻¹ entry climb the
-altitude loss is zero at both reference rotation times — **two seconds for the 50 kg reference design and 5.1 seconds for the 1 000 kg one** — and it stays zero at every thrust-to-weight ratio from 1.066
-down to 1.00. *(Both times, and the thrust-to-weight figures with them, were established on the
-reference geometry at its published mass. The closure above does not re-derive any of them, and
-none of them is an output of it.)* Nothing in that result requires the tip pairs
-to contribute lift once the climb is acquired.
-
-**The second model removes the result, and this is the sharper of the two limitations.** The
-point-mass model prescribes the attitude and therefore cannot account for the trajectory the
-aircraft flies while it is being rotated into that attitude. Solved instead with rotational
-dynamics and a finite control moment — **and with the aerodynamic pitching moment set to
-exactly zero, so that nothing favourable is borrowed** — the 50 kg reference design **loses 5.4 m at the
-same reference condition where the point-mass model reports none.** *(That figure, like the
-rotation times, belongs to the reference geometry at its published mass; the closure above does
-not re-derive it either.)*
-
-**The loss is not an artefact of the controller.** It is unchanged across linear, bang-bang and
-smooth reference profiles; it appears without the control moment ever saturating; and it grows
-rather than vanishes as the gains are raised, reaching 17 m at gains high enough to track the
-reference almost exactly. **What the kinematic model leaves out is not the difficulty of turning
-the aircraft but the trajectory the aircraft flies while it is being turned**, so tighter tracking
-of a reference the rotational dynamics do not admit moves the aircraft further from the path it
-can actually fly, not closer.
-
-**So the zero-altitude-loss result is a property of the model that produced it.** What replaces
-it is not a prediction: the aerodynamic pitching moment that would make it one is precisely the
-quantity Section 14 reports as **not predicted reliably** — the moment exists; what is missing is
-a method that predicts it. **For the methods used here, and for the published comparisons against
-which they were checked**, the predictions diverge above roughly ten degrees of incidence, which
-is the band the rotation passes through. With
-a borrowed moment the outcome depends on which moment is borrowed, and the spread is wide
-enough that **no number from it is reportable** — some models complete the rotation, some
-saturate the tip pairs, and some tumble. **That spread is itself the finding.** What survives is
-not a transferable transition figure but a result for the model that was tested: **within the
-finite-moment dynamic model, with the aerodynamic moment set to zero, the manoeuvre costs
-altitude.** Whether a real aircraft loses 5.4 m, more, or less is not settled by anything here.
+What replaces it is not a prediction: the pitching moment that would make it one exists, but for the methods used here the predictions diverge above roughly ten degrees of incidence, the band the rotation passes through (Section 14). With a borrowed moment the spread is wide enough that no number from it is reportable: some models complete the rotation, some saturate the tip pairs, and some tumble. **That spread is itself the finding.** **Within the finite-moment dynamic model, with the aerodynamic moment set to zero, the manoeuvre costs altitude.** Whether a real aircraft loses 5.4 m, more, or less is not settled by anything here.
 
 ### What closing does and does not establish
 
-**It establishes that the architecture is arithmetically self-consistent on a declared
-package**, at four corners of that package, with mass, power and range agreeing with one
-another and with the construction that reproduces the published aircraft.
-
-**It does not establish that the package exists.** The energy store this closure assumes is
-the item Section 14 examines, and the examination does not end well. Nothing in this section
-should be read as a claim that the aircraft is buildable; the claim is narrower and is the one
-the section's title makes — the loop closes analytically, on assumptions that are stated and
-that Section 14 tests.
-
-**And these range figures are carried forward as the closed-loop values, not as a ranking.** No multirotor or helicopter is sized in this work, so no range comparison is made against either — Section 6 compares
-the two families in cruise efficiency and says why it stops there. The comparison against the
-other hybrid architectures depends on the sizing contract and belongs to Section 13, which is
-where it is made.
+It establishes that the architecture is arithmetically self-consistent on a declared package, at four corners of that package. **It does not establish that the package exists.** The energy store this closure assumes is the item Section 14 examines, and the examination does not end well. These ranges are carried forward as closed-loop values, not as a ranking: no rotorcraft is sized in this work, so no range comparison is made against one (Section 6 compares cruise efficiency), and the comparison with the other hybrids depends on the sizing contract (Section 13).
 
 ---
 
@@ -235,6 +62,7 @@ where it is made.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 104 — Adım 10 yeniden kuruldu** (Tur 101–103; dört okuyucu + Claude, her ayrışık satır oylandı; R cümlelerine veto yok): `drafts/10-recomposed.md` uygulandı. Kaynak 83 geri (D29b, korunur); kaynak 20–23 eke, 67 J24'e; **R16 + P17 eke — kural (iii), yazar kararı (E7, Tur 104)**; J32 + P33 gövdede (DeepSeek; sonra dördü). Özgün gövde Ek S10'da tam | `drafts/10-recomposed.md` §3 iz |
 | **Tur 103 (Tur 102: ChatGPT ve DeepSeek inceltmesi; Grok ve Qwen aynı okumayı yazdı — teyide):** dipnot "the loop holds both factors fixed within each closure" — L/D köşeden köşeye değişir (sürükleme braketi), döngü onu yeniden yazmaz | Tur 102 cevapları |
 | **Tur 102 (Tur 101 oybirliği; T4):** tabloya L/De sütunu (5,56 / 6,00 / 6,84 / 7,39 = L/D × η_p) ve dipnot: "L/De = L/D × η_p at the cruise condition; the loop holds both factors fixed
 within each closure, so the closure changes neither. The four L/De values are the bounding corners of that product, carried into the closures as inputs, not four simulated aircraft." (G, C, D, K önerileri birleşti — teyide). Adım 6'nın köşe tablosu Adım 6 yeniden kurulurken taşınır. Özgün tablo Ek S10'da | Adım 6 köşe tablosu; `drafts/objects.md` T4 |

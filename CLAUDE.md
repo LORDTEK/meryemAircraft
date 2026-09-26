@@ -442,9 +442,17 @@ dahil herkesin hemfikir olduğu kısaltmalar uygulansın."*
   her şeklin betiği `v8_stale.py` `SEKILLER` listesine girer (emekli ifade + P56). **Kabul (Tur 102, dört okuyucu + Claude):**
   *"A number may move to the supplement; its meaning may not."* Sayı kimliği = değer + birim + nesne + **model ya da
   geometri** (uygulanıyorsa) — 5,4 m ancak *"sonlu momentli modelde, referans tasarımda"* anlamlıdır.
-- **Korunan cümle eke taşınabilir mi — kural (iii) (Tur 102; dört okuyucu + Claude oyladı, YAZAR KARARI BEKLİYOR, E7):**
-  *"A protected sentence may move to the supplement only together with the result it qualifies, and only by the author's
-  decision."* Fren: gövdede kalan bir sonucun niteleyicisi taşınamaz.
+- **Kural (iii) — YAZAR ONAYLADI (Tur 104, E7):** *"A protected sentence may move to the supplement only together with the
+  result it qualifies, and only by the author's decision."* Fren: gövdede kalan bir sonucun niteleyicisi taşınamaz. Taşınan
+  satır `v8-caveats.md`'nin alt tablosuna `| S10 | … | E7 |` biçiminde girer; `v8_caveats.py` ekte durduğunu sınar. İlk
+  uygulama: Adım 10'un R16 + P17'si. **Önce P71 (Grok):** eke taşımadan önce, öncülü taşınınca iddiaya dönüşecek her korunan
+  cümle listelenir; çift birlikte gider ya da hiç gitmez. **Adım 11–13'e cümle cümle, asla toptan** (Qwen P3).
+- **Görsel öncül kuralı (Tur 103; ChatGPT + Qwen P2, dört okuyucu + Claude):** *"A figure must not introduce a numerical
+  value, hardware name, operating state or physical claim that the body does not define or send to the supplement; every
+  number on a figure enters the number-match check."* Gövde her şekil sayısını tekrar etmek zorunda değil; tanımlamak ya da
+  eke göndermek yeter (ChatGPT).
+- **Okurun tarafından (Tur 103; ChatGPT, dört okuyucu + Claude):** *"The body should explain why a result means what it
+  means; the supplement should explain how the number was obtained."*
 
 ## 3. Doğrulama
 

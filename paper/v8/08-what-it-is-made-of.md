@@ -103,7 +103,8 @@ its outboard end. **Extension is the control variable** — the strip is modulat
 and deploying it also pitches the nose down by a small increment. Its inboard 46 % lies inside
 the nose propeller's slipstream, where dynamic pressure is set by disc loading and is therefore
 available at zero airspeed; its outboard 54 % works against the freestream in cruise. That split
-is why one device serves both regimes.
+is why one device serves both regimes. The split is an estimate: the slipstream boundary it rests on
+is not derived in this work.
 
 ### What meets the ground
 
@@ -191,6 +192,7 @@ brake or a lock rather than motor holding torque, the count of Section 7 would g
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 104 (S-37; Tur 103: dört okuyucu + Claude (iii) — şimdi nitele, göndermeden önce türet):** "The split is an estimate: the slipstream boundary it rests on is not derived in this work." — %46 `aero/roll.py`'de sabit, iz sınırı 0,67 → 0,47 m hiçbir betikte türetilmiyor; tek dayanak v5 eki. Sözcükler teyide | `paper/v8-source-defects.md` S-37 |
 | **Tur 100 (dört okuyucu + Claude):** S-30 ChatGPT'nin sözcükleriyle — "At equal counter-rotating speeds, the net angular momentum of the propulsion system is nominally zero: rotating the airframe through ninety degrees therefore produces no gyroscopic moment for the control system to cancel. If the pairs are speed-trimmed, that cancellation is no longer exact (below)." ("precesses" yanlış nesneyi adlandırıyordu). 8D "That is a design assignment, not a demonstrated result" korunan (169). Adım 7 notu olduğu gibi kaldı (ChatGPT yeterli buldu) | Tur 99 metni §2–§4 |
 | **Tur 99 (yeniden kurma; dört okuyucu + Claude):** envanter teyit edildi. 8E "It stands on its tail…" ve "four jobs" paragrafı çıktı (Adım 5C yinelemesi). S-30 "precesses nominally nothing, and no gyroscopic moment appears … unless the pairs are speed-trimmed (below)" (ChatGPT daha kesin bir sözcük öneriyor — oylamada); S-31 XB-35 kısmı çıktı (kaynaksız); S-32 "No wattage is quoted here; the closed powers are Section 10's." (önceki sürüm anlatısı çıktı); S-33 8G'ye durdurma cümlesi. Özgün paragraflar Ek S8'de | Tur 98 metni §3 |
 | **Tur 70:** *"These are the parts…"* → *"The tip pairs are the parts that fail the escape condition"* (DeepSeek; dört okuyucu + Claude). Birleştirilmiş görünümde cümle *"What moves"*tan sonra geliyor; *these* yanlış öncüle bağlanıyordu. Korunan liste aynı commit'te | Tur 69 metni §3 |

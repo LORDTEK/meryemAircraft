@@ -70,7 +70,6 @@ boşluğa duyarsız. `G` = Grok, `D` = DeepSeek, `C` = ChatGPT, `Q` = Qwen, `K` 
 | 9 | no comparison in this paper should be quoted without the contract it was computed under. | D |
 | 10 | Closing a sizing loop mathematically is not the same thing as closing an aircraft physically. | G |
 | 10 | These are the same configuration at four closed masses rather than four configurations | G |
-| 10 | The closures do not take that reduction, and it has not been run through the loop. | G |
 | 10 | So the zero-altitude-loss result is a property of the model that produced it. | G |
 | 10 | That spread is itself the finding. | G |
 | 10 | Whether a real aircraft loses 5.4 m, more, or less is not settled by anything here. | G |
@@ -194,3 +193,10 @@ kaybolmasına (CLAUDE.md §0.8). Aynı denetimle sınanır.
 | 8 | That is a design assignment, not a demonstrated result | G+C+D+Q+K |
 | 7 | The stopping class is absent if the tip pairs free-wheel in cruise or are held stopped by motor torque; a brake or a mechanical lock would add it. | D+G+C+Q+K |
 | 15 | while the tip pairs free-wheel or are held by motor torque — no rotor stowing, indexing or stopping mechanism | K+G+C+D+Q |
+| 10 | What the kinematic model leaves out is not the difficulty of turning the aircraft but the trajectory the aircraft flies while it is being turned. | C+Q+G+D+K |
+
+**Yazar kararıyla eke taşınan korunan cümleler (kural (iii), CLAUDE.md §2.4; `v8_caveats.py` ekte durduğunu sınar):**
+
+| Ek | Çekince | Karar |
+|---:|---|---|
+| S10 | The closures do not take that reduction, and it has not been run through the loop. | E7 |
