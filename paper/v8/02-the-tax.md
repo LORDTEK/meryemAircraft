@@ -165,12 +165,13 @@ separately. **The table is not a census of the field**; it lists
 the moves whose transfers are documented, and a remedy absent from it is not thereby claimed to
 cancel a charge.
 
-**One of these transfers has direct experimental support, and it is worth more than the table.**
+**One of these transfers has direct experimental support.**
 In the doctoral study whose wind-tunnel campaign is quoted above — and in that document rather
 than in the journal article by the same author, which reports a different comparison — a
 retraction system removed thirty percent of the airframe's drag; the same work then costed it. Applied to a passenger eVTOL, with the mechanism assessed
 at five percent of vehicle mass, maximum range rose from 119 km to 121 km — **a two-kilometre
-gain for a five-percent mass penalty.** Bill 2 was converted almost exactly into Bill 1, and
+gain for a five-percent mass penalty.** The same work finds the retraction's advantage elsewhere — the speed that
+maximises range rose by 5 m/s — which is a performance this accounting does not price. Bill 2 was converted almost exactly into Bill 1, and
 **the transfer is the point rather than the small residue.**
 
 ### What this accounting is for
@@ -197,7 +198,7 @@ remedy buys. **A framework that could absorb any cost by declaring it out-of-sco
 unfalsifiable**, so the costs outside the three are listed, not waved away.
 
 **The tilting row needs both clarifications.** If the architecture it modifies supplies its hover peak
-from a store, tilting without one imposes Bill 3 and the row is a transfer. If that architecture
+from a store, tilting without one imposes Bill 3 and the row is a transfer between charges. If that architecture
 already sizes its continuous plant by the hover peak, tilting leaves Bill 3 no worse; then, where the
 mechanism's kilograms are fewer than those of the lift group it removes, what keeps the row from
 refuting the accounting is the part of its cost that falls outside the three — which is why that part
@@ -224,6 +225,7 @@ any aircraft.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 90 (yeniden kurma, 2E–2F):** E2 D ("and it is worth more than the table" — desteksiz karşılaştırma), **S-18** E3 (Bacchini tezinin kendi "great advantage"ı hız, +5 m/s; muhasebe hızı fiyatlamıyor — eklendi, doğrulandı), F1 ("transfer between charges"). Dört okuyucu + Claude. **E1 uygulanmadı:** ChatGPT taslağı mevcut metin sanıp veto etti; geri soruldu. Özgün Ek S2'de donmuş | Tur 89 metni |
 | **Tur 89 (içerik, S-15/S-16; dört okuyucu + Claude):** 2E "Each known partial remedy reduces one and raises another" → "reduces one charge and pays for it, in another charge or in a cost outside the three"; 2F ilk paragraf (iki farklı sınama) → "The accounting is refuted by a counter-example, and the table above is where one would appear: every entry in it moves cost rather than removing it."; 3.1 "…is a transfer between charges"; başlık "remedies move cost between them" → "…among the three charges or outside them" (dördü değişsin dedi; sözcük DeepSeek'inki, teyide); 2B "charged a second time" → "counted" | Tur 88 metni §2 |
 | **Tur 88 — S-14 silindi:** kuyruk üstü "beşte bir" cümlesi — dört okuyucunun koşulu ("gelecek tura kadar kaynak gelmezse sil") gerçekleşti; hiçbir okuyucu kaynak bulamadı (Grok aradı), depoda yok, yazara soruldu. Örnek oran (3,2; ~4) ona dayanmıyor. Yazar kaynağı bulursa geri gelir | Tur 87 metni §5 |
 | **Tur 88 (yeniden kurma, 2A–2D):** 1 281 → 1 233. A1 R ("lighter or cleaner"), B1 D, C1 D, D1 D ("often the largest" — kaynaksız), **S-13** D2 ("returns to Bill 1" → "a cost in kilograms, though not Bill 1"), **S-14** D3 ("borne out" → "points the same way"; ifadeyle eşleşme düştü; kaynak yok — gelmezse silinecek). Dört okuyucu + Claude. Özgün Ek S2'de donmuş | Tur 87 metni |

@@ -185,7 +185,7 @@ aircraft; its size is the size of the mass difference.**
 
 ### What the framework asks of whoever uses it
 
-A framework that says every remedy transfers a charge rather than removing it takes something from
+A framework that says every remedy moves cost rather than removing it takes something from
 its user in return. **It asks for three things, and this paper holds itself to them.**
 
 **Each comparison states every charge in its own currency before any aggregate, names its contract, and states its asymmetries and their directions; an ordering is reported only with the contract it was computed under and, where its sign depends on an unmeasured quantity, with that quantity named.** The contract is chosen by the mission rather than by the analyst, and a comparison that does not state one has chosen one silently. **This paper meets that for its own column** (Section 11) **and not for the competitors'**, whose kilograms and drag counts here are parameters and transferred ratios rather than an audit.
@@ -212,6 +212,7 @@ of the architectures alone.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 90 (dört okuyucu + Claude):** "every remedy transfers a charge rather than removing it" → "every remedy moves cost rather than removing it" — S-16'nın kopyası; 2F ile birebir | Tur 89 metni §2 |
 | **Tur 87 (dört okuyucu + Claude):** "it makes the tilt row a bound" → "the tilting layout" (gövde tablosunda tilt satırı yok; karşılaştırma S13'te — `v8_refs.py` ilk koşuda yakaladı); "charges all three the same assumption" → "puts the same assumption on all three" (fatura sözcüğü genel fiil olarak, A′) | Tur 86 metni §5 |
 | **Tur 71:** ikinci geçiş S1–S5 uygulandı (Qwen RW-13A–D, ChatGPT'nin tek cümlesi); **S1'de DeepSeek'in vetosu:** sözleşme tanımı (*"It fixes what is held equal…"*) aynen geri | Tur 70 metni §3 |
 | **Tur 70:** Tur 69 taslağı uygulandı, iki istisnayla: 520 kg cümlesi **kaldı** (Grok'un vetosu: bu adımın kendi bulgusu, ve *"That comparison is not used"* öncülü); 0,80 gerekçeleri ve *"The contract is chosen by the mission…"* **kaldı** (Grok, Qwen). Kaybı olan her paragraf Ek S13'te aynen | Tur 69 metni §5 |

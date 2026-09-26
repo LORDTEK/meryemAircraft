@@ -24,6 +24,8 @@ DEGISTI = {
         "The accounting is refuted by a counter-example, and the table above is where one would appear: every entry in it moves cost rather than removing it.",
     "A move that reduces one charge and makes another worse is a transfer.":
         "A move that reduces one charge and makes another worse is a transfer between charges.",
+    "A framework that says every remedy transfers a charge rather than removing it takes something from its user in return.":
+        "A framework that says every remedy moves cost rather than removing it takes something from its user in return.",
     "The architecture converts a power-system charge into a mass one.":
         "The architecture converts a power-system charge into a cost in kilograms.",
 }

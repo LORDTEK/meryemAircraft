@@ -108,6 +108,8 @@ EMEKLI = {
     "move cost between them": "Tur 89: S-16 basligi (Grok P45)",
     "charged a second time": "Tur 89: genel fiil; ikinci odeme askı gucunde",
     "charged again in hover": "Tur 89: ayni (Adim 4)",
+    "worth more than the table": "Tur 90: desteksiz karsilastirma (E2)",
+    "every remedy transfers a charge": "Tur 90: S-16 kopyasi (Adim 13)",
     "moves* the charge": "Tur 80: mekanizma fatura degil, maliyet (Qwen; dort okuyucu)",
 }
 

@@ -245,3 +245,9 @@ remedy transfers a charge rather than removing it" (S-16 in another step) → vo
 in"), E2 D ("worth more than the table"), **S-18** E3 (the Bacchini thesis locates the retraction's "great advantage" in
 speed, +5 m/s; our paragraph quoted only the range half), F1 R. Evidence verified in the thesis this round (30 %, 5 %,
 119 → 121 km). Watch (Qwen): 2D "The quantities on the right" is anchored to the adjacent equation.
+
+## Round 90 — 2E–2F applied (E2, E3, F1); E1 back to ChatGPT; Step 2 at 2 487 (+10 % over the inventory)
+
+Heading kept (Qwen: heading and 2F carry different information — never merge). ChatGPT withdrew "removing a charge". E1 vetoed
+by ChatGPT on a misreading (took the draft for the source); asked back. Evidence file `paper/v8-evidence.md` (PDF pages);
+outside-the-three list `paper/v8-outside-the-three.md`. Protection of the S-18 sentence to vote. Next: Step 9 inventory.

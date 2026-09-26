@@ -295,3 +295,7 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | 2E başlığı değişsin | ✓ | ✓ | ✓ | ✓ | ✓ | Uygulandı (DeepSeek'in sözcükleri); sözcük teyide |
 | Adım 13 "moves cost rather than removing it" | — | — | — | Q P1 taraması | öneren | Oylamada |
 | 2E–2F E1, E2, E3 (S-18), F1 | — | — | — | — | öneren | Kör okuma + oylama |
+| 2E–2F E2, E3 (S-18), F1; Adım 13 "moves cost" | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı** (Tur 90); teyide |
+| 2E E1 "paid in" | ✓ | veto (yanlış okuma) | ✓ | ✓ | öneren | ChatGPT'ye geri |
+| S-18 cümlesi korunan | P47 | — | öneren | P2 | ✓ | Oylamada |
+| Adım 9 envanteri | — | — | — | — | öneren | Teyide |

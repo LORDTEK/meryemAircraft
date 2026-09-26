@@ -307,12 +307,13 @@ separately. **The table is not a census of the field**; it lists
 the moves whose transfers are documented, and a remedy absent from it is not thereby claimed to
 cancel a charge.
 
-**One of these transfers has direct experimental support, and it is worth more than the table.**
+**One of these transfers has direct experimental support.**
 In the doctoral study whose wind-tunnel campaign is quoted above — and in that document rather
 than in the journal article by the same author, which reports a different comparison — a
 retraction system removed thirty percent of the airframe's drag; the same work then costed it. Applied to a passenger eVTOL, with the mechanism assessed
 at five percent of vehicle mass, maximum range rose from 119 km to 121 km — **a two-kilometre
-gain for a five-percent mass penalty.** Bill 2 was converted almost exactly into Bill 1, and
+gain for a five-percent mass penalty.** The same work finds the retraction's advantage elsewhere — the speed that
+maximises range rose by 5 m/s — which is a performance this accounting does not price. Bill 2 was converted almost exactly into Bill 1, and
 **the transfer is the point rather than the small residue.**
 
 #### What this accounting is for
@@ -339,7 +340,7 @@ remedy buys. **A framework that could absorb any cost by declaring it out-of-sco
 unfalsifiable**, so the costs outside the three are listed, not waved away.
 
 **The tilting row needs both clarifications.** If the architecture it modifies supplies its hover peak
-from a store, tilting without one imposes Bill 3 and the row is a transfer. If that architecture
+from a store, tilting without one imposes Bill 3 and the row is a transfer between charges. If that architecture
 already sizes its continuous plant by the hover peak, tilting leaves Bill 3 no worse; then, where the
 mechanism's kilograms are fewer than those of the lift group it removes, what keeps the row from
 refuting the accounting is the part of its cost that falls outside the three — which is why that part
@@ -1913,7 +1914,7 @@ aircraft; its size is the size of the mass difference.**
 
 #### What the framework asks of whoever uses it
 
-A framework that says every remedy transfers a charge rather than removing it takes something from
+A framework that says every remedy moves cost rather than removing it takes something from
 its user in return. **It asks for three things, and this paper holds itself to them.**
 
 **Each comparison states every charge in its own currency before any aggregate, names its contract, and states its asymmetries and their directions; an ordering is reported only with the contract it was computed under and, where its sign depends on an unmeasured quantity, with that quantity named.** The contract is chosen by the mission rather than by the analyst, and a comparison that does not state one has chosen one silently. **This paper meets that for its own column** (Section 7.2) **and not for the competitors'**, whose kilograms and drag counts here are parameters and transferred ratios rather than an audit.

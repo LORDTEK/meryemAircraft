@@ -1603,3 +1603,13 @@ yanlış olurdu. **"Transfer" taraması:** S5-2'de etiketsiz dar anlam (F1) ve A
 transfers a charge rather than removing it") → oylamada. **2E–2F taslağı 1 257 → 1 280 (+23):** kısalmıyor. **S-18:** Bacchini
 tezini bu tur açtım; sayılar doğru ama tezin kendisi geri çekmenin "büyük avantajını" hızda buluyor (+5 m/s) — biz yalnız
 menzil yarısını alıntılamışız. Eklenen cümle bunu ve muhasebenin hızı fiyatlamadığını söylüyor.
+
+# Tur 90 — Tur 89 metnine dört cevap; 2E–2F uygulandı, E1 geri, Adım 9 envanteri
+
+**Oybirliği:** E2, E3 (S-18), F1, Adım 13 "moves cost rather than removing it" → uygulandı; başlık vetosuz (Qwen'in şartı:
+başlık ile 2F birleştirilmesin); ChatGPT "removing a charge"ı geri çekti. **E1:** ChatGPT taslaktaki "paid in"i mevcut metin
+sanıp veto etti — gerekçesi aslında E1'i destekliyor; geri soruldu. **Adım 2: 2 263 → 2 487 (+%10)** — içerik onarımları
+(S-1, S-5, S-15, S-16, S-18) ekledi, yeniden kurma az kazandırdı. Qwen P1 → `paper/v8-evidence.md` (Bacchini sayfaları);
+Qwen P3 → `paper/v8-outside-the-three.md`. Koruma oyu: S-18 cümlesi (DeepSeek; Grok P47, Qwen P2). **Adım 9 envanteri**
+teyide: üç aday — 4. madde Adım 7'yi neredeyse aynen yineliyor; 1. madde tabloyu yineliyor; 9F'nin emsal listesi Adım 1'i
+yineliyor (bunda görüşüm zayıf).
