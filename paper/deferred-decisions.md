@@ -197,7 +197,7 @@ and only by the author's decision."* Gövdede kalan bir sonucun niteleyicisi ta�
   **DeepSeek hayır** (dağılım olmadan okuyucu neden sayı verilmediğini göremez) → gövdede kalır, okuyuculara geri soruldu.
 **Tur 103 cevapları:** J32 + P33 için Grok taşımayı geri çekti; ChatGPT ve Qwen de DeepSeek'e katıldı → gövdede kalır (oybirliği). **Tur 104: R16 + P17 Ek S10'da; Adım 10 yeniden kuruldu.**
 
-## E8 — Uzunluk öngörüsü, Adım 10'un gerçek oranıyla (Tur 104) · **YAZARA BİLGİ; karar gerekebilir**
+## E8 — Uzunluk öngörüsü, Adım 10'un gerçek oranıyla (Tur 104) · **KARAR (Tur 105): "Mevcut şekilde ilerlemeye devam edelim. Varsın 9800'e düşsün. Sonra tekrar çözüm üretiriz."**
 
 Adım 10 sonuç cümlelerine indirildi: 2 354 → 954 kelime (tablo hariç), kaynağın **%40'ı**. Bütün gövde bugün 22 823 kelime
 düzyazı. Aynı oran her adıma uygulanırsa düzyazı **≈ 9 800** olur; plan **8 500** (fark ≈ 1 300). Hesap adımları 10–13 aynı
@@ -206,3 +206,13 @@ oranla **≈ 3 250**; plan **1 550**. Adım 11 taslağı ~820 (kaynağın %43'ü
 - (b) Kural (iii)'ü 11–13'te cümle cümle uygulamak (Qwen P3) — her taşıma yazar kararı.
 - (c) Toplam hedefi (12 000) derginin gerçek sınırına karşı yeniden denetlemek (`paper/target-journal.md`).
 Önerim: 11–13 taslakları bitince gerçek sayıyla (a) — tahminle değil.
+**Okuyucular (Tur 104):** Grok — %40 korunan cümleler ve öncülleri durdukça doğru beklenti; ChatGPT — oran hedef değil, 12–13
+taslaklarından sonra gerçek sayıyla; DeepSeek — hesap bütçesini ~2 500'e çıkar, farkı önce çerçeveden (2.1–2.3) al; Qwen — 12 ve 13
+%20–25'e inmeli, (iii) daha çok. Yazarın kararıyla hepsi bekletildi.
+
+## E9 — Adım 11'in kural (iii) adayı (Tur 105) · **YAZAR KARARI BEKLENİYOR**
+
+*"No line item at the adverse end is an independent measurement, and they should not be subtracted from one another as if
+they were."* Nitelediği kalem kalem sürükleme dökümü beş listede de Ek S11'e gidiyor; gövdede kalırsa okurun göremediği
+sayılardan söz eder. Dört okuyucu + Claude: yazara, kalem dökümüyle birlikte eke.
+

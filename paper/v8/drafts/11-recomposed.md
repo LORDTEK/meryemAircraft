@@ -1,4 +1,6 @@
-# Step 11 as result sentences — first recomposed draft (Round 104, to vote)
+# Step 11 as result sentences — recomposed draft (Round 104; revised Round 105, to vote)
+
+**Round 105:** R15 *"takes"* → *"occupies"* (ChatGPT); R18 → **J18**, the source's own sentence shortened, so the build-up is described by the source's words (*"a simulation assuming negligible rotor–structure interaction"*) and not judged by a paraphrase (ChatGPT's hold, Grok's check). The rule-(iii) candidate goes to the author.
 
 **Nothing here has entered `11-the-ledger.md`.** Source: the step file's English body, 1 969 words, 15 protected sentences
 (178 words). Tags as in Step 10: **P** protected, word for word · **D** one source sentence shortened by deletion · **J** source
@@ -58,9 +60,9 @@ as it stands.
 
 [R9] In the zero-lift drag build-up behind Section 10's bracket (line items in Supplement S11), **the hardware exposed by the vertical-phase layout — the tip frames and the free-wheeling attitude rotors — is 69 percent of the zero-lift drag at the favourable end and 57 percent at the adverse one**; the rotor term alone is 0.0154 at the favourable end. [P10] **The rotor line rests on section drag at low Reynolds number.** [D11] It is a blade-element result for sections near a Reynolds number of 8 × 10⁴ in the free-wheeling state, on section polars that are computed rather than measured; Section 12 shows how strongly the term depends on it. [P12] **The tip-frame term is an attribution, not a marginal removal cost**: [D13] it is not a claim that this drag would disappear if the vertical phase did.
 
-[J14] Removing the hub and small items, the tip frames and the free-wheeling rotors gives a clean-body lift-to-drag ratio of 20.55 at the favourable end and 15.24 at the adverse one, against the aircraft's 10.82 and 8.79: **the configuration retains 52.6 and 57.7 percent.** [R15] Bill 2 therefore takes a larger share where the clean-body drag is lower, because a near-constant charge is set against a smaller total — a statement about position within the drag bracket at one scale, not about size (Section 12).
+[J14] Removing the hub and small items, the tip frames and the free-wheeling rotors gives a clean-body lift-to-drag ratio of 20.55 at the favourable end and 15.24 at the adverse one, against the aircraft's 10.82 and 8.79: **the configuration retains 52.6 and 57.7 percent.** [R15] Bill 2 therefore occupies a larger share where the clean-body drag is lower, because a near-constant charge is set against a smaller total — a statement about position within the drag bracket at one scale, not about size (Section 12).
 
-[P17] **Rotor–structure and rotor–wing interference is not modelled and is not carried as a line.** [R18] The build-up is a calculation of the kind that Section 2's wind-tunnel source found to under-predict drag, and the bracket's upper margin is the only provision made for it.
+[P17] **Rotor–structure and rotor–wing interference is not modelled and is not carried as a line.** [J18] Section 2's wind-tunnel source found that a simulation assuming negligible rotor–structure interaction predicts lower drag than was experimentally observed; this build-up is such a calculation, and the bracket's upper margin is the only provision made for it.
 
 ### The cruise-efficiency gap under fixed pitch
 
@@ -99,7 +101,7 @@ as it stands.
 | "The tip-frame term…" (2) | P12, D13 (*"since the landing and directional duties…"* → S11) |
 | Clean-body L/D (1) | J14 (*"with the frames and rotors the large majority"* → S11) |
 | "That ordering…" + "This is a statement about position…" (8) | R15; the 0.0197 / 0.0216 counts and the design corollary → S11 |
-| Interference (4) | P17, R18 (the quotation → S11; Step 2 keeps it) |
+| Interference (4) | P17, J18 (the verbatim quotation → S11; Step 2 keeps it) |
 | Fixed-pitch gap (6) | J19, P20, P21, D22 |
 | Bill 1 (7) | D23, D24, R25; *"Whether that trade is favourable … 11.4 to 12.5 kW"* → carried by J30 |
 | Buffer input (7) | P27, R28, P29; the linear-in-weight argument and 0.168–0.188 → S11 |

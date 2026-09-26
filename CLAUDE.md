@@ -453,6 +453,16 @@ dahil herkesin hemfikir olduğu kısaltmalar uygulansın."*
   eke göndermek yeter (ChatGPT).
 - **Okurun tarafından (Tur 103; ChatGPT, dört okuyucu + Claude):** *"The body should explain why a result means what it
   means; the supplement should explain how the number was obtained."*
+- **Uzunluk — yazarın kararı (Tur 105, E8):** *"Mevcut şekilde ilerlemeye devam edelim. Varsın 9800'e düşsün. Sonra tekrar
+  çözüm üretiriz."* Adımlar ~%40 oranıyla yeniden kurulmaya devam eder; bütçe yeniden dağıtımı 10–15 bitince gerçek sayılarla.
+- **Bulgu mu hesap mı testi (Tur 104; ChatGPT, dört okuyucu + Claude):** *"A calculation may move when its result and the
+  qualification that gives the result its meaning remain traceable in the body; a calculation may not move if the surviving
+  body sentence would cease to tell the reader what was actually found."*
+- **Mekanizma cümlesi (Tur 104; Qwen, dört okuyucu + Claude):** bir gövde sonucunun fiziksel mekanizmasını açıklayan cümle
+  yorum önkoşuludur, bütçe kaynağı değildir (örnek: Adım 10 D29b).
+- **Görsel öncül kuralı altyazıları da kapsar** (Tur 104, DeepSeek). **Para birimi bayrağı** (Qwen): maliyet adlandıran her
+  cümle para birimini adlandırır; hiçbir cümle para birimleri arasında toplamaz. **Her hesap adımından önce dışa giden harita**
+  (Qwen R101-P2; Tur 104'te ChatGPT'nin oyuyla oybirliği).
 
 ## 3. Doğrulama
 

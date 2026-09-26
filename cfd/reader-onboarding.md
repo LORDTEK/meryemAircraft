@@ -214,16 +214,16 @@ The body is about **26 000 words**, and the journal's working target is **about 
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 104.**
+**Round 105.**
 
 | Block | State |
 |---|---|
 | All fifteen steps | inventoried and recomposed; Round 99–100 applied text confirmed |
-| Length | the author decided (Round 101): 12 000 words in all; 5 tables + 3 figures, 11 750; section budgets |
-| Rule (iii) | **the author approved it (Round 104):** a protected sentence may move to the supplement only together with the result it qualifies, and only by the author's decision |
-| Step 10 | **recomposed into result sentences** (2 354 → about 950 words); the original is in Supplement S10 in full |
-| Figures | v8 drafts of F1, F2, F3; S-37 (the slipstream boundary) qualified in Step 8, to be derived before submission |
-| Now | **Step 11 draft** (`paper/v8/drafts/11-recomposed.md`), to vote |
+| Length | the author decided (Round 101): 12 000 words in all; 5 tables + 3 figures. **Round 105:** keep recomposing at the method's rate (about 40 %); the author accepts about 9 800 words of prose for now and will redistribute later |
+| Rule (iii) | approved by the author (Round 104) |
+| Step 10 | recomposed and confirmed; original in Supplement S10 |
+| Step 11 | draft `paper/v8/drafts/11-recomposed.md`; R15 and J18 revised, to confirm; one rule-(iii) candidate with the author |
+| Now | readers' lists for **Steps 12 and 13 together** |
 
 **The body is about 22 800 words of prose** (tables not counted). Recomposition into result sentences took Step 10 to about 40 %
 of its length; the plan asks for 8 500 in all, and 1 550 for Steps 10–13 together. The earlier recomposition of Steps 1–9

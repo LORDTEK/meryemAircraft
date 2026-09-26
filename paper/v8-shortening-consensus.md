@@ -416,4 +416,11 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | R101 Qwen P2 (hesap adımı öncesi dışa giden harita), Qwen P3 (F3 veri tablosu ekte), Grok P70 (F3 yalnız Tablo 3) | ✓ | **oy yok — etiket karışıklığı benim hatam** | ✓ | ✓ | ✓ | ChatGPT'ye tam metinle soruldu |
 | Yeni: bulgu/hesap testi (ChatGPT); P73, P74 (Grok); altyazı görsel öncül kuralına (DeepSeek); para birimi bayrağı (Qwen P1); Adım 12 ifade eşleşmesi (Qwen P2) | — | — | — | — | — | Oylamada |
 | **Adım 11 taslağı** (`drafts/11-recomposed.md`, ~820 kelime) + (iii) adayı "No line item at the adverse end…" | — | — | — | — | öneren | **Oylamada; (iii) adayı yazara** |
+| **Tur 104 cevapları:** Adım 10 uygulandı, S-37 cümlesi — teyit; P73; bulgu/hesap testi; mekanizma kuralı (ChatGPT açık oyla); altyazılar görsel öncül kuralına; para birimi bayrağı; R101-P2, R101-P3, P70 | ✓ | ✓ | ✓ | ✓ | ✓ | **Kapandı / kabul (Tur 105)** |
+| **Yazar kararı (Tur 105, E8):** "Varsın 9800'e düşsün" — ~%40 oranla devam; yeniden dağıtım sonra | — | — | — | — | — | **Karar** |
+| Adım 11: R9, R25, R28, R33 | veto yok | veto yok | veto yok | veto yok | — | Hemfikir |
+| Adım 11: R15 "occupies"; R18 → J18 (kaynak cümlesi) | ✓ / kontrol | "occupies" / **HOLD** | ✓ | ✓ | ✓ | **Düzeltildi → teyide** |
+| Adım 11 (iii) adayı "No line item…" | ✓ | ✓ | ✓ | ✓ | ✓ | **Yazara (E9)** |
+| Yeni: R15 korunsun (DeepSeek); negatif niteleme denetim listesi (ChatGPT); P75, P76 (Grok); Adım 14 borç/kapsam bayrağı (Qwen R104-P2); açık tablosu (DeepSeek); DeepSeek'in Adım 10 işaretçisi — **olguyu ters söylüyor** | — | — | — | — | — | Oylamada |
+| Adım 12 ve 13 listeleri birlikte istendi | — | — | — | — | — | Açık |
 

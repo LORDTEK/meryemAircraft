@@ -176,3 +176,13 @@ named in the caption or drawn on panel (c) — to vote. Adding arrows means re-r
 - **F2 caption (draft, 23 words):** *"(a) Front view of the 50 kg reference design: tip-pair arms for pitch and yaw. (b) View from
   below: the strip and the nose-pair slipstream."*
 - **Qwen P1** is met by the T4 footnote; no caption sentence (Grok, DeepSeek, Qwen, Claude; ChatGPT did not vote).
+
+---
+
+## Round 105
+
+- **F2 caption (P73, all four + Claude):** *"(a) Front view of the 50 kg reference design: tip-pair arms for pitch and yaw. (b)
+  View from below: the strip and the nose-pair slipstream, whose boundary is estimated (Section 8)."* The 46 % enters the
+  number-match check with the status *estimate, no derivation in this work* until S-37 is derived.
+- **F3:** its points are Johnson & Silva Table 3 only (Grok R101-P70); its data table (nine entries + four closures) goes in
+  the supplement (Qwen R101-P3). Both unanimous after ChatGPT's vote in Round 104.
