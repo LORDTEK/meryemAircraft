@@ -107,6 +107,8 @@ that is allowed to be unfinished."* Adım 14'ün malzemesi, birikmiş hâliyle:
 - İskelet: *"Dört eksende dur — yeni hesap yok, atıf yok."* Adım 9'un dört ekseni, her birinde ne
   iddia edildiği. Adım 14'ün son cümlesi oraya devrediyor.
 - **E1 (kısaltma/oran)** bundan sonra: yazar *"10–14 yazıldıktan sonra tek seferde"* dedi. 14 yazıldı.
+- **Borç/kapsam denetimi (Qwen R108-P2, Tur 109 kabul):** Adım 15 yeniden kurulurken her cümlesi Adım 14'ün on altı
+  bilinmeyenine karşı okunur; hiçbiri çözülmüş gibi, hiçbiri *"cannot be built"* gibi okunmaz.
 
 ## Adım 12 bir sonraki açılışında — Tur 78 (S-3, dört okuyucu + Claude)
 
@@ -246,3 +248,14 @@ long a component is needed and how long it is present is the origin of all three
 Düzyazı toplamı 19 960. P28'in *"most worth measuring"* rehberliği artık Adım 14'ün iki bilinmeyeninde: rakibin kaldırma grubu
 kütlesi ve seyir pervane verimi (DeepSeek, Tur 108 — yan cümle geri getirilmesin diye kayıt).
 
+
+**Tur 110 — çerçeve taslakları (Adım 2, 3), oyda.** Adım 2: 2 189 → 1 842 (%84); Adım 3: 1 654 → 1 305 (%79); ikisi 3 147,
+plan 1 400. ChatGPT ve Qwen (P3) bunu önceden söyledi: çerçevenin tanımları ve korunan cümleleri (11 + 13) bir taban koyuyor.
+**Taşınanlar (DeepSeek'in kayıt önerisi):** Adım 2'nin örnek aracı ve iki bileşen denklemi → S2 (oran denklemi ve *"square
+root"* cümlesi gövdede); yirmi altı pervane çalışması → S2; Adım 3'ün dört sapma cümlesi → S3 (S3 tablosu zaten taşıyor),
+parantez → S3. **Oya konan ek taşımalar:** O1 yapısal yarı paragrafı (~65), O2 Bacchini aritmetiği (~60; ben karşıyım — P50),
+O3 NASA beş aile paragrafı (~80; tek evi Adım 4'te seçilsin).
+
+**Ek bölünmesi günü için (Tur 110):** Ek S2'nin donmuş kopyası Tur 88'de gövdeden **kaynaksız olduğu için** silinen kuyruk üstü
+"beşte bir" cümlesini taşıyor. İki okuyucu (ChatGPT, Qwen) onu "S2'ye taşınacak" diye önerdi — yani donmuş kopyalar dergi eki
+gibi okunuyor. Dergi eki / depo denetim arşivi ayrılırken **donmuş kopyalar arşive gider**; dergi ekine kaynaksız cümle girmez.

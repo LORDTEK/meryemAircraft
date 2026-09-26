@@ -441,3 +441,11 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | **Tur 108 cevapları:** S-38 ve J29 teyit; P28 yan cümlesi düşer (d koşuluyla, dördü); Adım 14'e veto yok; 16. bilinmeyen; adlar gövdede (ChatGPT ve DeepSeek görüş değiştirdi); depo figürü kimliği | ✓ | ✓ | ✓ | ✓ | ✓ | **Adım 14 uygulandı (Tur 109) → teyide** |
 | Yeni: J1 "…the answer is no: the required store performance is not demonstrated by the sources consulted here" (ChatGPT); D4 "the store figures" (Qwen); P83, P84 (Grok); Adım 15'te borç/kapsam denetimi (Qwen); iki rakip niceliği iz tablosunda çift (DeepSeek) | — | — | — | — | — | Oylamada |
 
+| **Tur 109 cevapları:** Adım 14 ve S-39 (Ek S14'ün iki yeni satırı) teyit; J1 ve D4; P84 (J3'ün iki bandı ayrı nesne); rakibin iki niceliği iz tablolarında çift (DeepSeek); Adım 15'te borç/kapsam denetimi (Qwen R108-P2) | ✓ | ✓ | ✓ | ✓ | ✓ | **Adım 14 kapandı; J1, D4 uygulandı (Tur 110) → teyide; üç öneri kabul** |
+| Adım 2–3 listeleri: tanımlar, kök cümle, T3, koşul, dört parça, dört başarısızlık kipi, üçlü ret gövdede; örnek araç S2'ye | ✓ | ✓ | ✓ | ✓ | ✓ | **Taslakta (`drafts/02-recomposed.md`, `03-recomposed.md`)** |
+| Bacchini aritmetiği | S2'ye | — | hem gövde hem S2 (kendi içinde çelişik) | S2'ye | **gövde** — korunan P50 ve D51 J49'a dayanıyor (P71) | **Ayrışık — okuyuculara adıyla** |
+| Adım 2 yapısal yarı paragrafı (ikinci NASA incelemesi) | — | taşınabilir | alıntı S2'ye, sonuç gövdede | S2'ye | gövde, olay ayrıntısı S2'ye | **Oya (O1)** |
+| Adım 2 NASA beş aile paragrafı | — | taşınabilir | gövde | S2'ye | gövde — tek evi Adım 4 kurulurken seçilsin (Adım 1, 2, 4'te üç kez tanıtılıyor) | **Oya (O3)** |
+| Bill 3 denklemleri | — | gövde | S2'ye | S2'ye | yalnız oran denklemi gövdede ("the quantities on the right" öncülü) | **Ayrışık — okuyuculara adıyla** |
+| Yeni: P85 (çekirdek önce), P86 (3,2'ler ayrı); Qwen P1 (tanım kaydı), P2 (T3 tablo kalır), P3 (Adım 3 korunan yoğunluğu); DeepSeek: kök ve koşul korunsun (**zaten korunan: satır 180, 182**), çerçeve taşımaları kayda; ChatGPT: yapısal sıkıştırma kuralı | — | — | — | — | — | Oylamada |
+| Yeni: S-40 (Adım 2'de "Wind-tunnel" düşmüş; Adım 11 J18'in etiketi yanlıştı — benim hatam), S-41 (Adım 2'nin "the next section says why" işaretçisi karşılıksız) | — | — | — | — | öneren | Oylamada |

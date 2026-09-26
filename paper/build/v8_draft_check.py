@@ -16,11 +16,13 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from v8_caveats import duz, liste  # noqa
 
 n = int(sys.argv[1])
+# Tur 110: --taslak YOL ile baska bir taslak dosyasi (ornek: drafts/02-draft2.md); cikti yanina -removed yazilir.
+TASLAK = sys.argv[sys.argv.index("--taslak") + 1] if "--taslak" in sys.argv else None
 src_f = glob.glob(os.path.join(KOK, "paper", "v8", "%02d-*.md" % n))[0]
 s = open(src_f, encoding="utf-8").read()
 m = re.search(r"^## (?!Yazar)", s, re.M); e = re.search(r"^## Yazarın denetimi", s, re.M)
 kaynak = re.sub(r"\n---\s*$", "", s[m.start():e.start()].rstrip())
-taslak = open(os.path.join(KOK, "paper", "v8", "drafts", "%02d-draft.md" % n), encoding="utf-8").read()
+taslak = open(TASLAK or os.path.join(KOK, "paper", "v8", "drafts", "%02d-draft.md" % n), encoding="utf-8").read()
 if "--sina" in sys.argv:
     taslak = taslak.replace("**Coupling is not identity.**", "**Coupling is identity.**")
 
@@ -35,7 +37,8 @@ def toks(x):
 def cumleler(x):
     x = re.sub(r"(?m)^#+ .*$", "", x)
     x = re.sub(r"\s+", " ", x.replace("*", ""))
-    return [c.strip() for c in re.split(r"(?<=[.!?])\s+(?=[A-Z(])", x) if c.strip()]
+    # Tur 110: tirnakla biten cumle de bolunur (."); yoksa alinti ile biten cumle sonrakine yapisiyordu
+    return [c.strip() for c in re.split(r"(?:(?<=[.!?])|(?<=[.!?]\"))\s+(?=[A-Z(])", x) if c.strip()]
 
 
 kc = cumleler(kaynak)
@@ -113,7 +116,7 @@ for i, c in enumerate(kc):
         kisaldi += 1
         silinen = [w for j, w in enumerate(kt[i]) if j not in u]
         satirlar.append("- **KISALDI:** %s\n  - *silinen:* %s" % (c, " ".join(silinen)))
-open(os.path.join(KOK, "paper", "v8", "drafts", "%02d-removed.md" % n), "w", encoding="utf-8").write("\n".join(satirlar) + "\n")
+open(re.sub(r"\.md$", "-removed.md", TASLAK) if TASLAK else os.path.join(KOK, "paper", "v8", "drafts", "%02d-removed.md" % n), "w", encoding="utf-8").write("\n".join(satirlar) + "\n")
 
 print("kaynak %d kelime, %d cumle | taslak %d kelime" % (len(kaynak.split()), len(kc), len(re.sub(r"[⟦⟧]", "", taslak).split())))
 print("cikan cumle %d, kisalan %d, aynen kalan %d" % (cikti, kisaldi, len(kc) - cikti - kisaldi))

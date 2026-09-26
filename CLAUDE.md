@@ -473,6 +473,9 @@ dahil herkesin hemfikir olduğu kısaltmalar uygulansın."*
   tezgâh ortalaması / sürekli / tasarım varsayımı / alıntı) + kaynak + süre ile taşınır — bir denetim listesi, üçüncü koruma
   ölçütü değil. **Engel önce, bilinmeyenler sonra** (Grok P82, Qwen): Adım 14 bilinen engelle açılır; her bilinmeyen bir soru
   olarak ve adıyla gövdede durur, *"what would settle it"* ekte; hiçbir cümle *"cannot be built"* demez.
+- **Tur 109'da kabul (dört okuyucu + Claude):** rakibin iki varsayılmış niceliği (kaldırma grubu kütlesi, pervane verimi) her
+  izde **çift** (DeepSeek); Adım 14'ün J3 bantları ayrı nesne (Grok P84) — ikisi `v8-coincidences-reviewed.md`'de; Adım 15
+  yazılırken Adım 14'ün on altı bilinmeyenine karşı **borç/kapsam denetimi** (Qwen R108-P2).
 
 ## 3. Doğrulama
 

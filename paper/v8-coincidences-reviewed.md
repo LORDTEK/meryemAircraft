@@ -20,3 +20,11 @@ Yeni bir çift eklenmeden önce iki bağlam da okunur.
 | 1.5 | 2 | W^1.5 üssü (sabit disk alanında askı gücü) | 10 | %1,5 kuruluş sınaması sapması |
 | 1.5 | 2 | W^1.5 üssü | 14 | 1.5 kW/kg, tezgâh ortalaması |
 | 3.2 | 2 | 3.2, örnek araç askı/seyir güç oranı | 12 | 2.4–3.2, dört kapanışta askı / motor oranı (Adım 11'in) |
+
+**Aynı adımda ayrı nesneler (Tur 110; Grok P84, dört okuyucu + Claude).** Adım 14'ün J3 bantları — **4.7–5.2** ve **5.5–6.1 kW
+per kilogram of buffer, elektrik barasında, askı / kalkış** — sayı eşleme denetimine bu kimlikle girer; aynı adımdaki
+**3.7–4.1×** (kalkış talebi / tezgâh ortalaması) ve **6.2–6.8×** (/ uçan sistemin sürekli değeri) oranlarıyla aynı nesne değildir.
+Ek S14'te birim ya da nesne değişirse ikisi ayrı ayrı denetlenir.
+
+**Rakip nicelik çifti (Tur 110; DeepSeek, dört okuyucu + Claude).** Rakibin kaldırma grubu kütle kesri ve seyir pervane verimi
+her iz tablosunda **çift** olarak geçer; biri taşınır ya da değişirse öteki de aynı işlemi görür (S-38).

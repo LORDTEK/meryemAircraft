@@ -214,26 +214,27 @@ The body is about **26 000 words**, and the journal's working target is **about 
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 109.**
+**Round 110.**
 
 | Block | State |
 |---|---|
 | Length | the author decided (Round 101): 12 000 words in all; 5 tables + 3 figures; Round 105: keep recomposing, redistribute later |
-| Calculation steps 10–14 | **all recomposed into result sentences** (5 150 words against a plan of 2 000); originals in Supplements S10–S14 in full |
-| Next | the framework, Steps 2–4, then the architecture (1, 5–9, 15) last |
-| Now | readers' lists for **Steps 2 and 3** |
+| Calculation steps 10–14 | **all recomposed and confirmed** (5 150 words against a plan of 2 000); originals in Supplements S10–S14 in full |
+| Framework, Steps 2 and 3 | **first drafts to vote**: `paper/v8/drafts/02-recomposed.md` (2 189 → 1 842) and `03-recomposed.md` (1 654 → 1 305) |
+| Next | Step 4, then the architecture (1, 5–9, 15) last |
 
-**The body is about 20 000 words of prose** (tables not counted). Recomposition into result sentences took Step 10 to about 40 %
-of its length; the plan asks for 8 500 in all, and 1 550 for Steps 10–13 together. The earlier recomposition of Steps 1–9
-gained a few percent per block, and its main product was defects found in the source and repaired.
+**The body is about 20 000 words of prose** (tables not counted). Recomposition into result sentences took Steps 10–11 to about
+40 % of their length and Steps 12–14 to 57–83 %. The framework drafts are at 79–84 %, because their definitions and protected
+sentences set a floor.
 
 **Tools the round texts mention:**
 
 | Tool | What it checks |
 |---|---|
 | `v8_caveats.py` | the protected sentences |
-| `v8_stale.py` | retired phrases (121) and single-home phrases, in the step bodies **and in the v8 figure scripts** |
+| `v8_stale.py` | retired phrases (131) and single-home phrases, in the step bodies **and in the v8 figure scripts** |
 | `v8_nothing_lost.py` | every sentence of a recomposed step is in the body or the supplement, or is a voted replacement |
+| `v8_draft_check.py` | a draft is derived from its source by deletion only (pointers in ⟦ ⟧ excepted); no negative or qualifier deleted; every protected sentence present |
 | `v8_refs.py` | table, row and relational-noun references, and supplement references |
 | `v8_assemble.py` | the assembled view and section references |
 
