@@ -75,7 +75,7 @@ claimed vertical capability pays none of the charges of Section 2, and nothing h
 with it on distance.
 
 **2. It does not claim vertical capability against multirotors.** That comparison runs the other
-way and would be absurd. The multirotor family is the opponent on cruise efficiency only.
+way and would be absurd.
 
 **3. It does not claim that the aircraft has no moving parts.** What is eliminated is a *class
 of mechanism* — the one that reorients a propulsor. The aircraft has a moving aerodynamic
@@ -135,6 +135,7 @@ what it demands of anyone who uses the framework afterwards.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 93 (yeniden kurma, 9E):** 2. madde — "The multirotor family is the opponent on cruise efficiency only." çıktı (9B tablosunu ve 1. maddenin kaldırılan eksen cümlesiyle aynı türden yinelemeyi taşıyordu; dört okuyucu + Claude). Özgün Ek S9'da | Tur 92 metni §2 |
 | **Tur 92 (yeniden kurma, 9E):** 4. madde — "What is offered is a count of mechanism classes…" çıktı, "A count is not a reliability argument" → "The count of mechanism classes in Section 7 is not a reliability argument" (R-1 onarımı; dört okuyucu + Claude). Özgün Ek S9'da | Tur 91 metni §2 |
 | **Tur 91 (yeniden kurma, 9E):** 1. madde — "The vertical axis is where the fixed-wing family is the opponent; the range axis is not." çıktı (9B tablosunu yineliyordu; dört okuyucu + Claude). 4. maddenin silinmesi uygulanmadı: silinince "A count is not a reliability argument" hemen önceki "Part count"a bağlanıyor (köken R, uygulamadan yakalandı) → R önerisi oylamada. Özgün paragraf Ek S9'da | Tur 90 metni §4 |
 | **Tur 86 (S-8, dört okuyucu + Claude):** "converts a power-system charge into a mass one" → "into a cost in kilograms" — A′'ye göre depo fatura değil; aynı ifade Adım 3, 9, 11'de birlikte düzeltildi | Tur 85 metni §5 |

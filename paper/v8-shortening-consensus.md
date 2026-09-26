@@ -308,3 +308,9 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | 14D R (R-2) | — | — | — | — | öneren | Oylamada |
 | Adım 9 2. madde silme | ✓ | R ister (yanlış okuma) | ✓ | ✓ | öneren | ChatGPT'ye geri |
 | S-19 ek cümle | — | — | — | — | öneren | Oylamada |
+| 14D R (R-2); Adım 9 2. madde; S-19 ek cümle | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı** (Tur 93); teyide |
+| S-19 cümlesi korunan | ? | ✓ | ✓ | ? | ✓ | Oylamada |
+| Kaynak açma kuralı (çevre metni) | — | — | öneren | P1 | ✓ | Oylamada |
+| Adım 14 izinde kanıt durumu sütunu | — | — | öneren | P2 | ✓ | Oylamada |
+| R-3 (14C "three kinds"); S-20 (Barrett sonucu) | — | — | — | — | öneren | Oylamada |
+| Adım 1 envanteri; S-21, S-22, S-23; iki yineleme | — | — | — | — | öneren | Teyide / oylamada |

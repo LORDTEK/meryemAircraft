@@ -61,7 +61,9 @@ electric VTOL aircraft is rated, as a flown system, at 0.892 kW per kilogram con
 unit pack, discharged on the bench at its highest tested rate of 10.68C, delivered on average about
 1.5 kW per kilogram for about four minutes and reached 55.1 °C against the 60 °C limit its authors
 adopted. A NASA-funded design study adopts 4 kW per kilogram and describes that figure as about twice
-that of existing batteries. **The take-off demand of Section 10's closures is 3.7 to 4.1 times the
+that of existing batteries. The same study notes lithium-polymer figures in the literature as high as
+3 kW per kilogram, which it cites rather than measures; against that figure the take-off demand is 1.8
+to 2.0 times. **The take-off demand of Section 10's closures is 3.7 to 4.1 times the
 bench rate — the highest of the measured figures — and 6.2 to 6.8 times the flown system's continuous
 rating**; hover alone is 3.1 to 3.5 times the bench rate. The comparison is between unlike ratings: a
 peak demand held through the vertical phases, a bench average over minutes, a continuous rating, and a
@@ -85,8 +87,7 @@ it was set at is not established.
 | 0.892 kW kg⁻¹, the flown system's continuous rating | about 335 kg | 22 to 25 % | set by nearness to non-closure |
 | 0.724 kW kg⁻¹, the unit pack's continuous rating | **does not close** | — | — |
 
-**At the bench rate the loop closes about three-quarters heavier**, with a buffer of about fourteen
-percent of take-off mass rather than 3.6. If Section 10's take-off masses are retained instead, the
+If Section 10's take-off masses are retained instead of re-closing at the bench rate, the
 payload falls to about 7 kg rather than 13. At the flown system's continuous rating the loop only just
 closes, and the mass it returns is set by how near the loop is to not closing rather than by anything
 about the aircraft. At the unit pack's continuous rating it does not close at all.
@@ -159,6 +160,7 @@ The last section returns to the four axes of Section 9 and states what is claime
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 93 (yeniden kurma, 14C ve 14D; dört okuyucu + Claude):** 14D — "At the bench rate the loop closes about three-quarters heavier, with a buffer of about fourteen percent…" çıktı (tablonun üçüncü satırını yineliyordu); ardından gelen cümle "retained instead," → "retained instead of re-closing at the bench rate," (R-2 onarımı: "instead" silinen cümleye bağlıydı, Grok P51 okuması uygulamadan önce yakaladı). 14C — S-19: Barrett çalışmasının 3 kW/kg alıntısı gövdeye girdi, **alıntı olarak** (çalışma ölçmüyor, kendi kaynağı [60]'ı gösteriyor); 5,5–6,1 / 3 = 1,8–2,0 kat. Özgün 14D paragrafı Ek S14'te | Tur 92 metni §2–§3 |
 | **Tur 92 (yeniden kurma, 14E ve 14G; dört okuyucu + Claude):** 14E "at a measured specific power it costs thirteen to fifteen percent of take-off mass instead of 3.6" çıktı (tablonun üçüncü satırının üçüncü söylenişi); 14G son iki cümle çıktı (listede zaten etiketli). "The escape from Bill 3 is real…" korunan (160). Özgün paragraflar Ek S14'te | Tur 91 metni §3 |
 | **Tur 66:** listeye rotor–yapı ve rotor–kanat girişimi eklendi (Adım 11'in tablosundan; Adım 14'te eksikti) | Adım 11 sınır cümlesi; Ek S11 |
 | **Tur 63:** Tur 62 listesinde *"allocation of the tip pairs between take-off margin and attitude authority"* düşmüştü — Grok yakaladı; geri kondu (Adım 5 ve 7'nin *"ikinci iş"*i) | Ek S14'ün ilgili satırı |

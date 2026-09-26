@@ -30,6 +30,8 @@ DEGISTI = {
         "They are three distinct accounting quantities, paid in kilograms, drag counts and installed kilowatts, and they are not assumed to be independent physical causes: a remedy can move a requirement from one currency into another.",
     "The architecture converts a power-system charge into a mass one.":
         "The architecture converts a power-system charge into a cost in kilograms.",
+    "If Section 10's take-off masses are retained instead, the payload falls to about 7 kg rather than 13.":
+        "If Section 10's take-off masses are retained instead of re-closing at the bench rate, the payload falls to about 7 kg rather than 13.",
 }
 ONCE = {2: "d2ca894", 9: "eb22a83", 14: "9f4cfcb", 3: "46b9628", 4: "8c4d712", 10: "024005c", 11: "65ae7de", 12: "c9fcdd7", 13: "c9fcdd7"}   # kisaltmadan onceki commit
 

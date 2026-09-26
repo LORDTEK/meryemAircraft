@@ -1634,3 +1634,18 @@ geri soruldu. **S-19:** 4 kW/kg kaynağını (Barrett 2023) açtım: doğru, ama
 diyor ve biz almamışız (S-18'in eşi) → ek cümle oylamada; talep 3 kW/kg'a karşı 1,8–2,0 kat. **Qwen'in uyarısı:** elindeki
 başlangıç metni Tur 64'te gönderilen eski metin; depodaki doğru. Başlangıç metnine sürüm damgası ve grep denetimi eklendi;
 §2–§3 tur metnine ek olarak kondu (okuyucular dosyayı açamıyordu).
+
+# Tur 93 — Tur 92 metnine dört cevap
+
+**Oybirliğiyle uygulandı:** 14D R-2 onarımı ("retained instead of re-closing at the bench rate"); Adım 9 2. maddenin son
+cümlesi çıktı; S-19 cümlesi 14C'ye girdi. Özgün paragraflar Ek S9 ve S14'te. Barrett ref. [60] = Rheaume & Lents 2016
+(SAE, ücretli) → attributed. Başlangıç metninin batarya satırı köken diliyle düzeltildi (ChatGPT, DeepSeek; Grok'un şartı).
+**Kendi hatam:** Tur 92'de başlangıç metnine koyduğum sürüm damgası kendi aradığı ifadeyi içerdiği için yeni dosyada 2
+veriyordu, eski kopyada 1 — yani iki sürümü ayırt edemiyordu; çalıştırmamıştım, Grok da "doğru damga" dedi. Pozitif
+denetimle değiştirildi, iki sürüme karşı sınandı. **R-3 (benim eklememin yan etkisi):** S-19 cümlesi girince 14C'nin
+"three different kinds" sayımı eksik kaldı → oylamada. **S-20:** Qwen P1'i (çevre metni okuma) oylamadan önce uyguladım;
+Barrett'in kendi sonucu ("mevcut teknolojiyle mümkün olabilir", darbe akımı, ≤20 s askı) alınmamış — dördüncü seçici alıntı.
+**Adım 1 envanteri:** kaynaklar çevre metniyle açıldı; üç kaynak kusuru adayı: S-21 ("iki ölçekte denetlendi" — Adım 12'de
+Bill 1 ikinci ölçekte sınanmadı), S-22 (DelftaCopter sabit hatve uzlaşmasının tanığı olarak gösteriliyor, oysa rotoru
+değişken hatveli ve aynı makale değişken hatveyi çare olarak adlandırıyor), S-23 ("tilt-rotors from the 1980s" — XV-3 1955,
+XV-15 1977). İki yineleme adayı (1D "Precise hovering…", 1E açılışı).

@@ -1,9 +1,12 @@
 # Reader onboarding — for a reader starting a new conversation
 
-> **Version check (Qwen P1, Round 92).** This version was rewritten in Round 91 and last updated in Round 92. An older copy
-> (Round 61, sent in Round 64) stated Step 13's contract results **in the reverse direction**. If the copy you have contains
-> the phrase *"this configuration's range is +55 to +84 %"*, it is the old one: do not use it. In the repository:
-> `grep -c "this configuration's range is" cfd/reader-onboarding.md` must print **0**.
+> **Version check (Qwen P1, Round 92; corrected in Round 93).** This version was rewritten in Round 91 and last updated in
+> Round 93. An older copy (Round 61, sent in Round 64) stated Step 13's contract results **in the reverse direction**: it
+> gave this configuration's range as 55 to 84 percent ahead of the lift-plus-cruise layout. **The older copy has no
+> version box at all; if yours does not begin with this box, it is the old one: do not use it.** In the repository:
+> `grep -c "Version check (Qwen P1" cfd/reader-onboarding.md` prints **more than 0** for this version and **0** for the old one.
+> (The Round 92 check searched for the old phrase itself and so found it in its own quotation: it printed 2 on this file,
+> not 0. My error; the positive check above replaces it.)
 
 > **Why you are reading this.** You are one of four independent readers (ChatGPT, Grok, DeepSeek, Qwen) of a paper in
 > development. The work has run for about ninety rounds. If your previous conversation filled up, this file puts you back
@@ -138,7 +141,7 @@ re-open Bill 2.
   take-off mass.** The sign changes inside the envelope, and the tilting competitor is only a bound.
   *(The earlier onboarding text of Round 61 stated these figures with the direction reversed. The figures above are
   quoted from Step 13.)*
-- **What does not close** (Step 14): the energy store. The take-off demand is 3.7 to 4.1 times the highest measured figure.
+- **What does not close** (Step 14): the energy store. The take-off demand is 3.7 to 4.1 times the bench rate derived from a measured 10.68C bench discharge of the unit pack of a battery flown in a 210 kg-class eVTOL aircraft (about 1.5 kW/kg, model-derived from the source's current, voltage and pack mass), and 1.8 to 2.0 times the 3 kW/kg a NASA-funded design study cites from the literature (attributed, not measured by that study).
 
 ---
 
@@ -211,16 +214,17 @@ The body is about **26 000 words**, and the journal's working target is **about 
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 92.**
+**Round 93.**
 
 | Block | State |
 |---|---|
 | Step 4 | recomposed and closed (1 586 → 1 356) |
 | Step 3 | recomposed and closed (1 874 → 1 698) |
 | Step 2 | recomposed, with its last pieces awaiting confirmation. It went **2 263 → 2 487**, because content repairs added more than recomposition removed. |
-| Step 9 | recomposed (items 1 and 4); item 2 awaiting one confirmation |
-| Step 14 | inventory confirmed; 14E and 14G applied; 14D and a source finding (S-19) to vote |
-| Order after that | Step 1 → Steps 5–6 → Steps 7–8 last |
+| Step 9 | recomposed (items 1, 2 and 4 applied); awaiting confirmation of the applied text |
+| Step 14 | recomposed (14C, 14D, 14E, 14G applied; S-19 entered as a quotation); awaiting confirmation. To vote: R-3 (the paragraph's count of kinds after S-19) and S-20 (the design study's own conclusion) |
+| Step 1 | inventory sent (Round 93), with three source findings (S-21, S-22, S-23) to vote |
+| Next | Steps 5–6; Steps 7–8 last |
 
 **The body is about 25 900 words.** Recomposition gains a few percent per block. In Steps 2 and 3 its main product was
 defects found in the source and repaired. The author will review the target when the steps are done.

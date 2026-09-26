@@ -42,3 +42,8 @@ partial instantiation), Step 13 (contract dependence), Step 3 (partial instantia
 - **Evidence status (ChatGPT):** only sentences with an evidentiary origin are tagged; a claim-boundary sentence is not.
 - **Item 2's** *"The multirotor family is the opponent on cruise efficiency only"* is the same kind of restatement as item
   1's → proposed symmetric removal (Round 91).
+
+## Round 93
+
+Item 2's last sentence removed (four + Claude; ChatGPT's order concern settled by the order). Items 1, 2 and 4 applied;
+awaiting confirmation.

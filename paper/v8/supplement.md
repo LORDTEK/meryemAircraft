@@ -627,6 +627,13 @@ with it on distance.
 
 ---
 
+### "It does not claim vertical capability against multirotors" as it stood before recomposition (frozen snapshot)
+
+**2. It does not claim vertical capability against multirotors.** That comparison runs the other
+way and would be absurd. The multirotor family is the opponent on cruise efficiency only.
+
+---
+
 ### "It does not claim mechanical simplicity" as it stood before recomposition (frozen snapshot)
 
 **4. It does not claim mechanical simplicity.** Part count, assembly mass, failure modes and
@@ -1083,4 +1090,12 @@ tried against it and disagree, and the low-Reynolds section drag, because the on
 least reliable exactly there. Several — hover control, the descent, the buffer's energy, the electrical
 path — are analyses this study has not posed. One — the engine installation — is not in the work at
 all.
+
+### The paragraph after the re-closure table as it stood before recomposition (frozen snapshot)
+
+**At the bench rate the loop closes about three-quarters heavier**, with a buffer of about fourteen
+percent of take-off mass rather than 3.6. If Section 10's take-off masses are retained instead, the
+payload falls to about 7 kg rather than 13. At the flown system's continuous rating the loop only just
+closes, and the mass it returns is set by how near the loop is to not closing rather than by anything
+about the aircraft. At the unit pack's continuous rating it does not close at all.
 

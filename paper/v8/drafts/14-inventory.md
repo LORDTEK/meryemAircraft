@@ -34,3 +34,9 @@ Inventory confirmed (four + Claude). 14E numbers and 14G last two sentences remo
 protected (160); 14H kept (named job: closing on the contribution). **R-2** caught before applying (14D "instead") → R to
 vote. **S-19** (Barrett 2023 p. 34: lithium-polymer up to 3 kW/kg, not quoted) → added sentence to vote; 4 kW/kg now
 verified (p. 16). Trace columns for the draft: debt vs scope flag (Qwen P2).
+
+## Round 93
+
+R-2 applied with its repair; S-19 sentence entered (four + Claude). **R-3** (the S-19 sentence leaves "three different
+kinds" and the unlike-ratings list incomplete) and **S-20** (Barrett pp. 34–35: pulse limits, hover ≤ 20 s, "may be possible
+… using existing technology", not quoted) to vote. Trace columns: evidence status per battery figure (Qwen P2, DeepSeek).
