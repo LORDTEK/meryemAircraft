@@ -2,7 +2,7 @@
 
 > **This is a task. Please answer it now, and begin with your name alone on the first line.**
 >
-> `LORDTEK/meryemAircraft`, branch `claude/ecstatic-cori-6w30at`, commit **`COMMIT`**.
+> `LORDTEK/meryemAircraft`, branch `claude/ecstatic-cori-6w30at`, commit **`ab39a10`**.
 >
 > - Step 10 is recomposed in `paper/v8/10-the-closure.md`.
 > - The original of Step 10 is in `paper/v8/supplement.md`, S10, in full.
