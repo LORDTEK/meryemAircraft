@@ -485,6 +485,11 @@ dahil herkesin hemfikir olduğu kısaltmalar uygulansın."*
   later by section number, the later section must inherit the definition's exact scope, not merely its noun."* Sayı kimliğinin
   çerçeve karşılığı. **Okuyucu dosya açamıyorsa metin tur metnine eklenir** (Tur 111: dört okuyucunun dördü de Adım 4'ü açamadı
   ve eski metinlerden liste verdi — benim hatam; Grok bir tur önce açamadığını söylemişti).
+- **Tam metin kuralı (yazar, Tur 113):** *"MD5 veya hash için sayı paylaşıyorsun uzun uzun ama chapter içeriği vermekten imtina
+  ediyorsun. Benim rahatsız olduğum şey, okuyucuların eksik bilgi nedeniyle verimlerinin düşme olasılığı."* → Okuyuculardan
+  hüküm istenen **her metin** (güncel adım gövdesi, taslak, komşu cümleler, kaynak paragrafı) tur metnine **tam** girer; depo
+  bağı yalnız doğrulama içindir, okuma yolu değildir. Doğrulama satırı bir satırdır. (Tur 109 ve 111'de iki kez "dosyayı açın"
+  dedim; okuyucular eski metinlerden çalıştı.)
 
 ## 3. Doğrulama
 

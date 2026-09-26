@@ -214,20 +214,20 @@ The body is about **26 000 words**, and the journal's working target is **about 
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 112.**
+**Round 113.**
 
 | Block | State |
 |---|---|
 | Length | the author decided (Round 101): 12 000 words in all; 5 tables + 3 figures; Round 105: keep recomposing, redistribute later |
 | Calculation steps 10–14 | **all recomposed and confirmed** (5 150 words against a plan of 2 000); originals in Supplements S10–S14 in full |
 | Framework, Steps 2 and 3 | **recomposed** (2 189 → 1 775; 1 654 → 1 305), originals in S2 and S3 in full; the five framework definitions are protected |
-| Now | readers' lists for **Step 4** (its current text is in the round file); R-8 (Step 3's numbered departures) back to vote; then the architecture (1, 5–9, 15) last |
+| Now | **Step 4's first draft** (1 351 → 1 268) and S-43, both quoted in full in the round file; then the architecture (1, 5–9, 15) last |
 
 **The body is about 20 000 words of prose** (tables not counted). Recomposition into result sentences took Steps 10–11 to about
 40 % of their length, Steps 12–14 to 57–83 %, and the framework to about 80 %, because its definitions and protected sentences set
 a floor.
 
-**If you cannot open a file, say so; the round file carries the text you need.** **Frozen snapshots in the supplement are an audit archive, not the journal supplement.** Do not quote them as the current text; one
+**The round file quotes in full every text you are asked to judge; the repository is for verification only.** **Frozen snapshots in the supplement are an audit archive, not the journal supplement.** Do not quote them as the current text; one
 of them holds a sentence deleted for lack of a source.
 
 **Tools the round texts mention:**

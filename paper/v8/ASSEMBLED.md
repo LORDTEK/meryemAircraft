@@ -234,7 +234,7 @@ This section asks what an architecture would have to do in order not to incur th
 
 #### Inverting the table
 
-**A charge appears wherever the two regimes are served by hardware that departs from one of four things: the same hardware, serving both duties, held in one orientation, with the hover peak supplied other than by its continuously installed power.** What each departure costs is in Supplement S3. Read one at a time, these are ways to pay. Read as a conjunction, they are a condition.
+**A charge appears wherever the two regimes are served by hardware that departs from one of four things: the same hardware, serving both duties, held in one orientation, with the hover peak supplied other than by its continuously installed power.** **Different hardware** costs Bills 1 and 2. **The same hardware serving only one duty** costs them again. **The same hardware serving both duties in a different orientation** is the tilting family. **The same hardware, both duties, one orientation, but a different sizing point** incurs Bill 3 — unless the hover peak is supplied from somewhere other than the continuously installed power. What each departure costs is in Supplement S3. Read one at a time, these are ways to pay. Read as a conjunction, they are a condition.
 
 #### The condition
 

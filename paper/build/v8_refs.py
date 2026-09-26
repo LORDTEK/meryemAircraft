@@ -63,6 +63,17 @@ for n in range(1, 16):
     for s_ in re.findall(r"Supplement (S\d+)", b):
         if s_ not in bolumler:
             yeni.append((n, "Supplement %s -- ekte boyle bir bolum yok" % s_))
+# Tur 113 (Grok P91; R-8): Adim 3'te "first/second/third/fourth departure" gecen her yerde, o sapmayi ADLANDIRAN cumle govdede olmali.
+SAPMA = {"first": "Different hardware costs Bills 1 and 2.",
+         "second": "The same hardware serving only one duty costs them again.",
+         "third": "The same hardware serving both duties in a different orientation is the tilting family.",
+         "fourth": "The same hardware, both duties, one orientation, but a different sizing point incurs Bill 3"}
+b3 = duz(govde(3))
+if "--sina" in sys.argv:
+    b3 = b3.replace(SAPMA["second"], "")
+for sira in sorted(set(re.findall(r"\b(first|second|third|fourth) departure", b3))):
+    if duz(SAPMA[sira]) not in b3:
+        yeni.append((3, "'%s departure' -- adlandiran cumle govdede yok: %s" % (sira, SAPMA[sira])))
 print("=== TABLO / SATIR / ILISKISEL AD / EK ATIF DENETIMI ===")
 for n, c in yeni:
     print("  !! Adim %d, gozden gecirilmemis atif: %s" % (n, c[:120]))

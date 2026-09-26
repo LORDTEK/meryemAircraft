@@ -15,7 +15,7 @@ This section asks what an architecture would have to do in order not to incur th
 
 ### Inverting the table
 
-**A charge appears wherever the two regimes are served by hardware that departs from one of four things: the same hardware, serving both duties, held in one orientation, with the hover peak supplied other than by its continuously installed power.** What each departure costs is in Supplement S3. Read one at a time, these are ways to pay. Read as a conjunction, they are a condition.
+**A charge appears wherever the two regimes are served by hardware that departs from one of four things: the same hardware, serving both duties, held in one orientation, with the hover peak supplied other than by its continuously installed power.** **Different hardware** costs Bills 1 and 2. **The same hardware serving only one duty** costs them again. **The same hardware serving both duties in a different orientation** is the tilting family. **The same hardware, both duties, one orientation, but a different sizing point** incurs Bill 3 — unless the hover peak is supplied from somewhere other than the continuously installed power. What each departure costs is in Supplement S3. Read one at a time, these are ways to pay. Read as a conjunction, they are a condition.
 
 ### The condition
 
@@ -66,6 +66,7 @@ The third departure is refused by a means other than the one the field has adopt
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 113 — R-8 onarıldı, seçenek C** (Tur 112; dört okuyucu + Claude; Qwen'in itirazı üzerine): dört sapma cümlesi, sapmayı adlandıran sözcüklere kadar silinmiş hâlleriyle (dördüncüsü tam, "exception"ın öncülü) D3'ün ardına. Sıra göndergeleri (D7, D10, D25, D47, D48) artık adlandırılmış öncüllere bağlı; `v8_refs.py` bunu sınıyor (Grok P91) | Tur 112 metni §4 |
 | **Tur 111 — Adım 3 sonuç cümleleriyle yeniden kuruldu** (Tur 110; dört okuyucu + Claude, veto yok): 1 654 → 1 305. Dört sapma cümlesi (Ek S3 tablosu taşıyor) ve ikinci sapma parantezi Ek S3'e; "Two things … are choices" (O4 reddedildi), eğme kurulumu D47–D48, uç çerçevelerin "landing gear" gerekçesi gövdede. Özgün Ek S3'te tam | Tur 110 metni §4, `drafts/03-recomposed.md` |
 | **Tur 87 (yeniden kurma, 3F; P39):** 3F 279 → 229 — F1 (S-9: "Those" yanlış üçlüye işaret ediyordu → "Three questions follow from it"), F2 (S-10: "the longest of the three answers" yanlış → "the answer most likely to be wrong"), F3 (3B evi), F4 (S-2 "the first departure"), F5 (3A evi, korunan). Elektrik yolu: "a charge" → "Bill 3 on the electrical path" (Adım 11'in korunan cümlesiyle). Dört okuyucu + Claude. 3E kilitli, değişmedi. Özgün 3F Ek S3'te donmuş | Tur 86 metni |
 | **Tur 86 (yeniden kurma, 3D; E2):** 880 → 797. D2 (A′ evi), D3, D4, D7 (3B evi), D8; **S-8** D5 "a mass one" → "a cost in kilograms" (Adım 9 ve 11 de), D6 "charges that refusal" → "sets". **E2 yazarın kararı:** "zero-bill condition" adı düştü → "The condition has to be read exactly."; "the first most nearly contradicts the name" gönderge kaybetti → silindi ("Six of them:"; bilgi ilk maddede). Dört okuyucu + Claude. Özgün 3D Ek S3'te donmuş | Tur 85 metni |
