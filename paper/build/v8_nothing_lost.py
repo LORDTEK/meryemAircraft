@@ -39,7 +39,7 @@ DEGISTI = {
     "The comparison is between unlike ratings: a peak demand held through the vertical phases, a bench average over minutes, a continuous rating, and a design assumption.":
         "The comparison is between unlike ratings: a peak demand held through the vertical phases, a bench average over minutes, a continuous rating, a design assumption, and a literature figure the study cites without its rating.",
 }
-ONCE = {2: ("d2ca894", "68c1c39"), 9: "eb22a83", 14: "9f4cfcb", 3: ("46b9628", "68c1c39"), 4: ("8c4d712", "c22b1c7"), 10: "024005c", 11: "65ae7de", 12: "c9fcdd7", 13: "c9fcdd7", 1: "e4b6847", 5: "fc646cb", 6: "38d5324", 7: "555b73b", 8: "0b4b24f"}   # kisaltmadan onceki commit
+ONCE = {2: ("d2ca894", "68c1c39"), 9: ("eb22a83", "0345c45"), 14: "9f4cfcb", 3: ("46b9628", "68c1c39"), 4: ("8c4d712", "c22b1c7"), 10: "024005c", 11: "65ae7de", 12: "c9fcdd7", 13: "c9fcdd7", 1: "e4b6847", 5: "fc646cb", 6: "38d5324", 7: "555b73b", 8: "0b4b24f"}   # kisaltmadan onceki commit
 
 
 def govde(s):

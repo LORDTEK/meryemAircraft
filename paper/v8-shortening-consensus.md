@@ -474,3 +474,8 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Adım 9 madde 4 "readers who convert…" (D2) | sil (ton) | sil | taşınabilir (vurgu) | **kalsın — etkin yasak** | taşı | **Ayrışık — Qwen'in gerekçesi öbürlerine** |
 | Adım 9 yeni adaylar N1–N4 (Claude) | — | — | — | — | öneren | Oylamada |
 | Savunulan cümle hem Adım 9'da hem Adım 15'te | Adım 9 çekirdek | Adım 15 sentez | Adım 9 çekirdek | Adım 15 kapanış | Adım 15 kurulurken karar | Açık |
+| **Tur 115 cevapları:** S-43 teyit (kapandı); madde 2 **yazar kararı: "absurd" çıkar**; N1, N2, N3 (dördü + Claude); taban kaydı; olumsuzluk–bağımlılık haritası | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı (Tur 116): Adım 9 1 166 → 1 086** |
+| D1 (açılış yerleşim cümlesi) | taşı | taşı | **ara yol:** "It is placed before the configuration's own numbers." kalsın, ikinci yarı gitsin | taşı | ara yola geçiyorum | **Yakınsamaya** |
+| D2 (madde 4'ün okuyucu yan cümlesi) | taşı (işlevleri farklı) | taşı | **kalsın** (Qwen'in eski gerekçesiyle) | **taşı** (görüş değiştirdi) | taşı | **Ayrışık — DeepSeek'e Qwen'in yeni gerekçesi** |
+| N4 ("That is not a caveat attached for safety…") | ses; taşınabilir | tabloda KALSIN, metinde TAŞI (çelişik) | kalsın | kalsın (ses) | taşı | **Ayrışık — ses sorusu, yazara** |
+| Yeni: S-44 ("by construction" üç anlamda); ChatGPT (yazar sesi ≠ korunan yüklem); Qwen R115-P2 (ses işareti), P1 (Adım 15 tüketim denetimi); Grok P98 (T1 ve madde 6'ya dokunan kesim durdurur) | — | — | — | — | — | Oylamada |

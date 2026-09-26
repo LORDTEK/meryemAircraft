@@ -500,6 +500,10 @@ dahil herkesin hemfikir olduğu kısaltmalar uygulansın."*
   alıntının karşılaştırdığı nesneler sınamanınkiler değilse cümle bunu söyler (S-43; seçici alıntıdan ayrı sınıf: doğru cümle,
   yanlış karşılaştırma). **P94 (Grok):** Adım 1'in rota paragrafları üçüncü tasarım, görev sayısı ya da üç neden almaz. **T1'in
   evi Adım 9; Adım 15 onu tüketir, yeniden kurmaz.** Bölümler arası P71: Adım 9 madde 6 ↔ Adım 4 M1 (Ek S4).
+- **Yazarın açıklaması (Tur 116) — konuşma metne girmez.** Adım 9'un *"would be absurd"*u, yazarın bana anlatırken kullandığı
+  *"Saçmadır"*dı ve ben onu olduğu gibi metne koymuştum. Yazar: *"Ben orada aslında sana anlatıyordum. Elbette çıksın."* → Yazarın
+  bana yazdığı açıklama, çalışma kurallarındaki ifadeler dahil, **makalenin sesi değildir**; metne ancak yazar öyle isterse girer.
+  Tur 115'te bunu okuyuculara "yazarın sesi" diye sundum; yanlıştı.
 
 ## 3. Doğrulama
 

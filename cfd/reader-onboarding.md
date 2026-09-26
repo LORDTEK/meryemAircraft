@@ -214,7 +214,7 @@ The body is about **26 000 words**, and the journal's working target is **about 
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 115.**
+**Round 116.**
 
 | Block | State |
 |---|---|
@@ -222,7 +222,7 @@ The body is about **26 000 words**, and the journal's working target is **about 
 | Calculation steps 10–14 | **all recomposed and confirmed** (5 150 words against a plan of 2 000); originals in Supplements S10–S14 in full |
 | Framework, Steps 2 and 3 | **recomposed** (2 189 → 1 775; 1 654 → 1 305), originals in S2 and S3 in full; the five framework definitions are protected |
 | Framework, Step 4 | **recomposed** (1 351 → 1 268); the NASA sizing study's single home (Sections 1 and 2 point forward to it) |
-| Now | **Step 9's first draft** (1 166 → 1 012 if every candidate moves), quoted in full in the round file; then 1 → 5–6 → 7–8 → 15 |
+| Now | **Step 9** partly applied (1 166 → 1 086); three candidates divided; S-44 ("by construction"); then 1 → 5–6 → 7–8 → 15 |
 
 **The body is about 20 000 words of prose** (tables not counted). Recomposition into result sentences took Steps 10–11 to about
 40 % of their length, Steps 12–14 to 57–83 %, and the framework to about 80 %, because its definitions and protected sentences set
