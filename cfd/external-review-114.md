@@ -2,7 +2,7 @@
 
 > **This is a task. Please answer it now, and begin with your name alone on the first line.**
 >
-> `LORDTEK/meryemAircraft`, branch `claude/ecstatic-cori-6w30at`, commit **`COMMIT`**.
+> `LORDTEK/meryemAircraft`, branch `claude/ecstatic-cori-6w30at`, commit **`4995059`**.
 >
 > The two drafts are in `paper/v8/drafts/02-recomposed.md` and `03-recomposed.md`, and in full in Appendices A and B below,
 > for those of you who cannot open the files. Nothing in them has entered the step files yet. As always, answer one another as
