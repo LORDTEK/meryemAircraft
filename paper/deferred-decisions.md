@@ -169,3 +169,15 @@ olduğunu düşünüyorum."* → Claude'un ayrıntılı önerisi Tur 100 metnind
 metin bütçesi 8 450 (bölüm bölüm); sonuç cümlesi biçimi (yöntem adı + değişen + sonuç + sınır + ek işaretçisi); gövde-yalnız
 yorumlanabilirlik kuralı (ChatGPT); ek ikiye (dergi eki / depo denetim arşivi); iş sırası nesneler → hesap → çerçeve → mimari;
 yeni denetim: gövdedeki her sonuç sayısı ekteki çalışmada aynı değerle bulunmalı. **Yazar okuyucu cevaplarından sonra karar verecek.**
+**Tur 101 — dört cevap (yazar okumadan yapıştırdı).** Hemfikir: 12 000 toplam; ek ikiye; sayı eşleşme denetimi; iş sırası (önce Adım 10'un
+dışa giden sayı haritası); kapanışlar + L/De tek tablo; sözleşmeler o tabloya katılmaz. Ayrışık: sözleşmeler tablo mu cümle mi;
+T1 tablo mu düzyazı mı; 3 mü 4 mü şekil; hesap bütçesi (çoğunluk 1 500–1 700, benim 1 250'm dar bulundu — kabul ettim); Adım 8
+tabanı; sonuç cümlesinin katılığı. **Claude'un uzlaştırılmış bütçesi:** 5 tablo (T1 450, T2 200, T3 450, T4 450, T5 200 = 1 750)
++ 4 şekil (1 300) = 3 050; düzyazı 8 500 (1: 850, 2: 750, 3: 650, 4: 350, 5: 600, 6: 850, 7: 900, 8: 900, 9: 400, 10–13: 1 550,
+14: 450, 15: 250) + özet/terimler 400 → **11 950**. Pay gerekirse F4 eke (Grok) ya da T5 cümleye (Grok) → 11 750. **Olgu
+düzeltmeleri:** gövdede Adım 3 ve Adım 4 tablosu yok (ChatGPT'nin "Merge A"sı ve Qwen'in "Adım 4 tablosunu eke" önerisi
+zaten olmuş); Qwen'in şablon örneği VLM açıklık verimine on derece sınırını bağlıyor, oysa Adım 6F o sınırın seyir sayılarına
+değmediğini söylüyor (katı şablonun boş "sınır" yuvasını yanlış doldurma riski); ChatGPT'nin son tablosu Adım 14'ü dışarıda
+bırakıyor ve üst ucu 12 000'i aşıyor; ChatGPT'nin "kapanış + üç fatura" sütununda Fatura 1 bir girdi (%3,6 sabit) — sonuç
+sütunu gibi okunur, korunan "The buffer fraction is an input to the loop, not a result of it" ile gerilimli. **Yazarın kararı
+bekleniyor.**

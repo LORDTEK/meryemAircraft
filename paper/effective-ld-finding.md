@@ -1739,3 +1739,9 @@ Yazarın yönlendirmesi (hesap çalışması eke, gövdede sonuç + ek işaretç
 önerileri yan yana, benim ayrıntılı önerimle Tur 100 metnine girdi. **Kendi hatam (yazmadan önce yakaladım):** nesne
 bütçesini 3 550 yazmışım; doğrusu 3 100 (1 800 + 1 300). Qwen'in iki önerisi yerleşik kararlarla çelişiyor (Adım 1'in "zaten
 dolu" listesi Tur 46 kuralı; dokunulmayan küme 14 249 kelime) — okuyuculara açıkça soruldu.
+
+# Tur 101 — Tur 100 metnine dört cevap (yazar okumadan yapıştırdı)
+
+§2 teyit edildi, kapandı. 12 000 toplam hedefte dördü hemfikir; ChatGPT eski "10–10,5k metin" önerisini düzeltti. Benim 1 250
+kelimelik hesap bütçem dar bulundu (729 korunan kelime → dört adıma 521 kelime) — Grok ve ChatGPT haklı, kabul ettim.
+Uzlaştırılmış bütçe ve ayrışan altı nokta yazara (E6). Tur metni yazarın kararından sonra.

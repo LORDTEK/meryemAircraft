@@ -370,3 +370,18 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Hedef ve yol (E6) | 10–12k gövde; iki paket | ~10–10,5k gövde, 12k tavan | 7 500 gövde (şekil/tablo ayrı) | 10k gövde; önce mimari dışı | 7 500 kayıtlı hedef şekil/tabloyla 12k'dan türetildi | **Yazara** |
 | Tur 99'da uygulananların teyidi; S-30 yeni hâli; 169; iki kural; sözcük dizini | — | — | — | — | — | Teyide (Tur 100) |
 | Hedef: 12 000 (metin + tablo + şekil), yazarın yolu; Claude'un bütçe planı | — | — | — | — | öneren | Okuyuculara; **karar yazarın** |
+| Tur 100 §2 (S-30 yeni hâli, 169, iki kural, sözcük dizini, Adım 7 notu) | ✓ | ✓ | ✓ | ✓ | ✓ | **Teyit edildi — kapandı** (Tur 101) |
+| Hedef: 12 000 toplam (metin + tablo + şekil) | ✓ | ✓ | ✓ | ✓ | ✓ | **Hemfikir** — yazarın kararı |
+| Ek ikiye (dergi eki / depo arşivi) | ✓ | ✓ | ✓ | ✓ | ✓ | Hemfikir |
+| Sayı eşleşme denetimi (değer + birim + nesne; insan okur) | ✓ | ✓ (köken) | ✓ | ✓ | ✓ | Hemfikir |
+| İş sırası: nesneler → Adım 10'un dışa giden sayıları haritalanır → hesap → çerçeve → mimari (dondurulmuş) | ✓ | ✓ | ✓ | ✓ | ✓ | Hemfikir |
+| Kapanışlar + L/De zarfı tek tabloda (T4) | ✓ | ✓ | ✓ (bölmeli) | ✓ | ✓ | Hemfikir |
+| Sözleşme sonuçları T4'e katılmaz | ✓ | ✓ | bölmeli olursa katılır | ✓ | ✓ (vazgeçtim) | Hemfikir: ayrı |
+| Sözleşmeler ayrı küçük tablo mu, cümle mi | cümle + ek | tablo | tablo/bölme | tablo | tablo (200) | **Ayrışık** |
+| T1 dört eksen tablo mu | tablo | tablo | düzyazı | tablo | tablo | **Ayrışık** |
+| Şekil sayısı | 3 (F4 eke) | 4 | 4 | 4 | 4 | **Ayrışık** |
+| Hesap bütçesi (10–13) | 1 250 dar → 1 500 | 1 500–1 700 | 1 700 (T1 düzyazıyla) | 1 250 | 1 550 (değiştirdim) | **Çoğunluk ~1 500–1 700** |
+| Adım 8 | ≥ 1 000 | 850–950 | 800 | 800 | 900 (değiştirdim) | Ayrışık |
+| Sonuç cümlesi | 4 parça | esnek (asgari yöntem kimliği) | 4 parça + betik | katı şablon | esnek + yöntem adı zorunlu | **Ayrışık** (yöntem adı zorunlu: hemfikir) |
+| Gövde-yalnız yorumlanabilirlik kuralı | ✓ | ✓ | (açık oy yok) | ✓ | ✓ | DeepSeek'in açık oyu bekleniyor |
+| Yeni: Adım 7 notunu koru (DeepSeek); ChatGPT'nin yönetici cümlesi; kapanış + üç fatura sütunu (ChatGPT) | — | — | — | — | — | Oylamaya |
