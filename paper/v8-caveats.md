@@ -120,7 +120,7 @@ boşluğa duyarsız. `G` = Grok, `D` = DeepSeek, `C` = ChatGPT, `Q` = Qwen, `K` 
 | 9 | It is not a list of the study's open questions. | G |
 | 13 | The mechanism claim is not a ranking and is not at stake here | G |
 | 10 | This section prices the arrangement of Sections 7 and 8 on a declared package; it does not bear on the count of mechanism classes, which rests on the inventory of those sections alone. | G |
-| 6 | The compared vehicles are 1 670 to 3 275 kg | D |
+| 6 | The compared vehicles are 1 660 to 3 275 kg | D |
 | 6 | Reynolds number favours the larger aircraft | D |
 | 6 | The quadrotor is a good quadrotor. | D |
 | 6 | Nothing here is compared against a poor example. | D |
@@ -189,3 +189,4 @@ kaybolmasına (CLAUDE.md §0.8). Aynı denetimle sınanır.
 | 5 | What that refusal costs in authority and in response time is not computed | G+C+D+Q+K |
 | 5 | A tail-sitting aircraft on the ground is more prone than a conventional one to tip over, in crosswind and on uneven ground. | G+C+D+Q+K |
 | 6 | The same sizing set gives its two helicopter types at 5.4 to 7.2, and against them the result is mixed | D+G+C+Q+K |
+| 14 | this aircraft's vertical phases occupy about a minute in all (Section 2), and how long each draws the peak is not computed here | C+G+D+Q+K |

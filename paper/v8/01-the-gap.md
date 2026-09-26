@@ -164,8 +164,7 @@ that costs, and what the rest of the combination costs, is what the paper is for
 
 **None of the elements is new**, and Section 7 says so. Tail-sitting aircraft are seventy years
 old and uncrewed ones are ordinary; blended wing bodies have been a standing subject of transport
-research for three decades; series-hybrid propulsion has established precedent in small uncrewed
-aircraft. The route is not claimed to have been waiting to be found. **The contribution is the
+research for three decades; series-hybrid propulsion has been flown in a crewed motor glider and designed for small uncrewed aircraft. The route is not claimed to have been waiting to be found. **The contribution is the
 architecture: a configuration arranged to change regime by rotating the airframe rather than its
 propulsors, and so carrying no mechanism that reorients a propulsor.** The combination, the
 consequences of the choices inside it, and an accounting of what they cost are how that contribution
@@ -180,6 +179,7 @@ presume an escape.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 98 (dört okuyucu + Claude):** S-29 — 1G "series-hybrid propulsion has been flown in a crewed motor glider and designed for small uncrewed aircraft" (Schoemann 2014 s. 25–26; Merical ve ark. 2014 özeti). Özgün Ek S1'de | `references/Schoemann-2014_…pdf` |
 | **Tur 97 (dört okuyucu + Claude):** 1B başlığı "The problem has been attacked for seventy years" (çaba ihtiyacın kanıtı değil) | Tur 96 metni §5 |
 | **Tur 96 (dört okuyucu + Claude):** "No field sustains that level of effort against a need that is not real." çıktı (evrensel çıkarım; ihtiyacı 1A söylüyor); "and several are in service" çıktı (insansız hibrit için hizmette kaynağı yok; V-22 insanlı tanık — reddedildi). Özgün 1C paragrafı Ek S1'de | Tur 95 metni §4 |
 | **Tur 95 (dört okuyucu + Claude):** 1B sırası — "Tail-sitting prototypes and the first tilt-rotor flew in the 1950s, vectored-thrust and tilt-wing aircraft in the 1960s, and a broad family…" (S-23'ün uygulanmış hâli sırayı bozuyor ve süreklilik ima ediyordu). **1D gerekçesi düzeltildi:** "Precise hovering…" cümlesi yanlış maddeyi saydığı için değil (kaynakta var: XFY-1 "Difficult to hover precisely over a spot"), yineleme olduğu ve daha uygun evi Adım 5E olduğu için çıktı; 1D'ye geri konmadı (dört okuyucu + Claude). **Açık:** "No field sustains…" ve "several are in service" | NASA 19810010574 XFY-1 satırı; 19840014464 "In retrospect" paragrafı |

@@ -352,3 +352,11 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | **Yazar kararı E5 (b):** helikopterler de rakip; S-27 "result is mixed" biçimiyle uygulandı, korunan (166) | — | — | — | — | uyguladı | Okuyucu teyidine |
 | Eksen yayılımı P-a … P-j (6A, 6B, 6C, 6E ölçek 1 660 kg, Adım 9 tablo ve madde 2, Adım 10, Adım 15) | — | — | — | — | öneren | Oylamada |
 | S-29: 1G "has been designed for small uncrewed aircraft" + Merical 2014 | — | — | — | — | öneren | Oylamada |
+| Tur 97'de uygulananlar (R-5, R-6, S-28, 1B başlığı, 7A, tablo bütünlüğü) | ✓ | ✓ | ✓ | ✓ | ✓ | **Teyit edildi** (Tur 98) |
+| S-27 "mixed" (166) | ✓ (tercih: "one of them on the 6.00 corner") | ✓ | ✓ | ✓ | ✓ | **Teyit edildi**; Grok'un inceltmesi oylamada |
+| P-a–P-h; S-29 1G; 7G "This dual role"; R-6 bütün korunan (167); P56 varyantı (1, 7, 8) | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı** (Tur 98); teyide |
+| 7L | tut (geri çekti) | tut | tut | tut (değiştirdi) | tut | **Kapandı — kalıyor** (iz: köprü) |
+| P-i ("So the second claim is narrower" helikoptere değinsin mi) | ekle | değiştirme | değiştirme | ekle | ? | **Ayrışık** |
+| Seri/paralel açıklama cümlesi (yer ve sözcük) | 7D ya da 8 | ilk geçtiği yer | 1G ya da 7 | 7 ya da 8 | öneren | Oylamada |
+| Sözcük kilidi (ChatGPT); eksen taraması (Grok P64, DeepSeek); Qwen P1 helikopter iz satırı | — | öneren | öneren | öneren | ✓ | Oylamada / kayıt |
+| Adım 8 envanteri; S-30–S-33; 8E iki aday | — | — | — | — | öneren | Teyide / oylamada |

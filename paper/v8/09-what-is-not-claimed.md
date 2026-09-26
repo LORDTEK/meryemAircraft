@@ -28,7 +28,7 @@ alternative, and this paper's alternatives differ from axis to axis.
 
 | Axis | Opponent | Status |
 |---|---|---|
-| Cruise efficiency | Multirotors | **Claimed, and bounded.** Cruise lift is carried on a surface rather than on rotors, which no sizing contract changes. The *size* of the resulting advantage is a calculation, not a consequence of that fact, and Section 6 measures it against two published quadrotors in one common definition. |
+| Cruise efficiency | Rotorcraft: multirotors and helicopters | **Claimed against multirotors, and bounded; against helicopters the published comparison is mixed and no advantage is claimed.** Cruise lift is carried on a surface rather than on rotors, which no sizing contract changes. The *size* of the resulting advantage is a calculation, not a consequence of that fact, and Section 6 measures it against two published quadrotors in one common definition. |
 | Operation without a runway | Fixed-wing aircraft | **Claimed**, in the sense stated below. |
 | The mechanism required to change regime | Tilting architectures | **Claimed.** This is the paper's contribution. |
 | Cruise efficiency and range | Other hybrids — lift-plus-cruise, tilt | **Not claimed, in either direction.** |
@@ -74,7 +74,7 @@ quantifying it would require a control-allocation study rather than a single tor
 claimed vertical capability pays none of the charges of Section 2, and nothing here competes
 with it on distance.
 
-**2. It does not claim vertical capability against multirotors.** That comparison runs the other
+**2. It does not claim vertical capability against rotorcraft.** That comparison runs the other
 way and would be absurd.
 
 **3. It does not claim that the aircraft has no moving parts.** What is eliminated is a *class
@@ -135,6 +135,7 @@ what it demands of anyone who uses the framework afterwards.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 98 (dört okuyucu + Claude; E5):** tablo satırı "Rotorcraft: multirotors and helicopters | Claimed against multirotors, and bounded; against helicopters the published comparison is mixed and no advantage is claimed."; 2. madde "against rotorcraft". Özgün Ek S9'da | Adım 6D S-27 |
 | **Tur 93 (yeniden kurma, 9E):** 2. madde — "The multirotor family is the opponent on cruise efficiency only." çıktı (9B tablosunu ve 1. maddenin kaldırılan eksen cümlesiyle aynı türden yinelemeyi taşıyordu; dört okuyucu + Claude). Özgün Ek S9'da | Tur 92 metni §2 |
 | **Tur 92 (yeniden kurma, 9E):** 4. madde — "What is offered is a count of mechanism classes…" çıktı, "A count is not a reliability argument" → "The count of mechanism classes in Section 7 is not a reliability argument" (R-1 onarımı; dört okuyucu + Claude). Özgün Ek S9'da | Tur 91 metni §2 |
 | **Tur 91 (yeniden kurma, 9E):** 1. madde — "The vertical axis is where the fixed-wing family is the opponent; the range axis is not." çıktı (9B tablosunu yineliyordu; dört okuyucu + Claude). 4. maddenin silinmesi uygulanmadı: silinince "A count is not a reliability argument" hemen önceki "Part count"a bağlanıyor (köken R, uygulamadan yakalandı) → R önerisi oylamada. Özgün paragraf Ek S9'da | Tur 90 metni §4 |

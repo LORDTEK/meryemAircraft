@@ -23,10 +23,10 @@ Ve **Adım 6 hâlâ *"It is this aircraft's own refusal of the variable-pitch hu
 The paper makes its claims on four axes, against four opponents (Section 9), and on each it stops where
 its evidence stops.
 
-**Cruise efficiency, against multirotors — claimed, and bounded.** Cruise lift is carried on a surface
+**Cruise efficiency, against rotorcraft — claimed against multirotors, and bounded; mixed against helicopters.** Cruise lift is carried on a surface
 rather than on rotors. The size of the advantage is a calculation, not a consequence of that statement:
 positive throughout against one published quadrotor, and from slightly behind to comfortably ahead against
-the other (Section 6). Nothing is claimed against multirotors on vertical capability.
+the other (Section 6). Nothing is claimed against rotorcraft on vertical capability.
 
 **Operation without a runway, against fixed-wing aircraft — claimed as sized, not demonstrated.** The
 vertical phase was sized with an energy store whose required performance the sources consulted here do not
@@ -55,6 +55,7 @@ that reorients a propulsor, and an account of what the combination costs.**
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 98 (dört okuyucu + Claude; E5):** "Cruise efficiency, against rotorcraft — claimed against multirotors, and bounded; mixed against helicopters."; "Nothing is claimed against rotorcraft on vertical capability." | Adım 6D, 9 |
 | **Tur 61 — kısa kapanış** (dört okuyucu + Claude hemfikir, A3): 1 023 → ~330 kelime. Kalan her yüklem aşağıdaki satırlarda kaynağıyla; çıkarılanlar kendi evlerinde: çerçeve özeti Adım 2–3, kısmi gerçekleşme Adım 3/7/8, *"by construction"* Adım 9, bağımsız üretilmiş rakamlar Adım 6 | `paper/v8-shortening-consensus.md` A3, A4 |
 | **Tur 60:** *"rather than cruise thrust"* | Grok |
 | **Tur 59:** *"The configuration is arranged to change regime by rotating the airframe"* — Grok Adım 14'ü yakaladı; aynı fiil burada da vardı | Adım 1 (P1) |

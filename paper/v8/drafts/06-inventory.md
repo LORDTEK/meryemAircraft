@@ -78,3 +78,10 @@ Inventory and direction column confirmed (four + Claude). Applied: 6A, 6B, 6G re
 pointing at a label — R-5); S-28 (divided). Grok P60: 6C's *"Lift is carried on a surface or it is carried on rotors"* stays
 a description of this paper's split, not a claim that rotor-borne cruise cannot reach 7.2; S-27 is the lock (Qwen P1 asks the
 same trace link). Qwen P2: all nine Table 3 values are in `paper/v8-evidence.md`.
+
+## Round 98
+
+Axis widened to rotorcraft (author, E5): P-a–P-d applied (four + Claude). **Qwen P1:** the trace carries a helicopter row —
+result mixed, no advantage claimed — so no draft can revert to "multirotor only". Specific references (the two quadrotors, the
+Bacchini & Cestino quotation) keep their names (ChatGPT's vocabulary lock, to vote). Open: P-i; Grok's refinement of S-27 (*"lie
+in the envelope, one of them on the 6.00 corner"*).

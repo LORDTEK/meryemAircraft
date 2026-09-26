@@ -30,15 +30,15 @@ kayıt: `paper/effective-ld-finding.md`. **Sayfa düzeltilmiş sayıyla yazıld�
 
 ### The opponent, and the axis
 
-On this axis the alternative is the multirotor, and as in the previous section the comparison
+On this axis the alternative is the rotorcraft, multirotor and helicopter alike, and as in the previous section the comparison
 runs one way only. **Nothing here is claimed against fixed-wing aircraft.** The claim is
-confined to the one thing the multirotor family structurally lacks: **a surface that carries the
+confined to the one thing the rotorcraft family structurally lacks: **a surface that carries the
 cruise lift.**
 
 ### What the requirement is
 
 Section 5 established the first half: the aircraft must leave from and return to a site that
-supplies nothing. **A multirotor meets that requirement completely.**
+supplies nothing. **A rotorcraft meets that requirement completely.**
 
 What it does not meet is the second half of both missions. Wildfire observation and response,
 and cargo delivery to places without a runway, each require the aircraft to **cover distance
@@ -56,7 +56,7 @@ the cruise condition the lift coefficient follows from `C_L = W/(qS)`, the drag 
 balances that drag. It supports none of the weight.
 
 That is the whole of the difference, and it is worth stating in those plain terms because the
-consequence is structural. **A multirotor's discs must produce the lift and the propulsive force
+consequence is structural. **A rotorcraft's rotors must produce the lift and the propulsive force
 together, throughout cruise.** This aircraft separates them: a surface holds the aircraft up and a
 propeller pushes it along, and **the wing produces its lift without a separate continuous power
 supply of its own** — the power the aircraft spends in cruise goes to overcoming drag, of which
@@ -164,7 +164,7 @@ declines to attribute all of it to the hub.
 They are given together because omitting any one of them would make the comparison look better
 than it is.
 
-**Scale.** The compared vehicles are 1 670 to 3 275 kg; the designs here are of order 50 kg and
+**Scale.** The compared vehicles are 1 660 to 3 275 kg; the designs here are of order 50 kg and
 1 000 kg — Section 10 closes the light one between 52.3 and 57.5 kg across the same bracket.
 Reynolds number favours the larger aircraft, so the smaller design is at a disadvantage in this
 comparison rather than an advantage.
@@ -236,6 +236,7 @@ the combination is what this paper is for.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 98 (dört okuyucu + Claude; yazar kararı E5):** eksen yayılımı P-a–P-d — "the alternative is the rotorcraft, multirotor and helicopter alike", "the rotorcraft family", "A rotorcraft meets…", "A rotorcraft's rotors…", korunan ölçek cümlesi "1 660 to 3 275 kg" (SbS TS 3 665 lb = 1 662 kg). Kaynak alıntıları ("multirotors are efficient in hover") ve belirli referanslar (quadrotor) değişmedi. Özgün paragraflar Ek S6'da | J&S Tablo 3 |
 | **Tur 97 — yazar kararı (b):** helikopterler de rakip. S-27 6D'ye: "The same sizing set gives its two helicopter types at 5.4 to 7.2, and against them the result is mixed: …" (turboşaft tek rotorluya karşı her köşede önde; ortadaki ikisi zarfın içinde; elektrikli yan yana rotorluya karşı yalnız en üst köşe); nitelemeler bunlara da uygulanıyor. Korunan (166). Eksen yayılımı (6A, 6B, 6C, 6E ölçek, Adım 9, 10, 15) okuyuculara | J&S Tablo 3 PDF s. 70; DGW: 3 951 / 5 980 / 3 665 / 5 547 lb |
 | **Tur 97 (dört okuyucu + Claude):** R-5 — 6D zayıf silme "The four corners are not demonstrated aircraft states" onarımıyla uygulandı; S-28 — "Its disc loading is 3.5 lb ft⁻², and the all-electric one's is 3; both are unusually low" ("unusually efficient" çıktı; "good quadrotor" bizim ifademiz, J&S'de yok). **S-27 (R-4) yazar kararı bekliyor** (helikopter ekseni). Özgün paragraflar Ek S6'da | J&S Tablo 3 |
 | **Tur 96 (yeniden kurma; dört okuyucu + Claude):** envanter ve yön sütunu teyit edildi. 6A yinelemesi ("A runway-launched aeroplane…"), 6B yinelemesi ("It is not a deficient machine…"), 6G'deki ikinci 7,47–9,20 çıktı; S-26 başlığı onarıldı. **Uygulanmadı:** S-27 (R-4 gönderge), 6D zayıf silme (R-5 "They"), S-28 (ayrışık). Özgün paragraflar Ek S6'da | J&S Tablo 3, PDF s. 70 |

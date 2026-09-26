@@ -68,7 +68,7 @@ with the blade family in every closure reported here.
 
 **The reference point is the aerodynamic lift-to-drag ratio, not the effective one.** The
 effective ratio of Section 6 already contains the propeller efficiency; it is the currency in
-which the multirotor comparison is made, and it is not an input to a loop whose own chain supplies
+which the rotorcraft comparison is made, and it is not an input to a loop whose own chain supplies
 that efficiency separately.
 
 **The sizing rules that keep that ratio valid as the mass moves are worth stating, because they
@@ -220,8 +220,7 @@ should be read as a claim that the aircraft is buildable; the claim is narrower 
 the section's title makes — the loop closes analytically, on assumptions that are stated and
 that Section 14 tests.
 
-**And these range figures are carried forward as the closed-loop values, not as a ranking.** No
-multirotor is sized in this work, so no range comparison is made against one — Section 6 compares
+**And these range figures are carried forward as the closed-loop values, not as a ranking.** No multirotor or helicopter is sized in this work, so no range comparison is made against either — Section 6 compares
 the two families in cruise efficiency and says why it stops there. The comparison against the
 other hybrid architectures depends on the sizing contract and belongs to Section 13, which is
 where it is made.
@@ -232,6 +231,7 @@ where it is made.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 98 (dört okuyucu + Claude; E5):** "the rotorcraft comparison"; "No multirotor or helicopter is sized in this work, so no range comparison is made against either". Özgün Ek S10'da | Adım 6 |
 | **Tur 88 (dört okuyucu + Claude):** "cannot charge for the trajectory" → "cannot account for" — fatura sözcüğü genel fiil (A′; Qwen P2 taraması) | Tur 87 metni §2 |
 | **Tur 73:** birinci geçişten 10.2 (alan sabit tutulsaydı karşı-olgusu) ve 10.4 (nokta kütle modelinde optimize edilecek süre yok paragrafı) uygulandı — dört okuyucu + Claude. **10.1, 10.3, 10.5 vetolandı** (ChatGPT; 10.3'e Grok da) → kaynak kaldı. Hüküm cümlesi korunan listeye | Tur 72 metni §4 |
 | **Tur 61:** yayılım tablosu tek cümleye indi (dört okuyucu + Claude hemfikir, A6); dört sayı aynen | `aero/closure-result.txt` YAYILIMLAR |

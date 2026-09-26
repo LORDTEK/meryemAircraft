@@ -88,9 +88,7 @@ single coaxial contra-rotating pair at the nose, and four small coaxial pairs at
 ends of the tip frames, whose moment arms give pitch and yaw directly. The tip pairs are
 sized from the moment requirement rather than from weight support, but the thrust that sizing
 gives them also supplies the aircraft's entire take-off margin, because the nose pair is sized
-at thrust equal to weight and no more. That is the one place the configuration asks a component
-to do a second job it was not sized for; it is a dependency, it is reported as one where the
-sizing is audited, and it does not make the tip pairs a dedicated lift system.
+at thrust equal to weight and no more. This dual role is a dependency, reported as one where the sizing is audited, and it does not make the tip pairs a dedicated lift system.
 
 **The claim is narrower than it may appear, and the boundary matters.**
 
@@ -135,6 +133,7 @@ exposed in cruise, and Section 11 charges them.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 98 (dört okuyucu + Claude):** 7G — Adım 5D'nin birebir cümlesi çıktı; "This dual role is a dependency, reported as one where the sizing is audited, and it does not make the tip pairs a dedicated lift system." (Qwen'in göndergesi). 7L kalıyor (dört okuyucu + Claude; iz: köprü/kapanış, yineleme değil). Özgün Ek S7'de | Tur 97 metni §5 |
 | **Tur 97 (yeniden kurma; dört okuyucu + Claude):** envanter teyit edildi; 7A ortadaki üç cümle çıktı (Adım 1G'nin yinelemesi; ev 1G). **Uygulanmadı:** 7G (onarım biçimi ayrışık: "It" / "That" / "This dual role"); 7L (Grok ve Qwen çıkar, ChatGPT ve DeepSeek tut — köprü/kapanış). Özgün paragraflar Ek S7'de | Tur 96 metni §7 |
 | **Tur 67 — V2, Grok'un ifadesi** (dört okuyucu + Claude): *"pays in efficiency in at least one of them"* — bedelin birimini adlandırıyor, sayı eklemiyor; Adım 3'ün *"the compromise is paid in efficiency"* cümlesiyle aynı güçte (Qwen) | Adım 3 |
 | **Tur 66 — B4 (3.2) ve ses geçişi V1, V2, V6** (dört okuyucu + Claude): tepki torku tek cümle (*"could"* + *"by design"* = tasarım kısıtı, fiziksel imkânsızlık değil); şerit dışlaması kural olarak; *"pays for it"*; *"carries costs"*. **V3 ve V5 kaldı** (herkes korudu), **V4 kaldı** (Grok: olumlu hâli koşulun karşılandığını ima ediyordu — uç çiftleri karşılamıyor) | Adım 8; ChatGPT'nin A–D kuralı |

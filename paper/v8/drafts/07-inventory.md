@@ -42,3 +42,8 @@ Section 1 (none is new; occupied ground), Section 2 (duty cycle), Section 3 (the
   in the body or in `references/`. Step 1G says the same without a source and pointed to Step 7; Step 7 points back to
   Section 1. The claim concedes rather than asserts, but it is a claim about the literature. Proposal: ask the readers for a
   downloadable source (CLAUDE.md §2.1); if none is found, soften to what Section 1 can show, or remove.
+
+## Round 98
+
+7A applied; 7G applied with *"This dual role"*; 7L stays, marked **bridge/closure, not restatement** (DeepSeek); the move (7E)
+and the count (7F) carry a soul flag in the trace (Qwen P2).

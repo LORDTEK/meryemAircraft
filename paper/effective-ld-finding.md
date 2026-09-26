@@ -1704,3 +1704,13 @@ değiştirecek.
 özetini yapıştırdı: tasarım ve benzetim, donanım gösterimi gelecekte → 1G "established precedent" yumuşatılmalı. **Denetim
 kusuru:** `v8_caveats.py` öneren sütunu biçimsiz satırı (parantezli) sessizce atlıyordu — 166. satır görünmedi; artık
 biçimsiz satırda duruyor.
+
+# Tur 98 — Tur 97 metnine dört cevap; yazar: "Bir okuyucunun itirazına diğer okuyucular yorum yapabilirler."
+
+**Teyit:** Tur 97'de uygulananların hepsi; S-27 "mixed" dördünce doğru bulundu. **Kendi hatam:** tur metninin tablosunda
+tek rotorlu elektrikli helikopter (6,0) için "6,00'da geride" yazdım — eşitlik (Grok). S-27 cümlesi bunu söylemiyor.
+**Oybirliğiyle uygulandı:** eksen yayılımı P-a–P-h (Adım 6, 9, 10, 15), S-29 (1G), 7G "This dual role", R-6 cümlesi bütün
+olarak korunan (167), P56 varyantı (Adım 1, 7, 8'e izinli). 7L kalıyor (Grok ve Qwen değiştirdi). `v8_nothing_lost.py`
+dondurulmamış yedi cümleyi yakaladı → Ek S1, S6, S7, S9, S10. **Ayrışık:** P-i; seri/paralel cümlesinin yeri ve sözcüğü.
+**Adım 8 envanteri:** S-30 (açısal momentum "precesses nothing" niteleyicisiz), S-31 (XB-35 kaynaksız), S-32 (gövdede önceki
+sürüm anlatısı), **S-33** (durdurulmuş uç rotorlar bir durdurma aracı gerektirebilir — Adım 7 tablosunun "yok" dediği sınıf).

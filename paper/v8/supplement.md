@@ -97,6 +97,17 @@ Hybrid VTOL aircraft occupy that corner today, and several are in service. **Thi
 not dispute that they work.** What matters for the argument is *how* each changes between the
 two regimes, because that is where the families differ from one another.
 
+### One more paragraph of Section 1 as it stood before the axis and source repairs (frozen snapshot)
+
+**None of the elements is new**, and Section 7 says so. Tail-sitting aircraft are seventy years
+old and uncrewed ones are ordinary; blended wing bodies have been a standing subject of transport
+research for three decades; series-hybrid propulsion has established precedent in small uncrewed
+aircraft. The route is not claimed to have been waiting to be found. **The contribution is the
+architecture: a configuration arranged to change regime by rotating the airframe rather than its
+propulsors, and so carrying no mechanism that reorients a propulsor.** The combination, the
+consequences of the choices inside it, and an accounting of what they cost are how that contribution
+is presented and priced.
+
 ---
 
 ## S2. Section 2 (from Section 2)
@@ -718,6 +729,22 @@ Heading: *Five qualifications, and every one of them runs against this configura
 **The quadrotor is a good quadrotor.** Its disc loading is 3.5 lb ft⁻², which is unusually low
 and unusually efficient. Nothing here is compared against a poor example.
 
+### Two more paragraphs of Section 6 as they stood before the axis was widened to rotorcraft (frozen snapshot)
+
+That is the whole of the difference, and it is worth stating in those plain terms because the
+consequence is structural. **A multirotor's discs must produce the lift and the propulsive force
+together, throughout cruise.** This aircraft separates them: a surface holds the aircraft up and a
+propeller pushes it along, and **the wing produces its lift without a separate continuous power
+supply of its own** — the power the aircraft spends in cruise goes to overcoming drag, of which
+the lift's share is the induced part.
+Lift is carried on a surface or it is carried on rotors, and no sizing contract, no assumption
+in this paper and no choice available to a designer moves a vehicle between those two states.
+
+**Scale.** The compared vehicles are 1 670 to 3 275 kg; the designs here are of order 50 kg and
+1 000 kg — Section 10 closes the light one between 52.3 and 57.5 kg across the same bracket.
+Reynolds number favours the larger aircraft, so the smaller design is at a disadvantage in this
+comparison rather than an advantage.
+
 ---
 
 ## S7. Section 7 (from Section 7)
@@ -731,6 +758,17 @@ including with blended-wing-body planforms and contra-rotating propulsion. Blend
 have been a standing subject of transport research for three decades. Series-hybrid propulsion
 has established precedent in small uncrewed aircraft. **Each can be found on its own, and in
 combination, in the literature and in hardware** — Section 1 says where.
+
+### One more paragraph of Section 7 as it stood before recomposition (frozen snapshot)
+
+Attitude is produced instead by differential thrust between fixed-pitch propellers: a
+single coaxial contra-rotating pair at the nose, and four small coaxial pairs at the
+ends of the tip frames, whose moment arms give pitch and yaw directly. The tip pairs are
+sized from the moment requirement rather than from weight support, but the thrust that sizing
+gives them also supplies the aircraft's entire take-off margin, because the nose pair is sized
+at thrust equal to weight and no more. That is the one place the configuration asks a component
+to do a second job it was not sized for; it is a dependency, it is reported as one where the
+sizing is audited, and it does not make the tip pairs a dedicated lift system.
 
 ---
 
@@ -760,6 +798,15 @@ What is offered is a **count** of mechanism classes that a tilting architecture 
 change regime and that this arrangement does not. A count is not a reliability argument, and
 readers who convert one into the other are not quoting this paper.
 
+### The axis table of Section 9 as it stood before the axis was widened to rotorcraft (frozen snapshot)
+
+| Axis | Opponent | Status |
+|---|---|---|
+| Cruise efficiency | Multirotors | **Claimed, and bounded.** Cruise lift is carried on a surface rather than on rotors, which no sizing contract changes. The *size* of the resulting advantage is a calculation, not a consequence of that fact, and Section 6 measures it against two published quadrotors in one common definition. |
+| Operation without a runway | Fixed-wing aircraft | **Claimed**, in the sense stated below. |
+| The mechanism required to change regime | Tilting architectures | **Claimed.** This is the paper's contribution. |
+| Cruise efficiency and range | Other hybrids — lift-plus-cruise, tilt | **Not claimed, in either direction.** |
+
 ---
 
 ## S10. Section 10's paragraphs as they stood before compression (from Section 10, Round 73)
@@ -785,6 +832,19 @@ rather than a trade.
 The control moment required scales as 1/t_r² and the control power as 1/t_r³, and the altitude
 loss falls with t_r as well: all three point the same way, so the rotation time is set by what
 the actuator can do rather than by a balance between competing penalties.
+
+### Two paragraphs of Section 10 as they stood before the axis was widened to rotorcraft (frozen snapshot)
+
+**The reference point is the aerodynamic lift-to-drag ratio, not the effective one.** The
+effective ratio of Section 6 already contains the propeller efficiency; it is the currency in
+which the multirotor comparison is made, and it is not an input to a loop whose own chain supplies
+that efficiency separately.
+
+**And these range figures are carried forward as the closed-loop values, not as a ranking.** No
+multirotor is sized in this work, so no range comparison is made against one — Section 6 compares
+the two families in cruise efficiency and says why it stops there. The comparison against the
+other hybrid architectures depends on the sizing contract and belongs to Section 13, which is
+where it is made.
 
 ---
 

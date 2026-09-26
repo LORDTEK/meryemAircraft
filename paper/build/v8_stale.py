@@ -128,6 +128,13 @@ EMEKLI = {
     "unusually low and unusually efficient": "Tur 97: S-28 -- disk yuklemesi verimi tek basina gostermez; iki quadrotor",
     "The demand has been continuous": "Tur 97: 1B basligi -- caba ihtiyacin kaniti degil",
     "bounding combinations permitted by two independent": "Tur 97: 6D yinelemesi (R-5 ile)",
+    "the alternative is the multirotor": "Tur 98: eksen doner kanatlilara genisledi (yazar, E5)",
+    "A multirotor's discs": "Tur 98: eksen genisledi -- 'A rotorcraft's rotors'",
+    "1 670 to 3 275 kg": "Tur 98: helikopterler girdi -- 1 660 (SbS TS 1 662 kg)",
+    "vertical capability against multirotors": "Tur 98: eksen genisledi -- 'against rotorcraft'",
+    "No multirotor is sized in this work": "Tur 98: eksen genisledi -- 'No multirotor or helicopter'",
+    "has established precedent in small uncrewed": "Tur 98: S-29 -- Schoemann 2014 s. 25 celisiyor",
+    "asks a component to do a second job it was not sized for; it is a dependency": "Tur 98: 7G -- Adim 5D'nin birebir kopyasi; 'This dual role'",
 }
 
 
@@ -135,7 +142,9 @@ EMEKLI = {
 # "by any combination of thrust settings" korunan reddetme cumlesinin yaninda (Adim 1) durur;
 # baska yerde niteleyicisiz tekrarlanirsa "fiziksel imkansizlik" okunur (CLAUDE.md 0.1).
 YALNIZ = {
-    "by any combination of thrust settings": "01-the-gap.md",
+    "by any combination of thrust settings": ("01-the-gap.md",),
+    # Tur 98 (Grok P61, DeepSeek; dort okuyucu + Claude): varyant; her ikisinde de reddedilen tepki torku kanali izliyor.
+    "combination of thrust settings produces a moment": ("07-the-combination.md", "08-what-it-is-made-of.md"),
 }
 
 
@@ -144,7 +153,7 @@ def yalniz_tara(adlar_metinler):
     for ad, metin in adlar_metinler:
         duz = re.sub(r"\s+", " ", metin.replace("*", ""))
         for k, yer in YALNIZ.items():
-            if k in duz and ad not in (yer, "ALL-STEPS.md"):
+            if k in duz and ad not in tuple(yer) + ("ALL-STEPS.md",):
                 bulunan.append((ad, k, yer))
     return bulunan
 
@@ -189,14 +198,15 @@ if __name__ == "__main__":
         if not b:
             sys.exit("!! Denetim eski hatayi YAKALAMADI -- denetim bozuk.")
     if "--sina" in sys.argv:
-        y = yalniz_tara([("05-sina.md", "produce no rolling moment **by any combination of thrust\nsettings**.")])
+        y = yalniz_tara([("05-sina.md", "produce no rolling moment **by any combination of thrust\nsettings**."),
+                         ("09-sina.md", "so no combination of thrust settings produces a moment about that axis")])
         print("SINAMA: yalniz-adim ifadesi baska adimda %d kez yakalandi" % len(y))
         if not y:
             sys.exit("!! Yalniz-adim denetimi YAKALAMADI -- denetim bozuk.")
     y = yalniz_tara(dosyalar())
     if y:
         for ad, k, yer in y:
-            print("  !! %s icinde %r -- yalniz %s'de durabilir" % (ad, k, yer))
+            print("  !! %s icinde %r -- yalniz %s'de durabilir" % (ad, k, ", ".join(yer)))
         sys.exit("Yalniz-adim ifadesi yerinden cikti.")
     b = tara(dosyalar())
     print("=== v8 EMEKLI IFADE/SAYI DENETIMI ===")
