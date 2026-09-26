@@ -1,7 +1,7 @@
 # Reader onboarding — for a reader starting a new conversation
 
 > **Version check (Qwen P1, Round 92; corrected in Round 93).** This version was rewritten in Round 91 and last updated in
-> Round 100. An older copy (Round 61, sent in Round 64) stated Step 13's contract results **in the reverse direction**: it
+> Round 101. An older copy (Round 61, sent in Round 64) stated Step 13's contract results **in the reverse direction**: it
 > gave this configuration's range as 55 to 84 percent ahead of the lift-plus-cruise layout. **The older copy has no
 > version box at all; if yours does not begin with this box, it is the old one: do not use it.** In the repository:
 > `grep -c "Version check (Qwen P1" cfd/reader-onboarding.md` prints **more than 0** for this version and **0** for the old one.
@@ -214,13 +214,13 @@ The body is about **26 000 words**, and the journal's working target is **about 
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 100.**
+**Round 101.**
 
 | Block | State |
 |---|---|
-| All fifteen steps | inventoried and recomposed; the last applied text (Step 8's S-30 wording; protection 169) awaits confirmation |
-| Length | **the author's direction:** 12 000 words in all, text and tables together (the journal counts figures and tables as words); the working behind each finding moves to the supplement, the body gives the result with a pointer; tables are merged |
-| Next | the readers answer the length plan (Round 100 text, §5); then the author decides |
+| All fifteen steps | inventoried and recomposed; Round 99–100 applied text confirmed |
+| Length | **the author decided (Round 101):** 12 000 words in all; 5 tables + 4 figures; section budgets; the working of each finding moves to the supplement, the body gives the result, its method and its limit (plan in the Round 101 text) |
+| Now | drafts of the five tables and four figures; the map of Step 10's outbound numbers; then the calculation steps become result sentences |
 
 **The body is about 25 800 words.** Recomposition gains a few percent per block. In Steps 2 and 3 its main product was
 defects found in the source and repaired. The author will review the target when the steps are done.

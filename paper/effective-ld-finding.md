@@ -1745,3 +1745,10 @@ dolu" listesi Tur 46 kuralı; dokunulmayan küme 14 249 kelime) — okuyuculara 
 §2 teyit edildi, kapandı. 12 000 toplam hedefte dördü hemfikir; ChatGPT eski "10–10,5k metin" önerisini düzeltti. Benim 1 250
 kelimelik hesap bütçem dar bulundu (729 korunan kelime → dört adıma 521 kelime) — Grok ve ChatGPT haklı, kabul ettim.
 Uzlaştırılmış bütçe ve ayrışan altı nokta yazara (E6). Tur metni yazarın kararından sonra.
+
+# Tur 101 — yazar: "Önerine göre git."
+
+Uzunluk planı kabul edildi (CLAUDE.md §2.4). İlk işler: nesne taslakları (`paper/v8/drafts/objects.md`: T1–T5, F1–F4; F3 yeni
+taslak şekil, yalnız doğrulanmış sayılarla), Adım 10'un dışa giden sayı haritası (`v8_outbound.py`, öz sınamalı; 21 sayı).
+**Şekil denetimi iki bulgu:** v7 fig08'in yatış etiketi tepki torku niteleyicisiz ("= 0 identically, at every thrust setting");
+fig12a Adım 10'un birinci (lehte) modelini çiziyor. **Kendi hatam R-7:** S-33 koşulu Adım 15'e yayılmamış.

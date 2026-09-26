@@ -420,6 +420,24 @@ dahil herkesin hemfikir olduğu kısaltmalar uygulansın."*
   her cümle P/D/J/R etiketli, etiketsiz = R, R cümle cümle vetolu; iz tablosu; özgün adım eke tam; durma: güçlenen yüklem
   ya da düşen sayı → dur, iki+ kırık öncül → hazır değil; sıra 4 → 2–3 (tek bölüm) → 9, 14 → 1 → 5–6 → 7–8 en son.
 
+### 2.4 Uzunluk aşaması. Yazarın kararı, Tur 101.
+
+> *"Yapayzeka kardeşlerim, korkmayın! Metin ve tablolarla birlikte 12K'da tamamlayabiliriz … Bazı şeyler (elbette bulgunun
+> çalışması gibi) eke taşınmak zorunda. … 'CD değeri hesaplanmış olup 2.3 olarak bulunmuştur [Ek-1]' … tabloların mantıklı
+> şekilde bir araya getirilebilecek yapılarının var olduğunu düşünüyorum."* → Tur 101: *"Önerine göre git."*
+
+- **Hedef: 12 000 kelime toplam** — dergi şekil ve tabloyu da kelime sayar (`paper/v8-budget.md`: 200 / 450 / 700).
+- **Plan (E6):** 5 tablo (1 750) + 4 şekil (1 300) + düzyazı 8 500 + özet/terimler 400 = 11 950. Bölüm bütçeleri: 1: 850,
+  2: 750, 3: 650, 4: 350, 5: 600, 6: 850, 7: 900, 8: 900, 9: 400, 10–13: 1 550, 14: 450, 15: 250. Pay gerekirse F4 eke.
+- **Sonuç cümlesi:** yöntemin adı zorunlu; sınır yalnız gerçekten varsa yazılır; ek işaretçisi. Katı şablon yok.
+- **Gövde-yalnız yorumlanabilirlik kuralı (ChatGPT):** *"A calculation result may remain in the body only if the body itself
+  retains the minimum definition, model qualification and comparison needed to interpret that result. Audit detail may move
+  to the supplement; interpretive prerequisites may not."*
+- **Ek ikiye:** dergi eki (bulguların çalışması, gövdenin bölüm numaralarıyla) / depo denetim arşivi (dondurulmuş parçalar).
+- **Sıra:** nesneler → Adım 10'un dışa giden sayı haritası (`paper/build/v8_outbound.py`) → hesap (10–14) → çerçeve (2–4) →
+  mimari (1, 5–9, 15) en son; o sırada mimari dondurulur.
+- **Yeni denetim:** gövdedeki her sonuç sayısı ekteki çalışmada aynı değer, birim ve nesneyle; betik işaretler, insan okur.
+
 ## 3. Doğrulama
 
 Hiçbir iddia denetlenmeden aktarılmaz — ne YZ'lerinki ne benimki.

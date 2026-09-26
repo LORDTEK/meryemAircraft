@@ -149,7 +149,7 @@ L/De 5,4–7,2; bizim zarf 5,56–7,39 — yan yana elektrikli helikoptere karş
 olarak bizim aleyhimize ama hesaplanmadı; (3) güvenilirlik iddiası ölçülmedi (§0.1, Adım 9 madde 4); sayım iddiası duruyor.
 S-27 (R-4) bu karara bağlı olarak uygulanmadı.
 
-## E6 — Adımlar bitti: hedefe yeniden bakış (Tur 99) · **YAZARA SORULDU; okuyucu önerileri Tur 100'de yazara sunuldu**
+## E6 — Adımlar bitti: hedefe yeniden bakış (Tur 99) · **KARAR (Tur 101): "Önerine göre git."** — plan CLAUDE.md §2.4'te
 
 Tur 77 yazar: *"Adımları bitirince geldiğimiz noktada tekrar bakarız."* Tur 98'de son blok (Adım 8) envanterden geçti. Gövde
 25 797 kelime (Tur 72: ~26 400; Tur 69: 26 852). Yeniden kurma kelimeyi pek azaltmadı; ürünü kaynak kusurları (S-1…S-33) ve

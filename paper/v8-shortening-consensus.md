@@ -385,3 +385,5 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Sonuç cümlesi | 4 parça | esnek (asgari yöntem kimliği) | 4 parça + betik | katı şablon | esnek + yöntem adı zorunlu | **Ayrışık** (yöntem adı zorunlu: hemfikir) |
 | Gövde-yalnız yorumlanabilirlik kuralı | ✓ | ✓ | (açık oy yok) | ✓ | ✓ | DeepSeek'in açık oyu bekleniyor |
 | Yeni: Adım 7 notunu koru (DeepSeek); ChatGPT'nin yönetici cümlesi; kapanış + üç fatura sütunu (ChatGPT) | — | — | — | — | — | Oylamaya |
+| **Yazar kararı (Tur 101): uzunluk planı** — 12 000; 5 tablo + 4 şekil; bölüm bütçeleri; esnek sonuç cümlesi; yorumlanabilirlik kuralı | — | — | — | — | — | **Karar** (CLAUDE.md §2.4) |
+| T1–T5 taslakları; F1–F4 planı; fig08 etiketi; fig12a modeli; R-7 onarımı; Adım 7 notu korunsun (DeepSeek); ChatGPT'nin yönetici cümlesi | — | — | — | — | öneren | Oylamada |
