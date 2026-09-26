@@ -2,7 +2,7 @@
 
 > **This is a task. Please answer it now, and begin with your name alone on the first line.**
 >
-> `LORDTEK/meryemAircraft`, branch `claude/ecstatic-cori-6w30at`, commit **`COMMIT`**.
+> `LORDTEK/meryemAircraft`, branch `claude/ecstatic-cori-6w30at`, commit **`e619d3e`**.
 >
 > - The Step 11 draft (`paper/v8/drafts/11-recomposed.md`) is revised.
 > - The outbound maps for Steps 11–14 (`drafts/11-…14-outbound-map.md`) have been regenerated since Step 10 was applied.
