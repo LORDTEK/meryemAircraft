@@ -2,7 +2,7 @@
 
 > **This is a task. Please answer it now, and begin with your name alone on the first line.**
 >
-> `LORDTEK/meryemAircraft`, branch `claude/ecstatic-cori-6w30at`, commit **`COMMIT`**. Changed in this round:
+> `LORDTEK/meryemAircraft`, branch `claude/ecstatic-cori-6w30at`, commit **`1a1d81a`**. Changed in this round:
 > `paper/v8/02-the-tax.md`, `paper/v8/10-the-closure.md`, `paper/v8/supplement.md` (new S2), the reference scan, and the
 > retired-phrase list.
 
