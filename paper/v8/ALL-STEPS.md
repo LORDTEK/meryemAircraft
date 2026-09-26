@@ -1210,8 +1210,7 @@ nose down when deployed.
 
 **4. It does not claim mechanical simplicity.** Part count, assembly mass, failure modes and
 maintenance burden were not measured, and nothing here supports a statement about reliability.
-What is offered is a **count** of mechanism classes that a tilting architecture requires to
-change regime and that this arrangement does not. A count is not a reliability argument, and
+The count of mechanism classes in Section 7 is not a reliability argument, and
 readers who convert one into the other are not quoting this paper.
 
 **5. It does not claim that the escape condition is fully instantiated.** The condition is met
@@ -2004,8 +2003,7 @@ about the aircraft. At the unit pack's continuous rating it does not close at al
 
 **This is where the coupling Section 12 found is paid.** The buffer is the conversion the escape
 condition permits — kilowatts of hover peak paid in kilograms of store. Section 11's ledger records that
-conversion at the assumed store; at a measured specific power it costs thirteen to fifteen percent of
-take-off mass instead of 3.6. **The escape from Bill 3 is real in the sense Section 3 defined it, and
+conversion at the assumed store. **The escape from Bill 3 is real in the sense Section 3 defined it, and
 its price depends on a component whose required performance has not been demonstrated.**
 
 ### What the obstacle reaches, and what it does not
@@ -2053,9 +2051,7 @@ listed with what would settle it.
 **None of these is a small correction to a known quantity.** Two of them need validated data rather
 than more of the computation already done: the transition moment, because three methods have been
 tried against it and disagree, and the low-Reynolds section drag, because the one method used here is
-least reliable exactly there. Several — hover control, the descent, the buffer's energy, the electrical
-path — are analyses this study has not posed. One — the engine installation — is not in the work at
-all.
+least reliable exactly there.
 
 ### What this section amounts to
 

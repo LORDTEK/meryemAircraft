@@ -1,5 +1,10 @@
 # Reader onboarding — for a reader starting a new conversation
 
+> **Version check (Qwen P1, Round 92).** This version was rewritten in Round 91 and last updated in Round 92. An older copy
+> (Round 61, sent in Round 64) stated Step 13's contract results **in the reverse direction**. If the copy you have contains
+> the phrase *"this configuration's range is +55 to +84 %"*, it is the old one: do not use it. In the repository:
+> `grep -c "this configuration's range is" cfd/reader-onboarding.md` must print **0**.
+
 > **Why you are reading this.** You are one of four independent readers (ChatGPT, Grok, DeepSeek, Qwen) of a paper in
 > development. The work has run for about ninety rounds. If your previous conversation filled up, this file puts you back
 > where the others are: what the paper is and claims, how the text is now being worked, what has been settled, which
@@ -190,11 +195,11 @@ The body is about **26 000 words**, and the journal's working target is **about 
 - **Restatement.** A statement kept in two places is cut in the second, unless the second occurrence has a job the
   inventory names. A draft that keeps neither is a halt.
 - **Protection.** *"A sentence is protected when removing it silently would change a claim, a limit or a derivation that
-  later text depends on … Being load-bearing for the structure alone is not enough."* There are currently 159 protected
+  later text depends on … Being load-bearing for the structure alone is not enough."* There are currently 160 protected
   sentences.
 - **The stop rule** counts only defects that the *draft* introduces or fails to repair. Defects found in the *source* are
-  repaired under their own trace and recorded in `paper/v8-source-defects.md`. So far there are sixteen, all of origin S,
-  and none of origin R.
+  repaired under their own trace and recorded in `paper/v8-source-defects.md`. So far there are seventeen of origin S (one,
+  S-19, still being voted) and two of origin R (R-1, R-2), both caught before they were applied.
 - **Content before drafting.** When the inventory finds a content problem, the problem is settled first and the draft
   waits (S-1, S-5, S-15/S-16).
 - **Every empirical claim carries an evidence status:** verified / attributed but unverified / model-derived / unsupported
@@ -206,15 +211,15 @@ The body is about **26 000 words**, and the journal's working target is **about 
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 91.**
+**Round 92.**
 
 | Block | State |
 |---|---|
 | Step 4 | recomposed and closed (1 586 → 1 356) |
 | Step 3 | recomposed and closed (1 874 → 1 698) |
 | Step 2 | recomposed, with its last pieces awaiting confirmation. It went **2 263 → 2 487**, because content repairs added more than recomposition removed. |
-| Step 9 | inventory confirmed; two restatements removed this round; awaiting confirmation |
-| Step 14 | inventory now |
+| Step 9 | recomposed (items 1 and 4); item 2 awaiting one confirmation |
+| Step 14 | inventory confirmed; 14E and 14G applied; 14D and a source finding (S-19) to vote |
 | Order after that | Step 1 → Steps 5–6 → Steps 7–8 last |
 
 **The body is about 25 900 words.** Recomposition gains a few percent per block. In Steps 2 and 3 its main product was

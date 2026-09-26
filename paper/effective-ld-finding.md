@@ -1624,3 +1624,13 @@ lift+cruise önde); Tur 64'te dört okuyucuya gitmişti. Okuyuculara bildirildi.
 **R-1 (yeniden kurmanın ilk kendi kusuru, uygulanmadan yakalandı):** 4. maddedeki silme "A count is not a reliability
 argument"ı "Part count"a bağlayacaktı → R önerisi. 9F emsal listesi kaldı (üçü tut, Grok at). **Adım 14 envanteri** teyide;
 Yu 2025 PDF'i açıldı, batarya sayıları doğrulandı.
+
+# Tur 92 — Tur 91 metnine dört cevap
+
+**Oybirliği:** Adım 9 4. madde R-1 onarımı; 14E ve 14G silmeleri; "The escape from Bill 3 is real…" korunan (160); 9F listesi
+kaldı (Grok: "I yield"). **R-2:** 14D'deki kabul edilen silme "instead"ı göndergesiz bırakacaktı — uygulanmadan yakalandı
+(Grok P51 artık yordam). **Madde 2:** ChatGPT silinecek cümlenin "That comparison"dan önce geldiğini sanmış; sonra geliyor —
+geri soruldu. **S-19:** 4 kW/kg kaynağını (Barrett 2023) açtım: doğru, ama aynı çalışma "lityum-polimer 3 kW/kg'a kadar"
+diyor ve biz almamışız (S-18'in eşi) → ek cümle oylamada; talep 3 kW/kg'a karşı 1,8–2,0 kat. **Qwen'in uyarısı:** elindeki
+başlangıç metni Tur 64'te gönderilen eski metin; depodaki doğru. Başlangıç metnine sürüm damgası ve grep denetimi eklendi;
+§2–§3 tur metnine ek olarak kondu (okuyucular dosyayı açamıyordu).

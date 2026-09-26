@@ -84,8 +84,7 @@ nose down when deployed.
 
 **4. It does not claim mechanical simplicity.** Part count, assembly mass, failure modes and
 maintenance burden were not measured, and nothing here supports a statement about reliability.
-What is offered is a **count** of mechanism classes that a tilting architecture requires to
-change regime and that this arrangement does not. A count is not a reliability argument, and
+The count of mechanism classes in Section 7 is not a reliability argument, and
 readers who convert one into the other are not quoting this paper.
 
 **5. It does not claim that the escape condition is fully instantiated.** The condition is met
@@ -136,6 +135,7 @@ what it demands of anyone who uses the framework afterwards.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 92 (yeniden kurma, 9E):** 4. madde — "What is offered is a count of mechanism classes…" çıktı, "A count is not a reliability argument" → "The count of mechanism classes in Section 7 is not a reliability argument" (R-1 onarımı; dört okuyucu + Claude). Özgün Ek S9'da | Tur 91 metni §2 |
 | **Tur 91 (yeniden kurma, 9E):** 1. madde — "The vertical axis is where the fixed-wing family is the opponent; the range axis is not." çıktı (9B tablosunu yineliyordu; dört okuyucu + Claude). 4. maddenin silinmesi uygulanmadı: silinince "A count is not a reliability argument" hemen önceki "Part count"a bağlanıyor (köken R, uygulamadan yakalandı) → R önerisi oylamada. Özgün paragraf Ek S9'da | Tur 90 metni §4 |
 | **Tur 86 (S-8, dört okuyucu + Claude):** "converts a power-system charge into a mass one" → "into a cost in kilograms" — A′'ye göre depo fatura değil; aynı ifade Adım 3, 9, 11'de birlikte düzeltildi | Tur 85 metni §5 |
 | **Tur 67 — B5 (3.2)** (dört okuyucu + Claude): gerekçe Adım 7'de; *"Section 7 should be read under that limit"* çıktı — katkı bölümünü sonradan zayıf okutan savunmacı ses (Tur 64 ölçümü); iki korunan cümle kaldı | Adım 7 |

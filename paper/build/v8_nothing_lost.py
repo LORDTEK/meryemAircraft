@@ -31,7 +31,7 @@ DEGISTI = {
     "The architecture converts a power-system charge into a mass one.":
         "The architecture converts a power-system charge into a cost in kilograms.",
 }
-ONCE = {2: "d2ca894", 9: "eb22a83", 3: "46b9628", 4: "8c4d712", 10: "024005c", 11: "65ae7de", 12: "c9fcdd7", 13: "c9fcdd7"}   # kisaltmadan onceki commit
+ONCE = {2: "d2ca894", 9: "eb22a83", 14: "9f4cfcb", 3: "46b9628", 4: "8c4d712", 10: "024005c", 11: "65ae7de", 12: "c9fcdd7", 13: "c9fcdd7"}   # kisaltmadan onceki commit
 
 
 def govde(s):

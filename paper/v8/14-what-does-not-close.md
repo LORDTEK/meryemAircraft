@@ -93,8 +93,7 @@ about the aircraft. At the unit pack's continuous rating it does not close at al
 
 **This is where the coupling Section 12 found is paid.** The buffer is the conversion the escape
 condition permits — kilowatts of hover peak paid in kilograms of store. Section 11's ledger records that
-conversion at the assumed store; at a measured specific power it costs thirteen to fifteen percent of
-take-off mass instead of 3.6. **The escape from Bill 3 is real in the sense Section 3 defined it, and
+conversion at the assumed store. **The escape from Bill 3 is real in the sense Section 3 defined it, and
 its price depends on a component whose required performance has not been demonstrated.**
 
 ### What the obstacle reaches, and what it does not
@@ -142,9 +141,7 @@ listed with what would settle it.
 **None of these is a small correction to a known quantity.** Two of them need validated data rather
 than more of the computation already done: the transition moment, because three methods have been
 tried against it and disagree, and the low-Reynolds section drag, because the one method used here is
-least reliable exactly there. Several — hover control, the descent, the buffer's energy, the electrical
-path — are analyses this study has not posed. One — the engine installation — is not in the work at
-all.
+least reliable exactly there.
 
 ### What this section amounts to
 
@@ -162,6 +159,7 @@ The last section returns to the four axes of Section 9 and states what is claime
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 92 (yeniden kurma, 14E ve 14G; dört okuyucu + Claude):** 14E "at a measured specific power it costs thirteen to fifteen percent of take-off mass instead of 3.6" çıktı (tablonun üçüncü satırının üçüncü söylenişi); 14G son iki cümle çıktı (listede zaten etiketli). "The escape from Bill 3 is real…" korunan (160). Özgün paragraflar Ek S14'te | Tur 91 metni §3 |
 | **Tur 66:** listeye rotor–yapı ve rotor–kanat girişimi eklendi (Adım 11'in tablosundan; Adım 14'te eksikti) | Adım 11 sınır cümlesi; Ek S11 |
 | **Tur 63:** Tur 62 listesinde *"allocation of the tip pairs between take-off margin and attitude authority"* düşmüştü — Grok yakaladı; geri kondu (Adım 5 ve 7'nin *"ikinci iş"*i) | Ek S14'ün ilgili satırı |
 | **Tur 61:** bilinmeyenler tablosu Ek S14'e taşındı; gövdede her kalem ve onu neyin çözeceği (dört okuyucu + Claude hemfikir, A6) | `paper/v8/supplement.md` S14 |

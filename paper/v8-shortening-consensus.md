@@ -304,3 +304,7 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Adım 9: 4. madde (R-1 yakalandı) → R | ✓ (silme) | ✓ | ✓ | ✓ | öneren | R oylamada |
 | 9F emsal listesi | at | tut | tut | tut | zayıf at | **Kaldı** |
 | Adım 14 envanteri; üç aday; Bill 3 cümlesi korunan | — | — | — | — | öneren | Teyide / oylamada |
+| Adım 9 4. madde R; 14E; 14G; Bill 3 cümlesi korunan | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı** (Tur 92); teyide |
+| 14D R (R-2) | — | — | — | — | öneren | Oylamada |
+| Adım 9 2. madde silme | ✓ | R ister (yanlış okuma) | ✓ | ✓ | öneren | ChatGPT'ye geri |
+| S-19 ek cümle | — | — | — | — | öneren | Oylamada |

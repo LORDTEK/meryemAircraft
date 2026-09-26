@@ -627,6 +627,16 @@ with it on distance.
 
 ---
 
+### "It does not claim mechanical simplicity" as it stood before recomposition (frozen snapshot)
+
+**4. It does not claim mechanical simplicity.** Part count, assembly mass, failure modes and
+maintenance burden were not measured, and nothing here supports a statement about reliability.
+What is offered is a **count** of mechanism classes that a tilting architecture requires to
+change regime and that this arrangement does not. A count is not a reliability argument, and
+readers who convert one into the other are not quoting this paper.
+
+---
+
 ## S10. Section 10's paragraphs as they stood before compression (from Section 10, Round 73)
 
 Every paragraph of Section 10 that lost a sentence or a clause in compression is given here in full, verbatim.
@@ -1058,3 +1068,19 @@ lift-plus-cruise layout falls from +55 to +84 percent to +33 to +45 percent (Sup
 | **Engine installation** — bay, intake, exhaust, cooling. | Mass, drag and packaging | **Absent from this work entirely** |
 | **Blade-family selection.** The criteria that would choose among the blade families — structural loads, acoustics, the motor operating point, rotor inertia, manufacture — are not modelled (Section 10). | Which point of the envelope the aircraft occupies | **Analysis not yet done** |
 | **Atmosphere.** Every number here is at sea level; the configuration's own altitude sensitivity has been computed for hover power and propeller efficiency, its effect on the Section 6 comparison has not. | The comparison in Section 6, made against a mission flown at altitude | **Analysis**: the direction of the effect has not been computed |
+
+### Two paragraphs of Section 14 as they stood before recomposition (frozen snapshot)
+
+**This is where the coupling Section 12 found is paid.** The buffer is the conversion the escape
+condition permits — kilowatts of hover peak paid in kilograms of store. Section 11's ledger records that
+conversion at the assumed store; at a measured specific power it costs thirteen to fifteen percent of
+take-off mass instead of 3.6. **The escape from Bill 3 is real in the sense Section 3 defined it, and
+its price depends on a component whose required performance has not been demonstrated.**
+
+**None of these is a small correction to a known quantity.** Two of them need validated data rather
+than more of the computation already done: the transition moment, because three methods have been
+tried against it and disagree, and the low-Reynolds section drag, because the one method used here is
+least reliable exactly there. Several — hover control, the descent, the buffer's energy, the electrical
+path — are analyses this study has not posed. One — the engine installation — is not in the work at
+all.
+

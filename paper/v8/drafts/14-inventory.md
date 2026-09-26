@@ -27,3 +27,10 @@ Section 8, after the calculations and before the conclusion.
 
 Section 10 (closures, masses, payload, ranges), Section 11 (ledger), Section 12 (coupling), Section 13 (orderings with the
 store held common), Section 3 (the escape from Bill 3), Section 6 (effective L/D), Sections 7–8 (the count).
+
+## Round 92
+
+Inventory confirmed (four + Claude). 14E numbers and 14G last two sentences removed; "The escape from Bill 3 is real…"
+protected (160); 14H kept (named job: closing on the contribution). **R-2** caught before applying (14D "instead") → R to
+vote. **S-19** (Barrett 2023 p. 34: lithium-polymer up to 3 kW/kg, not quoted) → added sentence to vote; 4 kW/kg now
+verified (p. 16). Trace columns for the draft: debt vs scope flag (Qwen P2).
