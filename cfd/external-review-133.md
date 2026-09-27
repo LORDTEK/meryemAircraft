@@ -2,7 +2,7 @@
 
 > **This is a task. Please answer it now, and begin with your name alone on the first line.**
 >
-> Commit **`@@COMMIT@@`**, branch `claude/ecstatic-cori-6w30at` (for verification only). **Every text you are asked to judge is quoted
+> Commit **`30707e3`**, branch `claude/ecstatic-cori-6w30at` (for verification only). **Every text you are asked to judge is quoted
 > here in full.**
 > - Appendix A: the S-53 texts (Step 8, Step 11, Supplement S11, Step 13), and their v7 source.
 > - Appendix B: Step 15, as it now stands.
