@@ -2,7 +2,7 @@
 
 > **This is a task. Please answer it now, and begin with your name alone on the first line.**
 >
-> Commit **`@@COMMIT@@`**, branch `claude/ecstatic-cori-6w30at` (for verification only). **Every text you are asked to judge is quoted
+> Commit **`61a99bb`**, branch `claude/ecstatic-cori-6w30at` (for verification only). **Every text you are asked to judge is quoted
 > here in full.**
 > - The full audit table (149 rows) is `paper/v8/drafts/receipt-audit.md`. Its five failures are quoted below with their texts.
 
