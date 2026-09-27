@@ -825,8 +825,6 @@ therefore places them outside the first charge while leaving them in the airstre
 
 ### 6.1 What this inventory does not settle
 
-Two items belong here rather than in a later list.
-
 **An untrimmed hover torque, with no trim mechanism identified.** This is a control question
 rather than a property of the hardware, and it is stated as one.
 
