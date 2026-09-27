@@ -516,6 +516,10 @@ dahil herkesin hemfikir olduğu kısaltmalar uygulansın."*
   diye işaretlemeden önce olgusal yüklemi §0.2'ye göre denetlenir.
 - **Yazarın kararları (Tur 120).** *"K kalsın."* — Adım 1'in K cümlesi kapandı. *"Adım 5 için (normalde hemfikir olmak önemliydi ama
   bu seferlik) çoğunlukla devam ediyoruz."* — **istisna, kural değil**: eşik öteki adımlarda dört okuyucu + Claude olarak kalır.
+- **Yazarın kararı (Tur 121) — ses tartışması.** *"Ses konusunu sen ve diğer okuyucular bir kaç tur tartışın. Herkes herkese görüş ve
+  yorum yapsın. İlerlenebiliyorsa ne ala yok ilerlenemiyorsa 3 tur sonra güncel durumu bana tekrar sunarsın. Biz devam edelim."* →
+  Adım 5–6 ses işaretleri Tur 122–124'te okuyucular arasında; Tur 124 sonunda yakınsamadıysa durum yazara. Ayrıca yüklenen belgelerin
+  yaklaşımının yazarın iddiasına **engel olup olmadığı** okuyuculara soruldu.
 
 ## 3. Doğrulama
 

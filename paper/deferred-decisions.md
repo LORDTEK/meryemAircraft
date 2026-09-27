@@ -306,3 +306,7 @@ metni o bakıştan sonra yazılacak**; içine girecekler hazır: Yang 2018'in il
 Rheaume & Lents 2016'nın metin kısımları ve tabloları (`paper/v8/drafts/src-rheaume2016-text.md`), S-48, S-49, P109, P110 (denetlendi,
 tutuyor), Qwen R121-P1/P2, nitelik yönü tanımı, ChatGPT'ye P104 ve R118-P1/P2 metinleriyle. **İndirilmesi istenen hâlâ:** Vegh 2025 ve
 Rohith ve ark. (ikisi de *J. Aircraft*).
+
+**Tur 122 — ses tartışması başladı (yazar kararı, Tur 121): Tur 122 = 1/3, Tur 124 sonunda yakınsamadıysa durum yazara.** Aynı turda:
+Yang 2018 ve Rheaume & Lents 2016 okuyuculara (yazarın sorusu: iddiaya engel mi?), S-48, S-49, Adım 6 taşıma adayları M1–M7, nitelik
+yönü tanımı, ChatGPT'ye P104 ve Qwen R118-P1/P2 metinleriyle.
