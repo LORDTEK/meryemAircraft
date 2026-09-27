@@ -214,17 +214,17 @@ The body is about **26 000 words**, and the journal's working target is **about 
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 131.**
+**Round 132.**
 
 | Block | State |
 |---|---|
-| Stages (the author, Round 129) | each stage is a pass through the whole text; the next stage's method is chosen when the present one is complete. Present stage: recomposition into result sentences, body 25 797 → 18 578 |
+| Stages (the author, Round 129) | each stage is a pass through the whole text; the next stage's method is chosen when the present one is complete. Present stage: recomposition into result sentences, body 25 797 → 18 651 |
 | Length | **not decided now** (the author): after this stage completes |
-| Tip pairs in cruise (**the author's decision, Round 131**) | uncommanded state: **free-wheeling at zero shaft torque**; commanded moments depart from it. Not drag-free: ΔC_D0 0.0154 for the eight discs at the favourable end (Section 11). The zero-thrust driven state is not adopted and not computed. The Step 8 sentence stating it is to vote (S-57) |
+| Tip pairs in cruise (the author's decision) | uncommanded state: free-wheeling at zero shaft torque, now stated in Step 8 (S-57); commanded moments depart from it. ΔC_D0 0.0154 for the eight discs at the favourable end (Section 11). The shaft power of commanded departures is not computed; where it is named is to vote |
 | Steps 1, 5, 7, 9, 15 | **closed** at 1 517, 1 133, 1 163, 1 020, 343 |
-| Steps 2, 6, 8, 11 | reopened for S-53 to S-57; repairs applied or to vote (Step 2 1 697, Step 6 1 879, Step 8 1 962, Step 11 902) |
-| Receipt audit | done once: 149 sentences, 5 failures (S-53, S-54, S-55, S-56); to re-run after the repairs |
-| To complete the stage | S-56, S-57; re-run receipt audit; surface and identity sweep; record-propagation sweep; Step 1 and Step 8 denial maps; Rohith/Vegh PDFs; then the whole reading in two halves (1–8, 9–15) and a short reconciliation |
+| Steps 2, 6, 8, 11 | S-53, S-54, S-55 closed; S-56 and S-57 applied, to confirm (Step 2 1 697, Step 6 1 926, Step 8 1 988, Step 11 902) |
+| Receipt audit | standing end-of-stage check (R1–R4). First run 149 sentences, 5 failures; re-run after repairs, 0 failures |
+| To complete the stage | confirm S-56, S-57; place the shaft-power limit; surface, identity and state sweep; record-propagation sweep; Step 1 and Step 8 denial maps; Rohith/Vegh PDFs; the whole reading in two halves (1–8, 9–15) and a short reconciliation |
 
 **Every step has now been recomposed once.** Recomposition into result sentences took Steps 10–11 to about 40 % of their length,
 Steps 12–14 to 57–83 %, and the framework and architecture to 80–95 %, because definitions, protected sentences and their evidence
@@ -238,7 +238,7 @@ of them holds a sentence deleted for lack of a source.
 | Tool | What it checks |
 |---|---|
 | `v8_caveats.py` | the protected sentences |
-| `v8_stale.py` | retired phrases (155) and single-home phrases, in the step bodies **and in the v8 figure scripts** |
+| `v8_stale.py` | retired phrases (156) and single-home phrases, in the step bodies **and in the v8 figure scripts** |
 | `v8_nothing_lost.py` | every sentence of a recomposed step is in the body or the supplement, or is a voted replacement |
 | `v8_draft_check.py` | a draft is derived from its source by deletion only (pointers in ⟦ ⟧ excepted); no negative or qualifier deleted; every protected sentence present |
 | `v8_refs.py` | table, row and relational-noun references, and supplement references |

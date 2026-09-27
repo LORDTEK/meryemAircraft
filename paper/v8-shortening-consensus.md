@@ -592,3 +592,8 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | S-56 (b) *"not priced"* | ✓ | ✓ | ✓ | ✓ | ✓ (öneren) | **Uygulanmadı** — Qwen'in gerekçesiyle yanlış çıktı; düzeltilmiş R Tur 131'de oyda |
 | S-57 karar cümlesi | ledger | uncommanded | trims | bekle | birleşik | **Yazar: sıfır şaft torku (Tur 131)**; birleşik cümle oyda |
 | Tamamlama listesi i–vi; iki yarı okuma | ✓ | ✓ | ✓ | ✓ | ✓ | **Kabul (Tur 130–131)** |
+| S-53 (A,B), S-54, S-55 teyit | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI (Tur 132)** |
+| S-56 düzeltilmiş R; ayna maliyet sorusu bu cümleyle | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı (Tur 132)**; teyide |
+| S-57 birleşik cümle | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı (Tur 132)**; teyide |
+| Kumandalı sapmaların şaft gücünü adlandır | Adım 8 | Adım 14 | Adım 8 | Adım 8 | Adım 8 | **Yer ayrıştı** → Tur 132 |
+| Alındı denetimi kalıcı kapanış kapısı; R1–R4; numarasız işaretçiler sonraki aşama | ✓ | ✓ | ✓ | ✓ | ✓ | **Kabul (Tur 132)**; CLAUDE §3.0 |

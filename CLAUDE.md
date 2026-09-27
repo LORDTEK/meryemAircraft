@@ -571,6 +571,17 @@ Hiçbir iddia denetlenmeden aktarılmaz — ne YZ'lerinki ne benimki.
   sına.** Sessizce boş dönen bir denetim, hiç olmayandan beterdir; bu bir kez
   oldu.
 
+### 3.0 Alındı denetimi — her aşamanın kapanış kapısı. Tur 130–132 (dört okuyucu + Claude).
+
+Başka bir bölüme ya da eke atıf yapan her gövde cümlesi, **alıcının vaat edilen şeyi gerçekten taşıyıp taşımadığına** karşı
+okunur — atfın çözülmesi yetmez (`v8_assemble.py` yalnız çözülmeyi denetler). Kategoriler (ChatGPT): **R1** sadık taşındı ·
+**R2** taşındı ama farklı nitelendi · **R3** atıf çözülüyor, içerik yok · **R4** gönderen alıcının kurduğundan fazlasını söylüyor.
+İlk koşu (Tur 130): 149 cümle, 5 başarısız → S-53 (R3+R4), S-54 (R4; ayrıca yanlış belge ve kesik alıntı — v5'ten beri),
+S-55 (R3), S-56 (R3). Onarımdan sonra yeniden koşulur (Tur 132: 0 başarısız). Tablo: `paper/v8/drafts/receipt-audit.md`.
+**Her aşamanın sonunda koşturulur.** Numarasız işaretçiler (*above*, *below*) bir sonraki aşamanın adayı.
+**Ders (S-56):** bir onarımın kendisi de alındıdır — "fiyatlanmadı" demeden önce maliyetin kapanışın içinde olup olmadığına
+bakılır; alıcıyı okumak yetmez.
+
 ### 3.1 Emekliye ayrılan ifade DEPONUN TAMAMINDA aranır. Tur 49.
 
 Adım 6'da *"different efficiency class"* ifadesini emekliye ayırdım ve gerekçesini

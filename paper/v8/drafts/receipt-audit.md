@@ -159,3 +159,17 @@
 | 146 | 15 | The configuration is arranged to change regime by rotating the airframe rather than the propulsors, and so carries none of the mechanism classes Secti… | holds |
 | 147 | 15 | The ordering belongs to the sizing contract (Section 13). | holds |
 | 148 | 15 | Section 14 lists what would settle the rest. | holds |
+
+## Re-run on the repaired text (Round 132; ChatGPT's item F)
+
+149 sentences again. **Five are new or changed** (the S-53 to S-57 repairs); all five were read against their receivers and **hold (R1)**:
+
+| Step | Sentence | Receiver | Verdict |
+|---|---|---|---|
+| 6 | *Section 11 charges the third.* | Step 11, the fixed-pitch gap | R1 |
+| 6 | *The first two are inside Section 10's closed numbers — the wing's mass in the empty fraction, the constrained planform in the computed span efficiency — …* | S10 empty fraction (`aero/baseline.py`, f_govde 0.30); e = 0.817 trimmed VLM (S6) used in the bracket (`aero/drag_sweep.py`) | R1 |
+| 8 | *… it is the drag state Section 11 charges.* | Step 11 Bill 2, free-wheeling rotors | R1 |
+| 8 | *… the drag figures estimated for the stopped condition (Supplement S11) …* | S11, the two estimate rows | R1 (row 66 repaired) |
+| 11 | *… (the estimate is an area-and-coefficient calculation, Supplement S11) … a class Section 7 counts …* | S11 estimate rows; Step 7 table (indexing) | R1 |
+
+**Gone:** the five failing sentences of the first run (S-53 ×2, S-54, S-55, S-56). **Failures now: 0.**

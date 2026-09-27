@@ -214,7 +214,7 @@ nothing and presents the aircraft's largest surface to ground wind. The tailless
 follows from having no boom constrains the sweep, because with no horizontal stabiliser the
 pitching moment must come from the distribution of lift along the body itself. And the
 fixed-pitch propeller that serves both regimes is the reason the margin above sits where it does
-rather than higher. Section 11 charges all three.
+rather than higher. Section 11 charges the third. The first two are inside Section 10's closed numbers — the wing's mass in the empty fraction, the constrained planform in the computed span efficiency — but neither is separated out as a charge, and the wing's exposure to ground wind is not priced in this work.
 
 **The two halves are now on the table separately. Section 7 is where they are combined**, and
 the combination is what this paper is for.
@@ -225,6 +225,7 @@ the combination is what this paper is for.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 132 — S-56 uygulandı (R; dört okuyucu + Claude):** *"Section 11 charges all three."* → *"Section 11 charges the third. The first two are inside Section 10's closed numbers — the wing's mass in the empty fraction, the constrained planform in the computed span efficiency — but neither is separated out as a charge, and the wing's exposure to ground wind is not priced in this work."* Kanat kütlesi `aero/baseline.py` f_govde 0,30; açıklık verimi 0,817 trimli VLM (Ek S6) | S-56 |
 | **Tur 131 — S-55 onarıldı:** *"which Section 10 states explicitly is not its best"* → *"which is not its best"* (silme; dört okuyucu + Claude). **S-56 açık:** *"Section 11 charges all three"* — (b) uygulanmadı, düzeltilmiş R oyda (kanat kütlesi ve planform kapanışın içinde, ayrılmamış; yer rüzgârı fiyatlanmamış) | S-55, S-56 |
 | **Tur 123 — uzunluk geçişi, ilk kısım** (dört okuyucu + Claude): **S-48** onarıldı (*"and whether it is ahead of the best examined blade family depends on the drag bracket"* çıktı — tablo +3…+27 %); **M3** L/D_max formülü ve 11,65 / 10,08 Ek S6'ya (kimlikleriyle), yön cümlesi kaldı; **M7** *"and 3.9 percent below the assumption"* Ek S6'ya, *"a vortex-lattice solution"* kaldı. M1 uygulanmadı (Claude'un önerisi P'nin kimliğini taşıyan cümleleri de taşıyordu; düzeltilmiş hâli oyda). Özgün adım Ek S6'da tam. 2 145 → 2 108 | Tur 122 metni §3, §4 |
 | **Tur 98 (dört okuyucu + Claude; yazar kararı E5):** eksen yayılımı P-a–P-d — "the alternative is the rotorcraft, multirotor and helicopter alike", "the rotorcraft family", "A rotorcraft meets…", "A rotorcraft's rotors…", korunan ölçek cümlesi "1 660 to 3 275 kg" (SbS TS 3 665 lb = 1 662 kg). Kaynak alıntıları ("multirotors are efficient in hover") ve belirli referanslar (quadrotor) değişmedi. Özgün paragraflar Ek S6'da | J&S Tablo 3 |

@@ -155,7 +155,7 @@ duty falls on the strip.
 
 **The fixed geometry of the tip pairs leaves two admissible cruise states, and only one of them
 is physically closed.** Unable to feather, the pairs must either turn at the zero-shaft-torque
-condition or be stopped.
+condition or be stopped. This configuration uses the first: free-wheeling at zero shaft torque is the tip pairs' uncommanded cruise state, and it is the drag state Section 11 charges.
 
 **The tip pairs are the parts that fail the escape condition.** The nose pair meets all four parts of Section 3. The tip pairs do not: they hold
 one orientation, but they are carried through cruise producing moments rather than cruise thrust,
@@ -181,6 +181,7 @@ brake or a lock rather than motor holding torque, the count of Section 7 would g
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 132 — S-57 uygulandı (R; yazarın kararı, dört okuyucu + Claude):** [28] *"…or be stopped."*dan sonra: *"This configuration uses the first: free-wheeling at zero shaft torque is the tip pairs' uncommanded cruise state, and it is the drag state Section 11 charges."* *"uncommanded"* kumandalı momentleri sapma olarak bırakır | S-57 |
 | **Tur 131 — S-53 (A):** korunan yan cümle R — *"the drag figures estimated for the stopped condition (Supplement S11) should be read as estimates for an assumed azimuth rather than as the state a particular installation would reach"* (dört okuyucu + Claude); `v8-caveats.md` satır 64 güncellendi. **S-57:** yazar — sıfır şaft torku; karar cümlesinin sözcükleri oyda | S-53, S-57 |
 | **Tur 127** (dört okuyucu + Claude): **S-52** onarıldı (R) — [7] *"or by differential thrust"* → *"or by the reaction torque of other rotors run at a different speed"* (§0.1; ifade emekli, Grok P119); **S-51** (c) — [24] *", because both are properties of the hardware just described"* çıktı; **P117** (R) — [14] *"(body axes, as fixed in the note below)"*; **N1** kalınlık ve veter Ek S8'e (kimlikleriyle); ses V1, V2, V3, V5 çıktı; V4, V6 kalır. Özgün adım Ek S8'de tam | Tur 126 metni §2–§4 |
 | **Tur 130 — S-53, D uygulandı (oybirliği):** [28] *"…or be stopped, and the difference between those two states is a substantial fraction of the aircraft's zero-lift drag. Both ends are computed rather than assumed and the charge appears in Section 11."* → *"…or be stopped."* `v8_draft_check` temiz. **Son paragraftaki yan cümle KORUNAN** (satır 64) — silinmedi; R onarımı oyda. S11'e kestirim satırları eklendi. S-57 adayı (yazar: seyir durumu boşta dönme) yazara soruldu | S-53, S-57 |
