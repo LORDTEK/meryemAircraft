@@ -325,3 +325,8 @@ beş madde oyda, S-50 adayı). Adım 8 listeleri istendi. **Uzunluk (E8):** mima
 
 **Tur 126.** Yazar: ChatGPT okuduğu Rohith ve Vegh içeriğini herkese versin — istendi (Tur 127'de öbürleri değerlendirir). Adım 7 teyitle
 kapanacak (1 259). Adım 8: S-51 ([24]↔[25] çelişkisi), S-52 ([7]'de tepki torkunu itki farkı karşılar diyor — §0.1 hatası) oyda.
+
+**Tur 127 — E8 zamanı geldi (uzunluk).** Bütün mimari adımlar ölçüldü: gövde düzyazısı (tablolar hariç) **18 644 kelime**, plan 8 500;
+AIAA Regular Article 10 000–12 000 (şekil ve tablo dahil). Silme temelli yeniden kurma iddia/sınır/mekanizma cümlelerini koruduğu için mimari
+ve çerçeve adımlarını %80–95'te bırakıyor. Okuyuculardan somut öneri istendi (Tur 127); ardından **yazara karar**: R'ye izinli ikinci geçiş,
+blokların eke gitmesi, adım birleştirme, başka makale türü, ya da aşımı kabul.

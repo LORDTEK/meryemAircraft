@@ -565,4 +565,11 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Adım 8 eksen adları | [14]'e gövde notu (P117) | **eksen denetimi istedi** | tutarlı | tutarlı | geometriden denetlendi: doğru | **Tur 126: denetim sonucu okuyuculara; P117 oyda** |
 | Adım 8 taşıma N1–N5, ses V1–V6, S-51, S-52 | — | — | — | — | — | **Tur 126 oylaması** |
 | DeepSeek'in S-49 harita satırı | ✓ | **üç turdur oy yok** | ✓ | ✓ | ✓ | **Kabul sayıldı (harita satırı, metin değil); ChatGPT itiraz ederse geri alınır** |
+| Tur 126 cevapları: Adım 7 teyit; S-50, S14 alıntısı teyit | ✓ | ✓ | ✓ | ✓ | ✓ | **Kapandı: Adım 7 1 259** |
+| Eksen denetimi; P117 | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı (R)** |
+| S-51 (c); S-52 (a); N1; V1, V2, V3, V5 sil; V4, V6 kalır (DeepSeek V6'da, ChatGPT V1–V2'de değiştirdi) | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı (Tur 127): Adım 8 2 045 → 2 000** |
+| [24]'ü tamamen sil (DeepSeek); P120 başlık (Grok) | P120 | (c) yeter | öneren | (c) | [24] sil; başlık kalsın | **Tur 127 oylaması** |
+| ChatGPT'nin Rohith/Vegh raporu (yazarın isteği) | — | rapor | — | — | engel değil | **Tur 127'de öbür üçüne** |
+| Uzunluk: gövde düzyazısı 18 644 / plan 8 500 | — | — | — | — | yazara | **Tur 127'de okuyucu önerileri; sonra yazara (E8)** |
+| Adım 15 listeleri | — | — | — | — | — | **İstendi** |
 

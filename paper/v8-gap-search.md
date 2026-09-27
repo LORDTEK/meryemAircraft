@@ -100,3 +100,11 @@ da alıntı yok).
 doi 10.2514/6.2025-1436 (yazarın verdiği); dergi makalesi *J. Aircraft*, doi 10.2514/1.C038393. ChatGPT'nin Rohith ve Vegh okuması hâlâ
 yalnız ChatGPT'nin; PDF'ler bekleniyor (Grok P116: doğrulanmamış bir okumadan cümle yazılmaz).
 
+**Tur 126 — ChatGPT'nin Rohith ve Vegh okuması** (ResearchGate görüntüsü; yazarın isteğiyle öbürlerine verildi, Tur 127'de değerlendirilecek).
+**Rohith** (tam metin, s. 1, 9–11, 13–15): kanatlı çift kanat kuyruk üstü, 100 kg; seri hibrit; motor seyir gücüne boyutlanmış (*"110% cruise
+instead of 150% hover"*), takviye bataryası dikey uçuşu karşılıyor; kuyruk üstüye çevirme *"fixed wings and collective pitch change
+mechanisms"* ekliyor → a, e evet; c hayır. **Vegh konferans** (tam metin, s. 1, 5–6, 10–11, 26): insansız uzun süreli eşeksenli kuyruk üstü;
+gövde, kanat, yatay ve dikey kuyruk; dört tahrik (dizel, paralel hibrit dizel, turboşaft, seri hibrit SOFC); hibrit askı gücünü enerji
+dönüştürücüden kısmen ayırıyor; tutum kontrolü metinde bulunamadı → a, b, e evet; d yok (kuyruklar). **Vegh dergi:** yalnız özet açıldı.
+**ChatGPT kendi Tur 123–124 anlatımını düzeltti** (geometri konferanstan, dergiden değil). Hiçbiri boşluğu kapatmıyor; PDF'ler hâlâ bekleniyor.
+

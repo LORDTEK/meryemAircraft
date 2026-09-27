@@ -1805,6 +1805,181 @@ q = T/A. For the 50 kg reference design, with the nose pair's hover thrust over 
 
 ---
 
+### Section 8 as it stood before the length pass (frozen snapshot, complete)
+
+Section 7 claimed that a class of mechanism is absent. A claim of that kind is only as good as
+the inventory behind it, so the inventory is given here in full, including the parts that move.
+
+#### The airframe
+
+The entire airframe is the wing. There is no cylindrical fuselage: every part of the planform
+carries payload and produces lift. Leading-edge sweep varies continuously along the span while
+the trailing edge is held at 25°, so the realised sweep runs from 45° at the root to 38.3° at the
+tip — a variation of under seven degrees, with the crescent character coming from the curvature of
+the leading edge rather than from a large change in sweep. Thickness runs from 25 % of chord at
+the root to 12 % at the tip, and chord from 0.970 m to 0.236 m. For the 50 kg reference design — the design this inventory describes; Section 10 re-closes it at
+four masses, and Section 12 sets it beside a 1 000 kg reference design — the span is 3.453 m, the wing area 1.979 m², and the aspect ratio 6.03.
+
+Sweep is not a free parameter here, and the reason is structural to the configuration rather than
+aerodynamic preference. The aircraft is tailless. With no horizontal stabiliser on a boom, the
+pitching moment must come from the distribution of lift along the body itself, and sweep is what
+places the outboard sections behind the centre of gravity so they can produce it. **The sweep
+angle and the longitudinal stability are one design variable seen from two directions.**
+
+#### The propulsion
+
+**Five propeller stations, ten rotors:** every station is a coaxial counter-rotating pair. The
+reason is narrow
+and worth stating as such: **reaction torque.** A single propeller applies to the airframe a
+torque equal and opposite to the one it applies to the air. It acts about the propeller axis,
+which on this aircraft is the body's longitudinal axis — the roll axis in body terms — in both
+regimes, and it must be opposed continuously, either by a control surface, which costs drag, or by
+differential thrust, which costs a control channel. A counter-rotating pair does not produce it.
+
+One pair sits at the nose, 1.20 m in diameter on the 50 kg reference design, and produces all propulsive
+thrust in both regimes. Four smaller pairs, 0.20 m in diameter, sit at the ends of rigid frames
+projecting from the wing tips. Every pair is of **fixed geometry**: no cyclic pitch, no
+collective, no variable-pitch hub and no mechanism that changes a rotor's orientation relative to
+the airframe. Shaft speed is commanded; blade geometry and orientation are not. Each rotor of each
+pair is driven by its own
+electric machine on a common axis, so **the splitting gearbox and the mechanical governors that
+synchronise it are not required**. This work
+makes no claim about the shafting: whether the two machines are stacked on the axis or arranged
+some other way is an implementation question it does not settle.
+
+The counter-rotating arrangement carries a second consequence that the transition analysis
+depends on. **At equal counter-rotating speeds, the net angular momentum of the propulsion system is nominally
+zero**: rotating the airframe through ninety degrees therefore produces no gyroscopic moment for the
+control system to cancel. If the pairs are speed-trimmed, that cancellation is no longer exact (below). In a tilting architecture that term is present and must be designed for.
+
+#### The energy path
+
+A series hybrid: fuel to engine, engine to generator, generator to electric machines at the
+rotors. The engine is not mechanically connected to any rotor. It is an energy source, and that
+decoupling is what allows it to be sized by cruise rather than by hover.
+
+**The separation the architecture depends on is that the continuous cruise requirement is several
+times smaller than the hover peak, and that the difference is supplied from a battery buffer for
+the vertical phase alone.** No wattage is quoted here; the closed powers are Section 10's.
+
+#### What produces each moment
+
+**Pitch and yaw come from differential thrust between the tip pairs**, and the two axes do not
+have the same moment arm. The frames project ±0.71 m perpendicular to the planform, so a
+differential between the upper and lower pairs acts at 0.71 m in pitch, while a differential
+between the left and right pairs acts at the semi-span, **1.726 m — 2.43 times the pitch arm.**
+The yaw arm is therefore the larger by that factor, which is the reverse of the usual situation
+and is a consequence of the layout rather than a design choice. What authority each axis
+actually has depends on the available thrust differential and on allocation as well as on the
+arm, and is not settled by the ratio alone.
+
+**The same differential-thrust system is what is assigned to rotate the airframe through
+transition.** That is a design
+assignment, not a demonstrated result (Section 7): the moment it produces is a sizing input to Section 10,
+and whether it suffices and whether the aircraft trims through the rotation are **not settled in this paper**.
+
+**Roll comes from neither, and the reason is a choice rather than an impossibility.** Every thrust
+vector is parallel to the body axis, so no combination of thrust settings produces a moment about
+it. Reaction torque could produce one: each rotor has its own machine, so running the two rotors of
+a pair at different speeds leaves a net torque about that axis, and the tail-sitter literature uses
+exactly that channel. **This configuration declines it** — every pair is operated torque-balanced,
+so no reaction torque is spent on control — and assigns the axis to an aerodynamic device instead.
+What declining it costs is not counted in this work. Roll is produced instead by a strip on the
+lower surface: inclined at 45° in planform, running 120 % of
+root chord, reaching 67 % of semi-span, and standing 2 cm proud at its inboard end and 6 cm at
+its outboard end. **Extension is the control variable** — the strip is modulated, not switched —
+and deploying it also pitches the nose down by a small increment. Its inboard 46 % lies inside
+the nose propeller's slipstream, where dynamic pressure is set by disc loading and is therefore
+available at zero airspeed; its outboard 54 % works against the freestream in cruise. That split
+is why one device serves both regimes. The split is an estimate: the slipstream boundary it rests on
+is not derived in this work.
+
+#### What meets the ground
+
+The aircraft rests on five points: the four lower ends of the tip frames, and the aft end of a
+keel running along the centreline.
+
+**The frames carry a fairing, and it is not only a drag measure.** The frames are the only
+surfaces standing perpendicular to the wing plane, and a planar planform supplies no directional
+stability at all, so the fairing is also the only vertical surface the aircraft has. Sized
+against the criterion the tailless literature recommends — C_n_β greater than 0.001 per degree —
+the chord required over the combined frame length is **39 mm**, against the 50 to 70 mm that a
+20 mm faired strut carries in any case. Directional stability on this configuration therefore
+does not ask for a surface; it asks for a fairing on a frame that is already there.
+
+**One part is not airframe and is easy to omit from a list of this kind: the flight control
+system.** The stability of this configuration is not airframe-borne — it is produced by
+differential thrust and by the strip, both of which are actively commanded — so an attitude
+reference and a flight computer are not optional equipment but part of the mechanism the
+preceding paragraphs describe. They are carried in the systems budget. The configuration
+replaces a pilot's workload with computation, and the computer is the part that does it.
+
+#### What moves
+
+The propellers rotate, as propellers do, and their shaft speed is commanded; but none of them
+changes its orientation relative to the airframe, or its blade pitch, at any point in the flight.
+**Beyond the propellers' rotation, one thing on this aircraft changes its configuration: the
+strip.**
+It is described as deployable in two halves — one side alone for roll, both together as a speed
+brake. The actuator inventory is therefore the propulsion motors plus the strip's actuation.
+**How many actuators that is, this study does not fix.** The systems budget carries the
+actuation without sizing the mechanism, and naming a number here would be inventing one.
+
+#### What this inventory does not settle
+
+Two items belong here rather than in a later list, because both are properties of the hardware
+just described.
+
+**An untrimmed hover torque, with no trim mechanism identified.** This is a control question
+rather than a property of the hardware, and it is stated as one.
+
+The torque balance within each pair is set exact at the cruise condition rather than at hover, so
+a small residual remains in hover. It acts about the propeller axis — the aircraft's longitudinal
+axis, which is the roll axis in body terms. *(This paper fixes body-axis naming throughout. That
+axis is the roll axis in both regimes; what changes is its orientation relative to the earth — it
+stands vertical in the hover attitude, where a moment about it appears as a change of heading, and
+horizontal in cruise, where it appears as a bank. The two conventions are not mixed here.)*
+
+That axis is the one the configuration has chosen not to command with the propellers, which is why
+the residual is awkward: the tip pairs cannot absorb it by thrust differential, because their thrust
+vectors are parallel to that axis too, and the strip works against dynamic pressure that the
+slipstream supplies over only part of its length at zero airspeed. What is left is the channel the
+configuration set aside — the speed trim of the pairs, which is a reaction-torque command and not a
+thrust one. Either the residual is small enough to be absorbed that way, which this study has not
+shown and which would mean the architecture spends a little of the channel it declined, or a fourth
+duty falls on the strip.
+
+**The fixed geometry of the tip pairs leaves two admissible cruise states, and only one of them
+is physically closed.** Unable to feather, the pairs must either turn at the zero-shaft-torque
+condition or be stopped, and the difference between those two states is a substantial fraction of
+the aircraft's zero-lift drag. Both ends are computed rather than assumed and the charge appears
+in Section 11.
+
+**The tip pairs are the parts that fail the escape condition**, and naming them here is the point of
+listing them. The nose pair meets all four parts of Section 3. The tip pairs do not: they hold
+one orientation, but they are carried through cruise producing moments rather than cruise thrust,
+which is the first of Section 3's failure modes, and they are exposed while doing it. This is the partial
+instantiation Section 3 lists as its **fourth** failure mode — meeting the condition where the
+aircraft is carried and failing it elsewhere — and the charge it re-opens is the second, carried in
+Section 11. *(They are sized for moments and used for them in both regimes; they add the take-off
+margin (Section 5) but were not sized for weight support. Section 3's permitted-cost clause
+therefore places them outside the first charge while leaving them in the airstream.)*
+
+The free-wheeling state is physically determinate: the rotor settles where net shaft torque is
+zero. **The stopped state is not.** Stopping a rotor requires the stop to be produced by
+something — motor holding torque, an electrical brake, a mechanical lock — and a stopped
+fixed-pitch blade also has an azimuth, so "stopped" is a family of aerodynamic states rather than
+one. Neither the means nor the azimuth is fixed by this study, and the drag figure quoted for the
+stopped condition should be read as the state Section 11 defines rather than as the state a
+particular installation would reach. The free-wheeling state needs no stopping means; the stopped state does, and if it were a
+brake or a lock rather than motor holding torque, the count of Section 7 would gain a class.
+
+### Moved from Section 8 in the length pass (Round 127)
+
+On the 50 kg reference design, thickness runs from 25 % of chord at the root to 12 % at the tip, and chord from 0.970 m to 0.236 m (realised planform, `aero/planform.py`).
+
+---
+
 ## S9. Section 9 (from Section 9)
 
 ### "It does not claim range against fixed-wing aircraft" as it stood before recomposition (frozen snapshot)
