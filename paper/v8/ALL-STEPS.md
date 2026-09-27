@@ -87,7 +87,9 @@ propellers is mounted to compensate each other's torque."*
 **The established answer to hover control on such a configuration is a surface in the
 slipstream**, and it is worth naming because this paper refuses it. That 2014 vehicle places
 *"elevon and rudder … immersed in the propeller slip stream to provide three axis control moments
-in hover."*
+in hover."* A flying-wing tail-sitter reported in 2018, with two counter-rotating propellers side by side and two
+elevons, uses the same answer for two of its three axes and treats the propellers' counter-moment about the thrust axis as
+a disturbance to be cancelled rather than as a control channel; only its hover and vertical flight are reported.
 
 **And the reaction-torque channel this paper declines is established as a control channel.** A
 coaxial contra-rotating tail-sitter reported in 2012 balances rotor torque *"by the inverse
@@ -307,8 +309,7 @@ applications this work is aimed at need the aircraft to arrive somewhere that ha
 to leave again.
 
 So the requirement is: **the aircraft carries everything it needs to depart and recover, and the
-site supplies no prepared launch or recovery infrastructure of any kind.** The ground is the only
-thing the site provides, and it provides it unprepared. A net, a catapult, a cradle, a prepared
+site supplies no prepared launch or recovery infrastructure of any kind.** A net, a catapult, a cradle, a prepared
 strip or a recovery vehicle each fail that test — including the ones that fail it only on the
 recovery half.
 
@@ -345,7 +346,7 @@ tip-frame lengths that set both the stance base and the control arms, and the st
 carries the landing loads. Those numbers exist and Section 10 reports **whether** they close, and
 with what margin. This section does not assert the outcome of a calculation it does not contain.
 
-**Not demonstrated, and the list is not short.**
+**Not demonstrated.**
 
 **The aircraft leaves the ground on its control propellers.** Hover power is sized at thrust
 equal to weight, so the primary propulsor supplies a thrust-to-weight ratio of exactly one and
@@ -430,17 +431,14 @@ the cruise condition the lift coefficient follows from `C_L = W/(qS)`, the drag 
 `C_D = C_D0 + C_L²/(πARe)`, and the nose pair is left with one job — producing the thrust that
 balances that drag. It supports none of the weight.
 
-That is the whole of the difference, and it is worth stating in those plain terms because the
-consequence is structural. **A rotorcraft's rotors must produce the lift and the propulsive force
+**A rotorcraft's rotors must produce the lift and the propulsive force
 together, throughout cruise.** This aircraft separates them: a surface holds the aircraft up and a
 propeller pushes it along, and **the wing produces its lift without a separate continuous power
 supply of its own** — the power the aircraft spends in cruise goes to overcoming drag, of which
 the lift's share is the induced part.
-Lift is carried on a surface or it is carried on rotors, and no sizing contract, no assumption
-in this paper and no choice available to a designer moves a vehicle between those two states.
 
 **But the size of the resulting advantage is a calculation, not a consequence of that
-statement**, and the two must not be run together. The rest of this section is the calculation,
+statement**. The rest of this section is the calculation,
 and it gives a smaller number than the structural statement invites.
 
 ### What the margin actually is, in one currency
@@ -456,13 +454,9 @@ cruise thrust equals drag and lift equals weight, so with shaft power `P = DV/η
 > **L/De = WV/P = (L/D) · η_p**
 
 **Which power `P` denotes is not assumed here**, because reading it as electrical power rather
-than shaft power would make this configuration's figure incomparable with the published one. The
-source settles it in its hover formulation: hover power is written `Ph = W√(W/2ρA)/FM`, with the
+than shaft power would make this configuration's figure incomparable with the published one. The source settles it: hover power is written with the
 figure of merit already applied — shaft power — and the propulsion-system efficiency applied
-separately outside it. The cruise formulation uses the same separation, writing cruise energy as
-`Pc/ηc` with `Pc = WV/(L/De)`. That separation appears in the source's **battery-capacity**
-derivation, so it holds for the all-electric entries as well as the shaft-driven ones: if `L/De`
-already contained the electrical chain, that derivation would count it twice.
+separately outside it. That separation holds for the all-electric entries as well as the shaft-driven ones.
 
 **Neither factor is a single number, and they are two different kinds of spread.**
 
@@ -471,8 +465,7 @@ rotors already charged. That spread is **uncertainty**: it is the zero-lift drag
 designer does not get to choose where in it the real aircraft lands.
 
 The cruise propeller efficiency is **0.632 to 0.683** across the nose-blade families that meet
-the hover figure of merit — two and three blades per rotor, at two target section lift
-coefficients, each solved at its hover and its cruise condition. That spread is **not
+the hover figure of merit. That spread is **not
 uncertainty**: it is a design variable this study has not fixed.
 
 | L/De | η_p 0.632 | η_p 0.683 |
@@ -489,8 +482,7 @@ and both are given, because choosing between them requires something this sectio
 - **Best examined blade family, 6.00 to 7.39.** The highest efficiency among the families
   examined is 0.683; holding it and sweeping only the drag bracket gives this range.
 
-**Whether 0.683 is the blade a designer would actually choose is not settled here**, and saying
-so is the point. It is the best of the four *on cruise efficiency under the hover figure-of-merit
+**Whether 0.683 is the blade a designer would actually choose is not settled here**. It is the best *on cruise efficiency under the hover figure-of-merit
 constraint*. Blade count and section loading also govern structural loads, acoustics, the motor
 operating point, rotor inertia and manufacture, and **none of those is modelled in this work**.
 Section 10 is where one blade is carried into a closed sizing loop; until then this section stays
@@ -607,8 +599,8 @@ the combination is what this paper is for.
 
 ## The combination
 
-None of the three elements is new. **Each can be found on its own, and in
-combination, in the literature and in hardware** — Section 1 says where.
+None of the three elements is new. **Each can be found on its own, and some of them
+together, in the literature and in hardware** — Section 1 says where.
 
 **What this paper contributes is that combination, the condition its primary propulsor is designed
 to satisfy, and the price the configuration pays for pursuing it.** The three elements, taken together, meet the escape condition
