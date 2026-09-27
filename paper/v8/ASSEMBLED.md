@@ -248,7 +248,7 @@ Two things in that sentence are choices rather than derivations. The inversion r
 
 #### What the condition does not say, and this matters more than what it says
 
-**It means zero of the three charges as Section 2.1 defines them.** **It does not mean an architecture that costs nothing, and it does not mean an architecture that carries nothing for the vertical phase.** A definition that placed every conceivable cost inside the thing to be escaped would be unfalsifiable, and an architecture built to satisfy it would win by construction rather than by performance.
+**It means zero of the three charges as Section 2.1 defines them.** **It does not mean an architecture that costs nothing, and it does not mean an architecture that carries nothing for the vertical phase.** A definition that placed every conceivable cost inside the thing to be escaped would be unfalsifiable, and an architecture built to satisfy it would win by definition rather than by performance.
 
 The costs the condition permits are named here, before any candidate is examined. Six of them:
 
@@ -897,7 +897,7 @@ brake or a lock rather than motor holding torque, the count of Section 5.1 would
 
 ### 6.2 What is not claimed
 
-This section states the boundary of the paper's claims. It is placed before the configuration's own numbers because a boundary drawn after the results would be a retreat, and one drawn before them is a commitment.
+This section states the boundary of the paper's claims. It is placed before the configuration's own numbers.
 
 **It is not a list of the study's open questions.** Those are in Section 8, and the difference matters: the boundary below is about claims the paper **declines to make**, most of which it could not make on any evidence; Section 8 is about questions the paper **does not answer**, and which better evidence would answer. One is a scope; the other is a debt.
 
@@ -933,7 +933,7 @@ The mechanism claim has a price this work does not compute. **This configuration
 
 **3. It does not claim that the aircraft has no moving parts.** What is eliminated is a *class of mechanism* — the one that reorients a propulsor. The aircraft has a moving aerodynamic surface, it is named where the elimination is claimed rather than later, and it also pitches the nose down when deployed.
 
-**4. It does not claim mechanical simplicity.** Part count, assembly mass, failure modes and maintenance burden were not measured, and nothing here supports a statement about reliability. The count of mechanism classes in Section 5.1 is not a reliability argument, and readers who convert one into the other are not quoting this paper.
+**4. It does not claim mechanical simplicity.** Part count, assembly mass, failure modes and maintenance burden were not measured, and nothing here supports a statement about reliability. The count of mechanism classes in Section 5.1 is not a reliability argument.
 
 **5. It does not claim that the escape condition is fully instantiated.** The condition is met in the propulsor that carries the aircraft and is not met in the attitude system, which is carried through cruise producing moments rather than cruise thrust. Section 2.2 names that case as partial instantiation, and the charge it re-opens is reported rather than absorbed.
 
@@ -951,7 +951,7 @@ Each half of that has a named opponent and neither half is a record. **Nor is th
 
 #### One consequence for how the numbers that follow should be read
 
-Because the comparative result depends on the sizing contract, **no comparison in this paper should be quoted without the contract it was computed under.** That is not a caveat attached for safety; it is the paper's own finding applied to the paper's own numbers, and Section 7.4 states what it demands of anyone who uses the framework afterwards.
+Because the comparative result depends on the sizing contract, **no comparison in this paper should be quoted without the contract it was computed under.**
 
 ## 7. The calculations
 
@@ -1113,7 +1113,7 @@ Section 2.1 predicted that such a ranking will move when the sizing rule changes
 
 #### What this section does not establish
 
-**The competitors are modelled at a coarser level than this configuration**: their drag is transferred or idealised, their propeller efficiency assumed and their architecture-specific mass a parameter. **Comparing computed figures against assumed ones favours whichever is assumed more optimistically** — in propeller efficiency both competitors, and with a common propeller efficiency the lift-plus-cruise lead under the first contract falls from 55–84 to 33–45 percent (Supplement S13); in drag the tilting layout, by construction. **The comparison is at one size**: Section 7.3's 1 000 kg reference design has no closure, and none of its figures is used here. **And nothing here ranks architectures for a mission.** What this section establishes is narrower: **the same aircraft, under three reasonable contracts, give orderings against lift-plus-cruise that move by tens of percentage points and, inside the envelope, change sign** — so the ordering is not a property of the architectures alone.
+**The competitors are modelled at a coarser level than this configuration**: their drag is transferred or idealised, their propeller efficiency assumed and their architecture-specific mass a parameter. **Comparing computed figures against assumed ones favours whichever is assumed more optimistically** — in propeller efficiency both competitors, and with a common propeller efficiency the lift-plus-cruise lead under the first contract falls from 55–84 to 33–45 percent (Supplement S13); in drag the tilting layout, by assumption. **The comparison is at one size**: Section 7.3's 1 000 kg reference design has no closure, and none of its figures is used here. **And nothing here ranks architectures for a mission.** What this section establishes is narrower: **the same aircraft, under three reasonable contracts, give orderings against lift-plus-cruise that move by tens of percentage points and, inside the envelope, change sign** — so the ordering is not a property of the architectures alone.
 
 ## 8. What does not close
 
