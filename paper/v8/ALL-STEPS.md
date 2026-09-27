@@ -161,8 +161,6 @@ A lift-plus-cruise aircraft carries two propulsion groups: rotors, motors, mount
 
 Its cost is not linear. Mass growth feeds itself — MTOW = m_payload / (1 − f_empty − f_energy) puts additional empty mass through a multiplier that grows as the denominator shrinks — and in the vertical phase the same increment is counted a second time, because at a fixed disc area hover power scales with W^1.5. *(The exponent is a property of the scaling rule chosen: holding disc loading constant instead makes hover power grow linearly with weight, and Section 12 uses that.)* A modest dead-mass fraction becomes a large payload penalty.
 
-**This charge has been identified independently, and by a source with no interest in the present argument.** The NASA sizing study of Section 4 found the lift-plus-cruise concepts the heaviest of the vehicles examined, and named the cause: not the cruise power draw, since the lift-plus-cruise effective lift-to-drag ratio is the higher of the set, but *"the extra empty weight items on board in hover."* That is Bill 1 stated by an independent source in its own terms: not a failure of engineering, but the cost of an architecture.
-
 ### Bill 2 — drag
 
 The second payment falls on architectures that leave hover hardware exposed in forward flight: rotors stopped in the airstream, the booms that carry them, and the interference between their wakes and the wing. Cruise drag has other sources on any aircraft; what is charged here is the part attributable to hardware retained for a phase that is over.
@@ -541,7 +539,7 @@ is 3; both are unusually low. Nothing here is compared against a poor example.
 
 **The speeds are not matched, and the direction of that mismatch is calculable.** The published
 figure is quoted at the best-range speed; this configuration's is at its chosen cruise condition,
-1.49 times stall, which Section 10 states explicitly is **not** its best lift-to-drag point. The
+1.49 times stall, which is **not** its best lift-to-drag point. The
 best point lies at 1.26 times stall, and `L/D_max` exceeds the cruise ratio at both ends of the drag bracket.
 **The reference is
 therefore given its best speed and this configuration is not given its best speed, and the margin
@@ -857,8 +855,8 @@ The free-wheeling state is physically determinate: the rotor settles where net s
 zero. **The stopped state is not.** Stopping a rotor requires the stop to be produced by
 something — motor holding torque, an electrical brake, a mechanical lock — and a stopped
 fixed-pitch blade also has an azimuth, so "stopped" is a family of aerodynamic states rather than
-one. Neither the means nor the azimuth is fixed by this study, and the drag figure quoted for the
-stopped condition should be read as the state Section 11 defines rather than as the state a
+one. Neither the means nor the azimuth is fixed by this study, and the drag figures estimated for the
+stopped condition (Supplement S11) should be read as estimates for an assumed azimuth rather than as the state a
 particular installation would reach. The free-wheeling state needs no stopping means; the stopped state does, and if it were a
 brake or a lock rather than motor holding torque, the count of Section 7 would gain a class.
 
@@ -975,7 +973,7 @@ Section 2 named three charges that any architecture in this corner pays; **this 
 
 ### Bill 2 — the drag of hover hardware, inside the bracket
 
-In the zero-lift drag build-up behind Section 10's bracket (line items in Supplement S11), **the hardware exposed by the vertical-phase layout — the tip frames and the free-wheeling attitude rotors — is 69 percent of the zero-lift drag at the favourable end and 57 percent at the adverse one**; the rotor term alone is 0.0154 at the favourable end. **The rotor line rests on section drag at low Reynolds number.** It is a blade-element result for sections near a Reynolds number of 8 × 10⁴ in the free-wheeling state, on section polars that are computed rather than measured; Section 12 shows how strongly the term depends on it. **The tip-frame term is an attribution, not a marginal removal cost**: it is not a claim that this drag would disappear if the vertical phase did.
+In the zero-lift drag build-up behind Section 10's bracket (line items in Supplement S11), **the hardware exposed by the vertical-phase layout — the tip frames and the free-wheeling attitude rotors — is 69 percent of the zero-lift drag at the favourable end and 57 percent at the adverse one**; the rotor term alone is 0.0154 at the favourable end. **The rotor line rests on section drag at low Reynolds number.** It is a blade-element result for sections near a Reynolds number of 8 × 10⁴ in the free-wheeling state, on section polars that are computed rather than measured; Section 12 shows how strongly the term depends on it. **The tip-frame term is an attribution, not a marginal removal cost**: it is not a claim that this drag would disappear if the vertical phase did. **No stopped-state counterfactual was computed.** The eight tip discs stopped edge-on at a controlled azimuth are estimated at ΔC_D0 = 0.0008, against the computed free-wheeling 0.0154 (the estimate is an area-and-coefficient calculation, Supplement S11), but controlling the azimuth takes an indexing mechanism — a class Section 7 counts — and sizing it for eight small discs, charging its mass and its failure modes, and re-solving the loop has not been done.
 
 Removing the hub and small items, the tip frames and the free-wheeling rotors gives a clean-body lift-to-drag ratio of 20.55 at the favourable end and 15.24 at the adverse one, against the aircraft's 10.82 and 8.79: **the configuration retains 52.6 and 57.7 percent.** Bill 2 therefore occupies a larger share where the clean-body drag is lower, because a near-constant charge is set against a smaller total — a statement about position within the drag bracket at one scale, not about size (Section 12).
 
