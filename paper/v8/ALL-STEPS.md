@@ -349,7 +349,7 @@ with what margin. This section does not assert the outcome of a calculation it d
 **Not demonstrated.**
 
 **The aircraft leaves the ground on its control propellers.** Hover power is sized at thrust
-equal to weight, so the primary propulsor supplies a thrust-to-weight ratio of exactly one and
+equal to weight, so the primary propulsor — the nose pair — supplies a thrust-to-weight ratio of exactly one and
 no more. The take-off margin comes from the four tip pairs, which were sized from the moment
 requirement rather than from weight support. That is the one place the configuration asks a
 component to do a second job it was not sized for, and it means the take-off margin and the
@@ -622,12 +622,12 @@ with the hover peak drawn from a buffer. Each element supplies one part of it, a
 of them supplies it alone:
 
 - The **blended wing body** carries the cruise lift on a surface, so that cruise is
-  wing-borne rather than thrust-borne. That is the second half of the union.
+  wing-borne rather than thrust-borne.
 - The **tail-sitting stance** aligns the thrust axis with the body axis, so the propulsor
   that produces the thrust for vertical operation is the same one that produces the cruise
   thrust, holding
   one orientation relative to the airframe throughout. There is no dedicated lift system to
-  carry, and vertical operation does not depend on a runway. That is the first half.
+  carry, and vertical operation does not depend on a runway.
 - The **series-hybrid buffer** releases the continuous power plant from the hover peak,
   so that it is sized by cruise rather than by a condition holding for about two percent
   of the flight. The series arrangement is used here for the electrical path it gives the buffered
@@ -665,7 +665,7 @@ sized from the moment requirement rather than from weight support, but the thrus
 gives them also supplies the aircraft's entire take-off margin, because the nose pair is sized
 at thrust equal to weight and no more. This dual role is a dependency, reported as one where the sizing is audited, and it does not make the tip pairs a dedicated lift system.
 
-**The claim is narrower than it may appear, and the boundary matters.**
+**The claim is narrower than it may appear.**
 
 This is not a configuration in which nothing moves. Roll cannot be produced by the
 propellers' **thrust**: every thrust vector is parallel to the body axis, so no combination
