@@ -214,17 +214,17 @@ The body is about **26 000 words**, and the journal's working target is **about 
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 133.**
+**Round 134.**
 
 | Block | State |
 |---|---|
-| Stages (the author, Round 129) | each stage is a pass through the whole text; the next stage's method is chosen when the present one is complete. Present stage: recomposition into result sentences, body 25 797 → about 18 670 |
+| Stages (the author, Round 129) | each stage is a pass through the whole text; the next stage's method is chosen when the present one is complete. Present stage: recomposition into result sentences |
 | Length | **not decided now** (the author): after this stage completes |
-| Tip pairs in cruise (the author's decision) | uncommanded state: free-wheeling at zero shaft torque, stated in Step 8; commanded moments depart from it, and their shaft power is not computed (stated in Step 8). ΔC_D0 0.0154 for the eight discs at the favourable end (Section 11) |
-| Source defects S-53 to S-57 | **closed** (the Step 8 shaft-power sentence to confirm) |
-| Receipt audit | standing end-of-stage check (R1–R4); last run 0 failures. Before any repair says "absent", the whole paper is searched. State identity is a standing rule |
-| Open | Step 14's list vs Step 15's "lists what would settle the rest": two open questions (cruise commanded shaft power; variable-pitch counterfactual) are not on the list — to vote |
-| To complete the stage | rest of the surface/identity/state sweep; record-propagation sweep; Step 1 and Step 8 denial maps; Rohith/Vegh PDFs; the whole reading in two halves (1–8, 9–15), with an orphaned-definition check, and a short reconciliation |
+| Tip pairs in cruise (the author's decision) | uncommanded state: free-wheeling at zero shaft torque (Step 8); shaft power of commanded departures not computed (Step 8; Step 14's list) |
+| Step 14 | list of unknowns now **eighteen** (S-58: cruise commanded shaft power; variable-pitch counterfactual), to confirm |
+| Rohith et al. 2026 (*J. Aircraft*) | **in the repository and read**: 100 kg winged biplane tail-sitter sizing study; series hybrid, engine for cruise, boost battery; collective/variable pitch — fails (c). Proposed: a Step 1 occupied-list line and the Step 7 witness sentence (with Rheaume), to vote |
+| Vegh | the uploaded file is only the **correction notice**; the paper is not yet in the repository |
+| To complete the stage | Rohith sentences; rest of the surface/identity/state sweep; record-propagation sweep; Step 1 and Step 8 denial maps; the whole reading in two halves (1–8, 9–15), with orphaned-definition and list-completeness checks, and a short reconciliation |
 
 **Every step has now been recomposed once.** Recomposition into result sentences took Steps 10–11 to about 40 % of their length,
 Steps 12–14 to 57–83 %, and the framework and architecture to 80–95 %, because definitions, protected sentences and their evidence

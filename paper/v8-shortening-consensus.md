@@ -601,3 +601,7 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Şaft gücü cümlesi Adım 8'de (ChatGPT döndü) | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı (Tur 133)**; teyide |
 | P126 başlık kalsın | ✓ | ✓ | ✓ | ✓ | ✓ | **Kabul (Tur 133)** |
 | Durum kimliği; yokluktan önce bütün metin; şaft gücü tamamlama listesinde | ✓ | ✓ | ✓ | ✓ | ✓ | **Kabul (Tur 133)**; CLAUDE §3.0 |
+| Adım 8 şaft gücü cümlesi teyit; Adım 12 miras yeter | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI (Tur 134)** |
+| S-58 (b): Adım 14'e iki madde, S14 satırları, borç izi | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı (Tur 134)**; teyide |
+| Qwen P1 (tanımsız/kullanılmayan terim), P2 (olumsuz iddia tutarlılığı); DeepSeek P2, P3 | ✓ | ✓ | ✓ | ✓ | ✓ | **Kabul (Tur 134)** |
+| Rohith: Adım 1 satırı (A), Adım 7 tanık cümlesi (B) | — | — | — | — | evet | **Tur 134 oylaması** (PDF depoda, okundu) |

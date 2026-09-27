@@ -66,6 +66,7 @@ The remaining items are not known obstacles; they are questions this work has no
 - the pitching moment through the transition;
 - section drag at low Reynolds number;
 - the tip pairs' stopped cruise state;
+- the tip pairs' shaft power when commanded off the free-wheeling state in cruise;
 - the buffer's energy, not only its power;
 - the electrical path at peak;
 - the airframe's mass;
@@ -78,6 +79,7 @@ The remaining items are not known obstacles; they are questions this work has no
 - rotor–structure and rotor–wing interference;
 - engine installation;
 - blade-family selection;
+- the variable-pitch counterfactual;
 - atmosphere.
 
 **None of these is a small correction to a known quantity.** Two of them need validated data rather than more of the computation already done: the transition moment, because three methods have been tried against it and disagree, and the low-Reynolds section drag, because the one method used here is least reliable exactly there.
@@ -92,6 +94,7 @@ The remaining items are not known obstacles; they are questions this work has no
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 134 — S-58 (b) uygulandı (dört okuyucu + Claude):** liste 16 → 18: *"the tip pairs' shaft power when commanded off the free-wheeling state in cruise"* (durdurulmuş durumdan sonra) ve *"the variable-pitch counterfactual"* (pala ailesi seçiminden sonra). S14'e iki satır, oylanan *"what would settle it"* metinleriyle. Borç izi güncellendi (`drafts/15-maps.md`); gövdede sayı geçmiyor | S-58 |
 | **Tur 110 (Tur 109: dört okuyucu + Claude):** J1 "…the answer is no: the required store performance is not demonstrated by the sources consulted here" (ChatGPT; borç/kapsam koruması); D4 "the store figures available" (Qwen; P9'un beş puanlamasıyla sayı tutarlılığı). Önceki biçimler Ek S14'teki özgünde | Tur 109 metni §4 |
 | **Tur 109 — Adım 14 yeniden kuruldu** (Tur 107–108; dört okuyucu + Claude, veto yok): `drafts/14-recomposed.md` uygulandı; bilinmeyenlerin adları gövdede (dördü); **on altıncı bilinmeyen: rakibin seyir pervane verimi** (S-38'in yayılımı, dördü). Ek S14 tablosuna iki satır: pervane verimi ve **eksik olan rotor–yapı/kanat etkileşimi** (S-39). Özgün gövde Ek S14'te tam | `drafts/14-recomposed.md` §3 |
 | **Tur 97 (14C; dört okuyucu + Claude):** R-6 — "this aircraft's vertical phases occupy about a minute in all (Section 2), and how long each draws the peak is not computed here" (Adım 2 "on the order of a minute" diyordu; §0.2 ihlalimdi) | Adım 2 satır 32–33 |

@@ -1103,6 +1103,7 @@ The remaining items are not known obstacles; they are questions this work has no
 - the pitching moment through the transition;
 - section drag at low Reynolds number;
 - the tip pairs' stopped cruise state;
+- the tip pairs' shaft power when commanded off the free-wheeling state in cruise;
 - the buffer's energy, not only its power;
 - the electrical path at peak;
 - the airframe's mass;
@@ -1115,6 +1116,7 @@ The remaining items are not known obstacles; they are questions this work has no
 - rotor–structure and rotor–wing interference;
 - engine installation;
 - blade-family selection;
+- the variable-pitch counterfactual;
 - atmosphere.
 
 **None of these is a small correction to a known quantity.** Two of them need validated data rather than more of the computation already done: the transition moment, because three methods have been tried against it and disagree, and the low-Reynolds section drag, because the one method used here is least reliable exactly there.

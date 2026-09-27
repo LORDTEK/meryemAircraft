@@ -42,3 +42,11 @@ rest"*. **Step 15 promises none of them.** Four are touched in Step 15, each wit
 
 The other twelve are consumed by the pointer alone. **Observation for the next stage:** *"The loop closes; the aircraft is not shown
 to."* stands verbatim in both Step 14 and Step 15 — an echo (Grok's narrow A), not a defect.
+
+## Debt trace update (Round 134; option (b), four readers + Claude)
+
+Step 14's list goes from sixteen to **eighteen**: *"the tip pairs' shaft power when commanded off the free-wheeling state in cruise"*
+(after the stopped state) and *"the variable-pitch counterfactual"* (after blade-family selection), each with *"what would settle it"*
+in Supplement S14. **Step 15 promises neither.** Step 15's *"no variable-pitch hub"* is the mechanism count, not the counterfactual.
+The four touched items are unchanged; the other **fourteen** are consumed by the pointer alone. No body sentence states the count
+(searched: *"sixteen"* appears in no step body).

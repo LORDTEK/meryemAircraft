@@ -116,3 +116,11 @@ kurulamadı**: kuyruklar gösterilmiş, kumanda yüzeyi sayısı bildirilmemiş.
 P111 biçimi) ve Adım 7'nin tanık cümlesi (Rohith önce, Rheaume sonra). **Grok P122** (Rohith satırı: *"biplane tail-sitter, series
 hybrid, cruise-sized engine, collective pitch"*, tutum ya da (c) hakkında alıntının ötesinde yüklem yok) — Tur 128'de oyda.
 Okuma durumu `paper/v8-evidence.md`'de (DeepSeek).
+
+**Tur 134 — Rohith PDF'i depoda ve okundu** (yazar yükledi). ChatGPT'nin Tur 126 okuması doğrulandı: (a) evet (kanatlı çift kanat kuyruk
+üstü), (e) evet (seri hibrit, motor seyre, takviye bataryası askıya), **(c) hayır** (kolektif hatve, s. 586; değişken hatve ve devir, s.
+580). Boyutlandırma çalışması, uçurulmuş araç değil. Boşluğu kapatmıyor. Adım 1 satırı (P122 biçimi) ve Adım 7 tanık cümlesi Tur 134'te
+oyda. **Vegh:** yazar arıyor.
+**Tur 134 — Vegh: yüklenen dosya yalnız düzeltme duyurusu** (doi 10.2514/6.2025-1436.c1, 1 sayfa; Tablo 2 düzeltmesi ve s. 11'den
+*"tail volume"*un optimizasyon değişkenlerinden silinmesi). (c) ve (d) hakkında bir şey söylemiyor. Asıl bildiri bekleniyor; Vegh için
+hiçbir metin değişikliği yok.
