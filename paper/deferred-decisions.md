@@ -282,3 +282,7 @@ absurd"*u, CLAUDE §0'daki yazar cümlesinin (*"Çok rotorluyla dikey iniş kalk
 waiting to be found."* ile yazarın *"görülememişi görmüş olmak"* duruşu. Adım 1 şimdi açılıyor; okuyuculara bu cümleye dokunmamaları
 söylendi.
 
+**Tur 118 — Adım 9 kapandı: 1 020 (taban, dört okuyucu + Claude).** Yazar "waiting to be found" cümlesini okuyuculara açtı:
+*"Cümleyle ilgili durumu herkese sor ne öneriyorlar. Ama bunu yaparken, yazarın ortaya koyduğu muhteşemliğin anlatımının kırpılmaması
+gerektiği hususuna dikkat ederek düşünsünler. Yorumlarında özgürler. Sen de."* Ses işaretleri (Adım 1) K ile birlikte yazara gidecek.
+

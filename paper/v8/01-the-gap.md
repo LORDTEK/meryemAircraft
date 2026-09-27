@@ -26,9 +26,7 @@ the thing the other is bounded by.
 
 **Fixed-wing aircraft** carry payload over distance efficiently, because a wing sustains the
 vehicle without continuously spending power on lift. Their limit is not aerodynamic but
-infrastructural: a runway, a catapult, or an equivalent installation. That requirement is
-expensive, fixed in place, and scales badly — a larger aircraft wants a longer runway, stronger
-pavement and wider taxiways, so its growth is gated by the ground rather than by the air.
+infrastructural: a runway, a catapult, or an equivalent installation.
 
 **Rotorcraft and multirotors** remove that requirement completely. They take off and land
 vertically, hover, and work from confined sites. Their limit is the converse: with no wing,
@@ -41,13 +39,6 @@ applications this work is aimed at sit** — wildfire observation and response, 
 places without a runway — and both want to leave from an unprepared site and then cover distance.
 **That corner is not empty**, as the rest of this section sets out; what is unsettled is which
 price an architecture in it must pay, and whether one arrangement pays less than it appears to.
-
-### The problem has been attacked for seventy years
-
-Tail-sitting prototypes and the first tilt-rotor flew in the 1950s, vectored-thrust and tilt-wing
-aircraft in the 1960s, and a broad family of hybrid vertical take-off and landing uncrewed
-aircraft since roughly 2010. Different nations, services and propulsion philosophies have
-attacked the same problem for seventy years.
 
 ### What the contemporary answers do, and how each changes regime
 
@@ -178,6 +169,7 @@ presume an escape.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 118 — Adım 1 uzunluk geçişi, ilk kısım** (Tur 117; dört okuyucu + Claude): C1 (sabit kanatlının pist gereğini açan cümle) ve C2 ("The problem has been attacked for seventy years" alt bölümü, tarihleriyle — Grok P101) Ek S1'e; "Tail-sitting aircraft are seventy years old" son paragrafta kalıyor. Özgün Ek S1'de tam | Tur 117 metni §3 |
 | **Tur 114 — NASA çalışmasının tek evi Adım 4** (P88, dış kanıt kimliği kuralı; Tur 113, dört okuyucu + Claude): "A NASA study that sizes five VTOL architecture families to one mission describes …" → "The NASA sizing study used in Section 4 describes …" (ileri işaretçi); iki rota paragrafı Adım 1'in kendi kullanımı olarak kalır (Grok P94: üçüncü tasarım, görev sayısı ya da üç neden buraya girmez) | Tur 113 metni §6 |
 | **Tur 98 (dört okuyucu + Claude):** S-29 — 1G "series-hybrid propulsion has been flown in a crewed motor glider and designed for small uncrewed aircraft" (Schoemann 2014 s. 25–26; Merical ve ark. 2014 özeti). Özgün Ek S1'de | `references/Schoemann-2014_…pdf` |
 | **Tur 97 (dört okuyucu + Claude):** 1B başlığı "The problem has been attacked for seventy years" (çaba ihtiyacın kanıtı değil) | Tur 96 metni §5 |

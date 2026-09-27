@@ -7,9 +7,7 @@ the thing the other is bounded by.
 
 **Fixed-wing aircraft** carry payload over distance efficiently, because a wing sustains the
 vehicle without continuously spending power on lift. Their limit is not aerodynamic but
-infrastructural: a runway, a catapult, or an equivalent installation. That requirement is
-expensive, fixed in place, and scales badly — a larger aircraft wants a longer runway, stronger
-pavement and wider taxiways, so its growth is gated by the ground rather than by the air.
+infrastructural: a runway, a catapult, or an equivalent installation.
 
 **Rotorcraft and multirotors** remove that requirement completely. They take off and land
 vertically, hover, and work from confined sites. Their limit is the converse: with no wing,
@@ -22,13 +20,6 @@ applications this work is aimed at sit** — wildfire observation and response, 
 places without a runway — and both want to leave from an unprepared site and then cover distance.
 **That corner is not empty**, as the rest of this section sets out; what is unsettled is which
 price an architecture in it must pay, and whether one arrangement pays less than it appears to.
-
-### The problem has been attacked for seventy years
-
-Tail-sitting prototypes and the first tilt-rotor flew in the 1950s, vectored-thrust and tilt-wing
-aircraft in the 1960s, and a broad family of hybrid vertical take-off and landing uncrewed
-aircraft since roughly 2010. Different nations, services and propulsion philosophies have
-attacked the same problem for seventy years.
 
 ### What the contemporary answers do, and how each changes regime
 
