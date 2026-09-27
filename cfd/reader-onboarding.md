@@ -214,7 +214,7 @@ The body is about **26 000 words**, and the journal's working target is **about 
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 122.**
+**Round 123.**
 
 | Block | State |
 |---|---|
@@ -225,7 +225,7 @@ The body is about **26 000 words**, and the journal's working target is **about 
 | Step 9 | **closed** at 1 020 (from 1 166); "by construction" has one meaning, checked (S-44) |
 | Step 1 | **closed** at 1 462: K stays (the author); V5 the one voice sentence; gap sentence unchanged, no documented search yet (`paper/v8-gap-search.md`) |
 | Step 5 | **closed** at 1 148 |
-| Now | **Step 6** (2 145): moves M1–M7 to vote; S-48, S-49. **Voice in Steps 5–6: readers discuss, rounds 122–124**, then to the author. Two opened documents (Yang 2018, Rheaume & Lents 2016): obstacle to the claim? Then 7–8 → 15 |
+| Now | **Step 6** (2 108): S-48, M3, M7 applied; revised M1, M2, S-49 to vote. **Voice in Steps 5–6: round 2 of 3** (classes and method agreed; removal forms to confirm), then to the author. Yang 2018 and Rheaume & Lents 2016: no obstacle (all). Two DOIs (Rohith; Vegh) for readers who can open them. Then 7–8 → 15 |
 
 **The body is about 20 000 words of prose** (tables not counted). Recomposition into result sentences took Steps 10–11 to about
 40 % of their length, Steps 12–14 to 57–83 %, and the framework to about 80 %, because its definitions and protected sentences set

@@ -168,6 +168,7 @@ EMEKLI = {
     "tilting layout, by construction": "Tur 117: S-44 -- 'by assumption'",
     "is what the paper is for": "Tur 121: S-46 -- reddedilen kanalin bedeli hesaplanmiyor (Adim 5, 8, 9, 15)",
     "the same four propellers": "Tur 121: S-47 -- dort ucu cifti sekiz pervane; 'the same propellers'",
+    "whether it is ahead of the best examined blade family depends": "Tur 123: S-48 -- tablo +3..+27 %, surukleme ucuna bagli degil",
 }
 
 

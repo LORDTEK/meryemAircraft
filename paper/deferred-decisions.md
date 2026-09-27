@@ -310,3 +310,6 @@ Rohith ve ark. (ikisi de *J. Aircraft*).
 **Tur 122 — ses tartışması başladı (yazar kararı, Tur 121): Tur 122 = 1/3, Tur 124 sonunda yakınsamadıysa durum yazara.** Aynı turda:
 Yang 2018 ve Rheaume & Lents 2016 okuyuculara (yazarın sorusu: iddiaya engel mi?), S-48, S-49, Adım 6 taşıma adayları M1–M7, nitelik
 yönü tanımı, ChatGPT'ye P104 ve Qwen R118-P1/P2 metinleriyle.
+
+**Tur 123 — ses 2/3.** Okuyucular sınıflarda ve yöntemde 1. turda yakınsadı (ifade düzeyinde çıkarma; yazar ton seçimlerini geri alır).
+Tur 124 teyit turu; sonra liste yazara. **Yazarın DOI'leri** (Rohith, Vegh) okuyuculara verildi.

@@ -89,3 +89,10 @@ hüküm yok), sonra WO2025255583A1 ve US 2025/0010988 (BWB kuyruk üstü patentl
 **Hâlâ indirilmedi:** Vegh (AIAA SciTech 2025, doi 10.2514/6.2025-1436; *J. Aircraft* 10.2514/1.C038393 — Grok'un verdiği DOI'ler,
 doğrulanmadı), Rohith ve ark. (*J. Aircraft* 10.2514/1.C038443, Grok), WO2025255583A1, US 2025/0010988 A1.
 
+**Tur 123 — yazar DOI'leri verdi, henüz erişemedi:** Rohith, Sridharan & Govindarajan, *J. Aircraft*, https://doi.org/10.2514/1.C038443 ;
+Vegh, AIAA SciTech 2025, https://doi.org/10.2514/6.2025-1436 . Okuyuculara verildi (açabilirlerse okusunlar; açmadıkları belgeden sayı ya
+da alıntı yok).
+
+**Tur 122 cevapları (dört okuyucu + Claude):** Yang 2018 ve Rheaume & Lents 2016 iddiaya **engel değil**. Yang dolu listeye ikinci tanık
+(Grok P111 cümlesi Tur 123'te oyda); Rheaume & Lents Adım 7'de öğe tanığı (Adım 7 açılınca).
+

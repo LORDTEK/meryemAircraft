@@ -527,4 +527,15 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | **Yazar (Tur 121):** *"ses işaretlerini bana ver bakalım önce ben bir bakayım"*; iki PDF yükledi (Rheaume & Lents 2016; Yang ve ark. 2018 — **istenen Vegh ve Rohith değil**); *"birinin içinden ilgili kısımda ne olduğunu ama diğer makalenin metin kısımlarını bir sonraki turda ver"* | — | — | — | — | — | **Ses listesi yazara (`paper/v8-voice-flags.md`); Tur 122 metni yazarın bakışından sonra** |
 | **Yazar (Tur 121):** ses 3 tur okuyucular arasında; belgelerin yaklaşımı iddiaya engel mi | — | — | — | — | — | **Tur 122: ses 1/3; belgeler okuyuculara** |
 | Adım 6 taşıma adayları M1–M7 (Tur 121 listelerinden) | M1 ?, M2 ✓, M3 ✓, M5 taşı | M1 ✓, M3 ✓, M4 taşı | M1 ✓, M2 ✓, M3 **kalsın**, M4 **kalsın** | M1 ✓, M2 ✓, M3 ✓, M7 taşı | M1 ✓, M2 yalnız [22] onarımıyla, M3 ✓, M4 kalsın, M5 kalsın, M6 taşınacak yok | **Tur 122 oylaması** |
+| **Tur 122 cevapları — ses 1/3:** sınıflar yakınsadı (saf ses: 5.1, 5.6b, 5.11a, 6.1b, 6.3b, 6.8b, "invites"); yöntem: ifade düzeyinde, yazar ton seçimlerini geri alır | ✓ (5.6'da "kapsam" dan "saf ses"e geçti) | ✓ | ✓ (5.3, 5.8, 6.11 işaretlerini geri çekti) | ✓ | ✓ | **Tur 123 = 2/3: çıkarma biçimleri teyide; 5.11 ve "invites"in temiz silme biçimi yok; 6.1 bütün cümle** |
+| Yang 2018 / Rheaume & Lents 2016: iddiaya engel değil | ✓ | ✓ | ✓ | ✓ | ✓ | **Kapandı**; Yang → Adım 1 dolu liste (P111, R, oyda); Rheaume → Adım 7 (kabul, Adım 7 açılınca) |
+| Rheaume Adım 14: gövdede atıf; süperkapasitör | yalnız niteleyle; gövdede değil | niteleme tanığı; gövdede seçenek | niteleyle; gövdede seçenek | niteleyle; yalnız Ek S14 | atıf yok; Ek S14 satırı | **Ayrışık — Tur 123** |
+| S-48 | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı (Tur 123)** |
+| S-49 | silme biçimi | **bütün cümle** | silme biçimi | silme biçimi | **bütün cümleye geçti** (Adım 9 T1 satır 1 işi taşıyor) | **Ayrışık — Tur 123** |
+| M1 | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulanmadı — Claude'un önerisi sonucu (P'nin kimliği) taşıyordu; düzeltilmiş M1 Tur 123'te oyda** |
+| M3; M7'nin %3,9 yan cümlesi | ✓ | ✓ | ✓ (M3'e geçti) | ✓ | ✓ | **Uygulandı (Tur 123): Adım 6 2 145 → 2 108** |
+| M2 | taşı + [22] onarımı | **kalsın** | taşı + onarım | taşı + onarım | taşı + onarım | **Ayrışık — ChatGPT'ye** |
+| M4 | kalsın | taşı | kalsın | kalsın | kalsın | **Kalır — ChatGPT'ye soruldu** |
+| M5 kalsın; M6 taşınacak yok; nitelik yönü tanımı | ✓ | ✓ | ✓ | ✓ | ✓ | **Kabul** |
+| P104, Qwen R118-P1/P2 (ChatGPT metinlerle oyladı); P109; Qwen R121-P1/P2 | ✓ | ✓ | ✓ | ✓ | ✓ | **Kabul** |
 
