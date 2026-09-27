@@ -78,3 +78,14 @@ holds"* dedi (fazla okuma).
 kuyruk üstü + seri hibrit: boşluk cümlesinin (b)/(e) kesişimine en yakın aday. **İlk indirilecek belge.** Sonra Rohith ve ark. (e + f'ye
 yakın: askı tepesini takviye bataryasına verip motoru seyre göre boyutlamak — Adım 3'ün kaçış koşuluyla aynı fikir olabilir; açılmadan
 hüküm yok), sonra WO2025255583A1 ve US 2025/0010988 (BWB kuyruk üstü patentleri).
+
+## Açılan belgeler (Tur 121, yazar yükledi, Claude tam okudu)
+
+| Belge | a | b | c | d | e | f | Not |
+|---|---|---|---|---|---|---|---|
+| Yang ve ark. 2018 IROS, uçan kanat kuyruk üstü | evet | hayır (iki pervane yan yana, CW/CCW) | evet | hayır (iki elevon) | hayır (LiPo) | hayır | dolu liste adayı: uçan kanat + tork dengeli çift + slipstream elevonu; karşı moment bozucu olarak |
+| Rheaume & Lents 2016 SAE, yolcu uçağı enerji depolama | hayır | hayır | — | — | kısmen (paralel hibrit, takviye) | hayır | kuyruk üstü değil; Adım 14 ve Adım 7 için kanıt, boşluk için değil |
+
+**Hâlâ indirilmedi:** Vegh (AIAA SciTech 2025, doi 10.2514/6.2025-1436; *J. Aircraft* 10.2514/1.C038393 — Grok'un verdiği DOI'ler,
+doğrulanmadı), Rohith ve ark. (*J. Aircraft* 10.2514/1.C038443, Grok), WO2025255583A1, US 2025/0010988 A1.
+

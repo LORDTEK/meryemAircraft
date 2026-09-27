@@ -300,3 +300,9 @@ tepkileri yazara gitti (3 sil, Grok kalsın; ChatGPT'nin koşulu, DeepSeek'in "b
 çoğunlukla** (*"normalde hemfikir olmak önemliydi ama bu seferlik"*): N1 ChatGPT'nin oyu olmadan uygulandı; öbür her şey zaten oybirliği.
 Grok **V5'i** seçti; V1–V4, V6 çıktı. **Açık — yazara:** Adım 5 ses işaretleri (aynı yöntem mi?). **Belgelenmiş arama:** dört okuyucu da
 veri tabanına erişemedi; indirilecek belgeler `paper/v8-gap-search.md`'de (önce Vegh — hedef dergide olabilir).
+
+**Tur 121 → 122 — yazarda bekleyen:** Adım 5 (11) ve Adım 6 (18) ses işaretleri, `paper/v8-voice-flags.md` — yazar önce bakacak. **Tur 122
+metni o bakıştan sonra yazılacak**; içine girecekler hazır: Yang 2018'in ilgili kısımları (`paper/v8/drafts/src-yang2018-relevant.md`),
+Rheaume & Lents 2016'nın metin kısımları ve tabloları (`paper/v8/drafts/src-rheaume2016-text.md`), S-48, S-49, P109, P110 (denetlendi,
+tutuyor), Qwen R121-P1/P2, nitelik yönü tanımı, ChatGPT'ye P104 ve R118-P1/P2 metinleriyle. **İndirilmesi istenen hâlâ:** Vegh 2025 ve
+Rohith ve ark. (ikisi de *J. Aircraft*).
