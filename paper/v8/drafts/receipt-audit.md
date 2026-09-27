@@ -4,6 +4,8 @@
 
 **Not covered:** pointers without a section number (*above*, *below*, *the table*) — table references are `v8_refs.py`'s job.
 
+**Categories (ChatGPT, Round 130):** R1 carried faithfully · R2 carried but qualified differently · R3 reference resolves, promised content absent · R4 sender overstates what the receiver establishes. S-53 = R3 + R4; S-54 = R4; S-55 = R3; S-56 = R3 (coverage overstatement).
+
 **Result: 144 hold; 5 sentences fail, in four defects — S-53 (known), S-54, S-55, S-56 (new).**
 
 | # | Step | Sentence (start) | Verdict |

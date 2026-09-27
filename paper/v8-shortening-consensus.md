@@ -587,3 +587,8 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | P-Claude-1 alındı denetimi | ✓ | ✓ | ✓ | ✓ | ✓ | **Yapıldı (Tur 130): 149 cümle, 5 başarısız, S-54/55/56 yeni** |
 | Bütün okuma: iki yarı (1–8 / 9–15) + kısa uzlaştırma | ✓ | ✓ | ✓ (iki yarı) | ✓ | ✓ | **Kabul (Tur 130)** |
 | Tamamlama listesine ekler (yüzey/sayı/eksen taraması; kayıt yayılım taraması; ses tutarlılığı sorusu; yankı listesi) | yankı | yüzey | yayılım+sayım | ses | hepsi | **Tur 130 oylaması** |
+| S-53 (A) korunan yan cümle R; (B) Adım 11 cümlesi | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı (Tur 131)**; teyide |
+| S-54 (a) paragraf sil; S-55 silme | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı (Tur 131)**; teyide |
+| S-56 (b) *"not priced"* | ✓ | ✓ | ✓ | ✓ | ✓ (öneren) | **Uygulanmadı** — Qwen'in gerekçesiyle yanlış çıktı; düzeltilmiş R Tur 131'de oyda |
+| S-57 karar cümlesi | ledger | uncommanded | trims | bekle | birleşik | **Yazar: sıfır şaft torku (Tur 131)**; birleşik cümle oyda |
+| Tamamlama listesi i–vi; iki yarı okuma | ✓ | ✓ | ✓ | ✓ | ✓ | **Kabul (Tur 130–131)** |

@@ -78,3 +78,9 @@ alıntı metne girmez (P116). Okuma yalnız ChatGPT'nin, ResearchGate görüntü
 | **Rohith, Sridharan & Govindarajan**, *J. Aircraft*, doi 10.2514/1.C038443 | tam metin (ChatGPT; s. 1, 9–11, 13–15) | (a) evet, (e) evet; **(c) hayır** — kuyruk üstüye çevirme *"fixed wings and collective pitch change mechanisms"* ekliyor (s. 13–14) | Adım 7'nin *"None of the three elements is new"* ve *"some of them together"*ini **destekler** (en yakın aynı sınıf tanık: kuyruk üstüde depodan askı tepesi); boşluğu **söylemiyor** |
 | **Vegh**, AIAA SciTech 2025, doi 10.2514/6.2025-1436 | konferans tam metni (ChatGPT; s. 1, 5–6, 10–11, 26) | (a), (b), (e) evet. **(c) gösterilmedi** — "collective" eşleşmesi yok, açık ifade de yok; yokluk sayılmaz. **(d) görüntüden kurulamadı** — gövde, yatay ve dikey kuyruk var; kuyruklarda kumanda yüzeyi sayısı bildirilmemiş (Grok, Qwen, ChatGPT) | boşluğu **söylemiyor** |
 | **Vegh**, *J. Aircraft*, doi 10.2514/1.C038393 | yalnız özet | — | — |
+
+**Tur 131 — Silva, Johnson ve ark. 2018 (NASA 20180006683, `references/20180006683.pdf`), Tur 130'da açıldı (S-54).**
+
+| Belge | Nereye dokunuyordu | Kaynağın kendi sonucu / niteleme | Kaynak-sonuç |
+|---|---|---|---|
+| Silva ve ark. 2018 — NASA kavram araçları (dört tip, Adım 4'ün Johnson & Silva 2022'sinden **önceki** boyutlandırma kümesi) | Adım 2 Fatura 1 paragrafı (**Tur 131'de silindi**) | s. 14: *"The weight of the Lift+Cruise concepts is heavier in general than for the other vehicles. This is not driven by the cruise power draw … the most likely targets for reducing vehicle weight are the extra empty weight items on board in hover (wing and propeller)."* — askıda taşınan **seyir** donanımı. Başka sayfada: *"with the Lift+Cruise being heaviest"* | Fatura 1 okuması için **çelişir** (kaynak aynasını söylüyor); gövdede kullanılmıyor. DeepSeek: yapılandırmanın kanadını askıda taşıması sorusuna (S-56) kayıt olarak ilgili — tanık kapsamı farklı (rakip sınıfı), gövdeye girmez |

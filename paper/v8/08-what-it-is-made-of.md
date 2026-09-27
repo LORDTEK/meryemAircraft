@@ -170,8 +170,8 @@ The free-wheeling state is physically determinate: the rotor settles where net s
 zero. **The stopped state is not.** Stopping a rotor requires the stop to be produced by
 something — motor holding torque, an electrical brake, a mechanical lock — and a stopped
 fixed-pitch blade also has an azimuth, so "stopped" is a family of aerodynamic states rather than
-one. Neither the means nor the azimuth is fixed by this study, and the drag figure quoted for the
-stopped condition should be read as the state Section 11 defines rather than as the state a
+one. Neither the means nor the azimuth is fixed by this study, and the drag figures estimated for the
+stopped condition (Supplement S11) should be read as estimates for an assumed azimuth rather than as the state a
 particular installation would reach. The free-wheeling state needs no stopping means; the stopped state does, and if it were a
 brake or a lock rather than motor holding torque, the count of Section 7 would gain a class.
 
@@ -181,6 +181,7 @@ brake or a lock rather than motor holding torque, the count of Section 7 would g
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 131 — S-53 (A):** korunan yan cümle R — *"the drag figures estimated for the stopped condition (Supplement S11) should be read as estimates for an assumed azimuth rather than as the state a particular installation would reach"* (dört okuyucu + Claude); `v8-caveats.md` satır 64 güncellendi. **S-57:** yazar — sıfır şaft torku; karar cümlesinin sözcükleri oyda | S-53, S-57 |
 | **Tur 127** (dört okuyucu + Claude): **S-52** onarıldı (R) — [7] *"or by differential thrust"* → *"or by the reaction torque of other rotors run at a different speed"* (§0.1; ifade emekli, Grok P119); **S-51** (c) — [24] *", because both are properties of the hardware just described"* çıktı; **P117** (R) — [14] *"(body axes, as fixed in the note below)"*; **N1** kalınlık ve veter Ek S8'e (kimlikleriyle); ses V1, V2, V3, V5 çıktı; V4, V6 kalır. Özgün adım Ek S8'de tam | Tur 126 metni §2–§4 |
 | **Tur 130 — S-53, D uygulandı (oybirliği):** [28] *"…or be stopped, and the difference between those two states is a substantial fraction of the aircraft's zero-lift drag. Both ends are computed rather than assumed and the charge appears in Section 11."* → *"…or be stopped."* `v8_draft_check` temiz. **Son paragraftaki yan cümle KORUNAN** (satır 64) — silinmedi; R onarımı oyda. S11'e kestirim satırları eklendi. S-57 adayı (yazar: seyir durumu boşta dönme) yazara soruldu | S-53, S-57 |
 | **Tur 129 — S-53 bulundu (kapanıştan sonra):** [28] *"Both ends are computed rather than assumed and the charge appears in Section 11"* ve son paragrafın *"the drag figure quoted for the stopped condition should be read as the state Section 11 defines"*i, Adım 11'de ve Ek S11'de karşılığı olmayan alındılar — yalnız serbest dönen durum orada. Onarım okuyucularda (D / D+). Alım haritası `drafts/08-11-receipts.md` | S-53 |

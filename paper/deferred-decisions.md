@@ -386,3 +386,5 @@ Başka dergi odağı kaybolmaz; yüksek kelimeli makaleyle kör atış yapılmaz
 **Tur 130 — yazara soru (S-57):** uç çiftlerinin seyir durumu. Yazar: *"sürüklenme olmayacak ve uçuşa destek vermeyecek şekilde boşta
 gibi dönecekti."* Hesaplanan durum sıfır şaft torku (serbest dönme; ΔC_D0 0,0154, sıfır değil — Tur 15). Sıfır itki (motorla sürülerek,
 ne itki ne sürükleme; şaft gücü harcar) hesaplanmadı. Hangisi kastediliyor? Cevaba göre Adım 8 [28]'e karar cümlesi (R) gider.
+**Tur 131 — yazarın kararı (S-57):** *"Neyse sıfır şaft torkunda kalsın."* Uç çiftlerinin kumandasız seyir durumu sıfır şaft torkunda serbest
+dönme; CLAUDE.md §0.1'e yazıldı. Karar cümlesinin sözcükleri okuyucularda.

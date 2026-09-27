@@ -165,7 +165,7 @@ is 3; both are unusually low. Nothing here is compared against a poor example.
 
 **The speeds are not matched, and the direction of that mismatch is calculable.** The published
 figure is quoted at the best-range speed; this configuration's is at its chosen cruise condition,
-1.49 times stall, which Section 10 states explicitly is **not** its best lift-to-drag point. The
+1.49 times stall, which is **not** its best lift-to-drag point. The
 best point lies at 1.26 times stall, and `L/D_max` exceeds the cruise ratio at both ends of the drag bracket.
 **The reference is
 therefore given its best speed and this configuration is not given its best speed, and the margin
@@ -225,6 +225,7 @@ the combination is what this paper is for.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 131 — S-55 onarıldı:** *"which Section 10 states explicitly is not its best"* → *"which is not its best"* (silme; dört okuyucu + Claude). **S-56 açık:** *"Section 11 charges all three"* — (b) uygulanmadı, düzeltilmiş R oyda (kanat kütlesi ve planform kapanışın içinde, ayrılmamış; yer rüzgârı fiyatlanmamış) | S-55, S-56 |
 | **Tur 123 — uzunluk geçişi, ilk kısım** (dört okuyucu + Claude): **S-48** onarıldı (*"and whether it is ahead of the best examined blade family depends on the drag bracket"* çıktı — tablo +3…+27 %); **M3** L/D_max formülü ve 11,65 / 10,08 Ek S6'ya (kimlikleriyle), yön cümlesi kaldı; **M7** *"and 3.9 percent below the assumption"* Ek S6'ya, *"a vortex-lattice solution"* kaldı. M1 uygulanmadı (Claude'un önerisi P'nin kimliğini taşıyan cümleleri de taşıyordu; düzeltilmiş hâli oyda). Özgün adım Ek S6'da tam. 2 145 → 2 108 | Tur 122 metni §3, §4 |
 | **Tur 98 (dört okuyucu + Claude; yazar kararı E5):** eksen yayılımı P-a–P-d — "the alternative is the rotorcraft, multirotor and helicopter alike", "the rotorcraft family", "A rotorcraft meets…", "A rotorcraft's rotors…", korunan ölçek cümlesi "1 660 to 3 275 kg" (SbS TS 3 665 lb = 1 662 kg). Kaynak alıntıları ("multirotors are efficient in hover") ve belirli referanslar (quadrotor) değişmedi. Özgün paragraflar Ek S6'da | J&S Tablo 3 |
 | **Tur 97 — yazar kararı (b):** helikopterler de rakip. S-27 6D'ye: "The same sizing set gives its two helicopter types at 5.4 to 7.2, and against them the result is mixed: …" (turboşaft tek rotorluya karşı her köşede önde; ortadaki ikisi zarfın içinde; elektrikli yan yana rotorluya karşı yalnız en üst köşe); nitelemeler bunlara da uygulanıyor. Korunan (166). Eksen yayılımı (6A, 6B, 6C, 6E ölçek, Adım 9, 10, 15) okuyuculara | J&S Tablo 3 PDF s. 70; DGW: 3 951 / 5 980 / 3 665 / 5 547 lb |

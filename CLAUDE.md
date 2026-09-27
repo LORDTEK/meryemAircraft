@@ -98,6 +98,14 @@ are **interchanged**"* (Wang ve ark., `references/2014_0529_paper.pdf`).
 > parça olmadığı DEĞİL.** Yunuslama ve sapma diferansiyel itkiden; yatış
 > şeritten. Eyleyici envanteri: motorlar **artı bir şerit eyleyicisi.**
 
+**UÇ ÇİFTLERİ SEYİRDE SIFIR ŞAFT TORKUNDA SERBEST DÖNER. Yazarın kararı (Tur 130–131): *"sıfır şaft torkunda kalsın."***
+Bağlam sıkıştırılınca bunu unuttum; yazar hatırlattı. Uç çiftleri seyirde boşta döner, uçuşa itki vermez;
+kumandalı moment gerektiğinde bu durumdan ayrılır (yunuslama/sapma diferansiyel itkiden). **Sürüklemesiz değildir:**
+sekiz diskin ΔC_D0'ı hesaplandı (Tur 15, `aero/tip_propeller.py`) — 50 kg tasarımda uygun uçta **0,0154**, uç
+çerçeveleriyle sıfır taşıma sürüklemesinin %69'u (Adım 11, Fatura 2). Durdurmak (kenarından 0,0008, kestirim) bir
+konumlama mekanizması ister — Adım 7'nin saydığı sınıf; o karşı-olgu hesaplanmadı. Sıfır itkide motorla sürmek ayrı bir
+durumdur ve **hesaplanmadı**. v7 bu kararı yazıyordu, v8 yazmıyordu (S-57).
+
 **"Mekanik olarak daha basit" de denmez** — parça sayısı, kütle, arıza kipi,
 bakım hiçbiri ölçülmedi. Denen şey bir **sayımdır**, güvenilirlik iddiası değil.
 

@@ -178,6 +178,9 @@ EMEKLI = {
     "Two items belong here rather than in a later list": "Tur 128: S-51 son hali -- [24] tumuyle silindi (dort okuyucu + Claude)",
     "nothing in this work addresses certification": "Tur 129: E9 -- sonucta evsiz yeni kapsam; bes oyla silindi (DeepSeek ve Qwen oy degistirdi)",
     "Both ends are computed rather than assumed": "Tur 130: S-53 (D) -- durdurulmus uc hesaplanmadi, kestirim; alindi Adim 11de karsiliksizdi",
+    "That is Bill 1 stated by an independent source": "Tur 131: S-54 -- Silva 2018 alintisi yanlis belge, parantez kesik, yon ters",
+    "which Section 10 states explicitly": "Tur 131: S-55 -- Adim 10 hic soylemedi",
+    "the drag figure quoted for the stopped condition": "Tur 131: S-53 (A) korunan yan cumle R",
 }
 
 
