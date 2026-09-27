@@ -130,3 +130,13 @@ güncellendi (arşivdeki eski tur metinleri hariç — onlar yazıldıkları an�
 | `19810010574.pdf` ve `NASA-Historical-Overview-of-STOL-VTOL-Aircraft.pdf` | **Aynı belge, iki kopya:** NASA TM-81280, *V/STOL Aircraft Historical Technology Overview* |
 | `19840014464.pdf` | NASA TM-85938, Anderson ve Nelms, *V/STOL Concepts in the United States — Past, Present, and Future* |
 
+
+## Tur 121'de yüklenenler (yazar, `cfd/`'den taşındı)
+
+İstenen iki belge Vegh 2025 ve Rohith ve ark. idi; yüklenen ikisi **başka belgeler**. İkisi de tam okundu (`paper/v8-gap-search.md`,
+`paper/v8-evidence.md`).
+
+| Dosya | Ne |
+|---|---|
+| `Rheaume-Lents-2016_SAE-2016-01-2014_energy-storage-hybrid-electric-aircraft.pdf` | Rheaume & Lents 2016, SAE 2016-01-2014: tek koridorlu yolcu uçağında paralel hibrit (kalkış/tırmanışta elektrik takviye, türbin seyre göre boyutlu); enerji depolama metrikleri (Tablo 1–3 görüntü, elle okundu). Adım 14 (tampon özgül gücü) ve Adım 3 (kaçış koşulunun ilkesi başka sınıfta) için; tanık kapsamı: 62 000 kg, 5 000 HP |
+| `Yang-Zhu-2018_IROS_ADRC-flying-wing-tailsitter-hover.pdf` | Yang, Zhu, Zhang, Wang 2018 IROS: uçan kanat kuyruk üstü, 2,23 kg, iki CW/CCW pervane yan yana + iki elevon; itki ekseni etrafında kontrol diferansiyel elevonla, pervane karşı momenti gözlemcide bozucu olarak; yalnız askı ve dikey uçuş uçuldu, geçiş gelecek iş. Adım 1 dolu liste ve Adım 8 (reddedilen kanal) için |
