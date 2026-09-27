@@ -382,3 +382,7 @@ Başka dergi odağı kaybolmaz; yüksek kelimeli makaleyle kör atış yapılmaz
 - B'ye oy: Grok, ChatGPT, DeepSeek evet; Qwen (B → çerçeve → dar A).
 
 ## E9 — KAPANDI (Tur 129): sertifikasyon yan cümlesi silindi — beş oy (DeepSeek ve Qwen Tur 128'de sile geçti); yazar ortak görüşe açık.
+
+**Tur 130 — yazara soru (S-57):** uç çiftlerinin seyir durumu. Yazar: *"sürüklenme olmayacak ve uçuşa destek vermeyecek şekilde boşta
+gibi dönecekti."* Hesaplanan durum sıfır şaft torku (serbest dönme; ΔC_D0 0,0154, sıfır değil — Tur 15). Sıfır itki (motorla sürülerek,
+ne itki ne sürükleme; şaft gücü harcar) hesaplanmadı. Hangisi kastediliyor? Cevaba göre Adım 8 [28]'e karar cümlesi (R) gider.

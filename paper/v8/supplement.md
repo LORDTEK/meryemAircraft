@@ -2427,6 +2427,17 @@ where it is made.
 | **Attitude rotors, free-wheeling** | **0.0154** | **0.0169** |
 | Total | 0.0285 | 0.0381 |
 
+**The other cruise state of the tip discs (estimates, not part of the closure; Round 130, S-53).** ΔC_D0 of the eight tip discs on the 50 kg reference design:
+
+| Tip discs in cruise | ΔC_D0 |
+|---|---:|
+| Stopped edge-on, azimuth controlled (estimate) | 0.0008 |
+| Stopped broadside, azimuth uncontrolled (estimate) | 0.015–0.018 |
+
+*Area-and-coefficient estimate with assumed solidity and section drag coefficients, not a propeller calculation; what is robust is the
+ratio between the states, not the values. Neither state is in the closure of Section 10.* The free-wheeling line above (0.0154 / 0.0169)
+is the blade-element result.
+
 ### What the closure does not contain (from Section 11)
 
 | Item | Status |

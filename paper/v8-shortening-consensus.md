@@ -582,3 +582,8 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Adım 15 tüketim haritası; Rohith/Vegh kaydı; P122 biçim | ✓ | ✓ | ✓ | ✓ | ✓ | **Kabul (Tur 128)** |
 | S-53 onarımı (D / D+) | — | — | — | — | D+ | **Tur 129 oylaması** |
 | Uzunluk yöntemi | — | — | — | — | — | **Yazar: ikinci aşama bitince (Tur 129)** |
+| Adım 15 kapanışı (343); borç izi | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI (Tur 130)** |
+| S-53 D+ (ilke); [28] silme; S11 satırları | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı (Tur 130)**; Adım 11 cümlesi inceltmelerle ve korunan yan cümlenin R onarımı teyide |
+| P-Claude-1 alındı denetimi | ✓ | ✓ | ✓ | ✓ | ✓ | **Yapıldı (Tur 130): 149 cümle, 5 başarısız, S-54/55/56 yeni** |
+| Bütün okuma: iki yarı (1–8 / 9–15) + kısa uzlaştırma | ✓ | ✓ | ✓ (iki yarı) | ✓ | ✓ | **Kabul (Tur 130)** |
+| Tamamlama listesine ekler (yüzey/sayı/eksen taraması; kayıt yayılım taraması; ses tutarlılığı sorusu; yankı listesi) | yankı | yüzey | yayılım+sayım | ses | hepsi | **Tur 130 oylaması** |

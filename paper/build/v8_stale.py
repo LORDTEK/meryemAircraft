@@ -177,6 +177,7 @@ EMEKLI = {
     "because both are properties of the hardware just described": "Tur 127: S-51 -- [25] ile celisiyordu",
     "Two items belong here rather than in a later list": "Tur 128: S-51 son hali -- [24] tumuyle silindi (dort okuyucu + Claude)",
     "nothing in this work addresses certification": "Tur 129: E9 -- sonucta evsiz yeni kapsam; bes oyla silindi (DeepSeek ve Qwen oy degistirdi)",
+    "Both ends are computed rather than assumed": "Tur 130: S-53 (D) -- durdurulmus uc hesaplanmadi, kestirim; alindi Adim 11de karsiliksizdi",
 }
 
 

@@ -155,9 +155,7 @@ duty falls on the strip.
 
 **The fixed geometry of the tip pairs leaves two admissible cruise states, and only one of them
 is physically closed.** Unable to feather, the pairs must either turn at the zero-shaft-torque
-condition or be stopped, and the difference between those two states is a substantial fraction of
-the aircraft's zero-lift drag. Both ends are computed rather than assumed and the charge appears
-in Section 11.
+condition or be stopped.
 
 **The tip pairs are the parts that fail the escape condition.** The nose pair meets all four parts of Section 3. The tip pairs do not: they hold
 one orientation, but they are carried through cruise producing moments rather than cruise thrust,
@@ -184,6 +182,7 @@ brake or a lock rather than motor holding torque, the count of Section 7 would g
 | İddia | Kaynak |
 |---|---|
 | **Tur 127** (dört okuyucu + Claude): **S-52** onarıldı (R) — [7] *"or by differential thrust"* → *"or by the reaction torque of other rotors run at a different speed"* (§0.1; ifade emekli, Grok P119); **S-51** (c) — [24] *", because both are properties of the hardware just described"* çıktı; **P117** (R) — [14] *"(body axes, as fixed in the note below)"*; **N1** kalınlık ve veter Ek S8'e (kimlikleriyle); ses V1, V2, V3, V5 çıktı; V4, V6 kalır. Özgün adım Ek S8'de tam | Tur 126 metni §2–§4 |
+| **Tur 130 — S-53, D uygulandı (oybirliği):** [28] *"…or be stopped, and the difference between those two states is a substantial fraction of the aircraft's zero-lift drag. Both ends are computed rather than assumed and the charge appears in Section 11."* → *"…or be stopped."* `v8_draft_check` temiz. **Son paragraftaki yan cümle KORUNAN** (satır 64) — silinmedi; R onarımı oyda. S11'e kestirim satırları eklendi. S-57 adayı (yazar: seyir durumu boşta dönme) yazara soruldu | S-53, S-57 |
 | **Tur 129 — S-53 bulundu (kapanıştan sonra):** [28] *"Both ends are computed rather than assumed and the charge appears in Section 11"* ve son paragrafın *"the drag figure quoted for the stopped condition should be read as the state Section 11 defines"*i, Adım 11'de ve Ek S11'de karşılığı olmayan alındılar — yalnız serbest dönen durum orada. Onarım okuyucularda (D / D+). Alım haritası `drafts/08-11-receipts.md` | S-53 |
 | **Tur 128 — Adım 8 KAPANDI: 1 990** (dört okuyucu + Claude teyit etti: S-52, P117, S-51 (c), N1, V1–V3, V5; S8 ifadesi). **[24] tümüyle silindi** (*"Two items belong here rather than in a later list."*; DeepSeek; oybirliği; `v8_draft_check` temiz: çıkan 1, eksik korunan yok). Başlık *"What this inventory does not settle"* kaldı (P120 reddedildi, Grok dahil). Qwen R126-P1 (Adım 8 → Adım 11 sürükleme defteri haritası) Adım 11 yeniden okunurken | S-51; Tur 128 |
 | **Tur 104 (S-37; Tur 103: dört okuyucu + Claude (iii) — şimdi nitele, göndermeden önce türet):** "The split is an estimate: the slipstream boundary it rests on is not derived in this work." — %46 `aero/roll.py`'de sabit, iz sınırı 0,67 → 0,47 m hiçbir betikte türetilmiyor; tek dayanak v5 eki. Sözcükler teyide | `paper/v8-source-defects.md` S-37 |
