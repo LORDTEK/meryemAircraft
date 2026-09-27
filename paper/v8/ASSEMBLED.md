@@ -604,8 +604,7 @@ that reorients a propulsor. The assembly is not offered as novel because it is a
 offered for what it satisfies, and for what it does not need in order to satisfy it — and Section 1
 has already set out how much of the ground is occupied.
 
-**The qualification in that sentence is not decoration, and it is made here rather than
-conceded later.** Section 2.2 lists partial instantiation among the ways an architecture can fail
+**The qualification in that sentence is not decoration.** Section 2.2 lists partial instantiation among the ways an architecture can fail
 the condition: meeting it where the aircraft is carried and failing it elsewhere. That is this
 configuration's own case. The single nose pair meets all four parts — same hardware, both duties
 served, one orientation, hover peak from a buffer. The four attitude pairs do not: they are exposed
