@@ -96,3 +96,7 @@ da alıntı yok).
 **Tur 122 cevapları (dört okuyucu + Claude):** Yang 2018 ve Rheaume & Lents 2016 iddiaya **engel değil**. Yang dolu listeye ikinci tanık
 (Grok P111 cümlesi Tur 123'te oyda); Rheaume & Lents Adım 7'de öğe tanığı (Adım 7 açılınca).
 
+**Tur 125 — Vegh iki ayrı kayıt** (ChatGPT, Grok'un Tur 121'deki DOI'lerini doğruluyor): konferans bildirisi AIAA SciTech 2025,
+doi 10.2514/6.2025-1436 (yazarın verdiği); dergi makalesi *J. Aircraft*, doi 10.2514/1.C038393. ChatGPT'nin Rohith ve Vegh okuması hâlâ
+yalnız ChatGPT'nin; PDF'ler bekleniyor (Grok P116: doğrulanmamış bir okumadan cümle yazılmaz).
+

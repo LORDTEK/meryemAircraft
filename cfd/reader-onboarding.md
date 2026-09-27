@@ -214,7 +214,7 @@ The body is about **26 000 words**, and the journal's working target is **about 
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 124.**
+**Round 125.**
 
 | Block | State |
 |---|---|
@@ -224,9 +224,8 @@ The body is about **26 000 words**, and the journal's working target is **about 
 | Framework, Step 4 | **recomposed** (1 351 → 1 268); the NASA sizing study's single home (Sections 1 and 2 point forward to it) |
 | Step 9 | **closed** at 1 020 (from 1 166); "by construction" has one meaning, checked (S-44) |
 | Step 1 | **closed** at 1 462: K stays (the author); V5 the one voice sentence; gap sentence unchanged, no documented search yet (`paper/v8-gap-search.md`) |
-| Step 5 | 1 128 after voice removals (to confirm) |
-| Step 6 | 1 969 (S-48, S-49, M1–M3, M7, voice applied; to confirm) |
-| Now | **Step 7 lists** (the combination; full text in the round file); voice in Steps 5–6 closed in round 2 of 3, tone choices with the author. Two DOIs (Rohith; Vegh): only one reader reports reading them; PDFs awaited. Then 8 → 15 |
+| Steps 1, 5, 6 | **closed** at 1 517, 1 128, 1 969 |
+| Now | **Step 7** (1 276): five items to vote, S-50 candidate (*"primary propulsor"* never identified as the nose pair). **Step 8 lists** (full text in the round file). Voice method is a standing rule. Rohith and Vegh PDFs awaited. Then 15 |
 
 **The body is about 20 000 words of prose** (tables not counted). Recomposition into result sentences took Steps 10–11 to about
 40 % of their length, Steps 12–14 to 57–83 %, and the framework to about 80 %, because its definitions and protected sentences set

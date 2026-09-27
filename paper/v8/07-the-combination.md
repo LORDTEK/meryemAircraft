@@ -37,8 +37,7 @@ that reorients a propulsor. The assembly is not offered as novel because it is a
 offered for what it satisfies, and for what it does not need in order to satisfy it — and Section 1
 has already set out how much of the ground is occupied.
 
-**The qualification in that sentence is not decoration, and it is made here rather than
-conceded later.** Section 3 lists partial instantiation among the ways an architecture can fail
+**The qualification in that sentence is not decoration.** Section 3 lists partial instantiation among the ways an architecture can fail
 the condition: meeting it where the aircraft is carried and failing it elsewhere. That is this
 configuration's own case. The single nose pair meets all four parts — same hardware, both duties
 served, one orientation, hover peak from a buffer. The four attitude pairs do not: they are exposed
@@ -137,6 +136,7 @@ exposed in cruise, and Section 11 charges them.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 125 — ses (yöntem Tur 124'te kapandı; yazar: "ton seçimleri tamam, geri koyma")**: [4]'ün *"and it is made here rather than conceded later"* yan cümlesi çıktı (dört okuyucu + Claude saf ses; ChatGPT bütün cümleyi silmek istiyor, ilk yarı korunan — ayrışık). Özgün adım Ek S7'de tam | Tur 124 metni §3 |
 | **Tur 124 — S-45 uygulandı** (Tur 119'da dört okuyucu + Claude; Adım 7 açılınca uygulanacaktı): *"and in combination"* → *"and some of them together"*; Adım 1 ile aynı nesne (Grok P103): öğeler, bazıları bir arada, ve bedeliyle birlikte kurulmamış birleşim | Tur 119 metni §2 |
 | **Tur 99 (dört okuyucu + Claude):** S-33 — tablonun durdurma satırı "— (see note)" ve altına not: "The stopping class is absent if the tip pairs free-wheel in cruise or are held stopped by motor torque; a brake or a mechanical lock would add it. The means of stopping is not fixed by this study (Section 8)." (dördü de Adım 7'de nitelemeyi istedi; sözcükler Grok + Qwen birleşimi — teyide). 7D seri hibrit cümlesi (ChatGPT'nin sözcükleri). Özgün tablo Ek S7'de | Adım 8G |
 | **Tur 98 (dört okuyucu + Claude):** 7G — Adım 5D'nin birebir cümlesi çıktı; "This dual role is a dependency, reported as one where the sizing is audited, and it does not make the tip pairs a dedicated lift system." (Qwen'in göndergesi). 7L kalıyor (dört okuyucu + Claude; iz: köprü/kapanış, yineleme değil). Özgün Ek S7'de | Tur 97 metni §5 |

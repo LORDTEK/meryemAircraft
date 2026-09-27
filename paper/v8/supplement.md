@@ -267,6 +267,15 @@ presume an escape.
 
 ---
 
+### Section 1's slipstream-surface item as it stood before the Round 124 addition (frozen snapshot)
+
+**The established answer to hover control on such a configuration is a surface in the
+slipstream**, and it is worth naming because this paper refuses it. That 2014 vehicle places
+*"elevon and rudder … immersed in the propeller slip stream to provide three axis control moments
+in hover."*
+
+---
+
 ## S2. Section 2 (from Section 2)
 
 ### The opening of Section 2 and the three bills as they stood before recomposition (frozen snapshot)
@@ -1629,6 +1638,114 @@ sizing is audited, and it does not make the tip pairs a dedicated lift system.
 | Variable-pitch hub | Architectures that trim a rotor across two widely separated operating points, or feather a rotor unused in one regime | — |
 | Dedicated lift rotors | Lift-plus-cruise architectures | — |
 | Rotor stowing, indexing or stopping mechanism | Architectures that remove dedicated lift rotors from the cruise flow by such means | — |
+
+---
+
+### Section 7 as it stood before the length pass (frozen snapshot, complete)
+
+None of the three elements is new. **Each can be found on its own, and some of them
+together, in the literature and in hardware** — Section 1 says where.
+
+**What this paper contributes is that combination, the condition its primary propulsor is designed
+to satisfy, and the price the configuration pays for pursuing it.** The three elements, taken together, meet the escape condition
+of Section 3 **in the propulsor that carries the aircraft**, and they meet it with no mechanism
+that reorients a propulsor. The assembly is not offered as novel because it is an assembly. It is
+offered for what it satisfies, and for what it does not need in order to satisfy it — and Section 1
+has already set out how much of the ground is occupied.
+
+**The qualification in that sentence is not decoration, and it is made here rather than
+conceded later.** Section 3 lists partial instantiation among the ways an architecture can fail
+the condition: meeting it where the aircraft is carried and failing it elsewhere. That is this
+configuration's own case. The single nose pair meets all four parts — same hardware, both duties
+served, one orientation, hover peak from a buffer. The four attitude pairs do not: they are exposed
+in the cruise flow and they cannot be feathered, so they re-open the second charge. **The
+instantiation is therefore partial**, and reporting what the failing part costs is a substantial
+share of what Section 11 does.
+
+The condition asks for one set of hardware to serve both regimes in one orientation,
+with the hover peak drawn from a buffer. Each element supplies one part of it, and none
+of them supplies it alone:
+
+- The **blended wing body** carries the cruise lift on a surface, so that cruise is
+  wing-borne rather than thrust-borne. That is the second half of the union.
+- The **tail-sitting stance** aligns the thrust axis with the body axis, so the propulsor
+  that produces the thrust for vertical operation is the same one that produces the cruise
+  thrust, holding
+  one orientation relative to the airframe throughout. There is no dedicated lift system to
+  carry, and vertical operation does not depend on a runway. That is the first half.
+- The **series-hybrid buffer** releases the continuous power plant from the hover peak,
+  so that it is sized by cruise rather than by a condition holding for about two percent
+  of the flight. The series arrangement is used here for the electrical path it gives the buffered
+  hover peak, not because this study assumes it is the more efficient hybrid architecture.
+
+The configuration is arranged to change regime by **rotating the airframe**. The propulsors hold
+their orientation relative to the body from take-off to cruise; what changes is the
+orientation of the body relative to the flight path. A tilting architecture reaches the
+same end by turning its propulsors instead, which requires a pivot and an actuator and
+introduces gyroscopic coupling from the reorienting mass and a control problem through the
+turn. It does not satisfy the condition as stated: the condition requires one orientation
+relative to the airframe, and turning the propulsors is the case the condition excludes.
+Here the end is reached by turning the thing the propulsors are already attached to, which
+leaves the orientation requirement intact.
+
+That single move is what removes the need for the mechanism. **The table below counts mechanism classes that
+exist in order to change regime, or to take a rotor out of one regime's flow.** The strip of Section 8 is a
+control surface, of a different class, and is named below and in Section 8 rather than in the table. The configuration therefore carries:
+
+| Mechanism | Where it is required | Present here |
+|---|---|---|
+| Pivot or tilting joint | Tilting architectures | — |
+| Nacelle or rotor-group actuator | Tilting architectures | — |
+| Variable-pitch hub | Architectures that trim a rotor across two widely separated operating points, or feather a rotor unused in one regime | — |
+| Dedicated lift rotors | Lift-plus-cruise architectures | — |
+| Rotor stowing, indexing or stopping mechanism | Architectures that remove dedicated lift rotors from the cruise flow by such means | — (see note) |
+
+*Note.* The stopping class is absent if the tip pairs free-wheel in cruise or are held stopped by motor torque; a
+brake or a mechanical lock would add it. The means of stopping is not fixed by this study (Section 8).
+
+Attitude is produced instead by differential thrust between fixed-pitch propellers: a
+single coaxial contra-rotating pair at the nose, and four small coaxial pairs at the
+ends of the tip frames, whose moment arms give pitch and yaw directly. The tip pairs are
+sized from the moment requirement rather than from weight support, but the thrust that sizing
+gives them also supplies the aircraft's entire take-off margin, because the nose pair is sized
+at thrust equal to weight and no more. This dual role is a dependency, reported as one where the sizing is audited, and it does not make the tip pairs a dedicated lift system.
+
+**The claim is narrower than it may appear, and the boundary matters.**
+
+This is not a configuration in which nothing moves. Roll cannot be produced by the
+propellers' **thrust**: every thrust vector is parallel to the body axis, so no combination
+of thrust settings produces a moment about that axis. It **could** be produced by their **reaction
+torque**, and this configuration declines that channel by design (Section 8), assigning the axis to an aerodynamic
+device instead. The device is the only moving aerodynamic
+surface on the aircraft — a variable-extension strip on the lower surface, modulated rather
+than switched, which also pitches the nose down by a small increment when it is deployed. The
+strip is part of the configuration and is named here rather than later, because a claim about
+eliminated mechanisms that omitted it would be false.
+
+A fixed-pitch propeller that serves two regimes pays in efficiency in at least one of them. The nose pair holds one
+orientation, which is the architectural claim, but it also holds one blade geometry across a
+hovering condition and a cruising one, and no single fixed-pitch blade is at its best in both.
+That is a price of refusing the variable-pitch hub rather than an argument against refusing it,
+and it is charged in Section 11 with the other costs of the union, not settled here.
+
+Nor is this a claim of mechanical simplicity. Part count, mass, failure modes and
+maintenance burden were not measured, and nothing in this work supports a statement
+about reliability. What is offered is a **count**: the classes of mechanism that a
+tilting architecture requires to change regime, and which this arrangement does not
+require. The actuator inventory that replaces them is the propulsion motors together
+with the strip.
+
+**One thing this section does not establish, and Section 9 holds it to that.** The arrangement
+described here requires no mechanism to change regime. **Whether this aircraft can actually perform
+the change is a separate question and is not settled anywhere in this paper**: whether the moment
+available is sufficient, and whether the aircraft trims through the rotation, depend on
+aerodynamics that — for the methods used here and the published comparisons against which they were
+checked — are not reliable above roughly ten degrees of incidence, which is inside the band the
+rotation passes through. **The mechanism claim is about hardware and survives that limit. The
+transition claim is not made.**
+
+The combination carries costs: the attitude rotors that make the union controllable are themselves
+exposed in cruise, and Section 11 charges them.
 
 ---
 
@@ -3001,7 +3118,7 @@ of the architectures alone.
 | **Section drag at low Reynolds number.** The attitude rotors' free-wheeling charge rests on section polars below a Reynolds number of 10⁵, and the uncertainty runs both ways. | The 0.0154 rotor term in every closure (Sections 10 and 11) and the size of Bill 2's fall with scale (Section 12) | **Validated data**: the drag of a free-wheeling attitude rotor, or of its sections, at about 8 × 10⁴, or a method validated there |
 | **The tip pairs' other cruise state.** Free-wheeling is determinate and computed; stopped is a family of states whose means and azimuth are not fixed (Section 8). | Whether a lower-drag cruise state is available, and at what mechanism cost | **Analysis**, or a measurement of one stopped state |
 | **The buffer's energy, not only its power.** The store is sized here by power. Whether it also holds the energy for the vertical phases and their reserves, and how it is recharged in cruise, depends on a hover duration this work does not fix; at the bench rate the unit pack emptied in about four minutes. | Whether the store sized by power is also large enough | **Analysis** against a defined mission profile |
-| **Other store types.** A supercapacitor store, or a battery–supercapacitor combination, is tabulated in one survey at the specific power the buffer asks for — 500 to 10 000 and 10 000 to 100 000 W/kg, at 1 to 10 Wh/kg (Rheaume and Lents 2016, Table 1, cited from its references [8] and [14]); the survey selects the best value in each category and notes that such values are not reached together in commercial products. | Whether a store other than a battery closes the buffer at the required power and holds the vertical phases' energy | **Analysis** against a defined mission profile; not computed here |
+| **Other store types.** A supercapacitor store, or a battery–supercapacitor combination, is tabulated in one survey at the specific power the buffer asks for — 500 to 10 000 and 10 000 to 100 000 W/kg, at 1 to 10 Wh/kg (Rheaume and Lents 2016, Table 1, cited from its references [8] and [14]). | Whether a store other than a battery closes the buffer at the required power and holds the vertical phases' energy | **Analysis** against a defined mission profile; not computed here |
 | **The electrical path at peak.** Machines, power electronics, wiring and their cooling carry the full take-off demand; they enter the loop as a mass fraction, not as components sized for that peak and its heat. | Whether the path that delivers the buffer's power exists at the mass assumed | **Component sizing and thermal analysis** |
 | **The airframe's mass.** It enters the loop as a construction constant, thirty percent of take-off mass (Section 11). A component build-up at the reference mass leaves room for the 13 kg payload only if the average shell areal density stays at or below 1.78 kg m⁻², against 1.50 assumed; the build-up carries a contingency rather than a structural sizing, and it has not been re-run at Section 10's closed masses, still less at the masses the store re-closure returns. At the 1 000 kg reference design the shell-mass exponent is not measured at all. | Every closed mass | **Structural sizing** (analysis), then a **built article** (measurement) |
 | **The strip and the fairing.** The strip's effect on this planform is computed, not measured, and its actuation is carried in the systems budget without being sized (Section 11); the fairing is sized against a published stability criterion, and the side force it develops is not measured. | The strip: the body roll axis, which appears as bank in cruise and as a change of heading in hover (Section 8). The fairing: directional stability in cruise | **Measurement** of both surfaces; **sizing** of the actuation |

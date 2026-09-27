@@ -547,4 +547,17 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | DOI'ler: Rohith, Vegh | 403 | RG üzerinden okuduğunu bildiriyor: ikisi de engel değil (Rohith a+e, kolektif hatve; Vegh a+b+e, kuyruklar) | açamadı | açamadı | erişim engelli | **Doğrulanmadı; PDF bekleniyor** |
 | Yeni: Grok P114; ChatGPT S6 kökeni (uygulandı); Qwen R123-P1 (ton sicili), R123-P2 (= R122-P2); DeepSeek (S-49 harita satırı) | — | — | — | — | — | **Tur 124** |
 | Adım 7 listeleri (metin tam, Ek A) | — | — | — | — | — | **İstendi** |
+| **Yazar (Tur 124):** *"Ton seçimleri tamam, geri koyma, devam edelim."* | — | — | — | — | — | **Ses kapandı; yöntem kalıcı kural** |
+| Tur 124 teyit: Adım 5 (1 128), Adım 6 (1 969), Adım 1 (1 517), S-45, S6 metni | ✓ | ✓ | ✓ | ✓ | ✓ | **Kapandı: Adım 1, 5, 6** |
+| S14 satırı | yeniden yaz ("together" kaynakta yok) | yeniden yaz | **pil nitelemesi süperkapasitöre yüklenmiş** | ✓ | hata benim | **Yanlış yan cümle silindi (Tur 125); kaynağın süperkapasitör cümlesi alıntı olarak oyda** |
+| P114 (S1'de Yang öncesi paragraf dondurulsun) | öneren | ✓ | ✓ | ✓ | ✓ | **Uygulandı** |
+| Adım 7 [4] ikinci yan cümle (saf ses) | ✓ | ✓ (bütün cümle) | ✓ | ✓ | ✓ | **Uygulandı (Tur 125)** |
+| Adım 7 [4] ilk yarı (korunan) | kalsın | **sil** | kalsın | kalsın | kalsın | **Ayrışık — ChatGPT'ye koruma ölçütü soruldu** |
+| Adım 7 [6] etiketleri | sil | sil | **kalsın** | sil | sil | **Ayrışık — DeepSeek'e** |
+| Adım 7 [12] "and the boundary matters" | ses | — | ses | — | ses | **Oylamada** |
+| Adım 7 [13] "named here rather than later" | — | — | ses | — | temiz silme yok | **Oylamada** |
+| Adım 7 [14] | kalsın | kalsın | kalsın | kalsın | kalsın | **Kalır** |
+| [3] cümlesi + "partial" korunan çift (ChatGPT §13); S-50 "primary propulsor" (ChatGPT'nin terim denetimi) | — | öneren | — | — | ✓ | **Oylamada** |
+| Vegh iki kayıt: SciTech 10.2514/6.2025-1436; J. Aircraft 10.2514/1.C038393 | ✓ | ✓ | — | — | ✓ | **Kayıtta** |
+| Adım 8 listeleri (metin tam, Ek B) | — | — | — | — | — | **İstendi** |
 
