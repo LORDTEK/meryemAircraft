@@ -583,7 +583,7 @@ nothing and presents the aircraft's largest surface to ground wind. The tailless
 follows from having no boom constrains the sweep, because with no horizontal stabiliser the
 pitching moment must come from the distribution of lift along the body itself. And the
 fixed-pitch propeller that serves both regimes is the reason the margin above sits where it does
-rather than higher. Section 7.2 charges all three.
+rather than higher. Section 7.2 charges the third. The first two are inside Section 7.1's closed numbers — the wing's mass in the empty fraction, the constrained planform in the computed span efficiency — but neither is separated out as a charge, and the wing's exposure to ground wind is not priced in this work.
 
 **The two halves are now on the table separately. Section 5.1 is where they are combined**, and
 the combination is what this paper is for.
@@ -844,7 +844,7 @@ duty falls on the strip.
 
 **The fixed geometry of the tip pairs leaves two admissible cruise states, and only one of them
 is physically closed.** Unable to feather, the pairs must either turn at the zero-shaft-torque
-condition or be stopped.
+condition or be stopped. This configuration uses the first: free-wheeling at zero shaft torque is the tip pairs' uncommanded cruise state, and it is the drag state Section 7.2 charges.
 
 The free-wheeling state is physically determinate: the rotor settles where net shaft torque is
 zero. **The stopped state is not.** Stopping a rotor requires the stop to be produced by

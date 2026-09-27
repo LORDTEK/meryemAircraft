@@ -51,6 +51,13 @@ doğrulanmasıdır.** NASA diyor ki: lift+cruise en ağır olan; sebebi seyir g�
 **değil** (seyir verimi zaten daha iyi), sebebi **hover için taşınan boş ağırlık.**
 Bölüm 3.2'nin tam olarak iddia ettiği şey budur.
 
+> **⚠️ DÜZELTME, Tur 130–132 (S-54) — yukarıdaki yorum YANLIŞ.** Alıntının kendi parantezi *"(wing and propeller)"*:
+> lift+cruise'da askıda taşınan ama kullanılmayan donanım **kanat ve seyir pervanesi** — yani **seyir** donanımı askıda.
+> Fatura 1 (Adım 2'nin tanımı) bunun tersidir: **kaldırma** donanımı seyirde. Kaynak Fatura 1'i değil **aynasını** söylüyor.
+> Ayrıca bu belge (Silva ve ark. 2018) Adım 4'ün Johnson & Silva 2022'si değil. v8 Adım 2'deki paragraf silindi; kayıt
+> `paper/v8-evidence.md` (kaynak-sonuç: Fatura 1 okuması için **çelişir**) ve `paper/v8-source-defects.md` S-54. Yorum tarih
+> olarak burada bırakıldı, silinmedi.
+
 **İkinci bulgu — N55'i destekliyor (s. 14):**
 > *"Lowering disk loading could improve the hover performance, but the rotor diameter
 > is at the constraint. **Adding more rotors may allow improvement in this regard**."*
