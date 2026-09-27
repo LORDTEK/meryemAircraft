@@ -842,9 +842,7 @@ duty falls on the strip.
 
 **The fixed geometry of the tip pairs leaves two admissible cruise states, and only one of them
 is physically closed.** Unable to feather, the pairs must either turn at the zero-shaft-torque
-condition or be stopped, and the difference between those two states is a substantial fraction of
-the aircraft's zero-lift drag. Both ends are computed rather than assumed and the charge appears
-in Section 11.
+condition or be stopped.
 
 **The tip pairs are the parts that fail the escape condition.** The nose pair meets all four parts of Section 3. The tip pairs do not: they hold
 one orientation, but they are carried through cruise producing moments rather than cruise thrust,

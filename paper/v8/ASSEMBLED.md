@@ -846,9 +846,7 @@ duty falls on the strip.
 
 **The fixed geometry of the tip pairs leaves two admissible cruise states, and only one of them
 is physically closed.** Unable to feather, the pairs must either turn at the zero-shaft-torque
-condition or be stopped, and the difference between those two states is a substantial fraction of
-the aircraft's zero-lift drag. Both ends are computed rather than assumed and the charge appears
-in Section 7.2.
+condition or be stopped.
 
 The free-wheeling state is physically determinate: the rotor settles where net shaft torque is
 zero. **The stopped state is not.** Stopping a rotor requires the stop to be produced by
