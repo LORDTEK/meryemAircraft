@@ -290,3 +290,8 @@ gerektiği hususuna dikkat ederek düşünsünler. Yorumlarında özgürler. Sen
 K cümlesi (3 sil / Grok kalsın); Adım 1 ses işaretleri (V1, V2 dördünün; "excellent", "ordinary", "giving-up", "what the paper is
 for" tartışmalı); belgelenmiş arama (Qwen'in önerdiği yerler; kim yapacak).
 
+**Tur 120 — yazarın Tur 119 kararları uygulanıyor.** (1) Adım 1 ses işaretleri: **Grok V1–V6'dan birini seçer, öbür beşi
+çıkar** (çıkarma biçimleri tur metninde; V6 aynı zamanda S-46). (2) **Belgelenmiş arama:** dört okuyucu arıyor; benim ön aramam
+`paper/v8-gap-search.md`'de (yalnız arama motoru özetleri; §2.2 anlamında belgelenmiş arama değil). (3) **K:** okuyucuların Grok'a
+tepkileri yazara gitti (3 sil, Grok kalsın; ChatGPT'nin koşulu, DeepSeek'in "boşta değil" tespiti); **karar yazarın.**
+**Açık — yazara:** Adım 5 ses işaretleri için de aynı yöntem mi (Grok seçer)? V4 ("uncrewed ones are ordinary") K ile etkileşiyor.

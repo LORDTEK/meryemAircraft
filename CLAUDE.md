@@ -508,6 +508,12 @@ dahil herkesin hemfikir olduğu kısaltmalar uygulansın."*
   cümle, silinmesi bir iddiayı, sınırı, türetmeyi ya da gerekli bir ayrımı değiştirmedikçe korunmaz. **Ses işareti** (Qwen) yazara
   bir soru kaydeder; koruma değildir. **"By construction"** yalnız Adım 9 madde 8'in anlamında (*"by the sizing"*); kaynak alıntıları
   muaf; `v8_stale.py` sınar (S-44).
+- **Yazarın kararları (Tur 119).** Ses işaretleri için yöntem: *"grok bir tanesini seçsin ve o kalsın kalanlar çıksın"* (Adım 1;
+  öbür adımlar için yazara soruldu). Belgelenmiş arama: *"Arama kısmını okuyucular yapsın sen de kendi aramanı yapacaksın"* →
+  kayıt `paper/v8-gap-search.md`; **arama motoru özeti belge değildir**, açılmayan adayın sayısı ya da alıntısı metne girmez.
+- **Ses cümlesi de yüklem taşıyabilir (Tur 120, S-46).** Adım 1'in *"What that costs … is what the paper is for"*u ses işareti
+  diye listelenmişti; oysa makalenin dört yerde hesaplanmadığını söylediği bir bedeli makalenin konusu yapıyordu. Bir cümleyi ses
+  diye işaretlemeden önce olgusal yüklemi §0.2'ye göre denetlenir.
 
 ## 3. Doğrulama
 
