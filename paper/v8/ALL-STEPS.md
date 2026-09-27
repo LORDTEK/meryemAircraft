@@ -840,7 +840,7 @@ duty falls on the strip.
 
 **The fixed geometry of the tip pairs leaves two admissible cruise states, and only one of them
 is physically closed.** Unable to feather, the pairs must either turn at the zero-shaft-torque
-condition or be stopped. This configuration uses the first: free-wheeling at zero shaft torque is the tip pairs' uncommanded cruise state, and it is the drag state Section 11 charges.
+condition or be stopped. This configuration uses the first: free-wheeling at zero shaft torque is the tip pairs' uncommanded cruise state, and it is the drag state Section 11 charges. The shaft power of commanded departures from that state, for attitude moments in cruise, is not computed.
 
 **The tip pairs are the parts that fail the escape condition.** The nose pair meets all four parts of Section 3. The tip pairs do not: they hold
 one orientation, but they are carried through cruise producing moments rather than cruise thrust,

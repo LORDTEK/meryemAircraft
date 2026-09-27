@@ -214,17 +214,17 @@ The body is about **26 000 words**, and the journal's working target is **about 
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 132.**
+**Round 133.**
 
 | Block | State |
 |---|---|
-| Stages (the author, Round 129) | each stage is a pass through the whole text; the next stage's method is chosen when the present one is complete. Present stage: recomposition into result sentences, body 25 797 → 18 651 |
+| Stages (the author, Round 129) | each stage is a pass through the whole text; the next stage's method is chosen when the present one is complete. Present stage: recomposition into result sentences, body 25 797 → about 18 670 |
 | Length | **not decided now** (the author): after this stage completes |
-| Tip pairs in cruise (the author's decision) | uncommanded state: free-wheeling at zero shaft torque, now stated in Step 8 (S-57); commanded moments depart from it. ΔC_D0 0.0154 for the eight discs at the favourable end (Section 11). The shaft power of commanded departures is not computed; where it is named is to vote |
-| Steps 1, 5, 7, 9, 15 | **closed** at 1 517, 1 133, 1 163, 1 020, 343 |
-| Steps 2, 6, 8, 11 | S-53, S-54, S-55 closed; S-56 and S-57 applied, to confirm (Step 2 1 697, Step 6 1 926, Step 8 1 988, Step 11 902) |
-| Receipt audit | standing end-of-stage check (R1–R4). First run 149 sentences, 5 failures; re-run after repairs, 0 failures |
-| To complete the stage | confirm S-56, S-57; place the shaft-power limit; surface, identity and state sweep; record-propagation sweep; Step 1 and Step 8 denial maps; Rohith/Vegh PDFs; the whole reading in two halves (1–8, 9–15) and a short reconciliation |
+| Tip pairs in cruise (the author's decision) | uncommanded state: free-wheeling at zero shaft torque, stated in Step 8; commanded moments depart from it, and their shaft power is not computed (stated in Step 8). ΔC_D0 0.0154 for the eight discs at the favourable end (Section 11) |
+| Source defects S-53 to S-57 | **closed** (the Step 8 shaft-power sentence to confirm) |
+| Receipt audit | standing end-of-stage check (R1–R4); last run 0 failures. Before any repair says "absent", the whole paper is searched. State identity is a standing rule |
+| Open | Step 14's list vs Step 15's "lists what would settle the rest": two open questions (cruise commanded shaft power; variable-pitch counterfactual) are not on the list — to vote |
+| To complete the stage | rest of the surface/identity/state sweep; record-propagation sweep; Step 1 and Step 8 denial maps; Rohith/Vegh PDFs; the whole reading in two halves (1–8, 9–15), with an orphaned-definition check, and a short reconciliation |
 
 **Every step has now been recomposed once.** Recomposition into result sentences took Steps 10–11 to about 40 % of their length,
 Steps 12–14 to 57–83 %, and the framework and architecture to 80–95 %, because definitions, protected sentences and their evidence

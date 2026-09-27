@@ -581,6 +581,11 @@ S-55 (R3), S-56 (R3). Onarımdan sonra yeniden koşulur (Tur 132: 0 başarısız
 **Her aşamanın sonunda koşturulur.** Numarasız işaretçiler (*above*, *below*) bir sonraki aşamanın adayı.
 **Ders (S-56):** bir onarımın kendisi de alındıdır — "fiyatlanmadı" demeden önce maliyetin kapanışın içinde olup olmadığına
 bakılır; alıcıyı okumak yetmez.
+**Kabul (Tur 133, dört okuyucu + Claude):** (1) **Yokluk demeden önce bütün metin aranır** (Qwen, ChatGPT'nin genel biçimi):
+*"Before a failed receipt is repaired by declaring content absent, unpriced, unstated or uncomputed, search the entire manuscript
+and its designated supplement for the promised content and its underlying quantity."* (2) **Durum kimliği** (ChatGPT) — sayı
+kimliğinin işletim durumu karşılığı: durum bağımlı her sonuç kendisine anlam veren durumu taşır (serbest dönen / durdurulmuş /
+kumandalı / kumandasız; askı / seyir); durumlar arası her yeniden kullanım izde işaretlenir (DeepSeek).
 
 ### 3.1 Emekliye ayrılan ifade DEPONUN TAMAMINDA aranır. Tur 49.
 

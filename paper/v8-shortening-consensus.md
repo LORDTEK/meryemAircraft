@@ -597,3 +597,7 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | S-57 birleşik cümle | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı (Tur 132)**; teyide |
 | Kumandalı sapmaların şaft gücünü adlandır | Adım 8 | Adım 14 | Adım 8 | Adım 8 | Adım 8 | **Yer ayrıştı** → Tur 132 |
 | Alındı denetimi kalıcı kapanış kapısı; R1–R4; numarasız işaretçiler sonraki aşama | ✓ | ✓ | ✓ | ✓ | ✓ | **Kabul (Tur 132)**; CLAUDE §3.0 |
+| S-56, S-57 teyit; yeniden koşu teyit | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI (Tur 133)** |
+| Şaft gücü cümlesi Adım 8'de (ChatGPT döndü) | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı (Tur 133)**; teyide |
+| P126 başlık kalsın | ✓ | ✓ | ✓ | ✓ | ✓ | **Kabul (Tur 133)** |
+| Durum kimliği; yokluktan önce bütün metin; şaft gücü tamamlama listesinde | ✓ | ✓ | ✓ | ✓ | ✓ | **Kabul (Tur 133)**; CLAUDE §3.0 |
