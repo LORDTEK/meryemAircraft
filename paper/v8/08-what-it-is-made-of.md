@@ -134,8 +134,6 @@ actuation without sizing the mechanism, and naming a number here would be invent
 
 ### What this inventory does not settle
 
-Two items belong here rather than in a later list.
-
 **An untrimmed hover torque, with no trim mechanism identified.** This is a control question
 rather than a property of the hardware, and it is stated as one.
 
@@ -186,6 +184,7 @@ brake or a lock rather than motor holding torque, the count of Section 7 would g
 | İddia | Kaynak |
 |---|---|
 | **Tur 127** (dört okuyucu + Claude): **S-52** onarıldı (R) — [7] *"or by differential thrust"* → *"or by the reaction torque of other rotors run at a different speed"* (§0.1; ifade emekli, Grok P119); **S-51** (c) — [24] *", because both are properties of the hardware just described"* çıktı; **P117** (R) — [14] *"(body axes, as fixed in the note below)"*; **N1** kalınlık ve veter Ek S8'e (kimlikleriyle); ses V1, V2, V3, V5 çıktı; V4, V6 kalır. Özgün adım Ek S8'de tam | Tur 126 metni §2–§4 |
+| **Tur 128 — Adım 8 KAPANDI: 1 990** (dört okuyucu + Claude teyit etti: S-52, P117, S-51 (c), N1, V1–V3, V5; S8 ifadesi). **[24] tümüyle silindi** (*"Two items belong here rather than in a later list."*; DeepSeek; oybirliği; `v8_draft_check` temiz: çıkan 1, eksik korunan yok). Başlık *"What this inventory does not settle"* kaldı (P120 reddedildi, Grok dahil). Qwen R126-P1 (Adım 8 → Adım 11 sürükleme defteri haritası) Adım 11 yeniden okunurken | S-51; Tur 128 |
 | **Tur 104 (S-37; Tur 103: dört okuyucu + Claude (iii) — şimdi nitele, göndermeden önce türet):** "The split is an estimate: the slipstream boundary it rests on is not derived in this work." — %46 `aero/roll.py`'de sabit, iz sınırı 0,67 → 0,47 m hiçbir betikte türetilmiyor; tek dayanak v5 eki. Sözcükler teyide | `paper/v8-source-defects.md` S-37 |
 | **Tur 100 (dört okuyucu + Claude):** S-30 ChatGPT'nin sözcükleriyle — "At equal counter-rotating speeds, the net angular momentum of the propulsion system is nominally zero: rotating the airframe through ninety degrees therefore produces no gyroscopic moment for the control system to cancel. If the pairs are speed-trimmed, that cancellation is no longer exact (below)." ("precesses" yanlış nesneyi adlandırıyordu). 8D "That is a design assignment, not a demonstrated result" korunan (169). Adım 7 notu olduğu gibi kaldı (ChatGPT yeterli buldu) | Tur 99 metni §2–§4 |
 | **Tur 99 (yeniden kurma; dört okuyucu + Claude):** envanter teyit edildi. 8E "It stands on its tail…" ve "four jobs" paragrafı çıktı (Adım 5C yinelemesi). S-30 "precesses nominally nothing, and no gyroscopic moment appears … unless the pairs are speed-trimmed (below)" (ChatGPT daha kesin bir sözcük öneriyor — oylamada); S-31 XB-35 kısmı çıktı (kaynaksız); S-32 "No wattage is quoted here; the closed powers are Section 10's." (önceki sürüm anlatısı çıktı); S-33 8G'ye durdurma cümlesi. Özgün paragraflar Ek S8'de | Tur 98 metni §3 |

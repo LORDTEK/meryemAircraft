@@ -330,3 +330,41 @@ kapanacak (1 259). Adım 8: S-51 ([24]↔[25] çelişkisi), S-52 ([7]'de tepki t
 AIAA Regular Article 10 000–12 000 (şekil ve tablo dahil). Silme temelli yeniden kurma iddia/sınır/mekanizma cümlelerini koruduğu için mimari
 ve çerçeve adımlarını %80–95'te bırakıyor. Okuyuculardan somut öneri istendi (Tur 127); ardından **yazara karar**: R'ye izinli ikinci geçiş,
 blokların eke gitmesi, adım birleştirme, başka makale türü, ya da aşımı kabul.
+
+## E8 — Uzunluk: karar paketi (Tur 128; Qwen P2) · **YAZARIN KARARI BEKLENİYOR**
+
+**Sayılar (ölçüldü, Tur 128).** Gövde düzyazısı **18 634** (Adım 8'in [24]'ü çıktıktan sonra). Adım 1–9: **13 122**; hesap 10–14: **5 163**;
+Adım 15: **349**. Düzyazı dışı plan (E6, F4 eke gittikten sonra): 5 tablo 1 750 + 3 şekil 1 100 + özet/terimler 400 = **3 250**.
+**Bugün hepsi dahil ≈ 21 900; tavan 12 000** (JoA Full-Length ve Design Forum ikisi de 10 000–12 000, `paper/joa-compliance.md`; JoA'da
+daha uzun bir tür kaydımızda yok). **12 000'e sığmak için düzyazı ≈ 8 750 olmalı: bugünkünün %47'si.**
+
+**Okuyucuların önerileri (Tur 127) — yan yana:**
+
+| | Ne | Kim | Karşı |
+|---|---|---|---|
+| A | Mimari/çerçeve adımlarında **R'ye izinli ikinci geçiş**, cümle cümle vetolu. Grok: yalnız adımlar arası **tekrar** (ev kalır, yankı bir cümle + işaretçi). ChatGPT: Adım 1–9'da −%25–30. DeepSeek: 1, 5, 6, 7, 8, 15 | Grok, ChatGPT, DeepSeek | **Qwen:** korunan cümleler taban; R ses ve mekanizma cümlelerini kaybettirir |
+| B | **Hesap adımlarında (10–14) kalan çalışmayı eke taşımak**; sonuç, niteleme, sözleşme, bilinmeyen gövdede. ChatGPT: 5 163 → 3 000–3 400 | ChatGPT, Qwen (*"10–14'te taşınabilecek türetme hâlâ var"*), DeepSeek (genel) | Grok açıkça oy vermedi |
+| C | **Bütün blokları eke**, gövdede bir paragraf özet (DeepSeek: Adım 8'in artık tork, durdurulmuş durum, şerit bölünmesi) | DeepSeek | **Grok:** 7–8'in blokları sayımın kanıtı; **ChatGPT:** 1–9 argümanın kendisi; **Qwen:** "kanıt gövdede" ilkesine aykırı |
+| D | **Sunumda birleştirme**: beş üst bölüm (1–4 / 5–8 / 9 / 10–14 / 15); açılış-kapanış tekrarları düşer | ChatGPT | DeepSeek ve Grok adım birleştirmeye karşı (yapı mimarinin kendisi) |
+| E | **Başka dergi / başka tür / yoldaş makale** (hesaplar ikinci makaleye) | Qwen (ilk yol); DeepSeek ve ChatGPT (yedek) | Grok: "henüz değil"; ChatGPT: yeniden kurmadan kaçmak için değil |
+| F | **Aşımı kabul edip savunmak** | Qwen | ChatGPT: dergi 10–12 bin diyorken ilk hamle olamaz |
+
+**Aritmetik — iyimser yolda bile:** A (−%25–30) + B (3 000–3 400) ikisi de tutarsa düzyazı ≈ **12 500–13 600**, hepsi dahil ≈ **15 800–16 800**.
+**12 000'e yine sığmıyor.** (DeepSeek'in kendi tahmini: 15–16 bin düzyazı.) ChatGPT'nin "katı" hedefi (10 000–10 200 düzyazı) yalnız
+tabloları saymış; şekiller ve özetle doğru tavan ≈ 8 750.
+
+**Açık iki olgu (kararı etkiler, okunmadı):** (1) AIAA metni *"typical … approximately"* diyor; aşımın reddedilip reddedilmediği ya da
+ücretlendirilip ücretlendirilmediği kaydımızda **yok**. (2) Öteki hedefler (AST, CJA) için sınır bulunamadı; §4 kuralı gereği ad konmadan
+önce şartları baştan sona okunur.
+
+**Önerim (Claude):** her yolda gereken iki işi şimdi başlat — önce **B** (yazarın sırası: *"önce hesaplar"*, Tur 67/72), sonra
+**çerçeve** (Tur 110 kuralı: Adım 2 çalışma taşıyarak, Adım 3 açıklayıcı tekrarı atarak), sonra **A'nın dar hâli** (Grok: yalnız adımlar
+arası tekrar). C yok. D içerik bitince bir düzen kararı. Her aşamadan sonra ölçüm. **Dergi/tür kararı (E/F) ölçülmüş sayıyla ve (1)–(2)
+okunduktan sonra** — ama dürüst beklenti: 12 000'e ancak çerçeve ve mimarinin de yarıya yakın inmesiyle ya da hedef değişerek.
+
+## E9 — Adım 15'in sertifikasyon cümlesi (Tur 128) · **YAZARIN KARARI BEKLENİYOR**
+
+*"… Section 14 lists what would settle the rest; nothing in this work addresses certification."* Makalenin hiçbir yerinde geçmiyor;
+sonuçta ilk kez beliriyor. **Sil:** Grok, ChatGPT, Claude (sonuç tüketir, yeni kapsam getirmez; doğru ama evi yok). **Kalsın:** Qwen
+(bölümün işi "nerede durduğu"). **Kalsın ve işaretlensin:** DeepSeek; Qwen P1 (sonuçta doğan sınır diye iz tablosuna). **Grok P121:**
+isteniyorsa önce Adım 14'e tarihli bir kapsam cümlesi, sonra 15 tüketir. Silme temiz: *"Section 14 lists what would settle the rest."*

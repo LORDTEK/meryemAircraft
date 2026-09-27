@@ -573,3 +573,8 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Uzunluk: gövde düzyazısı 18 644 / plan 8 500 | — | — | — | — | yazara | **Tur 127'de okuyucu önerileri; sonra yazara (E8)** |
 | Adım 15 listeleri | — | — | — | — | — | **İstendi** |
 
+| Adım 8 [24] tümüyle sil (DeepSeek); başlık kalır (P120 red) | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı (Tur 128): Adım 8 KAPANDI, 1 990** |
+| Rohith/Vegh: engel değil; Vegh (c) gösterilmedi, (d) görüntüden kurulamadı; PDF'siz metin değişmez | ✓ | ✓ | ✓ | ✓ | ✓ | **Kayda geçti** (`v8-gap-search.md`, `v8-evidence.md`) |
+| Adım 15 listeleri; (ii) quadrotor ifadesi tutuyor | ✓ | ✓ | ✓ | ✓ | ✓ | **Tüketim haritası `drafts/15-maps.md`, Tur 128'de teyide** |
+| Adım 15 (i) sertifikasyon cümlesi | sil | sil | kalsın+işaret | kalsın | sil | **Ayrıştı → yazar (E9)** |
+| Uzunluk | A (dar) | A+B+D | A+C | E/F | B → çerçeve → A (dar) | **Ayrıştı → yazar (E8 paketi)** |

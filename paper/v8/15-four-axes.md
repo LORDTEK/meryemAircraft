@@ -56,13 +56,14 @@ that reorients a propulsor, and an account of what the combination costs.**
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 128 — listeler (dört okuyucu + Claude):** çekirdek dört eksen + kapanış; kalanlar: hepsi (yer taban); saf ses yok. Tüketim haritası metne karşı denetlendi: `paper/v8/drafts/15-maps.md`. Borç/kapsam denetimi (Qwen R108-P2): Adım 15 Adım 14'ün açık bıraktığı hiçbir şeyi kapatmıyor (dördü). (ii) quadrotor ifadesi Adım 6 tablosuyla tutuyor (turboşaft +13…+51 % / +22…+51 %; tam elektrik −4…+27 % zarf, +3…+27 % en iyi aile — Qwen: ifade zarf okumasına ait). **(i) *"nothing in this work addresses certification"* AYRIŞTI** → yazara (E9) | Tur 128 |
 | **Tur 102 (Tur 101 oybirliği; R-7):** "and — while the tip pairs free-wheel or are held by motor torque — no rotor stowing, indexing or stopping mechanism (Section 7's note)"; koşulsuz biçim emekli. Özgün paragraf Ek S15'te | Adım 7 notu; S-33 |
 | **Tur 98 (dört okuyucu + Claude; E5):** "Cruise efficiency, against rotorcraft — claimed against multirotors, and bounded; mixed against helicopters."; "Nothing is claimed against rotorcraft on vertical capability." | Adım 6D, 9 |
 | **Tur 61 — kısa kapanış** (dört okuyucu + Claude hemfikir, A3): 1 023 → ~330 kelime. Kalan her yüklem aşağıdaki satırlarda kaynağıyla; çıkarılanlar kendi evlerinde: çerçeve özeti Adım 2–3, kısmi gerçekleşme Adım 3/7/8, *"by construction"* Adım 9, bağımsız üretilmiş rakamlar Adım 6 | `paper/v8-shortening-consensus.md` A3, A4 |
 | **Tur 60:** *"rather than cruise thrust"* | Grok |
 | **Tur 59:** *"The configuration is arranged to change regime by rotating the airframe"* — Grok Adım 14'ü yakaladı; aynı fiil burada da vardı | Adım 1 (P1) |
 | Dört eksen, dört rakip, sıralama | Adım 9 tablosu |
-| Seyir kaldırması yüzeyde; hiçbir sözleşme bunu değiştirmez | Adım 6 (*"no sizing contract … moves a vehicle between those two states"*) |
+| Seyir kaldırması yüzeyde | Adım 6 (*"a surface that carries the cruise lift"*), Adım 7 (*"carries the cruise lift on a surface"*). **Tur 128 düzeltmesi:** bu satır hâlâ S-49'la (Tur 123) emekliye ayrılan *"no sizing contract … moves a vehicle between those two states"* cümlesini ev gösteriyordu — kayıt yayılmamıştı (§3.1), gövde etkilenmedi |
 | Üstünlük hesap; iki yayımlanmış quadrotor; turboşafta karşı pozitif, tam elektriğe karşı *"slightly behind to comfortably ahead"* | Adım 6, *"What the margin actually is"* |
 | Sıkıştıran şey sabit hatveli paletin seyir verimi | Adım 6 (**Tur 57'de düzeltildi**: *"own refusal of the variable-pitch hub"* ChatGPT'nin Tur 53'te Adım 11'de yakaladığı aşırı atıftı ve Adım 6'ya yayılmamıştı) |
 | Karşılaştırma kontrollü yeniden üretim değil | Adım 6, beşinci nitelendirme |

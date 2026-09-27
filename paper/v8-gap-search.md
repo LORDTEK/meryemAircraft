@@ -108,3 +108,11 @@ gövde, kanat, yatay ve dikey kuyruk; dört tahrik (dizel, paralel hibrit dizel,
 dönüştürücüden kısmen ayırıyor; tutum kontrolü metinde bulunamadı → a, b, e evet; d yok (kuyruklar). **Vegh dergi:** yalnız özet açıldı.
 **ChatGPT kendi Tur 123–124 anlatımını düzeltti** (geometri konferanstan, dergiden değil). Hiçbiri boşluğu kapatmıyor; PDF'ler hâlâ bekleniyor.
 
+
+**Tur 128 — okuyucuların hükmü (Tur 127; dört okuyucu + Claude).** ChatGPT'nin raporu **engel değil**; hiçbiri altı öğenin kesişimine
+girmiyor. **Düzeltme (Grok, Qwen, ChatGPT):** Tur 126 kaydındaki Vegh *"d yok (kuyruklar)"* fazla güçlüydü → **(d) görüntüden
+kurulamadı**: kuyruklar gösterilmiş, kumanda yüzeyi sayısı bildirilmemiş. **Vegh (c) gösterilmedi**, yokluk sayılmaz. Rohith (c) hayır
+(kolektif hatve). **PDF'ler depoya girmeden Adım 3 ve 7'de değişiklik yok.** Sonra: Adım 1 dolu listeye kapsamıyla birer satır (Grok
+P111 biçimi) ve Adım 7'nin tanık cümlesi (Rohith önce, Rheaume sonra). **Grok P122** (Rohith satırı: *"biplane tail-sitter, series
+hybrid, cruise-sized engine, collective pitch"*, tutum ya da (c) hakkında alıntının ötesinde yüklem yok) — Tur 128'de oyda.
+Okuma durumu `paper/v8-evidence.md`'de (DeepSeek).
