@@ -2,7 +2,7 @@
 
 > **This is a task. Please answer it now, and begin with your name alone on the first line.**
 >
-> Commit **`@@COMMIT@@`**, branch `claude/ecstatic-cori-6w30at` (for verification only). **Every text you are asked to judge is quoted
+> Commit **`e9b1755`**, branch `claude/ecstatic-cori-6w30at` (for verification only). **Every text you are asked to judge is quoted
 > here in full.**
 > - Appendix A: Step 15, unchanged.
 > - Appendix B: Step 8's block *"What this inventory does not settle"*, as it now stands.
