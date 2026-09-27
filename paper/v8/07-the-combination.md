@@ -50,12 +50,12 @@ with the hover peak drawn from a buffer. Each element supplies one part of it, a
 of them supplies it alone:
 
 - The **blended wing body** carries the cruise lift on a surface, so that cruise is
-  wing-borne rather than thrust-borne. That is the second half of the union.
+  wing-borne rather than thrust-borne.
 - The **tail-sitting stance** aligns the thrust axis with the body axis, so the propulsor
   that produces the thrust for vertical operation is the same one that produces the cruise
   thrust, holding
   one orientation relative to the airframe throughout. There is no dedicated lift system to
-  carry, and vertical operation does not depend on a runway. That is the first half.
+  carry, and vertical operation does not depend on a runway.
 - The **series-hybrid buffer** releases the continuous power plant from the hover peak,
   so that it is sized by cruise rather than by a condition holding for about two percent
   of the flight. The series arrangement is used here for the electrical path it gives the buffered
@@ -93,7 +93,7 @@ sized from the moment requirement rather than from weight support, but the thrus
 gives them also supplies the aircraft's entire take-off margin, because the nose pair is sized
 at thrust equal to weight and no more. This dual role is a dependency, reported as one where the sizing is audited, and it does not make the tip pairs a dedicated lift system.
 
-**The claim is narrower than it may appear, and the boundary matters.**
+**The claim is narrower than it may appear.**
 
 This is not a configuration in which nothing moves. Roll cannot be produced by the
 propellers' **thrust**: every thrust vector is parallel to the body axis, so no combination
@@ -136,6 +136,7 @@ exposed in cruise, and Section 11 charges them.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 126** (dört okuyucu + Claude): [6]'nın iki etiketi (*"That is the second half of the union."*, *"That is the first half."*) ve [12]'nin *"and the boundary matters"* yan cümlesi çıktı (ses kuralı); [3]'ün karşılama cümlesi *"The instantiation is therefore partial."* ile çift olarak korunan (ChatGPT §13); [4]'ün ilk yarısı korunan kalır (ChatGPT görüş değiştirdi); [13] temiz silme yok, kalır | Tur 125 metni §3 |
 | **Tur 125 — ses (yöntem Tur 124'te kapandı; yazar: "ton seçimleri tamam, geri koyma")**: [4]'ün *"and it is made here rather than conceded later"* yan cümlesi çıktı (dört okuyucu + Claude saf ses; ChatGPT bütün cümleyi silmek istiyor, ilk yarı korunan — ayrışık). Özgün adım Ek S7'de tam | Tur 124 metni §3 |
 | **Tur 124 — S-45 uygulandı** (Tur 119'da dört okuyucu + Claude; Adım 7 açılınca uygulanacaktı): *"and in combination"* → *"and some of them together"*; Adım 1 ile aynı nesne (Grok P103): öğeler, bazıları bir arada, ve bedeliyle birlikte kurulmamış birleşim | Tur 119 metni §2 |
 | **Tur 99 (dört okuyucu + Claude):** S-33 — tablonun durdurma satırı "— (see note)" ve altına not: "The stopping class is absent if the tip pairs free-wheel in cruise or are held stopped by motor torque; a brake or a mechanical lock would add it. The means of stopping is not fixed by this study (Section 8)." (dördü de Adım 7'de nitelemeyi istedi; sözcükler Grok + Qwen birleşimi — teyide). 7D seri hibrit cümlesi (ChatGPT'nin sözcükleri). Özgün tablo Ek S7'de | Adım 8G |

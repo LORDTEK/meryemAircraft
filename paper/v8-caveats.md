@@ -53,6 +53,7 @@ boşluğa duyarsız. `G` = Grok, `D` = DeepSeek, `C` = ChatGPT, `Q` = Qwen, `K` 
 | 6 | The span efficiency used throughout this section is the computed value, 0.817, not the assumed 0.85. | D |
 | 6 | the aerodynamic predictions diverge above roughly ten degrees of incidence | D |
 | 7 | The instantiation is therefore partial. | G |
+| 7 | The three elements, taken together, meet the escape condition of Section 3 in the propulsor that carries the aircraft, and they meet it with no mechanism that reorients a propulsor. | G+C+D+Q+K |
 | 7 | This is not a configuration in which nothing moves. | G |
 | 7 | Nor is this a claim of mechanical simplicity. | G |
 | 7 | Whether this aircraft can actually perform the change is a separate question and is not settled anywhere in this paper. | G |

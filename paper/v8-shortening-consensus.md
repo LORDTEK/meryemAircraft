@@ -560,4 +560,9 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | [3] cümlesi + "partial" korunan çift (ChatGPT §13); S-50 "primary propulsor" (ChatGPT'nin terim denetimi) | — | öneren | — | — | ✓ | **Oylamada** |
 | Vegh iki kayıt: SciTech 10.2514/6.2025-1436; J. Aircraft 10.2514/1.C038393 | ✓ | ✓ | — | — | ✓ | **Kayıtta** |
 | Adım 8 listeleri (metin tam, Ek B) | — | — | — | — | — | **İstendi** |
+| **Yazar (Tur 125):** *"ChatGPT okuduğu içerikten diğer herkese içerik sağlasın çünkü akıl akıldan üstündür."* | — | — | — | — | — | **Tur 126: ChatGPT'den Rohith ve Vegh pasajları istendi** |
+| Tur 125 cevapları: S14 alıntısı; 3.1 kalsın (ChatGPT değiştirdi); 3.2 sil (DeepSeek değiştirdi); 3.3 sil; 3.4 kalsın; 3.5 koru; S-50 (a); haritalar | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı (Tur 126): Adım 7 1 259, Adım 5 1 133** |
+| Adım 8 eksen adları | [14]'e gövde notu (P117) | **eksen denetimi istedi** | tutarlı | tutarlı | geometriden denetlendi: doğru | **Tur 126: denetim sonucu okuyuculara; P117 oyda** |
+| Adım 8 taşıma N1–N5, ses V1–V6, S-51, S-52 | — | — | — | — | — | **Tur 126 oylaması** |
+| DeepSeek'in S-49 harita satırı | ✓ | **üç turdur oy yok** | ✓ | ✓ | ✓ | **Kabul sayıldı (harita satırı, metin değil); ChatGPT itiraz ederse geri alınır** |
 

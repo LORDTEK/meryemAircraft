@@ -68,7 +68,7 @@ with what margin. This section does not assert the outcome of a calculation it d
 **Not demonstrated.**
 
 **The aircraft leaves the ground on its control propellers.** Hover power is sized at thrust
-equal to weight, so the primary propulsor supplies a thrust-to-weight ratio of exactly one and
+equal to weight, so the primary propulsor — the nose pair — supplies a thrust-to-weight ratio of exactly one and
 no more. The take-off margin comes from the four tip pairs, which were sized from the moment
 requirement rather than from weight support. That is the one place the configuration asks a
 component to do a second job it was not sized for, and it means the take-off margin and the
@@ -125,6 +125,7 @@ section**, and the two are combined in Section 7.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 126 — S-50 onarımı (R, kapalı adıma tarihli; dört okuyucu + Claude):** *"so the primary propulsor supplies"* → *"so the primary propulsor — the nose pair — supplies"*. Özgün cümle Ek S5'in dondurulmuş kopyasında (Grok P118) | Tur 125 metni §3.6 |
 | **Tur 121 — uzunluk geçişi (yazar: Adım 5 bu kez çoğunlukla; sonuç zaten oybirliği).** E2 (*"'Vertical take-off' is a weaker requirement…"*) Ek S5'e (dört okuyucu + Claude; ChatGPT görüş değiştirdi); N1 uygulama adları yan cümlesi çıktı (Adım 1 adlandırıyor; Grok, DeepSeek, Qwen + Claude, ChatGPT oy vermedi); **S-47** *"the same four propellers"* → *"the same propellers"* (dört uç çifti eşeksenli = sekiz pervane). E1, E3 ve DeepSeek'in ek taşımaları **kalır** (DeepSeek geri çekti). Kalkış bağlaşımının son cümlesi korunan; *"Not demonstrated"* başlık korunan, *"and the list is not short"* ses işareti (yazara). Özgün adım Ek S5'te tam | Tur 120 metni §6, §8 |
 | **Tur 96 (dört okuyucu + Claude):** 5D işaret cümlesi çıktı (DeepSeek itirazını geri çekti); 5D devrilme cümlesi — "more prone than a conventional one to tip over, in crosswind and on uneven ground" (sayı kuralı: "one historical difficulty", iki koşul) ve korunan (165); 5C "takes the weight benefit" (P51). Özgün paragraflar Ek S5'te | Tur 95 metni §3, §4.3 |
 | **Tur 95 (yeniden kurma; dört okuyucu + Claude):** envanter teyit edildi. S-24 — 5C alıntısı sürdürüldü ("that such gear was limited to low sink rates, and that tip-over was 'a constant worry in gusty air and on uneven ground, particularly with the propellers turning.'"), 5D'ye "and to uneven ground"; S-25 — "The landing difficulty of the 1950s tail-sitters was attributed…"; "What that refusal costs … is not computed" korunan (164). **Açık:** 5D işaret cümlesi (üçü çıkar, DeepSeek tut). Özgün paragraflar Ek S5'te | NASA 19840014464 "In retrospect" paragrafı; 19810010574 XFY-1 satırı |

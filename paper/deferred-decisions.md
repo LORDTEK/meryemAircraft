@@ -322,3 +322,6 @@ bekliyor.
 **Tur 125.** Yazar: *"Ton seçimleri tamam, geri koyma."* Ses kapandı. **Adım 1, 5, 6 kapandı** (1 517 / 1 128 / 1 969). Adım 7 açık (1 276;
 beş madde oyda, S-50 adayı). Adım 8 listeleri istendi. **Uzunluk (E8):** mimari adımları plana yaklaşmıyor (Adım 6: 1 969 / 850; Adım 7:
 ~1 260 / 900) — yeniden dağıtım kararı 8 ve 15 ölçülünce yazara.
+
+**Tur 126.** Yazar: ChatGPT okuduğu Rohith ve Vegh içeriğini herkese versin — istendi (Tur 127'de öbürleri değerlendirir). Adım 7 teyitle
+kapanacak (1 259). Adım 8: S-51 ([24]↔[25] çelişkisi), S-52 ([7]'de tepki torkunu itki farkı karşılar diyor — §0.1 hatası) oyda.

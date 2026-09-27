@@ -214,7 +214,7 @@ The body is about **26 000 words**, and the journal's working target is **about 
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 125.**
+**Round 126.**
 
 | Block | State |
 |---|---|
@@ -224,8 +224,9 @@ The body is about **26 000 words**, and the journal's working target is **about 
 | Framework, Step 4 | **recomposed** (1 351 → 1 268); the NASA sizing study's single home (Sections 1 and 2 point forward to it) |
 | Step 9 | **closed** at 1 020 (from 1 166); "by construction" has one meaning, checked (S-44) |
 | Step 1 | **closed** at 1 462: K stays (the author); V5 the one voice sentence; gap sentence unchanged, no documented search yet (`paper/v8-gap-search.md`) |
-| Steps 1, 5, 6 | **closed** at 1 517, 1 128, 1 969 |
-| Now | **Step 7** (1 276): five items to vote, S-50 candidate (*"primary propulsor"* never identified as the nose pair). **Step 8 lists** (full text in the round file). Voice method is a standing rule. Rohith and Vegh PDFs awaited. Then 15 |
+| Steps 1, 5, 6 | **closed** at 1 517, 1 133 (S-50 R), 1 969 |
+| Step 7 | 1 259, applied; closes on confirmation |
+| Now | **Step 8** (2 045): axis audit done (body axes, correct); S-51, S-52 to vote; moves and voice to vote. ChatGPT shares the Rohith and Vegh passages it read. Then 15 |
 
 **The body is about 20 000 words of prose** (tables not counted). Recomposition into result sentences took Steps 10–11 to about
 40 % of their length, Steps 12–14 to 57–83 %, and the framework to about 80 %, because its definitions and protected sentences set
