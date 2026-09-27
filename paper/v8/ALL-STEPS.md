@@ -14,7 +14,7 @@ vertically, hover, and work from confined sites. Their limit is the converse: wi
 every second of flight is bought with installed power, so range and endurance stay modest and
 worsen as the vehicle grows.
 
-**Neither family is deficient.** Each is excellent at what it does and is limited by the price of
+**Neither family is deficient.** Each is limited by the price of
 doing it that way. **The corner where both capabilities are wanted at once is where the two
 applications this work is aimed at sit** — wildfire observation and response, and cargo delivery to
 places without a runway — and both want to leave from an unprepared site and then cover distance.
@@ -42,8 +42,7 @@ study carries six proprotors on a tilting main wing and two more on a tilting ta
 directly connected to its own electric motor. Nothing is carried unused; the same discs that
 lift the aircraft propel it, after being turned.
 
-**Both work, and the second is the more elegant on paper** — one propulsion group, no dead
-hardware in cruise. It is also the more demanding to build, because rotating a propulsor in
+**Both work, and the second is the more demanding to build**, because rotating a propulsor in
 flight brings a pivot and its actuators, a gyroscopic moment during the rotation, and a control
 problem through a regime in which the aircraft is neither a rotorcraft nor an aeroplane.
 **Those are mechanical and control requirements rather than aerodynamic ones**, and that
@@ -88,7 +87,7 @@ propellers is mounted to compensate each other's torque."*
 **The established answer to hover control on such a configuration is a surface in the
 slipstream**, and it is worth naming because this paper refuses it. That 2014 vehicle places
 *"elevon and rudder … immersed in the propeller slip stream to provide three axis control moments
-in hover."* The answer works, costs little, and is the one a reader will reasonably expect.
+in hover."*
 
 **And the reaction-torque channel this paper declines is established as a control channel.** A
 coaxial contra-rotating tail-sitter reported in 2012 balances rotor torque *"by the inverse
@@ -130,11 +129,9 @@ Each of those choices costs something, and **the giving-up is the part that is n
 quadrotor tail-sitter produces a rolling moment from the reaction torque of four independently
 driven rotors; a coaxial pair can produce one the same way, by running its two rotors at different
 speeds. **Operating every pair torque-balanced spends that channel to buy the torque balance and
-the near-zero net angular momentum**, and leaves the axis to a single aerodynamic device. What
-that costs, and what the rest of the combination costs, is what the paper is for.
+the near-zero net angular momentum**, and leaves the axis to a single aerodynamic device.
 
-**None of the elements is new**, and Section 7 says so. Tail-sitting aircraft are seventy years
-old and uncrewed ones are ordinary; blended wing bodies have been a standing subject of transport
+**None of the elements is new**, and Section 7 says so. Tail-sitting aircraft are seventy years old; blended wing bodies have been a standing subject of transport
 research for three decades; series-hybrid propulsion has been flown in a crewed motor glider and designed for small uncrewed aircraft. The route is not claimed to have been waiting to be found. **The contribution is the
 architecture: a configuration arranged to change regime by rotating the airframe rather than its
 propulsors, and so carrying no mechanism that reorients a propulsor.** The combination, the
@@ -304,13 +301,9 @@ do: leave from, and return to, a site that has not been prepared.
 
 ### What the requirement actually is
 
-"Vertical take-off" is a weaker requirement than the one the missions impose, and stating the
-stronger one first prevents the claim from being read as easier than it is.
-
 A catapult-launched fixed-wing aircraft also leaves without a runway. What it does not do is
 **come back** to the same unprepared site, and it does not travel without the launcher. The two
-applications this work is aimed at — wildfire observation and response, and cargo delivery to
-places without a runway — need the aircraft to arrive somewhere that has no infrastructure, and
+applications this work is aimed at need the aircraft to arrive somewhere that has no infrastructure, and
 to leave again.
 
 So the requirement is: **the aircraft carries everything it needs to depart and recover, and the
@@ -359,7 +352,7 @@ equal to weight, so the primary propulsor supplies a thrust-to-weight ratio of e
 no more. The take-off margin comes from the four tip pairs, which were sized from the moment
 requirement rather than from weight support. That is the one place the configuration asks a
 component to do a second job it was not sized for, and it means the take-off margin and the
-attitude authority are drawn from the same four propellers and compete for it.
+attitude authority are drawn from the same propellers and compete for it.
 
 **The vertical descent has not been analysed.** A rotor descending into its own wake can enter
 the vortex ring state, in which thrust becomes erratic and adding power makes matters worse.
