@@ -164,6 +164,8 @@ EMEKLI = {
     "A NASA study that sizes five VTOL architecture families": "Tur 114: calismanin tek evi Adim 4 (P88, dis kanit kimligi; Qwen R113-P2 ileri isaretci)",
     "A NASA study sizing five VTOL architecture families": "Tur 114: calismanin tek evi Adim 4 (P88)",
     "the second half of the prediction in its own words.": "Tur 115: S-43 -- kapsam yan cumlesi olmadan (Grok P95)",
+    "win by construction": "Tur 117: S-44 -- 'by definition'; 'by construction' yalniz Adim 9 madde 8 anlaminda",
+    "tilting layout, by construction": "Tur 117: S-44 -- 'by assumption'",
 }
 
 
@@ -272,6 +274,26 @@ if __name__ == "__main__":
             print("  !! %s icinde %r -- yalniz %s'de durabilir" % (ad, k, ", ".join(yer)))
         sys.exit("Yalniz-adim ifadesi yerinden cikti.")
     b = tara(dosyalar() + sekil_dosyalari())
+    # Tur 117 (S-44; Qwen P1, Grok P99): "by construction" yalniz Adim 9 madde 8'in tanim cumlesinde;
+    # kaynak alintisi (*"..."*) muaf (ChatGPT). Ek (dondurulmus kopyalar) arsivdir, taranmaz.
+    ihlal = []
+    for f in sorted(glob.glob(os.path.join(KOK, "paper", "v8", "[01][0-9]-*.md"))):
+        t = govde(open(f, encoding="utf-8").read())
+        if "--sina" in sys.argv and f.endswith("03-the-escape-condition.md"):
+            t += " It would win by construction."
+        t = re.sub(r'\*"[^"]*"\*', "", t)
+        for c in re.split(r"(?<=[.!?])\s+", re.sub(r"\s+", " ", t)):
+            if re.search(r"by construction", c, re.I) and "throughout this paper means" not in c:
+                ihlal.append((os.path.basename(f), c[:110]))
+    if "--sina" in sys.argv:
+        print("SINAMA: 'by construction' baska anlamda %d kez yakalandi" % len(ihlal))
+        if not ihlal:
+            sys.exit("!! 'by construction' denetimi YAKALAMADI -- denetim bozuk.")
+        ihlal = [x for x in ihlal if "It would win by construction" not in x[1]]
+    if ihlal:
+        for ad, c in ihlal:
+            print("  !! %s: 'by construction' Adim 9 madde 8 disinda: %s" % (ad, c))
+        sys.exit("S-44 sozcuk kurali bozuldu.")
     print("=== v8 EMEKLI IFADE/SAYI DENETIMI (govdeler + %d sekil betigi) ===" % len(SEKILLER))
     if b:
         for ad, k, n in b:

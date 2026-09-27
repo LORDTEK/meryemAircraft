@@ -11,7 +11,7 @@ kısıtlar bölümü değil (ChatGPT'nin şartı) — kapanmayanlar Adım 14'te 
 
 ## What is not claimed
 
-This section states the boundary of the paper's claims. It is placed before the configuration's own numbers because a boundary drawn after the results would be a retreat, and one drawn before them is a commitment.
+This section states the boundary of the paper's claims. It is placed before the configuration's own numbers.
 
 **It is not a list of the study's open questions.** Those are in Section 14, and the difference matters: the boundary below is about claims the paper **declines to make**, most of which it could not make on any evidence; Section 14 is about questions the paper **does not answer**, and which better evidence would answer. One is a scope; the other is a debt.
 
@@ -47,7 +47,7 @@ The mechanism claim has a price this work does not compute. **This configuration
 
 **3. It does not claim that the aircraft has no moving parts.** What is eliminated is a *class of mechanism* — the one that reorients a propulsor. The aircraft has a moving aerodynamic surface, it is named where the elimination is claimed rather than later, and it also pitches the nose down when deployed.
 
-**4. It does not claim mechanical simplicity.** Part count, assembly mass, failure modes and maintenance burden were not measured, and nothing here supports a statement about reliability. The count of mechanism classes in Section 7 is not a reliability argument, and readers who convert one into the other are not quoting this paper.
+**4. It does not claim mechanical simplicity.** Part count, assembly mass, failure modes and maintenance burden were not measured, and nothing here supports a statement about reliability. The count of mechanism classes in Section 7 is not a reliability argument.
 
 **5. It does not claim that the escape condition is fully instantiated.** The condition is met in the propulsor that carries the aircraft and is not met in the attitude system, which is carried through cruise producing moments rather than cruise thrust. Section 3 names that case as partial instantiation, and the charge it re-opens is reported rather than absorbed.
 
@@ -65,13 +65,14 @@ Each half of that has a named opponent and neither half is a record. **Nor is th
 
 ### One consequence for how the numbers that follow should be read
 
-Because the comparative result depends on the sizing contract, **no comparison in this paper should be quoted without the contract it was computed under.** That is not a caveat attached for safety; it is the paper's own finding applied to the paper's own numbers, and Section 13 states what it demands of anyone who uses the framework afterwards. 
+Because the comparative result depends on the sizing contract, **no comparison in this paper should be quoted without the contract it was computed under.** 
 ---
 
 ## Yazarın denetimi için — bu sayfadaki her olgusal yüklem ve kaynağı
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 117 — Adım 9 uzunluk geçişi, ikinci kısım** (Tur 116; dört okuyucu + Claude): D1 ara yol ("It is placed before the configuration's own numbers." kalır; retreat/commitment yarısı Ek S9'da), D2 (madde 4'ün okuyucu yan cümlesi) ve N4 ("That is not a caveat attached for safety…") Ek S9'daki donmuş kopyada | Tur 116 metni §4 |
 | **Tur 116 — Adım 9 uzunluk geçişi, ilk kısım** (Tur 115; dört okuyucu + Claude, madde 2'de **yazar kararı**): madde 2 "and would be absurd" çıktı (yazar: *"Ben orada aslında sana anlatıyordum. Elbette çıksın."*); N1 ("The boundary is easiest to state…"), N2 ("A reader who rejects one of these claims…"), N3 (madde 1'in ikinci cümlesi; Adım 5 aynısını taşıyor) Ek S9'a. D1, D2, N4 ayrışık. Özgün Ek S9'da tam | Tur 115 metni §3 |
 | **Tur 108 — S-38 (dört okuyucu + Claude):** "turns on a mass fraction of the competitor that is not measured" → "turns on quantities of the competitor that are assumed rather than measured" (Adım 13 P27 ile aynı nesne; Grok P81). Özgün Ek S9'da | S-38 |
 | **Tur 102 (Tur 101 oybirliği; T1):** tablo gövdenin eksen tablosu oldu — 1. satırdan "and Section 6 measures it against two published quadrotors in one common definition" çıktı (Şekil 3 taşıyor), "(Section 6)" işaretçisi; 2. satır "Claimed as sized, not demonstrated (Sections 5, 14)"; 3. satır sayım/basitlik sınırı. Korunan kalın cümle aynen. Özgün tablo Ek S9'da | `drafts/objects.md` T1 |

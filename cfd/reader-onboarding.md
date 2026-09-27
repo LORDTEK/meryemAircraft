@@ -214,7 +214,7 @@ The body is about **26 000 words**, and the journal's working target is **about 
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 116.**
+**Round 117.**
 
 | Block | State |
 |---|---|
@@ -222,7 +222,8 @@ The body is about **26 000 words**, and the journal's working target is **about 
 | Calculation steps 10–14 | **all recomposed and confirmed** (5 150 words against a plan of 2 000); originals in Supplements S10–S14 in full |
 | Framework, Steps 2 and 3 | **recomposed** (2 189 → 1 775; 1 654 → 1 305), originals in S2 and S3 in full; the five framework definitions are protected |
 | Framework, Step 4 | **recomposed** (1 351 → 1 268); the NASA sizing study's single home (Sections 1 and 2 point forward to it) |
-| Now | **Step 9** partly applied (1 166 → 1 086); three candidates divided; S-44 ("by construction"); then 1 → 5–6 → 7–8 → 15 |
+| Step 9 | recomposed (1 166 → 1 020); "by construction" has one meaning, checked (S-44) |
+| Now | **Step 1 lists** (its text is in the round file); then 5–6 → 7–8 → 15 |
 
 **The body is about 20 000 words of prose** (tables not counted). Recomposition into result sentences took Steps 10–11 to about
 40 % of their length, Steps 12–14 to 57–83 %, and the framework to about 80 %, because its definitions and protected sentences set
@@ -236,7 +237,7 @@ of them holds a sentence deleted for lack of a source.
 | Tool | What it checks |
 |---|---|
 | `v8_caveats.py` | the protected sentences |
-| `v8_stale.py` | retired phrases (138) and single-home phrases, in the step bodies **and in the v8 figure scripts** |
+| `v8_stale.py` | retired phrases (140) and single-home phrases, in the step bodies **and in the v8 figure scripts** |
 | `v8_nothing_lost.py` | every sentence of a recomposed step is in the body or the supplement, or is a voted replacement |
 | `v8_draft_check.py` | a draft is derived from its source by deletion only (pointers in ⟦ ⟧ excepted); no negative or qualifier deleted; every protected sentence present |
 | `v8_refs.py` | table, row and relational-noun references, and supplement references |

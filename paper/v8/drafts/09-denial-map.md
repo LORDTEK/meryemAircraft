@@ -18,5 +18,5 @@ was checked by searching the step bodies.
 | Item 5, partial instantiation | Section 3 (failure mode 4); Section 7 |
 | Item 6, *"A configuration may avoid all three and still be unbuildable…"* | Section 4's M1, now in Supplement S4 (cross-section P71) |
 | Item 7, the trades inside the escape | Sections 11, 14 |
-| Item 8, *"'By construction' throughout this paper means 'by the sizing', never 'by demonstration'"* | the whole paper — **but see S-44: Sections 3 and 13 use the phrase in other senses** |
+| Item 8, *"'By construction' throughout this paper means 'by the sizing', never 'by demonstration'"* | the whole paper — S-44 repaired (Round 117): Sections 3 and 13 now say *"by definition"* and *"by assumption"*; `v8_stale.py` allows the phrase only in this sentence (source quotations exempt) |
 | *"no comparison in this paper should be quoted without the contract it was computed under"* | Section 13; Section 15 (*"The ordering belongs to the sizing contract"*) |

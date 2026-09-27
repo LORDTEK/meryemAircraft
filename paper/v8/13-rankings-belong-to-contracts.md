@@ -88,7 +88,7 @@ Section 2 predicted that such a ranking will move when the sizing rule changes, 
 
 ### What this section does not establish
 
-**The competitors are modelled at a coarser level than this configuration**: their drag is transferred or idealised, their propeller efficiency assumed and their architecture-specific mass a parameter. **Comparing computed figures against assumed ones favours whichever is assumed more optimistically** — in propeller efficiency both competitors, and with a common propeller efficiency the lift-plus-cruise lead under the first contract falls from 55–84 to 33–45 percent (Supplement S13); in drag the tilting layout, by construction. **The comparison is at one size**: Section 12's 1 000 kg reference design has no closure, and none of its figures is used here. **And nothing here ranks architectures for a mission.** What this section establishes is narrower: **the same aircraft, under three reasonable contracts, give orderings against lift-plus-cruise that move by tens of percentage points and, inside the envelope, change sign** — so the ordering is not a property of the architectures alone.
+**The competitors are modelled at a coarser level than this configuration**: their drag is transferred or idealised, their propeller efficiency assumed and their architecture-specific mass a parameter. **Comparing computed figures against assumed ones favours whichever is assumed more optimistically** — in propeller efficiency both competitors, and with a common propeller efficiency the lift-plus-cruise lead under the first contract falls from 55–84 to 33–45 percent (Supplement S13); in drag the tilting layout, by assumption. **The comparison is at one size**: Section 12's 1 000 kg reference design has no closure, and none of its figures is used here. **And nothing here ranks architectures for a mission.** What this section establishes is narrower: **the same aircraft, under three reasonable contracts, give orderings against lift-plus-cruise that move by tens of percentage points and, inside the envelope, change sign** — so the ordering is not a property of the architectures alone.
 
 ---
 
@@ -96,6 +96,7 @@ Section 2 predicted that such a ranking will move when the sizing rule changes, 
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 117 — S-44 onarıldı** (Tur 116; dört okuyucu + Claude): P33'ün korunmayan kuyruğu "in drag the tilting layout, by construction" → "by assumption" | Tur 116 metni §3 |
 | **Tur 108 — S-38 onarımı (Tur 107: dört okuyucu + Claude):** P27 iki niceliği adlandırıyor (kaldırma grubu kütle oranı ve pervane verimi — Ek S13 tablosu: ikisi de sabit kalkış kütlesinde işareti tek başına belirliyor); P28 "those quantities". **P28'in son yan cümlesi ayrışık** (Grok, Qwen: "the ones most worth measuring"; ChatGPT: çıkar; DeepSeek: "both are worth measuring" ya da çıkar) → uzlaşmaya dek yan cümle yok. Özgün P27–P28 Ek S13'te | `paper/v8-source-defects.md` S-38 |
 | **Tur 107 — Adım 13 yeniden kuruldu** (Tur 105–106; dört okuyucu + Claude, hiçbir cümleye veto yok): `drafts/13-recomposed.md` uygulandı; korunan cümlelerin hepsi gövdede. Özgün gövde Ek S13'de tam | `drafts/13-recomposed.md` §3 iz |
 | **Tur 102 (Tur 101 oybirliği; T5):** satır adları A–D (Adım 10 tablosuyla eşleşir): adverse/lower = A, adverse/upper = B, favourable/lower = C, favourable/upper = D. Özgün tablo Ek S13'te | Adım 10 tablosu |

@@ -278,3 +278,7 @@ costs"*) hem Adım 9'un sonunda hem Adım 15'in kapanışında; hangisinin evi o
 ChatGPT, Qwen: Adım 15'in kapanışı). Adım 15 T1'i yeniden kurmaz (kabul). **Yazara ses sorusu:** Adım 9 madde 2'nin *"would be
 absurd"*u, CLAUDE §0'daki yazar cümlesinin (*"Çok rotorluyla dikey iniş kalkışta yarışmak. Saçmadır."*) karşılığı.
 
+**Tur 117 — yazara yeniden soruldu (§0.8'deki açık gerilim):** Adım 1'in korunan cümlesi *"The route is not claimed to have been
+waiting to be found."* ile yazarın *"görülememişi görmüş olmak"* duruşu. Adım 1 şimdi açılıyor; okuyuculara bu cümleye dokunmamaları
+söylendi.
+

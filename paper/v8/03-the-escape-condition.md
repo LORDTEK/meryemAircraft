@@ -30,7 +30,7 @@ Two things in that sentence are choices rather than derivations. The inversion r
 
 ### What the condition does not say, and this matters more than what it says
 
-**It means zero of the three charges as Section 2 defines them.** **It does not mean an architecture that costs nothing, and it does not mean an architecture that carries nothing for the vertical phase.** A definition that placed every conceivable cost inside the thing to be escaped would be unfalsifiable, and an architecture built to satisfy it would win by construction rather than by performance.
+**It means zero of the three charges as Section 2 defines them.** **It does not mean an architecture that costs nothing, and it does not mean an architecture that carries nothing for the vertical phase.** A definition that placed every conceivable cost inside the thing to be escaped would be unfalsifiable, and an architecture built to satisfy it would win by definition rather than by performance.
 
 The costs the condition permits are named here, before any candidate is examined. Six of them:
 
@@ -66,6 +66,7 @@ The third departure is refused by a means other than the one the field has adopt
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 117 — S-44 onarıldı** (Tur 116; dört okuyucu + Claude): "would win by construction rather than by performance" → "by definition"; "by construction" yalnız Adım 9 madde 8'in anlamında (boyutlandırma gereği) | Tur 116 metni §3 |
 | **Tur 114 — C-kısa** (Tur 113; dört okuyucu + Claude; yazarın sorusu): dördüncü sapma cümlesinin "— unless the hover peak is supplied from somewhere other than the continuously installed power" kısmı çıktı (C 60 → 46 kelime); "the fourth departure's exception" kendi cümlesinde tanımlı | Tur 113 metni §2 |
 | **Tur 113 — R-8 onarıldı, seçenek C** (Tur 112; dört okuyucu + Claude; Qwen'in itirazı üzerine): dört sapma cümlesi, sapmayı adlandıran sözcüklere kadar silinmiş hâlleriyle (dördüncüsü tam, "exception"ın öncülü) D3'ün ardına. Sıra göndergeleri (D7, D10, D25, D47, D48) artık adlandırılmış öncüllere bağlı; `v8_refs.py` bunu sınıyor (Grok P91) | Tur 112 metni §4 |
 | **Tur 111 — Adım 3 sonuç cümleleriyle yeniden kuruldu** (Tur 110; dört okuyucu + Claude, veto yok): 1 654 → 1 305. Dört sapma cümlesi (Ek S3 tablosu taşıyor) ve ikinci sapma parantezi Ek S3'e; "Two things … are choices" (O4 reddedildi), eğme kurulumu D47–D48, uç çerçevelerin "landing gear" gerekçesi gövdede. Özgün Ek S3'te tam | Tur 110 metni §4, `drafts/03-recomposed.md` |

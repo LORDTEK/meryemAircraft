@@ -504,6 +504,10 @@ dahil herkesin hemfikir olduğu kısaltmalar uygulansın."*
   *"Saçmadır"*dı ve ben onu olduğu gibi metne koymuştum. Yazar: *"Ben orada aslında sana anlatıyordum. Elbette çıksın."* → Yazarın
   bana yazdığı açıklama, çalışma kurallarındaki ifadeler dahil, **makalenin sesi değildir**; metne ancak yazar öyle isterse girer.
   Tur 115'te bunu okuyuculara "yazarın sesi" diye sundum; yanlıştı.
+- **Tur 116'da kabul (dört okuyucu + Claude):** *"Authorial-voice sentence ≠ protected predicate"* (ChatGPT) — ses taşıyan bir
+  cümle, silinmesi bir iddiayı, sınırı, türetmeyi ya da gerekli bir ayrımı değiştirmedikçe korunmaz. **Ses işareti** (Qwen) yazara
+  bir soru kaydeder; koruma değildir. **"By construction"** yalnız Adım 9 madde 8'in anlamında (*"by the sizing"*); kaynak alıntıları
+  muaf; `v8_stale.py` sınar (S-44).
 
 ## 3. Doğrulama
 
