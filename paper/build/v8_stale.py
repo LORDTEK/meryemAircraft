@@ -169,6 +169,10 @@ EMEKLI = {
     "is what the paper is for": "Tur 121: S-46 -- reddedilen kanalin bedeli hesaplanmiyor (Adim 5, 8, 9, 15)",
     "the same four propellers": "Tur 121: S-47 -- dort ucu cifti sekiz pervane; 'the same propellers'",
     "whether it is ahead of the best examined blade family depends": "Tur 123: S-48 -- tablo +3..+27 %, surukleme ucuna bagli degil",
+    "no choice available to a designer": "Tur 124: S-49 -- bilesik helikopter; cumle silindi (Grok P113)",
+    "Lift is carried on a surface or it is carried on rotors": "Tur 124: S-49 -- evrensel ikilik; is Adim 9 T1 satir 1'de",
+    "That is the whole of the difference": "Tur 124: ses + evrensel yuklem; cumle silindi",
+    "Each can be found on its own, and in combination": "Tur 124: S-45 -- 'some of them together'",
 }
 
 

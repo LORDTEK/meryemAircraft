@@ -520,6 +520,9 @@ dahil herkesin hemfikir olduğu kısaltmalar uygulansın."*
   yorum yapsın. İlerlenebiliyorsa ne ala yok ilerlenemiyorsa 3 tur sonra güncel durumu bana tekrar sunarsın. Biz devam edelim."* →
   Adım 5–6 ses işaretleri Tur 122–124'te okuyucular arasında; Tur 124 sonunda yakınsamadıysa durum yazara. Ayrıca yüklenen belgelerin
   yaklaşımının yazarın iddiasına **engel olup olmadığı** okuyuculara soruldu.
+- **Ses tartışmasının sonucu (Tur 124).** Okuyucular 2. turda yakınsadı: yoğun bölümlerde **ifade düzeyinde** çıkarma — sınıfla
+  (saf ses / yüklem taşır / korunan), yüklemi ayır, yalnız saf ses parçasını sil; temiz silme biçimi yoksa bırak; **ton seçimini yazar
+  geri koyar, ama bir ton seçimi yüklemi geri getiremez** (6.1).
 
 ## 3. Doğrulama
 

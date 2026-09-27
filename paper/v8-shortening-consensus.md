@@ -538,4 +538,13 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | M4 | kalsın | taşı | kalsın | kalsın | kalsın | **Kalır — ChatGPT'ye soruldu** |
 | M5 kalsın; M6 taşınacak yok; nitelik yönü tanımı | ✓ | ✓ | ✓ | ✓ | ✓ | **Kabul** |
 | P104, Qwen R118-P1/P2 (ChatGPT metinlerle oyladı); P109; Qwen R121-P1/P2 | ✓ | ✓ | ✓ | ✓ | ✓ | **Kabul** |
+| **Tur 123 cevapları — ses 2/3: çıkarma biçimleri** (5.1, 5.6, 6.1 bütün, 6.3, 6.8; 5.11 ve "invites" kalır) | ✓ | ✓ | ✓ | ✓ | ✓ | **Yakınsadı — uygulandı (Tur 124); ton seçimleri yazara** (Qwen 6.1'i geri istiyor → evrensel yüklem; DeepSeek: ancak daraltılarak) |
+| P111 Yang cümlesi (R) | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı: Adım 1 1 462 → 1 517** |
+| Rheaume Adım 14: gövdede yok, Ek S14 satırı | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı (S14 satırı; metni teyide)** |
+| S-49 bütün cümle | ✓ (değiştirdi) | ✓ | ✓ (değiştirdi) | ✓ (değiştirdi) | ✓ | **Uygulandı; P113 emekli çifti; P112 düştü** |
+| Düzeltilmiş M1; M2 + [22] onarımı; M4 kalsın; S6 taşınan metin | ✓ | ✓ (M2'ye geçti) | ✓ | ✓ | ✓ | **Uygulandı: Adım 6 2 108 → 1 969** |
+| S-45 (Adım 7 açılınca) | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı (Tur 124)** |
+| DOI'ler: Rohith, Vegh | 403 | RG üzerinden okuduğunu bildiriyor: ikisi de engel değil (Rohith a+e, kolektif hatve; Vegh a+b+e, kuyruklar) | açamadı | açamadı | erişim engelli | **Doğrulanmadı; PDF bekleniyor** |
+| Yeni: Grok P114; ChatGPT S6 kökeni (uygulandı); Qwen R123-P1 (ton sicili), R123-P2 (= R122-P2); DeepSeek (S-49 harita satırı) | — | — | — | — | — | **Tur 124** |
+| Adım 7 listeleri (metin tam, Ek A) | — | — | — | — | — | **İstendi** |
 

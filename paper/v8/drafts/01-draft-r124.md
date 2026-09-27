@@ -1,22 +1,3 @@
-# Step 1 — The gap
-
-**v8 taslağı, birinci yazım.** İskeletin 1. adımı. **Kararı ben verdim** — gerekçe aşağıda,
-`cfd/arsiv-dis-gorus/external-review-49.md` §1'de de açık.
-
-**Kural denetimi:** sabit kanatlıyla menzil yarışı **yok** (§0) · boşluk bir **mekanizma**
-boşluğu olarak konuyor, bir başarım boşluğu olarak değil · *"inşa gereği"* geçmiyor (§0.3) ·
-Adım 7 ve Adım 9'un *"what is new"* cümlelerinin **dayanağı burası** · çağdaş manzara
-NASA belgesinden **birinci elden**, hatırlanarak değil.
-
-**Tur 47 eklemesi.** Yazarın yüklediği iki belge birinci elden okundu ve *"zaten dolu olan"*
-bölümüne girdi: **Novlit ve ark. 2014** (eşeksenli karşıt dönüşlü kuyruk üstü MAV — tork
-dengeleme gerekçesi, slipstream içinde elevon ve rudder, ve **eksen adlarının askıda yer
-değiştirmesi**) ve **Zhang ve ark. 2012** (aynı mimaride **diferansiyel devirle yatış**).
-İkincisi, boşluk paragrafındaki *"a torque-balanced coaxial pair cannot produce a rolling moment
-by any setting"* cümlesini **çürüttü**; cümle bir seçim ifadesine çevrildi.
-
----
-
 ## The gap
 
 ### Two families, two different limits
@@ -162,50 +143,3 @@ is presented and priced.
 Section 2 states the cost that any architecture in this corner pays, in terms that do not
 presume an escape.
 
----
-
-## Yazarın denetimi için — bu sayfadaki her olgusal yüklem ve kaynağı
-
-| İddia | Kaynak |
-|---|---|
-| **Tur 121 — ses işaretleri (yazar kararı, Tur 119: Grok birini seçer, gerisi çıkar).** Grok V5'i seçti (*"the giving-up is the part that is not free"* kalır). Çıktı: V1 (*"The answer works, costs little…"*), V2 (*"elegant on paper — one propulsion group, no dead hardware in cruise. It is also the more"*; içerik rota paragrafında), V3 (*"excellent at what it does and is"*), V4 (*"and uncrewed ones are ordinary"*; içerik dolu listede ve XFY-1 paragrafında), V6 = **S-46** (*"What that costs … is what the paper is for"* — Adım 5, 8, 9, 15 ile çelişiyordu). Hepsi silme (`v8_draft_check.py --taslak`). **K kalır — yazar kararı (Tur 120).** Özgün Ek S1'in dondurulmuş kopyasında | Tur 120 metni §1, §4; yazar |
-| **Tur 118 — Adım 1 uzunluk geçişi, ilk kısım** (Tur 117; dört okuyucu + Claude): C1 (sabit kanatlının pist gereğini açan cümle) ve C2 ("The problem has been attacked for seventy years" alt bölümü, tarihleriyle — Grok P101) Ek S1'e; "Tail-sitting aircraft are seventy years old" son paragrafta kalıyor. Özgün Ek S1'de tam | Tur 117 metni §3 |
-| **Tur 114 — NASA çalışmasının tek evi Adım 4** (P88, dış kanıt kimliği kuralı; Tur 113, dört okuyucu + Claude): "A NASA study that sizes five VTOL architecture families to one mission describes …" → "The NASA sizing study used in Section 4 describes …" (ileri işaretçi); iki rota paragrafı Adım 1'in kendi kullanımı olarak kalır (Grok P94: üçüncü tasarım, görev sayısı ya da üç neden buraya girmez) | Tur 113 metni §6 |
-| **Tur 98 (dört okuyucu + Claude):** S-29 — 1G "series-hybrid propulsion has been flown in a crewed motor glider and designed for small uncrewed aircraft" (Schoemann 2014 s. 25–26; Merical ve ark. 2014 özeti). Özgün Ek S1'de | `references/Schoemann-2014_…pdf` |
-| **Tur 97 (dört okuyucu + Claude):** 1B başlığı "The problem has been attacked for seventy years" (çaba ihtiyacın kanıtı değil) | Tur 96 metni §5 |
-| **Tur 96 (dört okuyucu + Claude):** "No field sustains that level of effort against a need that is not real." çıktı (evrensel çıkarım; ihtiyacı 1A söylüyor); "and several are in service" çıktı (insansız hibrit için hizmette kaynağı yok; V-22 insanlı tanık — reddedildi). Özgün 1C paragrafı Ek S1'de | Tur 95 metni §4 |
-| **Tur 95 (dört okuyucu + Claude):** 1B sırası — "Tail-sitting prototypes and the first tilt-rotor flew in the 1950s, vectored-thrust and tilt-wing aircraft in the 1960s, and a broad family…" (S-23'ün uygulanmış hâli sırayı bozuyor ve süreklilik ima ediyordu). **1D gerekçesi düzeltildi:** "Precise hovering…" cümlesi yanlış maddeyi saydığı için değil (kaynakta var: XFY-1 "Difficult to hover precisely over a spot"), yineleme olduğu ve daha uygun evi Adım 5E olduğu için çıktı; 1D'ye geri konmadı (dört okuyucu + Claude). **Açık:** "No field sustains…" ve "several are in service" | NASA 19810010574 XFY-1 satırı; 19840014464 "In retrospect" paragrafı |
-| **Tur 94 (yeniden kurma; dört okuyucu + Claude):** 1D "Precise hovering … inherited" çıktı (üçüncü "inherited", listeyle uyuşmuyordu); 1E açılışı ("It would be easy, and wrong …") çıktı; S-21 "the last two of them at two scales"; S-22 DelftaCopter'in cyclic+collective hatveli rotoru ve değişken hatvenin bedeli; S-23 "tilt-rotors from the 1950s". 1D reddetme cümlesi korunan (162). Özgün paragraflar Ek S1'de. **Açık:** "No field sustains…" (üçü tut, ChatGPT çıkar); "several are in service" (kaynak ya da yumuşatma — dört farklı öneri) | De Wagter 2018 (değişken hatve: "two extra actuators … added weight from the mechanisms"; "A diameter of 1 m was finally selected as a compromise"); NASA 19810010574 (XV-3 Ağustos 1955, XV-15 Mayıs 1977); Adım 12 "Bill 1 is not tested" |
-| **Tur 64 — N3** (beşimiz hemfikir; Qwen'in *"the only one of those documented obstacles"* düzeltmesiyle): iki alt bölüm bire; XFV-1, NASA incelemelerinin değerlendirmeleri ve güçlük listesi, *"the usual account is wrong"* Ek S1'e aynen | Ek S1; Adım 5 *"That disposes of the spatial-orientation objection and nothing else"* |
-| **Tur 61:** ret cümlesi katkıdan önceye alındı; paragraf katkıyla bitiyor (dört okuyucu + Claude aynı yönde; Grok ve Qwen neredeyse aynı metni önerdi). Yüklem değişmedi | CLAUDE.md §0.8; `v8-shortening-consensus.md` C2 |
-| **Tur 58, P1:** katkı mimaridir — gövde döner, propulsor dönmez; yeniden yönlendiren mekanizma yok; üçlü katkının sunuluş/fiyatlanış biçimi | Adım 7 satır 69 (*"rotating the airframe"*); Adım 7 tablosu; Adım 15; CLAUDE.md §0.6. *"arranged to"*: geçişin tamamlanması iddia edilmiyor (Adım 7, 15) |
-| Sabit kanatlının sınırı altyapısal; pist, mancınık, eşdeğeri | §1, satır 152–157 |
-| Rotorlunun sınırı: kanat yok, her saniye kurulu güçle ödeniyor | §1, satır 159–163 |
-| Yetmiş yıl: 1950'ler kuyruk üstü, 1960'lar tilt-wing, 1980'ler tilt-rotor, 2010'lar hibrit | §1, satır 167–172 |
-| **Lift+cruise: durdurulan rotor, üç uçuş kipi, palalar gövde eksenine hizalı** | **Johnson & Silva 2022, §5.4, s. 71 — birinci elden okundu** |
-| **Tiltwing: eğilen ana kanatta altı, eğilen kuyrukta iki proprotor, her biri kendi motorunda** | **Johnson & Silva 2022, §5.5, s. 72 — birinci elden** |
-| Beş VTOL mimari ailesi, çoğu iki tahrik türünde | Johnson & Silva 2022, s. 70 |
-| Tilt bedeli: pivot ve aktüatörler, dönüşte gyroskopik moment, geçiş kontrol problemi | §1.4, satır 460–464 |
-| XFV-1 çevrimi tamamlamadı; XFY-1 Ağustos 1954, **altı geçiş** | §1.2, satır 402–407, kaynaklar [1,2] |
-| *"Good configuration arrangement for low- and high-speed compatibility"* | §1.2, satır 411–412, kaynak [1] |
-| *"Poor mechanical control system features including low actuator response rate"* | §1.2, satır 413 |
-| *"The unusual spatial orientation where the pilot looked over his shoulder and down"* | §1.2, satır 415–416, kaynak [2] |
-| *"…curtailed because of engine and gear-box reliability problems"* — iki incelemede de aynı | §1.2, satır 421–422 |
-| Dördünden üçü 1954 makinesine ve insan pilota itiraz | §1.2, satır 424–427 |
-| Miras alınan üç gerçek güçlük: dikey iniş, yanal rüzgâr, yatış momenti | §1.5, satır 481–488 |
-| Şimdi var olan üç şey: her rotorda elektrik tahrik, sensör tabanlı tutum, gövdeden gelmeyen kararlılık | §1.5, satır 497–501 |
-| Eşeksenli karşıt dönüşlü kuyruk üstü, gerekçe tork dengeleme | Novlit ve ark. 2014, `references/2014_0529_paper.pdf`: *"A pair of 10 inches coaxial contra rotating propellers is mounted to compensate each other's torque"* — **birinci elden** |
-| Askı kontrolünün yerleşik cevabı: slipstream içinde elevon ve rudder | Novlit ve ark. 2014, aynı belge: *"Elevon and rudder are immersed in the propeller slip stream to provide three axis control moments in hover"* — **birinci elden** |
-| Tepki torku yerleşik bir yatış kanalı; diferansiyel devirle | Zhang ve ark. 2012, `references/ica20120400001_12673514.pdf`, satır 128–130: *"It balances the anti-torque of the rotors by the inverse rotating of the two rotors"* — **birinci elden** |
-| Aynı kanal dikey kipte *yaw*, yatay kipte *roll* adını alıyor | Zhang 2012 **Tablo 2**, satır 159–165: Yaw/Vertical = *"Differential velocity of the two motors"*; Roll/Horizontal = aynı — **birinci elden** |
-| Eksen adlarının askıda yer değiştirmesi literatürde adlandırılmış | Novlit ve ark. 2014, satır 118–123: *"the definition of the roll and yaw angles are interchanged"* — **birinci elden** |
-| Kuadrotor kuyruk üstü yatışı bağımsız rotorların tepki torkundan üretir | Oosedo ve ark. 2013 (De Wagter 2018 içinden); Zhang 2012 aynı ilkeyi eşeksenli çiftte gösteriyor |
-| Üç öğenin hiçbiri yeni değil | `paper/v8/07-the-combination.md` açılışı |
-
-**Bu sayfada BİLEREK olmayanlar:** tek bir başarım sayısı, bu uçağa dair hiçbir tarif, ve
-çağdaş hibritlerin **işe yaramadığı** iması. Boşluk bir **başarım** boşluğu olarak değil,
-bir **araç** boşluğu olarak konuyor — çünkü makalenin iddiası da o.
-
-**Adım 7 ve Adım 9'un dayanağı artık burada.** Her ikisi de *"yeni olan şey birleşme ve
-araçtır"* diyor; bu sayfa o cümlenin karşılığını veriyor ve neyin yeni **olmadığını** açıkça
-sayıyor.

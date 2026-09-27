@@ -313,3 +313,8 @@ yönü tanımı, ChatGPT'ye P104 ve Qwen R118-P1/P2 metinleriyle.
 
 **Tur 123 — ses 2/3.** Okuyucular sınıflarda ve yöntemde 1. turda yakınsadı (ifade düzeyinde çıkarma; yazar ton seçimlerini geri alır).
 Tur 124 teyit turu; sonra liste yazara. **Yazarın DOI'leri** (Rohith, Vegh) okuyuculara verildi.
+
+**Tur 124 — ses kapandı (2. turda yakınsadı; yazarın "ilerlenebiliyorsa ne ala" kuralı).** Uygulandı; ton seçimleri yazara: Qwen 6.1'in
+ilk yarısını geri istiyor (ama o evrensel yüklem — ancak daraltılarak, R), ChatGPT 5.11 ve "invites"i (zaten kaldılar). **Rohith ve Vegh:**
+yalnız ChatGPT okuduğunu bildiriyor (ikisi de engel değil); PDF'ler bekleniyor. Adım 7'nin Rheaume/Rohith tanık cümlesi Rohith'in PDF'ini
+bekliyor.

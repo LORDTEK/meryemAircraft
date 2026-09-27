@@ -27,8 +27,8 @@ Ayrıntı ve alıntılar: `paper/roll-axis-finding.md`.
 
 ## The combination
 
-None of the three elements is new. **Each can be found on its own, and in
-combination, in the literature and in hardware** — Section 1 says where.
+None of the three elements is new. **Each can be found on its own, and some of them
+together, in the literature and in hardware** — Section 1 says where.
 
 **What this paper contributes is that combination, the condition its primary propulsor is designed
 to satisfy, and the price the configuration pays for pursuing it.** The three elements, taken together, meet the escape condition
@@ -137,6 +137,7 @@ exposed in cruise, and Section 11 charges them.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 124 — S-45 uygulandı** (Tur 119'da dört okuyucu + Claude; Adım 7 açılınca uygulanacaktı): *"and in combination"* → *"and some of them together"*; Adım 1 ile aynı nesne (Grok P103): öğeler, bazıları bir arada, ve bedeliyle birlikte kurulmamış birleşim | Tur 119 metni §2 |
 | **Tur 99 (dört okuyucu + Claude):** S-33 — tablonun durdurma satırı "— (see note)" ve altına not: "The stopping class is absent if the tip pairs free-wheel in cruise or are held stopped by motor torque; a brake or a mechanical lock would add it. The means of stopping is not fixed by this study (Section 8)." (dördü de Adım 7'de nitelemeyi istedi; sözcükler Grok + Qwen birleşimi — teyide). 7D seri hibrit cümlesi (ChatGPT'nin sözcükleri). Özgün tablo Ek S7'de | Adım 8G |
 | **Tur 98 (dört okuyucu + Claude):** 7G — Adım 5D'nin birebir cümlesi çıktı; "This dual role is a dependency, reported as one where the sizing is audited, and it does not make the tip pairs a dedicated lift system." (Qwen'in göndergesi). 7L kalıyor (dört okuyucu + Claude; iz: köprü/kapanış, yineleme değil). Özgün Ek S7'de | Tur 97 metni §5 |
 | **Tur 97 (yeniden kurma; dört okuyucu + Claude):** envanter teyit edildi; 7A ortadaki üç cümle çıktı (Adım 1G'nin yinelemesi; ev 1G). **Uygulanmadı:** 7G (onarım biçimi ayrışık: "It" / "That" / "This dual role"); 7L (Grok ve Qwen çıkar, ChatGPT ve DeepSeek tut — köprü/kapanış). Özgün paragraflar Ek S7'de | Tur 96 metni §7 |
