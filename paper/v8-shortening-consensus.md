@@ -488,3 +488,9 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | C4 (NASA üç kip ayrıntısı), C5 (tilt-wing donanım dökümü) | ifade şimdiki gibi | taşı | taşı | — | "in its own terms" öncülü (P71) — öneri: işaretçi cümleyle birlikte | Oya |
 | Dolu liste alıntıları; XFY-1 alıntısı | kalır | kanıtı bırak, ispatı sıkıştır | taşı | kalır | kalır (kanıt) | Ayrışık |
 | S-45 adayı: Adım 7 "Each can be found on its own, and in combination" ↔ Adım 1 boşluk ve Adım 7'nin kendi sonraki cümlesi | — | — | — | Qwen P2 açtı | bulundu | Okuyuculara |
+| **Tur 118 cevapları — K ("The route is not claimed to have been waiting to be found.")** | **kalsın** — katkı cümlesinin tanım yan cümlesi üçüncü rotanın kendisi; K son çit | sil | sil | sil | sil (Grok'a karşı: bir önceki cümle "Tail-sitting aircraft are seventy years old") | **Ayrışık — karar yazarın (yazarın sorusu)** |
+| S-45 "some of them together" | ✓ | ✓ (Adım 7 açılınca) | ✓ | ✓ | ✓ | **Sözcükler kabul; Adım 7 açılınca uygulanır** |
+| C1, C2 teyit; dolu liste ve XFY-1 alıntıları kalır | ✓ | ✓ | ✓ | ✓ | ✓ | **Kapandı** |
+| C4, C5 ve işaretçi cümle | üçü kalsın (kanıt; P71) | ayrıntı taşınsın, işaretçi R ile onarılsın | üçü taşınsın, bir yan cümlelik çapa | üçü taşınsın | **kalsın (Grok'a geçtim)** — Adım 1'in tükettiği kanıt | **Ayrışık** |
+| Belgelenmiş arama (öncelik iddiasının §2.2 biçimi) | kayıt olunca | kayıt olunca, şimdi değil | kayıt kurulsun | venue önerisi: AIAA ARC, IEEE Xplore, NTRS, Espacenet/USPTO; protokol `v8-evidence.md`'ye | kayıt olunca | **Yazara: aramayı kim yapacak** |
+| Yeni: P103 (Adım 1 ve 7 aynı nesne), P104 (yazarın "gördüm" cümlesi taslak/başlık/özet olmaz), DeepSeek (K silinirse haritada görevi yeniden atanır; arama isteğe bağlı değil), Qwen P1 (Adım 7 izinde işaret), Qwen P2 (arama protokolü kayıtta) | — | — | — | — | — | Oylamada |

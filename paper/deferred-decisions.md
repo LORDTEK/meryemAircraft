@@ -286,3 +286,7 @@ söylendi.
 *"Cümleyle ilgili durumu herkese sor ne öneriyorlar. Ama bunu yaparken, yazarın ortaya koyduğu muhteşemliğin anlatımının kırpılmaması
 gerektiği hususuna dikkat ederek düşünsünler. Yorumlarında özgürler. Sen de."* Ses işaretleri (Adım 1) K ile birlikte yazara gidecek.
 
+**Tur 119 — Adım 7 açılınca:** S-45 onarımı ("some of them together") uygulanır; Adım 1 ile aynı nesne (Grok P103). **Açık — yazara:**
+K cümlesi (3 sil / Grok kalsın); Adım 1 ses işaretleri (V1, V2 dördünün; "excellent", "ordinary", "giving-up", "what the paper is
+for" tartışmalı); belgelenmiş arama (Qwen'in önerdiği yerler; kim yapacak).
+
