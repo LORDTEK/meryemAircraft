@@ -715,8 +715,7 @@ The entire airframe is the wing. There is no cylindrical fuselage: every part of
 carries payload and produces lift. Leading-edge sweep varies continuously along the span while
 the trailing edge is held at 25°, so the realised sweep runs from 45° at the root to 38.3° at the
 tip — a variation of under seven degrees, with the crescent character coming from the curvature of
-the leading edge rather than from a large change in sweep. Thickness runs from 25 % of chord at
-the root to 12 % at the tip, and chord from 0.970 m to 0.236 m. For the 50 kg reference design — the design this inventory describes; Section 10 re-closes it at
+the leading edge rather than from a large change in sweep. For the 50 kg reference design — the design this inventory describes; Section 10 re-closes it at
 four masses, and Section 12 sets it beside a 1 000 kg reference design — the span is 3.453 m, the wing area 1.979 m², and the aspect ratio 6.03.
 
 Sweep is not a free parameter here, and the reason is structural to the configuration rather than
@@ -727,13 +726,10 @@ angle and the longitudinal stability are one design variable seen from two direc
 
 ### The propulsion
 
-**Five propeller stations, ten rotors:** every station is a coaxial counter-rotating pair. The
-reason is narrow
-and worth stating as such: **reaction torque.** A single propeller applies to the airframe a
+**Five propeller stations, ten rotors:** every station is a coaxial counter-rotating pair. The reason is narrow: **reaction torque.** A single propeller applies to the airframe a
 torque equal and opposite to the one it applies to the air. It acts about the propeller axis,
 which on this aircraft is the body's longitudinal axis — the roll axis in body terms — in both
-regimes, and it must be opposed continuously, either by a control surface, which costs drag, or by
-differential thrust, which costs a control channel. A counter-rotating pair does not produce it.
+regimes, and it must be opposed continuously, either by a control surface, which costs drag, or by the reaction torque of other rotors run at a different speed, which costs a control channel. A counter-rotating pair does not produce it.
 
 One pair sits at the nose, 1.20 m in diameter on the 50 kg reference design, and produces all propulsive
 thrust in both regimes. Four smaller pairs, 0.20 m in diameter, sit at the ends of rigid frames
@@ -763,7 +759,7 @@ the vertical phase alone.** No wattage is quoted here; the closed powers are Sec
 
 ### What produces each moment
 
-**Pitch and yaw come from differential thrust between the tip pairs**, and the two axes do not
+**Pitch and yaw come from differential thrust between the tip pairs** (body axes, as fixed in the note below), and the two axes do not
 have the same moment arm. The frames project ±0.71 m perpendicular to the planform, so a
 differential between the upper and lower pairs acts at 0.71 m in pitch, while a differential
 between the left and right pairs acts at the semi-span, **1.726 m — 2.43 times the pitch arm.**
@@ -806,8 +802,7 @@ the chord required over the combined frame length is **39 mm**, against the 50 t
 20 mm faired strut carries in any case. Directional stability on this configuration therefore
 does not ask for a surface; it asks for a fairing on a frame that is already there.
 
-**One part is not airframe and is easy to omit from a list of this kind: the flight control
-system.** The stability of this configuration is not airframe-borne — it is produced by
+**One part is not airframe: the flight control system.** The stability of this configuration is not airframe-borne — it is produced by
 differential thrust and by the strip, both of which are actively commanded — so an attitude
 reference and a flight computer are not optional equipment but part of the mechanism the
 preceding paragraphs describe. They are carried in the systems budget. The configuration
@@ -815,7 +810,7 @@ replaces a pilot's workload with computation, and the computer is the part that 
 
 ### What moves
 
-The propellers rotate, as propellers do, and their shaft speed is commanded; but none of them
+The propellers rotate, and their shaft speed is commanded; but none of them
 changes its orientation relative to the airframe, or its blade pitch, at any point in the flight.
 **Beyond the propellers' rotation, one thing on this aircraft changes its configuration: the
 strip.**
@@ -826,8 +821,7 @@ actuation without sizing the mechanism, and naming a number here would be invent
 
 ### What this inventory does not settle
 
-Two items belong here rather than in a later list, because both are properties of the hardware
-just described.
+Two items belong here rather than in a later list.
 
 **An untrimmed hover torque, with no trim mechanism identified.** This is a control question
 rather than a property of the hardware, and it is stated as one.
@@ -854,8 +848,7 @@ condition or be stopped, and the difference between those two states is a substa
 the aircraft's zero-lift drag. Both ends are computed rather than assumed and the charge appears
 in Section 11.
 
-**The tip pairs are the parts that fail the escape condition**, and naming them here is the point of
-listing them. The nose pair meets all four parts of Section 3. The tip pairs do not: they hold
+**The tip pairs are the parts that fail the escape condition.** The nose pair meets all four parts of Section 3. The tip pairs do not: they hold
 one orientation, but they are carried through cruise producing moments rather than cruise thrust,
 which is the first of Section 3's failure modes, and they are exposed while doing it. This is the partial
 instantiation Section 3 lists as its **fourth** failure mode — meeting the condition where the
