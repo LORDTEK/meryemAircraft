@@ -505,3 +505,14 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | DeepSeek'in ek taşımaları (kalkış açıklaması, girdap halkası tanımı, 1954 nedenleri) | — | kalkış bloğu korunsun | taşı | 1954 nedenleri P71 | kalsın | **Kalır; DeepSeek'e** |
 | Yeni (Tur 120 oylaması): S-46, S-47, ChatGPT kalkış korunması, ChatGPT §11 kaydı, "Not demonstrated." başlık/ses ayrımı, Grok P105, P106, Qwen R119-P1, P2, DeepSeek harita (kuruldu, Ek C), Claude N1 | — | — | — | — | — | **Oylamada** |
 | Adım 5 ses işaretleri (DeepSeek 10, ChatGPT 3, Qwen 1, Grok 0) | — | — | — | — | — | **Yazara** |
+| **Yazar (Tur 120):** *"K kalsın. … Adım 5 için (normalde hemfikir olmak önemliydi ama bu seferlik) çoğunlukla devam ediyoruz."* | — | — | — | — | — | **K kapandı: kalır (korunan 137). Adım 5: bu kez çoğunluk** |
+| **Tur 120 cevapları — ses işaretleri:** Grok **V5'i seçti**; V1, V2, V3, V4, V6 çıkarma biçimleri silme | seçti | ✓ | ✓ (V4'e çekince: *"K kalmazsa çıkmasın"* — K kaldı) | ✓ | ✓ | **Uygulandı (Tur 121): Adım 1 1 522 → 1 470 civarı** |
+| K (Grok'un dünya/makale ayrımına cevap) | kalsın | sil, zayıf | **kalsın (görüş değiştirdi)** | sil, zayıf | sil, zayıf | **Yazar: kalsın** |
+| S-46 (V6 çıkınca), S-47 ("the same propellers") | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı (Tur 121)** |
+| E1, E3, DeepSeek'in ek taşımaları | kalsın | kalsın | **kalsın (geri çekti)** | kalsın | kalsın | **Kalır (oybirliği)** |
+| E2 | taşı | **taşı (görüş değiştirdi)** | taşı | taşı | taşı | **Uygulandı: Ek S5** |
+| Kalkış bağlaşımının son cümlesi korunan; NASA ağırlık kazancı kaydı; "Not demonstrated" başlık korunan / "the list is not short" ses | ✓ | ✓ (bütün blok) | ✓ | ✓ | ✓ | **Uygulandı** |
+| Grok P105, P106; Qwen R119-P1, P2; Ek C haritası | ✓ | P105–P2 oy yok; harita ✓ | ✓ | ✓ | ✓ | **Uygulandı (Adım 5 — yazarın çoğunluk kararı); kayıtta** |
+| Claude N1 (Adım 5 uygulama adları) | ✓ | oy yok | ✓ | ✓ | öneren | **Uygulandı (çoğunluk, Adım 5)** |
+| Tur 119 §7 (P103, P104, K-haritası, Qwen R118-P1/P2) | ✓ | **oy yok (ikinci kez)** | ✓ | ✓ | ✓ | **ChatGPT'nin oyu bekleniyor — Adım 5 dışında, çoğunluk kararı kapsamaz** |
+| Yeni: Grok P107 (V5 korunmaz), P108 (Vegh, WO2025255583A1 kayıtta — uygulandı); DeepSeek (Adım 1 haritasına S-46/V4/K satırları; sayım denetimi — yapıldı, temiz); Qwen P1 (mekanizma öncülü işareti), P2 (Adım 6 envanterinde nitelik yönü sütunu); ChatGPT (V4 bağımlılığı: insansız kuyruk üstü dolu cümlesi korunsun) | — | — | — | — | — | **Oylamada (Tur 121)** |

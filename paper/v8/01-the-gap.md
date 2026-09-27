@@ -33,7 +33,7 @@ vertically, hover, and work from confined sites. Their limit is the converse: wi
 every second of flight is bought with installed power, so range and endurance stay modest and
 worsen as the vehicle grows.
 
-**Neither family is deficient.** Each is excellent at what it does and is limited by the price of
+**Neither family is deficient.** Each is limited by the price of
 doing it that way. **The corner where both capabilities are wanted at once is where the two
 applications this work is aimed at sit** — wildfire observation and response, and cargo delivery to
 places without a runway — and both want to leave from an unprepared site and then cover distance.
@@ -61,8 +61,7 @@ study carries six proprotors on a tilting main wing and two more on a tilting ta
 directly connected to its own electric motor. Nothing is carried unused; the same discs that
 lift the aircraft propel it, after being turned.
 
-**Both work, and the second is the more elegant on paper** — one propulsion group, no dead
-hardware in cruise. It is also the more demanding to build, because rotating a propulsor in
+**Both work, and the second is the more demanding to build**, because rotating a propulsor in
 flight brings a pivot and its actuators, a gyroscopic moment during the rotation, and a control
 problem through a regime in which the aircraft is neither a rotorcraft nor an aeroplane.
 **Those are mechanical and control requirements rather than aerodynamic ones**, and that
@@ -107,7 +106,7 @@ propellers is mounted to compensate each other's torque."*
 **The established answer to hover control on such a configuration is a surface in the
 slipstream**, and it is worth naming because this paper refuses it. That 2014 vehicle places
 *"elevon and rudder … immersed in the propeller slip stream to provide three axis control moments
-in hover."* The answer works, costs little, and is the one a reader will reasonably expect.
+in hover."*
 
 **And the reaction-torque channel this paper declines is established as a control channel.** A
 coaxial contra-rotating tail-sitter reported in 2012 balances rotor torque *"by the inverse
@@ -149,11 +148,9 @@ Each of those choices costs something, and **the giving-up is the part that is n
 quadrotor tail-sitter produces a rolling moment from the reaction torque of four independently
 driven rotors; a coaxial pair can produce one the same way, by running its two rotors at different
 speeds. **Operating every pair torque-balanced spends that channel to buy the torque balance and
-the near-zero net angular momentum**, and leaves the axis to a single aerodynamic device. What
-that costs, and what the rest of the combination costs, is what the paper is for.
+the near-zero net angular momentum**, and leaves the axis to a single aerodynamic device.
 
-**None of the elements is new**, and Section 7 says so. Tail-sitting aircraft are seventy years
-old and uncrewed ones are ordinary; blended wing bodies have been a standing subject of transport
+**None of the elements is new**, and Section 7 says so. Tail-sitting aircraft are seventy years old; blended wing bodies have been a standing subject of transport
 research for three decades; series-hybrid propulsion has been flown in a crewed motor glider and designed for small uncrewed aircraft. The route is not claimed to have been waiting to be found. **The contribution is the
 architecture: a configuration arranged to change regime by rotating the airframe rather than its
 propulsors, and so carrying no mechanism that reorients a propulsor.** The combination, the
@@ -169,6 +166,7 @@ presume an escape.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 121 — ses işaretleri (yazar kararı, Tur 119: Grok birini seçer, gerisi çıkar).** Grok V5'i seçti (*"the giving-up is the part that is not free"* kalır). Çıktı: V1 (*"The answer works, costs little…"*), V2 (*"elegant on paper — one propulsion group, no dead hardware in cruise. It is also the more"*; içerik rota paragrafında), V3 (*"excellent at what it does and is"*), V4 (*"and uncrewed ones are ordinary"*; içerik dolu listede ve XFY-1 paragrafında), V6 = **S-46** (*"What that costs … is what the paper is for"* — Adım 5, 8, 9, 15 ile çelişiyordu). Hepsi silme (`v8_draft_check.py --taslak`). **K kalır — yazar kararı (Tur 120).** Özgün Ek S1'in dondurulmuş kopyasında | Tur 120 metni §1, §4; yazar |
 | **Tur 118 — Adım 1 uzunluk geçişi, ilk kısım** (Tur 117; dört okuyucu + Claude): C1 (sabit kanatlının pist gereğini açan cümle) ve C2 ("The problem has been attacked for seventy years" alt bölümü, tarihleriyle — Grok P101) Ek S1'e; "Tail-sitting aircraft are seventy years old" son paragrafta kalıyor. Özgün Ek S1'de tam | Tur 117 metni §3 |
 | **Tur 114 — NASA çalışmasının tek evi Adım 4** (P88, dış kanıt kimliği kuralı; Tur 113, dört okuyucu + Claude): "A NASA study that sizes five VTOL architecture families to one mission describes …" → "The NASA sizing study used in Section 4 describes …" (ileri işaretçi); iki rota paragrafı Adım 1'in kendi kullanımı olarak kalır (Grok P94: üçüncü tasarım, görev sayısı ya da üç neden buraya girmez) | Tur 113 metni §6 |
 | **Tur 98 (dört okuyucu + Claude):** S-29 — 1G "series-hybrid propulsion has been flown in a crewed motor glider and designed for small uncrewed aircraft" (Schoemann 2014 s. 25–26; Merical ve ark. 2014 özeti). Özgün Ek S1'de | `references/Schoemann-2014_…pdf` |

@@ -514,6 +514,8 @@ dahil herkesin hemfikir olduğu kısaltmalar uygulansın."*
 - **Ses cümlesi de yüklem taşıyabilir (Tur 120, S-46).** Adım 1'in *"What that costs … is what the paper is for"*u ses işareti
   diye listelenmişti; oysa makalenin dört yerde hesaplanmadığını söylediği bir bedeli makalenin konusu yapıyordu. Bir cümleyi ses
   diye işaretlemeden önce olgusal yüklemi §0.2'ye göre denetlenir.
+- **Yazarın kararları (Tur 120).** *"K kalsın."* — Adım 1'in K cümlesi kapandı. *"Adım 5 için (normalde hemfikir olmak önemliydi ama
+  bu seferlik) çoğunlukla devam ediyoruz."* — **istisna, kural değil**: eşik öteki adımlarda dört okuyucu + Claude olarak kalır.
 
 ## 3. Doğrulama
 

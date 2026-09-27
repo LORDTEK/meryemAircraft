@@ -40,7 +40,7 @@ boşluğa duyarsız. `G` = Grok, `D` = DeepSeek, `C` = ChatGPT, `Q` = Qwen, `K` 
 | 4 | Second half, not derived. | D |
 | 4 | It does not establish that the accounting is complete…or that avoiding them makes an aircraft better. | D |
 | 5 | Nothing here is claimed against fixed-wing aircraft on range or cruise efficiency. | G |
-| 5 | Not demonstrated, and the list is not short. | D |
+| 5 | Not demonstrated | D |
 | 5 | The saving has precedent and it is not this paper's observation. | D |
 | 6 | The size of the resulting advantage is a calculation, not a consequence of that statement. | G |
 | 6 | These are the bounding corners of a product, not four simulated aircraft. | G |
@@ -186,6 +186,7 @@ kaybolmasına (CLAUDE.md §0.8). Aynı denetimle sınanır.
 | 14 | The study argues that, because pulse current limits can exceed continuous ones — by more than a factor of two in one commercial module it cites — a pack with the required specific power may be possible with existing technology | D+G+C+Q+K |
 | 5 | What that refusal costs in authority and in response time is not computed | G+C+D+Q+K |
 | 5 | A tail-sitting aircraft on the ground is more prone than a conventional one to tip over, in crosswind and on uneven ground. | G+C+D+Q+K |
+| 5 | That is the one place the configuration asks a component to do a second job it was not sized for, and it means the take-off margin and the attitude authority are drawn from the same propellers and compete for it. | G+C+D+Q+K |
 | 6 | The same sizing set gives its two helicopter types at 5.4 to 7.2, and against them the result is mixed | D+G+C+Q+K |
 | 14 | this aircraft's vertical phases occupy about a minute in all (Section 2), and how long each draws the peak is not computed here | C+G+D+Q+K |
 | 9 | Claimed against multirotors, and bounded; against helicopters the published comparison is mixed and no advantage is claimed. | C+G+D+Q+K |

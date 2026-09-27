@@ -1,15 +1,3 @@
-# Step 5 — The first half: operation without a runway
-
-**v8 taslağı, birinci yazım.** İskeletin 5. adımı. Rakip **sabit kanatlı**, ve **yalnız bu
-eksende.**
-
-**Kural denetimi:** sabit kanatlıya karşı **menzil iddiası yok** (§0) · *"inşa gereği"*
-geçmiyor · **boyutlandırıldı / gösterilmedi** ayrımı sayfanın merkezinde (§0.3) ·
-ChatGPT'nin Tur 45 şartı: bu sayfa uçağın dikey yeteneğini **kanıtlamaya çalışmıyor**,
-gereksinimi kuruyor ve neyin boyutlandırıldığını söylüyor.
-
----
-
 ## The first half: operation without a runway
 
 ### The opponent, and the axis
@@ -120,33 +108,3 @@ releases the engine from the hover peak is mass carried for the whole flight.
 **The second half — cruise carried on a wing rather than on rotors — is the subject of the next
 section**, and the two are combined in Section 7.
 
----
-
-## Yazarın denetimi için — bu sayfadaki her olgusal yüklem ve kaynağı
-
-| İddia | Kaynak |
-|---|---|
-| **Tur 121 — uzunluk geçişi (yazar: Adım 5 bu kez çoğunlukla; sonuç zaten oybirliği).** E2 (*"'Vertical take-off' is a weaker requirement…"*) Ek S5'e (dört okuyucu + Claude; ChatGPT görüş değiştirdi); N1 uygulama adları yan cümlesi çıktı (Adım 1 adlandırıyor; Grok, DeepSeek, Qwen + Claude, ChatGPT oy vermedi); **S-47** *"the same four propellers"* → *"the same propellers"* (dört uç çifti eşeksenli = sekiz pervane). E1, E3 ve DeepSeek'in ek taşımaları **kalır** (DeepSeek geri çekti). Kalkış bağlaşımının son cümlesi korunan; *"Not demonstrated"* başlık korunan, *"and the list is not short"* ses işareti (yazara). Özgün adım Ek S5'te tam | Tur 120 metni §6, §8 |
-| **Tur 96 (dört okuyucu + Claude):** 5D işaret cümlesi çıktı (DeepSeek itirazını geri çekti); 5D devrilme cümlesi — "more prone than a conventional one to tip over, in crosswind and on uneven ground" (sayı kuralı: "one historical difficulty", iki koşul) ve korunan (165); 5C "takes the weight benefit" (P51). Özgün paragraflar Ek S5'te | Tur 95 metni §3, §4.3 |
-| **Tur 95 (yeniden kurma; dört okuyucu + Claude):** envanter teyit edildi. S-24 — 5C alıntısı sürdürüldü ("that such gear was limited to low sink rates, and that tip-over was 'a constant worry in gusty air and on uneven ground, particularly with the propellers turning.'"), 5D'ye "and to uneven ground"; S-25 — "The landing difficulty of the 1950s tail-sitters was attributed…"; "What that refusal costs … is not computed" korunan (164). **Açık:** 5D işaret cümlesi (üçü çıkar, DeepSeek tut). Özgün paragraflar Ek S5'te | NASA 19840014464 "In retrospect" paragrafı; 19810010574 XFY-1 satırı |
-| **Tur 66 — B4 (3.1):** tepki torku kanalının açıklaması Adım 8'e; burada işaretçi ve *"not computed"* sınırı (dört okuyucu + Claude) | Adım 8 |
-| **Tur 60:** *"50 kg reference geometry"* — terim birliği | Adım 8 tanımı |
-| Beş temas noktası: dört uç çerçevesi ucu + orta omurga | §2.11, satır 946–948 |
-| Uç çerçeveleri pervaneler için eklenmedi; **iniş yapısıdır** | §2.11, satır 937 |
-| *"Dispensing with a conventional landing gear improved the empty weight fraction"* | §2.11, satır 940–942, kaynak [2] |
-| Tek yapı üç amaca hizmet ediyor, kütle bütçesine **bir kez** yazılıyor | §2.11, satır 950–952 |
-| Duruş tabanı **parametre**, kısıt değil; uçları dışa almak tabanı ve kolu birlikte büyütüyor | §2.11, satır 954–960 |
-| Gövde ekseni dikey, kendi depolama durumunda, **fırlatma teçhizatı yok** | §3.12, satır 2103–2105 |
-| Burun çifti T/W = 1,00 tam; kalkış marjı uç çiftlerinden | §3.15, satır 2624–2627 |
-| Kalkış marjı ile tutum otoritesi **aynı dört pervaneden** ve yarışıyorlar | §3.15, satır 2630–2631 |
-| Dikey iniş **analiz edilmedi**; girdap halkası durumu açık soru | §3.16, satır 2279–2285 |
-| İniş geçişi de analiz edilmedi; ileri ve geri **simetrik değil** | §3.16, satır 2287–2297 |
-| *"No figure in this paper describes the landing transition"* | §3.16, satır 2296–2297 |
-| XFY-1'in iniş güçlüğü: omzunun üstünden bakan pilot; **burada pilot yok** | §3.16, satır 2275–2278 |
-| Yanal rüzgâr maruziyeti **miras alınıyor** | §1.5, satır 483–485 |
-
-**Bu sayfada BİLEREK olmayanlar:** sabit kanatlıya karşı **hiçbir menzil ya da verim
-karşılaştırması**, ve uçağın dikey işletimi **gösterdiği** iması. ChatGPT'nin Tur 45 şartı:
-*"Adım 5, uçağın dikey yeteneğe sahip olduğunu KANITLAMAYA çalışmasın; rakibi ve görev
-düzeyindeki gereksinimi kursun, sonra neyin boyutlandırıldığını neyin gösterilmediğini
-söylesin."* Sayfa bunu yapıyor ve gösterilmeyenler listesi **dört maddelik**, kısaltılmadı.

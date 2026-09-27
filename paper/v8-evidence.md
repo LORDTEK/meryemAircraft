@@ -57,3 +57,8 @@ Açılan her kaynağın **kendi** sonucu ya da hemen çevresi, gövdedeki alınt
 
 **Boşluk araması (Tur 120).** Arama kaydı ayrı dosyada: `paper/v8-gap-search.md` (Qwen R118-P2 protokolü; ChatGPT'nin oyu
 bekleniyor). Oradaki adaylar **açılmadı**; kaynak-sonuç işareti ancak PDF depoya girip okununca verilir.
+
+**Tur 121 — ChatGPT R119 (kayıt; dört okuyucu + Claude).** Adım 5: *"The present arrangement takes the weight benefit and extends it
+by giving the same structure the control duty as well."* NASA kaynağı (19840014464) yalnız ağırlık kazancını söylüyor; kontrol görevini
+aynı yapıya vermek bu makalenin tasarımıdır. **Kaynak-sonuç: destekler (ağırlık kazancı) / söylemiyor (kontrol görevi).** Cümlenin öznesi
+(*"The present arrangement"*) bunu zaten söylüyor; değişiklik yok.

@@ -61,6 +61,20 @@ her öğe zaten dolu (Adım 1).
 
 ---
 
-## Okuyucuların aramaları
+## Okuyucuların aramaları (Tur 120 cevapları, 2026-09-27)
 
-(Tur 120'de istendi; geldikçe buraya.)
+**Dördünün ortak sonucu:** a–f'nin hepsini bir arada taşıyan kaynak bulunmadı. **Hiçbiri veri tabanını doğrudan sorgulayamadı,
+hiçbiri PDF açmadı.** Grok, ChatGPT ve DeepSeek bunun §2.2 anlamında belgelenmiş arama olmadığını açıkça yazdı; Qwen *"The gap
+holds"* dedi (fazla okuma).
+
+| Okuyucu | Araç ve erişim | Sorgular | Adaylar (yalnız özet; açılmadı) |
+|---|---|---|---|
+| **Grok** | genel web dizini; ARC, Xplore, NTRS, Espacenet, USPTO, Scopus, WoS erişilemedi | 5, sorgu dizgeleriyle; her birinin ilk sayfası (~8–12 sonuç) | **WO2025255583A1** (BWB kuyruk üstü; a); **Vegh, *Hybrid-Electric Design Studies for a Long-Endurance Tailsitter*, AIAA SciTech 2025 / *J. Aircraft*** (eşeksenli kuyruk üstü; dört tahrik düzeninden biri seri hibrit SOFC; e); Double Hybrid (L4); EP3912910 (eşeksenli, eğilebilir; c'yi taşımıyor); DARPA Tern (kolektif + çevrimsel; c'yi taşımıyor); Tal & Karaman uçan kanat kuyruk üstü (a, d'ye yakın; b yok); APISAT 2024 (L3; indirilebilir PDF bulamadı) |
+| **ChatGPT** | genel web araması; veri tabanları doğrudan değil | 6+ sorgu kümesi (terim birleşimleri; tam dizgeler ve sonuç sayıları yok) | **Cai ve ark. 2024** (eşeksenli, itki yönlendirmeli, iki eksenli yalpa çemberi; c'yi taşımıyor); **Vegh 2025/2026** (seri hibrit + eşeksenli kuyruk üstü; yatay ve dikey kuyruk → d'yi taşımıyor); **Rohith, Sridharan & Govindarajan, *Hybrid Powertrain Systems for 100 kg Multicopters and Tailsitters*** (seri hibrit, takviye bataryası, motor seyre göre boyutlanmış; kolektif hatve → c'yi taşımıyor; e ve f'ye yakın); Novlit 2014 (depoda; d'yi taşımıyor); US 2025/0010988 *Blended Wing Body Tailsitter UAV* (elevon/flap ya da itki yönlendirme); **kendi ön baskımız** (hariç tutulmalı) |
+| **DeepSeek** | hiçbir veri tabanına erişemedi | — | yok. *"This is a failed search"* — dürüst kayıt |
+| **Qwen** | ARC, Xplore, Scopus, WoS erişilemedi; Google Patents, NTRS, Google Scholar kullandığını söylüyor | 3, dizgeleriyle; sonuç sayısı yok | L1 *"Various authors, 2023/2024 conferences"* — **belirli bir belge değil**; L2 Sikorsky RBW patenti; L3 Double Hybrid (başlığı yanlış verilmiş); L4 APISAT 2024. Adaylar *"from open snippets/training data"* — eğitim verisi kaynak değildir |
+
+**Öne çıkan: Vegh.** İki okuyucu bağımsız olarak buldu; Grok'a göre *Journal of Aircraft*'ta — **hedef dergimiz.** Eşeksenli
+kuyruk üstü + seri hibrit: boşluk cümlesinin (b)/(e) kesişimine en yakın aday. **İlk indirilecek belge.** Sonra Rohith ve ark. (e + f'ye
+yakın: askı tepesini takviye bataryasına verip motoru seyre göre boyutlamak — Adım 3'ün kaçış koşuluyla aynı fikir olabilir; açılmadan
+hüküm yok), sonra WO2025255583A1 ve US 2025/0010988 (BWB kuyruk üstü patentleri).

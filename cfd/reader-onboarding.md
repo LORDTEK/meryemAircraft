@@ -214,7 +214,7 @@ The body is about **26 000 words**, and the journal's working target is **about 
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 120.**
+**Round 121.**
 
 | Block | State |
 |---|---|
@@ -223,7 +223,9 @@ The body is about **26 000 words**, and the journal's working target is **about 
 | Framework, Steps 2 and 3 | **recomposed** (2 189 → 1 775; 1 654 → 1 305), originals in S2 and S3 in full; the five framework definitions are protected |
 | Framework, Step 4 | **recomposed** (1 351 → 1 268); the NASA sizing study's single home (Sections 1 and 2 point forward to it) |
 | Step 9 | **closed** at 1 020 (from 1 166); "by construction" has one meaning, checked (S-44) |
-| Now | **Step 1** (1 522): the author decides K; Grok chooses one of six voice sentences and the other five go; all readers run the documented gap search (my preliminary search: `paper/v8-gap-search.md`). **Step 5** (1 192): core and most of the body agreed; E1, E2, E3 divided; S-46 (Step 1) and S-47 (Step 5) found; S-45 applied with Step 7. Then 6 → 7–8 → 15 |
+| Step 1 | 1 462: K stays (the author); V5 the one voice sentence kept, five removed; S-46 repaired. Gap sentence unchanged: no documented search yet (leads in `paper/v8-gap-search.md`) |
+| Step 5 | 1 148: E2 to S5, N1, S-47 applied; results to confirm; then closes |
+| Now | **Step 6 lists** (its full text is in the round file); then 7–8 → 15; S-45 applied with Step 7 |
 
 **The body is about 20 000 words of prose** (tables not counted). Recomposition into result sentences took Steps 10–11 to about
 40 % of their length, Steps 12–14 to 57–83 %, and the framework to about 80 %, because its definitions and protected sentences set

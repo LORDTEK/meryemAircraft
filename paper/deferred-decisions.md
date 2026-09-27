@@ -295,3 +295,8 @@ for" tartışmalı); belgelenmiş arama (Qwen'in önerdiği yerler; kim yapacak)
 `paper/v8-gap-search.md`'de (yalnız arama motoru özetleri; §2.2 anlamında belgelenmiş arama değil). (3) **K:** okuyucuların Grok'a
 tepkileri yazara gitti (3 sil, Grok kalsın; ChatGPT'nin koşulu, DeepSeek'in "boşta değil" tespiti); **karar yazarın.**
 **Açık — yazara:** Adım 5 ses işaretleri için de aynı yöntem mi (Grok seçer)? V4 ("uncrewed ones are ordinary") K ile etkileşiyor.
+
+**Tur 121 — yazarın Tur 120 kararları.** **K kalır** (Grok + DeepSeek kalsın; ChatGPT, Qwen, Claude zayıf sil) — kapandı. **Adım 5 bu kez
+çoğunlukla** (*"normalde hemfikir olmak önemliydi ama bu seferlik"*): N1 ChatGPT'nin oyu olmadan uygulandı; öbür her şey zaten oybirliği.
+Grok **V5'i** seçti; V1–V4, V6 çıktı. **Açık — yazara:** Adım 5 ses işaretleri (aynı yöntem mi?). **Belgelenmiş arama:** dört okuyucu da
+veri tabanına erişemedi; indirilecek belgeler `paper/v8-gap-search.md`'de (önce Vegh — hedef dergide olabilir).
