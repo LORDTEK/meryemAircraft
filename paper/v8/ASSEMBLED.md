@@ -512,7 +512,7 @@ gross weight for the same mission, 7 221 lb against 3 678 lb. **That higher gros
 consistent with the mass charge Section 2.1 describes**, and Section 2.3 is where the independent
 sizing evidence for it is set out — the comparison in this table does not establish the causal
 link by itself. On cruise efficiency taken alone, the entry is ahead of this configuration's low
-corner, and whether it is ahead of the best examined blade family depends on the drag bracket.
+corner.
 
 The same sizing set gives its two helicopter types at 5.4 to 7.2, and against them the result is
 mixed: this configuration is ahead of the turboshaft single-main-rotor helicopter at every corner,
@@ -545,8 +545,7 @@ is 3; both are unusually low. Nothing here is compared against a poor example.
 **The speeds are not matched, and the direction of that mismatch is calculable.** The published
 figure is quoted at the best-range speed; this configuration's is at its chosen cruise condition,
 1.49 times stall, which Section 7.1 states explicitly is **not** its best lift-to-drag point. The
-best point lies at 1.26 times stall, and `L/D_max = 0.5√(πARe/C_D0)` exceeds the cruise ratio at
-both ends of the drag bracket — 11.65 against 10.82, and 10.08 against 8.79, both at e = 0.817.
+best point lies at 1.26 times stall, and `L/D_max` exceeds the cruise ratio at both ends of the drag bracket.
 **The reference is
 therefore given its best speed and this configuration is not given its best speed, and the margin
 is positive anyway.** The best point is not an available option — cruising there leaves too little
@@ -579,8 +578,7 @@ operating points; and the range that follows from the chain, link by link.
 flight test in this work, and the drag coefficient is a build-up with a declared bracket rather
 than a measurement. The planform's sweep, taper and thickness distributions were chosen rather
 than optimised. **The span efficiency used throughout this section is the computed value, 0.817,
-not the assumed 0.85** — a vortex-lattice solution of the trimmed planform, and 3.9 percent below
-the assumption, so the lift-to-drag figures above carry the calculated penalty rather than the
+not the assumed 0.85** — a vortex-lattice solution of the trimmed planform, so the lift-to-drag figures above carry the calculated penalty rather than the
 optimistic estimate. And **for the methods used here, and for the published
 comparisons against which they were checked, the aerodynamic predictions diverge above roughly ten
 degrees of incidence**: three methods of three fidelities depart at the same place, the highest of
