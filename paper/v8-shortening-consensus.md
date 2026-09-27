@@ -605,3 +605,6 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | S-58 (b): Adım 14'e iki madde, S14 satırları, borç izi | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı (Tur 134)**; teyide |
 | Qwen P1 (tanımsız/kullanılmayan terim), P2 (olumsuz iddia tutarlılığı); DeepSeek P2, P3 | ✓ | ✓ | ✓ | ✓ | ✓ | **Kabul (Tur 134)** |
 | Rohith: Adım 1 satırı (A), Adım 7 tanık cümlesi (B) | — | — | — | — | evet | **Tur 134 oylaması** (PDF depoda, okundu) |
+| Rohith A (Adım 1) ve B (Adım 7) | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı (Tur 135)**; teyide |
+| S-58 teyit | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI (Tur 135)** |
+| "not …" sınıflaması; borç izi alındı denetiminde; liste tamlığı | ✓ | ✓ | ✓ | ✓ | ✓ | **Kabul (Tur 135)**; CLAUDE §3.0 |

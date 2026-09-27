@@ -92,3 +92,12 @@ yükledi; Claude tam okudu: özet, §II yapılandırmalar, eğitim yükseltme yo
 | Belge | Nereye dokunuyor | Kaynağın kendi sonucu / niteleme | Kaynak-sonuç |
 |---|---|---|---|
 | Rohith ve ark. 2026, *J. Aircraft* 63(2):575–591 — 100 kg çok rotorlu ve kanatlı çift kanat kuyruk üstü türevleri; **boyutlandırma çalışması** (HYDRA, SAND) | Adım 1 dolu liste (öneri, Tur 134); Adım 7 *"some of them together"* tanığı (öneri) | s. 575: *"The engine was sized to provide cruise power, while a 'boost' battery was sized to provide the necessary additional power required to take off and land vertically."* s. 585: *"110% cruise instead of 150% hover … the single biggest driver for empty weight reduction."* s. 586: dönüşüm *"fixed wings and collective pitch change mechanisms for the rotor blades"* ekliyor. s. 580: *"Variable-pitch and variable-RPM prop-rotors enable good hover figures of merit and good cruise propeller efficiencies with the same blade shape. The cost … is paid up-front in additional parts as well as development time to fine-tune flight controls, especially during transition."* Sonuç 2: kanatlı kuyruk üstünün seyir aerodinamik verimi çok rotorlununkinin *"nearly 3×"* (s. 589) | Adım 7'nin *"None of the three elements is new … some of them together"*ini **destekler** (depodan askı tepesi + kuyruk üstü); boşluğu **söylemiyor** — (c)'yi karşılamıyor (kolektif/değişken hatve). Adım 1'in *"known result"* maddesini **destekler** (s. 580). Uçurulmuş araç değil; tanık kapsamı: 100 kg, boyutlandırma |
+
+**Tur 135 — Rohith gövdede** (dört okuyucu + Claude): Adım 1 dolu liste satırı (s. 575, 586) ve Adım 7 tanık cümlesi (Rheaume ile).
+Durum: **kanıt, okundu** (Qwen P1). *"nearly 3×"* (s. 589): **iz, gövdede değil** — farklı ölçüt ve farklı boyutlandırma aracı; Adım 6'nın
+yönüne üçüncü taraf bir tutarlılık işareti olarak kayıtta (DeepSeek P1); yalıtım çifti kuralı gereği gövdeye girmez. s. 580 (değişken
+hatve): gövdeye girmez (Adım 1'in maddesinde iki kaynak var).
+
+**Vegh — durum (Qwen P2):** **iz, doğrulanmadı.** Depodaki dosya yalnız düzeltme duyurusu (doi 10.2514/6.2025-1436.c1: Tablo 2 değişti; s. 11
+cümlesinden *"tail volume"* silindi); (c) ve (d) hakkında bir şey söylemiyor. Asıl bildiri (10.2514/6.2025-1436) ve dergi sürümü
+(10.2514/1.C038393) depoda yok. Hiçbir yerde düzeltme duyurusu makale gibi anılmaz (ChatGPT; H taramasında denetlenir).

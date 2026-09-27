@@ -586,6 +586,11 @@ bakılır; alıcıyı okumak yetmez.
 and its designated supplement for the promised content and its underlying quantity."* (2) **Durum kimliği** (ChatGPT) — sayı
 kimliğinin işletim durumu karşılığı: durum bağımlı her sonuç kendisine anlam veren durumu taşır (serbest dönen / durdurulmuş /
 kumandalı / kumandasız; askı / seyir); durumlar arası her yeniden kullanım izde işaretlenir (DeepSeek).
+**Kabul (Tur 135, dört okuyucu + Claude):** (3) **"not …" sınıflaması** (ChatGPT) — her olumsuz cümle: açık nicel soru / hesaplanmamış
+karşılaştırmalı analiz / daha geniş çözülmemiş soru / kanıt sınırı / kapsam sınırı. Adım 14 yalnız ilk üçünü, her biri çözüm yöntemiyle
+taşır (S-58'in testi). (4) **Borç izi alındı denetiminin parçası** (DeepSeek): Adım 14 dışındaki her "not computed …" Adım 14'ün
+listesine karşı. (5) **Liste tamlığı** (Qwen): metin "lists / names / the following" dediği her yerde liste, **cümlenin belirttiği
+kapsamda** (ChatGPT) tam mı.
 
 ### 3.1 Emekliye ayrılan ifade DEPONUN TAMAMINDA aranır. Tur 49.
 

@@ -124,6 +124,11 @@ physical impossibility.
 is established**, reported in 2025 with vortex-lattice and RANS analysis of its planform,
 winglets and transition.
 
+**A buffered series hybrid on a winged tail-sitter has been sized.** A 2026 sizing study of 100 kg winged biplane tail-sitters sizes
+the engine *"to provide cruise power, while a 'boost' battery was sized to provide the necessary additional power required to take off
+and land vertically"*; converting its quadcopter baseline to the tail-sitter adds *"fixed wings and collective pitch change mechanisms for
+the rotor blades."*
+
 **And the propeller compromise at the centre of this paper's own ledger is a known result, not a
 discovery.** The uncrewed tail-sitter literature states it directly: fixed-pitch propellers make
 it *"theoretically impossible to be very efficient in both hovering and forward flight."* A
@@ -168,6 +173,7 @@ presume an escape.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 135 — Rohith dolu liste satırı (A; dört okuyucu + Claude; Grok P122 biçimi):** BWB maddesinden sonra *"A buffered series hybrid on a winged tail-sitter has been sized. A 2026 sizing study of 100 kg winged biplane tail-sitters sizes the engine 'to provide cruise power, while a 'boost' battery was sized …'; converting its quadcopter baseline to the tail-sitter adds 'fixed wings and collective pitch change mechanisms for the rotor blades.'"* Kaynak: Rohith ve ark. 2026 *J. Aircraft* s. 575, 586 (`references/Rohith-…pdf`). ChatGPT: başlıkta "biplane" isteğe bağlı, yüzey taramasında denetlenecek | Rohith 2026 |
 | **Tur 121 — ses işaretleri (yazar kararı, Tur 119: Grok birini seçer, gerisi çıkar).** Grok V5'i seçti (*"the giving-up is the part that is not free"* kalır). Çıktı: V1 (*"The answer works, costs little…"*), V2 (*"elegant on paper — one propulsion group, no dead hardware in cruise. It is also the more"*; içerik rota paragrafında), V3 (*"excellent at what it does and is"*), V4 (*"and uncrewed ones are ordinary"*; içerik dolu listede ve XFY-1 paragrafında), V6 = **S-46** (*"What that costs … is what the paper is for"* — Adım 5, 8, 9, 15 ile çelişiyordu). Hepsi silme (`v8_draft_check.py --taslak`). **K kalır — yazar kararı (Tur 120).** Özgün Ek S1'in dondurulmuş kopyasında | Tur 120 metni §1, §4; yazar |
 | **Tur 118 — Adım 1 uzunluk geçişi, ilk kısım** (Tur 117; dört okuyucu + Claude): C1 (sabit kanatlının pist gereğini açan cümle) ve C2 ("The problem has been attacked for seventy years" alt bölümü, tarihleriyle — Grok P101) Ek S1'e; "Tail-sitting aircraft are seventy years old" son paragrafta kalıyor. Özgün Ek S1'de tam | Tur 117 metni §3 |
 | **Tur 114 — NASA çalışmasının tek evi Adım 4** (P88, dış kanıt kimliği kuralı; Tur 113, dört okuyucu + Claude): "A NASA study that sizes five VTOL architecture families to one mission describes …" → "The NASA sizing study used in Section 4 describes …" (ileri işaretçi); iki rota paragrafı Adım 1'in kendi kullanımı olarak kalır (Grok P94: üçüncü tasarım, görev sayısı ya da üç neden buraya girmez) | Tur 113 metni §6 |

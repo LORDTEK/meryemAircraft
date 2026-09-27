@@ -388,3 +388,7 @@ gibi dönecekti."* Hesaplanan durum sıfır şaft torku (serbest dönme; ΔC_D0 
 ne itki ne sürükleme; şaft gücü harcar) hesaplanmadı. Hangisi kastediliyor? Cevaba göre Adım 8 [28]'e karar cümlesi (R) gider.
 **Tur 131 — yazarın kararı (S-57):** *"Neyse sıfır şaft torkunda kalsın."* Uç çiftlerinin kumandasız seyir durumu sıfır şaft torkunda serbest
 dönme; CLAUDE.md §0.1'e yazıldı. Karar cümlesinin sözcükleri okuyucularda.
+
+**Tur 135 — Vegh (yazar):** *"Vegh için ChatGPT'nin imkanı var mı? Varsa … o da ona baksın ve alakalı kısımları versin. Artık bulamazsam
+ve ChatGPT çok yardımcı olmazsa geçeceğiz sanki."* → ChatGPT'den Tur 126'da okuduğu konferans bildirisinden ilgili geçitler sayfa
+numarasıyla istendi. Gelmezse ya da yetmezse Vegh **iz** olarak kapanır: metne girmez, boşluk cümlesine dokunmaz.
