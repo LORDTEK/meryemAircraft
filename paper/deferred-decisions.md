@@ -368,3 +368,17 @@ okunduktan sonra** — ama dürüst beklenti: 12 000'e ancak çerçeve ve mimari
 sonuçta ilk kez beliriyor. **Sil:** Grok, ChatGPT, Claude (sonuç tüketir, yeni kapsam getirmez; doğru ama evi yok). **Kalsın:** Qwen
 (bölümün işi "nerede durduğu"). **Kalsın ve işaretlensin:** DeepSeek; Qwen P1 (sonuçta doğan sınır diye iz tablosuna). **Grok P121:**
 isteniyorsa önce Adım 14'e tarihli bir kapsam cümlesi, sonra 15 tüketir. Silme temiz: *"Section 14 lists what would settle the rest."*
+
+**Tur 129 — yazarın çerçevesi (E8):** uzunluk yöntemi **ikinci aşama (sonuç cümlelerine yeniden kurma) bütün metin için tamamlanınca**
+belirlenecek; bu tur değil. Yazarın ipuçları: hesap kısımları biraz daha eke; özet paragraftan sonra bölüm eke; Claude'un sırası.
+Başka dergi odağı kaybolmaz; yüksek kelimeli makaleyle kör atış yapılmaz. **Üçüncü aşama için aday kayıtlar (Tur 128 cevapları; oylanmadı):**
+- ChatGPT: *"R may compress repeated explanation, but R may not compress an evidentiary bridge merely because no individual sentence in
+  that bridge is tagged P."*; B ve çerçeveden sonra dergi/tür denetim noktası.
+- DeepSeek: R geçişinde mekanizma cümlesi kuralı (Tur 104; Qwen R120-P1) koruma listesiyle birlikte fren. Adım 8'de artık tork ve
+  şerit bölünmesi taşınabilir, durdurulmuş durum kalır — **Grok, ChatGPT, Qwen: Adım 8 blokları kalır** (ayrışma).
+- Grok P123: iki okunmamış olgu (AIAA aşım kuralı; öteki dergilerin şartları) iş kalemi olarak, varsayılmış cevap olarak değil.
+- Qwen P1: "indirgenemez taban" ölçüsü — **tahmini ~14 000 ölçülmedi**; Qwen'in adını verdiği dergilerin *"15 000+"* sınırı okunmadı
+  (kayda olgu olarak girmez).
+- B'ye oy: Grok, ChatGPT, DeepSeek evet; Qwen (B → çerçeve → dar A).
+
+## E9 — KAPANDI (Tur 129): sertifikasyon yan cümlesi silindi — beş oy (DeepSeek ve Qwen Tur 128'de sile geçti); yazar ortak görüşe açık.

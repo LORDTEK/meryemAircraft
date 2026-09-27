@@ -27,3 +27,18 @@ last column says so.
 
 **Debt/scope check (Qwen R108-P2):** Step 15 closes none of Step 14's unknowns. The store, the transition and the cost of the
 declined channel all stay open (all four readers).
+
+## Debt trace, Step 14 → Step 15 (Qwen P2, Round 129)
+
+Step 14 names one known obstacle (the store) and sixteen unknowns. Step 15 consumes them through *"Section 14 lists what would settle the
+rest"*. **Step 15 promises none of them.** Four are touched in Step 15, each with its limit:
+
+| Step 14 item | Where Step 15 touches it | Limit kept |
+|---|---|---|
+| the energy store (known obstacle) | axis 2: *"an energy store whose required performance the sources consulted here do not report as built (Section 14)"* | yes |
+| the pitching moment through the transition; vertical descent and the landing transition | axis 3: *"Whether this aircraft completes the rotation is a separate question, and it is not settled here."* | yes |
+| closed-loop hover control, including the declined reaction-torque channel | axis 3: *"what declining it costs is not computed"* | yes |
+| the tip pairs' stopped cruise state | axis 3: *"while the tip pairs free-wheel or are held by motor torque"* (the conditional count) | yes |
+
+The other twelve are consumed by the pointer alone. **Observation for the next stage:** *"The loop closes; the aircraft is not shown
+to."* stands verbatim in both Step 14 and Step 15 — an echo (Grok's narrow A), not a defect.

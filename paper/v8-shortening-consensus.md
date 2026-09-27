@@ -578,3 +578,7 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Adım 15 listeleri; (ii) quadrotor ifadesi tutuyor | ✓ | ✓ | ✓ | ✓ | ✓ | **Tüketim haritası `drafts/15-maps.md`, Tur 128'de teyide** |
 | Adım 15 (i) sertifikasyon cümlesi | sil | sil | kalsın+işaret | kalsın | sil | **Ayrıştı → yazar (E9)** |
 | Uzunluk | A (dar) | A+B+D | A+C | E/F | B → çerçeve → A (dar) | **Ayrıştı → yazar (E8 paketi)** |
+| Adım 15 sertifikasyon yan cümlesini sil (E9) | ✓ | ✓ | ✓ (değiştirdi) | ✓ (değiştirdi) | ✓ | **Uygulandı (Tur 129); Adım 15 teyitle kapanır** |
+| Adım 15 tüketim haritası; Rohith/Vegh kaydı; P122 biçim | ✓ | ✓ | ✓ | ✓ | ✓ | **Kabul (Tur 128)** |
+| S-53 onarımı (D / D+) | — | — | — | — | D+ | **Tur 129 oylaması** |
+| Uzunluk yöntemi | — | — | — | — | — | **Yazar: ikinci aşama bitince (Tur 129)** |

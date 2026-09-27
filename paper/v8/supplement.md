@@ -3481,3 +3481,10 @@ comes from the strip; the reaction-torque channel the coaxial pairs could provid
 declining it costs is not computed. **This is a count of mechanism classes, not a claim that nothing moves, and not a
 claim of mechanical simplicity or reliability.** Whether this aircraft completes the rotation is a separate
 question, and it is not settled here.
+
+### The closing paragraph of Section 15 as it stood before the certification clause was deleted (frozen snapshot, Round 129)
+
+**The loop closes; the aircraft is not shown to.** Section 14 lists what would settle the rest; nothing in
+this work addresses certification. What the paper offers is **a configuration sized to combine
+runway-independent vertical operation with wing-borne cruise efficiency, arranged to do so with no mechanism
+that reorients a propulsor, and an account of what the combination costs.**

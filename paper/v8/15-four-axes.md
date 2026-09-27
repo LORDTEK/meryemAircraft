@@ -45,8 +45,7 @@ question, and it is not settled here.
 **Range, against the other hybrids — not claimed, in either direction.** The ordering belongs to the sizing
 contract (Section 13).
 
-**The loop closes; the aircraft is not shown to.** Section 14 lists what would settle the rest; nothing in
-this work addresses certification. What the paper offers is **a configuration sized to combine
+**The loop closes; the aircraft is not shown to.** Section 14 lists what would settle the rest. What the paper offers is **a configuration sized to combine
 runway-independent vertical operation with wing-borne cruise efficiency, arranged to do so with no mechanism
 that reorients a propulsor, and an account of what the combination costs.**
 
@@ -56,6 +55,7 @@ that reorients a propulsor, and an account of what the combination costs.**
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 129 — E9 kapandı: sertifikasyon yan cümlesi SİLİNDİ** (beş oy: Grok, ChatGPT, Claude; DeepSeek ve Qwen Tur 128'de oy değiştirdi; yazar: *"hemfikir olursanız ortak fikriniz de isabetli olabilir"*). *"Section 14 lists what would settle the rest; nothing in this work addresses certification."* → *"Section 14 lists what would settle the rest."* `v8_draft_check` temiz (kısalan 1). Özgün paragraf Ek S15'te; ifade emekli. Borç izi (Qwen P2): `drafts/15-maps.md` | E9; Tur 129 |
 | **Tur 128 — listeler (dört okuyucu + Claude):** çekirdek dört eksen + kapanış; kalanlar: hepsi (yer taban); saf ses yok. Tüketim haritası metne karşı denetlendi: `paper/v8/drafts/15-maps.md`. Borç/kapsam denetimi (Qwen R108-P2): Adım 15 Adım 14'ün açık bıraktığı hiçbir şeyi kapatmıyor (dördü). (ii) quadrotor ifadesi Adım 6 tablosuyla tutuyor (turboşaft +13…+51 % / +22…+51 %; tam elektrik −4…+27 % zarf, +3…+27 % en iyi aile — Qwen: ifade zarf okumasına ait). **(i) *"nothing in this work addresses certification"* AYRIŞTI** → yazara (E9) | Tur 128 |
 | **Tur 102 (Tur 101 oybirliği; R-7):** "and — while the tip pairs free-wheel or are held by motor torque — no rotor stowing, indexing or stopping mechanism (Section 7's note)"; koşulsuz biçim emekli. Özgün paragraf Ek S15'te | Adım 7 notu; S-33 |
 | **Tur 98 (dört okuyucu + Claude; E5):** "Cruise efficiency, against rotorcraft — claimed against multirotors, and bounded; mixed against helicopters."; "Nothing is claimed against rotorcraft on vertical capability." | Adım 6D, 9 |

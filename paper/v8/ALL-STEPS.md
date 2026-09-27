@@ -1171,7 +1171,6 @@ question, and it is not settled here.
 **Range, against the other hybrids — not claimed, in either direction.** The ordering belongs to the sizing
 contract (Section 13).
 
-**The loop closes; the aircraft is not shown to.** Section 14 lists what would settle the rest; nothing in
-this work addresses certification. What the paper offers is **a configuration sized to combine
+**The loop closes; the aircraft is not shown to.** Section 14 lists what would settle the rest. What the paper offers is **a configuration sized to combine
 runway-independent vertical operation with wing-borne cruise efficiency, arranged to do so with no mechanism
 that reorients a propulsor, and an account of what the combination costs.**

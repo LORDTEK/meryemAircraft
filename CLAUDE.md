@@ -524,6 +524,21 @@ dahil herkesin hemfikir olduğu kısaltmalar uygulansın."*
   (saf ses / yüklem taşır / korunan), yüklemi ayır, yalnız saf ses parçasını sil; temiz silme biçimi yoksa bırak; **ton seçimini yazar
   geri koyar, ama bir ton seçimi yüklemi geri getiremez** (6.1).
 
+### 2.5 Aşama kuralı. Yazar, Tur 129 — korku işe bulaşmaz.
+
+> *"Hep yarıda bırakma (korkarak) tarafarı oldun ama bak bırakmadık ve bence çok güzel kısaldı. … Asıl mesele ne biliyor musun?
+> Üzerinde olduğumuz aşamanın hakkını verebilmek. Yaptığımız işe korkuyu bulaştırmadan kaliteli yapabilirsek bir sonraki aşamada
+> işimiz kolaylaşır. Ama korkudan yarım bırakırsak yeni aşamanın kurallarını da mantıklı şekilde belirleyemeyebiliriz."*
+
+- **Aşama = baştan sona ilerleyen bir geçiş.** Her aşamanın yolu ayrıdır; bir sonrakinin yöntemi **bu aşama bütün metin için
+  tamamlanınca** belirlenir — bir tur sonunda değil. Aşamalar şimdiye dek: kümeli silme (Tur 61–72) → yeniden kurma (Tur 73–98;
+  kelime az düştü, kaynak kusurları S-1…S-33 bulundu) → sonuç cümlelerine yeniden kurma (Tur 101–; 25 797 → 18 634).
+- **Uzunluk aritmetiği bir aşamayı yarıda kesmenin gerekçesi değildir.** Ölçüm raporlanır; karar aşama bitince verilir. Yazarın
+  Tur 129 ipuçları (karar değil): hesap kısımları biraz daha eke; özet paragrafla anlatıldıktan sonra bölüm eke; Claude'un sırası.
+  Başka dergi odağı kaybolmaz, yüksek kelimeli makaleyle kör atış yapılmaz.
+- **Şeffaflık herkese:** her tur metninin hata bölümü benim ve her okuyucunun hatasını adıyla **bütün okuyuculara** yazar; okuyucular
+  birbirlerinin görüşlerine cevap verir (Tur 85, 106).
+
 ## 3. Doğrulama
 
 Hiçbir iddia denetlenmeden aktarılmaz — ne YZ'lerinki ne benimki.

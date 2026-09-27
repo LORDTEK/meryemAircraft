@@ -176,6 +176,7 @@ EMEKLI = {
     "or by differential thrust, which costs a control channel": "Tur 127: S-52 -- itki farki yatis ekseninde moment vermez (CLAUDE 0.1); Grok P119",
     "because both are properties of the hardware just described": "Tur 127: S-51 -- [25] ile celisiyordu",
     "Two items belong here rather than in a later list": "Tur 128: S-51 son hali -- [24] tumuyle silindi (dort okuyucu + Claude)",
+    "nothing in this work addresses certification": "Tur 129: E9 -- sonucta evsiz yeni kapsam; bes oyla silindi (DeepSeek ve Qwen oy degistirdi)",
 }
 
 

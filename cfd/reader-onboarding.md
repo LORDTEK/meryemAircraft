@@ -214,18 +214,18 @@ The body is about **26 000 words**, and the journal's working target is **about 
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 128.**
+**Round 129.**
 
 | Block | State |
 |---|---|
-| Length | the author decided (Round 101): 12 000 words in all; 5 tables + 3 figures; Round 105: keep recomposing, redistribute later. **Now the E8 decision is due** (Round 128 packet) |
-| Calculation steps 10–14 | **all recomposed and confirmed** (5 163 words against a plan of 2 000); originals in Supplements S10–S14 in full |
-| Framework, Steps 2–4 | **recomposed** (1 786, 1 351, 1 279); the five framework definitions are protected; Step 4 is the NASA sizing study's single home |
+| Stages (the author, Round 129) | the work proceeds in stages, each a pass through the whole text; the next stage's method is chosen when the present one is complete. Present stage: recomposition into result sentences (Round 101–), body 25 797 → 18 628 |
+| Length | **not decided now** (the author): after this stage completes. Round 128 proposals recorded as candidates |
+| Calculation steps 10–14 | recomposed and confirmed (5 163) |
+| Framework, Steps 2–4 | recomposed (1 786, 1 351, 1 279) |
 | Steps 1, 5, 6, 7, 9 | **closed** at 1 517, 1 133, 1 883, 1 163, 1 020 |
-| Step 8 | **closed** at 1 990 ([24] deleted, Round 128; heading kept) |
-| Step 15 | lists agreed; consumption map checked (`paper/v8/drafts/15-maps.md`); the certification clause is divided → the author (E9) |
-| Rohith, Vegh | no obstacle (all); Vegh (c) not shown, (d) not established from the rendering; no text change before the PDFs are in the repository |
-| Now | **the length**: body prose 18 634, all-in ≈ 21 900 against 12 000; readers' proposals A–F side by side; the author decides (E8) |
+| Step 8 | closed at 1 990; **reopened for S-53** (stopped-state receipts to Section 11 that Section 11 does not carry) |
+| Step 15 | certification clause deleted (all five); closes at 343 on confirmation |
+| To complete the stage | Step 15; S-53; a receipt audit across all steps; Step 1's denial map; Rohith/Vegh PDFs; then a part–whole–part reading of the assembled paper |
 
 **Every step has now been recomposed once.** Recomposition into result sentences took Steps 10–11 to about 40 % of their length,
 Steps 12–14 to 57–83 %, and the framework and architecture to 80–95 %, because definitions, protected sentences and their evidence
@@ -239,7 +239,7 @@ of them holds a sentence deleted for lack of a source.
 | Tool | What it checks |
 |---|---|
 | `v8_caveats.py` | the protected sentences |
-| `v8_stale.py` | retired phrases (150) and single-home phrases, in the step bodies **and in the v8 figure scripts** |
+| `v8_stale.py` | retired phrases (151) and single-home phrases, in the step bodies **and in the v8 figure scripts** |
 | `v8_nothing_lost.py` | every sentence of a recomposed step is in the body or the supplement, or is a voted replacement |
 | `v8_draft_check.py` | a draft is derived from its source by deletion only (pointers in ⟦ ⟧ excepted); no negative or qualifier deleted; every protected sentence present |
 | `v8_refs.py` | table, row and relational-noun references, and supplement references |
