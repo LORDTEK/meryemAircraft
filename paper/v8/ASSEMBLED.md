@@ -108,6 +108,11 @@ physical impossibility.
 is established**, reported in 2025 with vortex-lattice and RANS analysis of its planform,
 winglets and transition.
 
+**A buffered series hybrid on a winged tail-sitter has been sized.** A 2026 sizing study of 100 kg winged biplane tail-sitters sizes
+the engine *"to provide cruise power, while a 'boost' battery was sized to provide the necessary additional power required to take off
+and land vertically"*; converting its quadcopter baseline to the tail-sitter adds *"fixed wings and collective pitch change mechanisms for
+the rotor blades."*
+
 **And the propeller compromise at the centre of this paper's own ledger is a known result, not a
 discovery.** The uncrewed tail-sitter literature states it directly: fixed-pitch propellers make
 it *"theoretically impossible to be very efficient in both hovering and forward flight."* A
@@ -593,7 +598,7 @@ the combination is what this paper is for.
 ### 5.1 The combination
 
 None of the three elements is new. **Each can be found on its own, and some of them
-together, in the literature and in hardware** — Section 1 says where.
+together, in the literature and in hardware** — Section 1 says where. The principle behind the third element — a continuous plant sized for cruise, with the vertical or take-off peak drawn from a store — has been applied in studies of a winged tail-sitter (Section 1) and of a single-aisle airliner whose turbines are *"sized for efficient operation during"* cruise and assisted by electric motors *"during takeoff and climb."*
 
 **What this paper contributes is that combination, the condition its primary propulsor is designed
 to satisfy, and the price the configuration pays for pursuing it.** The three elements, taken together, meet the escape condition
