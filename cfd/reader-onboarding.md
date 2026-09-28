@@ -214,12 +214,13 @@ The body is about **26 000 words**, and the journal's working target is **about 
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 160.**
+**Round 161.**
 
 | Block | State |
 |---|---|
-| Stages (the author, Round 129) | present stage: **compression by finding**. Supplement stage closed (−333); batch closed (−184); **6.2 + 9 merged into one Section 9 (−215), for the readers' confirmation.** Step 9 retired (`paper/v8/retired/`); Section 9 = Step 15; Section 6 = the former 6.1; the contract sentence heads Section 7; the "By construction" definition is in S9 (author's decision E11) |
-| **Measurement (Round 160)** | body 19 771 words (7 tables as text); **all-in by the AIAA method ≈ 21 400 – 23 900**. 12 000 is not reachable by the agreed levers without cutting argument steps. Remaining levers: L1 architecture compression, L2 tables to the supplement, L3 whole calculation sections to the supplement behind result paragraphs (the author's Round 129 hint), L4 a longer paper. The number is the author's decision |
+| Stages (the author, Round 129) | present stage: **compression by finding**. Supplement stage closed (−333); batch closed (−184); **6.2 + 9 merge closed** (−215; confirmed by all five) |
+| **The author's question (Round 161)** | where else can the 6.2 + 9 operation be done (two places doing the same job → one home; moves and deletions only; protected sentences kept; pointers re-read; old text to the supplement)? Each reader proposes independently; Claude's view goes to the author with the readers' |
+| Length | set aside by the author for now. Measurement (Round 160, corrected by ChatGPT): all-in ≈ 21 400 – 23 900; 12 000 would need 9 450 – 11 450 words cut from prose and headings. Readers' proposals (14 000 – 16 000) recorded for the author |
 | Contribution | Sections 1, 5.1 and 9 name one contribution, the architecture |
 | Tip pairs in cruise (the author's decision) | uncommanded state: free-wheeling at zero shaft torque (Section 6); shaft power of commanded departures not computed |
 

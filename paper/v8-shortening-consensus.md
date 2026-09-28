@@ -734,3 +734,7 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | D2 "By construction" tanımı (korunan) | sil | sil | sil | sil | sil (Tur 158) | **korunan — silinemez**; E11 (eke, yazar kararı) önerisi Tur 159 |
 | D1–D5 (birleşik 9) | ✓ | ✓ | ✓ | ✓ | ✓ | **uygulandı (Tur 160)**; E11 yazar onayı; sonuç teyide |
 | Ölçüm: 12 000 anlaşılmış kaldıraçlarla ulaşılamaz (≈ 21 400 – 23 900 hepsi dahil) | ? | ? | ? | ? | ölçtü | **Tur 160 — yazara** (L1–L4, sayı yazarın) |
+| 6.2 + 9 birleşmesi, uygulanan hâl (+ dördüncü işaretçi) | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI (Tur 161)** |
+| `v8_nothing_lost.py` bütün gövdelerde arar | ✓ | ✓ | ✓ | ✓ | ✓ | **kabul** |
+| Uzunluk hedefi | 15–16k | ölçümden sonra | 15k (taban 14k) | 14,5–15,5k | 14–16k | **yazar şimdilik bir kenara koydu (Tur 161)** |
+| Yazarın sorusu: 6.2 + 9 işlemi başka nerede? | ? | ? | ? | ? | (yazara, okuyuculardan sonra) | **Tur 161** |

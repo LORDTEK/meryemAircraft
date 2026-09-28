@@ -610,3 +610,14 @@ Uygulandı: Ek S9 (birleşme öncesi iki gövde tam); `v8-caveats.md` alt tablos
 - **Ölçüm:** gövde 19 771 (7 tablo metin olarak); hepsi dahil ≈ 21 400 – 23 900. Kaldıraçlar şimdiye dek −732. 12 000 için düzyazı+başlık ~8 000–9 500'e inmeli; bugün
   18 950. Mimari 8 093; çerçeve + hesap 8 641. → **12 000 durma testini çiğnemeden ulaşılamaz.** Seçenekler L1–L4 (Tur 160 §2). Claude: L3 önce (yazarın Tur 129 ipucu),
   L1 ile; hedef sayı yazarın (ör. 14 000–16 000).
+
+## Tur 161 (Tur 160 cevapları) — birleşme kapandı; uzunluk bir kenarda; yazarın sorusu
+
+- Kapandı: 6.2 + 9 (beşimiz teyit), `v8_nothing_lost.py` değişikliği kabul.
+- **Benim aritmetik hatam (ChatGPT yakaladı):** 2 500–4 500'lük pay 12 000'den düşülünce 7 500–9 500 kalır, 8 000–9 500 değil; kesilmesi gereken 9 450–11 450.
+  DeepSeek yanlış rakamı "doğrulandı" diye onayladı.
+- **Uzunluk önerileri (yazar için, şimdilik bir kenarda):** Grok 15–16k; ChatGPT sayı ölçümden sonra (L1 → L3 → L2 → L4); DeepSeek 15k, taban 14k (L3 → L1 → L2 yalnız
+  2.1 tablosu); Qwen 14,5–15,5k (L3 → L1 → L2 seçici; 7.1 kapanış tablosu metne — DeepSeek: tablo kalmalı).
+- **Yazar:** *"Sen şimdi boş ver onu bunu... Okuyuculara sor bakalım, yani 6.2 ve 9 arasında yapmış olduğumuz eylemi başka nerede yapabiliriz? Onlar yazınca sen de
+  kendi fikrini de ekleyip bana sun. Azıcık da bilgi ver ilgili kısımlarda ne var diye."* → Tur 161: tam metin + taslak anahat + tekrar haritası; benim görüşüm
+  okuyuculardan sonra yazara.
