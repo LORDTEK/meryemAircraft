@@ -478,3 +478,20 @@ yan yana, sonra yazara.
 Beş bağımsız öneri (Tur 152 metni §2, tam metinleri ekinde). Ortak: bulgu haritası önce (başlık değil), her bulguya tek ev, mimari bölümlerindeki tekrar çoğu kez
 argüman, tur başına tek değişiklik, birleşik görünümde denetim, dondurma sürer. Ayrışan: ana kaldıraç (kopya kesme / Qwen: eke taşıma — yazarın Tur 129 ipucu),
 etiket (ChatGPT H/C/P/K/S, DeepSeek işlev), H-2 zamanı, 6.1'in evi, 7.4. Okuyucular Tur 152'de birbirine cevap verir; **sonra yazar seçer.**
+
+## Tur 153 (Tur 152 cevapları) — yöntem yakınsadı; yazarın seçimine
+
+**Beşimizin (dört okuyucu + Claude) birleştiği yöntem:**
+- **A. Bulgu haritası** (1 tur): birden çok yerde geçen her bulgu; her geçiş için **işlev** (tanım / argüman adımı / sonuç / sınır / borç — DeepSeek) ve **işlem**
+  (H ev / K kalsın / C yan cümle / P işaretçi / S eke — ChatGPT); ek alanlar: okurun ilk karşılaştığı yer (DeepSeek), korunan cümle ve korunan çiftler (P71, Grok),
+  ev tam mı (ChatGPT). Kümeler: K-1…K-9 + C-10…C-13. Okuyucular ve yazar kabul etmeden hiçbir şey taşınmaz.
+- **B. Sıkıştırma**, tur başına bir küme: ev dışı kopyalar kesilir (C/P), işlevi farklı olan kalır (K); hesap bölümlerinde (7.1, 7.3, 2.1, 2.3) çalışma eke taşınır (S —
+  Qwen'in kaldıracı; yazarın Tur 129 ipucu) Tur 104 testiyle (kalan gövde cümlesi ne bulunduğunu söylemeli); ekte çift oluşmasın (Qwen). Sıra: hesaplar → sınır →
+  çerçeve → mimari en son; 7.4 ayrı kalır.
+- **C. Atıf haritası (H-2)**: evler oturduktan sonra, birleştirmeden önce — **beşi de artık bu zamanda**.
+- **D. Birleştirme** yalnız bir başlık boşaldıysa ya da iki bölüm aynı işi yapıyorsa (6.2 + 9 olası); birleştirici betiğin bölüm tablosu aynı turda (Grok).
+- **E. Son tarama** + özetin yeniden yazımı (Qwen) + birleştirme sonrası bölüm numarası geçişi (DeepSeek) + gönderim öncesi listesi.
+- Her değişiklikten sonra birleşik görünümde denetim; dondurma sürer; bölüm başına kota yok (Grok). Tahmin: 8–12 tur (Grok, ChatGPT, Qwen), 14–18 (DeepSeek).
+
+**Açık kalan:** 6.1'in evi — Bölüm 8 (Grok, ChatGPT) / 5.2 (DeepSeek, Qwen); haritanın kendisi karar versin (ChatGPT). DeepSeek: işlev etiketleri Tur 135 "not …"
+sınıflarıyla birleşsin. ChatGPT: numarasız işaretçi taban çizgisi B'den önce (ötekiler: her değişiklikte). **Yazar seçer.**

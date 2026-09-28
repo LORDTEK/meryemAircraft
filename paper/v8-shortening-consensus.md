@@ -698,3 +698,4 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | W-2 (yazarın cümlesi) teyit | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI (Tur 152)** |
 | **Aşama kapandı** (sonuç cümlelerine yeniden kurma; bütün okuma Tur 146–151; kapanış kapısı) | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI (Tur 152)** |
 | Bir sonraki aşama: beş bağımsız öneri | harita + ev + kopya kes | harita + H/C/P/K/S | harita + işlev etiketi, birleştirme son çare | harita + eke taşıma önce | harita (güncellendi) | **Tur 152: yan yana, birbirine cevap; sonra yazar seçer** |
+| Birleştirme aşaması yöntemi (A harita işlev+işlem → B sıkıştırma/eke taşıma → C H-2 → D gerekirse birleştirme → E son tarama) | ✓ | ✓ | ✓ | ✓ | ✓ | **Yakınsadı (Tur 152 cevapları); yazarın seçimi** — açık: 6.1'in evi (2–2) |
