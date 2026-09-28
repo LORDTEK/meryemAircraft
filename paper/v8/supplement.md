@@ -2032,6 +2032,54 @@ Section 11. *(They are sized for moments and used for them in both regimes; they
 margin (Section 5) but were not sized for weight support. Section 3's permitted-cost clause
 therefore places them outside the first charge while leaving them in the airstream.)*
 
+### Section 8's paragraphs as they stood before the Round 164 cuts
+
+Each paragraph below lost a sentence or a clause, or was replaced by one sentence, in Round 164; it is given here in full, verbatim, under its original heading.
+
+#### The airframe
+
+The entire airframe is the wing. There is no cylindrical fuselage: every part of the body that
+is carried is also a part that lifts. Leading-edge sweep varies continuously along the span while
+the trailing edge is held at 25°, so the realised sweep runs from 45° at the root to 38.3° at the
+tip — a variation of under seven degrees, with the crescent character coming from the curvature of
+the leading edge rather than from a large change in sweep. For the 50 kg reference design — the design this inventory describes; Section 10 re-closes it at
+four masses, and Section 12 sets it beside a 1 000 kg reference design — the span is 3.453 m, the wing area 1.979 m², and the aspect ratio 6.03.
+
+#### What meets the ground
+
+**One part is not airframe: the flight control system.** The stability of this configuration is not airframe-borne alone — the rest is produced by
+differential thrust and by the strip, both of which are actively commanded — so an attitude
+reference and a flight computer are not optional equipment but part of the mechanism the
+preceding paragraphs describe. They are carried in the systems budget. The configuration
+replaces a pilot's workload with computation, and the computer is the part that does it.
+
+#### What moves
+
+The propellers rotate, and their shaft speed is commanded; but none of them
+changes its orientation relative to the airframe, or its blade pitch, at any point in the flight.
+**Beyond the propellers' rotation, one thing on this aircraft changes its configuration: the
+strip.**
+It is specified as deployable in two halves — one side alone for roll, both together as a speed
+brake. The actuator inventory is therefore the propulsion motors plus the strip's actuation.
+**How many actuators that is, this study does not fix.** The systems budget carries the
+actuation without sizing the mechanism, and naming a number here would be inventing one.
+
+#### What this inventory does not settle
+
+**An untrimmed hover torque, with no trim mechanism identified.** This is a control question
+rather than a property of the hardware, and it is stated as one.
+
+#### What this inventory does not settle
+
+The torque balance within each pair is set exact at the cruise condition rather than at hover, so
+a small residual remains in hover. It acts about the propeller axis — the aircraft's longitudinal
+axis, which is the roll axis in body terms (Section 8, *The propulsion*).
+
+#### What this inventory does not settle
+
+**The fixed geometry of the tip pairs leaves two admissible cruise states, and only one of them
+is physically closed.** Unable to feather, the pairs must either turn at the zero-shaft-torque
+condition or be stopped. This configuration uses the first: free-wheeling at zero shaft torque is the tip pairs' uncommanded cruise state, and it is the drag state Section 11 charges. The shaft power of commanded departures from that state, for attitude moments in cruise, is not computed.
 
 ---
 
@@ -3695,6 +3743,36 @@ reorients a propulsor — is a count of hardware, and nothing in this section re
 is the aircraft, and the paper has not claimed the aircraft.
 
 The last section returns to the four axes of Section 9 and states what is claimed on each.
+
+### Section 14's paragraphs as they stood before the Round 164 cuts
+
+Each paragraph below lost a sentence or a clause, or was replaced by one sentence, in Round 164; it is given here in full, verbatim, under its original heading.
+
+#### First, the known obstacle: the energy store
+
+**Closing the loop on a measured store is a sensitivity of that package, not a second aircraft**: the buffer is derived inside the loop from the take-off demand at a given specific power, and everything else is Section 10's. At the bench rate of about 1.5 kW per kilogram the loop closes at 94.6 to 101.2 kg, 76 to 81 percent heavier, with a buffer of 13.4 to 14.7 percent; at the design study's 4 kW per kilogram it closes 6 to 8 percent heavier (the table is Supplement S14). **These masses are the Section 10 package with one input changed. They are not a structural closure at 100 kg**, and whether the airframe fraction holds at twice the mass it was set at is not established. If Section 10's take-off masses are retained instead of re-closing at the bench rate, the payload falls to about 7 kg rather than 13; at the flown system's continuous rating the loop only just closes, and at the unit pack's continuous rating it does not close at all.
+
+#### Then what is not known
+
+The remaining items are not known obstacles; they are questions this work has not answered, and each is listed with what would settle it in Supplement S14. They are:
+- the pitching moment through the transition;
+- section drag at low Reynolds number;
+- the tip pairs' stopped cruise state;
+- the tip pairs' shaft power when commanded off the free-wheeling state in cruise;
+- the buffer's energy, not only its power;
+- the electrical path at peak;
+- the airframe's mass;
+- the strip and the fairing;
+- closed-loop attitude control in hover and in cruise, including the declined reaction-torque channel, the hover torque residual and the allocation of the tip pairs between take-off margin and attitude authority;
+- vertical descent and the landing transition;
+- ground handling and landing loads;
+- the competitor's lift-group mass;
+- the competitor's cruise propeller efficiency;
+- rotor–structure and rotor–wing interference;
+- engine installation;
+- blade-family selection;
+- the variable-pitch counterfactual;
+- atmosphere.
 
 ---
 

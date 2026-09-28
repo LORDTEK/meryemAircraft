@@ -114,13 +114,20 @@ ad, b = adim_metni(7, 3)
 parca.append("### 5.1 %s\n\n%s" % (ad, alt(b)))
 ad8, b8 = adim_metni(8, 3)
 p8 = b8.split("\n\n")
-kes = next(i for i, p in enumerate(p8) if p.startswith("### What this inventory does not settle"))
+# Tur 163: "does not settle" basligi kaynakta yoksa (dagitilmis 5.2) Adim 8 bolunmez; 5.2 = butun govde.
+kes = next((i for i, p in enumerate(p8) if p.startswith("### What this inventory does not settle")), None)
 basarisiz = next(i for i, p in enumerate(p8) if p.startswith("**The tip pairs are the parts that fail"))
-envanter = p8[:kes] + [p8[basarisiz]]
-kalan = [p for i, p in enumerate(p8[kes:], kes) if i != basarisiz]
+if kes is None:
+    envanter, kalan, kes = p8, [], len(p8)
+else:
+    envanter = p8[:kes] + [p8[basarisiz]] if basarisiz > kes else p8[:kes]
+    kalan = [p for i, p in enumerate(p8[kes:], kes) if i != basarisiz]
 # Tur 162 (yazar): eski Bolum 6 ("What this inventory does not settle") 5.2'nin SON alt bolumu; Bolum 6 kalkti.
-k_ad = kalan[0][4:].strip()
-parca.append("### 5.2 %s\n\n%s\n\n#### %s\n\n%s" % (ad8, alt("\n\n".join(envanter)), k_ad, alt("\n\n".join(kalan[1:]))))
+if kalan:
+    k_ad = kalan[0][4:].strip()
+    parca.append("### 5.2 %s\n\n%s\n\n#### %s\n\n%s" % (ad8, alt("\n\n".join(envanter)), k_ad, alt("\n\n".join(kalan[1:]))))
+else:
+    parca.append("### 5.2 %s\n\n%s" % (ad8, alt("\n\n".join(envanter))))
 
 # 6: 10-13 (Tur 160, D1: Adim 10'un ilk paragrafi sozlesme cumlesiyse 6.1'in basligindan ONCE, Bolum 6'nin basina)
 parca.append("## 6. The calculations")
@@ -153,7 +160,7 @@ for adim, q, _ in liste():
 govdeler = sum(len(govde(n).split()) for n in range(1, 16) if n != 9)
 print("ASSEMBLED.md: %d kelime (adim govdeleri %d; fark = yeni basliklar)" % (len(metin.split()), govdeler))
 print("Adim 8 bolunmesi: envanter %d paragraf + 'tip pairs … fail' -> 5.2; kalan %d paragraf -> 5.2 sonu"
-      % (kes, len(kalan) - 1)); print("  (Tur 162: kalan -> 5.2 son alt bolum; Adim 9 emekli, Bolum 8 = Adim 15)")
+      % (kes, max(len(kalan) - 1, 0))); print("  (Tur 162: kalan -> 5.2 son alt bolum; Adim 9 emekli, Bolum 8 = Adim 15)")
 print("EKLEM (%d) — kaynakta degistirilmedi, gosterilecek:" % len(eklemler))
 for a, e, y in eklemler:
     print("   Adim %2d: %-28s -> %s" % (a, e, y))

@@ -677,3 +677,9 @@ Uygulandı: Ek S9 (birleşme öncesi iki gövde tam); `v8-caveats.md` alt tablos
 - Taslaklar: `paper/v8/drafts/08-A1-distributed.md`, `08-A2-above-below.md`, `14-B-shortened.md`; üretici `paper/build/v8_round163_drafts.py`; birleştirici yaması
   (başlık yoksa Adım 8 bölünmez) `paper/build/v8_round163_patch_asm.py`.
 - **Tur metninde kendi hatam:** tırnaksız heredoc başlıktaki ters tırnakları kabukta çalıştırdı (commit satırı boşaldı); gönderilmeden onarıldı.
+
+## E12 — Bölüm 7'nin yeniden kapanış paragrafı ve iki korunan cümlesi eke · **KARAR (Tur 163): "kapanış bir cümle ile"; Tur 164: "yukarısı aşağısı olsun, itiraz yoksa uygula"**
+
+Uygulandı (Tur 164): 5.2 yukarısı/aşağısı + C1–C5 (1 930 → 1 843); Bölüm 7 liste ve yeniden kapanış birer cümle (1 185 → 908); iki korunan cümle Ek S14'te (`| S14 | … | E12 |`).
+Dört okuyucu ciddi itiraz etmedi. Uygularken: "axis ." boşluğu düzeltildi (Grok, DeepSeek). S14'te 19 satır, biri "known obstacle" diye işaretli → 18 bilinmeyen (Grok'un sorusu).
+Birleştirici: başlık yoksa Adım 8 bölünmez (dağıtılmış seçenek için hazırdı, bugün kullanılmıyor). Gövde 18 759. Açık: DeepSeek Cut A/B (oy), sıradaki birleştirme/kısaltma önerileri.

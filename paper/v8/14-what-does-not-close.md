@@ -50,7 +50,7 @@ Section 10 closed the sizing loop on a declared package and said that whether an
 
 **The take-off demand of Section 10's closures is 3.7 to 4.1 times the bench rate — the highest figure obtained from a measurement — and 6.2 to 6.8 times the flown system's continuous rating**; hover alone is 3.1 to 3.5 times the bench rate. The comparison is between unlike ratings: a peak demand held through the vertical phases, a bench average over minutes, a continuous rating, a design assumption, and a literature figure the study cites without its rating. **The gap is real on every one of them; the factor quoted is peak demand against bench average.** The package Section 10 closes on does not exist with any store the sources consulted here report as built.
 
-**Closing the loop on a measured store is a sensitivity of that package, not a second aircraft**: the buffer is derived inside the loop from the take-off demand at a given specific power, and everything else is Section 10's. At the bench rate of about 1.5 kW per kilogram the loop closes at 94.6 to 101.2 kg, 76 to 81 percent heavier, with a buffer of 13.4 to 14.7 percent; at the design study's 4 kW per kilogram it closes 6 to 8 percent heavier (the table is Supplement S14). **These masses are the Section 10 package with one input changed. They are not a structural closure at 100 kg**, and whether the airframe fraction holds at twice the mass it was set at is not established. If Section 10's take-off masses are retained instead of re-closing at the bench rate, the payload falls to about 7 kg rather than 13; at the flown system's continuous rating the loop only just closes, and at the unit pack's continuous rating it does not close at all.
+Closed again on the measured bench rate of about 1.5 kW per kilogram, the same package becomes 76 to 81 percent heavier, a sensitivity of that package with one input changed rather than a structural closure (Supplement S14).
 
 **This is where the coupling Section 12 found is paid**: the buffer is the conversion the escape condition permits — kilowatts of hover peak paid in kilograms of store. **The escape from Bill 3 is real in the sense Section 3 defined it, and its price depends on a component whose required performance has not been demonstrated.**
 
@@ -62,25 +62,7 @@ Section 10 closed the sizing loop on a declared package and said that whether an
 
 ### Then what is not known
 
-The remaining items are not known obstacles; they are questions this work has not answered, and each is listed with what would settle it in Supplement S14. They are:
-- the pitching moment through the transition;
-- section drag at low Reynolds number;
-- the tip pairs' stopped cruise state;
-- the tip pairs' shaft power when commanded off the free-wheeling state in cruise;
-- the buffer's energy, not only its power;
-- the electrical path at peak;
-- the airframe's mass;
-- the strip and the fairing;
-- closed-loop attitude control in hover and in cruise, including the declined reaction-torque channel, the hover torque residual and the allocation of the tip pairs between take-off margin and attitude authority;
-- vertical descent and the landing transition;
-- ground handling and landing loads;
-- the competitor's lift-group mass;
-- the competitor's cruise propeller efficiency;
-- rotor–structure and rotor–wing interference;
-- engine installation;
-- blade-family selection;
-- the variable-pitch counterfactual;
-- atmosphere.
+Eighteen further questions are open, and Supplement S14 lists each with what it bears on and what would settle it.
 
 **None of these is a small correction to a known quantity.** Two of them need validated data rather than more of the computation already done: the transition moment, because three methods have been tried against it and disagree, and the low-Reynolds section drag, because the one method used here is least reliable exactly there.
 

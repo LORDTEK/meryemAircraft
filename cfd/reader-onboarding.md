@@ -214,13 +214,14 @@ The body is about **26 000 words**, and the journal's working target is **about 
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 163.**
+**Round 164.**
 
 | Block | State |
 |---|---|
-| Stages (the author, Round 129) | present stage: **compression by finding**. Merges so far: 6.2 + 9 (−215); the old Section 6 into 5.2 and Section 4's 28 words (Round 162) |
-| Structure | 1 · 2.1–2.3 · 3 · 4 · 5.1–5.2 · **6** calculations (6.1–6.4) · **7** What does not close · **8** Four axes (the conclusion) |
-| **Open (Round 163)** | 5.2 drafted two ways by the author's request: **above/below 1 844 words, distributed 1 816** (today 1 930): distributing buys 28 words; the author chooses. Section 7: the 18-item list to S14 with one sentence, the re-closure to one sentence (two protected sentences to S14 by the author's decision E12): 1 185 → 908. **The author's threshold: apply unless there is a serious objection** |
+| Stages (the author, Round 129) | present stage: **compression by finding**; merges and shortenings continue (the author) |
+| Structure | 1 · 2.1–2.3 · 3 · 4 · 5.1–5.2 (5.2 ends with *What this inventory does not settle*) · **6** calculations (6.1–6.4) · **7** What does not close · **8** Four axes (the conclusion) |
+| Applied (Round 164) | 5.2 above/below with cuts C1–C5 (1 930 → 1 843); Section 7's 18-item list and re-closure paragraph each reduced to one sentence, detail in S14 (1 185 → 908); E12 (author): two protected sentences to S14. Body 18 759 words. For the readers' confirmation |
+| Open (Round 164) | DeepSeek's Cut A / Cut B in 5.2 (vote); readers' next merge and shortening candidates |
 | Contribution | Sections 1, 5.1 and 8 name one contribution, the architecture |
 | Tip pairs in cruise (the author's decision) | uncommanded state: free-wheeling at zero shaft torque (5.2); shaft power of commanded departures not computed |
 

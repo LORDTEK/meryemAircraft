@@ -109,8 +109,6 @@ boşluğa duyarsız. `G` = Grok, `D` = DeepSeek, `C` = ChatGPT, `Q` = Qwen, `K` 
 | 14 | for the first item the answer is no | D |
 | 14 | The comparison is between unlike ratings | D |
 | 14 | The gap is real on every one of them; the factor quoted is peak demand against bench average. | D |
-| 14 | These masses are the Section 10 package with one input changed. | D |
-| 14 | They are not a structural closure at 100 kg | D |
 | 15 | This is a count of mechanism classes, not a claim that nothing moves, and not a claim of mechanical simplicity or reliability | D |
 | 15 | Whether this aircraft completes the rotation is a separate question, and it is not settled here | D |
 | 1 | What is not established is the combination taken together with its price. | G |
@@ -216,6 +214,8 @@ kaybolmasına (CLAUDE.md §0.8). Aynı denetimle sınanır.
 | S10 | The closures do not take that reduction, and it has not been run through the loop. | E7 |
 | S11 | No line item at the adverse end is an independent measurement, and they should not be subtracted from one another as if they were. | E9 |
 | S12 | This paragraph compares the reference pair only. | E10 |
+| S14 | These masses are the Section 10 package with one input changed. | E12 |
+| S14 | They are not a structural closure at 100 kg | E12 |
 | S9 | By construction" throughout this paper means "by the sizing", never "by demonstration. | E11 |
 
 *Tanım kaydı (Tur 111; Qwen P1, dört okuyucu + Claude): son beş Q+G+C+D+K satırı çerçevenin tanım cümleleri; kök (satır "is the origin of all three charges below") ve koşul zaten korunuyordu.*
