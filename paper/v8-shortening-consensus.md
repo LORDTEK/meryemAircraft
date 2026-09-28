@@ -662,3 +662,8 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | P-j, P-q, D-1–D-4, Q-2 | ✓ | ✓ | ✓ | ✓ | ✓ | **Kabul (Tur 145)** — bundan sonraki düzenlemelere; geriye dönük denetim yok |
 | H-2 atıf haritası: kur | ✓ | ✓ | ✓ | ✓ | ✓ | **Kabul (Tur 145)**; **ne zaman** sorusu Tur 145'te döngü teşhisiyle birlikte geri soruldu |
 | Yeni öneriler (ChatGPT H-3; DeepSeek P2–P4, harita sütunları; Qwen P1 şema, P2 "seventy years") | — | öneren | öneren | öneren | ? | **Park listesine önerildi (Tur 145, döngü teşhisi)** |
+| Tur 144 kaydı (Tur 145 §1) teyit | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI (Tur 146)** |
+| Öneri F: F-1 kapsam dondurma, F-2 yeniden sıralama, F-3 bütün okumanın sabit kapsamı | ✓ | ✓ | ✓ | ✓ | ✓ | **Kabul (Tur 146)**; yazara bildirildi, karar yazarın |
+| Park listesi (H-3; harita sütunları/şema; DeepSeek D-P2–D-P4; Qwen Q-P2) | ✓ | ✓ | ✓ | ✓ | ✓ | **Park (Tur 146)** — `paper/v8-parking.md` |
+| F-1 birleşik ifade (DeepSeek "detects" + ChatGPT park çizgisi); F-4 taban çizgisi (geçici uygulandı); park disiplini; Qwen P1 persona (iki sınırla) | ? | ? | ? | ? | evet | **Tur 146 oylaması** |
+| Bütün okuma birinci yarı: Claude W-1…W-10, L-1…L-8; W-2 yazarın | ? | ? | ? | ? | evet | **Tur 146 oylaması** |

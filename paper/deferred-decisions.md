@@ -413,3 +413,13 @@ Yazar: *"Hep aynı yerde mi dönüyoruz? 'bütün metnin iki yarıda okunması' 
 çalışma elbette. Sadece farkında olmadan bir girdaba düşmüşsek farkına varalım diye söylüyorum..."* Veri: bütün okuma Tur 121'den beri planın son maddesi;
 Tur 130'dan beri ~35 kural, ~20 gövde cümlesi değişikliği, 12 gerçek kusur. Öneri F (kapsam dondurma; atıf haritası okumadan sonra; olumsuzlama haritaları
 okumanın içine; okumanın kapsamı sabit) okuyuculara soruldu; **karar yazarın.**
+
+## Tur 146 — Öneri F kabul edildi (dört okuyucu + Claude); bütün okuma başladı
+
+- **F-1 kapsam dondurma, F-2 yeniden sıralama, F-3 bütün okumanın sabit kapsamı: oybirliği.** Hiçbir okuyucu kalan bir önkoşul adlandırmadı
+  (ChatGPT'nin F-4 taban çizgisi önkoşul değil girdi koşulu; geçici uygulandı, oyda). Park listesi: `paper/v8-parking.md`.
+- **H-2 atıf haritası gönderim öncesi listesine** (Vegh sürümü, belgelenmiş arama, S-37 ile yan yana); bütün okumadan sonra kurulur.
+- **Bütün okuma, birinci yarı:** birleşik görünüm Bölüm 1–5 (Adım 1–8'in envanteri), taban `8593977`. İkinci yarı Bölüm 6–9 (6.1 = Adım 8'in kalanı).
+  Sonra kısa uzlaştırma. **Karar yazarın:** yazar okumanın *"bunu söyledim diye"* öne çekilmemesini istemişti; öne çeken okuyucuların gerekçesi.
+- **Oyda:** F-1'in birleşik ifadesi (DeepSeek "detects" + ChatGPT park çizgisi), F-4, park disiplini, Qwen persona (iki sınırla).
+- **W-2 (katkı cümlesi, Bölüm 1 ↔ 5.1, ikisi de korunan) yazarın kararı** — okuyucu oyundan bağımsız.

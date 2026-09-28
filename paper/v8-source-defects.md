@@ -83,3 +83,19 @@ hemen yanındaki niteleme alınmadı. Kaynak açma kuralı (CLAUDE.md §2.1) bun
 
 **Kümelenme (Qwen):** 12 kusurun 3'ü **taşıma artığı** (S-7, S-11 ve ilk durumu S-1'in bir kısmı): bir tablo ya da paragraf
 başka yere taşındığında geride kalan atıf. `v8_refs.py` bunun için var.
+
+## Tur 146 — bütün okuma, birinci yarı (Bölüm 1–5): Claude'un adayları, oyda (hiçbiri uygulanmadı)
+
+| # | Yer | Soru | Kusur | Köken |
+|---|---|---|---|---|
+| W-1 | 5.1 not; 5.2 *The propulsion*; 5.2 *What produces each moment* | W9, W1 | Adım 8 birleşik görünümde bölününce üç alıcı 6.1'e geçti, işaretçiler 5.1/5.2'de kaldı: "(Section 5.2)" durdurma aracı, "(below)" hız trimi, "(the note below)" **eksen adlandırma notu** — not bütün kullanımlardan sonra geliyor. Alındı denetimi (Tur 130–132) adım dosyalarında koştu ve numarasız işaretçileri kapsamıyordu | **R** (birleştirme, Tur 68) |
+| W-2 | Bölüm 1 (K) ↔ 5.1 (G) | W2 | Bölüm 1: tek katkı mimari; 5.1: katkı "combination, the condition …, and the price" — üç nesne, biri çerçeve (§0.6'nın tersi). İkisi de korunan; **yazarın kararı** | S |
+| W-3 | 2.3 | W5 | *"one tenth"* birimsiz; %10 okunur (0,1 L/De; %1,2) | S |
+| W-4 | 4 | W5, W2 | *"roughly a quarter to a half"* turboşaftta en iyi aile okuması, elektrikte zarf okuması | S |
+| W-5 | 1 | W2, W7 | *"continuously since"* (1954'ten) tanıksız; aynı bölüm *"for more than a decade"* | S |
+| W-6 | 2.2 izin verilen beşinci maliyet | W4 | *"Attitude devices produce thrust in cruise"* durumsuz; kendi uçağında kumandasız seyir durumu serbest dönme | S |
+| W-7 | 2.2 dışlama | W1, W2 | "herhangi bir yapılandırmadan önce" diyen bölüm uç çerçevelerini tanımlanmadan kullanıyor | S |
+| W-8 | 3 | W1 | *"the strip"* ilk kez belirli tanımlıkla, tanıtılmadan | S |
+| W-9 | 1 | W2, W7 | *"the second is the more demanding to build"* ölçülmemiş karşılaştırma; 2007 alıntısı eğimliyi kuyruk üstüyle karşılaştırıyor | S |
+| W-10 | 2.2 son paragraf | W8 | *"The third departure is refused by a means other than the one the field has adopted."* öznesiz, ters okunuyor | S |
+| L-1…L-8 | çeşitli | — | düşük öncelik; L-2 (0,85 iki nesne) rastlantı kaydına yazıldı | S |

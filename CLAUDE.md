@@ -553,6 +553,14 @@ dahil herkesin hemfikir olduğu kısaltmalar uygulansın."*
   Başka dergi odağı kaybolmaz, yüksek kelimeli makaleyle kör atış yapılmaz.
 - **Şeffaflık herkese:** her tur metninin hata bölümü benim ve her okuyucunun hatasını adıyla **bütün okuyuculara** yazar; okuyucular
   birbirlerinin görüşlerine cevap verir (Tur 85, 106).
+- **Girdap uyarısı ve kapsam dondurma (yazar Tur 145; F oybirliği Tur 146).** Yazar: *"Hep aynı yerde mi dönüyoruz? 'bütün metnin iki yarıda
+  okunması' kaç turdur hep 4 tur uzakta..."* — okuma Tur 121'den beri planın son maddesiydi; her tur ~1 kusur bulup 3–5 kural ekliyorduk ve ben
+  her eki "son parça" diye sundum. **F-1:** aşama bitene kadar yeni kural/alan/denetim türü yalnız şimdiki gövdede bulunmuş adlı bir kusurla;
+  gerisi `paper/v8-parking.md`'ye, yalnız bir sonraki aşamanın başında okunur. **F-3:** bütün okuma birleşik görünümde (okurun karşılaştığı
+  sıra), iki yarı, soru listesi yalnız dondurmadan önce kabul edilmiş denetimlerden. **Kendime not:** bir öneriyi yazmadan önce sor — bu bir
+  önkoşul mu, yoksa yalnız iyileştirme mi? İyileştirmeyse park.
+- **Birleşik görünüm de denetlenir (Tur 146, W-1).** Alındı denetimi adım dosyalarında koştu; `v8_assemble.py` Adım 8'i 5.2 / 6.1 diye bölünce
+  üç alıcı 6.1'e geçti, işaretçiler geride kaldı. Okurun gördüğü metin birleşik görünümdür; bir üretici betik yazan, **çıktısını** denetler.
 
 ## 3. Doğrulama
 
