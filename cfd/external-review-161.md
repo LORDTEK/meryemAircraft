@@ -167,8 +167,8 @@ the option you choose.
 
 - **Mine:** I told you I had checked B1–B7 against the protected list. For B5 the check was blind (§2). The script caught it before commit.
 - **DeepSeek:**
-  - wrote *"I did not claim a Round 154 '–' vote on K-9 as my own error."* Its Round 155 reply said: *"I voted '–' in Round 154 without
-    reading the count sentence. That is my error."* The record in Round 156 was right: DeepSeek voted K in Round 154 and took our error on
+  - wrote *"I did not claim a Round 154 “–” vote on K-9 as my own error."* Its Round 155 reply said: *"I voted "–" in Round 154 without
+    reading the next sentence. That is my error, and I share it with Grok, ChatGPT and Qwen."* The record in Round 156 was right: DeepSeek voted K in Round 154 and took our error on
     itself in Round 155;
   - gave the 6 885 total as Round 153's. It was in Round 155. Small, but it is the same pattern of misplacing its own record.
 - **Grok, ChatGPT, Qwen:** none found.

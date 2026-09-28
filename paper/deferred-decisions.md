@@ -565,3 +565,14 @@ Okuyuculardan ölçümün denetimi istendi (yokluk iddiası, Tur 133).
   (7 804). Grok: 0,0068 7.2'de değil. ChatGPT: geri koymaları ve denetimi "yazara" atfetti.
 - **Kayıt (Grok):** 7.2'nin 0,0154'ü 7.3 yalnız oran verdiği sürece eke gitmez.
 - **Yazara ölçüm raporunda (D sonrası):** DeepSeek'in tablo kaldıracı (5 tablo + 3 şekil ≈ 2 725 kelime eşdeğeri); ChatGPT'nin 7.1–7.3 birleştirme fikri.
+
+## Tur 157 (Tur 156 cevapları) — toplu kesim uygulandı; B5 geri alındı; D evresi açıldı
+
+- **Uygulandı:** B1, B2, B3, B6, B7 (beşimiz ✓) — gövde 20 182 → 19 998 (−184). B4 K (dört veto). Ek aşaması kapandı (Bölüm 4'te S yok; beşimiz).
+- **Benim hatam:** okuyuculara "B1–B7'yi korunan listeye karşı denetledim" dedim; denetimi birleşik görünümde yaptım, korunan cümleler adım numaralı işaretçiyle
+  kayıtlı → işaretçi taşıyan korunanlar görünmezdi. B5 korunan bir cümleyi kısaltıyordu; `v8_caveats.py` uygulamada yakaladı, geri alındı. Usul: taslak
+  okuyucuya gitmeden adım kaynağına geçici uygulanır, `v8_caveats.py` koşar.
+- **Kuruldu:** `v8_count_flag.py` (sayım işareti; `--sina` K-9'u yakalıyor). **Kabul:** durma testi (CLAUDE.md §2.5).
+- **D evresi, 6.2 + 9:** JoA *"Conclusions provide a detailed discussion of study findings"* — Bölüm 9 tek sonuç adayı; "birleştirme" 9'u yok edemez. Seçenekler
+  A (9 = sonuç, 6.2'yi tekrar etmez; Claude), B (6.2 sona — yazarın ana hattı değişir → **yazar kararı**), C (bölme). Önce yapı, taslak sonra.
+- **Okuyucu kaydı:** DeepSeek Tur 155'te üstlendiği hatayı Tur 156'da inkâr etti (alıntı Tur 157 §5).

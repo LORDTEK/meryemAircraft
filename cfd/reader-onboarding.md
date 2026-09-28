@@ -214,14 +214,14 @@ The body is about **26 000 words**, and the journal's working target is **about 
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 156.**
+**Round 157.**
 
 | Block | State |
 |---|---|
-| Stages (the author, Round 129) | present stage: **compression by finding** (method approved Round 153). No round-by-round copy cuts: **the batch (B1–B7, −234 words) is drafted in full and voted in Round 156**; Section 9's rows wait for the 6.2 + 9 merge (Phase D) |
-| Length (E8) | **option 4, unanimous**: target 12 000 words all-in; stop and report to the author with numbers before a cut would remove an argument step. Two papers: closed by the author |
-| Supplement stage | 7.3 moved and **closed** (1 091 → 805; the old text complete in S12; one protected sentence moved by author decision E10). Outside 7.3 the lever is spent in 7.1, 7.2, 7.4 and 2.3 (one 47-word move, B7); Section 4 checked in Round 156 |
-| Protected sentences in "C" rows | two of K-3 6.2's three sentences are protected; the only admissible C deletes the 13-word lead (B1). K-2 5.2 is protected: K |
+| Stages (the author, Round 129) | present stage: **compression by finding**. Supplement stage **closed** (7.3 −286; 7.4 −47). **Batch of copy cuts applied: −184** (B1, B2, B3, B6, B7); B4 kept (four vetoes); B5 reverted (it cut a protected sentence; `v8_caveats.py` caught it). For the readers' confirmation |
+| Phase D (merges) | opens with 6.2 + 9. The *Journal of Aircraft* requires a Conclusions section, and Section 9 is the only candidate; the readers choose the structure (A: 9 becomes the Conclusions without restating 6.2; B: 6.2 moves to the end — the author's outline, so the author's decision; C: split) before any draft. New clusters are mapped after this merge |
+| Length (E8) | option 4, unanimous: target 12 000 all-in; report to the author with numbers before the architecture sections are compressed. Two papers: closed by the author |
+| Rules added this stage | counting flag (`v8_count_flag.py`, flags only); stop test = DeepSeek's for mapped sentences + Round 87 for the rest; protected pre-check on the step files, not the assembled view |
 | Contribution | Sections 1, 5.1, 6.2 and 9 name one contribution, the architecture |
 | Tip pairs in cruise (the author's decision) | uncommanded state: free-wheeling at zero shaft torque (Section 6.1); shaft power of commanded departures not computed |
 

@@ -719,3 +719,11 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Toplu kopya kesme B1–B7 (−234) | ? | ? | ? | ? | önerdi | **Tur 156 oyu** |
 | Sayım işareti (`v8_draft_check.py`; ChatGPT) | ? | önerdi | ? | ? | evet | **Tur 156 oyu** |
 | Durma testi: haritada argüman + başka ev (DeepSeek) + Tur 87 ölçütü (Claude) | ? | ? | önerdi | ? | evet | **Tur 156 oyu** |
+| K-3 6.2 = B1; K-2 5.2 = K | ✓ | ✓ | ✓ | ✓ | ✓ | **uygulandı / kapandı (Tur 157)** |
+| Bölüm 4: S yok; ek aşaması kapanır | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI** (7.3 −286, 7.4 −47) |
+| Toplu kesim B1, B2, B3, B6, B7 (−184) | ✓ | ✓ | ✓ | ✓ | ✓ | **uygulandı (Tur 157)**; sonuç teyide |
+| B4 | veto | K | veto | veto | muhakeme | **K** |
+| B5 | ✓ | ✓ | ✓ | ✓ | ✓ | **geri alındı** — korunan cümle; teyide |
+| Sayım işareti | ✓ | ✓ | ✓ | ✓ | ✓ | **kuruldu** (`v8_count_flag.py`) |
+| Durma testi (DeepSeek + Tur 87) | ✓ | ✓ | ✓ | ✓ | ✓ | **kabul** (CLAUDE.md §2.5) |
+| D evresi 6.2 + 9: A / B / C (JoA sonuç bölümü şartı) | ? | ? | ? | ? | A | **Tur 157 oyu**; B yazarın ana hattını değiştirir → yazar |
