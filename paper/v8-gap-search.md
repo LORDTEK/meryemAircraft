@@ -148,7 +148,7 @@ en yakın bilinen örnek. Adım 1 satırı Tur 137'de oyda.
 | Rohith ve ark. 2026 *J. Aircraft* | verified primary | **hayır** (H-1, Tur 142'de dört okuyucu + Claude; Tur 134 kaydı "evet" diyordu) | hayır | hayır | — | evet | hayır | Adım 1, Adım 7 |
 | Vegh 2025 (müsvedde R3) | verified primary (müsvedde) | hayır | evet | söylemiyor | söylemiyor | evet | hayır | Adım 1 |
 | Vegh düzeltme duyurusu | verified primary (yalnız düzeltme) | — | — | — | — | — | — | hiçbir yerde makale gibi anılmaz (gövde ve ekte aranıp yok, Tur 141) |
-| Rheaume & Lents 2016 | verified primary | hayır | hayır | — | — | kısmen (paralel) | hayır | Adım 7; S14 |
+| Rheaume & Lents 2016 | verified primary | hayır | hayır | — | — | **hayır** (paralel hibrit; öğe kuralı (e), Tur 143) | hayır | Adım 7; S14 |
 | Escareno ve ark. 2007 (tam), 2008 (s. 261–262) | **verified primary** (Tur 142; yazar yükledi) | 2007: hayır (*"oriented more towards a classical fixed-wing aircraft"*, s. 3387); 2008: eldeki sayfalarda yok | 2008: evet (eşeksenli karşıt dönüşlü); 2007 metni eşeksen demiyor | — | — | — | — | Adım 1 eşeksenli madde; PDF istendi |
 | WO2025255583A1, US 2025/0010988 A1, Cai 2024 | yalnız okuyucu özeti — açılmadı | — | — | — | — | — | — | yok (P116) |
 
@@ -157,3 +157,17 @@ doğrulamamla. (a) = BWB ya da uçan kanat kuyruk üstü. Rohith'in aracı bir m
 0.5 m × 0.4 m × 0.4 m"*, s. 580) dört rotorlu çift kanat (QBiT); belgede *"flying wing"* ve *"blended"* geçmiyor. Vegh'in (a)'sı aynı
 ölçütle Tur 136'da "hayır"a çekilmişti; düzeltme Rohith'e **yayılmamıştı**. Gövde etkilenmiyor (Adım 1 satırı *"winged biplane
 tail-sitters"* diyor, BWB demiyor). Kayıt düzeltmesi oyda (Tur 141).
+
+## Tur 143 — gap öğesi karar kuralları (Q-P1; Claude taslağı + Grok, ChatGPT, DeepSeek düzeltmeleri birleşik; teyide)
+
+- **(a) BWB ya da uçan kanat kuyruk üstü:** gövde-kanat tek taşıyıcı yüzeyde kaynaşmış (blended), ya da ayrı bir klasik gövde-ve-kuyruk düzeni yok. Bir gövde,
+  merkez gövde ya da çerçeve üstündeki klasik ya da çift kanat — gövde ne kadar küçük olursa olsun — (a) **değildir**.
+- **(b) Her itici eşeksenli çift:** itki üreten her itici eşeksenli çifttir; herhangi bir tek rotor (b)'yi bozar.
+- **(c) Yönlendirme, eğme, değişken hatve yok:** hiçbir itici gövdeye göre yön değiştirmez, hiçbir pala uçuşta hatve değiştirmez; devir kumandası serbest;
+  durdurulmuş ya da serbest dönen rotor yönlendirme sayılmaz; kolektif, çevrimsel, değişken hatve ya da eğme (c) **değildir**.
+- **(d) En çok bir hareketli aerodinamik aygıt:** uçuşta gövdeye göre hareket eden aerodinamik aygıtlar sayılır; iticiler sayılmaz; deney için sabitlenmiş
+  bir yüzey (kilitli kanatçık) hareketli değildir; *"söylemiyor"* *"evet"* değildir.
+- **(e) Tamponlu seri hibrit:** sürekli santral dikey tepenin altında boyutlanmış (işlevsel koşul), rotorlara elektrikle iletim, tepeyi karşılayan ayrı
+  bir enerji deposu; motoru rotoru doğrudan süren paralel hibrit ya da tümüyle elektrikli (e) **değildir**.
+- **(f) Üç faturalı muhasebe:** kaynak taşınan askı kütlesini, açıkta seyir sürüklemesini ve askıyla boyutlanan sürekli gücü **ayrı fiyatlanmış** üç
+  yük olarak verir; anmak yetmez.

@@ -647,3 +647,9 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | P-g, P-d′, Q-P1, D-P4 | ✓ | ✓ | ✓ | ✓ | ✓ | **Kabul (Tur 142)**; CLAUDE §3.0 |
 | Escareno/Liebeck okumasından: W (rota maddesine 2007 alıntısı), E-1 (eşeksenli maddenin bedeli birincilin sözcükleriyle), N9 ("more than three decades") | — | — | — | — | evet | **Tur 142 oylaması** |
 | P-h (okuma derinliği ayrı alan — mevcut "doğrulama" alanının değerleri açılır); DeepSeek P1–P4; Qwen P1 (öğe karar kuralları), P2 (yayılma defteri) | — | öneren | öneren | öneren | evet | **Tur 142 oylaması** |
+| Tur 142 okumaları; N8 yan cümlesi, H-1, Merical teyit | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI (Tur 143)** |
+| W ("states the comparison"), E-1 (b), N9 | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı (Tur 143)**; teyide |
+| D-P1, D-P2, D-P3, D-P4b, Q-P2; P-h ilkesi | ✓ | ✓ | ✓ | ✓ | ✓ | **Kabul (Tur 143)** |
+| Q-P1 karar kuralları (düzeltmeler birleşik) | ✓ | ✓ | ✓ | ✓ | ✓ | **Birleşik metin teyide (Tur 143)** |
+| P-h değer listesi: Claude'un tek listesi / DeepSeek'in iki alanı (erişim derinliği + doğrulama) | tek | tek | **iki** | tek | → iki | **Ayrışık — Tur 143'te geri soruldu** |
+| E-1′ ("in the same terms" sil); ChatGPT P-i; Qwen P1 (karmaşıklık izi), P2 (alıntı bağlamı) | — | öneren | — | öneren | evet | **Tur 143 oylaması** |

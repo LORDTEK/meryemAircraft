@@ -189,6 +189,7 @@ EMEKLI = {
     "the published chain": "Tur 140: S-61",
     "at its published mass": "Tur 140: S-61",
     "the published comparison is mixed": "Tur 140: N5 -- karsilastirma bizim, yayimlanmis sayilara karsi",
+    "at the cost of an extra motor and the": "Tur 143: E-1 -- bedel birincilin sozcukleriyle (Escareno 2008 s. 262)",
 }
 
 

@@ -246,3 +246,12 @@ declining it"* çerçevesi artık iki birincil tanıkla (Zhang 2012 eşeksenli �
   gövdeye girmez.
 - **Kaynak durumu güncellemesi (P-d):** Escareno gerekçe yan cümlesi verified primary; bedel yan cümlesi verified secondary (birincil nitelemesi
   bulundu); Liebeck verified primary; Merical verified primary — abstract only.
+
+**Tur 143 — eşeksenli maddenin kaynak ayrımı (DeepSeek R142):** gövdedeki *"coaxial"* **Escareno 2008**'e (s. 262, Twister) dayanır; Escareno 2007 metni
+*"coaxial"* demiyor. İki Escareno ayrı tanıktır: 2007 → rota karşılaştırması (W, s. 3385) ve tepki torku kanalı kullanımı (s. 3389); 2008 → eşeksenli
+çiftin gerekçesi ve bedeli (E-1, s. 262). **Kaynak bağlamı (Qwen R142-P2, oyda):** 2007'nin tanık aracı iz içinde kumanda yüzeyi kullanıyor (bizim reddettiğimiz);
+W alıntısı bunu kendi sözleriyle söylüyor.
+
+**Tur 143 — öğe karar kurallarıyla (Q-P1, birleşik metin teyide) yeniden sınıflama:** Rheaume & Lents (e) *"kısmen (paralel)"* → **hayır** (paralel hibrit
+(e) değildir). Oosedo (d) **evet** kalır (kilitli kanatçık hareketli aygıt sayılmaz — Grok). Yang (a) evet, Rohith (a) hayır, Vegh (a) hayır, Escareno 2007
+(d) hayır: kurallarla tutarlı.

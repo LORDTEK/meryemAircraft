@@ -214,17 +214,16 @@ The body is about **26 000 words**, and the journal's working target is **about 
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 142.**
+**Round 143.**
 
 | Block | State |
 |---|---|
 | Stages (the author, Round 129) | each stage is a pass through the whole text; the next stage's method is chosen when the present one is complete. Present stage: recomposition into result sentences |
 | Length | **not decided now** (the author): after this stage completes |
 | Tip pairs in cruise (the author's decision) | uncommanded state: free-wheeling at zero shaft torque (Step 8); shaft power of commanded departures not computed (Step 8; Step 14) |
-| Step 14 / S14 | eighteen unknowns; N7, N8 closed; N8 witness-scope clause applied |
-| Witnesses | Oosedo 2013, Escareno 2007 and 2008 (pp. 261–262 only), Liebeck 2004 read at first hand; W, E-1, N9 (Step 1) to vote |
-| Rules added | regime vocabulary (acts in / selected by / cross-regime); secondary ≠ primary for occupied elements; final number pass (figures scripted, tables read) |
-| Record-propagation sweep (H) | under way: H-1 applied (record only); decision rules for (a)–(f) and a propagation ledger to vote |
+| Step 1 | W (2007 comparison, quoted to its end), E-1 (coaxial cost in the primary's words), N9 applied, to confirm; E-1′ (delete "in the same terms") to vote |
+| Gap elements | decision rules (a)–(f) merged from all corrections, to confirm; Rheaume (e) → no under rule (e) |
+| Evidence record | P-h principle adopted; one-field vs two-field value list divided (DeepSeek: two) |
 | To complete the stage | rest of H; Step 1 and Step 8 denial maps; the whole reading in two halves (1–8, 9–15) and a short reconciliation |
 
 **Every step has now been recomposed once.** Recomposition into result sentences took Steps 10–11 to about 40 % of their length,

@@ -10,6 +10,8 @@ KOK = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))
 # Tur 86: kisaltma DEGIL, oylanmis icerik duzeltmesi -- eski cumle bilerek emekli edildi (emekli listesinde);
 # yeni hali govdede aranir. Eski cumle eke konmaz (emekli ifadeyi dergiye tasimamak icin).
 DEGISTI = {
+    "Tail-sitting aircraft are seventy years old; blended wing bodies have been a standing subject of transport research for three decades; series-hybrid propulsion has been flown in a crewed motor glider and designed for small uncrewed aircraft.":
+        "Tail-sitting aircraft are seventy years old; blended wing bodies have been a standing subject of transport research for more than three decades; series-hybrid propulsion has been flown in a crewed motor glider and designed for small uncrewed aircraft.",   # Tur 143: N9 (dort okuyucu + Claude; Liebeck 2004 s. 10)
     "That is an idealisation in its favour, and it is deliberate: it makes the tilt row a bound.":
         "That is an idealisation in its favour, and it is deliberate: it makes the tilting layout a bound.",
     "Whatever that store turns out to cost, holding it common charges all three the same assumption.":
