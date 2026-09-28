@@ -214,17 +214,16 @@ The body is about **26 000 words**, and the journal's working target is **about 
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 144.**
+**Round 145.**
 
 | Block | State |
 |---|---|
 | Stages (the author, Round 129) | each stage is a pass through the whole text; the next stage's method is chosen when the present one is complete. Present stage: recomposition into result sentences |
 | Length | **not decided now** (the author): after this stage completes |
 | Tip pairs in cruise (the author's decision) | uncommanded state: free-wheeling at zero shaft torque (Step 8); shaft power of commanded departures not computed (Step 8; Step 14) |
-| Step 1 | W, E-1, N9 closed; E-1′ applied, to confirm; every occupied element has a primary witness (final audit); two secondary history rows to vote |
-| Evidence record | fields: type/version · in repository · read by · access depth · verification · page basis; quotation lock; complexity trace enforced by `v8_stale.py` |
-| Record-propagation sweep (H) | nearly done; last piece: a citation map (v8 has no reference list yet) to vote |
-| To complete the stage | citation map; Step 1 and Step 8 denial maps; the whole reading in two halves (1–8, 9–15) and a short reconciliation |
+| Step 1 | closed through E-1′; every occupied element has a primary witness |
+| The author's question (Round 145) | are we in a loop? "the whole reading" has been the last planned item since Round 121. Proposal F (scope freeze; citation map after the reading; denial maps folded into it; fixed scope for the reading) to vote |
+| To complete the stage | if F passes: the whole reading in two halves (1–8, 9–15), then a short reconciliation; then the citation map and the pre-submission list |
 
 **Every step has now been recomposed once.** Recomposition into result sentences took Steps 10–11 to about 40 % of their length,
 Steps 12–14 to 57–83 %, and the framework and architecture to 80–95 %, because definitions, protected sentences and their evidence

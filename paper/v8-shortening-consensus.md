@@ -657,3 +657,8 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | E-1′ ("in the same terms" silindi) | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı (Tur 144)**; teyide |
 | P-h iki alan; P-i; Q-P1b (izi `v8_stale.py`'de); Q-P2b | ✓ | ✓ | ✓ | ✓ | ✓ | **Kabul/uygulandı (Tur 144)** |
 | ChatGPT P-j (kaynak değiştirmede yüklem yönü); ChatGPT'nin Q-P2b alan adı; DeepSeek P1–P4; Qwen P1 (koşuldu), P2 | — | öneren | öneren | öneren | evet | **Tur 144 oylaması** |
+| E-1′ teyit | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI (Tur 145)** |
+| İki ikincil satır belgelenmiş istisna (genel tarih) | ✓ | ✓ | ✓ | ✓ | ✓ | **Kabul (Tur 145)**; kanıt kaydı |
+| P-j, P-q, D-1–D-4, Q-2 | ✓ | ✓ | ✓ | ✓ | ✓ | **Kabul (Tur 145)** — bundan sonraki düzenlemelere; geriye dönük denetim yok |
+| H-2 atıf haritası: kur | ✓ | ✓ | ✓ | ✓ | ✓ | **Kabul (Tur 145)**; **ne zaman** sorusu Tur 145'te döngü teşhisiyle birlikte geri soruldu |
+| Yeni öneriler (ChatGPT H-3; DeepSeek P2–P4, harita sütunları; Qwen P1 şema, P2 "seventy years") | — | öneren | öneren | öneren | ? | **Park listesine önerildi (Tur 145, döngü teşhisi)** |

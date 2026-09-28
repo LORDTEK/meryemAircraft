@@ -406,3 +406,10 @@ numarasıyla istendi. Gelmezse ya da yetmezse Vegh **iz** olarak kapanır: metne
   ilk cümlesi yalnız De Wagter 2018 s. 3 üzerinden (verified secondary). Yazardan PDF istendi (Tur 141).
 - **S-37 türetmesi başarılırsa** (Qwen R140-P1, oyda): iz sınırının askıdaki girişim sonucu da (S14 girişim satırı) değerlendirilir.
 - **"more than three decades"** (Adım 1; Liebeck 2004: 1988) — gönderim tarihine göre yeniden bakılır (Qwen R143-P2, oyda).
+
+## Tur 145 — yazarın sorusu: döngüde miyiz?
+
+Yazar: *"Hep aynı yerde mi dönüyoruz? 'bütün metnin iki yarıda okunması' kaç turdur hep 4 tur uzakta... Hayır yani bunu söyledim diye onu öne çekmeye
+çalışma elbette. Sadece farkında olmadan bir girdaba düşmüşsek farkına varalım diye söylüyorum..."* Veri: bütün okuma Tur 121'den beri planın son maddesi;
+Tur 130'dan beri ~35 kural, ~20 gövde cümlesi değişikliği, 12 gerçek kusur. Öneri F (kapsam dondurma; atıf haritası okumadan sonra; olumsuzlama haritaları
+okumanın içine; okumanın kapsamı sabit) okuyuculara soruldu; **karar yazarın.**

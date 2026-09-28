@@ -285,3 +285,7 @@ alıntı için tanık ile yapılandırmamız arasındaki yorumu etkileyen fark k
 | BWB otuz yılı aşkın | Liebeck 2004 s. 10 | birincil ✓ |
 
 **Sonuç:** boşluğun dolu öğelerinin hepsinde birincil tanık var. İki ikincil satır tarih/genel cümlelerde; oyda (Tur 144): istisna olarak mı kalsın, birincil mi aransın.
+
+**Tur 145 — iki ikincil satır belgelenmiş istisna (dört okuyucu + Claude; P-d′, D-P2 izi).** Tür ayrımı (DeepSeek): **genel tarih**, dolu öğe değil.
+- XFY-1 (NASA 19810010574): programın kendi raporları aranmadı; inceleme programı yürüten kurumun kendi tarih kaydı.
+- Motorlu planör (Schoemann 2014 s. 25–26): planörün kendi belgesi aranmadı; cümle *"None of the elements is new"* paragrafında, boşluk iddiası taşımıyor.
