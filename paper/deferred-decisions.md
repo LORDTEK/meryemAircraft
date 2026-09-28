@@ -699,3 +699,13 @@ Birleştirici: başlık yoksa Adım 8 bölünmez (dağıtılmış seçenek için
   (2) Bölüm 7 "debt" cümlesi (−25). (3) 6.2 listesi → iki kalemi adlandıran bir cümle (−~60, yeniden yazım). (4) Büyük kaldıraç: 2.3 → sonuç paragrafı + S4 (L3, yazarın
   Tur 129 ipucu; yalıtım çifti kuralı ve 2.3'ün 15 korunan cümlesiyle) — yazarın izni gerekir. Reddettiklerim: katalog, Bölüm 1 listesi (§2.2: dolu olan boşluktan önce
   sayılır), 99 lb, 6.1 türetmesi, 2.2 ve Bölüm 4 nitelikleri.
+
+## Tur 165 — yazar: "1, 2, 3 okuyuculara gitsin, 4 için taslak yaz"
+
+- C1 (6.4 tablosu → S13, −75 + bir tablo), C2 (Bölüm 7 "debt" cümlesi, −18), C3 (6.2 listesi → iki kalemi adlandıran bir cümle, −34) oylamada.
+- **Benim hatam (Tur 164):** Bölüm 7'nin listesi S14'e gidince yalnız yeni işaretçileri okudum; Bölüm 7'ye işaret eden değişmemiş sekiz cümleden üçü artık tutmuyordu
+  (Bölüm 3 "vortex ring … open question in Section 7"; 6.2 "Section 7 lists them"; Bölüm 8 "Section 7 lists what the paper leaves open"). Onarımlar R-a, R-b, C3 oylamada.
+  Usul: bir bölümün içeriği değişince ona İŞARET EDEN her cümle yeniden okunur.
+- 2.3 taslağı (yazarın isteği): 1 282 → 1 004; 15 korunan cümle ve yalıtım çifti yerinde; tartım dökümü (580/99 lb) niteleyicisiyle birlikte S4'e. Daha derini (~500) ancak
+  korunan cümlelerin yazar kararıyla S4'e gitmesiyle — önermedim.
+- Taslaklar `paper/v8/drafts/r165/`; üreticiler `paper/build/v8_round165_cuts.py`, `v8_round165_23.py`.
