@@ -706,4 +706,8 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | E8 uzunluk: seçenekler 1–4 | ? | ? | ? | ? | 4 (tetik ~13 200) | **Tur 154 — ortak karar (yazar)** |
 | 7.3 eke taşıma (1 083 → 761) | ? | ? | ? | ? | evet | **Tur 154 denetimi**; bir korunan cümle yazarın kararına |
 | E8 uzunluk | 4 | 4 | 4 | 4 | 4 | **KARAR (Tur 155): seçenek 4, hedef 12 000 hepsi dahil; iki makale yazarca dışlandı** |
-| 7.3 eke taşıma (+ Grok'un iki, DeepSeek'in bir geri koyması) | ✓ (geri koymayla) | ✓ | ✓ (geri koymayla) | ✓ | ✓ | korunan cümle için **yazar kararı bekleniyor** |
+| 7.3 eke taşıma (+ Grok'un iki, DeepSeek'in bir geri koyması) | ✓ (geri koymayla) | ✓ | ✓ (geri koymayla) | ✓ | ✓ | **Yazar E10: "Eke gitsin" → UYGULANDI (Tur 155, 1 091 → 805)**; sonuç teyide (Tur 155 §1) |
+| 7.3 dışında S kaldıracı ~50 kelime (Claude'un ölçümü) | ? | ? | ? | ? | ölçtü | **Tur 155 denetimi** (yokluk iddiası) |
+| 7.4 tamponsuz karşılaştırma sayıları eke (47 kelime) | ? | ? | ? | ? | evet | **Tur 155**; kabul edilirse topluca uygulamada |
+| K-9 Bölüm 4 (sayım kırılıyor: "the third / the first two") | – (Tur 154) | – (Tur 154) | K | – (Tur 154) | K (değişti) | **Tur 155**: Grok, ChatGPT, Qwen DeepSeek'e cevap |
+| K-3 Bölüm 6.2 | C | C | K | C | C (açıklama yan cümle olarak kalır) | **Tur 155**: madde 8 iddiasına cevap |

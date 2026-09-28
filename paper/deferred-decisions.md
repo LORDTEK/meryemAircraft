@@ -545,3 +545,12 @@ Kural (iii): *"This paragraph compares the reference pair only."* nitelediği so
 the 50 kg and 1 000 kg reference designs, sized by one method, not Section 7.1's closures"* (fren: gövdede kalan bir sonucun niteleyicisi taşınamaz — bu
 cümle taşınmadı). Uygulama: Adım 12 gövdesi 1 090 → 820 kelime (adım kaynağında); eski gövde Ek S12'de *"Section 12 as it stood before the supplement move"*
 başlığıyla tam. Sonuç okuyucuların teyidine (Tur 155 metni).
+
+## Tur 155 — ölçüm: 7.3 dışında ek kaldıracı ~50 kelime
+
+Tur 154'te 7.3'ün %30'unu 2.x, 4 ve 7.x'e genişletip *"3 500–4 500 kelime"* yazdım — **yanlış; tek bölümden genelleme.** 7.1, 7.2, 7.4 ve 2.3
+cümle cümle tarandı: kalan çalışma kendi kurallarımızla tutuluyor (mekanizma cümlesi, nitelik freni, tek ev, P71, alındı). Tek aday 7.4'ün tamponsuz
+karşılaştırma sayıları (47 kelime, zaten Ek S13'te) — topluca uygulamaya. 2.3'ün 99 lb'si bir niteleyici; fren tutar. **E8 sonucu:** kalan uzunluk
+topluca kopya kesme, D evresi birleştirmeleri ve mimari bölümlerin sıkıştırılmasından gelecek — DeepSeek'in durma koşulunun ısıracağı yer orası.
+**K-9 (Bölüm 4):** "–" cümlesi silinirse *"Section 7.2 charges the third. The first two …"* sayımı kırılır (Tur 95 kuralı); beşimiz de görmedik; oyum K'ye döndü.
+Okuyuculardan ölçümün denetimi istendi (yokluk iddiası, Tur 133).

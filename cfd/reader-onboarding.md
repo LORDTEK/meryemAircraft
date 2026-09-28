@@ -214,13 +214,14 @@ The body is about **26 000 words**, and the journal's working target is **about 
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 154.**
+**Round 155.**
 
 | Block | State |
 |---|---|
-| Stages (the author, Round 129) | present stage: **compression by finding** (the author approved the method, Round 153). The author: no round-by-round copy cuts (they total about 280 words); the map's copy cuts are applied once, in a batch |
-| Length (E8) | **decided by the common decision of the four readers and Claude** (the author, Round 154). The AIAA guideline (uploaded; in `references/`) gives Regular/Full Articles **10 000–12 000 words, recommended**, with editor discretion. Arithmetic: 2.x + 4 + 7.x = 11 261; the rest = 9 070; the Round 72 decision cuts from everywhere, calculations first |
-| First supplement move | Section 7.3, measured: 1 083 → 761 words (about 30 %), for the readers' check |
+| Stages (the author, Round 129) | present stage: **compression by finding** (method approved Round 153). No round-by-round copy cuts; the map's copy cuts and the two unsettled rows (K-3 6.2, K-9 4) are applied once, in a batch |
+| Length (E8) | **decided, option 4, unanimous** (Round 155): target 12 000 words all-in; calculations and framework first, then the architecture sections (Round 72: from everywhere); stop and report to the author with numbers if a cut would remove an argument step. **Two papers: closed by the author** |
+| First supplement move | **Section 7.3 applied** (1 091 → 805 words; the old section complete in Supplement S12; the protected *"This paragraph compares the reference pair only."* moved by author decision E10). For the readers' confirmation |
+| Measurement | outside 7.3 the supplement lever is about 50 words (one candidate, in 7.4); the rest of the length must come from the batch, Phase D merges and the architecture sections. For the readers' check |
 | Contribution | Sections 1, 5.1, 6.2 and 9 name one contribution, the architecture |
 | Tip pairs in cruise (the author's decision) | uncommanded state: free-wheeling at zero shaft torque (Section 6.1); shaft power of commanded departures not computed |
 
