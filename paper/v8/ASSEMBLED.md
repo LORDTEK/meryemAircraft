@@ -328,7 +328,7 @@ attitude. **No launch equipment is present.** It rests on five points: the four 
 the tip frames and the aft end of a keel running along the centreline.
 
 **Those five points are not added hardware.** The tip frames are the landing structure, they are
-also the structure that carries the attitude propellers and sets their moment arm, and their
+also the structure that carries the four tip pairs (the attitude propellers) and sets their moment arm, and their
 fairing is the aircraft's only vertical surface. **One structure serves four purposes and is
 charged to the mass budget once** — Section 5.2 gives the fairing's sizing.
 
@@ -615,7 +615,7 @@ that reorients a propulsor. The assembly is not offered as novel because it is a
 offered for what it satisfies, and for what it does not need in order to satisfy it — and Section 1
 has already set out how much of the ground is occupied.
 
-**The qualification in that sentence is not decoration.** Section 2.2 lists partial instantiation among the ways an architecture can fail
+**The qualification "in the propulsor that carries the aircraft" is not decoration.** Section 2.2 lists partial instantiation among the ways an architecture can fail
 the condition: meeting it where the aircraft is carried and failing it elsewhere. That is this
 configuration's own case. The single nose pair meets all four parts — same hardware, both duties
 served, one orientation, hover peak from a buffer. The four tip pairs do not: they are exposed
@@ -1165,6 +1165,6 @@ question, and it is not settled here.
 **Range, against the other hybrids — not claimed, in either direction.** The ordering belongs to the sizing
 contract (Section 7.4).
 
-Section 8 lists what would settle the rest. What the paper offers is **a configuration sized to combine
+Section 8 lists what the paper leaves open. What the paper offers is **a configuration sized to combine
 runway-independent vertical operation with wing-borne cruise efficiency, arranged to do so with no mechanism
 that reorients a propulsor, and an account of what the combination costs.**
