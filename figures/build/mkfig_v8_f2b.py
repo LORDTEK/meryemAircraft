@@ -37,7 +37,7 @@ TE=rc+ys*math.tan(ste*D2R)
 # --- serit ---
 zA0=rc*0.15; L=rc*1.20
 uu=np.linspace(0,1,300); sx=uu*L; sz=zA0+uu*L
-# --- iz siniri: 0.67 -> 0.47, kok veteri boyunca ---
+# --- iz siniri: 0.67 -> 0.47, kok veteri boyunca (CIZIM ICIN; etiket sayi tasimaz -- F1, Tur 140) ---
 r0,r1=0.67,0.47
 def rz(z): return np.where(z<=rc, r0+(r1-r0)*np.clip(z,0,rc)/rc, r1)
 # kesisim
@@ -77,11 +77,11 @@ ax.annotate("2 cm",xy=(0.02,0.155),xytext=(-0.62,-0.08),fontsize=10,color=INK,
 ax.annotate("6 cm  ·  outer end at\n67 % of semi-span",xy=(1.164,1.305),xytext=(1.42,1.66),
             fontsize=10,color=INK,ha="left",va="center",linespacing=1.45,
             arrowprops=dict(arrowstyle="->",color=INK,lw=0.9))
-ax.annotate("slipstream boundary\n0.67 m  →  0.47 m",xy=(0.52,1.62),xytext=(0.10,2.24),
+ax.annotate("slipstream boundary\n(estimate, not derived; Section 8)",xy=(0.52,1.62),xytext=(0.10,2.24),
             fontsize=10.4,color=TEAL,ha="center",va="center",linespacing=1.45,
             arrowprops=dict(arrowstyle="->",color=TEAL,lw=1.0))
 ax.plot([half],[TE[-1]],"|",ms=11,color=MUT,mew=1.6)
-ax.text(half+0.06,TE[-1]+0.16,"tip\n$b/2$ = 1.73 m",ha="center",va="top",fontsize=9.6,
+ax.text(half+0.06,TE[-1]+0.16,"tip\n$b/2$ = 1.726 m",ha="center",va="top",fontsize=9.6,
         color=MUT,linespacing=1.35)
 ax.set_xlim(-2.40,2.30); ax.set_ylim(2.45,-0.95); ax.set_aspect("equal"); ax.axis("off")
 ax.text(-2.40,2.62,"One device, two regimes. The strip is on the lower surface, inclined at 45°, "
