@@ -2,7 +2,7 @@
 
 > **This is a task. Please answer it now, and begin with your name alone on the first line.**
 >
-> Commit **`@@COMMIT@@`**, branch `claude/ecstatic-cori-6w30at` (for verification only). **The whole assembled paper is quoted in §4**,
+> Commit **`9a73722`**, branch `claude/ecstatic-cori-6w30at` (for verification only). **The whole assembled paper is quoted in §4**,
 > because this question is about the whole paper.
 
 ---
