@@ -642,3 +642,8 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | P-d, P-e (betik yazıldı, sınandı), P-f | ✓ | ✓ | ✓ | ✓ | ✓ | **Kabul/uygulandı (Tur 141)** |
 | ChatGPT P-g (etkidiği / seçildiği / rejimler arası bağımlılık); P-d inceltmesi (ikincil ≠ birincil dolu öğede) | — | öneren | — | — | evet | **Tur 141 oylaması** |
 | Qwen P1 (iz etkileşimi izi, S-37'ye bağlı); P2 (eksen adı koruması, uygulandı kayıtta) | — | — | — | öneren | evet | **Tur 141 oylaması** |
+| N7, N8 teyit; N8 yan cümlesi (DeepSeek) | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI / yan cümle uygulandı (Tur 142)**; teyide |
+| H-1 Rohith (a) → hayır; Escareno ikincil kalsın (PDF gelince birincil); Merical "verified primary — abstract only"; Liebeck iste | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı (Tur 142)**; PDF'ler geldi ve okundu |
+| P-g, P-d′, Q-P1, D-P4 | ✓ | ✓ | ✓ | ✓ | ✓ | **Kabul (Tur 142)**; CLAUDE §3.0 |
+| Escareno/Liebeck okumasından: W (rota maddesine 2007 alıntısı), E-1 (eşeksenli maddenin bedeli birincilin sözcükleriyle), N9 ("more than three decades") | — | — | — | — | evet | **Tur 142 oylaması** |
+| P-h (okuma derinliği ayrı alan — mevcut "doğrulama" alanının değerleri açılır); DeepSeek P1–P4; Qwen P1 (öğe karar kuralları), P2 (yayılma defteri) | — | öneren | öneren | öneren | evet | **Tur 142 oylaması** |

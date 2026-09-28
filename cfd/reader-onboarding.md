@@ -214,17 +214,17 @@ The body is about **26 000 words**, and the journal's working target is **about 
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 141.**
+**Round 142.**
 
 | Block | State |
 |---|---|
 | Stages (the author, Round 129) | each stage is a pass through the whole text; the next stage's method is chosen when the present one is complete. Present stage: recomposition into result sentences |
 | Length | **not decided now** (the author): after this stage completes |
 | Tip pairs in cruise (the author's decision) | uncommanded state: free-wheeling at zero shaft torque (Step 8); shaft power of commanded departures not computed (Step 8; Step 14) |
-| Step 14 / S14 | eighteen unknowns; N7 and N8 applied (S14 rows widened to hover), to confirm; DeepSeek's contra-rotating clause to vote |
-| Witnesses | Oosedo 2013 verified primary; Escareno 2007/2008 verified secondary only (PDFs requested); provenance status (P-d) on every Step 1 occupied claim |
-| Tools | `v8_figures.py` (figure numbers vs body/supplement, with self-test) added to the standing checks |
-| Record-propagation sweep (H) | begun: correction notice never cited as the paper; gap-search status table; H-1 (Rohith (a) record error) to vote |
+| Step 14 / S14 | eighteen unknowns; N7, N8 closed; N8 witness-scope clause applied |
+| Witnesses | Oosedo 2013, Escareno 2007 and 2008 (pp. 261–262 only), Liebeck 2004 read at first hand; W, E-1, N9 (Step 1) to vote |
+| Rules added | regime vocabulary (acts in / selected by / cross-regime); secondary ≠ primary for occupied elements; final number pass (figures scripted, tables read) |
+| Record-propagation sweep (H) | under way: H-1 applied (record only); decision rules for (a)–(f) and a propagation ledger to vote |
 | To complete the stage | rest of H; Step 1 and Step 8 denial maps; the whole reading in two halves (1–8, 9–15) and a short reconciliation |
 
 **Every step has now been recomposed once.** Recomposition into result sentences took Steps 10–11 to about 40 % of their length,

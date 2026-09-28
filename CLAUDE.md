@@ -605,7 +605,7 @@ listesine karşı. (5) **Liste tamlığı** (Qwen): metin "lists / names / the f
 kapsamda** (ChatGPT) tam mı.
 **Kabul (Tur 140, dört okuyucu + Claude):** (6) **Rejim alanı ve rejim tamlığı** (ChatGPT, Qwen P2) — borç izinde her madde rejim taşır
 (askı / seyir / geçiş / çoklu); kontrol ya da dinamikle ilgili her Adım 14 maddesi, niceliğin etkidiği her rejimi kapsıyor mu diye denetlenir (S-60).
-(7) **Çerçeve/uçak ayrımı** (Qwen P1) — Adım 14 adayı uçak hakkında olmalı; çerçevenin sınırı E sınıfıdır, Adım 14'e girmez. (8) **S14 eşlemesi**
+**Ek (Tur 142, dört okuyucu + Claude):** rejim sözlüğü (ChatGPT P-g) — bir nicelik bir rejimde *etkir* / o rejimin gereğiyle *seçilir* / *rejimler arası bağımlılıktır*; bir nicelik aynı rejime birden çok ilişkiyle bağlı olabilir. **P-d′:** dolu bir öğe için verified secondary, verified primary'ye denk sayılmaz; durum hakeme görünür kalır ve birincil aranır. **D-P4:** son sayı kimliği geçişinde hiçbir şekil ya da tablo sayısı açılmamış bir kaynağa dayanmaz; kaynağın açılmış olması sayının doğrulandığı demek değildir (ChatGPT) — kimlik testi değer + birim + nesne + model/durum/tarih. (7) **Çerçeve/uçak ayrımı** (Qwen P1) — Adım 14 adayı uçak hakkında olmalı; çerçevenin sınırı E sınıfıdır, Adım 14'e girmez. (8) **S14 eşlemesi**
 (Qwen P3) — her S14 satırı ya adlı bir Adım 14 maddesine ya da bilinen engele bağlanır. (9) **Kaynak katmanları beş** (P-c inceltmesi, DeepSeek):
 kaynak olgusu · kaynağın kendi sınırı/nitelemesi · kaynak sessizliği · bizim sınıflamamız · makalemizin iddiası; *"was not investigated"* araç hakkında
 bir yokluğa, *"does not state"* bir niteliğe sıkıştırılamaz.

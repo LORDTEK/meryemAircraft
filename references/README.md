@@ -121,6 +121,9 @@ güncellendi (arşivdeki eski tur metinleri hariç — onlar yazıldıkları an�
 | `1521_Johnson & Silva_122721.pdf` | NASA kavram araçları; Adım 4'ün Tablo 3'ü (`aero/effective_ld.py`) |
 | `div-class-title-nasa-concept-vehicles-and-the-engineering-of-advanced-air-mobility-aircraft-div.pdf` | Aynı makalenin Cambridge kopyası (`paper/nasa-numbers-open.md`) |
 | `ica20120400001_12673514.pdf` | Zhang ve ark. 2012, eşeksenli kuyruk üstü; tepki torku kanalı (`aero/reaction_torque.py`, CLAUDE.md §0.1) |
+| `Escareno-2007_ECC_transition-convertible-tailsitter-UAV.pdf` | Escareno ve ark. 2007, ECC, s. 3385–3390 — kuyruk üstü geçişi; rotor devir farkıyla yatış torku (yazar yükledi, Tur 142; Adım 1) |
+| `Escareno-2008_UAS-Springer_coaxial-convertible-mini-UAV_PARTIAL-pp261-262.pdf` | Escareno ve ark. 2008 — eşeksenli dönüştürülebilir İHA; **yalnız s. 261–262** (yazar yükledi, Tur 142; Adım 1) |
+| `Liebeck-2004_JAircraft_design-of-BWB-subsonic-transport.pdf` | Liebeck 2004, *J. Aircraft* 41(1), 10–25 — BWB taşıtın tarihi ve tasarımı (yazar yükledi, Tur 142; Adım 1 son paragraf) |
 | `Oosedo-2013_ICRA_quad-rotor-tailsitter-without-control-surfaces.pdf` | Oosedo ve ark. 2013, ICRA, s. 317–322 — kumanda yüzeysiz dört rotorlu kuyruk üstü; askı, geçiş, seyir uçuşu (yazar yükledi, Tur 140; Adım 1) |
 | `2014_0529_paper.pdf` | Wang ve ark. 2014; askıda yatış/sapma adlarının yer değiştirmesi (CLAUDE.md §0.1) |
 | `Wagter_et_al_2018_Journal_of_Field_Robotics.pdf` | De Wagter ve ark. 2018, DelftaCopter kuyruk üstü İHA (`paper/prior-art-finding.md`) |
