@@ -171,3 +171,6 @@ tail-sitters"* diyor, BWB demiyor). Kayıt düzeltmesi oyda (Tur 141).
   bir enerji deposu; motoru rotoru doğrudan süren paralel hibrit ya da tümüyle elektrikli (e) **değildir**.
 - **(f) Üç faturalı muhasebe:** kaynak taşınan askı kütlesini, açıkta seyir sürüklemesini ve askıyla boyutlanan sürekli gücü **ayrı fiyatlanmış** üç
   yük olarak verir; anmak yetmez.
+
+**Tur 144 — kurallar teyit edildi (dört okuyucu + Claude).** DeepSeek'in (f) kaydı: üç yükü *tek toplam* olarak fiyatlayan ya da yalnız birini fiyatlayan
+kaynak (f)'yi karşılamaz.

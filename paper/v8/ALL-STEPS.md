@@ -83,7 +83,7 @@ operated without control surfaces, with experimental verification, was reported 
 **Coaxial contra-rotating propulsion on a tail-sitter is established**, proposed specifically to
 face the reaction torque a single propeller imposes *"without using complementary controls"*, at a cost its proposers name
 directly: it *"increases the mechanical complexity."* A coaxial contra-rotating tail-sitting micro air vehicle reported in 2014
-states the same purpose in the same terms: *"a pair of 10 inches coaxial contra rotating
+states the same purpose: *"a pair of 10 inches coaxial contra rotating
 propellers is mounted to compensate each other's torque."*
 
 **The established answer to hover control on such a configuration is a surface in the

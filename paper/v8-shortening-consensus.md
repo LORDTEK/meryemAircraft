@@ -653,3 +653,7 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Q-P1 karar kuralları (düzeltmeler birleşik) | ✓ | ✓ | ✓ | ✓ | ✓ | **Birleşik metin teyide (Tur 143)** |
 | P-h değer listesi: Claude'un tek listesi / DeepSeek'in iki alanı (erişim derinliği + doğrulama) | tek | tek | **iki** | tek | → iki | **Ayrışık — Tur 143'te geri soruldu** |
 | E-1′ ("in the same terms" sil); ChatGPT P-i; Qwen P1 (karmaşıklık izi), P2 (alıntı bağlamı) | — | öneren | — | öneren | evet | **Tur 143 oylaması** |
+| W, E-1, N9 teyit; karar kuralları teyit; Rheaume (e) hayır | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI (Tur 144)** |
+| E-1′ ("in the same terms" silindi) | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı (Tur 144)**; teyide |
+| P-h iki alan; P-i; Q-P1b (izi `v8_stale.py`'de); Q-P2b | ✓ | ✓ | ✓ | ✓ | ✓ | **Kabul/uygulandı (Tur 144)** |
+| ChatGPT P-j (kaynak değiştirmede yüklem yönü); ChatGPT'nin Q-P2b alan adı; DeepSeek P1–P4; Qwen P1 (koşuldu), P2 | — | öneren | öneren | öneren | evet | **Tur 144 oylaması** |

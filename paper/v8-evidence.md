@@ -255,3 +255,33 @@ W alıntısı bunu kendi sözleriyle söylüyor.
 **Tur 143 — öğe karar kurallarıyla (Q-P1, birleşik metin teyide) yeniden sınıflama:** Rheaume & Lents (e) *"kısmen (paralel)"* → **hayır** (paralel hibrit
 (e) değildir). Oosedo (d) **evet** kalır (kilitli kanatçık hareketli aygıt sayılmaz — Grok). Yang (a) evet, Rohith (a) hayır, Vegh (a) hayır, Escareno 2007
 (d) hayır: kurallarla tutarlı.
+
+**Tur 144 — kanıt satırı alanları yeniden düzenlendi (P-h, dört okuyucu + Claude; DeepSeek'in iki alanı):** tür/sürüm · depoda · okuyan ·
+**erişim derinliği** (tam / kısmi / yalnız özet / yalnız başlık ya da kaynakça / okunmadı) · **doğrulama** (depo PDF'i / tek okuyucu görüntüsü / ikincil
+kaynak / doğrulanmadı) · alıntı sayfa tabanı. Örnek: Vegh — konferans bildirisi, **kısmi**, **tek okuyucu görüntüsü** (ChatGPT); müsvedde R3, **tam**,
+**depo PDF'i** (Claude). Escareno 2008 — **kısmi**, depo PDF'i.
+
+**Tur 144 — alıntı kilidi (P-i, ChatGPT; dört okuyucu + Claude):** kaynaktan türeyen her cümle *birebir alıntı* / *sadık aktarma* (tırnaksız) / *bizim
+sınıflamamız*; tırnak yalnız birebir metne; aynı cümlede alıntı ve aktarma varsa ayrı işaretlenir. **Alıntı bağlamı (Q-P2b):** gövdeye giren her yeni
+alıntı için tanık ile yapılandırmamız arasındaki yorumu etkileyen fark kayda yazılır (W: 2007 aracı iz içinde kumanda yüzeyi kullanıyor).
+
+**Tur 144 — Adım 1 dolu listesinin son kanıt denetimi (Qwen R143-P1):** her dolu-öğe iddiasının en az bir **verified primary** tanığı var mı?
+
+| Adım 1 iddiası | En güçlü tanık | Sonuç |
+|---|---|---|
+| rota kurulu | Oosedo 2013 s. 317 (örnek); De Wagter 2018 s. 2 (tarama) | birincil ✓ |
+| rota karşılaştırması (W) | Escareno 2007 s. 3385 | birincil ✓ |
+| kumanda yüzeysiz 2013 | Oosedo 2013 | birincil ✓ |
+| eşeksenli çift (E-1) | Escareno 2008 s. 262; Wang 2014 | birincil ✓ |
+| iz içindeki yüzey | Wang 2014; Yang-Zhu 2018 | birincil ✓ |
+| tepki torku kanalı | Zhang 2012; Oosedo 2013 s. 319; Escareno 2007 s. 3389 | birincil ✓ |
+| BWB kuyruk üstü 2025 | SkySwift | birincil ✓ |
+| seri hibrit + kanatlı kuyruk üstü | Rohith 2026 | birincil ✓ |
+| eşeksenli + seri hibrit depo | Vegh müsveddesi R3 | birincil (müsvedde; sürüm gönderimden önce) ✓ |
+| pervane uzlaşması | De Wagter 2018 | birincil ✓ |
+| XFY-1 1954 (rota tarihi) | NASA 19810010574 | **ikincil** — istisna: tarih cümlesi, boşluğun dolu bir öğesi değil; D-P2 izi: program belgesi aranmadı |
+| seri hibrit motorlu planörde uçtu | Schoemann 2014 s. 25–26 | **ikincil** — istisna: *"None of the elements is new"* paragrafı; D-P2 izi: planörün kendi belgesi aranmadı |
+| seri hibrit küçük İHA için tasarlandı | Merical 2014 | birincil, yalnız özet |
+| BWB otuz yılı aşkın | Liebeck 2004 s. 10 | birincil ✓ |
+
+**Sonuç:** boşluğun dolu öğelerinin hepsinde birincil tanık var. İki ikincil satır tarih/genel cümlelerde; oyda (Tur 144): istisna olarak mı kalsın, birincil mi aransın.

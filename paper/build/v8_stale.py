@@ -190,6 +190,9 @@ EMEKLI = {
     "at its published mass": "Tur 140: S-61",
     "the published comparison is mixed": "Tur 140: N5 -- karsilastirma bizim, yayimlanmis sayilara karsi",
     "at the cost of an extra motor and the": "Tur 143: E-1 -- bedel birincilin sozcukleriyle (Escareno 2008 s. 262)",
+    "states the same purpose in the same terms": "Tur 144: E-1' -- terimler artik ayni degil",
+    "mechanically simpler": "Tur 144: Q-P1b -- basitlik iddiasi yok (Adim 9 madde 4); karmasiklik yalniz kaynak sozu",
+    "more reliable": "Tur 144: Q-P1b -- guvenilirlik olculmedi",
 }
 
 
@@ -200,6 +203,8 @@ YALNIZ = {
     "by any combination of thrust settings": ("01-the-gap.md",),
     # Tur 98 (Grok P61, DeepSeek; dort okuyucu + Claude): varyant; her ikisinde de reddedilen tepki torku kanali izliyor.
     "combination of thrust settings produces a moment": ("07-the-combination.md", "08-what-it-is-made-of.md"),
+    # Tur 144 (Q-P1b, dort okuyucu + Claude): "mechanical complexity" yalniz Adim 1'in kaynak alintilarinda.
+    "mechanical complexity": ("01-the-gap.md",),
 }
 
 
