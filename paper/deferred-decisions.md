@@ -637,3 +637,13 @@ Uygulandı: Ek S9 (birleşme öncesi iki gövde tam); `v8-caveats.md` alt tablos
 - **Okuyucu hataları:** DeepSeek — Bölüm 6'nın korunan cümlelerini yanlış adlandırdı (korunanlar: "The stopped state is not" satırı, "assumed azimuth" satırı, "Either the
   residual…" satırı); korunan cümlenin eke taşınması için yazar kararı gerekmez dedi (kural iii gerektirir); Bölüm 6'ya bir işaretçi dedi (üç: 4, 5.2 ×2). Qwen — "dış
   işaretçi bozulmaz" dedi (Bölüm 4'ten biri var). ChatGPT — zaten uygulanmış sweep kesimini aday gösterdi.
+
+## Tur 162 — yazarın kararları: Bölüm 6 → 5.2'nin sonu; 28 kelime silindi; yeni iki soru
+
+- Yazar: *"5.2'nin sonuna gitsin, 28 kelime de silinsin. Parça parça 6.1 ve 5.2 iki ayrı şey fakat birleşince bütün gözüyle yazılabilir. Yazarken farkedeceğin haklılığım
+  olacaktır. Neyse, şimdi bunu yapacağız. Sonra okuyucular yeniden bir öneri daha sunacaklar. Ayrıca mevcut bölüm 8 yani kapanmayanlar için 1200 kelime çok fazla. Zaten ne
+  olmadığını söylediğimiz için ne olduğunu anlatmaya yer kalmamış. Böyle olmaz. Bölüm 8 kısalacak, eğer birleşmiyorsa."*
+- Uygulandı: `v8_assemble.py` — Adım 8'in kalanı 5.2'nin son alt bölümü; numaralar 7→6, 8→7, 9→8; Adım 8 içindeki işaretçi "(below)"; Adım 6'nın 28 kelimesi silindi
+  (paragraf Ek S6'da tam). `--sina-bolunmus` yeniden anlamlı kılındı.
+- **Benim yakaladığım hatam (tur metninde, gönderilmeden):** korunan listeyi yeni numaralara çevirirken "Section 3" → "2.2" sonra "Section 2" → "2.1" sırası "2.1.2" üretti; düzeltildi.
+- Açık: A (5.2 bütün gözüyle), B (Bölüm 7 "What does not close" kısalır ya da birleşir) — okuyucu önerileri, sonra yazara.

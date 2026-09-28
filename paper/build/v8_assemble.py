@@ -21,10 +21,10 @@ V8 = os.path.join(KOK, "paper", "v8")
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from v8_caveats import duz, liste  # noqa: E402
 
-HARITA = {1: "1", 2: "2.1", 3: "2.2", 4: "2.3", 5: "3", 6: "4", 7: "5.1", 8: "5.2", 9: "9",   # Tur 160: Adim 9 Adim 15e birlesti (emekli)
-          10: "7.1", 11: "7.2", 12: "7.3", 13: "7.4", 14: "8", 15: "9"}
-EVDEKI = {1: "1", 2: "2", 3: "2", 4: "2", 5: "3", 6: "4", 7: "5", 8: "5", 9: "9",
-          10: "7", 11: "7", 12: "7", 13: "7", 14: "8", 15: "9"}
+HARITA = {1: "1", 2: "2.1", 3: "2.2", 4: "2.3", 5: "3", 6: "4", 7: "5.1", 8: "5.2", 9: "8",   # Tur 160: Adim 9 Adim 15e birlesti (emekli)
+          10: "6.1", 11: "6.2", 12: "6.3", 13: "6.4", 14: "7", 15: "8"}   # Tur 162: eski Bolum 6 5.2ye girdi; 7-9 -> 6-8
+EVDEKI = {1: "1", 2: "2", 3: "2", 4: "2", 5: "3", 6: "4", 7: "5", 8: "5", 9: "8",
+          10: "6", 11: "6", 12: "6", 13: "6", 14: "7", 15: "8"}
 
 
 def govde(n):
@@ -76,7 +76,7 @@ def cevir(metin, adim, kaydet=True):
 
 # Bolunmus adima (Adim 8 -> 5.2 + 6.1) acik atiflar (Tur 147, W-1): kaynakta alt basligi adlandirilir,
 # gorunumde dogru alt bolum numarasina cevrilir. Ciplak "Section 8" 5.2'ye gider.
-BOLUNMUS = {"(Section 8, *What this inventory does not settle*)": "(Section 6)",   # Tur 160: 6.2 kalkti, 6 tek parca
+BOLUNMUS = {"(Section 8, *What this inventory does not settle*)": "(Section 5.2)",   # Tur 162: alt bolum 5.2nin sonunda   # Tur 160: 6.2 kalkti, 6 tek parca
             "(Section 8, *The propulsion*)": "(Section 5.2)"}
 
 
@@ -118,24 +118,21 @@ kes = next(i for i, p in enumerate(p8) if p.startswith("### What this inventory 
 basarisiz = next(i for i, p in enumerate(p8) if p.startswith("**The tip pairs are the parts that fail"))
 envanter = p8[:kes] + [p8[basarisiz]]
 kalan = [p for i, p in enumerate(p8[kes:], kes) if i != basarisiz]
-parca.append("### 5.2 %s\n\n%s" % (ad8, alt("\n\n".join(envanter))))
-
-# 6: Adim 8 kalani (Tur 160: Adim 9 = eski 6.2, Bolum 9'a birlesti; 6 artik tek parca, alt baslik numarasiz)
-parca.append("## 6. The soundness of the resulting product")
+# Tur 162 (yazar): eski Bolum 6 ("What this inventory does not settle") 5.2'nin SON alt bolumu; Bolum 6 kalkti.
 k_ad = kalan[0][4:].strip()
-parca.append("### %s\n\n%s" % (k_ad, alt("\n\n".join(kalan[1:]))))
+parca.append("### 5.2 %s\n\n%s\n\n#### %s\n\n%s" % (ad8, alt("\n\n".join(envanter)), k_ad, alt("\n\n".join(kalan[1:]))))
 
-# 7: 10-13 (Tur 160, D1: Adim 10'un ilk paragrafi sozlesme cumlesiyse 7.1'in basligindan ONCE, Bolum 7'nin basina)
-parca.append("## 7. The calculations")
+# 6: 10-13 (Tur 160, D1: Adim 10'un ilk paragrafi sozlesme cumlesiyse 6.1'in basligindan ONCE, Bolum 6'nin basina)
+parca.append("## 6. The calculations")
 for i, n in enumerate((10, 11, 12, 13), 1):
     ad, b = adim_metni(n, 3)
     if n == 10 and b.startswith("Because the comparative result depends on the sizing contract"):
         ilk, _, b = b.partition("\n\n")
         parca.append(ilk)
-    parca.append("### 7.%d %s\n\n%s" % (i, ad, alt(b)))
+    parca.append("### 6.%d %s\n\n%s" % (i, ad, alt(b)))
 
-# 8, 9
-for s, n in ((8, 14), (9, 15)):
+# 7, 8
+for s, n in ((7, 14), (8, 15)):
     ad, b = adim_metni(n, 2)
     parca.append("## %d. %s\n\n%s" % (s, ad, b))
 
@@ -155,8 +152,8 @@ for adim, q, _ in liste():
             eksik.append((adim, q[:70]))
 govdeler = sum(len(govde(n).split()) for n in range(1, 16) if n != 9)
 print("ASSEMBLED.md: %d kelime (adim govdeleri %d; fark = yeni basliklar)" % (len(metin.split()), govdeler))
-print("Adim 8 bolunmesi: envanter %d paragraf + 'tip pairs … fail' -> 5.2; kalan %d paragraf -> 6"
-      % (kes, len(kalan) - 1)); print("  (Tur 160: kalan -> Bolum 6, tek parca; Adim 9 emekli, Bolum 9 = Adim 15)")
+print("Adim 8 bolunmesi: envanter %d paragraf + 'tip pairs … fail' -> 5.2; kalan %d paragraf -> 5.2 sonu"
+      % (kes, len(kalan) - 1)); print("  (Tur 162: kalan -> 5.2 son alt bolum; Adim 9 emekli, Bolum 8 = Adim 15)")
 print("EKLEM (%d) — kaynakta degistirilmedi, gosterilecek:" % len(eklemler))
 for a, e, y in eklemler:
     print("   Adim %2d: %-28s -> %s" % (a, e, y))
@@ -168,7 +165,7 @@ def bolunmus_liste(metin):
     for n in [x for x in range(1, 16) if x != 9]:
         for m in re.finditer(r"[^.]*\bSections? (?:\d+(?:, | and ))*8(?!\d|\.\d|, \*)[^.]*\.", govde(n)):
             out.append(("Adim %d -> 5.2" % n, " ".join(m.group(0).split())[:110]))
-    for bas, son in (("### 5.2 ", "## 6."), ("## 6. ", "## 7. ")):
+    for bas, son in (("### 5.2 ", "## 6."),):
         b = metin[metin.index(bas):metin.index(son, metin.index(bas))]
         for m in re.finditer(r"[^.]*\b(above|below)\b[^.]*\.", b):
             out.append((bas.strip("# "), " ".join(m.group(0).split())[:110]))
@@ -176,8 +173,9 @@ def bolunmus_liste(metin):
 
 
 if "--sina-bolunmus" in sys.argv:
-    metin_s = metin.replace("that cancellation is no longer exact (Section 6)", "that cancellation is no longer exact (below)")
-    yakaladi = any("no longer exact (below)" in x for _, x in bolunmus_liste(metin_s))
+    # Tur 162: 5.2'de artik mesru bir "(below)" var; sinama, 5.2 bolgesine YENI bir numarasiz isaretci koyup listenin bir artmasini ister.
+    metin_s = metin.replace("fail the escape condition** (Section 5.1)", "fail the escape condition** (below)")
+    yakaladi = metin_s != metin and len(bolunmus_liste(metin_s)) == len(bolunmus_liste(metin)) + 1
     print("  %s  --sina-bolunmus: W-1 '(below)' geri kondu, liste %s" % ("ok" if yakaladi else "!!", "gosterdi" if yakaladi else "GOSTERMEDI"))
     sys.exit(0 if yakaladi else 1)
 bl = bolunmus_liste(metin)
@@ -185,7 +183,7 @@ print("BOLUNMUS ADIM ISARETCILERI (%d) — insan okusun:" % len(bl))
 for yer, c in bl:
     print("   %-16s %s" % (yer, c))
 kalan_atif = set(re.findall(r"Sections? (\d+(?:\.\d)?)", metin))
-gecerli = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "2.1", "2.2", "2.3", "5.1", "5.2"} | {"7.%d" % i for i in range(1, 5)}
+gecerli = {"1", "2", "3", "4", "5", "6", "7", "8", "2.1", "2.2", "2.3", "5.1", "5.2"} | {"6.%d" % i for i in range(1, 5)}
 print("cozulmeyen atif:", sorted(kalan_atif - gecerli) or "yok")
 if eksik:
     print("EKSIK KORUNAN CUMLE:", eksik)

@@ -1617,6 +1617,17 @@ pitching moment must come from the distribution of lift along the body itself. A
 fixed-pitch propeller that serves both regimes is the reason the margin above sits where it does
 rather than higher. Section 11 charges the third. The first two are inside Section 10's closed numbers — the wing's mass in the empty fraction, the constrained planform in the computed span efficiency — but neither is separated out as a charge, and the wing's exposure to ground wind is not priced in this work.
 
+### Section 6's paragraph as it stood before the Round 162 cut
+
+The sentence on the airframe as the wing was cut here because Section 8 (the inventory) states it; the paragraph is given in full, verbatim.
+
+#### What the configuration does instead
+
+**Cruise lift is carried by the airframe itself.** There is no separate fuselage: the whole
+planform is the wing, so every part of the body that is carried is also a part that lifts. At
+the cruise condition the lift coefficient follows from `C_L = W/(qS)`, the drag from
+`C_D = C_D0 + C_L²/(πARe)`, and the nose pair is left with one job — producing the thrust that
+balances that drag. It supports none of the weight.
 
 ---
 

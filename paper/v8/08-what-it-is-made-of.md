@@ -61,7 +61,7 @@ some other way is an implementation question it does not settle.
 The counter-rotating arrangement carries a second consequence that the transition analysis
 depends on. **At equal counter-rotating speeds, the net angular momentum of the propulsion system is nominally
 zero**: rotating the airframe through ninety degrees therefore produces no gyroscopic moment for the
-control system to cancel. If the pairs are speed-trimmed, that cancellation is no longer exact (Section 8, *What this inventory does not settle*). In a tilting architecture that term is present and must be designed for.
+control system to cancel. If the pairs are speed-trimmed, that cancellation is no longer exact (below). In a tilting architecture that term is present and must be designed for.
 
 ### The energy path
 

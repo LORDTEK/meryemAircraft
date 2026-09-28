@@ -49,8 +49,7 @@ missions, while vectored-thrust aircraft are efficient in cruise and suited to l
 
 ### What the configuration does instead
 
-**Cruise lift is carried by the airframe itself.** There is no separate fuselage: the whole
-planform is the wing, so every part of the body that is carried is also a part that lifts. At
+**Cruise lift is carried by the airframe itself.** At
 the cruise condition the lift coefficient follows from `C_L = W/(qS)`, the drag from
 `C_D = C_D0 + C_L²/(πARe)`, and the nose pair is left with one job — producing the thrust that
 balances that drag. It supports none of the weight.

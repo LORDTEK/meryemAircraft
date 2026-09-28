@@ -43,10 +43,13 @@ DEGISTI = {
         "What has been measured is a fraction of that, and the figures available are of four different kinds.",
     "A NASA study that sizes five VTOL architecture families to one mission describes the two relevant routes in its own terms.":
         "The NASA sizing study used in Section 4 describes the two relevant routes in its own terms.",
+    # Tur 162 (yazar karari): eski 6.1 5.2'nin sonuna girdi; 5.2 icindeki isaretci artik ayni bolumu gosteriyor
+    "If the pairs are speed-trimmed, that cancellation is no longer exact (Section 8, What this inventory does not settle).":
+        "If the pairs are speed-trimmed, that cancellation is no longer exact (below).",
     "The comparison is between unlike ratings: a peak demand held through the vertical phases, a bench average over minutes, a continuous rating, and a design assumption.":
         "The comparison is between unlike ratings: a peak demand held through the vertical phases, a bench average over minutes, a continuous rating, a design assumption, and a literature figure the study cites without its rating.",
 }
-ONCE = {2: ("d2ca894", "68c1c39"), 9: ("eb22a83", "0345c45", "d88435f", "64e4005"), 14: "9f4cfcb", 3: ("46b9628", "68c1c39"), 4: ("8c4d712", "c22b1c7"), 10: "024005c", 11: "65ae7de", 12: ("c9fcdd7", "871a143"), 13: ("c9fcdd7", "d88435f"), 1: ("e4b6847", "8dd7a2f", "c75ea70", "c4d44ee"), 5: ("fc646cb", "c75ea70", "c4d44ee"), 6: ("38d5324", "29d8c07", "c4d44ee", "d88435f"), 7: ("555b73b", "d8d5439", "d88435f"), 8: ("0b4b24f", "96ff92f", "d88435f"), 15: ("978aef9", "64e4005")}   # Tur 157: 7.3 eke tasima oncesi (871a143) ve toplu kesim oncesi (d88435f)   # kisaltmadan onceki commit
+ONCE = {2: ("d2ca894", "68c1c39"), 9: ("eb22a83", "0345c45", "d88435f", "64e4005"), 14: "9f4cfcb", 3: ("46b9628", "68c1c39"), 4: ("8c4d712", "c22b1c7"), 10: "024005c", 11: "65ae7de", 12: ("c9fcdd7", "871a143"), 13: ("c9fcdd7", "d88435f"), 1: ("e4b6847", "8dd7a2f", "c75ea70", "c4d44ee"), 5: ("fc646cb", "c75ea70", "c4d44ee"), 6: ("38d5324", "29d8c07", "c4d44ee", "d88435f", "0586e21"), 7: ("555b73b", "d8d5439", "d88435f"), 8: ("0b4b24f", "96ff92f", "d88435f", "0586e21"), 15: ("978aef9", "64e4005")}   # Tur 157: 7.3 eke tasima oncesi (871a143) ve toplu kesim oncesi (d88435f)   # kisaltmadan onceki commit
 
 
 def govde(s):
