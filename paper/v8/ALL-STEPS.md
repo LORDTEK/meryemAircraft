@@ -54,7 +54,7 @@ There is a third way to put one set of propulsors into both regimes without reor
 thrust line at the ground and let the whole aircraft rotate.** It is neither new nor untried nor abandoned.
 The Convair XFY-1 flew it in 1954 and completed six transitions to conventional flight *"before testing was
 curtailed because of engine and gear-box reliability problems"*, and uncrewed tail-sitters have revisited the
-route continuously since. The pilot's spatial orientation and workload, recorded for that programme, were real
+route since. The pilot's spatial orientation and workload, recorded for that programme, were real
 and severe, **but they are not what curtailed the testing**, and they are the only one of those documented
 obstacles an uncrewed aircraft removes.
 
@@ -259,7 +259,7 @@ The costs the condition permits are named here, before any candidate is examined
 - **Hardware used in both regimes for something other than propulsive thrust is permitted, and its cruise drag is not eliminated.** *Cruise thrust in this paper means the thrust that balances cruise drag.* Attitude devices produce no cruise thrust in that sense; they are used throughout the flight, so their duty cycle matches their presence and they fall outside Bill 1. **They remain in the airstream, so the second charge reaches them.** **Attitude hardware does not stop the propulsor that carries the aircraft from meeting the condition, but it is carried through cruise without producing cruise thrust, which is the first failure mode below — and the charges are about everything the aircraft carries, so Bill 2 reaches it.** The condition permits such hardware outside the first charge and does not make it free.
 - **Serving two regimes with one set of hardware has a price of its own.** Hardware that is not duplicated cannot be optimised twice: a propeller sized for hover thrust at zero forward speed is not the propeller a cruise design would choose, and if its geometry is fixed the compromise is paid in efficiency. **The condition permits that cost and does not measure it.** Section 11 does.
 
-**One exclusion, stated narrowly.** Structure, surfaces and actuation present for reasons other than the vertical phase are not charged **as duty-cycle mismatch under this accounting**. That is a statement about which ledger they belong in, not a claim that they are free, and it does not apply to a part that would not exist but for the vertical phase. The tip frames are the case that tests it: they are landing gear because the aircraft stands on its tail. **Their mass is charged in the build-up and their drag in the ledger; the exclusion does not reach them.**
+**One exclusion, stated narrowly.** Structure, surfaces and actuation present for reasons other than the vertical phase are not charged **as duty-cycle mismatch under this accounting**. That is a statement about which ledger they belong in, not a claim that they are free, and it does not apply to a part that would not exist but for the vertical phase. The tip frames of the configuration described in Section 5 are the case that tests it: they are landing gear because the aircraft stands on its tail. **Their mass is charged in the build-up and their drag in the ledger; the exclusion does not reach them.**
 
 ### The condition can fail, and how
 
@@ -345,7 +345,7 @@ giving the same structure the control duty as well.
 **And the stance base is a parameter rather than a constraint.** Moving the frame ends further
 outboard widens the base against ground wind without altering the planform, the propulsion or
 the control architecture — and because the same displacement lengthens the control moment arm,
-both benefits arrive from one change. The 50 kg reference geometry is one point on that trade; an
+both benefits arrive from one change. The 50 kg reference geometry (Section 8) is one point on that trade; an
 operator with a stronger ground-wind requirement can take another.
 
 ### What is sized, and what is not demonstrated
@@ -472,7 +472,7 @@ separately outside it. That separation holds for the all-electric entries as wel
 **Neither factor is a single number, and they are two different kinds of spread.**
 
 The aerodynamic ratio is **8.79 to 10.82**, with the tip frames and the free-wheeling attitude
-rotors already charged. That spread is **uncertainty**: it is the zero-lift drag bracket, and a
+rotors (Section 8, *What this inventory does not settle*) already charged. That spread is **uncertainty**: it is the zero-lift drag bracket, and a
 designer does not get to choose where in it the real aircraft lands.
 
 The cruise propeller efficiency is **0.632 to 0.683** across the nose-blade families that meet
@@ -740,7 +740,7 @@ angle and the longitudinal stability are one design variable seen from two direc
 **Five propeller stations, ten rotors:** every station is a coaxial counter-rotating pair. The reason is narrow: **reaction torque.** A single propeller applies to the airframe a
 torque equal and opposite to the one it applies to the air. It acts about the propeller axis,
 which on this aircraft is the body's longitudinal axis — the roll axis in body terms — in both
-regimes, and it must be opposed continuously, either by a control surface, which costs drag, or by the reaction torque of other rotors run at a different speed, which costs a control channel. A counter-rotating pair does not produce it. *(This paper fixes body-axis naming throughout. That
+regimes, and it must be opposed continuously, either by a control surface, which costs drag, or by the reaction torque of other rotors run at a different speed, which costs a control channel. A torque-balanced counter-rotating pair does not produce it. *(This paper fixes body-axis naming throughout. That
 axis is the roll axis in both regimes; what changes is its orientation relative to the earth — it
 stands vertical in the hover attitude, where a moment about it appears as a change of heading, and
 horizontal in cruise, where it appears as a bank. The two conventions are not mixed here.)*
@@ -943,11 +943,11 @@ Installed power sets the propulsion mass, propulsion mass the take-off mass, and
 
 ### The inputs, and why there are four closures rather than one
 
-**The zero-lift drag coefficient is uncertainty:** a consistent build-up places it between 0.0285 and 0.0381 (Section 11), and a designer does not choose where the real aircraft falls in that range. **The blade family is a design variable this study has not fixed:** four nose-blade families that meet the hover figure of merit span cruise propeller efficiencies of 0.632 to 0.683, and the study carries all four rather than pretending to have chosen. **The reference design's assumed zero-lift value of 0.0248 is not used**; the consistent build-up places it below both ends of the bracket, outside the supported range.
+**The zero-lift drag coefficient is uncertainty:** a consistent build-up places it between 0.0285 and 0.0381 (Section 11), and a designer does not choose where the real aircraft falls in that range. **The blade family is a design variable this study has not fixed:** four nose-blade families that meet the hover figure of merit span cruise propeller efficiencies of 0.632 to 0.683. **The reference design's assumed zero-lift value of 0.0248 is not used**; the consistent build-up places it below both ends of the bracket, outside the supported range.
 
 The loop holds wing loading, disc loading and aspect ratio fixed, so **the cruise lift coefficient is unchanged at 0.450 in every closure** (geometry in Supplement S10); the claim is that C_L is unchanged, not that C_D0 is exactly so. The tip frames, the tip discs and the strip are not sizing variables; they were set on the 50 kg reference design of Section 8, and **the control moment arms of Section 8 are therefore reference values that this closure does not re-derive.** **These are the same configuration at four closed masses rather than four configurations** — but anything that depends on the arms is carried at the reference geometry and is not an output of the loop.
 
-Run on the reference design's assumed inputs — that drag coefficient without the rotor term, and a propeller efficiency of 0.80 — the same construction reproduces the 50 kg reference design within 1.5 percent (Supplement S10). That check is the only place in this section where the assumed value appears, so the closures report a change of inputs, not of method.
+Run on the reference design's assumed inputs — that drag coefficient without the rotor term, and a propeller efficiency of 0.80 — the same construction reproduces the 50 kg reference design within 1.5 percent (Supplement S10). That check is the only place in the closures where the assumed value appears, so the closures report a change of inputs, not of method.
 
 ### The four closures
 
@@ -968,9 +968,9 @@ simulated aircraft.*
 
 ### The transition
 
-The sizing above says nothing about whether the aircraft can change regime. **The question is asked in two models, only the second of which carries rotational dynamics, and that one does not support a zero altitude loss.** Every transition figure here belongs to a reference design at its reference mass and is not an output of the closure. In the first, a point-mass model with the body angle driven kinematically, a rotation entered in a 5 m s⁻¹ climb loses no altitude at either reference rotation time: 2 s for the 50 kg design and 5.1 s for the 1 000 kg one. Solved instead with rotational dynamics and a finite control moment, **and with the aerodynamic pitching moment set to exactly zero, so that nothing favourable is borrowed**, the 50 kg design **loses 5.4 m at the same reference condition.** The loss is not an artefact of the controller: it is unchanged across three reference profiles, appears without the control moment saturating, and grows as the gains are raised (Supplement S10). **What the kinematic model leaves out is not the difficulty of turning the aircraft but the trajectory the aircraft flies while it is being turned.** **So the zero-altitude-loss result is a property of the model that produced it.**
+The sizing above says nothing about whether the aircraft can change regime. **The question is asked in two models, only the second of which carries rotational dynamics, and that one does not support a zero altitude loss.** Every transition figure here belongs to a reference design at its reference mass and its assumed drag, and is not an output of the closure; at either end of the drag bracket the altitude loss moves by less than 0.1 m. In the first, a point-mass model with the body angle driven kinematically, a rotation entered in a 5 m s⁻¹ climb loses no altitude at either reference rotation time: 2 s for the 50 kg design and 5.1 s for the 1 000 kg one. Solved instead with rotational dynamics and a finite control moment, **and with the aerodynamic pitching moment set to exactly zero, so that nothing favourable is borrowed**, the 50 kg design **loses 5.4 to 6.6 m at the same reference condition**, depending on the reference profile. The loss is not an artefact of the controller: it appears under all three reference profiles, appears without the control moment saturating, and grows as the gains are raised (Supplement S10). **What the kinematic model leaves out is not the difficulty of turning the aircraft but the trajectory the aircraft flies while it is being turned.** **So the zero-altitude-loss result is a property of the model that produced it.**
 
-What replaces it is not a prediction: the pitching moment that would make it one exists, but for the methods used here the predictions diverge above roughly ten degrees of incidence, the band the rotation passes through (Section 14). With a borrowed moment the spread is wide enough that no number from it is reportable: some models complete the rotation, some saturate the tip pairs, and some tumble. **That spread is itself the finding.** **Within the finite-moment dynamic model, with the aerodynamic moment set to zero, the manoeuvre costs altitude.** Whether a real aircraft loses 5.4 m, more, or less is not settled by anything here.
+What replaces it is not a prediction: the pitching moment that would make it one exists, but for the methods used here the predictions diverge above roughly ten degrees of incidence, the band the rotation passes through (Section 14). With a borrowed moment the spread is wide enough that no number from it is reportable: some models complete the rotation, some saturate the tip pairs, and some tumble. **That spread is itself the finding.** **Within the finite-moment dynamic model, with the aerodynamic moment set to zero, the manoeuvre costs altitude.** Whether a real aircraft loses 5.4 to 6.6 m, more, or less is not settled by anything here.
 
 ### What closing does and does not establish
 
@@ -1008,7 +1008,7 @@ The engine is sized by cruise, **3.54 to 5.17 kW** of shaft rating, against a ho
 
 ### What the closure does not contain
 
-Section 10's convergence does not cover the cost of declining the reaction-torque channel, the sizing of the strip's actuation, the allocation of the take-off margin against attitude authority, the landing transition, the vortex ring state, closed-loop hover control, engine installation, or rotor–structure and rotor–wing interference; **none of these is a ledger entry, and Section 14 lists them.** **The first and the last are the two that would most change the numbers above if they were computed.**
+Section 10's convergence does not cover the cost of declining the reaction-torque channel, the sizing of the strip's actuation, the allocation of the take-off margin against attitude authority, the landing transition, the vortex ring state, closed-loop attitude control in hover and in cruise, engine installation, or rotor–structure and rotor–wing interference; **none of these is a ledger entry, and Section 14 lists them.** **The first and the last are the two that would most change the numbers above if they were computed.**
 
 **Every one of the charges above belongs to one scale**: the four closures do not establish how the three charges behave as the aircraft changes size, which Section 12 asks, or what happens to the comparison when the sizing contract changes, which Section 13 asks.
 
