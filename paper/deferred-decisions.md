@@ -441,3 +441,13 @@ göstericisi, Q4 5.1'de kalsın mı), Tur 149 ikinci tur; ardından yazara. **X-
 
 Yazar: *"X-6 onaylıyorum, Bölüm 9'dan silinsin."* → uygulandı; silme *"the rest"*ı öncülsüz bıraktı (R-11, onarım oyda). W-2: Q1 (virgül yok) ve Q4 (5.1'de kalsın)
 oybirliği; Q2 (ii) ChatGPT'nin kayıtlı kesinlik çekincesiyle, yeni seçenek (iii) Bölüm 1'in üçlüsü; Q3 italik mi tırnak mı. **Tur 149'dan sonra W-2 yazara.**
+
+## Tur 150 — W-2 yazarda (iki tartışma turu tamamlandı)
+
+Bölüm 5.1'in korunan katkı cümlesi için adaylar (hepsinde "are"dan önce virgül yok; Q3 tırnaklı onarım ayrıca uygulandı):
+- **(ii)** *"What this paper contributes is the architecture; the combination, the condition its primary propulsor is designed to satisfy, and the price the
+  configuration pays for pursuing it are how that contribution is presented and priced."* — Grok, ChatGPT (çekince: koşul ne sunulan ne fiyatlanan; standarttır),
+  Qwen, Claude (az farkla).
+- **(iii)** *"What this paper contributes is the architecture; the combination, the consequences of the choices inside it, and an accounting of what they cost are
+  how that contribution is presented and priced."* — DeepSeek. Bölüm 1 ve 6.2 ile tam uyum, çekince kalkar; bedeli Bölüm 1'in neredeyse birebir yankısı.
+- **(iv)** (DeepSeek'in inceltmesi) *"… the consequences of the choices inside it, and an accounting of the price the configuration pays for pursuing it are how …"*

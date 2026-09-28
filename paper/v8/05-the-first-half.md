@@ -39,7 +39,7 @@ attitude. **No launch equipment is present.** It rests on five points: the four 
 the tip frames and the aft end of a keel running along the centreline.
 
 **Those five points are not added hardware.** The tip frames are the landing structure, they are
-also the structure that carries the attitude propellers and sets their moment arm, and their
+also the structure that carries the four tip pairs (the attitude propellers) and sets their moment arm, and their
 fairing is the aircraft's only vertical surface. **One structure serves four purposes and is
 charged to the mass budget once** — Section 8 gives the fairing's sizing.
 
@@ -125,6 +125,7 @@ section**, and the two are combined in Section 7.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 150 — L-3 satır 1 (b) uygulandı** (Qwen; dört okuyucu + Claude): *"carries the attitude propellers"* → *"carries the four tip pairs (the attitude propellers)"* — ilk kullanımda ad + takma ad (2.2'nin genel *attitude devices*ına köprü). L-3 satır 2–3 kapandı | Tur 149 §3.2 |
 | **Tur 149 — L-3 satır 2, 3 uygulandı** (dört okuyucu + Claude): *"control propellers"*, *"The attitude propellers they carry"* → *"tip pairs"*. Satır 1 (ilk kullanım) ayrışık, geri soruldu. W-11 kapandı | Tur 148 §3 |
 | **Tur 148 — W-11 uygulandı** (DeepSeek; dört okuyucu + Claude): *"The 50 kg reference geometry (Section 8)"* — gövdede ilk 50 kg. W-8 kapandı | Tur 147 §3 |
 | **Tur 147 — W-8 uygulandı** (bütün okuma; dört okuyucu + Claude): *"leaving that axis to the strip."* → *"…to a strip on the lower surface, the only moving aerodynamic surface."* Oylanan biçimdeki ikinci *(Section 8)* cümlede zaten bir işaretçi olduğu için çıkarıldı (**R-10**, göndermeden önce yakalandı) | Tur 146 §5; Tur 147 §1 |

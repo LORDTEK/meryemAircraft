@@ -134,3 +134,9 @@ Okuyucu kayıtları: C-147-1…3, D-X7…D-X9, Q-X7, Q-X8 — yalnız kayıt.
 | # | Yer | Soru | Kusur | Köken |
 |---|---|---|---|---|
 | R-11 | 9 (Adım 15) | W9 (D-2) | X-6 silinince *"Section 8 lists what would settle the rest"*ta *"the rest"* öncülsüz; Tur 148'de hepimiz alındıyı denetledik, göndergeyi değil — uygularken yakaladım. Onarım önerisi: *"Section 8 lists what the paper leaves open."* | **R** |
+
+### Tur 150 — durum
+
+**KAPANDI (dört okuyucu teyit):** X-6, X-5, L-3 satır 2–8. **Uygulandı, teyide:** W-2 Q3 (tırnak), L-3 satır 1 (b), R-11 (*"what the paper leaves open"*).
+**Yazarda:** W-2 Q2 — (ii) Grok, ChatGPT (kayıtlı çekince: koşul "presented and priced" değil), Qwen, Claude (az farkla); (iii) DeepSeek; (iv) DeepSeek'in inceltmesi.
+Bütün okuma aşamasında açık gövde kusuru kalmadı; W-2 kararından sonra aşama kapanır.

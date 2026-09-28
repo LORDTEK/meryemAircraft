@@ -45,7 +45,7 @@ question, and it is not settled here.
 **Range, against the other hybrids — not claimed, in either direction.** The ordering belongs to the sizing
 contract (Section 13).
 
-Section 14 lists what would settle the rest. What the paper offers is **a configuration sized to combine
+Section 14 lists what the paper leaves open. What the paper offers is **a configuration sized to combine
 runway-independent vertical operation with wing-borne cruise efficiency, arranged to do so with no mechanism
 that reorients a propulsor, and an account of what the combination costs.**
 
@@ -55,6 +55,7 @@ that reorients a propulsor, and an account of what the combination costs.**
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 150 — R-11 uygulandı** (dört okuyucu + Claude): *"Section 14 lists what would settle the rest."* → *"Section 14 lists what the paper leaves open."* — X-6 silinince *"the rest"* öncülsüz kalmıştı. X-6 kapandı | Tur 149 §3.3 |
 | **Tur 149 — X-6 uygulandı** (dört okuyucu + Claude; **yazar onayladı**): *"The loop closes; the aircraft is not shown to."* Adım 15'ten silindi, Adım 14'te kalıyor (`v8_stale.py` YALNIZ). **R-11:** silme sonrası *"Section 14 lists what would settle the rest"*ta *"the rest"* öncülsüz kaldı — uygularken yakaladım; onarım oyda | Tur 148 §3; Tur 149 §3 |
 | **Tur 130 — Adım 15 KAPANDI: 343** (dört okuyucu + Claude teyit etti; borç izi teyit edildi) | Tur 130 |
 | **Tur 129 — E9 kapandı: sertifikasyon yan cümlesi SİLİNDİ** (beş oy: Grok, ChatGPT, Claude; DeepSeek ve Qwen Tur 128'de oy değiştirdi; yazar: *"hemfikir olursanız ortak fikriniz de isabetli olabilir"*). *"Section 14 lists what would settle the rest; nothing in this work addresses certification."* → *"Section 14 lists what would settle the rest."* `v8_draft_check` temiz (kısalan 1). Özgün paragraf Ek S15'te; ifade emekli. Borç izi (Qwen P2): `drafts/15-maps.md` | E9; Tur 129 |

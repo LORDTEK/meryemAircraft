@@ -58,7 +58,7 @@ boşluğa duyarsız. `G` = Grok, `D` = DeepSeek, `C` = ChatGPT, `Q` = Qwen, `K` 
 | 7 | Nor is this a claim of mechanical simplicity. | G |
 | 7 | Whether this aircraft can actually perform the change is a separate question and is not settled anywhere in this paper. | G |
 | 7 | The mechanism claim is about hardware and survives that limit. The transition claim is not made. | G |
-| 7 | The qualification in that sentence is not decoration | D |
+| 7 | The qualification "in the propulsor that carries the aircraft" is not decoration | D |
 | 8 | What declining it costs is not counted in this work. | G |
 | 8 | The free-wheeling state is physically determinate: the rotor settles where net shaft torque is zero. The stopped state is not. | G |
 | 8 | should be read as estimates for an assumed azimuth rather than as the state a particular installation would reach. | D |

@@ -687,3 +687,6 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | W-2 Q2 | (ii) | (ii) "ayakta, kesin değil" | (ii) | (ii) | (ii) dar | **İkinci tur (Tur 149)**: yeni (iii) Bölüm 1'in üçlüsü |
 | L-3 satır 1 | benim ifadem | benim ifadem | (a) takma adı düşür | (b) parantez | (b) | **Geri soruldu (Tur 149)** — benim ifadem üçlü liste okunuyordu |
 | R-11 "the rest" göndergesi | ? | ? | ? | ? | onarım | **Tur 149 oylaması** |
+| X-6, X-5, L-3 satır 2–8 teyit | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI (Tur 150)** |
+| W-2 Q3 tırnak; L-3 satır 1 (b); R-11 "what the paper leaves open" | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı (Tur 150)**; teyide |
+| W-2 Q2 | (ii) | (ii) dar, çekince kayıtlı | (iii) / (iv) | (ii) | (ii) dar | **Yazarın kararı** (iki tartışma turu tamam) |
