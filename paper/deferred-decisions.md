@@ -467,3 +467,8 @@ dört görüşünün sentezi): G-1 çok-bölümlü bulgu haritası ve her kümey
 sınır bölümleri (6.1, 6.2, 8, 9) → çerçeve → mimari en son; G-3 her birleştirmeden sonra birleşik görünümde alındı (bütün işaretçiler, above/below dahil), ilk
 kullanım, korunan, kayıp yok; G-4 H-2 birleştirmelerden sonra, gönderim öncesi en son; G-5 dondurma sürer; G-6 korunan cümle kuralı (Tur 104) değişmez. Tur başına
 bir birleştirme. **Karar yazarın.**
+
+**Düzeltme (Tur 151, yazar):** *"Her okuyucu bir sonraki aşama için kendi bağımsız önerisini özgürce sunsun. … Ayrıca sen hemen bölüm kümeleri oluşturup onları
+oylattırıyorsun, bu doğru bir tarz değil. Küme önerilerini de sor, elbette kendi önerilerini de onlara ver ki belki fikir verir."* → Tur 151 metni güncellendi:
+Öneri G oylanmıyor; okuyuculardan bağımsız yöntem ve küme önerileri isteniyor; benim yöntemim ve kümelerim (K-1…K-9) fikir olarak verildi. Gelecek tur beş öneri
+yan yana, sonra yazara.

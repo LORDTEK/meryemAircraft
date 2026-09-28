@@ -694,4 +694,4 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Kapanış kapısı, birleşik görünüm: 17 + 13 işaretçi R1 | ? | ? | ? | ? | tutuyor | **Tur 150 teyidi** |
 | W-2 Q3, L-3 satır 1, R-11 teyit; kapanış kapısı | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI (Tur 151)** |
 | W-2 (vi): yeni yüklem yok | ✓ | ✓ | ✓ | ✓ | ✓ | biçim: "the" + "shows" (Grok) — **yazar seçti**; uygulandı, teyide |
-| Bir sonraki aşama: Öneri G (G-1 harita önce … G-6) | ? | ? | ? | ? | evet | **Tur 151 oylaması**; karar yazarın |
+| Bir sonraki aşama | ? | ? | ? | ? | önerileri §3.3'te (fikir) | **Yazar (Tur 151): önce her okuyucu kendi bağımsız yöntemini ve küme önerisini sunsun**; oylama yok, gelecek tur yan yana |
