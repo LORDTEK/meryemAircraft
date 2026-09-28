@@ -711,3 +711,11 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | 7.4 tamponsuz karşılaştırma sayıları eke (47 kelime) | ? | ? | ? | ? | evet | **Tur 155**; kabul edilirse topluca uygulamada |
 | K-9 Bölüm 4 (sayım kırılıyor: "the third / the first two") | – (Tur 154) | – (Tur 154) | K | – (Tur 154) | K (değişti) | **Tur 155**: Grok, ChatGPT, Qwen DeepSeek'e cevap |
 | K-3 Bölüm 6.2 | C | C | K | C | C (açıklama yan cümle olarak kalır) | **Tur 155**: madde 8 iddiasına cevap |
+| 7.3 eke taşıma, uygulanan hâl | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI (Tur 156)** — teyit döngüsü tamam |
+| S kaldıracı 7.1/7.2/7.4/2.3'te bitti | ✓ | ✓ | ✓ | ✓ | ✓ | kabul; Bölüm 4 Tur 156'da denetime (Grok, ChatGPT şartı) |
+| 7.4 tamponsuz sayılar eke | ✓ | ✓ | ✓ | ✓ | ✓ | kabul; toplu uygulamada (B7) |
+| K-9 Bölüm 4 | K | K | K | K | K | **KAPANDI: K** (sayım) |
+| K-3 Bölüm 6.2 | C (korunanı keser) | C (ayrım kalsın) | K (envanter bağı kalırsa C) | C (yeniden yazım, iki korunanı siler) | B1: yalnız 13 kelimelik giriş | **Tur 156**: iki cümle korunan; tek geçerli C = B1 |
+| Toplu kopya kesme B1–B7 (−234) | ? | ? | ? | ? | önerdi | **Tur 156 oyu** |
+| Sayım işareti (`v8_draft_check.py`; ChatGPT) | ? | önerdi | ? | ? | evet | **Tur 156 oyu** |
+| Durma testi: haritada argüman + başka ev (DeepSeek) + Tur 87 ölçütü (Claude) | ? | ? | önerdi | ? | evet | **Tur 156 oyu** |

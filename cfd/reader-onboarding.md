@@ -214,14 +214,14 @@ The body is about **26 000 words**, and the journal's working target is **about 
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 155.**
+**Round 156.**
 
 | Block | State |
 |---|---|
-| Stages (the author, Round 129) | present stage: **compression by finding** (method approved Round 153). No round-by-round copy cuts; the map's copy cuts and the two unsettled rows (K-3 6.2, K-9 4) are applied once, in a batch |
-| Length (E8) | **decided, option 4, unanimous** (Round 155): target 12 000 words all-in; calculations and framework first, then the architecture sections (Round 72: from everywhere); stop and report to the author with numbers if a cut would remove an argument step. **Two papers: closed by the author** |
-| First supplement move | **Section 7.3 applied** (1 091 → 805 words; the old section complete in Supplement S12; the protected *"This paragraph compares the reference pair only."* moved by author decision E10). For the readers' confirmation |
-| Measurement | outside 7.3 the supplement lever is about 50 words (one candidate, in 7.4); the rest of the length must come from the batch, Phase D merges and the architecture sections. For the readers' check |
+| Stages (the author, Round 129) | present stage: **compression by finding** (method approved Round 153). No round-by-round copy cuts: **the batch (B1–B7, −234 words) is drafted in full and voted in Round 156**; Section 9's rows wait for the 6.2 + 9 merge (Phase D) |
+| Length (E8) | **option 4, unanimous**: target 12 000 words all-in; stop and report to the author with numbers before a cut would remove an argument step. Two papers: closed by the author |
+| Supplement stage | 7.3 moved and **closed** (1 091 → 805; the old text complete in S12; one protected sentence moved by author decision E10). Outside 7.3 the lever is spent in 7.1, 7.2, 7.4 and 2.3 (one 47-word move, B7); Section 4 checked in Round 156 |
+| Protected sentences in "C" rows | two of K-3 6.2's three sentences are protected; the only admissible C deletes the 13-word lead (B1). K-2 5.2 is protected: K |
 | Contribution | Sections 1, 5.1, 6.2 and 9 name one contribution, the architecture |
 | Tip pairs in cruise (the author's decision) | uncommanded state: free-wheeling at zero shaft torque (Section 6.1); shaft power of commanded departures not computed |
 

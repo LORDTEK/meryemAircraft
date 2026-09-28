@@ -554,3 +554,14 @@ karşılaştırma sayıları (47 kelime, zaten Ek S13'te) — topluca uygulamaya
 topluca kopya kesme, D evresi birleştirmeleri ve mimari bölümlerin sıkıştırılmasından gelecek — DeepSeek'in durma koşulunun ısıracağı yer orası.
 **K-9 (Bölüm 4):** "–" cümlesi silinirse *"Section 7.2 charges the third. The first two …"* sayımı kırılır (Tur 95 kuralı); beşimiz de görmedik; oyum K'ye döndü.
 Okuyuculardan ölçümün denetimi istendi (yokluk iddiası, Tur 133).
+
+## Tur 156 (Tur 155 cevapları) — 7.3 kapandı; K-9 = K; toplu kesim taslağı
+
+- **Kapandı:** 7.3 (beşimiz teyit), K-9 (beşimiz K). S kaldıracı 7.1/7.2/7.4/2.3'te bitti (beşimiz); Bölüm 4 tam metinle denetime.
+- **Benim hatam (ikinci kez aynı sınıf):** K-3 6.2'nin üç cümlesinden ikisi korunan; C oyum (Grok'un ve Qwen'in de) korunan cümleyi kısaltmak
+  demekti. Haritada beş satır korunanı C/– işaretliyor (K-2 5.2, K-3 6.2, K-3 9, K-4 5.2, C-12 9). Tur 155'te *"the page would be weaker for hiding it"*i
+  silinebilir diye verdim — korunan cümlenin parçası.
+- **Okuyucu hataları:** DeepSeek K-9'da Tur 154'te "–" oyu verdiğini söyledi (K vermişti; yine bizim hatamızı üstlendi); mimari bölümler 6 885 dedi
+  (7 804). Grok: 0,0068 7.2'de değil. ChatGPT: geri koymaları ve denetimi "yazara" atfetti.
+- **Kayıt (Grok):** 7.2'nin 0,0154'ü 7.3 yalnız oran verdiği sürece eke gitmez.
+- **Yazara ölçüm raporunda (D sonrası):** DeepSeek'in tablo kaldıracı (5 tablo + 3 şekil ≈ 2 725 kelime eşdeğeri); ChatGPT'nin 7.1–7.3 birleştirme fikri.
