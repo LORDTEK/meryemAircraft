@@ -74,8 +74,16 @@ def cevir(metin, adim, kaydet=True):
     return ATIF.sub(f, metin)
 
 
+# Bolunmus adima (Adim 8 -> 5.2 + 6.1) acik atiflar (Tur 147, W-1): kaynakta alt basligi adlandirilir,
+# gorunumde dogru alt bolum numarasina cevrilir. Ciplak "Section 8" 5.2'ye gider.
+BOLUNMUS = {"(Section 8, *What this inventory does not settle*)": "(Section 6.1)",
+            "(Section 8, *The propulsion*)": "(Section 5.2)"}
+
+
 def adim_metni(n, seviye):
     ad, b = baslik_ayir(govde(n))
+    for k, v in BOLUNMUS.items():
+        b = b.replace(k, v)
     return ad, cevir(b, n)
 
 
@@ -148,7 +156,7 @@ print("EKLEM (%d) — kaynakta degistirilmedi, gosterilecek:" % len(eklemler))
 for a, e, y in eklemler:
     print("   Adim %2d: %-28s -> %s" % (a, e, y))
 kalan_atif = set(re.findall(r"Sections? (\d+(?:\.\d)?)", metin))
-gecerli = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "2.1", "2.2", "2.3", "5.1", "5.2"} | {"7.%d" % i for i in range(1, 5)}
+gecerli = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "2.1", "2.2", "2.3", "5.1", "5.2", "6.1"} | {"7.%d" % i for i in range(1, 5)}
 print("cozulmeyen atif:", sorted(kalan_atif - gecerli) or "yok")
 if eksik:
     print("EKSIK KORUNAN CUMLE:", eksik)
