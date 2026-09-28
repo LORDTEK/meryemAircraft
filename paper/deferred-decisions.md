@@ -647,3 +647,19 @@ Uygulandı: Ek S9 (birleşme öncesi iki gövde tam); `v8-caveats.md` alt tablos
   (paragraf Ek S6'da tam). `--sina-bolunmus` yeniden anlamlı kılındı.
 - **Benim yakaladığım hatam (tur metninde, gönderilmeden):** korunan listeyi yeni numaralara çevirirken "Section 3" → "2.2" sonra "Section 2" → "2.1" sırası "2.1.2" üretti; düzeltildi.
 - Açık: A (5.2 bütün gözüyle), B (Bölüm 7 "What does not close" kısalır ya da birleşir) — okuyucu önerileri, sonra yazara.
+
+## Tur 162 cevapları — A (5.2 bütün gözüyle) ve B (Bölüm 7 kısalır); yazara sunuldu
+
+- **Teyit (dördü):** eski 6 → 5.2 sonu, 28 kelime, işaretçiler, numaralama.
+- **Benim hatam (Grok ve DeepSeek yakaladı):** 5.2'ye taşınan tork artığı paragrafındaki *"(Section 5.2)"* artık kendi bölümünü gösteriyor — BOLUNMUS
+  eşlemesi "(Section 8, *The propulsion*)"u 5.2'ye çeviriyor, EKLEM bunu görmüyor. A taslağında giderilecek.
+- **A:** limitler kendi donanımının yanına dağılsın — seyir durumları itki bloğuna, tork artığı momentler bloğuna; "does not settle" başlığı kalksın (Grok,
+  DeepSeek; Grok en fazla bir etiketli bağlaç, DeepSeek bir yeni giriş cümlesi) / tek kapanış bloğu kalsın (Qwen, ChatGPT; Qwen yeni geçiş cümlesi önerdi).
+  Tahminler: Grok 1 650–1 750, ChatGPT 1 550–1 700, DeepSeek ~−30, Qwen ~1 800.
+- **B:** dördü de birleşme değil kısaltma. 18 maddelik liste: gruplara/tek cümleye + tam liste S14 (Grok, ChatGPT, DeepSeek) / kalsın (Qwen). Yeniden kapanış
+  paragrafı: S14 + bir satır (Grok, DeepSeek) / sıkıştırılmış kalsın (ChatGPT) / S14 (Qwen). Hedefler: Grok 650–750, DeepSeek ~750, Qwen ~800, ChatGPT 850–900.
+- **Okuyucu hataları:** DeepSeek — açılış 90 değil 40 dedi (toplam 1 135 yanlış; doğrusu 1 185); *"None of these is a small correction…"* korunan değil; yeniden
+  kapanıştaki korunan iki cümleyi eke taşıyıp "hiçbir korunan cümle taşınmıyor" dedi (kural iii gerekir). ChatGPT — *"architecture claim … count of hardware"*
+  cümlesini korunan sandı (değil). Qwen'in yeni geçiş cümlesi yazarın "olmayanı anlatmak" eleştirisinin tam kendisi.
+- **Claude:** A'da dağıtma (Grok/DeepSeek); B'de kısalt: liste gruplanır, tam hâli S14; yeniden kapanışın korunan iki cümlesi ya gövdede kısa paragrafla kalır ya
+  yazar kararıyla (kural iii) S14'e gider; hedef ~700–800.
