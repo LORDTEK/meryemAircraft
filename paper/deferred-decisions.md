@@ -459,3 +459,11 @@ Bölüm 5.1'in korunan katkı cümlesi için adaylar (hepsinde "are"dan önce vi
 - Aşama: W-2 + teyitler kalınca kapanır; kapanış kapısı (alındı denetimi, birleşik görünüm) koşuldu, başarısız yok.
 - **Bir sonraki aşama için yazarın fikri (karar değil, okuyucu görüşüne):** *"bölümlerin birleştirilebilirliğinin incelenmesi … Birleşen bölümlerden artık ifadeler
   eke taşınabilir."* Uzunluk: gövde ~20 300; E6 planında düzyazı 8 500. Aşama kapanınca park listesi okunur; H-2 atıf haritası ve gönderim öncesi listesi sırada.
+
+## Tur 151 — W-2 yazarın biçimiyle uygulandı; aşama kapanıyor; birleştirme aşamasının yöntemi oyda
+
+Yazar iki biçim seçiminde Grok'u seçti: *"the architecture"* ve *"the price shows what it costs"*. Dört okuyucu teyit edince aşama kapanır. Öneri G (okuyucuların
+dört görüşünün sentezi): G-1 çok-bölümlü bulgu haritası ve her kümeye ev (kanıtın ve sonucun sahibi bölüm), oylanmadan hiçbir şey taşınmaz; G-2 sıra: hesaplar →
+sınır bölümleri (6.1, 6.2, 8, 9) → çerçeve → mimari en son; G-3 her birleştirmeden sonra birleşik görünümde alındı (bütün işaretçiler, above/below dahil), ilk
+kullanım, korunan, kayıp yok; G-4 H-2 birleştirmelerden sonra, gönderim öncesi en son; G-5 dondurma sürer; G-6 korunan cümle kuralı (Tur 104) değişmez. Tur başına
+bir birleştirme. **Karar yazarın.**

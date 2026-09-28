@@ -692,3 +692,6 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | W-2 Q2 | (ii) | (ii) dar, çekince kayıtlı | (iii) / (iv) | (ii) | (ii) dar | **Yazarın kararı** (iki tartışma turu tamam) |
 | W-2 (vi) yazarın cümlesi, tek katkılı ara yol (yazar onayladı) | ? | ? | ? | ? | evet | **Tur 150 denetimi** (yeni/kayıp yüklem; "an/the"; eksiltili yan cümle) |
 | Kapanış kapısı, birleşik görünüm: 17 + 13 işaretçi R1 | ? | ? | ? | ? | tutuyor | **Tur 150 teyidi** |
+| W-2 Q3, L-3 satır 1, R-11 teyit; kapanış kapısı | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI (Tur 151)** |
+| W-2 (vi): yeni yüklem yok | ✓ | ✓ | ✓ | ✓ | ✓ | biçim: "the" + "shows" (Grok) — **yazar seçti**; uygulandı, teyide |
+| Bir sonraki aşama: Öneri G (G-1 harita önce … G-6) | ? | ? | ? | ? | evet | **Tur 151 oylaması**; karar yazarın |

@@ -116,7 +116,7 @@ boşluğa duyarsız. `G` = Grok, `D` = DeepSeek, `C` = ChatGPT, `Q` = Qwen, `K` 
 | 15 | This is a count of mechanism classes, not a claim that nothing moves, and not a claim of mechanical simplicity or reliability | D |
 | 15 | Whether this aircraft completes the rotation is a separate question, and it is not settled here | D |
 | 1 | What is not established is the combination taken together with its price. | G |
-| 7 | What this paper contributes is that combination, the condition its primary propulsor is designed to satisfy, and the price the configuration pays for pursuing it. | G |
+| 7 | What this paper contributes is the architecture that brings the three elements together; the condition shows what it satisfies, and the price shows what it costs. | G |
 | 9 | It is not a list of the study's open questions. | G |
 | 13 | The mechanism claim is not a ranking and is not at stake here | G |
 | 10 | This section prices the arrangement of Sections 7 and 8 on a declared package; it does not bear on the count of mechanism classes, which rests on the inventory of those sections alone. | G |
@@ -172,7 +172,7 @@ kaybolmasına (CLAUDE.md §0.8). Aynı denetimle sınanır.
 |---:|---|---|
 | 1 | The contribution is the architecture: a configuration arranged to change regime by rotating the airframe rather than its propulsors, and so carrying no mechanism that reorients a propulsor. | K |
 | 6 | The two halves are now on the table separately. Section 7 is where they are combined, and the combination is what this paper is for. | C |
-| 7 | What this paper contributes is that combination, the condition its primary propulsor is designed to satisfy, and the price the configuration pays for pursuing it. | G |
+| 7 | What this paper contributes is the architecture that brings the three elements together; the condition shows what it satisfies, and the price shows what it costs. | G |
 | 7 | That single move is what removes the need for the mechanism. | K+C |
 | 15 | What the paper offers is a configuration sized to combine runway-independent vertical operation with wing-borne cruise efficiency, arranged to do so with no mechanism that reorients a propulsor, and an account of what the combination costs. | K |
 | 7 | The configuration is arranged to change regime by rotating the airframe. The propulsors hold their orientation relative to the body from take-off to cruise; what changes is the orientation of the body relative to the flight path. | G |

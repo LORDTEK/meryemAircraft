@@ -559,6 +559,10 @@ dahil herkesin hemfikir olduğu kısaltmalar uygulansın."*
   gerisi `paper/v8-parking.md`'ye, yalnız bir sonraki aşamanın başında okunur. **F-3:** bütün okuma birleşik görünümde (okurun karşılaştığı
   sıra), iki yarı, soru listesi yalnız dondurmadan önce kabul edilmiş denetimlerden. **Kendime not:** bir öneriyi yazmadan önce sor — bu bir
   önkoşul mu, yoksa yalnız iyileştirme mi? İyileştirmeyse park.
+- **Anlaşılırlık da bir denetimdir (yazar, Tur 150).** W-2'de beşimiz iki tur boyunca yüklemi koruyan uzun adaylar ürettik; yazar: *"Bu ne ya? Hukuk metni gibi
+  olmuş. … Ben hakem olsam canım sıkılır."* ve *"Bu bir hukuk metni değil. Anlaşılamadıktan sonra haklı olmak önem kaybeder."* Kendi birleştirici cümlesini önerdi
+  (*"avantajları bir araya getiren mimari"*): birleşim mimarinin rakibi değil, yaptığı iş. **Kural:** bir onarım adayı yazılınca sorulur — bir insan bunu bir
+  okumada anlar mı? Bir listeyi korumak için cümle ağırlaşıyorsa, listenin gerekli olup olmadığı sorulur. Tek katkı kararı (Tur 35) korunarak uygulandı.
 - **Birleşik görünüm de denetlenir (Tur 146, W-1).** Alındı denetimi adım dosyalarında koştu; `v8_assemble.py` Adım 8'i 5.2 / 6.1 diye bölünce
   üç alıcı 6.1'e geçti, işaretçiler geride kaldı. Okurun gördüğü metin birleşik görünümdür; bir üretici betik yazan, **çıktısını** denetler.
 

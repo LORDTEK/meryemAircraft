@@ -148,3 +148,9 @@ Bütün okuma aşamasında açık gövde kusuru kalmadı; W-2 kararından sonra 
 kararına ters). Yazarın onayladığı ara yol (vi): *"What this paper contributes is an architecture that brings the three elements together; the condition shows
 what it satisfies, and the price what it costs."* — okuyucu denetimine (yeni/kayıp yüklem, "an/the", eksiltili yan cümle). Yazar: *"Bu bir hukuk metni değil;
 anlaşılamadıktan sonra haklı olmak önem kaybeder."*
+
+### Tur 151 — W-2 uygulandı; aşama kapanışı
+
+**KAPANDI:** W-2 Q3, L-3 satır 1, R-11; kapanış kapısı (dört okuyucu). **Uygulandı, teyide:** W-2 — *"What this paper contributes is the architecture that brings
+the three elements together; the condition shows what it satisfies, and the price shows what it costs."* (yazarın cümlesi; "the" ve "shows" yazarın seçimi).
+Teyitle birlikte **aşama kapanır**; bir sonraki aşamanın yöntemi (Öneri G, bölüm birleştirme) oyda.

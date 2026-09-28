@@ -198,6 +198,7 @@ EMEKLI = {
     "tip propellers": "Tur 149: L-3 -- tek ad: tip pairs",
     "The qualification in that sentence": "Tur 150: W-2 Q3 -- gosterici iki cumle geride",
     "what would settle the rest": "Tur 150: R-11 -- X-6 silinince oncülsuz",
+    "What this paper contributes is that combination": "Tur 151: W-2 -- tek katki mimari (yazarin cumlesi)",
     "published zero-lift value": "Tur 140: S-61 -- tanimlanmamis nesne; referans tasarimin varsayimi",
     "reproduces the published aircraft": "Tur 140: S-61",
     "the published chain": "Tur 140: S-61",
