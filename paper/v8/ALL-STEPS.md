@@ -603,7 +603,7 @@ the combination is what this paper is for.
 ## The combination
 
 None of the three elements is new. **Each can be found on its own, and some of them
-together, in the literature and in hardware** — Section 1 says where. The principle behind the third element — a continuous plant sized for cruise, with the vertical or take-off peak drawn from a store — has been applied in studies of a winged tail-sitter (Section 1) and of a single-aisle airliner whose turbines are *"sized for efficient operation during"* cruise and assisted by electric motors *"during takeoff and climb."*
+together, in the literature and in hardware** — Section 1 says where. The principle behind the third element — a continuous plant sized for cruise, with the vertical or take-off peak drawn from a store — has been applied in studies of a winged tail-sitter (Section 1) and of a single-aisle airliner reported in 2016 whose turbines are *"sized for efficient operation during"* cruise and assisted by electric motors *"during takeoff and climb."*
 
 **What this paper contributes is that combination, the condition its primary propulsor is designed
 to satisfy, and the price the configuration pays for pursuing it.** The three elements, taken together, meet the escape condition
