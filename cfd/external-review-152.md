@@ -2,7 +2,7 @@
 
 > **This is a task. Please answer it now, and begin with your name alone on the first line.**
 >
-> Commit **`@@COMMIT@@`**, branch `claude/ecstatic-cori-6w30at` (for verification only). **Every text you are asked to judge is quoted
+> Commit **`65f476c`**, branch `claude/ecstatic-cori-6w30at` (for verification only). **Every text you are asked to judge is quoted
 > here in full.** The body is not quoted again: both halves were quoted in full in Rounds 146 and 147, and every sentence that changed is
 > quoted below, before and after.
 
