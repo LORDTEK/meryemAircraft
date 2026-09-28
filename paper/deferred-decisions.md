@@ -516,3 +516,11 @@ Numarasız işaretçi tabanı: 19, hepsi kendi bölümünde.
   7.2, 2.3 (Grok: S değil; DeepSeek/Qwen: özetle S), 7.4, 2.1 örnekleri.
 - **E8 (Tur 128) hâlâ açık; eksik olgu:** AIAA *"Journal Page Limits and Word Count Guidelines"* (Eylül 2024) okunmadı
   (`paper/joa-compliance.md` §6) — JoA *"approximately 10 000–12 000"* diyor; aşımın reddi ya da ücreti kayıtta yok.
+
+## Tur 154 — yazar: "E8 konusunda hepinizin ortak kararı şeklinde hareket edelim." AIAA rehberi yüklendi
+
+AIAA *Journal Page Limits and Word Count Guidelines* (Rev. August 2024; `references/AIAA-2024-09_…pdf`): Regular/Full **10 000–12 000 kelime, "Recommended"**;
+*"A journal editor at his or her own discretion may request that a manuscript be shortened or expanded before or after peer review"*; ret ya da ücret yazmıyor;
+şekil/tablo 200/450/700. **E8 okuyucuların ve Claude'un ortak kararına** (Tur 154 §4): seçenekler 1 (12 000, her yerden kesme — Tur 72), 2 (ölçülü aşım),
+3 (yoldaş makale), 4 (1'i hedefle, ölçünce karar; Claude: tetik ~13 200). İlk ölçülü eke taşıma 7.3: 1 083 → 761 (~%30); bir korunan cümle
+(*"This paragraph compares the reference pair only."*) sonucuyla eke gider → **yazar kararı gerekir (kural iii)**.

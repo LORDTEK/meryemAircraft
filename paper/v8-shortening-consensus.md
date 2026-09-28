@@ -703,3 +703,5 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | A evresi: bulgu haritası (13 küme, 73 geçiş); ölçüm: kopya kesme ~280 kelime, kaldıraç S | ? | ? | ? | ? | önerdi | **Tur 153 denetimi**: satır satır, eksik küme, S adayları, tahmin |
 | A evresi haritası: çoğu satır onaylandı; düzeltmeler (korunan "–" → K/C; K-4'e 5.1 cümlesi; yeni kümeler) | ✓ | ✓ | ✓ | ✓ | düzeltmeleri kabul | **Yazar: "280 kelime için 30 tur harcamayalım"** — küme küme turlar yok; uzunluk kararı (E8) yazarda |
 | 8 500 yalnız 2.x/4/7.x'ten gelir mi? | hayır | hayır | hayır (aritmetik: kalanlar 9 070) | hayır | hayır | **Yazarın şekil kararı gerekiyor** |
+| E8 uzunluk: seçenekler 1–4 | ? | ? | ? | ? | 4 (tetik ~13 200) | **Tur 154 — ortak karar (yazar)** |
+| 7.3 eke taşıma (1 083 → 761) | ? | ? | ? | ? | evet | **Tur 154 denetimi**; bir korunan cümle yazarın kararına |

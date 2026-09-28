@@ -214,15 +214,15 @@ The body is about **26 000 words**, and the journal's working target is **about 
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 153.**
+**Round 154.**
 
 | Block | State |
 |---|---|
-| Stages (the author, Round 129) | recomposition into result sentences closed (Round 152). **Present stage: compression by finding (the author approved the method, Round 153)**: A the finding map → B one cluster or supplement move per round → C the citation map → D merging only where needed → E the final sweep |
-| Phase A (Round 153) | the finding map: 13 clusters, 73 occurrences, each with function (definition / argument / consequence / boundary / debt) and treatment (H / K / C / P / S / –). **Finding: cutting copies saves only about 280 words; the target needs the prose cut from about 20 300 to about 8 500. The lever is moving working to the supplement (S).** Readers asked for S candidates, each with the summary that stays in the body |
-| Length | about 20 300 words in the body; the Round 101 plan gives prose 8 500 of a 12 000 total |
+| Stages (the author, Round 129) | present stage: **compression by finding** (the author approved the method, Round 153). The author: no round-by-round copy cuts (they total about 280 words); the map's copy cuts are applied once, in a batch |
+| Length (E8) | **decided by the common decision of the four readers and Claude** (the author, Round 154). The AIAA guideline (uploaded; in `references/`) gives Regular/Full Articles **10 000–12 000 words, recommended**, with editor discretion. Arithmetic: 2.x + 4 + 7.x = 11 261; the rest = 9 070; the Round 72 decision cuts from everywhere, calculations first |
+| First supplement move | Section 7.3, measured: 1 083 → 761 words (about 30 %), for the readers' check |
 | Contribution | Sections 1, 5.1, 6.2 and 9 name one contribution, the architecture |
-| Tip pairs in cruise (the author's decision) | uncommanded state: free-wheeling at zero shaft torque (Section 6.1 of the assembled view); shaft power of commanded departures not computed |
+| Tip pairs in cruise (the author's decision) | uncommanded state: free-wheeling at zero shaft torque (Section 6.1); shaft power of commanded departures not computed |
 
 **Every step has now been recomposed once.** Recomposition into result sentences took Steps 10–11 to about 40 % of their length,
 Steps 12–14 to 57–83 %, and the framework and architecture to 80–95 %, because definitions, protected sentences and their evidence
