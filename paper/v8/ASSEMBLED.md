@@ -113,6 +113,12 @@ the engine *"to provide cruise power, while a 'boost' battery was sized to provi
 and land vertically"*; converting its quadcopter baseline to the tail-sitter adds *"fixed wings and collective pitch change mechanisms for
 the rotor blades."*
 
+**A coaxial tail-sitter with a series-hybrid store has been sized.** A long-endurance *"coaxial tailsitter concept"* with a fuselage
+and horizontal and vertical tails, reported in 2025, places its fuel cells *"in a series hybrid arrangement, providing electrical power
+to a battery that in turn provides electrical power to an electric motor"*, and the fuel cell alone is *"unable to completely power the
+aircraft in hover out of ground effect at takeoff"*; how its attitude is controlled, and whether its rotors vary pitch, the paper does
+not state.
+
 **And the propeller compromise at the centre of this paper's own ledger is a known result, not a
 discovery.** The uncrewed tail-sitter literature states it directly: fixed-pitch propellers make
 it *"theoretically impossible to be very efficient in both hovering and forward flight."* A
