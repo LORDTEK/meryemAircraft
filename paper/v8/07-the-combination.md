@@ -28,7 +28,7 @@ Ayrıntı ve alıntılar: `paper/roll-axis-finding.md`.
 ## The combination
 
 None of the three elements is new. **Each can be found on its own, and some of them
-together, in the literature and in hardware** — Section 1 says where. The principle behind the third element — a continuous plant sized for cruise, with the vertical or take-off peak drawn from a store — has been applied in studies of a winged tail-sitter (Section 1) and of a single-aisle airliner whose turbines are *"sized for efficient operation during"* cruise and assisted by electric motors *"during takeoff and climb."*
+together, in the literature and in hardware** — Section 1 says where. The principle behind the third element — a continuous plant sized for cruise, with the vertical or take-off peak drawn from a store — has been applied in studies of a winged tail-sitter (Section 1) and of a single-aisle airliner reported in 2016 whose turbines are *"sized for efficient operation during"* cruise and assisted by electric motors *"during takeoff and climb."*
 
 **What this paper contributes is that combination, the condition its primary propulsor is designed
 to satisfy, and the price the configuration pays for pursuing it.** The three elements, taken together, meet the escape condition
@@ -136,6 +136,7 @@ exposed in cruise, and Section 11 charges them.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 137 — *"reported in 2016"* eklendi** (DeepSeek; dört okuyucu + Claude): *"and of a single-aisle airliner reported in 2016 whose turbines are …"* | Rheaume 2016 |
 | **Tur 136 — tanık cümlesi KAPANDI** (dört okuyucu teyit etti). DeepSeek önerisi (*"reported in 2016"*) oyda | Rohith 2026; Rheaume 2016 |
 | **Tur 135 — tanık cümlesi (B; dört okuyucu + Claude; Tur 124'ten beri bekliyordu):** *"— Section 1 says where."*den sonra *"The principle behind the third element — a continuous plant sized for cruise, with the vertical or take-off peak drawn from a store — has been applied in studies of a winged tail-sitter (Section 1) and of a single-aisle airliner whose turbines are 'sized for efficient operation during' cruise and assisted by electric motors 'during takeoff and climb.'"* Rheaume özet; Rohith Adım 1. Grok P127: *"some of them together"*in örneği Rohith'in kuyruk üstü + seri hibrit tampon birlikteliği (Adım 7'nin ikinci ve üçüncü öğesi), kolektif hatve değil — denetlendi | Rohith 2026; Rheaume 2016 |
 | **Tur 126** (dört okuyucu + Claude): [6]'nın iki etiketi (*"That is the second half of the union."*, *"That is the first half."*) ve [12]'nin *"and the boundary matters"* yan cümlesi çıktı (ses kuralı); [3]'ün karşılama cümlesi *"The instantiation is therefore partial."* ile çift olarak korunan (ChatGPT §13); [4]'ün ilk yarısı korunan kalır (ChatGPT görüş değiştirdi); [13] temiz silme yok, kalır | Tur 125 metni §3 |

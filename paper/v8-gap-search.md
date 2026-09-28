@@ -134,3 +134,7 @@ düzeltmesiyle):** kuyruk üstü evet ama **(a) hayır** (geleneksel gövde + ku
 diyor, notu "BWB değil"); (b) evet (eşeksenli); **(c) açık**; **(d) açık**; (e) evet; (f) hayır. **Engel değil.** Depoda değil →
 metne girmez (P116). Yazara: ResearchGate kopyası indirilebilirse Adım 1 dolu listeye bir satır önerilir (eşeksenli + seri hibrit
 kuyruk üstü, boşluğa (b)+(e) ile en yakın örnek).
+
+**Tur 137 — Vegh müsveddesi (R3-clean) depoda, Claude okudu.** ChatGPT'nin raporu doğrulandı; (a) düzeltmesi dört okuyucu + Claude.
+Sınıflama: kuyruk üstü evet, (a) hayır, (b) evet, (c) söylemiyor, (d) söylemiyor, (e) evet, (f) hayır. Boşluğa (b)+(e) birlikteliğiyle
+en yakın bilinen örnek. Adım 1 satırı Tur 137'de oyda.

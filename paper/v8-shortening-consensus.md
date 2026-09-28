@@ -610,3 +610,4 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | "not …" sınıflaması; borç izi alındı denetiminde; liste tamlığı | ✓ | ✓ | ✓ | ✓ | ✓ | **Kabul (Tur 135)**; CLAUDE §3.0 |
 | Rohith A ve B teyit | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI (Tur 136)** |
 | Vegh: ChatGPT okudu; engel değil; depoda değil | açamadı | okudu | açamadı | açamadı | (a) düzeltmesiyle kabul | **Kayıtta (Tur 136)**; PDF gelirse Adım 1 satırı oyda |
+| Vegh (a) düzeltmesi; Vegh satırı ilke olarak; belge sürüm alanı; sayım/eksen teyit; "reported in 2016" | ✓ | ✓ | ✓ | ✓ | ✓ | **Kabul/uygulandı (Tur 137)**; Vegh satırının sözcükleri oyda |

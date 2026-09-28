@@ -106,3 +106,19 @@ cümlesinden *"tail volume"* silindi); (c) ve (d) hakkında bir şey söylemiyor
 görüntüsü, yalnız ChatGPT** (ChatGPT'nin sürüm etiketi kuralı; Qwen'in "belge türü" alanı oyda). Kaynak-sonuç: boşluğu **söylemiyor**;
 kendi sınırları: pil teknolojisi ticari değil (s. 11), daha yüksek doğrulukta analiz önerisi (s. 26), rüzgârda kalkış/iniş incelenmedi
 (s. 5). Dergi sürümü (10.2514/1.C038393) ve düzeltme duyurusu (…1436.c1) ayrı kayıtlar; bulgular sürümler arasında taşınmaz.
+
+**Tur 137 — Vegh müsveddesi depoda ve Claude okudu** (`references/Vegh-2025_MANUSCRIPT-R3-clean_…pdf`). **Belge türü: yazar müsveddesi,
+düzeltme 3 (temiz), kamuya açık; dizgilenmiş sürüm değil; hangi yayına karşılık geldiği dosyada yok.** Sayfalar bu dosyanınki
+(ChatGPT'nin ResearchGate sayfalarından bir iki sayfa kayık — ör. *"beyond commercially available"* burada s. 10, ChatGPT s. 11).
+ChatGPT'nin Tur 135 raporundaki her olgu bu dosyada **doğrulandı**: eşeksenli kuyruk üstü (s. 4); aynı gövde ve kuyruk geometrisi,
+yatay kuyruk 58 ft², dikey kuyruk 27 ft², rüzgârda kalkış/iniş incelenmedi (s. 5); SOFC *"in a series hybrid arrangement, providing
+electrical power to a battery that in turn provides electrical power to an electric motor"* (s. 7); yakıt pili *"unable to completely
+power the aircraft in hover out of ground effect at takeoff"* (s. 13); pil varsayımı ticari değil (s. 10); *"partially decoupled power requirements between hover and
+forward flight"* (s. 20); *"control characteristics … would vary substantially"* (s. 24); daha yüksek doğrulukta analiz önerisi (s.
+26). **"collective", "cyclic", "control surface", "elevator", "rudder", "elevon", "attitude", "transition", "blended", "flying wing"
+hiç geçmiyor; "novel" yok; "first" yalnız başka bağlamlarda.** Ek bulgu, s. 4: kuyruk üstüler *"offer reduced mechanical complexity for
+conversion compared to tiltrotor and tiltwing aircraft"* (kaynağın [4]'üne dayanarak).
+
+| Belge | Nereye dokunuyor | Kaynak-sonuç |
+|---|---|---|
+| Vegh müsveddesi (R3) | Adım 1 dolu liste (öneri, Tur 137) | (b)+(e) birlikte **destekler** (dolu); (a) **hayır** (gövde + kuyruklar); (c), (d) **söylemiyor**; boşluğu **söylemiyor**. s. 4'ün mekanik karmaşıklık cümlesi Adım 1'in *"The route itself is established"*ini **destekler** |
