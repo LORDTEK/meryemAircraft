@@ -359,7 +359,7 @@ with what margin. This section does not assert the outcome of a calculation it d
 
 **Not demonstrated.**
 
-**The aircraft leaves the ground on its control propellers.** Hover power is sized at thrust
+**The aircraft leaves the ground on its tip pairs.** Hover power is sized at thrust
 equal to weight, so the primary propulsor — the nose pair — supplies a thrust-to-weight ratio of exactly one and
 no more. The take-off margin comes from the four tip pairs, which were sized from the moment
 requirement rather than from weight support. That is the one place the configuration asks a
@@ -404,7 +404,7 @@ this section does not pretend otherwise.
 
 Runway independence is not obtained free, and the charges appear later rather than here. The
 tip frames that make the aircraft self-supporting are structure standing in the cruise
-airstream, and Section 11 charges their drag. The attitude propellers they carry are exposed
+airstream, and Section 11 charges their drag. The tip pairs they carry are exposed
 for the whole cruise and cannot be feathered, and Section 11 charges that too. The buffer that
 releases the engine from the hover peak is mass carried for the whole flight.
 
@@ -471,7 +471,7 @@ separately outside it. That separation holds for the all-electric entries as wel
 
 **Neither factor is a single number, and they are two different kinds of spread.**
 
-The aerodynamic ratio is **8.79 to 10.82**, with the tip frames and the free-wheeling attitude
+The aerodynamic ratio is **8.79 to 10.82**, with the tip frames and the free-wheeling tip-pair
 rotors (Section 8, *What this inventory does not settle*) already charged. That spread is **uncertainty**: it is the zero-lift drag bracket, and a
 designer does not get to choose where in it the real aircraft lands.
 
@@ -623,7 +623,7 @@ has already set out how much of the ground is occupied.
 **The qualification in that sentence is not decoration.** Section 3 lists partial instantiation among the ways an architecture can fail
 the condition: meeting it where the aircraft is carried and failing it elsewhere. That is this
 configuration's own case. The single nose pair meets all four parts — same hardware, both duties
-served, one orientation, hover peak from a buffer. The four attitude pairs do not: they are exposed
+served, one orientation, hover peak from a buffer. The four tip pairs do not: they are exposed
 in the cruise flow and they cannot be feathered, so they re-open the second charge. **The
 instantiation is therefore partial**, and reporting what the failing part costs is a substantial
 share of what Section 11 does.
@@ -710,7 +710,7 @@ checked — are not reliable above roughly ten degrees of incidence, which is in
 rotation passes through. **The mechanism claim is about hardware and survives that limit. The
 transition claim is not made.**
 
-The combination carries costs: the attitude rotors that make the union controllable are themselves
+The combination carries costs: the tip pairs that make the union controllable are themselves
 exposed in cruise, and Section 11 charges them.
 
 ---
@@ -848,7 +848,7 @@ vectors are parallel to that axis too, and the strip works against dynamic press
 slipstream supplies over only part of its length at zero airspeed. What is left is the channel the
 configuration set aside — the speed trim of the pairs, which is a reaction-torque command and not a
 thrust one. Either the residual is small enough to be absorbed that way, which this study has not
-shown and which would mean the architecture spends a little of the channel it declined, or a fourth
+shown and which would mean the architecture spends a little of the channel it declined, or another
 duty falls on the strip.
 
 **The fixed geometry of the tip pairs leaves two admissible cruise states, and only one of them
@@ -986,7 +986,7 @@ Section 2 named three charges that any architecture in this corner pays; **this 
 
 ### Bill 2 — the drag of hover hardware, inside the bracket
 
-In the zero-lift drag build-up behind Section 10's bracket (line items in Supplement S11), **the hardware exposed by the vertical-phase layout — the tip frames and the free-wheeling attitude rotors — is 69 percent of the zero-lift drag at the favourable end and 57 percent at the adverse one**; the rotor term alone is 0.0154 at the favourable end. **The rotor line rests on section drag at low Reynolds number.** It is a blade-element result for sections near a Reynolds number of 8 × 10⁴ in the free-wheeling state, on section polars that are computed rather than measured; Section 12 shows how strongly the term depends on it. **The tip-frame term is an attribution, not a marginal removal cost**: it is not a claim that this drag would disappear if the vertical phase did. **No stopped-state counterfactual was computed.** The eight tip discs stopped edge-on at a controlled azimuth are estimated at ΔC_D0 = 0.0008, against the computed free-wheeling 0.0154 (the estimate is an area-and-coefficient calculation, Supplement S11), but controlling the azimuth takes an indexing mechanism — a class Section 7 counts — and sizing it for eight small discs, charging its mass and its failure modes, and re-solving the loop has not been done.
+In the zero-lift drag build-up behind Section 10's bracket (line items in Supplement S11), **the hardware exposed by the vertical-phase layout — the tip frames and the free-wheeling tip-pair rotors — is 69 percent of the zero-lift drag at the favourable end and 57 percent at the adverse one**; the rotor term alone is 0.0154 at the favourable end. **The rotor line rests on section drag at low Reynolds number.** It is a blade-element result for sections near a Reynolds number of 8 × 10⁴ in the free-wheeling state, on section polars that are computed rather than measured; Section 12 shows how strongly the term depends on it. **The tip-frame term is an attribution, not a marginal removal cost**: it is not a claim that this drag would disappear if the vertical phase did. **No stopped-state counterfactual was computed.** The eight tip discs stopped edge-on at a controlled azimuth are estimated at ΔC_D0 = 0.0008, against the computed free-wheeling 0.0154 (the estimate is an area-and-coefficient calculation, Supplement S11), but controlling the azimuth takes an indexing mechanism — a class Section 7 counts — and sizing it for eight small discs, charging its mass and its failure modes, and re-solving the loop has not been done.
 
 Removing the hub and small items, the tip frames and the free-wheeling rotors gives a clean-body lift-to-drag ratio of 20.55 at the favourable end and 15.24 at the adverse one, against the aircraft's 10.82 and 8.79: **the configuration retains 52.6 and 57.7 percent.** Bill 2 therefore occupies a larger share where the clean-body drag is lower, because a near-constant charge is set against a smaller total — a statement about position within the drag bracket at one scale, not about size (Section 12).
 
@@ -1046,7 +1046,7 @@ On this configuration Bill 1 appears as the energy buffer: 3.6 percent of take-o
 
 ### Two costs that scale does not relieve
 
-The fixed-pitch gap also widens slightly with size, to 16.4 to 22.9 percent at the heavy design (Supplement S12); as in Section 11, no variable-pitch counterfactual was computed. **The transition is where the square–cube relation is paid in full**: rotating the heavy design in the light design's two seconds would demand about 220 kW from the tip propellers, roughly the whole of hover power; at its own 5.1 seconds the demand is about 13 kW. **A larger aircraft of this type turns more slowly, and must.**
+The fixed-pitch gap also widens slightly with size, to 16.4 to 22.9 percent at the heavy design (Supplement S12); as in Section 11, no variable-pitch counterfactual was computed. **The transition is where the square–cube relation is paid in full**: rotating the heavy design in the light design's two seconds would demand about 220 kW from the tip pairs, roughly the whole of hover power; at its own 5.1 seconds the demand is about 13 kW. **A larger aircraft of this type turns more slowly, and must.**
 
 ### Why this section sits between the ledger and the contracts
 
@@ -1182,6 +1182,6 @@ question, and it is not settled here.
 **Range, against the other hybrids — not claimed, in either direction.** The ordering belongs to the sizing
 contract (Section 13).
 
-**The loop closes; the aircraft is not shown to.** Section 14 lists what would settle the rest. What the paper offers is **a configuration sized to combine
+Section 14 lists what would settle the rest. What the paper offers is **a configuration sized to combine
 runway-independent vertical operation with wing-borne cruise efficiency, arranged to do so with no mechanism
 that reorients a propulsor, and an account of what the combination costs.**
