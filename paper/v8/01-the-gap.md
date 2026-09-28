@@ -129,6 +129,12 @@ the engine *"to provide cruise power, while a 'boost' battery was sized to provi
 and land vertically"*; converting its quadcopter baseline to the tail-sitter adds *"fixed wings and collective pitch change mechanisms for
 the rotor blades."*
 
+**A coaxial tail-sitter with a series-hybrid store has been sized.** A long-endurance *"coaxial tailsitter concept"* with a fuselage
+and horizontal and vertical tails, reported in 2025, places its fuel cells *"in a series hybrid arrangement, providing electrical power
+to a battery that in turn provides electrical power to an electric motor"*, and the fuel cell alone is *"unable to completely power the
+aircraft in hover out of ground effect at takeoff"*; how its attitude is controlled, and whether its rotors vary pitch, the paper does
+not state.
+
 **And the propeller compromise at the centre of this paper's own ledger is a known result, not a
 discovery.** The uncrewed tail-sitter literature states it directly: fixed-pitch propellers make
 it *"theoretically impossible to be very efficient in both hovering and forward flight."* A
@@ -173,6 +179,7 @@ presume an escape.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 138 — Vegh dolu liste satırı (Öneri V; dört okuyucu + Claude; son yan cümle kalır — Q1 oybirliği; *"reported in 2025"* yer tutucu, sürüm gönderimden önce sabitlenir — Q2 oybirliği):** Rohith maddesinden sonra *"A coaxial tail-sitter with a series-hybrid store has been sized. … how its attitude is controlled, and whether its rotors vary pitch, the paper does not state."* Alıntılar s. 4, 7, 13; yokluk arama listesi ve sürüm bayrağı `v8-evidence.md` Tur 138. Liste öğelerini sayan cümle yok (arandı). Sınıflama: (a) hayır, (b) evet, (c)(d) söylemiyor, (e) evet, (f) hayır | Vegh müsveddesi R3 |
 | **Tur 136 — Rohith satırı KAPANDI** (dört okuyucu teyit etti) | Rohith 2026 |
 | **Tur 135 — Rohith dolu liste satırı (A; dört okuyucu + Claude; Grok P122 biçimi):** BWB maddesinden sonra *"A buffered series hybrid on a winged tail-sitter has been sized. A 2026 sizing study of 100 kg winged biplane tail-sitters sizes the engine 'to provide cruise power, while a 'boost' battery was sized …'; converting its quadcopter baseline to the tail-sitter adds 'fixed wings and collective pitch change mechanisms for the rotor blades.'"* Kaynak: Rohith ve ark. 2026 *J. Aircraft* s. 575, 586 (`references/Rohith-…pdf`). ChatGPT: başlıkta "biplane" isteğe bağlı, yüzey taramasında denetlenecek | Rohith 2026 |
 | **Tur 121 — ses işaretleri (yazar kararı, Tur 119: Grok birini seçer, gerisi çıkar).** Grok V5'i seçti (*"the giving-up is the part that is not free"* kalır). Çıktı: V1 (*"The answer works, costs little…"*), V2 (*"elegant on paper — one propulsion group, no dead hardware in cruise. It is also the more"*; içerik rota paragrafında), V3 (*"excellent at what it does and is"*), V4 (*"and uncrewed ones are ordinary"*; içerik dolu listede ve XFY-1 paragrafında), V6 = **S-46** (*"What that costs … is what the paper is for"* — Adım 5, 8, 9, 15 ile çelişiyordu). Hepsi silme (`v8_draft_check.py --taslak`). **K kalır — yazar kararı (Tur 120).** Özgün Ek S1'in dondurulmuş kopyasında | Tur 120 metni §1, §4; yazar |

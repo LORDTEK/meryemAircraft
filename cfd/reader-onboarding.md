@@ -214,18 +214,20 @@ The body is about **26 000 words**, and the journal's working target is **about 
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 137.**
+**Round 138.**
 
 | Block | State |
 |---|---|
 | Stages (the author, Round 129) | each stage is a pass through the whole text; the next stage's method is chosen when the present one is complete. Present stage: recomposition into result sentences |
 | Length | **not decided now** (the author): after this stage completes |
 | Tip pairs in cruise (the author's decision) | uncommanded state: free-wheeling at zero shaft torque (Step 8); shaft power of commanded departures not computed (Step 8; Step 14) |
-| Step 14 | eighteen unknowns (S-58 closed) |
-| Rohith et al. 2026 (*J. Aircraft*) | read; Step 1 occupied-list item and Step 7 witness sentence (with Rheaume) **closed** |
-| Vegh | author's manuscript (R3, clean) **in the repository and read**: coaxial tail-sitter, fuselage and tails (not (a)), SOFC series hybrid with battery completing hover; (c), (d) not stated; no obstacle. A Step 1 occupied-list line is to vote |
+| Step 14 | eighteen unknowns; S-60 (control items carry only the hover regime) to vote |
+| Rohith et al. 2026 (*J. Aircraft*) | read; Step 1 item and Step 7 witness **closed** |
+| Vegh | author's manuscript (R3) in the repository and read; **Step 1 occupied-list line applied** (Round 138), to confirm; *"reported in 2025"* is a placeholder, the cited version is fixed before submission |
+| Evidence record | four fields on every row (type/version; in repository; read by; verification); a fifth (quotation page basis) to vote |
+| *"not …"* classification | done (Round 138): S-59, S-60, R-9 and N2–N4 to vote |
 | Standing checks | receipt audit (R1–R4), debt trace, whole-paper search before "absent", state identity, "not …" classification, list completeness |
-| To complete the stage | the Vegh line; rest of the surface sweep (number identity, figures, "not …" classification) — counts and axis names done; record-propagation sweep; Step 1 and Step 8 denial maps; the whole reading in two halves (1–8, 9–15) and a short reconciliation |
+| To complete the stage | number identity; figure scripts and the "biplane" heading; record-propagation sweep; Step 1 and Step 8 denial maps; the whole reading in two halves (1–8, 9–15) and a short reconciliation |
 
 **Every step has now been recomposed once.** Recomposition into result sentences took Steps 10–11 to about 40 % of their length,
 Steps 12–14 to 57–83 %, and the framework and architecture to 80–95 %, because definitions, protected sentences and their evidence

@@ -122,3 +122,38 @@ conversion compared to tiltrotor and tiltwing aircraft"* (kaynağın [4]'üne da
 | Belge | Nereye dokunuyor | Kaynak-sonuç |
 |---|---|---|
 | Vegh müsveddesi (R3) | Adım 1 dolu liste (öneri, Tur 137) | (b)+(e) birlikte **destekler** (dolu); (a) **hayır** (gövde + kuyruklar); (c), (d) **söylemiyor**; boşluğu **söylemiyor**. s. 4'ün mekanik karmaşıklık cümlesi Adım 1'in *"The route itself is established"*ini **destekler** |
+
+**Tur 138 — Vegh satırı Adım 1'e girdi (Öneri V; dört okuyucu + Claude; son yan cümle kalır, *"reported in 2025"* yer tutucu).**
+Alıntılar müsveddeye karşı yeniden denetlendi: *"coaxial tailsitter concept"* (s. 4), *"in a series hybrid arrangement, providing
+electrical power to a battery that in turn provides electrical power to an electric motor"* (s. 7), *"unable to completely power the
+aircraft in hover out of ground effect at takeoff"* (s. 13; kaynakta özne *"The fuel cell (and diesel engine for the diesel-electric
+case) was unable …"*, ve *"for the baseline aircraft (and all aircraft sized for this study)"* diye sürüyor — satırdaki *"the fuel cell
+alone"* bu cümlenin yakıt pili kolunu, seri hibrit düzeninde pilsiz hâli anlatır).
+
+- **Yokluk arama listesi (DeepSeek P4 — "the paper does not state" iddiasıyla birlikte taşınır).** Müsveddenin tamamında aranan ve
+  **geçmeyen**: *"variable pitch", "propeller pitch", "blade pitch", "fixed pitch", "fixed-pitch", "swashplate", "collective", "cyclic",
+  "control surface", "elevator", "rudder", "elevon", "attitude", "transition", "blended", "flying wing", "novel", "governor", "rpm"*.
+  **Geçen ve bağlamı:** *"pitch"* bir kez, s. 19 — *"increases the required pitch angle for forward flight"* (uçağın yunuslama açısı,
+  kanat yüklemesi bağlamında; rotor hatvesi değil). *"control"* s. 24 (*"control characteristics … would vary substantially"*, boş kuyruk
+  geometrisiyle) ve s. 28 (kaynakça başlığı). *"torque"* s. 6, 16, 21, 22 — hepsi motor özgül torku (boyutlandırma), kumanda değil.
+  *"yaw"*, *"moment"* geçmiyor; *"roll"* yalnız bir yazar adında (s. 29).
+- **Kayda değer, gövdeye girmez:** s. 14 — loiter, seyir ve alçalma bölümlerinde *"rotor tip speed was lowered to 80% of the hover
+  value"*. Bu **devir** değişimidir, hatve değil; rotorların hatve değiştirip değiştirmediğini söylemez. Boyutlandırma aracı NDARC
+  (kaynakça [7]) ve rotor *"blade loading"* ile tanımlanıyor; bundan hatve çıkarımı **yapılmaz** (kaynak sessizliği, yokluk değil —
+  Qwen P1'in oydaki koruması).
+- **Sürüm bayrağı — gönderimden önce sabitlenecek (DeepSeek P1, Qwen P2, ChatGPT):** iki aday yayın — AIAA SciTech 2025, doi
+  10.2514/6.2025-1436; *J. Aircraft*, doi 10.2514/1.C038393. *"reported in 2025"* yer tutucudur; tarih kimliği **2025 → SciTech bildirisi
+  (sürüm) → müsvedde R3 karşılığı** biçiminde kurulacak (ChatGPT), yalnız *"müsvedde → 2025"* biçiminde değil. Dizgilenmiş sürüm elde
+  edilirse alıntılar ve sayfalar ona karşı yeniden denetlenir.
+
+**Kanıt satırı alanları (Tur 138'de kabul; dört okuyucu + Claude).** Her kanıt satırı dört alan taşır: **(1) tür/sürüm; (2) depoda: evet/hayır;
+(3) okuyan: kim, hangi sürüm; (4) doğrulama: depo PDF'ine karşı / tek okuyucu görüntüsü / yalnız özet.** Beşinci alan (alıntı sayfa tabanı,
+DeepSeek) oyda. İlk uygulama:
+
+| Belge | Tür/sürüm | Depoda | Okuyan (sürüm) | Doğrulama | Alıntı sayfa tabanı (oyda) |
+|---|---|---|---|---|---|
+| Vegh müsveddesi R3 | yazar müsveddesi, düzeltme 3, temiz; yayın karşılığı dosyada yok | evet | Claude (R3) | depo PDF'i | müsvedde |
+| Vegh SciTech 2025 (10.2514/6.2025-1436) | konferans tam metni | hayır | ChatGPT (ResearchGate görüntüsü) | tek okuyucu görüntüsü | ResearchGate (müsveddeden 1–2 sayfa kayık) |
+| Vegh düzeltme duyurusu (…1436.c1) | yalnız düzeltme | evet | Claude | depo PDF'i | — (makale gibi anılmaz) |
+| Vegh *J. Aircraft* (10.2514/1.C038393) | dergi makalesi | hayır | kimse (yalnız özet) | yalnız özet | — |
+| Rohith ve ark. 2026 | *J. Aircraft* 63(2):575–591, dizgilenmiş | evet | Claude (dizgilenmiş) | depo PDF'i | dizgilenmiş |

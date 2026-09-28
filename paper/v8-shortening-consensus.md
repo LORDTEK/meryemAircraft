@@ -611,3 +611,13 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Rohith A ve B teyit | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI (Tur 136)** |
 | Vegh: ChatGPT okudu; engel değil; depoda değil | açamadı | okudu | açamadı | açamadı | (a) düzeltmesiyle kabul | **Kayıtta (Tur 136)**; PDF gelirse Adım 1 satırı oyda |
 | Vegh (a) düzeltmesi; Vegh satırı ilke olarak; belge sürüm alanı; sayım/eksen teyit; "reported in 2016" | ✓ | ✓ | ✓ | ✓ | ✓ | **Kabul/uygulandı (Tur 137)**; Vegh satırının sözcükleri oyda |
+| Vegh okuması ve sınıflaması (müsvedde R3) | ✓ | ✓ | ✓ | ✓ | ✓ | **Teyit (Tur 138)** |
+| Öneri V (Adım 1 Vegh satırı); Q1 son yan cümle kalır; Q2 "reported in 2025" yer tutucu | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı (Tur 138)**; teyide |
+| "reported in 2016" (Adım 7) teyit | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI (Tur 138)** |
+| Kanıt satırı dört alanı (tür/sürüm; depoda; okuyan; doğrulama) | ✓ | ✓ | ✓ | ✓ | ✓ | **Kabul (Tur 138)**; `v8-evidence.md` |
+| Tarih kimliği; "not …" sınıflaması şekil betiklerinden önce | ✓ | ✓ | ✓ | ✓ | ✓ | **Kabul (Tur 138)** |
+| s. 4 mekanik karmaşıklık bulgusu: yalnız kayıt | ✓ | ✓ | ✓ | ✓ | ✓ | **Kabul (Tur 138)** |
+| DeepSeek: beşinci alan (alıntı sayfa tabanı); müsvedde okuma kuralı; yokluk arama listesi kayıtla taşınır | — | — | öneren | — | evet | **Tur 138 oylaması** |
+| ChatGPT: kaynak-iddia / makale-iddia sınır denetimi (H'ye) | — | öneren | — | — | evet | **Tur 138 oylaması** |
+| Qwen P1 (kaynak sessizliği ≠ yokluk koruması); P2 (müsvedde–dizgi uzlaştırması) | — | — | — | öneren | evet | **Tur 138 oylaması** |
+| "not …" sınıflaması: S-59 (Adım 8 kararlılık cümlesi), S-60 (Adım 14/S14 kontrol maddesi yalnız askı), R-9 (S14 depolama satırı), N2–N4, Adım 12 Fatura 1 = E | — | — | — | — | evet | **Tur 138 oylaması**; `drafts/not-classification.md` |
