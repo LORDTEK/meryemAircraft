@@ -111,12 +111,7 @@ hovering condition and a cruising one, and no single fixed-pitch blade is at its
 That is a price of refusing the variable-pitch hub rather than an argument against refusing it,
 and it is charged in Section 11 with the other costs of the union, not settled here.
 
-Nor is this a claim of mechanical simplicity. Part count, mass, failure modes and
-maintenance burden were not measured, and nothing in this work supports a statement
-about reliability. What is offered is a **count**: the classes of mechanism that a
-tilting architecture requires to change regime, and which this arrangement does not
-require. The actuator inventory that replaces them is the propulsion motors together
-with the strip.
+Nor is this a claim of mechanical simplicity. What is offered is a **count**: the classes of mechanism that a tilting architecture requires to change regime, and which this arrangement does not require. The actuator inventory that replaces them is the propulsion motors together with the strip.
 
 **One thing this section does not establish, and Section 9 holds it to that.** The arrangement
 described here requires no mechanism to change regime. **Whether this aircraft can actually perform

@@ -1604,6 +1604,20 @@ as well as the shaft-driven ones: if `L/De` already contained the electrical cha
 section lift coefficients, each solved at its hover and its cruise condition; all four meet the hover figure of merit, and 0.683 is
 the best of the four on cruise efficiency under that constraint.
 
+### Section 6's paragraphs as they stood before the copy-cut batch (Round 157)
+
+Each paragraph below lost a sentence or a clause in the batch of copy cuts; it is given here in full, verbatim, under its original heading.
+
+#### What this half costs
+
+The wing that makes cruise efficient is carried through the vertical phase, where it produces
+nothing and presents the aircraft's largest surface to ground wind. The tailless planform that
+follows from having no boom constrains the sweep, because with no horizontal stabiliser the
+pitching moment must come from the distribution of lift along the body itself. And the
+fixed-pitch propeller that serves both regimes is the reason the margin above sits where it does
+rather than higher. Section 11 charges the third. The first two are inside Section 10's closed numbers — the wing's mass in the empty fraction, the constrained planform in the computed span efficiency — but neither is separated out as a charge, and the wing's exposure to ground wind is not priced in this work.
+
+
 ---
 
 ## S7. Section 7 (from Section 7)
@@ -1746,6 +1760,20 @@ transition claim is not made.**
 
 The combination carries costs: the attitude rotors that make the union controllable are themselves
 exposed in cruise, and Section 11 charges them.
+
+### Section 7's paragraphs as they stood before the copy-cut batch (Round 157)
+
+Each paragraph below lost a sentence or a clause in the batch of copy cuts; it is given here in full, verbatim, under its original heading.
+
+#### The combination
+
+Nor is this a claim of mechanical simplicity. Part count, mass, failure modes and
+maintenance burden were not measured, and nothing in this work supports a statement
+about reliability. What is offered is a **count**: the classes of mechanism that a
+tilting architecture requires to change regime, and which this arrangement does not
+require. The actuator inventory that replaces them is the propulsion motors together
+with the strip.
+
 
 ---
 
@@ -1978,6 +2006,22 @@ brake or a lock rather than motor holding torque, the count of Section 7 would g
 
 On the 50 kg reference design, thickness runs from 25 % of chord at the root to 12 % at the tip, and chord from 0.970 m to 0.236 m (realised planform, `aero/planform.py`).
 
+### Section 8's paragraphs as they stood before the copy-cut batch (Round 157)
+
+Each paragraph below lost a sentence or a clause in the batch of copy cuts; it is given here in full, verbatim, under its original heading.
+
+#### What this inventory does not settle
+
+**The tip pairs are the parts that fail the escape condition.** The nose pair meets all four parts of Section 3. The tip pairs do not: they hold
+one orientation, but they are carried through cruise producing moments rather than cruise thrust,
+which is the first of Section 3's failure modes, and they are exposed while doing it. This is the partial
+instantiation Section 3 lists as its **fourth** failure mode — meeting the condition where the
+aircraft is carried and failing it elsewhere — and the charge it re-opens is the second, carried in
+Section 11. *(They are sized for moments and used for them in both regimes; they add the take-off
+margin (Section 5) but were not sized for weight support. Section 3's permitted-cost clause
+therefore places them outside the first charge while leaving them in the airstream.)*
+
+
 ---
 
 ## S9. Section 9 (from Section 9)
@@ -2152,6 +2196,15 @@ Because the comparative result depends on the sizing contract, **no comparison i
 should be quoted without the contract it was computed under.** That is not a caveat attached for
 safety; it is the paper's own finding applied to the paper's own numbers, and Section 13 states
 what it demands of anyone who uses the framework afterwards.
+
+### Section 9's paragraphs as they stood before the copy-cut batch (Round 157)
+
+Each paragraph below lost a sentence or a clause in the batch of copy cuts; it is given here in full, verbatim, under its original heading.
+
+#### What each claim does not depend on
+
+**The last of these carries a distinction that matters more than the others.** The mechanism claim is a statement about what hardware is present, and it is settled by the inventory of Sections 7 and 8. **The separate claim that this aircraft can actually perform the regime change is not settled** (Section 7).
+
 
 ---
 
@@ -3338,6 +3391,15 @@ architecture it then favours, is the user's question. What this section establis
 same aircraft, under three reasonable contracts, give orderings against lift-plus-cruise that move by
 tens of percentage points and, inside the envelope, change sign** — so the ordering is not a property
 of the architectures alone.
+
+### Section 13's paragraphs as they stood before the copy-cut batch (Round 157)
+
+Each paragraph below lost a sentence or a clause in the batch of copy cuts; it is given here in full, verbatim, under its original heading.
+
+#### What is compared, and on what basis
+
+Three architectures fly the same mission, 13 kg of payload at 30 m s⁻¹, with the same wing loading, disc loading and aspect ratio, the same airframe and avionics fractions, and the same fuel and energy chain apart from the propeller. **The competitors are therefore this planform with two add-ons, not independently designed aircraft of their families.** All three carry the same buffered series-hybrid power system, so Bill 3 is held common and the comparison measures mass and cruise drag. **Holding Bill 3 common is a choice of question, and it has a direction.** **The choice runs against this configuration.** Without the buffer, and with engines rated to deliver the hover demand, the lift-plus-cruise layout does not close under a fixed fuel fraction or a fixed take-off mass and falls 38 to 47 percent behind under a fixed fuel mass, and the tilt bound does not close under a fixed take-off mass; under a fixed fuel fraction it closes at 520 kg, about ten times this configuration's mass — the first contract's blindness to mass, made visible. That comparison is not used, because it would set competitors without a store against this configuration with one.
+
 
 ---
 

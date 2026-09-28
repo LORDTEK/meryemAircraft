@@ -141,14 +141,7 @@ the two middle entries fall inside its envelope, and only its top corner is ahea
 all-electric side-by-side helicopter, which has no wing either. The qualifications below apply to
 these entries as they do to the quadrotors.
 
-**So the second claim is narrower than the structural statement invites.** Carrying cruise lift on
-a wing is worth **roughly an eighth to a half against the turboshaft reference (a quarter to a half for the best examined blade family), and against the
-all-electric one it ranges from slightly behind to comfortably ahead depending on the drag outcome
-and the blade** — a measurable advantage, not a change of category. And what
-compresses it is not the wing. **It is the cruise efficiency this aircraft's fixed-pitch blade
-delivers:** at a propeller efficiency of 0.85 the same airframe reaches 7.47 to 9.20. Whether a
-variable-pitch hub would recover that difference is not computed; Section 11 reports the gap and
-declines to attribute all of it to the hub.
+**So the second claim is narrower than the structural statement invites.** Carrying cruise lift on a wing is worth **roughly an eighth to a half against the turboshaft reference (a quarter to a half for the best examined blade family), and against the all-electric one it ranges from slightly behind to comfortably ahead depending on the drag outcome and the blade** — a measurable advantage, not a change of category. And what compresses it is not the wing. **It is the cruise efficiency this aircraft's fixed-pitch blade delivers:** at a propeller efficiency of 0.85 the same airframe reaches 7.47 to 9.20. Whether a variable-pitch hub would recover that difference is not computed; Section 11 reports the gap and declines to attribute all of it to the hub.
 
 ### Five qualifications: three run against this configuration, one has no computed direction, and one bounds what the comparison can be called
 
@@ -209,12 +202,7 @@ above, which sit at a few degrees, but it bounds what this section may be read t
 
 ### What this half costs
 
-The wing that makes cruise efficient is carried through the vertical phase, where it produces
-nothing and presents the aircraft's largest surface to ground wind. The tailless planform that
-follows from having no boom constrains the sweep, because with no horizontal stabiliser the
-pitching moment must come from the distribution of lift along the body itself. And the
-fixed-pitch propeller that serves both regimes is the reason the margin above sits where it does
-rather than higher. Section 11 charges the third. The first two are inside Section 10's closed numbers — the wing's mass in the empty fraction, the constrained planform in the computed span efficiency — but neither is separated out as a charge, and the wing's exposure to ground wind is not priced in this work.
+The wing that makes cruise efficient is carried through the vertical phase, where it produces nothing and presents the aircraft's largest surface to ground wind. The tailless planform that follows from having no boom constrains the sweep. And the fixed-pitch propeller that serves both regimes is the reason the margin above sits where it does rather than higher. Section 11 charges the third. The first two are inside Section 10's closed numbers — the wing's mass in the empty fraction, the constrained planform in the computed span efficiency — but neither is separated out as a charge, and the wing's exposure to ground wind is not priced in this work.
 
 **The two halves are now on the table separately. Section 7 is where they are combined**, and
 the combination is what this paper is for.

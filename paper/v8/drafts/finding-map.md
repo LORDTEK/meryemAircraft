@@ -163,3 +163,21 @@
 | 5.2 | Roll is produced instead by a strip on the lower surface: inclined at 45° in planform, running 120 % of root chord, reaching 67 % of semi-span, and standing 2 cm proud at its inboard end and 6 cm at its outboard end. |  | definition | **H** |  |
 | 5.2 | Beyond the propellers' rotation, one thing on this aircraft changes its configuration: the strip. It is specified as deployable in two halves — one side alone for roll, both together as a speed brake. |  | definition | **K** | 5.2's 'What moves' |
 | 5.1 | The actuator inventory that replaces them is the propulsion motors together with the strip. |  | argument | **–** | 5.2 says it with the actuator count |
+
+---
+
+## Tur 157 — toplu kesim uygulandı (B1–B7, dört okuyucu + Claude)
+
+| Madde | Satır | Sonuç |
+|---|---|---|
+| B1 | K-3 6.2 | uygulandı: yalnız korunmayan 13 kelimelik giriş silindi; iki korunan cümle aynen |
+| B2 | K-4 5.2 | uygulandı (−84); işaretçi (Section 5.1) eklendi, parantez kalktı |
+| B3 | K-5 5.1 | uygulandı (−21); ev 6.2 madde 4 |
+| B4 | K-9 5.1 | **K** — dört okuyucu veto (mimarinin "tek yönelim / tek pal geometrisi" karşıtlığı) |
+| B5 | K-9 4 | **geri alındı** — dört okuyucu ✓ verdi, ama cümle korunan (Adım 6, Q); `v8_caveats.py` uygulamada yakaladı; ön denetimim birleşik görünümdeydi |
+| B6 | C-11 4 | uygulandı (−19); sayım ("the third / the first two") bozulmadı |
+| B7 | 7.4 | uygulandı (−47); ev S13 |
+| — | K-2 5.2, K-9 4, C-13 5.1, K-7 8 | K |
+| — | Bölüm 9 satırları; yeni kümeler | D evresi (6.2 + 9 önce; Qwen P1: yeni kümeler birleştirmeden sonra haritalanır) |
+
+**Sonuç: gövde −184 kelime** (adım gövdeleri 20 182 → 19 998).

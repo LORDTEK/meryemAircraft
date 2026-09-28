@@ -157,14 +157,7 @@ duty falls on the strip.
 is physically closed.** Unable to feather, the pairs must either turn at the zero-shaft-torque
 condition or be stopped. This configuration uses the first: free-wheeling at zero shaft torque is the tip pairs' uncommanded cruise state, and it is the drag state Section 11 charges. The shaft power of commanded departures from that state, for attitude moments in cruise, is not computed.
 
-**The tip pairs are the parts that fail the escape condition.** The nose pair meets all four parts of Section 3. The tip pairs do not: they hold
-one orientation, but they are carried through cruise producing moments rather than cruise thrust,
-which is the first of Section 3's failure modes, and they are exposed while doing it. This is the partial
-instantiation Section 3 lists as its **fourth** failure mode — meeting the condition where the
-aircraft is carried and failing it elsewhere — and the charge it re-opens is the second, carried in
-Section 11. *(They are sized for moments and used for them in both regimes; they add the take-off
-margin (Section 5) but were not sized for weight support. Section 3's permitted-cost clause
-therefore places them outside the first charge while leaving them in the airstream.)*
+**The tip pairs are the parts that fail the escape condition** (Section 7). They are sized for moments and used for them in both regimes; they add the take-off margin (Section 5) but were not sized for weight support. Section 3's permitted-cost clause therefore places them outside the first charge while leaving them in the airstream.
 
 The free-wheeling state is physically determinate: the rotor settles where net shaft torque is
 zero. **The stopped state is not.** Stopping a rotor requires the stop to be produced by

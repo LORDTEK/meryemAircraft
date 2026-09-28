@@ -32,7 +32,7 @@ Comparison is only meaningful against a named alternative, and this paper's alte
 
 **Operation without a runway** does not depend on the drag bracket, the propeller efficiency or the transition aerodynamics — **but it does depend on the energy store**: the vertical phase is sized with one, and Section 14 examines whether it exists. **Cruise lift carried on a surface** does not depend on the sizing contract or the transition aerodynamics. The **size** of the cruise-efficiency margin depends on both the drag bracket and the blade family, and Section 6 reports it as a range rather than a number. **Elimination of the propulsor-reorientation mechanism class** does not depend on the drag bracket, the propeller efficiency, the sizing contract, the range result or the energy store — **nor on the transition aerodynamics**.
 
-**The last of these carries a distinction that matters more than the others.** The mechanism claim is a statement about what hardware is present, and it is settled by the inventory of Sections 7 and 8. **The separate claim that this aircraft can actually perform the regime change is not settled** (Section 7).
+ The mechanism claim is a statement about what hardware is present, and it is settled by the inventory of Sections 7 and 8. **The separate claim that this aircraft can actually perform the regime change is not settled** (Section 7).
 
 ### One cost of the contribution that is named and not priced
 

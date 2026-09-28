@@ -565,6 +565,13 @@ dahil herkesin hemfikir olduğu kısaltmalar uygulansın."*
   olmuş. … Ben hakem olsam canım sıkılır."* ve *"Bu bir hukuk metni değil. Anlaşılamadıktan sonra haklı olmak önem kaybeder."* Kendi birleştirici cümlesini önerdi
   (*"avantajları bir araya getiren mimari"*): birleşim mimarinin rakibi değil, yaptığı iş. **Kural:** bir onarım adayı yazılınca sorulur — bir insan bunu bir
   okumada anlar mı? Bir listeyi korumak için cümle ağırlaşıyorsa, listenin gerekli olup olmadığı sorulur. Tek katkı kararı (Tur 35) korunarak uygulandı.
+- **Durma testi (Tur 157, dört okuyucu + Claude):** haritadaki bir cümle için — işlevi *argüman* ve evi kesilen bölüm değilse, kesmek bir argüman adımını
+  kaldırır → dur (DeepSeek). Haritada olmayan cümle için Tur 87 ölçütü: türetilmiş bir ifade iddia gibi, sınırlı bir iddia daha geniş okunur → dur.
+  "Haritada yok" "kesilebilir" demek değildir (Grok). İkisi de korunan cümle kuralını geçersiz kılmaz.
+- **Korunan ön denetimi adım kaynağında yapılır (Tur 157, B5).** Toplu kesim taslağını birleşik görünümde korunan listeye karşı denetledim; korunan
+  cümleler adım numaralı işaretçiyle kayıtlı (*"Section 11"*), görünümde *"Section 7.2"* olduğu için eşleşmedi ve B5 korunan bir cümleyi kısalttı —
+  okuyuculara "denetledim" dedikten sonra `v8_caveats.py` uygulamada yakaladı. **Okuyuculara gitmeden önce taslak adım kaynağına geçici uygulanır ve
+  `v8_caveats.py` koşar.**
 - **Birleşik görünüm de denetlenir (Tur 146, W-1).** Alındı denetimi adım dosyalarında koştu; `v8_assemble.py` Adım 8'i 5.2 / 6.1 diye bölünce
   üç alıcı 6.1'e geçti, işaretçiler geride kaldı. Okurun gördüğü metin birleşik görünümdür; bir üretici betik yazan, **çıktısını** denetler.
 
@@ -588,6 +595,7 @@ Hiçbir iddia denetlenmeden aktarılmaz — ne YZ'lerinki ne benimki.
   çözülmesini `v8_assemble.py` ("cozulmeyen atif") denetler. Tur 88'e dek v8 için "links temiz" diye raporladığım v7'ydi.
 - `paper/build/v8_refs.py` — v8'de tablo/satır atıfları, elle çözülmüş ilişkisel adlar (*the inversion*, *the N-th
   departure*) ve "Supplement S#" atıfları; gözden geçirilmiş liste `paper/v8-refs-reviewed.md` (`--sina`).
+- `paper/build/v8_count_flag.py BASE` — kısalan her paragrafta kalan sayma/sıra sözcüklerini ve silinen parçayı listeler; yalnız işaret, insan okur (Tur 157; ChatGPT, dört okuyucu + Claude; K-9'un mekanik hâli, `--sina` K-9 silmesini yakalar).
 - `paper/build/v8_figures.py` — v8 şekil betiklerindeki her birimli sayı gövdede ya da ekte aynı değer + birimle mi; yalnız değer eşleşmesi
   insan okur (Tur 141, P-e; `--sina` F1'i geri koyup yakalar).
 - **Kaynak durumu (Tur 141, P-d):** dolu-literatür iddiasının her tanığı verified primary / verified secondary / attributed (yalnız başlık) /

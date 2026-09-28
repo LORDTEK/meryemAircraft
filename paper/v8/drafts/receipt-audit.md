@@ -187,3 +187,9 @@ Yeni işaretçi: *"The working is in Supplement S12."* → Ek S12, *"Section 12 
 coupling Section 7.3 found is paid"*i — alıcı cümle (*"what is established is that they are coupled here … Coupling is not identity"*) gövdede
 kaldı; Grok'un geri koyma isteği bu alındıyı korudu. 7.2'nin *"Section 7.3 shows how strongly the term depends on it"*i: Reynolds sayıları eke
 gitti, ama bulgu (düşüşü Re açıklar, 0,29–0,65) gövdede — R1.
+
+## Tur 157 — toplu kesimden sonra
+
+Yeni işaretçiler: 5.2 *"The tip pairs are the parts that fail the escape condition (Section 5.1)"* → 5.1'in *"The single nose pair meets all four parts …
+The four tip pairs do not: … The instantiation is therefore partial"* — **R1**. 7.4 *"… does not close under a fixed fuel fraction or a fixed take-off mass
+(Supplement S13)"* → S13'ün tamponsuz paragrafı (38–47 %, 520 kg) — **R1**. ChatGPT'nin şartı (Tur 157): D evresinde 5.1 değişirse bu alındı yeniden okunur.

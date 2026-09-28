@@ -523,14 +523,7 @@ the two middle entries fall inside its envelope, and only its top corner is ahea
 all-electric side-by-side helicopter, which has no wing either. The qualifications below apply to
 these entries as they do to the quadrotors.
 
-**So the second claim is narrower than the structural statement invites.** Carrying cruise lift on
-a wing is worth **roughly an eighth to a half against the turboshaft reference (a quarter to a half for the best examined blade family), and against the
-all-electric one it ranges from slightly behind to comfortably ahead depending on the drag outcome
-and the blade** — a measurable advantage, not a change of category. And what
-compresses it is not the wing. **It is the cruise efficiency this aircraft's fixed-pitch blade
-delivers:** at a propeller efficiency of 0.85 the same airframe reaches 7.47 to 9.20. Whether a
-variable-pitch hub would recover that difference is not computed; Section 7.2 reports the gap and
-declines to attribute all of it to the hub.
+**So the second claim is narrower than the structural statement invites.** Carrying cruise lift on a wing is worth **roughly an eighth to a half against the turboshaft reference (a quarter to a half for the best examined blade family), and against the all-electric one it ranges from slightly behind to comfortably ahead depending on the drag outcome and the blade** — a measurable advantage, not a change of category. And what compresses it is not the wing. **It is the cruise efficiency this aircraft's fixed-pitch blade delivers:** at a propeller efficiency of 0.85 the same airframe reaches 7.47 to 9.20. Whether a variable-pitch hub would recover that difference is not computed; Section 7.2 reports the gap and declines to attribute all of it to the hub.
 
 ### Five qualifications: three run against this configuration, one has no computed direction, and one bounds what the comparison can be called
 
@@ -591,12 +584,7 @@ above, which sit at a few degrees, but it bounds what this section may be read t
 
 ### What this half costs
 
-The wing that makes cruise efficient is carried through the vertical phase, where it produces
-nothing and presents the aircraft's largest surface to ground wind. The tailless planform that
-follows from having no boom constrains the sweep, because with no horizontal stabiliser the
-pitching moment must come from the distribution of lift along the body itself. And the
-fixed-pitch propeller that serves both regimes is the reason the margin above sits where it does
-rather than higher. Section 7.2 charges the third. The first two are inside Section 7.1's closed numbers — the wing's mass in the empty fraction, the constrained planform in the computed span efficiency — but neither is separated out as a charge, and the wing's exposure to ground wind is not priced in this work.
+The wing that makes cruise efficient is carried through the vertical phase, where it produces nothing and presents the aircraft's largest surface to ground wind. The tailless planform that follows from having no boom constrains the sweep. And the fixed-pitch propeller that serves both regimes is the reason the margin above sits where it does rather than higher. Section 7.2 charges the third. The first two are inside Section 7.1's closed numbers — the wing's mass in the empty fraction, the constrained planform in the computed span efficiency — but neither is separated out as a charge, and the wing's exposure to ground wind is not priced in this work.
 
 **The two halves are now on the table separately. Section 5.1 is where they are combined**, and
 the combination is what this paper is for.
@@ -689,12 +677,7 @@ hovering condition and a cruising one, and no single fixed-pitch blade is at its
 That is a price of refusing the variable-pitch hub rather than an argument against refusing it,
 and it is charged in Section 7.2 with the other costs of the union, not settled here.
 
-Nor is this a claim of mechanical simplicity. Part count, mass, failure modes and
-maintenance burden were not measured, and nothing in this work supports a statement
-about reliability. What is offered is a **count**: the classes of mechanism that a
-tilting architecture requires to change regime, and which this arrangement does not
-require. The actuator inventory that replaces them is the propulsion motors together
-with the strip.
+Nor is this a claim of mechanical simplicity. What is offered is a **count**: the classes of mechanism that a tilting architecture requires to change regime, and which this arrangement does not require. The actuator inventory that replaces them is the propulsion motors together with the strip.
 
 **One thing this section does not establish, and Section 6 holds it to that.** The arrangement
 described here requires no mechanism to change regime. **Whether this aircraft can actually perform
@@ -826,14 +809,7 @@ brake. The actuator inventory is therefore the propulsion motors plus the strip'
 **How many actuators that is, this study does not fix.** The systems budget carries the
 actuation without sizing the mechanism, and naming a number here would be inventing one.
 
-**The tip pairs are the parts that fail the escape condition.** The nose pair meets all four parts of Section 2.2. The tip pairs do not: they hold
-one orientation, but they are carried through cruise producing moments rather than cruise thrust,
-which is the first of Section 2.2's failure modes, and they are exposed while doing it. This is the partial
-instantiation Section 2.2 lists as its **fourth** failure mode — meeting the condition where the
-aircraft is carried and failing it elsewhere — and the charge it re-opens is the second, carried in
-Section 7.2. *(They are sized for moments and used for them in both regimes; they add the take-off
-margin (Section 3) but were not sized for weight support. Section 2.2's permitted-cost clause
-therefore places them outside the first charge while leaving them in the airstream.)*
+**The tip pairs are the parts that fail the escape condition** (Section 5.1). They are sized for moments and used for them in both regimes; they add the take-off margin (Section 3) but were not sized for weight support. Section 2.2's permitted-cost clause therefore places them outside the first charge while leaving them in the airstream.
 
 ## 6. The soundness of the resulting product
 
@@ -891,7 +867,7 @@ Comparison is only meaningful against a named alternative, and this paper's alte
 
 **Operation without a runway** does not depend on the drag bracket, the propeller efficiency or the transition aerodynamics — **but it does depend on the energy store**: the vertical phase is sized with one, and Section 8 examines whether it exists. **Cruise lift carried on a surface** does not depend on the sizing contract or the transition aerodynamics. The **size** of the cruise-efficiency margin depends on both the drag bracket and the blade family, and Section 4 reports it as a range rather than a number. **Elimination of the propulsor-reorientation mechanism class** does not depend on the drag bracket, the propeller efficiency, the sizing contract, the range result or the energy store — **nor on the transition aerodynamics**.
 
-**The last of these carries a distinction that matters more than the others.** The mechanism claim is a statement about what hardware is present, and it is settled by the inventory of Sections 5.1 and 5.2. **The separate claim that this aircraft can actually perform the regime change is not settled** (Section 5.1).
+ The mechanism claim is a statement about what hardware is present, and it is settled by the inventory of Sections 5.1 and 5.2. **The separate claim that this aircraft can actually perform the regime change is not settled** (Section 5.1).
 
 #### One cost of the contribution that is named and not priced
 
@@ -1033,7 +1009,7 @@ Range in the sizing loop is proportional to L/D, to the energy chain, propeller 
 
 #### What is compared, and on what basis
 
-Three architectures fly the same mission, 13 kg of payload at 30 m s⁻¹, with the same wing loading, disc loading and aspect ratio, the same airframe and avionics fractions, and the same fuel and energy chain apart from the propeller. **The competitors are therefore this planform with two add-ons, not independently designed aircraft of their families.** All three carry the same buffered series-hybrid power system, so Bill 3 is held common and the comparison measures mass and cruise drag. **Holding Bill 3 common is a choice of question, and it has a direction.** **The choice runs against this configuration.** Without the buffer, and with engines rated to deliver the hover demand, the lift-plus-cruise layout does not close under a fixed fuel fraction or a fixed take-off mass and falls 38 to 47 percent behind under a fixed fuel mass, and the tilt bound does not close under a fixed take-off mass; under a fixed fuel fraction it closes at 520 kg, about ten times this configuration's mass — the first contract's blindness to mass, made visible. That comparison is not used, because it would set competitors without a store against this configuration with one.
+Three architectures fly the same mission, 13 kg of payload at 30 m s⁻¹, with the same wing loading, disc loading and aspect ratio, the same airframe and avionics fractions, and the same fuel and energy chain apart from the propeller. **The competitors are therefore this planform with two add-ons, not independently designed aircraft of their families.** All three carry the same buffered series-hybrid power system, so Bill 3 is held common and the comparison measures mass and cruise drag. **Holding Bill 3 common is a choice of question, and it has a direction.** **The choice runs against this configuration.** Without the buffer, and with engines rated to deliver the hover demand, the lift-plus-cruise layout does not close under a fixed fuel fraction or a fixed take-off mass (Supplement S13). That comparison is not used, because it would set competitors without a store against this configuration with one.
 
 The basis is not symmetric: the lift-plus-cruise layout carries a lift-to-drag ratio transferred from a different airframe's wind-tunnel campaign (Section 2.1) and assumes lift rotors stopped and aligned in cruise, which takes an indexing mechanism (Section 5.1) whose mass is not separately charged. **The tilting layout carries no cruise drag penalty at all. That is an idealisation in its favour**, and it is deliberate: it makes the tilting layout a bound. Both competitors use a propeller efficiency of 0.80, assumed, not computed, against this configuration's computed 0.632 and 0.683; the lift-plus-cruise layout carries a lift group of 10 percent of take-off mass and the tilting layout a tilt mechanism of 5 percent. **Neither figure is measured.**
 
