@@ -157,3 +157,37 @@ DeepSeek) oyda. İlk uygulama:
 | Vegh düzeltme duyurusu (…1436.c1) | yalnız düzeltme | evet | Claude | depo PDF'i | — (makale gibi anılmaz) |
 | Vegh *J. Aircraft* (10.2514/1.C038393) | dergi makalesi | hayır | kimse (yalnız özet) | yalnız özet | — |
 | Rohith ve ark. 2026 | *J. Aircraft* 63(2):575–591, dizgilenmiş | evet | Claude (dizgilenmiş) | depo PDF'i | dizgilenmiş |
+
+**Tur 140 — Oosedo ve ark. 2013 depoda ve Claude okudu** (`references/Oosedo-2013_ICRA_quad-rotor-tailsitter-without-control-surfaces.pdf`;
+yazar yükledi). Alanlar: **tür/sürüm** ICRA 2013 bildirisi, dizgilenmiş (IEEE Xplore, doi 10.1109/ICRA.2013.6630594), s. 317–322 · **depoda** evet ·
+**okuyan** Claude (dizgilenmiş) · **doğrulama** depo PDF'i · **alıntı sayfa tabanı** dizgilenmiş. Önceki durum: **attributed** (yalnız başlık, De Wagter
+2018 s. 24) — artık **verified primary**.
+
+- **Araç:** dört rotor + sabit kanat (R/C uçak kanadı, NACA0010, açıklık 0,99 m); *"it does not use any control surfaces even in the level
+  flight"* (s. 317); kanatçık sabitlenmiş (*"we fixed the aileron to prevent it from moving"*, s. 318); *"A fixed pitch propeller and a brushless DC
+  motor are used as propulsion units"* (s. 318). Kütle 1,18 / 1,39 kg (s. 320).
+- **Deney:** askı, geçiş ve seyir uçuşu, açık havada; seyir *"for 8 seconds"*, toplam uçuş 33 s; seyir referans yunuslaması −75° (s. 321).
+  *"we could verify the transition and level flight with the developed quad rotor tail-sitter VTOL UAV, which does not have any control
+  surfaces"* (s. 322).
+- **Kontrol kanalları (s. 319):** *"The PID controller generates the desired differential thrusts for Xb, Yb axis control, the desired torque for
+  Zb axis control"*; dağıtıcı her motorun devrini hesaplıyor. Zb itki eksenidir; kaynak ona **yaw** diyor ve *"The coordinate system of the
+  aircraft is consistent in every flight modes"* (s. 318) — bizim adlandırmamızda gövde yatış ekseni (CLAUDE §0.1: eksen adları yer değiştirir).
+  Yani **tepki torku kanalını kontrol kanalı olarak kullanıyor**. Adım 1'in *"A quadrotor tail-sitter produces a rolling moment from the reaction
+  torque of four independently driven rotors"* cümlesini **destekler** (denetim tablosu satırı artık birinci elden).
+- **Kanat–iz etkileşimi (s. 320):** pervanelerin altındaki kanada çarpan iz Zb etrafında pervane karşı-torkunun tersine moment üretiyor;
+  *"the effect of the slipstream leads to the difficulty of the attitude control"*; çözüm kanadı izin dışına almak (yıldız tipi) ya da yardımcı
+  kanat. Tork katsayısı çapraz tipte yarıya iniyor (Şekil 4). **Bizim askı için:** burun çiftinin izi iç kanadı ve şeridi yalıyor; eşeksenli karşı
+  dönüşlü çiftte artık dönme hesaplanmadı — Adım 14 girişim satırı yalnız Fatura 2'ye (seyir) bakıyor (Tur 140 önerisi).
+- **Geçişte irtifa kaybı (s. 321–322):** *"the altitude significantly fell in transition flight … The cause of altitude loss in transition flight is
+  a lack of wing lift. The transition flight was performed quickly, resulting in producing very little flight speed."* Adım 10'un sonlu momentli
+  sonucuyla **nitel olarak uyumlu**; tanık kapsamı farklı (1,39 kg, hızlı geçiş, farklı kontrolcü) — yalnız kayıt.
+- **Rota ve mekanizma (s. 317):** *"a tail-sitter aircraft is the simplest way to achieve the VTOL maneuver since it does not require extra actuators
+  for the VTOL maneuver"*; Quadshot için *"this UAV requires six actuators for flying"* — eyleyici sayımı mantığı. Adım 1'in *"The route itself is
+  established"*ini destekler; kayıt.
+- **"three times" (s. 317):** *"the quad rotor tail-sitter UAV can fly three times longer distance compared with that of the conventional quad rotor
+  helicopter"* — kaynağın **önceki benzetimi** [8]; bu bildiri ölçmüyor ve *"In the future, we will verify the improvement of energy efficiency"*
+  (s. 322). **Kendi sonucu söylemiyor/yumuşatıyor**; gövdeye girmez.
+- **Sınıflama:** kuyruk üstü evet; (a) hayır (kanat + dört rotorlu çerçeve, BWB değil); (b) hayır (dört tek rotor); **(c) evet** (sabit hatve, yönlendirme
+  yok); **(d) evet** (hiç hareketli yüzey yok); (e) söylemiyor (güç kaynağı adı yok); (f) hayır. Boşluğu **söylemiyor**; engel değil.
+- **Yokluk arama listesi:** battery 0, hybrid 0, coaxial 0, contra 0, counter-rotat 0, blended 0, flying wing 0, variable pitch 0, collective 0,
+  cyclic 0, swirl 0, fuel 0; "engine" 1 (kurum adı); "tilt" 14 (tilt-rotor ve "tilt-twist" kontrol yöntemi).

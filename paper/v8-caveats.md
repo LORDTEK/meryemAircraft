@@ -144,7 +144,7 @@ boşluğa duyarsız. `G` = Grok, `D` = DeepSeek, `C` = ChatGPT, `Q` = Qwen, `K` 
 | 7 | The assembly is not offered as novel because it is an assembly. | Q |
 | 8 | Either the residual is small enough to be absorbed that way, which this study has not shown and which would mean the architecture spends a little of the channel it declined, or a fourth duty falls on the strip. | Q |
 | 9 | It does not claim that the aircraft flies. | Q |
-| 10 | The published zero-lift value of 0.0248 is not used. | Q |
+| 10 | The reference design's assumed zero-lift value of 0.0248 is not used. | Q |
 | 12 | A change from 3.6 to 4.0 percent is a change between two choices, not a scaling result, and it cannot be offered as evidence that Bill 1 moves with size in either direction. | Q |
 | 13 | The competitors are therefore this planform with two add-ons, not independently designed aircraft of their families. | Q |
 | 13 | And nothing here ranks architectures for a mission. | Q |
@@ -191,7 +191,7 @@ kaybolmasına (CLAUDE.md §0.8). Aynı denetimle sınanır.
 | 5 | That is the one place the configuration asks a component to do a second job it was not sized for, and it means the take-off margin and the attitude authority are drawn from the same propellers and compete for it. | G+C+D+Q+K |
 | 6 | The same sizing set gives its two helicopter types at 5.4 to 7.2, and against them the result is mixed | D+G+C+Q+K |
 | 14 | this aircraft's vertical phases occupy about a minute in all (Section 2), and how long each draws the peak is not computed here | C+G+D+Q+K |
-| 9 | Claimed against multirotors, and bounded; against helicopters the published comparison is mixed and no advantage is claimed. | C+G+D+Q+K |
+| 9 | Claimed against multirotors, and bounded; against helicopters the comparison with published figures is mixed and no advantage is claimed. | C+G+D+Q+K |
 | 8 | That is a design assignment, not a demonstrated result | G+C+D+Q+K |
 | 7 | The stopping class is absent if the tip pairs free-wheel in cruise or are held stopped by motor torque; a brake or a mechanical lock would add it. | D+G+C+Q+K |
 | 15 | while the tip pairs free-wheel or are held by motor torque — no rotor stowing, indexing or stopping mechanism | K+G+C+D+Q |

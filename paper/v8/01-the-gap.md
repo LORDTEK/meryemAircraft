@@ -179,6 +179,7 @@ presume an escape.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 140 — 2013 tanığı birinci elden okundu** (Oosedo ve ark. 2013, ICRA, s. 317–322; yazar yükledi): *"A quadrotor tail-sitter operated without control surfaces, with experimental verification, was reported in 2013"* — s. 317 (*"does not use any control surfaces even in the level flight"*), s. 318 (kanatçık sabit), s. 321–322 (askı, geçiş, seyir uçuşu). Cümle değişmeden doğru | Oosedo 2013 |
 | **Tur 139 — Vegh satırı KAPANDI** (dört okuyucu teyit etti) | Vegh müsveddesi R3 |
 | **Tur 138 — Vegh dolu liste satırı (Öneri V; dört okuyucu + Claude; son yan cümle kalır — Q1 oybirliği; *"reported in 2025"* yer tutucu, sürüm gönderimden önce sabitlenir — Q2 oybirliği):** Rohith maddesinden sonra *"A coaxial tail-sitter with a series-hybrid store has been sized. … how its attitude is controlled, and whether its rotors vary pitch, the paper does not state."* Alıntılar s. 4, 7, 13; yokluk arama listesi ve sürüm bayrağı `v8-evidence.md` Tur 138. Liste öğelerini sayan cümle yok (arandı). Sınıflama: (a) hayır, (b) evet, (c)(d) söylemiyor, (e) evet, (f) hayır | Vegh müsveddesi R3 |
 | **Tur 136 — Rohith satırı KAPANDI** (dört okuyucu teyit etti) | Rohith 2026 |
@@ -214,7 +215,7 @@ presume an escape.
 | Tepki torku yerleşik bir yatış kanalı; diferansiyel devirle | Zhang ve ark. 2012, `references/ica20120400001_12673514.pdf`, satır 128–130: *"It balances the anti-torque of the rotors by the inverse rotating of the two rotors"* — **birinci elden** |
 | Aynı kanal dikey kipte *yaw*, yatay kipte *roll* adını alıyor | Zhang 2012 **Tablo 2**, satır 159–165: Yaw/Vertical = *"Differential velocity of the two motors"*; Roll/Horizontal = aynı — **birinci elden** |
 | Eksen adlarının askıda yer değiştirmesi literatürde adlandırılmış | Novlit ve ark. 2014, satır 118–123: *"the definition of the roll and yaw angles are interchanged"* — **birinci elden** |
-| Kuadrotor kuyruk üstü yatışı bağımsız rotorların tepki torkundan üretir | Oosedo ve ark. 2013 (De Wagter 2018 içinden); Zhang 2012 aynı ilkeyi eşeksenli çiftte gösteriyor |
+| Kuadrotor kuyruk üstü yatışı bağımsız rotorların tepki torkundan üretir | **Oosedo ve ark. 2013 s. 319, birinci elden (Tur 140)**: *"the desired torque for Zb axis control"*, Zb itki ekseni, kaynak adı *yaw* (eksen adları yer değiştirir); Zhang 2012 aynı ilkeyi eşeksenli çiftte gösteriyor |
 | Üç öğenin hiçbiri yeni değil | `paper/v8/07-the-combination.md` açılışı |
 
 **Bu sayfada BİLEREK olmayanlar:** tek bir başarım sayısı, bu uçağa dair hiçbir tarif, ve

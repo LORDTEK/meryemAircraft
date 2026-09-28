@@ -184,6 +184,11 @@ EMEKLI = {
     "the drag figure quoted for the stopped condition": "Tur 131: S-53 (A) korunan yan cumle R",
     "The stability of this configuration is not airframe-borne —": "Tur 139: S-59 -- kaporta yon kararliligini gövdeden sagliyor; (a) 'alone'",
     "closed-loop hover control, including": "Tur 139: S-60 -- kontrol maddesi askı ve seyir",
+    "published zero-lift value": "Tur 140: S-61 -- tanimlanmamis nesne; referans tasarimin varsayimi",
+    "reproduces the published aircraft": "Tur 140: S-61",
+    "the published chain": "Tur 140: S-61",
+    "at its published mass": "Tur 140: S-61",
+    "the published comparison is mixed": "Tur 140: N5 -- karsilastirma bizim, yayimlanmis sayilara karsi",
 }
 
 

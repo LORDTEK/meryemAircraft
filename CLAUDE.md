@@ -598,6 +598,12 @@ karşılaştırmalı analiz / daha geniş çözülmemiş soru / kanıt sınırı
 taşır (S-58'in testi). (4) **Borç izi alındı denetiminin parçası** (DeepSeek): Adım 14 dışındaki her "not computed …" Adım 14'ün
 listesine karşı. (5) **Liste tamlığı** (Qwen): metin "lists / names / the following" dediği her yerde liste, **cümlenin belirttiği
 kapsamda** (ChatGPT) tam mı.
+**Kabul (Tur 140, dört okuyucu + Claude):** (6) **Rejim alanı ve rejim tamlığı** (ChatGPT, Qwen P2) — borç izinde her madde rejim taşır
+(askı / seyir / geçiş / çoklu); kontrol ya da dinamikle ilgili her Adım 14 maddesi, niceliğin etkidiği her rejimi kapsıyor mu diye denetlenir (S-60).
+(7) **Çerçeve/uçak ayrımı** (Qwen P1) — Adım 14 adayı uçak hakkında olmalı; çerçevenin sınırı E sınıfıdır, Adım 14'e girmez. (8) **S14 eşlemesi**
+(Qwen P3) — her S14 satırı ya adlı bir Adım 14 maddesine ya da bilinen engele bağlanır. (9) **Kaynak katmanları beş** (P-c inceltmesi, DeepSeek):
+kaynak olgusu · kaynağın kendi sınırı/nitelemesi · kaynak sessizliği · bizim sınıflamamız · makalemizin iddiası; *"was not investigated"* araç hakkında
+bir yokluğa, *"does not state"* bir niteliğe sıkıştırılamaz.
 
 ### 3.1 Emekliye ayrılan ifade DEPONUN TAMAMINDA aranır. Tur 49.
 

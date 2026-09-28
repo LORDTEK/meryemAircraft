@@ -214,20 +214,19 @@ The body is about **26 000 words**, and the journal's working target is **about 
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 139.**
+**Round 140.**
 
 | Block | State |
 |---|---|
 | Stages (the author, Round 129) | each stage is a pass through the whole text; the next stage's method is chosen when the present one is complete. Present stage: recomposition into result sentences |
 | Length | **not decided now** (the author): after this stage completes |
 | Tip pairs in cruise (the author's decision) | uncommanded state: free-wheeling at zero shaft torque (Step 8); shaft power of commanded departures not computed (Step 8; Step 14) |
-| Step 14 | eighteen unknowns; the control item now covers hover and cruise (S-60, applied, to confirm) |
-| Vegh | Step 1 line **closed**; the cited version is fixed before submission |
-| Evidence record | five fields (type/version; in repository; read by; verification; quotation page basis); manuscript rule; source-layer check (in the record-propagation sweep) |
-| *"not …"* classification | done; S-59, S-60, R-9, N3, N4 applied, to confirm |
-| Number identity, dates, figures | done (Round 139): S-61 (*"published"* in Steps 10–11), N5, N6, F1 (Figure 2b labels) and the 2013 witness (title only) to vote |
-| Standing checks | receipt audit (R1–R4), debt trace, whole-paper search before "absent", state identity, "not …" classification, list completeness |
-| To complete the stage | record-propagation sweep with the source-layer check; Step 1 and Step 8 denial maps; the whole reading in two halves (1–8, 9–15) and a short reconciliation |
+| Step 14 | eighteen unknowns; control item covers hover and cruise; regime-completeness run: N7, N8 to vote |
+| Witnesses | Vegh line closed (version fixed before submission); **Oosedo 2013 read at first hand** (Round 140) — Step 1's sentence stands |
+| Evidence record | five fields; manuscript rule; five source layers |
+| Surface sweep | *"not …"* classification, number identity, dates, figures done; S-61 (*"published"* → *"the reference design's"*), N5, N6, S-62 (Figure 2b) applied, to confirm |
+| Standing checks | receipt audit (R1–R4), debt trace with regime field, whole-paper search before "absent", state identity, "not …" classification, list completeness, framework-versus-aircraft, S14 mapping |
+| To complete the stage | record-propagation sweep; Step 1 and Step 8 denial maps; the whole reading in two halves (1–8, 9–15) and a short reconciliation |
 
 **Every step has now been recomposed once.** Recomposition into result sentences took Steps 10–11 to about 40 % of their length,
 Steps 12–14 to 57–83 %, and the framework and architecture to 80–95 %, because definitions, protected sentences and their evidence

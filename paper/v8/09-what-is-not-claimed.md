@@ -21,7 +21,7 @@ Comparison is only meaningful against a named alternative, and this paper's alte
 
 | Axis | Opponent | Status |
 |---|---|---|
-| Cruise efficiency | Rotorcraft: multirotors and helicopters | **Claimed against multirotors, and bounded; against helicopters the published comparison is mixed and no advantage is claimed.** Cruise lift is carried on a surface rather than on rotors, which no sizing contract changes. The *size* of the resulting advantage is a calculation, not a consequence of that fact (Section 6). |
+| Cruise efficiency | Rotorcraft: multirotors and helicopters | **Claimed against multirotors, and bounded; against helicopters the comparison with published figures is mixed and no advantage is claimed.** Cruise lift is carried on a surface rather than on rotors, which no sizing contract changes. The *size* of the resulting advantage is a calculation, not a consequence of that fact (Section 6). |
 | Operation without a runway | Fixed-wing aircraft | **Claimed as sized, not demonstrated** (Sections 5, 14). |
 | The mechanism required to change regime | Tilting architectures | **Claimed.** This is the paper's contribution — a count of mechanism classes (Section 7), not a claim of mechanical simplicity or reliability. |
 | Cruise efficiency and range | Other hybrids — lift-plus-cruise, tilt | **Not claimed, in either direction.** |

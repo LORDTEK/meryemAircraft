@@ -630,3 +630,9 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Çerçeve/uçak kapsam denetimi Adım 14 için (Qwen P1); S14 eşleme kuralı (Qwen P3) | — | — | — | öneren | evet | **Tur 139 oylaması** |
 | P-c inceltmesi: kaynağın kendi sınırı/nitelemesi ayrı katman (DeepSeek) | — | — | öneren | — | evet (adla) | **Tur 139 oylaması** |
 | Sayı kimliği / tarih / şekil taraması: S-61 ("published", Adım 10–11), N5 (Adım 9 hücresi), N6 (S14 düşük Re satırı), F1 (Şekil 2b etiketleri), 2013 tanığı (yalnız başlık), "biplane" başlığı sadık | — | — | — | — | evet | **Tur 139 oylaması**; `drafts/number-identity.md` |
+| S-59, S-60, R-9, N3 (b), N4 teyit | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI (Tur 140)** |
+| S-61 (b); N5; N6; F1 (= S-62); "biplane" başlığı sadık; 2013 tanığı (okunana dek attributed) | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı (Tur 140)**; teyide. 2013 tanığı yazarın yüklemesiyle okundu |
+| §3: i "the rest" kalır (ChatGPT geri çekti); ii "include values at the level required by the buffer"; iii rejim alanı + tamlık; iv çerçeve/uçak; v S14 eşlemesi; vi beş katman | ✓ | ✓ | ✓ | ✓ | ✓ | **Kabul/uygulandı (Tur 140)**; CLAUDE §3.0 (6)–(9) |
+| ChatGPT: kaynak durumu dörtlüsü (verified primary / verified secondary / attributed–title only / unverified) | — | öneren | — | — | evet | **Tur 140 oylaması** |
+| Şekil sayısı denetimi betiği (DeepSeek P3, Qwen P1); attributed tanık arama protokolü (DeepSeek P4, Qwen P2) | — | — | öneren | öneren | evet | **Tur 140 oylaması** |
+| Rejim tamlığı ilk koşusu: N7 (düşük Re satırı askıyı da taşısın), N8 (girişim satırı askıda iz–kanat etkileşimi; Oosedo 2013 tanığı) | — | — | — | — | evet | **Tur 140 oylaması** |
