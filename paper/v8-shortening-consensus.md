@@ -727,3 +727,6 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Sayım işareti | ✓ | ✓ | ✓ | ✓ | ✓ | **kuruldu** (`v8_count_flag.py`) |
 | Durma testi (DeepSeek + Tur 87) | ✓ | ✓ | ✓ | ✓ | ✓ | **kabul** (CLAUDE.md §2.5) |
 | D evresi 6.2 + 9: A / B / C (JoA sonuç bölümü şartı) | ? | ? | ? | ? | A | **Tur 157 oyu**; B yazarın ana hattını değiştirir → yazar |
+| Toplu kesim sonucu (−184) | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI (Tur 158)** |
+| B5 = K | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI** |
+| D 6.2 + 9 (Tur 157 oyu, yazarın önerisinden önce) | A | A (bulgudan yazım) | A (+ bulgu paragrafı) | A (+ P1 kuralı) | A | **Yazar (Tur 158): 6.2 + 9 = Bölüm 9, 6.2 kalkar; "hatalı olabilirim"; 2 turda karar** — Claude yazarın önerisine yöneldi (yeni metin yok, tek ev) |

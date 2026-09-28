@@ -214,14 +214,14 @@ The body is about **26 000 words**, and the journal's working target is **about 
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 157.**
+**Round 158.**
 
 | Block | State |
 |---|---|
-| Stages (the author, Round 129) | present stage: **compression by finding**. Supplement stage **closed** (7.3 −286; 7.4 −47). **Batch of copy cuts applied: −184** (B1, B2, B3, B6, B7); B4 kept (four vetoes); B5 reverted (it cut a protected sentence; `v8_caveats.py` caught it). For the readers' confirmation |
-| Phase D (merges) | opens with 6.2 + 9. The *Journal of Aircraft* requires a Conclusions section, and Section 9 is the only candidate; the readers choose the structure (A: 9 becomes the Conclusions without restating 6.2; B: 6.2 moves to the end — the author's outline, so the author's decision; C: split) before any draft. New clusters are mapped after this merge |
+| Stages (the author, Round 129) | present stage: **compression by finding**. Supplement stage closed (7.3 −286; 7.4 −47); **batch of copy cuts closed** (−184; B4 kept; B5 = K, protected) |
+| Phase D (merges) | **6.2 + 9, decided in two rounds (the author, Round 158).** Six proposals side by side: **the author's (6.2 and 9 become one Section 9; 6.2 disappears)**, Claude's (A, now leaning to the author's: it moves and de-duplicates without new text), and the four readers' A variants (Section 9 as a findings-based Conclusions; 6.2 stays). The *Journal of Aircraft* requires a Conclusions section. Everyone comments on everyone |
 | Length (E8) | option 4, unanimous: target 12 000 all-in; report to the author with numbers before the architecture sections are compressed. Two papers: closed by the author |
-| Rules added this stage | counting flag (`v8_count_flag.py`, flags only); stop test = DeepSeek's for mapped sentences + Round 87 for the rest; protected pre-check on the step files, not the assembled view |
+| Rules added this stage | counting flag (`v8_count_flag.py`); stop test (DeepSeek's for mapped sentences + Round 87 for the rest); protected pre-check on a temporary copy of the step files |
 | Contribution | Sections 1, 5.1, 6.2 and 9 name one contribution, the architecture |
 | Tip pairs in cruise (the author's decision) | uncommanded state: free-wheeling at zero shaft torque (Section 6.1); shaft power of commanded departures not computed |
 

@@ -576,3 +576,14 @@ Okuyuculardan ölçümün denetimi istendi (yokluk iddiası, Tur 133).
 - **D evresi, 6.2 + 9:** JoA *"Conclusions provide a detailed discussion of study findings"* — Bölüm 9 tek sonuç adayı; "birleştirme" 9'u yok edemez. Seçenekler
   A (9 = sonuç, 6.2'yi tekrar etmez; Claude), B (6.2 sona — yazarın ana hattı değişir → **yazar kararı**), C (bölme). Önce yapı, taslak sonra.
 - **Okuyucu kaydı:** DeepSeek Tur 155'te üstlendiği hatayı Tur 156'da inkâr etti (alıntı Tur 157 §5).
+
+## Tur 158 (Tur 157 cevapları) — toplu kesim kapandı; D evresi 6.2 + 9 yazarın önerisiyle açık
+
+- **Kapandı:** toplu kesim (beşimiz teyit), B5 = K.
+- **Yazar:** *"Bence 6.2'yi 9 ile birleştirelim ve birleşim, 9 olsun. Böylece 6.2 ortadan kalksın. Evet hatalı olabilirim. Bunu arkadaşlara da danışalım
+  bakalım. Yani herkes öneri sunsun sonra herkes herkes hakkında yorum yapsın. Benimki ve seninki de ortalığa serilen öneriler arasında olsun. Böylece ek 2
+  turda karar verebiliriz."* → Tur 158 altı öneriyi yan yana koydu; Tur 159'da yakınsama ya da yazara.
+- Okuyucuların dördü Tur 157'de, yazarın önerisini bilmeden A dedi (6.2 kalır, 9 bulgu temelli sonuç olur; hepsi yeni metin ekliyor).
+- **Benim görüşüm değişti:** yazarın önerisi taşır ve tekrarı siler, yeni yüklem yazmaz; tek ev; daha çok kısaltır. Bedeli: sınır sayılardan önce gelmez
+  (sözleşme talimatı 7'nin başında tek cümle kalabilir); Bölüm 6 yalnız 6.1; JoA *"do not introduce concepts"* — madde 8'in "by construction" tanımı
+  yalnız orada. Değişimimin yazarın önerisiyle çakıştığını okuyuculara açıkça yazdım.
