@@ -36,10 +36,10 @@ the strip's split and actuators, the balance question, the indexing mechanism), 
 | 7 | variable-pitch price *"not settled here"* | C | the variable-pitch counterfactual | |
 | 7 | *"Part count, mass, failure modes and maintenance burden were not measured"* | S (no reliability claim) | — | |
 | 7 | *"Whether this aircraft can actually perform the change … is not settled anywhere in this paper"* | B | the pitching moment through the transition | |
-| 8 | *"What authority each axis actually has … is not settled by the ratio alone."* | B | closed-loop **hover** control | **S-60** — the sentence has no regime |
+| 8 | *"What authority each axis actually has … is not settled by the ratio alone."* | B | closed-loop attitude control in hover and in cruise (after S-60) | **S-60** — the sentence has no regime |
 | 8 | transition assignment *"not settled in this paper"* | B | the pitching moment through the transition | |
 | 8 | shafting *"an implementation question it does not settle"* | S | — | |
-| 8 | *"What declining it costs is not counted in this work."* | C | closed-loop **hover** control | **S-60** — no regime; the channel is a roll channel in cruise |
+| 8 | *"What declining it costs is not counted in this work."* | C | closed-loop attitude control in hover and in cruise (after S-60) | **S-60** — no regime; the channel is a roll channel in cruise |
 | 8 | *"The split is an estimate: the slipstream boundary it rests on is not derived in this work."* | Q | the strip and the fairing | **N2** — S14 row does not name it; S-37 derivation is scheduled |
 | 8 | *"How many actuators that is, this study does not fix."* | Q | the strip and the fairing (actuation) | |
 | 8 | torque residual absorption *"which this study has not shown"* | Q | closed-loop hover control (residual) | |
@@ -47,8 +47,8 @@ the strip's split and actuators, the balance question, the indexing mechanism), 
 | 8 | *"Neither the means nor the azimuth is fixed by this study"* | Q | the tip pairs' stopped cruise state | |
 | 8 † | *"The stability of this configuration is not airframe-borne — it is produced by differential thrust and by the strip"* | (physical statement) | — | **S-59** — the preceding paragraph sizes the fairing for directional stability |
 | 9 | *"It is not a list of the study's open questions."* and the eight non-claims | S | — | |
-| 9 | refusal cost *"is not computed anywhere in this paper"* | C | closed-loop **hover** control | **S-60** |
-| 9 | *"Whether eliminating it is favourable on balance is a question this work does not settle"* | B | closed-loop **hover** control | **S-60** |
+| 9 | refusal cost *"is not computed anywhere in this paper"* | C | closed-loop attitude control in hover and in cruise (after S-60) | **S-60** |
+| 9 | *"Whether eliminating it is favourable on balance is a question this work does not settle"* | B | closed-loop attitude control in hover and in cruise (after S-60) | **S-60** |
 | 9 | *"The separate claim that this aircraft can actually perform the regime change is not settled"* | B | the pitching moment through the transition | |
 | 9 | *"No aircraft has been built, no wind tunnel has been run on this geometry"* | E | — | |
 | 10 | *"The blade family is a design variable this study has not fixed"* | Q | blade-family selection | |
@@ -74,7 +74,7 @@ the strip's split and actuators, the balance question, the indexing mechanism), 
 |---|---|---|---|
 | 14 | *"how long each draws the peak is not computed here"* | Q | the buffer's energy |
 | 14 | *"whether the airframe fraction holds at twice the mass it was set at is not established"* | Q | the airframe's mass (S14 row names the re-closure masses) |
-| 14 | *"how they would move with a measured store is not computed"* (Section 13's orderings) | C | sits in the known-obstacle part, without its own settlement line; my view: the settlement is the re-closure already described |
+| 14 | *"how they would move with a measured store is not computed"* (Section 13's orderings) | C | sits in the known-obstacle part; **C, settlement: re-run Section 13's contracts on the store re-closure** (ChatGPT, Round 139, record) |
 | 14 | *"The package Section 10 closes on does not exist with any store the sources consulted here report as built."* | E | the S14 *"Other store types"* row bears on it: **R-9**, **N3** |
 | 15 | five negatives | — | consumed; `15-maps.md` |
 
@@ -94,3 +94,8 @@ the strip's split and actuators, the balance question, the indexing mechanism), 
 - **N3** (list completeness, reverse). S14's table has nineteen rows; Step 14's body list has eighteen. The extra row, *"Other store
   types"*, was placed in the supplement only by the Round 127 vote.
 - **N4** (minor). The ground-wind price (Step 6) is under *"ground handling"* by topic; the S14 row names the stance base but not the price.
+
+## Round 139 — votes (four readers + Claude, unanimous)
+
+S-59 (a), S-60 (Step 14 item and S14 row; Step 11 left), R-9, N2 no action, N3 (b), N4, Step 12's Bill 1 = E: **applied or recorded**,
+to confirm. Homes of the Section 8 and 9 channel rows follow S-60 (Grok, ChatGPT). No other classification changed (all four).

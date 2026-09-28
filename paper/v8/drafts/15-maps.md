@@ -50,3 +50,9 @@ Step 14's list goes from sixteen to **eighteen**: *"the tip pairs' shaft power w
 in Supplement S14. **Step 15 promises neither.** Step 15's *"no variable-pitch hub"* is the mechanism count, not the counterfactual.
 The four touched items are unchanged; the other **fourteen** are consumed by the pointer alone. No body sentence states the count
 (searched: *"sixteen"* appears in no step body).
+
+## Debt trace update (Round 139; S-60, four readers + Claude)
+
+The control item is widened, the count unchanged: *"closed-loop attitude control in hover and in cruise, including the declined
+reaction-torque channel, …"*. Step 15's axis 3 (*"what declining it costs is not computed"*) states no regime and is consumed by the
+widened item. The S14 *"Other store types"* row is marked as part of the known obstacle (N3 (b)); it is not a nineteenth unknown.

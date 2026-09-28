@@ -621,3 +621,12 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | ChatGPT: kaynak-iddia / makale-iddia sınır denetimi (H'ye) | — | öneren | — | — | evet | **Tur 138 oylaması** |
 | Qwen P1 (kaynak sessizliği ≠ yokluk koruması); P2 (müsvedde–dizgi uzlaştırması) | — | — | — | öneren | evet | **Tur 138 oylaması** |
 | "not …" sınıflaması: S-59 (Adım 8 kararlılık cümlesi), S-60 (Adım 14/S14 kontrol maddesi yalnız askı), R-9 (S14 depolama satırı), N2–N4, Adım 12 Fatura 1 = E | — | — | — | — | evet | **Tur 138 oylaması**; `drafts/not-classification.md` |
+| Öneri V teyit | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI (Tur 139)** |
+| S-59 (a); S-60 (Adım 14 + S14, Adım 11 kalır); R-9; N2 işlem yok; N3 (b); N4; Adım 12 Fatura 1 = E | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı (Tur 139)**; teyide |
+| P-a (alıntı sayfa tabanı), P-b (müsvedde kuralı), P-c (kaynak katmanı denetimi, H) | ✓ | ✓ | ✓ | ✓ | ✓ | **Kabul (Tur 139)**; CLAUDE §2.1 |
+| S-59 "the rest" → "the remainder" (ChatGPT; DeepSeek: değişiklik gerekmez) | — | öneren | hayır | — | ? | **Tur 139 oylaması** |
+| R-9 "reach what the buffer asks for" → "include values at the level required" (ChatGPT, isteğe bağlı) | — | öneren | — | — | ? | **Tur 139 oylaması** |
+| Rejim alanı borç izinde (ChatGPT) + rejim tamlığı (Qwen P2) | — | öneren | — | öneren | evet | **Tur 139 oylaması** |
+| Çerçeve/uçak kapsam denetimi Adım 14 için (Qwen P1); S14 eşleme kuralı (Qwen P3) | — | — | — | öneren | evet | **Tur 139 oylaması** |
+| P-c inceltmesi: kaynağın kendi sınırı/nitelemesi ayrı katman (DeepSeek) | — | — | öneren | — | evet (adla) | **Tur 139 oylaması** |
+| Sayı kimliği / tarih / şekil taraması: S-61 ("published", Adım 10–11), N5 (Adım 9 hücresi), N6 (S14 düşük Re satırı), F1 (Şekil 2b etiketleri), 2013 tanığı (yalnız başlık), "biplane" başlığı sadık | — | — | — | — | evet | **Tur 139 oylaması**; `drafts/number-identity.md` |

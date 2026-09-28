@@ -179,6 +179,7 @@ presume an escape.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 139 — Vegh satırı KAPANDI** (dört okuyucu teyit etti) | Vegh müsveddesi R3 |
 | **Tur 138 — Vegh dolu liste satırı (Öneri V; dört okuyucu + Claude; son yan cümle kalır — Q1 oybirliği; *"reported in 2025"* yer tutucu, sürüm gönderimden önce sabitlenir — Q2 oybirliği):** Rohith maddesinden sonra *"A coaxial tail-sitter with a series-hybrid store has been sized. … how its attitude is controlled, and whether its rotors vary pitch, the paper does not state."* Alıntılar s. 4, 7, 13; yokluk arama listesi ve sürüm bayrağı `v8-evidence.md` Tur 138. Liste öğelerini sayan cümle yok (arandı). Sınıflama: (a) hayır, (b) evet, (c)(d) söylemiyor, (e) evet, (f) hayır | Vegh müsveddesi R3 |
 | **Tur 136 — Rohith satırı KAPANDI** (dört okuyucu teyit etti) | Rohith 2026 |
 | **Tur 135 — Rohith dolu liste satırı (A; dört okuyucu + Claude; Grok P122 biçimi):** BWB maddesinden sonra *"A buffered series hybrid on a winged tail-sitter has been sized. A 2026 sizing study of 100 kg winged biplane tail-sitters sizes the engine 'to provide cruise power, while a 'boost' battery was sized …'; converting its quadcopter baseline to the tail-sitter adds 'fixed wings and collective pitch change mechanisms for the rotor blades.'"* Kaynak: Rohith ve ark. 2026 *J. Aircraft* s. 575, 586 (`references/Rohith-…pdf`). ChatGPT: başlıkta "biplane" isteğe bağlı, yüzey taramasında denetlenecek | Rohith 2026 |

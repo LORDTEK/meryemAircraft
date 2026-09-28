@@ -20,6 +20,8 @@ Yeni bir çift eklenmeden önce iki bağlam da okunur.
 | 1.5 | 2 | W^1.5 üssü (sabit disk alanında askı gücü) | 10 | %1,5 kuruluş sınaması sapması |
 | 1.5 | 2 | W^1.5 üssü | 14 | 1.5 kW/kg, tezgâh ortalaması |
 | 3.2 | 2 | 3.2, örnek araç askı/seyir güç oranı | 12 | 2.4–3.2, dört kapanışta askı / motor oranı (Adım 11'in) |
+| 0.80 | 11 | referans tasarımın ilk boyutlandırmasında varsayılan η_p | 13 | iki rakibin varsayılan η_p'si — aynı köken, aynı durum (varsayım); Tur 139 |
+| 5.4 | 6 | helikopter L/De alt ucu | 10 | geçişte irtifa kaybı, m — birimler farklı; Tur 139 |
 
 **Aynı adımda ayrı nesneler (Tur 110; Grok P84, dört okuyucu + Claude).** Adım 14'ün J3 bantları — **4.7–5.2** ve **5.5–6.1 kW
 per kilogram of buffer, elektrik barasında, askı / kalkış** — sayı eşleme denetimine bu kimlikle girer; aynı adımdaki

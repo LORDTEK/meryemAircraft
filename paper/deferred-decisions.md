@@ -392,3 +392,13 @@ dönme; CLAUDE.md §0.1'e yazıldı. Karar cümlesinin sözcükleri okuyucularda
 **Tur 135 — Vegh (yazar):** *"Vegh için ChatGPT'nin imkanı var mı? Varsa … o da ona baksın ve alakalı kısımları versin. Artık bulamazsam
 ve ChatGPT çok yardımcı olmazsa geçeceğiz sanki."* → ChatGPT'den Tur 126'da okuduğu konferans bildirisinden ilgili geçitler sayfa
 numarasıyla istendi. Gelmezse ya da yetmezse Vegh **iz** olarak kapanır: metne girmez, boşluk cümlesine dokunmaz.
+
+## Gönderim öncesi denetim listesi (Tur 139'da açıldı)
+
+- **Vegh atıf sürümü** (P-b): SciTech 2025 (10.2514/6.2025-1436) mı, *J. Aircraft* (10.2514/1.C038393) mı; *"reported in 2025"* yer
+  tutucusu buna göre; dizgilenmiş sürüm elde edilirse alıntılar ve sayfalar ona karşı.
+- **Belgelenmiş boşluk araması** (DeepSeek P4, Tur 138): `v8-gap-search.md`'deki kaynaklar gönderimden önce yeniden.
+- **S-37 türetmesi** (şeridin iz sınırı): başarılırsa Adım 8 cümlesi değişir; başarılamazsa madde S14'e (N2).
+- **Oosedo ve ark. 2013** (ICRA, s. 317–322): Adım 1'in *"A quadrotor tail-sitter operated without control surfaces, with experimental
+  verification, was reported in 2013"* cümlesi yalnız başlığa dayanıyor (De Wagter 2018 s. 24 kaynakça, s. 2 anılış); belge açılmadı.
+  Yazardan PDF istendi (Tur 139).

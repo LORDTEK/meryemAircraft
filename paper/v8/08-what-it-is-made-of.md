@@ -115,7 +115,7 @@ the chord required over the combined frame length is **39 mm**, against the 50 t
 20 mm faired strut carries in any case. Directional stability on this configuration therefore
 does not ask for a surface; it asks for a fairing on a frame that is already there.
 
-**One part is not airframe: the flight control system.** The stability of this configuration is not airframe-borne — it is produced by
+**One part is not airframe: the flight control system.** The stability of this configuration is not airframe-borne alone — the rest is produced by
 differential thrust and by the strip, both of which are actively commanded — so an attitude
 reference and a flight computer are not optional equipment but part of the mechanism the
 preceding paragraphs describe. They are carried in the systems budget. The configuration
@@ -181,6 +181,7 @@ brake or a lock rather than motor holding torque, the count of Section 7 would g
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 139 — S-59 (a), R (dört okuyucu + Claude):** *"The stability of this configuration is not airframe-borne — it is produced by"* → *"… is not airframe-borne alone — the rest is produced by"*. Önceki paragraf kaportayı yön kararlılığı için boyutluyor; Adım 1 *"need not come from the airframe alone"*. Özgün cümle Ek S8'in dondurulmuş kopyasında; ifade emekli | `v8-source-defects.md` S-59 |
 | **Tur 133 — kumandalı sapmaların şaft gücü (Qwen P1; dört okuyucu + Claude, ChatGPT Adım 14'ten döndü):** S-57 cümlesinin ardına *"The shaft power of commanded departures from that state, for attitude moments in cruise, is not computed."* Başlık *"only one of them is physically closed"* kaldı (Grok P126, oybirliği) | S-57 |
 | **Tur 132 — S-57 uygulandı (R; yazarın kararı, dört okuyucu + Claude):** [28] *"…or be stopped."*dan sonra: *"This configuration uses the first: free-wheeling at zero shaft torque is the tip pairs' uncommanded cruise state, and it is the drag state Section 11 charges."* *"uncommanded"* kumandalı momentleri sapma olarak bırakır | S-57 |
 | **Tur 131 — S-53 (A):** korunan yan cümle R — *"the drag figures estimated for the stopped condition (Supplement S11) should be read as estimates for an assumed azimuth rather than as the state a particular installation would reach"* (dört okuyucu + Claude); `v8-caveats.md` satır 64 güncellendi. **S-57:** yazar — sıfır şaft torku; karar cümlesinin sözcükleri oyda | S-53, S-57 |

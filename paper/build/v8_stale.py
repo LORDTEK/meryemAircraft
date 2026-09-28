@@ -182,6 +182,8 @@ EMEKLI = {
     "which Section 10 states explicitly": "Tur 131: S-55 -- Adim 10 hic soylemedi",
     "Section 11 charges all three": "Tur 132: S-56 -- Adim 11 yalniz ucuncuyu tasiyor",
     "the drag figure quoted for the stopped condition": "Tur 131: S-53 (A) korunan yan cumle R",
+    "The stability of this configuration is not airframe-borne —": "Tur 139: S-59 -- kaporta yon kararliligini gövdeden sagliyor; (a) 'alone'",
+    "closed-loop hover control, including": "Tur 139: S-60 -- kontrol maddesi askı ve seyir",
 }
 
 

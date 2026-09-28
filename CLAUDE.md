@@ -334,6 +334,13 @@ aile düzeyinde ifade (→ *rotorcraft*), belirli referans (kalır: iki quadroto
 çözülmemiş bir işletim durumuna ya da uygulama seçimine bağlıysa, o öğe kesin olarak "yok" sayılmaz; koşul envanterin
 evinde ve ona dayanan her sayımda görünür. Örnek: S-33 (uç rotorların durdurma aracı).
 
+**Kanıt satırı alanları ve müsvedde kuralı (Tur 138–139; dört okuyucu + Claude).** Her kanıt satırı: tür/sürüm · depoda mı ·
+okuyan (hangi sürüm) · doğrulama (depo PDF'i / tek okuyucu görüntüsü / yalnız özet) · **alıntı sayfa tabanı** (DeepSeek, P-a).
+**Müsvedde kuralı (P-b):** müsveddeden okunan alıntı ve sayfalar müsvedde-sürümü diye kaydedilir; atıf bayraklanır, dizgilenmiş
+sürüm elde edilirse gönderimden önce ona karşı uzlaştırılır. **Kaynak katmanı denetimi (P-c, H taramasında):** bir tanıktan türeyen
+her cümle kaynak olgusu / kaynak sessizliği / sınıflama / makalenin iddiası; kaynak sessizliği yan cümleleri (*"the paper does not
+state"*) arama terimi listesini kanıt kaydında taşır ve hiçbir kısaltma onları araç hakkında bir iddiaya çeviremez. Örnek: Vegh.
+
 ### 2.2 Yenilik iddiası yazmadan önce. Tur 46'nın bedeli.
 
 Adım 1'e *"1954'te bir kez uçuruldu ve tekrar ele alınmadı"* ve *"her mimari bunu propulsor'ü

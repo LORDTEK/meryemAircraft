@@ -71,7 +71,7 @@ The remaining items are not known obstacles; they are questions this work has no
 - the electrical path at peak;
 - the airframe's mass;
 - the strip and the fairing;
-- closed-loop hover control, including the declined reaction-torque channel, the hover torque residual and the allocation of the tip pairs between take-off margin and attitude authority;
+- closed-loop attitude control in hover and in cruise, including the declined reaction-torque channel, the hover torque residual and the allocation of the tip pairs between take-off margin and attitude authority;
 - vertical descent and the landing transition;
 - ground handling and landing loads;
 - the competitor's lift-group mass;
@@ -94,6 +94,7 @@ The remaining items are not known obstacles; they are questions this work has no
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 139 — S-60, R (dört okuyucu + Claude):** liste maddesi *"closed-loop hover control, including …"* → *"closed-loop attitude control in hover and in cruise, including …"*; S14 satırı aynı kapsamla. Liste 18 maddede; *"None of these is a small correction"* ve *"Two of them"* tutuyor. Ayrıca S14'te: R-9 (depolama satırı), N3 (b) (satır bilinen engelin parçası), N4 (yer rüzgârı bedeli) | `v8-source-defects.md` S-60, R-9; `drafts/not-classification.md` |
 | **Tur 134 — S-58 (b) uygulandı (dört okuyucu + Claude):** liste 16 → 18: *"the tip pairs' shaft power when commanded off the free-wheeling state in cruise"* (durdurulmuş durumdan sonra) ve *"the variable-pitch counterfactual"* (pala ailesi seçiminden sonra). S14'e iki satır, oylanan *"what would settle it"* metinleriyle. Borç izi güncellendi (`drafts/15-maps.md`); gövdede sayı geçmiyor | S-58 |
 | **Tur 110 (Tur 109: dört okuyucu + Claude):** J1 "…the answer is no: the required store performance is not demonstrated by the sources consulted here" (ChatGPT; borç/kapsam koruması); D4 "the store figures available" (Qwen; P9'un beş puanlamasıyla sayı tutarlılığı). Önceki biçimler Ek S14'teki özgünde | Tur 109 metni §4 |
 | **Tur 109 — Adım 14 yeniden kuruldu** (Tur 107–108; dört okuyucu + Claude, veto yok): `drafts/14-recomposed.md` uygulandı; bilinmeyenlerin adları gövdede (dördü); **on altıncı bilinmeyen: rakibin seyir pervane verimi** (S-38'in yayılımı, dördü). Ek S14 tablosuna iki satır: pervane verimi ve **eksik olan rotor–yapı/kanat etkileşimi** (S-39). Özgün gövde Ek S14'te tam | `drafts/14-recomposed.md` §3 |
