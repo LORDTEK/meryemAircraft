@@ -436,8 +436,7 @@ missions, while vectored-thrust aircraft are efficient in cruise and suited to l
 
 ### What the configuration does instead
 
-**Cruise lift is carried by the airframe itself.** There is no separate fuselage: the whole
-planform is the wing, so every part of the body that is carried is also a part that lifts. At
+**Cruise lift is carried by the airframe itself.** At
 the cruise condition the lift coefficient follows from `C_L = W/(qS)`, the drag from
 `C_D = C_D0 + C_L²/(πARe)`, and the nose pair is left with one job — producing the thrust that
 balances that drag. It supports none of the weight.
@@ -742,7 +741,7 @@ some other way is an implementation question it does not settle.
 The counter-rotating arrangement carries a second consequence that the transition analysis
 depends on. **At equal counter-rotating speeds, the net angular momentum of the propulsion system is nominally
 zero**: rotating the airframe through ninety degrees therefore produces no gyroscopic moment for the
-control system to cancel. If the pairs are speed-trimmed, that cancellation is no longer exact (Section 8, *What this inventory does not settle*). In a tilting architecture that term is present and must be designed for.
+control system to cancel. If the pairs are speed-trimmed, that cancellation is no longer exact (below). In a tilting architecture that term is present and must be designed for.
 
 ### The energy path
 
