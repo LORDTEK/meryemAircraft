@@ -140,3 +140,11 @@ Okuyucu kayıtları: C-147-1…3, D-X7…D-X9, Q-X7, Q-X8 — yalnız kayıt.
 **KAPANDI (dört okuyucu teyit):** X-6, X-5, L-3 satır 2–8. **Uygulandı, teyide:** W-2 Q3 (tırnak), L-3 satır 1 (b), R-11 (*"what the paper leaves open"*).
 **Yazarda:** W-2 Q2 — (ii) Grok, ChatGPT (kayıtlı çekince: koşul "presented and priced" değil), Qwen, Claude (az farkla); (iii) DeepSeek; (iv) DeepSeek'in inceltmesi.
 Bütün okuma aşamasında açık gövde kusuru kalmadı; W-2 kararından sonra aşama kapanır.
+
+### Tur 150 — kapanış kapısı ve W-2
+
+**Kapanış kapısı (alındı denetimi, birleşik görünüm):** 17 yeni/değişmiş işaretçi cümlesi, hepsi R1; bölünmüş adımın 13 işaretçisi R1. Başarısız yok.
+**W-2:** yazarın önerisi — *"avantajları bir araya getiren mimari"* — birleşim/mimari çatışmasını çözüyor; *"mimari, koşul ve bedel"* üç katkı sayıyordu (Tur 35
+kararına ters). Yazarın onayladığı ara yol (vi): *"What this paper contributes is an architecture that brings the three elements together; the condition shows
+what it satisfies, and the price what it costs."* — okuyucu denetimine (yeni/kayıp yüklem, "an/the", eksiltili yan cümle). Yazar: *"Bu bir hukuk metni değil;
+anlaşılamadıktan sonra haklı olmak önem kaybeder."*

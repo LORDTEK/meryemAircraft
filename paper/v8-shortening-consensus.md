@@ -690,3 +690,5 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | X-6, X-5, L-3 satır 2–8 teyit | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI (Tur 150)** |
 | W-2 Q3 tırnak; L-3 satır 1 (b); R-11 "what the paper leaves open" | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı (Tur 150)**; teyide |
 | W-2 Q2 | (ii) | (ii) dar, çekince kayıtlı | (iii) / (iv) | (ii) | (ii) dar | **Yazarın kararı** (iki tartışma turu tamam) |
+| W-2 (vi) yazarın cümlesi, tek katkılı ara yol (yazar onayladı) | ? | ? | ? | ? | evet | **Tur 150 denetimi** (yeni/kayıp yüklem; "an/the"; eksiltili yan cümle) |
+| Kapanış kapısı, birleşik görünüm: 17 + 13 işaretçi R1 | ? | ? | ? | ? | tutuyor | **Tur 150 teyidi** |

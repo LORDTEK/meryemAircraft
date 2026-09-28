@@ -173,3 +173,9 @@
 | 11 | *… (the estimate is an area-and-coefficient calculation, Supplement S11) … a class Section 7 counts …* | S11 estimate rows; Step 7 table (indexing) | R1 |
 
 **Gone:** the five failing sentences of the first run (S-53 ×2, S-54, S-55, S-56). **Failures now: 0.**
+
+## Kapanış kapısı, birleşik görünümde (Tur 150)
+
+`paper/build/v8_receipt_diff.py`: bugünkü gövdede 152 işaretçi cümlesi; 135'i Tur 130 tablosundakiyle aynı (hüküm geçerli; S-53…S-56 onarıldı,
+Tur 132 yeniden koşusu 0). **17 yeni ya da değişmiş cümle birleşik görünümdeki alıcıya karşı okundu: 17'si de R1** (liste Tur 150 metni §2.1).
+Bölünmüş adım işaretçileri (Q-P1, `v8_assemble.py`): 13, hepsi R1. Kapsam dışı: numarasız işaretçiler (park listesinde). **Sonuç: başarısız alındı yok.**

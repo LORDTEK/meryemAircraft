@@ -451,3 +451,11 @@ Bölüm 5.1'in korunan katkı cümlesi için adaylar (hepsinde "are"dan önce vi
 - **(iii)** *"What this paper contributes is the architecture; the combination, the consequences of the choices inside it, and an accounting of what they cost are
   how that contribution is presented and priced."* — DeepSeek. Bölüm 1 ve 6.2 ile tam uyum, çekince kalkar; bedeli Bölüm 1'in neredeyse birebir yankısı.
 - **(iv)** (DeepSeek'in inceltmesi) *"… the consequences of the choices inside it, and an accounting of the price the configuration pays for pursuing it are how …"*
+
+## Tur 150 — W-2 yazarın cümlesiyle; aşama kapanışı; bir sonraki aşama için yazarın fikri
+
+- W-2: yazar (ii)/(iii)/(iv)'ü okuyunca *"Bu ne ya? Hukuk metni gibi olmuş."* dedi ve kendi birleştirici cümlesini önerdi; ara yol (vi) yazarın onayıyla
+  okuyuculara (gerekçesi: *"Bu bir hukuk metni değil. Anlaşılamadıktan sonra haklı olmak önem kaybeder."*).
+- Aşama: W-2 + teyitler kalınca kapanır; kapanış kapısı (alındı denetimi, birleşik görünüm) koşuldu, başarısız yok.
+- **Bir sonraki aşama için yazarın fikri (karar değil, okuyucu görüşüne):** *"bölümlerin birleştirilebilirliğinin incelenmesi … Birleşen bölümlerden artık ifadeler
+  eke taşınabilir."* Uzunluk: gövde ~20 300; E6 planında düzyazı 8 500. Aşama kapanınca park listesi okunur; H-2 atıf haritası ve gönderim öncesi listesi sırada.

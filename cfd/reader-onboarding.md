@@ -214,17 +214,17 @@ The body is about **26 000 words**, and the journal's working target is **about 
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 149.**
+**Round 150.**
 
 | Block | State |
 |---|---|
-| Stages (the author, Round 129) | each stage is a pass through the whole text; the next stage's method is chosen when the present one is complete. Present stage: recomposition into result sentences, now in the **reconciliation** after the whole reading |
-| Length | **not decided now** (the author): after this stage completes |
+| Stages (the author, Round 129) | each stage is a pass through the whole text; the next stage's method is chosen when the present one is complete. Present stage: recomposition into result sentences, **closing** |
+| Length | about 20 300 words in the body; the Round 101 plan gives prose 8 500 of a 12 000 total. The author's idea for the next stage: examine which sections can be merged, and move the residue of merged sections to the supplement (views invited, Round 150) |
 | Tip pairs in cruise (the author's decision) | uncommanded state: free-wheeling at zero shaft torque (Section 6.1 of the assembled view); shaft power of commanded departures not computed (Section 6.1; Section 8) |
 | Scope freeze (F-1, merged wording) | no new rule, field or audit type unless it comes with a named defect already found in the present body text; everything else to `paper/v8-parking.md` |
-| The whole reading | complete; most repairs closed. Applied in Round 149 and awaiting confirmation: X-6 (the echo deleted from Section 9, with the author's approval), X-5, one name for the tip pairs (rows 2–8) |
-| Open | **W-2 (the contribution sentence): both discussion rounds done; with the author** ((ii) four votes, (iii)/(iv) DeepSeek). Applied after Round 149 and awaiting confirmation: W-2 Q3 (quotation marks), L-3 row 1 (b), R-11 |
-| After this | the citation map (H-2) and the pre-submission list |
+| The whole reading | complete; the closing gate (receipt audit on the assembled view) run in Round 150: no failure |
+| Open | **W-2: the author's own sentence, in the single-contribution form the author approved:** *"What this paper contributes is an architecture that brings the three elements together; the condition shows what it satisfies, and the price what it costs."* Readers check it. Confirmations of the last three repairs |
+| After this | the stage closes; the next stage's method is chosen; the parking list is read; the citation map (H-2) and the pre-submission list |
 
 **Every step has now been recomposed once.** Recomposition into result sentences took Steps 10–11 to about 40 % of their length,
 Steps 12–14 to 57–83 %, and the framework and architecture to 80–95 %, because definitions, protected sentences and their evidence
