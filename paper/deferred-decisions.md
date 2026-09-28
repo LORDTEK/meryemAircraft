@@ -495,3 +495,10 @@ etiket (ChatGPT H/C/P/K/S, DeepSeek işlev), H-2 zamanı, 6.1'in evi, 7.4. Okuyu
 
 **Açık kalan:** 6.1'in evi — Bölüm 8 (Grok, ChatGPT) / 5.2 (DeepSeek, Qwen); haritanın kendisi karar versin (ChatGPT). DeepSeek: işlev etiketleri Tur 135 "not …"
 sınıflarıyla birleşsin. ChatGPT: numarasız işaretçi taban çizgisi B'den önce (ötekiler: her değişiklikte). **Yazar seçer.**
+
+## Tur 153 — yazar yöntemi onayladı ("Onaylıyorum."); A evresi: bulgu haritası
+
+13 küme, 73 geçiş (`paper/v8/drafts/finding-map.md`; aday çıkarımı `paper/build/v8_finding_map.py`). **Ölçüm:** C ve – önerilerimin hepsi uygulansa gövde ~280
+kelime kaybeder; hedef için düzyazı ~20 300 → ~8 500. Kopya kesme kaldıraç değil; **kaldıraç S (eke taşıma)** — yazarın Tur 129 ipucu, Qwen'in Tur 151 önerisi.
+Okuyuculardan S adayları (alt bölüm + gövdede kalacak özet + içindeki korunan cümleler) ve "8 500 yalnız 2.x, 4, 7.x'ten gelir mi?" tahmini istendi.
+Numarasız işaretçi tabanı: 19, hepsi kendi bölümünde.

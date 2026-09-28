@@ -214,15 +214,15 @@ The body is about **26 000 words**, and the journal's working target is **about 
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 152.**
+**Round 153.**
 
 | Block | State |
 |---|---|
-| Stages (the author, Round 129) | **Recomposition into result sentences is closed** (Round 152; the whole reading, Rounds 146–151, was its last pass; closing gate held). The next stage's method is being chosen |
-| Contribution | Sections 1, 5.1, 6.2 and 9 name one contribution, the architecture (5.1: the author's sentence, Round 151) |
+| Stages (the author, Round 129) | recomposition into result sentences closed (Round 152). **Present stage: compression by finding (the author approved the method, Round 153)**: A the finding map → B one cluster or supplement move per round → C the citation map → D merging only where needed → E the final sweep |
+| Phase A (Round 153) | the finding map: 13 clusters, 73 occurrences, each with function (definition / argument / consequence / boundary / debt) and treatment (H / K / C / P / S / –). **Finding: cutting copies saves only about 280 words; the target needs the prose cut from about 20 300 to about 8 500. The lever is moving working to the supplement (S).** Readers asked for S candidates, each with the summary that stays in the body |
 | Length | about 20 300 words in the body; the Round 101 plan gives prose 8 500 of a 12 000 total |
-| Next stage | five independent proposals (four readers + Claude) side by side in Round 152; all start from a **map of findings argued in more than one place**, one home each, one change per round, checks in the assembled view, freeze continues. Differences: the main lever (cutting copies vs moving working to the supplement), labels, when the citation map is built, where 6.1 goes. **The author chooses** |
-| Tip pairs in cruise (the author's decision) | uncommanded state: free-wheeling at zero shaft torque (Section 6.1 of the assembled view); shaft power of commanded departures not computed (Section 6.1; Section 8) |
+| Contribution | Sections 1, 5.1, 6.2 and 9 name one contribution, the architecture |
+| Tip pairs in cruise (the author's decision) | uncommanded state: free-wheeling at zero shaft torque (Section 6.1 of the assembled view); shaft power of commanded departures not computed |
 
 **Every step has now been recomposed once.** Recomposition into result sentences took Steps 10–11 to about 40 % of their length,
 Steps 12–14 to 57–83 %, and the framework and architecture to 80–95 %, because definitions, protected sentences and their evidence
