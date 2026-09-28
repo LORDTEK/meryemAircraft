@@ -804,7 +804,7 @@ the chord required over the combined frame length is **39 mm**, against the 50 t
 20 mm faired strut carries in any case. Directional stability on this configuration therefore
 does not ask for a surface; it asks for a fairing on a frame that is already there.
 
-**One part is not airframe: the flight control system.** The stability of this configuration is not airframe-borne — it is produced by
+**One part is not airframe: the flight control system.** The stability of this configuration is not airframe-borne alone — the rest is produced by
 differential thrust and by the strip, both of which are actively commanded — so an attitude
 reference and a flight computer are not optional equipment but part of the mechanism the
 preceding paragraphs describe. They are carried in the systems budget. The configuration
@@ -1119,7 +1119,7 @@ The remaining items are not known obstacles; they are questions this work has no
 - the electrical path at peak;
 - the airframe's mass;
 - the strip and the fairing;
-- closed-loop hover control, including the declined reaction-torque channel, the hover torque residual and the allocation of the tip pairs between take-off margin and attitude authority;
+- closed-loop attitude control in hover and in cruise, including the declined reaction-torque channel, the hover torque residual and the allocation of the tip pairs between take-off margin and attitude authority;
 - vertical descent and the landing transition;
 - ground handling and landing loads;
 - the competitor's lift-group mass;
