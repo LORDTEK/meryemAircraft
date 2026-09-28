@@ -101,3 +101,8 @@ hatve): gövdeye girmez (Adım 1'in maddesinde iki kaynak var).
 **Vegh — durum (Qwen P2):** **iz, doğrulanmadı.** Depodaki dosya yalnız düzeltme duyurusu (doi 10.2514/6.2025-1436.c1: Tablo 2 değişti; s. 11
 cümlesinden *"tail volume"* silindi); (c) ve (d) hakkında bir şey söylemiyor. Asıl bildiri (10.2514/6.2025-1436) ve dergi sürümü
 (10.2514/1.C038393) depoda yok. Hiçbir yerde düzeltme duyurusu makale gibi anılmaz (ChatGPT; H taramasında denetlenir).
+
+**Tur 136 — Vegh konferans bildirisi (doi 10.2514/6.2025-1436): ChatGPT okudu, depoda değil.** Belge türü: **tam metin, ResearchGate
+görüntüsü, yalnız ChatGPT** (ChatGPT'nin sürüm etiketi kuralı; Qwen'in "belge türü" alanı oyda). Kaynak-sonuç: boşluğu **söylemiyor**;
+kendi sınırları: pil teknolojisi ticari değil (s. 11), daha yüksek doğrulukta analiz önerisi (s. 26), rüzgârda kalkış/iniş incelenmedi
+(s. 5). Dergi sürümü (10.2514/1.C038393) ve düzeltme duyurusu (…1436.c1) ayrı kayıtlar; bulgular sürümler arasında taşınmaz.

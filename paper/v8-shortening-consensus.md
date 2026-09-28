@@ -608,3 +608,5 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Rohith A (Adım 1) ve B (Adım 7) | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı (Tur 135)**; teyide |
 | S-58 teyit | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI (Tur 135)** |
 | "not …" sınıflaması; borç izi alındı denetiminde; liste tamlığı | ✓ | ✓ | ✓ | ✓ | ✓ | **Kabul (Tur 135)**; CLAUDE §3.0 |
+| Rohith A ve B teyit | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI (Tur 136)** |
+| Vegh: ChatGPT okudu; engel değil; depoda değil | açamadı | okudu | açamadı | açamadı | (a) düzeltmesiyle kabul | **Kayıtta (Tur 136)**; PDF gelirse Adım 1 satırı oyda |

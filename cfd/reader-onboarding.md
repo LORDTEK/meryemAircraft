@@ -214,7 +214,7 @@ The body is about **26 000 words**, and the journal's working target is **about 
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 135.**
+**Round 136.**
 
 | Block | State |
 |---|---|
@@ -222,10 +222,10 @@ The body is about **26 000 words**, and the journal's working target is **about 
 | Length | **not decided now** (the author): after this stage completes |
 | Tip pairs in cruise (the author's decision) | uncommanded state: free-wheeling at zero shaft torque (Step 8); shaft power of commanded departures not computed (Step 8; Step 14) |
 | Step 14 | eighteen unknowns (S-58 closed) |
-| Rohith et al. 2026 (*J. Aircraft*) | read; applied: a Step 1 occupied-list item and the Step 7 witness sentence (with Rheaume) — to confirm |
-| Vegh | only the correction notice is in the repository; ChatGPT is asked for the relevant passages of the conference paper, else Vegh closes as a lead (the author) |
+| Rohith et al. 2026 (*J. Aircraft*) | read; Step 1 occupied-list item and Step 7 witness sentence (with Rheaume) **closed** |
+| Vegh | ChatGPT reopened the conference paper (ResearchGate): coaxial tail-sitter, conventional fuselage and tails (not (a)), series hybrid with battery for hover; (c), (d) open; no obstacle. Not in the repository: a Step 1 line only if the PDF arrives |
 | Standing checks | receipt audit (R1–R4), debt trace, whole-paper search before "absent", state identity, "not …" classification, list completeness |
-| To complete the stage | Vegh; rest of the surface sweep; record-propagation sweep; Step 1 and Step 8 denial maps; the whole reading in two halves (1–8, 9–15) and a short reconciliation |
+| To complete the stage | Vegh PDF or closure; rest of the surface sweep (number identity, figures, "not …" classification) — counts and axis names done; record-propagation sweep; Step 1 and Step 8 denial maps; the whole reading in two halves (1–8, 9–15) and a short reconciliation |
 
 **Every step has now been recomposed once.** Recomposition into result sentences took Steps 10–11 to about 40 % of their length,
 Steps 12–14 to 57–83 %, and the framework and architecture to 80–95 %, because definitions, protected sentences and their evidence

@@ -124,3 +124,13 @@ oyda. **Vegh:** yazar arıyor.
 **Tur 134 — Vegh: yüklenen dosya yalnız düzeltme duyurusu** (doi 10.2514/6.2025-1436.c1, 1 sayfa; Tablo 2 düzeltmesi ve s. 11'den
 *"tail volume"*un optimizasyon değişkenlerinden silinmesi). (c) ve (d) hakkında bir şey söylemiyor. Asıl bildiri bekleniyor; Vegh için
 hiçbir metin değişikliği yok.
+
+**Tur 136 — Vegh konferans bildirisi: ChatGPT yeniden açtı** (ResearchGate tam metin, researchgate.net/publication/388935673; sayfa
+numaralı alıntılar Tur 135 cevabında). Öteki üç okuyucu açamadı; Grok yalnız özet ve düzeltme duyurusu. **Özet:** eşeksenli kuyruk üstü
+(s. 4); ortak geometri gövde + kanat + yatay kuyruk 58 ft² + dikey kuyruk 27 ft² (s. 5); *"collective"*, *"cyclic"*, kumanda yüzeyi
+sözcükleri yok; *"control characteristics … would vary substantially"* (s. 24); SOFC seri hibrit, pil askıyı tamamlıyor (s. 7, 14); pil
+varsayımı *"beyond commercially available systems at the time of writing"* (s. 11); yenilik/öncelik iddiası yok. **Sınıflama (Claude
+düzeltmesiyle):** kuyruk üstü evet ama **(a) hayır** (geleneksel gövde + kuyruk, BWB/uçan kanat değil — ChatGPT'nin tablosu "evet"
+diyor, notu "BWB değil"); (b) evet (eşeksenli); **(c) açık**; **(d) açık**; (e) evet; (f) hayır. **Engel değil.** Depoda değil →
+metne girmez (P116). Yazara: ResearchGate kopyası indirilebilirse Adım 1 dolu listeye bir satır önerilir (eşeksenli + seri hibrit
+kuyruk üstü, boşluğa (b)+(e) ile en yakın örnek).
