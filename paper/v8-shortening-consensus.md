@@ -636,3 +636,9 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | ChatGPT: kaynak durumu dörtlüsü (verified primary / verified secondary / attributed–title only / unverified) | — | öneren | — | — | evet | **Tur 140 oylaması** |
 | Şekil sayısı denetimi betiği (DeepSeek P3, Qwen P1); attributed tanık arama protokolü (DeepSeek P4, Qwen P2) | — | — | öneren | öneren | evet | **Tur 140 oylaması** |
 | Rejim tamlığı ilk koşusu: N7 (düşük Re satırı askıyı da taşısın), N8 (girişim satırı askıda iz–kanat etkileşimi; Oosedo 2013 tanığı) | — | — | — | — | evet | **Tur 140 oylaması** |
+| S-61, N5, N6, S-62 teyit; Oosedo okuması; Adım 1 değişmez | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI (Tur 141)** |
+| N7 | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı (Tur 141)**; teyide |
+| N8 temel satır | ✓ | ✓ | ✓ (eşeksenli yan cümlesiyle) | ✓ | ✓ | **Uygulandı (Tur 141)**; DeepSeek'in yan cümlesi oyda |
+| P-d, P-e (betik yazıldı, sınandı), P-f | ✓ | ✓ | ✓ | ✓ | ✓ | **Kabul/uygulandı (Tur 141)** |
+| ChatGPT P-g (etkidiği / seçildiği / rejimler arası bağımlılık); P-d inceltmesi (ikincil ≠ birincil dolu öğede) | — | öneren | — | — | evet | **Tur 141 oylaması** |
+| Qwen P1 (iz etkileşimi izi, S-37'ye bağlı); P2 (eksen adı koruması, uygulandı kayıtta) | — | — | — | öneren | evet | **Tur 141 oylaması** |

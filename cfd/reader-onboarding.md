@@ -214,19 +214,18 @@ The body is about **26 000 words**, and the journal's working target is **about 
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 140.**
+**Round 141.**
 
 | Block | State |
 |---|---|
 | Stages (the author, Round 129) | each stage is a pass through the whole text; the next stage's method is chosen when the present one is complete. Present stage: recomposition into result sentences |
 | Length | **not decided now** (the author): after this stage completes |
 | Tip pairs in cruise (the author's decision) | uncommanded state: free-wheeling at zero shaft torque (Step 8); shaft power of commanded departures not computed (Step 8; Step 14) |
-| Step 14 | eighteen unknowns; control item covers hover and cruise; regime-completeness run: N7, N8 to vote |
-| Witnesses | Vegh line closed (version fixed before submission); **Oosedo 2013 read at first hand** (Round 140) — Step 1's sentence stands |
-| Evidence record | five fields; manuscript rule; five source layers |
-| Surface sweep | *"not …"* classification, number identity, dates, figures done; S-61 (*"published"* → *"the reference design's"*), N5, N6, S-62 (Figure 2b) applied, to confirm |
-| Standing checks | receipt audit (R1–R4), debt trace with regime field, whole-paper search before "absent", state identity, "not …" classification, list completeness, framework-versus-aircraft, S14 mapping |
-| To complete the stage | record-propagation sweep; Step 1 and Step 8 denial maps; the whole reading in two halves (1–8, 9–15) and a short reconciliation |
+| Step 14 / S14 | eighteen unknowns; N7 and N8 applied (S14 rows widened to hover), to confirm; DeepSeek's contra-rotating clause to vote |
+| Witnesses | Oosedo 2013 verified primary; Escareno 2007/2008 verified secondary only (PDFs requested); provenance status (P-d) on every Step 1 occupied claim |
+| Tools | `v8_figures.py` (figure numbers vs body/supplement, with self-test) added to the standing checks |
+| Record-propagation sweep (H) | begun: correction notice never cited as the paper; gap-search status table; H-1 (Rohith (a) record error) to vote |
+| To complete the stage | rest of H; Step 1 and Step 8 denial maps; the whole reading in two halves (1–8, 9–15) and a short reconciliation |
 
 **Every step has now been recomposed once.** Recomposition into result sentences took Steps 10–11 to about 40 % of their length,
 Steps 12–14 to 57–83 %, and the framework and architecture to 80–95 %, because definitions, protected sentences and their evidence

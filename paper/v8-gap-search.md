@@ -138,3 +138,22 @@ kuyruk üstü, boşluğa (b)+(e) ile en yakın örnek).
 **Tur 137 — Vegh müsveddesi (R3-clean) depoda, Claude okudu.** ChatGPT'nin raporu doğrulandı; (a) düzeltmesi dört okuyucu + Claude.
 Sınıflama: kuyruk üstü evet, (a) hayır, (b) evet, (c) söylemiyor, (d) söylemiyor, (e) evet, (f) hayır. Boşluğa (b)+(e) birlikteliğiyle
 en yakın bilinen örnek. Adım 1 satırı Tur 137'de oyda.
+
+## Tur 141 — güncel durum tablosu (kayıt yayılma taraması H'nin ilk parçası; P-d durumlarıyla)
+
+| Belge | Durum (P-d) | a | b | c | d | e | f | Gövdede |
+|---|---|---|---|---|---|---|---|---|
+| Oosedo ve ark. 2013 ICRA | verified primary (Tur 140) | hayır | hayır | **evet** | **evet** | söylemiyor | hayır | Adım 1 (2013 satırı; tepki torku cümlesinin kaynağı) |
+| Yang ve ark. 2018 IROS | verified primary | evet | hayır | evet | hayır | hayır | hayır | Adım 1 |
+| Rohith ve ark. 2026 *J. Aircraft* | verified primary | **hayır — düzeltme önerisi (H-1)**; Tur 134 kaydı "evet" diyordu | hayır | hayır | — | evet | hayır | Adım 1, Adım 7 |
+| Vegh 2025 (müsvedde R3) | verified primary (müsvedde) | hayır | evet | söylemiyor | söylemiyor | evet | hayır | Adım 1 |
+| Vegh düzeltme duyurusu | verified primary (yalnız düzeltme) | — | — | — | — | — | — | hiçbir yerde makale gibi anılmaz (gövde ve ekte aranıp yok, Tur 141) |
+| Rheaume & Lents 2016 | verified primary | hayır | hayır | — | — | kısmen (paralel) | hayır | Adım 7; S14 |
+| Escareno ve ark. 2007, 2008 | verified secondary (De Wagter s. 3) | — | evet (eşeksenli) | — | — | — | — | Adım 1 eşeksenli madde; PDF istendi |
+| WO2025255583A1, US 2025/0010988 A1, Cai 2024 | yalnız okuyucu özeti — açılmadı | — | — | — | — | — | — | yok (P116) |
+
+**H-1 (Rohith (a)).** Tur 134 kaydı (a)'yı *"evet (kanatlı çift kanat kuyruk üstü)"* diye yazdı — ChatGPT'nin Tur 126 okumasından, benim
+doğrulamamla. (a) = BWB ya da uçan kanat kuyruk üstü. Rohith'in aracı bir merkez gövdeli (*"The centerbody ("fuselage"), with dimension of
+0.5 m × 0.4 m × 0.4 m"*, s. 580) dört rotorlu çift kanat (QBiT); belgede *"flying wing"* ve *"blended"* geçmiyor. Vegh'in (a)'sı aynı
+ölçütle Tur 136'da "hayır"a çekilmişti; düzeltme Rohith'e **yayılmamıştı**. Gövde etkilenmiyor (Adım 1 satırı *"winged biplane
+tail-sitters"* diyor, BWB demiyor). Kayıt düzeltmesi oyda (Tur 141).

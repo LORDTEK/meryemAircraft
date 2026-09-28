@@ -191,3 +191,30 @@ yazar yükledi). Alanlar: **tür/sürüm** ICRA 2013 bildirisi, dizgilenmiş (IE
   yok); **(d) evet** (hiç hareketli yüzey yok); (e) söylemiyor (güç kaynağı adı yok); (f) hayır. Boşluğu **söylemiyor**; engel değil.
 - **Yokluk arama listesi:** battery 0, hybrid 0, coaxial 0, contra 0, counter-rotat 0, blended 0, flying wing 0, variable pitch 0, collective 0,
   cyclic 0, swirl 0, fuel 0; "engine" 1 (kurum adı); "tilt" 14 (tilt-rotor ve "tilt-twist" kontrol yöntemi).
+
+**Tur 141 — kaynak durumu (P-d, ChatGPT; dört okuyucu + Claude) ilk uygulama: Adım 1'in dolu listesi ve son paragrafı.**
+Durumlar: verified primary / verified secondary / attributed (yalnız başlık) / unverified. ChatGPT'nin inceltmesi (ikincil, dolu bir öğeyi kurarken
+birincile denk sayılmaz) oyda.
+
+| Adım 1 iddiası | Tanık | Durum | Not |
+|---|---|---|---|
+| XFY-1 1954, altı geçiş, motor ve dişli kutusu | NASA 19810010574 (tarihçe incelemesi) | verified secondary | programın kendi belgesi değil |
+| *"The route itself is established"* (dörtlü + kanat, birkaç eyleyici, on yıldan fazla) | De Wagter 2018 s. 2 (tarama); Oosedo 2013 s. 317 (örnek) | verified secondary + verified primary (bir örnek) | |
+| kumanda yüzeysiz kuyruk üstü, 2013 | Oosedo 2013 | **verified primary** (Tur 140) | |
+| eşeksenli çift *"proposed specifically to remove the reaction torque … at the cost of an extra motor and the coaxial arrangement"* | Escareno ve ark. 2007 (ECC, s. 3385–3390), 2008 (Springer UAS, s. 261–273) — **De Wagter 2018 s. 3 üzerinden** | **verified secondary** | dolu öğe; **PDF yazardan istendi (Tur 141)** |
+| 2014 MAV *"to compensate each other's torque"* | Wang ve ark. ICAS 2014 | verified primary | |
+| iz içindeki yüzey (2014, 2018) | Wang 2014; Yang-Zhu 2018 IROS | verified primary | |
+| tepki torku kanalı, 2012 | Zhang ve ark. 2012 | verified primary | |
+| kuadrotor kuyruk üstü tepki torkuyla yatış | Oosedo 2013 s. 319 | verified primary (Tur 140) | kaynağın adı *yaw* (Zb = itki ekseni = bizim gövde yatış ekseni; Qwen P2) |
+| BWB kuyruk üstü 2025 | SkySwift | verified primary | |
+| seri hibrit + kanatlı kuyruk üstü 2026 | Rohith ve ark. 2026 | verified primary | |
+| eşeksenli kuyruk üstü + seri hibrit depo 2025 | Vegh müsveddesi R3 | verified primary (müsvedde) | sürüm gönderimden önce |
+| pervane uzlaşması, *"theoretically impossible"*; DelftaCopter *"a compromise"* | De Wagter 2018 s. 2 ve kendi aracı | verified primary (De Wagter'in kendi cümlesi) | |
+| seri hibrit *"flown in a crewed motor glider"* | Schoemann 2014 tezi s. 25–26 | verified secondary | |
+| seri hibrit *"designed for small uncrewed aircraft"* | Merical ve ark. 2014 | **yalnız özet** — dört durumun hiçbirine tam oturmuyor | okuyuculara soruldu |
+| *"Tail-sitting aircraft are seventy years old"* | XFY-1 (NASA 1981) | verified secondary | |
+| *"blended wing bodies have been a standing subject of transport research for three decades"* | Liebeck, Page, Rawdon 1998 (36. AIAA ASM) ve Liebeck 2004 (*J. Aircraft* 41, 10–25) — `references/BWB-low-Mach-aerodynamic-performance_Fluids.pdf` kaynakçasında (Tur 141'de arandı) | **attributed (yalnız başlık)** | 1998 → 2026: ~28 yıl; genel tarih cümlesi, dolu öğe değil |
+
+**Oosedo 2013, ek kayıt (DeepSeek R140-P2):** tepki torku kanalını **kullanan** ikinci birincil tanık — Adım 1'in *"Using it is a choice, and so is
+declining it"* çerçevesi artık iki birincil tanıkla (Zhang 2012 eşeksenli çiftte, Oosedo 2013 dört tek rotorda); gövdeye girmez.
+**Eksen adı koruması (Qwen R140-P2):** kaynak Zb = itki ekseni, adı *yaw*; bizim adlandırmamızda gövde yatış ekseni (askıda yön, seyirde bank).

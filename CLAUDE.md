@@ -574,6 +574,11 @@ Hiçbir iddia denetlenmeden aktarılmaz — ne YZ'lerinki ne benimki.
   çözülmesini `v8_assemble.py` ("cozulmeyen atif") denetler. Tur 88'e dek v8 için "links temiz" diye raporladığım v7'ydi.
 - `paper/build/v8_refs.py` — v8'de tablo/satır atıfları, elle çözülmüş ilişkisel adlar (*the inversion*, *the N-th
   departure*) ve "Supplement S#" atıfları; gözden geçirilmiş liste `paper/v8-refs-reviewed.md` (`--sina`).
+- `paper/build/v8_figures.py` — v8 şekil betiklerindeki her birimli sayı gövdede ya da ekte aynı değer + birimle mi; yalnız değer eşleşmesi
+  insan okur (Tur 141, P-e; `--sina` F1'i geri koyup yakalar).
+- **Kaynak durumu (Tur 141, P-d):** dolu-literatür iddiasının her tanığı verified primary / verified secondary / attributed (yalnız başlık) /
+  unverified diye `v8-evidence.md`'de; gönderimden önce denetlenir. **Attributed tanık protokolü (P-f):** PDF gelmeden arama terimleri ((a)–(f)),
+  tarih ve ikincil yol kayda yazılır.
 - Bir denetim yazdığında **eski hatayı geri koyup yakalayıp yakalamadığını
   sına.** Sessizce boş dönen bir denetim, hiç olmayandan beterdir; bu bir kez
   oldu.

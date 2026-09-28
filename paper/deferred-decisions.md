@@ -402,3 +402,6 @@ numarasıyla istendi. Gelmezse ya da yetmezse Vegh **iz** olarak kapanır: metne
 - **Oosedo ve ark. 2013** (ICRA, s. 317–322): Adım 1'in *"A quadrotor tail-sitter operated without control surfaces, with experimental
   verification, was reported in 2013"* cümlesi yalnız başlığa dayanıyor (De Wagter 2018 s. 24 kaynakça, s. 2 anılış); belge açılmadı.
   Yazardan PDF istendi (Tur 139).
+- **Escareno ve ark. 2007** (ECC 2007, s. 3385–3390) ve **2008** (Unmanned Aircraft Systems, Springer, s. 261–273): Adım 1'in eşeksenli çift maddesinin
+  ilk cümlesi yalnız De Wagter 2018 s. 3 üzerinden (verified secondary). Yazardan PDF istendi (Tur 141).
+- **S-37 türetmesi başarılırsa** (Qwen R140-P1, oyda): iz sınırının askıdaki girişim sonucu da (S14 girişim satırı) değerlendirilir.
