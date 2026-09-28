@@ -587,3 +587,13 @@ Okuyuculardan ölçümün denetimi istendi (yokluk iddiası, Tur 133).
 - **Benim görüşüm değişti:** yazarın önerisi taşır ve tekrarı siler, yeni yüklem yazmaz; tek ev; daha çok kısaltır. Bedeli: sınır sayılardan önce gelmez
   (sözleşme talimatı 7'nin başında tek cümle kalabilir); Bölüm 6 yalnız 6.1; JoA *"do not introduce concepts"* — madde 8'in "by construction" tanımı
   yalnız orada. Değişimimin yazarın önerisiyle çakıştığını okuyuculara açıkça yazdım.
+
+## Tur 159 (Tur 158 cevapları) — 6.2 + 9: yazarın önerisi beşimizle kabul; taslak
+
+- Dört okuyucu da yazarın önerisine geçti (yeni metin yok, tek ev). Taslak `paper/v8/drafts/09-merged-draft.md`: yalnız taşıma + silme; −215 kelime; korunan ön
+  denetimi temiz.
+- **Beşimizin ortak hatası:** "By construction" tanımını silmeyi önerdik — korunan (Adım 9, D). Sözleşme cümlesi de korunan (ChatGPT'nin seçeneği onu 9'da
+  bırakıyor; silmiyor).
+- **E11 (yazara gidecek, okuyucu oyundan sonra):** "By construction" tanımı eke (S9) — ifade gövdede başka hiçbir yerde yok; öz geri gelirse tanım da gelir.
+- Açık: D1 sözleşme cümlesi (7'nin başı / 9'da), D3 iki bulgu yan cümlesi tabloya, D4 "Removing those eight" paragrafı, D5 korunan ikiz (bırak), D6 başlık (E evresi).
+- Okuyucu hataları: Qwen "measured range doğru" dedi (değil; ChatGPT haklı); DeepSeek yeni metin yok gerekçesiyle geçip yeni işaretçi cümlesi önerdi.

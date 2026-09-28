@@ -214,14 +214,14 @@ The body is about **26 000 words**, and the journal's working target is **about 
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 158.**
+**Round 159.**
 
 | Block | State |
 |---|---|
-| Stages (the author, Round 129) | present stage: **compression by finding**. Supplement stage closed (7.3 −286; 7.4 −47); **batch of copy cuts closed** (−184; B4 kept; B5 = K, protected) |
-| Phase D (merges) | **6.2 + 9, decided in two rounds (the author, Round 158).** Six proposals side by side: **the author's (6.2 and 9 become one Section 9; 6.2 disappears)**, Claude's (A, now leaning to the author's: it moves and de-duplicates without new text), and the four readers' A variants (Section 9 as a findings-based Conclusions; 6.2 stays). The *Journal of Aircraft* requires a Conclusions section. Everyone comments on everyone |
-| Length (E8) | option 4, unanimous: target 12 000 all-in; report to the author with numbers before the architecture sections are compressed. Two papers: closed by the author |
-| Rules added this stage | counting flag (`v8_count_flag.py`); stop test (DeepSeek's for mapped sentences + Round 87 for the rest); protected pre-check on a temporary copy of the step files |
+| Stages (the author, Round 129) | present stage: **compression by finding**. Supplement stage closed (7.3 −286; 7.4 −47); batch of copy cuts closed (−184) |
+| Phase D (merges) | **6.2 + 9: decided — the author's proposal, supported by all five** (6.2 and 9 become one Section 9; 6.2 disappears; Section 6 keeps today's 6.1). The merged Section 9 is drafted in full (moves and deletions only; −215 words); open points D1–D5 are voted in Round 159 (`paper/v8/drafts/09-merged-draft.md`) |
+| Protected sentences met in the merge | *"'By construction' … means 'by the sizing' …"* (the phrase is used nowhere else; proposed to the supplement by author decision, E11) and the contract sentence (proposed at the head of Section 7) |
+| Length (E8) | option 4, unanimous: target 12 000 all-in; report to the author with numbers before the architecture sections are compressed |
 | Contribution | Sections 1, 5.1, 6.2 and 9 name one contribution, the architecture |
 | Tip pairs in cruise (the author's decision) | uncommanded state: free-wheeling at zero shaft torque (Section 6.1); shaft power of commanded departures not computed |
 
