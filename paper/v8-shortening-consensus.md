@@ -681,3 +681,9 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | X-5 "another duty" | ✓ | ✓ | ✗ (üç görev sayılabilir) | ✓ | ✓ | **Geri soruldu (Tur 148)** |
 | X-6 yalnız Bölüm 8'de kalsın | ✓ | ✓ | ✓ | ✓ | ✓ | **Yazara soruldu** (iki kopya korunan) |
 | L-3 ad birliği (sekiz satır) | ? | ? | ? | ? | evet | **Tur 148 oylaması** |
+| Tur 148 uygulananlar (W-5, W-7, W-11, W-13, L-8, X-1–X-4, üç not, Q-P1) teyit | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI (Tur 149)** |
+| X-6 (yazar onayı), X-5, L-3 satır 2–8 | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı (Tur 149)**; teyide |
+| W-2 Q1 virgül yok; Q4 5.1'de kalsın; Q3 kusur | ✓ | ✓ | ✓ | ✓ | ✓ | **Kabul (Tur 149)**; Q3 biçimi (italik/tırnak) ikinci turda |
+| W-2 Q2 | (ii) | (ii) "ayakta, kesin değil" | (ii) | (ii) | (ii) dar | **İkinci tur (Tur 149)**: yeni (iii) Bölüm 1'in üçlüsü |
+| L-3 satır 1 | benim ifadem | benim ifadem | (a) takma adı düşür | (b) parantez | (b) | **Geri soruldu (Tur 149)** — benim ifadem üçlü liste okunuyordu |
+| R-11 "the rest" göndergesi | ? | ? | ? | ? | onarım | **Tur 149 oylaması** |

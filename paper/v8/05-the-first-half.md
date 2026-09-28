@@ -67,7 +67,7 @@ with what margin. This section does not assert the outcome of a calculation it d
 
 **Not demonstrated.**
 
-**The aircraft leaves the ground on its control propellers.** Hover power is sized at thrust
+**The aircraft leaves the ground on its tip pairs.** Hover power is sized at thrust
 equal to weight, so the primary propulsor — the nose pair — supplies a thrust-to-weight ratio of exactly one and
 no more. The take-off margin comes from the four tip pairs, which were sized from the moment
 requirement rather than from weight support. That is the one place the configuration asks a
@@ -112,7 +112,7 @@ this section does not pretend otherwise.
 
 Runway independence is not obtained free, and the charges appear later rather than here. The
 tip frames that make the aircraft self-supporting are structure standing in the cruise
-airstream, and Section 11 charges their drag. The attitude propellers they carry are exposed
+airstream, and Section 11 charges their drag. The tip pairs they carry are exposed
 for the whole cruise and cannot be feathered, and Section 11 charges that too. The buffer that
 releases the engine from the hover peak is mass carried for the whole flight.
 
@@ -125,6 +125,7 @@ section**, and the two are combined in Section 7.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 149 — L-3 satır 2, 3 uygulandı** (dört okuyucu + Claude): *"control propellers"*, *"The attitude propellers they carry"* → *"tip pairs"*. Satır 1 (ilk kullanım) ayrışık, geri soruldu. W-11 kapandı | Tur 148 §3 |
 | **Tur 148 — W-11 uygulandı** (DeepSeek; dört okuyucu + Claude): *"The 50 kg reference geometry (Section 8)"* — gövdede ilk 50 kg. W-8 kapandı | Tur 147 §3 |
 | **Tur 147 — W-8 uygulandı** (bütün okuma; dört okuyucu + Claude): *"leaving that axis to the strip."* → *"…to a strip on the lower surface, the only moving aerodynamic surface."* Oylanan biçimdeki ikinci *(Section 8)* cümlede zaten bir işaretçi olduğu için çıkarıldı (**R-10**, göndermeden önce yakalandı) | Tur 146 §5; Tur 147 §1 |
 | **Tur 126 — S-50 onarımı (R, kapalı adıma tarihli; dört okuyucu + Claude):** *"so the primary propulsor supplies"* → *"so the primary propulsor — the nose pair — supplies"*. Özgün cümle Ek S5'in dondurulmuş kopyasında (Grok P118) | Tur 125 metni §3.6 |

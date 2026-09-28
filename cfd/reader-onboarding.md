@@ -214,7 +214,7 @@ The body is about **26 000 words**, and the journal's working target is **about 
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 148.**
+**Round 149.**
 
 | Block | State |
 |---|---|
@@ -222,8 +222,8 @@ The body is about **26 000 words**, and the journal's working target is **about 
 | Length | **not decided now** (the author): after this stage completes |
 | Tip pairs in cruise (the author's decision) | uncommanded state: free-wheeling at zero shaft torque (Section 6.1 of the assembled view); shaft power of commanded departures not computed (Section 6.1; Section 8) |
 | Scope freeze (F-1, merged wording) | no new rule, field or audit type unless it comes with a named defect already found in the present body text; everything else to `paper/v8-parking.md` |
-| The whole reading | **complete (both halves).** First-half repairs closed; Round 147–148 repairs applied (transition loss now 5.4–6.6 m across three reference profiles, and more) and awaiting confirmation |
-| Open | **W-2 (the contribution sentence): the author asked the readers to discuss it for two more rounds (Round 148 is the first)**; X-5; X-6 (with the author: both copies protected); L-3 (one name for the tip pairs) |
+| The whole reading | complete; most repairs closed. Applied in Round 149 and awaiting confirmation: X-6 (the echo deleted from Section 9, with the author's approval), X-5, one name for the tip pairs (rows 2–8) |
+| Open | **W-2 (the contribution sentence): second of two discussion rounds the author asked for (Round 149); then the author decides**; L-3 row 1; R-11 (*"the rest"* in Section 9 after the X-6 deletion) |
 | After this | the citation map (H-2) and the pre-submission list |
 
 **Every step has now been recomposed once.** Recomposition into result sentences took Steps 10–11 to about 40 % of their length,

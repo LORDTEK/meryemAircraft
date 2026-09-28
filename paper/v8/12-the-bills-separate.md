@@ -86,7 +86,7 @@ On this configuration Bill 1 appears as the energy buffer: 3.6 percent of take-o
 
 ### Two costs that scale does not relieve
 
-The fixed-pitch gap also widens slightly with size, to 16.4 to 22.9 percent at the heavy design (Supplement S12); as in Section 11, no variable-pitch counterfactual was computed. **The transition is where the square–cube relation is paid in full**: rotating the heavy design in the light design's two seconds would demand about 220 kW from the tip propellers, roughly the whole of hover power; at its own 5.1 seconds the demand is about 13 kW. **A larger aircraft of this type turns more slowly, and must.**
+The fixed-pitch gap also widens slightly with size, to 16.4 to 22.9 percent at the heavy design (Supplement S12); as in Section 11, no variable-pitch counterfactual was computed. **The transition is where the square–cube relation is paid in full**: rotating the heavy design in the light design's two seconds would demand about 220 kW from the tip pairs, roughly the whole of hover power; at its own 5.1 seconds the demand is about 13 kW. **A larger aircraft of this type turns more slowly, and must.**
 
 ### Why this section sits between the ledger and the contracts
 
@@ -98,6 +98,7 @@ The fixed-pitch gap also widens slightly with size, to 16.4 to 22.9 percent at t
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 149 — L-3 satır 8 uygulandı:** *"from the tip propellers"* → *"from the tip pairs"* | Tur 148 §3 |
 | **Tur 108 (Tur 107: dört okuyucu + Claude):** J29 kısa biçim — "The fixed-pitch gap also widens slightly with size, to 16.4 to 22.9 percent at the heavy design (Supplement S12)"; **oylanan sözcüklere olumsuz niteleyici geri eklendi** ("as in Section 11, no variable-pitch counterfactual was computed") — benim önerim onu düşürmüştü; teyide | Tur 107 metni §3(a) |
 | **Tur 107 — Adım 12 yeniden kuruldu** (Tur 105–106; dört okuyucu + Claude, hiçbir cümleye veto yok): `drafts/12-recomposed.md` uygulandı; korunan cümlelerin hepsi gövdede. Özgün gövde Ek S12'de tam | `drafts/12-recomposed.md` §3 iz |
 | **Tur 70:** ikinci geçiş uygulandı — R1 (Grok; Claude: *sized by one method*, kapsam cümlesi, üstel; Grok/Qwen: *none could be run on the same footing* geri), R2, R3 (DeepSeek; Grok: *blade-section Reynolds number* adı geri), R4, R5 (Grok), D1, D2 (ChatGPT). Dört okuyucu kabul. Değişen paragrafların özgün hâli Ek S12'de — **biri (*"Two conditions travel…"*) eksikti**, çünkü ilk geçişte bütün kalmıştı; `v8_nothing_lost.py` yakaladı, eklendi | Tur 69 metni §4 |

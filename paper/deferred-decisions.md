@@ -436,3 +436,8 @@ presented and priced."* Benim önerim (ii). **Yazar seçer.**
 
 Yazar (Tur 148): *"w2'yi kendi aranızda 2 tur daha konuşun."* → Tur 148 birinci tur (Q1 virgül, Q2 "presented and priced" koşula uyar mı, Q3 *"that sentence"*
 göstericisi, Q4 5.1'de kalsın mı), Tur 149 ikinci tur; ardından yazara. **X-6** (yankıyı Bölüm 9'dan silmek; iki kopya korunan) yazara ayrıca soruldu.
+
+## Tur 149 — X-6 yazar onayladı; W-2 ikinci tartışma turu
+
+Yazar: *"X-6 onaylıyorum, Bölüm 9'dan silinsin."* → uygulandı; silme *"the rest"*ı öncülsüz bıraktı (R-11, onarım oyda). W-2: Q1 (virgül yok) ve Q4 (5.1'de kalsın)
+oybirliği; Q2 (ii) ChatGPT'nin kayıtlı kesinlik çekincesiyle, yeni seçenek (iii) Bölüm 1'in üçlüsü; Q3 italik mi tırnak mı. **Tur 149'dan sonra W-2 yazara.**

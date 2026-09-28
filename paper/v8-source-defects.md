@@ -125,3 +125,12 @@ Bölüm 4) — evet önerdim; W-12, G-1 — değişiklik yok önerdim.
 **Açık:** W-2 (yazar: *"kendi aranızda 2 tur daha konuşun"* — Tur 148 birinci tur; Q1 virgül, Q2 fiil çifti, Q3 *"that sentence"* göstericisi — **yeni
 kusur aday, W9**, Q4 5.1'de kalsın mı); X-5 (DeepSeek'e geri); X-6 (oybirliği, iki kopya da korunan → **yazara soruldu**); L-3 (sekiz satırlık ad önerisi).
 Okuyucu kayıtları: C-147-1…3, D-X7…D-X9, Q-X7, Q-X8 — yalnız kayıt.
+
+### Tur 149 — durum
+
+**KAPANDI (dört okuyucu teyit):** W-5, W-7, W-11, W-13, L-8, X-1, X-2, X-3, X-4; Q-P1. **Uygulandı, teyide:** X-6 (yazar onayı), X-5 (korunan), L-3 satır 2–8.
+**Açık:** W-2 (ikinci tartışma turu: Q2 (ii) / yeni (iii) Bölüm 1'in üçlüsü; Q3 italik / tırnak), L-3 satır 1 ((a) DeepSeek / (b) Qwen).
+
+| # | Yer | Soru | Kusur | Köken |
+|---|---|---|---|---|
+| R-11 | 9 (Adım 15) | W9 (D-2) | X-6 silinince *"Section 8 lists what would settle the rest"*ta *"the rest"* öncülsüz; Tur 148'de hepimiz alındıyı denetledik, göndergeyi değil — uygularken yakaladım. Onarım önerisi: *"Section 8 lists what the paper leaves open."* | **R** |

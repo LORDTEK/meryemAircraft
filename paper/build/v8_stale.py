@@ -191,6 +191,11 @@ EMEKLI = {
     "the only place in this section where the assumed value appears": "Tur 148: X-2 -- gecis varsayilan suruklemede",
     "revisited the route continuously since": "Tur 148: W-5 -- taniksiz",
     "the second is the more demanding to build": "Tur 147: W-9 -- olculmemis karsilastirma",
+    "a fourth duty falls on the strip": "Tur 149: X-5 -- uc gorev sayilamiyor",
+    "control propellers": "Tur 149: L-3 -- tek ad: tip pairs",
+    "attitude pairs": "Tur 149: L-3 -- tek ad: tip pairs",
+    "attitude rotors": "Tur 149: L-3 -- tek ad: tip pairs / tip-pair rotors",
+    "tip propellers": "Tur 149: L-3 -- tek ad: tip pairs",
     "published zero-lift value": "Tur 140: S-61 -- tanimlanmamis nesne; referans tasarimin varsayimi",
     "reproduces the published aircraft": "Tur 140: S-61",
     "the published chain": "Tur 140: S-61",
@@ -212,6 +217,8 @@ YALNIZ = {
     "combination of thrust settings produces a moment": ("07-the-combination.md", "08-what-it-is-made-of.md"),
     # Tur 144 (Q-P1b, dort okuyucu + Claude): "mechanical complexity" yalniz Adim 1'in kaynak alintilarinda.
     "mechanical complexity": ("01-the-gap.md",),
+    # Tur 149 (X-6; dort okuyucu + Claude, yazar onayi): yanki yalniz Adim 14te.
+    "The loop closes; the aircraft is not shown to": ("14-what-does-not-close.md",),
 }
 
 

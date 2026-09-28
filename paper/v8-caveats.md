@@ -142,7 +142,7 @@ boşluğa duyarsız. `G` = Grok, `D` = DeepSeek, `C` = ChatGPT, `Q` = Qwen, `K` 
 | 5 | This section does not assert the outcome of a calculation it does not contain. | Q |
 | 6 | The reference is therefore given its best speed and this configuration is not given its best speed, and the margin is positive anyway. | Q |
 | 7 | The assembly is not offered as novel because it is an assembly. | Q |
-| 8 | Either the residual is small enough to be absorbed that way, which this study has not shown and which would mean the architecture spends a little of the channel it declined, or a fourth duty falls on the strip. | Q |
+| 8 | Either the residual is small enough to be absorbed that way, which this study has not shown and which would mean the architecture spends a little of the channel it declined, or another duty falls on the strip. | Q |
 | 9 | It does not claim that the aircraft flies. | Q |
 | 10 | The reference design's assumed zero-lift value of 0.0248 is not used. | Q |
 | 12 | A change from 3.6 to 4.0 percent is a change between two choices, not a scaling result, and it cannot be offered as evidence that Bill 1 moves with size in either direction. | Q |

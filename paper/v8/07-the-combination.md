@@ -40,7 +40,7 @@ has already set out how much of the ground is occupied.
 **The qualification in that sentence is not decoration.** Section 3 lists partial instantiation among the ways an architecture can fail
 the condition: meeting it where the aircraft is carried and failing it elsewhere. That is this
 configuration's own case. The single nose pair meets all four parts — same hardware, both duties
-served, one orientation, hover peak from a buffer. The four attitude pairs do not: they are exposed
+served, one orientation, hover peak from a buffer. The four tip pairs do not: they are exposed
 in the cruise flow and they cannot be feathered, so they re-open the second charge. **The
 instantiation is therefore partial**, and reporting what the failing part costs is a substantial
 share of what Section 11 does.
@@ -127,7 +127,7 @@ checked — are not reliable above roughly ten degrees of incidence, which is in
 rotation passes through. **The mechanism claim is about hardware and survives that limit. The
 transition claim is not made.**
 
-The combination carries costs: the attitude rotors that make the union controllable are themselves
+The combination carries costs: the tip pairs that make the union controllable are themselves
 exposed in cruise, and Section 11 charges them.
 
 ---
@@ -136,6 +136,7 @@ exposed in cruise, and Section 11 charges them.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 149 — L-3 satır 5, 6 uygulandı:** *"The four attitude pairs"* → *"The four tip pairs"*; *"the attitude rotors that make the union controllable"* → *"the tip pairs that…"* (ChatGPT'nin çekincesi: tek kontrol aracı değil). W-2 (katkı cümlesi) Tur 149'da ikinci tartışma turunda, sonra yazara | Tur 148 §2–3 |
 | **Tur 147 — W-1 (1) ve L-7 uygulandı** (bütün okuma; dört okuyucu + Claude): not *"(Section 8)"* → *"(Section 8, *What this inventory does not settle*)"* (birleşik görünümde 6.1); L-7 *"reported as one where the sizing is audited"* → *"reported as one in Section 5"* (işaretçi eklemek Bölüm 3'ü boyutlandırma denetçisi gibi gösterecekti; teyide). W-2 katkı cümlesi yazarın kararında | Tur 146 §5; Tur 147 §1 |
 | **Tur 137 — *"reported in 2016"* eklendi** (DeepSeek; dört okuyucu + Claude): *"and of a single-aisle airliner reported in 2016 whose turbines are …"* | Rheaume 2016 |
 | **Tur 136 — tanık cümlesi KAPANDI** (dört okuyucu teyit etti). DeepSeek önerisi (*"reported in 2016"*) oyda | Rohith 2026; Rheaume 2016 |

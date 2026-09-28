@@ -150,7 +150,7 @@ vectors are parallel to that axis too, and the strip works against dynamic press
 slipstream supplies over only part of its length at zero airspeed. What is left is the channel the
 configuration set aside — the speed trim of the pairs, which is a reaction-torque command and not a
 thrust one. Either the residual is small enough to be absorbed that way, which this study has not
-shown and which would mean the architecture spends a little of the channel it declined, or a fourth
+shown and which would mean the architecture spends a little of the channel it declined, or another
 duty falls on the strip.
 
 **The fixed geometry of the tip pairs leaves two admissible cruise states, and only one of them
@@ -181,6 +181,7 @@ brake or a lock rather than motor holding torque, the count of Section 7 would g
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 149 — X-5 uygulandı** (DeepSeek geri çekti; dört okuyucu + Claude): korunan *"or a fourth duty falls on the strip"* → *"or another duty…"* — `v8-caveats.md` güncellendi (önerimde korunduğunu söylememiştim). L-8 kapandı | Tur 148 §3 |
 | **Tur 148 — L-8 uygulandı** (Grok'un bölmesi; dört okuyucu + Claude): *"A counter-rotating pair does not produce it."* → *"A torque-balanced counter-rotating pair…"*; açısal momentum cümlesi değişmedi (tork dengesi ile eşit devir aynı durum diye gösterilmedi — 6.1 askıda artık diyor). W-1, L-4, L-5 kapandı | Tur 147 §2 |
 | **Tur 147 — W-1 (2), (3), (a); L-4; L-5 uygulandı** (bütün okuma; dört okuyucu + Claude): eksen notu 6.1'den *The propulsion* paragrafının sonuna (oylanan yer *"That axis"*ı öncülsüz bırakıyordu; teyide); *"(below)"* → *"(Section 8, *What this inventory does not settle*)"*; *"note below"* → *"note above"*; 6.1'de *"(Section 8, *The propulsion*)"*; L-4 *"described"* → *"specified"*; L-5 *"every part of the planform carries payload and produces lift"* → Adım 6'nın cümlesi (birebir yineleme; teyide). `v8_assemble.py` BOLUNMUS eşlemesi | Tur 146 §5; Tur 147 §1 |
 | **Tur 139 — S-59 (a), R (dört okuyucu + Claude):** *"The stability of this configuration is not airframe-borne — it is produced by"* → *"… is not airframe-borne alone — the rest is produced by"*. Önceki paragraf kaportayı yön kararlılığı için boyutluyor; Adım 1 *"need not come from the airframe alone"*. Özgün cümle Ek S8'in dondurulmuş kopyasında; ifade emekli | `v8-source-defects.md` S-59 |

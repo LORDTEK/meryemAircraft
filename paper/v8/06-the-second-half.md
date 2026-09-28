@@ -84,7 +84,7 @@ separately outside it. That separation holds for the all-electric entries as wel
 
 **Neither factor is a single number, and they are two different kinds of spread.**
 
-The aerodynamic ratio is **8.79 to 10.82**, with the tip frames and the free-wheeling attitude
+The aerodynamic ratio is **8.79 to 10.82**, with the tip frames and the free-wheeling tip-pair
 rotors (Section 8, *What this inventory does not settle*) already charged. That spread is **uncertainty**: it is the zero-lift drag bracket, and a
 designer does not get to choose where in it the real aircraft lands.
 
@@ -225,6 +225,7 @@ the combination is what this paper is for.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 149 — L-3 satır 4 uygulandı:** *"free-wheeling attitude rotors"* → *"free-wheeling tip-pair rotors"*. W-13 kapandı | Tur 148 §3 |
 | **Tur 148 — W-13 uygulandı** (DeepSeek; dört okuyucu + Claude): *"free-wheeling attitude rotors (Section 8, *What this inventory does not settle*)"* → görünümde 6.1. W-4, L-1 kapandı | Tur 147 §3 |
 | **Tur 147 — W-4 ve L-1 uygulandı** (bütün okuma; dört okuyucu + Claude): W-4 *"roughly a quarter to a half"* → *"roughly an eighth to a half … (a quarter to a half for the best examined blade family)"*; L-1 (korunan) *"gives its two helicopter types at"* → *"gives four entries for its two helicopter types, at"* — `v8-caveats.md` güncellendi | Tur 146 §5 |
 | **Tur 132 — S-56 uygulandı (R; dört okuyucu + Claude):** *"Section 11 charges all three."* → *"Section 11 charges the third. The first two are inside Section 10's closed numbers — the wing's mass in the empty fraction, the constrained planform in the computed span efficiency — but neither is separated out as a charge, and the wing's exposure to ground wind is not priced in this work."* Kanat kütlesi `aero/baseline.py` f_govde 0,30; açıklık verimi 0,817 trimli VLM (Ek S6) | S-56 |
