@@ -423,3 +423,11 @@ okumanın içine; okumanın kapsamı sabit) okuyuculara soruldu; **karar yazarı
   Sonra kısa uzlaştırma. **Karar yazarın:** yazar okumanın *"bunu söyledim diye"* öne çekilmemesini istemişti; öne çeken okuyucuların gerekçesi.
 - **Oyda:** F-1'in birleşik ifadesi (DeepSeek "detects" + ChatGPT park çizgisi), F-4, park disiplini, Qwen persona (iki sınırla).
 - **W-2 (katkı cümlesi, Bölüm 1 ↔ 5.1, ikisi de korunan) yazarın kararı** — okuyucu oyundan bağımsız.
+
+## Tur 147 — yazarın kararı bekleniyor: W-2 (katkı cümlesi)
+
+Bölüm 1 (K, korunan): *"The contribution is the architecture: …"*; Bölüm 5.1 (G, korunan): *"What this paper contributes is that combination, the condition …,
+and the price …"* — dört okuyucu çatışmayı doğruladı. Adaylar: (i) benim ilk ifadem *"…the architecture this combination produces; …"* (Grok, DeepSeek,
+Qwen evet; ChatGPT: "produces" yeni yüklem — haklı); (ii) ChatGPT'nin sırası, noktalı virgülle: *"What this paper contributes is the architecture; the
+combination, the condition its primary propulsor is designed to satisfy, and the price the configuration pays for pursuing it, are how that contribution is
+presented and priced."* Benim önerim (ii). **Yazar seçer.**

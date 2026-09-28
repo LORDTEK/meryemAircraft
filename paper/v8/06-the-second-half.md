@@ -135,14 +135,14 @@ sizing evidence for it is set out — the comparison in this table does not esta
 link by itself. On cruise efficiency taken alone, the entry is ahead of this configuration's low
 corner.
 
-The same sizing set gives its two helicopter types at 5.4 to 7.2, and against them the result is
+The same sizing set gives four entries for its two helicopter types, at 5.4 to 7.2, and against them the result is
 mixed: this configuration is ahead of the turboshaft single-main-rotor helicopter at every corner,
 the two middle entries fall inside its envelope, and only its top corner is ahead of the
 all-electric side-by-side helicopter, which has no wing either. The qualifications below apply to
 these entries as they do to the quadrotors.
 
 **So the second claim is narrower than the structural statement invites.** Carrying cruise lift on
-a wing is worth **roughly a quarter to a half against the turboshaft reference, and against the
+a wing is worth **roughly an eighth to a half against the turboshaft reference (a quarter to a half for the best examined blade family), and against the
 all-electric one it ranges from slightly behind to comfortably ahead depending on the drag outcome
 and the blade** — a measurable advantage, not a change of category. And what
 compresses it is not the wing. **It is the cruise efficiency this aircraft's fixed-pitch blade
@@ -225,6 +225,7 @@ the combination is what this paper is for.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 147 — W-4 ve L-1 uygulandı** (bütün okuma; dört okuyucu + Claude): W-4 *"roughly a quarter to a half"* → *"roughly an eighth to a half … (a quarter to a half for the best examined blade family)"*; L-1 (korunan) *"gives its two helicopter types at"* → *"gives four entries for its two helicopter types, at"* — `v8-caveats.md` güncellendi | Tur 146 §5 |
 | **Tur 132 — S-56 uygulandı (R; dört okuyucu + Claude):** *"Section 11 charges all three."* → *"Section 11 charges the third. The first two are inside Section 10's closed numbers — the wing's mass in the empty fraction, the constrained planform in the computed span efficiency — but neither is separated out as a charge, and the wing's exposure to ground wind is not priced in this work."* Kanat kütlesi `aero/baseline.py` f_govde 0,30; açıklık verimi 0,817 trimli VLM (Ek S6) | S-56 |
 | **Tur 131 — S-55 onarıldı:** *"which Section 10 states explicitly is not its best"* → *"which is not its best"* (silme; dört okuyucu + Claude). **S-56 açık:** *"Section 11 charges all three"* — (b) uygulanmadı, düzeltilmiş R oyda (kanat kütlesi ve planform kapanışın içinde, ayrılmamış; yer rüzgârı fiyatlanmamış) | S-55, S-56 |
 | **Tur 123 — uzunluk geçişi, ilk kısım** (dört okuyucu + Claude): **S-48** onarıldı (*"and whether it is ahead of the best examined blade family depends on the drag bracket"* çıktı — tablo +3…+27 %); **M3** L/D_max formülü ve 11,65 / 10,08 Ek S6'ya (kimlikleriyle), yön cümlesi kaldı; **M7** *"and 3.9 percent below the assumption"* Ek S6'ya, *"a vortex-lattice solution"* kaldı. M1 uygulanmadı (Claude'un önerisi P'nin kimliğini taşıyan cümleleri de taşıyordu; düzeltilmiş hâli oyda). Özgün adım Ek S6'da tam. 2 145 → 2 108 | Tur 122 metni §3, §4 |

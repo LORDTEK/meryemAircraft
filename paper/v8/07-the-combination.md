@@ -84,14 +84,14 @@ control surface, of a different class, and is named below and in Section 8 rathe
 | Rotor stowing, indexing or stopping mechanism | Architectures that remove dedicated lift rotors from the cruise flow by such means | — (see note) |
 
 *Note.* The stopping class is absent if the tip pairs free-wheel in cruise or are held stopped by motor torque; a
-brake or a mechanical lock would add it. The means of stopping is not fixed by this study (Section 8).
+brake or a mechanical lock would add it. The means of stopping is not fixed by this study (Section 8, *What this inventory does not settle*).
 
 Attitude is produced instead by differential thrust between fixed-pitch propellers: a
 single coaxial contra-rotating pair at the nose, and four small coaxial pairs at the
 ends of the tip frames, whose moment arms give pitch and yaw directly. The tip pairs are
 sized from the moment requirement rather than from weight support, but the thrust that sizing
 gives them also supplies the aircraft's entire take-off margin, because the nose pair is sized
-at thrust equal to weight and no more. This dual role is a dependency, reported as one where the sizing is audited, and it does not make the tip pairs a dedicated lift system.
+at thrust equal to weight and no more. This dual role is a dependency, reported as one in Section 5, and it does not make the tip pairs a dedicated lift system.
 
 **The claim is narrower than it may appear.**
 
@@ -136,6 +136,7 @@ exposed in cruise, and Section 11 charges them.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 147 — W-1 (1) ve L-7 uygulandı** (bütün okuma; dört okuyucu + Claude): not *"(Section 8)"* → *"(Section 8, *What this inventory does not settle*)"* (birleşik görünümde 6.1); L-7 *"reported as one where the sizing is audited"* → *"reported as one in Section 5"* (işaretçi eklemek Bölüm 3'ü boyutlandırma denetçisi gibi gösterecekti; teyide). W-2 katkı cümlesi yazarın kararında | Tur 146 §5; Tur 147 §1 |
 | **Tur 137 — *"reported in 2016"* eklendi** (DeepSeek; dört okuyucu + Claude): *"and of a single-aisle airliner reported in 2016 whose turbines are …"* | Rheaume 2016 |
 | **Tur 136 — tanık cümlesi KAPANDI** (dört okuyucu teyit etti). DeepSeek önerisi (*"reported in 2016"*) oyda | Rohith 2026; Rheaume 2016 |
 | **Tur 135 — tanık cümlesi (B; dört okuyucu + Claude; Tur 124'ten beri bekliyordu):** *"— Section 1 says where."*den sonra *"The principle behind the third element — a continuous plant sized for cruise, with the vertical or take-off peak drawn from a store — has been applied in studies of a winged tail-sitter (Section 1) and of a single-aisle airliner whose turbines are 'sized for efficient operation during' cruise and assisted by electric motors 'during takeoff and climb.'"* Rheaume özet; Rohith Adım 1. Grok P127: *"some of them together"*in örneği Rohith'in kuyruk üstü + seri hibrit tampon birlikteliği (Adım 7'nin ikinci ve üçüncü öğesi), kolektif hatve değil — denetlendi | Rohith 2026; Rheaume 2016 |

@@ -667,3 +667,11 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Park listesi (H-3; harita sütunları/şema; DeepSeek D-P2–D-P4; Qwen Q-P2) | ✓ | ✓ | ✓ | ✓ | ✓ | **Park (Tur 146)** — `paper/v8-parking.md` |
 | F-1 birleşik ifade (DeepSeek "detects" + ChatGPT park çizgisi); F-4 taban çizgisi (geçici uygulandı); park disiplini; Qwen P1 persona (iki sınırla) | ? | ? | ? | ? | evet | **Tur 146 oylaması** |
 | Bütün okuma birinci yarı: Claude W-1…W-10, L-1…L-8; W-2 yazarın | ? | ? | ? | ? | evet | **Tur 146 oylaması** |
+| A-1 F-1 birleşik ifade; A-2 F-4; A-3 park disiplini; A-4 persona (iki sınırla); A-5 yankı ikinci yarıda | ✓ | ✓ | ✓ | ✓ | ✓ | **Kabul (Tur 147)** |
+| Birinci yarı: W-1, W-3, W-4, W-6 (ilk yan cümle), W-8, W-9, W-10, L-1, L-4, L-5, L-7 | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı (Tur 147)**; teyide (W-1a yer, L-5, L-7 notlarıyla) |
+| W-2 katkı cümlesi | çatışma ✓ | ✓ (kendi ifadesi) | ✓ | ✓ | ChatGPT'nin sırası | **Yazarın kararı**; ifade geri soruldu |
+| W-5 yalnız "continuously" | ✓ | ✗ (tüm yan cümle) | ✓ | ✓ | ✓ | **Geri soruldu (Tur 147)** |
+| W-6 ikinci yan cümle kalsın | ✓ | ✗ | ✓ | ✓ | ✓ | **Geri soruldu (Tur 147)** |
+| W-7 | (a) | (b) | (a′) Bölüm 3 | (a) | (a′) | **Geri soruldu (Tur 147)** — benim işaretçim yanlıştı |
+| L-8 | Grok'un bölmesi | kayıt | değişiklik yok | durum adı | Grok | **Geri soruldu (Tur 147)** |
+| İkinci yarı: X-1…X-6, L-9; okuyucu adayları W-11, W-13, G-1, W-12, Q-P1 | ? | ? | ? | ? | önerdi | **Tur 147 oylaması** |

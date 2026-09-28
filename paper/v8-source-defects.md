@@ -99,3 +99,21 @@ başka yere taşındığında geride kalan atıf. `v8_refs.py` bunun için var.
 | W-9 | 1 | W2, W7 | *"the second is the more demanding to build"* ölçülmemiş karşılaştırma; 2007 alıntısı eğimliyi kuyruk üstüyle karşılaştırıyor | S |
 | W-10 | 2.2 son paragraf | W8 | *"The third departure is refused by a means other than the one the field has adopted."* öznesiz, ters okunuyor | S |
 | L-1…L-8 | çeşitli | — | düşük öncelik; L-2 (0,85 iki nesne) rastlantı kaydına yazıldı | S |
+
+### Tur 147 — birinci yarının sonucu; ikinci yarı (Bölüm 6–9) adayları
+
+**Uygulandı (dört okuyucu + Claude):** W-1 (1)(2)(3)(a), W-3, W-4, W-6 (ilk yan cümle), W-8, W-9, W-10, L-1, L-4, L-5, L-7 — teyide. **Geri soruldu:**
+W-2 (yazar; ChatGPT'nin sırası, benim ilk ifadem yüklem ekliyordu), W-5 (ChatGPT tüm yan cümle), W-6 ikinci yan cümle (ChatGPT), W-7 (işaretçim yanlıştı:
+Bölüm 3; (a′) / (b)), L-8 (DeepSeek ve Qwen gösterilmemiş bir eşdeğerlik öne sürdü). **Okuyucu adayları:** W-11 (50 kg, Bölüm 3), W-13 (free-wheeling,
+Bölüm 4) — evet önerdim; W-12, G-1 — değişiklik yok önerdim.
+
+| # | Yer | Soru | Kusur | Köken |
+|---|---|---|---|---|
+| R-10 | Bölüm 3 (Adım 5) | W9 | W-8 oylandığı gibi uygulanınca aynı cümlede iki *(Section 5.2)* — göndermeden önce yakalandı, eklenen işaretçi silindi | **R** |
+| X-1 | 7.1 (Adım 10) | W5, W2 | *"loses 5.4 m"* üç profilin en küçüğü (doğrusal 5,43 / yumuşak 6,33 / üçgen 6,57 m, Tur 147'de yeniden koşuldu); *"unchanged across three reference profiles"* yanlış. Tur 139'da kaydedip "gövde değişikliği yok" dedim — **benim hatam** | S |
+| X-2 | 7.1 | W5 | *"the only place in this section where the assumed value appears"* — geçiş betiği C_D0 0,0248 / e 0,85 ile koşuyor; aralık uçlarında fark ≤ 0,02 m | S |
+| X-3 | 7.1 | W5, W2 | *"the study carries all four"* kanat ailesi — kapanışlar iki η_p taşıyor | S |
+| X-4 | 7.2 (Adım 11) | W4, W9 | *"closed-loop hover control"* — S-60 onarımı (Tur 140) buraya ulaşmadı; **benim yayılma hatam** | S |
+| X-5 | 6.1 (Adım 8) | W9 | *"a fourth duty falls on the strip"* — üç görev sayılamıyor | S |
+| X-6 | 8 ↔ 9 | W8 | yankı (A-5) | S |
+| L-9 | 8 | W2 | *"the answer is no:"* iki noktaya kadar "yapılamaz" okunuyor | S |

@@ -25,6 +25,7 @@ Recorded, no change:
   5.4 m is the linear rotation profile (the kinematic model's own); the other two profiles give 6.6 and 6.3 m (as `aero/README.md`
   records). Re-run this round at the bracket ends with the computed span efficiency (C_D0 0.0285 and 0.0381, e 0.817): 5.44 and 5.45 m.
   The drag input does not move the figure; no body change.
+  **Düzeltme (Tur 147, X-1):** "no body change" yanlıştı — gövde *"unchanged across three reference profiles"* diyor ve en küçük profili (5,4 m) raporluyor. Yeniden koşu: doğrusal 5,43 / yumuşak 6,33 / üçgen 6,57 m; C_D0 0,0285 ve 0,0381 (e 0,817) ile en çok 0,02 m fark. Onarım oyda.
 
 ## Dated witnesses
 

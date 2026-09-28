@@ -24,8 +24,8 @@ the inventory behind it, so the inventory is given here in full, including the p
 
 ### The airframe
 
-The entire airframe is the wing. There is no cylindrical fuselage: every part of the planform
-carries payload and produces lift. Leading-edge sweep varies continuously along the span while
+The entire airframe is the wing. There is no cylindrical fuselage: every part of the body that
+is carried is also a part that lifts. Leading-edge sweep varies continuously along the span while
 the trailing edge is held at 25°, so the realised sweep runs from 45° at the root to 38.3° at the
 tip — a variation of under seven degrees, with the crescent character coming from the curvature of
 the leading edge rather than from a large change in sweep. For the 50 kg reference design — the design this inventory describes; Section 10 re-closes it at
@@ -42,7 +42,10 @@ angle and the longitudinal stability are one design variable seen from two direc
 **Five propeller stations, ten rotors:** every station is a coaxial counter-rotating pair. The reason is narrow: **reaction torque.** A single propeller applies to the airframe a
 torque equal and opposite to the one it applies to the air. It acts about the propeller axis,
 which on this aircraft is the body's longitudinal axis — the roll axis in body terms — in both
-regimes, and it must be opposed continuously, either by a control surface, which costs drag, or by the reaction torque of other rotors run at a different speed, which costs a control channel. A counter-rotating pair does not produce it.
+regimes, and it must be opposed continuously, either by a control surface, which costs drag, or by the reaction torque of other rotors run at a different speed, which costs a control channel. A counter-rotating pair does not produce it. *(This paper fixes body-axis naming throughout. That
+axis is the roll axis in both regimes; what changes is its orientation relative to the earth — it
+stands vertical in the hover attitude, where a moment about it appears as a change of heading, and
+horizontal in cruise, where it appears as a bank. The two conventions are not mixed here.)*
 
 One pair sits at the nose, 1.20 m in diameter on the 50 kg reference design, and produces all propulsive
 thrust in both regimes. Four smaller pairs, 0.20 m in diameter, sit at the ends of rigid frames
@@ -58,7 +61,7 @@ some other way is an implementation question it does not settle.
 The counter-rotating arrangement carries a second consequence that the transition analysis
 depends on. **At equal counter-rotating speeds, the net angular momentum of the propulsion system is nominally
 zero**: rotating the airframe through ninety degrees therefore produces no gyroscopic moment for the
-control system to cancel. If the pairs are speed-trimmed, that cancellation is no longer exact (below). In a tilting architecture that term is present and must be designed for.
+control system to cancel. If the pairs are speed-trimmed, that cancellation is no longer exact (Section 8, *What this inventory does not settle*). In a tilting architecture that term is present and must be designed for.
 
 ### The energy path
 
@@ -72,7 +75,7 @@ the vertical phase alone.** No wattage is quoted here; the closed powers are Sec
 
 ### What produces each moment
 
-**Pitch and yaw come from differential thrust between the tip pairs** (body axes, as fixed in the note below), and the two axes do not
+**Pitch and yaw come from differential thrust between the tip pairs** (body axes, as fixed in the note above), and the two axes do not
 have the same moment arm. The frames project ±0.71 m perpendicular to the planform, so a
 differential between the upper and lower pairs acts at 0.71 m in pitch, while a differential
 between the left and right pairs acts at the semi-span, **1.726 m — 2.43 times the pitch arm.**
@@ -127,7 +130,7 @@ The propellers rotate, and their shaft speed is commanded; but none of them
 changes its orientation relative to the airframe, or its blade pitch, at any point in the flight.
 **Beyond the propellers' rotation, one thing on this aircraft changes its configuration: the
 strip.**
-It is described as deployable in two halves — one side alone for roll, both together as a speed
+It is specified as deployable in two halves — one side alone for roll, both together as a speed
 brake. The actuator inventory is therefore the propulsion motors plus the strip's actuation.
 **How many actuators that is, this study does not fix.** The systems budget carries the
 actuation without sizing the mechanism, and naming a number here would be inventing one.
@@ -139,10 +142,7 @@ rather than a property of the hardware, and it is stated as one.
 
 The torque balance within each pair is set exact at the cruise condition rather than at hover, so
 a small residual remains in hover. It acts about the propeller axis — the aircraft's longitudinal
-axis, which is the roll axis in body terms. *(This paper fixes body-axis naming throughout. That
-axis is the roll axis in both regimes; what changes is its orientation relative to the earth — it
-stands vertical in the hover attitude, where a moment about it appears as a change of heading, and
-horizontal in cruise, where it appears as a bank. The two conventions are not mixed here.)*
+axis, which is the roll axis in body terms (Section 8, *The propulsion*).
 
 That axis is the one the configuration has chosen not to command with the propellers, which is why
 the residual is awkward: the tip pairs cannot absorb it by thrust differential, because their thrust
@@ -181,6 +181,7 @@ brake or a lock rather than motor holding torque, the count of Section 7 would g
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 147 — W-1 (2), (3), (a); L-4; L-5 uygulandı** (bütün okuma; dört okuyucu + Claude): eksen notu 6.1'den *The propulsion* paragrafının sonuna (oylanan yer *"That axis"*ı öncülsüz bırakıyordu; teyide); *"(below)"* → *"(Section 8, *What this inventory does not settle*)"*; *"note below"* → *"note above"*; 6.1'de *"(Section 8, *The propulsion*)"*; L-4 *"described"* → *"specified"*; L-5 *"every part of the planform carries payload and produces lift"* → Adım 6'nın cümlesi (birebir yineleme; teyide). `v8_assemble.py` BOLUNMUS eşlemesi | Tur 146 §5; Tur 147 §1 |
 | **Tur 139 — S-59 (a), R (dört okuyucu + Claude):** *"The stability of this configuration is not airframe-borne — it is produced by"* → *"… is not airframe-borne alone — the rest is produced by"*. Önceki paragraf kaportayı yön kararlılığı için boyutluyor; Adım 1 *"need not come from the airframe alone"*. Özgün cümle Ek S8'in dondurulmuş kopyasında; ifade emekli | `v8-source-defects.md` S-59 |
 | **Tur 133 — kumandalı sapmaların şaft gücü (Qwen P1; dört okuyucu + Claude, ChatGPT Adım 14'ten döndü):** S-57 cümlesinin ardına *"The shaft power of commanded departures from that state, for attitude moments in cruise, is not computed."* Başlık *"only one of them is physically closed"* kaldı (Grok P126, oybirliği) | S-57 |
 | **Tur 132 — S-57 uygulandı (R; yazarın kararı, dört okuyucu + Claude):** [28] *"…or be stopped."*dan sonra: *"This configuration uses the first: free-wheeling at zero shaft torque is the tip pairs' uncommanded cruise state, and it is the drag state Section 11 charges."* *"uncommanded"* kumandalı momentleri sapma olarak bırakır | S-57 |

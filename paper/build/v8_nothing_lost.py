@@ -10,6 +10,11 @@ KOK = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))
 # Tur 86: kisaltma DEGIL, oylanmis icerik duzeltmesi -- eski cumle bilerek emekli edildi (emekli listesinde);
 # yeni hali govdede aranir. Eski cumle eke konmaz (emekli ifadeyi dergiye tasimamak icin).
 DEGISTI = {
+    # Tur 147 (butun okuma W-3, W-9; dort okuyucu + Claude)
+    "The margin in cruise efficiency is one tenth and nothing is claimed from its direction.":
+        "The margin in cruise efficiency is 0.1 in effective lift-to-drag ratio, and nothing is claimed from its direction.",
+    "Both work, and the second is the more demanding to build, because rotating a propulsor in flight brings a pivot and its actuators, a gyroscopic moment during the rotation, and a control problem through a regime in which the aircraft is neither a rotorcraft nor an aeroplane.":
+        "Rotating a propulsor in flight brings a pivot and its actuators, a gyroscopic moment during the rotation, and a control problem through a regime in which the aircraft is neither a rotorcraft nor an aeroplane.",
     "Tail-sitting aircraft are seventy years old; blended wing bodies have been a standing subject of transport research for three decades; series-hybrid propulsion has been flown in a crewed motor glider and designed for small uncrewed aircraft.":
         "Tail-sitting aircraft are seventy years old; blended wing bodies have been a standing subject of transport research for more than three decades; series-hybrid propulsion has been flown in a crewed motor glider and designed for small uncrewed aircraft.",   # Tur 143: N9 (dort okuyucu + Claude; Liebeck 2004 s. 10)
     "That is an idealisation in its favour, and it is deliberate: it makes the tilt row a bound.":

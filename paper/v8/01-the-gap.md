@@ -61,7 +61,7 @@ study carries six proprotors on a tilting main wing and two more on a tilting ta
 directly connected to its own electric motor. Nothing is carried unused; the same discs that
 lift the aircraft propel it, after being turned.
 
-**Both work, and the second is the more demanding to build**, because rotating a propulsor in
+**Both work.** Rotating a propulsor in
 flight brings a pivot and its actuators, a gyroscopic moment during the rotation, and a control
 problem through a regime in which the aircraft is neither a rotorcraft nor an aeroplane.
 **Those are mechanical and control requirements rather than aerodynamic ones**, and that
@@ -181,6 +181,7 @@ presume an escape.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 147 — W-9 uygulandı** (bütün okuma; dört okuyucu + Claude; silme + noktalama): *"Both work, and the second is the more demanding to build, because rotating…"* → *"Both work. Rotating…"* — ölçülmemiş karşılaştırma; 2007 alıntısı eğimliyi kuyruk üstüyle karşılaştırıyor. W-5 (*"continuously"*) ayrışık, geri soruldu | Tur 146 metni §5; Tur 147 §1 |
 | **Tur 144 — W, E-1, N9 KAPANDI (dört okuyucu teyit etti); E-1′ uygulandı** (dört okuyucu + Claude; yalnız silme): *"states the same purpose in the same terms:"* → *"states the same purpose:"*; ifade emekli. Karmaşıklık izi (Q-P1b): *"mechanical complexity"* yalnız bu adımda (kaynak alıntıları), `v8_stale.py` YALNIZ; *"mechanically simpler"*, *"more reliable"* emekli (Adım 7 sayımı, Adım 9 madde 4) | Escareno 2007, 2008 |
 | **Tur 143 — W, E-1 (b), N9 uygulandı (dört okuyucu + Claude).** W: rota maddesine *"A tail-sitter study reported in 2007 already states the comparison: tilting configurations reach the same goal 'at the expense of significantly increased mechanical complexity compared to a tail-sitter that uses propeller wash over normal aircraft control surfaces to effect vertical flight control.'"* (Escareno 2007 s. 3385; *"gives the reason"* dört okuyucuca fazla bulundu). E-1: *"… proposed specifically to face the reaction torque a single propeller imposes 'without using complementary controls', at a cost its proposers name directly: it 'increases the mechanical complexity.'"* (Escareno 2008 s. 262); eski bedel ifadesi emekli. N9: *"for more than three decades"* (Liebeck 2004 s. 10: 1988). Sonraki cümlenin *"in the same terms"*i açık (E-1′) | Escareno 2007, 2008; Liebeck 2004 |
 | **Tur 142 — Escareno 2007 (tam), 2008 (s. 261–262) ve Liebeck 2004 birinci elden okundu** (yazar yükledi). Eşeksenli maddenin gerekçe yan cümlesi 2008 s. 262 ile birincil; bedel yan cümlesi De Wagter'den (ikincil) ve birincil onu *"it increases the mechanical complexity"* diye adlandırıyor (öneri E-1). *"three decades"*: Liebeck s. 10, 1988 (öneri N9). Rota maddesine Escareno 2007 s. 3385 önerisi (W) | Escareno 2007, 2008; Liebeck 2004 |

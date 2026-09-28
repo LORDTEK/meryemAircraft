@@ -90,7 +90,7 @@ paper describes the landing transition.**
 **Hover attitude control is sized but not demonstrated as a closed loop.** The moments available
 about each axis are computed, but no control allocation has been closed around them and nothing
 has been simulated or flown. That gap is wider than it looks, because this configuration declines the reaction-torque channel that comparable
-aircraft use about the body's longitudinal axis (Section 8), leaving that axis to the strip.
+aircraft use about the body's longitudinal axis (Section 8), leaving that axis to a strip on the lower surface, the only moving aerodynamic surface.
 **What that refusal costs in authority and in response time is not computed**, and Section 14
 carries it.
 
@@ -125,6 +125,7 @@ section**, and the two are combined in Section 7.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 147 — W-8 uygulandı** (bütün okuma; dört okuyucu + Claude): *"leaving that axis to the strip."* → *"…to a strip on the lower surface, the only moving aerodynamic surface."* Oylanan biçimdeki ikinci *(Section 8)* cümlede zaten bir işaretçi olduğu için çıkarıldı (**R-10**, göndermeden önce yakalandı) | Tur 146 §5; Tur 147 §1 |
 | **Tur 126 — S-50 onarımı (R, kapalı adıma tarihli; dört okuyucu + Claude):** *"so the primary propulsor supplies"* → *"so the primary propulsor — the nose pair — supplies"*. Özgün cümle Ek S5'in dondurulmuş kopyasında (Grok P118) | Tur 125 metni §3.6 |
 | **Tur 121 — uzunluk geçişi (yazar: Adım 5 bu kez çoğunlukla; sonuç zaten oybirliği).** E2 (*"'Vertical take-off' is a weaker requirement…"*) Ek S5'e (dört okuyucu + Claude; ChatGPT görüş değiştirdi); N1 uygulama adları yan cümlesi çıktı (Adım 1 adlandırıyor; Grok, DeepSeek, Qwen + Claude, ChatGPT oy vermedi); **S-47** *"the same four propellers"* → *"the same propellers"* (dört uç çifti eşeksenli = sekiz pervane). E1, E3 ve DeepSeek'in ek taşımaları **kalır** (DeepSeek geri çekti). Kalkış bağlaşımının son cümlesi korunan; *"Not demonstrated"* başlık korunan, *"and the list is not short"* ses işareti (yazara). Özgün adım Ek S5'te tam | Tur 120 metni §6, §8 |
 | **Tur 96 (dört okuyucu + Claude):** 5D işaret cümlesi çıktı (DeepSeek itirazını geri çekti); 5D devrilme cümlesi — "more prone than a conventional one to tip over, in crosswind and on uneven ground" (sayı kuralı: "one historical difficulty", iki koşul) ve korunan (165); 5C "takes the weight benefit" (P51). Özgün paragraflar Ek S5'te | Tur 95 metni §3, §4.3 |
