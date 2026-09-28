@@ -705,3 +705,5 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | 8 500 yalnız 2.x/4/7.x'ten gelir mi? | hayır | hayır | hayır (aritmetik: kalanlar 9 070) | hayır | hayır | **Yazarın şekil kararı gerekiyor** |
 | E8 uzunluk: seçenekler 1–4 | ? | ? | ? | ? | 4 (tetik ~13 200) | **Tur 154 — ortak karar (yazar)** |
 | 7.3 eke taşıma (1 083 → 761) | ? | ? | ? | ? | evet | **Tur 154 denetimi**; bir korunan cümle yazarın kararına |
+| E8 uzunluk | 4 | 4 | 4 | 4 | 4 | **KARAR (Tur 155): seçenek 4, hedef 12 000 hepsi dahil; iki makale yazarca dışlandı** |
+| 7.3 eke taşıma (+ Grok'un iki, DeepSeek'in bir geri koyması) | ✓ (geri koymayla) | ✓ | ✓ (geri koymayla) | ✓ | ✓ | korunan cümle için **yazar kararı bekleniyor** |

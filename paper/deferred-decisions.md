@@ -524,3 +524,16 @@ AIAA *Journal Page Limits and Word Count Guidelines* (Rev. August 2024; `referen
 şekil/tablo 200/450/700. **E8 okuyucuların ve Claude'un ortak kararına** (Tur 154 §4): seçenekler 1 (12 000, her yerden kesme — Tur 72), 2 (ölçülü aşım),
 3 (yoldaş makale), 4 (1'i hedefle, ölçünce karar; Claude: tetik ~13 200). İlk ölçülü eke taşıma 7.3: 1 083 → 761 (~%30); bir korunan cümle
 (*"This paragraph compares the reference pair only."*) sonucuyla eke gider → **yazar kararı gerekir (kural iii)**.
+
+## Tur 155 (Tur 154 cevapları) — E8 KARARI: seçenek 4, oybirliği; iki makale yazarca dışlandı
+
+- **Yazar:** *"İki makale olmayacak. Onu boşuna konuşmaya gerek yok. … Daha 1 makaleyi Q1 yapamadık henüz. … Önce çalışacağız."* → seçenek 3 **kapandı**.
+- **Dört okuyucu + Claude: seçenek 4.** Hedef **12 000 hepsi dahil**; önce hesaplar ve çerçeve eke taşınır, sonra mimari bölümler sıkıştırılır (Tur 72:
+  her yerden). Ölçülen taban, bir argüman adımını kesmeden ulaşılabilen en kısa hâldir; aşım ölçülünce yazara rakamla gelir (DeepSeek'in koşulu: bir
+  argüman adımını kaldıran ilk kesimde durulur). Tetikler (13 200 / 13 500) seçenek 3'ü yeniden açmak içindi; seçenek 3 kapandığı için düştü.
+- **Gönderim öncesi listesine (DeepSeek):** AIAA'nın LaTeX/PDF yöntemiyle kelime sayımı (sayfa başına kelime × toplam sayfa), Word eşdeğer sayımıyla yan yana.
+- **7.3 eke taşıma:** dördü de kabul; Grok iki geri koyma istedi (çap/açıklık 0.35 → 0.47 yan cümlesi; *"Coupling is not identity …"*), DeepSeek bir (*"Either
+  answer leaves the mechanism claim where it was …"*). Korunan *"This paragraph compares the reference pair only."* sonucuyla eke gider — **yazar kararı bekleniyor.**
+  ChatGPT "coupling ≠ identity korunmuş" dedi; taslakta çıkarılmıştı (okuyucu hatası).
+- **Harita, iki satır:** K-3 6.2 — C (Grok, ChatGPT, Qwen, Claude) / K (DeepSeek); K-9 4 — – (Grok, ChatGPT, Qwen, Claude) / K (DeepSeek). Topluca uygulamada
+  yeniden sorulur.
