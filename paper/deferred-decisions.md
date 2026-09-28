@@ -621,3 +621,19 @@ Uygulandı: Ek S9 (birleşme öncesi iki gövde tam); `v8-caveats.md` alt tablos
 - **Yazar:** *"Sen şimdi boş ver onu bunu... Okuyuculara sor bakalım, yani 6.2 ve 9 arasında yapmış olduğumuz eylemi başka nerede yapabiliriz? Onlar yazınca sen de
   kendi fikrini de ekleyip bana sun. Azıcık da bilgi ver ilgili kısımlarda ne var diye."* → Tur 161: tam metin + taslak anahat + tekrar haritası; benim görüşüm
   okuyuculardan sonra yazara.
+
+## Tur 161 cevapları — "6.2 + 9 işlemi başka nerede?" (yazara sunuldu, karar bekleniyor)
+
+- **Dördü de:** 6.2 + 9 gibi bölüm düzeyinde ikinci bir aynı-iş çifti yok; tek aday **Bölüm 6** (eski 6.1: askı tork artığı, uç çiftlerinin iki seyir durumu).
+  - Grok, DeepSeek: 6 → 8 (ikisi de "çözülmeyen" işi yapıyor; 8'in listesi aynı iki maddeyi zaten adlandırıyor). DeepSeek tartışmayı S14'e göndermek istiyor.
+  - Qwen: 6 → 5.2'nin son alt bölümü (metin değişmez; envanterin hemen ardından sınırları).
+  - ChatGPT: birleştirme yok; birleştirme aramasını durdur, mimari sıkıştırmaya geç.
+  - Hepsi: Bölüm 6 yazarın ana hat adımı ("ürünün sorunsuzluğu") → **yazar kararı**.
+- **Küçük adaylar:** Qwen — Bölüm 4'teki "no separate fuselage" cümlesi 5.2'nin neredeyse aynısı (−28). DeepSeek — 7.2'nin "closure does not contain" listesi → 8
+  (Claude: olduğu gibi olmaz — "The first and the last are the two that would most change the numbers" bulgusu ve "none of these" öncülü düşer; "vortex ring state"
+  8'in listesinde adıyla yok). ChatGPT — 4/5.2 sweep kesimi (B6 ile zaten uygulandı).
+- **Claude'un görüşü:** 6 → 5.2 (Qwen). Gerekçe: Bölüm 6'nın seyir durumu paragrafı (*"free-wheeling … is the drag state Section 7.2 charges"*) 7.2'nin tükettiği
+  tanımı veriyor; Bölüm 7'den önce durmalı — 8'e giderse tanım kullanımından sonra gelir. Başlık/içerik gerilimi: "sorunsuzluk" başlığı altında artık yalnız çözülmeyenler var.
+- **Okuyucu hataları:** DeepSeek — Bölüm 6'nın korunan cümlelerini yanlış adlandırdı (korunanlar: "The stopped state is not" satırı, "assumed azimuth" satırı, "Either the
+  residual…" satırı); korunan cümlenin eke taşınması için yazar kararı gerekmez dedi (kural iii gerektirir); Bölüm 6'ya bir işaretçi dedi (üç: 4, 5.2 ×2). Qwen — "dış
+  işaretçi bozulmaz" dedi (Bölüm 4'ten biri var). ChatGPT — zaten uygulanmış sweep kesimini aday gösterdi.
