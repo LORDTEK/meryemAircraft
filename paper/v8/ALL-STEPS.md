@@ -73,14 +73,16 @@ not a historical one.
 
 **The route itself is established.** Uncrewed tail-sitters combining fixed-pitch rotors with a
 flying wing have been built and flown for more than a decade, beginning with quadrotor-plus-wing
-arrangements carrying a few aerodynamic actuators for forward flight.
+arrangements carrying a few aerodynamic actuators for forward flight. A tail-sitter study reported in 2007 already states the
+comparison: tilting configurations reach the same goal *"at the expense of significantly increased mechanical complexity compared to a
+tail-sitter that uses propeller wash over normal aircraft control surfaces to effect vertical flight control."*
 
 **Attitude without aerodynamic control surfaces is established.** A quadrotor tail-sitter
 operated without control surfaces, with experimental verification, was reported in 2013.
 
 **Coaxial contra-rotating propulsion on a tail-sitter is established**, proposed specifically to
-remove the reaction torque a single propeller imposes, at the cost of an extra motor and the
-coaxial arrangement. A coaxial contra-rotating tail-sitting micro air vehicle reported in 2014
+face the reaction torque a single propeller imposes *"without using complementary controls"*, at a cost its proposers name
+directly: it *"increases the mechanical complexity."* A coaxial contra-rotating tail-sitting micro air vehicle reported in 2014
 states the same purpose in the same terms: *"a pair of 10 inches coaxial contra rotating
 propellers is mounted to compensate each other's torque."*
 
@@ -145,7 +147,7 @@ speeds. **Operating every pair torque-balanced spends that channel to buy the to
 the near-zero net angular momentum**, and leaves the axis to a single aerodynamic device.
 
 **None of the elements is new**, and Section 7 says so. Tail-sitting aircraft are seventy years old; blended wing bodies have been a standing subject of transport
-research for three decades; series-hybrid propulsion has been flown in a crewed motor glider and designed for small uncrewed aircraft. The route is not claimed to have been waiting to be found. **The contribution is the
+research for more than three decades; series-hybrid propulsion has been flown in a crewed motor glider and designed for small uncrewed aircraft. The route is not claimed to have been waiting to be found. **The contribution is the
 architecture: a configuration arranged to change regime by rotating the airframe rather than its
 propulsors, and so carrying no mechanism that reorients a propulsor.** The combination, the
 consequences of the choices inside it, and an accounting of what they cost are how that contribution
