@@ -179,3 +179,11 @@
 `paper/build/v8_receipt_diff.py`: bugünkü gövdede 152 işaretçi cümlesi; 135'i Tur 130 tablosundakiyle aynı (hüküm geçerli; S-53…S-56 onarıldı,
 Tur 132 yeniden koşusu 0). **17 yeni ya da değişmiş cümle birleşik görünümdeki alıcıya karşı okundu: 17'si de R1** (liste Tur 150 metni §2.1).
 Bölünmüş adım işaretçileri (Q-P1, `v8_assemble.py`): 13, hepsi R1. Kapsam dışı: numarasız işaretçiler (park listesinde). **Sonuç: başarısız alındı yok.**
+
+## Tur 155 — 7.3 eke taşımasından sonra (birleştirme aşaması, B evresi)
+
+Yeni işaretçi: *"The working is in Supplement S12."* → Ek S12, *"Section 12 as it stood before the supplement move (complete)"* — **R1**.
+7.3'e işaret eden sekiz cümle yeni 7.3'e karşı okundu (2.1 ×2, 5.2, 7.2 ×3, 7.4 ×2, 8): hepsi **R1**. En hassası Bölüm 8'in *"This is where the
+coupling Section 7.3 found is paid"*i — alıcı cümle (*"what is established is that they are coupled here … Coupling is not identity"*) gövdede
+kaldı; Grok'un geri koyma isteği bu alındıyı korudu. 7.2'nin *"Section 7.3 shows how strongly the term depends on it"*i: Reynolds sayıları eke
+gitti, ama bulgu (düşüşü Re açıklar, 0,29–0,65) gövdede — R1.

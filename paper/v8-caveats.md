@@ -88,7 +88,6 @@ boşluğa duyarsız. `G` = Grok, `D` = DeepSeek, `C` = ChatGPT, `Q` = Qwen, `K` 
 | 11 | The tip-frame term is an attribution, not a marginal removal cost. | D |
 | 11 | Rotor–structure and rotor–wing interference is not modelled and is not carried as a line. | D |
 | 12 | That near-constancy is a property of the constant-disc-loading rule, not a finding about Bill 3. | G |
-| 12 | This paragraph compares the reference pair only. | G |
 | 12 | Bill 1 is not tested. | G |
 | 12 | It is consistent with the separability Section 2 asserts; it is not a verification of separability as a general property. | G |
 | 12 | The test is deliberately weak | D |
@@ -217,6 +216,7 @@ kaybolmasına (CLAUDE.md §0.8). Aynı denetimle sınanır.
 |---:|---|---|
 | S10 | The closures do not take that reduction, and it has not been run through the loop. | E7 |
 | S11 | No line item at the adverse end is an independent measurement, and they should not be subtracted from one another as if they were. | E9 |
+| S12 | This paragraph compares the reference pair only. | E10 |
 
 *Tanım kaydı (Tur 111; Qwen P1, dört okuyucu + Claude): son beş Q+G+C+D+K satırı çerçevenin tanım cümleleri; kök (satır "is the origin of all three charges below") ve koşul zaten korunuyordu.*
 

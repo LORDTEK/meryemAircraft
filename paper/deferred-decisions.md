@@ -537,3 +537,11 @@ AIAA *Journal Page Limits and Word Count Guidelines* (Rev. August 2024; `referen
   ChatGPT "coupling ≠ identity korunmuş" dedi; taslakta çıkarılmıştı (okuyucu hatası).
 - **Harita, iki satır:** K-3 6.2 — C (Grok, ChatGPT, Qwen, Claude) / K (DeepSeek); K-9 4 — – (Grok, ChatGPT, Qwen, Claude) / K (DeepSeek). Topluca uygulamada
   yeniden sorulur.
+
+## E10 — 7.3'ün korunan cümlesi eke (Tur 155) · **KARAR: "Eke gitsin"**
+
+Kural (iii): *"This paragraph compares the reference pair only."* nitelediği sonuçla (4.19 / 3.98 oranı ve 2.4–3.2 parantezi) birlikte Ek S12'ye gitti;
+`v8-caveats.md` alt tablosunda `| S12 | … | E10 |`. Gövdede kalan *"Bill 3 ratio by 5 to 14 percent"* sonucunun niteleyicisi gövdede duruyor: *"The test is
+the 50 kg and 1 000 kg reference designs, sized by one method, not Section 7.1's closures"* (fren: gövdede kalan bir sonucun niteleyicisi taşınamaz — bu
+cümle taşınmadı). Uygulama: Adım 12 gövdesi 1 090 → 820 kelime (adım kaynağında); eski gövde Ek S12'de *"Section 12 as it stood before the supplement move"*
+başlığıyla tam. Sonuç okuyucuların teyidine (Tur 155 metni).
