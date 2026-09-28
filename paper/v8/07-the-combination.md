@@ -113,7 +113,7 @@ and it is charged in Section 11 with the other costs of the union, not settled h
 
 Nor is this a claim of mechanical simplicity. What is offered is a **count**: the classes of mechanism that a tilting architecture requires to change regime, and which this arrangement does not require. The actuator inventory that replaces them is the propulsion motors together with the strip.
 
-**One thing this section does not establish, and Section 9 holds it to that.** The arrangement
+**One thing this section does not establish, and Section 15 holds it to that.** The arrangement
 described here requires no mechanism to change regime. **Whether this aircraft can actually perform
 the change is a separate question and is not settled anywhere in this paper**: whether the moment
 available is sufficient, and whether the aircraft trims through the rotation, depend on

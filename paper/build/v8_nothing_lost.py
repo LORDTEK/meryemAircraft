@@ -46,7 +46,7 @@ DEGISTI = {
     "The comparison is between unlike ratings: a peak demand held through the vertical phases, a bench average over minutes, a continuous rating, and a design assumption.":
         "The comparison is between unlike ratings: a peak demand held through the vertical phases, a bench average over minutes, a continuous rating, a design assumption, and a literature figure the study cites without its rating.",
 }
-ONCE = {2: ("d2ca894", "68c1c39"), 9: ("eb22a83", "0345c45", "d88435f"), 14: "9f4cfcb", 3: ("46b9628", "68c1c39"), 4: ("8c4d712", "c22b1c7"), 10: "024005c", 11: "65ae7de", 12: ("c9fcdd7", "871a143"), 13: ("c9fcdd7", "d88435f"), 1: ("e4b6847", "8dd7a2f", "c75ea70", "c4d44ee"), 5: ("fc646cb", "c75ea70", "c4d44ee"), 6: ("38d5324", "29d8c07", "c4d44ee", "d88435f"), 7: ("555b73b", "d8d5439", "d88435f"), 8: ("0b4b24f", "96ff92f", "d88435f"), 15: "978aef9"}   # Tur 157: 7.3 eke tasima oncesi (871a143) ve toplu kesim oncesi (d88435f)   # kisaltmadan onceki commit
+ONCE = {2: ("d2ca894", "68c1c39"), 9: ("eb22a83", "0345c45", "d88435f", "64e4005"), 14: "9f4cfcb", 3: ("46b9628", "68c1c39"), 4: ("8c4d712", "c22b1c7"), 10: "024005c", 11: "65ae7de", 12: ("c9fcdd7", "871a143"), 13: ("c9fcdd7", "d88435f"), 1: ("e4b6847", "8dd7a2f", "c75ea70", "c4d44ee"), 5: ("fc646cb", "c75ea70", "c4d44ee"), 6: ("38d5324", "29d8c07", "c4d44ee", "d88435f"), 7: ("555b73b", "d8d5439", "d88435f"), 8: ("0b4b24f", "96ff92f", "d88435f"), 15: ("978aef9", "64e4005")}   # Tur 157: 7.3 eke tasima oncesi (871a143) ve toplu kesim oncesi (d88435f)   # kisaltmadan onceki commit
 
 
 def govde(s):
@@ -74,11 +74,16 @@ ek = duz(re.sub(r"(?m)^\s*- ", "", open(os.path.join(KOK, "paper", "v8", "supple
 if "--sina" in sys.argv:
     ek = ek.replace("The heavy design is not the light design photographed from further away.", "")
 kayip = 0
+TUM_GOVDE = " ".join(duz(re.sub(r"(?m)^\s*- ", "", govde(open(f, encoding="utf-8").read()))) for f in glob.glob(os.path.join(KOK, "paper", "v8", "[0-9][0-9]-*.md")))
 IKILI = [(n, c) for n, cs in ONCE.items() for c in (cs if isinstance(cs, tuple) else (cs,))]   # Tur 111: bir adim iki kez kisaltildiysa iki commit
 for n, c in IKILI:
-    yol = os.path.relpath(glob.glob(os.path.join(KOK, "paper", "v8", "%02d-*.md" % n))[0], KOK)
-    eski = subprocess.run(["git", "-C", KOK, "show", "%s:%s" % (c, yol)], capture_output=True, text=True, check=True).stdout
-    simdi = duz(re.sub(r"(?m)^\s*- ", "", govde(open(os.path.join(KOK, yol), encoding="utf-8").read())))   # Tur 84: madde imi eski metinde siliniyordu, simdikinde de silinmeli
+    yol = os.path.relpath((glob.glob(os.path.join(KOK, "paper", "v8", "%02d-*.md" % n)) or glob.glob(os.path.join(KOK, "paper", "v8", "retired", "%02d-*.md" % n)))[0], KOK)
+    yol_eski = yol.replace("paper/v8/retired/", "paper/v8/")
+    eski = subprocess.run(["git", "-C", KOK, "show", "%s:%s" % (c, yol_eski)], capture_output=True, text=True, check=True).stdout
+    # Tur 160 (D evresi): bolumler arasi tasima mesru -- cumle HERHANGI bir adimin govdesinde ya da ekte aranir; emekli adimin
+    # kendi dosyasi (paper/v8/retired/) govde sayilmaz. Tarihsel commit'teki yol emekli degil, eski yoldur.
+    simdi = TUM_GOVDE
+    # Tur 84: madde imi eski metinde siliniyordu, simdikinde de silinmeli
     for k in cumleler(govde(eski)):
         if k in DEGISTI:
             if duz(DEGISTI[k]) not in simdi and duz(DEGISTI[k]) not in ek:   # Tur 104: yeni hal de eke tasinabilir (Adim 10 dondurmasi)

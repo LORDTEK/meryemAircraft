@@ -732,3 +732,5 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | D 6.2 + 9 (Tur 157 oyu, yazarın önerisinden önce) | A | A (bulgudan yazım) | A (+ bulgu paragrafı) | A (+ P1 kuralı) | A | **Yazar (Tur 158): 6.2 + 9 = Bölüm 9, 6.2 kalkar; "hatalı olabilirim"; 2 turda karar** — Claude yazarın önerisine yöneldi (yeni metin yok, tek ev) |
 | D 6.2 + 9: yazarın önerisi (6.2 + 9 = 9) | ✓ (3 şartla) | ✓ (gerekmedikçe işaretçi yok) | ✓ (+ işaretçi cümlesi) | ✓ (+ sözleşme cümlesi 7'ye) | ✓ | **KARAR (Tur 159): yazarın önerisi, beşimiz** — taslak Tur 159'da; D1–D5 oyda |
 | D2 "By construction" tanımı (korunan) | sil | sil | sil | sil | sil (Tur 158) | **korunan — silinemez**; E11 (eke, yazar kararı) önerisi Tur 159 |
+| D1–D5 (birleşik 9) | ✓ | ✓ | ✓ | ✓ | ✓ | **uygulandı (Tur 160)**; E11 yazar onayı; sonuç teyide |
+| Ölçüm: 12 000 anlaşılmış kaldıraçlarla ulaşılamaz (≈ 21 400 – 23 900 hepsi dahil) | ? | ? | ? | ? | ölçtü | **Tur 160 — yazara** (L1–L4, sayı yazarın) |

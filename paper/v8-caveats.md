@@ -63,12 +63,11 @@ boşluğa duyarsız. `G` = Grok, `D` = DeepSeek, `C` = ChatGPT, `Q` = Qwen, `K` 
 | 8 | The free-wheeling state is physically determinate: the rotor settles where net shaft torque is zero. The stopped state is not. | G |
 | 8 | should be read as estimates for an assumed azimuth rather than as the state a particular installation would reach. | D |
 | 8 | How many actuators that is, this study does not fix. | D |
-| 9 | No range claim is made against the tilting or lift-plus-cruise families in either direction. | G |
-| 9 | is not computed anywhere in this paper. | G |
-| 9 | The mechanism claim is a statement about what hardware is present | D |
-| 9 | The separate claim that this aircraft can actually perform the regime change is not settled | D |
-| 9 | By construction" throughout this paper means "by the sizing", never "by demonstration. | D |
-| 9 | no comparison in this paper should be quoted without the contract it was computed under. | D |
+| 15 | No range claim is made against the tilting or lift-plus-cruise families in either direction. | G |
+| 15 | is not computed anywhere in this paper. | G |
+| 15 | The mechanism claim is a statement about what hardware is present | D |
+| 15 | The separate claim that this aircraft can actually perform the regime change is not settled | D |
+| 10 | no comparison in this paper should be quoted without the contract it was computed under. | D |
 | 10 | Closing a sizing loop mathematically is not the same thing as closing an aircraft physically. | G |
 | 10 | These are the same configuration at four closed masses rather than four configurations | G |
 | 10 | So the zero-altitude-loss result is a property of the model that produced it. | G |
@@ -116,7 +115,7 @@ boşluğa duyarsız. `G` = Grok, `D` = DeepSeek, `C` = ChatGPT, `Q` = Qwen, `K` 
 | 15 | Whether this aircraft completes the rotation is a separate question, and it is not settled here | D |
 | 1 | What is not established is the combination taken together with its price. | G |
 | 7 | What this paper contributes is the architecture that brings the three elements together; the condition shows what it satisfies, and the price shows what it costs. | G |
-| 9 | It is not a list of the study's open questions. | G |
+| 15 | It is not a list of the study's open questions. | G |
 | 13 | The mechanism claim is not a ranking and is not at stake here | G |
 | 10 | This section prices the arrangement of Sections 7 and 8 on a declared package; it does not bear on the count of mechanism classes, which rests on the inventory of those sections alone. | G |
 | 6 | The compared vehicles are 1 660 to 3 275 kg | D |
@@ -142,7 +141,7 @@ boşluğa duyarsız. `G` = Grok, `D` = DeepSeek, `C` = ChatGPT, `Q` = Qwen, `K` 
 | 6 | The reference is therefore given its best speed and this configuration is not given its best speed, and the margin is positive anyway. | Q |
 | 7 | The assembly is not offered as novel because it is an assembly. | Q |
 | 8 | Either the residual is small enough to be absorbed that way, which this study has not shown and which would mean the architecture spends a little of the channel it declined, or another duty falls on the strip. | Q |
-| 9 | It does not claim that the aircraft flies. | Q |
+| 15 | It does not claim that the aircraft flies. | Q |
 | 10 | The reference design's assumed zero-lift value of 0.0248 is not used. | Q |
 | 12 | A change from 3.6 to 4.0 percent is a change between two choices, not a scaling result, and it cannot be offered as evidence that Bill 1 moves with size in either direction. | Q |
 | 13 | The competitors are therefore this planform with two add-ons, not independently designed aircraft of their families. | Q |
@@ -190,7 +189,7 @@ kaybolmasına (CLAUDE.md §0.8). Aynı denetimle sınanır.
 | 5 | That is the one place the configuration asks a component to do a second job it was not sized for, and it means the take-off margin and the attitude authority are drawn from the same propellers and compete for it. | G+C+D+Q+K |
 | 6 | The same sizing set gives four entries for its two helicopter types, at 5.4 to 7.2, and against them the result is mixed | D+G+C+Q+K |
 | 14 | this aircraft's vertical phases occupy about a minute in all (Section 2), and how long each draws the peak is not computed here | C+G+D+Q+K |
-| 9 | Claimed against multirotors, and bounded; against helicopters the comparison with published figures is mixed and no advantage is claimed. | C+G+D+Q+K |
+| 15 | Claimed against multirotors, and bounded; against helicopters the comparison with published figures is mixed and no advantage is claimed. | C+G+D+Q+K |
 | 8 | That is a design assignment, not a demonstrated result | G+C+D+Q+K |
 | 7 | The stopping class is absent if the tip pairs free-wheel in cruise or are held stopped by motor torque; a brake or a mechanical lock would add it. | D+G+C+Q+K |
 | 15 | while the tip pairs free-wheel or are held by motor torque — no rotor stowing, indexing or stopping mechanism | K+G+C+D+Q |
@@ -208,7 +207,7 @@ kaybolmasına (CLAUDE.md §0.8). Aynı denetimle sınanır.
 | 4 | None is known to the authors. | Q+G+C+D+K |
 | 4 | And the source states the second half of the prediction in its own words, on a comparison the check does not use as its test. | G+C+D+Q+K |
 | 4 | but not enough to counter the increase in structure and propulsion weight. | G+C+D+Q+K |
-| 9 | A configuration may avoid all three and still be unbuildable, uncontrollable, or unsuited to its mission, and the accounting says nothing against that possibility. | G+C+D+Q+K |
+| 15 | A configuration may avoid all three and still be unbuildable, uncontrollable, or unsuited to its mission, and the accounting says nothing against that possibility. | G+C+D+Q+K |
 
 **Yazar kararıyla eke taşınan korunan cümleler (kural (iii), CLAUDE.md §2.4; `v8_caveats.py` ekte durduğunu sınar):**
 
@@ -217,6 +216,7 @@ kaybolmasına (CLAUDE.md §0.8). Aynı denetimle sınanır.
 | S10 | The closures do not take that reduction, and it has not been run through the loop. | E7 |
 | S11 | No line item at the adverse end is an independent measurement, and they should not be subtracted from one another as if they were. | E9 |
 | S12 | This paragraph compares the reference pair only. | E10 |
+| S9 | By construction" throughout this paper means "by the sizing", never "by demonstration. | E11 |
 
 *Tanım kaydı (Tur 111; Qwen P1, dört okuyucu + Claude): son beş Q+G+C+D+K satırı çerçevenin tanım cümleleri; kök (satır "is the origin of all three charges below") ve koşul zaten korunuyordu.*
 

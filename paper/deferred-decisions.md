@@ -597,3 +597,16 @@ Okuyuculardan ölçümün denetimi istendi (yokluk iddiası, Tur 133).
 - **E11 (yazara gidecek, okuyucu oyundan sonra):** "By construction" tanımı eke (S9) — ifade gövdede başka hiçbir yerde yok; öz geri gelirse tanım da gelir.
 - Açık: D1 sözleşme cümlesi (7'nin başı / 9'da), D3 iki bulgu yan cümlesi tabloya, D4 "Removing those eight" paragrafı, D5 korunan ikiz (bırak), D6 başlık (E evresi).
 - Okuyucu hataları: Qwen "measured range doğru" dedi (değil; ChatGPT haklı); DeepSeek yeni metin yok gerekçesiyle geçip yeni işaretçi cümlesi önerdi.
+
+## E11 — "By construction" tanımı eke · **KARAR (Tur 160): "E11 onaylıyorum, tanım eke gitsin"**
+
+Uygulandı: Ek S9 (birleşme öncesi iki gövde tam); `v8-caveats.md` alt tablosu `| S9 | … | E11 |`. Koşul (DeepSeek, Qwen): E evresinde özet "by construction" kullanırsa tanım geri gelir.
+
+## Tur 160 — 6.2 + 9 uygulandı; ÖLÇÜM yazara (E8'in "ölç, sonra karar ver" adımı)
+
+- Uygulandı: Adım 9 → Adım 15'e birleşti (emekli: `paper/v8/retired/`); D1 sözleşme cümlesi Adım 10 başı (görünümde Bölüm 7'nin başı); D3, D4; D5 bırakıldı.
+- Hatalarım: dördüncü işaretçiyi (Adım 14 "four axes of Section 9") Tur 159'da atladım — yalnız silmeyle onarıldı, teyide; uygularken iki hata (BOLUNMUS → "(Section 4)";
+  "---" artığı) commit'ten önce yakalandı.
+- **Ölçüm:** gövde 19 771 (7 tablo metin olarak); hepsi dahil ≈ 21 400 – 23 900. Kaldıraçlar şimdiye dek −732. 12 000 için düzyazı+başlık ~8 000–9 500'e inmeli; bugün
+  18 950. Mimari 8 093; çerçeve + hesap 8 641. → **12 000 durma testini çiğnemeden ulaşılamaz.** Seçenekler L1–L4 (Tur 160 §2). Claude: L3 önce (yazarın Tur 129 ipucu),
+  L1 ile; hedef sayı yazarın (ör. 14 000–16 000).

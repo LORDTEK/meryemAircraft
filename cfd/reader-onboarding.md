@@ -214,16 +214,14 @@ The body is about **26 000 words**, and the journal's working target is **about 
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 159.**
+**Round 160.**
 
 | Block | State |
 |---|---|
-| Stages (the author, Round 129) | present stage: **compression by finding**. Supplement stage closed (7.3 −286; 7.4 −47); batch of copy cuts closed (−184) |
-| Phase D (merges) | **6.2 + 9: decided — the author's proposal, supported by all five** (6.2 and 9 become one Section 9; 6.2 disappears; Section 6 keeps today's 6.1). The merged Section 9 is drafted in full (moves and deletions only; −215 words); open points D1–D5 are voted in Round 159 (`paper/v8/drafts/09-merged-draft.md`) |
-| Protected sentences met in the merge | *"'By construction' … means 'by the sizing' …"* (the phrase is used nowhere else; proposed to the supplement by author decision, E11) and the contract sentence (proposed at the head of Section 7) |
-| Length (E8) | option 4, unanimous: target 12 000 all-in; report to the author with numbers before the architecture sections are compressed |
-| Contribution | Sections 1, 5.1, 6.2 and 9 name one contribution, the architecture |
-| Tip pairs in cruise (the author's decision) | uncommanded state: free-wheeling at zero shaft torque (Section 6.1); shaft power of commanded departures not computed |
+| Stages (the author, Round 129) | present stage: **compression by finding**. Supplement stage closed (−333); batch closed (−184); **6.2 + 9 merged into one Section 9 (−215), for the readers' confirmation.** Step 9 retired (`paper/v8/retired/`); Section 9 = Step 15; Section 6 = the former 6.1; the contract sentence heads Section 7; the "By construction" definition is in S9 (author's decision E11) |
+| **Measurement (Round 160)** | body 19 771 words (7 tables as text); **all-in by the AIAA method ≈ 21 400 – 23 900**. 12 000 is not reachable by the agreed levers without cutting argument steps. Remaining levers: L1 architecture compression, L2 tables to the supplement, L3 whole calculation sections to the supplement behind result paragraphs (the author's Round 129 hint), L4 a longer paper. The number is the author's decision |
+| Contribution | Sections 1, 5.1 and 9 name one contribution, the architecture |
+| Tip pairs in cruise (the author's decision) | uncommanded state: free-wheeling at zero shaft torque (Section 6); shaft power of commanded departures not computed |
 
 **Every step has now been recomposed once.** Recomposition into result sentences took Steps 10–11 to about 40 % of their length,
 Steps 12–14 to 57–83 %, and the framework and architecture to 80–95 %, because definitions, protected sentences and their evidence

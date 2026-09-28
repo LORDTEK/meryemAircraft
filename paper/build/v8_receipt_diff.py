@@ -22,7 +22,7 @@ aud = open(os.path.join(KOK, "paper/v8/drafts/receipt-audit.md"), encoding="utf-
 starts = [norm(m.group(1)).rstrip("…")[:45] for m in re.finditer(r"^\| \d+ \| \d+ \| (.+?) \|", aud, re.M)]
 PAT = re.compile(r"Sections? \d|Supplement S\d|next section|previous section|last section")
 new, tot = [], 0
-for n in range(1, 16):
+for n in [x for x in range(1, 16) if glob.glob(os.path.join(KOK, "paper", "v8", "%02d-*.md" % x))]:   # Tur 160: Adim 9 emekli
     b = norm(govde(n))
     for s in re.split(r"(?<=[.!?])\s+(?=[A-Z(\"])", b):
         if PAT.search(s):

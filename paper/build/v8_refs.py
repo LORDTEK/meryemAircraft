@@ -46,7 +46,7 @@ for L in open(os.path.join(KOK, "paper", "v8-refs-reviewed.md"), encoding="utf-8
         gozden.append((int(m.group(1)), duz(m.group(2))))
 
 yeni = []
-for n in range(1, 16):
+for n in [x for x in range(1, 16) if glob.glob(os.path.join(V8, "%02d-*.md" % x))]:   # Tur 160: Adim 9 emekli
     b = govde(n)
     if "--sina" in sys.argv and n == 3:
         b += "\n\nThe table's last row permits nothing. The fourth departure says nothing.\n"
@@ -56,7 +56,7 @@ for n in range(1, 16):
 # Tur 88 (DeepSeek): her "Supplement S#" atfi ekte var olan bir "## S#" bolumune cozulmeli.
 ek = open(os.path.join(V8, "supplement.md"), encoding="utf-8").read()
 bolumler = set(re.findall(r"(?m)^## (S\d+)\.", ek))
-for n in range(1, 16):
+for n in [x for x in range(1, 16) if glob.glob(os.path.join(V8, "%02d-*.md" % x))]:   # Tur 160: Adim 9 emekli
     b = govde(n)
     if "--sina" in sys.argv and n == 3:
         b += "\n\nSee Supplement S99.\n"

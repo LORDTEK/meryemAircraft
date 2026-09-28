@@ -17,6 +17,8 @@ dört kapanışı çalıştırıyor.
 
 ## Analytical closure of the sizing loop
 
+Because the comparative result depends on the sizing contract, **no comparison in this paper should be quoted without the contract it was computed under.**
+
 This section prices the arrangement of Sections 7 and 8 on a declared package; it does not bear on the count of mechanism classes, which rests on the inventory of those sections alone. **Closing a sizing loop mathematically is not the same thing as closing an aircraft physically.** This section does the first: what it produces is a set of consistent numbers on a declared set of assumptions.
 
 Installed power sets the propulsion mass, propulsion mass the take-off mass, and take-off mass the hover power that sizes the installed power; the take-off mass is found by iteration as the fixed point of that circle (Supplement S10). **If no fixed point exists, the declared sizing package does not close.**

@@ -193,3 +193,10 @@ gitti, ama bulgu (düşüşü Re açıklar, 0,29–0,65) gövdede — R1.
 Yeni işaretçiler: 5.2 *"The tip pairs are the parts that fail the escape condition (Section 5.1)"* → 5.1'in *"The single nose pair meets all four parts …
 The four tip pairs do not: … The instantiation is therefore partial"* — **R1**. 7.4 *"… does not close under a fixed fuel fraction or a fixed take-off mass
 (Supplement S13)"* → S13'ün tamponsuz paragrafı (38–47 %, 520 kg) — **R1**. ChatGPT'nin şartı (Tur 157): D evresinde 5.1 değişirse bu alındı yeniden okunur.
+
+## Tur 160 — 6.2 + 9 birleşmesinden sonra
+
+5.1 *"… and Section 9 holds it to that"* → birleşik 9 (mekanizma/geçiş ayrımı, madde 8) — **R1**. 8 *"Section 9 calls this section a debt: …"* → birleşik 9'un kapsam/borç paragrafı
+(ve cümle *debt*'i kendi tanımlıyor) — **R1**. 8 *"The last section returns to the four axes and states what is claimed on each"* → dört eksen tablosu — **R1**
+(Tur 159'da atladığım dördüncü işaretçi; "of Section 6" silindi). Tablo satırı *"(Section 4)"* → Bölüm 4'ün iki quadrotor karşılaştırması — **R1**.
+**Uygularken yakalanan hatam:** BOLUNMUS çıktısı "(Section 6)" adım numarası diye yeniden çevrildi → "(Section 4)"; EKLEM listesi gösterdi, yer tutucuyla düzeltildi.

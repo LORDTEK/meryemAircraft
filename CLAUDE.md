@@ -587,7 +587,7 @@ Hiçbir iddia denetlenmeden aktarılmaz — ne YZ'lerinki ne benimki.
   adımlarında durduğunu sınar; `--sina` silinen bir çekinceyi yakaladığını sınar.
 - `paper/build/v8_assemble.py` — birleştirilmiş görünüm; 150 korunan cümle görünümde mi (`--sina`).
 - `paper/build/v8_draft_check.py NN` — taslak yalnız silmeyle mi türedi, olumsuzluk silinmiş mi (`--sina`).
-- `paper/build/v8_nothing_lost.py` — kısaltılan adımların her cümlesi gövdede ya da ekte mi (`--sina`). Ek kuralı (Qwen, Tur 69):
+- `paper/build/v8_nothing_lost.py` — kısaltılan adımların her cümlesi gövdede ya da ekte mi (`--sina`). **Tur 160:** D evresinde bölümler arası taşıma meşru — cümle herhangi bir adımın gövdesinde ya da ekte aranır; emekli adım (`paper/v8/retired/`, ilk: Adım 9 → Adım 15'e birleşti) gövde sayılmaz. Ek kuralı (Qwen, Tur 69):
   kaybı olan her paragraf eke **tam** ve özgün başlığıyla gider.
 - `paper/build/links.py` — bağ dokusu: işaretçiler çözülüyor mu, **doğru
   yere mi** çözülüyor, tablo/şekil atıfları tutuyor mu.
