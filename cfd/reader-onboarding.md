@@ -214,16 +214,15 @@ The body is about **26 000 words**, and the journal's working target is **about 
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 162.**
+**Round 163.**
 
 | Block | State |
 |---|---|
-| Stages (the author, Round 129) | present stage: **compression by finding**. Supplement stage closed (−333); batch closed (−184); 6.2 + 9 merged (−215) |
-| **Structure now (the author, Round 162)** | the old Section 6 (*What this inventory does not settle*) is the last subsection of 5.2; Section 4's 28-word fuselage sentence deleted. Sections renumbered: **6** The calculations (6.1–6.4), **7** What does not close, **8** Four axes, and where the paper stops (the conclusion) |
-| **Open (Round 162)** | the author's two questions: **A** — 5.2 written as one whole (inventory + its limits); **B** — Section 7 "What does not close" (1 185 words) is too long: merge or shorten. Readers propose; Claude's view goes to the author with theirs |
-| Length | set aside by the author; measurement of Round 160 on record |
+| Stages (the author, Round 129) | present stage: **compression by finding**. Merges so far: 6.2 + 9 (−215); the old Section 6 into 5.2 and Section 4's 28 words (Round 162) |
+| Structure | 1 · 2.1–2.3 · 3 · 4 · 5.1–5.2 · **6** calculations (6.1–6.4) · **7** What does not close · **8** Four axes (the conclusion) |
+| **Open (Round 163)** | 5.2 drafted two ways by the author's request: **above/below 1 844 words, distributed 1 816** (today 1 930): distributing buys 28 words; the author chooses. Section 7: the 18-item list to S14 with one sentence, the re-closure to one sentence (two protected sentences to S14 by the author's decision E12): 1 185 → 908. **The author's threshold: apply unless there is a serious objection** |
 | Contribution | Sections 1, 5.1 and 8 name one contribution, the architecture |
-| Tip pairs in cruise (the author's decision) | uncommanded state: free-wheeling at zero shaft torque (5.2, last subsection); shaft power of commanded departures not computed |
+| Tip pairs in cruise (the author's decision) | uncommanded state: free-wheeling at zero shaft torque (5.2); shaft power of commanded departures not computed |
 
 **Every step has now been recomposed once.** Recomposition into result sentences took Steps 10–11 to about 40 % of their length,
 Steps 12–14 to 57–83 %, and the framework and architecture to 80–95 %, because definitions, protected sentences and their evidence

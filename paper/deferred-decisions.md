@@ -663,3 +663,17 @@ Uygulandı: Ek S9 (birleşme öncesi iki gövde tam); `v8-caveats.md` alt tablos
   cümlesini korunan sandı (değil). Qwen'in yeni geçiş cümlesi yazarın "olmayanı anlatmak" eleştirisinin tam kendisi.
 - **Claude:** A'da dağıtma (Grok/DeepSeek); B'de kısalt: liste gruplanır, tam hâli S14; yeniden kapanışın korunan iki cümlesi ya gövdede kısa paragrafla kalır ya
   yazar kararıyla (kural iii) S14'e gider; hedef ~700–800.
+
+## Tur 163 — yazarın kararları: A iki yoldan yazılsın; B liste ve yeniden kapanış birer cümleye (E12)
+
+- Yazar: *"A. Aslına bakarsan doğrusu Qwen ve ChatGPT'nin dediği gibi yukarısı ve aşağısı olması. Ama bu durumda yeterince yoğurup küçültemeyebiliriz. Tam bu noktada bir
+  şeytan gizli: dağıtalım ama dağılınca yine aynı miktarda kısalacaksa o zaman ben yukarısı ve aşağısı yöntemini tercih ederim. Sen hem dağılsını kaliteli şekilde yap hem de
+  yukarısı aşağısı şeklinde kaliteli yap. Aradaki fark önemliyse ve önemsizse ona göre karar veririz. B. liste eke gitsin bir cümle ile. kapanış bir cümle ile. Bunları
+  okuyuculara da sunalım. çok büyük itiraz yoksa uygulayalım."*
+- Ölçüm (geçici çalışma kopyasında, korunan denetimi temiz): 5.2 bugün 1 930 → yukarısı/aşağısı 1 844, dağıtılmış 1 816 → **fark 28 kelime.** Ortak kesimler C1–C5
+  (ses; benim Tur 162 öz-işaretçi hatam; korunan cümlenin tekrarı; iki işaretçi; ses). Dağıtılmışa özgü: başlık + tork artığı paragrafının açılışındaki tekrar.
+- **E12 (yazar, "kapanış bir cümle ile"):** yeniden kapanış paragrafı Ek S14'e, gövdede bir cümle; iki korunan cümle (*"These masses are the Section 10 package with one
+  input changed."*, *"They are not a structural closure at 100 kg"*) onunla eke. Liste S14'e, gövdede bir cümle. Bölüm 7: 1 185 → 908.
+- Taslaklar: `paper/v8/drafts/08-A1-distributed.md`, `08-A2-above-below.md`, `14-B-shortened.md`; üretici `paper/build/v8_round163_drafts.py`; birleştirici yaması
+  (başlık yoksa Adım 8 bölünmez) `paper/build/v8_round163_patch_asm.py`.
+- **Tur metninde kendi hatam:** tırnaksız heredoc başlıktaki ters tırnakları kabukta çalıştırdı (commit satırı boşaldı); gönderilmeden onarıldı.
