@@ -3268,6 +3268,17 @@ The fixed-pitch gap also widens slightly with size, to 16.4 to 22.9 percent at t
 
 ## S13. Sensitivity of the lift-plus-cruise comparison (from Section 13)
 
+Range of the lift-plus-cruise layout relative to this configuration:
+
+| Closure (Section 10) | Fixed fuel fraction | Fixed fuel mass | Fixed take-off mass |
+|---|---:|---:|---:|
+| A | +67.8 % | +40.2 % | +1.1 % |
+| B | +55.3 % | +27.5 % | **−13.0 %** |
+| C | +83.9 % | +53.5 % | +7.3 % |
+| D | +70.2 % | +40.1 % | **−6.5 %** |
+
+*(Moved here from Section 13's body in Round 166; the body keeps every range, the shift and the sign change. The table below varies the inputs of this one.)*
+
 | Case | Fixed fuel fraction | Fixed fuel mass | Fixed take-off mass | Shift, first to third |
 |---|---:|---:|---:|---:|
 | As above | +55 to +84 % | +28 to +54 % | −13 to +7 % | 67 to 77 points |
@@ -3777,6 +3788,14 @@ The remaining items are not known obstacles; they are questions this work has no
 - blade-family selection;
 - the variable-pitch counterfactual;
 - atmosphere.
+
+---
+
+### Section 14's opening paragraph as it stood before the Round 166 cut
+
+The debt sentence was deleted in Round 166; Section 15 states the debt and the scope. The paragraph is given here in full, verbatim.
+
+Section 10 closed the sizing loop on a declared package and said that whether an aircraft can be built to it is a different question. **This section is where that question is answered, and for the first item the answer is no: the required store performance is not demonstrated by the sources consulted here.** Section 15 calls this section a debt: questions the paper does not answer and that better evidence would. It is stated in that order — first the obstacle that is known, then what is not known.
 
 ---
 

@@ -738,3 +738,13 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | `v8_nothing_lost.py` bütün gövdelerde arar | ✓ | ✓ | ✓ | ✓ | ✓ | **kabul** |
 | Uzunluk hedefi | 15–16k | ölçümden sonra | 15k (taban 14k) | 14,5–15,5k | 14–16k | **yazar şimdilik bir kenara koydu (Tur 161)** |
 | Yazarın sorusu: 6.2 + 9 işlemi başka nerede? | ? | ? | ? | ? | (yazara, okuyuculardan sonra) | **Tur 161** |
+| Bölüm 6 → 5.2'nin sonu; Adım 6'dan 28 kelime (yazar kararı) | ✓ | ✓ | ✓ | ✓ | ✓ | **uygulandı (Tur 162), teyit Tur 163** |
+| A: 5.2 yukarısı/aşağısı (yazar: "yukarısı aşağısı olsun") + C1–C5 | – | – | – | – | – | **yazar kararı (Tur 164), ciddi itiraz yok → uygulandı; KAPANDI (Tur 165)** |
+| B: Bölüm 7 listesi ve yeniden kapanış birer cümle (E12) | – | – | – | – | – | **yazar kararı; uygulandı (Tur 164); KAPANDI (Tur 165)** |
+| Cut A (şaft cümlesi, −22) | ✓ | ✓ | ✓ | ✓ | ✓ | **uygulandı (Tur 165)** |
+| Cut B | ✗ | ✗ | ✗ | ✗ | ✗ | **K** |
+| C1 6.4 A–D tablosu → S13 | ✓ | ✓ | ✓ (+ işaretçi) | ✓ | ✓ | **uygulandı (Tur 166)**; teyide; işaretçi cümlesi Tur 166 oyunda |
+| C2 Bölüm 7 "debt" cümlesi | ✓ | ✓ | ✓ | ✓ | ✓ | **uygulandı (Tur 166)**; teyide |
+| C3 6.2 listesi → tek cümle | ✓ | bekletti (kapsam) | ✓ | ✓ | önerdi | **uygulanmadı**; ChatGPT haklı; C3′ (yalnız işaretçi) Tur 166 oyunda |
+| R-a, R-b (Bölüm 7'ye işaretçiler → S14) | ✓ | ✓ | ✓ | ✓ | ✓ | **uygulandı (Tur 166)**; teyide |
+| 2.3 taslağı 1 282 → 1 004 | ✓ + geri koy | ✓ + köprü | ✗ (bulgu düştü) | ✓ | önerdi | **uygulanmadı**; gözden geçirilmiş taslak 1 095 Tur 166 oyunda |

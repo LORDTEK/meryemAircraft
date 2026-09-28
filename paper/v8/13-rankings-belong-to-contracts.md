@@ -61,15 +61,6 @@ The basis is not symmetric: the lift-plus-cruise layout carries a lift-to-drag r
 
 **The two architectures trade one charge against another**: closed under a fixed fuel fraction, this configuration is 27 to 30 percent lighter, and the lift-plus-cruise layout cruises at a lift-to-drag ratio of 11.66 and 15.72 against 8.79 and 10.82, with a propeller at 0.80.
 
-Range of the lift-plus-cruise layout relative to this configuration:
-
-| Closure (Section 10) | Fixed fuel fraction | Fixed fuel mass | Fixed take-off mass |
-|---|---:|---:|---:|
-| A | +67.8 % | +40.2 % | +1.1 % |
-| B | +55.3 % | +27.5 % | **−13.0 %** |
-| C | +83.9 % | +53.5 % | +7.3 % |
-| D | +70.2 % | +40.1 % | **−6.5 %** |
-
 **The lift-plus-cruise layout is 55 to 84 percent ahead under the first contract, 28 to 54 percent under the second, and between 13 percent short and 7 percent ahead under the third; the shift from first to third is 67 to 77 percentage points at every closure**, at the declared lift-group fraction, and always toward the lighter aircraft. **The sign itself changes inside the envelope under the third contract**: this configuration is ahead at the two closures with the higher-efficiency blade family and behind at the two with the lower. **A statement of which architecture has the longer range, made without its contract, would therefore be a statement about the contract.**
 
 ### Against the tilting layout: a bound, not a ranking
@@ -96,6 +87,7 @@ Section 2 predicted that such a ranking will move when the sizing rule changes, 
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 166 — C1 uygulandı** (Tur 165: dört okuyucu + Claude): A–D tablosu (kapanış başına üç sözleşme) gövdeden Ek S13'ün başına, aynen. Gövdede her aralık, 67–77 puanlık kayma ve işaret değişimi kalıyor. S13'teki duyarlılık tablosunun *"As above"* satırı artık hemen üstündeki bu tabloyu gösteriyor (aynı nesne). DeepSeek'in işaretçi cümlesi (*"The per-closure numbers are in Supplement S13."*) Tur 166 oyunda | `paper/v8/supplement.md` S13 |
 | **Tur 117 — S-44 onarıldı** (Tur 116; dört okuyucu + Claude): P33'ün korunmayan kuyruğu "in drag the tilting layout, by construction" → "by assumption" | Tur 116 metni §3 |
 | **Tur 108 — S-38 onarımı (Tur 107: dört okuyucu + Claude):** P27 iki niceliği adlandırıyor (kaldırma grubu kütle oranı ve pervane verimi — Ek S13 tablosu: ikisi de sabit kalkış kütlesinde işareti tek başına belirliyor); P28 "those quantities". **P28'in son yan cümlesi ayrışık** (Grok, Qwen: "the ones most worth measuring"; ChatGPT: çıkar; DeepSeek: "both are worth measuring" ya da çıkar) → uzlaşmaya dek yan cümle yok. Özgün P27–P28 Ek S13'te | `paper/v8-source-defects.md` S-38 |
 | **Tur 107 — Adım 13 yeniden kuruldu** (Tur 105–106; dört okuyucu + Claude, hiçbir cümleye veto yok): `drafts/13-recomposed.md` uygulandı; korunan cümlelerin hepsi gövdede. Özgün gövde Ek S13'de tam | `drafts/13-recomposed.md` §3 iz |

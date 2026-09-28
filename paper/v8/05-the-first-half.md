@@ -77,7 +77,7 @@ attitude authority are drawn from the same propellers and compete for it.
 **The vertical descent has not been analysed.** A rotor descending into its own wake can enter
 the vortex ring state, in which thrust becomes erratic and adding power makes matters worse.
 Whether this configuration's descent profile enters that region, and at what rate of descent,
-is an open question in Section 14 rather than an answered one here.
+is an open question in Supplement S14 rather than an answered one here.
 
 **Neither has the landing transition.** The forward rotation and the reverse are not symmetric
 and must not be assumed to be. Going out, the rotation builds dynamic pressure while it turns,
@@ -125,6 +125,7 @@ section**, and the two are combined in Section 7.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 166 — R-a uygulandı** (Tur 165: dört okuyucu + Claude): *"an open question in Section 14"* → *"an open question in Supplement S14"* — Bölüm 7'nin listesi S14'e gidince işaretçi tutmuyordu (Claude'un alındı hatası, Tur 164). S14 satırı *"Vertical descent and the landing transition … the vortex ring state is not assessed"*: R1 | `paper/v8/supplement.md` S14 |
 | **Tur 150 — L-3 satır 1 (b) uygulandı** (Qwen; dört okuyucu + Claude): *"carries the attitude propellers"* → *"carries the four tip pairs (the attitude propellers)"* — ilk kullanımda ad + takma ad (2.2'nin genel *attitude devices*ına köprü). L-3 satır 2–3 kapandı | Tur 149 §3.2 |
 | **Tur 149 — L-3 satır 2, 3 uygulandı** (dört okuyucu + Claude): *"control propellers"*, *"The attitude propellers they carry"* → *"tip pairs"*. Satır 1 (ilk kullanım) ayrışık, geri soruldu. W-11 kapandı | Tur 148 §3 |
 | **Tur 148 — W-11 uygulandı** (DeepSeek; dört okuyucu + Claude): *"The 50 kg reference geometry (Section 8)"* — gövdede ilk 50 kg. W-8 kapandı | Tur 147 §3 |

@@ -48,8 +48,13 @@ DEGISTI = {
         "If the pairs are speed-trimmed, that cancellation is no longer exact (below).",
     "The comparison is between unlike ratings: a peak demand held through the vertical phases, a bench average over minutes, a continuous rating, and a design assumption.":
         "The comparison is between unlike ratings: a peak demand held through the vertical phases, a bench average over minutes, a continuous rating, a design assumption, and a literature figure the study cites without its rating.",
+    # Tur 165 (besimiz evet): Bolum 7'nin listesi eke gitti; ona isaret eden iki cumle S14'u de adlandiriyor
+    "Whether this configuration's descent profile enters that region, and at what rate of descent, is an open question in Section 14 rather than an answered one here.":
+        "Whether this configuration's descent profile enters that region, and at what rate of descent, is an open question in Supplement S14 rather than an answered one here.",
+    "Section 14 lists what the paper leaves open.":
+        "Section 14 and Supplement S14 list what the paper leaves open.",
 }
-ONCE = {2: ("d2ca894", "68c1c39"), 9: ("eb22a83", "0345c45", "d88435f", "64e4005"), 14: ("9f4cfcb", "d15656a"), 3: ("46b9628", "68c1c39"), 4: ("8c4d712", "c22b1c7"), 10: "024005c", 11: "65ae7de", 12: ("c9fcdd7", "871a143"), 13: ("c9fcdd7", "d88435f"), 1: ("e4b6847", "8dd7a2f", "c75ea70", "c4d44ee"), 5: ("fc646cb", "c75ea70", "c4d44ee"), 6: ("38d5324", "29d8c07", "c4d44ee", "d88435f", "0586e21"), 7: ("555b73b", "d8d5439", "d88435f"), 8: ("0b4b24f", "96ff92f", "d88435f", "0586e21", "d15656a", "9c22b58"), 15: ("978aef9", "64e4005")}   # Tur 157: 7.3 eke tasima oncesi (871a143) ve toplu kesim oncesi (d88435f)   # kisaltmadan onceki commit
+ONCE = {2: ("d2ca894", "68c1c39"), 9: ("eb22a83", "0345c45", "d88435f", "64e4005"), 14: ("9f4cfcb", "d15656a", "f63920c"), 3: ("46b9628", "68c1c39"), 4: ("8c4d712", "c22b1c7"), 10: "024005c", 11: "65ae7de", 12: ("c9fcdd7", "871a143"), 13: ("c9fcdd7", "d88435f", "f63920c"), 1: ("e4b6847", "8dd7a2f", "c75ea70", "c4d44ee"), 5: ("fc646cb", "c75ea70", "c4d44ee", "f63920c"), 6: ("38d5324", "29d8c07", "c4d44ee", "d88435f", "0586e21"), 7: ("555b73b", "d8d5439", "d88435f"), 8: ("0b4b24f", "96ff92f", "d88435f", "0586e21", "d15656a", "9c22b58"), 15: ("978aef9", "64e4005", "f63920c")}   # Tur 157: 7.3 eke tasima oncesi (871a143) ve toplu kesim oncesi (d88435f)   # kisaltmadan onceki commit
 
 
 def govde(s):

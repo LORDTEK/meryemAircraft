@@ -40,7 +40,7 @@ mekanizma iddiası bu sayfadaki hiçbir kaleme bağlı değil — bu **denetlend
 
 ## What does not close
 
-Section 10 closed the sizing loop on a declared package and said that whether an aircraft can be built to it is a different question. **This section is where that question is answered, and for the first item the answer is no: the required store performance is not demonstrated by the sources consulted here.** Section 15 calls this section a debt: questions the paper does not answer and that better evidence would. It is stated in that order — first the obstacle that is known, then what is not known.
+Section 10 closed the sizing loop on a declared package and said that whether an aircraft can be built to it is a different question. **This section is where that question is answered, and for the first item the answer is no: the required store performance is not demonstrated by the sources consulted here.** It is stated in that order — first the obstacle that is known, then what is not known.
 
 ### First, the known obstacle: the energy store
 
@@ -76,6 +76,7 @@ Eighteen further questions are open, and Supplement S14 lists each with what it 
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 166 — C2 uygulandı** (Tur 165: dört okuyucu + Claude): açılıştaki *"Section 15 calls this section a debt: questions the paper does not answer and that better evidence would."* silindi — Adım 15 (Bölüm 8) borç/kapsam ayrımını kendisi söylüyor. Eski paragraf Ek S14'te tam. Bu bölüme işaret eden altı cümle yeniden okundu (R1; biri okuyuculara soruldu) | `paper/v8/supplement.md` S14 |
 | **Tur 139 — S-60, R (dört okuyucu + Claude):** liste maddesi *"closed-loop hover control, including …"* → *"closed-loop attitude control in hover and in cruise, including …"*; S14 satırı aynı kapsamla. Liste 18 maddede; *"None of these is a small correction"* ve *"Two of them"* tutuyor. Ayrıca S14'te: R-9 (depolama satırı), N3 (b) (satır bilinen engelin parçası), N4 (yer rüzgârı bedeli) | `v8-source-defects.md` S-60, R-9; `drafts/not-classification.md` |
 | **Tur 134 — S-58 (b) uygulandı (dört okuyucu + Claude):** liste 16 → 18: *"the tip pairs' shaft power when commanded off the free-wheeling state in cruise"* (durdurulmuş durumdan sonra) ve *"the variable-pitch counterfactual"* (pala ailesi seçiminden sonra). S14'e iki satır, oylanan *"what would settle it"* metinleriyle. Borç izi güncellendi (`drafts/15-maps.md`); gövdede sayı geçmiyor | S-58 |
 | **Tur 110 (Tur 109: dört okuyucu + Claude):** J1 "…the answer is no: the required store performance is not demonstrated by the sources consulted here" (ChatGPT; borç/kapsam koruması); D4 "the store figures available" (Qwen; P9'un beş puanlamasıyla sayı tutarlılığı). Önceki biçimler Ek S14'teki özgünde | Tur 109 metni §4 |

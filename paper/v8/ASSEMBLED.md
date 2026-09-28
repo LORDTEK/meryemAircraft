@@ -366,7 +366,7 @@ attitude authority are drawn from the same propellers and compete for it.
 **The vertical descent has not been analysed.** A rotor descending into its own wake can enter
 the vortex ring state, in which thrust becomes erratic and adding power makes matters worse.
 Whether this configuration's descent profile enters that region, and at what rate of descent,
-is an open question in Section 7 rather than an answered one here.
+is an open question in Supplement S14 rather than an answered one here.
 
 **Neither has the landing transition.** The forward rotation and the reverse are not symmetric
 and must not be assumed to be. Going out, the rotation builds dynamic pressure while it turns,
@@ -865,15 +865,6 @@ The basis is not symmetric: the lift-plus-cruise layout carries a lift-to-drag r
 
 **The two architectures trade one charge against another**: closed under a fixed fuel fraction, this configuration is 27 to 30 percent lighter, and the lift-plus-cruise layout cruises at a lift-to-drag ratio of 11.66 and 15.72 against 8.79 and 10.82, with a propeller at 0.80.
 
-Range of the lift-plus-cruise layout relative to this configuration:
-
-| Closure (Section 6.1) | Fixed fuel fraction | Fixed fuel mass | Fixed take-off mass |
-|---|---:|---:|---:|
-| A | +67.8 % | +40.2 % | +1.1 % |
-| B | +55.3 % | +27.5 % | **−13.0 %** |
-| C | +83.9 % | +53.5 % | +7.3 % |
-| D | +70.2 % | +40.1 % | **−6.5 %** |
-
 **The lift-plus-cruise layout is 55 to 84 percent ahead under the first contract, 28 to 54 percent under the second, and between 13 percent short and 7 percent ahead under the third; the shift from first to third is 67 to 77 percentage points at every closure**, at the declared lift-group fraction, and always toward the lighter aircraft. **The sign itself changes inside the envelope under the third contract**: this configuration is ahead at the two closures with the higher-efficiency blade family and behind at the two with the lower. **A statement of which architecture has the longer range, made without its contract, would therefore be a statement about the contract.**
 
 #### Against the tilting layout: a bound, not a ranking
@@ -896,7 +887,7 @@ Section 2.1 predicted that such a ranking will move when the sizing rule changes
 
 ## 7. What does not close
 
-Section 6.1 closed the sizing loop on a declared package and said that whether an aircraft can be built to it is a different question. **This section is where that question is answered, and for the first item the answer is no: the required store performance is not demonstrated by the sources consulted here.** Section 8 calls this section a debt: questions the paper does not answer and that better evidence would. It is stated in that order — first the obstacle that is known, then what is not known.
+Section 6.1 closed the sizing loop on a declared package and said that whether an aircraft can be built to it is a different question. **This section is where that question is answered, and for the first item the answer is no: the required store performance is not demonstrated by the sources consulted here.** It is stated in that order — first the obstacle that is known, then what is not known.
 
 ### First, the known obstacle: the energy store
 
@@ -975,7 +966,7 @@ The mechanism claim has a price this work does not compute. **This configuration
 
 ### What the claims that remain amount to
 
-Section 7 lists what the paper leaves open. What the paper offers is **a configuration sized to combine runway-independent vertical operation with wing-borne cruise efficiency, arranged to do so with no mechanism that reorients a propulsor, and an account of what the combination costs.**
+Section 7 and Supplement S14 list what the paper leaves open. What the paper offers is **a configuration sized to combine runway-independent vertical operation with wing-borne cruise efficiency, arranged to do so with no mechanism that reorients a propulsor, and an account of what the combination costs.**
 
 Each half of that has a named opponent and neither half is a record. **Nor is the configuration claimed to be without precedent**: Section 1 sets out what is already established, including uncrewed tail-sitters, tail-sitters without control surfaces, coaxial contra-rotating tail-sitter propulsion, and blended-wing-body tail-sitters. **The contribution is the architecture, and the paper presents it as the combination, the consequences of the choices inside it, and the accounting** — which is what Sections 5.1 and 5.2 describe and what Section 6.2 prices.
 

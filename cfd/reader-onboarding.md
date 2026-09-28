@@ -214,14 +214,14 @@ The body is about **26 000 words**, and the journal's working target is **about 
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 165.**
+**Round 166.**
 
 | Block | State |
 |---|---|
 | Stages (the author, Round 129) | present stage: **compression by finding**; merges and shortenings continue |
 | Structure | 1 · 2.1–2.3 · 3 · 4 · 5.1–5.2 · **6** calculations (6.1–6.4) · **7** What does not close · **8** Four axes (the conclusion) |
-| Closed (Round 165) | 5.2 above/below and Section 7 (Round 164) confirmed; Cut A applied (−22) |
-| **Open (Round 165)** | C1 (6.4's A–D table to S13), C2 (Section 7's debt sentence), C3 (6.2's list to one sentence) — vote; R-a, R-b — pointers into Section 7 repaired after its list moved to S14 (Claude's receipt defect); **2.3 draft 1 282 → 1 004** (the author's request; 15 protected sentences and the isolation pair kept) |
+| Applied (Round 166), for confirmation | C1: 6.4's A–D table → head of S13 (the prose keeps every range, the shift and the sign change); C2: Section 7's debt sentence deleted; R-a, R-b: pointers into Section 7 now name Supplement S14 |
+| **Open (Round 166)** | DeepSeek's pointer sentence for 6.4 (vote); **C3′**: 6.2's list kept, only *"Section 7 lists them"* → *"Supplement S14 lists them"* (ChatGPT's scope objection to C3 upheld); **2.3 revised draft 1 282 → 1 095**: the weight-breakdown sentence restored verbatim with its 99 lb, and the bridge sentence restored verbatim |
 | Contribution | Sections 1, 5.1 and 8 name one contribution, the architecture |
 | Tip pairs in cruise (the author's decision) | uncommanded state: free-wheeling at zero shaft torque (5.2); shaft power of commanded departures not computed |
 

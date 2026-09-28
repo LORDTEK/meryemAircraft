@@ -709,3 +709,17 @@ Birleştirici: başlık yoksa Adım 8 bölünmez (dağıtılmış seçenek için
 - 2.3 taslağı (yazarın isteği): 1 282 → 1 004; 15 korunan cümle ve yalıtım çifti yerinde; tartım dökümü (580/99 lb) niteleyicisiyle birlikte S4'e. Daha derini (~500) ancak
   korunan cümlelerin yazar kararıyla S4'e gitmesiyle — önermedim.
 - Taslaklar `paper/v8/drafts/r165/`; üreticiler `paper/build/v8_round165_cuts.py`, `v8_round165_23.py`.
+
+## Tur 165 cevapları — C1, C2, R-a, R-b uygulandı (beşimiz); C3 ve 2.3 onarıldı, yeniden oyda
+
+- **Uygulandı (dört okuyucu + Claude):** C1 — 6.4'ün A–D tablosu Ek S13'ün başına (S13'ün "As above" satırı artık onu gösteriyor); C2 — Bölüm 7'nin "debt" cümlesi
+  (eski paragraf S14'te); R-a — Bölüm 3 "open question in Supplement S14"; R-b — Bölüm 8 "Section 7 and Supplement S14 list what the paper leaves open". Gövde ≈ −90 kelime
+  ve bir tablo. Değişen bölümlere (6.4, 7) işaret eden cümleler yeniden okundu: 6.4'e üç, 7'ye altı, hepsi R1; Bölüm 8'in "Those are in Section 7" cümlesi okuyuculara soruldu.
+- **C3 uygulanmadı — ChatGPT haklı:** yeniden yazım "of them" ile sıralamayı sekiz adlı maliyetten S14'ün 18 sorusuna genişletiyordu (benim hatam). ChatGPT'nin iki onarımı
+  da tutmuyor (listelenen bir şey ve "yukarıda belirlenen" bir şey kalmıyor). **C3′ (önerim):** liste kalır, yalnız "Section 7 lists them" → "Supplement S14 lists them";
+  sekiz maliyetin sekizi de S14 satırlarında (R1). Kısaltma yok; yanlış işaretçi onarımı.
+- **2.3:** Grok ve DeepSeek haklı — taslak bir bulguyu (NASA ağırlık dökümü aktarım özelliğiyle tutarlı) gövdeden çıkarıyordu. Ama ikisinin geri koyma biçimi de freni
+  bozuyor (iddia gövdede, 99 lb ekte; Tur 155'te beşimiz reddetmiştik). **Önerim:** özgün döküm cümlesi 99 lb'siyle aynen geri; DeepSeek'in yankı cümlesi dışarıda.
+  ChatGPT köprü konusunda haklı (mekanizma cümlesi, Tur 104 kuralı — benim hatam), ama "expected sign" kaynaktan güçlü ve mekanizmayı düşürüyor → köprü aynen geri.
+  Gözden geçirilmiş taslak 1 282 → 1 095 (`paper/v8/drafts/r166/04-draft.md`, üretici `paper/build/v8_round166_23.py`); 15 korunan cümle ve yalıtım çifti yerinde.
+- **Kayıt açığım:** `v8-shortening-consensus.md` Tur 162–165 satırlarını taşımıyordu; bu tur eklendi.

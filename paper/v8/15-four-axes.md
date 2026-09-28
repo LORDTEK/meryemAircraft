@@ -67,7 +67,7 @@ The mechanism claim has a price this work does not compute. **This configuration
 
 ### What the claims that remain amount to
 
-Section 14 lists what the paper leaves open. What the paper offers is **a configuration sized to combine runway-independent vertical operation with wing-borne cruise efficiency, arranged to do so with no mechanism that reorients a propulsor, and an account of what the combination costs.**
+Section 14 and Supplement S14 list what the paper leaves open. What the paper offers is **a configuration sized to combine runway-independent vertical operation with wing-borne cruise efficiency, arranged to do so with no mechanism that reorients a propulsor, and an account of what the combination costs.**
 
 Each half of that has a named opponent and neither half is a record. **Nor is the configuration claimed to be without precedent**: Section 1 sets out what is already established, including uncrewed tail-sitters, tail-sitters without control surfaces, coaxial contra-rotating tail-sitter propulsion, and blended-wing-body tail-sitters. **The contribution is the architecture, and the paper presents it as the combination, the consequences of the choices inside it, and the accounting** — which is what Sections 7 and 8 describe and what Section 11 prices.
 
@@ -79,6 +79,7 @@ The configuration is arranged to change regime by rotating the airframe rather t
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 166 — R-b uygulandı** (Tur 165: dört okuyucu + Claude): *"Section 14 lists what the paper leaves open."* → *"Section 14 and Supplement S14 list what the paper leaves open."* — liste S14'te, Bölüm 7 engeli ve açık soruların varlığını söylüyor | `paper/v8/supplement.md` S14 |
 | **Tur 160 — D evresi: Adım 9 (6.2) bu adıma birleşti** (yazarın önerisi; dört okuyucu + Claude; E11 yazar onayı): 6.2 + 9 → tek Bölüm 9; yalnız taşıma + silme; iki bulgu yan cümlesi tabloya; *"Removing those eight"* silindi; sözleşme cümlesi Adım 10'un başına; "By construction" tanımı Ek S9'a (E11). Eski iki gövde Ek S9'da tam | Tur 159 §2–3 |
 | **Tur 150 — R-11 uygulandı** (dört okuyucu + Claude): *"Section 14 lists what would settle the rest."* → *"Section 14 lists what the paper leaves open."* — X-6 silinince *"the rest"* öncülsüz kalmıştı. X-6 kapandı | Tur 149 §3.3 |
 | **Tur 149 — X-6 uygulandı** (dört okuyucu + Claude; **yazar onayladı**): *"The loop closes; the aircraft is not shown to."* Adım 15'ten silindi, Adım 14'te kalıyor (`v8_stale.py` YALNIZ). **R-11:** silme sonrası *"Section 14 lists what would settle the rest"*ta *"the rest"* öncülsüz kaldı — uygularken yakaladım; onarım oyda | Tur 148 §3; Tur 149 §3 |
