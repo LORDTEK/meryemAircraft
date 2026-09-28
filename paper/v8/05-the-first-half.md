@@ -53,7 +53,7 @@ giving the same structure the control duty as well.
 **And the stance base is a parameter rather than a constraint.** Moving the frame ends further
 outboard widens the base against ground wind without altering the planform, the propulsion or
 the control architecture — and because the same displacement lengthens the control moment arm,
-both benefits arrive from one change. The 50 kg reference geometry is one point on that trade; an
+both benefits arrive from one change. The 50 kg reference geometry (Section 8) is one point on that trade; an
 operator with a stronger ground-wind requirement can take another.
 
 ### What is sized, and what is not demonstrated
@@ -125,6 +125,7 @@ section**, and the two are combined in Section 7.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 148 — W-11 uygulandı** (DeepSeek; dört okuyucu + Claude): *"The 50 kg reference geometry (Section 8)"* — gövdede ilk 50 kg. W-8 kapandı | Tur 147 §3 |
 | **Tur 147 — W-8 uygulandı** (bütün okuma; dört okuyucu + Claude): *"leaving that axis to the strip."* → *"…to a strip on the lower surface, the only moving aerodynamic surface."* Oylanan biçimdeki ikinci *(Section 8)* cümlede zaten bir işaretçi olduğu için çıkarıldı (**R-10**, göndermeden önce yakalandı) | Tur 146 §5; Tur 147 §1 |
 | **Tur 126 — S-50 onarımı (R, kapalı adıma tarihli; dört okuyucu + Claude):** *"so the primary propulsor supplies"* → *"so the primary propulsor — the nose pair — supplies"*. Özgün cümle Ek S5'in dondurulmuş kopyasında (Grok P118) | Tur 125 metni §3.6 |
 | **Tur 121 — uzunluk geçişi (yazar: Adım 5 bu kez çoğunlukla; sonuç zaten oybirliği).** E2 (*"'Vertical take-off' is a weaker requirement…"*) Ek S5'e (dört okuyucu + Claude; ChatGPT görüş değiştirdi); N1 uygulama adları yan cümlesi çıktı (Adım 1 adlandırıyor; Grok, DeepSeek, Qwen + Claude, ChatGPT oy vermedi); **S-47** *"the same four propellers"* → *"the same propellers"* (dört uç çifti eşeksenli = sekiz pervane). E1, E3 ve DeepSeek'in ek taşımaları **kalır** (DeepSeek geri çekti). Kalkış bağlaşımının son cümlesi korunan; *"Not demonstrated"* başlık korunan, *"and the list is not short"* ses işareti (yazara). Özgün adım Ek S5'te tam | Tur 120 metni §6, §8 |

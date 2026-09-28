@@ -73,7 +73,7 @@ boşluğa duyarsız. `G` = Grok, `D` = DeepSeek, `C` = ChatGPT, `Q` = Qwen, `K` 
 | 10 | These are the same configuration at four closed masses rather than four configurations | G |
 | 10 | So the zero-altitude-loss result is a property of the model that produced it. | G |
 | 10 | That spread is itself the finding. | G |
-| 10 | Whether a real aircraft loses 5.4 m, more, or less is not settled by anything here. | G |
+| 10 | Whether a real aircraft loses 5.4 to 6.6 m, more, or less is not settled by anything here. | G |
 | 10 | If no fixed point exists, the declared sizing package does not close. | D |
 | 10 | Within the finite-moment dynamic model, with the aerodynamic moment set to zero, the manoeuvre costs altitude. | D |
 | 10 | It does not establish that the package exists. | D |

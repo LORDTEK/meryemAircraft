@@ -117,3 +117,11 @@ Bölüm 4) — evet önerdim; W-12, G-1 — değişiklik yok önerdim.
 | X-5 | 6.1 (Adım 8) | W9 | *"a fourth duty falls on the strip"* — üç görev sayılamıyor | S |
 | X-6 | 8 ↔ 9 | W8 | yankı (A-5) | S |
 | L-9 | 8 | W2 | *"the answer is no:"* iki noktaya kadar "yapılamaz" okunuyor | S |
+
+### Tur 148 — durum
+
+**KAPANDI (dört okuyucu + Claude teyit etti):** W-1, W-3, W-4, W-6, W-8, W-9, W-10, L-1, L-4, L-5, L-7; W-12, G-1 değişiklik yok; L-9 yalnız kayıt.
+**Uygulandı, teyide:** W-5, W-7 (a′), W-11, W-13, L-8, X-1, X-2, X-3, X-4; Q-P1 (`v8_assemble.py` bölünmüş adım listesi, 13 öğe, hepsi R1).
+**Açık:** W-2 (yazar: *"kendi aranızda 2 tur daha konuşun"* — Tur 148 birinci tur; Q1 virgül, Q2 fiil çifti, Q3 *"that sentence"* göstericisi — **yeni
+kusur aday, W9**, Q4 5.1'de kalsın mı); X-5 (DeepSeek'e geri); X-6 (oybirliği, iki kopya da korunan → **yazara soruldu**); L-3 (sekiz satırlık ad önerisi).
+Okuyucu kayıtları: C-147-1…3, D-X7…D-X9, Q-X7, Q-X8 — yalnız kayıt.

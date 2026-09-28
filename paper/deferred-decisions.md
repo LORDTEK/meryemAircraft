@@ -431,3 +431,8 @@ and the price …"* — dört okuyucu çatışmayı doğruladı. Adaylar: (i) be
 Qwen evet; ChatGPT: "produces" yeni yüklem — haklı); (ii) ChatGPT'nin sırası, noktalı virgülle: *"What this paper contributes is the architecture; the
 combination, the condition its primary propulsor is designed to satisfy, and the price the configuration pays for pursuing it, are how that contribution is
 presented and priced."* Benim önerim (ii). **Yazar seçer.**
+
+## Tur 148 — yazarın talimatı: W-2 okuyucular arasında 2 tur daha
+
+Yazar (Tur 148): *"w2'yi kendi aranızda 2 tur daha konuşun."* → Tur 148 birinci tur (Q1 virgül, Q2 "presented and priced" koşula uyar mı, Q3 *"that sentence"*
+göstericisi, Q4 5.1'de kalsın mı), Tur 149 ikinci tur; ardından yazara. **X-6** (yankıyı Bölüm 9'dan silmek; iki kopya korunan) yazara ayrıca soruldu.

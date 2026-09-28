@@ -214,16 +214,17 @@ The body is about **26 000 words**, and the journal's working target is **about 
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 147.**
+**Round 148.**
 
 | Block | State |
 |---|---|
-| Stages (the author, Round 129) | each stage is a pass through the whole text; the next stage's method is chosen when the present one is complete. Present stage: recomposition into result sentences, now in its **whole reading** |
+| Stages (the author, Round 129) | each stage is a pass through the whole text; the next stage's method is chosen when the present one is complete. Present stage: recomposition into result sentences, now in the **reconciliation** after the whole reading |
 | Length | **not decided now** (the author): after this stage completes |
 | Tip pairs in cruise (the author's decision) | uncommanded state: free-wheeling at zero shaft torque (Section 6.1 of the assembled view); shaft power of commanded departures not computed (Section 6.1; Section 8) |
-| Scope freeze (F-1, merged wording, Round 147) | no new rule, field or audit type unless it comes with a named defect already found in the present body text; everything else to `paper/v8-parking.md`; adopted checks stay in force, including during the reading |
-| The whole reading | **first half (Sections 1–5):** eleven repairs applied and shown for confirmation; W-2 (the contribution sentence) with the author; W-5, W-6 (second clause), W-7, L-8 returned. **Second half (Sections 6–9):** quoted in full in Round 147, baseline recorded; my findings X-1 to X-6 |
-| After the reading | reconciliation of both halves; then the citation map (H-2) and the pre-submission list |
+| Scope freeze (F-1, merged wording) | no new rule, field or audit type unless it comes with a named defect already found in the present body text; everything else to `paper/v8-parking.md` |
+| The whole reading | **complete (both halves).** First-half repairs closed; Round 147–148 repairs applied (transition loss now 5.4–6.6 m across three reference profiles, and more) and awaiting confirmation |
+| Open | **W-2 (the contribution sentence): the author asked the readers to discuss it for two more rounds (Round 148 is the first)**; X-5; X-6 (with the author: both copies protected); L-3 (one name for the tip pairs) |
+| After this | the citation map (H-2) and the pre-submission list |
 
 **Every step has now been recomposed once.** Recomposition into result sentences took Steps 10–11 to about 40 % of their length,
 Steps 12–14 to 57–83 %, and the framework and architecture to 80–95 %, because definitions, protected sentences and their evidence

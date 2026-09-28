@@ -2385,6 +2385,11 @@ the aircraft but the trajectory the aircraft flies while it is being turned**, s
 of a reference the rotational dynamics do not admit moves the aircraft further from the path it
 can actually fly, not closer.
 
+*Correction (Round 148, X-1; four readers + Claude).* The loss is not unchanged across the profiles; it persists across them. Re-run of
+`aero/transition_dynamics.py` (50 kg design, t_r = 2 s, M = 23.0 N·m, 5 m s⁻¹ climb entry, zero aerodynamic moment): **linear 5.43 m,
+smooth 6.33 m, bang-bang 6.57 m**. With C_D0 0.0285 or 0.0381 and e 0.817 instead of the assumed 0.0248 and 0.85, each moves by at
+most 0.02 m. The body reports 5.4 to 6.6 m. The paragraph above is kept as frozen text.
+
 **So the zero-altitude-loss result is a property of the model that produced it.** What replaces
 it is not a prediction: the aerodynamic pitching moment that would make it one is precisely the
 quantity Section 14 reports as **not predicted reliably** — the moment exists; what is missing is

@@ -3193,6 +3193,8 @@ koşulunda **5,4 m** kaybediyor; kinematik model sıfır diyor.
 
 Üç kontrol bunu yapaylıktan ayırıyor:
 - Üç referans profilinde de aynı (5,4 / 6,6 / 6,3 m) → profil seçimi değil.
+  **Düzeltme (Tur 148, X-1):** "aynı" = kayıp her profilde var; sayılar aynı değil. Adlarıyla yeniden koşu: **doğrusal 5,43 / yumuşak 6,33 /
+  üçgen (bang-bang) 6,57 m**; C_D0 0,0285 ya da 0,0381 (e 0,817) ile en çok 0,02 m fark. Gövde artık 5,4–6,6 m diyor.
 - Kontrol momenti **hiç doymuyor** → otorite eksikliği değil.
 - Kazanç yükseltilince **büyüyor**, küçülmüyor: 6,6 → 8,7 → 17,2 m → izleme
   gecikmesi değil.

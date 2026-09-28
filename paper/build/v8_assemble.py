@@ -155,6 +155,30 @@ print("Adim 8 bolunmesi: envanter %d paragraf + 'tip pairs … fail' -> 5.2; kal
 print("EKLEM (%d) — kaynakta degistirilmedi, gosterilecek:" % len(eklemler))
 for a, e, y in eklemler:
     print("   Adim %2d: %-28s -> %s" % (a, e, y))
+# Q-P1 (Tur 148; W-1'e bagli, dort okuyucu + Claude): bolunmus adima (Adim 8) giden ciplak atiflar ve
+# 5.2 / 6.1 icindeki numarasiz isaretciler INSAN OKUSUN diye listelenir; hangi alt bolumu kastettigini
+# betik bilemez. --sina-bolunmus: W-1'in "(below)"unu 5.2'ye geri koyar ve listede gorundugunu sinar.
+def bolunmus_liste(metin):
+    out = []
+    for n in range(1, 16):
+        for m in re.finditer(r"[^.]*\bSections? (?:\d+(?:, | and ))*8(?!\d|\.\d|, \*)[^.]*\.", govde(n)):
+            out.append(("Adim %d -> 5.2" % n, " ".join(m.group(0).split())[:110]))
+    for bas, son in (("### 5.2 ", "## 6."), ("### 6.1 ", "### 6.2 ")):
+        b = metin[metin.index(bas):metin.index(son, metin.index(bas))]
+        for m in re.finditer(r"[^.]*\b(above|below)\b[^.]*\.", b):
+            out.append((bas.strip("# "), " ".join(m.group(0).split())[:110]))
+    return out
+
+
+if "--sina-bolunmus" in sys.argv:
+    metin_s = metin.replace("that cancellation is no longer exact (Section 6.1)", "that cancellation is no longer exact (below)")
+    yakaladi = any("no longer exact (below)" in x for _, x in bolunmus_liste(metin_s))
+    print("  %s  --sina-bolunmus: W-1 '(below)' geri kondu, liste %s" % ("ok" if yakaladi else "!!", "gosterdi" if yakaladi else "GOSTERMEDI"))
+    sys.exit(0 if yakaladi else 1)
+bl = bolunmus_liste(metin)
+print("BOLUNMUS ADIM ISARETCILERI (%d) — insan okusun:" % len(bl))
+for yer, c in bl:
+    print("   %-16s %s" % (yer, c))
 kalan_atif = set(re.findall(r"Sections? (\d+(?:\.\d)?)", metin))
 gecerli = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "2.1", "2.2", "2.3", "5.1", "5.2", "6.1"} | {"7.%d" % i for i in range(1, 5)}
 print("cozulmeyen atif:", sorted(kalan_atif - gecerli) or "yok")

@@ -42,7 +42,7 @@ angle and the longitudinal stability are one design variable seen from two direc
 **Five propeller stations, ten rotors:** every station is a coaxial counter-rotating pair. The reason is narrow: **reaction torque.** A single propeller applies to the airframe a
 torque equal and opposite to the one it applies to the air. It acts about the propeller axis,
 which on this aircraft is the body's longitudinal axis — the roll axis in body terms — in both
-regimes, and it must be opposed continuously, either by a control surface, which costs drag, or by the reaction torque of other rotors run at a different speed, which costs a control channel. A counter-rotating pair does not produce it. *(This paper fixes body-axis naming throughout. That
+regimes, and it must be opposed continuously, either by a control surface, which costs drag, or by the reaction torque of other rotors run at a different speed, which costs a control channel. A torque-balanced counter-rotating pair does not produce it. *(This paper fixes body-axis naming throughout. That
 axis is the roll axis in both regimes; what changes is its orientation relative to the earth — it
 stands vertical in the hover attitude, where a moment about it appears as a change of heading, and
 horizontal in cruise, where it appears as a bank. The two conventions are not mixed here.)*
@@ -181,6 +181,7 @@ brake or a lock rather than motor holding torque, the count of Section 7 would g
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 148 — L-8 uygulandı** (Grok'un bölmesi; dört okuyucu + Claude): *"A counter-rotating pair does not produce it."* → *"A torque-balanced counter-rotating pair…"*; açısal momentum cümlesi değişmedi (tork dengesi ile eşit devir aynı durum diye gösterilmedi — 6.1 askıda artık diyor). W-1, L-4, L-5 kapandı | Tur 147 §2 |
 | **Tur 147 — W-1 (2), (3), (a); L-4; L-5 uygulandı** (bütün okuma; dört okuyucu + Claude): eksen notu 6.1'den *The propulsion* paragrafının sonuna (oylanan yer *"That axis"*ı öncülsüz bırakıyordu; teyide); *"(below)"* → *"(Section 8, *What this inventory does not settle*)"*; *"note below"* → *"note above"*; 6.1'de *"(Section 8, *The propulsion*)"*; L-4 *"described"* → *"specified"*; L-5 *"every part of the planform carries payload and produces lift"* → Adım 6'nın cümlesi (birebir yineleme; teyide). `v8_assemble.py` BOLUNMUS eşlemesi | Tur 146 §5; Tur 147 §1 |
 | **Tur 139 — S-59 (a), R (dört okuyucu + Claude):** *"The stability of this configuration is not airframe-borne — it is produced by"* → *"… is not airframe-borne alone — the rest is produced by"*. Önceki paragraf kaportayı yön kararlılığı için boyutluyor; Adım 1 *"need not come from the airframe alone"*. Özgün cümle Ek S8'in dondurulmuş kopyasında; ifade emekli | `v8-source-defects.md` S-59 |
 | **Tur 133 — kumandalı sapmaların şaft gücü (Qwen P1; dört okuyucu + Claude, ChatGPT Adım 14'ten döndü):** S-57 cümlesinin ardına *"The shaft power of commanded departures from that state, for attitude moments in cruise, is not computed."* Başlık *"only one of them is physically closed"* kaldı (Grok P126, oybirliği) | S-57 |

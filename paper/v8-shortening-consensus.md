@@ -675,3 +675,9 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | W-7 | (a) | (b) | (a′) Bölüm 3 | (a) | (a′) | **Geri soruldu (Tur 147)** — benim işaretçim yanlıştı |
 | L-8 | Grok'un bölmesi | kayıt | değişiklik yok | durum adı | Grok | **Geri soruldu (Tur 147)** |
 | İkinci yarı: X-1…X-6, L-9; okuyucu adayları W-11, W-13, G-1, W-12, Q-P1 | ? | ? | ? | ? | önerdi | **Tur 147 oylaması** |
+| Birinci yarının 11 onarımı teyit | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI (Tur 148)** |
+| W-5 yalnız "continuously"; W-6 ikinci yan cümle kalsın; W-7 (a′); L-8 Grok'un bölmesi; W-11; W-13; X-1–X-4; Q-P1 daraltılmış | ✓ | ✓ | ✓ | ✓ | ✓ | **Uygulandı (Tur 148)**; teyide |
+| W-2 ChatGPT'nin sırası, noktalı virgül | ✓ | ✓ | ✓ | ✓ | ✓ | **Yazar: "kendi aranızda 2 tur daha konuşun"** — Tur 148 birinci tur (Q1–Q4) |
+| X-5 "another duty" | ✓ | ✓ | ✗ (üç görev sayılabilir) | ✓ | ✓ | **Geri soruldu (Tur 148)** |
+| X-6 yalnız Bölüm 8'de kalsın | ✓ | ✓ | ✓ | ✓ | ✓ | **Yazara soruldu** (iki kopya korunan) |
+| L-3 ad birliği (sekiz satır) | ? | ? | ? | ? | evet | **Tur 148 oylaması** |

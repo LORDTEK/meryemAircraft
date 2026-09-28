@@ -44,7 +44,7 @@ The engine is sized by cruise, **3.54 to 5.17 kW** of shaft rating, against a ho
 
 ### What the closure does not contain
 
-Section 10's convergence does not cover the cost of declining the reaction-torque channel, the sizing of the strip's actuation, the allocation of the take-off margin against attitude authority, the landing transition, the vortex ring state, closed-loop hover control, engine installation, or rotor–structure and rotor–wing interference; **none of these is a ledger entry, and Section 14 lists them.** **The first and the last are the two that would most change the numbers above if they were computed.**
+Section 10's convergence does not cover the cost of declining the reaction-torque channel, the sizing of the strip's actuation, the allocation of the take-off margin against attitude authority, the landing transition, the vortex ring state, closed-loop attitude control in hover and in cruise, engine installation, or rotor–structure and rotor–wing interference; **none of these is a ledger entry, and Section 14 lists them.** **The first and the last are the two that would most change the numbers above if they were computed.**
 
 **Every one of the charges above belongs to one scale**: the four closures do not establish how the three charges behave as the aircraft changes size, which Section 12 asks, or what happens to the comparison when the sizing contract changes, which Section 13 asks.
 
@@ -54,6 +54,7 @@ Section 10's convergence does not cover the cost of declining the reaction-torqu
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 148 — X-4 uygulandı** (dört okuyucu + Claude): *"closed-loop hover control"* → *"closed-loop attitude control in hover and in cruise"* — S-60 onarımı (Tur 140) buraya ulaşmamıştı; emekli ifade listesine eklendi | Tur 147 §4 |
 | **Tur 131 — S-53 (B), R (dört okuyucu + Claude):** Fatura 2'ye, *"… if the vertical phase did."*dan sonra: *"No stopped-state counterfactual was computed. The eight tip discs stopped edge-on at a controlled azimuth are estimated at ΔC_D0 = 0.0008, against the computed free-wheeling 0.0154 (the estimate is an area-and-coefficient calculation, Supplement S11), but controlling the azimuth takes an indexing mechanism — a class Section 7 counts — and sizing it for eight small discs, charging its mass and its failure modes, and re-solving the loop has not been done."* Kestirim satırları Ek S11'de | S-53 |
 | **Tur 111 — S-40** (Tur 110; dört okuyucu + Claude): J18 özgün cümlesine birebir döndü — "Section 2 quotes a wind-tunnel finding that … *"always predicts higher lift and lower drag than were experimentally observed"*; …". Tur 105'te J diye oylattığım "Section 2's wind-tunnel source found…" silme değildi ve bulguyu Bacchini'ye bağlıyordu (benim hatam) | Tur 110 metni §5 |
 | **Tur 106 — Adım 11 yeniden kuruldu** (Tur 103–105; dört okuyucu + Claude, R cümlelerine veto yok; R15 "occupies" ve J18 teyitli): `drafts/11-recomposed.md` uygulandı. Kalem kalem sürükleme dökümü ve korunan "No line item at the adverse end…" **birlikte Ek S11'de — kural (iii), yazar kararı (E9, Tur 106)**. R15 korunur. Özgün gövde Ek S11'de tam | `drafts/11-recomposed.md` §3 iz |

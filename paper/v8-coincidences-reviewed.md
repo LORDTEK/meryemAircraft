@@ -22,6 +22,7 @@ Yeni bir çift eklenmeden önce iki bağlam da okunur.
 | 3.2 | 2 | 3.2, örnek araç askı/seyir güç oranı | 12 | 2.4–3.2, dört kapanışta askı / motor oranı (Adım 11'in) |
 | 0.80 | 11 | referans tasarımın ilk boyutlandırmasında varsayılan η_p | 13 | iki rakibin varsayılan η_p'si — aynı köken, aynı durum (varsayım); Tur 139 |
 | 5.4 | 6 | helikopter L/De alt ucu | 10 | geçişte irtifa kaybı, m — birimler farklı; Tur 139 |
+| 5.4–6.6 | 10 | geçişte irtifa kaybı, m, üç referans profili (Tur 148, X-1: 5.4 artık aralığın alt ucu) | 6 | 5.4 helikopter L/De alt ucu — birimler farklı; 6.6 başka yerde geçmiyor |
 | 0.85 | 6 | η_p 0,85 ("at a propeller efficiency of 0.85 the same airframe reaches 7.47 to 9.20") | 6 | varsayılan açıklık verimi e 0,85 ("not the assumed 0.85") — aynı bölümde iki nesne; ikisi de doğru; Tur 146 bütün okuma L-2, yalnız kayıt |
 
 **Aynı adımda ayrı nesneler (Tur 110; Grok P84, dört okuyucu + Claude).** Adım 14'ün J3 bantları — **4.7–5.2** ve **5.5–6.1 kW
