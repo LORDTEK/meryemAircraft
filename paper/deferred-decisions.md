@@ -683,3 +683,19 @@ Uygulandı: Ek S9 (birleşme öncesi iki gövde tam); `v8-caveats.md` alt tablos
 Uygulandı (Tur 164): 5.2 yukarısı/aşağısı + C1–C5 (1 930 → 1 843); Bölüm 7 liste ve yeniden kapanış birer cümle (1 185 → 908); iki korunan cümle Ek S14'te (`| S14 | … | E12 |`).
 Dört okuyucu ciddi itiraz etmedi. Uygularken: "axis ." boşluğu düzeltildi (Grok, DeepSeek). S14'te 19 satır, biri "known obstacle" diye işaretli → 18 bilinmeyen (Grok'un sorusu).
 Birleştirici: başlık yoksa Adım 8 bölünmez (dağıtılmış seçenek için hazırdı, bugün kullanılmıyor). Gövde 18 759. Açık: DeepSeek Cut A/B (oy), sıradaki birleştirme/kısaltma önerileri.
+
+## Tur 164 cevapları — Cut A uygulandı (beşimiz); sıradaki adaylar yazara
+
+- **Teyit (dördü):** 5.2 yukarısı/aşağısı ve Bölüm 7 → kapandı. **Cut A** (şaft cümlesi, −22) beşimiz evet → uygulandı (Ek S8'e eski paragraf). **Cut B** beşimiz hayır.
+- **Adaylar:** Grok — Bölüm 7'nin dört tür depo kataloğu → bir cümle (−80–120); 6.2'nin "closure does not contain" listesi → bir cümle ("the first and the last"
+  adlandırılarak); Bölüm 7 açılışındaki "Section 8 calls this section a debt" (−25). ChatGPT — yerel sıkıştırma: "Section 4" (= 2.3 kastediliyor), 1, 6.4, 6.3, 8, "3" (= 2.2).
+  DeepSeek — N1 2.3 özet + S4 (−700–800), N2 6.1 türetme → S10, N3 2.2 izinli maliyetler, N4 Bölüm 4'ün beş niteliği, N5 2.1 eğik satır örneği. Qwen — 6.4 tablosu → S13
+  (+ bir cümle), Bölüm 1 "already occupied" → S1 özet, 2.3 görev cümlesi ve 99 lb → S4.
+- **Claude'un doğrulamaları:** ChatGPT eski adım numaralarını bölüm sandı (Bölüm 3/4 dediği 2.2/2.3) ve 18 759'u "hepsi dahil" dedi (gövde). DeepSeek N2, Tur 155'te
+  beşimizin "7.1'de S kaldıracı bitti" kararıyla çelişiyor; N1 "not identical" niteleyicisini (korunan, Adım 4) eke gönderiyor. Qwen C3 Tur 155'te frenle reddedilen 99 lb'yi
+  yeniden öneriyor. Grok'un katalog adayında iki değil üç korunan cümle var ve biri kaynağın kendi karşı sonucu ("may be possible", S-20) — gövdeden çıkarmak seçici alıntıyı
+  geri getirir.
+- **Claude'un önerisi (yazara):** (1) 6.4 tablosu → S13; ardındaki düzyazı her aralığı ve işaret değişimini zaten söylüyor, yeni metin gerekmez (−~130 metin, bir tablo eşdeğeri).
+  (2) Bölüm 7 "debt" cümlesi (−25). (3) 6.2 listesi → iki kalemi adlandıran bir cümle (−~60, yeniden yazım). (4) Büyük kaldıraç: 2.3 → sonuç paragrafı + S4 (L3, yazarın
+  Tur 129 ipucu; yalıtım çifti kuralı ve 2.3'ün 15 korunan cümlesiyle) — yazarın izni gerekir. Reddettiklerim: katalog, Bölüm 1 listesi (§2.2: dolu olan boşluktan önce
+  sayılır), 99 lb, 6.1 türetmesi, 2.2 ve Bölüm 4 nitelikleri.

@@ -2081,6 +2081,10 @@ axis, which is the roll axis in body terms (Section 8, *The propulsion*).
 is physically closed.** Unable to feather, the pairs must either turn at the zero-shaft-torque
 condition or be stopped. This configuration uses the first: free-wheeling at zero shaft torque is the tip pairs' uncommanded cruise state, and it is the drag state Section 11 charges. The shaft power of commanded departures from that state, for attitude moments in cruise, is not computed.
 
+#### The propulsion (before the Round 165 cut, Cut A)
+
+One pair sits at the nose, 1.20 m in diameter on the 50 kg reference design, and produces all propulsive thrust in both regimes. Four smaller pairs, 0.20 m in diameter, sit at the ends of rigid frames projecting from the wing tips. Every pair is of **fixed geometry**: no cyclic pitch, no collective, no variable-pitch hub and no mechanism that changes a rotor's orientation relative to the airframe. Shaft speed is commanded; blade geometry and orientation are not. Each rotor of each pair is driven by its own electric machine on a common axis, so **the splitting gearbox and the mechanical governors that synchronise it are not required**. This work makes no claim about the shafting: whether the two machines are stacked on the axis or arranged some other way is an implementation question it does not settle.
+
 ---
 
 ## S9. Section 9 (from Section 9)
