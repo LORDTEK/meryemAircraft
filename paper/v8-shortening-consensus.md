@@ -701,3 +701,5 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Birleştirme aşaması yöntemi (A harita işlev+işlem → B sıkıştırma/eke taşıma → C H-2 → D gerekirse birleştirme → E son tarama) | ✓ | ✓ | ✓ | ✓ | ✓ | **Yakınsadı (Tur 152 cevapları); yazarın seçimi** — açık: 6.1'in evi (2–2) |
 | Sıkıştırma aşaması yöntemi (A–E) | ✓ | ✓ | ✓ | ✓ | ✓ | **Yazar onayladı (Tur 153)** |
 | A evresi: bulgu haritası (13 küme, 73 geçiş); ölçüm: kopya kesme ~280 kelime, kaldıraç S | ? | ? | ? | ? | önerdi | **Tur 153 denetimi**: satır satır, eksik küme, S adayları, tahmin |
+| A evresi haritası: çoğu satır onaylandı; düzeltmeler (korunan "–" → K/C; K-4'e 5.1 cümlesi; yeni kümeler) | ✓ | ✓ | ✓ | ✓ | düzeltmeleri kabul | **Yazar: "280 kelime için 30 tur harcamayalım"** — küme küme turlar yok; uzunluk kararı (E8) yazarda |
+| 8 500 yalnız 2.x/4/7.x'ten gelir mi? | hayır | hayır | hayır (aritmetik: kalanlar 9 070) | hayır | hayır | **Yazarın şekil kararı gerekiyor** |

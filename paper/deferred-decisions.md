@@ -502,3 +502,17 @@ sınıflarıyla birleşsin. ChatGPT: numarasız işaretçi taban çizgisi B'den 
 kelime kaybeder; hedef için düzyazı ~20 300 → ~8 500. Kopya kesme kaldıraç değil; **kaldıraç S (eke taşıma)** — yazarın Tur 129 ipucu, Qwen'in Tur 151 önerisi.
 Okuyuculardan S adayları (alt bölüm + gövdede kalacak özet + içindeki korunan cümleler) ve "8 500 yalnız 2.x, 4, 7.x'ten gelir mi?" tahmini istendi.
 Numarasız işaretçi tabanı: 19, hepsi kendi bölümünde.
+
+## Tur 154 (Tur 153 cevapları) — yazar: "280 kelime için 30 tur harcamayalım." Uzunluk kararı (E8) yeniden yazarın önünde
+
+- **Harita denetimi:** okuyucular çoğu satırı onayladı. **Benim hatalarım:** korunan bir cümleyi (K-2, 5.2 *"What declining it costs is not counted in this
+  work."*) "–" (sil) işaretledim; haritanın kendi kuralı buna izin vermiyor (DeepSeek, Grok, ChatGPT yakaladı). K-4'te 5.1'in *"The four tip pairs do not: …"*
+  cümlesi haritada yoktu (ChatGPT). Önerilen ek kümeler: Grok F-1/F-2, ChatGPT K-10…K-13, DeepSeek C-14 (durdurma notu) ve C-15 (uç çerçevesinin dört işi), Qwen
+  C-14 (sürükleme aralığı).
+- **Aritmetik (DeepSeek'inki doğru):** 2.x + 4 + 7.x = **11 261**; geri kalan bölümler (1, 3, 5.1, 5.2, 6.1, 6.2, 8, 9) = **9 070**. **Hesap ve çerçeve
+  bölümlerinin tamamı gövdeden çıksa bile düzyazı 8 500'ün üstünde kalır.** Okuyucu hataları: Grok 10 070 / 10 230 (doğrusu 9 070 / 11 261); ChatGPT yalnız tablomdaki
+  alt bölümleri toplayıp (8 096) yanlış sonuca vardı; ChatGPT bağımsız sınamayı §4'e koydu (2.3).
+- **Dört okuyucu da:** 8 500 yalnız 2.x, 4, 7.x'ten gelmez. DeepSeek: şekil kararı S turlarından **önce** verilmeli. S adayları: 7.3 (hepsi), 7.1 kapanışları,
+  7.2, 2.3 (Grok: S değil; DeepSeek/Qwen: özetle S), 7.4, 2.1 örnekleri.
+- **E8 (Tur 128) hâlâ açık; eksik olgu:** AIAA *"Journal Page Limits and Word Count Guidelines"* (Eylül 2024) okunmadı
+  (`paper/joa-compliance.md` §6) — JoA *"approximately 10 000–12 000"* diyor; aşımın reddi ya da ücreti kayıtta yok.
