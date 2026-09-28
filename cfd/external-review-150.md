@@ -2,7 +2,7 @@
 
 > **This is a task. Please answer it now, and begin with your name alone on the first line.**
 >
-> Commit **`@@COMMIT@@`**, branch `claude/ecstatic-cori-6w30at` (for verification only). **Every text you are asked to judge is quoted
+> Commit **`fb85e97`**, branch `claude/ecstatic-cori-6w30at` (for verification only). **Every text you are asked to judge is quoted
 > here in full.**
 >
 > **Baseline for this half (F-4):** the body text in §8 is the assembled view (`paper/v8/ASSEMBLED.md`, lines 4–833) at this commit. It is
