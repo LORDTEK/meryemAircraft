@@ -695,3 +695,6 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | W-2 Q3, L-3 satır 1, R-11 teyit; kapanış kapısı | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI (Tur 151)** |
 | W-2 (vi): yeni yüklem yok | ✓ | ✓ | ✓ | ✓ | ✓ | biçim: "the" + "shows" (Grok) — **yazar seçti**; uygulandı, teyide |
 | Bir sonraki aşama | ? | ? | ? | ? | önerileri §3.3'te (fikir) | **Yazar (Tur 151): önce her okuyucu kendi bağımsız yöntemini ve küme önerisini sunsun**; oylama yok, gelecek tur yan yana |
+| W-2 (yazarın cümlesi) teyit | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI (Tur 152)** |
+| **Aşama kapandı** (sonuç cümlelerine yeniden kurma; bütün okuma Tur 146–151; kapanış kapısı) | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI (Tur 152)** |
+| Bir sonraki aşama: beş bağımsız öneri | harita + ev + kopya kes | harita + H/C/P/K/S | harita + işlev etiketi, birleştirme son çare | harita + eke taşıma önce | harita (güncellendi) | **Tur 152: yan yana, birbirine cevap; sonra yazar seçer** |

@@ -472,3 +472,9 @@ bir birleştirme. **Karar yazarın.**
 oylattırıyorsun, bu doğru bir tarz değil. Küme önerilerini de sor, elbette kendi önerilerini de onlara ver ki belki fikir verir."* → Tur 151 metni güncellendi:
 Öneri G oylanmıyor; okuyuculardan bağımsız yöntem ve küme önerileri isteniyor; benim yöntemim ve kümelerim (K-1…K-9) fikir olarak verildi. Gelecek tur beş öneri
 yan yana, sonra yazara.
+
+## Tur 152 — aşama kapandı; bir sonraki aşamanın yöntemi yazarda
+
+Beş bağımsız öneri (Tur 152 metni §2, tam metinleri ekinde). Ortak: bulgu haritası önce (başlık değil), her bulguya tek ev, mimari bölümlerindeki tekrar çoğu kez
+argüman, tur başına tek değişiklik, birleşik görünümde denetim, dondurma sürer. Ayrışan: ana kaldıraç (kopya kesme / Qwen: eke taşıma — yazarın Tur 129 ipucu),
+etiket (ChatGPT H/C/P/K/S, DeepSeek işlev), H-2 zamanı, 6.1'in evi, 7.4. Okuyucular Tur 152'de birbirine cevap verir; **sonra yazar seçer.**

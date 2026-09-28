@@ -547,7 +547,8 @@ dahil herkesin hemfikir olduğu kısaltmalar uygulansın."*
 
 - **Aşama = baştan sona ilerleyen bir geçiş.** Her aşamanın yolu ayrıdır; bir sonrakinin yöntemi **bu aşama bütün metin için
   tamamlanınca** belirlenir — bir tur sonunda değil. Aşamalar şimdiye dek: kümeli silme (Tur 61–72) → yeniden kurma (Tur 73–98;
-  kelime az düştü, kaynak kusurları S-1…S-33 bulundu) → sonuç cümlelerine yeniden kurma (Tur 101–; 25 797 → 18 634).
+  kelime az düştü, kaynak kusurları S-1…S-33 bulundu) → sonuç cümlelerine yeniden kurma (Tur 101–151; 25 797 → 18 634; son geçişi bütün okuma
+  Tur 146–151, kapanış kapısı birleşik görünümde; **kapandı Tur 152**) → sıradaki: yöntemi yazar seçiyor (beş bağımsız öneri, Tur 152).
 - **Uzunluk aritmetiği bir aşamayı yarıda kesmenin gerekçesi değildir.** Ölçüm raporlanır; karar aşama bitince verilir. Yazarın
   Tur 129 ipuçları (karar değil): hesap kısımları biraz daha eke; özet paragrafla anlatıldıktan sonra bölüm eke; Claude'un sırası.
   Başka dergi odağı kaybolmaz, yüksek kelimeli makaleyle kör atış yapılmaz.

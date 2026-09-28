@@ -214,14 +214,14 @@ The body is about **26 000 words**, and the journal's working target is **about 
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 151.**
+**Round 152.**
 
 | Block | State |
 |---|---|
-| Stages (the author, Round 129) | each stage is a pass through the whole text; the next stage's method is chosen when the present one is complete. **Recomposition into result sentences closes with this round's confirmation of W-2**; the closing gate (receipts in the assembled view) holds |
-| Contribution (W-2, the author's sentence) | 5.1 now reads: *"What this paper contributes is the architecture that brings the three elements together; the condition shows what it satisfies, and the price shows what it costs."* Sections 1, 5.1, 6.2 and 9 name one contribution, the architecture |
+| Stages (the author, Round 129) | **Recomposition into result sentences is closed** (Round 152; the whole reading, Rounds 146–151, was its last pass; closing gate held). The next stage's method is being chosen |
+| Contribution | Sections 1, 5.1, 6.2 and 9 name one contribution, the architecture (5.1: the author's sentence, Round 151) |
 | Length | about 20 300 words in the body; the Round 101 plan gives prose 8 500 of a 12 000 total |
-| Next stage (Round 151) | **merging** is the author's idea. **Each reader first proposes their own method and their own clusters, independently** (the author's instruction); Claude's method and clusters K-1 to K-9 are given as ideas, not for a vote. All proposals side by side next round, then to the author |
+| Next stage | five independent proposals (four readers + Claude) side by side in Round 152; all start from a **map of findings argued in more than one place**, one home each, one change per round, checks in the assembled view, freeze continues. Differences: the main lever (cutting copies vs moving working to the supplement), labels, when the citation map is built, where 6.1 goes. **The author chooses** |
 | Tip pairs in cruise (the author's decision) | uncommanded state: free-wheeling at zero shaft torque (Section 6.1 of the assembled view); shaft power of commanded departures not computed (Section 6.1; Section 8) |
 
 **Every step has now been recomposed once.** Recomposition into result sentences took Steps 10–11 to about 40 % of their length,
