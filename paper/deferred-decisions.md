@@ -813,3 +813,17 @@ Birleştirici: başlık yoksa Adım 8 bölünmez (dağıtılmış seçenek için
 - Tur 169 metni yeni pencereler için kendi kendine yeter: gövdenin tamamı yazarın numaralamasıyla ekte.
 - **Yazar:** *"Turlarda tur numarası ile içerdeki numara tutmuyor."* → Tur 169'dan itibaren `cfd/round-NNN.md` (dosya adı = tur); eski dosyalar adlarını korur,
   eşleme `cfd/arsiv-dis-gorus/INDEX.md` (173 dosya; 5'inin başlığında tur numarası yok).
+
+## Tur 169 cevapları — dört okuyucu (yeni pencereler)
+
+- **Kimlik karışıklığı:** DeepSeek yeni penceresinde cevabını **"ChatGPT"** adıyla imzaladı ve ChatGPT'nin Tur 168 hatalarını (12 000 hedefi, "üç gerekçe"yi sıkıştırma,
+  100 kelimeye itiraz) kendi hatası diye geri aldı; DeepSeek'ten üçüncü kişi olarak söz etti. Yazar doğruladı (cevap DeepSeek penceresinden). **Tur 170 metninde DeepSeek
+  uyarılacak** (yazarın isteği): adı DeepSeek; geri aldığı hatalar ChatGPT'nindi; kendi Tur 168 hataları (korunmayanı S işaretlemek, 4.4/4.6 yeri, toplam) ayrı.
+- Hemfikir: §1 işlemleri (dördü + Claude); D1 6.1+6.2 (adlı iki alt bölümle; numaralama biçimi açık: Qwen tek 6.1 altında 6.1.1/6.1.2); D3 5.1 reddetmeleri K (beşi);
+  D4 2.1.7 K (beşi; Qwen geri çekti); D5 işaretçi evet (beşi); D6 8.6'ya dokunulmaz (ChatGPT: gerekirse sıkılaşır).
+- Ayrışan: D2 2.3'ün 100 kelimesi — "ölçek" cümlesi S: Grok, Qwen, Claude; quadrotor kalsın: ChatGPT, DeepSeek (DeepSeek'in ~98 kelimelik listesi Tur 166 oybirliğiyle geri
+  konan ağırlık dökümünü kısaltıyor, bir sınır cümlesini eke yolluyor, yalıtım çifti tanımlarını sıkıştırıyor, bir cümleyi niteleyicisini düşürerek yeniden yazıyor).
+  4.6 ayrıntıları S: Grok, Claude; K: ChatGPT, DeepSeek, Qwen. Birleştirme: yalnız 6.1+6.2 (ChatGPT ayrıca 7+8 üst düzey). Dört başlık: dördü sekiz bölümü koruyor
+  (ChatGPT: dört perdelik çatı olarak iyi, şimdi değil; DeepSeek: istenirse yalnız başlık denemesi); Claude: kısaltmadan sonra başlık denemesi seçenek.
+- **Yazara giden tek S listesi (Tur 169):** (1) 2.1.6 geri çekme örneği + korunan +5 m/s → S2, yerine işaretçi — beşi evet; (2) 4.4 "Whether 0.683 …" → S6 — beşi evet;
+  (3) 2.3 "The quadrotor is reported for scale …" → S4 — 3'e 2; (4) 2.3 "It is used for three reasons …" → S4 — yalnız 100'ü tamamlamak için, önerici yok; (5) 4.6 ayrıntı — 2'ye 3.
