@@ -778,3 +778,10 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | C9b 5.2.5 "What declining it costs …" (kopya, −10) | ? | ? | ? | ? | kes | **Tur 171 oyu; yazar kararı** |
 | T1–T4 (DeepSeek küçük kesimler: 1.4 alıntı, 2.2.4 Bill 1, 4.6 hız, 7.2 tezgâh) | ? | ? | önerdi | ? | koru (dördü) | **Tur 171 oyu** |
 | Bir sonraki aşama | ? | ? | ? | ? | (Tur 172'de onlarınkiyle) | **Tur 171 sorusu; sonra yazar** |
+| R2, R9 onarılmış hâl; R8 | ✓ (R8 veto geri çekildi) | ✓ | ✓ | ✓ | ✓ | **KAPANDI (Tur 171 cevapları)** |
+| Yazarın notları üzerine kısaltma geçişi (17 734 → 14 914) | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI (Tur 171 cevapları)** |
+| C2 6.4.6 "Put plainly …" (kopya, −23) | kes | kes | kes | kes | kes | **yazara (tek liste)** |
+| C9b 5.2.5 "What declining it costs …" (kopya, −10) | kes | kes | kes | kes | kes | **yazara (tek liste)** |
+| C1, C4, C9a | önerme | önerme | önerme | önerme | önerme | **KAPANDI: kalır** |
+| T1–T4 | koru | koru | geri çekti | koru | koru | **KAPANDI: değişmedi** |
+| Bir sonraki aşama | paragraf, 250–500 | paragraf/bölüm, 300–800 | Bölüm 6, 1 000–1 500 | dur → başlık denemesi | tek liste, 250–500, sonra başlık | **yazara** |

@@ -862,3 +862,22 @@ Birleştirici: başlık yoksa Adım 8 bölünmez (dağıtılmış seçenek için
 
 - Her tur metni ve her yazar raporu **sıranın yazarda olup olmadığını** adıyla söyler. Bu tur yazara gidecek olanlar (cevaplardan sonra): (1) kopya listesi, tek liste;
   (2) bir sonraki aşamanın yöntemi (Tur 171 §4; beş görüş yan yana, benimki Tur 172'de onlarınkiyle birlikte).
+
+## Tur 171 cevapları — dört okuyucu; kısaltma geçişi kapandı; iki karar yazara
+
+- **R2, R9 (onarılmış hâl):** dördü teyit → **kapandı.** **R8:** Grok vetoyu geri çekti (*"The premise was wrong"*) → **kapandı.** Yazarın notları üzerine
+  kısaltma geçişi (Tur 168–171) bütün metin için **kapandı**: 17 734 → 14 914 düzyazı.
+- **T1–T4 (DeepSeek'in küçük kesimleri):** Grok, ChatGPT, Qwen koru; DeepSeek dördünü de geri çekti → **kapandı, değişmedi.**
+- **Kopya listesi:** C2 (6.4.6 "Put plainly …", −23) ve C9b (5.2.5 "What declining it costs …", −10) — **dört okuyucu + Claude: kes.** C1, C4, C9a önerilmedi
+  (beşimiz). → **YAZARA (C işlemi, tek liste).**
+- **Bir sonraki aşama** (yeni soru; görüşler ayrışıyor) → **YAZARA:**
+  - Grok: *working-behind-findings* — paragraf birimi, bulgu ve niteleyici gövdede kalır; adaylar 2.3 ağırlık dökümü, 6.3 Reynolds ayrışımı, 6.4.3 rakip tabanı,
+    6.4.6 duyarlılık; 250–500; bütün bölüm eke taşıma yok; hiçbir şey frenden geçmezse dur. (Not: 2.3 ağırlık dökümü cümlesi Tur 166'da beşimizce geri konmuştu.)
+  - ChatGPT: *Calculation Relocation Audit* — paragraf/bölüm birimi; 300–800; 3–6 aday.
+  - DeepSeek: *Calculation-to-supplement* — Bölüm 6 (6.1.2–6.1.4, 6.2.2, 6.3, 6.4.2–6.4.6); 1 000–1 500. (Denetim: 6.3 büyük ölçüde korunan cümle; 6.4'ün A–D tablosu
+    zaten S13'te (Tur 166); 6.4.4 bantları bulgunun kendisi — bu tahmin korunmayan metnin taşıyabileceğinin üstünde.)
+  - Qwen: **dur ve başlık denemesine geç**; alternatif *finding-first extraction* (2.1.3, 2.1.5, 6.3; 500–800).
+  - Claude: tek turluk uygulanmış liste (Tur 170 gibi), paragraf birimi, bütün metin; gerçekçi 250–500; sonra başlık denemesi (yalnız başlık). ~10 000'e inmek
+    istenirse kaldıraç bölüm düzeyidir (gövdenin neyi taşıdığı) — yazarın kararı, frenle okuyucu geçişinden çıkmaz.
+- DeepSeek bu tur **DeepSeek olarak imzaladı** ve yalnız kendi hatalarını saydı. Küçük kayma: ChatGPT yazarın Tur 129 ipucunu italikle ama değiştirerek aktardı
+  (*"the section itself"* → *"the detailed calculation can potentially"*); Qwen R2 onarımında benim *"on my own sentence"* ifademi kendi cümlesiymiş gibi kopyaladı.
