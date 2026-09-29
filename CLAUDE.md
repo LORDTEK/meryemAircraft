@@ -384,6 +384,10 @@ dahil herkesin hemfikir olduğu kısaltmalar uygulansın."*
   zorbalıktır. Senin görüşün de onlarınki ile birlikte bir anlatıda yer alacak."* → Her tur metninde benim görüşüm okuyucularınkiyle **aynı tabloda, aynı
   anlatıda ya da aynı listede**, bir sütun ya da bir satır olarak durur; ayrı bir "Claude'un görüşü" bölümü yazılmaz. Hata listesi de tektir, benimkiler dahil.
   Yeni bir soruda başkaları henüz cevap vermemişse kendi görüşümü tek başına öne koymam; bir sonraki turda onlarınkiyle yan yana veririm.
+- **Sıra yazara gelince haber (yazar, Tur 171).** *"Siz okuyucular birlikte çalışın. Ne zaman sıra bana gelirse (yani ne zaman benim müdahalem
+  gerekirse) haber vermeyi unutma lütfen. Bak, ben müdahale edince dramatik değişim oluyor."* → Her tur metni **yazara ne gideceğini** adıyla söyleyerek biter;
+  yazara her rapor bir **"Sıra sizde mi?"** satırı taşır: ya *"şu an kararınız gerekmiyor"* ya da gereken karar, seçenekleriyle. Sıra yazara gelir: korunan
+  cümle (S/C), kapanmış bir kararı yeniden açma, aşama yöntemi, okuyucular yakınsamadığında.
 - **Ben de bir okuyucuyum, hakem değilim.** Her tur metninde her açık madde için **kendi görüşüm ve gerekçem**
   yazılır ve okuyuculardan **benim görüşümü de eleştirmeleri** istenir. Oylama tablosunda ben de bir sütunum.
 - **Uygulama eşiği: dört okuyucu + ben.** Biri bile karşıysa uygulanmaz, geri sorulur. Karar yine yazarındır;

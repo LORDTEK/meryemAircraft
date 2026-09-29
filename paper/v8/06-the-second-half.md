@@ -120,7 +120,7 @@ variable-pitch hub would recover that difference is not computed; Section 11 rep
 
 ### Five qualifications: three run against this configuration, one has no computed direction, and one bounds what the comparison can be called
 
-**Scale.** The compared vehicles are larger than both designs here, of order 50 kg and 1 000 kg (Supplement S6), and **Reynolds number
+**Scale.** The compared vehicles are larger than both designs studied here, which are of order 50 kg and 1 000 kg (Supplement S6), and **Reynolds number
 favours the larger aircraft**, so the smaller design is at a disadvantage in this comparison rather than an advantage.
 
 **The quadrotor is a good quadrotor**: both quadrotors have unusually low disc loadings. **Nothing here is compared against a poor
@@ -168,6 +168,7 @@ the combination is what this paper is for.
 | İddia | Kaynak |
 |---|---|
 | **Tur 170 — yazarın notları üzerine kısaltma uygulandı** (Tur 168–169: işlemlerde dört okuyucu + Claude; korunan cümle taşımaları yazar kararı E13). Değişen her paragrafın eski hâli ekin bu adıma ait bölümünde aynen (*"… before the Round 170 shortening"*). Yeni (R) cümleler Tur 170 §2'de okuyucu vetosuna açık; sonuç teyide | `paper/build/v8_round170_texts.py`, `v8_round170_apply.py` |
+| **Tur 171 — R9 onarıldı** (Grok vetosu, Tur 170): 4.6 ölçek cümlesinde "of order 50 kg and 1 000 kg" iki isimden birine asılabiliyordu → "larger than both designs studied here, which are of order 50 kg and 1 000 kg (Supplement S6)". Kütleler Tur 170 öncesi 4.6'da da vardı (Qwen); yeni sayı yok. **R8 değişmedi:** beş etken eski 4.4'ün üçüncü cümlesinde birebir duruyordu (Tur 169 eki, S6); Grok'tan vetoyu geri çekmesi istendi. Teyide (Tur 171 §1) | Grok, Qwen |
 | **Tur 149 — L-3 satır 4 uygulandı:** *"free-wheeling attitude rotors"* → *"free-wheeling tip-pair rotors"*. W-13 kapandı | Tur 148 §3 |
 | **Tur 148 — W-13 uygulandı** (DeepSeek; dört okuyucu + Claude): *"free-wheeling attitude rotors (Section 8, *What this inventory does not settle*)"* → görünümde 6.1. W-4, L-1 kapandı | Tur 147 §3 |
 | **Tur 147 — W-4 ve L-1 uygulandı** (bütün okuma; dört okuyucu + Claude): W-4 *"roughly a quarter to a half"* → *"roughly an eighth to a half … (a quarter to a half for the best examined blade family)"*; L-1 (korunan) *"gives its two helicopter types at"* → *"gives four entries for its two helicopter types, at"* — `v8-caveats.md` güncellendi | Tur 146 §5 |

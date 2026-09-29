@@ -771,3 +771,10 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Yazarın notları — işlemler uygulandı (17 734 → 14 900) | ? | ? | ? | ? | uyguladı | **Tur 170: teyit ya da cümle vetosu**; R1–R15 oyda |
 | E13 korunan cümleler eke (1, 2, 3, 5; 4 hayır) | — | — | — | — | — | **yazar kararı (Tur 170)** |
 | 6.1 + 6.2 yeniden numaralama | tek bölüm | koru | koru | tek bölüm | koru | **Tur 170 oyu** |
+| Yazarın notları — uygulanan hâl (17 734 → 14 900) | ✓ (R2, R8, R9 hariç) | ✓ | ✓ | ✓ | uyguladı | **teyit edildi (Tur 170 cevapları)**; R2, R9 onarıldı, R8 Grok'a geri soruldu (Tur 171) |
+| 6.1 + 6.2 yeniden numaralama | koru | koru | koru | koru | koru | **KAPANDI (Tur 171): numaralama kalır** |
+| Dört başlık düşüncesi | sekiz bölüm; deneme sonra | aynı | aynı | aynı | aynı | **şimdilik kapandı; kısaltma kapanınca başlık denemesi** |
+| C2 6.4.6 "Put plainly …" (kopya, −23) | ? | ? | ? | ? | kes | **Tur 171 oyu; yazar kararı** |
+| C9b 5.2.5 "What declining it costs …" (kopya, −10) | ? | ? | ? | ? | kes | **Tur 171 oyu; yazar kararı** |
+| T1–T4 (DeepSeek küçük kesimler: 1.4 alıntı, 2.2.4 Bill 1, 4.6 hız, 7.2 tezgâh) | ? | ? | önerdi | ? | koru (dördü) | **Tur 171 oyu** |
+| Bir sonraki aşama | ? | ? | ? | ? | (Tur 172'de onlarınkiyle) | **Tur 171 sorusu; sonra yazar** |

@@ -845,3 +845,20 @@ Birleştirici: başlık yoksa Adım 8 bölünmez (dağıtılmış seçenek için
 - Yazarın ara sorusu: *"korunan cümleleri tartışmaya açmaya gerek var mı acaba?"* → cevap yazara (Tur 170 raporu).
 - Uygulamada yakaladığım hatalarım: tablo kopyalarken tablodan sonraki kalın paragrafı "not" sanma (4.4/4.5'te çift paragraf); satır sonunda bölünmüş "Section / 8"
   işaretçisi; 2.2.4'te tutum donanımı maddesinden iki ayrım düşmüştü (5.2.7 ona işaret ediyor); 6.2.2'de "a simulation" → "calculations" genişlemesi. Hepsi gönderilmeden onarıldı.
+
+## Tur 170 cevapları — dört okuyucu; kısaltma teyit edildi, üç cümle vetolu (Grok)
+
+- ChatGPT, DeepSeek, Qwen: bütün alt bölümler ve R1–R15 **teyit**. Grok: R2, R8, R9 dışında teyit.
+- **R2** (Grok haklı): "those three" inceltilmiş bir listeyi sayıyordu → kaynak ifade geri kondu (+11). **R9** (Grok haklı, okuma olarak): kütleler iki isimden birine
+  asılabiliyordu → "both designs studied here, which are of order 50 kg and 1 000 kg". **R8 değişmedi:** beş etken eski 4.4'ün üçüncü cümlesinde birebir (Tur 169 eki);
+  Grok'un öncülü tutmuyor, Tur 171'de geri çekmesi istendi.
+- 6.1 + 6.2 numaralama: beşimiz koru → **kapandı**. Dört başlık: beşimiz sekiz bölüm, başlık denemesi kısaltma kapanınca → **şimdilik kapandı**.
+- DeepSeek yine "ChatGPT" imzasıyla; ChatGPT'nin Tur 169 hatasını kendi hatası diye üstlendi; kendinden üçüncü şahısla söz etti. Tur 171'de ikinci kez uyarıldı.
+  **Yazara öneri:** DeepSeek'e metni gönderirken başa "You are DeepSeek." yazmak.
+- Korunan kopya taraması (yazar: "Onu da bir sonraki turda yapalım mı?"): bağlamında okununca **33 kelime** — C2 (6.4.6 "Put plainly …") ve C9b (5.2.5 "What declining
+  it costs …"). C1 (8.6 son cümle), C4 (4.1), C9a (3.4, "authority" 8.4'te yok) önerilmedi, gerekçeli. Yazara verdiğim 150–300 tahmini yanlıştı. Okuyucu oyuyla yazara (C işlemi).
+
+## Tur 171 — yazar: "Siz okuyucular birlikte çalışın. Ne zaman sıra bana gelirse … haber vermeyi unutma"
+
+- Her tur metni ve her yazar raporu **sıranın yazarda olup olmadığını** adıyla söyler. Bu tur yazara gidecek olanlar (cevaplardan sonra): (1) kopya listesi, tek liste;
+  (2) bir sonraki aşamanın yöntemi (Tur 171 §4; beş görüş yan yana, benimki Tur 172'de onlarınkiyle birlikte).

@@ -64,7 +64,7 @@ thrust vectors are all parallel to the body axis produce no rolling moment **by 
 settings**. The reaction-torque channel that other coaxial tail-sitters use about that axis is a choice this
 configuration declines rather than a limit it inherits (Sections 7 and 8).
 
-What has changed is electric drive on each rotor, sensor-based attitude reference and onboard computation, and **the
+What has changed is electric drive on each individual rotor, sensor-based attitude reference, and enough onboard computation that stability need not come from the airframe alone, and **the
 uncrewed tail-sitter literature has been exploiting exactly those three for over a decade**; the gap below is not a historical one.
 
 ### What is already occupied, stated before the gap
@@ -142,6 +142,7 @@ presume an escape.
 | İddia | Kaynak |
 |---|---|
 | **Tur 170 — yazarın notları üzerine kısaltma uygulandı** (Tur 168–169: işlemlerde dört okuyucu + Claude; korunan cümle taşımaları yazar kararı E13). Değişen her paragrafın eski hâli ekin bu adıma ait bölümünde aynen (*"… before the Round 170 shortening"*). Yeni (R) cümleler Tur 170 §2'de okuyucu vetosuna açık; sonuç teyide | `paper/build/v8_round170_texts.py`, `v8_round170_apply.py` |
+| **Tur 171 — R2 onarıldı** (Grok vetosu, Tur 170): 1.3'te "onboard computation" kaynak ifadeye geri döndü — "electric drive on each individual rotor, sensor-based attitude reference, and enough onboard computation that stability need not come from the airframe alone"; korunan "those three" yine üç tam öğeyi sayıyor (sayma sözcüğü denetimi, benim hatam). +11 kelime. Teyide (Tur 171 §1) | Grok |
 | **Tur 148 — W-5 uygulandı** (dört okuyucu + Claude; ChatGPT itirazını geri çekti): *"revisited the route continuously since"* → *"…the route since"* (1954'e bağlı; 2007'den tanıklı; *"nor abandoned"*ın paragraf içi dayanağı). W-9 kapandı | Tur 147 §2; Tur 148 §1 |
 | **Tur 147 — W-9 uygulandı** (bütün okuma; dört okuyucu + Claude; silme + noktalama): *"Both work, and the second is the more demanding to build, because rotating…"* → *"Both work. Rotating…"* — ölçülmemiş karşılaştırma; 2007 alıntısı eğimliyi kuyruk üstüyle karşılaştırıyor. W-5 (*"continuously"*) ayrışık, geri soruldu | Tur 146 metni §5; Tur 147 §1 |
 | **Tur 144 — W, E-1, N9 KAPANDI (dört okuyucu teyit etti); E-1′ uygulandı** (dört okuyucu + Claude; yalnız silme): *"states the same purpose in the same terms:"* → *"states the same purpose:"*; ifade emekli. Karmaşıklık izi (Q-P1b): *"mechanical complexity"* yalnız bu adımda (kaynak alıntıları), `v8_stale.py` YALNIZ; *"mechanically simpler"*, *"more reliable"* emekli (Adım 7 sayımı, Adım 9 madde 4) | Escareno 2007, 2008 |
