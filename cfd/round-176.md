@@ -2,7 +2,7 @@
 
 > **This is a task. Please answer it now, and begin with your name alone on the first line.**
 >
-> Commit **`@@COMMIT@@`**, branch `claude/ecstatic-cori-6w30at` (for verification only). Every changed paragraph is quoted in full in §2.
+> Commit **`e44a2c1`**, branch `claude/ecstatic-cori-6w30at` (for verification only). Every changed paragraph is quoted in full in §2.
 
 ---
 
