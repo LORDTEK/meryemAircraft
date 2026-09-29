@@ -928,3 +928,13 @@ Aman dikkatli ve kaliteli ilerleyelim."*
 1. **Korunan cümlelerin korunma durumunu gözden geçirme** — parça–bütün–parça okumayla.
 2. **Tablo ve şekiller** — kısaltma ya da birleştirme.
 Ayrıca daha önce ertelenen: **2.3'ün çerçeve/mimari oranındaki payı** (bölüm birleştirme aşamasında), **Bölüm 1'e dönüş**, **bölüm birleştirme / dört başlık denemesi**.
+
+## Tur 173 cevapları — dört okuyucu; Bölüm 2 geçişi kapandı
+
+- Değişen bütün alt bölümler, R4–R6, E16 a–b alındısı: **dördü teyit, veto yok** → **KAPANDI.** 13 860.
+- **2.3 pound sayıları:** ChatGPT, DeepSeek, Qwen görüş değiştirdi (Qwen: *"I was wrong in Round 172. Grok is right."*) → **beşimiz: gövdede** → **KAPANDI.** Ders:
+  99 lb "consistent"i sınırlayan niteleyici; denetim izi değil.
+- ChatGPT E16 a'da D4'teki oyunu değiştirdi (eke taşımayı kabul).
+- DeepSeek notu (veto değil): 2.1.7'den taşınan tilt satırı uygulamasına *"(Supplement S2)"* işaretçisi yok; bir sonraki uygulamada önerilecek.
+- **Sıradaki yer (ayrışık) → YAZARA:** Grok 5.1 korunmayan ayrıntı (80–150); ChatGPT 2.1.7 → 2.2 tekrar denetimi (100–250); DeepSeek 1.4 (50–70), ikinci 7.2;
+  Qwen bu tur kısaltma yok, istenirse 2.3'ün "architecture proposed later" paragrafı (~30). Claude: Bölüm 2'yi bitirmek (ChatGPT + Qwen + DeepSeek'in işaretçisi), sonra 5.1.

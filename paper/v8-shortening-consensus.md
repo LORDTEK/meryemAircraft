@@ -795,3 +795,6 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Tur 173 Bölüm 2 (katman 1 + R4–R6) | ? | ? | ? | ? | uyguladı | **Tur 173 teyit/veto** |
 | E16 a, b (yazar kararı) | — | — | — | — | — | **yazar**; alındı okuyuculara |
 | 2.3 pound sayıları | gövde (veto) | S4 | S4 | S4 | gövde | **gövdede**; üçüne Grok'un gerekçesi soruldu |
+| Tur 173 Bölüm 2 (katman 1 + R4–R6), E16 alındısı | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI (Tur 173 cevapları)** |
+| 2.3 pound sayıları gövdede | ✓ (veto) | ✓ (değişti) | ✓ (değişti) | ✓ (değişti) | ✓ | **KAPANDI: gövdede** |
+| Sıradaki yer | 5.1 | 2.1.7→2.2 tekrar | 1.4 | yok / 2.3 paragrafı | Bölüm 2'yi bitir | **yazara** |
