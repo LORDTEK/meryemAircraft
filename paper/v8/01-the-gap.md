@@ -36,14 +36,13 @@ worsen as the vehicle grows.
 **Neither family is deficient.** Each is limited by the price of
 doing it that way. **The corner where both capabilities are wanted at once is where the two
 applications this work is aimed at sit** — wildfire observation and response, and cargo delivery to
-places without a runway — and both want to leave from an unprepared site and then cover distance.
+places without a runway .
 **That corner is not empty**, as the rest of this section sets out; what is unsettled is which
 price an architecture in it must pay, and whether one arrangement pays less than it appears to.
 
 ### What the contemporary answers do, and how each changes regime
 
-Hybrid VTOL aircraft occupy that corner today. **This paper does not dispute that they work.** The NASA sizing study used in
-Section 4 describes the two routes they take between the regimes: lift-plus-cruise aircraft keep two sets of hardware and switch
+Hybrid VTOL aircraft occupy that corner today. **This paper does not dispute that they work.** They take two routes between the regimes: lift-plus-cruise aircraft keep two sets of hardware and switch
 between them, and tilting aircraft keep one set and reorient it (Section 7). Rotating a propulsor in flight brings a pivot and its
 actuators, a gyroscopic moment during the rotation, and a control problem through a regime in which the aircraft is neither a
 rotorcraft nor an aeroplane. **Those are mechanical and control requirements rather than aerodynamic ones**, and that distinction is
@@ -52,7 +51,7 @@ what this paper is built on.
 ### The third route is established, and some of its difficulties are inherited
 
 There is a third way to put one set of propulsors into both regimes without reorienting them: **point the
-thrust line at the ground and let the whole aircraft rotate.** It is neither new nor untried nor abandoned.
+thrust line at the ground and let the whole aircraft rotate.**
 The Convair XFY-1 flew it in 1954 and completed six transitions to conventional flight *"before testing was
 curtailed because of engine and gear-box reliability problems"*, and uncrewed tail-sitters have revisited the
 route since. The pilot's spatial orientation and workload were real, **but they are not what curtailed the testing**, and they are
@@ -119,10 +118,7 @@ through a buffered series hybrid, and **audited explicitly against carried hover
 cruise drag and hover-sized continuous power**, the last two of them at two scales, and under three sizing
 contracts.
 
-Each of those choices costs something, and **the giving-up is the part that is not free**. A
-quadrotor tail-sitter produces a rolling moment from the reaction torque of four independently
-driven rotors; a coaxial pair can produce one the same way, by running its two rotors at different
-speeds. **Operating every pair torque-balanced spends that channel to buy the torque balance and
+Each of those choices costs something, and **the giving-up is the part that is not free**. **Operating every pair torque-balanced spends the reaction-torque channel to buy the torque balance and
 the near-zero net angular momentum**, and leaves the axis to a single aerodynamic device.
 
 **None of the elements is new**, and Section 7 says so. Tail-sitting aircraft are seventy years old; blended wing bodies have been a standing subject of transport
@@ -132,8 +128,6 @@ propulsors, and so carrying no mechanism that reorients a propulsor.** The combi
 consequences of the choices inside it, and an accounting of what they cost are how that contribution
 is presented and priced.
 
-Section 2 states the cost that any architecture in this corner pays, in terms that do not
-presume an escape.
 
 ---
 
@@ -143,6 +137,7 @@ presume an escape.
 |---|---|
 | **Tur 170 — yazarın notları üzerine kısaltma uygulandı** (Tur 168–169: işlemlerde dört okuyucu + Claude; korunan cümle taşımaları yazar kararı E13). Değişen her paragrafın eski hâli ekin bu adıma ait bölümünde aynen (*"… before the Round 170 shortening"*). Yeni (R) cümleler Tur 170 §2'de okuyucu vetosuna açık; sonuç teyide | `paper/build/v8_round170_texts.py`, `v8_round170_apply.py` |
 | **Tur 171 — R2 onarıldı** (Grok vetosu, Tur 170): 1.3'te "onboard computation" kaynak ifadeye geri döndü — "electric drive on each individual rotor, sensor-based attitude reference, and enough onboard computation that stability need not come from the airframe alone"; korunan "those three" yine üç tam öğeyi sayıyor (sayma sözcüğü denetimi, benim hatam). +11 kelime. Teyide (Tur 171 §1) | Grok |
+| **Tur 176 — Bölüm 1 son geçiş (yazar: "son kez yapıyoruz gibi düşünerek ne oluyorsa yap geç"):** 1.1 yan cümle, 1.2 R10 (NASA tek ev 2.3), 1.3 "It is neither new…" (yazar onayı), 1.5 R11 (tepki torku tekrarı) ve kapanış köprüsü (yazar onayı). Eski paragraflar ekte; okuyucu teyidine | — |
 | **Tur 148 — W-5 uygulandı** (dört okuyucu + Claude; ChatGPT itirazını geri çekti): *"revisited the route continuously since"* → *"…the route since"* (1954'e bağlı; 2007'den tanıklı; *"nor abandoned"*ın paragraf içi dayanağı). W-9 kapandı | Tur 147 §2; Tur 148 §1 |
 | **Tur 147 — W-9 uygulandı** (bütün okuma; dört okuyucu + Claude; silme + noktalama): *"Both work, and the second is the more demanding to build, because rotating…"* → *"Both work. Rotating…"* — ölçülmemiş karşılaştırma; 2007 alıntısı eğimliyi kuyruk üstüyle karşılaştırıyor. W-5 (*"continuously"*) ayrışık, geri soruldu | Tur 146 metni §5; Tur 147 §1 |
 | **Tur 144 — W, E-1, N9 KAPANDI (dört okuyucu teyit etti); E-1′ uygulandı** (dört okuyucu + Claude; yalnız silme): *"states the same purpose in the same terms:"* → *"states the same purpose:"*; ifade emekli. Karmaşıklık izi (Q-P1b): *"mechanical complexity"* yalnız bu adımda (kaynak alıntıları), `v8_stale.py` YALNIZ; *"mechanically simpler"*, *"more reliable"* emekli (Adım 7 sayımı, Adım 9 madde 4) | Escareno 2007, 2008 |

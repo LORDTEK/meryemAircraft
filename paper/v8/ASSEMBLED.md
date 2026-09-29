@@ -20,14 +20,13 @@ worsen as the vehicle grows.
 **Neither family is deficient.** Each is limited by the price of
 doing it that way. **The corner where both capabilities are wanted at once is where the two
 applications this work is aimed at sit** — wildfire observation and response, and cargo delivery to
-places without a runway — and both want to leave from an unprepared site and then cover distance.
+places without a runway .
 **That corner is not empty**, as the rest of this section sets out; what is unsettled is which
 price an architecture in it must pay, and whether one arrangement pays less than it appears to.
 
 ### What the contemporary answers do, and how each changes regime
 
-Hybrid VTOL aircraft occupy that corner today. **This paper does not dispute that they work.** The NASA sizing study used in
-Section 2.3 describes the two routes they take between the regimes: lift-plus-cruise aircraft keep two sets of hardware and switch
+Hybrid VTOL aircraft occupy that corner today. **This paper does not dispute that they work.** They take two routes between the regimes: lift-plus-cruise aircraft keep two sets of hardware and switch
 between them, and tilting aircraft keep one set and reorient it (Section 5.1). Rotating a propulsor in flight brings a pivot and its
 actuators, a gyroscopic moment during the rotation, and a control problem through a regime in which the aircraft is neither a
 rotorcraft nor an aeroplane. **Those are mechanical and control requirements rather than aerodynamic ones**, and that distinction is
@@ -36,7 +35,7 @@ what this paper is built on.
 ### The third route is established, and some of its difficulties are inherited
 
 There is a third way to put one set of propulsors into both regimes without reorienting them: **point the
-thrust line at the ground and let the whole aircraft rotate.** It is neither new nor untried nor abandoned.
+thrust line at the ground and let the whole aircraft rotate.**
 The Convair XFY-1 flew it in 1954 and completed six transitions to conventional flight *"before testing was
 curtailed because of engine and gear-box reliability problems"*, and uncrewed tail-sitters have revisited the
 route since. The pilot's spatial orientation and workload were real, **but they are not what curtailed the testing**, and they are
@@ -103,10 +102,7 @@ through a buffered series hybrid, and **audited explicitly against carried hover
 cruise drag and hover-sized continuous power**, the last two of them at two scales, and under three sizing
 contracts.
 
-Each of those choices costs something, and **the giving-up is the part that is not free**. A
-quadrotor tail-sitter produces a rolling moment from the reaction torque of four independently
-driven rotors; a coaxial pair can produce one the same way, by running its two rotors at different
-speeds. **Operating every pair torque-balanced spends that channel to buy the torque balance and
+Each of those choices costs something, and **the giving-up is the part that is not free**. **Operating every pair torque-balanced spends the reaction-torque channel to buy the torque balance and
 the near-zero net angular momentum**, and leaves the axis to a single aerodynamic device.
 
 **None of the elements is new**, and Section 5.1 says so. Tail-sitting aircraft are seventy years old; blended wing bodies have been a standing subject of transport
@@ -115,9 +111,6 @@ architecture: a configuration arranged to change regime by rotating the airframe
 propulsors, and so carrying no mechanism that reorients a propulsor.** The combination, the
 consequences of the choices inside it, and an accounting of what they cost are how that contribution
 is presented and priced.
-
-Section 2.1 states the cost that any architecture in this corner pays, in terms that do not
-presume an escape.
 
 ## 2. The charges, the condition, an independent check
 

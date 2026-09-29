@@ -168,7 +168,7 @@ decision, a four-heading telling: *Current state · Proposed solution · Calcula
 **The stage.** The paper went through deletion (Rounds 61–72), recomposition (73–98), recomposition into result sentences (101–151,
 25 797 → 18 634 words) and compression by finding (from Round 153). **Sentence-level cutting is exhausted** (Round 167). The author
 then read the whole paper and wrote notes on about thirty subsections (Round 168): *narrow this*, *merge this*, *2.3 at least 100 words
-shorter*, and *perhaps 6.1 and 6.2 merge*. **That pass closed in Round 171; a calculation pass followed in Round 172 a framework pass in Rounds 173–174 and 5.1 in Round 175** (§6). The body is **13 676 words of prose** (tables excluded).
+shorter*, and *perhaps 6.1 and 6.2 merge*. **That pass closed in Round 171; a calculation pass followed in Round 172 a framework pass in Rounds 173–174, 5.1 in Round 175 and Section 1 in Round 176** (§6). The body is **13 593 words of prose** (tables excluded).
 
 **Length.** The author has set word targets aside (Round 161). **Do not argue from 12 000, 8 500 or 7 500;** those were earlier
 targets.
@@ -210,18 +210,17 @@ closes.** Readers answer one another, not only Claude.
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 175.** All four readers work in new conversations since Round 169; this was done **for equality** (Grok's conversation did not need
+**Round 176.** All four readers work in new conversations since Round 169; this was done **for equality** (Grok's conversation did not need
 renewing). **The author (Round 171):** *"You readers, work together. Whenever it comes to my turn, don't forget to tell me."* Each round
 text ends by naming what goes to the author.
 
 | Block | State |
 |---|---|
-| Closed | the author's subsection notes (Rounds 168–171); Section 6 calculation pass (172); Section 2 (173–174) |
-| Author's decisions | E13–E17 as above; **"Let it be 5.1"** (Round 175; the author's Round 168 note: the airframe rotation *"has been made too much of a problem"*) |
-| **Parked by the author, not now** | protected-sentence status (a part–whole–part later); tables and figures; 2.3 with the section merging; Section 1 later |
-| **Open (Round 175)** | confirm or veto 5.1's changes and R9; any repetition left in 5.1; the next place (DeepSeek's 7.2 is the standing alternative) |
+| Closed | shortening inside the current structure (Rounds 168–176): 17 734 → 13 593 words of prose; Section 1's last pass in Round 176 (teyide) |
+| Author's order of the parked stages | **1** Section 1 (done, Round 176) → **2** which protected sentences need protection (part–whole–part; **begins Round 176**) → **3** tables and figures → **4** section merging, 2.3 included. The four headings were *"to create awareness"*, not a proposal |
+| **Open (Round 176)** | Section 1's changes, R10, R11; the method of stage 2 (marks K / U / C / S); marks for Sections 1–2's 48 register rows |
 | Protected sentences | 161 in the body, 28 in the supplement |
-| Body | 13 676 words of prose (tables excluded) |
+| Body | 13 593 words of prose (tables excluded) |
 
 **Tools the round texts mention:**
 

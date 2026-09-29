@@ -965,3 +965,12 @@ Yalnız korunmayan tekrar: 908 → 823; gövde 13 762 → 13 676. Korunan cümle
   5.2.8 (20–30); Qwen *"No clean next place … I would not force another pass."* Claude: 7.2'de de 5.2.8'de de temiz tekrar yok denecek kadar az — aşama tükendi.
 - **Yazara:** ertelenmiş işlerden hangisiyle devam: (1) Bölüm 1'e dönüş, (2) korunan cümlelerin korunma durumu (parça–bütün–parça), (3) tablo/şekil,
   (4) bölüm birleştirme (2.3 dahil). Claude'un önerdiği sıra: 1 → 2 → 3 → 4.
+
+## Tur 176 — yazar: sıra 1 → 2 → 3 → 4; Bölüm 1 son geçiş; 2. aşama başlıyor
+
+- *"Öneri sıran harika. Aynen belirttiğin şekilde başlayalım."* · Dört başlık: *"farkındalık oluşturabilmek içindi. Yoksa ben 4 başlık olsun demiyorum. Birleşebileceğini göstermek istemiştim."*
+  · *"çerçeve bu kadar mı kısalıyor yani hani hala mimariden büyük ya"* → cevap: kalan kaldıraçlar 2.3 (birleştirme) ve korunan gözden geçirme (2.2.4, 2.1.7).
+- *"İkisi de onaylı"* (1.3 "It is neither new…", 1.5 kapanış köprüsü) · *"Bölüm 1 için … tamamına bak … son kez yapıyoruz gibi düşünerek ne oluyorsa artık yap geç."*
+  → 13 676 → 13 593. **Bölüm 1 bu aşama için kapandı** (teyide).
+- **2. aşama yöntemi (Tur 176 §3):** K / U / C / S işaretleri; parça (1–2, 3–5, 6, 7–8) → bütün (§0 sınırlarına karşı) → parça (yazar karar, grup başına tek liste).
+  İlk parça: Bölüm 1–2, 48 satır; Claude: U 4, C 2, 2 kayıt kopyası.

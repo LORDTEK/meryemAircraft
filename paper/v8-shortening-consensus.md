@@ -805,3 +805,6 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Tur 175 5.1 + R9 | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI** |
 | 5.1'de ek kesim (şerit ayrıntısı, eyleyici envanteri) | önerdi | hayır | yok | (yanlış cümle) | hayır | **uygulanmadı** |
 | Sıradaki aşama | birleştirme | 7.2 denetimi | 5.2.8 | dur | Bölüm 1 → korunan durumu → tablo/şekil → birleştirme | **yazara** |
+| Tur 176 Bölüm 1 son geçiş (R10, R11 + yazar onaylı iki kesim) | ? | ? | ? | ? | uyguladı | **Tur 176 teyit/veto** |
+| 2. aşama yöntemi (K/U/C/S; parça–bütün–parça) | ? | ? | ? | ? | önerdi | **Tur 176 eleştiri** |
+| 2. aşama parça 1 (Bölüm 1–2, 48 satır) | ? | ? | ? | ? | U 4, C 2 | **Tur 176 işaretleme** |
