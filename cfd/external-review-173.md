@@ -2,7 +2,7 @@
 
 > **This is a task. Please answer it now, and begin with your name alone on the first line.**
 >
-> Commit **`@@COMMIT@@`**, branch `claude/ecstatic-cori-6w30at` (for verification only). **The body has not changed since Round 168**
+> Commit **`39ab20d`**, branch `claude/ecstatic-cori-6w30at` (for verification only). **The body has not changed since Round 168**
 > (its full text, with the author's numbering, is the appendix of Round 168). The subsections under dispute are quoted in full at the end
 > of this text.
 
