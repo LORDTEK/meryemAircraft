@@ -800,3 +800,5 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Sıradaki yer | 5.1 | 2.1.7→2.2 tekrar | 1.4 | yok / 2.3 paragrafı | Bölüm 2'yi bitir | **yazara** |
 | Tur 174 Bölüm 2'nin tamamlanması (katman 1 + R7, R8) | ? | ? | ? | ? | uyguladı | **Tur 174 teyit/veto** |
 | E17 a (yazar kararı) | — | — | — | — | — | **yazar**; alındı okuyuculara |
+| Tur 174 Bölüm 2'nin tamamlanması, R7, R8, E17 | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI** |
+| Tur 175 5.1 (yalnız tekrar) + R9 | ? | ? | ? | ? | uyguladı | **Tur 175 teyit/veto** |

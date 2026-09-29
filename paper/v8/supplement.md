@@ -2248,6 +2248,40 @@ exposed in cruise, and Section 11 charges them.
 
 ---
 
+### Section 7's paragraphs as they stood before the Round 175 shortening
+
+Each paragraph below was shortened or moved in Round 175 (Section 5.1; the readers' proposal and the author's Round 168 note); it is given here in full, verbatim. Protected sentences moved here by the author's decision (none this round) are among them.
+
+**The configuration is arranged to change regime by rotating the airframe. The propulsors hold their orientation relative to the body
+from take-off to cruise; what changes is the orientation of the body relative to the flight path.** The contemporary hybrids reach the
+same end otherwise. The lift-plus-cruise design of the NASA study used in Section 4 carries its lifting rotors through cruise, stopped
+and aligned with the stream, and flies on a separate pusher; its tilt-wing turns eight proprotors, each on its own motor, on a tilting
+wing and tail, which takes a pivot and actuators and brings a gyroscopic moment and a control problem through the turn. Turning the
+propulsors is the case the condition excludes; turning the thing they are attached to leaves the orientation requirement intact.
+**That single move is what removes the need for the mechanism.** The table counts the mechanism classes that exist in order to change
+regime, or to take a rotor out of one regime's flow; the strip of Section 8 is a control surface, of a different class, and is named
+below. The configuration therefore carries:
+
+Attitude comes from differential thrust between the fixed-pitch pairs: the moment arms of the four tip pairs give pitch and yaw. The tip
+pairs are sized from the moment requirement, but because the nose pair is sized at thrust equal to weight and no more, they also supply
+the whole take-off margin; that dependency is reported in Section 5, and it does not make them a dedicated lift system.
+
+**The claim is narrower than it may appear.** **This is not a configuration in which nothing moves.** Roll cannot come from the
+propellers' thrust, since every thrust vector is parallel to the body axis; it could come from their reaction torque, and this
+configuration declines that channel by design (Section 8), assigning the axis to the only moving aerodynamic surface on the aircraft: a
+variable-extension strip on the lower surface, modulated rather than switched, which also pitches the nose down slightly when deployed.
+It is named here because a claim about eliminated mechanisms that omitted it would be false. A fixed-pitch blade that serves both
+regimes is at its best in neither; that is a price of refusing the variable-pitch hub, charged in Section 11. **Nor is this a claim of
+mechanical simplicity**: what is offered is a count of the mechanism classes a tilting architecture needs to change regime and this
+arrangement does not, and the actuator inventory that replaces them is the propulsion motors together with the strip.
+
+**Whether this aircraft can actually perform the change is a separate question and is not settled anywhere in this paper**: whether
+the moment available suffices, and whether the aircraft trims through the rotation, depend on aerodynamics that the methods used here do
+not predict reliably in the band the rotation passes through (Section 6). **The mechanism claim is about hardware and survives that
+limit. The transition claim is not made.** Section 15 holds the paper to that.
+
+---
+
 ## S8. Section 8 (from Section 8)
 
 ### Six paragraphs of Section 8 as they stood before recomposition (frozen snapshot)

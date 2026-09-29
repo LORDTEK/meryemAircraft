@@ -950,3 +950,7 @@ mimari ≈ 2 260. Tur 174 okuyuculara.
   (bütün adım gövdeleri tarandı, başka yok). DeepSeek: Tur 174 metninin R8 satırı *"(Section 2)"*, kâğıt *"(Section 2.1)"* — tur metnine adım dosyasının biçimini kopyaladım; kâğıt doğru.
 - **Sıradaki yer:** Grok 5.1 (sürdürdü); ChatGPT 5.1 (değişti); Qwen 5.1 (değişti); DeepSeek 7.2 (1.4'ten değişti; 5.1'e *"unless the author wants the architecture thinned"*).
   Yazarın Tur 168 notu: *"5.1 … daralır bu 5.1"*. → Yazara: 5.1 taslağı hazır (−85, korunan cümle yok).
+
+## Tur 175 — 5.1 · **KARAR (Tur 174 sonrası): "5.1 olsun, uygula ve Tur 175'i hazırla"**
+
+Yalnız korunmayan tekrar: 908 → 823; gövde 13 762 → 13 676. Korunan cümle taşınmadı. 2.1.7 boşluğu düzeltildi. Tur 175 okuyuculara.
