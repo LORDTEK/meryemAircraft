@@ -881,3 +881,16 @@ Birleştirici: başlık yoksa Adım 8 bölünmez (dağıtılmış seçenek için
     istenirse kaldıraç bölüm düzeyidir (gövdenin neyi taşıdığı) — yazarın kararı, frenle okuyucu geçişinden çıkmaz.
 - DeepSeek bu tur **DeepSeek olarak imzaladı** ve yalnız kendi hatalarını saydı. Küçük kayma: ChatGPT yazarın Tur 129 ipucunu italikle ama değiştirerek aktardı
   (*"the section itself"* → *"the detailed calculation can potentially"*); Qwen R2 onarımında benim *"on my own sentence"* ifademi kendi cümlesiymiş gibi kopyaladı.
+
+## E14 — kopya listesi · **KARAR (Tur 171 sonrası): "1'i onaylıyorum."**
+
+C2 (6.4.6 *"Put plainly …"*, −23) ve C9b (5.2.5 *"What declining it costs …"*, −10) **uygulandı** (C işlemi; dört okuyucu + Claude + yazar). Cümleler ekte zaten
+duruyordu (S13, S8); `v8-caveats.md` alt tablosunda `| S13 | … | E14 |`, `| S8 | … | E14 |`. Denetimler: 177 korunan gövdede, 12 ekte; nothing_lost, assemble, refs, stale temiz.
+
+## Bir sonraki aşama · **KARAR (Tur 171 sonrası): "(a) seçeneğini seçiyorum."**
+
+Yazar: *"Senin 250-500 diye tahmin ettiğin görüşü yapalım. 6. bölümdeki hesap dramatik kısalacak."* · *"ben bir ara 100 kelime kısalsın dediğim yerden de makul bir
+kısaltmayı yapalım ayrıca"* (2.3: 62 kısaldı, ~40 daha) · *"Bir ara tekrar birinci bölüme de el atarız sonradan."* · *"Parça-bütün-parça mantığıyla aynı şeyi üst üste
+yapmak istemiyorum"* · *"tekrar bölüm birleştirmeden önce mevcut yapıda neler yapılabilir, bu kıymetli."* → Tek turluk uygulanmış liste (Tur 170 biçimi): hesap çalışması
+paragraf birimiyle eke, bulgu ve niteleyici gövdede; Bölüm 6 ağırlıklı. Yazara bildirildi: Bölüm 6'da 54 korunan cümle (~780 kelime) var; "dramatik" kısalma ancak
+ikincil sonuçların korunan cümleleri sonuçlarıyla eke giderse (kural iii) olur → iki katman: (1) korunmayan çalışma, okuyucu teyidi; (2) S listesi, yazarın kararı.

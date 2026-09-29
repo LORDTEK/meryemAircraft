@@ -93,7 +93,6 @@ propeller basis (Supplement S13). With a lighter lift group the lift-plus-cruise
 closure; with a heavier one this configuration leads under a fixed take-off mass at every closure; with a common propeller efficiency
 a reversal appears at every closure. **Which architecture ranks first under a fixed take-off mass is therefore decided, in this model,
 by quantities this study assumes for the competitor rather than measures: its lift-group mass fraction and its propeller efficiency.**
-**Put plainly, the sign under a fixed take-off mass is not a result about the architectures; it is a result about those quantities.**
 What is robust is that the shift exists and runs toward the lighter aircraft.
 
 ### What the framework asks of whoever uses it

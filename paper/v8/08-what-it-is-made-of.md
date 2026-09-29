@@ -65,7 +65,7 @@ Section 10, and whether it suffices is **not settled in this paper**.
 
 **Roll comes from neither, and the reason is a choice rather than an impossibility.** No combination of thrust settings produces a
 moment about the body axis, and the reaction-torque channel that could (Section 1) is declined: every pair is operated
-torque-balanced. What declining it costs is not counted in this work. Roll comes instead from a strip on the lower surface (its
+torque-balanced. Roll comes instead from a strip on the lower surface (its
 geometry is in Supplement S8). **Extension is the control variable** — the strip is modulated, not switched — and deploying it also
 pitches the nose down by a small increment. Its inboard 46 % lies inside the nose propeller's slipstream, where dynamic pressure is set
 by disc loading and is available at zero airspeed, and its outboard 54 % works against the freestream in cruise, which is why one

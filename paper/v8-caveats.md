@@ -58,7 +58,6 @@ boşluğa duyarsız. `G` = Grok, `D` = DeepSeek, `C` = ChatGPT, `Q` = Qwen, `K` 
 | 7 | Whether this aircraft can actually perform the change is a separate question and is not settled anywhere in this paper. | G |
 | 7 | The mechanism claim is about hardware and survives that limit. The transition claim is not made. | G |
 | 7 | The qualification "in the propulsor that carries the aircraft" is not decoration | D |
-| 8 | What declining it costs is not counted in this work. | G |
 | 8 | The free-wheeling state is physically determinate: the rotor settles where net shaft torque is zero. The stopped state is not. | G |
 | 8 | should be read as estimates for an assumed azimuth rather than as the state a particular installation would reach. | D |
 | 8 | How many actuators that is, this study does not fix. | D |
@@ -100,7 +99,6 @@ boşluğa duyarsız. `G` = Grok, `D` = DeepSeek, `C` = ChatGPT, `Q` = Qwen, `K` 
 | 13 | The choice runs against this configuration. | D |
 | 13 | The tilting layout carries no cruise drag penalty at all. That is an idealisation in its favour. | D |
 | 13 | Neither figure is measured. | D |
-| 13 | The sign under a fixed take-off mass is not a result about the architectures; it is a result about those quantities. | D+G+C+Q+K |
 | 13 | Comparing computed figures against assumed ones favours whichever is assumed more optimistically. | D |
 | 14 | The package Section 10 closes on does not exist with any store the sources consulted here report as built. | G |
 | 14 | It does not reach the mechanism claim. | G |
@@ -217,6 +215,8 @@ kaybolmasına (CLAUDE.md §0.8). Aynı denetimle sınanır.
 | S6 | Whether 0.683 is the blade a designer would actually choose is not settled here. | E13 |
 | S4 | The quadrotor is reported for scale, and the isolation test above is what carries the prediction | E13 |
 | S6 | The compared vehicles are 1 660 to 3 275 kg | E13 |
+| S8 | What declining it costs is not counted in this work. | E14 |
+| S13 | The sign under a fixed take-off mass is not a result about the architectures; it is a result about those quantities. | E14 |
 
 *Tanım kaydı (Tur 111; Qwen P1, dört okuyucu + Claude): son beş Q+G+C+D+K satırı çerçevenin tanım cümleleri; kök (satır "is the origin of all three charges below") ve koşul zaten korunuyordu.*
 
