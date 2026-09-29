@@ -755,3 +755,8 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | "Those are in Section 7" | R1 | R1 | R2 (+ S14) | R1 | R1 | **değişmedi**; DeepSeek'e soruldu |
 | R-c 2.3 "It establishes" → "The check establishes" (Qwen) | ? | ? | ? | önerdi | ✓ | **Tur 167 oyu** |
 | Yeniden okuma kuralı ek bölümlerini kapsar (DeepSeek) | ? | ? | önerdi | ? | ✓ (açıklama) | **Tur 167 oyu** |
+| 6.4 işaretçisi, C3′, 2.3 (1 095), S4 bloğu — uygulanan hâl | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI (Tur 168)** |
+| "Those are in Section 7" | R1 | R1 | R1 (geri çekti) | R1 | R1 | **KAPANDI: değişmedi** |
+| R-c "The check establishes" | ✓ | ✓ | ✓ | ✓ | ✓ | **uygulandı (Tur 168)** |
+| İçeri işaret denetimi ek bölümlerini kapsar | ✓ | ✓ | ✓ | ✓ | ✓ | **kabul** (CLAUDE.md §3.0) |
+| Sıradaki adaylar (Grok N1; DeepSeek C-1…C-7; Qwen 2; ChatGPT yöntem) | — | — | — | — | doğruladı | **yazara (Tur 168)** |

@@ -738,3 +738,30 @@ Birleştirici: başlık yoksa Adım 8 bölünmez (dağıtılmış seçenek için
   shortening until I am confident"* cümlesini güncel talimat diye aktardı (Tur 72'de yazar tersine çevirdi).
 - **Sıradaki adım:** yazarın "sonra devam edeceğiz birleştirme ve kısaltmalara" planı — okuyuculardan aday istendi (altı alanlı: pasaj tam, işlem, kelime, korunan
   cümle, içeri işaretçiler, fren/Tur 104); ben görüşümü onların adaylarından sonra ekleyip yazara sunacağım. En büyük bölümler 4 (1 983) ve 2.1 (1 942).
+
+## Tur 167 cevapları — uygulananlar kapandı; R-c uygulandı; adaylar doğrulandı ve yazara sunuldu
+
+- **Teyit (dördü):** 6.4 işaretçisi, C3′, 2.3 (1 095), S4 bloğu → **kapandı.** "Those are in Section 7": DeepSeek R2'yi geri çekti → **R1, kapandı.**
+- **Uygulandı (dört okuyucu + Claude):** R-c — 2.3 "It establishes" → "The check establishes". **Kural açıklaması** (DeepSeek; beşimiz): içeri işaret denetimi ek
+  bölümlerini de kapsar → CLAUDE.md §3.0.
+- **Adaylar (doğrulama: kaynak metin + korunan liste + fren/Tur 104):**
+
+| Aday | Kim | Kazanç | Doğrulama | Claude |
+|---|---|---:|---|---|
+| Bölüm 7 "None of these is a small correction…" sil | Grok | 12 | korunan değil; ama borcun ağırlığını söyleyen sınır cümlesi — silinince açık sorular küçük düzeltme gibi okunabilir | hayır (zayıf) |
+| C-1 2.1 eğik satır paragrafı → S2 + yeni cümle | DeepSeek, Qwen | ~60 | korunan değil; "aritmetik" yok — paragraf, eğik satırın hesabı çürütebileceği durumu ve onu neyin durdurduğunu söylüyor (yanlışlanabilirlik); yeni cümle bu itirafı düşürüyor | hayır |
+| C-2 2.1 geri çekme "speed … rose by 5 m/s" sil | DeepSeek | 25 | **korunan** (S-18 onarımı: kaynağın kendi "great advantage"ı; seçici alıntı) — DeepSeek "none" dedi | hayır, kesin |
+| C-3 Bölüm 3 1950'ler nedenleri → "pilot workload" | DeepSeek | 15 | kaynağın atfını başka kategoriyle değiştiriyor; sonraki korunan cümlenin "spatial-orientation" ve "human estimate" öncülü kırılır | hayır |
+| C-4 Bölüm 4 "Which power P denotes" paragrafı → S6 | DeepSeek | ~35 (70 değil) | korunan değil; ama dış karşılaştırmanın ortak tabanının kanıtı (yalıtım çifti kuralı); yeni cümle "incomparable" gerekçesini düşürüyor | hayır |
+| C-5 5.2 sırt kaplaması ölçütü ve 50–70 mm → S8 | DeepSeek | ~25 | 39 mm neye karşı? Tur 104 testi ve gövde-yalnız yorumlanabilirlik bozulur | hayır |
+| C-6 6.2 düşük Re niteleyicisi → S11 | DeepSeek | ~40 | model niteleyicisi ("computed rather than measured") — yorum önkoşulu | hayır |
+| C-7 5.2 "rests on five points" (Bölüm 3'ün kopyası) | DeepSeek | ~15 net | gerçek kopya; ama 5.2 "What meets the ground" alt başlığının tek envanter cümlesi — yerine işaretçi gerekir | zayıf evet |
+| Qwen 2 Bölüm 4 L/De türetmesi → S6 | Qwen | ~20 (40 değil) | karşılaştırmanın ortak tabanı (bu yapılandırmanın sayısı nasıl hesaplandı) | hayır |
+| ChatGPT: 8, 2.1, 4 paragraf düzeyinde incelensin | ChatGPT | — | pasaj alıntılamadı; "Section 4" başlığı altında 2.3'ü anlatıyor (eski adım numarası — yine) | yöntem olarak evet |
+
+- **Claude'un görüşü (yazara):** cümle düzeyinde kesim bitti — doğrulanan adaylardan ancak ~15 kelime çıkıyor. Kalan yol: (a) Grok ve ChatGPT'nin önerisi, 2.1 ve 4'ü
+  (en büyük iki bölüm) tam alıntılayıp okuyuculardan paragraf düzeyinde tekrar haritası istemek; (b) yapısal kararlar (korunan cümleler kural (iii) ile eke; argüman
+  adımı kesmek) — yazarın. Önerim (a).
+- **Okuyucu hataları:** DeepSeek C-2'nin korunan olduğunu görmedi (S-18) ve C-1'e "aritmetik" dedi (yok); C-4 "incomparable gerekçesi kalır" dedi, yeni cümlesi düşürüyor.
+  Qwen DeepSeek'in C-1'ini denetlemeden benimsedi ve "Round 166" dedi (Tur 167 cevabı); L/De kazancını 40 dedi (~20). ChatGPT yine eski adım numarasını kullandı
+  ("Section 4" = 2.3) ve 12 000 hedefinden söz etti (yazar uzunluğu bir kenara koydu).

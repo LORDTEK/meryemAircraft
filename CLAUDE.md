@@ -613,6 +613,7 @@ okunur — atfın çözülmesi yetmez (`v8_assemble.py` yalnız çözülmeyi den
 İlk koşu (Tur 130): 149 cümle, 5 başarısız → S-53 (R3+R4), S-54 (R4; ayrıca yanlış belge ve kesik alıntı — v5'ten beri),
 S-55 (R3), S-56 (R3). Onarımdan sonra yeniden koşulur (Tur 132: 0 başarısız). Tablo: `paper/v8/drafts/receipt-audit.md`.
 **Her aşamanın sonunda koşturulur.** Numarasız işaretçiler (*above*, *below*) bir sonraki aşamanın adayı.
+**İçeri işaret denetimi (Tur 165, Claude'un hatası; Tur 168'de ek bölümleri için açıklama, dört okuyucu + Claude):** bir bölümün içeriği değişince o bölüme **işaret eden her cümle** yeniden okunur — yalnız değişen cümleler değil. *"Bölüm"* ek bölümlerini de kapsar (S4, S13, S14 gövde işaretçilerinin alıcısı). Yalnız ekleme alan bir alıcı, işaretçi *"yalnız"* demedikçe bir işaretçiyi yanlışlamaz.
 **Ders (S-56):** bir onarımın kendisi de alındıdır — "fiyatlanmadı" demeden önce maliyetin kapanışın içinde olup olmadığına
 bakılır; alıcıyı okumak yetmez.
 **Kabul (Tur 133, dört okuyucu + Claude):** (1) **Yokluk demeden önce bütün metin aranır** (Qwen, ChatGPT'nin genel biçimi):
