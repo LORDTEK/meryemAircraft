@@ -214,14 +214,16 @@ The body is about **26 000 words**, and the journal's working target is **about 
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 166.**
+**Round 167.**
 
 | Block | State |
 |---|---|
 | Stages (the author, Round 129) | present stage: **compression by finding**; merges and shortenings continue |
 | Structure | 1 · 2.1–2.3 · 3 · 4 · 5.1–5.2 · **6** calculations (6.1–6.4) · **7** What does not close · **8** Four axes (the conclusion) |
-| Applied (Round 166), for confirmation | C1: 6.4's A–D table → head of S13 (the prose keeps every range, the shift and the sign change); C2: Section 7's debt sentence deleted; R-a, R-b: pointers into Section 7 now name Supplement S14 |
-| **Open (Round 166)** | DeepSeek's pointer sentence for 6.4 (vote); **C3′**: 6.2's list kept, only *"Section 7 lists them"* → *"Supplement S14 lists them"* (ChatGPT's scope objection to C3 upheld); **2.3 revised draft 1 282 → 1 095**: the weight-breakdown sentence restored verbatim with its 99 lb, and the bridge sentence restored verbatim |
+| Closed (Round 167) | C1 (6.4's A–D table in S13), C2 (Section 7's debt sentence), R-a, R-b (pointers into Section 7 name S14) |
+| Applied (Round 167), for confirmation | 6.4: *"The per-closure numbers are in Supplement S13."*; C3′: 6.2's list kept, *"Supplement S14 lists them"*; **2.3 recomposed, 1 282 → 1 095** (the bridge sentence and the weight-breakdown sentence with its 99 lb kept; five paragraphs in S4 in full) |
+| **Open (Round 167)** | R-c (2.3: *"It establishes"* → *"The check establishes"*); *"Those are in Section 7"* (DeepSeek R2, the others R1); the re-read rule includes supplement sections; **the readers' next candidates for merging and shortening** (the author decides) |
+| Body | ≈ 18 470 words (assembled view, headings excluded) |
 | Contribution | Sections 1, 5.1 and 8 name one contribution, the architecture |
 | Tip pairs in cruise (the author's decision) | uncommanded state: free-wheeling at zero shaft torque (5.2); shaft power of commanded departures not computed |
 

@@ -748,3 +748,10 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | C3 6.2 listesi → tek cümle | ✓ | bekletti (kapsam) | ✓ | ✓ | önerdi | **uygulanmadı**; ChatGPT haklı; C3′ (yalnız işaretçi) Tur 166 oyunda |
 | R-a, R-b (Bölüm 7'ye işaretçiler → S14) | ✓ | ✓ | ✓ | ✓ | ✓ | **uygulandı (Tur 166)**; teyide |
 | 2.3 taslağı 1 282 → 1 004 | ✓ + geri koy | ✓ + köprü | ✗ (bulgu düştü) | ✓ | önerdi | **uygulanmadı**; gözden geçirilmiş taslak 1 095 Tur 166 oyunda |
+| C1, C2, R-a, R-b uygulanan hâl | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI (Tur 167)** |
+| 6.4 işaretçisi (DeepSeek) | ✓ | ✓ | ✓ | ✓ | ✓ | **uygulandı (Tur 167)**; teyide |
+| C3′ (liste kalır, işaretçi S14) | ✓ | ✓ (itiraz karşılandı) | ✓ | ✓ | ✓ | **uygulandı (Tur 167)**; teyide |
+| 2.3 gözden geçirilmiş taslak 1 095 | ✓ | ✓ | ✓ | ✓ | ✓ | **uygulandı (Tur 167)**; teyide |
+| "Those are in Section 7" | R1 | R1 | R2 (+ S14) | R1 | R1 | **değişmedi**; DeepSeek'e soruldu |
+| R-c 2.3 "It establishes" → "The check establishes" (Qwen) | ? | ? | ? | önerdi | ✓ | **Tur 167 oyu** |
+| Yeniden okuma kuralı ek bölümlerini kapsar (DeepSeek) | ? | ? | önerdi | ? | ✓ (açıklama) | **Tur 167 oyu** |

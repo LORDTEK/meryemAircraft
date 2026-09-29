@@ -723,3 +723,18 @@ Birleştirici: başlık yoksa Adım 8 bölünmez (dağıtılmış seçenek için
   ChatGPT köprü konusunda haklı (mekanizma cümlesi, Tur 104 kuralı — benim hatam), ama "expected sign" kaynaktan güçlü ve mekanizmayı düşürüyor → köprü aynen geri.
   Gözden geçirilmiş taslak 1 282 → 1 095 (`paper/v8/drafts/r166/04-draft.md`, üretici `paper/build/v8_round166_23.py`); 15 korunan cümle ve yalıtım çifti yerinde.
 - **Kayıt açığım:** `v8-shortening-consensus.md` Tur 162–165 satırlarını taşımıyordu; bu tur eklendi.
+
+## Tur 166 cevapları — işaretçi, C3′ ve 2.3 uygulandı (beşimiz); sıradaki adaylar okuyuculardan
+
+- **Teyit (dördü):** C1, C2, R-a, R-b → kapandı.
+- **Uygulandı (dört okuyucu + Claude):** 6.4'e DeepSeek'in işaretçisi (*"The per-closure numbers are in Supplement S13."*); C3′ (6.2 listesi kalır, *"Supplement S14 lists
+  them"*; ChatGPT itirazının karşılandığını söyledi); 2.3 gözden geçirilmiş taslak 1 282 → 1 095 (köprü ve ağırlık dökümü cümlesi aynen; beş paragraf Ek S4'te tam).
+  Görünüm 19 096 → 18 921; gövde ≈ 18 470 (başlıklar hariç).
+- **Benim hatalarım (tur metninde, makalede değil):** taslağı elle çevirirken "Section 2." (noktayla biten) 2.1'e çevrilmedi (Grok, ChatGPT yakaladı); Tur 166 §1.4'te
+  "Section 6.4 tests …" cümlesini 2.2'ye verdim, 2.1'de (kendim buldum).
+- **Açık:** R-c (Qwen: 2.3 "It establishes" → "The check establishes"; kaynak kusuru, taslak getirmedi); "Those are in Section 7" (DeepSeek R2, üç okuyucu ve ben R1 →
+  değişmedi, DeepSeek'e soruldu); DeepSeek: yeniden okuma kuralı ek bölümlerini de kapsar (açıklama olarak oyda).
+- **Okuyucu hataları:** DeepSeek §1.4 onarımını "deletion only" dedi (kelime ekliyor). ChatGPT yine beni "the author" diye anıyor. Qwen Tur 61–63'ün *"There will be no
+  shortening until I am confident"* cümlesini güncel talimat diye aktardı (Tur 72'de yazar tersine çevirdi).
+- **Sıradaki adım:** yazarın "sonra devam edeceğiz birleştirme ve kısaltmalara" planı — okuyuculardan aday istendi (altı alanlı: pasaj tam, işlem, kelime, korunan
+  cümle, içeri işaretçiler, fren/Tur 104); ben görüşümü onların adaylarından sonra ekleyip yazara sunacağım. En büyük bölümler 4 (1 983) ve 2.1 (1 942).

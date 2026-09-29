@@ -44,7 +44,7 @@ The engine is sized by cruise, **3.54 to 5.17 kW** of shaft rating, against a ho
 
 ### What the closure does not contain
 
-Section 10's convergence does not cover the cost of declining the reaction-torque channel, the sizing of the strip's actuation, the allocation of the take-off margin against attitude authority, the landing transition, the vortex ring state, closed-loop attitude control in hover and in cruise, engine installation, or rotor–structure and rotor–wing interference; **none of these is a ledger entry, and Section 14 lists them.** **The first and the last are the two that would most change the numbers above if they were computed.**
+Section 10's convergence does not cover the cost of declining the reaction-torque channel, the sizing of the strip's actuation, the allocation of the take-off margin against attitude authority, the landing transition, the vortex ring state, closed-loop attitude control in hover and in cruise, engine installation, or rotor–structure and rotor–wing interference; **none of these is a ledger entry, and Supplement S14 lists them.** **The first and the last are the two that would most change the numbers above if they were computed.**
 
 **Every one of the charges above belongs to one scale**: the four closures do not establish how the three charges behave as the aircraft changes size, which Section 12 asks, or what happens to the comparison when the sizing contract changes, which Section 13 asks.
 
@@ -54,6 +54,7 @@ Section 10's convergence does not cover the cost of declining the reaction-torqu
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 167 — C3′ uygulandı** (Tur 166: dört okuyucu + Claude): *"and Section 14 lists them"* → *"and Supplement S14 lists them"*. Liste kalıyor; Tur 165'in tek cümlelik yeniden yazımı sıralamayı sekiz maliyetten S14'ün 18 sorusuna genişletiyordu (ChatGPT yakaladı, Claude'un hatası). Sekiz kalemin sekizi S14 satırlarında: R1 | `paper/v8/supplement.md` S14 |
 | **Tur 149 — L-3 satır 7 uygulandı:** *"free-wheeling attitude rotors"* → *"free-wheeling tip-pair rotors"*. X-4 kapandı | Tur 148 §3 |
 | **Tur 148 — X-4 uygulandı** (dört okuyucu + Claude): *"closed-loop hover control"* → *"closed-loop attitude control in hover and in cruise"* — S-60 onarımı (Tur 140) buraya ulaşmamıştı; emekli ifade listesine eklendi | Tur 147 §4 |
 | **Tur 131 — S-53 (B), R (dört okuyucu + Claude):** Fatura 2'ye, *"… if the vertical phase did."*dan sonra: *"No stopped-state counterfactual was computed. The eight tip discs stopped edge-on at a controlled azimuth are estimated at ΔC_D0 = 0.0008, against the computed free-wheeling 0.0154 (the estimate is an area-and-coefficient calculation, Supplement S11), but controlling the azimuth takes an indexing mechanism — a class Section 7 counts — and sizing it for eight small discs, charging its mass and its failure modes, and re-solving the loop has not been done."* Kestirim satırları Ek S11'de | S-53 |
