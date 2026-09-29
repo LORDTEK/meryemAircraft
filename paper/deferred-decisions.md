@@ -943,3 +943,10 @@ Ayrıca daha önce ertelenen: **2.3'ün çerçeve/mimari oranındaki payı** (b�
 
 a (2.2.5, C) uygulandı; katman 1 (ChatGPT'nin 2.1–2.2 tekrar taraması, Qwen'in 2.3 paragrafı, DeepSeek'in S2 işaretçisi R7). 13 860 → 13 762. Bölüm 2 ≈ 3 150 /
 mimari ≈ 2 260. Tur 174 okuyuculara.
+
+## Tur 174 cevapları — dört okuyucu; Bölüm 2 kapandı
+
+- Değişen alt bölümler, R7, R8, E17 a alındısı: **dördü teyit, veto yok** → **KAPANDI.** Grok ve DeepSeek: 2.1.7'de *"meet ."* — silmeden kalan boşluk; **düzeltildi**
+  (bütün adım gövdeleri tarandı, başka yok). DeepSeek: Tur 174 metninin R8 satırı *"(Section 2)"*, kâğıt *"(Section 2.1)"* — tur metnine adım dosyasının biçimini kopyaladım; kâğıt doğru.
+- **Sıradaki yer:** Grok 5.1 (sürdürdü); ChatGPT 5.1 (değişti); Qwen 5.1 (değişti); DeepSeek 7.2 (1.4'ten değişti; 5.1'e *"unless the author wants the architecture thinned"*).
+  Yazarın Tur 168 notu: *"5.1 … daralır bu 5.1"*. → Yazara: 5.1 taslağı hazır (−85, korunan cümle yok).
