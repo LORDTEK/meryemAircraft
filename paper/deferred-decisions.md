@@ -954,3 +954,14 @@ mimari ≈ 2 260. Tur 174 okuyuculara.
 ## Tur 175 — 5.1 · **KARAR (Tur 174 sonrası): "5.1 olsun, uygula ve Tur 175'i hazırla"**
 
 Yalnız korunmayan tekrar: 908 → 823; gövde 13 762 → 13 676. Korunan cümle taşınmadı. 2.1.7 boşluğu düzeltildi. Tur 175 okuyuculara.
+
+## Tur 175 cevapları — 5.1 kapandı; "mevcut yapıda kısaltma" aşaması tükendi → YAZARA
+
+- 5.1 değişiklikleri, R9, içeri işaretçiler: **dördü teyit, veto yok** → **KAPANDI.** 13 676.
+- 5.1'de kalan tekrar: Grok iki cümle önerdi (şeridin "modulated … pitches the nose down" ayrıntısı; eyleyici envanteri yan cümlesi); ChatGPT *"justified repetition —
+  no further 5.1 cut"*; DeepSeek yok; Qwen'in gösterdiği cümle (*"The combination carries costs …"*) **gövdede yok**, yalnız ekte (eski metin) — Qwen'in hatası.
+  Oybirliği yok → uygulanmadı. (Claude: eyleyici envanteri kalmalı — §0.1'in "doğru iddia" kalıbı; şerit ayrıntısı küçük, zorlamaya değmez.)
+- Sıradaki yer: Grok *"the next author decision is then the parked merge stage"*; ChatGPT 7.2 yalnız hedefli tekrar denetimi, kesim varsayımı yok; DeepSeek 7.2'yi geri çekti,
+  5.2.8 (20–30); Qwen *"No clean next place … I would not force another pass."* Claude: 7.2'de de 5.2.8'de de temiz tekrar yok denecek kadar az — aşama tükendi.
+- **Yazara:** ertelenmiş işlerden hangisiyle devam: (1) Bölüm 1'e dönüş, (2) korunan cümlelerin korunma durumu (parça–bütün–parça), (3) tablo/şekil,
+  (4) bölüm birleştirme (2.3 dahil). Claude'un önerdiği sıra: 1 → 2 → 3 → 4.

@@ -802,3 +802,6 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | E17 a (yazar kararı) | — | — | — | — | — | **yazar**; alındı okuyuculara |
 | Tur 174 Bölüm 2'nin tamamlanması, R7, R8, E17 | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI** |
 | Tur 175 5.1 (yalnız tekrar) + R9 | ? | ? | ? | ? | uyguladı | **Tur 175 teyit/veto** |
+| Tur 175 5.1 + R9 | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI** |
+| 5.1'de ek kesim (şerit ayrıntısı, eyleyici envanteri) | önerdi | hayır | yok | (yanlış cümle) | hayır | **uygulanmadı** |
+| Sıradaki aşama | birleştirme | 7.2 denetimi | 5.2.8 | dur | Bölüm 1 → korunan durumu → tablo/şekil → birleştirme | **yazara** |
