@@ -34,46 +34,30 @@ together, in the literature and in hardware** — Section 1 says where. The prin
 condition shows what it satisfies, and the price shows what it costs.** The three elements, taken together, meet the escape condition
 of Section 3 **in the propulsor that carries the aircraft**, and they meet it with no mechanism
 that reorients a propulsor. The assembly is not offered as novel because it is an assembly. It is
-offered for what it satisfies, and for what it does not need in order to satisfy it — and Section 1
-has already set out how much of the ground is occupied.
+offered for what it satisfies, and for what it does not need in order to satisfy it.
 
-**The qualification "in the propulsor that carries the aircraft" is not decoration.** Section 3 lists partial instantiation among the ways an architecture can fail
-the condition: meeting it where the aircraft is carried and failing it elsewhere. That is this
-configuration's own case. The single nose pair meets all four parts — same hardware, both duties
-served, one orientation, hover peak from a buffer. The four tip pairs do not: they are exposed
-in the cruise flow and they cannot be feathered, so they re-open the second charge. **The
-instantiation is therefore partial**, and reporting what the failing part costs is a substantial
-share of what Section 11 does.
+**The qualification "in the propulsor that carries the aircraft" is not decoration.** The single nose pair meets all four parts of
+the condition. The four tip pairs do not: they are exposed in the cruise flow and cannot be feathered, so they re-open the second
+charge. **The instantiation is therefore partial**, the case Section 3 lists among the ways to fail, and reporting what the failing
+part costs is a substantial share of what Section 11 does.
 
-The condition asks for one set of hardware to serve both regimes in one orientation,
-with the hover peak drawn from a buffer. Each element supplies one part of it, and none
-of them supplies it alone:
+Each element supplies one part of the condition, and none supplies it alone:
 
-- The **blended wing body** carries the cruise lift on a surface, so that cruise is
-  wing-borne rather than thrust-borne.
-- The **tail-sitting stance** aligns the thrust axis with the body axis, so the propulsor
-  that produces the thrust for vertical operation is the same one that produces the cruise
-  thrust, holding
-  one orientation relative to the airframe throughout. There is no dedicated lift system to
-  carry, and vertical operation does not depend on a runway.
-- The **series-hybrid buffer** releases the continuous power plant from the hover peak,
-  so that it is sized by cruise rather than by a condition holding for about two percent
-  of the flight. The series arrangement is used here for the electrical path it gives the buffered
-  hover peak, not because this study assumes it is the more efficient hybrid architecture.
+- The **blended wing body** carries the cruise lift on a surface.
+- The **tail-sitting stance** aligns the thrust axis with the body axis, so one propulsor produces the thrust for vertical operation
+  and for cruise, in one orientation relative to the airframe; there is no dedicated lift system, and vertical operation needs no runway.
+- The **series-hybrid buffer** releases the continuous plant from the hover peak, so that it is sized by cruise; the series
+  arrangement is chosen for the electrical path it gives the buffered peak, not because it is assumed to be the more efficient hybrid.
 
-The configuration is arranged to change regime by **rotating the airframe**. The propulsors hold
-their orientation relative to the body from take-off to cruise; what changes is the
-orientation of the body relative to the flight path. A tilting architecture reaches the
-same end by turning its propulsors instead, which requires a pivot and an actuator and
-introduces gyroscopic coupling from the reorienting mass and a control problem through the
-turn. It does not satisfy the condition as stated: the condition requires one orientation
-relative to the airframe, and turning the propulsors is the case the condition excludes.
-Here the end is reached by turning the thing the propulsors are already attached to, which
-leaves the orientation requirement intact.
-
-That single move is what removes the need for the mechanism. **The table below counts mechanism classes that
-exist in order to change regime, or to take a rotor out of one regime's flow.** The strip of Section 8 is a
-control surface, of a different class, and is named below and in Section 8 rather than in the table. The configuration therefore carries:
+**The configuration is arranged to change regime by rotating the airframe. The propulsors hold their orientation relative to the body
+from take-off to cruise; what changes is the orientation of the body relative to the flight path.** The contemporary hybrids reach the
+same end otherwise. The lift-plus-cruise design of the NASA study used in Section 4 carries its lifting rotors through cruise, stopped
+and aligned with the stream, and flies on a separate pusher; its tilt-wing turns eight proprotors, each on its own motor, on a tilting
+wing and tail, which takes a pivot and actuators and brings a gyroscopic moment and a control problem through the turn. Turning the
+propulsors is the case the condition excludes; turning the thing they are attached to leaves the orientation requirement intact.
+**That single move is what removes the need for the mechanism.** The table counts the mechanism classes that exist in order to change
+regime, or to take a rotor out of one regime's flow; the strip of Section 8 is a control surface, of a different class, and is named
+below. The configuration therefore carries:
 
 | Mechanism | Where it is required | Present here |
 |---|---|---|
@@ -86,44 +70,23 @@ control surface, of a different class, and is named below and in Section 8 rathe
 *Note.* The stopping class is absent if the tip pairs free-wheel in cruise or are held stopped by motor torque; a
 brake or a mechanical lock would add it. The means of stopping is not fixed by this study (Section 8, *What this inventory does not settle*).
 
-Attitude is produced instead by differential thrust between fixed-pitch propellers: a
-single coaxial contra-rotating pair at the nose, and four small coaxial pairs at the
-ends of the tip frames, whose moment arms give pitch and yaw directly. The tip pairs are
-sized from the moment requirement rather than from weight support, but the thrust that sizing
-gives them also supplies the aircraft's entire take-off margin, because the nose pair is sized
-at thrust equal to weight and no more. This dual role is a dependency, reported as one in Section 5, and it does not make the tip pairs a dedicated lift system.
+Attitude comes from differential thrust between the fixed-pitch pairs: the moment arms of the four tip pairs give pitch and yaw. The tip
+pairs are sized from the moment requirement, but because the nose pair is sized at thrust equal to weight and no more, they also supply
+the whole take-off margin; that dependency is reported in Section 5, and it does not make them a dedicated lift system.
 
-**The claim is narrower than it may appear.**
+**The claim is narrower than it may appear.** **This is not a configuration in which nothing moves.** Roll cannot come from the
+propellers' thrust, since every thrust vector is parallel to the body axis; it could come from their reaction torque, and this
+configuration declines that channel by design (Section 8), assigning the axis to the only moving aerodynamic surface on the aircraft: a
+variable-extension strip on the lower surface, modulated rather than switched, which also pitches the nose down slightly when deployed.
+It is named here because a claim about eliminated mechanisms that omitted it would be false. A fixed-pitch blade that serves both
+regimes is at its best in neither; that is a price of refusing the variable-pitch hub, charged in Section 11. **Nor is this a claim of
+mechanical simplicity**: what is offered is a count of the mechanism classes a tilting architecture needs to change regime and this
+arrangement does not, and the actuator inventory that replaces them is the propulsion motors together with the strip.
 
-This is not a configuration in which nothing moves. Roll cannot be produced by the
-propellers' **thrust**: every thrust vector is parallel to the body axis, so no combination
-of thrust settings produces a moment about that axis. It **could** be produced by their **reaction
-torque**, and this configuration declines that channel by design (Section 8), assigning the axis to an aerodynamic
-device instead. The device is the only moving aerodynamic
-surface on the aircraft — a variable-extension strip on the lower surface, modulated rather
-than switched, which also pitches the nose down by a small increment when it is deployed. The
-strip is part of the configuration and is named here rather than later, because a claim about
-eliminated mechanisms that omitted it would be false.
-
-A fixed-pitch propeller that serves two regimes pays in efficiency in at least one of them. The nose pair holds one
-orientation, which is the architectural claim, but it also holds one blade geometry across a
-hovering condition and a cruising one, and no single fixed-pitch blade is at its best in both.
-That is a price of refusing the variable-pitch hub rather than an argument against refusing it,
-and it is charged in Section 11 with the other costs of the union, not settled here.
-
-Nor is this a claim of mechanical simplicity. What is offered is a **count**: the classes of mechanism that a tilting architecture requires to change regime, and which this arrangement does not require. The actuator inventory that replaces them is the propulsion motors together with the strip.
-
-**One thing this section does not establish, and Section 15 holds it to that.** The arrangement
-described here requires no mechanism to change regime. **Whether this aircraft can actually perform
-the change is a separate question and is not settled anywhere in this paper**: whether the moment
-available is sufficient, and whether the aircraft trims through the rotation, depend on
-aerodynamics that — for the methods used here and the published comparisons against which they were
-checked — are not reliable above roughly ten degrees of incidence, which is inside the band the
-rotation passes through. **The mechanism claim is about hardware and survives that limit. The
-transition claim is not made.**
-
-The combination carries costs: the tip pairs that make the union controllable are themselves
-exposed in cruise, and Section 11 charges them.
+**Whether this aircraft can actually perform the change is a separate question and is not settled anywhere in this paper**: whether
+the moment available suffices, and whether the aircraft trims through the rotation, depend on aerodynamics that the methods used here do
+not predict reliably in the band the rotation passes through (Section 6). **The mechanism claim is about hardware and survives that
+limit. The transition claim is not made.** Section 15 holds the paper to that.
 
 ---
 
@@ -131,6 +94,7 @@ exposed in cruise, and Section 11 charges them.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 170 — yazarın notları üzerine kısaltma uygulandı** (Tur 168–169: işlemlerde dört okuyucu + Claude; korunan cümle taşımaları yazar kararı E13). Değişen her paragrafın eski hâli ekin bu adıma ait bölümünde aynen (*"… before the Round 170 shortening"*). Yeni (R) cümleler Tur 170 §2'de okuyucu vetosuna açık; sonuç teyide | `paper/build/v8_round170_texts.py`, `v8_round170_apply.py` |
 | **Tur 151 — W-2 uygulandı (yazarın cümlesi ve kararı; dört okuyucu yeni yüklem bulmadı):** korunan *"What this paper contributes is that combination, the condition its primary propulsor is designed to satisfy, and the price the configuration pays for pursuing it."* → *"What this paper contributes is the architecture that brings the three elements together; the condition shows what it satisfies, and the price shows what it costs."* Tanımlık ve fiil yazarın seçimi (Grok'un biçimi). Tek katkı: mimari (Tur 35); Bölüm 1, 5.1, 6.2, 9 artık aynı katkıyı adlandırıyor. Q3, L-3 satır 1 kapandı | Tur 150 §0; Tur 151 §1 |
 | **Tur 150 — W-2 Q3 uygulandı** (dört okuyucu + Claude; korunan, D): *"The qualification in that sentence is not decoration."* → *"The qualification "in the propulsor that carries the aircraft" is not decoration."* (gösterici iki cümle gerideydi; tırnak, çünkü italik Qwen'in ekranına ulaşmadı). **W-2 Q2 yazarın kararında:** (ii) Grok, ChatGPT (çekinceli), Qwen, Claude; (iii) DeepSeek, (iv) DeepSeek'in inceltmesi | Tur 149 §2 |
 | **Tur 149 — L-3 satır 5, 6 uygulandı:** *"The four attitude pairs"* → *"The four tip pairs"*; *"the attitude rotors that make the union controllable"* → *"the tip pairs that…"* (ChatGPT'nin çekincesi: tek kontrol aracı değil). W-2 (katkı cümlesi) Tur 149'da ikinci tartışma turunda, sonra yazara | Tur 148 §2–3 |

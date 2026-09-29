@@ -16,17 +16,29 @@ kalır"*) · sıralama yok, Adım 13'ün işi.
 
 ## The ledger
 
-Section 2 named three charges that any architecture in this corner pays; **this section says where each charge appears inside the closed numbers of Section 10, and how large it is there.** Like the closure, the ledger prices the arrangement; the count of mechanism classes is not an entry in it.
-
-**It attributes. It does not add.** Every cost named below is already inside the closure of Section 10. **No new physical cost term is introduced here.** **And there is no single figure for what the architecture costs.** The three charges are in three different currencies — kilograms, drag counts, installed kilowatts — and **no scalar aggregate is defined, because this study has no defensible weighting between them.** **The total is the contract, not a property of the aircraft** (Section 13).
+This section says where each charge of Section 2 appears inside the closed numbers of Section 10, and how large it is there.
+**It attributes. It does not add.** Every cost named below is already inside the closure of Section 10. **No new physical cost term is
+introduced here.** **And there is no single figure for what the architecture costs**: the charges are in three currencies, and **no
+scalar aggregate is defined, because this study has no defensible weighting between them** (Section 13).
 
 ### Bill 2 — the drag of hover hardware, inside the bracket
 
-In the zero-lift drag build-up behind Section 10's bracket (line items in Supplement S11), **the hardware exposed by the vertical-phase layout — the tip frames and the free-wheeling tip-pair rotors — is 69 percent of the zero-lift drag at the favourable end and 57 percent at the adverse one**; the rotor term alone is 0.0154 at the favourable end. **The rotor line rests on section drag at low Reynolds number.** It is a blade-element result for sections near a Reynolds number of 8 × 10⁴ in the free-wheeling state, on section polars that are computed rather than measured; Section 12 shows how strongly the term depends on it. **The tip-frame term is an attribution, not a marginal removal cost**: it is not a claim that this drag would disappear if the vertical phase did. **No stopped-state counterfactual was computed.** The eight tip discs stopped edge-on at a controlled azimuth are estimated at ΔC_D0 = 0.0008, against the computed free-wheeling 0.0154 (the estimate is an area-and-coefficient calculation, Supplement S11), but controlling the azimuth takes an indexing mechanism — a class Section 7 counts — and sizing it for eight small discs, charging its mass and its failure modes, and re-solving the loop has not been done.
+In the drag build-up behind the bracket (line items in Supplement S11), **the hardware exposed by the vertical-phase layout — the
+tip frames and the free-wheeling tip-pair rotors — is 69 percent of the zero-lift drag at the favourable end and 57 percent at the
+adverse one**; the rotor term alone is 0.0154 at the favourable end. **The rotor line rests on section drag at low Reynolds number**,
+on section polars computed rather than measured (Section 12). **The tip-frame term is an attribution, not a marginal removal cost**: it
+is not a claim that this drag would disappear if the vertical phase did. **No stopped-state counterfactual was computed**: the eight
+tip discs stopped edge-on are estimated at ΔC_D0 = 0.0008 (Supplement S11), but that takes an indexing mechanism, a class Section 7
+counts, which has not been sized, charged or closed.
 
-Removing the hub and small items, the tip frames and the free-wheeling rotors gives a clean-body lift-to-drag ratio of 20.55 at the favourable end and 15.24 at the adverse one, against the aircraft's 10.82 and 8.79: **the configuration retains 52.6 and 57.7 percent.** Bill 2 therefore occupies a larger share where the clean-body drag is lower, because a near-constant charge is set against a smaller total — a statement about position within the drag bracket at one scale, not about size (Section 12).
+Without the hub and small items, the tip frames and the rotors, the clean body reaches a lift-to-drag ratio of 20.55 at the favourable
+end and 15.24 at the adverse one, against the aircraft's 10.82 and 8.79: **the configuration retains 52.6 and 57.7 percent.** Bill 2
+therefore occupies a larger share where the clean-body drag is lower — a statement about position within the drag bracket at one
+scale, not about size (Section 12).
 
-**Rotor–structure and rotor–wing interference is not modelled and is not carried as a line.** Section 2 quotes a wind-tunnel finding that a simulation assuming negligible rotor–structure interaction *"always predicts higher lift and lower drag than were experimentally observed"*; this build-up is such a calculation, and the bracket's upper margin is the only provision made for it.
+**Rotor–structure and rotor–wing interference is not modelled and is not carried as a line.** Section 2 quotes a wind-tunnel finding
+that a simulation neglecting it predicted higher lift and lower drag than were measured; this build-up is such a calculation, and the bracket's
+upper margin is the only provision made for it.
 
 ### The cruise-efficiency gap under fixed pitch
 
@@ -54,6 +66,7 @@ Section 10's convergence does not cover the cost of declining the reaction-torqu
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 170 — yazarın notları üzerine kısaltma uygulandı** (Tur 168–169: işlemlerde dört okuyucu + Claude; korunan cümle taşımaları yazar kararı E13). Değişen her paragrafın eski hâli ekin bu adıma ait bölümünde aynen (*"… before the Round 170 shortening"*). Yeni (R) cümleler Tur 170 §2'de okuyucu vetosuna açık; sonuç teyide | `paper/build/v8_round170_texts.py`, `v8_round170_apply.py` |
 | **Tur 167 — C3′ uygulandı** (Tur 166: dört okuyucu + Claude): *"and Section 14 lists them"* → *"and Supplement S14 lists them"*. Liste kalıyor; Tur 165'in tek cümlelik yeniden yazımı sıralamayı sekiz maliyetten S14'ün 18 sorusuna genişletiyordu (ChatGPT yakaladı, Claude'un hatası). Sekiz kalemin sekizi S14 satırlarında: R1 | `paper/v8/supplement.md` S14 |
 | **Tur 149 — L-3 satır 7 uygulandı:** *"free-wheeling attitude rotors"* → *"free-wheeling tip-pair rotors"*. X-4 kapandı | Tur 148 §3 |
 | **Tur 148 — X-4 uygulandı** (dört okuyucu + Claude): *"closed-loop hover control"* → *"closed-loop attitude control in hover and in cruise"* — S-60 onarımı (Tur 140) buraya ulaşmamıştı; emekli ifade listesine eklendi | Tur 147 §4 |

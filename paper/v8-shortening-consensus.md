@@ -768,3 +768,6 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | D4 2.1.7 eğik satır testi (korunan) | K | K | S | S | K | **Tur 169 tartışma** |
 | D5 "One of these transfers has direct experimental support (Supplement S2)." | ? | ? | evet | evet | evet | **Tur 169 oyu** |
 | Yazarın sorusu: birleştirme; dört başlık düşüncesi | ? | ? | ? | ? | (sonraki tur) | **Tur 169** |
+| Yazarın notları — işlemler uygulandı (17 734 → 14 900) | ? | ? | ? | ? | uyguladı | **Tur 170: teyit ya da cümle vetosu**; R1–R15 oyda |
+| E13 korunan cümleler eke (1, 2, 3, 5; 4 hayır) | — | — | — | — | — | **yazar kararı (Tur 170)** |
+| 6.1 + 6.2 yeniden numaralama | tek bölüm | koru | koru | tek bölüm | koru | **Tur 170 oyu** |

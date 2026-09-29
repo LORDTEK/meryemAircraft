@@ -827,3 +827,21 @@ Birleştirici: başlık yoksa Adım 8 bölünmez (dağıtılmış seçenek için
   (ChatGPT: dört perdelik çatı olarak iyi, şimdi değil; DeepSeek: istenirse yalnız başlık denemesi); Claude: kısaltmadan sonra başlık denemesi seçenek.
 - **Yazara giden tek S listesi (Tur 169):** (1) 2.1.6 geri çekme örneği + korunan +5 m/s → S2, yerine işaretçi — beşi evet; (2) 4.4 "Whether 0.683 …" → S6 — beşi evet;
   (3) 2.3 "The quadrotor is reported for scale …" → S4 — 3'e 2; (4) 2.3 "It is used for three reasons …" → S4 — yalnız 100'ü tamamlamak için, önerici yok; (5) 4.6 ayrıntı — 2'ye 3.
+
+## E13 — korunan cümleler eke, tek liste · **KARAR (Tur 170): "4'ü boşver. Diğerleri makul"**
+
+1 geri çekme örneği + "+5 m/s" (2.1.6 → S2) evet · 2 "Whether 0.683 …" (4.4 → S6) evet · 3 quadrotor "reported for scale" + karşılaştırması (2.3 → S4) evet ·
+4 "It is used for three reasons …" (2.3) **hayır, kalır** · 5 "The compared vehicles are 1 660 to 3 275 kg" (4.6 → S6) evet. `v8-caveats.md` alt tablosunda `| S… | … | E13 |`.
+2.3 böylece 62 kelime kısaldı (100 değil); yazar 4'ü bırakarak kabul etti.
+
+## Tur 170 — yazar: "Hadi yapalım … ARTIK HEPİMİZ BİR HEYKELTRAŞIZ!!!"
+
+- Yazar: *"Hadi yapalım, diğer okuyucularla birlikte. Sen biraz çalış ama lütfen onlara yumuşak bir geçiş sununca fazlalaşan tur sayısında asıl iş boğuluyor. Taslak
+  olarak sonuçta sen çalışma yapıyorsun ya hah işte o çalışmayı yaparken senden rica ediyorum bir tık daha kaliteli düşün lütfen."* → hemfikir olunan işlemler
+  **uygulandı** (öneri turu yok): 17 734 → 14 900 düzyazı (−2 834). Değişen her paragrafın eski hâli ekte aynen (107 paragraf). Yeni (R) cümleler R1–R15 Tur 170 §2'de
+  vetoya açık; her alt bölüm teyide. Denetimler: caveats (179 + 10 ekte), nothing_lost, assemble, refs, stale, figures temiz.
+- Tahminlerin üstünde kalanlar: 1.4 (518), 2.2.4 (423), 4.6 (281), 7.2 (393) — frenin istediği nitelemeler yüzünden; okuyuculardan temiz kesim önerisi istendi.
+- 6.1 + 6.2: numaralama değişmedi; birleşme içerikte (tek açılış, braket bir kez). Yeniden numaralama oyda.
+- Yazarın ara sorusu: *"korunan cümleleri tartışmaya açmaya gerek var mı acaba?"* → cevap yazara (Tur 170 raporu).
+- Uygulamada yakaladığım hatalarım: tablo kopyalarken tablodan sonraki kalın paragrafı "not" sanma (4.4/4.5'te çift paragraf); satır sonunda bölünmüş "Section / 8"
+  işaretçisi; 2.2.4'te tutum donanımı maddesinden iki ayrım düşmüştü (5.2.7 ona işaret ediyor); 6.2.2'de "a simulation" → "calculations" genişlemesi. Hepsi gönderilmeden onarıldı.

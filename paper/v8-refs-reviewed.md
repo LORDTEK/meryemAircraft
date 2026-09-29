@@ -22,6 +22,7 @@ gövde tablosunda tilt satırı yok (karşılaştırma S13'e taşınmış); Tur 
 | 6 | That higher gross weight is consistent with the mass charge Section 2 | idiom / Step 6's own table | Tur 86 |
 | 6 | The two halves are now on the table separately. | idiom / Step 6's own table | Tur 86 |
 | 7 | The table below counts mechanism classes that exist in order to change | Step 7's mechanism table, below | Tur 86 |
+| 7 | The table counts the mechanism classes that exist in order to change regime | Step 7's mechanism table, directly after the sentence | Tur 170 |
 | 7 | The strip of Section 8 is a control surface, of a different class, and | Step 7's mechanism table, below | Tur 86 |
 | 15 | The fourth row is the important one, and the reason it is a refusal ra | Step 9's axis table, row 4 (other hybrids) | Tur 86 |
 | 10 | Across the four, the spread — (max − min)/min, auditable from the tabl | Step 10's closure table, above | Tur 86 |

@@ -58,41 +58,26 @@ operator with a stronger ground-wind requirement can take another.
 
 ### What is sized, and what is not demonstrated
 
-**Sized.** The vertical phase is sized: hover power from momentum theory at thrust equal to
-weight, the buffer that supplies what the engine cannot deliver of that peak — at a specific power
-Section 14 examines — the
-tip-frame lengths that set both the stance base and the control arms, and the structure that
-carries the landing loads. Those numbers exist and Section 10 reports **whether** they close, and
-with what margin. This section does not assert the outcome of a calculation it does not contain.
+**Sized.** The vertical phase is sized: hover power from momentum theory at thrust equal to weight, the buffer that supplies what
+the engine cannot deliver of that peak (at a specific power Section 14 examines), the tip-frame lengths that set both the stance base
+and the control arms, and the structure that carries the landing loads. Section 10 reports **whether** they close. This section does
+not assert the outcome of a calculation it does not contain.
 
 **Not demonstrated.**
 
-**The aircraft leaves the ground on its tip pairs.** Hover power is sized at thrust
-equal to weight, so the primary propulsor — the nose pair — supplies a thrust-to-weight ratio of exactly one and
-no more. The take-off margin comes from the four tip pairs, which were sized from the moment
-requirement rather than from weight support. That is the one place the configuration asks a
-component to do a second job it was not sized for, and it means the take-off margin and the
-attitude authority are drawn from the same propellers and compete for it.
+**The aircraft leaves the ground on its tip pairs.** The nose pair is sized at thrust equal to weight, so the take-off margin comes
+from the four tip pairs, which were sized from the moment requirement. That is the one place the configuration asks a component to do
+a second job it was not sized for, and it means the take-off margin and the attitude authority are drawn from the same propellers and
+compete for it.
 
-**The vertical descent has not been analysed.** A rotor descending into its own wake can enter
-the vortex ring state, in which thrust becomes erratic and adding power makes matters worse.
-Whether this configuration's descent profile enters that region, and at what rate of descent,
-is an open question in Supplement S14 rather than an answered one here.
+**The vertical descent and the landing transition have not been analysed.** Whether the descent enters the vortex ring state is an
+open question in Supplement S14; the landing transition is not the take-off transition run backwards, and no figure in this paper
+describes it (Supplement S5).
 
-**Neither has the landing transition.** The forward rotation and the reverse are not symmetric
-and must not be assumed to be. Going out, the rotation builds dynamic pressure while it turns,
-so lift arrives to replace the vertical component of thrust as that component falls. Coming
-back, the race runs backwards: dynamic pressure is falling while the aircraft is being turned,
-so lift is leaving at the moment the thrust vector has not yet returned to vertical. **A model
-built for the first case cannot be read for the second by changing a sign, and no figure in this
-paper describes the landing transition.**
-
-**Hover attitude control is sized but not demonstrated as a closed loop.** The moments available
-about each axis are computed, but no control allocation has been closed around them and nothing
-has been simulated or flown. That gap is wider than it looks, because this configuration declines the reaction-torque channel that comparable
-aircraft use about the body's longitudinal axis (Section 8), leaving that axis to a strip on the lower surface, the only moving aerodynamic surface.
-**What that refusal costs in authority and in response time is not computed**, and Section 14
-carries it.
+**Hover attitude control is sized but not demonstrated as a closed loop**: the moments about each axis are computed, and no control
+allocation has been closed around them. This configuration also declines the reaction-torque channel that comparable aircraft use
+about the body's longitudinal axis (Section 8). **What that refusal costs in authority and in response time is not computed**, and
+Supplement S14 carries it.
 
 **And one historical difficulty is inherited rather than removed.** A tail-sitting aircraft on
 the ground is more prone than a conventional one to tip over, in crosswind and on uneven ground. The stance base is the answer
@@ -125,6 +110,7 @@ section**, and the two are combined in Section 7.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 170 — yazarın notları üzerine kısaltma uygulandı** (Tur 168–169: işlemlerde dört okuyucu + Claude; korunan cümle taşımaları yazar kararı E13). Değişen her paragrafın eski hâli ekin bu adıma ait bölümünde aynen (*"… before the Round 170 shortening"*). Yeni (R) cümleler Tur 170 §2'de okuyucu vetosuna açık; sonuç teyide | `paper/build/v8_round170_texts.py`, `v8_round170_apply.py` |
 | **Tur 166 — R-a uygulandı** (Tur 165: dört okuyucu + Claude): *"an open question in Section 14"* → *"an open question in Supplement S14"* — Bölüm 7'nin listesi S14'e gidince işaretçi tutmuyordu (Claude'un alındı hatası, Tur 164). S14 satırı *"Vertical descent and the landing transition … the vortex ring state is not assessed"*: R1 | `paper/v8/supplement.md` S14 |
 | **Tur 150 — L-3 satır 1 (b) uygulandı** (Qwen; dört okuyucu + Claude): *"carries the attitude propellers"* → *"carries the four tip pairs (the attitude propellers)"* — ilk kullanımda ad + takma ad (2.2'nin genel *attitude devices*ına köprü). L-3 satır 2–3 kapandı | Tur 149 §3.2 |
 | **Tur 149 — L-3 satır 2, 3 uygulandı** (dört okuyucu + Claude): *"control propellers"*, *"The attitude propellers they carry"* → *"tip pairs"*. Satır 1 (ilk kullanım) ayrışık, geri soruldu. W-11 kapandı | Tur 148 §3 |

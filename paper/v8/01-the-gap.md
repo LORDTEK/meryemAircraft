@@ -42,30 +42,12 @@ price an architecture in it must pay, and whether one arrangement pays less than
 
 ### What the contemporary answers do, and how each changes regime
 
-Hybrid VTOL aircraft occupy that corner today. **This paper does
-not dispute that they work.** What matters for the argument is *how* each changes between the
-two regimes, because that is where the families differ from one another.
-
-The NASA sizing study used in Section 4 describes the two relevant routes in its own terms.
-
-**The lift-plus-cruise route keeps two sets of hardware and switches between them.** In that
-study the configuration is a stopping-rotor compound with three flight modes — helicopter mode
-with the lifting rotors turning, compound mode with both sets operating, and aeroplane mode in
-which *"the lifting rotors are stopped with the blade axis pointed along the vehicle
-longitudinal axis, and therefore nominally aligned with the free stream to minimise drag,"*
-with forward thrust from a pusher propeller. The lifting rotors are carried through cruise and
-are stopped in the airstream.
-
-**The tilting route keeps one set of hardware and reorients it.** The tilt-wing in the same
-study carries six proprotors on a tilting main wing and two more on a tilting tail, each
-directly connected to its own electric motor. Nothing is carried unused; the same discs that
-lift the aircraft propel it, after being turned.
-
-**Both work.** Rotating a propulsor in
-flight brings a pivot and its actuators, a gyroscopic moment during the rotation, and a control
-problem through a regime in which the aircraft is neither a rotorcraft nor an aeroplane.
-**Those are mechanical and control requirements rather than aerodynamic ones**, and that
-distinction is what this paper is built on.
+Hybrid VTOL aircraft occupy that corner today. **This paper does not dispute that they work.** The NASA sizing study used in
+Section 4 describes the two routes they take between the regimes: lift-plus-cruise aircraft keep two sets of hardware and switch
+between them, and tilting aircraft keep one set and reorient it (Section 7). Rotating a propulsor in flight brings a pivot and its
+actuators, a gyroscopic moment during the rotation, and a control problem through a regime in which the aircraft is neither a
+rotorcraft nor an aeroplane. **Those are mechanical and control requirements rather than aerodynamic ones**, and that distinction is
+what this paper is built on.
 
 ### The third route is established, and some of its difficulties are inherited
 
@@ -73,9 +55,8 @@ There is a third way to put one set of propulsors into both regimes without reor
 thrust line at the ground and let the whole aircraft rotate.** It is neither new nor untried nor abandoned.
 The Convair XFY-1 flew it in 1954 and completed six transitions to conventional flight *"before testing was
 curtailed because of engine and gear-box reliability problems"*, and uncrewed tail-sitters have revisited the
-route since. The pilot's spatial orientation and workload, recorded for that programme, were real
-and severe, **but they are not what curtailed the testing**, and they are the only one of those documented
-obstacles an uncrewed aircraft removes.
+route since. The pilot's spatial orientation and workload were real, **but they are not what curtailed the testing**, and they are
+the only one of those documented obstacles an uncrewed aircraft removes.
 
 **Some of the difficulties were real, internal, and are inherited here.** A tail-sitting vertical descent is
 harder than a runway landing; a tail-sitter on the ground is more exposed to crosswind; and propellers whose
@@ -83,67 +64,46 @@ thrust vectors are all parallel to the body axis produce no rolling moment **by 
 settings**. The reaction-torque channel that other coaxial tail-sitters use about that axis is a choice this
 configuration declines rather than a limit it inherits (Sections 7 and 8).
 
-Three things are available now that were not: electric drive on each individual rotor, sensor-based attitude
-reference, and enough onboard computation that stability need not come from the airframe alone. **The uncrewed
-tail-sitter literature has been exploiting exactly those three for over a decade**, which is why the gap below is
-not a historical one.
+What has changed is electric drive on each rotor, sensor-based attitude reference and onboard computation, and **the
+uncrewed tail-sitter literature has been exploiting exactly those three for over a decade**; the gap below is not a historical one.
 
 ### What is already occupied, stated before the gap
 
 **The route itself is established.** Uncrewed tail-sitters combining fixed-pitch rotors with a
-flying wing have been built and flown for more than a decade, beginning with quadrotor-plus-wing
-arrangements carrying a few aerodynamic actuators for forward flight. A tail-sitter study reported in 2007 already states the
+flying wing have been built and flown for more than a decade. A tail-sitter study reported in 2007 already states the
 comparison: tilting configurations reach the same goal *"at the expense of significantly increased mechanical complexity compared to a
 tail-sitter that uses propeller wash over normal aircraft control surfaces to effect vertical flight control."*
 
-**Attitude without aerodynamic control surfaces is established.** A quadrotor tail-sitter
-operated without control surfaces, with experimental verification, was reported in 2013.
+**Attitude without aerodynamic control surfaces is established**: a quadrotor tail-sitter operated without control surfaces, with
+experimental verification, was reported in 2013.
 
-**Coaxial contra-rotating propulsion on a tail-sitter is established**, proposed specifically to
-face the reaction torque a single propeller imposes *"without using complementary controls"*, at a cost its proposers name
-directly: it *"increases the mechanical complexity."* A coaxial contra-rotating tail-sitting micro air vehicle reported in 2014
-states the same purpose: *"a pair of 10 inches coaxial contra rotating
-propellers is mounted to compensate each other's torque."*
+**Coaxial contra-rotating propulsion on a tail-sitter is established**, proposed to cancel a single propeller's reaction torque without
+complementary controls, at a cost its proposers name as added mechanical complexity; a tail-sitting micro air vehicle reported in 2014
+uses a coaxial pair for the same purpose.
 
-**The established answer to hover control on such a configuration is a surface in the
-slipstream**, and it is worth naming because this paper refuses it. That 2014 vehicle places
-*"elevon and rudder … immersed in the propeller slip stream to provide three axis control moments
-in hover."* A flying-wing tail-sitter reported in 2018, with two counter-rotating propellers side by side and two
-elevons, uses the same answer for two of its three axes and treats the propellers' counter-moment about the thrust axis as
-a disturbance to be cancelled rather than as a control channel; only its hover and vertical flight are reported.
+**The established answer to hover control on such a configuration is a surface in the slipstream**, and this paper refuses it. The 2014
+vehicle places an elevon and a rudder in the propeller slipstream for three-axis control in hover; a flying-wing tail-sitter reported in 2018 uses elevons for two of its three axes and treats the propellers'
+counter-moment about the thrust axis as a disturbance rather than a control channel, and reports hover and vertical flight only.
 
-**And the reaction-torque channel this paper declines is established as a control channel.** A
-coaxial contra-rotating tail-sitter reported in 2012 balances rotor torque *"by the inverse
-rotating of the two rotors"* and then unbalances it on purpose to steer: its published control
-scheme assigns *"differential velocity of the two motors"* to yaw in the vertical mode and to
-roll in the horizontal one. **Those are the same physical channel under two names** — a moment
-about the propeller axis, which stands vertical in hover and horizontal in cruise — and
-independently driven rotors make it available to any coaxial pair. **Using it is a choice, and
-so is declining it**, which is what separates this configuration's control problem from a
-physical impossibility.
+**And the reaction-torque channel this paper declines is established as a control channel.** A coaxial contra-rotating tail-sitter
+reported in 2012 balances rotor torque by counter-rotation and unbalances it on purpose to steer: its published control scheme assigns
+*"differential velocity of the two motors"* to yaw in the vertical mode and to roll in the horizontal one. **Those are the same physical
+channel under two names**, a moment about the propeller axis, and independently driven rotors make it available to any coaxial pair.
+**Using it is a choice, and so is declining it**, which is what separates this configuration's control problem from a physical
+impossibility.
 
-**A blended-wing-body tail-sitter with contra-rotating propulsion, aimed at disaster response,
-is established**, reported in 2025 with vortex-lattice and RANS analysis of its planform,
-winglets and transition.
+**A blended-wing-body tail-sitter with contra-rotating propulsion, aimed at disaster response, is established**, reported in 2025 with vortex-lattice and RANS analysis.
 
-**A buffered series hybrid on a winged tail-sitter has been sized.** A 2026 sizing study of 100 kg winged biplane tail-sitters sizes
-the engine *"to provide cruise power, while a 'boost' battery was sized to provide the necessary additional power required to take off
-and land vertically"*; converting its quadcopter baseline to the tail-sitter adds *"fixed wings and collective pitch change mechanisms for
-the rotor blades."*
+**A buffered series hybrid on a winged tail-sitter has been sized**: a 2026 study of 100 kg winged biplane tail-sitters sizes the engine
+for cruise and a boost battery for vertical take-off and landing, and gives its rotors collective pitch change mechanisms.
 
-**A coaxial tail-sitter with a series-hybrid store has been sized.** A long-endurance *"coaxial tailsitter concept"* with a fuselage
-and horizontal and vertical tails, reported in 2025, places its fuel cells *"in a series hybrid arrangement, providing electrical power
-to a battery that in turn provides electrical power to an electric motor"*, and the fuel cell alone is *"unable to completely power the
-aircraft in hover out of ground effect at takeoff"*; how its attitude is controlled, and whether its rotors vary pitch, the paper does
-not state.
+**A coaxial tail-sitter with a series-hybrid store has been sized**: a long-endurance concept reported in 2025, with a fuselage and
+tails, whose fuel cells charge a battery that drives the motor, because the fuel cell alone cannot fully power hover out of ground
+effect at take-off; how its attitude is controlled, and whether its rotors vary pitch, the paper does not state.
 
-**And the propeller compromise at the centre of this paper's own ledger is a known result, not a
-discovery.** The uncrewed tail-sitter literature states it directly: fixed-pitch propellers make
-it *"theoretically impossible to be very efficient in both hovering and forward flight."* A
-long-range tail-sitter reported in 2018 that uses a cyclic- and collective-pitch rotor still describes it
-as *"a compromise between efficient hover and efficient forward flight"* and selects its diameter on
-that basis; the same paper names variable pitch as the remedy for fixed-pitch propellers, at the cost of
-extra actuators and the weight of the mechanism.
+**And the propeller compromise at the centre of this paper's own ledger is a known result, not a discovery.** The uncrewed tail-sitter
+literature states that fixed-pitch propellers make it *"theoretically impossible to be very efficient in both hovering and forward
+flight."* A long-range tail-sitter reported in 2018 names variable pitch as the remedy, at the cost of extra actuators and mechanism weight, and even with cyclic and collective pitch still sizes its rotor as a compromise between hover and forward flight.
 
 ### The gap, stated precisely
 
@@ -181,6 +141,7 @@ presume an escape.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 170 — yazarın notları üzerine kısaltma uygulandı** (Tur 168–169: işlemlerde dört okuyucu + Claude; korunan cümle taşımaları yazar kararı E13). Değişen her paragrafın eski hâli ekin bu adıma ait bölümünde aynen (*"… before the Round 170 shortening"*). Yeni (R) cümleler Tur 170 §2'de okuyucu vetosuna açık; sonuç teyide | `paper/build/v8_round170_texts.py`, `v8_round170_apply.py` |
 | **Tur 148 — W-5 uygulandı** (dört okuyucu + Claude; ChatGPT itirazını geri çekti): *"revisited the route continuously since"* → *"…the route since"* (1954'e bağlı; 2007'den tanıklı; *"nor abandoned"*ın paragraf içi dayanağı). W-9 kapandı | Tur 147 §2; Tur 148 §1 |
 | **Tur 147 — W-9 uygulandı** (bütün okuma; dört okuyucu + Claude; silme + noktalama): *"Both work, and the second is the more demanding to build, because rotating…"* → *"Both work. Rotating…"* — ölçülmemiş karşılaştırma; 2007 alıntısı eğimliyi kuyruk üstüyle karşılaştırıyor. W-5 (*"continuously"*) ayrışık, geri soruldu | Tur 146 metni §5; Tur 147 §1 |
 | **Tur 144 — W, E-1, N9 KAPANDI (dört okuyucu teyit etti); E-1′ uygulandı** (dört okuyucu + Claude; yalnız silme): *"states the same purpose in the same terms:"* → *"states the same purpose:"*; ifade emekli. Karmaşıklık izi (Q-P1b): *"mechanical complexity"* yalnız bu adımda (kaynak alıntıları), `v8_stale.py` YALNIZ; *"mechanically simpler"*, *"more reliable"* emekli (Adım 7 sayımı, Adım 9 madde 4) | Escareno 2007, 2008 |

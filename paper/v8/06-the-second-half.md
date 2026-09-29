@@ -66,142 +66,97 @@ and it gives a smaller number than the structural statement invites.
 
 ### What the margin actually is, in one currency
 
-The sizing set of Section 4 reports an **effective lift-to-drag ratio**, defined in its own
-nomenclature as `L/De = WV/P`: weight times speed over power. That is a system figure of merit,
-not a force ratio, and it already contains the propulsive efficiency of whatever produces the
-thrust. **A force ratio cannot be placed beside it.**
-
-Converting this configuration's aerodynamic ratio into the same quantity is one line: in level
-cruise thrust equals drag and lift equals weight, so with shaft power `P = DV/η_p`,
+The sizing set of Section 4 reports an **effective lift-to-drag ratio**, `L/De = WV/P`: a system figure of merit that already
+contains the propulsive efficiency of whatever produces the thrust, so **a force ratio cannot be placed beside it.** In level cruise,
+with shaft power `P = DV/η_p`,
 
 > **L/De = WV/P = (L/D) · η_p**
 
-**Which power `P` denotes is not assumed here**, because reading it as electrical power rather
-than shaft power would make this configuration's figure incomparable with the published one. The source settles it: hover power is written with the
-figure of merit already applied — shaft power — and the propulsion-system efficiency applied
-separately outside it. That separation holds for the all-electric entries as well as the shaft-driven ones.
+**Which power `P` denotes is not assumed here**, because reading it as electrical rather than shaft power would make this
+configuration's figure incomparable with the published one. The source writes hover power with the figure of merit applied, which is
+shaft power, and applies the propulsion-system efficiency separately, for the all-electric entries as for the shaft-driven ones.
 
-**Neither factor is a single number, and they are two different kinds of spread.**
-
-The aerodynamic ratio is **8.79 to 10.82**, with the tip frames and the free-wheeling tip-pair
-rotors (Section 8, *What this inventory does not settle*) already charged. That spread is **uncertainty**: it is the zero-lift drag bracket, and a
-designer does not get to choose where in it the real aircraft lands.
-
-The cruise propeller efficiency is **0.632 to 0.683** across the nose-blade families that meet
-the hover figure of merit. That spread is **not
-uncertainty**: it is a design variable this study has not fixed.
+The aerodynamic ratio is **8.79 to 10.82**, with the tip frames and the free-wheeling tip-pair rotors (Section 8) already charged; that
+spread is **uncertainty**, the zero-lift drag bracket. The cruise propeller efficiency is **0.632 to 0.683** across the nose-blade
+families that meet the hover figure of merit; that spread is **not uncertainty** but a design variable this study has not fixed.
 
 | L/De | η_p 0.632 | η_p 0.683 |
 |---|---:|---:|
 | **L/D 8.79** (adverse drag) | 5.56 | 6.00 |
 | **L/D 10.82** (favourable drag) | 6.84 | 7.39 |
 
-**These are the bounding corners of a product, not four simulated aircraft.** Two readings follow
-and both are given, because choosing between them requires something this section does not have:
-
-- **Examined envelope, 5.56 to 7.39.** **The four corners are not demonstrated aircraft
-  states**, and nothing here
-  shows that a built aircraft would land simultaneously on both bounds.
-- **Best examined blade family, 6.00 to 7.39.** The highest efficiency among the families
-  examined is 0.683; holding it and sweeping only the drag bracket gives this range.
-
-**Whether 0.683 is the blade a designer would actually choose is not settled here**. It is the best *on cruise efficiency under the hover figure-of-merit
-constraint*. Blade count and section loading also govern structural loads, acoustics, the motor
-operating point, rotor inertia and manufacture, and **none of those is modelled in this work**.
-Section 10 is where one blade is carried into a closed sizing loop; until then this section stays
-at envelope level and does not present any corner as the aircraft's performance.
+**These are the bounding corners of a product, not four simulated aircraft.** Across the examined envelope they give **5.56 to
+7.39**; for the best examined blade family, at 0.683, **6.00 to 7.39**. Which blade a designer would choose also turns on structural
+loads, acoustics, the motor operating point, rotor inertia and manufacture, **none of which is modelled in this work** (Supplement S6).
+Section 10 carries one blade into a closed sizing loop; until then no corner is presented as the aircraft's performance.
 
 ### What the comparison gives, against both published quadrotors
 
-The sizing set contains two quadrotors for the same mission, and **neither is treated here as the
-primary one.**
+The sizing set contains two quadrotors for the same mission, and **neither is treated here as the primary one.**
 
 | | L/De | vs examined envelope 5.56 – 7.39 | vs best examined family 6.00 – 7.39 |
 |---|---:|---|---|
 | Quadrotor, turboshaft | 4.9 | +13 % … +51 % | **+22 % … +51 %** |
 | Quadrotor, all-electric | 5.8 | −4 % … +27 % | **+3 % … +27 %** |
 
-**Against the turboshaft quadrotor the sign holds at every corner of both readings.** Closing it
-would need the propeller efficiency to fall to 0.557, against 0.632 for the least efficient blade
-family examined.
+**Against the turboshaft quadrotor the sign holds at every corner of both readings**; closing it would need a propeller efficiency
+of 0.557, against 0.632 for the least efficient blade family examined.
 
-**Against the all-electric quadrotor it does not hold at the low corner**, and that result is
-reported as a result rather than as a caveat. That vehicle reaches 5.8 — above this
-configuration's 5.56 — and it buys the difference with 1 742 lb of battery and nearly twice the
-gross weight for the same mission, 7 221 lb against 3 678 lb. **That higher gross weight is
-consistent with the mass charge Section 2 describes**, and Section 4 is where the independent
-sizing evidence for it is set out — the comparison in this table does not establish the causal
-link by itself. On cruise efficiency taken alone, the entry is ahead of this configuration's low
-corner.
+**Against the all-electric quadrotor it does not hold at the low corner**, and that result is reported as a result rather than as a
+caveat. That vehicle reaches 5.8 with 1 742 lb of battery and nearly twice the gross weight for the same mission, 7 221 lb against
+3 678 lb. **That higher gross weight is consistent with the mass charge Section 2 describes**; this table alone does not establish the
+causal link, and Section 4 sets out the independent evidence for it.
 
 The same sizing set gives four entries for its two helicopter types, at 5.4 to 7.2, and against them the result is
 mixed: this configuration is ahead of the turboshaft single-main-rotor helicopter at every corner,
 the two middle entries fall inside its envelope, and only its top corner is ahead of the
-all-electric side-by-side helicopter, which has no wing either. The qualifications below apply to
-these entries as they do to the quadrotors.
+all-electric side-by-side helicopter, which has no wing either. The qualifications below apply to them too.
 
-**So the second claim is narrower than the structural statement invites.** Carrying cruise lift on a wing is worth **roughly an eighth to a half against the turboshaft reference (a quarter to a half for the best examined blade family), and against the all-electric one it ranges from slightly behind to comfortably ahead depending on the drag outcome and the blade** — a measurable advantage, not a change of category. And what compresses it is not the wing. **It is the cruise efficiency this aircraft's fixed-pitch blade delivers:** at a propeller efficiency of 0.85 the same airframe reaches 7.47 to 9.20. Whether a variable-pitch hub would recover that difference is not computed; Section 11 reports the gap and declines to attribute all of it to the hub.
+**So the second claim is narrower than the structural statement invites**: carrying cruise lift on a wing is worth roughly an eighth
+to a half against the turboshaft reference, and against the all-electric one it ranges from slightly behind to comfortably ahead
+depending on the drag outcome and the blade — a measurable advantage, not a change of category. What compresses it is the cruise
+efficiency of the fixed-pitch blade: at a propeller efficiency of 0.85 the same airframe reaches 7.47 to 9.20. Whether a
+variable-pitch hub would recover that difference is not computed; Section 11 reports the gap and declines to attribute all of it to the hub.
 
 ### Five qualifications: three run against this configuration, one has no computed direction, and one bounds what the comparison can be called
 
-They are given together because omitting any one of them would make the comparison look better
-than it is.
+**Scale.** The compared vehicles are larger than both designs here, of order 50 kg and 1 000 kg (Supplement S6), and **Reynolds number
+favours the larger aircraft**, so the smaller design is at a disadvantage in this comparison rather than an advantage.
 
-**Scale.** The compared vehicles are 1 660 to 3 275 kg; the designs here are of order 50 kg and
-1 000 kg — Section 10 closes the light one between 52.3 and 57.5 kg across the same bracket.
-Reynolds number favours the larger aircraft, so the smaller design is at a disadvantage in this
-comparison rather than an advantage.
+**The quadrotor is a good quadrotor**: both quadrotors have unusually low disc loadings. **Nothing here is compared against a poor
+example.**
 
-**The quadrotor is a good quadrotor.** Its disc loading is 3.5 lb ft⁻², and the all-electric one's
-is 3; both are unusually low. Nothing here is compared against a poor example.
+**The speeds are not matched, and the direction of that mismatch is calculable.** The reference is quoted at its best-range speed, this configuration at its cruise condition, 1.49 times stall, rather than at its best point, 1.26. **The reference is therefore given its best speed and this configuration is not given its best speed, and the margin is
+positive anyway.** **The best point is not an available option** — cruising there leaves too little margin above the stall — **so this
+fixes a direction, not a magnitude.**
 
-**The speeds are not matched, and the direction of that mismatch is calculable.** The published
-figure is quoted at the best-range speed; this configuration's is at its chosen cruise condition,
-1.49 times stall, which is **not** its best lift-to-drag point. The
-best point lies at 1.26 times stall, and `L/D_max` exceeds the cruise ratio at both ends of the drag bracket.
-**The reference is
-therefore given its best speed and this configuration is not given its best speed, and the margin
-is positive anyway.** The best point is not an available option — cruising there leaves too little
-margin above the stall — so this fixes a direction, not a magnitude.
+**The atmospheres are not matched.** The published sizing mission is flown at *"5,000-ft altitude and ISA + 20°C"*; every number in
+this work is at sea level. **The direction of that mismatch is not claimed here**, because it has not been computed.
 
-**The atmospheres are not matched.** The published sizing mission is flown at *"5,000-ft altitude
-and ISA + 20°C"*; every number in this work is at sea level, with a sea-level drag polar and a
-sea-level blade solution. **The direction of that mismatch is not claimed here**, because it has
-not been computed: the altitude sweep in this work measured the effect on hover power and on
-propeller efficiency, not on a cruise comparison at a re-trimmed best-range speed.
-
-**The analysis chains are not matched, and this is the qualification that bounds what the
-comparison can be called.** The published value is the output of an integrated conceptual-design
-system with a comprehensive rotor analysis behind its rotor performance. The value here is
-assembled from a drag build-up, a drag polar at a prescribed cruise condition, and a separate
-blade-element propeller solution. There is a second difference inside that one: **the published
-value is the effective ratio of a fully sized vehicle, while the value here is a converted
-performance metric at a prescribed cruise condition, taken before the sizing closure Section 10
-reports.** So this is a comparison of two independently produced figures in a common definition,
-not a controlled numerical reproduction, and nothing in it should be read as validation of either,
-or as a completed aircraft-level comparison.
+**The analysis chains are not matched, and this is the qualification that bounds what the comparison can be called.** The published value comes from a fully sized vehicle in an integrated design system; the value here is a converted metric at a prescribed cruise condition, taken before the sizing closure of Section 10. So this is a comparison of two
+independently produced figures in a common definition, not a controlled numerical reproduction, and nothing in it should be read as
+validation of either, or as a completed aircraft-level comparison.
 
 ### What is sized, and what is not demonstrated
 
-**Sized.** The drag build-up and its bracket; the lift-to-drag ratio at the cruise condition
-from the drag polar; the propeller efficiency from blade-element momentum theory at two
-operating points; and the range that follows from the chain, link by link.
+**Sized.** The drag build-up and its bracket, the lift-to-drag ratio from the drag polar, the propeller efficiency from
+blade-element momentum theory at two operating points, and the range that follows from the chain.
 
-**Not demonstrated.** **No part of this has been measured.** There is no wind-tunnel test and no
-flight test in this work, and the drag coefficient is a build-up with a declared bracket rather
-than a measurement. The planform's sweep, taper and thickness distributions were chosen rather
-than optimised. **The span efficiency used throughout this section is the computed value, 0.817,
-not the assumed 0.85** — a vortex-lattice solution of the trimmed planform, so the lift-to-drag figures above carry the calculated penalty rather than the
-optimistic estimate. And **for the methods used here, and for the published
-comparisons against which they were checked, the aerodynamic predictions diverge above roughly ten
-degrees of incidence**: three methods of three fidelities depart at the same place, the highest of
-them against wind-tunnel measurement. That is a statement about these methods on this class of
-configuration, not about what any method could achieve. It does not touch the cruise numbers
-above, which sit at a few degrees, but it bounds what this section may be read to support.
+**Not demonstrated.** **No part of this has been measured**: there is no wind-tunnel or flight test in this work, and the drag
+coefficient is a build-up with a declared bracket. The planform was chosen rather than optimised. **The span efficiency used
+throughout this section is the computed value, 0.817, not the assumed 0.85**, from a vortex-lattice solution of the trimmed planform.
+And for the methods used here, and for the published comparisons against which they were checked, **the aerodynamic predictions
+diverge above roughly ten degrees of incidence**: three methods of three fidelities depart at the same place, the highest of them
+against wind-tunnel measurement. That is a statement about these methods on this class of configuration, not about what any method
+could achieve; it does not touch the cruise numbers above, which sit at a few degrees, but it bounds what this section may be read to
+support, and the transition of Sections 7 and 10 passes through that band.
 
 ### What this half costs
 
-The wing that makes cruise efficient is carried through the vertical phase, where it produces nothing and presents the aircraft's largest surface to ground wind. The tailless planform that follows from having no boom constrains the sweep. And the fixed-pitch propeller that serves both regimes is the reason the margin above sits where it does rather than higher. Section 11 charges the third. The first two are inside Section 10's closed numbers — the wing's mass in the empty fraction, the constrained planform in the computed span efficiency — but neither is separated out as a charge, and the wing's exposure to ground wind is not priced in this work.
+The wing that makes cruise efficient is carried through the vertical phase, where it produces nothing and presents the aircraft's
+largest surface to ground wind; the tailless planform constrains the sweep; and the fixed-pitch propeller is why the margin above
+sits where it does. Section 11 charges the third. The first two are inside Section 10's closed numbers but are not separated out as
+charges, and the wing's exposure to ground wind is not priced in this work.
 
 **The two halves are now on the table separately. Section 7 is where they are combined**, and
 the combination is what this paper is for.
@@ -212,6 +167,7 @@ the combination is what this paper is for.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 170 — yazarın notları üzerine kısaltma uygulandı** (Tur 168–169: işlemlerde dört okuyucu + Claude; korunan cümle taşımaları yazar kararı E13). Değişen her paragrafın eski hâli ekin bu adıma ait bölümünde aynen (*"… before the Round 170 shortening"*). Yeni (R) cümleler Tur 170 §2'de okuyucu vetosuna açık; sonuç teyide | `paper/build/v8_round170_texts.py`, `v8_round170_apply.py` |
 | **Tur 149 — L-3 satır 4 uygulandı:** *"free-wheeling attitude rotors"* → *"free-wheeling tip-pair rotors"*. W-13 kapandı | Tur 148 §3 |
 | **Tur 148 — W-13 uygulandı** (DeepSeek; dört okuyucu + Claude): *"free-wheeling attitude rotors (Section 8, *What this inventory does not settle*)"* → görünümde 6.1. W-4, L-1 kapandı | Tur 147 §3 |
 | **Tur 147 — W-4 ve L-1 uygulandı** (bütün okuma; dört okuyucu + Claude): W-4 *"roughly a quarter to a half"* → *"roughly an eighth to a half … (a quarter to a half for the best examined blade family)"*; L-1 (korunan) *"gives its two helicopter types at"* → *"gives four entries for its two helicopter types, at"* — `v8-caveats.md` güncellendi | Tur 146 §5 |

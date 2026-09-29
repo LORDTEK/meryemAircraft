@@ -45,17 +45,33 @@ baskın mimari ağırlıksız sıralanır (ChatGPT) — tilt satırı buna yakı
 
 ## Rankings belong to contracts
 
-Section 12 showed that at least two of the charges are not locked together; where one architecture pays less of one charge and more of another, the ranking depends on how the charges are weighed, and **a sizing contract is one such weighing**: it fixes what is held equal between the architectures being compared. This section applies three contracts to three architectures at each of the four closures of Section 10. **The mechanism claim is not a ranking and is not at stake here.**
+Where one architecture pays less of one charge and more of another, the ranking depends on how the charges are weighed
+(Section 12), and **a sizing contract is one such weighing**: it fixes what is held equal between the architectures being compared.
+This section applies three contracts to three architectures at each of the four closures of Section 10. **The mechanism claim is not a
+ranking and is not at stake here.**
 
 ### Three contracts, and what each holds equal
 
-Range in the sizing loop is proportional to L/D, to the energy chain, propeller included, and to the fuel fraction, and the three contracts differ only in the last (Supplement S13): a **fixed fuel fraction**, sixteen percent of each architecture's own take-off mass, under which take-off mass cancels from range; a **fixed fuel mass**, the 8.4 to 9.2 kg this configuration carries, under which range is divided by take-off mass; and a **fixed take-off mass and payload**, under which every kilogram of architecture-specific hardware is a kilogram of fuel not carried. **These are three different questions, not three estimates of one answer.** A mission decides which of them it is asking; this paper has no mission that would decide, and does not choose.
+Range in the sizing loop is proportional to L/D, to the energy chain and to the fuel fraction, and the three contracts differ
+only in the last (Supplement S13): a **fixed fuel fraction**, sixteen percent of each architecture's own take-off mass; a **fixed fuel
+mass**, the 8.4 to 9.2 kg this configuration carries; and a **fixed take-off mass and payload**, under which every kilogram of
+architecture-specific hardware is a kilogram of fuel not carried. **These are three different questions, not three estimates of one
+answer**, and this paper has no mission that would decide among them.
 
 ### What is compared, and on what basis
 
-Three architectures fly the same mission, 13 kg of payload at 30 m s⁻¹, with the same wing loading, disc loading and aspect ratio, the same airframe and avionics fractions, and the same fuel and energy chain apart from the propeller. **The competitors are therefore this planform with two add-ons, not independently designed aircraft of their families.** All three carry the same buffered series-hybrid power system, so Bill 3 is held common and the comparison measures mass and cruise drag. **Holding Bill 3 common is a choice of question, and it has a direction.** **The choice runs against this configuration.** Without the buffer, and with engines rated to deliver the hover demand, the lift-plus-cruise layout does not close under a fixed fuel fraction or a fixed take-off mass (Supplement S13). That comparison is not used, because it would set competitors without a store against this configuration with one.
+Three architectures fly the same mission, 13 kg of payload at 30 m s⁻¹, with the same wing loading, disc loading and aspect ratio,
+the same airframe and avionics fractions, and the same energy chain apart from the propeller. **The competitors are therefore this
+planform with two add-ons, not independently designed aircraft of their families.** All three carry the same buffered series-hybrid
+power system, so Bill 3 is held common and the comparison measures mass and cruise drag. **Holding Bill 3 common is a choice of
+question, and it has a direction.** **The choice runs against this configuration**: without the buffer, and with engines rated to the
+hover demand, the lift-plus-cruise layout does not close under a fixed fuel fraction or a fixed take-off mass (Supplement S13).
 
-The basis is not symmetric: the lift-plus-cruise layout carries a lift-to-drag ratio transferred from a different airframe's wind-tunnel campaign (Section 2) and assumes lift rotors stopped and aligned in cruise, which takes an indexing mechanism (Section 7) whose mass is not separately charged. **The tilting layout carries no cruise drag penalty at all. That is an idealisation in its favour**, and it is deliberate: it makes the tilting layout a bound. Both competitors use a propeller efficiency of 0.80, assumed, not computed, against this configuration's computed 0.632 and 0.683; the lift-plus-cruise layout carries a lift group of 10 percent of take-off mass and the tilting layout a tilt mechanism of 5 percent. **Neither figure is measured.**
+The basis is not symmetric. The lift-plus-cruise layout carries a lift-to-drag ratio transferred from a different airframe's
+wind-tunnel campaign (Section 2), and its stopped lift rotors take an indexing mechanism (Section 7) whose mass is not charged. **The
+tilting layout carries no cruise drag penalty at all. That is an idealisation in its favour**, and it makes the tilting layout a bound.
+Both competitors are given a propeller efficiency of 0.80, assumed, against this configuration's computed 0.632 and 0.683, and a lift
+group of 10 percent or a tilt mechanism of 5 percent of take-off mass. **Neither figure is measured.**
 
 ### Against lift-plus-cruise: a trade, and the contract sets the exchange rate
 
@@ -69,9 +85,16 @@ The basis is not symmetric: the lift-plus-cruise layout carries a lift-to-drag r
 
 ### Section 2's prediction, tested
 
-Section 2 predicted that such a ranking will move when the sizing rule changes, and can reverse. **The movement holds everywhere**, against both competitors, toward the lighter arrangement as the contract weights mass more; **the reversal holds at two of the four closures against lift-plus-cruise, and at none against the tilt bound.**
-
-**Where the reversal falls is decided by quantities this study has not measured or not fixed**: the blade family in the base case, and across the sensitivity cases the competitor's lift-group mass and the propeller basis (Supplement S13). With a lighter lift group the lift-plus-cruise layout leads under all three contracts at every closure; with a heavier one this configuration leads under a fixed take-off mass at every closure; with a common propeller efficiency a reversal appears at every closure. **Which architecture ranks first under a fixed take-off mass is therefore decided, in this model, by quantities this study assumes for the competitor rather than measures: its lift-group mass fraction and its propeller efficiency.** **Put plainly, the sign under a fixed take-off mass is not a result about the architectures; it is a result about those quantities.** What is robust is that the shift exists and runs toward the lighter aircraft; its size is the size of the mass difference.
+Section 2 predicted that such a ranking will move when the sizing rule changes, and can reverse. **The movement holds
+everywhere**, against both competitors, toward the lighter arrangement as the contract weights mass more; **the reversal holds at two of
+the four closures against lift-plus-cruise, and at none against the tilt bound.** Where it falls is decided by quantities this study
+has not measured or fixed: the blade family in the base case, and across the sensitivity cases the competitor's lift-group mass and the
+propeller basis (Supplement S13). With a lighter lift group the lift-plus-cruise layout leads under all three contracts at every
+closure; with a heavier one this configuration leads under a fixed take-off mass at every closure; with a common propeller efficiency
+a reversal appears at every closure. **Which architecture ranks first under a fixed take-off mass is therefore decided, in this model,
+by quantities this study assumes for the competitor rather than measures: its lift-group mass fraction and its propeller efficiency.**
+**Put plainly, the sign under a fixed take-off mass is not a result about the architectures; it is a result about those quantities.**
+What is robust is that the shift exists and runs toward the lighter aircraft.
 
 ### What the framework asks of whoever uses it
 
@@ -87,6 +110,7 @@ Section 2 predicted that such a ranking will move when the sizing rule changes, 
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 170 — yazarın notları üzerine kısaltma uygulandı** (Tur 168–169: işlemlerde dört okuyucu + Claude; korunan cümle taşımaları yazar kararı E13). Değişen her paragrafın eski hâli ekin bu adıma ait bölümünde aynen (*"… before the Round 170 shortening"*). Yeni (R) cümleler Tur 170 §2'de okuyucu vetosuna açık; sonuç teyide | `paper/build/v8_round170_texts.py`, `v8_round170_apply.py` |
 | **Tur 167 — işaretçi eklendi** (DeepSeek önerisi; Tur 166: dört okuyucu + Claude): *"The per-closure numbers are in Supplement S13."* aralık cümlesinden sonra — A–D tablosu S13'e gidince okur dört değeri nerede bulacağını bilsin | `paper/v8/supplement.md` S13 |
 | **Tur 166 — C1 uygulandı** (Tur 165: dört okuyucu + Claude): A–D tablosu (kapanış başına üç sözleşme) gövdeden Ek S13'ün başına, aynen. Gövdede her aralık, 67–77 puanlık kayma ve işaret değişimi kalıyor. S13'teki duyarlılık tablosunun *"As above"* satırı artık hemen üstündeki bu tabloyu gösteriyor (aynı nesne). DeepSeek'in işaretçi cümlesi (*"The per-closure numbers are in Supplement S13."*) Tur 166 oyunda | `paper/v8/supplement.md` S13 |
 | **Tur 117 — S-44 onarıldı** (Tur 116; dört okuyucu + Claude): P33'ün korunmayan kuyruğu "in drag the tilting layout, by construction" → "by assumption" | Tur 116 metni §3 |

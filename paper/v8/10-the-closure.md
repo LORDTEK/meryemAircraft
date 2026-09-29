@@ -25,11 +25,15 @@ Installed power sets the propulsion mass, propulsion mass the take-off mass, and
 
 ### The inputs, and why there are four closures rather than one
 
-**The zero-lift drag coefficient is uncertainty:** a consistent build-up places it between 0.0285 and 0.0381 (Section 11), and a designer does not choose where the real aircraft falls in that range. **The blade family is a design variable this study has not fixed:** four nose-blade families that meet the hover figure of merit span cruise propeller efficiencies of 0.632 to 0.683. **The reference design's assumed zero-lift value of 0.0248 is not used**; the consistent build-up places it below both ends of the bracket, outside the supported range.
+**The zero-lift drag coefficient is uncertainty:** the build-up of Section 11 places it between 0.0285 and 0.0381, and a designer
+does not choose where the real aircraft falls. **The blade family is a design variable this study has not fixed:** four nose-blade
+families that meet the hover figure of merit span cruise propeller efficiencies of 0.632 to 0.683. **The reference design's assumed
+zero-lift value of 0.0248 is not used**: it lies below both ends of the bracket.
 
-The loop holds wing loading, disc loading and aspect ratio fixed, so **the cruise lift coefficient is unchanged at 0.450 in every closure** (geometry in Supplement S10); the claim is that C_L is unchanged, not that C_D0 is exactly so. The tip frames, the tip discs and the strip are not sizing variables; they were set on the 50 kg reference design of Section 8, and **the control moment arms of Section 8 are therefore reference values that this closure does not re-derive.** **These are the same configuration at four closed masses rather than four configurations** — but anything that depends on the arms is carried at the reference geometry and is not an output of the loop.
-
-Run on the reference design's assumed inputs — that drag coefficient without the rotor term, and a propeller efficiency of 0.80 — the same construction reproduces the 50 kg reference design within 1.5 percent (Supplement S10). That check is the only place in the closures where the assumed value appears, so the closures report a change of inputs, not of method.
+Wing loading, disc loading and aspect ratio are held fixed, so **the cruise lift coefficient is 0.450 in every closure** (Supplement S10). The tip frames, tip discs and strip were set on the 50 kg reference design of Section 8, and **the control moment arms of Section 8 are therefore reference values that this closure does not re-derive.** **These are the same configuration at four closed masses
+rather than four configurations**, with anything that depends on the arms carried at the reference geometry. Run on the reference
+design's own assumed inputs, the same construction reproduces that design within 1.5 percent (Supplement S10), so the closures report
+a change of inputs, not of method.
 
 ### The four closures
 
@@ -46,13 +50,26 @@ Run on the reference design's assumed inputs — that drag coefficient without t
 neither. The four L/De values are the bounding corners of that product, carried into the closures as inputs, not four
 simulated aircraft.*
 
-**Payload is an input, fixed at 13 kg; take-off mass is the output**, and the payload fraction runs from 0.25 down to 0.23. **The blade that is best before the loop is still best after it.** There was no reason to assume so: propeller efficiency propagates through cruise power into engine size, engine size into mass, and mass back into hover power, and a loop can reverse a local ranking. At both ends of the drag bracket the higher-efficiency family closes to the longer range — **a result of the closure rather than an assumption carried into it.**
+Payload is fixed at 13 kg and take-off mass is the output. **The blade that is best before the loop is still best after it**, though a
+loop can reverse a local ranking: at both ends of the drag bracket the higher-efficiency family closes to the longer range — **a result
+of the closure rather than an assumption carried into it.**
 
 ### The transition
 
-The sizing above says nothing about whether the aircraft can change regime. **The question is asked in two models, only the second of which carries rotational dynamics, and that one does not support a zero altitude loss.** Every transition figure here belongs to a reference design at its reference mass and its assumed drag, and is not an output of the closure; at either end of the drag bracket the altitude loss moves by less than 0.1 m. In the first, a point-mass model with the body angle driven kinematically, a rotation entered in a 5 m s⁻¹ climb loses no altitude at either reference rotation time: 2 s for the 50 kg design and 5.1 s for the 1 000 kg one. Solved instead with rotational dynamics and a finite control moment, **and with the aerodynamic pitching moment set to exactly zero, so that nothing favourable is borrowed**, the 50 kg design **loses 5.4 to 6.6 m at the same reference condition**, depending on the reference profile. The loss is not an artefact of the controller: it appears under all three reference profiles, appears without the control moment saturating, and grows as the gains are raised (Supplement S10). **What the kinematic model leaves out is not the difficulty of turning the aircraft but the trajectory the aircraft flies while it is being turned.** **So the zero-altitude-loss result is a property of the model that produced it.**
+The sizing above says nothing about whether the aircraft can change regime. **The question is asked in two models, only the
+second of which carries rotational dynamics, and that one does not support a zero altitude loss.** Both use the reference designs at
+their reference masses and assumed drag, not the closures. A point-mass model with the body angle driven kinematically loses no
+altitude in a rotation entered in a 5 m s⁻¹ climb, at the reference rotation times of 2 s for the 50 kg design and 5.1 s for the
+1 000 kg one. Solved with rotational dynamics and a finite control moment, **and with the aerodynamic pitching moment set to exactly
+zero, so that nothing favourable is borrowed**, the 50 kg design **loses 5.4 to 6.6 m at the same reference condition**; the loss is
+not an artefact of the controller (Supplement S10). **What the kinematic model leaves out is not the difficulty of turning the aircraft
+but the trajectory the aircraft flies while it is being turned.** **So the zero-altitude-loss result is a property of the model that
+produced it.**
 
-What replaces it is not a prediction: the pitching moment that would make it one exists, but for the methods used here the predictions diverge above roughly ten degrees of incidence, the band the rotation passes through (Section 14). With a borrowed moment the spread is wide enough that no number from it is reportable: some models complete the rotation, some saturate the tip pairs, and some tumble. **That spread is itself the finding.** **Within the finite-moment dynamic model, with the aerodynamic moment set to zero, the manoeuvre costs altitude.** Whether a real aircraft loses 5.4 to 6.6 m, more, or less is not settled by anything here.
+A prediction would need the aerodynamic pitching moment, and the methods used here diverge in the band the rotation passes through
+(Section 6); with a borrowed moment some models complete the rotation, some saturate the tip pairs, and some tumble. **That spread is
+itself the finding.** **Within the finite-moment dynamic model, with the aerodynamic moment set to zero, the manoeuvre costs altitude.**
+Whether a real aircraft loses 5.4 to 6.6 m, more, or less is not settled by anything here.
 
 ### What closing does and does not establish
 
@@ -64,6 +81,7 @@ It establishes that the architecture is arithmetically self-consistent on a decl
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 170 — yazarın notları üzerine kısaltma uygulandı** (Tur 168–169: işlemlerde dört okuyucu + Claude; korunan cümle taşımaları yazar kararı E13). Değişen her paragrafın eski hâli ekin bu adıma ait bölümünde aynen (*"… before the Round 170 shortening"*). Yeni (R) cümleler Tur 170 §2'de okuyucu vetosuna açık; sonuç teyide | `paper/build/v8_round170_texts.py`, `v8_round170_apply.py` |
 | **Tur 148 — X-1, X-2, X-3 uygulandı** (bütün okuma; dört okuyucu + Claude): X-1 *"loses 5.4 m … unchanged across three reference profiles"* → *"loses 5.4 to 6.6 m …, depending on the reference profile … appears under all three"* ve korunan *"loses 5.4 to 6.6 m, more, or less"* (yeniden koşu: doğrusal 5,43 / yumuşak 6,33 / üçgen 6,57 m); X-2 *"only place in the closures"* + geçiş paragrafına *"and its assumed drag … less than 0.1 m"*; X-3 *"and the study carries all four rather than pretending to have chosen"* silindi. Ek S10'a donmuş metni değiştirmeden düzeltme notu | Tur 147 §4; Tur 148 §1 |
 | **Tur 104 — Adım 10 yeniden kuruldu** (Tur 101–103; dört okuyucu + Claude, her ayrışık satır oylandı; R cümlelerine veto yok): `drafts/10-recomposed.md` uygulandı. Kaynak 83 geri (D29b, korunur); kaynak 20–23 eke, 67 J24'e; **R16 + P17 eke — kural (iii), yazar kararı (E7, Tur 104)**; J32 + P33 gövdede (DeepSeek; sonra dördü). Özgün gövde Ek S10'da tam | `drafts/10-recomposed.md` §3 iz |
 | **Tur 103 (Tur 102: ChatGPT ve DeepSeek inceltmesi; Grok ve Qwen aynı okumayı yazdı — teyide):** dipnot "the loop holds both factors fixed within each closure" — L/D köşeden köşeye değişir (sürükleme braketi), döngü onu yeniden yazmaz | Tur 102 cevapları |

@@ -48,7 +48,6 @@ boşluğa duyarsız. `G` = Grok, `D` = DeepSeek, `C` = ChatGPT, `Q` = Qwen, `K` 
 | 6 | This is a comparison of two independently produced figures in a common definition, not a controlled numerical reproduction. | G |
 | 6 | is not claimed here, because it has not been computed. | G |
 | 6 | Nothing here is claimed against fixed-wing aircraft. | D |
-| 6 | Whether 0.683 is the blade a designer would actually choose is not settled here. | D |
 | 6 | No part of this has been measured. | D |
 | 6 | The span efficiency used throughout this section is the computed value, 0.817, not the assumed 0.85. | D |
 | 6 | the aerodynamic predictions diverge above roughly ten degrees of incidence | D |
@@ -116,7 +115,6 @@ boşluğa duyarsız. `G` = Grok, `D` = DeepSeek, `C` = ChatGPT, `Q` = Qwen, `K` 
 | 15 | It is not a list of the study's open questions. | G |
 | 13 | The mechanism claim is not a ranking and is not at stake here | G |
 | 10 | This section prices the arrangement of Sections 7 and 8 on a declared package; it does not bear on the count of mechanism classes, which rests on the inventory of those sections alone. | G |
-| 6 | The compared vehicles are 1 660 to 3 275 kg | D |
 | 6 | Reynolds number favours the larger aircraft | D |
 | 6 | The quadrotor is a good quadrotor. | D |
 | 6 | Nothing here is compared against a poor example. | D |
@@ -148,14 +146,12 @@ boşluğa duyarsız. `G` = Grok, `D` = DeepSeek, `C` = ChatGPT, `Q` = Qwen, `K` 
 | 11 | No new physical cost term is introduced here. | Q |
 | 11 | Every cost named below is already inside the closure of Section 10. | Q |
 | 6 | variable-pitch hub would recover that difference is not computed; Section 11 reports the gap and declines to attribute all of it to the hub | Q |
-| 4 | The quadrotor is reported for scale, and the isolation test above is what carries the prediction | Q |
 | 1 | they are the only one of those documented obstacles an uncrewed aircraft removes | Q |
 | 12 | Of the two rotor terms, the light one is therefore the less certain — and it is the one Sections 10 and 11 carry. | G+K |
 | 10 | the question is asked in two models, only the second of which carries rotational dynamics, and that one does not support a zero altitude loss | C+G+D+Q+K |
 | 4 | The instrument is now fixed, and it is not modified again. | G+C+D+Q+K |
 | 4 | Everything that follows is measured with it rather than added to it. | G+C+D+Q+K |
 | 14 | The escape from Bill 3 is real in the sense Section 3 defined it, and its price depends on a component whose required performance has not been demonstrated. | G+C+D+Q+K |
-| 2 | The same work finds the retraction's advantage elsewhere — the speed that maximises range rose by 5 m/s — which is a performance this accounting does not price. | G+C+D+Q+K |
 | 2 | Whether an architecture can decline the mismatch itself, rather than redistribute its consequences, is a different question | G+C+D+Q+K |
 | 2 | If that architecture already sizes its continuous plant by the hover peak, tilting leaves Bill 3 no worse…what keeps the row from refuting the accounting is the part of its cost that falls outside the three — which is why that part is listed | G+C+D+Q+K |
 
@@ -217,6 +213,10 @@ kaybolmasına (CLAUDE.md §0.8). Aynı denetimle sınanır.
 | S14 | These masses are the Section 10 package with one input changed. | E12 |
 | S14 | They are not a structural closure at 100 kg | E12 |
 | S9 | By construction" throughout this paper means "by the sizing", never "by demonstration. | E11 |
+| S2 | The same work finds the retraction's advantage elsewhere — the speed that maximises range rose by 5 m/s — which is a performance this accounting does not price. | E13 |
+| S6 | Whether 0.683 is the blade a designer would actually choose is not settled here. | E13 |
+| S4 | The quadrotor is reported for scale, and the isolation test above is what carries the prediction | E13 |
+| S6 | The compared vehicles are 1 660 to 3 275 kg | E13 |
 
 *Tanım kaydı (Tur 111; Qwen P1, dört okuyucu + Claude): son beş Q+G+C+D+K satırı çerçevenin tanım cümleleri; kök (satır "is the origin of all three charges below") ve koşul zaten korunuyordu.*
 

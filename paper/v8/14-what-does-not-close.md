@@ -44,15 +44,28 @@ Section 10 closed the sizing loop on a declared package and said that whether an
 
 ### First, the known obstacle: the energy store
 
-**Every closure in Section 10 carries a buffer of 3.6 percent of take-off mass**, an input rather than a result (Sections 11 and 12). Taken at the electrical bus, where the buffer sits, **the four closures ask the buffer for 4.7 to 5.2 kW per kilogram of buffer to hover, and 5.5 to 6.1 kW per kilogram of buffer to leave the ground** with the tip pairs at full thrust (Section 5).
+**Every closure in Section 10 carries a buffer of 3.6 percent of take-off mass.** Taken at the
+electrical bus, **the four closures ask the buffer for 4.7 to 5.2 kW per kilogram of buffer to hover, and 5.5 to 6.1 kW per kilogram of
+buffer to leave the ground** with the tip pairs at full thrust (Section 5).
 
-**What has been measured is a fraction of that, and the store figures available are of four different kinds.** A 24-series nickel–cobalt–manganese pack designed, bench-tested and flown in a 210 kg-class electric VTOL aircraft is rated, as a flown system, at 0.892 kW per kilogram continuous; its unit pack, discharged on the bench at its highest tested rate, delivered on average about 1.5 kW per kilogram (Supplement S14). A NASA-funded design study adopts 4 kW per kilogram and describes that figure as about twice that of existing batteries. The same study notes lithium-polymer figures in the literature as high as 3 kW per kilogram, which it cites rather than measures; against that figure the take-off demand is 1.8 to 2.0 times. The study argues that, because pulse current limits can exceed continuous ones — by more than a factor of two in one commercial module it cites — a pack with the required specific power may be possible with existing technology; the study's hover lasts twenty seconds or less; this aircraft's vertical phases occupy about a minute in all (Section 2), and how long each draws the peak is not computed here.
+**What has been measured is a fraction of that, and the store figures available are of four different kinds.** A pack flown in a 210 kg-class electric VTOL aircraft is rated, as a flown system, at 0.892 kW per kilogram continuous; its
+unit pack, discharged on the bench at its highest tested rate, delivered on average about 1.5 kW per kilogram (Supplement S14). A
+NASA-funded design study adopts 4 kW per kilogram and describes that figure as about twice that of existing batteries. The same study
+notes lithium-polymer figures in the literature as high as 3 kW per kilogram, which it cites rather than measures; against that figure
+the take-off demand is 1.8 to 2.0 times. The study argues that, because pulse current limits can exceed continuous ones — by more than a
+factor of two in one commercial module it cites — a pack with the required specific power may be possible with existing technology; its
+hover lasts twenty seconds or less, while this aircraft's vertical phases occupy about a minute in all (Section 2), and how long each
+draws the peak is not computed here.
 
-**The take-off demand of Section 10's closures is 3.7 to 4.1 times the bench rate — the highest figure obtained from a measurement — and 6.2 to 6.8 times the flown system's continuous rating**; hover alone is 3.1 to 3.5 times the bench rate. The comparison is between unlike ratings: a peak demand held through the vertical phases, a bench average over minutes, a continuous rating, a design assumption, and a literature figure the study cites without its rating. **The gap is real on every one of them; the factor quoted is peak demand against bench average.** The package Section 10 closes on does not exist with any store the sources consulted here report as built.
+**The take-off demand is 3.7 to 4.1 times the bench rate — the highest figure obtained from a measurement — and 6.2 to 6.8 times the
+flown system's continuous rating.** The comparison is between unlike ratings. **The gap is real on every one of them;
+the factor quoted is peak demand against bench average.** The package Section 10 closes on does not exist with any store the sources
+consulted here report as built; closed again at the bench rate, it becomes 76 to 81 percent heavier, a sensitivity with one input
+changed rather than a structural closure (Supplement S14).
 
-Closed again on the measured bench rate of about 1.5 kW per kilogram, the same package becomes 76 to 81 percent heavier, a sensitivity of that package with one input changed rather than a structural closure (Supplement S14).
-
-**This is where the coupling Section 12 found is paid**: the buffer is the conversion the escape condition permits — kilowatts of hover peak paid in kilograms of store. **The escape from Bill 3 is real in the sense Section 3 defined it, and its price depends on a component whose required performance has not been demonstrated.**
+**This is where the coupling Section 12 found is paid**: the buffer converts kilowatts of hover peak into kilograms of store. **The
+escape from Bill 3 is real in the sense Section 3 defined it, and its price depends on a component whose required performance has not
+been demonstrated.**
 
 ### What the obstacle reaches, and what it does not
 
@@ -76,6 +89,7 @@ Eighteen further questions are open, and Supplement S14 lists each with what it 
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 170 — yazarın notları üzerine kısaltma uygulandı** (Tur 168–169: işlemlerde dört okuyucu + Claude; korunan cümle taşımaları yazar kararı E13). Değişen her paragrafın eski hâli ekin bu adıma ait bölümünde aynen (*"… before the Round 170 shortening"*). Yeni (R) cümleler Tur 170 §2'de okuyucu vetosuna açık; sonuç teyide | `paper/build/v8_round170_texts.py`, `v8_round170_apply.py` |
 | **Tur 166 — C2 uygulandı** (Tur 165: dört okuyucu + Claude): açılıştaki *"Section 15 calls this section a debt: questions the paper does not answer and that better evidence would."* silindi — Adım 15 (Bölüm 8) borç/kapsam ayrımını kendisi söylüyor. Eski paragraf Ek S14'te tam. Bu bölüme işaret eden altı cümle yeniden okundu (R1; biri okuyuculara soruldu) | `paper/v8/supplement.md` S14 |
 | **Tur 139 — S-60, R (dört okuyucu + Claude):** liste maddesi *"closed-loop hover control, including …"* → *"closed-loop attitude control in hover and in cruise, including …"*; S14 satırı aynı kapsamla. Liste 18 maddede; *"None of these is a small correction"* ve *"Two of them"* tutuyor. Ayrıca S14'te: R-9 (depolama satırı), N3 (b) (satır bilinen engelin parçası), N4 (yer rüzgârı bedeli) | `v8-source-defects.md` S-60, R-9; `drafts/not-classification.md` |
 | **Tur 134 — S-58 (b) uygulandı (dört okuyucu + Claude):** liste 16 → 18: *"the tip pairs' shaft power when commanded off the free-wheeling state in cruise"* (durdurulmuş durumdan sonra) ve *"the variable-pitch counterfactual"* (pala ailesi seçiminden sonra). S14'e iki satır, oylanan *"what would settle it"* metinleriyle. Borç izi güncellendi (`drafts/15-maps.md`); gövdede sayı geçmiyor | S-58 |

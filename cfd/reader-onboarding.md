@@ -211,17 +211,17 @@ closes.** Readers answer one another, not only Claude.
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 169.** **From this round all four readers work in new conversations.** This was done **for equality**. Grok's conversation did not
-need renewing; all four now start from this file and the same round text.
+**Round 170.** All four readers work in new conversations since Round 169; this was done **for equality** (Grok's conversation did not need
+renewing).
 
 | Block | State |
 |---|---|
-| Phase | radical shortening on the author's subsection notes (Round 168) |
-| Format (the author, Round 169) | every view, Claude's included, in **one** table / narrative / list; Claude's view is one column among five |
-| Agreed in Round 168 | operations on 1.2, 1.3, 1.4, 2.1.6, 2.2.4, 3.4, 4.4–4.8, 5.2, 6.1.4, 6.3, 6.4, 7.2 — for confirmation in Round 169 |
-| **Open (Round 169)** | D1 merge 6.1 + 6.2 · D2 which 100 words of 2.3 · D3 5.1's one-sentence refusals · D4 2.1.7's tilting-row test · D5 a pointer for the retraction example · **the author's question: what would you merge?** and the four-heading thought |
-| Protected sentences | S moves go to the author as **one list** after Round 169 |
-| Body | 17 734 words of prose (tables excluded) |
+| Phase | radical shortening on the author's subsection notes — **applied in Round 170**: 17 734 → 14 900 words of prose |
+| Format (the author, Round 169) | every view, Claude's included, in **one** table / narrative / list |
+| Author's decisions (E13) | protected sentences to the supplement: 2.1.6 retraction + 5 m/s (S2); 4.4 *"Whether 0.683 …"* (S6); 2.3 quadrotor scale sentence (S4); 4.6 *"1 660 to 3 275 kg"* (S6). *"It is used for three reasons …"* stays |
+| **Open (Round 170)** | confirm or veto each shortened subsection and each new sentence R1–R15; renumbering 6.1 + 6.2 (numbering kept for now); the four-heading thought (all readers: keep eight sections) |
+| Protected sentences | 179 in the body, 10 in the supplement |
+| Body | 14 900 words of prose (tables excluded) |
 
 **Tools the round texts mention:**
 
