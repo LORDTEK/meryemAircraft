@@ -63,7 +63,7 @@ the factor quoted is peak demand against bench average.** The package Section 10
 consulted here report as built; closed again at the bench rate, it becomes 76 to 81 percent heavier, a sensitivity with one input
 changed rather than a structural closure (Supplement S14).
 
-**This is where the coupling Section 12 found is paid**: the buffer converts kilowatts of hover peak into kilograms of store. **The
+**This is where the coupling Section 3 names is paid**: the buffer converts kilowatts of hover peak into kilograms of store. **The
 escape from Bill 3 is real in the sense Section 3 defined it, and its price depends on a component whose required performance has not
 been demonstrated.**
 
@@ -90,6 +90,7 @@ Eighteen further questions are open, and Supplement S14 lists each with what it 
 | İddia | Kaynak |
 |---|---|
 | **Tur 170 — yazarın notları üzerine kısaltma uygulandı** (Tur 168–169: işlemlerde dört okuyucu + Claude; korunan cümle taşımaları yazar kararı E13). Değişen her paragrafın eski hâli ekin bu adıma ait bölümünde aynen (*"… before the Round 170 shortening"*). Yeni (R) cümleler Tur 170 §2'de okuyucu vetosuna açık; sonuç teyide | `paper/build/v8_round170_texts.py`, `v8_round170_apply.py` |
+| **Tur 172 — hesap geçişi (yazar E14, E15; katman 1 okuyucu teyidine)** S-63 onarıldı (R3): "the coupling Section 12 found" → "the coupling Section 3 names". Eski paragraflar ekte aynen | — |
 | **Tur 166 — C2 uygulandı** (Tur 165: dört okuyucu + Claude): açılıştaki *"Section 15 calls this section a debt: questions the paper does not answer and that better evidence would."* silindi — Adım 15 (Bölüm 8) borç/kapsam ayrımını kendisi söylüyor. Eski paragraf Ek S14'te tam. Bu bölüme işaret eden altı cümle yeniden okundu (R1; biri okuyuculara soruldu) | `paper/v8/supplement.md` S14 |
 | **Tur 139 — S-60, R (dört okuyucu + Claude):** liste maddesi *"closed-loop hover control, including …"* → *"closed-loop attitude control in hover and in cruise, including …"*; S14 satırı aynı kapsamla. Liste 18 maddede; *"None of these is a small correction"* ve *"Two of them"* tutuyor. Ayrıca S14'te: R-9 (depolama satırı), N3 (b) (satır bilinen engelin parçası), N4 (yer rüzgârı bedeli) | `v8-source-defects.md` S-60, R-9; `drafts/not-classification.md` |
 | **Tur 134 — S-58 (b) uygulandı (dört okuyucu + Claude):** liste 16 → 18: *"the tip pairs' shaft power when commanded off the free-wheeling state in cruise"* (durdurulmuş durumdan sonra) ve *"the variable-pitch counterfactual"* (pala ailesi seçiminden sonra). S14'e iki satır, oylanan *"what would settle it"* metinleriyle. Borç izi güncellendi (`drafts/15-maps.md`); gövdede sayı geçmiyor | S-58 |

@@ -785,3 +785,6 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | C1, C4, C9a | önerme | önerme | önerme | önerme | önerme | **KAPANDI: kalır** |
 | T1–T4 | koru | koru | geri çekti | koru | koru | **KAPANDI: değişmedi** |
 | Bir sonraki aşama | paragraf, 250–500 | paragraf/bölüm, 300–800 | Bölüm 6, 1 000–1 500 | dur → başlık denemesi | tek liste, 250–500, sonra başlık | **yazara** |
+| E14 C2, C9b uygulanan hâl | ? | ? | ? | ? | uyguladı | **Tur 172 teyidi** |
+| Tur 172 hesap geçişi (katman 1) + 2.2.5, 2.3 (yazarın notları) | ? | ? | ? | ? | uyguladı | **Tur 172 teyit ya da cümle vetosu**; R1–R3 oyda |
+| E15 a–k (korunan, yazar kararı) | — | — | — | — | — | **yazar kararı (Tur 171 sonrası)**; alındı denetimi okuyuculara |

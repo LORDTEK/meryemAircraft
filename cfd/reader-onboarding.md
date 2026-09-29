@@ -168,7 +168,7 @@ decision, a four-heading telling: *Current state · Proposed solution · Calcula
 **The stage.** The paper went through deletion (Rounds 61–72), recomposition (73–98), recomposition into result sentences (101–151,
 25 797 → 18 634 words) and compression by finding (from Round 153). **Sentence-level cutting is exhausted** (Round 167). The author
 then read the whole paper and wrote notes on about thirty subsections (Round 168): *narrow this*, *merge this*, *2.3 at least 100 words
-shorter*, and *perhaps 6.1 and 6.2 merge*. **That pass was applied in Round 170 and is closing** (§6). The body is **14 914 words of prose** (tables excluded).
+shorter*, and *perhaps 6.1 and 6.2 merge*. **That pass closed in Round 171; a calculation pass followed in Round 172** (§6). The body is **14 180 words of prose** (tables excluded).
 
 **Length.** The author has set word targets aside (Round 161). **Do not argue from 12 000, 8 500 or 7 500;** those were earlier
 targets.
@@ -180,7 +180,7 @@ closes.** Readers answer one another, not only Claude.
 **The rules that govern every proposal:**
 
 1. **Protected sentences.** *"A sentence is protected when removing it silently would change a claim, a limit or a derivation that
-   later text depends on …"* There are **179 in the body and 10 in the supplement**, in the register `paper/v8-caveats.md`. A protected
+   later text depends on …"* There are **164 in the body and 25 in the supplement**, in the register `paper/v8-caveats.md`. A protected
    sentence is kept **verbatim**. **It cannot be reworded.** If you think one should be, ask the author.
 2. **Rule (iii) (the author, Round 104).** *"A protected sentence may move to the supplement only together with the result it
    qualifies, and only by the author's decision."* The author decides these **as one list** (Round 168).
@@ -210,19 +210,18 @@ closes.** Readers answer one another, not only Claude.
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 171.** All four readers work in new conversations since Round 169; this was done **for equality** (Grok's conversation did not need
-renewing). **The author (Round 171, Claude's translation):** *"You readers, work together. Whenever it comes to my turn, don't forget to
-tell me."* Each round text now ends by naming what goes to the author.
+**Round 172.** All four readers work in new conversations since Round 169; this was done **for equality** (Grok's conversation did not need
+renewing). **The author (Round 171):** *"You readers, work together. Whenever it comes to my turn, don't forget to tell me."* Each round
+text ends by naming what goes to the author.
 
 | Block | State |
 |---|---|
-| Phase | radical shortening on the author's subsection notes — **applied in Round 170** (17 734 → 14 900) and **confirmed** by all four readers, except three sentences |
-| Format (the author, Round 169) | every view, Claude's included, in **one** table / narrative / list |
-| Author's decisions (E13) | protected sentences to the supplement: 2.1.6 retraction + 5 m/s (S2); 4.4 *"Whether 0.683 …"* (S6); 2.3 quadrotor scale sentence (S4); 4.6 *"1 660 to 3 275 kg"* (S6). *"It is used for three reasons …"* stays |
-| Closed in Round 171 | 6.1 and 6.2 keep their numbering (all five); eight sections stay, a heading trial after the shortening closes (all five) |
-| **Open (Round 171)** | R2 and R9 as repaired; Grok's R8 veto (the five factors stood in the old 4.4); two protected copies (C2 6.4.6, C9b 5.2.5; operation C, author decides); DeepSeek's four small cuts T1–T4; **the next pass** (all views first, then the author) |
-| Protected sentences | 179 in the body, 10 in the supplement |
-| Body | 14 914 words of prose (tables excluded); tables 574 |
+| Closed | the pass on the author's subsection notes (Rounds 168–171; 17 734 → 14 914) |
+| Author's decisions | E13 (Round 170); **E14** the copy list, C2 and C9b cut; **next pass (a)**: one round, calculation working to the supplement; **E15** eleven protected sentences in Section 6 cut as copies (C) or moved with their result (S), items a–k |
+| Author's notes applied | 2.2.5 shortened; 2.3 simplified *"to the parts that concern us"* |
+| **Open (Round 172)** | confirm or veto each changed paragraph; R1–R3; the 2.3 weight-breakdown figures; the receipt of a–k; your proposal for the next place in the current structure (the author wants the current structure worked on **before** sections merge) |
+| Protected sentences | 164 in the body, 25 in the supplement |
+| Body | 14 180 words of prose (tables excluded) |
 
 **Tools the round texts mention:**
 

@@ -89,9 +89,7 @@ Section 2 predicted that such a ranking will move when the sizing rule changes, 
 everywhere**, against both competitors, toward the lighter arrangement as the contract weights mass more; **the reversal holds at two of
 the four closures against lift-plus-cruise, and at none against the tilt bound.** Where it falls is decided by quantities this study
 has not measured or fixed: the blade family in the base case, and across the sensitivity cases the competitor's lift-group mass and the
-propeller basis (Supplement S13). With a lighter lift group the lift-plus-cruise layout leads under all three contracts at every
-closure; with a heavier one this configuration leads under a fixed take-off mass at every closure; with a common propeller efficiency
-a reversal appears at every closure. **Which architecture ranks first under a fixed take-off mass is therefore decided, in this model,
+propeller basis (Supplement S13). **Which architecture ranks first under a fixed take-off mass is therefore decided, in this model,
 by quantities this study assumes for the competitor rather than measures: its lift-group mass fraction and its propeller efficiency.**
 What is robust is that the shift exists and runs toward the lighter aircraft.
 
@@ -110,6 +108,7 @@ What is robust is that the shift exists and runs toward the lighter aircraft.
 | İddia | Kaynak |
 |---|---|
 | **Tur 170 — yazarın notları üzerine kısaltma uygulandı** (Tur 168–169: işlemlerde dört okuyucu + Claude; korunan cümle taşımaları yazar kararı E13). Değişen her paragrafın eski hâli ekin bu adıma ait bölümünde aynen (*"… before the Round 170 shortening"*). Yeni (R) cümleler Tur 170 §2'de okuyucu vetosuna açık; sonuç teyide | `paper/build/v8_round170_texts.py`, `v8_round170_apply.py` |
+| **Tur 172 — hesap geçişi (yazar E14, E15; katman 1 okuyucu teyidine)** E14: C2 ("Put plainly …") kesildi. E15 i: duyarlılık sonuçları S13'e. Eski paragraflar ekte aynen | — |
 | **Tur 167 — işaretçi eklendi** (DeepSeek önerisi; Tur 166: dört okuyucu + Claude): *"The per-closure numbers are in Supplement S13."* aralık cümlesinden sonra — A–D tablosu S13'e gidince okur dört değeri nerede bulacağını bilsin | `paper/v8/supplement.md` S13 |
 | **Tur 166 — C1 uygulandı** (Tur 165: dört okuyucu + Claude): A–D tablosu (kapanış başına üç sözleşme) gövdeden Ek S13'ün başına, aynen. Gövdede her aralık, 67–77 puanlık kayma ve işaret değişimi kalıyor. S13'teki duyarlılık tablosunun *"As above"* satırı artık hemen üstündeki bu tabloyu gösteriyor (aynı nesne). DeepSeek'in işaretçi cümlesi (*"The per-closure numbers are in Supplement S13."*) Tur 166 oyunda | `paper/v8/supplement.md` S13 |
 | **Tur 117 — S-44 onarıldı** (Tur 116; dört okuyucu + Claude): P33'ün korunmayan kuyruğu "in drag the tilting layout, by construction" → "by assumption" | Tur 116 metni §3 |

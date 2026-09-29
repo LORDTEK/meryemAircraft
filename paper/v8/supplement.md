@@ -1105,6 +1105,16 @@ The costs the condition permits are named here, before any candidate is examined
 
 ---
 
+### Section 3's paragraphs as they stood before the Round 172 shortening
+
+Each paragraph below was shortened or moved in Round 172 (calculation working to the supplement; the author's notes on Sections 3 and 4); it is given here in full, verbatim. Protected sentences moved here by the author's decision (E15) are among them.
+
+The condition is a statement about what an architecture would have to be. **It is not a claim that anything satisfies it, not a claim that anything satisfying it would fly, and not a claim that satisfying it is desirable.** Three questions follow from it, and they are answered separately: whether the accounting behind the condition survives contact with an independent sizing study is tested in the next section, against data this work did not produce; whether any configuration satisfies the condition is the subject of Sections 5 to 7; and what such a configuration pays instead is the subject of Section 11, the answer most likely to be wrong.
+
+A tilting architecture accepts the third departure and buys its way out of the first with a mechanism. **An architecture that reorients a propulsor does not satisfy the condition as written**, because the condition requires one orientation relative to the airframe. **Whether such an architecture might avoid the three charges by some other route is a separate question this paper does not settle** — the condition is a definition, not a law, and it can be too narrow without being wrong.
+
+---
+
 ## S4. The independent check: the table, the weight breakdown, and the quadrotor contrast (from Section 4)
 
 | Configuration | Effective L/D | Design gross weight | Dedicated lift group |
@@ -1317,6 +1327,18 @@ Each paragraph below was shortened, rewritten or moved in Round 170, on the auth
 The check uses a NASA study, conducted for its own purposes and with no relationship to the present work, that sizes **five VTOL architecture families** — nine designs in all — against a single mission with common tools and common assumptions; it does not use the three-bill accounting of Section 2 or any framework derived from it. It is used for three reasons, stated so that the choice is not merely the one that agreed: it holds the mission fixed across architecture families, it applies one set of tools to all of them, and it reports both quantities this prediction needs. The mission is 1 200 lb of payload over 75 nautical miles. Three of the nine designs matter here. The turboshaft quadrotor reaches an effective lift-to-drag ratio of 4.9 at a design gross weight of 3 678 lb, with no dedicated lift group: its rotors serve both regimes. **The turbo-electric lift-plus-cruise design reaches 8.5 at 7 271 lb and carries a dedicated lift group — eight lift motors beside its cruise motor. The turbo-electric tilt-wing reaches 8.6 at 6 584 lb with none: eight proprotors, reoriented.**
 
 **The primary comparison is the lift-plus-cruise design against the tilt-wing**, because they isolate the charge: they share the mission, the payload, the turbo-electric propulsion architecture and the presence of a cruising wing. **They are not identical in every other respect** — one stops its lift rotors in the airstream and drives a separate pusher, the other reorients its proprotors on a tilting wing — **but the difference the comparison turns on is that one carries a dedicated lift group through cruise and the other does not.** The comparison is the closest the published set comes to isolating that charge; it is not a controlled experiment. **The tilt-wing is 1.2 % better in effective cruise efficiency and 9.4 % lighter.** The design gross weights differ by 687 lb in the tilt-wing's favour. **That figure is the net difference between two architectures, not the measured mass of a lift group**. **The published weight breakdown is consistent with the transfer property of Section 2 — the mechanism giving part of the structural saving back — inside a breakdown this work did not produce**: its three reported categories account for 580 lb of the 679 lb empty-weight difference, and the remaining 99 lb lies in categories it does not break out (Supplement S4). **And the source states the second half of the prediction in its own words, on a comparison the check does not use as its test.** Discussing why the all-electric lift-plus-cruise design is the heaviest in the set, the study writes that the high cruise efficiency of the lift-plus-cruise type reduces battery weight compared with the quadrotor, *"but not enough to counter the increase in structure and propulsion weight."* **The quadrotor is reported for scale, and the isolation test above is what carries the prediction**: against it the lift-plus-cruise design changes three things at once, and the contrast is in Supplement S4. **The framework does not predict any of these numbers**; without the input fractions it predicts no magnitudes. What it predicts is that the amplified weight charge survives the efficiency credit, and on the isolated pair it does so with the credit reduced to nothing.
+
+---
+
+### Section 4's paragraphs as they stood before the Round 172 shortening
+
+Each paragraph below was shortened or moved in Round 172 (calculation working to the supplement; the author's notes on Sections 3 and 4); it is given here in full, verbatim. Protected sentences moved here by the author's decision (E15) are among them.
+
+> **First half, derived from Section 2.** A configuration carrying a dedicated lift system pays for it in gross weight, and the payment is amplified: additional empty mass enters through a multiplier that grows as the empty-mass fraction rises, and the same increment is counted again in hover.
+
+**The primary comparison is the lift-plus-cruise design against the tilt-wing**, because they isolate the charge: they share the mission, the payload, the turbo-electric propulsion architecture and the presence of a cruising wing. **They are not identical in every other respect** — one stops its lift rotors in the airstream and drives a separate pusher, the other reorients its proprotors on a tilting wing — **but the difference the comparison turns on is that one carries a dedicated lift group through cruise and the other does not.** The comparison is the closest the published set comes to isolating that charge; it is not a controlled experiment. **The tilt-wing is 1.2 % better in effective cruise efficiency and 9.4 % lighter.** The design gross weights differ by 687 lb in the tilt-wing's favour. **That figure is the net difference between two architectures, not the measured mass of a lift group**. **The published weight breakdown is consistent with the transfer property of Section 2 — the mechanism giving part of the structural saving back — inside a breakdown this work did not produce**: its three reported categories account for 580 lb of the 679 lb empty-weight difference, and the remaining 99 lb lies in categories it does not break out (Supplement S4). **And the source states the second half of the prediction in its own words, on a comparison the check does not use as its test.** Discussing why the all-electric lift-plus-cruise design is the heaviest in the set, the study writes that the high cruise efficiency of the lift-plus-cruise type reduces battery weight compared with a quadrotor, *"but not enough to counter the increase in structure and propulsion weight."*  **The framework does not predict any of these numbers**; without the input fractions it predicts no magnitudes. What it predicts is that the amplified weight charge survives the efficiency credit, and on the isolated pair it does so with the credit reduced to nothing.
+
+**The architecture proposed later in this paper is not the only way to avoid the first charge.** The tilting family avoids it too — it carries no dedicated lift group, it is the lighter of the two matched designs, and an independent set says so. The margin in cruise efficiency is 0.1 in effective lift-to-drag ratio, and nothing is claimed from its direction. The tilt-wing does not escape the accounting by avoiding the mass charge; it *moves* the cost — to the mechanism that reorients its propulsors, with the actuation, the gyroscopic coupling and the transition control problem that Section 2 assigns to that family. What separates the tilting family from the configuration described later is not this axis; it is what each pays, and a sizing study does not settle that.
 
 ---
 
@@ -3078,6 +3100,49 @@ What replaces it is not a prediction: the pitching moment that would make it one
 
 ---
 
+### Section 10's paragraphs as they stood before the Round 172 shortening
+
+Each paragraph below was shortened or moved in Round 172 (calculation working to the supplement; the author's notes on Sections 3 and 4); it is given here in full, verbatim. Protected sentences moved here by the author's decision (E15) are among them.
+
+Because the comparative result depends on the sizing contract, **no comparison in this paper should be quoted without the contract it was computed under.**
+
+Installed power sets the propulsion mass, propulsion mass the take-off mass, and take-off mass the hover power that sizes the installed power; the take-off mass is found by iteration as the fixed point of that circle (Supplement S10). **If no fixed point exists, the declared sizing package does not close.**
+
+**The zero-lift drag coefficient is uncertainty:** the build-up of Section 11 places it between 0.0285 and 0.0381, and a designer
+does not choose where the real aircraft falls. **The blade family is a design variable this study has not fixed:** four nose-blade
+families that meet the hover figure of merit span cruise propeller efficiencies of 0.632 to 0.683. **The reference design's assumed
+zero-lift value of 0.0248 is not used**: it lies below both ends of the bracket.
+
+Wing loading, disc loading and aspect ratio are held fixed, so **the cruise lift coefficient is 0.450 in every closure** (Supplement S10). The tip frames, tip discs and strip were set on the 50 kg reference design of Section 8, and **the control moment arms of Section 8 are therefore reference values that this closure does not re-derive.** **These are the same configuration at four closed masses
+rather than four configurations**, with anything that depends on the arms carried at the reference geometry. Run on the reference
+design's own assumed inputs, the same construction reproduces that design within 1.5 percent (Supplement S10), so the closures report
+a change of inputs, not of method.
+
+*L/De = L/D × η_p at the cruise condition; the loop holds both factors fixed within each closure, so the closure changes
+neither. The four L/De values are the bounding corners of that product, carried into the closures as inputs, not four
+simulated aircraft.*
+
+Payload is fixed at 13 kg and take-off mass is the output. **The blade that is best before the loop is still best after it**, though a
+loop can reverse a local ranking: at both ends of the drag bracket the higher-efficiency family closes to the longer range — **a result
+of the closure rather than an assumption carried into it.**
+
+The sizing above says nothing about whether the aircraft can change regime. **The question is asked in two models, only the
+second of which carries rotational dynamics, and that one does not support a zero altitude loss.** Both use the reference designs at
+their reference masses and assumed drag, not the closures. A point-mass model with the body angle driven kinematically loses no
+altitude in a rotation entered in a 5 m s⁻¹ climb, at the reference rotation times of 2 s for the 50 kg design and 5.1 s for the
+1 000 kg one. Solved with rotational dynamics and a finite control moment, **and with the aerodynamic pitching moment set to exactly
+zero, so that nothing favourable is borrowed**, the 50 kg design **loses 5.4 to 6.6 m at the same reference condition**; the loss is
+not an artefact of the controller (Supplement S10). **What the kinematic model leaves out is not the difficulty of turning the aircraft
+but the trajectory the aircraft flies while it is being turned.** **So the zero-altitude-loss result is a property of the model that
+produced it.**
+
+A prediction would need the aerodynamic pitching moment, and the methods used here diverge in the band the rotation passes through
+(Section 6); with a borrowed moment some models complete the rotation, some saturate the tip pairs, and some tumble. **That spread is
+itself the finding.** **Within the finite-moment dynamic model, with the aerodynamic moment set to zero, the manoeuvre costs altitude.**
+Whether a real aircraft loses 5.4 to 6.6 m, more, or less is not settled by anything here.
+
+---
+
 ## S11. The zero-lift drag build-up as a table (from Section 11)
 
 | | favourable end | adverse end |
@@ -3352,6 +3417,24 @@ In the zero-lift drag build-up behind Section 10's bracket (line items in Supple
 Removing the hub and small items, the tip frames and the free-wheeling rotors gives a clean-body lift-to-drag ratio of 20.55 at the favourable end and 15.24 at the adverse one, against the aircraft's 10.82 and 8.79: **the configuration retains 52.6 and 57.7 percent.** Bill 2 therefore occupies a larger share where the clean-body drag is lower, because a near-constant charge is set against a smaller total — a statement about position within the drag bracket at one scale, not about size (Section 12).
 
 **Rotor–structure and rotor–wing interference is not modelled and is not carried as a line.** Section 2 quotes a wind-tunnel finding that a simulation assuming negligible rotor–structure interaction *"always predicts higher lift and lower drag than were experimentally observed"*; this build-up is such a calculation, and the bracket's upper margin is the only provision made for it.
+
+---
+
+### Section 11's paragraphs as they stood before the Round 172 shortening
+
+Each paragraph below was shortened or moved in Round 172 (calculation working to the supplement; the author's notes on Sections 3 and 4); it is given here in full, verbatim. Protected sentences moved here by the author's decision (E15) are among them.
+
+This section says where each charge of Section 2 appears inside the closed numbers of Section 10, and how large it is there.
+**It attributes. It does not add.** Every cost named below is already inside the closure of Section 10. **No new physical cost term is
+introduced here.** **And there is no single figure for what the architecture costs**: the charges are in three currencies, and **no
+scalar aggregate is defined, because this study has no defensible weighting between them** (Section 13).
+
+Without the hub and small items, the tip frames and the rotors, the clean body reaches a lift-to-drag ratio of 20.55 at the favourable
+end and 15.24 at the adverse one, against the aircraft's 10.82 and 8.79: **the configuration retains 52.6 and 57.7 percent.** Bill 2
+therefore occupies a larger share where the clean-body drag is lower — a statement about position within the drag bracket at one
+scale, not about size (Section 12).
+
+**Every one of the charges above belongs to one scale**: the four closures do not establish how the three charges behave as the aircraft changes size, which Section 12 asks, or what happens to the comparison when the sizing contract changes, which Section 13 asks.
 
 ---
 
@@ -3748,6 +3831,42 @@ The fixed-pitch gap also widens slightly with size, to 16.4 to 22.9 percent at t
 
 ---
 
+### Section 12's paragraphs as they stood before the Round 172 shortening
+
+Each paragraph below was shortened or moved in Round 172 (calculation working to the supplement; the author's notes on Sections 3 and 4); it is given here in full, verbatim. Protected sentences moved here by the author's decision (E15) are among them.
+
+Section 11 decomposed the three charges on one aircraft, at one size; **this section asks whether they are three quantities or
+one quantity under three names**, by changing the size of the aircraft and seeing whether they move together. Either answer leaves the
+mechanism claim where it was. **The test is deliberately weak**: it can show that two charges are not locked together within this
+model; **it cannot show that they are independent in general.**
+
+**The test is the 50 kg and 1 000 kg reference designs, sized by one method, not Section 10's closures**: no closure was run at
+1 000 kg, the heavy design has no drag bracket and no structural closure, and no heavy-design range is quoted (Supplement S12).
+
+**Under a twentyfold change of mass, the rotor term of Bill 2 falls to between 0.29 and 0.65 of its light-design value in the section
+polars used here, while specific hover power changes by one percent and the Bill 3 ratio by 5 to 14 percent.** Bill 2 moved by more
+than the Bill 3 ratio at every point in the heavy interval and under either engine margin. **Within this model, the two are therefore
+not one quantity under two names.** Disc loading is held nearly constant, so specific hover power is held with it: **that
+near-constancy is a property of the constant-disc-loading rule, not a finding about Bill 3.** The rule is paid in geometry, and **much
+above 1 000 kg a single nose pair can no longer hold the disc loading.**
+
+Only the rotor term of Bill 2 is computed at both sizes; the frame term enters both designs as the same multiplier. Within the
+blade-element and section-polar model the section Reynolds number accounts for the fall, a decomposition inside the model rather than
+a causal claim beyond it, and the light end lies below a Reynolds number of 10⁵, where section drag is hardest to predict. **Of the two
+rotor terms, the light one is therefore the less certain — and it is the one Sections 10 and 11 carry.**
+
+**Bill 1 is not tested.** It appears here as the energy buffer, 3.6 percent of take-off mass at 50 kg and 4.0 percent at 1 000 kg, and
+both figures are inputs: **a change from 3.6 to 4.0 percent is a change between two choices, not a scaling result, and it cannot be
+offered as evidence that Bill 1 moves with size in either direction.** Whether it is separable from Bill 3 here is not established;
+that the two are coupled here is Section 3's claim, and coupling is not identity.
+
+**The evidence is one pair of design points, computed by one method, with the Bill 2 result resting on a section-drag model at low
+Reynolds number.** **It is consistent with the separability Section 2 asserts; it is not a verification of separability as a general
+property.** **The transition is where the square–cube relation is paid in full**, and **a larger aircraft of this type turns more
+slowly, and must** (Supplement S12).
+
+---
+
 ## S13. Sensitivity of the lift-plus-cruise comparison (from Section 13)
 
 Range of the lift-plus-cruise layout relative to this configuration:
@@ -4072,6 +4191,22 @@ The basis is not symmetric: the lift-plus-cruise layout carries a lift-to-drag r
 Section 2 predicted that such a ranking will move when the sizing rule changes, and can reverse. **The movement holds everywhere**, against both competitors, toward the lighter arrangement as the contract weights mass more; **the reversal holds at two of the four closures against lift-plus-cruise, and at none against the tilt bound.**
 
 **Where the reversal falls is decided by quantities this study has not measured or not fixed**: the blade family in the base case, and across the sensitivity cases the competitor's lift-group mass and the propeller basis (Supplement S13). With a lighter lift group the lift-plus-cruise layout leads under all three contracts at every closure; with a heavier one this configuration leads under a fixed take-off mass at every closure; with a common propeller efficiency a reversal appears at every closure. **Which architecture ranks first under a fixed take-off mass is therefore decided, in this model, by quantities this study assumes for the competitor rather than measures: its lift-group mass fraction and its propeller efficiency.** **Put plainly, the sign under a fixed take-off mass is not a result about the architectures; it is a result about those quantities.** What is robust is that the shift exists and runs toward the lighter aircraft; its size is the size of the mass difference.
+
+---
+
+### Section 13's paragraphs as they stood before the Round 172 shortening
+
+Each paragraph below was shortened or moved in Round 172 (calculation working to the supplement; the author's notes on Sections 3 and 4); it is given here in full, verbatim. Protected sentences moved here by the author's decision (E15) are among them.
+
+Section 2 predicted that such a ranking will move when the sizing rule changes, and can reverse. **The movement holds
+everywhere**, against both competitors, toward the lighter arrangement as the contract weights mass more; **the reversal holds at two of
+the four closures against lift-plus-cruise, and at none against the tilt bound.** Where it falls is decided by quantities this study
+has not measured or fixed: the blade family in the base case, and across the sensitivity cases the competitor's lift-group mass and the
+propeller basis (Supplement S13). With a lighter lift group the lift-plus-cruise layout leads under all three contracts at every
+closure; with a heavier one this configuration leads under a fixed take-off mass at every closure; with a common propeller efficiency
+a reversal appears at every closure. **Which architecture ranks first under a fixed take-off mass is therefore decided, in this model,
+by quantities this study assumes for the competitor rather than measures: its lift-group mass fraction and its propeller efficiency.**
+What is robust is that the shift exists and runs toward the lighter aircraft.
 
 ---
 

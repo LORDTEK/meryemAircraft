@@ -65,14 +65,11 @@ boşluğa duyarsız. `G` = Grok, `D` = DeepSeek, `C` = ChatGPT, `Q` = Qwen, `K` 
 | 15 | is not computed anywhere in this paper. | G |
 | 15 | The mechanism claim is a statement about what hardware is present | D |
 | 15 | The separate claim that this aircraft can actually perform the regime change is not settled | D |
-| 10 | no comparison in this paper should be quoted without the contract it was computed under. | D |
 | 10 | Closing a sizing loop mathematically is not the same thing as closing an aircraft physically. | G |
 | 10 | These are the same configuration at four closed masses rather than four configurations | G |
 | 10 | So the zero-altitude-loss result is a property of the model that produced it. | G |
 | 10 | That spread is itself the finding. | G |
 | 10 | Whether a real aircraft loses 5.4 to 6.6 m, more, or less is not settled by anything here. | G |
-| 10 | If no fixed point exists, the declared sizing package does not close. | D |
-| 10 | Within the finite-moment dynamic model, with the aerodynamic moment set to zero, the manoeuvre costs altitude. | D |
 | 10 | It does not establish that the package exists. | D |
 | 11 | It attributes. It does not add. | G |
 | 11 | no scalar aggregate is defined | G |
@@ -84,7 +81,6 @@ boşluğa duyarsız. `G` = Grok, `D` = DeepSeek, `C` = ChatGPT, `Q` = Qwen, `K` 
 | 11 | The rotor line rests on section drag at low Reynolds number. | D |
 | 11 | The tip-frame term is an attribution, not a marginal removal cost. | D |
 | 11 | Rotor–structure and rotor–wing interference is not modelled and is not carried as a line. | D |
-| 12 | That near-constancy is a property of the constant-disc-loading rule, not a finding about Bill 3. | G |
 | 12 | Bill 1 is not tested. | G |
 | 12 | It is consistent with the separability Section 2 asserts; it is not a verification of separability as a general property. | G |
 | 12 | The test is deliberately weak | D |
@@ -121,10 +117,8 @@ boşluğa duyarsız. `G` = Grok, `D` = DeepSeek, `C` = ChatGPT, `Q` = Qwen, `K` 
 | 6 | The analysis chains are not matched, and this is the qualification that bounds what the comparison can be called. | D |
 | 6 | The best point is not an available option | D |
 | 6 | so this fixes a direction, not a magnitude | D+Q |
-| 10 | the control moment arms of Section 8 are therefore reference values that this closure does not re-derive | D |
 | 11 | The corner that needs the most buffer per kilogram is given the smallest buffer | D |
 | 11 | that is a declared assumption of the closure rather than an outcome of it | D |
-| 12 | Much above 1 000 kg a single nose pair can no longer hold | D |
 | 3 | It is not a claim that anything satisfies it, not a claim that anything satisfying it would fly, and not a claim that satisfying it is desirable. | C+Q |
 | 1 | What follows is therefore not a claim to an empty field. | Q |
 | 1 | The route is not claimed to have been waiting to be found. | Q+G |
@@ -136,13 +130,9 @@ boşluğa duyarsız. `G` = Grok, `D` = DeepSeek, `C` = ChatGPT, `Q` = Qwen, `K` 
 | 7 | The assembly is not offered as novel because it is an assembly. | Q |
 | 8 | Either the residual is small enough to be absorbed that way, which this study has not shown and which would mean the architecture spends a little of the channel it declined, or another duty falls on the strip. | Q |
 | 15 | It does not claim that the aircraft flies. | Q |
-| 10 | The reference design's assumed zero-lift value of 0.0248 is not used. | Q |
-| 12 | A change from 3.6 to 4.0 percent is a change between two choices, not a scaling result, and it cannot be offered as evidence that Bill 1 moves with size in either direction. | Q |
 | 13 | The competitors are therefore this planform with two add-ons, not independently designed aircraft of their families. | Q |
 | 13 | And nothing here ranks architectures for a mission. | Q |
 | 14 | The ranges of 927 to 1 233 km survive the re-closure only because the fuel fraction is held, on an aircraft three-quarters heavier; they do not survive as 13 kg carried that far on a store that has been built. | Q |
-| 11 | No new physical cost term is introduced here. | Q |
-| 11 | Every cost named below is already inside the closure of Section 10. | Q |
 | 6 | variable-pitch hub would recover that difference is not computed; Section 11 reports the gap and declines to attribute all of it to the hub | Q |
 | 1 | they are the only one of those documented obstacles an uncrewed aircraft removes | Q |
 | 12 | Of the two rotor terms, the light one is therefore the less certain — and it is the one Sections 10 and 11 carry. | G+K |
@@ -186,9 +176,6 @@ kaybolmasına (CLAUDE.md §0.8). Aynı denetimle sınanır.
 | 7 | The stopping class is absent if the tip pairs free-wheel in cruise or are held stopped by motor torque; a brake or a mechanical lock would add it. | D+G+C+Q+K |
 | 15 | while the tip pairs free-wheel or are held by motor torque — no rotor stowing, indexing or stopping mechanism | K+G+C+D+Q |
 | 10 | What the kinematic model leaves out is not the difficulty of turning the aircraft but the trajectory the aircraft flies while it is being turned. | C+Q+G+D+K |
-| 11 | Bill 2 therefore occupies a larger share where the clean-body drag is lower | D+G+C+Q+K |
-| 13 | With a lighter lift group the lift-plus-cruise layout leads under all three contracts at every closure; with a heavier one this configuration leads under a fixed take-off mass at every closure; with a common propeller efficiency a reversal appears at every closure. | D+G+C+Q+K |
-| 12 | A larger aircraft of this type turns more slowly, and must. | G+D+C+Q+K |
 | 13 | transferred from a different airframe | C+G+D+Q+K |
 | 2 | A charge and its currency are not the same thing. | Q+G+C+D+K |
 | 2 | Bill 1, as this accounting uses it, is the mass of a dedicated lift subsystem; Bill 2, the cruise drag of hover hardware left exposed; Bill 3, continuous power installed to a hover peak. | Q+G+C+D+K |
@@ -217,6 +204,19 @@ kaybolmasına (CLAUDE.md §0.8). Aynı denetimle sınanır.
 | S6 | The compared vehicles are 1 660 to 3 275 kg | E13 |
 | S8 | What declining it costs is not counted in this work. | E14 |
 | S13 | The sign under a fixed take-off mass is not a result about the architectures; it is a result about those quantities. | E14 |
+| S10 | no comparison in this paper should be quoted without the contract it was computed under. | E15 |
+| S10 | If no fixed point exists, the declared sizing package does not close. | E15 |
+| S10 | The reference design's assumed zero-lift value of 0.0248 is not used. | E15 |
+| S10 | the control moment arms of Section 8 are therefore reference values that this closure does not re-derive | E15 |
+| S10 | Within the finite-moment dynamic model, with the aerodynamic moment set to zero, the manoeuvre costs altitude. | E15 |
+| S11 | Every cost named below is already inside the closure of Section 10. | E15 |
+| S11 | No new physical cost term is introduced here. | E15 |
+| S11 | Bill 2 therefore occupies a larger share where the clean-body drag is lower | E15 |
+| S12 | A change from 3.6 to 4.0 percent is a change between two choices, not a scaling result, and it cannot be offered as evidence that Bill 1 moves with size in either direction. | E15 |
+| S13 | With a lighter lift group the lift-plus-cruise layout leads under all three contracts at every closure; with a heavier one this configuration leads under a fixed take-off mass at every closure; with a common propeller efficiency a reversal appears at every closure. | E15 |
+| S12 | That near-constancy is a property of the constant-disc-loading rule, not a finding about Bill 3. | E15 |
+| S12 | Much above 1 000 kg a single nose pair can no longer hold | E15 |
+| S12 | A larger aircraft of this type turns more slowly, and must. | E15 |
 
 *Tanım kaydı (Tur 111; Qwen P1, dört okuyucu + Claude): son beş Q+G+C+D+K satırı çerçevenin tanım cümleleri; kök (satır "is the origin of all three charges below") ve koşul zaten korunuyordu.*
 

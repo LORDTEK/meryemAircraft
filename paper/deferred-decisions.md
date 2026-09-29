@@ -901,3 +901,5 @@ Yazar: *"Sen şimdi taslak hazırlama çalışmanı gerçekleştir. Bana da eke 
 `paper/build/v8_round172_apply.py` (uygulanmadı; geçici kopyada denendi, bütün denetimler temiz). Katman 1 (korunmayan çalışma + yazarın 2.2.5 ve 2.3 notları):
 −308. Katman 2 (a–i, S/C): −272. B seçeneği (j, k; 6.3): −121. Hepsi: 14 881 → 14 180. Bölüm 6: ~3 210 → ~2 670 (−%17). Bulunan kaynak kusuru: Bölüm 7
 *"the coupling Section 6.3 found"* — 6.3 bağlaşımı bulmuyor, *"Section 2.2's claim"* diyor (R4); Tur 172'de onarım oyda.
+**KARAR (E15):** *"Hepsi onaylı, a–k uygula ve Tur 172'yi hazırla."* k için: *"k'yı zaten bu alandaki uzman tüm insanlar bilir. Özellikle yazmaya gerek yok. Atalet diye
+bir şey var sonuçta."* → **Uygulandı (Tur 172):** 14 881 → 14 180; 164 korunan gövdede, 25 ekte; S-63 onarıldı (R3). Tur 172 okuyuculara teyit/veto için.

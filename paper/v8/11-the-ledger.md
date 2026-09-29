@@ -17,8 +17,7 @@ kalır"*) · sıralama yok, Adım 13'ün işi.
 ## The ledger
 
 This section says where each charge of Section 2 appears inside the closed numbers of Section 10, and how large it is there.
-**It attributes. It does not add.** Every cost named below is already inside the closure of Section 10. **No new physical cost term is
-introduced here.** **And there is no single figure for what the architecture costs**: the charges are in three currencies, and **no
+**It attributes. It does not add.** **And there is no single figure for what the architecture costs**: the charges are in three currencies, and **no
 scalar aggregate is defined, because this study has no defensible weighting between them** (Section 13).
 
 ### Bill 2 — the drag of hover hardware, inside the bracket
@@ -30,11 +29,6 @@ on section polars computed rather than measured (Section 12). **The tip-frame te
 is not a claim that this drag would disappear if the vertical phase did. **No stopped-state counterfactual was computed**: the eight
 tip discs stopped edge-on are estimated at ΔC_D0 = 0.0008 (Supplement S11), but that takes an indexing mechanism, a class Section 7
 counts, which has not been sized, charged or closed.
-
-Without the hub and small items, the tip frames and the rotors, the clean body reaches a lift-to-drag ratio of 20.55 at the favourable
-end and 15.24 at the adverse one, against the aircraft's 10.82 and 8.79: **the configuration retains 52.6 and 57.7 percent.** Bill 2
-therefore occupies a larger share where the clean-body drag is lower — a statement about position within the drag bracket at one
-scale, not about size (Section 12).
 
 **Rotor–structure and rotor–wing interference is not modelled and is not carried as a line.** Section 2 quotes a wind-tunnel finding
 that a simulation neglecting it predicted higher lift and lower drag than were measured; this build-up is such a calculation, and the bracket's
@@ -58,7 +52,6 @@ The engine is sized by cruise, **3.54 to 5.17 kW** of shaft rating, against a ho
 
 Section 10's convergence does not cover the cost of declining the reaction-torque channel, the sizing of the strip's actuation, the allocation of the take-off margin against attitude authority, the landing transition, the vortex ring state, closed-loop attitude control in hover and in cruise, engine installation, or rotor–structure and rotor–wing interference; **none of these is a ledger entry, and Supplement S14 lists them.** **The first and the last are the two that would most change the numbers above if they were computed.**
 
-**Every one of the charges above belongs to one scale**: the four closures do not establish how the three charges behave as the aircraft changes size, which Section 12 asks, or what happens to the comparison when the sizing contract changes, which Section 13 asks.
 
 ---
 
@@ -67,6 +60,7 @@ Section 10's convergence does not cover the cost of declining the reaction-torqu
 | İddia | Kaynak |
 |---|---|
 | **Tur 170 — yazarın notları üzerine kısaltma uygulandı** (Tur 168–169: işlemlerde dört okuyucu + Claude; korunan cümle taşımaları yazar kararı E13). Değişen her paragrafın eski hâli ekin bu adıma ait bölümünde aynen (*"… before the Round 170 shortening"*). Yeni (R) cümleler Tur 170 §2'de okuyucu vetosuna açık; sonuç teyide | `paper/build/v8_round170_texts.py`, `v8_round170_apply.py` |
+| **Tur 172 — hesap geçişi (yazar E14, E15; katman 1 okuyucu teyidine)** E15 f, g (temiz gövde paragrafı S11'e); köprü paragrafı "Every one of the charges above belongs to one scale" kesildi. Eski paragraflar ekte aynen | — |
 | **Tur 167 — C3′ uygulandı** (Tur 166: dört okuyucu + Claude): *"and Section 14 lists them"* → *"and Supplement S14 lists them"*. Liste kalıyor; Tur 165'in tek cümlelik yeniden yazımı sıralamayı sekiz maliyetten S14'ün 18 sorusuna genişletiyordu (ChatGPT yakaladı, Claude'un hatası). Sekiz kalemin sekizi S14 satırlarında: R1 | `paper/v8/supplement.md` S14 |
 | **Tur 149 — L-3 satır 7 uygulandı:** *"free-wheeling attitude rotors"* → *"free-wheeling tip-pair rotors"*. X-4 kapandı | Tur 148 §3 |
 | **Tur 148 — X-4 uygulandı** (dört okuyucu + Claude): *"closed-loop hover control"* → *"closed-loop attitude control in hover and in cruise"* — S-60 onarımı (Tur 140) buraya ulaşmamıştı; emekli ifade listesine eklendi | Tur 147 §4 |

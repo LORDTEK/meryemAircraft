@@ -54,9 +54,9 @@ The fourth is not a technicality, and it is the reason this list exists. **An ar
 
 ### What follows from the condition, and what does not
 
-The condition is a statement about what an architecture would have to be. **It is not a claim that anything satisfies it, not a claim that anything satisfying it would fly, and not a claim that satisfying it is desirable.** Three questions follow from it, and they are answered separately: whether the accounting behind the condition survives contact with an independent sizing study is tested in the next section, against data this work did not produce; whether any configuration satisfies the condition is the subject of Sections 5 to 7; and what such a configuration pays instead is the subject of Section 11, the answer most likely to be wrong.
+The condition is a statement about what an architecture would have to be. **It is not a claim that anything satisfies it, not a claim that anything satisfying it would fly, and not a claim that satisfying it is desirable.**
 
-A tilting architecture accepts the third departure and buys its way out of the first with a mechanism. **An architecture that reorients a propulsor does not satisfy the condition as written**, because the condition requires one orientation relative to the airframe. **Whether such an architecture might avoid the three charges by some other route is a separate question this paper does not settle** — the condition is a definition, not a law, and it can be too narrow without being wrong.
+**An architecture that reorients a propulsor does not satisfy the condition as written**, because the condition requires one orientation relative to the airframe. **Whether such an architecture might avoid the three charges by some other route is a separate question this paper does not settle** — the condition is a definition, not a law, and it can be too narrow without being wrong.
 
 ---
 
@@ -65,6 +65,7 @@ A tilting architecture accepts the third departure and buys its way out of the f
 | İddia | Kaynak |
 |---|---|
 | **Tur 170 — yazarın notları üzerine kısaltma uygulandı** (Tur 168–169: işlemlerde dört okuyucu + Claude; korunan cümle taşımaları yazar kararı E13). Değişen her paragrafın eski hâli ekin bu adıma ait bölümünde aynen (*"… before the Round 170 shortening"*). Yeni (R) cümleler Tur 170 §2'de okuyucu vetosuna açık; sonuç teyide | `paper/build/v8_round170_texts.py`, `v8_round170_apply.py` |
+| **Tur 172 — hesap geçişi (yazar E14, E15; katman 1 okuyucu teyidine)** 2.2.5 kısaldı (yazarın notu): yol haritası cümlesi ve 2.1 tekrarı çıktı; korunan üç cümle yerinde. Eski paragraflar ekte aynen | — |
 | **Tur 148 — W-7 (a′) uygulandı** (dört okuyucu + Claude): *"The tip frames are the case"* → *"The tip frames of the configuration described in Section 5 are the case"* (benim ilk işaretçim 5.2'ydi, DeepSeek düzeltti). W-6 ikinci yan cümle değişmedi (oybirliği); W-6, W-10 kapandı | Tur 147 §2 |
 | **Tur 147 — W-6 ve W-10 uygulandı** (bütün okuma; dört okuyucu + Claude): W-6 *"Attitude devices produce thrust in cruise, but they produce…"* → *"Attitude devices produce…"* (kumandasız seyir durumu serbest dönme; ikinci yan cümle ayrışık); W-10 ilk cümle silindi, *"that departure"* → *"the third departure"*, *"the first departure"* → *"the first"*. W-7 (uç çerçeveleri, işaretçi Bölüm 3'e mi, taşıma mı) geri soruldu | Tur 146 §5; Tur 147 §1 |
 | **Tur 117 — S-44 onarıldı** (Tur 116; dört okuyucu + Claude): "would win by construction rather than by performance" → "by definition"; "by construction" yalnız Adım 9 madde 8'in anlamında (boyutlandırma gereği) | Tur 116 metni §3 |

@@ -57,34 +57,26 @@ düşüşünün MEKANİZMASI yanlıştı, ve yanlışlık bir hesap hatasından 
 ## Scale does not lock two of the charges together; the third is not tested
 
 Section 11 decomposed the three charges on one aircraft, at one size; **this section asks whether they are three quantities or
-one quantity under three names**, by changing the size of the aircraft and seeing whether they move together. Either answer leaves the
-mechanism claim where it was. **The test is deliberately weak**: it can show that two charges are not locked together within this
+one quantity under three names**, by changing the size of the aircraft and seeing whether they move together. **The test is deliberately weak**: it can show that two charges are not locked together within this
 model; **it cannot show that they are independent in general.**
 
-**The test is the 50 kg and 1 000 kg reference designs, sized by one method, not Section 10's closures**: no closure was run at
-1 000 kg, the heavy design has no drag bracket and no structural closure, and no heavy-design range is quoted (Supplement S12).
+**The test is the 50 kg and 1 000 kg reference designs, sized by one method, not Section 10's closures** (Supplement S12).
 
 **Under a twentyfold change of mass, the rotor term of Bill 2 falls to between 0.29 and 0.65 of its light-design value in the section
-polars used here, while specific hover power changes by one percent and the Bill 3 ratio by 5 to 14 percent.** Bill 2 moved by more
-than the Bill 3 ratio at every point in the heavy interval and under either engine margin. **Within this model, the two are therefore
-not one quantity under two names.** Disc loading is held nearly constant, so specific hover power is held with it: **that
-near-constancy is a property of the constant-disc-loading rule, not a finding about Bill 3.** The rule is paid in geometry, and **much
-above 1 000 kg a single nose pair can no longer hold the disc loading.**
+polars used here, while specific hover power changes by one percent and the Bill 3 ratio by 5 to 14 percent.** **Within this model, the two are therefore
+not one quantity under two names.**
 
-Only the rotor term of Bill 2 is computed at both sizes; the frame term enters both designs as the same multiplier. Within the
+Within the
 blade-element and section-polar model the section Reynolds number accounts for the fall, a decomposition inside the model rather than
 a causal claim beyond it, and the light end lies below a Reynolds number of 10⁵, where section drag is hardest to predict. **Of the two
 rotor terms, the light one is therefore the less certain — and it is the one Sections 10 and 11 carry.**
 
-**Bill 1 is not tested.** It appears here as the energy buffer, 3.6 percent of take-off mass at 50 kg and 4.0 percent at 1 000 kg, and
-both figures are inputs: **a change from 3.6 to 4.0 percent is a change between two choices, not a scaling result, and it cannot be
-offered as evidence that Bill 1 moves with size in either direction.** Whether it is separable from Bill 3 here is not established;
+**Bill 1 is not tested.** It appears here as the energy buffer, 3.6 percent of take-off mass at 50 kg and 4.0 percent at 1 000 kg, and both figures are inputs (Supplement S12). Whether it is separable from Bill 3 here is not established;
 that the two are coupled here is Section 3's claim, and coupling is not identity.
 
 **The evidence is one pair of design points, computed by one method, with the Bill 2 result resting on a section-drag model at low
 Reynolds number.** **It is consistent with the separability Section 2 asserts; it is not a verification of separability as a general
-property.** **The transition is where the square–cube relation is paid in full**, and **a larger aircraft of this type turns more
-slowly, and must** (Supplement S12).
+property.**
 
 **Because at least two of the charges are not locked together, a comparison of architectures cannot in general be reduced to a number
 that does not depend on how the charges are weighed.** Section 13 examines what the choice of sizing contract does to a ranking, on the
@@ -97,6 +89,7 @@ light closures of Section 10 only.
 | İddia | Kaynak |
 |---|---|
 | **Tur 170 — yazarın notları üzerine kısaltma uygulandı** (Tur 168–169: işlemlerde dört okuyucu + Claude; korunan cümle taşımaları yazar kararı E13). Değişen her paragrafın eski hâli ekin bu adıma ait bölümünde aynen (*"… before the Round 170 shortening"*). Yeni (R) cümleler Tur 170 §2'de okuyucu vetosuna açık; sonuç teyide | `paper/build/v8_round170_texts.py`, `v8_round170_apply.py` |
+| **Tur 172 — hesap geçişi (yazar E14, E15; katman 1 okuyucu teyidine)** E15 h, j, k (yazar k için: "Atalet diye bir şey var sonuçta"); ağır tasarım ayrıntıları S12'ye; "Either answer leaves the mechanism claim where it was." kesildi. Eski paragraflar ekte aynen | — |
 | **Tur 155 — birleştirme aşamasının ilk eke taşıması (S), dört okuyucu + Claude; korunan cümle için yazar kararı E10 ("Eke gitsin"):** 7.3 1 083 → ~830 kelime. Eke giden çalışma (S12, "as it stood before the supplement move"): disk yüklemesi ve özgül güç sayıları, 4.19 / 3.98 paragrafı ve korunan *"This paragraph compares the reference pair only."*, rotor terimi değerleri ve Reynolds sayıları, *"three other candidates are excluded"*, tampon türetme cümlesi. Geri konanlar: çap/açıklık 0.35 → 0.47 ve *"Coupling is not identity"* (Grok), *"Either answer leaves the mechanism claim …"* (DeepSeek). Alt başlıklar kaldırıldı | Tur 154 §5; Tur 155 |
 | **Tur 149 — L-3 satır 8 uygulandı:** *"from the tip propellers"* → *"from the tip pairs"* | Tur 148 §3 |
 | **Tur 108 (Tur 107: dört okuyucu + Claude):** J29 kısa biçim — "The fixed-pitch gap also widens slightly with size, to 16.4 to 22.9 percent at the heavy design (Supplement S12)"; **oylanan sözcüklere olumsuz niteleyici geri eklendi** ("as in Section 11, no variable-pitch counterfactual was computed") — benim önerim onu düşürmüştü; teyide | Tur 107 metni §3(a) |
