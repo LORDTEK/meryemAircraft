@@ -25,7 +25,6 @@ boşluğa duyarsız. `G` = Grok, `D` = DeepSeek, `C` = ChatGPT, `Q` = Qwen, `K` 
 | 2 | they are not assumed to be independent physical causes | D |
 | 3 | It means zero of the three charges as Section 2 defines them…It does not mean an architecture that costs nothing | G |
 | 3 | It does not claim the trade is favourable. | G |
-| 3 | An architecture may meet the condition where it carries the aircraft and fail it elsewhere | G |
 | 3 | Whether such an architecture might avoid the three charges by some other route is a separate question this paper does not settle. | G |
 | 3 | A store is permitted…It does not claim the trade is favourable. | D |
 | 3 | Releasing the engine is not releasing the electrical path. | D |
@@ -217,6 +216,7 @@ kaybolmasına (CLAUDE.md §0.8). Aynı denetimle sınanır.
 | S12 | A larger aircraft of this type turns more slowly, and must. | E15 |
 | S2 | If that architecture already sizes its continuous plant by the hover peak, tilting leaves Bill 3 no worse…what keeps the row from refuting the accounting is the part of its cost that falls outside the three — which is why that part is listed | E16 |
 | S2 | A framework that could absorb any cost by declaring it out-of-scope would be unfalsifiable. | E16 |
+| S3 | An architecture may meet the condition where it carries the aircraft and fail it elsewhere | E17 |
 
 *Tanım kaydı (Tur 111; Qwen P1, dört okuyucu + Claude): son beş Q+G+C+D+K satırı çerçevenin tanım cümleleri; kök (satır "is the origin of all three charges below") ve koşul zaten korunuyordu.*
 

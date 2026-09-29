@@ -50,8 +50,6 @@ An architecture fails the condition if **any** of the following holds:
 3. Its continuously installed power is sized by the hover requirement rather than by cruise.
 4. It satisfies the first three only in part — for instance in its primary propulsor while a secondary set fails them — in which case the instantiation is **partial**, and the part that fails re-opens the charge it fails.
 
-The fourth is not a technicality, and it is the reason this list exists. **An architecture may meet the condition where it carries the aircraft and fail it elsewhere**, and a paper that reported only the first half would be reporting the condition rather than the aircraft.
-
 ### What follows from the condition, and what does not
 
 The condition is a statement about what an architecture would have to be. **It is not a claim that anything satisfies it, not a claim that anything satisfying it would fly, and not a claim that satisfying it is desirable.**
@@ -67,6 +65,7 @@ The condition is a statement about what an architecture would have to be. **It i
 | **Tur 170 — yazarın notları üzerine kısaltma uygulandı** (Tur 168–169: işlemlerde dört okuyucu + Claude; korunan cümle taşımaları yazar kararı E13). Değişen her paragrafın eski hâli ekin bu adıma ait bölümünde aynen (*"… before the Round 170 shortening"*). Yeni (R) cümleler Tur 170 §2'de okuyucu vetosuna açık; sonuç teyide | `paper/build/v8_round170_texts.py`, `v8_round170_apply.py` |
 | **Tur 172 — hesap geçişi (yazar E14, E15; katman 1 okuyucu teyidine)** 2.2.5 kısaldı (yazarın notu): yol haritası cümlesi ve 2.1 tekrarı çıktı; korunan üç cümle yerinde. Eski paragraflar ekte aynen | — |
 | **Tur 173 — 2.2.3 sayım tekrarı ("The first three come from…") kesildi.** Eski paragraflar ekte aynen; okuyucu teyidine | — |
+| **Tur 174 — 2.2.5 ses cümlesi kesildi; E17 a (C) "An architecture may meet the condition where it carries the aircraft …".** Eski paragraflar ekte aynen; okuyucu teyidine | — |
 | **Tur 148 — W-7 (a′) uygulandı** (dört okuyucu + Claude): *"The tip frames are the case"* → *"The tip frames of the configuration described in Section 5 are the case"* (benim ilk işaretçim 5.2'ydi, DeepSeek düzeltti). W-6 ikinci yan cümle değişmedi (oybirliği); W-6, W-10 kapandı | Tur 147 §2 |
 | **Tur 147 — W-6 ve W-10 uygulandı** (bütün okuma; dört okuyucu + Claude): W-6 *"Attitude devices produce thrust in cruise, but they produce…"* → *"Attitude devices produce…"* (kumandasız seyir durumu serbest dönme; ikinci yan cümle ayrışık); W-10 ilk cümle silindi, *"that departure"* → *"the third departure"*, *"the first departure"* → *"the first"*. W-7 (uç çerçeveleri, işaretçi Bölüm 3'e mi, taşıma mı) geri soruldu | Tur 146 §5; Tur 147 §1 |
 | **Tur 117 — S-44 onarıldı** (Tur 116; dört okuyucu + Claude): "would win by construction rather than by performance" → "by definition"; "by construction" yalnız Adım 9 madde 8'in anlamında (boyutlandırma gereği) | Tur 116 metni §3 |

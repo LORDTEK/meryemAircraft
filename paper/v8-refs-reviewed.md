@@ -37,3 +37,4 @@ gövde tablosunda tilt satırı yok (karşılaştırma S13'e taşınmış); Tur 
 | 3 | A tilting architecture accepts that departure and buys its way out of the | 3B, first departure (S-2, Round 87) | Tur 88; **Tur 113: seçenek C — sıra, "Inverting the table"daki adlandırılmış dört sapma cümlesine bağlı; `v8_refs.py` sınıyor** |
 | 2 | The accounting is refuted by a counter-example, and the table above is w | 2E's table, above (Round 89) | Tur 89 |
 | 14 | At the bench rate of about 1.5 kW per kilogram the loop closes at 94 | the re-closure table, in the frozen Section 14 inside S14 (to move to the clean journal supplement when the supplement is split) | Tur 109 |
+| 2 | The tilting row, which needs both clarifications, is worked through in | Supplement S2: "The tilting row needs both clarifications. …" (Section 2's paragraphs as they stood before the Round 173 shortening) | Tur 174 |

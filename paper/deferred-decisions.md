@@ -938,3 +938,8 @@ Ayrıca daha önce ertelenen: **2.3'ün çerçeve/mimari oranındaki payı** (b�
 - DeepSeek notu (veto değil): 2.1.7'den taşınan tilt satırı uygulamasına *"(Supplement S2)"* işaretçisi yok; bir sonraki uygulamada önerilecek.
 - **Sıradaki yer (ayrışık) → YAZARA:** Grok 5.1 korunmayan ayrıntı (80–150); ChatGPT 2.1.7 → 2.2 tekrar denetimi (100–250); DeepSeek 1.4 (50–70), ikinci 7.2;
   Qwen bu tur kısaltma yok, istenirse 2.3'ün "architecture proposed later" paragrafı (~30). Claude: Bölüm 2'yi bitirmek (ChatGPT + Qwen + DeepSeek'in işaretçisi), sonra 5.1.
+
+## E17 — Bölüm 2'nin tamamlanması · **KARAR (Tur 173 sonrası): "Bölüm 2'yi bitir" · "a onaylı, uygula ve Tur 174'ü hazırla"**
+
+a (2.2.5, C) uygulandı; katman 1 (ChatGPT'nin 2.1–2.2 tekrar taraması, Qwen'in 2.3 paragrafı, DeepSeek'in S2 işaretçisi R7). 13 860 → 13 762. Bölüm 2 ≈ 3 150 /
+mimari ≈ 2 260. Tur 174 okuyuculara.

@@ -810,6 +810,18 @@ It also makes a prediction that can be checked without settling the architectura
 
 ---
 
+### Section 2's paragraphs as they stood before the Round 174 shortening
+
+Each paragraph below was shortened or moved in Round 174 (Section 2 completed; the author's decision); it is given here in full, verbatim. Protected sentences moved here by the author's decision (E17) are among them.
+
+A VTOL aircraft must install enough power to hover, but it draws that power only during the two percent of the flight in which it hovers. The ratio between the two demands follows from the governing equations rather than from any design choice (Supplement S2):
+
+**Two clarifications keep the test from being either too easy or unfalsifiable.** **"No worse" is judged against the architecture the move modifies.** A move that reduces one charge and makes another worse is a transfer between charges. And a remedy whose cost falls **outside** the three charges does not refute the accounting, because the accounting is about those three; **but it is not thereby exempt from being counted.**
+
+**The moves in the table are partial remedies: each accepts the duty-cycle mismatch and then redistributes what it costs.** Whether an architecture can decline the mismatch itself, rather than redistribute its consequences, is a different question, and the next section states the condition it would have to meet — a definition, derived from the table above rather than from any aircraft.
+
+---
+
 ## S3. The departures as a table (from Section 3)
 
 | Departure | What it costs |
@@ -1143,6 +1155,14 @@ Four parts: **same hardware, both duties, one orientation, hover peak from a sto
 
 ---
 
+### Section 3's paragraphs as they stood before the Round 174 shortening
+
+Each paragraph below was shortened or moved in Round 174 (Section 2 completed; the author's decision); it is given here in full, verbatim. Protected sentences moved here by the author's decision (E17) are among them.
+
+The fourth is not a technicality, and it is the reason this list exists. **An architecture may meet the condition where it carries the aircraft and fail it elsewhere**, and a paper that reported only the first half would be reporting the condition rather than the aircraft.
+
+---
+
 ## S4. The independent check: the table, the weight breakdown, and the quadrotor contrast (from Section 4)
 
 | Configuration | Effective L/D | Design gross weight | Dedicated lift group |
@@ -1367,6 +1387,14 @@ Each paragraph below was shortened or moved in Round 172 (calculation working to
 **The primary comparison is the lift-plus-cruise design against the tilt-wing**, because they isolate the charge: they share the mission, the payload, the turbo-electric propulsion architecture and the presence of a cruising wing. **They are not identical in every other respect** — one stops its lift rotors in the airstream and drives a separate pusher, the other reorients its proprotors on a tilting wing — **but the difference the comparison turns on is that one carries a dedicated lift group through cruise and the other does not.** The comparison is the closest the published set comes to isolating that charge; it is not a controlled experiment. **The tilt-wing is 1.2 % better in effective cruise efficiency and 9.4 % lighter.** The design gross weights differ by 687 lb in the tilt-wing's favour. **That figure is the net difference between two architectures, not the measured mass of a lift group**. **The published weight breakdown is consistent with the transfer property of Section 2 — the mechanism giving part of the structural saving back — inside a breakdown this work did not produce**: its three reported categories account for 580 lb of the 679 lb empty-weight difference, and the remaining 99 lb lies in categories it does not break out (Supplement S4). **And the source states the second half of the prediction in its own words, on a comparison the check does not use as its test.** Discussing why the all-electric lift-plus-cruise design is the heaviest in the set, the study writes that the high cruise efficiency of the lift-plus-cruise type reduces battery weight compared with a quadrotor, *"but not enough to counter the increase in structure and propulsion weight."*  **The framework does not predict any of these numbers**; without the input fractions it predicts no magnitudes. What it predicts is that the amplified weight charge survives the efficiency credit, and on the isolated pair it does so with the credit reduced to nothing.
 
 **The architecture proposed later in this paper is not the only way to avoid the first charge.** The tilting family avoids it too — it carries no dedicated lift group, it is the lighter of the two matched designs, and an independent set says so. The margin in cruise efficiency is 0.1 in effective lift-to-drag ratio, and nothing is claimed from its direction. The tilt-wing does not escape the accounting by avoiding the mass charge; it *moves* the cost — to the mechanism that reorients its propulsors, with the actuation, the gyroscopic coupling and the transition control problem that Section 2 assigns to that family. What separates the tilting family from the configuration described later is not this axis; it is what each pays, and a sizing study does not settle that.
+
+---
+
+### Section 4's paragraphs as they stood before the Round 174 shortening
+
+Each paragraph below was shortened or moved in Round 174 (Section 2 completed; the author's decision); it is given here in full, verbatim. Protected sentences moved here by the author's decision (E17) are among them.
+
+**The architecture proposed later in this paper is not the only way to avoid the first charge.** The tilting family avoids it too. The margin in cruise efficiency is 0.1 in effective lift-to-drag ratio, and nothing is claimed from its direction. The tilt-wing does not escape the accounting by avoiding the mass charge; it *moves* the cost — to the mechanism that reorients its propulsors, with the actuation, the gyroscopic coupling and the transition control problem that Section 2 assigns to that family. What separates the tilting family from the configuration described later is not this axis; it is what each pays, and a sizing study does not settle that.
 
 ---
 

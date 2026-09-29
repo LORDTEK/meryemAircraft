@@ -46,7 +46,7 @@ Wind-tunnel work on a hybrid airframe found that the difference between propelle
 
 ### Bill 3 — power system sizing
 
-A VTOL aircraft must install enough power to hover, but it draws that power only during the two percent of the flight in which it hovers. The ratio between the two demands follows from the governing equations rather than from any design choice (Supplement S2):
+A VTOL aircraft must install enough power to hover. The ratio between the two demands follows from the governing equations rather than from any design choice (Supplement S2):
 
     P_hover / P_cruise = √(DL / 2ρ) · (L/D) / V · (η_p / η_h)
 
@@ -79,11 +79,11 @@ One of these transfers has direct experimental support (Supplement S2).
 
 **Stated positively, so that the test can actually be run: a counter-example is a remedy that reduces one of the three charges, leaves the other two no worse, and whose own cost is either absent or demonstrably smaller than the reduction — measured in the same currency.** **The accounting claims transfer. It does not claim that every architecture is equally good**, and a remedy that is simply a better bargain in one currency refutes it.
 
-**Two clarifications keep the test from being either too easy or unfalsifiable.** **"No worse" is judged against the architecture the move modifies.** A move that reduces one charge and makes another worse is a transfer between charges. And a remedy whose cost falls **outside** the three charges does not refute the accounting, because the accounting is about those three; **but it is not thereby exempt from being counted.**
+**Two clarifications keep the test from being either too easy or unfalsifiable.** **"No worse" is judged against the architecture the move modifies.** A move that reduces one charge and makes another worse is a transfer between charges. And a remedy whose cost falls **outside** the three charges does not refute the accounting, because the accounting is about those three; **but it is not thereby exempt from being counted.** The tilting row, which needs both clarifications, is worked through in Supplement S2.
 
 The accounting also makes a prediction that can be checked without settling the architectural question at all: **where an arrangement pays one charge heavily in order to escape another, its ranking against a differently-balanced arrangement will move when the sizing rule changes — toward the lighter arrangement as the rule weights mass more — and will reverse where that reweighting carries it past the point at which the two break even.** Section 13 tests both the movement and the reversal on this configuration, and Section 4 tests a different consequence against a sizing study this work did not produce.
 
-**The moves in the table are partial remedies: each accepts the duty-cycle mismatch and then redistributes what it costs.** Whether an architecture can decline the mismatch itself, rather than redistribute its consequences, is a different question, and the next section states the condition it would have to meet — a definition, derived from the table above rather than from any aircraft.
+Whether an architecture can decline the mismatch itself, rather than redistribute its consequences, is a different question, and the next section states the condition it would have to meet .
 
 ---
 
@@ -93,6 +93,7 @@ The accounting also makes a prediction that can be checked without settling the 
 |---|---|
 | **Tur 170 — yazarın notları üzerine kısaltma uygulandı** (Tur 168–169: işlemlerde dört okuyucu + Claude; korunan cümle taşımaları yazar kararı E13). Değişen her paragrafın eski hâli ekin bu adıma ait bölümünde aynen (*"… before the Round 170 shortening"*). Yeni (R) cümleler Tur 170 §2'de okuyucu vetosuna açık; sonuç teyide | `paper/build/v8_round170_texts.py`, `v8_round170_apply.py` |
 | **Tur 173 — Bölüm 2 geçişi (yazar: "Bölüm 2 olsun"; E16 a tilt satırı paragrafı + öncülleri → S2, D4'ü yeniden açar; b C). Katman 1: 2.1.2 yol haritası, 2.1.3 üs parantezi → S2, 2.1.6 tablo tekrarları (R4), 2.1.7 başa baş açıklaması; R5 "The accounting also makes".** Eski paragraflar ekte aynen; okuyucu teyidine | — |
+| **Tur 174 — Bölüm 2'nin tamamlanması (yazar: "Bölüm 2'yi bitir"): 2.1.5 kök tekrarı, 2.1.7 iki tekrar; R7 S2 işaretçisi (DeepSeek).** Eski paragraflar ekte aynen; okuyucu teyidine | — |
 | **Tur 131 — S-54 onarıldı (a):** Fatura 1 paragrafı silindi (*"This charge has been identified independently … That is Bill 1 stated by an independent source in its own terms …"*). Alıntı Silva ve ark. 2018'den, Adım 4'ün belgesinden değil; *"(wing and propeller)"*dan önce kesilmişti — kaynak askıda taşınan seyir donanımını söylüyor. Dört okuyucu + Claude. Fatura 1'in bağımsız dayanağı Adım 4'te (Johnson & Silva 2022) | S-54 |
 | **Tur 114 — NASA çalışmasının tek evi Adım 4** (Tur 113, dört okuyucu + Claude): "A NASA study sizing five VTOL architecture families against a common mission with common tools found …" → "The NASA sizing study of Section 4 found …"; bulgu (tüketilen bulgu) kalır | Tur 113 metni §6 |
 | **Tur 112 — S-42 onarıldı** (Tur 111; dört okuyucu + Claude): D24 → "The bill is charged mainly by the motors — hardware that cannot be feathered or aligned away, because its cost is its presence; the same work notes that its motors were chosen for performance rather than for low drag, and that the drag of the supporting beams is limited." Kaynak: Bacchini tezi basılı s. 141 ("means" = "beams", benim okumam; dördü kabul). İki ifade emekli (Grok P89). **Bacchini P71 çifti (Qwen P2, dört okuyucu + Claude):** {30 %, 5 %, 119 → 121 km} ↔ {P50 "elsewhere", D51 "converted almost exactly"} — biri taşınırsa öbürü de | Tur 111 metni §4, §6 |
