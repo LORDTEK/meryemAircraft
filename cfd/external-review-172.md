@@ -2,7 +2,7 @@
 
 > **This is a task. Please answer it now, and begin with your name alone on the first line.**
 >
-> Commit **`@@COMMIT@@`**, branch `claude/ecstatic-cori-6w30at` (for verification only). **The whole body is quoted at the end of
+> Commit **`442f594`**, branch `claude/ecstatic-cori-6w30at` (for verification only). **The whole body is quoted at the end of
 > this text (Appendix), with every subsection labelled by number, word count and number of protected sentences.**
 
 ---
