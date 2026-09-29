@@ -894,3 +894,10 @@ kısaltmayı yapalım ayrıca"* (2.3: 62 kısaldı, ~40 daha) · *"Bir ara tekra
 yapmak istemiyorum"* · *"tekrar bölüm birleştirmeden önce mevcut yapıda neler yapılabilir, bu kıymetli."* → Tek turluk uygulanmış liste (Tur 170 biçimi): hesap çalışması
 paragraf birimiyle eke, bulgu ve niteleyici gövdede; Bölüm 6 ağırlıklı. Yazara bildirildi: Bölüm 6'da 54 korunan cümle (~780 kelime) var; "dramatik" kısalma ancak
 ikincil sonuçların korunan cümleleri sonuçlarıyla eke giderse (kural iii) olur → iki katman: (1) korunmayan çalışma, okuyucu teyidi; (2) S listesi, yazarın kararı.
+
+## E15 — Bölüm 6 taslağı (Tur 172), korunan cümle S/C listesi · **yazarda**
+
+Yazar: *"Sen şimdi taslak hazırlama çalışmanı gerçekleştir. Bana da eke taşınacak ama korunmakta olan cümlelerin listesini getir."* Taslak betiği
+`paper/build/v8_round172_apply.py` (uygulanmadı; geçici kopyada denendi, bütün denetimler temiz). Katman 1 (korunmayan çalışma + yazarın 2.2.5 ve 2.3 notları):
+−308. Katman 2 (a–i, S/C): −272. B seçeneği (j, k; 6.3): −121. Hepsi: 14 881 → 14 180. Bölüm 6: ~3 210 → ~2 670 (−%17). Bulunan kaynak kusuru: Bölüm 7
+*"the coupling Section 6.3 found"* — 6.3 bağlaşımı bulmuyor, *"Section 2.2's claim"* diyor (R4); Tur 172'de onarım oyda.
