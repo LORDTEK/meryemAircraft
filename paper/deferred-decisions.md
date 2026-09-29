@@ -903,3 +903,14 @@ Yazar: *"Sen şimdi taslak hazırlama çalışmanı gerçekleştir. Bana da eke 
 *"the coupling Section 6.3 found"* — 6.3 bağlaşımı bulmuyor, *"Section 2.2's claim"* diyor (R4); Tur 172'de onarım oyda.
 **KARAR (E15):** *"Hepsi onaylı, a–k uygula ve Tur 172'yi hazırla."* k için: *"k'yı zaten bu alandaki uzman tüm insanlar bilir. Özellikle yazmaya gerek yok. Atalet diye
 bir şey var sonuçta."* → **Uygulandı (Tur 172):** 14 881 → 14 180; 164 korunan gövdede, 25 ekte; S-63 onarıldı (R3). Tur 172 okuyuculara teyit/veto için.
+
+## Tur 172 cevapları — dört okuyucu
+
+- Bütün değişen alt bölümler, R1–R3, E14 (C2, C9b) ve E15 a–k alındısı: **dördü teyit**, iki istisnayla:
+  - **2.3 pound sayıları:** Grok **veto** (*"What was found is not the adjective 'consistent' … the 99 lb is the qualifier"*); ChatGPT, DeepSeek, Qwen S4'ü tercih etti
+    (Qwen: *"move the audit trail, not the result"*). Kural gereği **geri kondu**; üçüne Grok'un gerekçesi Tur 173'te sorulacak. Benim görüşüm Grok'la: 99 lb "consistent"i niteleyen sınır.
+  - **j alındısı:** DeepSeek *"meaning not fully carried"*, Grok *"weak"* — korunan niteleyici eke gitmiş, sonucu (%1) gövdede kalmıştı. **P71 ihlali, benim hatam.** Onarım:
+    sonuç da S12'ye (*"while the Bill 3 ratio changes by 5 to 14 percent"*); yazarın kararı değişmedi, çiftin öbür yarısı tamamlandı. Tur 173'te teyide.
+- **Sıradaki yer (öneriler ayrışık):** Grok 5.1 (80–150); ChatGPT Bölüm 5, 5.1 + 5.2 (150–400); DeepSeek 1.4 (50–70), ikinci 7.2; Qwen 2.1.3 ve 2.1.5 türetmeleri
+  (100–150). → **YAZARA**; Claude: Bölüm 2 (yazarın *"çerçeve mimariden aşırı derece fazla olamaz"* gözlemi).
+- ChatGPT bu tur Türkçe cevap verdi.

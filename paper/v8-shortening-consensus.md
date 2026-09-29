@@ -788,3 +788,7 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | E14 C2, C9b uygulanan hâl | ? | ? | ? | ? | uyguladı | **Tur 172 teyidi** |
 | Tur 172 hesap geçişi (katman 1) + 2.2.5, 2.3 (yazarın notları) | ? | ? | ? | ? | uyguladı | **Tur 172 teyit ya da cümle vetosu**; R1–R3 oyda |
 | E15 a–k (korunan, yazar kararı) | — | — | — | — | — | **yazar kararı (Tur 171 sonrası)**; alındı denetimi okuyuculara |
+| Tur 172 uygulanan hâl (değişen alt bölümler, R1–R3, E14, E15 alındısı) | ✓ | ✓ | ✓ | ✓ | uyguladı | **KAPANDI**, iki istisna: |
+| 2.3 pound sayıları eke | **veto** | ✓ | ✓ | ✓ | Grok'la | **geri kondu**; Tur 173'te üçüne soruldu |
+| j: %1 sonucu da S12'ye (P71 tamamlama) | weak | ✓ | onarım istedi | ✓ | uyguladı | **Tur 173 teyidi** |
+| Sıradaki yer | 5.1 | Bölüm 5 | 1.4 | 2.1 türetmeleri | Bölüm 2 | **yazara** |

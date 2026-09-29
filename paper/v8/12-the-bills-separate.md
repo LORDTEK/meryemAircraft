@@ -63,7 +63,7 @@ model; **it cannot show that they are independent in general.**
 **The test is the 50 kg and 1 000 kg reference designs, sized by one method, not Section 10's closures** (Supplement S12).
 
 **Under a twentyfold change of mass, the rotor term of Bill 2 falls to between 0.29 and 0.65 of its light-design value in the section
-polars used here, while specific hover power changes by one percent and the Bill 3 ratio by 5 to 14 percent.** **Within this model, the two are therefore
+polars used here, while the Bill 3 ratio changes by 5 to 14 percent.** **Within this model, the two are therefore
 not one quantity under two names.**
 
 Within the
@@ -90,6 +90,7 @@ light closures of Section 10 only.
 |---|---|
 | **Tur 170 — yazarın notları üzerine kısaltma uygulandı** (Tur 168–169: işlemlerde dört okuyucu + Claude; korunan cümle taşımaları yazar kararı E13). Değişen her paragrafın eski hâli ekin bu adıma ait bölümünde aynen (*"… before the Round 170 shortening"*). Yeni (R) cümleler Tur 170 §2'de okuyucu vetosuna açık; sonuç teyide | `paper/build/v8_round170_texts.py`, `v8_round170_apply.py` |
 | **Tur 172 — hesap geçişi (yazar E14, E15; katman 1 okuyucu teyidine)** E15 h, j, k (yazar k için: "Atalet diye bir şey var sonuçta"); ağır tasarım ayrıntıları S12'ye; "Either answer leaves the mechanism claim where it was." kesildi. Eski paragraflar ekte aynen | — |
+| **Tur 172 cevapları — j çiftinin tamamlanması (DeepSeek onarım, Grok "weak"):** korunan *"that near-constancy is a property of the constant-disc-loading rule"* eke gitmiş ama nitelediği sonuç (*"specific hover power changes by one percent"*) gövdede kalmıştı — P71 ihlali, benim hatam. Sonuç da S12'ye: *"while the Bill 3 ratio changes by 5 to 14 percent"*. Teyide | DeepSeek, Grok |
 | **Tur 155 — birleştirme aşamasının ilk eke taşıması (S), dört okuyucu + Claude; korunan cümle için yazar kararı E10 ("Eke gitsin"):** 7.3 1 083 → ~830 kelime. Eke giden çalışma (S12, "as it stood before the supplement move"): disk yüklemesi ve özgül güç sayıları, 4.19 / 3.98 paragrafı ve korunan *"This paragraph compares the reference pair only."*, rotor terimi değerleri ve Reynolds sayıları, *"three other candidates are excluded"*, tampon türetme cümlesi. Geri konanlar: çap/açıklık 0.35 → 0.47 ve *"Coupling is not identity"* (Grok), *"Either answer leaves the mechanism claim …"* (DeepSeek). Alt başlıklar kaldırıldı | Tur 154 §5; Tur 155 |
 | **Tur 149 — L-3 satır 8 uygulandı:** *"from the tip propellers"* → *"from the tip pairs"* | Tur 148 §3 |
 | **Tur 108 (Tur 107: dört okuyucu + Claude):** J29 kısa biçim — "The fixed-pitch gap also widens slightly with size, to 16.4 to 22.9 percent at the heavy design (Supplement S12)"; **oylanan sözcüklere olumsuz niteleyici geri eklendi** ("as in Section 11, no variable-pitch counterfactual was computed") — benim önerim onu düşürmüştü; teyide | Tur 107 metni §3(a) |
