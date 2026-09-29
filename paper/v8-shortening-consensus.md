@@ -760,3 +760,4 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | R-c "The check establishes" | ✓ | ✓ | ✓ | ✓ | ✓ | **uygulandı (Tur 168)** |
 | İçeri işaret denetimi ek bölümlerini kapsar | ✓ | ✓ | ✓ | ✓ | ✓ | **kabul** (CLAUDE.md §3.0) |
 | Sıradaki adaylar (Grok N1; DeepSeek C-1…C-7; Qwen 2; ChatGPT yöntem) | — | — | — | — | doğruladı | **yazara (Tur 168)** |
+| Yazarın alt bölüm notları (1.2 … 7.2; 6.1 + 6.2 birleşmesi) | ? | ? | ? | ? | görüş yazdı (Tur 168 §3) | **Tur 168: inceleme turu**; Tur 169 tartışma |

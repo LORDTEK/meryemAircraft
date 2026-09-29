@@ -765,3 +765,24 @@ Birleştirici: başlık yoksa Adım 8 bölünmez (dağıtılmış seçenek için
 - **Okuyucu hataları:** DeepSeek C-2'nin korunan olduğunu görmedi (S-18) ve C-1'e "aritmetik" dedi (yok); C-4 "incomparable gerekçesi kalır" dedi, yeni cümlesi düşürüyor.
   Qwen DeepSeek'in C-1'ini denetlemeden benimsedi ve "Round 166" dedi (Tur 167 cevabı); L/De kazancını 40 dedi (~20). ChatGPT yine eski adım numarasını kullandı
   ("Section 4" = 2.3) ve 12 000 hedefinden söz etti (yazar uzunluğu bir kenara koydu).
+
+## Tur 168 — yazar: "Detaylarla gitmeye şimdilik ara verelim" → bölüm haritası → yazarın alt bölüm notları
+
+- Yazar bölüm/alt bölüm haritası ve kelime sayıları istedi (tablo ve şekil hariç); verildi (gövde düzyazı 17 734).
+- **Yazarın notları (aynen):** 1.1 harika, kalsın · 1.2 başta bunu vermeye gerek yok. Başka bir bölümle birleşsin. Bizim önerimizin olduğu yere yedirilebilir ·
+  1.3 belki biraz kısılabilir · 1.4 gereksiz uzunluk olabilir burada · 1.5 harika · 2.1.6 kısmak mümkün. Temelimiz nerede? Bir şeyin kendisini anlatamıyorsak ama
+  nerelerinin kötü olduğunu detaylıca anlatıyorsak mantıklı değil · 2.2.4 kesinlikle daralacak · 2.3 en az 100 kelime daralacak · 3.4 kontrol bu makalenin konusu
+  olmadığı için kısmak mümkün olabilir · 4.4, 4.5, 4.6, 4.7 daralt · 4.8 gerekirse daraltırsın · 5.1 gövdeyi döndürmek de gövdeyi döndürmek. Çok sorun edilmiş bu
+  gövdeyi döndürmek. daralır bu 5.1 · 5.2.2, 5.2.3, 5.2.5 daralt · 5.2.6 beş noktadan yere değeri anlatmak için 204 kelimeye gerek yok. daralt · 5.2.7 daralır bence ·
+  5.2.8 çok uzatmaya gerek yok. Okuyucu mantığı anlasın biraz teknik verdik mi tamamdır. Çok uzun tutunca ne kazanacağız? · 6.1.2 zaten zahmet edip C_D hesaplanmış.
+  daha basit ifade edililebilir · 6.1.3 yük 13 kg olabilir ama asıl değil ya, bir iki cümle kısalabilir belki. Bakmakta fayda var · 6.1.4 Bunu da uzatmaya gerek yok.
+  Yaklaşım anlatılıyor. Hesaplar verilsin kısaca tamam. Daralabilir · 6.2.1 daha basit bir giriş olabilir · 6.2.2 kardeşim C_D zaten vardı. Tekraren neden defalarca
+  gündeme geliyor? · Belki de 6.1 ve 6.2 birleşebilir gibi. Bir tartışın · 6.3 daralabileceğini düşünüyorum · 6.4.8 bu kısım olduktan sonra diğer 6.4 kısımları
+  seyrelebilir · 7.2 daraltırsın.
+- **Süreç (yazar):** *"Önce herkes incelesin ve düşünsün. Sonra tartışmayı pişirin. Ortak karar alırsanız ilerleyebiliriz. Beni de bilgilendir süreçten."* → Tur 168:
+  inceleme (her okuyucu işlem önerir; korunan cümle için K / S / C / M); Tur 169: tartışma; ortak karar → taslak.
+- **Numaralama varsayımım:** bölüm alt başlıktan önce metinle açılıyorsa o metin .1 (5.2.6 = "What meets the ground" bunu doğruluyor). Yazara sorulan iki eşleme:
+  **2.1.6 = "The charges are coupled"**, **7.2 = "First, the known obstacle: the energy store"**. Açık soru: 2.1.6'daki "Temelimiz nerede?" (a) alt bölüm içi mi,
+  (b) makalenin sırası (çerçeve 4 100 kelime, uçak Bölüm 3'te, mimari 5'te) mı?
+- **Kısıt (yazara açıkça):** notlar ~11 900 kelimeyi ve 183 korunan cümlenin ~126'sını kapsıyor. Korunan cümleler aynen kalır ya da yalnız yazar kararıyla sonucuyla
+  birlikte eke gider (kural iii); yeniden yazım işlemlerimizde yok. Claude'un kaba tahmini: bütün notlar tutarsa ~−4 400 → ~13 300 düzyazı, çoğu kural (iii) ile.
