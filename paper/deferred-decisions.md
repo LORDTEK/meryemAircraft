@@ -801,3 +801,15 @@ Birleştirici: başlık yoksa Adım 8 bölünmez (dağıtılmış seçenek için
   olarak okuyuculara soruldu; Claude'un görüşü bir sonraki turda onlarınkiyle yan yana.
 - **Yazarın sorusu (bana):** radikal kısaltma aşamasında okuyuculara yeni pencere mi? — cevabım yazara (Tur 169 raporu).
 - **Süreç notu:** yazar "önce ben bakacağım" demişken metni hazırlamaya başlamıştım; durdurdu. Kural: yazar "önce bana" dediğinde metin, yazarın onayından sonra.
+
+## Tur 169 — yeni pencereler ve dosya adı
+
+- **Yazar:** *"Başlangıç dosyasını güncelle, hepsini yeni pencerede başlatacağım. Ama kayıtlara düşsün, Grok gerektiği için değil eşitlik nedeniyle yeni pencreye
+  geçirilmiştir."* → **Kayıt:** Tur 169'dan itibaren dört okuyucu yeni pencerede. **Grok'un penceresi yenilenmeyi gerektirmiyordu** (son iki turda bayat hafıza
+  hatası yoktu); **eşitlik nedeniyle** o da yeni pencereye geçirildi. Bayat hafıza izleri: Qwen (Tur 61 sözü), ChatGPT (eski adım numaraları, 12 000), DeepSeek (8 500).
+- `cfd/reader-onboarding.md` Tur 169'da baştan yazıldı (eski hâli Tur 101'de kalmıştı: 26 000 kelime, dokuz bölüm, yeniden kurma yöntemi). Yeni: sekiz bölüm ve adım
+  eşlemesi, yazarın alt bölüm numaralaması, 13 kural (korunan cümle, kural iii, K/S/C/M, fren, Tur 104, yalıtım çifti, tek ev, alındı, sayım, alıntı kilidi,
+  anlaşılırlık, yeni yüklem yok), yazarın kararları, tekrarlayan hatalar (bayat hafıza dahil), aynı biçim kuralı.
+- Tur 169 metni yeni pencereler için kendi kendine yeter: gövdenin tamamı yazarın numaralamasıyla ekte.
+- **Yazar:** *"Turlarda tur numarası ile içerdeki numara tutmuyor."* → Tur 169'dan itibaren `cfd/round-NNN.md` (dosya adı = tur); eski dosyalar adlarını korur,
+  eşleme `cfd/arsiv-dis-gorus/INDEX.md` (173 dosya; 5'inin başlığında tur numarası yok).

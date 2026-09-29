@@ -1,55 +1,56 @@
 # Reader onboarding — for a reader starting a new conversation
 
-> **Version check (Qwen P1, Round 92; corrected in Round 93).** This version was rewritten in Round 91 and last updated in
-> Round 101. An older copy (Round 61, sent in Round 64) stated Step 13's contract results **in the reverse direction**: it
-> gave this configuration's range as 55 to 84 percent ahead of the lift-plus-cruise layout. **The older copy has no
-> version box at all; if yours does not begin with this box, it is the old one: do not use it.** In the repository:
-> `grep -c "Version check (Qwen P1" cfd/reader-onboarding.md` prints **more than 0** for this version and **0** for the old one.
-> (The Round 92 check searched for the old phrase itself and so found it in its own quotation: it printed 2 on this file,
-> not 0. My error; the positive check above replaces it.)
+> **Version check.** Rewritten in Round 169 for four new conversations. Older copies (Round 61, Round 91–101) describe a paper of
+> 26 000 words in nine sections with a recomposition method; **that is no longer the state of the work.** In the repository,
+> `grep -c "Rewritten in Round 169" cfd/reader-onboarding.md` prints **more than 0** for this version.
 
-> **Why you are reading this.** You are one of four independent readers (ChatGPT, Grok, DeepSeek, Qwen) of a paper in
-> development. The work has run for about ninety rounds. If your previous conversation filled up, this file puts you back
-> where the others are: what the paper is and claims, how the text is now being worked, what has been settled, which
-> errors recur, and how to answer. **It makes no claim of its own. Every number in it is quoted from the step it names,
-> and if this file and a step disagree, the step wins. Please tell us if they do.**
+> **Why you are reading this.** You are one of four independent readers (Grok, ChatGPT, DeepSeek, Qwen) of a paper in
+> development. Claude, the fifth voice, runs the rounds, checks every claim against the text and the sources, applies what
+> is agreed, and gives its own view **in the same table as yours, as one column among five**. The author reads everyone's
+> positions and decides. **Claude is not the author.** The work has run for about 170 rounds; this file tells you what the
+> paper is and claims, which rules govern changes to it, what the author has decided, which errors recur, and where the work
+> stands.
 >
-> **You will receive this file together with the current round text.** Read this file first, then answer the round text.
-> If you can open the repository, the whole current paper is `paper/v8/ASSEMBLED.md` (about 26 000 words), and each of the
-> fifteen source steps is `paper/v8/NN-*.md`.
+> **It makes no claim of its own.** Every number in it is quoted from the section it names. If this file and the paper
+> disagree, the paper wins. Please tell us if they do.
 >
-> *This file is kept current: the **"Where the work stands"** section (§6) is rewritten every round.*
+> **You receive this file together with the current round text.** Read this file first, then answer the round text. The round
+> text quotes in full every text you are asked to judge. The repository is only for verification: the assembled paper is
+> `paper/v8/ASSEMBLED.md`, and its source is the step files `paper/v8/NN-*.md`.
 
 ---
 
 ## 1. What the paper is
 
-**A design study of an uncrewed aircraft**, written for the *Journal of Aircraft* (AIAA). The aircraft is a
-**tail-sitting blended-wing-body (BWB) series-hybrid vertical-take-off-and-landing** configuration. It stands on its tail,
-takes off and lands vertically, and then rotates the whole airframe through about ninety degrees to fly on its wing. It is
-aimed at **wildfire observation and response** and **cargo delivery to places without a runway**.
+**A design study of an uncrewed aircraft**, written for the *Journal of Aircraft* (AIAA). The aircraft is a **tail-sitting
+blended-wing-body (BWB) series-hybrid vertical-take-off-and-landing** configuration. It stands on its tail, takes off and lands
+vertically, and then rotates the whole airframe through about ninety degrees to fly on its wing. It is aimed at **wildfire
+observation and response** and **cargo delivery to places without a runway**.
 
-**What it is made of** (Step 8):
+**What it is made of** (Section 5.2):
 
-- **A blended wing body.** It has one lifting surface and no separate fuselage or tail.
-- **One coaxial contra-rotating nose pair** of fixed-pitch propellers, 1.20 m in diameter on the 50 kg reference design.
-  It produces **all propulsive thrust in both regimes**, in one orientation relative to the body.
-- **Four small counter-rotating pairs, 0.20 m, at the ends of rigid frames projecting from the wing tips.**
-  - In hover they give pitch and yaw by differential thrust, and they supply the take-off margin.
-  - In cruise they are carried, producing moments rather than cruise thrust.
-- **A strip on the lower surface**, deployable in two halves. One half alone gives roll; both together act as a speed
-  brake. **Roll does not come from the propellers**: the reaction-torque channel of the coaxial pairs is **declined** as a
-  design choice, and its cost is **not computed**.
-- **A series-hybrid power path:** fuel → engine → generator → electric machines. The engine is sized by cruise, and a
-  **battery buffer** supplies the hover peak.
+- **A blended wing body.** One lifting surface; no separate fuselage or tail.
+- **One coaxial contra-rotating nose pair** of fixed-pitch propellers, 1.20 m in diameter on the 50 kg reference design. It
+  produces **all propulsive thrust in both regimes**, in one orientation relative to the body.
+- **Four small coaxial pairs, 0.20 m, at the ends of rigid frames projecting from the wing tips.** They give pitch and yaw by
+  differential thrust, and they supply the take-off margin. **In cruise they free-wheel at zero shaft torque** (the author's
+  decision) and give no cruise thrust; they are not drag-free.
+- **A strip on the lower surface**, deployable in two halves: one half alone for roll, both together as a speed brake. It is the
+  only moving aerodynamic surface. **Roll does not come from the propellers.** The reaction-torque channel of the coaxial pairs
+  could give it; this configuration **declines** that channel by design, and what declining it costs is **not computed**.
+- **A series-hybrid power path:** fuel → engine → generator → electric machines. The engine is sized by cruise; a **battery
+  buffer** supplies the hover peak.
+
+**Axis names.** The paper fixes body-axis naming. The propeller axis is the roll axis in both regimes; it stands vertical in hover
+(a moment about it is a change of heading) and horizontal in cruise (a bank). The two conventions are never mixed.
 
 **Three aircraft appear in the paper; keep them apart:**
 
 | Name in the text | What it is | Where |
 |---|---|---|
-| **The 50 kg reference design** | The design the inventory describes. The transition results (2 s rotation, 5.4 m altitude loss) are its own. | Steps 8, 10, 12 |
-| **The four closures, A–D** | The same configuration, re-closed at four combinations of drag bracket and blade family. They weigh 52.3 to 57.5 kg. | Step 10 |
-| **The 1 000 kg reference design** | Used only to test how the charges behave with scale. No closure was run at 1 000 kg. | Step 12 |
+| **The 50 kg reference design** | The design the inventory describes. The transition figures are its own: 2 s rotation; in the finite-moment dynamic model with zero aerodynamic moment, 5.4 to 6.6 m altitude loss | 5.2, 6.1 |
+| **The four closures, A–D** | The same configuration re-closed at four combinations of drag bracket and blade family: 52.3 to 57.5 kg, 13 kg payload | 6.1 |
+| **The 1 000 kg reference design** | Used only to test how the charges behave with scale. No closure was run at 1 000 kg | 6.3 |
 
 ---
 
@@ -57,47 +58,41 @@ aimed at **wildfire observation and response** and **cargo delivery to places wi
 
 | Axis | Opponent | Standing |
 |---|---|---|
-| **Cruise efficiency** | Rotorcraft: multirotors **and helicopters** (the author's decision, Round 97) | **Claimed against multirotors, and bounded:** 5.56 to 7.39 here, against 4.9 for a published turboshaft quadrotor and 5.8 for an all-electric one (Step 6). **Against helicopters the result is mixed:** the same NASA table gives 5.4 to 7.2; ahead of the turboshaft single-main-rotor helicopter at every corner, and only the top corner ahead of the all-electric side-by-side helicopter (7.2). No superiority is claimed there. |
-| **Operation without a runway** | Fixed-wing aircraft | **Claimed as sized, not demonstrated.** It depends on an energy store whose required performance the sources consulted do not report as built (Step 14). |
+| **Cruise efficiency** | Rotorcraft: multirotors **and helicopters** (the author's decision) | **Claimed against multirotors, and bounded:** effective L/D 5.56 to 7.39 here, against 4.9 for a published turboshaft quadrotor and 5.8 for an all-electric one (Section 4). **Against helicopters the result is mixed** (5.4 to 7.2 in the same NASA table); no advantage is claimed there. |
+| **Operation without a runway** | Fixed-wing aircraft | **Claimed as sized, not demonstrated.** It depends on an energy store whose required performance the sources consulted do not report as built (Section 7). |
 | **The mechanism required to change regime** | Tilting architectures | **The contribution.** |
-| **Range** | The other hybrids (lift-plus-cruise, tilting) | **Not claimed, in either direction.** The ordering belongs to the sizing contract (Step 13). |
+| **Range** | The other hybrids (lift-plus-cruise, tilting) | **Not claimed, in either direction.** The ordering belongs to the sizing contract (6.4). |
 
-**There is one contribution: the architecture.** It is *"arranged to change regime by rotating the airframe rather than
-its propulsors"*. It carries none of five mechanism classes (Step 7) — the fifth, a rotor-stopping mechanism, only if the tip pairs free-wheel or are held by motor torque; a brake or lock would add it:
+**There is one contribution: the architecture.** It is *"arranged to change regime by rotating the airframe rather than its
+propulsors"*. It carries none of five mechanism classes (5.1): a pivot or tilting joint; a nacelle or rotor-group actuator; a
+variable-pitch hub; dedicated lift rotors; a rotor stowing, indexing or stopping mechanism. **The fifth is absent only while the tip
+pairs free-wheel or are held by motor torque; a brake or lock would add it.**
 
-- a pivot or tilting joint;
-- a nacelle or rotor-group actuator;
-- a variable-pitch hub;
-- dedicated lift rotors;
-- a rotor stowing, indexing or stopping mechanism.
+**It is a count of mechanism classes.** It is not a claim that nothing moves (the strip moves), and not a claim of simplicity or
+reliability (neither was measured). **"Arranged to", not "changes": the transition is not shown.**
 
-**It is a count of mechanism classes.** It is not a claim that nothing moves, since the strip moves, and not a claim of
-simplicity or reliability, which were not measured. **"Arranged to", not "changes": the transition is not shown.**
-
-**The paper's own statement of what it offers** (Steps 9 and 15): *"a configuration sized to combine runway-independent
-vertical operation with wing-borne cruise efficiency, arranged to do so with no mechanism that reorients a propulsor, and
-an account of what the combination costs."*
+**The paper's own statement of what it offers** (Section 8): *"a configuration sized to combine runway-independent vertical operation
+with wing-borne cruise efficiency, arranged to do so with no mechanism that reorients a propulsor, and an account of what the
+combination costs."*
 
 **Sentences that are never written:**
 
 - "the range of a fixed-wing aircraft", or any range comparison with fixed-wing aircraft;
-- any comparison with multirotors on vertical capability;
+- any comparison with rotorcraft on vertical capability;
 - a range claim against lift-plus-cruise or tilting aircraft;
-- "no moving parts", "no control surfaces", "simpler";
+- "no moving parts", "no control surfaces", "simpler", "more reliable";
 - "the aircraft changes regime";
-- "there is no general architectural superiority claim";
-- "first", "only", "not done before". These appear only as "not found", with the place searched named. Uncrewed
-  tail-sitters, tail-sitters without control surfaces, coaxial tail-sitters and BWB tail-sitters are all in the
-  literature (Step 1).
+- "first", "only", "not done before". These appear only as "not found", with the place searched named. Uncrewed tail-sitters,
+  tail-sitters without control surfaces, coaxial tail-sitters and BWB tail-sitters are all in the literature (Section 1).
 
 ---
 
-## 3. The framework, which is the instrument that makes the claim checkable
+## 3. The framework: the instrument that makes the claim checkable
 
-**The framework is not a second contribution.**
+**The framework is not a second contribution.** It is how the architecture claim is made checkable.
 
-**The three charges ("bills")** (Step 2). The root of all three is a **duty-cycle mismatch**: hardware needed for about two
-percent of a flight is carried for the rest.
+**The three charges ("bills")** (2.1). The root is a **duty-cycle mismatch**: hardware needed for about two percent of a flight
+is carried for the rest.
 
 | Charge | What it is |
 |---|---|
@@ -105,196 +100,193 @@ percent of a flight is carried for the rest.
 | **Bill 2** | the cruise drag of hover hardware left exposed |
 | **Bill 3** | continuous power installed to a hover peak |
 
-**Charge and currency are not the same thing** (settled over Rounds 77–80). The currencies are kilograms, drag counts and
-installed kilowatts. A remedy's own cost can fall in a currency without being a charge. For example, a tilt pivot's mass is
-*"kilograms, not Bill 1"*. The table in Step 2 names bills by number and every other cost in words.
+**A charge and its currency are not the same thing.** The currencies are kilograms, drag counts and installed kilowatts. A remedy's
+own cost can fall in a currency without being a charge (a tilt pivot's mass is *"kilograms, not Bill 1"*). **Remedies move cost; they
+do not remove it.** The refutation test (2.1): a counter-example reduces one charge, leaves the other two no worse (judged against the
+architecture the move modifies), and has an own cost that is absent or demonstrably smaller, in the same currency. Costs outside the
+three are listed, not waved away.
 
-**Remedies move cost; they do not remove it.** The Step 2E heading reads *"remedies move cost, among the three charges or
-outside them"*. The word *transfer* has two senses:
+**The escape condition** (2.2) is **a definition, stated before any configuration**: same hardware, both duties, one orientation,
+hover peak from a store. It permits six costs and has four failure modes; the fourth is **partial instantiation**. **This
+configuration is a partial instantiation:** the nose pair meets all four parts; the tip pairs are carried through cruise producing
+moments, so they re-open Bill 2.
 
-- **"A transfer between charges"** is narrow: one charge is reduced and another made worse.
-- **"The accounting claims transfer"** is broad: cost is moved, possibly out of the three charges.
+**The rest:**
 
-**The refutation test** (Step 2F). A counter-example reduces one charge, leaves the other two no worse, and has an own cost
-that is either absent or demonstrably smaller than the reduction, in the same currency.
-
-- *"No worse"* is judged against **the architecture the move modifies**.
-- A cost outside the three does not refute the accounting, **but it is listed, not waved away**.
-- **The tilting row** falls on one of two branches, depending on how the modified architecture supplies its hover peak:
-  - either it is a transfer between charges;
-  - or what keeps it from refuting the accounting is the part of its cost that falls outside the three.
-
-**The escape condition** (Step 3) is **a definition, stated before any configuration**. It is derived by inverting the
-table. It has four parts: **same hardware, both duties, one orientation, hover peak from a store**. It names six permitted
-costs and four failure modes, the fourth being **partial instantiation**. **This configuration is a partial
-instantiation**: the nose pair meets all four parts, and the tip pairs are carried through cruise producing moments, so they
-re-open Bill 2.
-
-**The rest of the framework:**
-
-- **Independent check** (Step 4): a NASA sizing set of five VTOL families.
-- **Ledger** (Step 11): the price of the closures attributed to the three charges, with no scalar total.
-- **Scale** (Step 12): the rotor term of Bill 2 falls to 0.29–0.65 of its light value while Bill 3 is held nearly flat by
-  the sizing rule, so **at least two charges are not locked together.**
-- **Contracts** (Step 13). **Against this configuration, the lift-plus-cruise layout is 55 to 84 percent ahead under a fixed
-  fuel fraction, 28 to 54 percent under a fixed fuel mass, and between 13 percent short and 7 percent ahead under a fixed
-  take-off mass.** The sign changes inside the envelope, and the tilting competitor is only a bound.
-  *(The earlier onboarding text of Round 61 stated these figures with the direction reversed. The figures above are
-  quoted from Step 13.)*
-- **What does not close** (Step 14): the energy store. The take-off demand is 3.7 to 4.1 times the bench rate derived from a measured 10.68C bench discharge of the unit pack of a battery flown in a 210 kg-class eVTOL aircraft (about 1.5 kW/kg, model-derived from the source's current, voltage and pack mass), and 1.8 to 2.0 times the 3 kW/kg a NASA-funded design study cites from the literature (attributed, not measured by that study). The same study argues that, with pulse current limits, a pack with the required specific power *may be possible* with existing technology; its hover lasts 20 s or less, and this aircraft's peak duration is not computed. That is an attributed conclusion, not a built pack.
+- **Independent check** (2.3): a NASA sizing set of five VTOL families, nine designs, one mission. Its test is the **isolation pair**
+  (turbo-electric lift-plus-cruise against turbo-electric tilt-wing). **2.3 is the home of this data set.**
+- **Closure** (6.1) and **ledger** (6.2): the loop closes on a declared package at four corners; the ledger attributes the three
+  charges inside it, with no scalar total.
+- **Scale** (6.3): the rotor term of Bill 2 falls to 0.29–0.65 of its light value while Bill 3 is held nearly flat by the sizing rule,
+  so **at least two charges are not locked together**, within this model.
+- **Contracts** (6.4): **against this configuration, the lift-plus-cruise layout is 55 to 84 percent ahead under a fixed fuel
+  fraction, 28 to 54 percent under a fixed fuel mass, and between 13 percent short and 7 percent ahead under a fixed take-off mass.**
+  The sign changes inside the envelope; the tilting competitor is only a bound.
+- **What does not close** (7): the energy store. The take-off demand is 3.7 to 4.1 times the highest measured figure (a bench
+  average of about 1.5 kW per kilogram). A NASA-funded design study argues that a pack with the required specific power *may be
+  possible*; that is its conclusion, not a built pack. Eighteen further questions are listed in Supplement S14.
 
 ---
 
-## 4. The paper, step by step, and the assembled numbering
+## 4. The paper's structure, and the two numberings
 
-The source is **fifteen step files**. The **assembled view** (`paper/v8/ASSEMBLED.md`, produced by a script) arranges them
-into nine sections:
+The source is **fifteen step files**; Step 9 has been merged into Step 15 and retired. The **assembled view**
+(`paper/v8/ASSEMBLED.md`, produced by a script) arranges them into **eight sections**. **Readers must use the section numbers.**
+Using step numbers as section numbers is a recurring error (§7).
 
-| Step | Title | Section in the assembled view |
+| Step | Section | Title |
 |---:|---|---|
-| 1 | The gap | 1 |
-| 2 | The tax | 2.1 |
-| 3 | The escape condition | 2.2 |
-| 4 | An independent quantitative check | 2.3 |
-| 5 | The first half: operation without a runway | 3 |
-| 6 | The second half: cruise carried on a wing | 4 |
-| 7 | **The combination** | 5.1 |
-| 8 | What it is made of, and what still moves | 5.2 (and 6.1) |
-| 9 | What is not claimed | 6.2 |
-| 10–13 | Closure, ledger, scale, contracts | 7.1–7.4 |
-| 14 | What does not close | 8 |
-| 15 | Four axes, and where the paper stops | 9 |
+| 1 | 1 | The gap |
+| 2 | 2.1 | The tax |
+| 3 | 2.2 | The escape condition |
+| 4 | 2.3 | An independent quantitative check |
+| 5 | 3 | The first half: operation without a runway |
+| 6 | 4 | The second half: cruise carried on a wing |
+| 7 | 5.1 | The combination |
+| 8 | 5.2 | What it is made of, and what still moves |
+| 10 | 6.1 | Analytical closure of the sizing loop |
+| 11 | 6.2 | The ledger |
+| 12 | 6.3 | Scale |
+| 13 | 6.4 | Rankings belong to contracts |
+| 14 | 7 | What does not close |
+| 15 | 8 | Four axes, and where the paper stops (the conclusion) |
 
-The author's outline: *introduction · the current state · one problem's solution · the other's · **combining the solutions**
-· the soundness of the product · the calculations · conclusion.*
+**The supplement names sections by step number.** Its *"Section 10"* is 6.1, and so on.
+
+**The author's subsection numbering (Round 168).** Subsections are numbered in order. Where a section opens with text before its
+first subheading, that text is .1. So 2.1.6 is *"The charges are coupled"*, 5.2.6 is *"What meets the ground"*, and 7.2 is *"First,
+the known obstacle: the energy store"*.
+
+**The author's outline of the argument:** *introduction · the current state · one problem's solution · the other's · **combining the
+solutions** · the soundness of the product · the calculations · conclusion.* (Claude's translation) The author has also floated, as a thought and not a
+decision, a four-heading telling: *Current state · Proposed solution · Calculations · Conclusion* (Round 169; Claude's translation).
 
 ---
 
-## 5. How the text is being worked now: recomposition
+## 5. How changes are made now
 
-The body is about **26 000 words**, and the journal's working target is **about 7 500**. The author's rules are these:
+**The stage.** The paper went through deletion (Rounds 61–72), recomposition (73–98), recomposition into result sentences (101–151,
+25 797 → 18 634 words) and compression by finding (from Round 153). **Sentence-level cutting is exhausted** (Round 167). The author
+then read the whole paper and wrote notes on about thirty subsections (Round 168): *narrow this*, *merge this*, *2.3 at least 100 words
+shorter*, and *perhaps 6.1 and 6.2 merge*. **We are in the phase of radical shortening on those notes.** The body is **17 734 words of
+prose** (tables excluded).
 
-- **Shortening is not pruning, and no word budget drives it.**
-- **The insight is carried by placement, order and voice**, never by a stronger sentence.
-- **Cuts come from everywhere**, but the calculations are cut first.
+**Length.** The author has set word targets aside (Round 161). **Do not argue from 12 000, 8 500 or 7 500;** those were earlier
+targets.
 
-**The method (agreed in Rounds 73–76), applied one block at a time:**
+**Who decides.** A change is applied when **all four readers and Claude agree**, or when **the author decides**. One objection means
+it is not applied; it goes back with its reasons. **The applied result is shown word for word and confirmed by everyone before it
+closes.** Readers answer one another, not only Claude.
 
-1. **A semantic inventory**, confirmed by the readers first. It records what must be said, the evidence, the
-   qualifications, what must *not* be said, where each item is stated first, and its outbound dependencies.
-2. **A frozen snapshot** of the source block. When the block changes, the original goes to the supplement, whole, with a
-   note that sits outside the frozen text.
-3. **A blind reading.** The readers reconstruct the block from the draft alone, *before* they see the trace.
-4. **A trace table.** Every sentence is tagged **P** (protected, verbatim), **D** (deletion only), **J** (joining sentence;
-   states no fact) or **R** (rewrite; each R sentence can be vetoed on its own). The table also records any qualification
-   or epistemic status that was lost, and the **origin** of every defect found: **S** (it was already in the source) or
-   **R** (the recomposition introduced it).
-5. **Votes.** A change is applied only if **all four readers and Claude** agree. **One objection means it is not applied**;
-   it goes back with the reasons. **The applied result is shown word for word and confirmed by everyone before it
-   closes.**
+**The rules that govern every proposal:**
 
-**Rules that are now standing:**
+1. **Protected sentences.** *"A sentence is protected when removing it silently would change a claim, a limit or a derivation that
+   later text depends on …"* There are **183 in the body and 6 in the supplement**, in the register `paper/v8-caveats.md`. A protected
+   sentence is kept **verbatim**. **It cannot be reworded.** If you think one should be, ask the author.
+2. **Rule (iii) (the author, Round 104).** *"A protected sentence may move to the supplement only together with the result it
+   qualifies, and only by the author's decision."* The author decides these **as one list** (Round 168).
+3. **The four operations on a protected sentence:** **K** keep verbatim · **S** supplement, with its result (rule (iii)) · **C** cut as a
+   copy, **naming the other body sentence that already says it** · **M** move to another body section.
+4. **The brake.** *"Move the working, not the evidence; move the derivation, not the qualification; move the audit trail, not the
+   result."* A qualifier travels with the result it qualifies, or neither moves.
+5. **The Round 104 test.** *"… a calculation may not move if the surviving body sentence would cease to tell the reader what was
+   actually found."* A sentence that explains the physical mechanism behind a body result is an interpretive prerequisite, not a
+   source of words.
+6. **The isolation pair (Round 113).** When an external comparison tests a prediction, the body keeps the compared objects, their
+   common basis, and *"it is not a controlled experiment"*.
+7. **One home per external data set.** The NASA set's identity, selection and population live in 2.3; other sections use its
+   findings.
+8. **Occupied before the gap.** What the literature already holds is stated in the body, before the gap (Section 1).
+9. **The receipt check.** Every pointer must deliver what it promises. **When a section changes, every sentence pointing into it is
+   re-read**, including pointers into supplement sections.
+10. **Counting words.** When a list gains or loses an item, every nearby count (*"three reasons"*, *"the third route"*) is re-read.
+11. **Quotation lock.** Quotation marks only on verbatim text.
+12. **Readability (the author, Round 150).** *"This is not a legal text. Once it cannot be understood, being right loses its
+    importance."* (Claude's translation) Ask of every candidate: would a person understand this in one reading?
+13. **Nothing new.** A shortening adds no new claim and **no new number**.
 
-- **Restatement.** A statement kept in two places is cut in the second, unless the second occurrence has a job the
-  inventory names. A draft that keeps neither is a halt.
-- **Protection.** *"A sentence is protected when removing it silently would change a claim, a limit or a derivation that
-  later text depends on … Being load-bearing for the structure alone is not enough."* There are currently 160 protected
-  sentences.
-- **The stop rule** counts only defects that the *draft* introduces or fails to repair. Defects found in the *source* are
-  repaired under their own trace and recorded in `paper/v8-source-defects.md`. So far there are seventeen of origin S (one,
-  S-19, still being voted) and two of origin R (R-1, R-2), both caught before they were applied.
-- **Content before drafting.** When the inventory finds a content problem, the problem is settled first and the draft
-  waits (S-1, S-5, S-15/S-16).
-- **Every empirical claim carries an evidence status:** verified / attributed but unverified / model-derived / unsupported
-  (`paper/v8-evidence.md`, with PDF page locators).
-- **Readers answer one another**, not only Claude. When one reader is not persuaded, the others are asked to respond.
-- **A veto must cite the "now" text, not the "proposed" text.** Tables in the round text show both.
+**Frozen snapshots in the supplement are an audit archive, not the journal supplement.** Do not quote them as the current text.
 
 ---
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 169.**
+**Round 169.** **From this round all four readers work in new conversations.** This was done **for equality**. Grok's conversation did not
+need renewing; all four now start from this file and the same round text.
 
 | Block | State |
 |---|---|
-| Stages (the author, Round 129) | present stage: **compression by finding**, now on the author's subsection notes (radical shortening) |
-| Structure | 1 · 2.1–2.3 · 3 · 4 · 5.1–5.2 · **6** calculations (6.1–6.4) · **7** What does not close · **8** Four axes (the conclusion) |
+| Phase | radical shortening on the author's subsection notes (Round 168) |
 | Format (the author, Round 169) | every view, Claude's included, in **one** table / narrative / list; Claude's view is one column among five |
-| Agreed (Round 168 replies) | operations on 1.2, 1.3, 1.4, 2.1.6, 2.2.4, 3.4, 4.4–4.8, 5.2, 6.1.4, 6.3, 6.4, 7.2 — for confirmation |
-| **Open (Round 169)** | D1 merge 6.1 + 6.2 (4 yes, ChatGPT no) · D2 which 100 words of 2.3 (quadrotor out: Grok, DeepSeek, Claude; keep: ChatGPT, Qwen) · D3 5.1's one-sentence refusals (K: DeepSeek, Qwen, Claude; C: Grok, ChatGPT) · D4 2.1.7 tilting-row test (protected; K: Grok, ChatGPT, Claude) · D5 pointer for the retraction example · the author's question: what to merge, and the four-heading thought (Current state · Proposed solution · Calculations · Conclusion) |
-| Protected sentences | S moves go to the author as **one list** after this round |
+| Agreed in Round 168 | operations on 1.2, 1.3, 1.4, 2.1.6, 2.2.4, 3.4, 4.4–4.8, 5.2, 6.1.4, 6.3, 6.4, 7.2 — for confirmation in Round 169 |
+| **Open (Round 169)** | D1 merge 6.1 + 6.2 · D2 which 100 words of 2.3 · D3 5.1's one-sentence refusals · D4 2.1.7's tilting-row test · D5 a pointer for the retraction example · **the author's question: what would you merge?** and the four-heading thought |
+| Protected sentences | S moves go to the author as **one list** after Round 169 |
 | Body | 17 734 words of prose (tables excluded) |
-| Contribution | Sections 1, 5.1 and 8 name one contribution, the architecture |
-| Tip pairs in cruise (the author's decision) | uncommanded state: free-wheeling at zero shaft torque (5.2); shaft power of commanded departures not computed |
-
-**Every step has now been recomposed once.** Recomposition into result sentences took Steps 10–11 to about 40 % of their length,
-Steps 12–14 to 57–83 %, and the framework and architecture to 80–95 %, because definitions, protected sentences and their evidence
-set a floor.
-
-**The round file quotes in full every text you are asked to judge; the repository is for verification only.** **Frozen snapshots in the supplement are an audit archive, not the journal supplement.** Do not quote them as the current text; one
-of them holds a sentence deleted for lack of a source.
 
 **Tools the round texts mention:**
 
 | Tool | What it checks |
 |---|---|
-| `v8_caveats.py` | the protected sentences |
-| `v8_stale.py` | retired phrases (156) and single-home phrases, in the step bodies **and in the v8 figure scripts** |
-| `v8_nothing_lost.py` | every sentence of a recomposed step is in the body or the supplement, or is a voted replacement |
-| `v8_draft_check.py` | a draft is derived from its source by deletion only (pointers in ⟦ ⟧ excepted); no negative or qualifier deleted; every protected sentence present |
-| `v8_refs.py` | table, row and relational-noun references, and supplement references |
-| `v8_assemble.py` | the assembled view and section references |
-
-**`links.py` checks the old v7 file**, not v8.
+| `v8_caveats.py` | the protected sentences are where the register says |
+| `v8_nothing_lost.py` | every sentence of a shortened step is in a body or the supplement, or is a voted replacement |
+| `v8_draft_check.py` | a draft derives from its source by deletion only; no negative or qualifier deleted |
+| `v8_assemble.py` | the assembled view; section references resolve |
+| `v8_refs.py`, `v8_stale.py`, `v8_count_flag.py`, `v8_figures.py` | table references; retired phrases; counting words; figure numbers |
 
 ---
 
 ## 7. Errors that recur — look for these first
 
-1. **A correction that creates a new contradiction** in another section.
-2. **A correction that does not travel.** A phrase is retired in one step and survives in another (S-8, S-16 in Step 13).
-3. **A reference left behind when text moves.** A table moves to the supplement and *"the table"* keeps pointing at it
-   (S-7, S-11).
-4. **Charge/currency conflation:** calling kilograms "Bill 1" (S-1, S-8, S-13).
-5. **Selective quotation of a source.** S-18: the source's own conclusion, a speed advantage, was left out.
-6. **An uncited number that survives by repetition.** S-14 went uncited from v5 to v8, and is deleted.
-7. **Quoting the proposed text as the current text, or an old version as the current one.**
-8. **A number from one aircraft attributed to another** (see §1), and mixed power stations (rotor shaft, engine shaft,
-   electrical bus).
-9. **Over-claiming while summarising**, including in this file.
+1. **Step numbers used as section numbers** (*"Section 4"* meaning 2.3). Use §4's table.
+2. **Old targets and old instructions from memory**: 12 000, 8 500, 7 500 words; the author's early position of no shortening until confident (Round 61,
+   reversed in Round 72).
+3. **Getting protection wrong.** Marking an unprotected sentence as protected, or missing that a sentence is protected. Check the
+   register; the round text lists the protected sentences you are asked to mark.
+4. **Rewording a protected sentence** while calling it compression.
+5. **A shortening that adds a number or a claim** the section did not carry.
+6. **A correction that creates a new contradiction** in another section, or **does not travel** to every place the phrase appears.
+7. **A pointer left behind when text moves.**
+8. **Selective quotation of a source.** The source's own qualification or contrary conclusion is quoted or recorded as omitted (S-18:
+   the retraction's speed gain; S-20: the store study's *"may be possible"*).
+9. **Charge/currency conflation:** calling kilograms "Bill 1".
+10. **A number from one aircraft attributed to another** (§1), and mixed power stations (rotor shaft, engine shaft, electrical bus).
+11. **Treating Claude as the author.** The drafts, checks and objections are Claude's; the decisions are the author's.
+12. **Over-claiming while summarising**, including in this file.
 
 ---
 
 ## 8. Decisions already made — please do not reopen them
 
-These are the author's decisions. You may point out a consequence the author may not have seen, but please do not argue
-the decision itself.
+These are the author's decisions. You may point out a consequence the author may not have seen, but please do not argue the decision
+itself.
 
-- **One contribution: the architecture.** No range claim against the other hybrids.
+- **One contribution: the architecture** (Round 35). The framework is the instrument; contract dependence is a finding, not a second thesis.
+- **Helicopters are rivals on the cruise axis** (Round 97); the result against them is written as mixed.
+- **Tip pairs free-wheel at zero shaft torque in cruise** (Rounds 130–131).
 - **"Arranged to change regime."** Roll comes from the strip; the reaction-torque channel is declined.
-- **The frozen v7 and its public archive are not touched.**
+- **Word targets set aside** (Round 161); shortening continues by merges and cuts.
+- **2.3 is to be at least 100 words shorter** (Round 168). The open question is which 100.
+- **2.1.6's "Where is our foundation?"** is about the inside of that subsection, not the order of the paper (Round 168).
+- **Rule (iii)**, and S moves decided **as one list**.
 - **The journal body carries no "in a previous version…" narrative.**
 - **AI use is declared without brand, model or company names.**
-- **The name "zero-bill condition" is dropped** (Round 86).
 
 ---
 
 ## 9. How to answer
 
 - **Begin with your name alone on the first line. Reply in English.**
-- **Be blunt; encouragement is not wanted.** Quote the sentence and name the step for every point.
+- **Be blunt; encouragement is not wanted.** Quote the sentence and name the section for every point.
+- **Vote item by item.** If you object, name the **current** sentence you object to and why.
+- **Answer the other readers' positions and Claude's**, favourable or not. Claude's view is one column among five; criticise it as you would any other.
 - **Sources:** give a downloadable PDF link only for novelty claims, numbers from tables, or verbatim quotations. **Say which
-  document you opened in this conversation.** If you could not open it, give no number.
+  document you opened in this conversation.** If you could not open it, give no number from it.
 - **Do not guess the sign of a calculation. Do not propose new claims.**
-- **Vote item by item.** If you veto, say which **current** sentence you object to and why.
-- **You may answer the other readers' positions**, favourable or not.
 - **Every round text ends with an open call for your own proposals.**
 
 ---
 
 ## 10. Verifying the text you have
 
-Each round text names the repository (`LORDTEK/meryemAircraft`, branch `claude/ecstatic-cori-6w30at`), the commit, and
-usually a SHA-256 or a short `grep` check. You do not need the repository to answer; those are there so that a stale copy
-can be recognised.
+Each round text names the repository (`LORDTEK/meryemAircraft`, branch `claude/ecstatic-cori-6w30at`) and the commit. You do not need the
+repository to answer; that line is there so that a stale copy can be recognised.

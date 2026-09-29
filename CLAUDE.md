@@ -366,6 +366,9 @@ biçiminde ve **aranan yer adlandırılarak** yazılır.
   tur metni** ve `reader-onboarding.md` durur; yeni tur yazılınca bir öncekisi **aynı commit'te**
   `cfd/arsiv-dis-gorus/`'a taşınır ve `cfd/README.md`'nin başındaki işaretçi güncellenir. Kaynak PDF'ler
   `references/`'e gider; `cfd/source/` CFD kodunun açtığı dosyalardır, yerinde kalır.
+- **Dosya adı = tur numarası (yazar, Tur 169: *"Turlarda tur numarası ile içerdeki numara tutmuyor"*).** Tur 169'dan itibaren tur metni
+  `cfd/round-NNN.md`, NNN içerdeki *Round NNN*. Eski `external-review-NNN.md` dosyaları yeniden adlandırılmadı (kayıtlar onlara atıf yapıyor);
+  eşleme `cfd/arsiv-dis-gorus/INDEX.md`'de, her yeni arşivlemede bir satır eklenir.
 - **Tur metni yalnız değişiklikleri taşır.** Tam metin okuyucuların penceresinde zaten var (son tam metin
   hangi turdaysa ona atıf yapılır, commit karmasıyla). Yeni pencere açan okuyucu için `cfd/reader-onboarding.md`.
 - **Kısaltma doğrudan yapılmaz.** Her okuyucunun önerisi öteki okuyuculara **yan yana** sunulur; görüş alınır.
