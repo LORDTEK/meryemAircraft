@@ -789,3 +789,15 @@ Birleştirici: başlık yoksa Adım 8 bölünmez (dağıtılmış seçenek için
 - **Yazarın cevapları (Tur 168):** *"Numaralama doğru, 2.1.6 için (a); tek liste getir"* → numaralama teyit edildi; 2.1.6'daki "Temelimiz nerede?" alt bölümün içi
   hakkında (makalenin sırası değil); eke gidecek korunan cümleler (S) tartışma turundan sonra **tek liste** hâlinde yazara gelecek. Tur 168 metni buna göre güncellendi
   (okuyuculara gitmeden).
+
+## Tur 168 cevapları — dört okuyucu; yazarın yeni kuralı (aynı biçim) ve yeni sorusu (birleştirme)
+
+- Dört cevap geldi (Grok ayrıca). Hemfikir: 1.2, 1.3, 1.4, 2.1.6, 2.2.4, 3.4, 4.4–4.8, 5.2, 6.1.4, 6.3, 6.4, 7.2 (işlem düzeyinde). Ayrışan: D1 6.1+6.2 birleşmesi
+  (ChatGPT hayır), D2 2.3'ün 100 kelimesi (quadrotor), D3 5.1'in tek cümlelik reddetmeleri (Claude C'den K'ya döndü), D4 2.1.7 eğik satır testi (korunan), D5 işaretçi.
+- **Yazar (Tur 169):** *"Şimdi herkesin görüşünü ve kendi görüşünü BİR TABLODA veya BİR ANLATIDA veya BİR LİSTEDE sun. Onlarınkini onlara verip kendinkini ayrı formatta
+  verince diğer okuyucular kendilerini baskı altında hissedebilir ki bu zorbalıktır. Senin görüşün de onlarınki ile birlikte bir anlatıda yer alacak. Sonra herkes her görüş
+  hakkında yorum yapsın. Ayrıca sor, birleştirilmesini tavsiye ettikleri bölüm veya kısım var mı diye. İnanır mısın bilmem ama Mevcut Durum, Getirilen Çözüm, Hesaplar, Sonuç
+  şeklinde 4 başlıkta bile anlatım yapılabilir diye düşünüyorum. Neyse."* → CLAUDE.md §2.3 "Aynı biçim"; Tur 169 metni bu biçimde. Dört başlık fikri **karar değil, düşünce**
+  olarak okuyuculara soruldu; Claude'un görüşü bir sonraki turda onlarınkiyle yan yana.
+- **Yazarın sorusu (bana):** radikal kısaltma aşamasında okuyuculara yeni pencere mi? — cevabım yazara (Tur 169 raporu).
+- **Süreç notu:** yazar "önce ben bakacağım" demişken metni hazırlamaya başlamıştım; durdurdu. Kural: yazar "önce bana" dediğinde metin, yazarın onayından sonra.

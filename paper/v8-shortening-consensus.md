@@ -761,3 +761,10 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | İçeri işaret denetimi ek bölümlerini kapsar | ✓ | ✓ | ✓ | ✓ | ✓ | **kabul** (CLAUDE.md §3.0) |
 | Sıradaki adaylar (Grok N1; DeepSeek C-1…C-7; Qwen 2; ChatGPT yöntem) | — | — | — | — | doğruladı | **yazara (Tur 168)** |
 | Yazarın alt bölüm notları (1.2 … 7.2; 6.1 + 6.2 birleşmesi) | ? | ? | ? | ? | görüş yazdı (Tur 168 §3) | **Tur 168: inceleme turu**; Tur 169 tartışma |
+| Yazarın notları — işlem düzeyinde hemfikir olunanlar (Tur 169 §1) | ✓ | ✓ | ✓ | ✓ | ✓ | **teyide (Tur 169)** |
+| D1 6.1 + 6.2 birleşmesi | evet | hayır (düz birleşme) | evet | evet | evet | **Tur 169 tartışma** |
+| D2 2.3: quadrotor çıksın | evet (~40/~70) | hayır | evet | hayır | evet | **Tur 169 tartışma**; 100'ün kalanı yazar listesi |
+| D3 5.1 tek cümlelik reddetmeler | C (ikisi) | C | K | K | K (değişti) | **Tur 169 tartışma** |
+| D4 2.1.7 eğik satır testi (korunan) | K | K | S | S | K | **Tur 169 tartışma** |
+| D5 "One of these transfers has direct experimental support (Supplement S2)." | ? | ? | evet | evet | evet | **Tur 169 oyu** |
+| Yazarın sorusu: birleştirme; dört başlık düşüncesi | ? | ? | ? | ? | (sonraki tur) | **Tur 169** |

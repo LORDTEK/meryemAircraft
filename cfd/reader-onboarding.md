@@ -214,15 +214,17 @@ The body is about **26 000 words**, and the journal's working target is **about 
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 168.**
+**Round 169.**
 
 | Block | State |
 |---|---|
-| Stages (the author, Round 129) | present stage: **compression by finding**; sentence-level cutting exhausted (Round 167) |
+| Stages (the author, Round 129) | present stage: **compression by finding**, now on the author's subsection notes (radical shortening) |
 | Structure | 1 · 2.1–2.3 · 3 · 4 · 5.1–5.2 · **6** calculations (6.1–6.4) · **7** What does not close · **8** Four axes (the conclusion) |
-| Closed (Round 168) | 6.4 pointer, C3′, 2.3 (1 095), S4 block; R-c applied (*"The check establishes"*); inward-pointer re-read covers supplement sections |
-| **Open (Round 168)** | **The author's subsection notes** (1.2–1.4, 2.1.6, 2.2.4, 2.3 −100, 3.4, 4.4–4.8, 5.1, 5.2.2–5.2.8, 6.1.2–6.1.4, 6.2.1–6.2.2, 6.1 + 6.2 merge, 6.3, 6.4, 7.2): round 1 of 2 — each reader examines and proposes operations (K / S / C / M for protected sentences); round 2 — discussion; a common decision lets us proceed |
-| Body | 17 734 words of prose (tables excluded); ≈ 18 470 with tables |
+| Format (the author, Round 169) | every view, Claude's included, in **one** table / narrative / list; Claude's view is one column among five |
+| Agreed (Round 168 replies) | operations on 1.2, 1.3, 1.4, 2.1.6, 2.2.4, 3.4, 4.4–4.8, 5.2, 6.1.4, 6.3, 6.4, 7.2 — for confirmation |
+| **Open (Round 169)** | D1 merge 6.1 + 6.2 (4 yes, ChatGPT no) · D2 which 100 words of 2.3 (quadrotor out: Grok, DeepSeek, Claude; keep: ChatGPT, Qwen) · D3 5.1's one-sentence refusals (K: DeepSeek, Qwen, Claude; C: Grok, ChatGPT) · D4 2.1.7 tilting-row test (protected; K: Grok, ChatGPT, Claude) · D5 pointer for the retraction example · the author's question: what to merge, and the four-heading thought (Current state · Proposed solution · Calculations · Conclusion) |
+| Protected sentences | S moves go to the author as **one list** after this round |
+| Body | 17 734 words of prose (tables excluded) |
 | Contribution | Sections 1, 5.1 and 8 name one contribution, the architecture |
 | Tip pairs in cruise (the author's decision) | uncommanded state: free-wheeling at zero shaft torque (5.2); shaft power of commanded departures not computed |
 
