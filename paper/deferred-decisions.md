@@ -786,3 +786,6 @@ Birleştirici: başlık yoksa Adım 8 bölünmez (dağıtılmış seçenek için
   (b) makalenin sırası (çerçeve 4 100 kelime, uçak Bölüm 3'te, mimari 5'te) mı?
 - **Kısıt (yazara açıkça):** notlar ~11 900 kelimeyi ve 183 korunan cümlenin ~126'sını kapsıyor. Korunan cümleler aynen kalır ya da yalnız yazar kararıyla sonucuyla
   birlikte eke gider (kural iii); yeniden yazım işlemlerimizde yok. Claude'un kaba tahmini: bütün notlar tutarsa ~−4 400 → ~13 300 düzyazı, çoğu kural (iii) ile.
+- **Yazarın cevapları (Tur 168):** *"Numaralama doğru, 2.1.6 için (a); tek liste getir"* → numaralama teyit edildi; 2.1.6'daki "Temelimiz nerede?" alt bölümün içi
+  hakkında (makalenin sırası değil); eke gidecek korunan cümleler (S) tartışma turundan sonra **tek liste** hâlinde yazara gelecek. Tur 168 metni buna göre güncellendi
+  (okuyuculara gitmeden).

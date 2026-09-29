@@ -2,7 +2,7 @@
 
 > **This is a task. Please answer it now, and begin with your name alone on the first line.**
 >
-> Commit **`8d61035`**, branch `claude/ecstatic-cori-6w30at` (for verification only). **The whole body is quoted at the end of
+> Commit **`@@COMMIT@@`**, branch `claude/ecstatic-cori-6w30at` (for verification only). **The whole body is quoted at the end of
 > this text (Appendix), with every subsection labelled by number, word count and number of protected sentences.**
 
 ---
@@ -25,8 +25,7 @@
 ## 1. The author's notes (my translation)
 
 The author numbered the subsections in the order they appear. Where a section opens with text before its first subheading, that text counts
-as .1 (so 5.2.6 is *"What meets the ground"*). **The labels in the Appendix follow that numbering.** For two notes the mapping is my reading, and I
-have asked the author to confirm: **2.1.6** = *"The charges are coupled"* and **7.2** = *"First, the known obstacle: the energy store"*.
+as .1 (so 5.2.6 is *"What meets the ground"*). **The labels in the Appendix follow that numbering, and the author has confirmed it**: **2.1.6** = *"The charges are coupled"* and **7.2** = *"First, the known obstacle: the energy store"*.
 
 | # | Subsection | Words | Protected | The author's note |
 |---|---|---:|---:|---|
@@ -89,6 +88,8 @@ about 126 protected sentences. So for each note, please mark each protected sent
 
 **Rewording a protected sentence is not one of our operations.** If you think one should be reworded, say so as a question to the author.
 
+**The author has asked for all S moves to come as a single list**, after the discussion round. So please mark them; the author decides them together.
+
 ---
 
 ## 3. My own reading of each note (to be criticised with the rest)
@@ -112,13 +113,7 @@ sentence with year and what it does. The quotations would go to S1, except the o
 
 **Estimate: 667 → about 420.**
 
-**2.1.6 — the author's question, *"Where is our foundation?"*** I read it two ways, and I ask the author which:
-- **(a) Inside 2.1.6.** After the principle and the table, the subsection spends most of its words on other architectures' transfers: the
-  tilting row, the retraction example. My proposal is that the retraction example and its protected speed-gain qualifier go to S2 **together**
-  (S, rule (iii)). That keeps the brake and removes about 90 words. The table and the two principle paragraphs stay.
-- **(b) The order of the paper.** The reader meets about 4 100 words of framework (Section 2) before the aircraft appears (Section 3), and the
-  architecture itself only in Section 5. That order was chosen deliberately: *"the standard is not taken from the thing it will be used to
-  measure"*. The author's question may be about exactly that order. **If so, it is a structural question and it is the author's.**
+**2.1.6 — the author's question, *"Where is our foundation?"*** I offered the author two readings: (a) inside the subsection, or (b) the order of the paper. **The author answered: (a).** Read that way: after the principle and the table, 2.1.6 spends most of its words on other architectures' transfers, the tilting row and the retraction example, rather than on the principle itself. My proposal is that the retraction example and its protected speed-gain qualifier go to S2 **together** (S, rule (iii)). That keeps the brake and removes about 90 words. The table and the two principle paragraphs stay.
 
 **2.2.4.** The six permitted costs become six one-sentence items, with the elaboration in S3. The six protected sentences are the line
 *"zero of the three charges … not an architecture that costs nothing"* and the heads of the permitted costs (the store, the electrical path,
@@ -195,7 +190,7 @@ re-closure sentence is already one sentence.
 |---|---|
 | a | **For each note in §1:** what you would do, with an estimate. For every protected sentence you touch: K / S / C / M (§2). |
 | b | **6.1 + 6.2: merge or not?** If merge, how is the merged section ordered? |
-| c | **2.1.6: how do you read *"Where is our foundation?"*** — (a), (b), or something else? |
+| c | **2.1.6:** the author means it inside the subsection (answer (a)). What would you keep as *the foundation*, and what goes? |
 | d | **2.3:** which 100 words? Is the quadrotor move compatible with the single-home rule? |
 | e | Criticise my §3. Where do I cut too much, where too little? |
 | f | Anything the author's notes miss that belongs with them (a copy elsewhere, a pointer that would break) |
