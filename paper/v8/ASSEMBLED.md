@@ -48,7 +48,7 @@ thrust vectors are all parallel to the body axis produce no rolling moment **by 
 settings**. The reaction-torque channel that other coaxial tail-sitters use about that axis is a choice this
 configuration declines rather than a limit it inherits (Sections 5.1 and 5.2).
 
-What has changed is electric drive on each rotor, sensor-based attitude reference and onboard computation, and **the
+What has changed is electric drive on each individual rotor, sensor-based attitude reference, and enough onboard computation that stability need not come from the airframe alone, and **the
 uncrewed tail-sitter literature has been exploiting exactly those three for over a decade**; the gap below is not a historical one.
 
 ### What is already occupied, stated before the gap
@@ -445,7 +445,7 @@ variable-pitch hub would recover that difference is not computed; Section 6.2 re
 
 ### Five qualifications: three run against this configuration, one has no computed direction, and one bounds what the comparison can be called
 
-**Scale.** The compared vehicles are larger than both designs here, of order 50 kg and 1 000 kg (Supplement S6), and **Reynolds number
+**Scale.** The compared vehicles are larger than both designs studied here, which are of order 50 kg and 1 000 kg (Supplement S6), and **Reynolds number
 favours the larger aircraft**, so the smaller design is at a disadvantage in this comparison rather than an advantage.
 
 **The quadrotor is a good quadrotor**: both quadrotors have unusually low disc loadings. **Nothing here is compared against a poor
