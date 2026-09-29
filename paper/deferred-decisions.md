@@ -914,3 +914,17 @@ bir şey var sonuçta."* → **Uygulandı (Tur 172):** 14 881 → 14 180; 164 ko
 - **Sıradaki yer (öneriler ayrışık):** Grok 5.1 (80–150); ChatGPT Bölüm 5, 5.1 + 5.2 (150–400); DeepSeek 1.4 (50–70), ikinci 7.2; Qwen 2.1.3 ve 2.1.5 türetmeleri
   (100–150). → **YAZARA**; Claude: Bölüm 2 (yazarın *"çerçeve mimariden aşırı derece fazla olamaz"* gözlemi).
 - ChatGPT bu tur Türkçe cevap verdi.
+
+## E16 — Bölüm 2 · **KARAR (Tur 172 sonrası): "Bölüm 2 olsun" · "İkisi de onaylı, uygula ve Tur 173'ü hazırla"**
+
+a (2.1.7 tilt satırı paragrafı + "no worse" öncülleri → S2; D4'ü yeniden açar) ve b (C, "A framework that could absorb any cost …") uygulandı. Katman 1 + R4–R6.
+14 200 → 13 860. Bölüm 2 ≈ 3 250 / mimari ≈ 2 260. Tur 173 okuyuculara.
+
+## Yazarın ertelediği iki iş (Tur 172 sonrası) — **acele yok, şimdi değil**
+
+*"Sonralardan … korumalı cümlelerin hangilerinin aslında o kadar da korumalı olmasına gerek olmadığı. Orada bir parça-bütün-parça yaparız. Şimdi değil. Gelecekte bir vakit de
+… tablo veya şekil konusunda kısaltacak veya birleşecek ne yapılabilir ona da bakarız. Bu iki şeyin acelesi yok. Biz şimdi yaptığımız işi sağlam yapalım da, bu çok önemli.
+Aman dikkatli ve kaliteli ilerleyelim."*
+1. **Korunan cümlelerin korunma durumunu gözden geçirme** — parça–bütün–parça okumayla.
+2. **Tablo ve şekiller** — kısaltma ya da birleştirme.
+Ayrıca daha önce ertelenen: **2.3'ün çerçeve/mimari oranındaki payı** (bölüm birleştirme aşamasında), **Bölüm 1'e dönüş**, **bölüm birleştirme / dört başlık denemesi**.

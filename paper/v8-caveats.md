@@ -21,7 +21,6 @@ boşluğa duyarsız. `G` = Grok, `D` = DeepSeek, `C` = ChatGPT, `Q` = Qwen, `K` 
 | 1 | Using it is a choice, and so is declining it. | D |
 | 2 | The accounting claims transfer. It does not claim that every architecture is equally good. | G |
 | 2 | A remedy whose cost falls outside the three charges does not refute the accounting…but it is not thereby exempt from being counted. | G |
-| 2 | A framework that could absorb any cost by declaring it out-of-scope would be unfalsifiable. | D |
 | 2 | The statement is deliberately confined to architectures with a dedicated lift subsystem. | D |
 | 2 | they are not assumed to be independent physical causes | D |
 | 3 | It means zero of the three charges as Section 2 defines them…It does not mean an architecture that costs nothing | G |
@@ -141,7 +140,6 @@ boşluğa duyarsız. `G` = Grok, `D` = DeepSeek, `C` = ChatGPT, `Q` = Qwen, `K` 
 | 4 | Everything that follows is measured with it rather than added to it. | G+C+D+Q+K |
 | 14 | The escape from Bill 3 is real in the sense Section 3 defined it, and its price depends on a component whose required performance has not been demonstrated. | G+C+D+Q+K |
 | 2 | Whether an architecture can decline the mismatch itself, rather than redistribute its consequences, is a different question | G+C+D+Q+K |
-| 2 | If that architecture already sizes its continuous plant by the hover peak, tilting leaves Bill 3 no worse…what keeps the row from refuting the accounting is the part of its cost that falls outside the three — which is why that part is listed | G+C+D+Q+K |
 
 ## Ruh cümleleri (Tur 61, Claude'un önerisi)
 
@@ -217,6 +215,8 @@ kaybolmasına (CLAUDE.md §0.8). Aynı denetimle sınanır.
 | S12 | That near-constancy is a property of the constant-disc-loading rule, not a finding about Bill 3. | E15 |
 | S12 | Much above 1 000 kg a single nose pair can no longer hold | E15 |
 | S12 | A larger aircraft of this type turns more slowly, and must. | E15 |
+| S2 | If that architecture already sizes its continuous plant by the hover peak, tilting leaves Bill 3 no worse…what keeps the row from refuting the accounting is the part of its cost that falls outside the three — which is why that part is listed | E16 |
+| S2 | A framework that could absorb any cost by declaring it out-of-scope would be unfalsifiable. | E16 |
 
 *Tanım kaydı (Tur 111; Qwen P1, dört okuyucu + Claude): son beş Q+G+C+D+K satırı çerçevenin tanım cümleleri; kök (satır "is the origin of all three charges below") ve koşul zaten korunuyordu.*
 

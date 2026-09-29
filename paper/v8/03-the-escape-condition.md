@@ -24,7 +24,7 @@ This section asks what an architecture would have to do in order not to incur th
 > thrust, and if the difference between the hover peak and the cruise demand is supplied from
 > a store rather than from permanently installed continuous power.**
 
-Four parts: **same hardware, both duties, one orientation, hover peak from a store.** The first three come from the first three departures; the fourth comes from the fourth.
+Four parts: **same hardware, both duties, one orientation, hover peak from a store.**
 
 Two things in that sentence are choices rather than derivations. The inversion requires only *one orientation relative to the airframe*; **how** an architecture keeps that while changing flight regime — by rotating the whole body, or otherwise — is not in the inversion, and is treated as exposition rather than as part of the definition. And the fourth departure's exception lets the peak come from **any** source other than the continuously installed power; a store is the narrower reading used here, because it is what the configuration examined later uses and because a narrower condition is easier to fail.
 
@@ -66,6 +66,7 @@ The condition is a statement about what an architecture would have to be. **It i
 |---|---|
 | **Tur 170 — yazarın notları üzerine kısaltma uygulandı** (Tur 168–169: işlemlerde dört okuyucu + Claude; korunan cümle taşımaları yazar kararı E13). Değişen her paragrafın eski hâli ekin bu adıma ait bölümünde aynen (*"… before the Round 170 shortening"*). Yeni (R) cümleler Tur 170 §2'de okuyucu vetosuna açık; sonuç teyide | `paper/build/v8_round170_texts.py`, `v8_round170_apply.py` |
 | **Tur 172 — hesap geçişi (yazar E14, E15; katman 1 okuyucu teyidine)** 2.2.5 kısaldı (yazarın notu): yol haritası cümlesi ve 2.1 tekrarı çıktı; korunan üç cümle yerinde. Eski paragraflar ekte aynen | — |
+| **Tur 173 — 2.2.3 sayım tekrarı ("The first three come from…") kesildi.** Eski paragraflar ekte aynen; okuyucu teyidine | — |
 | **Tur 148 — W-7 (a′) uygulandı** (dört okuyucu + Claude): *"The tip frames are the case"* → *"The tip frames of the configuration described in Section 5 are the case"* (benim ilk işaretçim 5.2'ydi, DeepSeek düzeltti). W-6 ikinci yan cümle değişmedi (oybirliği); W-6, W-10 kapandı | Tur 147 §2 |
 | **Tur 147 — W-6 ve W-10 uygulandı** (bütün okuma; dört okuyucu + Claude): W-6 *"Attitude devices produce thrust in cruise, but they produce…"* → *"Attitude devices produce…"* (kumandasız seyir durumu serbest dönme; ikinci yan cümle ayrışık); W-10 ilk cümle silindi, *"that departure"* → *"the third departure"*, *"the first departure"* → *"the first"*. W-7 (uç çerçeveleri, işaretçi Bölüm 3'e mi, taşıma mı) geri soruldu | Tur 146 §5; Tur 147 §1 |
 | **Tur 117 — S-44 onarıldı** (Tur 116; dört okuyucu + Claude): "would win by construction rather than by performance" → "by definition"; "by construction" yalnız Adım 9 madde 8'in anlamında (boyutlandırma gereği) | Tur 116 metni §3 |

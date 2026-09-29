@@ -792,3 +792,6 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | 2.3 pound sayıları eke | **veto** | ✓ | ✓ | ✓ | Grok'la | **geri kondu**; Tur 173'te üçüne soruldu |
 | j: %1 sonucu da S12'ye (P71 tamamlama) | weak | ✓ | onarım istedi | ✓ | uyguladı | **Tur 173 teyidi** |
 | Sıradaki yer | 5.1 | Bölüm 5 | 1.4 | 2.1 türetmeleri | Bölüm 2 | **yazara** |
+| Tur 173 Bölüm 2 (katman 1 + R4–R6) | ? | ? | ? | ? | uyguladı | **Tur 173 teyit/veto** |
+| E16 a, b (yazar kararı) | — | — | — | — | — | **yazar**; alındı okuyuculara |
+| 2.3 pound sayıları | gövde (veto) | S4 | S4 | S4 | gövde | **gövdede**; üçüne Grok'un gerekçesi soruldu |

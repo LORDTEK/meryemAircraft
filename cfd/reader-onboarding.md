@@ -168,7 +168,7 @@ decision, a four-heading telling: *Current state · Proposed solution · Calcula
 **The stage.** The paper went through deletion (Rounds 61–72), recomposition (73–98), recomposition into result sentences (101–151,
 25 797 → 18 634 words) and compression by finding (from Round 153). **Sentence-level cutting is exhausted** (Round 167). The author
 then read the whole paper and wrote notes on about thirty subsections (Round 168): *narrow this*, *merge this*, *2.3 at least 100 words
-shorter*, and *perhaps 6.1 and 6.2 merge*. **That pass closed in Round 171; a calculation pass followed in Round 172** (§6). The body is **14 180 words of prose** (tables excluded).
+shorter*, and *perhaps 6.1 and 6.2 merge*. **That pass closed in Round 171; a calculation pass followed in Round 172 and a framework pass in Round 173** (§6). The body is **13 860 words of prose** (tables excluded).
 
 **Length.** The author has set word targets aside (Round 161). **Do not argue from 12 000, 8 500 or 7 500;** those were earlier
 targets.
@@ -180,7 +180,7 @@ closes.** Readers answer one another, not only Claude.
 **The rules that govern every proposal:**
 
 1. **Protected sentences.** *"A sentence is protected when removing it silently would change a claim, a limit or a derivation that
-   later text depends on …"* There are **164 in the body and 25 in the supplement**, in the register `paper/v8-caveats.md`. A protected
+   later text depends on …"* There are **162 in the body and 27 in the supplement**, in the register `paper/v8-caveats.md`. A protected
    sentence is kept **verbatim**. **It cannot be reworded.** If you think one should be, ask the author.
 2. **Rule (iii) (the author, Round 104).** *"A protected sentence may move to the supplement only together with the result it
    qualifies, and only by the author's decision."* The author decides these **as one list** (Round 168).
@@ -210,18 +210,18 @@ closes.** Readers answer one another, not only Claude.
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 172.** All four readers work in new conversations since Round 169; this was done **for equality** (Grok's conversation did not need
+**Round 173.** All four readers work in new conversations since Round 169; this was done **for equality** (Grok's conversation did not need
 renewing). **The author (Round 171):** *"You readers, work together. Whenever it comes to my turn, don't forget to tell me."* Each round
 text ends by naming what goes to the author.
 
 | Block | State |
 |---|---|
-| Closed | the pass on the author's subsection notes (Rounds 168–171; 17 734 → 14 914) |
-| Author's decisions | E13 (Round 170); **E14** the copy list, C2 and C9b cut; **next pass (a)**: one round, calculation working to the supplement; **E15** eleven protected sentences in Section 6 cut as copies (C) or moved with their result (S), items a–k |
-| Author's notes applied | 2.2.5 shortened; 2.3 simplified *"to the parts that concern us"* |
-| **Open (Round 172)** | confirm or veto each changed paragraph; R1–R3; the 2.3 weight-breakdown figures; the receipt of a–k; your proposal for the next place in the current structure (the author wants the current structure worked on **before** sections merge) |
-| Protected sentences | 164 in the body, 25 in the supplement |
-| Body | 14 180 words of prose (tables excluded) |
+| Closed | the pass on the author's subsection notes (Rounds 168–171); the Section 6 calculation pass (Round 172; E14, E15) |
+| Author's decisions | E13–E15 as above; **next place: Section 2** (*"the framework cannot be excessively larger than the architecture"*); **E16** a (2.1.7 tilting-row paragraph → S2, reopens D4) and b (C) |
+| **Parked by the author, not now** | which protected sentences need not be protected (a part–whole–part later); tables and figures, what can be shortened or merged. *"Let us do what we are doing now soundly."* |
+| **Open (Round 173)** | confirm or veto Section 2's changed paragraphs; R4–R6; receipt of E16; the 2.3 pound figures (Grok's veto, restored; the other three asked to answer) |
+| Protected sentences | 162 in the body, 27 in the supplement |
+| Body | 13 860 words of prose (tables excluded) |
 
 **Tools the round texts mention:**
 
