@@ -1277,3 +1277,11 @@ NeuralFoil makale künyesi doğrulanmadı. Okuyuculardan künye alanları (bağl
 - **[15] Mathur ayrışık:** d (Grok, Qwen, Claude), c (ChatGPT), b (DeepSeek). C2 hâlâ tek okuyuculu. Tur 197'de okuyucular birbirine cevap verir; yakınsama olmazsa yazara.
 - **Sıradaki gönderim maddesi (Tur 197'de açıldı):** Teşekkür bölümündeki YZ kullanım beyanı. AIAA şablonu: *"If AI is used in the writing process or figure construction as permitted, authors must include a brief description of AI use in the Acknowledgments section of the manuscript."*
   *"as permitted"*in işaret ettiği AIAA politikası depoda yok → okuyucular bulur, birebir alıntılar. v7 beyanı (`paper/00-front-matter.md`) v8'de olmayan bir *"Section 2.14"*e atıf yapıyor. Beyanın olgusu yazarındır.
+
+## Tur 197 cevapları — Mathur kapandı; YZ beyanı yazara yaklaşıyor
+
+- **[15] Mathur (beşimiz, d):** arXiv v1 kendi başlığıyla; alıntı değişmez. Dergiye geçiş ancak üç okuyucu aynı dergi cümlesini aktarırsa.
+- **Claude'un bulgusu:** 2.1'in *"drag in the hybrid regime exceeding either pure mode"*i kaynağın s. 22'deki *"generally"*sini düşürüyor → Tur 198 B'de tek sözcüklük onarım oylamada.
+- **AIAA YZ politikası** (Etik Standartlar §3; Grok, ChatGPT, Qwen aynı cümleleri aktardı): yazımda YZ *"should be used primarily to improve readability, grammar, and language"*; ScholarOne beyanı + Teşekkür'de kısa tarif;
+  *"not adequately described"* ret gerekçesi. **v8'in kullanımı (metnin YZ tarafından kurulması) bu ifadenin ötesinde → yazara (Tur 198 F).** Olgular (2–5) ve seçenekler (a) tam beyanla gönder, (b) önce editörlüğe sor.
+  Marka adı kuralı ile *"adequately described"* gerilimi de yazarın.

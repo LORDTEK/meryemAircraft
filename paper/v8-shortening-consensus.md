@@ -897,3 +897,5 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Tur 195: hangi sürüme atıf ([11], [15]) | (a) dergi + arXiv alıntısı, kilit notu kayıtta | (c) dergi sözcükleri / yoksa arXiv | (b) Mathur dergi + gövdede "preprint"; Vegh SciTech | (a) | (d) metni açılan sürüm | **ayrışık → Tur 196** |
 | Tur 196: [11] Vegh hangi sürüm | d | d | b (= SciTech) | d | d | **kapandı: SciTech 2025-1436 + düzeltme** |
 | Tur 196: [15] Mathur hangi sürüm | d | c | b | d | d | **ayrışık → Tur 197 (birbirine cevap); olmazsa yazara** |
+| Tur 197: [15] Mathur hangi sürüm | d | d (şimdilik) | d (b'den) | d | d | **kapandı: arXiv v1 kendi başlığıyla** |
+| Tur 197: v7 YZ beyanı cümle 3 | kısmen; ikincisi yazarın | kurulmadı | tutar | tutar | kurulmadı → yazar | **ayrışık; olgu yazarın** |

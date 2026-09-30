@@ -294,3 +294,9 @@ alıntı için tanık ile yapılandırmamız arasındaki yorumu etkileyen fark k
 PDF s. 23 (sonuç tartışması, bulgular bölümü): *"The simulation model used in [12], based on ideal case assumptions of negligible flow interaction between rotors and the vehicle structure, always predicts
 higher lift and lower drag than were experimentally observed."* Kaynak katmanı: benzetim modeli kaynağın kendi [12]'si; gövde "a simulation assuming negligible rotor–structure
 interaction" diyor — sadık. Tur 90'dan beri "attributed but unverified"ti → **verified primary (preprint)**. Dergi sürümü (doi 10.2514/1.C036916) gönderimden önce buna karşı.
+**Tur 197 (beşimiz, d):** kaynakçada **arXiv v1** kendi başlığıyla (*"Wind Tunnel Testing and Aerodynamic Characterization of a QuadPlane Uncrewed Aircraft System"*); dergi sürümü atıf almaz — metni dördümüzce okunmadı.
+Tek okuyucu görüntüsü (ChatGPT, Tur 196, ResearchGate 368702127, "Engineering Notes"): *"… predicts higher lift and significantly lower drag than were experimentally observed"* — *"always"* yok; çapraz denetlenmedi (Grok 403, DeepSeek, Qwen açamadı; ChatGPT Tur 197'de yeniden açamadı).
+Cümlenin ilk yarısı (*"drag in the hybrid regime exceeding either pure mode through adverse flow interaction"*), kaynağın kendi paragrafı ve sonucu okundu (Tur 94 kuralı):
+s. 22, seyir hızları (≥ 11 m/s): *"the vehicle has the least drag in Plane mode at all αV, as expected. Drag in Quadrotor mode is **generally** less than drag in Hybrid mode due to adverse flow interactions in Hybrid mode."*
+s. 23, 5 m/s (geçiş): *"Drag in Quad mode is almost the same as in Plane mode for low airspeed and low αV, while Hybrid mode has the highest drag."* Sonuç (s. 35): *"The QuadPlane exhibits high drag and low dynamic thrust due to flow interactions."*
+→ **niteler:** gövde s. 22'nin *"generally"*sini düşürüyor; yüklem kaynağınkinden biraz geniş. Tur 198'de okuyuculara onarım adayı olarak gitti (*"generally exceeding"*).

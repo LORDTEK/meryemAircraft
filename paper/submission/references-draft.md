@@ -23,7 +23,7 @@
 | 12 | Liebeck, R. H., "Design of the Blended Wing Body Subsonic Transport," *Journal of Aircraft*, Vol. 41, No. 1, 2004, pp. 10–25. https://doi.org/10.2514/1.9084 | primary | `Liebeck-2004_JAircraft_…pdf` |
 | 13 | Merical, K., Beechner, T., and Yelvington, P., "Hybrid-Electric, Heavy-Fuel Propulsion System for Small Unmanned Aircraft," *SAE International Journal of Aerospace*, Vol. 7, No. 1, 2014, pp. 126–134. https://doi.org/10.4271/2014-01-2222 | **abstract only** (full reference: Grok, ChatGPT, Qwen, from SAE's page; DeepSeek's *2014-01-2101* not taken) | — |
 | 14 | Bacchini, A., "Electric VTOL Preliminary Design and Wind Tunnel Tests," Ph.D. Dissertation, Dept. of Mechanical and Aerospace Engineering, Politecnico di Torino, Turin, Italy, 2020. | primary | `conv_doctoral_dissertation_alessandro_bacchini-…pdf` |
-| 15 | Mathur, A., and Atkins, E., "Experimental Aerodynamic Analysis of a QuadPlane Unmanned Aircraft System," *Journal of Aircraft*, Vol. 60, No. [4 or 5 ?], 2023, pp. 1323–1328. https://doi.org/10.2514/1.C036916 | **arXiv v1 in repo, quote verified there** (2026-09-30). The journal version (Grok, ChatGPT, Qwen) is to be cited, once its PDF confirms the quoted words | `Mathur-Atkins-2023_arXiv-2301.12316v1_…pdf` |
+| 15 | Mathur, A., and Atkins, E., "Wind Tunnel Testing and Aerodynamic Characterization of a QuadPlane Uncrewed Aircraft System," arXiv:2301.12316v1, Jan. 2023. https://doi.org/10.48550/arXiv.2301.12316 [DOI and version history: readers to confirm, Round 198] | **primary** (arXiv v1 in repo; quotation verified, p. 23). Decision d, Round 197 (all five). The *Journal of Aircraft* version (Vol. 60, No. 4, 2023, pp. 1323–1328, doi 10.2514/1.C036916) is **not cited**: its text is unread by four of five, and one reader reports different wording | `Mathur-Atkins-2023_arXiv-2301.12316v1_…pdf` |
 | 16 | Johnson, W., and Silva, C., "NASA Concept Vehicles and the Engineering of Advanced Air Mobility Aircraft," *The Aeronautical Journal*, Vol. 126, No. 1295, 2022, pp. 59–91. https://doi.org/10.1017/aer.2021.92 | primary | `1521_Johnson & Silva_122721.pdf` |
 | 17 | Nelms, W. P., and Anderson, S. B., "V/STOL Concepts in the United States: Past, Present, and Future," NASA TM-85938, April 1984. | primary | `19840014464.pdf` |
 | 18 | Bacchini, A., and Cestino, E., "Electric VTOL Configurations Comparison," *Aerospace*, Vol. 6, No. 3, 2019, Paper 26. https://doi.org/10.3390/aerospace6030026 | primary | `Bacchini-Cestino-2019_…pdf` |
@@ -140,3 +140,12 @@
 - **[15] Mathur: split.** Grok, Qwen, Claude: d (arXiv v1). ChatGPT: c (journal wording and journal citation). DeepSeek: b (journal citation, quotation marked as from the preprint).
   - C2, the journal wording, is still single-reader. Grok, DeepSeek and Qwen could not open ResearchGate 368702127.
   - C1: no conflicting value remains. DeepSeek withdrew No. 5 and pp. 1612–1623. Issue 4 comes from Grok (AIAA page), ChatGPT and Qwen; pp. 1323–1328 from ChatGPT, Qwen and DeepSeek. Grok has not seen the pages.
+
+## Round 197 answers (2026-09-30)
+
+- **[15] Mathur: closed, all five, position d.** DeepSeek moved from b to d, and ChatGPT from c to d "for now". Cite arXiv v1 under its own title, with the quotation unchanged.
+  - Switch to the journal version (position c) only if at least three readers quote the same journal sentence from a page they opened.
+  - ChatGPT's single-reader reading of the journal sentence stays in the evidence record as a single-reader reading. ChatGPT's retry this round failed.
+- **Journal fields of [15], for the record:** issue 4 from Grok (AIAA page), ChatGPT, Qwen and DeepSeek; pp. 1323–1328 from ChatGPT, Qwen and DeepSeek (DeepSeek from the reference list of doi 10.2514/1.C038339 on ARC). Grok has not seen the pages. Not used in the list.
+- **[9] pages:** DeepSeek has not answered in two rounds. Qwen reconfirmed.
+
