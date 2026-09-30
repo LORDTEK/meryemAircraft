@@ -872,3 +872,7 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | D1 (4.1) | K | – | R-1 | – | R-2 | **Tur 189 oy** |
 | D2 (1.3, korunan) | – | – | yazara (c) | – | yazara (b) | **yazara (E24)** |
 | Son okuma parça 2 (Bölüm 5–8) | ? | ? | ? | ? | (Tur 190'da) | **Tur 189** |
+| D1 (4.1) | R-2 | R-2 | R-2 | R-2 | R-2 | **oybirliği; Tur 191'de uygulanır** |
+| D2 (1.3, korunan) | (b) | (b) | (b) | (b) | (b) | **yazar (b) — E24** |
+| D3 (5.2 yunuslama kolu, DeepSeek) | – | – | kusur | – | kusur değil | **Tur 190** |
+| Son okuma, bütün (işaretçiler, geçişler, §0, sayılar) | ? | ? | ? | ? | satır 0 R4 adayı | **Tur 190** |

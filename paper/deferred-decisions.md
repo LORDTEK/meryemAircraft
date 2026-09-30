@@ -1161,3 +1161,15 @@ mercekler: Grok §0 · ChatGPT işaretçi/zamir · DeepSeek sayı · Qwen okunur
 - **D2** (DeepSeek + Claude): 1.3 **korunan** *"they are the only one of those documented obstacles"* — sayı uyumu. **Yazara (E24):** (a) kalsın, (b) *"the only ones"* (Claude;
   iş yükünü korur), (c) DeepSeek'in *"spatial orientation is the only one"* (iş yükünü düşürür — yüklem değişir).
 - Tur 190 notu: 2.2 *"it is priced where the transition is analysed"* — numarasız işaretçi, 6.1'e alındı.
+
+## E24 — 1.3 korunan cümle (D2) · **KARAR (Tur 189 sırasında): "D2 için (b) onaylı"** → *"they are the only ones of those documented obstacles"*; Tur 191'de uygulanacak.
+
+## Tur 189 cevapları — son okuma, parça 2 (Bölüm 5–8)
+
+- **D1:** beşimiz R-2 (Grok K'dan döndü; DeepSeek R-1'i geri çekti). **D2:** dördü de (b) önerdi; yazar zaten (b) dedi.
+- Bölüm 5–8: Grok, ChatGPT, Qwen kusur yok. **DeepSeek D3:** 5.2 *"acts at 0.71 m in pitch … 2.43 times the pitch arm"* — kol 1,42 olmalı, oran 1,22 dedi. **Claude'un denetimi:**
+  iki kol da merkezden her çifte ölçülüyor (0,71 / 1,726); M = 2ΔT·0,71 ve 2ΔT·1,726 (`aero/yaw.py`, `aero/thrust.py`); yarı mesafe ya da tam aralık, oran her iki
+  ölçüde 2,43. DeepSeek yunuslamada tam aralığı, sapmada yarı açıklığı almış. Cümle doğru → Tur 190'da DeepSeek'e ve ötekilere.
+- **Tur 190 (bütün):** 82 bölümler arası işaretçi + 1 numarasız (2.2 *"priced where the transition is analysed"* — Claude R4 adayı: 6.1 analiz eder ve sınırlar, fiyatlamaz;
+  önerilen düzeltme *"and Section 6.1 analyses the transition without pricing it"*; önceki cümle korunan, bu değil); R2: 53, 54, 55, 57, 62; geri kalanı R1. 13 geçiş,
+  §0 haritası (hiçbir sınır tek U cümlesine dayanmıyor), başlık sayıları ve nitelemeleri.
