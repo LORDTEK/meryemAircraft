@@ -899,3 +899,5 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Tur 196: [15] Mathur hangi sürüm | d | c | b | d | d | **ayrışık → Tur 197 (birbirine cevap); olmazsa yazara** |
 | Tur 197: [15] Mathur hangi sürüm | d | d (şimdilik) | d (b'den) | d | d | **kapandı: arXiv v1 kendi başlığıyla** |
 | Tur 197: v7 YZ beyanı cümle 3 | kısmen; ikincisi yazarın | kurulmadı | tutar | tutar | kurulmadı → yazar | **ayrışık; olgu yazarın** |
+| Tur 198: 2.1 "generally" | evet | evet | evet | evet | öneren | **uygulandı Tur 199; teyide** |
+| Tur 198: C3 nasıl ilerlenir | önce metin, sonra editörlüğe sor | (b) | tam beyanla gönder | (a) + gövde cümlesi | Grok'la | **ayrışık → yazar** |

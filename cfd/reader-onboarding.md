@@ -210,7 +210,7 @@ closes.** Readers answer one another, not only Claude.
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 198.** All four readers work in new conversations since Round 169; this was done **for equality** (Grok's conversation did not need
+**Round 199.** All four readers work in new conversations since Round 169; this was done **for equality** (Grok's conversation did not need
 renewing). **The author (Round 171):** *"You readers, work together. Whenever it comes to my turn, don't forget to tell me."* Each round
 text ends by naming what goes to the author.
 
@@ -223,7 +223,8 @@ text ends by naming what goes to the author.
 | Closed (Round 195) | E28 confirmed; [13] Merical (abstract), [6] (no DOI); E1: the generator names NeuralFoil 0.3.3 and AeroSandbox 4.2.10 at 4.7; [9] pages 6268–6278 printed in the PDF |
 | Closed (Round 196) | [11] Vegh: cite SciTech 2025-1436 with its correction notice (the journal item exists; its text is unread); [9] pages 6268–6278 |
 | Closed (Round 197) | [15] Mathur: cite arXiv v1 under its own title, the quotation unchanged (all five, position d) |
-| **Open (Round 198)** | the readers cross-check the sources (the author, Round 195, my translation: *"Don't ask me to research sources. Ask them; let them cross-check. If they all say 'correct', it is correct."*). Open: the arXiv DOI and version history for [15]; a one-word repair in 2.1 (*"generally"*, from the source's own paragraph); **the AI-use statement**: AIAA's policy (Section 3 of its ethical standards), the v7 statement read against the v8 facts, and the tension with *"primarily to improve readability, grammar, and language"*. The facts of the statement are the author's |
+| Closed (Round 198) | the reference list (26 entries, all fields cross-checked; [15] is arXiv v1, the only version); 2.1 *"generally"* applied (awaiting confirmation); the v7 AI statement read against the v8 facts (all five agree) |
+| **Open (Round 199)** | **the AI-use statement**: each reader drafts the Acknowledgments statement and the methods sentence that AIAA's policy requires for AI used in the research activity. The author's position (Round 198): the concept, the architecture and the design are the authors'; AI did tool work; no brand, model or company names; B.G. did the software; all authors read and approved. To the author: ask the journal office first, or submit directly |
 | Still to do | numbered references (original sources only); style conversion by a generator script (Roman-numeral sections, *Sec.*, numbered tables and equations, lists as 1) 2), American spelling, no bold emphasis, no dashes); acknowledgments with the AI-use statement |
 | Protected sentences | 145 in the body, 31 in the supplement; U table 14 |
 

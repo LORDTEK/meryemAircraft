@@ -1291,3 +1291,9 @@ NeuralFoil makale künyesi doğrulanmadı. Okuyuculardan künye alanları (bağl
 - Yazılım: B.G. · Bütün yazarlar okudu ve onayladı (v7 cümle 5 tutar) · Marka/model/şirket adı yok; tarif kullanım üzerinden (*"adequately described"* gerilimi kapandı).
 - Kavram, mimari, tasarım ve çözüm yaklaşımı yazarların; beyan YZ'yi fikrin üzerine koyamaz. Olgular 2–5 yine doğru beyan edilir (AIAA: beyansızlık ihlal).
 - Tur 198 metni bu cevaplarla güncellendi (C0); açık kalan tek soru yazım sürecinin *"primarily … language"* ifadesiyle ilişkisi (C3) ve beyanın taşıması gereken öğeler (C4).
+
+## Tur 198 cevapları
+
+- Kapandı (dördü + Claude): [9] 6268–6278; [15] DOI ve yalnız v1; v7 beyanının beş cümlesi; 2.1 *"generally"* uygulandı (`v8_round199_apply.py`, teyide).
+- AIAA dergi sayfası: C1a (şekil → ScholarOne), C1b (araştırma/mühendislikte YZ *"fully described in the manuscript"*), C1c (§4.2 beyansızlık ihlal) — Grok ve ChatGPT açtı; Qwen eski çıkarımdan; DeepSeek başka belge (teknik bildiri standardı).
+- **Yazara (Tur 199 H):** (1) önce editörlüğe sor (Grok, ChatGPT, Claude) mu, doğrudan tam beyanla gönder (DeepSeek, Qwen) mi; (2) kod ve şekil betiklerinde YZ ne ölçüde yardımcı araç olarak kullanıldı; (3) C1b gövde cümlesi onayı.

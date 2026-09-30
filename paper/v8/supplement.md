@@ -908,6 +908,14 @@ A VTOL aircraft must install enough power to hover, but it draws that power only
 
 ---
 
+### Section 2's paragraphs as they stood before the Round 199 repair
+
+Each paragraph below was repaired in Round 199: the source's own qualifier *generally* was restored (all four readers and Claude, Round 198 B); it is given here in full, verbatim.
+
+Wind-tunnel work on a hybrid airframe found that the difference between propellers parallel to the airflow and no propellers at all is modest, while *"the drag produced by the motors is significant."* The bill is charged mainly by the motors — hardware that cannot be feathered or aligned away, **because its cost is its presence**; the same work notes that its motors were chosen for performance rather than for low drag, and that the drag of the supporting beams is limited. Wind-tunnel characterisation of a quadplane found drag in the hybrid regime exceeding either pure mode through adverse flow interaction, and that a simulation assuming negligible rotor–structure interaction *"always predicts higher lift and lower drag than were experimentally observed."*
+
+---
+
 ## S3. The departures as a table (from Section 3)
 
 | Departure | What it costs |
