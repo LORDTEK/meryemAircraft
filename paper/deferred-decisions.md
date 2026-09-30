@@ -1111,3 +1111,13 @@ Yazara açıklama (Tur 183 sonrası): "4'ü boşver" yalnız bir kez söylenmiş
 - **Tur 185:** Bölüm 1 tam metin, 52 cümle numaralı, 10 korunan; Claude'un denetim bulguları (olgu, öneri değil): 48 ↔ 5.1 karşılıklı işaretçi; üç "yol dolu" ifadesi
   (17, 23, 42); "decade" tekrarı (22, 24); *"Rotorcraft and multirotors"* sözcük kilidi; *"more than three decades"* gönderim tarihine karşı; dört eksen Bölüm 1'de adıyla yok.
   Claude'un görüşü Tur 186'da yan yana.
+
+## Tur 185 cevapları — Bölüm 1 geçişi
+
+- **Beşimiz:** eksen önizlemesi yok (A yok); 48 ↔ 5.1 karşılıklı işaretçi yerinde; 17 ve 42 kalır; *"three decades"* gönderimde. Hiçbir öneri korunan cümleye dokunmuyor.
+- **Adaylar (Tur 186'da açık oylama):** 4 — R-a *"Rotorcraft remove …"* (Grok, DeepSeek, Qwen; sözcük kilidi), K (ChatGPT: Bölüm 8 çok rotorlu/helikopteri ayırıyor —
+  doğrulandı, tablo etiketi *"Rotorcraft: multirotors and helicopters"*), R-b *"Rotorcraft, multirotors and helicopters alike, …"* (Claude, iki kaygıyı birleştirir);
+  10 — son yan cümleyi sil (Grok; Claude evet: sıralama vaadi gibi okunuyor, 6.4 ve Bölüm 8 reddediyor); 22 — ikiye böl (DeepSeek; Claude evet); 23 — C → 24 (ChatGPT;
+  Grok, DeepSeek, Qwen, Claude K: 1.4 paralel dizisinin ilk iddia cümlesi); 45 — böl, *"It is audited …"* (DeepSeek; Claude K: denetim "not established" kapsamından
+  çıkar); 47 — *"the axis"* → *"the moment about the propeller axis"* (Claude, yeni: 1.5'te göndergesiz).
+- Claude'un Tur 185 bulgusu *"decade"* tekrarı geri çekildi (Grok: iki ayrı olgu).

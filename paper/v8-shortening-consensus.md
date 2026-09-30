@@ -857,3 +857,6 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | 4. aşama | kapansın | kapansın | kapansın | kapansın | kapansın | **KAPANDI; sonraki aşama yazarda** |
 | Kısaltma bitti; Bölüm 1 geçişi → parça-bütün-parça → gönderim | — | — | — | — | — | **yazar (E21)** |
 | Bölüm 1 geçişi: işaretler, bulgular, eksen hazırlığı | ? | ? | ? | ? | (Tur 186'da) | **Tur 185** |
+| Bölüm 1: eksen önizlemesi yok; 48↔5.1; 17, 42 K | ✓ | ✓ | ✓ | ✓ | ✓ | **oybirliği** |
+| Bölüm 1 cümle 4 | R-a | K | R-a | R-a | R-b | **Tur 186** |
+| Bölüm 1 cümle 10 / 22 / 23 / 45 / 47 | R/–/K/–/– | –/–/C/–/– | –/R/K/R/– | –/–/K/–/– | R/R/K/K/R | **Tur 186 açık oy** |
