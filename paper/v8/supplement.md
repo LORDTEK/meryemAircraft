@@ -425,6 +425,19 @@ the near-zero net angular momentum**, and leaves the axis to a single aerodynami
 
 ---
 
+### Section 1's paragraphs as they stood before the Round 191 repairs
+
+Each paragraph below was repaired in Round 191 (the last part–whole–part reading: defects only, not length); it is given here in full, verbatim.
+
+There is a third way to put one set of propulsors into both regimes without reorienting them: **point the
+thrust line at the ground and let the whole aircraft rotate.**
+The Convair XFY-1 flew it in 1954 and completed six transitions to conventional flight *"before testing was
+curtailed because of engine and gear-box reliability problems"*, and uncrewed tail-sitters have revisited the
+route since. The pilot's spatial orientation and workload were real, **but they are not what curtailed the testing**, and they are
+the only one of those documented obstacles an uncrewed aircraft removes.
+
+---
+
 ## S2. Section 2 (from Section 2)
 
 ### The opening of Section 2 and the three bills as they stood before recomposition (frozen snapshot)
@@ -1220,6 +1233,19 @@ Four parts: **same hardware, both duties, one orientation, hover peak from a sto
 Each paragraph below was shortened or moved in Round 174 (Section 2 completed; the author's decision); it is given here in full, verbatim. Protected sentences moved here by the author's decision (E17) are among them.
 
 The fourth is not a technicality, and it is the reason this list exists. **An architecture may meet the condition where it carries the aircraft and fail it elsewhere**, and a paper that reported only the first half would be reporting the condition rather than the aircraft.
+
+---
+
+### Section 3's paragraphs as they stood before the Round 191 repairs
+
+Each paragraph below was repaired in Round 191 (the last part–whole–part reading: defects only, not length); it is given here in full, verbatim.
+
+- **A store is permitted**, though it is mass carried for a duty that is briefly needed, which is the complaint Bill 1 makes. **It does not claim the trade is favourable**: whether the store is lighter than the continuous power it displaces is computed, not asserted.
+- **Releasing the engine is not releasing the electrical path.** Machines, power electronics and wiring still pass the full hover power, and that Bill 3 is carried in the ledger.
+- **Rotating the airframe is permitted and is not priced here.** An architecture that rotates its whole body still turns its thrust axis through ninety degrees relative to the flight path, with the moments and the control through the turn that implies; that is not one of the three charges, and it is priced where the transition is analysed.
+- **Hardware installed for the vertical phase is permitted if it serves both duties.**
+- **Hardware used in both regimes for something other than propulsive thrust is permitted, and its cruise drag is not eliminated.** *Cruise thrust in this paper means the thrust that balances cruise drag.* Attitude devices produce none; used throughout the flight, they fall outside Bill 1, and they do not stop the propulsor that carries the aircraft from meeting the condition. But carried through cruise without producing cruise thrust, they are the first failure mode below, and Bill 2 reaches them.
+- **Serving two regimes with one set of hardware has a price of its own**: a fixed geometry cannot be optimised for both, and the compromise is paid in efficiency. **The condition permits that cost and does not measure it.** Section 11 does.
 
 ---
 
@@ -2074,6 +2100,17 @@ configuration, not about what any method could achieve. It does not touch the cr
 above, which sit at a few degrees, but it bounds what this section may be read to support.
 
 The wing that makes cruise efficient is carried through the vertical phase, where it produces nothing and presents the aircraft's largest surface to ground wind. The tailless planform that follows from having no boom constrains the sweep. And the fixed-pitch propeller that serves both regimes is the reason the margin above sits where it does rather than higher. Section 11 charges the third. The first two are inside Section 10's closed numbers — the wing's mass in the empty fraction, the constrained planform in the computed span efficiency — but neither is separated out as a charge, and the wing's exposure to ground wind is not priced in this work.
+
+---
+
+### Section 6's paragraphs as they stood before the Round 191 repairs
+
+Each paragraph below was repaired in Round 191 (the last part–whole–part reading: defects only, not length); it is given here in full, verbatim.
+
+On this axis the alternative is the rotorcraft, multirotor and helicopter alike, and as in the previous section the comparison
+runs one way only. **Nothing here is claimed against fixed-wing aircraft.** The claim is
+confined to the one thing the rotorcraft family structurally lacks: **a surface that carries the
+cruise lift.**
 
 ---
 

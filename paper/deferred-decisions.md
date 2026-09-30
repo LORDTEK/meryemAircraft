@@ -1173,3 +1173,14 @@ mercekler: Grok §0 · ChatGPT işaretçi/zamir · DeepSeek sayı · Qwen okunur
 - **Tur 190 (bütün):** 82 bölümler arası işaretçi + 1 numarasız (2.2 *"priced where the transition is analysed"* — Claude R4 adayı: 6.1 analiz eder ve sınırlar, fiyatlamaz;
   önerilen düzeltme *"and Section 6.1 analyses the transition without pricing it"*; önceki cümle korunan, bu değil); R2: 53, 54, 55, 57, 62; geri kalanı R1. 13 geçiş,
   §0 haritası (hiçbir sınır tek U cümlesine dayanmıyor), başlık sayıları ve nitelemeleri.
+
+## Tur 190 cevapları — son okuma, bütün
+
+- **D3 geri çekildi** (DeepSeek); üçü cümlenin doğru olduğunu teyit etti.
+- **Satır 0** (2.2 "priced"): beşimiz kusur, aynı düzeltme → uygulandı (Tur 191).
+- Başka kusur yok: Grok (§0 haritası), ChatGPT (işaretçiler), Qwen (13 geçiş), DeepSeek (başlık sayıları).
+- **DeepSeek'in iki geç adayı (Tur 191'de oy):** C1 6.3 **korunan** *"the separability Section 2.1 asserts"* (tür 1/5) — Claude K (2.1 "three distinct accounting quantities"
+  ve "one quantity under three names … tested in Section 6.3" diyor; ayrılabilirlik = hesap ayrılığı); C2 6.4 *"(Section 2.1)"* → S13 (tür 2) — Claude K (işaretçi kampanyaya
+  bağlı; 2.1 hibrit gövde rüzgâr tüneli çalışmasını alıntılıyor; S13 "the wind-tunnel campaign quoted in Section 2" diyor). **Claude'un hatası:** Tur 190 notunda kampanyayı
+  quadplane diye adlandırdım; doğrusu hibrit gövde çalışması.
+- **Uygulandı (Tur 191):** D1, D2 (E24; kayıt satırı yeni metne), satır 0 (`v8_round191_apply.py`); denetimler geçti; eski üç paragraf S1, S3, S6'da.

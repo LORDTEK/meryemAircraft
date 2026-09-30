@@ -34,7 +34,7 @@ Two things in that sentence are choices rather than derivations. The inversion r
 
 - **A store is permitted**, though it is mass carried for a duty that is briefly needed, which is the complaint Bill 1 makes. **It does not claim the trade is favourable**: whether the store is lighter than the continuous power it displaces is computed, not asserted.
 - **Releasing the engine is not releasing the electrical path.** Machines, power electronics and wiring still pass the full hover power, and that Bill 3 is carried in the ledger.
-- **Rotating the airframe is permitted and is not priced here.** An architecture that rotates its whole body still turns its thrust axis through ninety degrees relative to the flight path, with the moments and the control through the turn that implies; that is not one of the three charges, and it is priced where the transition is analysed.
+- **Rotating the airframe is permitted and is not priced here.** An architecture that rotates its whole body still turns its thrust axis through ninety degrees relative to the flight path, with the moments and the control through the turn that implies; that is not one of the three charges, and Section 10 analyses the transition without pricing it.
 - **Hardware installed for the vertical phase is permitted if it serves both duties.**
 - **Hardware used in both regimes for something other than propulsive thrust is permitted, and its cruise drag is not eliminated.** *Cruise thrust in this paper means the thrust that balances cruise drag.* Attitude devices produce none; used throughout the flight, they fall outside Bill 1, and they do not stop the propulsor that carries the aircraft from meeting the condition. But carried through cruise without producing cruise thrust, they are the first failure mode below, and Bill 2 reaches them.
 - **Serving two regimes with one set of hardware has a price of its own**: a fixed geometry cannot be optimised for both, and the compromise is paid in efficiency. **The condition permits that cost and does not measure it.** Section 11 does.
@@ -62,6 +62,7 @@ The condition is a statement about what an architecture would have to be. **It i
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 191 — son okuma onarımı, satır 0** (beşimiz): *"it is priced where the transition is analysed"* → *"Section 10 analyses the transition without pricing it"* (6.1 analiz eder ve sınırlar, fiyatlamaz; alındı R4). Önceki korunan cümleye dokunulmadı. Eski paragraf S3'te | Tur 190 cevapları |
 | **Tur 170 — yazarın notları üzerine kısaltma uygulandı** (Tur 168–169: işlemlerde dört okuyucu + Claude; korunan cümle taşımaları yazar kararı E13). Değişen her paragrafın eski hâli ekin bu adıma ait bölümünde aynen (*"… before the Round 170 shortening"*). Yeni (R) cümleler Tur 170 §2'de okuyucu vetosuna açık; sonuç teyide | `paper/build/v8_round170_texts.py`, `v8_round170_apply.py` |
 | **Tur 172 — hesap geçişi (yazar E14, E15; katman 1 okuyucu teyidine)** 2.2.5 kısaldı (yazarın notu): yol haritası cümlesi ve 2.1 tekrarı çıktı; korunan üç cümle yerinde. Eski paragraflar ekte aynen | — |
 | **Tur 173 — 2.2.3 sayım tekrarı ("The first three come from…") kesildi.** Eski paragraflar ekte aynen; okuyucu teyidine | — |

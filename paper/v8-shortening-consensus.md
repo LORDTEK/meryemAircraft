@@ -876,3 +876,7 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | D2 (1.3, korunan) | (b) | (b) | (b) | (b) | (b) | **yazar (b) — E24** |
 | D3 (5.2 yunuslama kolu, DeepSeek) | – | – | kusur | – | kusur değil | **Tur 190** |
 | Son okuma, bütün (işaretçiler, geçişler, §0, sayılar) | ? | ? | ? | ? | satır 0 R4 adayı | **Tur 190** |
+| D3 | K | K | geri çekti | K | K | **kusur değil** |
+| Satır 0 (2.2 "priced") | R | R | R | R | R | **uygulandı (Tur 191)** |
+| C1 (6.3, korunan) / C2 (6.4 işaretçi) | ? | ? | R / R | ? | K / K | **Tur 191 oy** |
+| Son okuma onarımları (D1, D2, satır 0) teyit; kapanış | ? | ? | ? | ? | uyguladı | **Tur 191** |

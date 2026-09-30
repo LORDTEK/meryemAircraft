@@ -30,7 +30,7 @@ kayıt: `paper/effective-ld-finding.md`. **Sayfa düzeltilmiş sayıyla yazıld�
 
 ### The opponent, and the axis
 
-On this axis the alternative is the rotorcraft, multirotor and helicopter alike, and as in the previous section the comparison
+On this axis the alternative is the rotorcraft — multirotor and helicopter alike — and as in the previous section the comparison
 runs one way only. **Nothing here is claimed against fixed-wing aircraft.** The claim is
 confined to the one thing the rotorcraft family structurally lacks: **a surface that carries the
 cruise lift.**
@@ -167,6 +167,7 @@ the combination is what this paper is for.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 191 — son okuma onarımı D1** (beşimiz): *"the rotorcraft, multirotor and helicopter alike,"* → *"the rotorcraft — multirotor and helicopter alike —"* (iç açıklama; E5'in helikopter girişi korunur). Eski paragraf S6'da | Tur 189 cevapları |
 | **Tur 170 — yazarın notları üzerine kısaltma uygulandı** (Tur 168–169: işlemlerde dört okuyucu + Claude; korunan cümle taşımaları yazar kararı E13). Değişen her paragrafın eski hâli ekin bu adıma ait bölümünde aynen (*"… before the Round 170 shortening"*). Yeni (R) cümleler Tur 170 §2'de okuyucu vetosuna açık; sonuç teyide | `paper/build/v8_round170_texts.py`, `v8_round170_apply.py` |
 | **Tur 171 — R9 onarıldı** (Grok vetosu, Tur 170): 4.6 ölçek cümlesinde "of order 50 kg and 1 000 kg" iki isimden birine asılabiliyordu → "larger than both designs studied here, which are of order 50 kg and 1 000 kg (Supplement S6)". Kütleler Tur 170 öncesi 4.6'da da vardı (Qwen); yeni sayı yok. **R8 değişmedi:** beş etken eski 4.4'ün üçüncü cümlesinde birebir duruyordu (Tur 169 eki, S6); Grok'tan vetoyu geri çekmesi istendi. Teyide (Tur 171 §1) | Grok, Qwen |
 | **Tur 149 — L-3 satır 4 uygulandı:** *"free-wheeling attitude rotors"* → *"free-wheeling tip-pair rotors"*. W-13 kapandı | Tur 148 §3 |

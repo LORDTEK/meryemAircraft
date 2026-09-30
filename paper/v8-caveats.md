@@ -122,7 +122,7 @@ boşluğa duyarsız. `G` = Grok, `D` = DeepSeek, `C` = ChatGPT, `Q` = Qwen, `K` 
 | 13 | And nothing here ranks architectures for a mission. | Q |
 | 14 | The ranges of 927 to 1 233 km survive the re-closure only because the fuel fraction is held, on an aircraft three-quarters heavier; they do not survive as 13 kg carried that far on a store that has been built. | Q |
 | 6 | variable-pitch hub would recover that difference is not computed; Section 11 reports the gap and declines to attribute all of it to the hub | Q |
-| 1 | they are the only one of those documented obstacles an uncrewed aircraft removes | Q |
+| 1 | they are the only ones of those documented obstacles an uncrewed aircraft removes | Q |
 | 12 | Of the two rotor terms, the light one is therefore the less certain — and it is the one Sections 10 and 11 carry. | G+K |
 | 10 | the question is asked in two models, only the second of which carries rotational dynamics, and that one does not support a zero altitude loss | C+G+D+Q+K |
 | 4 | The instrument is now fixed, and it is not modified again. | G+C+D+Q+K |

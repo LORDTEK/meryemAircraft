@@ -35,8 +35,7 @@ There is a third way to put one set of propulsors into both regimes without reor
 thrust line at the ground and let the whole aircraft rotate.**
 The Convair XFY-1 flew it in 1954 and completed six transitions to conventional flight *"before testing was
 curtailed because of engine and gear-box reliability problems"*, and uncrewed tail-sitters have revisited the
-route since. The pilot's spatial orientation and workload were real, **but they are not what curtailed the testing**, and they are
-the only one of those documented obstacles an uncrewed aircraft removes.
+route since. The pilot's spatial orientation and workload were real, **but they are not what curtailed the testing**, and they are the only ones of those documented obstacles an uncrewed aircraft removes.
 
 **Some of the difficulties were real, internal, and are inherited here.** A tail-sitting vertical descent is
 harder than a runway landing; a tail-sitter on the ground is more exposed to crosswind; and propellers whose
@@ -202,7 +201,7 @@ Two things in that sentence are choices rather than derivations. The inversion r
 
 - **A store is permitted**, though it is mass carried for a duty that is briefly needed, which is the complaint Bill 1 makes. **It does not claim the trade is favourable**: whether the store is lighter than the continuous power it displaces is computed, not asserted.
 - **Releasing the engine is not releasing the electrical path.** Machines, power electronics and wiring still pass the full hover power, and that Bill 3 is carried in the ledger.
-- **Rotating the airframe is permitted and is not priced here.** An architecture that rotates its whole body still turns its thrust axis through ninety degrees relative to the flight path, with the moments and the control through the turn that implies; that is not one of the three charges, and it is priced where the transition is analysed.
+- **Rotating the airframe is permitted and is not priced here.** An architecture that rotates its whole body still turns its thrust axis through ninety degrees relative to the flight path, with the moments and the control through the turn that implies; that is not one of the three charges, and Section 10 analyses the transition without pricing it.
 - **Hardware installed for the vertical phase is permitted if it serves both duties.**
 - **Hardware used in both regimes for something other than propulsive thrust is permitted, and its cruise drag is not eliminated.** *Cruise thrust in this paper means the thrust that balances cruise drag.* Attitude devices produce none; used throughout the flight, they fall outside Bill 1, and they do not stop the propulsor that carries the aircraft from meeting the condition. But carried through cruise without producing cruise thrust, they are the first failure mode below, and Bill 2 reaches them.
 - **Serving two regimes with one set of hardware has a price of its own**: a fixed geometry cannot be optimised for both, and the compromise is paid in efficiency. **The condition permits that cost and does not measure it.** Section 11 does.
@@ -348,7 +347,7 @@ section**, and the two are combined in Section 7.
 
 ### The opponent, and the axis
 
-On this axis the alternative is the rotorcraft, multirotor and helicopter alike, and as in the previous section the comparison
+On this axis the alternative is the rotorcraft — multirotor and helicopter alike — and as in the previous section the comparison
 runs one way only. **Nothing here is claimed against fixed-wing aircraft.** The claim is
 confined to the one thing the rotorcraft family structurally lacks: **a surface that carries the
 cruise lift.**

@@ -54,8 +54,7 @@ There is a third way to put one set of propulsors into both regimes without reor
 thrust line at the ground and let the whole aircraft rotate.**
 The Convair XFY-1 flew it in 1954 and completed six transitions to conventional flight *"before testing was
 curtailed because of engine and gear-box reliability problems"*, and uncrewed tail-sitters have revisited the
-route since. The pilot's spatial orientation and workload were real, **but they are not what curtailed the testing**, and they are
-the only one of those documented obstacles an uncrewed aircraft removes.
+route since. The pilot's spatial orientation and workload were real, **but they are not what curtailed the testing**, and they are the only ones of those documented obstacles an uncrewed aircraft removes.
 
 **Some of the difficulties were real, internal, and are inherited here.** A tail-sitting vertical descent is
 harder than a runway landing; a tail-sitter on the ground is more exposed to crosswind; and propellers whose
@@ -134,6 +133,7 @@ is presented and priced.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 191 — son okuma onarımı D2** (yazar E24): 1.3 korunan cümlede *"the only one"* → *"the only ones"* (sayı uyumu; iş yükü korunur); kayıt satırı da güncellendi. Eski paragraf S1'de | Tur 189; E24 |
 | **Tur 187 — Bölüm 1 geçişi uygulandı** (`paper/build/v8_round187_apply.py`; Tur 186 oylaması): 10 R (*"and whether one arrangement pays less than it appears to"* düştü — sıralama vaadi gibi okunuyordu; beşimiz), 22 R (ikiye bölündü; beşimiz), 47 R (*"the axis"* → *"the moment about the propeller axis"*; beşimiz), 4 R-a (*"Rotorcraft remove …"*; yazar E22, 4'e 1). 23 ve 45 K. Eski dört paragraf ekte (S1) aynen; okuyucu teyidine | Tur 186 cevapları; E22 |
 | **Tur 170 — yazarın notları üzerine kısaltma uygulandı** (Tur 168–169: işlemlerde dört okuyucu + Claude; korunan cümle taşımaları yazar kararı E13). Değişen her paragrafın eski hâli ekin bu adıma ait bölümünde aynen (*"… before the Round 170 shortening"*). Yeni (R) cümleler Tur 170 §2'de okuyucu vetosuna açık; sonuç teyide | `paper/build/v8_round170_texts.py`, `v8_round170_apply.py` |
 | **Tur 171 — R2 onarıldı** (Grok vetosu, Tur 170): 1.3'te "onboard computation" kaynak ifadeye geri döndü — "electric drive on each individual rotor, sensor-based attitude reference, and enough onboard computation that stability need not come from the airframe alone"; korunan "those three" yine üç tam öğeyi sayıyor (sayma sözcüğü denetimi, benim hatam). +11 kelime. Teyide (Tur 171 §1) | Grok |
