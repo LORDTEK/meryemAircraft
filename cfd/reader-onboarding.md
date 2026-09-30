@@ -210,7 +210,7 @@ closes.** Readers answer one another, not only Claude.
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 200.** All four readers work in new conversations since Round 169; this was done **for equality** (Grok's conversation did not need
+**Round 201.** All four readers work in new conversations since Round 169; this was done **for equality** (Grok's conversation did not need
 renewing). **The author (Round 171):** *"You readers, work together. Whenever it comes to my turn, don't forget to tell me."* Each round
 text ends by naming what goes to the author.
 
@@ -225,7 +225,8 @@ text ends by naming what goes to the author.
 | Closed (Round 197) | [15] Mathur: cite arXiv v1 under its own title, the quotation unchanged (all five, position d) |
 | Closed (Round 198) | the reference list (26 entries, all fields cross-checked; [15] is arXiv v1, the only version); 2.1 *"generally"* applied (awaiting confirmation); the v7 AI statement read against the v8 facts (all five agree) |
 | Decided (E30) | submit directly with full disclosure (no inquiry to the office); the authors used AI tools as a tool for the calculations; the disclosure is **one sentence**. 2.1 *"generally"* confirmed by all four |
-| **Open (Round 200)** | the one AI-use sentence: its wording, and whether it goes in the Acknowledgments alone (Claude) or also in 4.7 (the four Round 199 drafts). It is the same sentence that the ScholarOne form will carry |
+| Decided (E31) | the AI-use sentence, in the Acknowledgments only, with *"and solution approach"* |
+| **Open (Round 201)** | the submission package: `paper/build/submission_build.py` builds `paper/submission/latex/meryemaircraft.tex` (34 pages) from the step sources without changing them. To check: the table captions and table references, the 36 citation markers, title case; proposals for the style pass (dashes, *above*/*below*, italics), the journal supplement, and no nomenclature |
 | Still to do | numbered references (original sources only); style conversion by a generator script (Roman-numeral sections, *Sec.*, numbered tables and equations, lists as 1) 2), American spelling, no bold emphasis, no dashes); acknowledgments with the AI-use statement |
 | Protected sentences | 145 in the body, 31 in the supplement; U table 14 |
 

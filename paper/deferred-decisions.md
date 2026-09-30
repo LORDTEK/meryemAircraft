@@ -1310,3 +1310,11 @@ NeuralFoil makale künyesi doğrulanmadı. Okuyuculardan künye alanları (bağl
 - **Yer: yalnız Teşekkür** (dördü + Claude; C1b bölüm adı vermiyor). Gövde değişmez.
 - **Cümle:** ChatGPT, DeepSeek, Qwen tabanı değişmeden kabul etti; Grok "design" → "design, and solution approach" ekiyle kabul etti (yazarın E29'daki kendi ifadesi). Claude Grok'la.
 - **E31 — yazara:** taban mı, ek mi? Metin `paper/submission/acknowledgments.md`. Onaydan sonra aynı cümle ScholarOne alanına da girer.
+
+## E31 — YZ cümlesi · **YAZAR (2026-09-30): "(b) onaylı, gönderim paketine geç"**
+
+- Teşekkür cümlesi *"… the concept, architecture, design, and solution approach are the authors' own …"* (`paper/submission/acknowledgments.md`); ScholarOne alanına da aynısı.
+- **Gönderim paketi başladı (Tur 201):** `paper/build/submission_build.py` → `paper/submission/latex/meryemaircraft.tex` + PDF (34 s.), rapor `paper/submission/build-report.md`.
+  TeX Live ortama kuruldu (apt); `new-aiaa.cls` arşivde yok → eşdeğer yedek düzen; yazar Overleaf şablonundan tek dosyayı yüklerse otomatik geçer.
+  Çıktı denetimi: sözcük dizisi kaynağa karşı, 17 fark satırı, hepsi gösterim. Uzunluk: düzyazı 14 057 + tablolar ≈2 000–2 700 + özet 199.
+- Okuyuculara (Tur 201): tablo başlıkları (6), tablo atıfları (9), 36 atıf işareti, başlık büyük harfi; üslup geçişi şimdi mi sonra mı; dergi eki üreteci; terimler listesi yok.
