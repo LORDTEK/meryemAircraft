@@ -1191,3 +1191,14 @@ mercekler: Grok §0 · ChatGPT işaretçi/zamir · DeepSeek sayı · Qwen okunur
 - **Sıradaki: gönderim aşaması (yazar).** Önce derginin kendi yönergeleri (CLAUDE.md §4 dergi şartı kuralı): AIAA sayfa/kelime yönergesi PDF'i ve JoA yazar talimatları yazardan
   istendi (aiaa.org bu ortamdan engelli). Gövdede henüz olmayanlar (gönderim için gerekecek): başlık, özet, terimler (nomenclature), kaynakça ve metin içi atıf işaretleri
   (gövde kaynakları yıl ve tarifle anıyor), YZ kullanım beyanı (marka/model/şirket adı yok), teşekkür; şekil sorusu (E19 park) ve *"more than three decades"* (Q-2).
+
+## Gönderim aşaması açıldı (2026-09-30) — dergi şartları şart şart: `paper/joa-requirements.md`
+
+- Yazar üç dosya yükledi (cfd/'e düştü, references/'e taşındı): sayfa/kelime rehberi (**Tur 154'ten beri depoda olanla aynı** — kopya silindi), LaTeX talimat PDF'i, Word şablonu;
+  ayrıca AIAA yazar sayfalarının metnini sohbete yapıştırdı.
+- **Claude'un hatası:** Tur 187'den beri yazara uzunluk sınırının "okunmadığını" söyledim ve belgeyi yeniden istedim; belge Tur 154'ten beri depodaydı, 12 000 hedefi ondan türetilmişti.
+  `target-journal.md`'deki bayat satır güncellendi.
+- **Bulgular:** uzunluk ~15 700–16 500 (tablolarla) / önerilen 10–12 bin; şekil şartı yok (E19 park sorusu kapanır); başlık (≤12 kelime), özet (100–200), kaynakça (numaralı, birincil
+  kaynak şartı — ikincil/attributed tanıklar riski), Roma rakamlı bölümler ve "Sec.", madde işareti yok, tire yok (D1'in tireleri parantez olmalı), Amerikan yazımı, sayı biçimi,
+  numaralı tablo/denklem, teşekkürde YZ beyanı. **Belgelerde olmayan iki açık soru:** ek malzeme (gövde 34 kez "Supplement S#") ve Zenodo ön baskısı ("published … elsewhere").
+- **E25 — yazarda:** uzunluk (a/b), ek malzeme ve ön baskı politikası belgeleri, LaTeX/Word, yazar bilgisi.
