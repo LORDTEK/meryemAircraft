@@ -827,3 +827,6 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | 8.5 madde 1, 3, 4 kayda | ✓ | gereksiz | ✓ | ✓ | ✓ | **yazara** |
 | E18 uygulandı (U 13, kopya 3, 8.5 kayıt 4; C → U) | ? | ? | ? | ? | uyguladı | **Tur 180 teyit** |
 | 3. aşama: tablolar ve şekiller (T1–T6, F1–F3) | ? | ? | ? | ? | (Tur 181'de) | **Tur 180 yöntem + öneri** |
+| E18 uygulaması, C → U | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI** |
+| 3. aşama T1, T4, T5, T6 K; F1 B; F3 N | ✓ | ✓ | ✓ | ✓ | ✓ | **oybirliği** |
+| T2 / T3 / F2a / F2b | M/M/M/M | K/S/B/S | K/S/B/S | at/K/S/S | K/K/B/S | **Tur 181'de karşılıklı** |

@@ -1012,3 +1012,10 @@ Yalnız korunmayan tekrar: 908 → 823; gövde 13 762 → 13 676. Korunan cümle
 Uygulandı: U 13 (kayıttan U tablosuna; gövdede aynen), 3 kayıt kopyası silindi, 8.5 madde 1–4 kayda (K). **C uygulanmadı → U:** korunan taşıyıcı *"It checks …"*'in
 *"It"*'i kesilecek cümleye bağlıydı; beşimiz de kaçırdık, uygulamada bulundu, geri alındı (CLAUDE.md §3.0'a satır). Kayıt 161 → 148; gövde değişmedi (13 593).
 **Tur 180:** 3. aşama (tablolar ve şekiller) açıldı — yöntem ve öneriler okuyuculara (yeni soru; Claude'un görüşü Tur 181'de yan yana).
+
+## Tur 180 cevapları — E18 teyit; 3. aşama önerileri
+
+- E18 uygulaması ve C → U: **dördü teyit.** Alındı satırı: dördü kabul (Grok "implied subject", ChatGPT "anaphoric", DeepSeek "unless repairable") → birleşik biçim Tur 181'de.
+- 3. aşama: T1, T4, T5, T6 K ve F1 gövdede ve F3 gövdede değil — **beşimiz.** Ayrışık: T2 (Grok M, ChatGPT K, DeepSeek K, Qwen at; Claude K — korunan "These" öncülü),
+  T3 (Grok M, ChatGPT S, DeepSeek S, Qwen K; Claude K — 4.9 yalnız tabloda, "this table" korunan komşuda), F2a (Grok M+B, ChatGPT B, DeepSeek B, Qwen S; Claude B),
+  F2b (Grok M, üçü S; Claude S). Dürüst not: 3. aşama uzunluğu artırır (+400 kelime eşdeğeri, F1 + F2a); gövdede bugün hiç şekil yok.

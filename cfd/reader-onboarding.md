@@ -210,7 +210,7 @@ closes.** Readers answer one another, not only Claude.
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 180.** All four readers work in new conversations since Round 169; this was done **for equality** (Grok's conversation did not need
+**Round 181.** All four readers work in new conversations since Round 169; this was done **for equality** (Grok's conversation did not need
 renewing). **The author (Round 171):** *"You readers, work together. Whenever it comes to my turn, don't forget to tell me."* Each round
 text ends by naming what goes to the author.
 
@@ -218,7 +218,7 @@ text ends by naming what goes to the author.
 |---|---|
 | Closed | shortening inside the current structure (Rounds 168–176): 17 734 → 13 593 words of prose; **stage 2** (protected-sentence status, Rounds 176–180; author's decision E18): 14 sentences unprotected (they stay in the body), 3 duplicate register rows removed, 8.5 items 1–4 registered |
 | **Stage 3 (now): tables and figures** | 6 body tables (T1–T6); 4 figure drafts (F1, F2a, F2b, F3), none yet called in the body. The journal counts 200 / 450 words per single / double-column object |
-| **Open (Round 180)** | confirm stage 2's application and the C → U reversal; the added receipt line (a C fails if the carrier's pronoun points at the cut sentence); stage 3's method and proposals |
+| **Open (Round 181)** | the combined receipt line; stage 3's marks (K / M / S / B / N); four split objects (T2, T3, F2a, F2b). Agreed: T1, T4, T5, T6 stay; F1 in the body; F3 not called |
 | Later stage | 4 section merging, 2.3 included |
 | Protected sentences | 148 in the body, 28 in the supplement; U table 14 |
 | Body | 13 593 words of prose (tables excluded) |
