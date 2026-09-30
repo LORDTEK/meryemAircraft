@@ -50,7 +50,7 @@ bir vaka** olarak yayımlanabilir.
 | Kartil | **Q1** (SJR, 2024 en iyi kartil; SJR 0,73) |
 | Deneysel doğrulama şartı | **Yazılı böyle bir şart bulamadım.** Drones'taki gibi bir madde yok. |
 | Ücret | **Yayın ücreti gönüllü** — tam makale için 875 USD, ödememek mümkün. ⚠️ **Renkli şekil ücretleri ayrı ve ciddi görünüyor** (sabit üretim bedeli + şekil başına ücret); 12 şeklimiz var, gönderimden önce netleştirilecek. |
-| Uzunluk | Article biçimine inilecek. Kesin sayfa sınırını bulamadım. ⚠️ |
+| Uzunluk | **Bayat satır (Tur 154'te düzeldi, burada güncellenmemişti — 2026-09-30):** AIAA *Journal Page Limits and Word Count Guidelines* (Rev. Aug 2024, `references/`): Regular/Full Articles 10 000–12 000 kelime, şekil/tablo eşdeğeri dahil, önerilen; editör takdiri. Şart şart karşılaştırma: `paper/joa-requirements.md` |
 
 **Neden birinci:** kapsam cümlesi bize yazılmış gibi, Q1, arşivsel, ve deneysiz
 kavramsal tasarım çalışmaları bu derginin geleneksel malzemesi. Ayrıca AIAA'nın
