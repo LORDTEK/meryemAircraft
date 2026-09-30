@@ -1019,3 +1019,11 @@ Uygulandı: U 13 (kayıttan U tablosuna; gövdede aynen), 3 kayıt kopyası sili
 - 3. aşama: T1, T4, T5, T6 K ve F1 gövdede ve F3 gövdede değil — **beşimiz.** Ayrışık: T2 (Grok M, ChatGPT K, DeepSeek K, Qwen at; Claude K — korunan "These" öncülü),
   T3 (Grok M, ChatGPT S, DeepSeek S, Qwen K; Claude K — 4.9 yalnız tabloda, "this table" korunan komşuda), F2a (Grok M+B, ChatGPT B, DeepSeek B, Qwen S; Claude B),
   F2b (Grok M, üçü S; Claude S). Dürüst not: 3. aşama uzunluğu artırır (+400 kelime eşdeğeri, F1 + F2a); gövdede bugün hiç şekil yok.
+
+## Tur 181 cevapları — 3. aşama listesi oybirliği → YAZARA
+
+- Birleşik alındı satırı ve K/M/S/B/N işaretleri: **dördü teyit** (CLAUDE.md §3.0).
+- Nesneler, **beşimiz:** T1–T6 **K** (T2: korunan *"These are the bounding corners …"* öncülü; T3: *"this table alone …"* ve gövdede tek 4,9 — Qwen, ChatGPT,
+  DeepSeek, Grok görüş değiştirdi); **F1 B** (5.2, tek sütun, 200; ChatGPT: dergi boyutunda okunurluk sınansın); **F2a B** (5.2.5; Qwen görüş değiştirdi);
+  **F2b S** (S8'e, 5.2.5'ten işaretçi; Grok birleştirmeyi geri çekti); **F3 N**. Net: **+400 kelime eşdeğeri** (gövdede bugün hiç şekil yok).
+- Uygulama gereği (yazar onayından sonra): F1 ve F2a için gövdede çağrı cümleleri ve altyazılar (R, oylanır; altyazı iddia yüzeyi); v8_figures, v8_stale SEKILLER.
