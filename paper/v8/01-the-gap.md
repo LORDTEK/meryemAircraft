@@ -36,7 +36,7 @@ worsen as the vehicle grows.
 **Neither family is deficient.** Each is limited by the price of
 doing it that way. **The corner where both capabilities are wanted at once is where the two
 applications this work is aimed at sit** — wildfire observation and response, and cargo delivery to
-places without a runway .
+places without a runway.
 **That corner is not empty**, as the rest of this section sets out; what is unsettled is which
 price an architecture in it must pay, and whether one arrangement pays less than it appears to.
 

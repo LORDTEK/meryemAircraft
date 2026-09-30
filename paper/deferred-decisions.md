@@ -974,3 +974,11 @@ Yalnız korunmayan tekrar: 908 → 823; gövde 13 762 → 13 676. Korunan cümle
   → 13 676 → 13 593. **Bölüm 1 bu aşama için kapandı** (teyide).
 - **2. aşama yöntemi (Tur 176 §3):** K / U / C / S işaretleri; parça (1–2, 3–5, 6, 7–8) → bütün (§0 sınırlarına karşı) → parça (yazar karar, grup başına tek liste).
   İlk parça: Bölüm 1–2, 48 satır; Claude: U 4, C 2, 2 kayıt kopyası.
+
+## Tur 176 cevapları — Bölüm 1 kapandı; 2. aşama yöntemi kabul (dört okuyucu + Claude)
+
+- Bölüm 1 değişiklikleri, R10, R11: **dördü teyit.** 1.1'de *"runway ."* boşluğu (Grok, DeepSeek) — ikinci kez benim hatam; düzeltildi; apply şablonuna noktalama öncesi boşluk temizliği eklendi.
+- **Yöntem kabul**, inceltmelerle: C yalnız **aynı yüklem** (Grok); her C için içeri işaretçi alındısı (Grok) ve taşıyıcının nüansı (Qwen); §0 bütün okuması C/S kesinleşmeden
+  önce (ChatGPT); kayıtta U işareti (DeepSeek); kayıt kopyası silme = temizlik (Grok).
+- **Parça 1 işaretleri:** oybirliği K 42, U 22 ve 24, C 35, iki kayıt kopyası. **Ayrışık:** 11 (U ×4, ChatGPT K), 42 (U ×4, ChatGPT K), 44 (Grok U, Qwen K, ChatGPT ve
+  DeepSeek C; Claude C → U). Tur 177'de okuyucular birbirine cevap verecek. Karar bütün okumadan sonra yazarın.

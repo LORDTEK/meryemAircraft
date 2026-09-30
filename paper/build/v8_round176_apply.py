@@ -26,6 +26,7 @@ def write(n, s, st, en, core, rest):
     core = re.sub(r"[ \t]+\n", "\n", core)          # silmeden kalan satir sonu bosluklari
     core = re.sub(r"(\n\n)[ \t]{1,3}(?=\S)", r"\1", core)  # 4+ bosluk kod blogudur, dokunulmaz  # silmeden kalan paragraf basi bosluklari
     core = re.sub(r"(?<=\S)  +(?=\S)", " ", core)     # silmeden kalan cift bosluk
+    core = "\n".join(l if l.lstrip().startswith("|") else re.sub(r"(?<=\S) +([.,;:])(?!\d)", r"\1", l) for l in core.split("\n"))  # Tur 176: silmeden kalan noktalama oncesi bosluk (Grok, DeepSeek iki kez yakaladi)
     open(path(n), 'w', encoding='utf-8').write(s[:st] + core + rest + s[en:])
 def paras(txt): return [p.strip() for p in re.split(r"\n\s*\n", txt) if p.strip()]
 ESKI = {}
