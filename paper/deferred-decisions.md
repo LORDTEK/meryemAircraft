@@ -1211,3 +1211,8 @@ mercekler: Grok §0 · ChatGPT işaretçi/zamir · DeepSeek sayı · Qwen okunur
   AIAA metni) zaten birebir alıntıyla cevaplı: ek izinli (gövde tek başına yetmeli), ön baskı gönderimden önce izinli. **Claude'un aynı gün ikinci hatası:** o dosyayı
   okumadan "belgelerde yok" dedim. CLAUDE.md §4'e kural eklendi.
 - **Kalan → yazara:** makale türü — Full-Length Paper (hakemli) / Design Forum (hakemsiz) (`joa-compliance.md` §2).
+
+## E26 — makale türü · **KARAR (2026-09-30): "Full-Length Paper olsun, başlık ve özete geçelim"**
+
+Tur 192: başlık ve özet okuyuculara (yeni soru; Claude'un adayları Tur 193'te yan yana). L1–L16 izinli ifade envanteri (her biri gövde cümlesiyle), yasaklar listesi (§0).
+**Yazara soru:** *meryemAircraft* adı başlıkta mı? `joa-compliance.md` "yazar kararı" diyor ama kayıtta yazarın sözü bulunamadı; gövde adı hiç kullanmıyor. Okuyuculardan iki aday (adlı/adsız).

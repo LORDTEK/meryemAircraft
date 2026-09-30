@@ -881,3 +881,5 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | C1 (6.3, korunan) / C2 (6.4 işaretçi) | ? | ? | R / R | ? | K / K | **Tur 191 oy** |
 | Son okuma onarımları (D1, D2, satır 0) teyit; kapanış | ? | ? | ? | ? | uyguladı | **Tur 191** |
 | Son okuma onarımları teyit; C1, C2 K; kapanış | ✓ | ✓ | ✓ | ✓ | ✓ | **SON OKUMA KAPANDI** |
+| Gönderim: Full-Length, LaTeX, mevcut uzunluk | — | — | — | — | — | **yazar (E25, E26)** |
+| Başlık ve özet | ? | ? | ? | ? | (Tur 193'te) | **Tur 192** |

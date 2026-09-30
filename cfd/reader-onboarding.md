@@ -210,19 +210,17 @@ closes.** Readers answer one another, not only Claude.
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 191.** All four readers work in new conversations since Round 169; this was done **for equality** (Grok's conversation did not need
+**Round 192.** All four readers work in new conversations since Round 169; this was done **for equality** (Grok's conversation did not need
 renewing). **The author (Round 171):** *"You readers, work together. Whenever it comes to my turn, don't forget to tell me."* Each round
 text ends by naming what goes to the author.
 
 | Block | State |
 |---|---|
-| Closed | **the shortening is over** (the author, E21). Stages: inside the current structure (Rounds 168–176); protected-sentence status (176–180, E18); tables and figures (180–182, no change, E19); section merging (182–184: no merge; 2.3 −181, E20); **the pass over Section 1 (185–187: sentences 4, 10, 22, 47 changed; E22)** |
-| **Now (Rounds 188–191): the last part–whole–part reading** (the author, E23) | 188 part: Sections 1–4 · 189 part: Sections 5–8 · 190 whole: transitions, cross-section pointers and pronouns, §0 boundary map, headline numbers · 191 part: repairs shown, confirmed, closed. **Verification, not editing:** a change only for a defect (false sentence, broken pointer, unheld boundary or strengthened claim, stale number, contradiction, not understandable in one reading); no shortening; at most three defects per reader per round; one lens per reader (Grok §0 · ChatGPT pointers and anaphora · DeepSeek numbers · Qwen clarity and flow) |
-| Applied (Round 191), to confirm | D1 4.1 dashes (all five); D2 1.3 *"the only ones"* (the author, E24); row 0 2.2 *"Section 6.1 analyses the transition without pricing it"* (all five). D3 withdrawn |
-| Open (Round 191) | two late candidates from DeepSeek: C1 6.3 protected *"the separability Section 2.1 asserts"* (Claude K), C2 6.4 pointer *"(Section 2.1)"* → S13 (Claude K); whether the last reading closes |
-| Next | submission (the journal's instructions on length and figures; the author has been asked for the PDF) |
+| Closed | the shortening (E21); the pass over Section 1 (Rounds 185–187, E22); **the last part–whole–part reading (Rounds 188–191, E23): repairs D1, D2 (E24), row 0; no defect remains** |
+| **Now: submission to *Journal of Aircraft*** | the author (E25, E26): **Full-Length Paper**, LaTeX, submitted at the present length (~16 000 with table equivalents; 10 000–12 000 recommended). Requirements, verbatim and item by item: `paper/joa-compliance.md` (16 September) and `paper/joa-requirements.md` (30 September) |
+| **Open (Round 192)** | the title (at most 12 words, no acronym, no leading article) and the abstract (100–200 words, no acronyms or abbreviations, no section or reference citations, third person), each sentence traced to the licensed statements L1–L16 |
+| Still to do | numbered references (original sources only); style conversion by a generator script (Roman-numeral sections, *Sec.*, numbered tables and equations, lists as 1) 2), American spelling, no bold emphasis, no dashes); acknowledgments with the AI-use statement |
 | Protected sentences | 145 in the body, 31 in the supplement; U table 14 |
-| Body | about 13 405 words of prose (tables excluded) |
 
 **Tools the round texts mention:**
 
