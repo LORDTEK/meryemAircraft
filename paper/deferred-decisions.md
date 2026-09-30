@@ -1152,3 +1152,12 @@ Tur 187: teyit + 47 ↔ 5.2 alındısı (ChatGPT'nin isteği) + Bölüm 1 geçi�
 
 Parça (188: 1–4; 189: 5–8) → bütün (190) → parça (191: onarım, teyit, kapanış). Kusur tanımı altı madde; kısaltma yok; okuyucu başına tur başına en çok üç kusur;
 mercekler: Grok §0 · ChatGPT işaretçi/zamir · DeepSeek sayı · Qwen okunurluk · Claude hepsi + betikler. Claude'un bulguları bir sonraki turda yan yana.
+
+## Tur 188 cevapları — son okuma, parça 1 (Bölüm 1–4)
+
+- Grok, ChatGPT, Qwen: kusur yok (§0 / zamirler / akış). DeepSeek: sayılar temiz (Claude bağımsız yeniden hesapladı: köşeler, yüzdeler, 0,557, 7,47–9,20, "an eighth to a half").
+- **D1** (DeepSeek + Claude): 4.1 *"the rotorcraft, multirotor and helicopter alike"* — tür 6. R-1 *"the rotorcraft family"* (DeepSeek) / R-2 tirelerle iç açıklama (Claude; E5'in
+  helikopter girişi korunur, Tur 186'daki R-a gerekçesi "helikopter Bölüm 4 ve 8'de girer" bununla tutarlı) / K (Grok). Tur 189'da oy.
+- **D2** (DeepSeek + Claude): 1.3 **korunan** *"they are the only one of those documented obstacles"* — sayı uyumu. **Yazara (E24):** (a) kalsın, (b) *"the only ones"* (Claude;
+  iş yükünü korur), (c) DeepSeek'in *"spatial orientation is the only one"* (iş yükünü düşürür — yüklem değişir).
+- Tur 190 notu: 2.2 *"it is priced where the transition is analysed"* — numarasız işaretçi, 6.1'e alındı.

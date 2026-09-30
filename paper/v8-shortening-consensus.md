@@ -868,3 +868,7 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Bölüm 1 geçişi (4, 10, 22, 47) teyit; 47↔5.2 R1 | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI** |
 | Son okuma yöntemi | parça×6 → bütün | bütün → parça → bütün | tek tur, roller | 3 blok | parça×2 → bütün → parça | **yazara (E23)** |
 | Son okuma, parça 1 (Bölüm 1–4) | ? | ? | ? | ? | (Tur 189'da) | **Tur 188** |
+| Son okuma parça 1: kusur yok (sayılar teyitli) dışında D1, D2 | yok | yok | D1, D2 | yok | D1, D2 | **Tur 189** |
+| D1 (4.1) | K | – | R-1 | – | R-2 | **Tur 189 oy** |
+| D2 (1.3, korunan) | – | – | yazara (c) | – | yazara (b) | **yazara (E24)** |
+| Son okuma parça 2 (Bölüm 5–8) | ? | ? | ? | ? | (Tur 190'da) | **Tur 189** |
