@@ -1285,3 +1285,9 @@ NeuralFoil makale künyesi doğrulanmadı. Okuyuculardan künye alanları (bağl
 - **AIAA YZ politikası** (Etik Standartlar §3; Grok, ChatGPT, Qwen aynı cümleleri aktardı): yazımda YZ *"should be used primarily to improve readability, grammar, and language"*; ScholarOne beyanı + Teşekkür'de kısa tarif;
   *"not adequately described"* ret gerekçesi. **v8'in kullanımı (metnin YZ tarafından kurulması) bu ifadenin ötesinde → yazara (Tur 198 F).** Olgular (2–5) ve seçenekler (a) tam beyanla gönder, (b) önce editörlüğe sor.
   Marka adı kuralı ile *"adequately described"* gerilimi de yazarın.
+
+## E29 — YZ beyanının olguları · **YAZAR (2026-09-30):** *"Berke evet yazılım yaptı. Tüm yazarlar okudu ve onayladı. Yapayzeka için marka ve model vesaire yazılmayacak. Bugüne kadar olmayan yenilikçi fikrime yapayzekanın konmasına asla izin vermeyeceğim. Bu yazarların ürünüdür. … Kıymetli olan yenilikçi tasarım ve çözüm yaklaşımı. C_D0 hesabını yapınca makalenin kıymetlisi olmuyorsun. Herkes haddini bilecek."*
+
+- Yazılım: B.G. · Bütün yazarlar okudu ve onayladı (v7 cümle 5 tutar) · Marka/model/şirket adı yok; tarif kullanım üzerinden (*"adequately described"* gerilimi kapandı).
+- Kavram, mimari, tasarım ve çözüm yaklaşımı yazarların; beyan YZ'yi fikrin üzerine koyamaz. Olgular 2–5 yine doğru beyan edilir (AIAA: beyansızlık ihlal).
+- Tur 198 metni bu cevaplarla güncellendi (C0); açık kalan tek soru yazım sürecinin *"primarily … language"* ifadesiyle ilişkisi (C3) ve beyanın taşıması gereken öğeler (C4).

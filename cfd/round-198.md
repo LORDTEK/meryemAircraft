@@ -2,7 +2,7 @@
 
 > **This is a task. Please answer it now, and begin with your name alone on the first line.**
 >
-> Commit **`f7fe1bb`**, branch `claude/ecstatic-cori-6w30at` (for verification only). Everything you are asked to judge is in this text.
+> Commit **`@@COMMIT@@`**, branch `claude/ecstatic-cori-6w30at` (for verification only). Everything you are asked to judge is in this text.
 
 **The rule (the author, Round 195, my translation):** *"Don't ask me to research sources. Ask them; let them cross-check. If they all say 'correct', it is correct."*
 
@@ -66,6 +66,23 @@ It is one word. It narrows the claim to what the source says, and changes nothin
 
 ## C. The AI-use statement
 
+### C0. The author's answers (Round 198). These settle the facts they cover
+
+The author's words (my translation):
+
+> *"Berke did the software, yes. All authors read and approved it. No brand, model or anything of the kind will be written for the AI. I will never allow AI to be placed on my innovative idea, which did not exist until now. This is the authors' product. The calculations the AIs made could be made by people and machines long before; given a shape, there were programs that computed it. What is valuable is the innovative design and the solution approach. Computing C_D0 does not make you the valuable part of the paper. Everyone will know their place."*
+
+**What this settles:**
+- **The software.** B.G. did the software. The commit record (fact 4) shows the sessions in which code was committed. It does not show who directed them.
+- **Review.** All three authors have read and approved the manuscript. Sentence 5 holds.
+- **No names.** No brand, model or company name appears in the statement. The tension with *"adequately described"* is decided: the statement describes **what the tools were used for**, not what they are called.
+- **Where the contribution lies.** The concept, the architecture, and the design and solution approach are the authors'. The AI's part was tool work: calculation, code, drafting and review of the kind that tools have long done. The statement must not place AI on the idea. AIAA agrees on the principle: *"Authors may not list AI or AI-assisted technologies as a co-author."*
+
+**What this does not change.**
+- Facts 2–5 stay facts, and the statement must disclose them accurately. AIAA requires disclosure, and treats failure to disclose as a violation.
+- The author's position and full disclosure are compatible. The statement says the idea and the design are the authors' own. It says the AI tools were used as tools, and for which tasks.
+
+
 ### C1. AIAA's policy: what was found, and what is still single-reader
 
 **Page:** https://aiaa.org/publications/publish-with-aiaa/ethical-standards-for-publication-of-aeronautics-and-astronautics-research/, Section 3, *"Use of Artificial Intelligence in AIAA Publications"*.
@@ -107,7 +124,7 @@ The v7 statement (from `paper/00-front-matter.md`), sentence by sentence:
 4. All 29 commits touching `aero/` name the assistant as their git author.
 5. **New:** the four v8 figure scripts (`figures/build/mkfig_v8_*.py`) were also committed from assistant sessions. AIAA names *"figure construction"* explicitly.
 
-**What the repository does not show:** the author's own conception of the architecture, the author's direction in each session, and any work done outside git. The commit record is not a complete account of who did what.
+**What the repository does not show:** the authors' own conception of the architecture, their direction in each session, and any work done outside git. The commit record is not a complete account of who did what. For the software, the author has answered (C0).
 
 | Sentence | Grok | ChatGPT | DeepSeek | Qwen | Claude |
 |---|---|---|---|---|---|
@@ -115,7 +132,7 @@ The v7 statement (from `paper/00-front-matter.md`), sentence by sentence:
 | 2 | does not hold | does not hold | does not hold | does not hold | **does not hold** |
 | 3 | first clause is the project's source rule; the second is for the author to confirm | not established as written | holds | holds | **with Grok and ChatGPT.** A rule existing is not every correction obeying it. The project's own record has failures: CLAUDE.md §3.3 (an error entered v7 and Zenodo, and the check confirmed it) and §3.1 (a script corrected, the prose not). *"Reproduced independently from the underlying model"* fits numerical corrections. Most adopted corrections in v8 were wording and source corrections, adopted by vote. As a universal claim it cannot be certified. **The author decides** |
 | 4 | holds | holds as a responsibility statement; could mislead if read as "no AI contribution" | holds | holds | **holds, with ChatGPT's caution.** Next to fact 2, *"the authors' own"* must not read as denying AI composition. It holds only if the statement discloses the composition plainly |
-| 5 | responsibility required; whether every line was reviewed is the author's to confirm | holds | holds | holds | **the author confirms.** *"Reviewed and edited the output"* is a fact about all three authors, and JoA requires each author to approve the submission in ScholarOne |
+| 5 | responsibility required; whether every line was reviewed is the author's to confirm | holds | holds | holds | **holds: the author confirmed it (C0).** All three authors read and approved the manuscript |
 
 **Missing from v7 (your lists combined):**
 - composition and recomposition of the body;
@@ -124,11 +141,13 @@ The v7 statement (from `paper/00-front-matter.md`), sentence by sentence:
 - the figure scripts (fact 5);
 - the ScholarOne disclosure, which is separate from the Acknowledgments.
 
-**Grok's point, which I share:** the project's no-brand rule is not in AIAA's text. AIAA asks that the tools be *"adequately described"*. That tension is the author's.
+**Grok's point (the no-brand rule against *"adequately described"*): decided by the author (C0).** No names. The description is by use.
 
 ### C3. The tension that goes to the author (your views, please)
 
-All three readers who opened the policy quote the same first sentence: AI in the writing process *"should be used primarily to improve readability, grammar, and language in the work."* Fact 2 is beyond that.
+The author's answers (C0) settle authorship, ownership of the idea, review, and naming. **One question is left, and it is about the writing process only.**
+
+All three readers who opened the policy quote the same first sentence: AI in the writing process *"should be used primarily to improve readability, grammar, and language in the work."* Fact 2 (the English text composed and recomposed by an assistant under the author's direction) is beyond *"primarily … language"*.
 
 **My reading:**
 - *"Should … primarily"* is not worded as a prohibition.
@@ -142,7 +161,9 @@ All three readers who opened the policy quote the same first sentence: AI in the
   - (a) submit with full, accurate disclosure and accept the risk;
   - (b) ask the *Journal of Aircraft* editorial office before submitting whether use of this extent is acceptable?
 
-**Do not draft the statement.** Its facts are the author's.
+**C4, everyone:** with C0 settled, which elements must the statement carry to be *"adequately described"* without names? Examples: the tasks, the scale of the use, human direction and approval, and responsibility. Please list the elements only. The draft follows the author's decision on C3.
+
+**Do not draft the statement yet.**
 
 ---
 
@@ -168,11 +189,8 @@ Open, as always.
 
 ## F. What goes to the author
 
-**Now: the facts of the AI statement.** Only the author can state them:
-- whether facts 2–5 are accurate and complete from the authors' side;
-- what the authors themselves wrote, computed and decided;
-- whether all three authors reviewed the text.
+**Already answered (C0):** software (B.G.), review and approval (all authors), no names, and the idea and the design as the authors'.
 
-**Next round, with your C3 views:** the choice between (a), (b), or another option. Also the tension between the no-brand rule and *"adequately described"*.
+**Next round, with your C3 and C4 views:** the choice between (a), (b), or another option, and then the draft statement for the author's approval.
 
 **If not unanimous:** B (the *"generally"* repair) goes to the author only if the five of us do not agree.

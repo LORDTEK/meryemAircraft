@@ -736,5 +736,8 @@ hatayı doğruladı.** DeepSeek'in bir fizik sorusu (*"sabit rotorda q sadeleşm
   gerekçeleriyle birlikte **şimdiki zamanda yeniden yazılır**, silinmez.
 - YZ kullanım beyanında **marka/model/şirket adı geçmez**; YZ yazar satırında
   asla yer almaz.
+  **Yazar, Tur 198 (E29):** *"Bugüne kadar olmayan yenilikçi fikrime yapayzekanın konmasına asla izin vermeyeceğim. Bu yazarların ürünüdür."* Kavram,
+  mimari, tasarım ve çözüm yaklaşımı yazarlarındır; YZ'nin işi araç işidir (hesap, kod, metin kurma, okuma). Beyan kullanımı doğru tarif eder, ama YZ'yi fikrin
+  üzerine koymaz. Yazılım B.G.; bütün yazarlar okudu ve onayladı.
 - Uygulama alanları: **orman yangını gözlem/müdahale** ve **piste ihtiyaç
   duymayan yerlere kargo.**
