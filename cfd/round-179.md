@@ -2,7 +2,7 @@
 
 > **This is a task. Please answer it now, and begin with your name alone on the first line.**
 >
-> Commit **`@@COMMIT@@`**, branch `claude/ecstatic-cori-6w30at` (for verification only). **The whole assembled body is in the appendix,
+> Commit **`3b71eee`**, branch `claude/ecstatic-cori-6w30at` (for verification only). **The whole assembled body is in the appendix,
 > Sections 1–8, as it stands.** Please read it there, not from memory.
 
 ---
