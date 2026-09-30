@@ -997,3 +997,12 @@ Yalnız korunmayan tekrar: 908 → 823; gövde 13 762 → 13 676. Korunan cümle
 - Parça 4: U 12 (8.1) oybirliği.
 - Tur 179: **bütün okuma** (ekte birleşik gövde tam). Birleşik liste: U 13, C 1 (2.3 "not a test of the whole framework"), 3 kayıt kopyası, 1 ayrışık.
   Bulunan boşluk: 8.5'in 1–4. maddeleri kayıtta yok; madde 2 ikinci sınırın (rotorlu ile dikey yetenek yarışı yok) tek taşıyıcısı. Kayda alınması yazara sorulacak.
+
+## Tur 179 cevapları — bütün okuma tamam; 2. aşama listesi YAZARA
+
+- 6.1 satır 1: ChatGPT, DeepSeek, Qwen K'ye geçti → **beşimiz K.**
+- C (2.3 *"What follows is not a test of the whole framework."*) alındısı: **dördü teyit** (dört işaretçi, taşıyıcı inceltilmemiş).
+- Bütün okuma: **her §0 sınırı en az bir korunan cümleyle tutuluyor**, bir istisna: *"It does not claim vertical capability against rotorcraft."* (8.5 madde 2) tek taşıyıcı ve
+  kayıtta yok. **Kayda alma:** madde 2 — beşimiz; madde 1, 3, 4 — Grok, DeepSeek, Qwen, Claude evet; ChatGPT gereksiz (başka evleri var).
+- Grok'un notu: 6.3 "The evidence is one pair …" (U) ileride kesilirse 27'nin "It" öznesi onarılmalı.
+- **Yazara giden liste:** U 13 (2.1 ×2, 2.2.2, 2.3 ×2, 3.4, 4.6 ×2, 4.8, 5.1, 6.1.4, 6.3, 8.1); C 1 (2.3, 7 kelime); 3 kayıt kopyası; kayda alma 8.5 madde 2 (+1, 3, 4).

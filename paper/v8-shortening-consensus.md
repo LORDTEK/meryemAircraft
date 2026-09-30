@@ -821,3 +821,7 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Parça 3: U 7, 26 · Parça 4: U 12 | ✓ | ✓ | ✓ | ✓ | ✓ | **oybirliği** |
 | Parça 3 satır 1 (6.1) | K | U | U | U | K | **Tur 179'da karşılıklı** |
 | Bütün okuma; 8.5 madde 1–4 kayıt | ? | ? | ? | ? | kayıt öner | **Tur 179** |
+| Parça 3 satır 1 (6.1) | K | K | K | K | K | **oybirliği K** |
+| C (2.3) alındısı; bütün okuma | ✓ | ✓ | ✓ | ✓ | ✓ | **geçti** |
+| 8.5 madde 2 kayda | ✓ | ✓ | ✓ | ✓ | ✓ | **oybirliği; yazara** |
+| 8.5 madde 1, 3, 4 kayda | ✓ | gereksiz | ✓ | ✓ | ✓ | **yazara** |
