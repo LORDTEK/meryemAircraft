@@ -1121,3 +1121,12 @@ Yazara açıklama (Tur 183 sonrası): "4'ü boşver" yalnız bir kez söylenmiş
   Grok, DeepSeek, Qwen, Claude K: 1.4 paralel dizisinin ilk iddia cümlesi); 45 — böl, *"It is audited …"* (DeepSeek; Claude K: denetim "not established" kapsamından
   çıkar); 47 — *"the axis"* → *"the moment about the propeller axis"* (Claude, yeni: 1.5'te göndergesiz).
 - Claude'un Tur 185 bulgusu *"decade"* tekrarı geri çekildi (Grok: iki ayrı olgu).
+
+## Tur 186 cevapları — Bölüm 1 oylaması
+
+- **Oybirliği (beşimiz):** 10 R (son yan cümle düşer), 22 R (ikiye bölünür), 47 R (*"the moment about the propeller axis"*) — uygulanacak; 23 K (ChatGPT C'yi geri çekti:
+  paralel dizi), 45 K (DeepSeek bölmeyi geri çekti: kapsam).
+- **Cümle 4:** mevcut hâline oy yok (ChatGPT K'dan R-b'ye geçti). R-a *"Rotorcraft remove …"*: Grok, DeepSeek, Qwen; R-b: ChatGPT. Claude R-b'den **R-a'ya geçti**
+  (okuyucuların gerekçesi: virgüllerle R-b üç eşdeğer kategori gibi okunuyor ve cümle 1'in iki aile ikiliğini bozuyor; helikopter 4.5'te ve Bölüm 8'de, sonuçların
+  gerçekten ayrıştığı yerde giriyor). → 4'e 1 → **E22, yazarda**: R-a ya da R-b.
+- Uygulama betiği hazır ve kopyada sınandı: `paper/build/v8_round187_apply.py KOK --c4 a|b` (yazarın kararıyla tek geçişte uygulanacak).

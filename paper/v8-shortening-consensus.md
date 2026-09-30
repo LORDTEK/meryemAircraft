@@ -860,3 +860,6 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Bölüm 1: eksen önizlemesi yok; 48↔5.1; 17, 42 K | ✓ | ✓ | ✓ | ✓ | ✓ | **oybirliği** |
 | Bölüm 1 cümle 4 | R-a | K | R-a | R-a | R-b | **Tur 186** |
 | Bölüm 1 cümle 10 / 22 / 23 / 45 / 47 | R/–/K/–/– | –/–/C/–/– | –/R/K/R/– | –/–/K/–/– | R/R/K/K/R | **Tur 186 açık oy** |
+| Bölüm 1: 10 R, 22 R, 47 R | ✓ | ✓ | ✓ | ✓ | ✓ | **oybirliği; uygulanacak** |
+| Bölüm 1: 23 K, 45 K | ✓ | ✓ | ✓ | ✓ | ✓ | **oybirliği** |
+| Bölüm 1 cümle 4 | R-a | R-b | R-a | R-a | R-a | **yazara (E22)** |
