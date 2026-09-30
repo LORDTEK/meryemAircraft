@@ -1216,3 +1216,12 @@ mercekler: Grok §0 · ChatGPT işaretçi/zamir · DeepSeek sayı · Qwen okunur
 
 Tur 192: başlık ve özet okuyuculara (yeni soru; Claude'un adayları Tur 193'te yan yana). L1–L16 izinli ifade envanteri (her biri gövde cümlesiyle), yasaklar listesi (§0).
 **Yazara soru:** *meryemAircraft* adı başlıkta mı? `joa-compliance.md` "yazar kararı" diyor ama kayıtta yazarın sözü bulunamadı; gövde adı hiç kullanmıyor. Okuyuculardan iki aday (adlı/adsız).
+
+## Tur 192 cevapları — başlık ve özet adayları; yazar: "meryemAircraft olacak"
+
+- **Yazar kararı:** ad başlıkta. **Qwen iki cevap verdi** (yazar: bundan sonra da ikisini verecek, Claude hangisinin "sağlıklı" işaretleneceğini söyleyecek) → **Qwen1**
+  (Qwen2'de yanlış genelleme "Eliminating the mechanism … requires rotating the entire airframe", "current sources" genişletmesi, "claims only", ve Q2 hatası).
+- Claude'un denetimi (Tur 193 §C): Grok G1 "changes flight regime" (arranged to değil), G2 anahtar kelime yok, G3 "Instantiation is partial" açıklamasız; ChatGPT C1 aynı, C2 "aircraft"
+  ≠ "package", C3 sayı yok, C4 sözleşme bulgusu yok, C5 anahtar kelime yok; DeepSeek D1 "they pay three charges" (tilt Bill 1 ödemez), D2 fiilsiz, D3 "No wind tunnel … was built",
+  D4 L8 yok; Qwen Q1 5.56–7.39 "closed sizing loop" (kapanıştan önce), Q2 yanlış yarı, Q3 yalnız ilk sözleşme sayısı.
+- Claude'un adayı (199 kelime) ve başlığı (*"meryemAircraft: Tail-Sitting Blended-Wing Body for Vertical Takeoff Without Propulsor Reorientation"*, 10) Tur 193'te yan yana.

@@ -883,3 +883,5 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Son okuma onarımları teyit; C1, C2 K; kapanış | ✓ | ✓ | ✓ | ✓ | ✓ | **SON OKUMA KAPANDI** |
 | Gönderim: Full-Length, LaTeX, mevcut uzunluk | — | — | — | — | — | **yazar (E25, E26)** |
 | Başlık ve özet | ? | ? | ? | ? | (Tur 193'te) | **Tur 192** |
+| Başlık (adlı) | 5 aday | | | | | **Tur 193: sıralama → yazar** |
+| Özet | G1–G3 | C1–C5 | D1–D4 | Q1–Q3 | aday | **Tur 193: taban + cümle değişiklikleri** |
