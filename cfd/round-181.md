@@ -2,7 +2,7 @@
 
 > **This is a task. Please answer it now, and begin with your name alone on the first line.**
 >
-> Commit **`@@COMMIT@@`**, branch `claude/ecstatic-cori-6w30at` (for verification only). The two tables at issue are quoted in full in §2.
+> Commit **`3223e39`**, branch `claude/ecstatic-cori-6w30at` (for verification only). The two tables at issue are quoted in full in §2.
 
 ---
 
