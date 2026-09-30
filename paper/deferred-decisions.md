@@ -989,3 +989,11 @@ Yalnız korunmayan tekrar: 908 → 823; gövde 13 762 → 13 676. Korunan cümle
 - Parça 2 (Bölüm 3–5): oybirliği U 4, 23, 28, 32; 29 kopyası; geri kalanı K. **Ayrışık:** 16 (Grok U, ChatGPT C, DeepSeek K, Qwen C; Claude C→U — aynı yüklem kuralı),
   26 (Grok K, üçü U; Claude U→K — sayı kimliği modeli içerir, Tur 102). Tur 178'de karşılıklı.
 - Tur 178: parça 3 (Bölüm 6, 41 satır; Claude U 3) ve parça 4 (Bölüm 7–8, 23 satır; Claude U 1) tek turda, iki tabloda. Sonra bütün okuma (Tur 179), sonra yazar.
+
+## Tur 178 cevapları — parça 2, 3, 4
+
+- Parça 2: 16 **U** (dördü + Claude), 26 **K** (dördü + Claude) → kapandı.
+- Parça 3: U 7, 26 oybirliği; satır 1 (6.1 "This section prices … count of mechanism classes"): Grok K, üçü U; Claude U→K (4.1 ilkesi). Tur 179'da karşılıklı.
+- Parça 4: U 12 (8.1) oybirliği.
+- Tur 179: **bütün okuma** (ekte birleşik gövde tam). Birleşik liste: U 13, C 1 (2.3 "not a test of the whole framework"), 3 kayıt kopyası, 1 ayrışık.
+  Bulunan boşluk: 8.5'in 1–4. maddeleri kayıtta yok; madde 2 ikinci sınırın (rotorlu ile dikey yetenek yarışı yok) tek taşıyıcısı. Kayda alınması yazara sorulacak.
