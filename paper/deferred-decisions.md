@@ -1092,3 +1092,14 @@ Yazara açıklama (Tur 183 sonrası): "4'ü boşver" yalnız bir kez söylenmiş
 - **Grok:** gelen metin **Tur 183'ün sorularına** cevap (A/B, "drop 30", 7+8); Tur 184'ün a–e'si yok. İçinde yeni bir işaret: **38 K** (Tur 183'te C kabul etmişti);
   gerekçesi 39'un yüklemini 38'e veriyor. → Tur 184 Grok'a yeniden; 38'i açıkça sorsun. Grok teyit etmeden E20 uygulaması ve 4. aşama **kapanmaz**.
 - Açık aday (gönderim hazırlığı): JoA uzunluk sınırı `paper/target-journal.md`'de "bulunamadı ⚠️" — dergi yönergelerine karşı okunmadı; şekil sorusuyla birlikte.
+
+## Grok'un Tur 184 cevabı — 4. aşama KAPANDI
+
+- Grok: §1 beş paragraf **teyit** (38 dahil — önceki "38 K" işareti Tur 183'e yazılmış eski cevaptaydı; bu cevapta paragraf 4'ü teyit etti); §2 altı işaretçi **teyit**;
+  **cümle 19 K**; 4. aşama **kapansın**; sonraki aşama yazarın (gönderim hazırlığı ya da dur).
+- **E20 uygulaması: beşimiz teyit → KAPANDI.** Cümle 19: beşimiz K → **kalır.** **4. aşama: beşimiz kapansın → KAPANDI** (hiçbir bölüm birleşmedi; 2.3 −181).
+- Gövde ~13 411 kelime düzyazı; Bölüm 2 ~2 970 (1,37× Bölüm 5).
+- **Dergi uzunluğu (gönderim hazırlığı adayı):** AIAA'nın "Journal Page Limits and Word Count Guidelines" belgesi (Rev. Aug 2024:
+  `aiaa.org/wp-content/uploads/2024/12/journalpagelimitsandwordcountguidelines_Sept_2024.pdf`; Rev. Aug 2018: `arc.aiaa.org/pb-assets/PDFs/JournalPageLimitsandWordCountGuidelines_August 2018.pdf`)
+  bu oturumdan **açılamadı** (aiaa.org ağ politikasıyla engelli). Bir arama motoru özeti tam makale için ~10 000–12 000 kelime (denklem, şekil, tablo eşdeğeri dahil) ve
+  100–200 kelimelik özet diyor — **özet belge değildir** (Tur 119), sayı kullanılmaz. Yazardan PDF'in `references/`'e yüklenmesi istendi.

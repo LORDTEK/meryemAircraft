@@ -852,3 +852,6 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | E20 uygulaması teyit | (Tur 183'e cevap; 38 K?) | ✓ | ✓ | ✓ | ✓ | **Grok bekleniyor** |
 | 2.3 cümle 19 | (cevap yok) | K | K | K | K | **K — kalır** |
 | 4. aşama kapanır | (cevap yok) | ✓ | ✓ | ✓ | ✓ | **Grok bekleniyor** |
+| E20 uygulaması teyit | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI** |
+| 2.3 cümle 19 | K | K | K | K | K | **kalır** |
+| 4. aşama | kapansın | kapansın | kapansın | kapansın | kapansın | **KAPANDI; sonraki aşama yazarda** |
