@@ -849,3 +849,6 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | E20 uygulaması (B + 11), 2.3 −181 | ? | ? | ? | ? | uyguladı | **Tur 184 teyit** |
 | 2.3 cümle 19 → S4? (yazar sordurdu; beşimiz hemfikirse) | ? | ? | ? | ? | (Tur 185'te) | **Tur 184** |
 | 4. aşama kapanıyor mu | ? | ? | ? | ? | (Tur 185'te) | **Tur 184** |
+| E20 uygulaması teyit | (Tur 183'e cevap; 38 K?) | ✓ | ✓ | ✓ | ✓ | **Grok bekleniyor** |
+| 2.3 cümle 19 | (cevap yok) | K | K | K | K | **K — kalır** |
+| 4. aşama kapanır | (cevap yok) | ✓ | ✓ | ✓ | ✓ | **Grok bekleniyor** |

@@ -1081,3 +1081,14 @@ yargısını ("eksik bulunur") yazara dergi şartı gibi aktardım; denetlenmemi
 31–32 S (korunan üç cümle → `v8-caveats.md` alt tablosu `| S4 | … | E20 |`). Cümle 1 K (veto), 30 gövdede. 2.3 −181; gövde ~13 411; Bölüm 2 ~2 970 (1,37×).
 Denetimler geçti. Eski beş paragraf S4'te aynen. **Cümle 19 (E13'ün 4. maddesi):** yazar okuyuculara sordurdu; beşimiz hemfikirsek S4'e, değilse kalır (Tur 184 §3).
 Yazara açıklama (Tur 183 sonrası): "4'ü boşver" yalnız bir kez söylenmişti (Tur 170); ben iki kez geri aktardım.
+
+## Tur 184 cevapları — üç okuyucu; Grok'un cevabı Tur 183'e
+
+- **ChatGPT, DeepSeek, Qwen:** §1 beş paragraf **teyit**; §2 alındıları **teyit** (4.5 işaretçisi R1: bağımsız kanıt yalıtılmış çift, gövdede); **cümle 19: K** (üçü; tek ev
+  kuralı, cümle 1'in veri tarafındaki karşılığı, E13) → beşimizin oybirliği mümkün değil → **cümle 19 kalır** (yazarın kuralı: hemfikirsek taşınır). Claude: K.
+- **4. aşama:** üçü "(a) ve (b) teyit edilince kapanır". ChatGPT: bir sonraki aşama sayısal hedefle başlamasın, kendi ölçütüyle. DeepSeek: yalnız başlık denemesi ya da son
+  okuma + gönderim hazırlığı; *"framework will no longer precede the aircraft"* beklentisi beşimizin "2.3 uçaktan önce" kararıyla çelişiyor; "başlık denemesi"ni yazarın
+  park ettiği şey diye aktardı — kayıtta bu beşimizin notu (Tur 169), yazar Tur 175'te dört başlığın öneri değil farkındalık olduğunu söyledi. Qwen: yazarın kararı.
+- **Grok:** gelen metin **Tur 183'ün sorularına** cevap (A/B, "drop 30", 7+8); Tur 184'ün a–e'si yok. İçinde yeni bir işaret: **38 K** (Tur 183'te C kabul etmişti);
+  gerekçesi 39'un yüklemini 38'e veriyor. → Tur 184 Grok'a yeniden; 38'i açıkça sorsun. Grok teyit etmeden E20 uygulaması ve 4. aşama **kapanmaz**.
+- Açık aday (gönderim hazırlığı): JoA uzunluk sınırı `paper/target-journal.md`'de "bulunamadı ⚠️" — dergi yönergelerine karşı okunmadı; şekil sorusuyla birlikte.
