@@ -1184,3 +1184,10 @@ mercekler: Grok §0 · ChatGPT işaretçi/zamir · DeepSeek sayı · Qwen okunur
   bağlı; 2.1 hibrit gövde rüzgâr tüneli çalışmasını alıntılıyor; S13 "the wind-tunnel campaign quoted in Section 2" diyor). **Claude'un hatası:** Tur 190 notunda kampanyayı
   quadplane diye adlandırdım; doğrusu hibrit gövde çalışması.
 - **Uygulandı (Tur 191):** D1, D2 (E24; kayıt satırı yeni metne), satır 0 (`v8_round191_apply.py`); denetimler geçti; eski üç paragraf S1, S3, S6'da.
+
+## Tur 191 cevapları — SON OKUMA KAPANDI
+
+- Üç onarım (D1, D2, satır 0): **dördü teyit.** C1 ve C2: **beşimiz K** (DeepSeek ikisini de geri çekti). Son parça–bütün–parça okuması **kapandı** (beşimiz).
+- **Sıradaki: gönderim aşaması (yazar).** Önce derginin kendi yönergeleri (CLAUDE.md §4 dergi şartı kuralı): AIAA sayfa/kelime yönergesi PDF'i ve JoA yazar talimatları yazardan
+  istendi (aiaa.org bu ortamdan engelli). Gövdede henüz olmayanlar (gönderim için gerekecek): başlık, özet, terimler (nomenclature), kaynakça ve metin içi atıf işaretleri
+  (gövde kaynakları yıl ve tarifle anıyor), YZ kullanım beyanı (marka/model/şirket adı yok), teşekkür; şekil sorusu (E19 park) ve *"more than three decades"* (Q-2).

@@ -880,3 +880,4 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Satır 0 (2.2 "priced") | R | R | R | R | R | **uygulandı (Tur 191)** |
 | C1 (6.3, korunan) / C2 (6.4 işaretçi) | ? | ? | R / R | ? | K / K | **Tur 191 oy** |
 | Son okuma onarımları (D1, D2, satır 0) teyit; kapanış | ? | ? | ? | ? | uyguladı | **Tur 191** |
+| Son okuma onarımları teyit; C1, C2 K; kapanış | ✓ | ✓ | ✓ | ✓ | ✓ | **SON OKUMA KAPANDI** |
