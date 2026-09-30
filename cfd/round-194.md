@@ -2,7 +2,7 @@
 
 > **This is a task. Please answer it now, and begin with your name alone on the first line.**
 >
-> Commit **`@@COMMIT@@`**, branch `claude/ecstatic-cori-6w30at` (for verification only). The full draft is below.
+> Commit **`80d2e52`**, branch `claude/ecstatic-cori-6w30at` (for verification only). The full draft is below.
 
 ---
 
