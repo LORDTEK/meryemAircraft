@@ -832,3 +832,5 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | T2 / T3 / F2a / F2b | M/M/M/M | K/S/B/S | K/S/B/S | at/K/S/S | K/K/B/S | **Tur 181'de karşılıklı** |
 | Alındı satırı (birleşik) ve K/M/S/B/N | ✓ | ✓ | ✓ | ✓ | ✓ | **kabul** |
 | 3. aşama: T1–T6 K; F1 B (tek sütun); F2a B; F2b S; F3 N | ✓ | ✓ | ✓ | ✓ | ✓ | **oybirliği → yazara** |
+| 3. aşama | — | — | — | — | — | **yazar: değişikliksiz kapandı (E19)**; şekil sorusu gönderim hazırlığına park |
+| 4. aşama: bölüm birleştirme (2.3 dahil) | ? | ? | ? | ? | (Tur 183'te) | **Tur 182 yöntem + öneri** |

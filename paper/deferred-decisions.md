@@ -1027,3 +1027,10 @@ Uygulandı: U 13 (kayıttan U tablosuna; gövdede aynen), 3 kayıt kopyası sili
   DeepSeek, Grok görüş değiştirdi); **F1 B** (5.2, tek sütun, 200; ChatGPT: dergi boyutunda okunurluk sınansın); **F2a B** (5.2.5; Qwen görüş değiştirdi);
   **F2b S** (S8'e, 5.2.5'ten işaretçi; Grok birleştirmeyi geri çekti); **F3 N**. Net: **+400 kelime eşdeğeri** (gövdede bugün hiç şekil yok).
 - Uygulama gereği (yazar onayından sonra): F1 ve F2a için gövdede çağrı cümleleri ve altyazılar (R, oylanır; altyazı iddia yüzeyi); v8_figures, v8_stale SEKILLER.
+
+## E19 — 3. aşama · **KARAR (Tur 181 sonrası): "Yaptığımız iş hedefimiz ile uyumlu değilse yapmayalım."**
+
+3. aşama **değişikliksiz kapandı:** altı tablo kalır, şekil eklenmez. Aşamanın hedefi kısaltma/birleştirmeydi; liste +400 kelime eşdeğeri getiriyordu.
+**Park:** gönderimde şekil gerekip gerekmediği — gönderim hazırlığında, derginin kendi yönergelerine karşı (CLAUDE.md §4 dergi şartı kuralı). Benim hatam: okuyucuların
+yargısını ("eksik bulunur") yazara dergi şartı gibi aktardım; denetlenmemişti.
+**Tur 182:** 4. aşama (bölüm birleştirme, 2.3 dahil) açıldı; yöntem ve öneriler okuyuculara (yeni soru).
