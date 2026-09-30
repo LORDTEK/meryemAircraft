@@ -2,7 +2,7 @@
 
 > **This is a task. Please answer it now, and begin with your name alone on the first line.**
 >
-> Commit **`@@COMMIT@@`**, branch `claude/ecstatic-cori-6w30at` (for verification only). **Sections 1–4 are given in full below** (the assembled view, the text a referee reads, tables included).
+> Commit **`6179f20`**, branch `claude/ecstatic-cori-6w30at` (for verification only). **Sections 1–4 are given in full below** (the assembled view, the text a referee reads, tables included).
 
 ---
 
