@@ -291,6 +291,6 @@ alıntı için tanık ile yapılandırmamız arasındaki yorumu etkileyen fark k
 - Motorlu planör (Schoemann 2014 s. 25–26): planörün kendi belgesi aranmadı; cümle *"None of the elements is new"* paragrafında, boşluk iddiası taşımıyor.
 
 **2026-09-30 — Mathur & Atkins 2023 (quadplane, gövde 2.1 alıntısı):** arXiv v1 depoda (`references/Mathur-Atkins-2023_arXiv-2301.12316v1_…pdf`), **tam**, depo PDF'i; alıntı birebir
-PDF s. 23 (sonuç): *"The simulation model used in [12], based on ideal case assumptions of negligible flow interaction between rotors and the vehicle structure, always predicts
+PDF s. 23 (sonuç tartışması, bulgular bölümü): *"The simulation model used in [12], based on ideal case assumptions of negligible flow interaction between rotors and the vehicle structure, always predicts
 higher lift and lower drag than were experimentally observed."* Kaynak katmanı: benzetim modeli kaynağın kendi [12]'si; gövde "a simulation assuming negligible rotor–structure
 interaction" diyor — sadık. Tur 90'dan beri "attributed but unverified"ti → **verified primary (preprint)**. Dergi sürümü (doi 10.2514/1.C036916) gönderimden önce buna karşı.

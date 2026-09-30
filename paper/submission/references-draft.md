@@ -95,7 +95,7 @@
   - Where readers disagreed, the version backed by the publisher's own page was taken:
     - [5]: journal DOI (three readers), not Grok's book-chapter DOI;
     - [14]: SAE 2014-01-2222 (three readers), not DeepSeek's 2014-01-2101.
-- **[16]:** the author uploaded arXiv v1. The quotation is verbatim on PDF page 23 (the conclusion): *"The simulation model used in [12], based on ideal case assumptions of negligible flow interaction between rotors and the vehicle structure, always predicts higher lift and lower drag than were experimentally observed."*
+- **[16]:** the author uploaded arXiv v1. The quotation is verbatim on PDF page 23 (results discussion): *"The simulation model used in [12], based on ideal case assumptions of negligible flow interaction between rotors and the vehicle structure, always predicts higher lift and lower drag than were experimentally observed."*
   - A *Journal of Aircraft* version exists (Grok, ChatGPT, Qwen; DeepSeek found none): doi 10.2514/1.C036916, with a different title.
   - AIAA prefers the journal version. Its PDF is needed to confirm the wording and the issue number: ChatGPT and Grok say No. 4, Qwen No. 5.
 - **[11] Vegh:** ChatGPT found a *Journal of Aircraft* version, doi 10.2514/1.C038393. The author could not obtain the SciTech paper. The journal version is the one to cite if it can be obtained.
