@@ -180,7 +180,7 @@ closes.** Readers answer one another, not only Claude.
 **The rules that govern every proposal:**
 
 1. **Protected sentences.** *"A sentence is protected when removing it silently would change a claim, a limit or a derivation that
-   later text depends on …"* There are **161 in the body and 28 in the supplement**, in the register `paper/v8-caveats.md`. A protected
+   later text depends on …"* There are **148 in the body and 28 in the supplement** (and 14 unprotected by the author's decision E18, still in the body), in the register `paper/v8-caveats.md`. A protected
    sentence is kept **verbatim**. **It cannot be reworded.** If you think one should be, ask the author.
 2. **Rule (iii) (the author, Round 104).** *"A protected sentence may move to the supplement only together with the result it
    qualifies, and only by the author's decision."* The author decides these **as one list** (Round 168).
@@ -210,20 +210,17 @@ closes.** Readers answer one another, not only Claude.
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 179.** All four readers work in new conversations since Round 169; this was done **for equality** (Grok's conversation did not need
+**Round 180.** All four readers work in new conversations since Round 169; this was done **for equality** (Grok's conversation did not need
 renewing). **The author (Round 171):** *"You readers, work together. Whenever it comes to my turn, don't forget to tell me."* Each round
 text ends by naming what goes to the author.
 
 | Block | State |
 |---|---|
-| Closed | shortening inside the current structure (Rounds 168–176): 17 734 → 13 593 words of prose |
-| **Stage 2 (now): which protected sentences need protection** | marks **K** keep / **U** unprotect (stays in the body, no longer blocks shortening) / **C** cut as a copy (carrier must state the **same predicate**) / **S** to the supplement with its result (rule iii). Groups 1–2, 3–5, 6, 7–8 → whole reading against §0 (and receipt for every C) → the author decides each group as one list. **Nothing applied yet** |
-| Part 1 (Sections 1–2) | **settled, all five:** U 11, 22, 24, 42, 44; C 35; two duplicate rows dropped |
-| Part 2 (Sections 3–5) | **settled:** U 4, 16, 23, 28, 32; row 26 K; duplicate 29 dropped |
-| Parts 3–4 (Sections 6, 7–8) | U 6.1.4 (*"That spread …"*), 6.3 (*"The evidence is one pair …"*), 8.1; 6.1 row 1 split |
-| **Open (Round 179)** | **the whole reading** of all marks against the paper and §0; 6.1 row 1; registering 8.5 items 1–4 (a gap found). Then the author |
-| Later stages | 3 tables and figures; 4 section merging, 2.3 included |
-| Protected sentences | 161 in the body, 28 in the supplement |
+| Closed | shortening inside the current structure (Rounds 168–176): 17 734 → 13 593 words of prose; **stage 2** (protected-sentence status, Rounds 176–180; author's decision E18): 14 sentences unprotected (they stay in the body), 3 duplicate register rows removed, 8.5 items 1–4 registered |
+| **Stage 3 (now): tables and figures** | 6 body tables (T1–T6); 4 figure drafts (F1, F2a, F2b, F3), none yet called in the body. The journal counts 200 / 450 words per single / double-column object |
+| **Open (Round 180)** | confirm stage 2's application and the C → U reversal; the added receipt line (a C fails if the carrier's pronoun points at the cut sentence); stage 3's method and proposals |
+| Later stage | 4 section merging, 2.3 included |
+| Protected sentences | 148 in the body, 28 in the supplement; U table 14 |
 | Body | 13 593 words of prose (tables excluded) |
 
 **Tools the round texts mention:**

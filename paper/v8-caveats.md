@@ -24,14 +24,12 @@ boşluğa duyarsız. `G` = Grok, `D` = DeepSeek, `C` = ChatGPT, `Q` = Qwen, `K` 
 | 2 | The statement is deliberately confined to architectures with a dedicated lift subsystem. | D |
 | 2 | they are not assumed to be independent physical causes | D |
 | 3 | It means zero of the three charges as Section 2 defines them…It does not mean an architecture that costs nothing | G |
-| 3 | It does not claim the trade is favourable. | G |
 | 3 | Whether such an architecture might avoid the three charges by some other route is a separate question this paper does not settle. | G |
 | 3 | A store is permitted…It does not claim the trade is favourable. | D |
 | 3 | Releasing the engine is not releasing the electrical path. | D |
 | 3 | Rotating the airframe is permitted and is not priced here. | D |
 | 3 | Serving two regimes with one set of hardware has a price of its own…The condition permits that cost and does not measure it. | D |
 | 3 | An architecture that reorients a propulsor does not satisfy the condition as written…the condition is a definition, not a law, and it can be too narrow without being wrong. | D |
-| 4 | What follows is not a test of the whole framework. | G |
 | 4 | only the first is a derivation | G |
 | 4 | They are not identical in every other respect…the comparison is the closest the published set comes to isolating that charge; it is not a controlled experiment. | G |
 | 4 | It checks one falsifiable consequence on one independent data set. | D |
@@ -55,7 +53,6 @@ boşluğa duyarsız. `G` = Grok, `D` = DeepSeek, `C` = ChatGPT, `Q` = Qwen, `K` 
 | 7 | Nor is this a claim of mechanical simplicity. | G |
 | 7 | Whether this aircraft can actually perform the change is a separate question and is not settled anywhere in this paper. | G |
 | 7 | The mechanism claim is about hardware and survives that limit. The transition claim is not made. | G |
-| 7 | The qualification "in the propulsor that carries the aircraft" is not decoration | D |
 | 8 | The free-wheeling state is physically determinate: the rotor settles where net shaft torque is zero. The stopped state is not. | G |
 | 8 | should be read as estimates for an assumed azimuth rather than as the state a particular installation would reach. | D |
 | 8 | How many actuators that is, this study does not fix. | D |
@@ -66,7 +63,6 @@ boşluğa duyarsız. `G` = Grok, `D` = DeepSeek, `C` = ChatGPT, `Q` = Qwen, `K` 
 | 10 | Closing a sizing loop mathematically is not the same thing as closing an aircraft physically. | G |
 | 10 | These are the same configuration at four closed masses rather than four configurations | G |
 | 10 | So the zero-altitude-loss result is a property of the model that produced it. | G |
-| 10 | That spread is itself the finding. | G |
 | 10 | Whether a real aircraft loses 5.4 to 6.6 m, more, or less is not settled by anything here. | G |
 | 10 | It does not establish that the package exists. | D |
 | 11 | It attributes. It does not add. | G |
@@ -83,7 +79,6 @@ boşluğa duyarsız. `G` = Grok, `D` = DeepSeek, `C` = ChatGPT, `Q` = Qwen, `K` 
 | 12 | It is consistent with the separability Section 2 asserts; it is not a verification of separability as a general property. | G |
 | 12 | The test is deliberately weak | D |
 | 12 | It cannot show that they are independent in general | D |
-| 12 | The evidence is one pair of design points, computed by one method, with the Bill 2 result resting on a section-drag model at low Reynolds number. | D |
 | 13 | What the bound gives is a size, not an order. | G |
 | 13 | how much of it they fill is not computed | G |
 | 13 | A ranking against a competitor modelled as a bound is not a ranking, and no range claim is made against the tilting family in either direction. | G |
@@ -104,15 +99,12 @@ boşluğa duyarsız. `G` = Grok, `D` = DeepSeek, `C` = ChatGPT, `Q` = Qwen, `K` 
 | 15 | Whether this aircraft completes the rotation is a separate question, and it is not settled here | D |
 | 1 | What is not established is the combination taken together with its price. | G |
 | 7 | What this paper contributes is the architecture that brings the three elements together; the condition shows what it satisfies, and the price shows what it costs. | G |
-| 15 | It is not a list of the study's open questions. | G |
 | 13 | The mechanism claim is not a ranking and is not at stake here | G |
 | 10 | This section prices the arrangement of Sections 7 and 8 on a declared package; it does not bear on the count of mechanism classes, which rests on the inventory of those sections alone. | G |
 | 6 | Reynolds number favours the larger aircraft | D |
 | 6 | The quadrotor is a good quadrotor. | D |
-| 6 | Nothing here is compared against a poor example. | D |
 | 6 | The speeds are not matched, and the direction of that mismatch is calculable. | D |
 | 6 | The atmospheres are not matched. | D |
-| 6 | The analysis chains are not matched, and this is the qualification that bounds what the comparison can be called. | D |
 | 6 | The best point is not an available option | D |
 | 6 | so this fixes a direction, not a magnitude | D+Q |
 | 11 | The corner that needs the most buffer per kilogram is given the smallest buffer | D |
@@ -122,8 +114,6 @@ boşluğa duyarsız. `G` = Grok, `D` = DeepSeek, `C` = ChatGPT, `Q` = Qwen, `K` 
 | 1 | The route is not claimed to have been waiting to be found. | Q+G |
 | 2 | The table is not a census of the field; it lists the moves whose transfers are documented, and a remedy absent from it is not thereby claimed to cancel a charge. | Q |
 | 4 | The framework does not predict any of these numbers; without the input fractions it predicts no magnitudes. | Q |
-| 4 | The prediction is also mission-dependent, and the page would be weaker for hiding it. | Q |
-| 5 | This section does not assert the outcome of a calculation it does not contain. | Q |
 | 6 | The reference is therefore given its best speed and this configuration is not given its best speed, and the margin is positive anyway. | Q |
 | 7 | The assembly is not offered as novel because it is an assembly. | Q |
 | 8 | Either the residual is small enough to be absorbed that way, which this study has not shown and which would mean the architecture spends a little of the channel it declined, or another duty falls on the strip. | Q |
@@ -136,9 +126,7 @@ boşluğa duyarsız. `G` = Grok, `D` = DeepSeek, `C` = ChatGPT, `Q` = Qwen, `K` 
 | 12 | Of the two rotor terms, the light one is therefore the less certain — and it is the one Sections 10 and 11 carry. | G+K |
 | 10 | the question is asked in two models, only the second of which carries rotational dynamics, and that one does not support a zero altitude loss | C+G+D+Q+K |
 | 4 | The instrument is now fixed, and it is not modified again. | G+C+D+Q+K |
-| 4 | Everything that follows is measured with it rather than added to it. | G+C+D+Q+K |
 | 14 | The escape from Bill 3 is real in the sense Section 3 defined it, and its price depends on a component whose required performance has not been demonstrated. | G+C+D+Q+K |
-| 2 | Whether an architecture can decline the mismatch itself, rather than redistribute its consequences, is a different question | G+C+D+Q+K |
 
 ## Ruh cümleleri (Tur 61, Claude'un önerisi)
 
@@ -147,18 +135,13 @@ kaybolmasına (CLAUDE.md §0.8). Aynı denetimle sınanır.
 
 | Adım | Cümle | Öneren |
 |---:|---|---|
-| 1 | The contribution is the architecture: a configuration arranged to change regime by rotating the airframe rather than its propulsors, and so carrying no mechanism that reorients a propulsor. | K |
-| 6 | The two halves are now on the table separately. Section 7 is where they are combined, and the combination is what this paper is for. | C |
-| 7 | What this paper contributes is the architecture that brings the three elements together; the condition shows what it satisfies, and the price shows what it costs. | G |
 | 7 | That single move is what removes the need for the mechanism. | K+C |
 | 15 | What the paper offers is a configuration sized to combine runway-independent vertical operation with wing-borne cruise efficiency, arranged to do so with no mechanism that reorients a propulsor, and an account of what the combination costs. | K |
 | 7 | The configuration is arranged to change regime by rotating the airframe. The propulsors hold their orientation relative to the body from take-off to cruise; what changes is the orientation of the body relative to the flight path. | G |
 | 3 | The answer is a definition, derived by inverting the table, and it is stated here before any configuration is offered so that the standard is not taken from the thing it will be used to measure. | G+C+D+Q+K |
-| 3 | Read one at a time, these are ways to pay. Read as a conjunction, they are a condition. | G+C+D+Q+K |
 | 3 | An architecture does not incur the three charges if the propulsors that carry the weight…produce both the hover thrust and the cruise…is supplied from a store rather than from permanently installed continuous power | D |
 | 8 | The tip pairs are the parts that fail the escape condition | D |
 | 2 | is the origin of all three charges below | Q |
-| 2 | A claim that one architecture escapes a cost shared by the others is only meaningful if the cost is stated first, in terms that do not presume the escape. | G |
 | 14 | The same study notes lithium-polymer figures in the literature as high as 3 kW per kilogram, which it cites rather than measures | C+D+G+Q+K |
 | 1 | The reaction-torque channel that other coaxial tail-sitters use about that axis is a choice this configuration declines rather than a limit it inherits | G+C+D+Q+K |
 | 1 | Uncrewed tail-sitters combining fixed-pitch rotors with a flying wing have been built and flown for more than a decade | G+C+D+Q+K |
@@ -184,6 +167,10 @@ kaybolmasına (CLAUDE.md §0.8). Aynı denetimle sınanır.
 | 4 | And the source states the second half of the prediction in its own words, on a comparison the check does not use as its test. | G+C+D+Q+K |
 | 4 | but not enough to counter the increase in structure and propulsion weight. | G+C+D+Q+K |
 | 15 | A configuration may avoid all three and still be unbuildable, uncontrollable, or unsuited to its mission, and the accounting says nothing against that possibility. | G+C+D+Q+K |
+| 15 | It does not claim range against fixed-wing aircraft. | G+C+D+Q+K |
+| 15 | It does not claim vertical capability against rotorcraft. | G+C+D+Q+K |
+| 15 | It does not claim that the aircraft has no moving parts. | G+D+Q+K |
+| 15 | It does not claim mechanical simplicity. | G+D+Q+K |
 
 **Yazar kararıyla eke taşınan korunan cümleler (kural (iii), CLAUDE.md §2.4; `v8_caveats.py` ekte durduğunu sınar):**
 
@@ -223,3 +210,28 @@ kaybolmasına (CLAUDE.md §0.8). Aynı denetimle sınanır.
 *P71 birimi (Tur 114; DeepSeek, dört okuyucu + Claude): Adım 4'ün "The instrument is now fixed, and it is not modified again." ve "Everything that follows is measured with it rather than added to it." cümleleri birlikte kalır ya da birlikte gider.*
 
 *Bölümler arası P71 (Tur 115; Grok P96, DeepSeek, dört okuyucu + Claude): Adım 9 madde 6'nın ikinci cümlesi, Adım 4'ün Ek S4'teki M1'inin gövdedeki taşıyıcısıdır; biri taşınırsa öbürü de gözden geçirilir.*
+
+## U — korumadan çıkarılan cümleler (Tur 180, yazar kararı E18)
+
+Bu cümleler **gövdede aynen durur**; yalnız kısaltmayı bloklamaz. Sonraki bir kısaltma olağan oylamayla (dört okuyucu + Claude) yapılır.
+Uyarı (Grok, Tur 179): 6.3 satırı kesilirse, arkasındaki korunan cümlenin *"It"* öznesi onarılmalıdır. Adım 4'ün iki satırı Tur 114'ün P71 birimidir
+(*"The instrument is now fixed …"* korunur); ikincisi kesilecekse birim kuralı yeniden okunur.
+
+| İşaret | Adım | Yer | Cümle | Karar |
+|---|---:|---|---|---|
+| U | 2 | 2.1 | A claim that one architecture escapes a cost shared by the others is only meaningful if the cost is stated first, in terms that do not presume the escape. | E18 |
+| U | 2 | 2.1.7 | Whether an architecture can decline the mismatch itself, rather than redistribute its consequences, is a different question | E18 |
+| U | 3 | 2.2.2 | Read one at a time, these are ways to pay. Read as a conjunction, they are a condition. | E18 |
+| U | 4 | 2.3 | The prediction is also mission-dependent, and the page would be weaker for hiding it. | E18 |
+| U | 4 | 2.3 | Everything that follows is measured with it rather than added to it. | E18 |
+| U | 5 | 3.4 | This section does not assert the outcome of a calculation it does not contain. | E18 |
+| U | 6 | 4.6 | Nothing here is compared against a poor example. | E18 |
+| U | 6 | 4.6 | The analysis chains are not matched, and this is the qualification that bounds what the comparison can be called. | E18 |
+| U | 6 | 4.8 | The two halves are now on the table separately. Section 7 is where they are combined, and the combination is what this paper is for. | E18 |
+| U | 7 | 5.1 | The qualification "in the propulsor that carries the aircraft" is not decoration | E18 |
+| U | 10 | 6.1.4 | That spread is itself the finding. | E18 |
+| U | 12 | 6.3 | The evidence is one pair of design points, computed by one method, with the Bill 2 result resting on a section-drag model at low Reynolds number. | E18 |
+| U | 15 | 8.1 | It is not a list of the study's open questions. | E18 |
+| U | 4 | 2.3 | What follows is not a test of the whole framework. | E18 (C yerine U; bkz. not) |
+
+**C yerine U (Tur 180):** yazar C işaretini onayladı (E18), ama uygulamada korunan taşıyıcının *"It checks one falsifiable consequence …"* *"It"* öznesinin kesilecek cümleye dayandığı görüldü; kesilince *"It"* önceki cümlenin *"a particular aircraft"*ına bağlanıyordu. Cümle gövdede kaldı, U oldu; ileride kesilirse taşıyıcının öznesi onarılmalı. Kayıt kopyaları (1 K, 3 G, 7 G ikinci) silindi.

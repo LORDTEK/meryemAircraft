@@ -1006,3 +1006,9 @@ Yalnız korunmayan tekrar: 908 → 823; gövde 13 762 → 13 676. Korunan cümle
   kayıtta yok. **Kayda alma:** madde 2 — beşimiz; madde 1, 3, 4 — Grok, DeepSeek, Qwen, Claude evet; ChatGPT gereksiz (başka evleri var).
 - Grok'un notu: 6.3 "The evidence is one pair …" (U) ileride kesilirse 27'nin "It" öznesi onarılmalı.
 - **Yazara giden liste:** U 13 (2.1 ×2, 2.2.2, 2.3 ×2, 3.4, 4.6 ×2, 4.8, 5.1, 6.1.4, 6.3, 8.1); C 1 (2.3, 7 kelime); 3 kayıt kopyası; kayda alma 8.5 madde 2 (+1, 3, 4).
+
+## E18 — 2. aşama listesi · **KARAR (Tur 179 sonrası): "Hepsi onaylı, uygula ve Tur 180'i hazırla. Harika ilerliyoruz."**
+
+Uygulandı: U 13 (kayıttan U tablosuna; gövdede aynen), 3 kayıt kopyası silindi, 8.5 madde 1–4 kayda (K). **C uygulanmadı → U:** korunan taşıyıcı *"It checks …"*'in
+*"It"*'i kesilecek cümleye bağlıydı; beşimiz de kaçırdık, uygulamada bulundu, geri alındı (CLAUDE.md §3.0'a satır). Kayıt 161 → 148; gövde değişmedi (13 593).
+**Tur 180:** 3. aşama (tablolar ve şekiller) açıldı — yöntem ve öneriler okuyuculara (yeni soru; Claude'un görüşü Tur 181'de yan yana).

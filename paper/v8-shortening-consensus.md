@@ -825,3 +825,5 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | C (2.3) alındısı; bütün okuma | ✓ | ✓ | ✓ | ✓ | ✓ | **geçti** |
 | 8.5 madde 2 kayda | ✓ | ✓ | ✓ | ✓ | ✓ | **oybirliği; yazara** |
 | 8.5 madde 1, 3, 4 kayda | ✓ | gereksiz | ✓ | ✓ | ✓ | **yazara** |
+| E18 uygulandı (U 13, kopya 3, 8.5 kayıt 4; C → U) | ? | ? | ? | ? | uyguladı | **Tur 180 teyit** |
+| 3. aşama: tablolar ve şekiller (T1–T6, F1–F3) | ? | ? | ? | ? | (Tur 181'de) | **Tur 180 yöntem + öneri** |
