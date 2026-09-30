@@ -1269,3 +1269,11 @@ NeuralFoil makale künyesi doğrulanmadı. Okuyuculardan künye alanları (bağl
 - Claude dosyalardan: arXiv başlığı derginin başlığından **farklı** (Grok, ChatGPT haklı; Tur 195 D1(ii) yanlış başlık bastı — Claude'un hatası); [9] sayfaları PDF'te basılı 6268–6278 (Qwen'in 357–381'i yanlış).
 - Açık → Tur 196: Mathur dergi sayı/sayfa (4, 1323–1328 vs 5, 1612–1623); ChatGPT'nin tek başına okuduğu dergi ifadesi (*"always"* yok, *"significantly"* var); Vegh dergi künyesi (DeepSeek bulamadı);
   **hangi sürüme atıf** — (a) Grok, Qwen; (b) DeepSeek; (c) ChatGPT; (d) Claude: metni açılan sürüm (Mathur arXiv v1, Vegh SciTech + düzeltme). Yakınsama olmazsa yazara.
+
+## Tur 196 cevapları
+
+- **[11] Vegh kapandı (beşimiz):** SciTech 2025-1436 + düzeltme duyurusu; dergi sürümü kanıt kaydına (var olduğu dördünce doğrulandı), kaynakçaya değil. Sessizlik yan cümlesi dergiye karşı denetlenmedi (beşimiz).
+- **[9] 6268–6278:** üç okuyucu + Claude; DeepSeek B'ye cevap vermedi → tek satır teyit.
+- **[15] Mathur ayrışık:** d (Grok, Qwen, Claude), c (ChatGPT), b (DeepSeek). C2 hâlâ tek okuyuculu. Tur 197'de okuyucular birbirine cevap verir; yakınsama olmazsa yazara.
+- **Sıradaki gönderim maddesi (Tur 197'de açıldı):** Teşekkür bölümündeki YZ kullanım beyanı. AIAA şablonu: *"If AI is used in the writing process or figure construction as permitted, authors must include a brief description of AI use in the Acknowledgments section of the manuscript."*
+  *"as permitted"*in işaret ettiği AIAA politikası depoda yok → okuyucular bulur, birebir alıntılar. v7 beyanı (`paper/00-front-matter.md`) v8'de olmayan bir *"Section 2.14"*e atıf yapıyor. Beyanın olgusu yazarındır.

@@ -131,3 +131,12 @@
 - [15] journal wording: ChatGPT alone reports, from ResearchGate 368702127, *"predicts higher lift and significantly lower drag than were experimentally observed"* (no *"always"*). Not yet cross-checked.
 - [11] Vegh journal: Vol. 63, No. 4, 2026 (Grok, ChatGPT, Qwen); pp. 1650–1660 (ChatGPT via an aggregator, Qwen); title without *"a"*. DeepSeek could not confirm the journal item exists.
 - **Which version to cite** for [11] and [15] when nobody has opened the journal text.
+
+## Round 196 answers (2026-09-30)
+
+- **[11] Vegh: closed, all five.** Cite the SciTech paper, AIAA 2025-1436, with its correction notice: Grok, ChatGPT, Qwen and Claude by position d, and DeepSeek by position b, which for Vegh is the same citation. The body's two facts and its silence clause were checked in manuscript R3, and ChatGPT read the conference full text in Round 136. The manuscript flag stays. The *Journal of Aircraft* item (doi 10.2514/1.C038393, *"… for Long-Endurance Tailsitter Concept"*) exists, confirmed by all four, and goes to the evidence record, not the list. Its volume, issue and pages are not needed.
+- **C4 closed, all five:** no reader has checked the silence clause against the journal text. Qwen withdrew *"highly probable"*.
+- **[9] pages 6268–6278:** Grok, ChatGPT, Qwen (withdrew 357–381) and Claude agree. DeepSeek did not answer B → one-line confirmation.
+- **[15] Mathur: split.** Grok, Qwen, Claude: d (arXiv v1). ChatGPT: c (journal wording and journal citation). DeepSeek: b (journal citation, quotation marked as from the preprint).
+  - C2, the journal wording, is still single-reader. Grok, DeepSeek and Qwen could not open ResearchGate 368702127.
+  - C1: no conflicting value remains. DeepSeek withdrew No. 5 and pp. 1612–1623. Issue 4 comes from Grok (AIAA page), ChatGPT and Qwen; pp. 1323–1328 from ChatGPT, Qwen and DeepSeek. Grok has not seen the pages.
