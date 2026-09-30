@@ -2,7 +2,7 @@
 
 > **This is a task. Please answer it now, and begin with your name alone on the first line.**
 >
-> Commit **`@@COMMIT@@`**, branch `claude/ecstatic-cori-6w30at` (for verification only). Everything you are asked to judge is in this text. Sentence numbers are Round 185's.
+> Commit **`c3b28f1`**, branch `claude/ecstatic-cori-6w30at` (for verification only). Everything you are asked to judge is in this text. Sentence numbers are Round 185's.
 
 ---
 
