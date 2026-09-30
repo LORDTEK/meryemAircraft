@@ -2,7 +2,7 @@
 
 > **This is a task. Please answer it now, and begin with your name alone on the first line.**
 >
-> Commit **`@@COMMIT@@`**, branch `claude/ecstatic-cori-6w30at` (for verification only). Everything you are asked to judge is in this text.
+> Commit **`74edb6b`**, branch `claude/ecstatic-cori-6w30at` (for verification only). Everything you are asked to judge is in this text.
 
 **The rule this round runs on (the author, Round 195, my translation):** *"Don't ask me to research sources. Ask them; let them cross-check. If they all say 'correct', it is correct."*
 - Every field below closes only when all four of you give the same value, each with the link you read it from.
