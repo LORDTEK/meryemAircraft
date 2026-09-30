@@ -982,3 +982,10 @@ Yalnız korunmayan tekrar: 908 → 823; gövde 13 762 → 13 676. Korunan cümle
   önce (ChatGPT); kayıtta U işareti (DeepSeek); kayıt kopyası silme = temizlik (Grok).
 - **Parça 1 işaretleri:** oybirliği K 42, U 22 ve 24, C 35, iki kayıt kopyası. **Ayrışık:** 11 (U ×4, ChatGPT K), 42 (U ×4, ChatGPT K), 44 (Grok U, Qwen K, ChatGPT ve
   DeepSeek C; Claude C → U). Tur 177'de okuyucular birbirine cevap verecek. Karar bütün okumadan sonra yazarın.
+
+## Tur 177 cevapları — parça 1 kapandı; parça 2'de iki ayrışık satır
+
+- Parça 1: 11/42/44 — ChatGPT üçünde U'ya geçti, Qwen 44'te K→U, DeepSeek 44'te C'yi geri çekti → **beşimiz: U 11, 22, 24, 42, 44; C 35; iki kopya satır.**
+- Parça 2 (Bölüm 3–5): oybirliği U 4, 23, 28, 32; 29 kopyası; geri kalanı K. **Ayrışık:** 16 (Grok U, ChatGPT C, DeepSeek K, Qwen C; Claude C→U — aynı yüklem kuralı),
+  26 (Grok K, üçü U; Claude U→K — sayı kimliği modeli içerir, Tur 102). Tur 178'de karşılıklı.
+- Tur 178: parça 3 (Bölüm 6, 41 satır; Claude U 3) ve parça 4 (Bölüm 7–8, 23 satır; Claude U 1) tek turda, iki tabloda. Sonra bütün okuma (Tur 179), sonra yazar.

@@ -210,7 +210,7 @@ closes.** Readers answer one another, not only Claude.
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 177.** All four readers work in new conversations since Round 169; this was done **for equality** (Grok's conversation did not need
+**Round 178.** All four readers work in new conversations since Round 169; this was done **for equality** (Grok's conversation did not need
 renewing). **The author (Round 171):** *"You readers, work together. Whenever it comes to my turn, don't forget to tell me."* Each round
 text ends by naming what goes to the author.
 
@@ -218,8 +218,9 @@ text ends by naming what goes to the author.
 |---|---|
 | Closed | shortening inside the current structure (Rounds 168–176): 17 734 → 13 593 words of prose |
 | **Stage 2 (now): which protected sentences need protection** | marks **K** keep / **U** unprotect (stays in the body, no longer blocks shortening) / **C** cut as a copy (carrier must state the **same predicate**) / **S** to the supplement with its result (rule iii). Groups 1–2, 3–5, 6, 7–8 → whole reading against §0 (and receipt for every C) → the author decides each group as one list. **Nothing applied yet** |
-| Part 1 (Sections 1–2) | marked (Round 176); unanimous U 22, 24; C 35; rows 11, 42, 44 split (Round 177) |
-| **Open (Round 177)** | the three split rows; marks for Sections 3–5 (46 rows) |
+| Part 1 (Sections 1–2) | **settled, all five:** U 11, 22, 24, 42, 44; C 35; two duplicate rows dropped |
+| Part 2 (Sections 3–5) | U 4, 23, 28, 32; duplicate 29 dropped; rows 16 and 26 split (Round 178) |
+| **Open (Round 178)** | rows 16 and 26; marks for Section 6 (41 rows) and Sections 7–8 (23 rows). Then the whole reading (Round 179), then the author |
 | Later stages | 3 tables and figures; 4 section merging, 2.3 included |
 | Protected sentences | 161 in the body, 28 in the supplement |
 | Body | 13 593 words of prose (tables excluded) |

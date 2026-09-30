@@ -813,3 +813,7 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Parça 1: 22 U, 24 U, 35 C, 2 kayıt kopyası | ✓ | ✓ | ✓ | ✓ | ✓ | **oybirliği; bütün okumadan sonra yazara** |
 | Parça 1: 11 / 42 / 44 | U/U/U | K/K/C | U/U/C | U/U/K | U/U/U | **Tur 177'de karşılıklı** |
 | Parça 2 (Bölüm 3–5, 46 satır) | ? | ? | ? | ? | U 5, C 1 | **Tur 177 işaretleme** |
+| Parça 1 (Bölüm 1–2): U 11, 22, 24, 42, 44; C 35; 2 kopya | ✓ | ✓ | ✓ | ✓ | ✓ | **oybirliği; bütün okumadan sonra yazara** |
+| Parça 2 (Bölüm 3–5): U 4, 23, 28, 32; 29 kopya | ✓ | ✓ | ✓ | ✓ | ✓ | **oybirliği** |
+| Parça 2 satır 16 / 26 | U / K | C / U | K / U | C / U | U / K | **Tur 178'de karşılıklı** |
+| Parça 3 (Bölüm 6) ve parça 4 (Bölüm 7–8) | ? | ? | ? | ? | U 3 / U 1 | **Tur 178 işaretleme** |
