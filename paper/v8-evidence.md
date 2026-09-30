@@ -211,7 +211,7 @@ birincile denk sayılmaz) oyda.
 | seri hibrit + kanatlı kuyruk üstü 2026 | Rohith ve ark. 2026 | verified primary | |
 | eşeksenli kuyruk üstü + seri hibrit depo 2025 | Vegh müsveddesi R3 | verified primary (müsvedde) | sürüm gönderimden önce |
 | pervane uzlaşması, *"theoretically impossible"*; DelftaCopter *"a compromise"* | De Wagter 2018 s. 2 ve kendi aracı | verified primary (De Wagter'in kendi cümlesi) | |
-| seri hibrit *"flown in a crewed motor glider"* | Schoemann 2014 tezi s. 25–26 | verified secondary | |
+| seri hibrit *"flown in a crewed motor glider"* | Schoemann 2014 tezi s. 25–26 | verified secondary | **Tur 195: yan cümle gövdeden düştü (E28 (a)); satır tarihsel** |
 | seri hibrit *"designed for small uncrewed aircraft"* | Merical ve ark. 2014 | **verified primary — abstract only** (Tur 142, dört okuyucu + Claude; ChatGPT'nin adlandırması) | okuma derinliği zaten *doğrulama* alanında ("yalnız özet") |
 | *"Tail-sitting aircraft are seventy years old"* | XFY-1 (NASA 1981) | verified secondary | |
 | *"blended wing bodies have been a standing subject of transport research for three decades"* | Liebeck 2004, *J. Aircraft* 41(1), 10–25 (`references/Liebeck-2004_…pdf`) s. 10: *"in 1988, when NASA Langley Research Center's Dennis Bushnell asked …"*; *"A NASA/industry/university team was formed in 1994"* | **verified primary** (Tur 142) | 1988 → 2026: 38 yıl — *"three decades"* doğru ama eksik söylüyor (Tur 142 önerisi) |
@@ -280,7 +280,7 @@ alıntı için tanık ile yapılandırmamız arasındaki yorumu etkileyen fark k
 | eşeksenli + seri hibrit depo | Vegh müsveddesi R3 | birincil (müsvedde; sürüm gönderimden önce) ✓ |
 | pervane uzlaşması | De Wagter 2018 | birincil ✓ |
 | XFY-1 1954 (rota tarihi) | NASA 19810010574 | **ikincil** — istisna: tarih cümlesi, boşluğun dolu bir öğesi değil; D-P2 izi: program belgesi aranmadı |
-| seri hibrit motorlu planörde uçtu | Schoemann 2014 s. 25–26 | **ikincil** — istisna: *"None of the elements is new"* paragrafı; D-P2 izi: planörün kendi belgesi aranmadı |
+| seri hibrit motorlu planörde uçtu | Schoemann 2014 s. 25–26 | **ikincil** — istisna: *"None of the elements is new"* paragrafı; D-P2 izi: planörün kendi belgesi aranmadı — **Tur 195: yan cümle gövdeden düştü (E28 (a)); satır tarihsel** |
 | seri hibrit küçük İHA için tasarlandı | Merical 2014 | birincil, yalnız özet |
 | BWB otuz yılı aşkın | Liebeck 2004 s. 10 | birincil ✓ |
 

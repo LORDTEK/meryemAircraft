@@ -1249,3 +1249,14 @@ NeuralFoil makale künyesi doğrulanmadı. Okuyuculardan künye alanları (bağl
 - **[13] motorlu planör:** DA36 E-Star (2011; Grok, ChatGPT, Qwen); birincil yalnız üretici haber sayfası (AIAA: kaynakçaya girmez). **E28 — yazara:** (a) yan cümle düşer
   (Qwen, DeepSeek), (b) Diamond sayfası metin içinde parantezle anılır (AIAA izin veriyor, dipnot önerilmiyor), (c) Schömann "as reported by" (ikincil — AIAA şartına aykırı).
 - Qwen'in [24] sorusu: iki alıntı Rheaume & Lents'te doğrulandı. [9] kalır; ders kitabı atfı yok (üçü). AeroSandbox 4.2.10: 2021 tezi + metinde sürüm.
+
+## E28 — 1.5'in motorlu planör yan cümlesi · **KARAR (2026-09-30): "E28 için (a)."**
+
+- (a) uygulandı (Tur 195, `paper/build/v8_round195_apply.py`): *"series-hybrid propulsion has been designed for small uncrewed aircraft."* Eski paragraf Ek S1'de.
+- Cümle korunan değil (korunan yalnız *"None of the elements is new"*); yine de yazarın kararıyla değişti. Denetimler temiz.
+- Kaynakça: Schömann (eski [13]) çıktı; eski [14]–[27] → [13]–[26] (`paper/submission/references-draft.md`).
+- **Yazarın kuralı (aynı mesaj):** *"Benden kaynak araştırmamı isteme. Onlara sor, çapraz denetim yapsınlar. Hepsi 'doğru' diyorsa doğrudur."*
+  → CLAUDE.md §2.1'e yazıldı. Açık kaynak alanları (Mathur ve Vegh *J. Aircraft* sürümleri) Tur 195'te okuyucuların çapraz denetimine gitti.
+
+- **Tur 195 metni** (`cfd/round-195.md`): E28'in önce/sonrası teyide; D1 Mathur JoA (sayı 4/5, alıntı birebir mi), D2 Vegh JoA (künye; 1.4'ün iki olgusu ve sessizlik yan cümlesi),
+  D3 Merical, D4 tek okuyuculu alanlar; (e)–(g) beşimiz yan yana; E1 (Claude): 4.7'de NeuralFoil 0.3.3 [19] ve AeroSandbox 4.2.10 [20] üreteçte adlandırılır — oylamada.

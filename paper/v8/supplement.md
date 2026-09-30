@@ -438,6 +438,19 @@ the only one of those documented obstacles an uncrewed aircraft removes.
 
 ---
 
+### Section 1's paragraphs as they stood before the Round 195 change (E28)
+
+Each paragraph below was changed in Round 195 by the author's decision E28 (no original source for the motor-glider flight); it is given here in full, verbatim.
+
+**None of the elements is new**, and Section 7 says so. Tail-sitting aircraft are seventy years old; blended wing bodies have been a standing subject of transport
+research for more than three decades; series-hybrid propulsion has been flown in a crewed motor glider and designed for small uncrewed aircraft. The route is not claimed to have been waiting to be found. **The contribution is the
+architecture: a configuration arranged to change regime by rotating the airframe rather than its
+propulsors, and so carrying no mechanism that reorients a propulsor.** The combination, the
+consequences of the choices inside it, and an accounting of what they cost are how that contribution
+is presented and priced.
+
+---
+
 ## S2. Section 2 (from Section 2)
 
 ### The opening of Section 2 and the three bills as they stood before recomposition (frozen snapshot)

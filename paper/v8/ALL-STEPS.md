@@ -101,7 +101,7 @@ Each of those choices costs something, and **the giving-up is the part that is n
 the near-zero net angular momentum**, and leaves the moment about the propeller axis to a single aerodynamic device.
 
 **None of the elements is new**, and Section 7 says so. Tail-sitting aircraft are seventy years old; blended wing bodies have been a standing subject of transport
-research for more than three decades; series-hybrid propulsion has been flown in a crewed motor glider and designed for small uncrewed aircraft. The route is not claimed to have been waiting to be found. **The contribution is the
+research for more than three decades; series-hybrid propulsion has been designed for small uncrewed aircraft. The route is not claimed to have been waiting to be found. **The contribution is the
 architecture: a configuration arranged to change regime by rotating the airframe rather than its
 propulsors, and so carrying no mechanism that reorients a propulsor.** The combination, the
 consequences of the choices inside it, and an accounting of what they cost are how that contribution

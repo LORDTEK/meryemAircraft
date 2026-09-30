@@ -341,6 +341,10 @@ sürüm elde edilirse gönderimden önce ona karşı uzlaştırılır. **Kaynak 
 her cümle kaynak olgusu / kaynak sessizliği / sınıflama / makalenin iddiası; kaynak sessizliği yan cümleleri (*"the paper does not
 state"*) arama terimi listesini kanıt kaydında taşır ve hiçbir kısaltma onları araç hakkında bir iddiaya çeviremez. Örnek: Vegh.
 
+**Kaynak araştırması okuyucularındır (yazar, Tur 195).** *"Benden kaynak araştırmamı isteme. Onlara sor, çapraz denetim yapsınlar. Hepsi 'doğru' diyorsa
+doğrudur."* → Künye alanı, DOI, sayfa, dergi sürümü, alıntının dergi sürümünde birebir durup durmadığı: dört okuyucuya sorulur, birbirlerinin cevabını çapraz
+denetlerler; **dördü de "doğru" derse kabul.** Ayrışırlarsa bir sonraki turda yan yana geri sorulur. Yazar yalnız kendiliğinden yüklerse dosya depoya girer.
+
 ### 2.2 Yenilik iddiası yazmadan önce. Tur 46'nın bedeli.
 
 Adım 1'e *"1954'te bir kez uçuruldu ve tekrar ele alınmadı"* ve *"her mimari bunu propulsor'ü

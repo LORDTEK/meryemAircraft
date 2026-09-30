@@ -889,3 +889,6 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Özet tabanı | Claude | Claude | Claude | Claude | Claude | **oybirliği; değişiklikler ayrışık → yazara (E27)** |
 | Başlık / özet | — | — | — | — | — | **yazar (E27): Claude'un başlığı; özet tabanı değişmeden** |
 | Kaynakça taslağı (27) | ? | ? | ? | ? | (Tur 195'te e–g) | **Tur 194** |
+| Kaynakça (e) yerleşim | uyar; iki gözlem | [19] BEMT'yi taşımasın | uyar | [23] sorusu (dosyada doğrulandı) | E1: araç adı + sürüm 4.7'de, üreteçte | **Tur 195'te E1 oylamada** |
+| Kaynakça (f) [9] / ders kitabı | tut / bırak | tut / yalnız gerekirse | tut / bırak | tut / bırak | tut / bırak | **[9] oybirliği tut; ders kitabı: dördü bırak, ChatGPT koşullu → Tur 195** |
+| E28 motorlu planör yan cümlesi | — | — | (a) | (a) | — | **yazar (E28): (a) uygulandı Tur 195; teyide gitti** |

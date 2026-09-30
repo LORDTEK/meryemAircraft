@@ -120,7 +120,7 @@ Each of those choices costs something, and **the giving-up is the part that is n
 the near-zero net angular momentum**, and leaves the moment about the propeller axis to a single aerodynamic device.
 
 **None of the elements is new**, and Section 7 says so. Tail-sitting aircraft are seventy years old; blended wing bodies have been a standing subject of transport
-research for more than three decades; series-hybrid propulsion has been flown in a crewed motor glider and designed for small uncrewed aircraft. The route is not claimed to have been waiting to be found. **The contribution is the
+research for more than three decades; series-hybrid propulsion has been designed for small uncrewed aircraft. The route is not claimed to have been waiting to be found. **The contribution is the
 architecture: a configuration arranged to change regime by rotating the airframe rather than its
 propulsors, and so carrying no mechanism that reorients a propulsor.** The combination, the
 consequences of the choices inside it, and an accounting of what they cost are how that contribution
@@ -133,6 +133,7 @@ is presented and priced.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 195 — E28 (a), yazarın kararı:** 1.5'te *"has been flown in a crewed motor glider and"* düştü; cümle *"series-hybrid propulsion has been designed for small uncrewed aircraft."* Gerekçe: AIAA birincil kaynak ister; motorlu planörün (DA36 E-Star, 2011) tek birinci elden kaydı üretici haber sayfası, Schömann ikincil. Kalan yüklemi Merical ve ark. 2014 taşır (özet: tasarım ve benzetim). Eski paragraf S1'de; `paper/build/v8_round195_apply.py` | Tur 194; E28 |
 | **Tur 191 — son okuma onarımı D2** (yazar E24): 1.3 korunan cümlede *"the only one"* → *"the only ones"* (sayı uyumu; iş yükü korunur); kayıt satırı da güncellendi. Eski paragraf S1'de | Tur 189; E24 |
 | **Tur 187 — Bölüm 1 geçişi uygulandı** (`paper/build/v8_round187_apply.py`; Tur 186 oylaması): 10 R (*"and whether one arrangement pays less than it appears to"* düştü — sıralama vaadi gibi okunuyordu; beşimiz), 22 R (ikiye bölündü; beşimiz), 47 R (*"the axis"* → *"the moment about the propeller axis"*; beşimiz), 4 R-a (*"Rotorcraft remove …"*; yazar E22, 4'e 1). 23 ve 45 K. Eski dört paragraf ekte (S1) aynen; okuyucu teyidine | Tur 186 cevapları; E22 |
 | **Tur 170 — yazarın notları üzerine kısaltma uygulandı** (Tur 168–169: işlemlerde dört okuyucu + Claude; korunan cümle taşımaları yazar kararı E13). Değişen her paragrafın eski hâli ekin bu adıma ait bölümünde aynen (*"… before the Round 170 shortening"*). Yeni (R) cümleler Tur 170 §2'de okuyucu vetosuna açık; sonuç teyide | `paper/build/v8_round170_texts.py`, `v8_round170_apply.py` |
