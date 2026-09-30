@@ -865,3 +865,5 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Bölüm 1 cümle 4 | R-a | R-b | R-a | R-a | R-a | **yazara (E22)** |
 | Bölüm 1 geçişi uygulandı (4 R-a, 10, 22, 47) | ? | ? | ? | ? | uyguladı | **Tur 187 teyit** |
 | Son parça–bütün–parça okumasının yöntemi | ? | ? | ? | ? | (Tur 188'de) | **Tur 187; sonra yazara** |
+| Bölüm 1 geçişi (4, 10, 22, 47) teyit; 47↔5.2 R1 | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI** |
+| Son okuma yöntemi | parça×6 → bütün | bütün → parça → bütün | tek tur, roller | 3 blok | parça×2 → bütün → parça | **yazara (E23)** |

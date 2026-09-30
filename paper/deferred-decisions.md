@@ -1135,3 +1135,15 @@ Yazara açıklama (Tur 183 sonrası): "4'ü boşver" yalnız bir kez söylenmiş
 
 **Uygulandı (Tur 187):** 4 R-a, 10 R, 22 R, 47 R (`v8_round187_apply.py . --c4 a`); denetimler geçti; eski dört paragraf S1'de aynen; net ~−6 kelime.
 Tur 187: teyit + 47 ↔ 5.2 alındısı (ChatGPT'nin isteği) + Bölüm 1 geçişi kapanıyor mu + son parça–bütün–parça okumasının yöntemi (yeni soru; Claude'un görüşü Tur 188'de; yöntem yazara).
+
+## Tur 187 cevapları — Bölüm 1 geçişi KAPANDI; son okuma yöntemi yazara (E23)
+
+- Dört paragraf: **dördü teyit**; 47 ↔ 5.2 alındısı **R1** (dördü); Bölüm 1 geçişi **kapansın** (dördü + Claude) → **KAPANDI.**
+- **Son parça–bütün–parça okuması, öneriler (ortak zemin: düzenleme değil doğrulama; kısaltma yok; yalnız kusurda değişiklik; sessizlik K):**
+  - Grok: sırayla 1 · 2 · 3–4 · 5 · 6 · 7–8, tur başına bir parça (~6 tur); dört soru (işaretçi, artık yanlış cümle, §0, öncelik biçimi); sonra bütün: §0 ve Bölüm 1'in
+    vaatleri, her sınırı tutan cümleler adıyla (tek U cümlesine dayanıyorsa söylenir).
+  - ChatGPT: bütün → parçalar (1–2, 3–5, 6, 7–8) → bütün (geçişler, bölüm sınırında zamirler, sınır cümleleri, başlık sayıları); kusur yoksa dur; yeni kısaltma önerisi yasak.
+  - DeepSeek: tek tur; herkes 1–8'i okur, her okuyucu bir çapraz denetim taşır (işaretçi / sayı-tablo / §0 / korunan-zamir); okuyucu başına en çok üç kusur.
+  - Qwen: üç blok (1–3, 4–6, 7–8 + ek dizini); dört soru (işaretçi, sınır, okunurluk, sayı eşleşmesi); yalnız kusurda işaret.
+  - Claude: parça (Tur 188: 1–4; Tur 189: 5–8) → bütün (Tur 190: bölüm geçişleri, bölüm sınırında zamirler, §0 sınır haritası, başlık sayıları) → parça (Tur 191:
+    onarımlar gösterilir, teyit, kapanış). Her okuyucu bir mercek taşır (DeepSeek); okuyucu başına tur başına en çok üç kusur; kusur tanımı ortak liste; her turdan önce betik denetimleri.
