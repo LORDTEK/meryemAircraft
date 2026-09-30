@@ -28,7 +28,7 @@ the thing the other is bounded by.
 vehicle without continuously spending power on lift. Their limit is not aerodynamic but
 infrastructural: a runway, a catapult, or an equivalent installation.
 
-**Rotorcraft and multirotors** remove that requirement completely. They take off and land
+**Rotorcraft** remove that requirement completely. They take off and land
 vertically, hover, and work from confined sites. Their limit is the converse: with no wing,
 every second of flight is bought with installed power, so range and endurance stay modest and
 worsen as the vehicle grows.
@@ -38,7 +38,7 @@ doing it that way. **The corner where both capabilities are wanted at once is wh
 applications this work is aimed at sit** — wildfire observation and response, and cargo delivery to
 places without a runway.
 **That corner is not empty**, as the rest of this section sets out; what is unsettled is which
-price an architecture in it must pay, and whether one arrangement pays less than it appears to.
+price an architecture in it must pay.
 
 ### What the contemporary answers do, and how each changes regime
 
@@ -63,8 +63,7 @@ thrust vectors are all parallel to the body axis produce no rolling moment **by 
 settings**. The reaction-torque channel that other coaxial tail-sitters use about that axis is a choice this
 configuration declines rather than a limit it inherits (Sections 7 and 8).
 
-What has changed is electric drive on each individual rotor, sensor-based attitude reference, and enough onboard computation that stability need not come from the airframe alone, and **the
-uncrewed tail-sitter literature has been exploiting exactly those three for over a decade**; the gap below is not a historical one.
+What has changed is electric drive on each individual rotor, sensor-based attitude reference, and enough onboard computation that stability need not come from the airframe alone. **The uncrewed tail-sitter literature has been exploiting exactly those three for over a decade**; the gap below is not a historical one.
 
 ### What is already occupied, stated before the gap
 
@@ -119,7 +118,7 @@ cruise drag and hover-sized continuous power**, the last two of them at two scal
 contracts.
 
 Each of those choices costs something, and **the giving-up is the part that is not free**. **Operating every pair torque-balanced spends the reaction-torque channel to buy the torque balance and
-the near-zero net angular momentum**, and leaves the axis to a single aerodynamic device.
+the near-zero net angular momentum**, and leaves the moment about the propeller axis to a single aerodynamic device.
 
 **None of the elements is new**, and Section 7 says so. Tail-sitting aircraft are seventy years old; blended wing bodies have been a standing subject of transport
 research for more than three decades; series-hybrid propulsion has been flown in a crewed motor glider and designed for small uncrewed aircraft. The route is not claimed to have been waiting to be found. **The contribution is the
@@ -135,6 +134,7 @@ is presented and priced.
 
 | İddia | Kaynak |
 |---|---|
+| **Tur 187 — Bölüm 1 geçişi uygulandı** (`paper/build/v8_round187_apply.py`; Tur 186 oylaması): 10 R (*"and whether one arrangement pays less than it appears to"* düştü — sıralama vaadi gibi okunuyordu; beşimiz), 22 R (ikiye bölündü; beşimiz), 47 R (*"the axis"* → *"the moment about the propeller axis"*; beşimiz), 4 R-a (*"Rotorcraft remove …"*; yazar E22, 4'e 1). 23 ve 45 K. Eski dört paragraf ekte (S1) aynen; okuyucu teyidine | Tur 186 cevapları; E22 |
 | **Tur 170 — yazarın notları üzerine kısaltma uygulandı** (Tur 168–169: işlemlerde dört okuyucu + Claude; korunan cümle taşımaları yazar kararı E13). Değişen her paragrafın eski hâli ekin bu adıma ait bölümünde aynen (*"… before the Round 170 shortening"*). Yeni (R) cümleler Tur 170 §2'de okuyucu vetosuna açık; sonuç teyide | `paper/build/v8_round170_texts.py`, `v8_round170_apply.py` |
 | **Tur 171 — R2 onarıldı** (Grok vetosu, Tur 170): 1.3'te "onboard computation" kaynak ifadeye geri döndü — "electric drive on each individual rotor, sensor-based attitude reference, and enough onboard computation that stability need not come from the airframe alone"; korunan "those three" yine üç tam öğeyi sayıyor (sayma sözcüğü denetimi, benim hatam). +11 kelime. Teyide (Tur 171 §1) | Grok |
 | **Tur 176 — Bölüm 1 son geçiş (yazar: "son kez yapıyoruz gibi düşünerek ne oluyorsa yap geç"):** 1.1 yan cümle, 1.2 R10 (NASA tek ev 2.3), 1.3 "It is neither new…" (yazar onayı), 1.5 R11 (tepki torku tekrarı) ve kapanış köprüsü (yazar onayı). Eski paragraflar ekte; okuyucu teyidine | — |

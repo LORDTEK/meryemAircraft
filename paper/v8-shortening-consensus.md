@@ -863,3 +863,5 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Bölüm 1: 10 R, 22 R, 47 R | ✓ | ✓ | ✓ | ✓ | ✓ | **oybirliği; uygulanacak** |
 | Bölüm 1: 23 K, 45 K | ✓ | ✓ | ✓ | ✓ | ✓ | **oybirliği** |
 | Bölüm 1 cümle 4 | R-a | R-b | R-a | R-a | R-a | **yazara (E22)** |
+| Bölüm 1 geçişi uygulandı (4 R-a, 10, 22, 47) | ? | ? | ? | ? | uyguladı | **Tur 187 teyit** |
+| Son parça–bütün–parça okumasının yöntemi | ? | ? | ? | ? | (Tur 188'de) | **Tur 187; sonra yazara** |

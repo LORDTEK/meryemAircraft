@@ -401,6 +401,30 @@ presume an escape.
 
 ---
 
+### Section 1's paragraphs as they stood before the Round 187 pass
+
+Each paragraph below was changed in Round 187 (the pass over Section 1: clarity and match with the body, not length); it is given here in full, verbatim.
+
+**Rotorcraft and multirotors** remove that requirement completely. They take off and land
+vertically, hover, and work from confined sites. Their limit is the converse: with no wing,
+every second of flight is bought with installed power, so range and endurance stay modest and
+worsen as the vehicle grows.
+
+**Neither family is deficient.** Each is limited by the price of
+doing it that way. **The corner where both capabilities are wanted at once is where the two
+applications this work is aimed at sit** — wildfire observation and response, and cargo delivery to
+places without a runway.
+**That corner is not empty**, as the rest of this section sets out; what is unsettled is which
+price an architecture in it must pay, and whether one arrangement pays less than it appears to.
+
+What has changed is electric drive on each individual rotor, sensor-based attitude reference, and enough onboard computation that stability need not come from the airframe alone, and **the
+uncrewed tail-sitter literature has been exploiting exactly those three for over a decade**; the gap below is not a historical one.
+
+Each of those choices costs something, and **the giving-up is the part that is not free**. **Operating every pair torque-balanced spends the reaction-torque channel to buy the torque balance and
+the near-zero net angular momentum**, and leaves the axis to a single aerodynamic device.
+
+---
+
 ## S2. Section 2 (from Section 2)
 
 ### The opening of Section 2 and the three bills as they stood before recomposition (frozen snapshot)

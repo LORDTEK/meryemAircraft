@@ -210,18 +210,18 @@ closes.** Readers answer one another, not only Claude.
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 186.** All four readers work in new conversations since Round 169; this was done **for equality** (Grok's conversation did not need
+**Round 187.** All four readers work in new conversations since Round 169; this was done **for equality** (Grok's conversation did not need
 renewing). **The author (Round 171):** *"You readers, work together. Whenever it comes to my turn, don't forget to tell me."* Each round
 text ends by naming what goes to the author.
 
 | Block | State |
 |---|---|
 | Closed | **the shortening is over** (the author, after Round 184). Stages: inside the current structure (Rounds 168–176); protected-sentence status (Rounds 176–180, E18); tables and figures (Rounds 180–182, no change, E19); section merging (Rounds 182–184: no merge; 2.3 −181 by E20; sentence 19 stays, all five) |
-| **Now (Rounds 185–186): a pass over Section 1** | not a length pass: clarity in one reading, match with the body as it now stands, the §0 boundaries, priority wording, preparing the four-axis claims of Section 8. Marks K / R / C / S / A |
-| Open (Round 186) | six candidates voted explicitly: 4 (K / R-a *"Rotorcraft"* / R-b *"Rotorcraft, multirotors and helicopters alike,"*), 10 (drop the *"pays less than it appears to"* clause), 22 (split), 23 (C → 24), 45 (split), 47 (*"the moment about the propeller axis"*). Agreed: no axis preview; 48 ↔ 5.1 fine; 17 and 42 stay |
+| **Now (Rounds 185–187): a pass over Section 1** | not a length pass: clarity in one reading, match with the body as it now stands, the §0 boundaries, priority wording, preparing the four-axis claims of Section 8. Marks K / R / C / S / A |
+| Applied (Round 187), to confirm | 4 R-a (*"Rotorcraft remove …"*, the author E22), 10 (clause dropped), 22 (split), 47 (*"the moment about the propeller axis"*); 23 and 45 kept |
 | Next | a last part–whole–part reading of the whole paper (need not shorten), then submission (the journal's instructions on length and figures; the author has been asked for the PDF) |
 | Protected sentences | 145 in the body, 31 in the supplement; U table 14 |
-| Body | about 13 411 words of prose (tables excluded) |
+| Body | about 13 405 words of prose (tables excluded) |
 
 **Tools the round texts mention:**
 

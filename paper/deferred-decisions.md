@@ -1130,3 +1130,8 @@ Yazara açıklama (Tur 183 sonrası): "4'ü boşver" yalnız bir kez söylenmiş
   (okuyucuların gerekçesi: virgüllerle R-b üç eşdeğer kategori gibi okunuyor ve cümle 1'in iki aile ikiliğini bozuyor; helikopter 4.5'te ve Bölüm 8'de, sonuçların
   gerçekten ayrıştığı yerde giriyor). → 4'e 1 → **E22, yazarda**: R-a ya da R-b.
 - Uygulama betiği hazır ve kopyada sınandı: `paper/build/v8_round187_apply.py KOK --c4 a|b` (yazarın kararıyla tek geçişte uygulanacak).
+
+## E22 — Bölüm 1 cümle 4 · **KARAR (Tur 186 sonrası): "R-a onaylı, uygula ve Tur 187'yi hazırla"**
+
+**Uygulandı (Tur 187):** 4 R-a, 10 R, 22 R, 47 R (`v8_round187_apply.py . --c4 a`); denetimler geçti; eski dört paragraf S1'de aynen; net ~−6 kelime.
+Tur 187: teyit + 47 ↔ 5.2 alındısı (ChatGPT'nin isteği) + Bölüm 1 geçişi kapanıyor mu + son parça–bütün–parça okumasının yöntemi (yeni soru; Claude'un görüşü Tur 188'de; yöntem yazara).
