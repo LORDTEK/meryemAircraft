@@ -1297,3 +1297,10 @@ NeuralFoil makale künyesi doğrulanmadı. Okuyuculardan künye alanları (bağl
 - Kapandı (dördü + Claude): [9] 6268–6278; [15] DOI ve yalnız v1; v7 beyanının beş cümlesi; 2.1 *"generally"* uygulandı (`v8_round199_apply.py`, teyide).
 - AIAA dergi sayfası: C1a (şekil → ScholarOne), C1b (araştırma/mühendislikte YZ *"fully described in the manuscript"*), C1c (§4.2 beyansızlık ihlal) — Grok ve ChatGPT açtı; Qwen eski çıkarımdan; DeepSeek başka belge (teknik bildiri standardı).
 - **Yazara (Tur 199 H):** (1) önce editörlüğe sor (Grok, ChatGPT, Claude) mu, doğrudan tam beyanla gönder (DeepSeek, Qwen) mi; (2) kod ve şekil betiklerinde YZ ne ölçüde yardımcı araç olarak kullanıldı; (3) C1b gövde cümlesi onayı.
+
+## E30 — YZ beyanı: gönderim yolu ve uzunluk · **YAZAR (2026-09-30):** *"Doğrudan gönderelim. YZ araçlarını yapılması gereken hesapların yapılmasında bir araç olarak kullandı. 4.7'ye mi eklesek yoksa Acknowladge kısmı mı yapsak acaba bilemedim. 1 cümle ile belirtmek yeterli. Zaten kelime sayı hususu var bir de şu saçma iş için ayrıca olumsuzluk kazanmayalım."*
+
+- Doğrudan gönderim, tam beyanla; editörlüğe önceden sorulmayacak. (Kayıt: Tur 199'da beşimiz önce sormayı önermiştik; karar yazarın, yeniden açılmaz.)
+- Öğe 4: YZ araçları hesapların yapılmasında araç olarak kullanıldı.
+- Tek cümle. Yer: Claude'un önerisi yalnız Teşekkür (zorunlu zaten; Teşekkür makalenin parçası, C1b'nin *"in the manuscript"*ini karşılar; gövde değişmez) → Tur 200'de okuyuculara.
+- 2.1 *"generally"* dördünce teyit edildi → kapandı. C1a–C1c dördünce dergi sayfasından → kapandı.

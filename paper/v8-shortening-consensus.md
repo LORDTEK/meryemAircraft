@@ -901,3 +901,5 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Tur 197: v7 YZ beyanı cümle 3 | kısmen; ikincisi yazarın | kurulmadı | tutar | tutar | kurulmadı → yazar | **ayrışık; olgu yazarın** |
 | Tur 198: 2.1 "generally" | evet | evet | evet | evet | öneren | **uygulandı Tur 199; teyide** |
 | Tur 198: C3 nasıl ilerlenir | önce metin, sonra editörlüğe sor | (b) | tam beyanla gönder | (a) + gövde cümlesi | Grok'la | **ayrışık → yazar** |
+| Tur 199: 2.1 "generally" teyidi | teyit | teyit | teyit | teyit | — | **kapandı** |
+| Tur 199: C3 | önce sor | önce sor | önce sor (a'dan) | önce sor (a'dan) | önce sor | **yazar (E30): doğrudan gönder** |

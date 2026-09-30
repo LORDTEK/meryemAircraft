@@ -210,7 +210,7 @@ closes.** Readers answer one another, not only Claude.
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 199.** All four readers work in new conversations since Round 169; this was done **for equality** (Grok's conversation did not need
+**Round 200.** All four readers work in new conversations since Round 169; this was done **for equality** (Grok's conversation did not need
 renewing). **The author (Round 171):** *"You readers, work together. Whenever it comes to my turn, don't forget to tell me."* Each round
 text ends by naming what goes to the author.
 
@@ -224,7 +224,8 @@ text ends by naming what goes to the author.
 | Closed (Round 196) | [11] Vegh: cite SciTech 2025-1436 with its correction notice (the journal item exists; its text is unread); [9] pages 6268–6278 |
 | Closed (Round 197) | [15] Mathur: cite arXiv v1 under its own title, the quotation unchanged (all five, position d) |
 | Closed (Round 198) | the reference list (26 entries, all fields cross-checked; [15] is arXiv v1, the only version); 2.1 *"generally"* applied (awaiting confirmation); the v7 AI statement read against the v8 facts (all five agree) |
-| **Open (Round 199)** | **the AI-use statement**: each reader drafts the Acknowledgments statement and the methods sentence that AIAA's policy requires for AI used in the research activity. The author's position (Round 198): the concept, the architecture and the design are the authors'; AI did tool work; no brand, model or company names; B.G. did the software; all authors read and approved. To the author: ask the journal office first, or submit directly |
+| Decided (E30) | submit directly with full disclosure (no inquiry to the office); the authors used AI tools as a tool for the calculations; the disclosure is **one sentence**. 2.1 *"generally"* confirmed by all four |
+| **Open (Round 200)** | the one AI-use sentence: its wording, and whether it goes in the Acknowledgments alone (Claude) or also in 4.7 (the four Round 199 drafts). It is the same sentence that the ScholarOne form will carry |
 | Still to do | numbered references (original sources only); style conversion by a generator script (Roman-numeral sections, *Sec.*, numbered tables and equations, lists as 1) 2), American spelling, no bold emphasis, no dashes); acknowledgments with the AI-use statement |
 | Protected sentences | 145 in the body, 31 in the supplement; U table 14 |
 
