@@ -1202,3 +1202,12 @@ mercekler: Grok §0 · ChatGPT işaretçi/zamir · DeepSeek sayı · Qwen okunur
   kaynak şartı — ikincil/attributed tanıklar riski), Roma rakamlı bölümler ve "Sec.", madde işareti yok, tire yok (D1'in tireleri parantez olmalı), Amerikan yazımı, sayı biçimi,
   numaralı tablo/denklem, teşekkürde YZ beyanı. **Belgelerde olmayan iki açık soru:** ek malzeme (gövde 34 kez "Supplement S#") ve Zenodo ön baskısı ("published … elsewhere").
 - **E25 — yazarda:** uzunluk (a/b), ek malzeme ve ön baskı politikası belgeleri, LaTeX/Word, yazar bilgisi.
+
+## E25 — gönderim kararları · **KARAR (2026-09-30):** *"1. a · 3. LaTeX (sorun olmayacaksa) · 4. … kurum: Independent Researcher, Ankara Türkiye, ünvan Meryem Ms. diğer iki yazar Mr., üyelik henüz yok, fon keşke olsa..."*
+
+- Uzunluk: **(a)** böyle gönderilir. Biçim: **LaTeX** (TeX Live Ubuntu arşivinden kurulabilir; CTAN engelli). Yazarlar: Meryem Gülmen (Ms., sorumlu), Berke Gülmen (Mr.),
+  Ömer Gülmen (Mr.); Independent Researcher, Ankara, Türkiye; üyelik yok; fon yok.
+- Yazarın 2. maddesi (*"Nereden ne indireceğim bulamadım"*) — **gerek kalmadı:** ek malzeme ve ön baskı politikası `paper/joa-compliance.md`'de (2026-09-16, yazarın yapıştırdığı
+  AIAA metni) zaten birebir alıntıyla cevaplı: ek izinli (gövde tek başına yetmeli), ön baskı gönderimden önce izinli. **Claude'un aynı gün ikinci hatası:** o dosyayı
+  okumadan "belgelerde yok" dedim. CLAUDE.md §4'e kural eklendi.
+- **Kalan → yazara:** makale türü — Full-Length Paper (hakemli) / Design Forum (hakemsiz) (`joa-compliance.md` §2).

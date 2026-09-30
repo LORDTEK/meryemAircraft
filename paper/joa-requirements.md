@@ -6,9 +6,12 @@ CLAUDE.md §4'ün dergi şartı kuralı: bir hedef dergiye gönderilmeden önce 
 - **[S]** `references/AIAA-2024-09_journal-page-limits-and-word-count-guidelines.pdf`: *Journal Page Limits and Word Count Guidelines*, Rev. August 2024, 1 sayfa. **Tur 154'ten beri depoda.** Yazar 2026-09-30'da aynısını yeniden yükledi; SHA-256 aynı olduğu için kopya silindi.
 - **[T]** `references/AIAA-journal-LaTeX-template-instructions_Preparation-of-Papers.pdf`: *Preparation of Papers for AIAA Technical Journals*, LaTeX şablonunun talimat metni, 9 sayfa. Yazar yükledi (2026-09-30; özgün adı `mqqbqqvyhtwm.pdf`).
 - **[D]** `references/AIAA-manuscript-template-2025.docx`: Word şablonu. Yazar yükledi (2026-09-30). Biçim için kullanılır; ayrı bir şart metni taşımıyor.
+- **[C]** `paper/joa-compliance.md` (2026-09-16): **aynı iş iki hafta önce yapılmış.** Yazarın o gün yapıştırdığı AIAA sayfalarından (dergi kapsamı, makale türleri, ek malzeme, ön baskı politikası, sonuç bölümü, kaynakça, usul) şart şart bir liste. Bu dosya onun üstüne kurulur; çelişen yerde [C]'nin birebir alıntıları geçerlidir.
 - **[W]** AIAA yazar sayfalarının metni: başlık, yazarlık, dipnot, semboller, şekiller, tablolar, listeler, kaynaklar, özet, noktalama ve üslup. **Yazar sohbete yapıştırdı** (2026-09-30). Aşağıdaki alıntılar o metinden birebirdir; metnin kendisi depoda yok.
 
 **Benim hatam.** Tur 187 ve sonrasında yazara *"uzunluk sınırı kayıtta 'bulunamadı'; derginin yönergesine karşı hiç okunmadı"* dedim ve belgeyi yeniden istedim. Oysa [S] Tur 154'ten beri depodaydı (`references/README.md` satır 151). Ayrıca Round 101'deki 12 000 kelime hedefi zaten ondan türetilmişti. `target-journal.md`'deki "bulunamadı ⚠️" satırları Tur 154'ten beri bayattı. Yokluk demeden önce depoyu aramadım (§3.0 kabul (1)'in ihlali).
+
+**Aynı hatayı aynı gün ikinci kez yaptım.** Bu dosyanın ilk hâlinde ek malzeme ve ön baskı politikasını *"belgelerde yok, açık soru"* diye yazdım ve yazardan yeni belge istedim. İkisi de [C]'de, yazarın 2026-09-16'da yapıştırdığı AIAA metninden birebir alıntıyla cevaplanmıştı. Dosyayı yazmadan önce `paper/` altında *JoA* araması yapmadım. Düzeltilmiş hâli aşağıda.
 
 ---
 
@@ -78,22 +81,29 @@ CLAUDE.md §4'ün dergi şartı kuralı: bir hedef dergiye gönderilmeden önce 
 | Şart | Kaynak | Durum |
 |---|---|---|
 | Tek sütun, çift aralık; LaTeX ya da Word şablonu; PDF yüklemesi önerilir | [T], [D] | **Biçim seçimi yazarın:** LaTeX mi Word mü |
-| *"Your manuscript cannot be published by AIAA if … The work has been published or is currently under consideration for publication or presentation elsewhere."* | [T] | **Açık soru:** makalenin v7 sürümü Zenodo'da (DOI 10.5281/zenodo.22144194). Belgeler ön baskıdan (preprint) söz etmiyor. AIAA'nın ön baskı politikası ayrıca okunmalı. *Drones*/*Aerospace* gönderimi masadan reddedildi ve sonuçlandı; yalnız AIAA dergi ve konferans geçmişinin beyanı isteniyor |
+| *"Your manuscript cannot be published by AIAA if … The work has been published or is currently under consideration for publication or presentation elsewhere."* | [T] | **Ön baskı sorun değil** ([C] §8, AIAA metninden): *"Prior to submitting to an AIAA journal or a conference, authors can: Post draft manuscripts and research results anywhere, anytime, including pre-print servers."* Zenodo'daki v1–v7 izinli. Kabul sonrası telif devrinde Zenodo'nun durumu kabul gelirse AIAA'ya sorulacak ([C] §8). *Drones*/*Aerospace* gönderimi sonuçlandı; beyan yalnız AIAA dergi ve konferans geçmişi için isteniyor |
 | Yapay zekâ kullanıldıysa *"authors must include a brief description of AI use in the Acknowledgments section"* | [T] | Teşekkür bölümü yazılacak; CLAUDE.md §4: marka, model ve şirket adı yok, YZ yazar satırında yok |
 | Fon kaynakları bölümü; ScholarOne'daki fon verisiyle eşleşmeli | [T] | Yazardan (fon yoksa bölüm yok) |
 | Telif beyanı makaleye yazılmaz | [T] | ✓ |
-| **Ek malzeme (supplement)** | — | **Belgelerde hiç geçmiyor.** Gövde 34 yerde *"Supplement S#"* diyor. JoA'nın ek malzeme kabul edip etmediği ve biçimi okunmadı. Kabul etmiyorsa bu gönderim için yapısal bir sorun olur. **Açık soru** |
+| **Ek malzeme** | [C] §5 | **İzinli, bir şartla** (AIAA metninden): *"supplemental files… are intended only to support the primary content presented in the article, which must be self-contained and stand on its own. Acceptance for publication will be based solely on the content of the article."* Gövde 34 yerde *"Supplement S#"* diyor. Bizim gövde-yalnız yorumlanabilirlik kuralımız (Tur 101) tam bu şart için; son okuma hiçbir sonucun niteleyicisinin ekte kalmadığını denetledi |
+| Özet: *"without numerical references, acronyms, or abbreviations"* | [C] §4 | Özette akronim yok (VTOL açılır) |
+| Sonuç: *"do not refer to other work"* | [C] §7 | Bölüm 8'de kaynak atfı yok ✓ (numaralı kaynakça gelince yeniden denetlenecek) |
+| *"websites where there is no commitment to archiving … should not be cited in the reference list"* | [C] §6 | Depoya GitHub bağıyla değil, **Zenodo DOI'siyle** atıf |
+| **Makale türü:** Full-Length Paper (hakemli) ya da Design Forum (*"do not undergo routine peer review"*) | [C] §2 | **Karar verilmemiş** (kayıtta yok) → yazara |
+| Her yazar, kabul edilirse, başkalarının gönderdiği üç makaleyi hakemler; bütün yazarlar ScholarOne'da gönderimi onaylar | [C] §9 | Bilgi; üç yazar da gönderilen sürümü okumuş olmalı |
+| Ücretler | [C] §10 | Teyit edilmedi (yalnız arama motoru özeti var; bu projede sayı bağlanmaz) |
 
-## 9. Yazara sorular
+## 9. Yazarın kararları (E25, 2026-09-30) ve kalan soru
 
-1. **Uzunluk.** Önerilen aralık 10–12 bin; biz tablolarla ~16 bindeyiz. (a) Böyle gönderilsin, editör isterse kısaltılır. (b) Gönderimden önce yeni bir kısaltma aşaması.
-2. **Ek malzeme ve ön baskı.** AIAA'nın *Supplemental Materials* ve *preprint* politika sayfalarının indirilip yüklenmesi. Bu ortamdan aiaa.org'a erişim yok.
-3. **Biçim.** LaTeX mi Word mü?
-4. **Yazar bilgisi.** Ad, kurum, adres, unvan, AIAA üyeliği, fon.
+1. **Uzunluk: (a)** böyle gönderilir; editör isterse kısaltılır.
+2. ~~Ek malzeme ve ön baskı belgeleri~~: **gerek kalmadı**, [C]'de cevaplı (yukarıda).
+3. **Biçim: LaTeX.** Bu ortamda TeX Live Ubuntu arşivinden kurulabiliyor (`texlive-latex-base` 2023; AIAA sınıfı `new-aiaa` `texlive-publishers` paketinde olmalı, kurulumda doğrulanacak). CTAN'a doğrudan erişim yok.
+4. **Yazarlar:** Meryem Gülmen (Ms., sorumlu yazar, meryemgulmen@outlook.com), Berke Gülmen (Mr.), Ömer Gülmen (Mr.); kurum *Independent Researcher, Ankara, Türkiye*; AIAA üyeliği yok; **fon yok** → *Funding Sources* bölümü yazılmaz. Sıra `00-front-matter.md`'deki gibi.
+5. **Kalan soru → yazara: makale türü**, Full-Length (hakemli) mı Design Forum (hakemsiz) mı ([C] §2).
 
 ## 10. Önerilen iş sırası (yazar onayıyla)
 
-1. **Yazar kararları** (§9).
+1. **Yazar kararları** (§9): 1, 3, 4 verildi; makale türü bekleniyor.
 2. **Başlık ve özet.** İddia yüzeyi oldukları için okuyucu turuyla, §0'a karşı.
 3. **Kaynakça.** Tanık listesinden numaralı kaynakça; ikincil ve *attributed* tanıklar için birincil arama.
 4. **Mekanik dönüşüm.** Bir üretici betik: adım kaynakları → gönderim metni. Roman rakamlı bölümler, *Sec.*, numaralı tablo ve denklemler, listeler, Amerikan yazımı, sayı biçimi, kalın vurgunun kaldırılması. **Adım kaynakları değişmez; çıktı denetlenir** (§2.5, W-1).

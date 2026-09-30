@@ -725,6 +725,7 @@ hatayı doğruladı.** DeepSeek'in bir fizik sorusu (*"sabit rotorda q sadeleşm
   insansız bir platformdan deneysel veriyle doğrulama"* şartı yazılıydı; hiç
   açmadım. Makaleyi kendine karşı denetleyip gideceği yere karşı hiç
   denetlemeyen bir düzen, yanlış şeyi denetliyor demektir.
+- **JoA hakkında bir şey yazmadan ya da yazardan belge istemeden önce** `paper/joa-compliance.md` (2026-09-16, AIAA metninden birebir) ve `paper/joa-requirements.md` (2026-09-30, şart şart) okunur ve `references/` aranır. 2026-09-30'da aynı gün iki kez depoda olan belgeyi "yok" deyip yazardan yeniden istedim (sayfa/kelime rehberi Tur 154'ten, ek malzeme ve ön baskı politikası 16 Eylül'den beri depodaydı).
 - **v8 yeniden kurgulanır, kısaltılmaz.** Ve dergi gövdesinde *"bir önceki
   sürümde şöyleydi"* anlatısı **bulunmaz** — makale tek başına yeter olmalıdır;
   düzeltme tarihi depoda durur. Gerekçesini o anlatının içinde taşıyan sayılar
