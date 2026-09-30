@@ -846,3 +846,6 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | 2.3 cümle 30 B'de | sunulmasın | yazara | yazara | yazara | yazara | **yazara, Grok'un gerekçesiyle** |
 | 7 + 8 | hayır | isteğe bağlı | hayır | hayır | hayır | **önerilmiyor** |
 | 2.3 başlığı; 2.1/2.2, 3/4, 6.3/6.4 ayrı | ✓ | ✓ | ✓ | ✓ | ✓ | **oybirliği** |
+| E20 uygulaması (B + 11), 2.3 −181 | ? | ? | ? | ? | uyguladı | **Tur 184 teyit** |
+| 2.3 cümle 19 → S4? (yazar sordurdu; beşimiz hemfikirse) | ? | ? | ? | ? | (Tur 185'te) | **Tur 184** |
+| 4. aşama kapanıyor mu | ? | ? | ? | ? | (Tur 185'te) | **Tur 184** |

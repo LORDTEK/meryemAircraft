@@ -1066,7 +1066,7 @@ yargısını ("eksik bulunur") yazara dergi şartı gibi aktardım; denetlenmemi
 - **2.3 başlığı yerinde; 2.1+2.2, 3+4, 6.3+6.4 ayrı:** beşimiz (ChatGPT ve DeepSeek geri çekti).
 - **Sonuç:** 4. aşamada hiçbir bölüm birleşmesi kendini ödemiyor; tek kaldıraç 2.3 ve küçük.
 
-## E20 — 2.3 · **yazarda**
+## E20 — 2.3 · **KARAR (Tur 183 sonrası): "B onaylı, uygula" · "11 gitsin" · "4. maddeyi de diğer okuyuculara sor. Hemfikir olduğunuz şekilde ilerleyelim."**
 
 | Seçenek | Ne | Kelime | 2.3 | Bölüm 2 | Bölüm 5'e oran |
 |---|---|---:|---:|---:|---:|
@@ -1076,3 +1076,8 @@ yargısını ("eksik bulunur") yazara dergi şartı gibi aktardım; denetlenmemi
 
 11 (32 kelime) ayrışık (ChatGPT veto); çözülürse her satıra −32. Daha büyük tek yol: denetimin sonucu niteleyicileriyle eke (~720–800) — beşimiz önermiyor
 (denetimin kanıtı gövdeden çıkar; Bölüm 4'ün menzil kanıtı eke işaret eder; 19 E13'e aykırı). Yazara ayrıca: ~1,4× "aşırı" mı?
+
+**E20 uygulandı (Tur 184):** 10 C, 38 C, 41 ses (beşimiz); 11 S (yazar, ChatGPT vetosu geçildi — yazar cümleyi Türkçesi ve komşularıyla okuduktan sonra); 16–17 S,
+31–32 S (korunan üç cümle → `v8-caveats.md` alt tablosu `| S4 | … | E20 |`). Cümle 1 K (veto), 30 gövdede. 2.3 −181; gövde ~13 411; Bölüm 2 ~2 970 (1,37×).
+Denetimler geçti. Eski beş paragraf S4'te aynen. **Cümle 19 (E13'ün 4. maddesi):** yazar okuyuculara sordurdu; beşimiz hemfikirsek S4'e, değilse kalır (Tur 184 §3).
+Yazara açıklama (Tur 183 sonrası): "4'ü boşver" yalnız bir kez söylenmişti (Tur 170); ben iki kez geri aktardım.

@@ -163,9 +163,6 @@ kaybolmasına (CLAUDE.md §0.8). Aynı denetimle sınanır.
 | 2 | a counter-example is a remedy that reduces one of the three charges, leaves the other two no worse, and whose own cost is either absent or demonstrably smaller than the reduction — measured in the same currency | Q+G+C+D+K |
 | 2 | "No worse" is judged against the architecture the move modifies. | Q+G+C+D+K |
 | 4 | It is used for three reasons, stated so that the choice is not merely the one that agreed | Q+G+C+D+K |
-| 4 | None is known to the authors. | Q+G+C+D+K |
-| 4 | And the source states the second half of the prediction in its own words, on a comparison the check does not use as its test. | G+C+D+Q+K |
-| 4 | but not enough to counter the increase in structure and propulsion weight. | G+C+D+Q+K |
 | 15 | A configuration may avoid all three and still be unbuildable, uncontrollable, or unsuited to its mission, and the accounting says nothing against that possibility. | G+C+D+Q+K |
 | 15 | It does not claim range against fixed-wing aircraft. | G+C+D+Q+K |
 | 15 | It does not claim vertical capability against rotorcraft. | G+C+D+Q+K |
@@ -204,6 +201,9 @@ kaybolmasına (CLAUDE.md §0.8). Aynı denetimle sınanır.
 | S2 | If that architecture already sizes its continuous plant by the hover peak, tilting leaves Bill 3 no worse…what keeps the row from refuting the accounting is the part of its cost that falls outside the three — which is why that part is listed | E16 |
 | S2 | A framework that could absorb any cost by declaring it out-of-scope would be unfalsifiable. | E16 |
 | S3 | An architecture may meet the condition where it carries the aircraft and fail it elsewhere | E17 |
+| S4 | None is known to the authors. | E20 |
+| S4 | And the source states the second half of the prediction in its own words, on a comparison the check does not use as its test. | E20 |
+| S4 | but not enough to counter the increase in structure and propulsion weight. | E20 |
 
 *Tanım kaydı (Tur 111; Qwen P1, dört okuyucu + Claude): son beş Q+G+C+D+K satırı çerçevenin tanım cümleleri; kök (satır "is the origin of all three charges below") ve koşul zaten korunuyordu.*
 
