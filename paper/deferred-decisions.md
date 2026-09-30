@@ -1240,3 +1240,12 @@ Başlık: *meryemAircraft: Tail-Sitting Blended-Wing Body for Vertical Takeoff W
 **Kaynakça (Tur 194):** `paper/submission/references-draft.md` — 27 kaynak, ilk atıf sırasıyla; yerleşim tablosu; açık konular. **Bulgu (Claude):** Mathur & Atkins 2023 (quadplane)
 depoda yok ve gövde birebir alıntılıyor (Tur 90'dan beri "attributed but unverified"); Vegh basılı sürümü yok (müsvedde kuralı); motorlu planör birincili ve Merical tam künyesi yok;
 NeuralFoil makale künyesi doğrulanmadı. Okuyuculardan künye alanları (bağlantıyla), birincil kaynaklar, yerleşim denetimi.
+
+## Tur 194 cevapları — kaynakça alanları; yazar Mathur arXiv'i yükledi
+
+- Dolan alanlar: [3], [4], [5] (2009, dergi DOI'si), [6] (St. Petersburg, 2014-0529), [7], [9] (s. 6268–6278, dosyadan), [14] (SAE 2014-01-2222), [20] (Sharpe & Hansman 2025), [26].
+- **[16] Mathur:** arXiv v1 yüklendi, alıntı s. 23'te birebir **doğrulandı**. *J. Aircraft* sürümü var (doi 10.2514/1.C036916; Grok, ChatGPT, Qwen) → PDF'i istenir (İTÜ erişimi).
+- **[11] Vegh:** yazar SciTech bildirisini daha önce de bulamamış; ChatGPT *J. Aircraft* sürümünü buldu (doi 10.2514/1.C038393) → onu denemesi istenir.
+- **[13] motorlu planör:** DA36 E-Star (2011; Grok, ChatGPT, Qwen); birincil yalnız üretici haber sayfası (AIAA: kaynakçaya girmez). **E28 — yazara:** (a) yan cümle düşer
+  (Qwen, DeepSeek), (b) Diamond sayfası metin içinde parantezle anılır (AIAA izin veriyor, dipnot önerilmiyor), (c) Schömann "as reported by" (ikincil — AIAA şartına aykırı).
+- Qwen'in [24] sorusu: iki alıntı Rheaume & Lents'te doğrulandı. [9] kalır; ders kitabı atfı yok (üçü). AeroSandbox 4.2.10: 2021 tezi + metinde sürüm.
