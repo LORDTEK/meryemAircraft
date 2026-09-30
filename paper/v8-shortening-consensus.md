@@ -834,3 +834,7 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | 3. aşama: T1–T6 K; F1 B (tek sütun); F2a B; F2b S; F3 N | ✓ | ✓ | ✓ | ✓ | ✓ | **oybirliği → yazara** |
 | 3. aşama | — | — | — | — | — | **yazar: değişikliksiz kapandı (E19)**; şekil sorusu gönderim hazırlığına park |
 | 4. aşama: bölüm birleştirme (2.3 dahil) | ? | ? | ? | ? | (Tur 183'te) | **Tur 182 yöntem + öneri** |
+| 4. aşama: *birleştirme* kendi bölümü; 2.3 uçaktan önce; ana hat değişmez | ✓ | ✓ | ✓ | ✓ | ✓ | **oybirliği** |
+| 2.3 derinliği | S4'e −750–800 | yerinde −200–300 | 2.2'ye, −800 | S4'e −720 | A −110 / B −270 (sayım) | **Tur 183: sayım teyide** |
+| 7 + 8 | hayır | evet | evet | evet | hayır | **Tur 183'te karşılıklı** |
+| 2.1+2.2 / 6.3+6.4 / 3+4 | hayır | evet (3+4 B) | hayır | — | hayır | **Tur 183** |

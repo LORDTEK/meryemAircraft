@@ -194,3 +194,4 @@ Tur numarası her dosyanın kendi başlığından okundu; başlıkta tur numaras
 | `round-179.md` | 179 |
 | `round-180.md` | 180 |
 | `round-181.md` | 181 |
+| `round-182.md` | 182 |

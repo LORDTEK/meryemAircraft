@@ -210,15 +210,17 @@ closes.** Readers answer one another, not only Claude.
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 182.** All four readers work in new conversations since Round 169; this was done **for equality** (Grok's conversation did not need
+**Round 183.** All four readers work in new conversations since Round 169; this was done **for equality** (Grok's conversation did not need
 renewing). **The author (Round 171):** *"You readers, work together. Whenever it comes to my turn, don't forget to tell me."* Each round
 text ends by naming what goes to the author.
 
 | Block | State |
 |---|---|
-| Closed | shortening inside the current structure (Rounds 168–176): 17 734 → 13 593; stage 2, protected-sentence status (Rounds 176–180, E18); **stage 3, tables and figures (Rounds 180–182): no change** — the author: *"If the work we are doing is not aligned with our goal, let us not do it."* All six tables stay; no figure added; whether the submission needs a figure is parked for submission preparation, to be checked against the journal's instructions |
+| Closed | shortening inside the current structure (Rounds 168–176): 17 734 → 13 593; stage 2, protected-sentence status (Rounds 176–180, E18); stage 3, tables and figures (Rounds 180–182): **no change** (E19); the figure question is parked for submission preparation, against the journal's instructions |
 | **Stage 4 (now): section merging, 2.3 included** | goal: a shorter body, the framework no longer outweighing the architecture, the author's line of argument intact (*combining the solutions* is its own step). A merge that does not shorten is not proposed |
-| **Open (Round 182)** | stage 4's method and proposals (a new question: Claude's view comes next round, beside yours) |
+| Agreed (Round 182, all five) | *combining the solutions* stays its own section; 2.3 stays before the aircraft; the outline is unchanged |
+| **Open (Round 183)** | 2.3 counted sentence by sentence against the protected register: **A** (−110, no author decision) / **B** (−270, three groups by the author's decision); 7 + 8 (DeepSeek, Qwen, ChatGPT for; Grok, Claude against); ChatGPT's 2.1 + 2.2 and 6.3 + 6.4 |
+| Binding decisions on 2.3 | *"It is used for three reasons …"* stays (author, E13, Round 170); the 580/679/99 lb sentence stays in the body (all five, Round 173); 6.1 + 6.2 numbering kept (closed) |
 | Protected sentences | 148 in the body, 28 in the supplement; U table 14 |
 | Body | 13 592 words of prose (tables excluded) |
 

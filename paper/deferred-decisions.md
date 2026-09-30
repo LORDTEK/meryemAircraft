@@ -1034,3 +1034,18 @@ Uygulandı: U 13 (kayıttan U tablosuna; gövdede aynen), 3 kayıt kopyası sili
 **Park:** gönderimde şekil gerekip gerekmediği — gönderim hazırlığında, derginin kendi yönergelerine karşı (CLAUDE.md §4 dergi şartı kuralı). Benim hatam: okuyucuların
 yargısını ("eksik bulunur") yazara dergi şartı gibi aktardım; denetlenmemişti.
 **Tur 182:** 4. aşama (bölüm birleştirme, 2.3 dahil) açıldı; yöntem ve öneriler okuyuculara (yeni soru).
+
+## Tur 182 cevapları — 4. aşama (bölüm birleştirme), yöntem ve öneriler
+
+- **Beşimiz:** *birleştirme* kendi bölümü; 2.3 uçaktan önce; yazarın ana hattı değişmez.
+- **2.3:** Grok (S4'e, bulgu paragrafı, −750–800), DeepSeek (bütünü S4'e, bulgu paragrafı 2.2'de, −800), Qwen (S4'e, −720), ChatGPT (yerinde sıkıştır, −200–300).
+- **Claude'un sayımı (korunan kayda karşı, cümle cümle; 46 cümle, 971 kelime):** 11 korunan (273) + 3 U (36) + onlara bağlı cümleler. **A** (yazarsız): −110
+  (1 C→44, 10 C→5/8–9, 11 S, 38 C→2.1 tilt satırı, 41 ses). **B** (yazar kararıyla üç grup): −270 (16–17 *"None is known"*; 30 bütün cümle — Tur 173 kapanışına
+  değer; 31–32 kaynak cümlesi + alıntı). Bölüm 2: ~3 040 / ~2 880 (Bölüm 5'in 1,40× / 1,32×'i). 720–800 ancak sonucun niteleyicileriyle birlikte S4'e gitmesiyle
+  (5, 8, 25–26, 33, 42, 18–19) — denetimin kanıtı gövdeden çıkar, 19 E13'e aykırı; önermedim, bedeli görünsün diye adlandırdım.
+- **Denetimde bulunanlar:** Grok 1.2 işaretçisi yok; *"three reasons"* E13'te yazar kararıyla kalır (*"4'ü boşver"*). DeepSeek 6.4.3 işaretçisi yok; sınırları S4'e
+  (fren) ve pound sayılarını S4'e (Tur 173 kapanışı). Qwen'in üç S4 kaleminden ikisi bugünkü 2.3'te yok (dokuz tasarım listesi; dört rotorlu ölçek cümlesi E13'te gitti).
+  ChatGPT seçenek B'nin gerekçesi yazarın *"4 başlık olsun demiyorum"*unu tersine çeviriyor; 6.1+6.2 kapanmıştı. **Benim hatam:** Tur 182 2.3'ün korunan cümlelerini ve
+  bağlayıcı kararlarını vermeden tasarruf istedi.
+- **7 + 8:** DeepSeek, Qwen, ChatGPT evet; Grok hayır (*"Debt is not scope"*); Claude hayır (saydığım ~25–40 kelime; iki uçtaki özet cümleleri korunan).
+- **Tur 183:** sayım okuyucuların teyidine; karşılıklı cevaplar; sonra yazara: 2.3 A/B (B'nin üç grubu adıyla) ve gerekirse 7+8.
