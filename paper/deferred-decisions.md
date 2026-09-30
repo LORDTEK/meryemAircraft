@@ -1233,3 +1233,10 @@ Tur 192: başlık ve özet okuyuculara (yeni soru; Claude'un adayları Tur 193't
   niteleyicisi), L11 eklensin, "range" çıksın. ChatGPT: kendi 178 kelimelik sürümü (L8 çok rotorlu sonucu ve L9 kapanış düşüyor; Claude karşı). Oybirliğiyle geçen değişiklik yok.
 - Denetim bulguları G1–G3, C1–C5, D1–D4, Q1–Q3: sahipleri kabul etti (ChatGPT C3'ü "kusur değil, fırsat" diye reddetti; D4'ü de aynı gerekçeyle).
 - Dosya: `paper/submission/title-abstract.md`. **E27 — yazara:** başlık seçimi; özetin onayı (tabanı olduğu gibi / Grok'un L11 eki / başka).
+
+## E27 — başlık ve özet · **KARAR (2026-09-30): "Başlık birinci satır, özet (a); kaynakçaya geçelim"**
+
+Başlık: *meryemAircraft: Tail-Sitting Blended-Wing Body for Vertical Takeoff Without Propulsor Reorientation*. Özet: taban, değişiklik yok (199). `paper/submission/title-abstract.md`.
+**Kaynakça (Tur 194):** `paper/submission/references-draft.md` — 27 kaynak, ilk atıf sırasıyla; yerleşim tablosu; açık konular. **Bulgu (Claude):** Mathur & Atkins 2023 (quadplane)
+depoda yok ve gövde birebir alıntılıyor (Tur 90'dan beri "attributed but unverified"); Vegh basılı sürümü yok (müsvedde kuralı); motorlu planör birincili ve Merical tam künyesi yok;
+NeuralFoil makale künyesi doğrulanmadı. Okuyuculardan künye alanları (bağlantıyla), birincil kaynaklar, yerleşim denetimi.

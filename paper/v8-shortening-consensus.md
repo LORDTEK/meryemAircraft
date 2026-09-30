@@ -887,3 +887,5 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Özet | G1–G3 | C1–C5 | D1–D4 | Q1–Q3 | aday | **Tur 193: taban + cümle değişiklikleri** |
 | Başlık 1. sıra | Claude | Grok | Claude | Claude | — | **yazara (E27)** |
 | Özet tabanı | Claude | Claude | Claude | Claude | Claude | **oybirliği; değişiklikler ayrışık → yazara (E27)** |
+| Başlık / özet | — | — | — | — | — | **yazar (E27): Claude'un başlığı; özet tabanı değişmeden** |
+| Kaynakça taslağı (27) | ? | ? | ? | ? | (Tur 195'te e–g) | **Tur 194** |
