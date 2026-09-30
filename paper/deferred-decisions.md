@@ -1225,3 +1225,11 @@ Tur 192: başlık ve özet okuyuculara (yeni soru; Claude'un adayları Tur 193't
   ≠ "package", C3 sayı yok, C4 sözleşme bulgusu yok, C5 anahtar kelime yok; DeepSeek D1 "they pay three charges" (tilt Bill 1 ödemez), D2 fiilsiz, D3 "No wind tunnel … was built",
   D4 L8 yok; Qwen Q1 5.56–7.39 "closed sizing loop" (kapanıştan önce), Q2 yanlış yarı, Q3 yalnız ilk sözleşme sayısı.
 - Claude'un adayı (199 kelime) ve başlığı (*"meryemAircraft: Tail-Sitting Blended-Wing Body for Vertical Takeoff Without Propulsor Reorientation"*, 10) Tur 193'te yan yana.
+
+## Tur 193 cevapları — başlık ve özet → E27, yazarda
+
+- **Başlık sıralaması:** Claude'un adayı (*"… for Vertical Takeoff Without Propulsor Reorientation"*) Grok, DeepSeek, Qwen'de 1.; ChatGPT'de 3. (1. Grok'unki).
+- **Özet:** dördü de **Claude'un adayını taban** seçti. DeepSeek ve Qwen değişiklik önermedi. Grok: "not as a controlled experiment" çıksın (Claude karşı: yalıtım çifti
+  niteleyicisi), L11 eklensin, "range" çıksın. ChatGPT: kendi 178 kelimelik sürümü (L8 çok rotorlu sonucu ve L9 kapanış düşüyor; Claude karşı). Oybirliğiyle geçen değişiklik yok.
+- Denetim bulguları G1–G3, C1–C5, D1–D4, Q1–Q3: sahipleri kabul etti (ChatGPT C3'ü "kusur değil, fırsat" diye reddetti; D4'ü de aynı gerekçeyle).
+- Dosya: `paper/submission/title-abstract.md`. **E27 — yazara:** başlık seçimi; özetin onayı (tabanı olduğu gibi / Grok'un L11 eki / başka).
