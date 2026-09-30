@@ -1049,3 +1049,30 @@ yargısını ("eksik bulunur") yazara dergi şartı gibi aktardım; denetlenmemi
   bağlayıcı kararlarını vermeden tasarruf istedi.
 - **7 + 8:** DeepSeek, Qwen, ChatGPT evet; Grok hayır (*"Debt is not scope"*); Claude hayır (saydığım ~25–40 kelime; iki uçtaki özet cümleleri korunan).
 - **Tur 183:** sayım okuyucuların teyidine; karşılıklı cevaplar; sonra yazara: 2.3 A/B (B'nin üç grubu adıyla) ve gerekirse 7+8.
+
+## Tur 183 cevapları — dört okuyucu; sayım teyit edildi
+
+- **Sayım:** dördü teyit; dördü de Tur 182 tahminlerini (720–800 / 200–300) geri çekti, kendi hatalarını kabul etti (Grok 1.2 ve E13; DeepSeek 6.4.3, fren, Tur 173;
+  Qwen olmayan metin; ChatGPT 2.1+2.2 ve 6.3+6.4 tahminleri).
+- **Cümle 1 (C → 44):** Grok ve DeepSeek **veto** (iki ayrı yüklem: itiraz ≠ yerleşim kuralı); Qwen "sınırda, veto yok"; ChatGPT kabul. → **K.** Benim görüşüm:
+  haklılar; yüklem aynı değil, işareti ben zorladım.
+- **Cümle 11 (S):** ChatGPT **veto** (12'nin *"first half supplying the reason"*u 6–11'e dayanıyor, der). Grok, DeepSeek, Qwen kabul. Benim görüşüm: 12'nin
+  "first half"ı 6–7'dir ve kalıyor; 11 ikinci yarının neden türetilmediğini anlatır. Ama kural gereği veto durur → **şimdilik K, ayrışık.**
+- **Cümle 38 (C):** beşi kabul. Alıcı: DeepSeek 2.1.6'nın gövde cümlesini önerdi (*"Each known partial remedy reduces one charge and pays for it …"*, gövdede var,
+  doğrulandı); Qwen *"this axis"*in göndergesini 35 (*"the first charge"*) okudu, ben 37; ikisinde de gönderge bulunuyor.
+- **Cümle 10 (C), 41 (ses):** beşi kabul.
+- **Cümle 30:** ChatGPT, DeepSeek, Qwen B'de, yazar kararı olarak; **Grok: yazara hiç sunulmasın** (Tur 173 kapanışı). → yazara ayrı satır olarak, Grok'un gerekçesiyle.
+- **7 + 8:** DeepSeek ve Qwen geri çekti; Grok, Claude hayır; ChatGPT "izin verilebilir ama gerekli değil, ~25–40". → **önerilmiyor.**
+- **2.3 başlığı yerinde; 2.1+2.2, 3+4, 6.3+6.4 ayrı:** beşimiz (ChatGPT ve DeepSeek geri çekti).
+- **Sonuç:** 4. aşamada hiçbir bölüm birleşmesi kendini ödemiyor; tek kaldıraç 2.3 ve küçük.
+
+## E20 — 2.3 · **yazarda**
+
+| Seçenek | Ne | Kelime | 2.3 | Bölüm 2 | Bölüm 5'e oran |
+|---|---|---:|---:|---:|---:|
+| A | 10 C, 38 C, 41 ses (beşimiz) | −49 | ~922 | ~3 100 | 1,43 |
+| B | A + 16–17 (*"None is known"* ve karşı-küme) + 31–32 (kaynak cümlesi + alıntı), yazar kararıyla | −149 | ~822 | ~3 000 | 1,38 |
+| B + 30 | B + 580/679/99 lb cümlesi bütünüyle (Tur 173 kapanışına dokunur; Grok karşı) | −210 | ~761 | ~2 940 | 1,35 |
+
+11 (32 kelime) ayrışık (ChatGPT veto); çözülürse her satıra −32. Daha büyük tek yol: denetimin sonucu niteleyicileriyle eke (~720–800) — beşimiz önermiyor
+(denetimin kanıtı gövdeden çıkar; Bölüm 4'ün menzil kanıtı eke işaret eder; 19 E13'e aykırı). Yazara ayrıca: ~1,4× "aşırı" mı?

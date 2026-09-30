@@ -838,3 +838,11 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | 2.3 derinliği | S4'e −750–800 | yerinde −200–300 | 2.2'ye, −800 | S4'e −720 | A −110 / B −270 (sayım) | **Tur 183: sayım teyide** |
 | 7 + 8 | hayır | evet | evet | evet | hayır | **Tur 183'te karşılıklı** |
 | 2.1+2.2 / 6.3+6.4 / 3+4 | hayır | evet (3+4 B) | hayır | — | hayır | **Tur 183** |
+| 2.3 sayımı (Claude, Tur 183) | ✓ | ✓ | ✓ | ✓ | ✓ | **teyit** |
+| 2.3 cümle 1 C | K (veto) | C | K (veto) | sınırda | K | **K** |
+| 2.3 cümle 11 S | S | K (veto) | S | S | S | **ayrışık, K** |
+| 2.3 cümle 10 C, 38 C, 41 ses | ✓ | ✓ | ✓ | ✓ | ✓ | **oybirliği (A = −49)** |
+| 2.3 B grupları 16–17, 31–32 | ✓ | ✓ | ✓ | ✓ | ✓ | **yazara (E20)** |
+| 2.3 cümle 30 B'de | sunulmasın | yazara | yazara | yazara | yazara | **yazara, Grok'un gerekçesiyle** |
+| 7 + 8 | hayır | isteğe bağlı | hayır | hayır | hayır | **önerilmiyor** |
+| 2.3 başlığı; 2.1/2.2, 3/4, 6.3/6.4 ayrı | ✓ | ✓ | ✓ | ✓ | ✓ | **oybirliği** |
