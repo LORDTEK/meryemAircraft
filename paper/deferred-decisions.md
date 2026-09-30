@@ -1304,3 +1304,9 @@ NeuralFoil makale künyesi doğrulanmadı. Okuyuculardan künye alanları (bağl
 - Öğe 4: YZ araçları hesapların yapılmasında araç olarak kullanıldı.
 - Tek cümle. Yer: Claude'un önerisi yalnız Teşekkür (zorunlu zaten; Teşekkür makalenin parçası, C1b'nin *"in the manuscript"*ini karşılar; gövde değişmez) → Tur 200'de okuyuculara.
 - 2.1 *"generally"* dördünce teyit edildi → kapandı. C1a–C1c dördünce dergi sayfasından → kapandı.
+
+## Tur 200 cevapları — YZ cümlesi
+
+- **Yer: yalnız Teşekkür** (dördü + Claude; C1b bölüm adı vermiyor). Gövde değişmez.
+- **Cümle:** ChatGPT, DeepSeek, Qwen tabanı değişmeden kabul etti; Grok "design" → "design, and solution approach" ekiyle kabul etti (yazarın E29'daki kendi ifadesi). Claude Grok'la.
+- **E31 — yazara:** taban mı, ek mi? Metin `paper/submission/acknowledgments.md`. Onaydan sonra aynı cümle ScholarOne alanına da girer.

@@ -903,3 +903,5 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Tur 198: C3 nasıl ilerlenir | önce metin, sonra editörlüğe sor | (b) | tam beyanla gönder | (a) + gövde cümlesi | Grok'la | **ayrışık → yazar** |
 | Tur 199: 2.1 "generally" teyidi | teyit | teyit | teyit | teyit | — | **kapandı** |
 | Tur 199: C3 | önce sor | önce sor | önce sor (a'dan) | önce sor (a'dan) | önce sor | **yazar (E30): doğrudan gönder** |
+| Tur 200: YZ cümlesinin yeri | Teşekkür | Teşekkür | Teşekkür | Teşekkür | Teşekkür | **kapandı** |
+| Tur 200: YZ cümlesi | evet + "and solution approach" | evet, değişmeden | evet | evet | Grok'un ekiyle | **yazar (E31): taban mı ek mi** |
