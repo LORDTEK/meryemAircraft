@@ -855,3 +855,5 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | E20 uygulaması teyit | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI** |
 | 2.3 cümle 19 | K | K | K | K | K | **kalır** |
 | 4. aşama | kapansın | kapansın | kapansın | kapansın | kapansın | **KAPANDI; sonraki aşama yazarda** |
+| Kısaltma bitti; Bölüm 1 geçişi → parça-bütün-parça → gönderim | — | — | — | — | — | **yazar (E21)** |
+| Bölüm 1 geçişi: işaretler, bulgular, eksen hazırlığı | ? | ? | ? | ? | (Tur 186'da) | **Tur 185** |

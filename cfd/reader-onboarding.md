@@ -210,19 +210,17 @@ closes.** Readers answer one another, not only Claude.
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 184.** All four readers work in new conversations since Round 169; this was done **for equality** (Grok's conversation did not need
+**Round 185.** All four readers work in new conversations since Round 169; this was done **for equality** (Grok's conversation did not need
 renewing). **The author (Round 171):** *"You readers, work together. Whenever it comes to my turn, don't forget to tell me."* Each round
 text ends by naming what goes to the author.
 
 | Block | State |
 |---|---|
-| Closed | shortening inside the current structure (Rounds 168–176): 17 734 → 13 593; stage 2, protected-sentence status (Rounds 176–180, E18); stage 3, tables and figures (Rounds 180–182): **no change** (E19); the figure question is parked for submission preparation, against the journal's instructions |
-| **Stage 4 (now): section merging, 2.3 included** | no section merge pays (all five, Round 183): 2.1/2.2, 3/4, 6.3/6.4 and 7/8 stay separate; *combining the solutions* stays its own section; 2.3 keeps its heading and place |
-| **Applied (Round 184), to confirm** | 2.3 shortened by the author's decision E20 (B + sentence 11): 10, 38 cut as copies, 41 as voice (all five); 11, 16–17, 31–32 to S4 (author; three protected sentences moved). Sentence 1 and sentence 30 stay. −181 words |
-| **Open (Round 184)** | confirmation of the result and its receipts; sentence 19 (*"It is used for three reasons …"*): the author asks the readers, and it moves only if all five agree; whether stage 4 closes |
-| Binding decisions on 2.3 | the 580/679/99 lb sentence stays in the body (all five, Round 173); 6.1 + 6.2 numbering kept (closed) |
+| Closed | **the shortening is over** (the author, after Round 184). Stages: inside the current structure (Rounds 168–176); protected-sentence status (Rounds 176–180, E18); tables and figures (Rounds 180–182, no change, E19); section merging (Rounds 182–184: no merge; 2.3 −181 by E20; sentence 19 stays, all five) |
+| **Now (Round 185): a pass over Section 1** | not a length pass: clarity in one reading, match with the body as it now stands, the §0 boundaries, priority wording, preparing the four-axis claims of Section 8. Marks K / R / C / S / A |
+| Next | a last part–whole–part reading of the whole paper (need not shorten), then submission (the journal's instructions on length and figures; the author has been asked for the PDF) |
 | Protected sentences | 145 in the body, 31 in the supplement; U table 14 |
-| Body | about 13 411 words of prose (tables excluded); Section 2 about 2 970, 1.37× Section 5 |
+| Body | about 13 411 words of prose (tables excluded) |
 
 **Tools the round texts mention:**
 

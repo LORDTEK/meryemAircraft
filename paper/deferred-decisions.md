@@ -1103,3 +1103,11 @@ Yazara açıklama (Tur 183 sonrası): "4'ü boşver" yalnız bir kez söylenmiş
   `aiaa.org/wp-content/uploads/2024/12/journalpagelimitsandwordcountguidelines_Sept_2024.pdf`; Rev. Aug 2018: `arc.aiaa.org/pb-assets/PDFs/JournalPageLimitsandWordCountGuidelines_August 2018.pdf`)
   bu oturumdan **açılamadı** (aiaa.org ağ politikasıyla engelli). Bir arama motoru özeti tam makale için ~10 000–12 000 kelime (denklem, şekil, tablo eşdeğeri dahil) ve
   100–200 kelimelik özet diyor — **özet belge değildir** (Tur 119), sayı kullanılmaz. Yazardan PDF'in `references/`'e yüklenmesi istendi.
+
+## E21 — sonraki iş · **KARAR (4. aşama kapanınca): "bana da kısaltma yeter gibi geldi … 1'i elden geçirelim. Sonra ben parça-bütün-parça bakışı isteyeceğim (kısalması şart değil ama son bir bakış). Ardından gönderme aşamasına geçeriz."**
+
+- **Kısaltma bitti.** Sıra: (1) Bölüm 1 geçişi (Tur 185; uzunluk geçişi değil: anlaşılırlık, gövdeyle eşleşme, §0 sınırları, öncelik ifadesi, Bölüm 8'in dört eksenine hazırlık);
+  (2) bütün metne parça–bütün–parça son bakış (kısaltma şart değil); (3) gönderim (JoA yönergeleri: uzunluk, şekil — PDF yazardan istendi, aiaa.org bu ortamdan engelli).
+- **Tur 185:** Bölüm 1 tam metin, 52 cümle numaralı, 10 korunan; Claude'un denetim bulguları (olgu, öneri değil): 48 ↔ 5.1 karşılıklı işaretçi; üç "yol dolu" ifadesi
+  (17, 23, 42); "decade" tekrarı (22, 24); *"Rotorcraft and multirotors"* sözcük kilidi; *"more than three decades"* gönderim tarihine karşı; dört eksen Bölüm 1'de adıyla yok.
+  Claude'un görüşü Tur 186'da yan yana.
