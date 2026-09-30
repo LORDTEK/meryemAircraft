@@ -125,7 +125,7 @@ Anything on the reference list or the submission package: numbering, the in-text
 
 ## G. What goes to the author
 
-- **Nothing to download.** The author's rule (§C) puts the source search with you.
+- **Nothing to download.** The author's rule (§C) puts the source search with you. The author tried both *Journal of Aircraft* PDFs (Mathur and Atkins, Vegh) and could not obtain either, so do not propose a download as the answer to D1 or D2.
 - **To the author only if you do not converge** on D1(iv): which Mathur version to cite if nobody can see the journal text.
 - E1, if all five of us agree, is applied without the author: it names tools and adds no claim about the aircraft.
 

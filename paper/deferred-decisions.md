@@ -1260,3 +1260,5 @@ NeuralFoil makale künyesi doğrulanmadı. Okuyuculardan künye alanları (bağl
 
 - **Tur 195 metni** (`cfd/round-195.md`): E28'in önce/sonrası teyide; D1 Mathur JoA (sayı 4/5, alıntı birebir mi), D2 Vegh JoA (künye; 1.4'ün iki olgusu ve sessizlik yan cümlesi),
   D3 Merical, D4 tek okuyuculu alanlar; (e)–(g) beşimiz yan yana; E1 (Claude): 4.7'de NeuralFoil 0.3.3 [19] ve AeroSandbox 4.2.10 [20] üreteçte adlandırılır — oylamada.
+- **Yazar (Tur 195, gönderilmeden önce):** *"istediğin 2 kaynağı indiremedim"* — Mathur ve Vegh *J. Aircraft* PDF'leri alınamadı. Tur 195 §G'ye eklendi: okuyucular indirmeyi cevap diye önermesin.
+  Birleşme olmazsa geri dönüş: Mathur için arXiv v1 (depoda, alıntı s. 23'te doğrulandı); Vegh için müsvedde R3 (depoda) + müsvedde kuralının bayrağı.
