@@ -892,3 +892,6 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Kaynakça (e) yerleşim | uyar; iki gözlem | [19] BEMT'yi taşımasın | uyar | [23] sorusu (dosyada doğrulandı) | E1: araç adı + sürüm 4.7'de, üreteçte | **Tur 195'te E1 oylamada** |
 | Kaynakça (f) [9] / ders kitabı | tut / bırak | tut / yalnız gerekirse | tut / bırak | tut / bırak | tut / bırak | **[9] oybirliği tut; ders kitabı: dördü bırak, ChatGPT koşullu → Tur 195** |
 | E28 motorlu planör yan cümlesi | — | — | (a) | (a) | — | **yazar (E28): (a) uygulandı Tur 195; teyide gitti** |
+| Tur 195: E28 teyidi | teyit | teyit | teyit | teyit | teyit | **kapandı** |
+| Tur 195: E1 (araç adı + sürüm, üreteçte) | evet | K | evet | evet | öneren | **kabul — üreteç kuralı** |
+| Tur 195: hangi sürüme atıf ([11], [15]) | (a) dergi + arXiv alıntısı, kilit notu kayıtta | (c) dergi sözcükleri / yoksa arXiv | (b) Mathur dergi + gövdede "preprint"; Vegh SciTech | (a) | (d) metni açılan sürüm | **ayrışık → Tur 196** |

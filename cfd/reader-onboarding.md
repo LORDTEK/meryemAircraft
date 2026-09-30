@@ -210,7 +210,7 @@ closes.** Readers answer one another, not only Claude.
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 195.** All four readers work in new conversations since Round 169; this was done **for equality** (Grok's conversation did not need
+**Round 196.** All four readers work in new conversations since Round 169; this was done **for equality** (Grok's conversation did not need
 renewing). **The author (Round 171):** *"You readers, work together. Whenever it comes to my turn, don't forget to tell me."* Each round
 text ends by naming what goes to the author.
 
@@ -220,7 +220,8 @@ text ends by naming what goes to the author.
 | **Now: submission to *Journal of Aircraft*** | the author (E25, E26): **Full-Length Paper**, LaTeX, submitted at the present length (~16 000 with table equivalents; 10 000–12 000 recommended). Requirements, verbatim and item by item: `paper/joa-compliance.md` (16 September) and `paper/joa-requirements.md` (30 September) |
 | Decided (E27) | title *meryemAircraft: Tail-Sitting Blended-Wing Body for Vertical Takeoff Without Propulsor Reorientation*; abstract as in `paper/submission/title-abstract.md` (199 words) |
 | Decided (E28) | Section 1.5: the crewed-motor-glider clause is dropped (no original source); the reference list is renumbered (26 entries) |
-| **Open (Round 195)** | the reference list (`paper/submission/references-draft.md`): **the readers cross-check the sources** (the author, Round 195: *"Don't ask me to research sources. Ask them; let them cross-check. If they all say 'correct', it is correct."*, my translation). Open: the *Journal of Aircraft* versions of Mathur and Atkins and of Vegh; naming the software tools and versions in 4.7 (E1) |
+| Closed (Round 195) | E28 confirmed; [13] Merical (abstract), [6] (no DOI); E1: the generator names NeuralFoil 0.3.3 and AeroSandbox 4.2.10 at 4.7; [9] pages 6268–6278 printed in the PDF |
+| **Open (Round 196)** | the readers cross-check the sources (the author, Round 195: *"Don't ask me to research sources. Ask them; let them cross-check. If they all say 'correct', it is correct."*, my translation; the author could not obtain either journal PDF). Open: Mathur's journal issue, pages and wording; Vegh's journal record; **which version to cite** for [11] and [15] when nobody has opened the journal text |
 | Still to do | numbered references (original sources only); style conversion by a generator script (Roman-numeral sections, *Sec.*, numbered tables and equations, lists as 1) 2), American spelling, no bold emphasis, no dashes); acknowledgments with the AI-use statement |
 | Protected sentences | 145 in the body, 31 in the supplement; U table 14 |
 

@@ -1262,3 +1262,10 @@ NeuralFoil makale künyesi doğrulanmadı. Okuyuculardan künye alanları (bağl
   D3 Merical, D4 tek okuyuculu alanlar; (e)–(g) beşimiz yan yana; E1 (Claude): 4.7'de NeuralFoil 0.3.3 [19] ve AeroSandbox 4.2.10 [20] üreteçte adlandırılır — oylamada.
 - **Yazar (Tur 195, gönderilmeden önce):** *"istediğin 2 kaynağı indiremedim"* — Mathur ve Vegh *J. Aircraft* PDF'leri alınamadı. Tur 195 §G'ye eklendi: okuyucular indirmeyi cevap diye önermesin.
   Birleşme olmazsa geri dönüş: Mathur için arXiv v1 (depoda, alıntı s. 23'te doğrulandı); Vegh için müsvedde R3 (depoda) + müsvedde kuralının bayrağı.
+
+## Tur 195 cevapları — kaynak çapraz denetimi
+
+- Kapandı (dördü + Claude): E28 teyidi; [13] Merical (yayıncı özeti, üç okuyucu birebir aynı alıntı); [6] DOI yok; E1 kabul (üreteç 4.7'de NeuralFoil 0.3.3 ve AeroSandbox 4.2.10'u adlandırır); E2, E3.
+- Claude dosyalardan: arXiv başlığı derginin başlığından **farklı** (Grok, ChatGPT haklı; Tur 195 D1(ii) yanlış başlık bastı — Claude'un hatası); [9] sayfaları PDF'te basılı 6268–6278 (Qwen'in 357–381'i yanlış).
+- Açık → Tur 196: Mathur dergi sayı/sayfa (4, 1323–1328 vs 5, 1612–1623); ChatGPT'nin tek başına okuduğu dergi ifadesi (*"always"* yok, *"significantly"* var); Vegh dergi künyesi (DeepSeek bulamadı);
+  **hangi sürüme atıf** — (a) Grok, Qwen; (b) DeepSeek; (c) ChatGPT; (d) Claude: metni açılan sürüm (Mathur arXiv v1, Vegh SciTech + düzeltme). Yakınsama olmazsa yazara.

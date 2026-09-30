@@ -111,3 +111,23 @@
 - The remaining support for the clause is [13] Merical et al., known from its abstract, which states a design and simulation (Round 97). *"Designed for"* is what it carries.
 - **Author's rule (Round 195):** the author does not search for sources. The four readers cross-check each other; when all four say a field or a quotation is correct, it is accepted.
 
+
+## Round 195 answers (2026-09-30)
+
+**Closed (all four + Claude):**
+- **E28 confirmed.** The new 1.5 sentence says less and nothing more; no other sentence leans on the dropped clause (Grok, DeepSeek, Qwen explicitly; ChatGPT: *"The author's removal of the crewed-motor-glider clause was therefore conservative and does not weaken the remaining source-supported claim"*).
+- **[13] Merical:** publisher abstract, quoted identically by Grok, ChatGPT and DeepSeek: *"A series hybrid-electric propulsion system has been designed for small rapid-response unmanned aircraft systems (UAS)"*. It carries *"designed for"*. Status: abstract only (publisher page).
+- **[6]:** no DOI (all four). Place St. Petersburg, paper 2014-0529 (from the ICAS archive PDF).
+- **E1 accepted:** the generator names the tools at 4.7: *"… with section polars from NeuralFoil 0.3.3 [19] …"* and *"… (AeroSandbox 4.2.10 [20]) …"*. Not in the step sources.
+- **E2, E3:** Bacchini's three uses stand; momentum and blade-element momentum theory stay uncited (ChatGPT now agrees).
+
+**Checked by Claude in the repository files:**
+- **arXiv title of [15]:** *"Wind Tunnel Testing and Aerodynamic Characterization of a QuadPlane Uncrewed Aircraft System"* (PDF p. 1). Grok and ChatGPT are right that it differs from the journal title; DeepSeek and Qwen said "identical". Round 195 D1(ii) itself printed the journal title as the arXiv title (Claude's error).
+- **arXiv v1 is 38 pages**; the journal item (pp. 1323–1328 per ChatGPT and Qwen) would be six. The texts cannot be assumed identical.
+- **[9] pages:** the repository PDF prints page numbers 6268 on its first page through 6278 on its eleventh, with the header *"Vol 5 Issue 2 (2025)"*. Qwen's 357–381 is not what the file shows. ChatGPT's condition (keep the pages only if the PDF itself prints them) is met.
+
+**Open (back to the readers, Round 196):**
+- [15] journal issue and pages: No. 4, pp. 1323–1328 (Grok issue only; ChatGPT, Qwen) vs No. 5, pp. 1612–1623 (DeepSeek).
+- [15] journal wording: ChatGPT alone reports, from ResearchGate 368702127, *"predicts higher lift and significantly lower drag than were experimentally observed"* (no *"always"*). Not yet cross-checked.
+- [11] Vegh journal: Vol. 63, No. 4, 2026 (Grok, ChatGPT, Qwen); pp. 1650–1660 (ChatGPT via an aggregator, Qwen); title without *"a"*. DeepSeek could not confirm the journal item exists.
+- **Which version to cite** for [11] and [15] when nobody has opened the journal text.
