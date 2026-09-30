@@ -867,3 +867,4 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Son parça–bütün–parça okumasının yöntemi | ? | ? | ? | ? | (Tur 188'de) | **Tur 187; sonra yazara** |
 | Bölüm 1 geçişi (4, 10, 22, 47) teyit; 47↔5.2 R1 | ✓ | ✓ | ✓ | ✓ | ✓ | **KAPANDI** |
 | Son okuma yöntemi | parça×6 → bütün | bütün → parça → bütün | tek tur, roller | 3 blok | parça×2 → bütün → parça | **yazara (E23)** |
+| Son okuma, parça 1 (Bölüm 1–4) | ? | ? | ? | ? | (Tur 189'da) | **Tur 188** |

@@ -1147,3 +1147,8 @@ Tur 187: teyit + 47 ↔ 5.2 alındısı (ChatGPT'nin isteği) + Bölüm 1 geçi�
   - Qwen: üç blok (1–3, 4–6, 7–8 + ek dizini); dört soru (işaretçi, sınır, okunurluk, sayı eşleşmesi); yalnız kusurda işaret.
   - Claude: parça (Tur 188: 1–4; Tur 189: 5–8) → bütün (Tur 190: bölüm geçişleri, bölüm sınırında zamirler, §0 sınır haritası, başlık sayıları) → parça (Tur 191:
     onarımlar gösterilir, teyit, kapanış). Her okuyucu bir mercek taşır (DeepSeek); okuyucu başına tur başına en çok üç kusur; kusur tanımı ortak liste; her turdan önce betik denetimleri.
+
+## E23 — son okuma yöntemi · **KARAR (Tur 187 sonrası): "Seninki onaylı, Tur 188'i hazırla"**
+
+Parça (188: 1–4; 189: 5–8) → bütün (190) → parça (191: onarım, teyit, kapanış). Kusur tanımı altı madde; kısaltma yok; okuyucu başına tur başına en çok üç kusur;
+mercekler: Grok §0 · ChatGPT işaretçi/zamir · DeepSeek sayı · Qwen okunurluk · Claude hepsi + betikler. Claude'un bulguları bir sonraki turda yan yana.

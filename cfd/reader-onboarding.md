@@ -210,16 +210,15 @@ closes.** Readers answer one another, not only Claude.
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 187.** All four readers work in new conversations since Round 169; this was done **for equality** (Grok's conversation did not need
+**Round 188.** All four readers work in new conversations since Round 169; this was done **for equality** (Grok's conversation did not need
 renewing). **The author (Round 171):** *"You readers, work together. Whenever it comes to my turn, don't forget to tell me."* Each round
 text ends by naming what goes to the author.
 
 | Block | State |
 |---|---|
-| Closed | **the shortening is over** (the author, after Round 184). Stages: inside the current structure (Rounds 168–176); protected-sentence status (Rounds 176–180, E18); tables and figures (Rounds 180–182, no change, E19); section merging (Rounds 182–184: no merge; 2.3 −181 by E20; sentence 19 stays, all five) |
-| **Now (Rounds 185–187): a pass over Section 1** | not a length pass: clarity in one reading, match with the body as it now stands, the §0 boundaries, priority wording, preparing the four-axis claims of Section 8. Marks K / R / C / S / A |
-| Applied (Round 187), to confirm | 4 R-a (*"Rotorcraft remove …"*, the author E22), 10 (clause dropped), 22 (split), 47 (*"the moment about the propeller axis"*); 23 and 45 kept |
-| Next | a last part–whole–part reading of the whole paper (need not shorten), then submission (the journal's instructions on length and figures; the author has been asked for the PDF) |
+| Closed | **the shortening is over** (the author, E21). Stages: inside the current structure (Rounds 168–176); protected-sentence status (176–180, E18); tables and figures (180–182, no change, E19); section merging (182–184: no merge; 2.3 −181, E20); **the pass over Section 1 (185–187: sentences 4, 10, 22, 47 changed; E22)** |
+| **Now (Rounds 188–191): the last part–whole–part reading** (the author, E23) | 188 part: Sections 1–4 · 189 part: Sections 5–8 · 190 whole: transitions, cross-section pointers and pronouns, §0 boundary map, headline numbers · 191 part: repairs shown, confirmed, closed. **Verification, not editing:** a change only for a defect (false sentence, broken pointer, unheld boundary or strengthened claim, stale number, contradiction, not understandable in one reading); no shortening; at most three defects per reader per round; one lens per reader (Grok §0 · ChatGPT pointers and anaphora · DeepSeek numbers · Qwen clarity and flow) |
+| Next | submission (the journal's instructions on length and figures; the author has been asked for the PDF) |
 | Protected sentences | 145 in the body, 31 in the supplement; U table 14 |
 | Body | about 13 405 words of prose (tables excluded) |
 
