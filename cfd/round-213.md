@@ -2,7 +2,7 @@
 
 > **This is a task. Please answer it now, and begin with your name alone on the first line.**
 >
-> Commit **`@@COMMIT@@`**, branch `claude/ecstatic-cori-6w30at` (for verification only). Everything you are asked to judge is in this text, including Section 7 in full and the other sentences that point into S14.
+> Commit **`152176e`**, branch `claude/ecstatic-cori-6w30at` (for verification only). Everything you are asked to judge is in this text, including Section 7 in full and the other sentences that point into S14.
 
 ---
 
