@@ -89,6 +89,10 @@ My draft (197 words; no brand, model or company name, per our rule):
 
 > The authors used general-purpose large-language-model assistants, under their direction, in four ways. (1) Text: the assistants drafted and revised the English text from the authors' instructions and earlier drafts. (2) Literature: the assistants searched the literature; quotations and numbers taken from sources were checked against the source documents themselves, not against search summaries, and the one source known only from its abstract is used only for what that abstract states. (3) Review: several assistants were used as independent readers of the manuscript, to find errors, unsupported statements and inconsistencies between sections; their proposals were applied only after being checked against the manuscript and its sources, with contested points decided by the authors. (4) Calculations and figure: the assistants wrote and ran the analysis code (sizing, aerodynamic, propulsion and transition calculations) under the authors' direction, and the script that renders Figure 1 from the design geometry; the numerical results are reproduced by these scripts, and automated checks compare the numbers in the text with their outputs. The concept, architecture, design and solution approach are the authors' own. No AI tool is an author; all three authors read and approved the manuscript and take full responsibility for its content.
 
+A third required field: *"Please provide a detailed explanation of how AI was used to improve the language in this manuscript."* My draft (124 words):
+
+> The authors' working language is Turkish; the assistants rendered the authors' content in English and then improved the language of the manuscript under the authors' direction: grammar, clarity, concision, consistent terminology, American spelling, and the journal's style for headings, references and units. Several assistants read the text independently and proposed wording changes; each change was compared with the text it replaced, and a change that altered a claim, a limit or a number was rejected. Sentences that state the paper's claims and limits were kept on a list that may be changed only by the authors' decision, and scripts checked that every such sentence, and every number, survived each revision. The authors read and approved the final text.
+
 **Facts the draft rests on:**
 - [13] (Merical) is known to us from its abstract only (Round 195). The body uses it only for *"series-hybrid propulsion has been designed for small uncrewed aircraft"*.
 - Figure 1 is rendered by `figures/build/mkfig_v8_stand.py`, which I wrote, from the three-dimensional model of the reference design.
@@ -111,7 +115,7 @@ My view is (a), because the form itself names figures, and a field that says mor
 3. **The history paragraph.** The manuscript was submitted to *Drones* (MDPI) on 2026-09-14. It was found out of scope there, transferred to *Aerospace*, and desk-rejected there on the same day; it was never peer reviewed. AIAA's form asks only about AIAA history. Should the letter mention the MDPI submission, or not? Please give your reason.
 4. **The length sentence.** Keep it, as an upfront statement, or drop it and let the editor judge?
 5. **Anything missing** that an editor at the *Journal of Aircraft* would expect in a cover letter?
-6. **The AI-use explanation (§B2).** Any statement that is inaccurate, or stronger than the Acknowledgments?
+6. **The two AI-use explanations (§B2).** Any statement that is inaccurate, or stronger than the Acknowledgments?
 7. **The figure gap (§B2).** (a), (b) or (c), with your reason.
 
 Your own proposals are welcome, as always.
