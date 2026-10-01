@@ -1,0 +1,15 @@
+KOSULLAR: 50 kg (HAFIF), M = 23,0 N m, t_r = 2 s, giris tirmanisi 5 m/s, C_m = 0; CD0 0,0248, e 0,85
+PROFILLER (Kp 25, Kd 10)
+  dogrusal             kayip   5.43 m   doyma 0.000 s
+  yumusak 3t^2-2t^3    kayip   6.33 m   doyma 0.000 s
+  bang-bang            kayip   6.57 m   doyma 0.000 s
+KAZANC TARAMASI (bang-bang; Kp x k, Kd x sqrt(k))
+  k =  1   kayip   6.57 m   doyma 0.000 s
+  k =  2   kayip   7.85 m   doyma 0.000 s
+  k =  4   kayip   8.71 m   doyma 0.000 s
+  k =  8   kayip  16.32 m   doyma 0.000 s
+  k = 16   kayip  16.94 m   doyma 0.000 s
+SURUKLEME (e 0,817): kayip farki, m
+  dogrusal  CD0 0,0285: -0.007   CD0 0,0381: -0.022
+  duz       CD0 0,0285: -0.007   CD0 0,0381: -0.019
+  bang      CD0 0,0285: -0.007   CD0 0,0381: -0.019
