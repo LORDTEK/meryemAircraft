@@ -1382,3 +1382,7 @@ NeuralFoil makale künyesi doğrulanmadı. Okuyuculardan künye alanları (bağl
 - **Açık (Tur 209):** S-67 sözcüğü — Grok / ChatGPT / DeepSeek / Qwen (iki biçim) / Claude (ChatGPT'ninki). DeepSeek: P14 R1 ve kazanç sayısı.
 - **Yazar (Tur 208):** *"Paketi her seferinde ek olarak veremem … Qwen zaten dosya olarak da alamadı."* → paket kontrol noktalarında ve yeni pencerede; parçalı sürüm (`reader-packet-partN.md`, ~6 000 sözcük). CLAUDE.md'ye işlendi.
 - **Yazara soru (Tur 209):** S11–S14'ten önce pencereler yenilensin mi; dördü birden mi, yalnız isteyenler mi.
+
+## E35 — Qwen'in iki cevabı ve pencereler · **YAZAR (2026-10-01): "Hem 209'u güncelle hem de dördünü birden yenile."**
+- Qwen'in Tur 208'deki iki cevabından **Qwen-2** esas alındı (Claude'un önerisi; gerekçe: 6.2 fiziksel atıf / 6.1 hesap döngüsü ayrımı, kodu aşmayan yüklem, profesyonel üslup). Tur 209'da Qwen'in oyu Qwen-2'nin biçimi.
+- **Dört okuyucu Tur 209 ile yeni pencerede başlar:** başlangıç metni (Tur 209'da güncellendi) + okuyucu paketi (Qwen'e dört parça) + Tur 209.
