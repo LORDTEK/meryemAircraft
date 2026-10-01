@@ -79,6 +79,31 @@ Independent Researchers, Ankara, Türkiye
 
 ---
 
+## B2. A second Step 6 field, added after the cover letter was drafted
+
+The form asks: *"Was artificial intelligence (AI) or an AI-based tool used to generate significant content in this manuscript, including writing text, creating figures, generating a literature review, etc.?"*
+- Our Acknowledgments say the tools were used *"to draft and revise the English text, to search the literature"*, so the author answered **Yes**. The language question is also **Yes**.
+- A required field then appeared: *"Please provide a detailed explanation of how AI was used to generate content in this manuscript."*
+
+My draft (197 words; no brand, model or company name, per our rule):
+
+> The authors used general-purpose large-language-model assistants, under their direction, in four ways. (1) Text: the assistants drafted and revised the English text from the authors' instructions and earlier drafts. (2) Literature: the assistants searched the literature; quotations and numbers taken from sources were checked against the source documents themselves, not against search summaries, and the one source known only from its abstract is used only for what that abstract states. (3) Review: several assistants were used as independent readers of the manuscript, to find errors, unsupported statements and inconsistencies between sections; their proposals were applied only after being checked against the manuscript and its sources, with contested points decided by the authors. (4) Calculations and figure: the assistants wrote and ran the analysis code (sizing, aerodynamic, propulsion and transition calculations) under the authors' direction, and the script that renders Figure 1 from the design geometry; the numerical results are reproduced by these scripts, and automated checks compare the numbers in the text with their outputs. The concept, architecture, design and solution approach are the authors' own. No AI tool is an author; all three authors read and approved the manuscript and take full responsibility for its content.
+
+**Facts the draft rests on:**
+- [13] (Merical) is known to us from its abstract only (Round 195). The body uses it only for *"series-hybrid propulsion has been designed for small uncrewed aircraft"*.
+- Figure 1 is rendered by , which I wrote, from the three-dimensional model of the reference design.
+
+**A gap this reveals.** The form's question names *"creating figures"*, and AIAA requires, verbatim: *"if AI was used in the writing process or figure construction … a brief description of its use in the Acknowledgments section"*.
+- The Acknowledgments sentence (E31, the author's decision) names text, literature, review and calculations. **It does not name the figure.**
+- Options:
+  - **(a)** add *"and to write the code that renders Figure 1"* to the Acknowledgments sentence. This is the author's decision, and the PDF and the source are rebuilt and re-uploaded.
+  - **(b)** leave the sentence as it is, on the reading that rendering code falls under *"as a tool in carrying out the calculations"*.
+  - **(c)** another form.
+
+My view is (a), because the form itself names figures, and a field that says more than the Acknowledgments is the kind of mismatch the Step 6 check is meant to catch.
+
+---
+
 ## C. The questions
 
 1. **Any predicate the body does not support,** or any that is stronger than the body states?
@@ -86,6 +111,8 @@ Independent Researchers, Ankara, Türkiye
 3. **The history paragraph.** The manuscript was submitted to *Drones* (MDPI) on 2026-09-14. It was found out of scope there, transferred to *Aerospace*, and desk-rejected there on the same day; it was never peer reviewed. AIAA's form asks only about AIAA history. Should the letter mention the MDPI submission, or not? Please give your reason.
 4. **The length sentence.** Keep it, as an upfront statement, or drop it and let the editor judge?
 5. **Anything missing** that an editor at the *Journal of Aircraft* would expect in a cover letter?
+6. **The AI-use explanation (§B2).** Any statement that is inaccurate, or stronger than the Acknowledgments?
+7. **The figure gap (§B2).** (a), (b) or (c), with your reason.
 
 Your own proposals are welcome, as always.
 
