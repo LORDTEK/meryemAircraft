@@ -345,6 +345,9 @@ state"*) arama terimi listesini kanıt kaydında taşır ve hiçbir kısaltma on
 doğrudur."* → Künye alanı, DOI, sayfa, dergi sürümü, alıntının dergi sürümünde birebir durup durmadığı: dört okuyucuya sorulur, birbirlerinin cevabını çapraz
 denetlerler; **dördü de "doğru" derse kabul.** Ayrışırlarsa bir sonraki turda yan yana geri sorulur. Yazar yalnız kendiliğinden yüklerse dosya depoya girer.
 
+**İndirme isteği bağlantı taşır (yazar, Tur 201).** *"Sen hep dosya adı veriyorsun ama bağlantı vermiyorsun. Diğer okuyuculardan, nereden indireceğimi vermelerini iste."*
+→ Yazardan bir dosya istenirse (şablon, PDF), istek **açılmış bir bağlantıyla** gider; bağlantı bende yoksa önce okuyuculara sorulur, dördünün üzerinde birleştiği bağlantı yazara gider.
+
 ### 2.2 Yenilik iddiası yazmadan önce. Tur 46'nın bedeli.
 
 Adım 1'e *"1954'te bir kez uçuruldu ve tekrar ele alınmadı"* ve *"her mimari bunu propulsor'ü

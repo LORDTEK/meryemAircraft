@@ -1318,3 +1318,5 @@ NeuralFoil makale künyesi doğrulanmadı. Okuyuculardan künye alanları (bağl
   TeX Live ortama kuruldu (apt); `new-aiaa.cls` arşivde yok → eşdeğer yedek düzen; yazar Overleaf şablonundan tek dosyayı yüklerse otomatik geçer.
   Çıktı denetimi: sözcük dizisi kaynağa karşı, 17 fark satırı, hepsi gösterim. Uzunluk: düzyazı 14 057 + tablolar ≈2 000–2 700 + özet 199.
 - Okuyuculara (Tur 201): tablo başlıkları (6), tablo atıfları (9), 36 atıf işareti, başlık büyük harfi; üslup geçişi şimdi mi sonra mı; dergi eki üreteci; terimler listesi yok.
+- **Yazar (Tur 201 güncellemesi):** *"Sen hep dosya adı veriyorsun ama bağlantı vermiyorsun. Diğer okuyuculardan, nereden indireceğimi vermelerini iste. … bu şekilde Q1 yayını olarak kabul ediyorlar mı? … JoA için göndermeden önce kısaltmayı öneriyorlar mı."*
+  → Tur 201'e E2 eklendi: Q1 şablon indirme bağlantısı (dördünün birleştiği), Q2 JoA çeyreği (SJR/JCR sayfasıyla), Q3 göndermeden önce kısaltma önerisi (E25'i yeniden açar; karar yazarın). Kural CLAUDE.md §2.1'e: indirme isteği bağlantı taşır.

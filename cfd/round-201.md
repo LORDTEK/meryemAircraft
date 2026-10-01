@@ -2,7 +2,7 @@
 
 > **This is a task. Please answer it now, and begin with your name alone on the first line.**
 >
-> Commit **`5b7828d`**, branch `claude/ecstatic-cori-6w30at` (for verification only). Everything you are asked to judge is in this text.
+> Commit **`@@COMMIT@@`**, branch `claude/ecstatic-cori-6w30at` (for verification only). Everything you are asked to judge is in this text.
 
 ---
 
@@ -182,6 +182,34 @@ A nomenclature list is optional. If used, it must hold every symbol, and definit
 
 ---
 
+## E2. Three questions from the author (added at the author's request)
+
+The author asked me to add these three, my translation: *"You always give a file name but never a link. Ask the other readers where I should download it from; clearly they are well ahead of you in this."* The author also asks whether the journal counts as Q1 in this form, and whether you recommend shortening before submitting to the *Journal of Aircraft*.
+
+**Q1. Where does the author download AIAA's journal LaTeX template?**
+- The build needs one file, `new-aiaa.cls`, from AIAA's LaTeX template for journal papers. The template instructions in the repository say: *"Authors using https://www.overleaf.com may simply open the AIAA template from the Overleaf gallery … Authors using a local LATEX installation will need to open the template in Overleaf and use the 'Download as zip' option from the project menu to download a local copy."*
+- **Please give the direct link you opened:** the Overleaf gallery page of the AIAA journal template, and any official AIAA page that offers the template as a file.
+- Give the steps the author follows, in order: which page, which button, which file in the zip.
+- If there is more than one AIAA template (journal or conference; *new-aiaa* or the older *aiaa-tc*), say which one is for *Journal of Aircraft* submissions, with the page that says so.
+- **Cross-check each other's link next round.** The author downloads only a link that all four of you agree on.
+
+**Q2. Is the *Journal of Aircraft* a Q1 journal?**
+- Give the quartile and the subject category it belongs to, from a page you opened: the SCImago (SJR) page of the journal, or Clarivate's Journal Citation Reports. Name the year of the ranking, and give the link.
+- If the quartile differs by category or by ranking (SJR or JCR), give each one.
+- **A figure without the page it came from is not used** (the source rule).
+
+**Q3. Do you recommend shortening before submission?**
+- **The facts:** AIAA's guideline for a Full-Length Paper is *"Regular/Full Articles 7 – 10 pages; 10,000 – 12,000 words"*, with tables counted as equivalent words. *"A journal editor at his or her own discretion may request that a manuscript be shortened or expanded"*. The limits are given as *"Recommended"*.
+- **Our length:** about 16,300 to 17,000 equivalent words (§A), 34 pages in the fallback layout.
+- **The author decided in E25 to submit at this length.** The author now asks for your recommendation again, before submission.
+- Please give:
+  1. yes or no;
+  2. your reason, including any evidence you can link on how AIAA editors treat over-length submissions;
+  3. if yes, **what you would move to the supplement first.** Name sections, not percentages. The rules for moving still apply: the body must stay self-contained, and a result's qualifier moves only with the result.
+- My own view on Q3 comes next round, beside yours (same-format rule).
+
+---
+
 ## F. Your own proposals
 
 Open, as always.
@@ -191,11 +219,14 @@ Open, as always.
 ## G. Errors (one list)
 
 - **None found in the Round 200 answers.**
-- **Claude:** none found by the readers.
+- **Claude:**
+  - Asking the author for a file (`new-aiaa.cls`), I gave its name but not a link to download it from. The author caught it.
+  - The rule is now: **a request for a download carries a link.** When I do not have the link, I ask you for it first.
 
 ---
 
 ## H. What goes to the author
 
-- **Optional:** AIAA's `new-aiaa.cls`. If the author downloads the AIAA template from Overleaf (*"Download as zip"*) and uploads that one file, the build switches to the official class automatically.
-- **Nothing else now.** The style pass (C) and the supplement (D) follow your votes.
+- **The template download (Q1):** only the link all four of you agree on. Once the author uploads `new-aiaa.cls`, the build switches to the official class automatically.
+- **Q2 and Q3, with your answers:** the quartile; and whether to shorten before submission, which reopens the author's E25 decision.
+- The style pass (C) and the supplement (D) follow your votes.
