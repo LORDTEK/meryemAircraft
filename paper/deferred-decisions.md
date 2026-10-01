@@ -1341,3 +1341,10 @@ NeuralFoil makale künyesi doğrulanmadı. Okuyuculardan künye alanları (bağl
 - Gönderim çıktısında korunan cümlelerde yalnız biçim (noktalama, Amerikan yazımı, italik) serbest; koşul (ChatGPT): bağlanma, yan cümle sınırı ve niteleyici kapsamı değişmez. A02 (*"charges below"* → *"that follow"*) onaylı.
 - Tur 202 cevapları: Şekil 1 kabul (dördü); Tablo 6 başlığı *"The four axes and their opponents"* (beşimiz) ve [2, 3] (beşimiz) uygulandı; [6] kalır. Üslup: D33, A11, A12, D50, D55 ayrışık → Tur 203. Qwen'in A04/A05/A14 korunan iddiası yanlış (kayıtta yok).
 - **Bulgu (Claude):** `supplement.md` çoğunlukla denetim arşivi; gövdenin 34 atfının vaat ettiği içerik büyük ölçüde yalnız dondurulmuş eski taslak kopyalarında, ve o kopyalar emekli iddialar da taşıyor (ör. S8'de XB-35). Dergi eki **yeniden kurulacak** (öneri Tur 203 D: atıf başına içerik, emekli denetimi, alındı tablosu, S1–S11 yeniden numaralama).
+
+## Tur 203 cevapları — dergi eki başladı
+
+- Kapandı (dördü + Claude): A11 *"the preceding margin"*, A12 *"named later in this section"*, D50 virgülsüz — uygulandı. Dergi eki yöntemi kabul; hiçbir atıf kaldırılmaz.
+- Ayrışık → Tur 204: D33 (Grok virgül, ötekiler iki nokta), D55 (Grok *"all of which"*; Claude Grok'a geçti), yeniden numaralama (ChatGPT hayır), ChatGPT'nin "yeni iddia yok" kuralı.
+- **Dergi eki S2–S4 taslağı:** `paper/submission/supplement-src.md` (kaynak notlarıyla). Kaynağı açarken iki arşiv kusuru: **S-64** (S4 ağırlık dökümü, batarya +10 lb, işaret ters yazılmıştı; gövdenin 580'i doğru), **S-65** (1,74 → 1,73).
+- **Yazara (Tur 204 F):** E13 ile eke taşınan korunan cümlede *"the isolation test above"* → *"of Section 2.3"*.

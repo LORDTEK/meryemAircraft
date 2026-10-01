@@ -2,7 +2,7 @@
 
 Source `paper/v8/ASSEMBLED.md`; output `paper/submission/latex/meryemaircraft.tex`. **The step sources are not changed.**
 
-- Body words (text and table cells, excluding abstract, references and acknowledgments): **14428**
+- Body words (text and table cells, excluding abstract, references and acknowledgments): **14431**
 - Tables: 6 · numbered equations: 2 · lists: 3
 
 ## Output check: word-sequence differences other than the listed mechanical changes
@@ -388,7 +388,7 @@ Each row is a place where the output's words differ from the source. Every row s
 ## Warnings (0)
 
 
-## Style pass (Round 202; for reader check) (100)
+## Style pass (Round 202; for reader check) (101)
 
 - **D01** `this work is aimed at sit — wildfire` → `this work is aimed at sit: wildfire`
 - **D02** `torque-balanced pair — so that reaction torque and net angular momentum are given up along with the reorientation mechanism — carrying` → `torque-balanced pair (so that reaction torque and net angular momentum are given up along with the reorientation mechanism), carrying`
@@ -439,7 +439,7 @@ Each row is a place where the output's words differ from the source. Every row s
 - **D47** `It is stated in that order — first the obstacle` → `It is stated in that order: first the obstacle`
 - **D48** `can exceed continuous ones — by more than a factor of two in one commercial module it cites — a pack` → `can exceed continuous ones (by more than a factor of two in one commercial module it cites), a pack`
 - **D49** `times the bench rate — the highest figure obtained from a measurement — and 6.2` → `times the bench rate (the highest figure obtained from a measurement) and 6.2`
-- **D50** `The architecture claim — that the configuration is arranged to change regime with no mechanism that reorients a propulsor — is a count` → `The architecture claim, that the configuration is arranged to change regime with no mechanism that reorients a propulsor, is a count`
+- **D50** `The architecture claim — that the configuration is arranged to change regime with no mechanism that reorients a propulsor — is a count` → `The architecture claim that the configuration is arranged to change regime with no mechanism that reorients a propulsor is a count`
 - **D51** `or the transition aerodynamics — but it does depend` → `or the transition aerodynamics, but it does depend`
 - **D52** `the range result or the energy store — nor on the transition` → `the range result or the energy store, nor on the transition`
 - **D53** `What that refusal costs — in thrust asymmetry, in propulsive efficiency, and in response time set by rotor inertia — is not computed` → `What that refusal costs (in thrust asymmetry, in propulsive efficiency, and in response time set by rotor inertia) is not computed`
@@ -468,7 +468,8 @@ Each row is a place where the output's words differ from the source. Every row s
 - **A05** `The mission used below is short` → `The mission used here is short`
 - **A07** `The qualifications below apply to them too` → `The qualifications that follow apply to them too`
 - **A10** `it does not touch the cruise numbers above` → `it does not touch the preceding cruise numbers`
-- **A12** `is a control surface, of a different class, and is named below` → `is a control surface, of a different class, and is named next`
+- **A12** `is a control surface, of a different class, and is named below` → `is a control surface, of a different class, and is named later in this section`
+- **A11** `the fixed-pitch propeller is why the margin above sits where it does` → `the fixed-pitch propeller is why the preceding margin sits where it does`
 - **A13** `that cancellation is no longer exact (below)` → `that cancellation is no longer exact (discussed later in this section)`
 - **A14** `(body axes, as fixed above)` → `(body axes, as fixed earlier in this section)`
 - **A15** `The sizing above says nothing` → `The preceding sizing says nothing`
@@ -494,12 +495,11 @@ Each row is a place where the output's words differ from the source. Every row s
 ## Dashes left in the text (style pass: reader round) (0)
 
 
-## "above" / "below" left in the text (style pass: reader round) (5)
+## "above" / "below" left in the text (style pass: reader round) (4)
 
 - There is no pilot here, and height above ground is a sensor measurement rather than a human
 -  The best point is not an available option (cruising there leaves too little margin above the stall), so this fixes a direction, not a magnitude
 - diverge above roughly ten degrees of incidence: three methods of three fidelities depart at the same place, the highest of them
-- largest surface to ground wind; the tailless planform constrains the sweep; and the fixed-pitch propeller is why the margin above
 - a causal claim beyond it, and the light end lies below a Reynolds number of 10⁵, where section drag is hardest to predict
 
 ## Italic (non-quotation) kept (0)
