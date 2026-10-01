@@ -1,4 +1,4 @@
-> **Reader packet, part 3 of 4** (commit `41b3bc5`). Read all parts before answering; the round text says what to judge.
+> **Reader packet, part 3 of 4** (commit `dd7ab96`). Read all parts before answering; the round text says what to judge.
 
 The basis is not symmetric. The lift-plus-cruise layout carries a lift-to-drag ratio transferred from a different airframe's
 wind-tunnel campaign (Section 2.1), and its stopped lift rotors take an indexing mechanism (Section 5.1) whose mass is not charged. **The

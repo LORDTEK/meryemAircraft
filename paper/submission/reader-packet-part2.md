@@ -1,4 +1,4 @@
-> **Reader packet, part 2 of 4** (commit `41b3bc5`). Read all parts before answering; the round text says what to judge.
+> **Reader packet, part 2 of 4** (commit `dd7ab96`). Read all parts before answering; the round text says what to judge.
 
 **Cruise lift is carried by the airframe itself.** At
 the cruise condition the lift coefficient follows from `C_L = W/(qS)`, the drag from

@@ -1,20 +1,23 @@
 # Reader onboarding — for a reader starting a new conversation
 
-> **Version check.** Rewritten in Round 169 for four new conversations. Older copies (Round 61, Round 91–101) describe a paper of
-> 26 000 words in nine sections with a recomposition method; **that is no longer the state of the work.** In the repository,
-> `grep -c "Rewritten in Round 169" cfd/reader-onboarding.md` prints **more than 0** for this version.
+> **Version check.** Rewritten in Round 169 for four new conversations, and brought up to date in Round 209, when all four readers started
+> new conversations again. Older copies (Round 61, Round 91–101) describe a paper of 26 000 words in nine sections with a recomposition
+> method; **that is no longer the state of the work.** In the repository, `grep -c "brought up to date in Round 209" cfd/reader-onboarding.md`
+> prints **more than 0** for this version.
 
 > **Why you are reading this.** You are one of four independent readers (Grok, ChatGPT, DeepSeek, Qwen) of a paper in
 > development. Claude, the fifth voice, runs the rounds, checks every claim against the text and the sources, applies what
 > is agreed, and gives its own view **in the same table as yours, as one column among five**. The author reads everyone's
-> positions and decides. **Claude is not the author.** The work has run for about 170 rounds; this file tells you what the
+> positions and decides. **Claude is not the author.** The work has run for about 210 rounds; this file tells you what the
 > paper is and claims, which rules govern changes to it, what the author has decided, which errors recur, and where the work
 > stands.
 >
 > **It makes no claim of its own.** Every number in it is quoted from the section it names. If this file and the paper
 > disagree, the paper wins. Please tell us if they do.
 >
-> **You receive this file together with the current round text.** Read this file first, then answer the round text. The round
+> **You receive this file together with the reader packet and the current round text.** The reader packet
+> (`paper/submission/reader-packet.md`, in parts where a file cannot be attached) is the whole current body and the journal supplement
+> drafted so far. Read this file first, then the packet, then answer the round text. The round
 > text quotes in full every text you are asked to judge. The repository is only for verification: the assembled paper is
 > `paper/v8/ASSEMBLED.md`, and its source is the step files `paper/v8/NN-*.md`.
 
@@ -151,7 +154,9 @@ Using step numbers as section numbers is a recurring error (§7).
 | 14 | 7 | What does not close |
 | 15 | 8 | Four axes, and where the paper stops (the conclusion) |
 
-**The supplement names sections by step number.** Its *"Section 10"* is 6.1, and so on.
+**The audit archive (`paper/v8/supplement.md`) names sections by step number.** Its *"Section 10"* is 6.1, and so on. **The journal
+supplement** (`paper/submission/supplement-src.md`, in the packet) uses the assembled section numbers and keeps the archive's S labels
+(S2, S3, … S14) while it is drafted; the submission renumbers them S1–S11.
 
 **The author's subsection numbering (Round 168).** Subsections are numbered in order. Where a section opens with text before its
 first subheading, that text is .1. So 2.1.6 is *"The charges are coupled"*, 5.2.6 is *"What meets the ground"*, and 7.2 is *"First,
@@ -168,7 +173,7 @@ decision, a four-heading telling: *Current state · Proposed solution · Calcula
 **The stage.** The paper went through deletion (Rounds 61–72), recomposition (73–98), recomposition into result sentences (101–151,
 25 797 → 18 634 words) and compression by finding (from Round 153). **Sentence-level cutting is exhausted** (Round 167). The author
 then read the whole paper and wrote notes on about thirty subsections (Round 168): *narrow this*, *merge this*, *2.3 at least 100 words
-shorter*, and *perhaps 6.1 and 6.2 merge*. **That pass closed in Round 171; a calculation pass followed in Round 172 a framework pass in Rounds 173–174, 5.1 in Round 175 and Section 1 in Round 176** (§6). The body is **13 593 words of prose** (tables excluded).
+shorter*, and *perhaps 6.1 and 6.2 merge*. **That pass closed in Round 171; a calculation pass followed in Round 172, a framework pass in Rounds 173–174, 5.1 in Round 175 and Section 1 in Round 176.** The last whole reading closed in Round 191. **The work is now in the submission stage** (§6): the body is about 14 800 words in the assembled view, tables included, and is not being shortened (the author, E25 and E32); the journal supplement is being composed.
 
 **Length.** The author has set word targets aside (Round 161). **Do not argue from 12 000, 8 500 or 7 500;** those were earlier
 targets.
@@ -180,7 +185,7 @@ closes.** Readers answer one another, not only Claude.
 **The rules that govern every proposal:**
 
 1. **Protected sentences.** *"A sentence is protected when removing it silently would change a claim, a limit or a derivation that
-   later text depends on …"* There are **148 in the body and 28 in the supplement** (and 14 unprotected by the author's decision E18, still in the body), in the register `paper/v8-caveats.md`. A protected
+   later text depends on …"* There are **145 in the body and 31 in the supplement** (and 14 unprotected by the author's decision E18, still in the body), in the register `paper/v8-caveats.md`. A protected
    sentence is kept **verbatim**. **It cannot be reworded.** If you think one should be, ask the author.
 2. **Rule (iii) (the author, Round 104).** *"A protected sentence may move to the supplement only together with the result it
    qualifies, and only by the author's decision."* The author decides these **as one list** (Round 168).
@@ -210,8 +215,8 @@ closes.** Readers answer one another, not only Claude.
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 209.** All four readers work in new conversations since Round 169; this was done **for equality** (Grok's conversation did not need
-renewing). **The author (Round 171):** *"You readers, work together. Whenever it comes to my turn, don't forget to tell me."* Each round
+**Round 209.** All four readers start **new conversations with Round 209** (the author's decision, all four together, for equality, as in
+Round 169). **The author (Round 171):** *"You readers, work together. Whenever it comes to my turn, don't forget to tell me."* Each round
 text ends by naming what goes to the author.
 
 | Block | State |
@@ -238,7 +243,9 @@ text ends by naming what goes to the author.
 | Closed (Round 208) | all four answered the author's question (nothing missing; Grok and DeepSeek: a fresh conversation would help before S11–S14); S2–S8 whole-body check passed by all four; S10: P17, P18 R1, archive corrections accepted, gain sweep kept as a new sensitivity run; S-67 is a defect (P16 R4 until repaired); S8 ending kept |
 | **Reader packet, how it is used** | not attached every round (the author cannot attach it to every reader); used at checkpoints (S2–S10 done; next: the completed supplement) and for a fresh conversation, in ~6 000-word parts (`paper/submission/reader-packet-partN.md`) where a file cannot be attached. Between checkpoints each round text carries the body section it asks about in full |
 | **Open (Round 209)** | the S-67 wording (five forms); DeepSeek: P14 R1, and the gain-sweep number; still to compose: S11–S14 (17 pointers) |
-| Still to do | numbered references (original sources only); style conversion by a generator script (Roman-numeral sections, *Sec.*, numbered tables and equations, lists as 1) 2), American spelling, no bold emphasis, no dashes); acknowledgments with the AI-use statement |
+| **How the journal supplement is composed** (Rounds 203–208) | only what the 34 body pointers (P01–P34) promise; each passage taken from the latest archive snapshot, brought up to the current body and checked against the code and sources, with a provenance note; protected supplement rows carried verbatim; ChatGPT's rule (Round 204); each pointer's receipt graded R1 faithful / R2 differently qualified / R3 no content / R4 the body says more than the supplement establishes. Done: S2–S6, S8, S10. To do: S11–S14 (17 pointers) |
+| Done in the submission stage | numbered references (26); the generator `paper/build/submission_build.py` (LaTeX, AIAA class, Roman-numeral sections, *Sec.*, American spelling, no dashes); Fig. 1; the Acknowledgments AI-use sentence |
+| Still to do | the S-67 repair; S11–S14; the supplement generator (LaTeX, S1–S11); the receipt table for all 34 pointers; the final whole-body check with the completed supplement |
 | Protected sentences | 145 in the body, 31 in the supplement; U table 14 |
 
 **Tools the round texts mention:**
@@ -282,12 +289,15 @@ itself.
 - **Helicopters are rivals on the cruise axis** (Round 97); the result against them is written as mixed.
 - **Tip pairs free-wheel at zero shaft torque in cruise** (Rounds 130–131).
 - **"Arranged to change regime."** Roll comes from the strip; the reaction-torque channel is declined.
-- **Word targets set aside** (Round 161); shortening continues by merges and cuts.
-- **2.3 is to be at least 100 words shorter** (Round 168). The open question is which 100.
+- **Word targets set aside** (Round 161); **the shortening is closed and the paper is submitted at its present length** (E21, E25, E32).
+- **Target: *Journal of Aircraft*, Full-Length Paper, LaTeX with the AIAA class** (E25, E26, E32), with at least one figure (Fig. 1).
 - **2.1.6's "Where is our foundation?"** is about the inside of that subsection, not the order of the paper (Round 168).
 - **Rule (iii)**, and S moves decided **as one list**.
 - **The journal body carries no "in a previous version…" narrative.**
-- **AI use is declared without brand, model or company names.**
+- **AI use is declared without brand, model or company names**, in one sentence in the Acknowledgments (E30, E31). The concept, architecture,
+  design and solution approach are the authors'; AI tools were a tool (E29).
+- **Source research is the readers' work** (Round 195): bibliographic fields, DOIs, pages and versions are cross-checked among the four of
+  you; when all four agree, it is accepted. A request to the author for a file always carries a link the four have agreed on (Round 201).
 
 ---
 
@@ -297,6 +307,7 @@ itself.
 - **Be blunt; encouragement is not wanted.** Quote the sentence and name the section for every point.
 - **Vote item by item.** If you object, name the **current** sentence you object to and why.
 - **Answer the other readers' positions and Claude's**, favourable or not. Claude's view is one column among five; criticise it as you would any other.
+- **Keep it professional** (the author, Round 205): disagree with the reading, name the sentence and the reason; do not characterise the reader.
 - **Sources:** give a downloadable PDF link only for novelty claims, numbers from tables, or verbatim quotations. **Say which
   document you opened in this conversation.** If you could not open it, give no number from it.
 - **Do not guess the sign of a calculation. Do not propose new claims.**

@@ -1,8 +1,8 @@
-> **Reader packet, part 1 of 4** (commit `41b3bc5`). Read all parts before answering; the round text says what to judge.
+> **Reader packet, part 1 of 4** (commit `dd7ab96`). Read all parts before answering; the round text says what to judge.
 
 # meryemAircraft — reader packet: the current body and the journal supplement draft
 
-> Generated from the repository at commit `41b3bc5` (branch `claude/ecstatic-cori-6w30at`). It is a reference for reading the round texts, not a task in itself.
+> Generated from the repository at commit `dd7ab96` (branch `claude/ecstatic-cori-6w30at`). It is a reference for reading the round texts, not a task in itself.
 >
 > **Part 1** is the current body (14775 words) in the assembled numbering the round texts use (*"Section 5.2"*). The submission generator converts this to the journal's form (Roman-numeral sections, *Sec.*, numbered citations, American spelling, one figure); the wording is the same.
 >
