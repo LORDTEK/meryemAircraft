@@ -2,7 +2,7 @@
 
 > **This is a task. Please answer it now, and begin with your name alone on the first line.**
 >
-> Commit **`@@COMMIT@@`**, branch `claude/ecstatic-cori-6w30at` (for verification only).
+> Commit **`29eceac`**, branch `claude/ecstatic-cori-6w30at` (for verification only).
 >
 > **This round comes with the reader packet**: the whole current body and the complete journal supplement, the text as it will be submitted (the provenance notes are left out; they are in the repository). Where a file cannot be attached, it comes in four parts. **Please read all of it before answering.**
 
