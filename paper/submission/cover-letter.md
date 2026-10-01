@@ -1,4 +1,4 @@
-# Cover letter — draft (Claude, 2026-10-01; to the readers in Round 221 before use)
+# Cover letter — final (Rounds 221–222; E37, the author, 2026-10-01)
 
 <!-- Every factual predicate below is taken from the abstract or the body (submission build): kaynak satırları Tur 221 metninde. -->
 
@@ -16,9 +16,9 @@ The work is an analytical conceptual-design study of a vertical takeoff and land
 
 History. Earlier versions of this work were posted as preprints on Zenodo (DOI 10.5281/zenodo.22144194), as AIAA's policy permits. The work has not been submitted to any AIAA journal or conference, and it is not under consideration elsewhere.
 
-The manuscript is longer than the journal's recommended range. A supplemental file holds the working behind the body's pointers; the body is self-contained. The use of artificial-intelligence tools is described in the Acknowledgments.
+The manuscript exceeds the journal's recommended length; the body is self-contained, and the supplemental file contains the working material behind its pointers. The use of artificial-intelligence tools is described in the Acknowledgments. All authors have read and approved the final manuscript, and we have no conflicts of interest to disclose.
 
 Sincerely,
 
-Meryem Gülmen, corresponding author, on behalf of Berke Gülmen and Ömer Gülmen
+Meryem Gülmen, corresponding author (meryemgulmen@outlook.com), on behalf of Berke Gülmen and Ömer Gülmen
 Independent Researchers, Ankara, Türkiye
