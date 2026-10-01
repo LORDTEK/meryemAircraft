@@ -31,3 +31,13 @@ Tail-sitter; vertical takeoff and landing; blended wing body; hybrid-electric pr
 
 ## Plain Language Summary (isteğe bağlı; Kudos'a gider — Claude taslağı, okuyuculardan geçmedi)
 Aircraft that take off and land vertically and then fly on a wing usually carry dedicated lift rotors, or a mechanism that tilts their propellers between hovering and forward flight. This paper describes an uncrewed aircraft with neither: it stands on its tail to take off and land, and rotates its whole body to fly on its wing, so nothing on it turns a propeller relative to the airframe. Our calculations put its cruise efficiency above a published fuel-powered quadrotor's, and from slightly below to well above an all-electric one's, with mixed results against helicopters; they also set out what the design costs and what is still unproven, including the battery it needs and the turn from hover to cruise.
+
+## Step 5 — önerilen hakemler (Tur 217–220; dört okuyucu + Claude, oybirliği)
+| Ad | Soyad | Kurum | E-posta (yalnız okuyucunun açtığı kurum sayfasında basılıysa) | Kanıt sayfası |
+|---|---|---|---|---|
+| Brian J. | German | Georgia Institute of Technology | brian.german@aerospace.gatech.edu | https://ae.gatech.edu/directory/person/brian-j-german |
+| David W. | Zingg | University of Toronto Institute for Aerospace Studies | — | https://www.utias.utoronto.ca/research-and-centres/computational-aerodynamics/ |
+| Panagiotis | Laskaridis | Cranfield University | — (sayfada basılı; tur metnine girmedi) | https://www.cranfield.ac.uk/people/professor-panagiotis-laskaridis-342615 |
+| Boyang | Li | The Hong Kong Polytechnic University | bo-yang.li@polyu.edu.hk | https://www.polyu.edu.hk/aae/people/academic-staff/dr-li-boyang/ |
+
+Hepsi "preferred". İstenmeyen hakem yok; editör tercihi yok. Kaynakçadaki yazarlar önerilmedi: [10], [11] ve Bölüm I.D'deki [2] aynı alt bölümde, boşluktan hemen önce (Tur 220).
