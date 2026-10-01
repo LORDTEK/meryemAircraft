@@ -20,7 +20,7 @@ Hybrid aircraft for vertical takeoff and landing reach wing-borne cruise by carr
 Yok.
 
 ## Yapay zekâ kullanımı (Teşekkür bölümündeki cümlenin aynısı)
-The authors used artificial-intelligence tools, under their direction, to draft and revise the English text, to search the literature, to review the manuscript, and as a tool in carrying out the calculations; the concept, architecture, and design are the authors' own, and all three authors read and approved the manuscript and take full responsibility for its content.
+The authors used artificial-intelligence tools, under their direction, to draft and revise the English text, to search the literature, to review the manuscript, and as a tool in carrying out the calculations; the concept, architecture, design, and solution approach are the authors' own, and all three authors read and approved the manuscript and take full responsibility for its content.
 
 ## Anahtar kelimeler (öneri; sistem isterse — yazarın onayına)
 Tail-sitter; vertical takeoff and landing; blended wing body; hybrid-electric propulsion; aircraft sizing; conceptual design
