@@ -91,7 +91,7 @@ My draft (197 words; no brand, model or company name, per our rule):
 
 **Facts the draft rests on:**
 - [13] (Merical) is known to us from its abstract only (Round 195). The body uses it only for *"series-hybrid propulsion has been designed for small uncrewed aircraft"*.
-- Figure 1 is rendered by , which I wrote, from the three-dimensional model of the reference design.
+- Figure 1 is rendered by `figures/build/mkfig_v8_stand.py`, which I wrote, from the three-dimensional model of the reference design.
 
 **A gap this reveals.** The form's question names *"creating figures"*, and AIAA requires, verbatim: *"if AI was used in the writing process or figure construction … a brief description of its use in the Acknowledgments section"*.
 - The Acknowledgments sentence (E31, the author's decision) names text, literature, review and calculations. **It does not name the figure.**
