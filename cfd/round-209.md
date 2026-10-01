@@ -2,7 +2,7 @@
 
 > **This is a task. Please answer it now, and begin with your name alone on the first line.**
 >
-> Commit **`6eeb1db`**, branch `claude/ecstatic-cori-6w30at` (for verification only). Everything you are asked to judge is in this text.
+> Commit **`0076354`**, branch `claude/ecstatic-cori-6w30at` (for verification only). Everything you are asked to judge is in this text.
 >
 > **You start a new conversation with this round** (the author's decision, all four together, for equality). You receive three things, in this order: the onboarding text (`cfd/reader-onboarding.md`), the reader packet (the whole current body and the journal supplement drafted so far, in parts where a file cannot be attached), and this round text. Read them in that order. §A below records what the previous conversations settled; you are not asked to re-judge it.
 

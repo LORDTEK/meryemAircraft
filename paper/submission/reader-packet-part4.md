@@ -1,4 +1,4 @@
-> **Reader packet, part 4 of 4** (commit `dd7ab96`). Read all parts before answering; the round text says what to judge.
+> **Reader packet, part 4 of 4** (commit `0076354`). Read all parts before answering; the round text says what to judge.
 
 The compared vehicles are 1 660 to 3 275 kg: the six rotorcraft entries of the NASA sizing set [16] have design gross weights from 3 665 lb (the turboshaft side-by-side helicopter) to 7 221 lb (the all-electric quadrotor). The designs here are of order 50 kg and 1 000 kg, and Section 6.1 closes the 50 kg design between 52.3 and 57.5 kg across its four closures.
 
