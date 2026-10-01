@@ -1320,3 +1320,11 @@ NeuralFoil makale künyesi doğrulanmadı. Okuyuculardan künye alanları (bağl
 - Okuyuculara (Tur 201): tablo başlıkları (6), tablo atıfları (9), 36 atıf işareti, başlık büyük harfi; üslup geçişi şimdi mi sonra mı; dergi eki üreteci; terimler listesi yok.
 - **Yazar (Tur 201 güncellemesi):** *"Sen hep dosya adı veriyorsun ama bağlantı vermiyorsun. Diğer okuyuculardan, nereden indireceğimi vermelerini iste. … bu şekilde Q1 yayını olarak kabul ediyorlar mı? … JoA için göndermeden önce kısaltmayı öneriyorlar mı."*
   → Tur 201'e E2 eklendi: Q1 şablon indirme bağlantısı (dördünün birleştiği), Q2 JoA çeyreği (SJR/JCR sayfasıyla), Q3 göndermeden önce kısaltma önerisi (E25'i yeniden açar; karar yazarın). Kural CLAUDE.md §2.1'e: indirme isteği bağlantı taşır.
+
+## Tur 201 cevapları — gönderim paketi
+
+- **Kapandı (dördü + Claude):** B2 tablo atıfları; B4 başlık büyük harfi; D dergi eki üreteci; E terimler listesi yok; C üslup geçişi **şimdi** (kural incelikleri: tek tire → açıklamaysa iki nokta, bağımsız cümleyse noktalı virgül; çift tire → yalnız niteleyiciyse parantez, değilse virgül ya da yeniden yazım; her cümle önce/sonra).
+- **Ayrışık:** B1 Tablo 6 başlığı (*"The four axes and their opponents"*: Grok, ChatGPT, Claude; değişmesin: DeepSeek, Qwen). B3 [2] → [2, 3] (ChatGPT, DeepSeek, Qwen; Grok: [2] tek başına on yılı taşımasın, [3] eklenirse olur — teyit istenecek). [6] tekrarı: tut (Grok, ChatGPT, DeepSeek), at (Qwen).
+- **Q1 şablon:** dördü aynı Overleaf şablonu (kimlik mqqbqqvyhtwm): https://www.overleaf.com/latex/templates/preparation-of-papers-for-aiaa-technical-journals/mqqbqqvyhtwm — Open as Template → Menu → Download → Source → zip'ten `new-aiaa.cls`; `\documentclass[journal]{new-aiaa}`.
+- **Q2 çeyrek:** **SJR 2025: Q2, Aerospace Engineering, 0,585** (Grok, ChatGPT, DeepSeek SCImago sayfasından; Qwen Q2). Geçmiş ayrışık: Grok "2010'ların ortasına dek Q1", DeepSeek "2021–2024 Q1". JCR birincil sayfasını kimse açamadı (DeepSeek ikincillerden Q2). → **Yazara: JoA SJR 2025'te Q1 değil.**
+- **Q3 kısaltma:** evet (ChatGPT: önce VI, sonra II, sonra VIII; DeepSeek: 6.1, 6.3, 2.3 ayrıntısı, 4.6 → 900–1 350 kelime; Qwen: 1.4 ayrıntıları, 2.1 fatura türetmeleri), hayır (Grok: E25 karar verdi; editör isterse önce VI). → E25'i yeniden açar, yazara.
