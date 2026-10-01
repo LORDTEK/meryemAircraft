@@ -2,7 +2,7 @@
 
 Source `paper/v8/ASSEMBLED.md`; output `paper/submission/latex/meryemaircraft.tex`. **The step sources are not changed.**
 
-- Body words (text and table cells, excluding abstract, references and acknowledgments): **14463**
+- Body words (text and table cells, excluding abstract, references and acknowledgments): **14474**
 - Tables: 6 · numbered equations: 2 · lists: 3
 
 ## Output check: word-sequence differences other than the listed mechanical changes
