@@ -28,3 +28,6 @@ Tail-sitter; vertical takeoff and landing; blended wing body; hybrid-electric pr
 ## Yüklenecek dosyalar
 - Ana metin: `paper/submission/upload/GulmenJA.pdf`
 - Ek malzeme: `paper/submission/upload/GulmenJASupp.pdf`
+
+## Plain Language Summary (isteğe bağlı; Kudos'a gider — Claude taslağı, okuyuculardan geçmedi)
+Aircraft that take off and land vertically and then fly on a wing usually carry dedicated lift rotors, or a mechanism that tilts their propellers between hovering and forward flight. This paper describes an uncrewed aircraft with neither: it stands on its tail to take off and land, and rotates its whole body to fly on its wing, so nothing on it turns a propeller relative to the airframe. Our calculations put its cruise efficiency above a published fuel-powered quadrotor's, and from slightly below to well above an all-electric one's, with mixed results against helicopters; they also set out what the design costs and what is still unproven, including the battery it needs and the turn from hover to cruise.
