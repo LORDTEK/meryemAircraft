@@ -2,7 +2,7 @@
 
 Source `paper/v8/ASSEMBLED.md`; output `paper/submission/latex/meryemaircraft.tex`. **The step sources are not changed.**
 
-- Body words (text and table cells, excluding abstract, references and acknowledgments): **14431**
+- Body words (text and table cells, excluding abstract, references and acknowledgments): **14463**
 - Tables: 6 · numbered equations: 2 · lists: 3
 
 ## Output check: word-sequence differences other than the listed mechanical changes
@@ -495,11 +495,12 @@ Each row is a place where the output's words differ from the source. Every row s
 ## Dashes left in the text (style pass: reader round) (0)
 
 
-## "above" / "below" left in the text (style pass: reader round) (4)
+## "above" / "below" left in the text (style pass: reader round) (5)
 
 - There is no pilot here, and height above ground is a sensor measurement rather than a human
 -  The best point is not an available option (cruising there leaves too little margin above the stall), so this fixes a direction, not a magnitude
 - diverge above roughly ten degrees of incidence: three methods of three fidelities depart at the same place, the highest of them
+- 0 per radian the chord is 31 to 52 mm, within or below the 50 to 70 mm assumed for a 20 mm faired strut
 - a causal claim beyond it, and the light end lies below a Reynolds number of 10⁵, where section drag is hardest to predict
 
 ## Italic (non-quotation) kept (0)
