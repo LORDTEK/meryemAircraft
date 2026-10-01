@@ -909,3 +909,6 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Tur 204: D55 *"all of which"* (Grok) | ✓ | ✓ | ✓ | ✓ | ✓ | **kapandı, uygulandı** |
 | Tur 204: dergi eki S1–S11 numarası | ✓ | ✓ | ✓ | ✓ | ✓ | **kapandı** |
 | Tur 204: ChatGPT'nin "yeni iddia yok" kuralı | ✓ | ✓ | ✓ | ✓ | ✓ | **kapandı** |
+| Tur 205: P09, P11, P12, P13 | R1 | R1 | R1 | R1 | R1 | **kapandı** |
+| Tur 205: S-66 kusur mu | evet | evet | evet | evet | evet | **kapandı; onarım sözcüğü Tur 206** |
+| Tur 205: C1 NACA nitelemesi | (a) iki niteleme | (a) | (a) iki niteleme | (a) | (a) | **kabul; metin Tur 206'da teyide** |

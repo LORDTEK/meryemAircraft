@@ -1360,3 +1360,9 @@ NeuralFoil makale künyesi doğrulanmadı. Okuyuculardan künye alanları (bağl
 - P01–P07 alındıları R1; S-64 ve S-65 kabul.
 - **Tur 205'te bulunan (Claude):** S4 kaynak notunda ve S-64 satırında Johnson & Silva Tablo 3'ün sayfası **s. 71** yazılmıştı; doğrusu **s. 70** (PDF s. 12). Sayılar değişmedi.
 - **Dergi eki S5, S6, S8 taslağı** (`paper/submission/supplement-src.md`), Tur 205'te okuyuculara.
+
+## Tur 205 cevapları — S5, S6, S8
+- **Kapandı (dördü + Claude):** P09, P11, P12, P13 R1; S6/S8 işaretli değişiklikler kabul; **S-66 kusur** (gövdenin fairing cümlesi *"less than … in any case"*: eğim 3,0/rad'da 52 mm, varsayılan 50–70 mm'nin içinde); C1 (a) NACA nitelemesi S8'e.
+- **P14:** ChatGPT, DeepSeek R4; Grok R2/R4; Qwen R1 (ama C2'de R4 riski dedi) → Tur 206'da Qwen'e soruldu.
+- **S-66 onarım sözcüğü:** dört ayrı biçim + Claude'unki, Tur 206'da yan yana. Gövde cümlesi korunan değil; yakınsamazsa yazara.
+- **Claude'un hatası:** S-65 satırında da s. 71 kalmıştı (yayılma defteri koşulmadı); düzeltildi.
