@@ -338,3 +338,55 @@ The deficit per kilogram spreads by 12 percent across the four closures, and the
      put to the readers in Round 210. -->
 
 The propulsion fraction of the empty mass is 0.176 to 0.198 across the four closures, in two parts. A fixed 0.108 is back-solved from the reference design's own budget (the code's comment lists propeller, shaft, mount and wiring). The engine term is the engine rating divided by an assumed specific power of 1.0 kW per kilogram: 0.068 at closure D to 0.090 at closure A, following the cruise-sized rating of 3.54 to 5.17 kW. The hover power, 11.4 to 12.5 kW at the rotor shaft, passes through the electrical path whatever the engine is rated at, but the loop computes no hover-rated mass for that path; whatever of it lies in the fixed 0.108 scales with take-off mass, which at fixed disc loading is how hover power scales. The airframe (0.300) and avionics (0.080) fractions are construction constants held common across the three architectures of Section 6.4; they are not results of the ledger.
+
+## S12. Scale: working for Section 6.3
+
+### The reference pair
+
+<!-- for P24 (Section 6.3): "The test is the 50 kg and 1 000 kg reference designs, sized by one method, not Section 6.1's closures (Supplement S12)".
+     src: paper/v8/supplement.md, "Section 12 as it stood before the supplement move (complete)" (archive S12, the moved working of Round 155).
+     Protected S12 rows carried: "That near-constancy is a property of the constant-disc-loading rule, not a finding about Bill 3." (E15);
+     "This paragraph compares the reference pair only." (E10); "Much above 1 000 kg a single nose pair can no longer hold" (E15).
+     Figures checked this round: 10.9 / 2.6 = 4.19 and 216.2 / 54.3 = 3.98 (the reference designs' own figures, aero/baseline.py comments and
+     agir_dogrula(); paper/v8-evidence.md row "4,19 / 3,98"); engine margins 2.6 / 1.7 = 1.53 and 54.3 / 39.2 = 1.39 (aero/baseline.py);
+     216.2 / (39.2 x 1.53) = 3.61, (4.19 - 3.61) / 4.19 = 14 percent, (4.19 - 3.98) / 4.19 = 5 percent; disc loading 50 / (pi 0.6^2) = 44.2 and
+     1000 / (pi 2.7^2) = 43.7 kg/m2; 10.9 / 50 = 0.218 and 216.2 / 1000 = 0.216 kW/kg; diameter / span 1.2 / 3.452 = 0.35 and 5.4 / (6.0 x 22.24)^0.5
+     = 0.47. ADDED: the heavy ratio under the light design's margin (3.61), which is the arithmetic behind the archive's "5 to 14 percent". -->
+
+The test uses the 50 kg and 1 000 kg reference designs, sized by one method. No closure of Section 6.1 was run at 1 000 kg: the heavy design has no drag bracket and no structural closure, and no heavy-design range is quoted.
+
+Disc loading is held at approximately the same value, 44.2 kg m⁻² at 50 kg and 43.7 at 1 000 kg, so specific hover power is held with it: 0.218 kW kg⁻¹ at the light design and 0.216 at the heavy. That near-constancy is a property of the constant-disc-loading rule, not a finding about Bill 3. Section 6.2's measure of Bill 3, rotor-shaft hover power over engine shaft rating, is 4.19 at the light design (10.9 kW over 2.6 kW) and 3.98 at the heavy (216.2 kW over 54.3 kW). The two designs rate their engines at different margins over cruise power, 1.53 and 1.39; with the light design's margin, the heavy ratio would be 3.61. The ratio therefore moves by 5 to 14 percent across the factor of twenty, depending on an engine margin the sizing rule does not set. Section 6.2's 2.4 to 3.2 is the same ratio at the four closures. This paragraph compares the reference pair only.
+
+The rule has a price, paid in geometry: the ratio of nose-propeller diameter to span rises from 0.35 to 0.47, and much above 1 000 kg a single nose pair can no longer hold the disc loading, so a second would have to be added.
+
+### The rotor term of Bill 2
+
+<!-- for P24 (the comparison's Bill 2 side; the body's "falls to between 0.29 and 0.65 … in the section polars used here" and its Reynolds-number sentence).
+     src: same archive snapshot, "Bill 2 — the rotor term falls" paragraph. Figures from aero/heavy_rotor.py (corrected setup, Round 55), stored output
+     aero/heavy-rotor-result.txt, rerun this round: eight designs c_l 0.55-0.85, all FM >= 0.599, dC_D0 0.00447-0.01003, ratio to 0.01535 = 0.29-0.65;
+     c_l 0.68: 0.00681; median section Re 81 689 -> 556 336; heavy blade at the light Re: 0.01810 = 1.18 x; solidity 0.0754 -> 0.0999 (x 1.33);
+     q test 0.00748 at 30 m/s, 0.00681 at 40 m/s (0.911, against 1/1.778 = 0.562); tip speed 210 m/s and hub 15 percent of radius at both sizes.
+     CHANGED: the archive's "three other candidates are excluded" now names them; the count word is dropped (the list has solidity, dynamic pressure,
+     and the shared tip speed and hub fraction). -->
+
+Only the rotor term of Bill 2 is computed at both sizes; the frame term enters both designs as the same multiplier, so it cannot show a scale effect in either direction. At 50 kg the rotor term is 0.0154. At 1 000 kg, eight tip-rotor designs at section lift coefficients from 0.55 to 0.85, all meeting the hover figure of merit, give 0.0045 to 0.0100, that is 0.29 to 0.65 of the light value; the design at the light design's section lift coefficient, 0.68, gives 0.0068. Within the blade-element and section-polar model the section Reynolds number accounts for the fall: the median section Reynolds number rises from about 8.2 × 10⁴ to 5.6 × 10⁵, and the heavy blade brought down to the light design's Reynolds number gives 0.0181, 1.18 times the light value. The other candidates are excluded. The heavy blade is the more solid (1.33 times), which would raise its drag rather than lower it; dynamic pressure cancels (between 30 and 40 m s⁻¹ the heavy term changes by a factor of 0.911, against the 0.562 a dynamic-pressure effect would give); and the design tip speed (210 m s⁻¹) and the hub fraction (15 percent of radius) are the same at both sizes. This is a decomposition inside the model rather than a causal claim beyond it.
+
+### Bill 1
+
+<!-- for P25 (Section 6.3): "It appears here as the energy buffer, 3.6 percent of take-off mass at 50 kg and 4.0 percent at 1 000 kg, and both figures are
+     inputs (Supplement S12)". src: same archive snapshot, "Bill 1 — not tested". Protected S12 row (E15) carried: "A change from 3.6 to 4.0 percent is a
+     change between two choices, not a scaling result, and it cannot be offered as evidence that Bill 1 moves with size in either direction."
+     Inputs checked: light closures f_tampon 0.036 (aero/closure.py), heavy design f_tampon 0.04 (aero/baseline.py mimariler() default, agir_dogrula()). -->
+
+Both buffer figures are inputs: 0.036 of take-off mass in the light closures and 0.040 in the heavy design's sizing. A change from 3.6 to 4.0 percent is a change between two choices, not a scaling result, and it cannot be offered as evidence that Bill 1 moves with size in either direction. A buffer sized to the hover deficit at the same specific power would track hover power and engine rating, which are the Bill 3 measures, so that derivation cannot test whether Bill 1 separates.
+
+### The rotation time
+
+<!-- No body pointer: carried because the protected row was moved here by the author's decision (E15): "A larger aircraft of this type turns more slowly,
+     and must." src: same archive snapshot, "Two costs that scale does not relieve".
+     CHANGED: the archive's "about 220 kW … about 13 kW" could not be reproduced exactly (no script found; a momentum-power estimate from
+     aero/rotation.py's moments gives about 200 kW and 12 kW). Replaced by figures aero/rotation.py prints, rerun this round: pitch inertia 9.813 and
+     2503 kg m2 (ratio 255.1), available moment 23.0 and 952 N m (ratio 41.4), rotation time that keeps the light design's moment margin 4.96 s, the
+     heavy design's 5.1 s. Put to the readers in Round 211: whether this subsection stays (it carries a protected row the body does not point to). -->
+
+The transition is where the square–cube relation is paid. The heavy design's pitch inertia is 255 times the light design's and its available control moment 41 times, so to keep the light design's moment margin it must rotate in about 5 s rather than 2 s (4.96 s computed; the heavy design uses 5.1 s). A larger aircraft of this type turns more slowly, and must.

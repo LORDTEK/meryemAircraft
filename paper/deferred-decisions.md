@@ -1391,3 +1391,8 @@ NeuralFoil makale künyesi doğrulanmadı. Okuyuculardan künye alanları (bağl
 - **Kapandı (beşimiz):** S-67 ChatGPT'nin biçimiyle; gövdeye uygulandı (Adım 10), denetimler temiz, PDF yeniden üretildi → Tur 210'da teyide. P14 R1; kazanç sayısı S10'da kalır.
 - **Yazar (Tur 209 sonrası):** *"Şimdilik dosyaları yeniden vermeyelim. Gerektikçe turlara devam edelim."* → dosyalar her tur yeniden gönderilmez.
 - **Tur 210:** S11 taslağı (P15, P19–P22); arşivde bir hata daha (Fatura 3'ün "propulsion fraction reflects it" ifadesi, S-67 ile aynı aşırı okuma); **Q-210** (P22 işaretçisi bölünmeden fazlasını mı vaat ediyor).
+
+## Tur 210 cevapları
+- **Kapandı (dördü + Claude):** S-67 sonucu teyit, P16 R1; S11 P15, P19, P20, P21 R1; S11'in üç işaretli değişikliği kabul.
+- **Q-210 (P22) ayrışık:** Grok R4 (yalnız işaretçi değişsin), ChatGPT R1 (değişiklik yok), DeepSeek R4 (iki onarım), Qwen R4 (cümleyi yeniden yazma). **Claude'un hatası:** Tur 210'da "cümle korunan değil" yazdım; **korunan** (`v8-caveats.md`, Adım 11 satırı). Tur 211'de düzeltildi; korunan sözcükleri değiştiren biçimler ancak yazara gider.
+- **Tur 211:** S12 taslağı (P24, P25); arşivin 220/13 kW geçiş güçleri yeniden üretilemedi (betik yok) → `aero/rotation.py` çıktısıyla değiştirildi; dönüş süresi alt bölümünün gövde işaretçisi yok (yalnız E15 korunan satırı için) → okuyuculara.

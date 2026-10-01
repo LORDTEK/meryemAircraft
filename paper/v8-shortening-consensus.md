@@ -921,3 +921,5 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Tur 208: S10 P17, P18 | R1 | R1 | R1 | R1 | R1 | **kapandı** |
 | Tur 208: kazanç taraması ekte | evet | evet (yeni koşu etiketi) | evet (ya da nitel) | evet | evet | **kapandı; DeepSeek'e sayı soruldu** |
 | Tur 209: S-67 sözcüğü | ChatGPT'nin | ChatGPT'nin | ChatGPT'nin (kendini geri çekti) | ChatGPT'nin (kendini geri çekti) | ChatGPT'nin | **uygulandı; teyide (Tur 210)** |
+| Tur 210: S11 P15, P19–P21 | R1 | R1 | R1 | R1 | R1 | **kapandı** |
+| Tur 210: Q-210 (P22) | R4, işaretçi | R1, değişiklik yok | R4, iki onarım | R4, yeniden yazma | R2, ek cümle (Tur 211) | **ayrışık; Tur 211** |
