@@ -10,6 +10,6 @@
 
 **Variant (Grok; Claude agrees; 60 words):** *"design"* becomes *"design, and solution approach"*. This is the author's own pairing (E29: *"Kıymetli olan yenilikçi tasarım ve çözüm yaklaşımı"*).
 
-> The authors used artificial-intelligence tools, under their direction, to draft and revise the English text, to search the literature, to review the manuscript, and as a tool in carrying out the calculations; the concept, architecture, design, and solution approach are the authors' own, and all three authors read and approved the manuscript and take full responsibility for its content.
+> The authors used artificial-intelligence tools, under their direction, to draft and revise the English text, to search the literature, to review the manuscript, to write the code that renders Figure 1, and as a tool in carrying out the calculations; the concept, architecture, design, and solution approach are the authors' own, and all three authors read and approved the manuscript and take full responsibility for its content.
 
 **Decision:** the author's (E31).

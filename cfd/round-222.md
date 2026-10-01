@@ -72,7 +72,8 @@ My view is (a), because the form itself names figures, and a field that says mor
 
 1. **The cover letter:** your view on 1, 2b, 3, 4 and 5 after §A and §B.
 2. **The two AI-use explanations (§C):** is any statement inaccurate, or stronger than the Acknowledgments?
-3. **The figure gap (§C):** (a), (b) or (c), with your reason.
+3. **The figure gap (§C): the author has decided (a)** (E36). The Acknowledgments sentence now reads: *"The authors used artificial-intelligence tools, under their direction, to draft and revise the English text, to search the literature, to review the manuscript, to write the code that renders Figure 1, and as a tool in carrying out the calculations; the concept, architecture, design, and solution approach are the authors' own, and all three authors read and approved the manuscript and take full responsibility for its content."* The PDF was rebuilt; this sentence is its only change. **Please confirm the result.**
+4. **The language-improvement text (§C)** says *"scripts checked that every such sentence survived each revision and checked key numbers against the analysis outputs"*. Is that accurate as you know the process?
 
 ---
 

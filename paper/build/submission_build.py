@@ -43,9 +43,10 @@ ABSTRACT = ("Hybrid aircraft for vertical takeoff and landing reach wing-borne c
  "against helicopters the result is mixed. The sizing loop closes at 52.3 to 57.5 kilograms, establishing arithmetic "
  "consistency, not that the package exists. Against lift-plus-cruise layouts the range ranking depends on the sizing contract. "
  "The buffer's required specific power is not demonstrated by the sources consulted, and the transition is not settled.")
-# E31 (b), yazar onayi 2026-09-30
+# E31 (b), yazar onayi 2026-09-30; E36 (a), yazar karari 2026-10-01: Sekil 1'i ciziren kod da sayilir (AIAA: "figure construction")
 ACK = ("The authors used artificial-intelligence tools, under their direction, to draft and revise the English text, to search "
- "the literature, to review the manuscript, and as a tool in carrying out the calculations; the concept, architecture, design, "
+ "the literature, to review the manuscript, to write the code that renders Figure 1, and as a tool in carrying out the "
+ "calculations; the concept, architecture, design, "
  "and solution approach are the authors' own, and all three authors read and approved the manuscript and take full "
  "responsibility for its content.")
 

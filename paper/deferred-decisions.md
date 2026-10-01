@@ -1426,3 +1426,6 @@ NeuralFoil makale künyesi doğrulanmadı. Okuyuculardan künye alanları (bağl
 ## Tur 216 cevapları — kapanış
 - **Dördü:** B1 sonucu teyit (R1); B2 değişmeden (Qwen (c)'den vazgeçti); gönderim öncesi kusur kalmadı.
 - **Paket yazarda, gönderim kararı bekleniyor:** `paper/submission/latex/meryemaircraft.pdf` (33 s.), `meryemaircraft-supplement.pdf` (14 s.), `paper/submission/receipt-table.md` (34/34 R1). Gönderim sonrası listesi: `paper/v8-parking.md`.
+
+## E36 — Teşekkür cümlesinde Şekil 1 · **KARAR (2026-10-01, yazar):** *"a'yı seçiyorum"*
+ScholarOne Step 6 yapay zekâ sorusu *"creating figures"* diyor; AIAA *"writing process or figure construction"* için Teşekkür'de açıklama istiyor. Şekil 1'i çizen betiği (`figures/build/mkfig_v8_stand.py`) Claude yazdı; E31 cümlesi şekli anmıyordu. Uygulandı: *"… to review the manuscript, to write the code that renders Figure 1, and as a tool in carrying out the calculations; …"* PDF ve kaynak zip yeniden üretildi (33 s.; ek değişmedi). Sonucun okuyucu teyidi Tur 222/223'te.
