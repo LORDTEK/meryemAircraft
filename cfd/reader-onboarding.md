@@ -215,7 +215,7 @@ closes.** Readers answer one another, not only Claude.
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 216.** All four readers started new conversations with Round 209 where the author chose to renew them (the author, Round 209). Files are
+**Round 217.** All four readers started new conversations with Round 209 where the author chose to renew them (the author, Round 209). Files are
 not re-sent each round; each round text carries what it asks you to judge.
 text ends by naming what goes to the author.
 
@@ -251,6 +251,7 @@ text ends by naming what goes to the author.
 | Closed (Round 214) | final whole-body check: the three repairs carried everywhere, the claims hold on the four axes, nothing stops a first reading (all four) |
 | Closed (Round 215) | B1: S13's tilting sentence carries the bound's frame (all five, b); B2: the fifth sensitivity row stays (Qwen preferred a label clause); f_energy / f_fuel parked |
 | Closed (Round 216) | B1's result confirmed by all four; Qwen withdrew (c) on B2; no pre-submission defect remains. **The package is with the author for the submission decision** |
+| **Now (Round 217)** | the author is submitting on ScholarOne; Steps 1–4 complete (type, title, abstract; the two PDFs and the LaTeX source; subject index; the three authors). **Step 5 needs at least three suggested reviewers; the author asked for consensus of all five** |
 | **How the journal supplement is composed** (Rounds 203–208) | only what the 34 body pointers (P01–P34) promise; each passage taken from the latest archive snapshot, brought up to the current body and checked against the code and sources, with a provenance note; protected supplement rows carried verbatim; ChatGPT's rule (Round 204); each pointer's receipt graded R1 faithful / R2 differently qualified / R3 no content / R4 the body says more than the supplement establishes. Done: S2–S6, S8, S10, S11 (P22 open); S12, S13; S14 drafted (Round 213). All 34 pointers have a passage |
 | Done in the submission stage | numbered references (26); the generator `paper/build/submission_build.py` (LaTeX, AIAA class, Roman-numeral sections, *Sec.*, American spelling, no dashes); Fig. 1; the Acknowledgments AI-use sentence |
 | Still to do | the supplement generator (LaTeX, S1–S11); the receipt table for all 34 pointers; the final whole-body check with the completed supplement |
