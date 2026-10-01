@@ -929,3 +929,5 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Tur 212: P22 ek cümle | evet | evet | kabul edilebilir | evet | evet | **uygulandı; teyide (Tur 213)** |
 | Tur 212: S12 dönüş süresi | sayılarla | sayılarla (geçti) | sayılarla | sayılarla (geçti) | sayılarla | **kapandı** |
 | Tur 212: S13 P26–P30 | R1 | R1 | R1 | R1 | R1 | **kapandı** |
+| Tur 215–216: B1 S13 çerçeve | b | b (R4→R1) | b | b | b | **uygulandı, teyit edildi; kapandı** |
+| Tur 215–216: B2 beşinci satır | kalsın | kalsın | kalsın (a'dan geçti) | kalsın (c'den vazgeçti) | kalsın | **kapandı** |

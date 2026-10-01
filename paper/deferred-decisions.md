@@ -1422,3 +1422,7 @@ NeuralFoil makale künyesi doğrulanmadı. Okuyuculardan künye alanları (bağl
 - **B2:** beşinci duyarlılık satırı kalır (Grok, ChatGPT, DeepSeek, Claude b; Qwen c, ChatGPT c'ye karşı) — değişiklik yok.
 - **C:** f_energy/f_fuel park.
 - **Paket yazara (Tur 216):** gövde PDF (33 s.), ek PDF (14 s.), 26 kaynak, YZ cümlesi, alındı tablosu 34/34 R1.
+
+## Tur 216 cevapları — kapanış
+- **Dördü:** B1 sonucu teyit (R1); B2 değişmeden (Qwen (c)'den vazgeçti); gönderim öncesi kusur kalmadı.
+- **Paket yazarda, gönderim kararı bekleniyor:** `paper/submission/latex/meryemaircraft.pdf` (33 s.), `meryemaircraft-supplement.pdf` (14 s.), `paper/submission/receipt-table.md` (34/34 R1). Gönderim sonrası listesi: `paper/v8-parking.md`.
