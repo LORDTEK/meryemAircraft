@@ -2,7 +2,7 @@
 
 Source `paper/v8/ASSEMBLED.md`; output `paper/submission/latex/meryemaircraft.tex`. **The step sources are not changed.**
 
-- Body words (text and table cells, excluding abstract, references and acknowledgments): **14407**
+- Body words (text and table cells, excluding abstract, references and acknowledgments): **14428**
 - Tables: 6 · numbered equations: 2 · lists: 3
 
 ## Output check: word-sequence differences other than the listed mechanical changes
@@ -15,6 +15,7 @@ Each row is a place where the output's words differ from the source. Every row s
 | delete | 2 |  |
 | delete | 3 |  |
 | delete | 4 |  |
+| delete | fig |  |
 | replace | are | 2 a r e |
 | replace | de | d e |
 | replace | de | d e |
@@ -73,7 +74,7 @@ Each row is a place where the output's words differ from the source. Every row s
 - `blade-element momentum theory at two operating points` → `blade-element momentum theory, with section polars from NeuralFoil 0.3.3⟦CITE:19⟧, at two operating points`
 - `from a vortex-lattice solution of the trimmed planform` → `from a vortex-lattice solution (AeroSandbox 4.2.10⟦CITE:20⟧) of the trimmed planform`
 
-## Table references (for reader check) (9)
+## Table references (for reader check) (10)
 
 - `The table is not a census of the field` → `Table 1 is not a census of the field`
 - `and the table above is where one would appear` → `and Table 1 is where one would appear`
@@ -84,11 +85,13 @@ Each row is a place where the output's words differ from the source. Every row s
 - `The table counts the mechanism classes` → `Table 4 counts the mechanism classes`
 - `On these assumptions all four converge` → `On these assumptions all four converge (Table 5)`
 - `this paper's alternatives differ from axis to axis.` → `this paper's alternatives differ from axis to axis (Table 6).`
+- `in its own storage attitude` → `in its own storage attitude (Fig. 1)⟦FIG⟧`
 
-## Section pointers (121)
+## Section pointers (122)
 
 - `Section 5.1` → `Sec. V.A`
 - `Sections 5.1 and 5.2` → `Secs. V.A and V.B`
+- `Section 1.5` → `Sec. I.E`
 - `Section 5.1` → `Sec. V.A`
 - `Section 6.2` → `Sec. VI.B`
 - `Section 6.3` → `Sec. VI.C`
@@ -311,9 +314,9 @@ Each row is a place where the output's words differ from the source. Every row s
 - ## 2. The charges, the condition, an independent check → The Charges, the Condition, an Independent Check
 - ### 2.1 The tax → The Tax
 - #### The root: a duty cycle that does not match the hardware → The Root: A Duty Cycle That Does Not Match the Hardware
-- #### Bill 1 — mass → Bill 1 — Mass
-- #### Bill 2 — drag → Bill 2 — Drag
-- #### Bill 3 — power system sizing → Bill 3 — Power System Sizing
+- #### Bill 1: mass → Bill 1: Mass
+- #### Bill 2: drag → Bill 2: Drag
+- #### Bill 3: power system sizing → Bill 3: Power System Sizing
 - #### The charges are coupled: remedies move cost, among the three charges or outside them → The Charges Are Coupled: Remedies Move Cost, Among the Three Charges or Outside Them
 - #### What this accounting is for → What This Accounting Is For
 - ### 2.2 The escape condition → The Escape Condition
@@ -356,10 +359,10 @@ Each row is a place where the output's words differ from the source. Every row s
 - #### The transition → The Transition
 - #### What closing does and does not establish → What Closing Does and Does Not Establish
 - ### 6.2 The ledger → The Ledger
-- #### Bill 2 — the drag of hover hardware, inside the bracket → Bill 2 — The Drag of Hover Hardware, Inside the Bracket
+- #### Bill 2: the drag of hover hardware, inside the bracket → Bill 2: The Drag of Hover Hardware, Inside the Bracket
 - #### The cruise-efficiency gap under fixed pitch → The Cruise-Efficiency Gap Under Fixed Pitch
-- #### Bill 1 — carried mass, and what it is on this configuration → Bill 1 — Carried Mass, and What It Is on This Configuration
-- #### Bill 3 — released from the engine, and not from the electrical path → Bill 3 — Released from the Engine, and Not from the Electrical Path
+- #### Bill 1: carried mass, and what it is on this configuration → Bill 1: Carried Mass, and What It Is on This Configuration
+- #### Bill 3: released from the engine, and not from the electrical path → Bill 3: Released from the Engine, and Not from the Electrical Path
 - #### What the closure does not contain → What the Closure Does Not Contain
 - ### 6.3 Scale does not lock two of the charges together; the third is not tested → Scale Does Not Lock Two of the Charges Together; the Third Is Not Tested
 - ### 6.4 Rankings belong to contracts → Rankings Belong to Contracts
@@ -385,110 +388,119 @@ Each row is a place where the output's words differ from the source. Every row s
 ## Warnings (0)
 
 
-## Dashes left in the text (style pass: reader round) (74)
+## Style pass (Round 202; for reader check) (100)
 
-- applications this work is aimed at sit — wildfire observation and response, and cargo delivery to
-- a blended-wing-body tail-sitter in which *every* propulsor is a coaxial, torque-balanced pair —
-- mechanism — carrying no aerodynamic control surfaces beyond a single moving device, powered
-- For a mission of one hour, a take-off, a transition, a return transition and a landing occupy on the order of a minute — roughly two percent of the flight
-- #### Bill 1 — mass
-- Mass growth feeds itself — MTOW = m_payload / (1 − f_empty − f_energy) puts additional empty mass through a multiplier that grows as the denominator shrinks — a
-- #### Bill 2 — drag
-- "*⟦CITE:14⟧ The bill is charged mainly by the motors — hardware that cannot be feathered or aligned away, because its cost is its presence; the same work notes 
--  It is charged per unit time in cruise — so it grows with exactly the quantity the aircraft exists to maximise
-- #### Bill 3 — power system sizing
-- Sizing by hover means an oversized engine, or a battery that must deliver a peak it will rarely be asked for, or both — and whichever is chosen, the extra insta
-- | Move | Bill it attacks | What it creates — a bill by its number, any other cost in words |
-- | Distributed electric lift rotors | 3 — the cruise engine no longer sizes to hover | 1 and 2 — many rotors and mounts, permanently carried and exposed |
-- | Folding or retracting lift rotors | 2 — the exposed rotor is removed from cruise | 1 — mechanism, actuation, locking; and a new failure mode, not among the th
-- | Tilt-rotor, tilt-wing, tilt-nacelle | 1 — one propulsion group serves both regimes | kilograms, not Bill 1 — the pivot and its actuators; Bill 3, imposed or l
-- | Variable-pitch or feathering propulsors | 1 and 3 — one propulsor is retrimmed across two widely separated operating points instead of duplicated | kilograms,
-- | Higher disc loading, smaller rotors | 1 and 2 — smaller, lighter, cleaner rotors | 3 — hover power rises with √(DL) |
-- | Lower disc loading, larger rotors | 3 — hover power falls | 1 and 2 — larger structure and exposed area |
-- Stated positively, so that the test can actually be run: a counter-example is a remedy that reduces one of the three charges, leaves the other two no worse, and
-- The accounting also makes a prediction that can be checked without settling the architectural question at all: where an arrangement pays one charge heavily in o
-- The inversion requires only *one orientation relative to the airframe*; how an architecture keeps that while changing flight regime — by rotating the whole body
-- It satisfies the first three only in part — for instance in its primary propulsor while a secondary set fails them — in which case the instantiation is partial,
-- Whether such an architecture might avoid the three charges by some other route is a separate question this paper does not settle — the condition is a definition
-- The check uses a NASA study⟦CITE:16⟧, conducted for its own purposes and with no relationship to the present work, that sizes five VTOL architecture families — 
-- 5 at 7 271 lb and carries a dedicated lift group — eight lift motors beside its cruise motor
-- They are not identical in every other respect — one stops its lift rotors in the airstream and drives a separate pusher, the other reorients its proprotors on a
-- 1 — the mechanism giving part of the structural saving back — inside a breakdown this work did not produce: its three reported categories account for 580 lb of 
-- strip or a recovery vehicle each fail that test — including the ones that fail it only on the
-- charged to the mass budget once — Section 5
-- the control architecture — and because the same displacement lengthens the control moment arm,
-- The second half — cruise carried on a wing rather than on rotors — is the subject of the next
-- On this axis the alternative is the rotorcraft — multirotor and helicopter alike — and as in the previous section the comparison
-- `C_D = C_D0 + C_L²/(πARe)`, and the nose pair is left with one job — producing the thrust that
-- supply of its own — the power the aircraft spends in cruise goes to overcoming drag, of which
-- depending on the drag outcome and the blade — a measurable advantage, not a change of category
--  The best point is not an available option — cruising there leaves too little margin above the stall — so this
-- together, in the literature and in hardware — Section 1 says where
-- The principle behind the third element — a continuous plant sized for cruise, with the vertical or take-off peak drawn from a store — has been applied in studie
-- | Pivot or tilting joint | Tilting architectures | — |
-- | Nacelle or rotor-group actuator | Tilting architectures | — |
-- | Variable-pitch hub | Architectures that trim a rotor across two widely separated operating points, or feather a rotor unused in one regime | — |
-- | Dedicated lift rotors | Lift-plus-cruise architectures | — |
-- | Rotor stowing, indexing or stopping mechanism | Architectures that remove dedicated lift rotors from the cruise flow by such means | — (see note) |
-- propeller applies to the airframe a torque about its own axis, which on this aircraft is the body's longitudinal axis — the roll axis
-- in body terms — in both regimes
-- That axis is the roll axis in both regimes; what changes is its orientation relative to the earth — it stands vertical in the hover attitude, where a moment abo
-- 726 m —
-- Extension is the control variable — the strip is modulated, not switched — and deploying it also
-- two halves — one side alone for roll, both together as a speed brake
-- produced by something — motor holding torque, an electrical brake, a mechanical lock — and a stopped fixed-pitch blade also has an
-- On these assumptions all four converge (Table 5), for the 50 kg design — the only one carried through this loop
-- The blade that is best before the loop is still best after it — a result of the closure rather than an assumption carried into it
-- #### Bill 2 — the drag of hover hardware, inside the bracket
-- In the drag build-up behind the bracket (line items in Supplement S11), the hardware exposed by the vertical-phase layout — the
-- tip frames and the free-wheeling tip-pair rotors — is 69 percent of the zero-lift drag at the favourable end and 57 percent at the
-- #### Bill 1 — carried mass, and what it is on this configuration
-- #### Bill 3 — released from the engine, and not from the electrical path
-- rotor terms, the light one is therefore the less certain — and it is the one Sections 6
--  Credited with no cruise penalty, the tilting layout is 93 to 141 percent ahead of this configuration under every contract at every closure; that margin is the 
-- Comparing computed figures against assumed ones favours whichever is assumed more optimistically — in propeller efficiency both competitors, and with a common p
--  What this section establishes is narrower: the same aircraft, under three reasonable contracts, give orderings against lift-plus-cruise that move by tens of pe
--  It is stated in that order — first the obstacle that is known, then what is not known
-- The study argues that, because pulse current limits can exceed continuous ones — by more than a
-- factor of two in one commercial module it cites — a pack with the required specific power may be possible with existing technology; its
-- 1 times the bench rate — the highest figure obtained from a measurement — and 6
-- The architecture claim — that the configuration is arranged to change regime with no mechanism that reorients a propulsor — is a count of hardware, and nothing 
--  This is the paper's contribution — a count of mechanism classes (Section 5
-- | Cruise efficiency and range | Other hybrids — lift-plus-cruise, tilt | Not claimed, in either direction
-- Operation without a runway does not depend on the drag bracket, the propeller efficiency or the transition aerodynamics — but it does depend on the energy store
-- Elimination of the propulsor-reorientation mechanism class does not depend on the drag bracket, the propeller efficiency, the sizing contract, the range result 
-- What that refusal costs — in thrust asymmetry, in propulsive efficiency, and in response time set by rotor inertia — is not computed anywhere in this paper
--  What is eliminated is a *class of mechanism* — the one that reorients a propulsor
-- The contribution is the architecture, and the paper presents it as the combination, the consequences of the choices inside it, and the accounting — which is wha
-- 1 counts: no pivot, no nacelle or rotor-group actuator, no variable-pitch hub, no dedicated lift rotors, and — while the tip pairs free-wheel or are held by mot
+- **D01** `this work is aimed at sit — wildfire` → `this work is aimed at sit: wildfire`
+- **D02** `torque-balanced pair — so that reaction torque and net angular momentum are given up along with the reorientation mechanism — carrying` → `torque-balanced pair (so that reaction torque and net angular momentum are given up along with the reorientation mechanism), carrying`
+- **D03** `on the order of a minute — roughly two percent` → `on the order of a minute, roughly two percent`
+- **D04** `#### Bill 1 — mass` → `#### Bill 1: mass`
+- **D05** `Mass growth feeds itself — MTOW = m_payload / (1 − f_empty − f_energy) puts additional empty mass through a multiplier that grows as the denominator shrinks — and in` → `Mass growth feeds itself (MTOW = m_payload / (1 − f_empty − f_energy) puts additional empty mass through a multiplier that grows as the denominator shrinks), and in`
+- **D06** `#### Bill 2 — drag` → `#### Bill 2: drag`
+- **D07** `charged mainly by the motors — hardware that cannot` → `charged mainly by the motors: hardware that cannot`
+- **D08** `per unit time in cruise — so it grows` → `per unit time in cruise, so it grows`
+- **D09** `#### Bill 3 — power system sizing` → `#### Bill 3: power system sizing`
+- **D10** `or both — and whichever is chosen` → `or both, and whichever is chosen`
+- **D11** `smaller than the reduction — measured in the same currency` → `smaller than the reduction, measured in the same currency`
+- **D12** `when the sizing rule changes — toward the lighter arrangement as the rule weights mass more — and will reverse` → `when the sizing rule changes (toward the lighter arrangement as the rule weights mass more) and will reverse`
+- **D13** `while changing flight regime — by rotating the whole body, or otherwise — is not in the inversion` → `while changing flight regime (by rotating the whole body, or otherwise) is not in the inversion`
+- **D14** `only in part — for instance in its primary propulsor while a secondary set fails them — in which case` → `only in part (for instance in its primary propulsor while a secondary set fails them), in which case`
+- **D15** `this paper does not settle — the condition is a definition` → `this paper does not settle; the condition is a definition`
+- **D16** `five VTOL architecture families — nine designs in all — against` → `five VTOL architecture families (nine designs in all) against`
+- **D17** `a dedicated lift group — eight lift motors` → `a dedicated lift group: eight lift motors`
+- **D18** `in every other respect — one stops its lift rotors in the airstream and drives a separate pusher, the other reorients its proprotors on a tilting wing — but the difference` → `in every other respect (one stops its lift rotors in the airstream and drives a separate pusher, the other reorients its proprotors on a tilting wing), but the difference`
+- **D19** `transfer property of Section 2.1 — the mechanism giving part of the structural saving back — inside a breakdown` → `transfer property of Section 2.1 (the mechanism giving part of the structural saving back) inside a breakdown`
+- **D20** `each fail that test — including` → `each fail that test, including`
+- **D21** `charged to the mass budget once — Section 5.2 gives` → `charged to the mass budget once; Section 5.2 gives`
+- **D22** `or the control architecture — and because` → `or the control architecture, and because`
+- **D23** `The second half — cruise carried on a wing rather than on rotors — is the subject` → `The second half (cruise carried on a wing rather than on rotors) is the subject`
+- **D24** `the alternative is the rotorcraft — multirotor and helicopter alike — and as in` → `the alternative is the rotorcraft (multirotor and helicopter alike), and as in`
+- **D25** `is left with one job — producing the thrust` → `is left with one job: producing the thrust`
+- **D26** `continuous power supply of its own — the power the aircraft spends` → `continuous power supply of its own; the power the aircraft spends`
+- **D27** `the drag outcome and the blade — a measurable advantage` → `the drag outcome and the blade: a measurable advantage`
+- **D28** `not an available option — cruising there leaves too little margin above the stall — so this fixes` → `not an available option (cruising there leaves too little margin above the stall), so this fixes`
+- **D29** `in the literature and in hardware — Section 1 says where` → `in the literature and in hardware; Section 1 says where`
+- **D30** `The principle behind the third element — a continuous plant sized for cruise, with the vertical or take-off peak drawn from a store — has been applied` → `The principle behind the third element (a continuous plant sized for cruise, with the vertical or take-off peak drawn from a store) has been applied`
+- **D31** `the body's longitudinal axis — the roll axis in body terms — in both regimes` → `the body's longitudinal axis (the roll axis in body terms) in both regimes`
+- **D32** `relative to the earth — it stands vertical` → `relative to the earth: it stands vertical`
+- **D33** `at the semi-span, 1.726 m — 2.43 times the pitch arm` → `at the semi-span, 1.726 m: 2.43 times the pitch arm`
+- **D34** `Extension is the control variable — the strip is modulated, not switched — and deploying it` → `Extension is the control variable (the strip is modulated, not switched), and deploying it`
+- **D35** `deployable in two halves — one side alone` → `deployable in two halves: one side alone`
+- **D36** `produced by something — motor holding torque, an electrical brake, a mechanical lock — and a stopped` → `produced by something (motor holding torque, an electrical brake, a mechanical lock), and a stopped`
+- **D37** `for the 50 kg design — the only one carried` → `for the 50 kg design, the only one carried`
+- **D38** `still best after it — a result of the closure` → `still best after it: a result of the closure`
+- **D39** `#### Bill 2 — the drag of hover hardware` → `#### Bill 2: the drag of hover hardware`
+- **D40** `exposed by the vertical-phase layout — the tip frames and the free-wheeling tip-pair rotors — is 69 percent` → `exposed by the vertical-phase layout (the tip frames and the free-wheeling tip-pair rotors) is 69 percent`
+- **D41** `#### Bill 1 — carried mass` → `#### Bill 1: carried mass`
+- **D42** `#### Bill 3 — released from the engine` → `#### Bill 3: released from the engine`
+- **D43** `the light one is therefore the less certain — and it is the one` → `the light one is therefore the less certain, and it is the one`
+- **D44** `cruise penalties — nacelle drag, pivot fairing, hover-sized rotors flown as cruise propellers — would have to fill` → `cruise penalties (nacelle drag, pivot fairing, hover-sized rotors flown as cruise propellers) would have to fill`
+- **D45** `assumed more optimistically — in propeller efficiency` → `assumed more optimistically: in propeller efficiency`
+- **D46** `inside the envelope, change sign — so the ordering` → `inside the envelope, change sign, so the ordering`
+- **D47** `It is stated in that order — first the obstacle` → `It is stated in that order: first the obstacle`
+- **D48** `can exceed continuous ones — by more than a factor of two in one commercial module it cites — a pack` → `can exceed continuous ones (by more than a factor of two in one commercial module it cites), a pack`
+- **D49** `times the bench rate — the highest figure obtained from a measurement — and 6.2` → `times the bench rate (the highest figure obtained from a measurement) and 6.2`
+- **D50** `The architecture claim — that the configuration is arranged to change regime with no mechanism that reorients a propulsor — is a count` → `The architecture claim, that the configuration is arranged to change regime with no mechanism that reorients a propulsor, is a count`
+- **D51** `or the transition aerodynamics — but it does depend` → `or the transition aerodynamics, but it does depend`
+- **D52** `the range result or the energy store — nor on the transition` → `the range result or the energy store, nor on the transition`
+- **D53** `What that refusal costs — in thrust asymmetry, in propulsive efficiency, and in response time set by rotor inertia — is not computed` → `What that refusal costs (in thrust asymmetry, in propulsive efficiency, and in response time set by rotor inertia) is not computed`
+- **D54** `a *class of mechanism* — the one that` → `a class of mechanism: the one that`
+- **D55** `and the accounting — which is what Sections 5.1 and 5.2 describe` → `and the accounting; that is what Sections 5.1 and 5.2 describe`
+- **D56** `and — while the tip pairs free-wheel or are held by motor torque — no rotor stowing` → `and (while the tip pairs free-wheel or are held by motor torque) no rotor stowing`
+- **T1h** `What it creates — a bill by its number, any other cost in words` → `What it creates (a bill by its number, any other cost in words)`
+- **T1a** `| 3 — the cruise engine no longer sizes to hover | 1 and 2 — many rotors` → `| 3: the cruise engine no longer sizes to hover | 1 and 2: many rotors`
+- **T1b** `| 2 — the exposed rotor is removed from cruise | 1 — mechanism,` → `| 2: the exposed rotor is removed from cruise | 1: mechanism,`
+- **T1c** `| 1 — one propulsion group serves both regimes | kilograms, not Bill 1 — the pivot` → `| 1: one propulsion group serves both regimes | kilograms, not Bill 1: the pivot`
+- **T1d** `supplies its hover peak — with no store, the power plant is sized by the hover peak; and` → `supplies its hover peak (with no store, the power plant is sized by the hover peak); and`
+- **T1e** `| 1 and 3 — one propulsor is retrimmed` → `| 1 and 3: one propulsor is retrimmed`
+- **T1f** `kilograms, not Bill 1 — pitch hub and actuation` → `kilograms, not Bill 1: pitch hub and actuation`
+- **T1g** `| 1 and 2 — smaller, lighter, cleaner rotors | 3 — hover power rises` → `| 1 and 2: smaller, lighter, cleaner rotors | 3: hover power rises`
+- **T1i** `| 3 — hover power falls | 1 and 2 — larger structure` → `| 3: hover power falls | 1 and 2: larger structure`
+- **T4a** `| Pivot or tilting joint | Tilting architectures | — |` → `| Pivot or tilting joint | Tilting architectures | None |`
+- **T4b** `| Nacelle or rotor-group actuator | Tilting architectures | — |` → `| Nacelle or rotor-group actuator | Tilting architectures | None |`
+- **T4c** `or feather a rotor unused in one regime | — |` → `or feather a rotor unused in one regime | None |`
+- **T4d** `| Dedicated lift rotors | Lift-plus-cruise architectures | — |` → `| Dedicated lift rotors | Lift-plus-cruise architectures | None |`
+- **T4e** `from the cruise flow by such means | — (see note) |` → `from the cruise flow by such means | None (see note) |`
+- **T6a** `This is the paper's contribution — a count of mechanism classes` → `This is the paper's contribution: a count of mechanism classes`
+- **T6b** `| Other hybrids — lift-plus-cruise, tilt |` → `| Other hybrids (lift-plus-cruise, tilt) |`
+- **A01** `the gap below is not a historical one` → `the gap set out in Section 1.5 is not a historical one`
+- **A02** `the origin of all three charges below` → `the origin of all three charges that follow`
+- **A04** `they are the first failure mode below` → `they are the first failure mode that follows`
+- **A05** `The mission used below is short` → `The mission used here is short`
+- **A07** `The qualifications below apply to them too` → `The qualifications that follow apply to them too`
+- **A10** `it does not touch the cruise numbers above` → `it does not touch the preceding cruise numbers`
+- **A12** `is a control surface, of a different class, and is named below` → `is a control surface, of a different class, and is named next`
+- **A13** `that cancellation is no longer exact (below)` → `that cancellation is no longer exact (discussed later in this section)`
+- **A14** `(body axes, as fixed above)` → `(body axes, as fixed earlier in this section)`
+- **A15** `The sizing above says nothing` → `The preceding sizing says nothing`
+- **A16** `would most change the numbers above` → `would most change the preceding numbers`
+- **A18** `the boundary below is about claims` → `the boundary that follows is about claims`
+- **I1** `in which *every* propulsor` → `in which every propulsor`
+- **I2** `only *one orientation relative to the airframe*` → `only one orientation relative to the airframe`
+- **I3** `*Cruise thrust in this paper means the thrust that balances cruise drag.*` → `Cruise thrust in this paper means the thrust that balances cruise drag.`
+- **I4** `*Note.* The stopping class` → `Note: The stopping class`
+- **I5** `*(This paper fixes body-axis naming throughout.` → `(This paper fixes body-axis naming throughout.`
+- **I6** `The two conventions are not mixed here.)*` → `The two conventions are not mixed here.)`
+- **I7** `The *size* of the resulting advantage` → `The size of the resulting advantage`
+- **I8** `The design *sizes* vertical operation` → `The design sizes vertical operation`
+- **L1** `1. ` → `1) `
+- **L2** `2. ` → `2) `
+- **L3** `3. ` → `3) `
+- **L4** `4. ` → `4) `
+- **L5** `5. ` → `5) `
+- **L6** `6. ` → `6) `
+- **L7** `7. ` → `7) `
+- **L8** `8. ` → `8) `
 
-## "above" / "below" left in the text (style pass: reader round) (17)
+## Dashes left in the text (style pass: reader round) (0)
 
-- The uncrewed tail-sitter literature has been exploiting exactly those three for over a decade⟦CITE:2⟧; the gap below is not a historical one
-- The mismatch between how long a component is needed and how long it is present is the origin of all three charges below
-- But carried through cruise without producing cruise thrust, they are the first failure mode below, and Bill 2 reaches them
-- The mission used below is short
+
+## "above" / "below" left in the text (style pass: reader round) (5)
+
 - There is no pilot here, and height above ground is a sensor measurement rather than a human
-- The qualifications below apply to them too
--  The best point is not an available option — cruising there leaves too little margin above the stall — so this
+-  The best point is not an available option (cruising there leaves too little margin above the stall), so this fixes a direction, not a magnitude
 - diverge above roughly ten degrees of incidence: three methods of three fidelities depart at the same place, the highest of them
-- could achieve; it does not touch the cruise numbers above, which sit at a few degrees, but it bounds what this section may be read to
 - largest surface to ground wind; the tailless planform constrains the sweep; and the fixed-pitch propeller is why the margin above
-- below
-- cancellation is no longer exact (below)
-- Pitch and yaw come from differential thrust between the tip pairs (body axes, as fixed above)
-- The sizing above says nothing about whether the aircraft can change regime
--  The first and the last are the two that would most change the numbers above if they were computed
 - a causal claim beyond it, and the light end lies below a Reynolds number of 10⁵, where section drag is hardest to predict
--  Those are in Section 7, and the difference matters: the boundary below is about claims the paper declines to make, most of which it could not make on any evide
 
-## Italic (non-quotation) kept (8)
+## Italic (non-quotation) kept (0)
 
-- every
-- one orientation relative to the airframe
-- Cruise thrust in this paper means the thrust that balances cruise drag.
-- Note.
-- (This paper fixes body-axis naming throughout. That axis is the roll axis in bot
-- size
-- class of mechanism
-- sizes
