@@ -1335,3 +1335,9 @@ NeuralFoil makale künyesi doğrulanmadı. Okuyuculardan künye alanları (bağl
 - **Şekil 1:** `figures/build/mkfig_v8_stand.py` → `figures/output/v8-f1-standing.png` (depo 3B modeli, dik duruş kipi, 50 kg tasarım, kamera ≈31°, etiketsiz ve ölçeksiz; pala sayısı hesap koduyla aynı, iki). III'te ilk duruş cümlesine *"(Fig. 1)"*. `v8_stale.py` SEKILLER listesine girdi; `v8_figures.py` temiz.
 - **Üslup geçişi uygulandı (üreteçte, 100 satır):** düzyazıda tire kalmadı; konum bildiren above/below düzeltildi (A11 belirsiz, bırakıldı); vurgu italikleri kalktı; VIII.D maddeleri 1). Okuyucu teyidine (Tur 202).
 - **Yazara (Tur 202 H):** (1) korunan cümlelerde yalnız biçim değişikliği (noktalama, Amerikan yazımı, italik) serbest mi; (2) A02: korunan tanım *"… charges below"* → *"… that follow"*.
+
+## E33 — korunan cümlede biçim; A02 · **YAZAR (2026-10-01): "1 ve 2 evet, devam"**
+
+- Gönderim çıktısında korunan cümlelerde yalnız biçim (noktalama, Amerikan yazımı, italik) serbest; koşul (ChatGPT): bağlanma, yan cümle sınırı ve niteleyici kapsamı değişmez. A02 (*"charges below"* → *"that follow"*) onaylı.
+- Tur 202 cevapları: Şekil 1 kabul (dördü); Tablo 6 başlığı *"The four axes and their opponents"* (beşimiz) ve [2, 3] (beşimiz) uygulandı; [6] kalır. Üslup: D33, A11, A12, D50, D55 ayrışık → Tur 203. Qwen'in A04/A05/A14 korunan iddiası yanlış (kayıtta yok).
+- **Bulgu (Claude):** `supplement.md` çoğunlukla denetim arşivi; gövdenin 34 atfının vaat ettiği içerik büyük ölçüde yalnız dondurulmuş eski taslak kopyalarında, ve o kopyalar emekli iddialar da taşıyor (ör. S8'de XB-35). Dergi eki **yeniden kurulacak** (öneri Tur 203 D: atıf başına içerik, emekli denetimi, alındı tablosu, S1–S11 yeniden numaralama).

@@ -33,7 +33,7 @@ Each row is a place where the output's words differ from the source. Every row s
 ## Citation markers inserted (36)
 
 - `ng was curtailed because of engine and gear-box reliability problems"*` + ⟦CITE:1⟧
-- `has been exploiting exactly those three for over a decade` + ⟦CITE:2⟧
+- `has been exploiting exactly those three for over a decade` + ⟦CITE:2,3⟧
 - `have been built and flown for more than a decade` + ⟦CITE:2,3⟧
 - `A tail-sitter study reported in 2007` + ⟦CITE:4⟧
 - `Attitude without aerodynamic control surfaces is established` + ⟦CITE:3⟧

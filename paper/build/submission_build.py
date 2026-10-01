@@ -53,7 +53,7 @@ ACK = ("The authors used artificial-intelligence tools, under their direction, t
 # (isaretten hemen once gelen metin, kaynak numaralari). Metin ham markdown'da tam bir kez eslesmeli.
 CITES = [
     ('before testing was curtailed because of engine and gear-box reliability problems"*', [1]),
-    ('has been exploiting exactly those three for over a decade', [2]),
+    ('has been exploiting exactly those three for over a decade', [2, 3]),
     ('have been built and flown for more than a decade', [2, 3]),
     ('A tail-sitter study reported in 2007', [4]),
     ('Attitude without aerodynamic control surfaces is established', [3]),
@@ -235,7 +235,7 @@ CAPTIONS = [
     "Effective lift-to-drag ratio against the two published quadrotors",
     "Mechanism classes that change regime or remove a rotor from one regime's flow",
     "The four closures of the sizing loop, 50 kg design",
-    "The four claim axes and their opponents",
+    "The four axes and their opponents",
 ]
 EQUATIONS = {  # ham kaynak -> LaTeX (numarali)
     'P_hover / P_cruise = √(DL / 2ρ) · (L/D) / V · (η_p / η_h)':

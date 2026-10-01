@@ -210,7 +210,7 @@ closes.** Readers answer one another, not only Claude.
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 202.** All four readers work in new conversations since Round 169; this was done **for equality** (Grok's conversation did not need
+**Round 203.** All four readers work in new conversations since Round 169; this was done **for equality** (Grok's conversation did not need
 renewing). **The author (Round 171):** *"You readers, work together. Whenever it comes to my turn, don't forget to tell me."* Each round
 text ends by naming what goes to the author.
 
@@ -227,7 +227,8 @@ text ends by naming what goes to the author.
 | Decided (E30) | submit directly with full disclosure (no inquiry to the office); the authors used AI tools as a tool for the calculations; the disclosure is **one sentence**. 2.1 *"generally"* confirmed by all four |
 | Decided (E31) | the AI-use sentence, in the Acknowledgments only, with *"and solution approach"* |
 | Decided (E32) | stay with the *Journal of Aircraft* (SJR 2025 Q2, recorded); no shortening (E25 stands); at least one figure (Fig. 1: the aircraft standing on its tail); AIAA's official `new-aiaa.cls` now used (33 pages) |
-| **Open (Round 202)** | Fig. 1 and its caption; three split items (Table 6 caption, [2, 3], [6]); the style pass, change by change (100 rows); next, the journal supplement generator |
+| Decided (E33) | format-only changes (punctuation, American spelling, italics) allowed in protected sentences in the submission output, provided no attachment moves; A02 approved. Closed (Round 202): Fig. 1, Table 6 caption, [2, 3], [6] kept, most of the style pass |
+| **Open (Round 203)** | five style rows (D33, A11, A12, D50, D55); **the journal supplement**: the archive holds the promised content only inside frozen snapshots that also carry retired claims, so a new supplement is to be composed from the 34 body pointers, with a receipt table and (proposed) S1–S11 renumbering |
 | Still to do | numbered references (original sources only); style conversion by a generator script (Roman-numeral sections, *Sec.*, numbered tables and equations, lists as 1) 2), American spelling, no bold emphasis, no dashes); acknowledgments with the AI-use statement |
 | Protected sentences | 145 in the body, 31 in the supplement; U table 14 |
 
