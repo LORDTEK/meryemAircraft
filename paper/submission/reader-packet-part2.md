@@ -1,4 +1,4 @@
-> **Reader packet, part 2 of 4** (commit `73b68ec`). Read all parts before answering; the round text says what to judge.
+> **Reader packet, part 2 of 4** (commit `ddc3212`). Read all parts before answering; the round text says what to judge.
 
 What it does not meet is the second half of both missions. Wildfire observation and response,
 and cargo delivery to places without a runway, each require the aircraft to **cover distance
