@@ -1371,3 +1371,8 @@ NeuralFoil makale künyesi doğrulanmadı. Okuyuculardan künye alanları (bağl
 - **Uygulandı (dördü + Claude):** gövde 5.2 fairing cümlesi Claude'un biçimiyle (ChatGPT "evet", *"compared with"* inceltmesini tercih ediyor → Tur 207). P14 eski cümleye R4 (Qwen R1'den R4'e geçti, kendisi söyledi). C1 S8 metni iki notla kabul.
 - **Açık (Tur 207):** *"within or below"* / *"compared with"* (ChatGPT); *"and not their drag"* (DeepSeek; ChatGPT olduğu gibi kalsın).
 - **Yazarın sorusu (Tur 206):** *"Verimi düşen arkadaş var mı? … Eksik bilgiyle verimli çalışma olmaz."* → okuyucu paketi (`paper/submission/reader-packet.md`, `paper/build/reader_packet.py`): güncel gövde + dergi eki taslağı. Tur 207'de her okuyucuya eksiği ve pencere durumu soruldu. Gövdenin tamamı en son Tur 188–190'da gitmişti.
+
+## Tur 207 cevapları
+- **Kapandı:** S-66 sonucu dördünce teyit; *"within or below"* kaldı (ChatGPT geçti); S8 son cümlesi taslaktaki gibi (*"side force only"*; DeepSeek önerisini geri çekti, ChatGPT taslak, Grok ikisi de, Qwen eki tercih etti → Tur 208'de Qwen'e soruldu).
+- **Yazarın sorusu:** yalnız Qwen cevapladı (eksik yok; S10–S14 için arşiv metni gerekecek; pencere şimdilik iyi). Grok, ChatGPT, DeepSeek cevaplamadı → Tur 208'de yeniden.
+- **Tur 208:** S10 taslağı (sayılar kod yeniden koşturularak); aday **S-67** (6.1'in döngü cümlesi "askı gücü kurulu gücü boyutlar" ↔ 6.2 "motor seyre göre" ↔ kod); arşivde iki hata (MTOW^1.5; %7). Kazanç taraması betiği depoya girdi (`aero/transition_gain_sweep.py`).

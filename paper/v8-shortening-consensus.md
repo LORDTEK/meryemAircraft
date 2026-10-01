@@ -914,3 +914,6 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Tur 205: C1 NACA nitelemesi | (a) iki niteleme | (a) | (a) iki niteleme | (a) | (a) | **kabul; metin Tur 206'da teyide** |
 | Tur 206: S-66 gövde onarımı (Claude'un biçimi) | evet | evet (inceltme önerisi) | evet | evet | evet | **uygulandı; teyide (Tur 207)** |
 | Tur 206: C1 S8 metni (iki not) | evet | evet | evet | evet | evet | **kabul** |
+| Tur 207: S-66 sonucu teyit | evet | evet | evet | evet | evet | **kapandı** |
+| Tur 207: "within or below" / "compared with" | within | within (geçti) | within | within | within | **kapandı** |
+| Tur 207: S8 "only" / "and not their drag" | ikisi | only | only (geri çekti) | not their drag | only | **taslak kalır; Qwen'e soruldu** |
