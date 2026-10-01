@@ -15,3 +15,5 @@ soru listesine giremez (ChatGPT, A-3 oyda). Önceden kabul edilmiş denetimler a
 | — | numarasız işaretçiler (*above*, *below*) için alındı denetimi (Tur 132'de "bir sonraki aşamanın adayı" diye kaydedilmişti; W-1'in iki öğesi gövde kusuru olarak ayrıca onarılıyor) | Claude | 132 / 146 |
 
 **Aşama sonrasına, park değil, gönderim öncesi listesinde:** H-2 atıf haritasının kurulması (F-2) — `paper/deferred-decisions.md`.
+
+**Tur 205 (Claude, F-1 altında park; gövde kusuru değil):** `aero/roll.py` şeridin alanını **açıklık boyunca** (`ys` 0 → 1,164 m) integre ediyor; şerit planformda 45° eğik, kendi boyu daha uzun. Normal kuvvete cos²(45°) uygulanıyor. Hangi uzunluğun doğru olduğu yeniden hesaplanmadı. Gövdede şerit kuvveti ya da yatış momenti sayısı yok; ekin S8'i yalnız açıklık boyunu (1,164 m, yarı açıklığın %67'si) veriyor.

@@ -395,6 +395,9 @@ dahil herkesin hemfikir olduğu kısaltmalar uygulansın."*
   gerekirse) haber vermeyi unutma lütfen. Bak, ben müdahale edince dramatik değişim oluyor."* → Her tur metni **yazara ne gideceğini** adıyla söyleyerek biter;
   yazara her rapor bir **"Sıra sizde mi?"** satırı taşır: ya *"şu an kararınız gerekmiyor"* ya da gereken karar, seçenekleriyle. Sıra yazara gelir: korunan
   cümle (S/C), kapanmış bir kararı yeniden açma, aşama yöntemi, okuyucular yakınsamadığında.
+- **Profesyonel iletişim (yazar, Tur 205).** *"Bu arada Grok'u zorbalama, bazen güzel tavsiyeler verebiliyor. Profesyonel iletişim daim olsun."* →
+  Ayrışan görüş **tarafsız** sunulur: kim ne dedi, gerekçesi, karşı gerekçe; bir okuyucu "tek kalan" diye öne çıkarılmaz, "ötekiler X dedi, Y hayır"
+  biçimi yerine her görüş kendi gerekçesiyle yan yana durur. Bir okuyucunun önerisi benimsenince adıyla anılır. Üslup her okuyucuya aynıdır.
 - **Ben de bir okuyucuyum, hakem değilim.** Her tur metninde her açık madde için **kendi görüşüm ve gerekçem**
   yazılır ve okuyuculardan **benim görüşümü de eleştirmeleri** istenir. Oylama tablosunda ben de bir sütunum.
 - **Uygulama eşiği: dört okuyucu + ben.** Biri bile karşıysa uygulanmaz, geri sorulur. Karar yine yazarındır;

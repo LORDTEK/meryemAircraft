@@ -86,7 +86,7 @@ The second departure is stated separately because it does real work later: a pro
 
 <!-- for P06: "The working is in Supplement S4".
      src: paper/v8/supplement.md S4 working part, table (L1275-L1279); figures checked against the source in this round:
-     Johnson & Silva [16], weight table p. 71 (references/1521_Johnson & Silva_122721.pdf): L/De 4.9 / 8.5 / 8.6; DGW 3,678 / 7,271 / 6,584 lb. -->
+     Johnson & Silva [16], Table 3, p. 70 (references/1521_Johnson & Silva_122721.pdf): L/De 4.9 / 8.5 / 8.6; DGW 3,678 / 7,271 / 6,584 lb. -->
 
 | Configuration (NASA sizing set [16]) | Effective L/D | Design gross weight | Dedicated lift group |
 |---|---:|---:|---|
@@ -121,6 +121,64 @@ And the source states the second half of the prediction in its own words, on a c
 
 <!-- src: S4 working part (L1289-L1300). Protected S4 row (E13) carried. Dashes -> colon and parentheses.
      Check: 8.5 / 4.9 = 1.735 -> 1.73 (the archive wrote 1.74: S-65); 7,271 / 3,678 = 1.977 -> 1.98.
-     PROTECTED WORD CHANGE (author's decision): "the isolation test above" -> "the isolation test of Section 2.3" (the supplement has no test above). -->
+     PROTECTED WORD CHANGE: "the isolation test above" -> "the isolation test of Section 2.3" (the supplement has no test above). Author approved, Round 204 (E34). -->
 
 The quadrotor is reported for scale, and the isolation test of Section 2.3 is what carries the prediction. Against it the lift-plus-cruise configuration is about three-quarters better in cruise efficiency (a factor of 1.73) and nearly twice as heavy, a factor of 1.98. The efficiency credit is exactly what the accounting says a dedicated lift system buys, and the weight charge is exactly what it says the buyer pays: the charge survives the credit. But that contrast changes three things at once (dedicated lift group, powertrain, and whether a cruise wing exists at all), so it supports a weaker proposition than the prediction as stated: that adding a wing and a lift group together still costs mass.
+
+## S5. The landing transition: working for Section 3
+
+<!-- for P09: "… the landing transition is not the take-off transition run backwards, and no figure in this paper describes it (Supplement S5)".
+     src: paper/v8/supplement.md, "Section 5 as it stood before the length pass", paragraph "Neither has the landing transition." (L1630-L1636).
+     Changes: the lead "Neither has the landing transition." dropped (the heading carries it); bold removed; the closing clause shortened,
+     since the body already says no figure describes it. No number. -->
+
+The forward rotation and the reverse are not symmetric and must not be assumed to be. Going out, the rotation builds dynamic pressure while it turns, so lift arrives to replace the vertical component of thrust as that component falls. Coming back, the race runs backwards: dynamic pressure is falling while the aircraft is being turned, so lift is leaving at the moment the thrust vector has not yet returned to vertical. A model built for the first case cannot be read for the second by changing a sign, and no figure in this paper describes the second.
+
+## S6. The cruise-efficiency comparison: working for Section 4
+
+### The blade families
+
+<!-- for P11: "Which blade a designer would choose also turns on structural loads, acoustics, the motor operating point, rotor inertia and manufacture,
+     none of which is modelled in this work (Supplement S6)".
+     src: paper/v8/supplement.md, "Section 6 as it stood before the length pass" (L1830-L1833 and L1856-L1861). Protected S6 row (E13) carried verbatim.
+     Added (working under the body's "four nose-blade families", Section 6.1): the family definitions and each family's efficiency, from
+     aero/nose-propeller-crossing.txt (aero/nose_propeller_crossing.py, rerun this round). "Section 10 is where …" -> Section 6.1. -->
+
+The four nose-blade families are two and three blades per rotor, each designed at two target section lift coefficients, 0.55 and 0.70, and each solved at its hover and its cruise condition by blade-element momentum theory. Their cruise propeller efficiencies are 0.648 and 0.683 with two blades and 0.632 and 0.643 with three, at the lower and the higher section lift coefficient respectively. Whether 0.683 is the blade a designer would actually choose is not settled here. It is the best of the four on cruise efficiency under the hover figure-of-merit constraint. Blade count and section loading also govern structural loads, acoustics, the motor operating point, rotor inertia and manufacture, and none of those is modelled in this work. Section 6.1 is where one blade is carried into a closed sizing loop.
+
+### The compared vehicles
+
+<!-- for P12: "The compared vehicles are larger than both designs studied here, which are of order 50 kg and 1 000 kg (Supplement S6)".
+     src: paper/v8/supplement.md L1906-L1908 (protected S6 row E13 carried verbatim: "The compared vehicles are 1 660 to 3 275 kg").
+     Checked this round against Johnson & Silva [16], Table 3, p. 70: rotorcraft design gross weights QSMR 3,951 / 5,980 lb, side-by-side
+     3,665 / 5,547 lb, quadrotor 3,678 / 7,221 lb; 3,665 lb = 1,662 kg, 7,221 lb = 3,275 kg. Closed masses 52.3 and 57.5 kg: body Section 6.1 table.
+     Change: "across the same bracket" -> "across its four closures" (52.3 kg is closure D, 57.5 kg closure A; they differ in blade as well as drag). -->
+
+The compared vehicles are 1 660 to 3 275 kg: the six rotorcraft entries of the NASA sizing set [16] have design gross weights from 3 665 lb (the turboshaft side-by-side helicopter) to 7 221 lb (the all-electric quadrotor). The designs here are of order 50 kg and 1 000 kg, and Section 6.1 closes the 50 kg design between 52.3 and 57.5 kg across its four closures.
+
+## S8. The strip and the fairing: working for Section 5.2
+
+### The strip's geometry
+
+<!-- for P13: "Roll comes instead from a strip on the lower surface (its geometry is in Supplement S8)".
+     src: paper/v8/supplement.md, "Section 8's paragraphs as they stood before the Round 170 shortening" (L2736). Protected S8 row (E14) carried verbatim
+     with the sentence that gives its "it" a referent. Geometry checked this round against aero/roll.py L55-L57 (SERIT_UZUNLUK = 1.20 x root chord,
+     SERIT_H_IC/DIS = 0.02/0.06 m, SERIT_ACI = 45 deg in planform) and aero/planform.py (root chord 0.97 m); the strip runs from y = 0 to 1.164 m,
+     1.164 / 1.726 = 67 percent of the semi-span. Change: "running 120 % of root chord" made explicit as a spanwise extent, which is how aero/roll.py
+     uses it. -->
+
+The reaction-torque channel is declined: every pair is operated torque-balanced, so no reaction torque is spent on control. What declining it costs is not counted in this work. The strip lies on the lower surface, inclined at 45° in planform, and runs outboard from the centreline over a spanwise extent of 120 percent of the root chord (1.164 m against a root chord of 0.97 m), so that it reaches 67 percent of the 1.726 m semi-span. Fully extended it stands 2 cm proud of the surface at its inboard end and 6 cm at its outboard end; extension scales that height.
+
+### The fairing chord
+
+<!-- for P14: "… sized against the criterion the tailless literature recommends it needs a chord of 39 mm, less than a 20 mm faired strut carries
+     in any case (Supplement S8)".
+     src: paper/v8/supplement.md L2569-L2575 ("What meets the ground"); working from aero/yaw.py, rerun this round: vortex-lattice planform alone
+     C_n_beta = +0.00000 /rad; frame mid-chord arm 0.879 m aft of the CG; required side area C_n_beta S b / (a_f l_f) for both frames;
+     frame length 2 x 0.71 = 1.42 m each, 2.84 m both; chord = area / 2.84 m: a_f = 3.0 -> 52 mm, 4.0 -> 39 mm, 5.0 -> 31 mm.
+     Quotation checked this round: references/NACA-TR-796_…pdf, p. 428 ("… is usually greater than 0.001 per degree").
+     The source's own discussion (same column): models flew at one-third of that value, best flying qualities above it; and for fins at the wing
+     tips "the drag characteristics as well as the lift characteristics of the tip fins exert an influence on the directional stability".
+     The 39 mm counts lift only. Whether the supplement quotes that is put to the readers (Round 205). The 50 to 70 mm is a design assumption, not sourced. -->
+
+The planform alone supplies no directional stability: a vortex-lattice solution of the planform without the frames returns a directional-stability derivative of zero, as a planar surface with nothing standing out of its plane should. The fairing on the tip frames therefore supplies all of it. The criterion is the value recommended for conventional airplanes, which the tailless literature applies to tailless ones: a directional-stability parameter *"usually greater than 0.001 per degree"* [24], 0.0573 per radian. With the frames' mid-chord 0.879 m aft of the centre of gravity, the side area required is C_nβ S b/(a_f l_f), where S and b are the reference area and span, l_f the arm and a_f the lateral lift-curve slope of the faired frame. Taken over the combined frame length of 2.84 m (two frames, each projecting 0.71 m on both sides of the planform), that area is a chord of 39 mm at an assumed a_f of 4.0 per radian, and 52 mm and 31 mm at 3.0 and 5.0. A 20 mm thick faired strut is taken to have a chord of 50 to 70 mm, a fineness ratio of 2.5 to 3.5 assumed here rather than sourced.

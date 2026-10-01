@@ -422,7 +422,7 @@ Each row is a place where the output's words differ from the source. Every row s
 - **D30** `The principle behind the third element — a continuous plant sized for cruise, with the vertical or take-off peak drawn from a store — has been applied` → `The principle behind the third element (a continuous plant sized for cruise, with the vertical or take-off peak drawn from a store) has been applied`
 - **D31** `the body's longitudinal axis — the roll axis in body terms — in both regimes` → `the body's longitudinal axis (the roll axis in body terms) in both regimes`
 - **D32** `relative to the earth — it stands vertical` → `relative to the earth: it stands vertical`
-- **D33** `at the semi-span, 1.726 m — 2.43 times the pitch arm` → `at the semi-span, 1.726 m: 2.43 times the pitch arm`
+- **D33** `at the semi-span, 1.726 m — 2.43 times the pitch arm` → `at the semi-span, 1.726 m, 2.43 times the pitch arm`
 - **D34** `Extension is the control variable — the strip is modulated, not switched — and deploying it` → `Extension is the control variable (the strip is modulated, not switched), and deploying it`
 - **D35** `deployable in two halves — one side alone` → `deployable in two halves: one side alone`
 - **D36** `produced by something — motor holding torque, an electrical brake, a mechanical lock — and a stopped` → `produced by something (motor holding torque, an electrical brake, a mechanical lock), and a stopped`
@@ -444,7 +444,7 @@ Each row is a place where the output's words differ from the source. Every row s
 - **D52** `the range result or the energy store — nor on the transition` → `the range result or the energy store, nor on the transition`
 - **D53** `What that refusal costs — in thrust asymmetry, in propulsive efficiency, and in response time set by rotor inertia — is not computed` → `What that refusal costs (in thrust asymmetry, in propulsive efficiency, and in response time set by rotor inertia) is not computed`
 - **D54** `a *class of mechanism* — the one that` → `a class of mechanism: the one that`
-- **D55** `and the accounting — which is what Sections 5.1 and 5.2 describe` → `and the accounting; that is what Sections 5.1 and 5.2 describe`
+- **D55** `and the accounting — which is what Sections 5.1 and 5.2 describe` → `and the accounting, all of which Sections 5.1 and 5.2 describe`
 - **D56** `and — while the tip pairs free-wheel or are held by motor torque — no rotor stowing` → `and (while the tip pairs free-wheel or are held by motor torque) no rotor stowing`
 - **T1h** `What it creates — a bill by its number, any other cost in words` → `What it creates (a bill by its number, any other cost in words)`
 - **T1a** `| 3 — the cruise engine no longer sizes to hover | 1 and 2 — many rotors` → `| 3: the cruise engine no longer sizes to hover | 1 and 2: many rotors`

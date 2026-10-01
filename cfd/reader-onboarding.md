@@ -210,7 +210,7 @@ closes.** Readers answer one another, not only Claude.
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 204.** All four readers work in new conversations since Round 169; this was done **for equality** (Grok's conversation did not need
+**Round 205.** All four readers work in new conversations since Round 169; this was done **for equality** (Grok's conversation did not need
 renewing). **The author (Round 171):** *"You readers, work together. Whenever it comes to my turn, don't forget to tell me."* Each round
 text ends by naming what goes to the author.
 
@@ -229,7 +229,9 @@ text ends by naming what goes to the author.
 | Decided (E32) | stay with the *Journal of Aircraft* (SJR 2025 Q2, recorded); no shortening (E25 stands); at least one figure (Fig. 1: the aircraft standing on its tail); AIAA's official `new-aiaa.cls` now used (33 pages) |
 | Decided (E33) | format-only changes (punctuation, American spelling, italics) allowed in protected sentences in the submission output, provided no attachment moves; A02 approved. Closed (Round 202): Fig. 1, Table 6 caption, [2, 3], [6] kept, most of the style pass |
 | Closed (Round 203) | A11, A12, D50 applied; the supplement method agreed; no pointer removed |
-| **Open (Round 204)** | the new journal supplement, S2–S4 drafted in `paper/submission/supplement-src.md` with provenance (two archive defects found: S-64 sign, S-65 rounding); splits D33, D55, renumbering, ChatGPT's no-new-claim rule |
+| Closed (Round 204) | D33 comma form and D55 *"all of which"* (both Grok's) applied; the journal supplement renumbered S1–S11; ChatGPT's rule adopted (*"A supplement passage may clarify or expose working already underlying the body pointer, but may not introduce a new substantive claim that the body itself does not make or promise."*); P01–P07 R1; S-64, S-65 accepted |
+| Decided (E34) | the protected S4 sentence reads *"the isolation test of Section 2.3"* |
+| **Open (Round 205)** | the journal supplement S5, S6, S8 (receipts P09, P11–P14); two questions on the fairing chord (C1 the source's tip-fin qualification; C2 the body's *"less than … in any case"* against the assumed lateral lift slope, candidate S-66); still to compose: S10–S14 |
 | Still to do | numbered references (original sources only); style conversion by a generator script (Roman-numeral sections, *Sec.*, numbered tables and equations, lists as 1) 2), American spelling, no bold emphasis, no dashes); acknowledgments with the AI-use statement |
 | Protected sentences | 145 in the body, 31 in the supplement; U table 14 |
 

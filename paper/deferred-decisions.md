@@ -1348,3 +1348,15 @@ NeuralFoil makale künyesi doğrulanmadı. Okuyuculardan künye alanları (bağl
 - Ayrışık → Tur 204: D33 (Grok virgül, ötekiler iki nokta), D55 (Grok *"all of which"*; Claude Grok'a geçti), yeniden numaralama (ChatGPT hayır), ChatGPT'nin "yeni iddia yok" kuralı.
 - **Dergi eki S2–S4 taslağı:** `paper/submission/supplement-src.md` (kaynak notlarıyla). Kaynağı açarken iki arşiv kusuru: **S-64** (S4 ağırlık dökümü, batarya +10 lb, işaret ters yazılmıştı; gövdenin 580'i doğru), **S-65** (1,74 → 1,73).
 - **Yazara (Tur 204 F):** E13 ile eke taşınan korunan cümlede *"the isolation test above"* → *"of Section 2.3"*.
+
+## E34 — korunan cümlede sözcük değişikliği (Ek S4) · **YAZAR (2026-10-01): "evet"**
+- *"the isolation test above"* → *"the isolation test of Section 2.3"* (dergi ekinde yukarıda bir sınama yok). Uygulandı (`paper/submission/supplement-src.md`).
+- **Yazarın talimatı (aynı mesaj):** *"Bu arada Grok'u zorbalama, bazen güzel tavsiyeler verebiliyor. Profesyonel iletişim daim olsun."* → CLAUDE.md §2.3'e kural: ayrışan görüş tarafsız, gerekçesiyle yan yana; benimsenen öneri adıyla anılır.
+
+## Tur 204 cevapları — kapananlar
+- **D33** Grok'un virgül biçimi (*"1.726 m, 2.43 times the pitch arm"*) ve **D55** Grok'un *"all of which"* biçimi: dördü + Claude; üreteçte uygulandı, çıktıda doğrulandı.
+- **Yeniden numaralama** dergi ekinde S2–S14 → S1–S11: dördü + Claude (köken her parçanın notunda ve depoda).
+- **ChatGPT'nin kuralı** (*"A supplement passage may clarify or expose working … may not introduce a new substantive claim …"*): dördü + Claude.
+- P01–P07 alındıları R1; S-64 ve S-65 kabul.
+- **Tur 205'te bulunan (Claude):** S4 kaynak notunda ve S-64 satırında Johnson & Silva Tablo 3'ün sayfası **s. 71** yazılmıştı; doğrusu **s. 70** (PDF s. 12). Sayılar değişmedi.
+- **Dergi eki S5, S6, S8 taslağı** (`paper/submission/supplement-src.md`), Tur 205'te okuyuculara.
