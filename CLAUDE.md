@@ -398,6 +398,10 @@ dahil herkesin hemfikir olduğu kısaltmalar uygulansın."*
 - **Profesyonel iletişim (yazar, Tur 205).** *"Bu arada Grok'u zorbalama, bazen güzel tavsiyeler verebiliyor. Profesyonel iletişim daim olsun."* →
   Ayrışan görüş **tarafsız** sunulur: kim ne dedi, gerekçesi, karşı gerekçe; bir okuyucu "tek kalan" diye öne çıkarılmaz, "ötekiler X dedi, Y hayır"
   biçimi yerine her görüş kendi gerekçesiyle yan yana durur. Bir okuyucunun önerisi benimsenince adıyla anılır. Üslup her okuyucuya aynıdır.
+- **Okuyucu paketi (yazar, Tur 206).** *"Verimi düşen arkadaş var mı? … Eksik bilgiyle verimli çalışma olmaz."* Okuyucular depoyu açamaz;
+  bir bütüne karşı hüküm istenen her soruda (örn. *"gövdenin söylemediği bir iddia ekliyor mu"*) o bütün tur metniyle birlikte gider.
+  `paper/build/reader_packet.py` → `paper/submission/reader-packet.md` (güncel gövde + dergi eki taslağı); gövde değişince yeniden üretilir.
+  Yeni pencere açan okuyucuya başlangıç metni + güncel tur metni + paket. Okuyuculara düzenli olarak eksiklerini ve pencere durumlarını sor.
 - **Ben de bir okuyucuyum, hakem değilim.** Her tur metninde her açık madde için **kendi görüşüm ve gerekçem**
   yazılır ve okuyuculardan **benim görüşümü de eleştirmeleri** istenir. Oylama tablosunda ben de bir sütunum.
 - **Uygulama eşiği: dört okuyucu + ben.** Biri bile karşıysa uygulanmaz, geri sorulur. Karar yine yazarındır;

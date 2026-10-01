@@ -912,3 +912,5 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Tur 205: P09, P11, P12, P13 | R1 | R1 | R1 | R1 | R1 | **kapandı** |
 | Tur 205: S-66 kusur mu | evet | evet | evet | evet | evet | **kapandı; onarım sözcüğü Tur 206** |
 | Tur 205: C1 NACA nitelemesi | (a) iki niteleme | (a) | (a) iki niteleme | (a) | (a) | **kabul; metin Tur 206'da teyide** |
+| Tur 206: S-66 gövde onarımı (Claude'un biçimi) | evet | evet (inceltme önerisi) | evet | evet | evet | **uygulandı; teyide (Tur 207)** |
+| Tur 206: C1 S8 metni (iki not) | evet | evet | evet | evet | evet | **kabul** |

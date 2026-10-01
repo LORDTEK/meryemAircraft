@@ -1366,3 +1366,8 @@ NeuralFoil makale künyesi doğrulanmadı. Okuyuculardan künye alanları (bağl
 - **P14:** ChatGPT, DeepSeek R4; Grok R2/R4; Qwen R1 (ama C2'de R4 riski dedi) → Tur 206'da Qwen'e soruldu.
 - **S-66 onarım sözcüğü:** dört ayrı biçim + Claude'unki, Tur 206'da yan yana. Gövde cümlesi korunan değil; yakınsamazsa yazara.
 - **Claude'un hatası:** S-65 satırında da s. 71 kalmıştı (yayılma defteri koşulmadı); düzeltildi.
+
+## Tur 206 cevapları — S-66 onarıldı
+- **Uygulandı (dördü + Claude):** gövde 5.2 fairing cümlesi Claude'un biçimiyle (ChatGPT "evet", *"compared with"* inceltmesini tercih ediyor → Tur 207). P14 eski cümleye R4 (Qwen R1'den R4'e geçti, kendisi söyledi). C1 S8 metni iki notla kabul.
+- **Açık (Tur 207):** *"within or below"* / *"compared with"* (ChatGPT); *"and not their drag"* (DeepSeek; ChatGPT olduğu gibi kalsın).
+- **Yazarın sorusu (Tur 206):** *"Verimi düşen arkadaş var mı? … Eksik bilgiyle verimli çalışma olmaz."* → okuyucu paketi (`paper/submission/reader-packet.md`, `paper/build/reader_packet.py`): güncel gövde + dergi eki taslağı. Tur 207'de her okuyucuya eksiği ve pencere durumu soruldu. Gövdenin tamamı en son Tur 188–190'da gitmişti.
