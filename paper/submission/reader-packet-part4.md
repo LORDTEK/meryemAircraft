@@ -1,4 +1,4 @@
-> **Reader packet, part 4 of 4** (commit `73b68ec`). Read all parts before answering; the round text says what to judge.
+> **Reader packet, part 4 of 4** (commit `ddc3212`). Read all parts before answering; the round text says what to judge.
 
 The loop holds wing loading (25.3 kg/m²), disc loading (44.2 kg/m²) and aspect ratio (6.03) fixed, so area, span and nose disc diameter follow the mass: across the four closures the wing area runs from 2.07 to 2.27 m², the span from 3.53 to 3.70 m and the nose disc diameter from 1.23 to 1.29 m, and the cruise lift coefficient is 0.450 in every one of them. The tip-frame length, the tip-disc diameter and the strip are not sizing variables. They were set on the 50 kg reference design of Section 5.2, and the control moment arms of Section 5.2 are therefore reference values that this closure does not re-derive.
 
