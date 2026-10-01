@@ -926,3 +926,6 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Tur 211: S12 P24, P25 | R1 | R1 | R1 | R1 | R1 | **kapandı** |
 | Tur 211: P22 ek cümle | evet | evet | değişiklik yok | evet | evet | **Tur 212'de DeepSeek'e** |
 | Tur 211: S12 dönüş süresi | sayılarla | yalnız cümle | sayılarla | çıksın | sayılarla | **Tur 212; olası yazar** |
+| Tur 212: P22 ek cümle | evet | evet | kabul edilebilir | evet | evet | **uygulandı; teyide (Tur 213)** |
+| Tur 212: S12 dönüş süresi | sayılarla | sayılarla (geçti) | sayılarla | sayılarla (geçti) | sayılarla | **kapandı** |
+| Tur 212: S13 P26–P30 | R1 | R1 | R1 | R1 | R1 | **kapandı** |

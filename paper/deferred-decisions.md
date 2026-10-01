@@ -1402,3 +1402,7 @@ NeuralFoil makale künyesi doğrulanmadı. Okuyuculardan künye alanları (bağl
 - **B1 (P22):** ek cümle — Grok, ChatGPT, Qwen, Claude evet; DeepSeek "değişiklik gerekmez" → Tur 212'de kabul edilebilir mi diye soruldu.
 - **B2 (S12 dönüş süresi):** Grok, DeepSeek, Claude sayılarla kalsın; ChatGPT yalnız korunan cümle; Qwen alt bölüm çıksın (korunan satırı çıkarmak yazarın kararı) → Tur 212; yakınsamazsa yazara üç seçenekle.
 - **Tur 212:** S13 taslağı (P26–P30), `aero/contracts.py` yeniden koşuldu, aynı.
+
+## Tur 212 cevapları
+- **Kapandı (beşimiz):** P22 ek cümlesi (DeepSeek "kabul edilebilir") — gövdeye uygulandı (Adım 11), denetimler temiz, PDF yeniden üretildi → Tur 213'te teyide. S12 dönüş süresi sayılarla kalır (ChatGPT ve Qwen geçti; yazara gitmez). S13 P26–P30 R1.
+- **Tur 213:** S14 taslağı (P08, P10, P23, P31–P34); `aero/buffer.py` yeniden koşuldu (aynı); Yu [25] Tablo 7'den 249 s ve 1,49 kW/kg bu tur doğrulandı. Bütün 34 işaretçinin parçası var. Sonra: ek üreteci, alındı tablosu, son bütün-gövde denetimi (paket).
