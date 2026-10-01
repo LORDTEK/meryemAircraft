@@ -505,3 +505,40 @@ Each row is a place where the output's words differ from the source. Every row s
 
 ## Italic (non-quotation) kept (0)
 
+
+## Supplement labels renumbered (S2–S14 → S1–S11) (34)
+
+- Supplement S2 → S1
+- Supplement S2 → S1
+- Supplement S2 → S1
+- Supplement S3 → S2
+- Supplement S3 → S2
+- Supplement S4 → S3
+- Supplement S4 → S3
+- Supplement S14 → S11
+- Supplement S5 → S4
+- Supplement S14 → S11
+- Supplement S6 → S5
+- Supplement S6 → S5
+- Supplement S8 → S6
+- Supplement S8 → S6
+- Supplement S11 → S8
+- Supplement S10 → S7
+- Supplement S10 → S7
+- Supplement S10 → S7
+- Supplement S11 → S8
+- Supplement S11 → S8
+- Supplement S11 → S8
+- Supplement S11 → S8
+- Supplement S14 → S11
+- Supplement S12 → S9
+- Supplement S12 → S9
+- Supplement S13 → S10
+- Supplement S13 → S10
+- Supplement S13 → S10
+- Supplement S13 → S10
+- Supplement S13 → S10
+- Supplement S14 → S11
+- Supplement S14 → S11
+- Supplement S14 → S11
+- Supplement S14 → S11
