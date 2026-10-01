@@ -1416,3 +1416,9 @@ NeuralFoil makale künyesi doğrulanmadı. Okuyuculardan künye alanları (bağl
 - Grok, Qwen: kusur yok. DeepSeek: kusur adayı B2 (S13 beşinci duyarlılık satırı, bloke etmiyor) + gönderim sonrası öneri (f_energy/f_fuel → park). ChatGPT: B1 (S13'ün eğik kanat cümlesi, §8'in korunan menzil cümlesiyle; R4).
 - Dördü: üç onarım her yerde taşınmış; dört eksende iddialar tutuyor; hakem ilk okumada takılmaz.
 - **Tur 215:** B1 (Claude: S13 cümlesi silinsin ya da çerçeve eklensin), B2 (Claude: satır kalsın). Sonra paket yazara.
+
+## Tur 215 cevapları
+- **B1 (beşimiz, b):** S13 eğik kanat cümlesine çerçeve eklendi (*"…: the size of the bound of Section 6.4, not a ranking."*); ek PDF yeniden üretildi → Tur 216'da teyide.
+- **B2:** beşinci duyarlılık satırı kalır (Grok, ChatGPT, DeepSeek, Claude b; Qwen c, ChatGPT c'ye karşı) — değişiklik yok.
+- **C:** f_energy/f_fuel park.
+- **Paket yazara (Tur 216):** gövde PDF (33 s.), ek PDF (14 s.), 26 kaynak, YZ cümlesi, alındı tablosu 34/34 R1.

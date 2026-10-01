@@ -409,7 +409,9 @@ Range in the sizing loop is R = f_fuel E* η_chain (L/D)/g, with E* the fuel's s
 ### The per-closure numbers
 
 <!-- for P28 (Section 6.4): "The per-closure numbers are in Supplement S13." src: archive S13 first table (L4126-L4132); figures from aero/contracts.py, rerun this
-     round. Added from the same output: the mass ratio under the first contract and the shift. -->
+     round. Added from the same output: the mass ratio under the first contract and the shift.
+     Round 216 (B1, all five, option b): the tilting sentence carries the bound's frame from Section 6.4 (raised by ChatGPT against Section 8's
+     protected range sentence). B2 (all five keep the fifth sensitivity row; Qwen preferred adding a label clause, ChatGPT opposed it). -->
 
 Range of the lift-plus-cruise layout relative to this configuration (positive: lift-plus-cruise ahead), and the mass ratio under the first contract:
 
@@ -420,7 +422,7 @@ Range of the lift-plus-cruise layout relative to this configuration (positive: l
 | C | +83.9 % | +53.5 % | +7.3 % | 76.6 points | 1.378 |
 | D | +70.2 % | +40.1 % | −6.5 % | 76.7 points | 1.409 |
 
-The tilting layout, credited with no cruise penalty, is 93 to 141 percent ahead under every contract at every closure.
+The tilting layout, credited with no cruise penalty, is 93 to 141 percent ahead under every contract at every closure: the size of the bound of Section 6.4, not a ranking.
 
 ### Without the common buffer
 
