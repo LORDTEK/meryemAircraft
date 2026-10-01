@@ -240,7 +240,7 @@ Each row is a place where the output's words differ from the source. Every row s
 - take-off → takeoff
 - centre → center
 - take-off → takeoff
-- take-off → takeoff
+- Take-off → Takeoff
 - take-off → takeoff
 - take-off → takeoff
 - take-off → takeoff
