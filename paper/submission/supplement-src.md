@@ -2,7 +2,7 @@
 
 <!-- Uretim kaynagi. Gonderim ureteci (sonraki adim) bunu LaTeX'e cevirir: "Section 2.1" -> "Sec. II.A", Amerikan yazimi, sayi bicimi.
      Kural (Tur 203, dort okuyucu + Claude; ChatGPT'nin eki oylamada): yalniz govdenin 34 atfinin vaat ettigi icerik; her parca bir arsiv
-     kopyasindan gelir ve bugunku govdeye getirilir; emekli iddia yok; sayi kimligi korunur; her parcanin kaynagi <!-- src --> notunda. -->
+     kopyasindan gelir ve bugunku govdeye getirilir; emekli iddia yok; sayi kimligi korunur; her parcanin kaynagi src notunda. -->
 
 ## S2. The charges: working for Section 2.1
 

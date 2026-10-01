@@ -1,12 +1,12 @@
-> **Reader packet, part 1 of 4** (commit `0076354`). Read all parts before answering; the round text says what to judge.
+> **Reader packet, part 1 of 4** (commit `73b68ec`). Read all parts before answering; the round text says what to judge.
 
 # meryemAircraft — reader packet: the current body and the journal supplement draft
 
-> Generated from the repository at commit `0076354` (branch `claude/ecstatic-cori-6w30at`). It is a reference for reading the round texts, not a task in itself.
+> Generated from the repository at commit `73b68ec` (branch `claude/ecstatic-cori-6w30at`). It is a reference for reading the round texts, not a task in itself.
 >
-> **Part 1** is the current body (14775 words) in the assembled numbering the round texts use (*"Section 5.2"*). The submission generator converts this to the journal's form (Roman-numeral sections, *Sec.*, numbered citations, American spelling, one figure); the wording is the same.
+> **Part 1** is the current body (14786 words) in the assembled numbering the round texts use (*"Section 5.2"*). The submission generator converts this to the journal's form (Roman-numeral sections, *Sec.*, numbered citations, American spelling, one figure); the wording is the same.
 >
-> **Part 2** is the journal supplement as drafted so far (5638 words), with each passage's provenance note.
+> **Part 2** is the journal supplement (7453 words), complete, without the provenance notes: the text as it will be submitted. The notes are in the repository, `paper/submission/supplement-src.md`. It keeps the archive labels (S2–S14) that the body's pointers use; the submission renumbers both to S1–S11.
 
 ---
 
@@ -362,12 +362,3 @@ cruise lift.**
 
 Section 3 established the first half: the aircraft must leave from and return to a site that
 supplies nothing. **A rotorcraft meets that requirement completely.**
-
-What it does not meet is the second half of both missions. Wildfire observation and response,
-and cargo delivery to places without a runway, each require the aircraft to **cover distance
-after it has left the unprepared site**, and a vehicle with no wing buys every second of that
-distance with installed power. The consequence has been stated independently: surveying the
-field, one study concludes that multirotors are efficient in hover and suited to short-range
-missions, while vectored-thrust aircraft are efficient in cruise and suited to long-range ones.
-
-### What the configuration does instead

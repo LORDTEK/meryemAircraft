@@ -268,6 +268,7 @@ SPELLING = [  # (Ingiliz, Amerikan) -- sozcuk sinirli, buyuk-kucuk harf korunur
     ('utilised', 'utilized'), ('emphasised', 'emphasized'), ('catalogue', 'catalog'), ('defence', 'defense'),
     ('grey', 'gray'), ('travelled', 'traveled'), ('fuelled', 'fueled'), ('labelled', 'labeled'), ('levelled', 'leveled'),
     ('programme', 'program'), ('take-off', 'takeoff'),
+    ('maximises', 'maximizes'), ('kilometre', 'kilometer'), ('kilometres', 'kilometers'), ('disfavour', 'disfavor'),
 ]
 # 'analyses' fiil mi isim mi baglama bagli: elle
 ANALYSES_VERB = ['Section 10 analyses', 'analyses the transition', 'which analyses']
@@ -349,6 +350,17 @@ def conv_pointers(t):
         return new
     return re.sub(r'\b(Sections?) (\d+(?:\.\d+)?)(?:,? and (\d+(?:\.\d+)?))?(?!\.\d)', rep, t)
 
+# Dergi eki S2-S14 -> S1-S11 (Tur 204, dort okuyucu + Claude). Kaynak ve arsiv eski etiketleri tasir.
+SUPP_MAP = {'2': '1', '3': '2', '4': '3', '5': '4', '6': '5', '8': '6', '10': '7', '11': '8', '12': '9', '13': '10', '14': '11'}
+RAPOR.setdefault('supplement', [])
+def conv_supp(t):
+    def rep(m):
+        n = m.group(1)
+        assert n in SUPP_MAP, ('dergi ekinde olmayan bolum', n)
+        RAPOR['supplement'].append('Supplement S%s → S%s' % (n, SUPP_MAP[n]))
+        return 'Supplement S' + SUPP_MAP[n]
+    return re.sub(r'\bSupplement S(\d+)\b', rep, t)
+
 def conv_spelling(t):
     for gb, us in SPELLING:
         def rep(m, us=us):
@@ -386,6 +398,7 @@ def conv_inline(t, in_table=False):
             return inner                                   # alinti: italik degil, tirnak kalir
         RAPOR['italics'].append(inner[:80]); return '⟦I⟧' + inner + '⟦/I⟧'
     t = re.sub(r'(?<![*\w])\*([^*\n]+?)\*(?![*\w])', ital, t)
+    t = conv_supp(t)
     t = conv_pointers(t)
     t = conv_spelling(t)
     t = conv_numbers(t)
@@ -607,6 +620,7 @@ def norm_md(t):
     t = re.sub(r'(?<![*\w])\*([^*\n]+?)\*(?![*\w])', r'\1', t)
     t = re.sub(r'^#+ (\d+(\.\d+)?\.? )?', '', t, flags=re.M)
     t = re.sub(r'^\|?[-:| ]+\|$', '', t, flags=re.M)
+    t = re.sub(r'\bSupplement S\d+\b', ' SUPP REF ', t)
     t = re.sub(r'\bSections? \d+(?:\.\d+)?(?:,? and \d+(?:\.\d+)?)?(?!\.\d)', ' SECREF ', t)
     t = re.sub(r'(?<![\d.,])(\d{1,3}) (\d{3})(?!\d)', r'\1\2', t)
     for gb, us in SPELLING:
@@ -622,6 +636,7 @@ def norm_tex(t):
     t = re.sub(r'\\includegraphics(\[[^\]]*\])?\{[^}]*\}', '', t)
     t = re.sub(r'~?\\cite\{[^}]*\}', '', t)
     t = re.sub(r'\\(begin|end)\{[^}]*\}(\{[^}]*\})*(\[[^\]]*\])?(\{[^}]*\})*', ' ', t)
+    t = re.sub(r'\bSupplement S\d+\b', ' SUPP REF ', t)
     t = re.sub(r'\b(Secs?\.|Sections?) [IVX]+(?:\.[A-H])?(?: and [IVX]+(?:\.[A-H])?)?', ' SECREF ', t)
     t = re.sub(r'(\d),(\d{3})', r'\1\2', t)
     t = re.sub(r'\\[a-zA-Z]+', ' ', t)
@@ -649,7 +664,7 @@ with open(REPORT, 'w', encoding='utf-8') as f:
     titles = {'citations': 'Citation markers inserted', 'e1': 'E1 tool names (Round 195)', 'table_refs': 'Table references (for reader check)',
               'pointers': 'Section pointers', 'spelling': 'American spelling', 'numbers': 'Number format', 'percent': 'Percent spacing',
               'headings': 'Headings (title case)', 'warnings': 'Warnings', 'dashes': 'Dashes left in the text (style pass: reader round)',
-              'above_below': '"above" / "below" left in the text (style pass: reader round)', 'italics': 'Italic (non-quotation) kept', 'style': 'Style pass (Round 202; for reader check)'}
+              'above_below': '"above" / "below" left in the text (style pass: reader round)', 'supplement': 'Supplement labels renumbered (S2–S14 → S1–S11)', 'italics': 'Italic (non-quotation) kept', 'style': 'Style pass (Round 202; for reader check)'}
     for k, v in RAPOR.items():
         f.write('\n## %s (%d)\n\n' % (titles[k], len(v)))
         for x in v: f.write('- %s\n' % x)

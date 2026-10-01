@@ -1406,3 +1406,8 @@ NeuralFoil makale künyesi doğrulanmadı. Okuyuculardan künye alanları (bağl
 ## Tur 212 cevapları
 - **Kapandı (beşimiz):** P22 ek cümlesi (DeepSeek "kabul edilebilir") — gövdeye uygulandı (Adım 11), denetimler temiz, PDF yeniden üretildi → Tur 213'te teyide. S12 dönüş süresi sayılarla kalır (ChatGPT ve Qwen geçti; yazara gitmez). S13 P26–P30 R1.
 - **Tur 213:** S14 taslağı (P08, P10, P23, P31–P34); `aero/buffer.py` yeniden koşuldu (aynı); Yu [25] Tablo 7'den 249 s ve 1,49 kW/kg bu tur doğrulandı. Bütün 34 işaretçinin parçası var. Sonra: ek üreteci, alındı tablosu, son bütün-gövde denetimi (paket).
+
+## Tur 213 cevapları
+- **Kapandı (dördü + Claude):** P22 R1; S14'ün yedi işaretçisi R1; dört işaretli değişiklik kabul. **34 işaretçinin hepsi R1.**
+- 18–22° ve 1,78 kg/m²: Grok "betik varsa koş, yoksa etiket kalsın"; ötekiler gerek yok. Betik bulunamadı → etiket kaynak notunda kalır.
+- **Tur 214 (mekanik):** gövde üretecinde ek etiketleri S1–S11; `paper/build/supplement_build.py` (14 sayfa, korunan 30 satır denetimi, `--sina`); `paper/submission/receipt-table.md`; okuyucu paketi `--yalin` (kaynak notsuz, 4 parça). Son bütün-gövde denetimi Tur 214'te (kontrol noktası; paket gider).

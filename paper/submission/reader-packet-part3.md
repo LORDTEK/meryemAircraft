@@ -1,4 +1,11 @@
-> **Reader packet, part 3 of 4** (commit `0076354`). Read all parts before answering; the round text says what to judge.
+> **Reader packet, part 3 of 4** (commit `73b68ec`). Read all parts before answering; the round text says what to judge.
+
+Three architectures fly the same mission, 13 kg of payload at 30 m s⁻¹, with the same wing loading, disc loading and aspect ratio,
+the same airframe and avionics fractions, and the same energy chain apart from the propeller. **The competitors are therefore this
+planform with two add-ons, not independently designed aircraft of their families.** All three carry the same buffered series-hybrid
+power system, so Bill 3 is held common and the comparison measures mass and cruise drag. **Holding Bill 3 common is a choice of
+question, and it has a direction.** **The choice runs against this configuration**: without the buffer, and with engines rated to the
+hover demand, the lift-plus-cruise layout does not close under a fixed fuel fraction or a fixed take-off mass (Supplement S13).
 
 The basis is not symmetric. The lift-plus-cruise layout carries a lift-to-drag ratio transferred from a different airframe's
 wind-tunnel campaign (Section 2.1), and its stopped lift rotors take an indexing mechanism (Section 5.1) whose mass is not charged. **The
@@ -138,13 +145,10 @@ The configuration is arranged to change regime by rotating the airframe rather t
 
 # Part 2. The journal supplement (draft so far)
 
-> *Provenance and changes:* Uretim kaynagi. Gonderim ureteci (sonraki adim) bunu LaTeX'e cevirir: "Section 2.1" -> "Sec. II.A", Amerikan yazimi, sayi bicimi. Kural (Tur 203, dort okuyucu + Claude; ChatGPT'nin eki oylamada): yalniz govdenin 34 atfinin vaat ettigi icerik; her parca bir arsiv kopyasindan gelir ve bugunku govdeye getirilir; emekli iddia yok; sayi kimligi korunur; her parcanin kaynagi <!-- src notunda. -->
-
 ### S2. The charges: working for Section 2.1
 
 #### The power ratio
 
-> *Provenance and changes:* for P01: "The ratio between the two demands follows from the governing equations rather than from any design choice (Supplement S2)". src: paper/v8/supplement.md, "Section 2 as it stood before recomposition into result sentences", Bill 3 (L756-L771). Verbatim except the Section number.
 
 Taking hover power from momentum theory and cruise power from the drag polar,
 
@@ -159,13 +163,11 @@ A vehicle with a disc loading of 100 N m⁻², a cruise lift-to-drag ratio of 15
 
 #### The transfer with direct experimental support
 
-> *Provenance and changes:* for P02: "One of these transfers has direct experimental support (Supplement S2)". src: same snapshot, "The charges are coupled" (L805-L812). Change: dash pair -> parentheses (E33, protected S2 row, format only). ADDED (source fact, for reader vote): "and deducted from the battery mass" -- Bacchini thesis eq. (81), paper/bacchini-reading-record.md 5.2.
 
 In the doctoral study whose wind-tunnel campaign Section 2.1 quotes [14], and in that document rather than in the journal article by the same author, which reports a different comparison, a retraction system removed thirty percent of the airframe's drag; the same work then costed it. Applied to a passenger eVTOL, with the mechanism assessed at five percent of vehicle mass and deducted from the battery mass, maximum range rose from 119 km to 121 km: a two-kilometre gain for a five-percent mass penalty. The same work finds the retraction's advantage elsewhere (the speed that maximises range rose by 5 m/s), which is a performance this accounting does not price. Bill 2 was converted almost exactly into Bill 1, and the transfer is the point rather than the small residue.
 
 #### The tilting row
 
-> *Provenance and changes:* for P03: "The tilting row, which needs both clarifications, is worked through in Supplement S2". src: same snapshot, "One row pays part of its cost…" (L795-L801), "Two clarifications…" (L822-L832), "The tilting row needs both clarifications" (L834-L839). Protected S2 rows (E16) carried, format only (E33). ADDED connector sentence (for reader vote): "The two clarifications of Section 2.1 apply to it as follows."
 
 What a tilting architecture buys its unified propulsion group with is a mechanism: a pivot, an actuator, the gyroscopic coupling of a reorienting mass, and a control problem through the turn. The pivot and the actuator are paid in kilograms, although they are not lift-subsystem mass; the coupling and the control problem are paid in none of the three.
 
@@ -177,7 +179,6 @@ The tilting row needs both clarifications. If the architecture it modifies suppl
 
 #### What each departure costs
 
-> *Provenance and changes:* for P04: "What each departure costs is in Supplement S3". src: paper/v8/supplement.md S3 working part, the departures table (L921-L926); the note from "Section 3 as it stood before recomposition…" (L1096-L1100). Change: one dash -> comma (row 4).
 
 | Departure | What it costs |
 |---|---|
@@ -190,7 +191,6 @@ The second departure is stated separately because it does real work later: a pro
 
 #### The six permitted costs
 
-> *Provenance and changes:* for P05: "Six costs are permitted, named here before any candidate is examined (the working is in Supplement S3)". src: "Section 3 as it stood before recomposition into result sentences", the six bullets (L1131-L1180) and the failure-mode note (L1199-L1201). BROUGHT UP TO THE CURRENT BODY (superseded wording not carried): (3) snapshot "it is priced where the transition is analysed" -> current body "Section 6.1 analyses the transition without pricing it" (Round 191, row 0); (5) snapshot "Attitude devices produce thrust in cruise" -> current body "produce no cruise thrust in that sense" (the tip pairs free-wheel at zero shaft torque in cruise, Round 130-131); (6) "Section 11" -> "Section 6.2".  Protected S3 row (E17) carried. Dashes -> parentheses or colons.
 
 1) **A store.** It has the same duty-cycle character as Bill 1. The fourth part moves the hover peak off the continuous power plant and onto a store; that store delivers its peak for two percent of the flight and is carried for the rest. It is not Bill 1 as Section 2.1 defines it (it is not lift-subsystem mass), but it is mass carried for a duty that is briefly needed, which is the same complaint Bill 1 makes. The condition converts a power-system charge into a cost in kilograms and claims only that the three charges as named are not incurred. It does not claim the trade is favourable. Whether the store is lighter than the continuous power it displaces is a sizing result and is computed, not asserted.
 
@@ -208,7 +208,6 @@ The second departure is stated separately because it does real work later: a pro
 
 #### The published designs used
 
-> *Provenance and changes:* for P06: "The working is in Supplement S4". src: paper/v8/supplement.md S4 working part, table (L1275-L1279); figures checked against the source in this round: Johnson & Silva [16], Table 3, p. 70 (references/1521_Johnson & Silva_122721.pdf): L/De 4.9 / 8.5 / 8.6; DGW 3,678 / 7,271 / 6,584 lb.
 
 | Configuration (NASA sizing set [16]) | Effective L/D | Design gross weight | Dedicated lift group |
 |---|---:|---:|---|
@@ -218,31 +217,26 @@ The second departure is stated separately because it does real work later: a pro
 
 #### Why the second half of the prediction is not derived
 
-> *Provenance and changes:* src: "Section 4's paragraphs as they stood before the Round 184 shortening" (L1514) and "…before the Round 167 recomposition" (L1466). Protected S4 rows (E20) carried: the counter-set and "None is known to the authors." Change: "the mission used below" -> "the mission of Section 2.3"; dash -> colon.
 
 Section 2.1 predicts the charge and the amplification; it does not prove that the credit must lose. A dedicated lift system raises the empty-mass fraction and may lower the energy fraction at the same time, and which wins is a closure result rather than a consequence of the accounting. If some data set showed the credit covering the charge, Bill 1 would not be refuted: the mass would still have been paid. What would be refuted is the expectation that the amplified charge outweighs the linear credit. A long enough mission is where the credit is most likely to cover the charge, and the mission of Section 2.3 is short. The counter-set is therefore a common-mission sizing study at longer range in which a dedicated-lift configuration is both more efficient and no heavier than one without. None is known to the authors.
 
 #### The weight breakdown
 
-> *Provenance and changes:* for P07: "… the remaining 99 lb lies in categories it does not break out (Supplement S4)". src: S4 working part (L1281-L1287), CORRECTED against the source (S-64): the archive wrote "battery returns a further 10 lb"; the source gives battery 254 lb (lift-plus-cruise) against 244 lb (tilt-wing), so it ADDS 10 lb in the lift-plus-cruise entry's disfavour. Check: structure 2,670 − 1,954 = 716; propulsion 1,772 − 1,918 = −146; battery 254 − 244 = +10; 716 − 146 + 10 = 580; empty 5,809 − 5,130 = 679.
 
 Of the empty-weight difference of 679 lb, structure accounts for 716 lb in the lift-plus-cruise entry's disfavour, propulsion returns 146 lb of it because the tilt-wing's mechanism is heavier, and battery adds a further 10 lb. Those three categories account for 580 lb of the 679; the remaining 99 lb lies in empty-weight categories the published table does not break out, and this work does not know how it is distributed. What the three reported categories do show is the transfer property of Section 2.1 (the mechanism giving part of the structural saving back), visible inside a weight breakdown this work did not produce.
 
 #### The source's own statement
 
-> *Provenance and changes:* src: "Section 4's paragraphs as they stood before the Round 184 shortening" (L1518). Protected S4 rows (E20) carried verbatim. Quotation checked this round: references/1521_Johnson & Silva_122721.pdf, text lines 495-496 ("… but not enough to counter the increase in structure and propulsion weight").
 
 And the source states the second half of the prediction in its own words, on a comparison the check does not use as its test. Discussing why the all-electric lift-plus-cruise design is the heaviest in the set, the study writes that the high cruise efficiency of the lift-plus-cruise type reduces battery weight compared with a quadrotor, *"but not enough to counter the increase in structure and propulsion weight."*
 
 #### The quadrotor contrast
 
-> *Provenance and changes:* src: S4 working part (L1289-L1300). Protected S4 row (E13) carried. Dashes -> colon and parentheses. Check: 8.5 / 4.9 = 1.735 -> 1.73 (the archive wrote 1.74: S-65); 7,271 / 3,678 = 1.977 -> 1.98. PROTECTED WORD CHANGE: "the isolation test above" -> "the isolation test of Section 2.3" (the supplement has no test above). Author approved, Round 204 (E34).
 
 The quadrotor is reported for scale, and the isolation test of Section 2.3 is what carries the prediction. Against it the lift-plus-cruise configuration is about three-quarters better in cruise efficiency (a factor of 1.73) and nearly twice as heavy, a factor of 1.98. The efficiency credit is exactly what the accounting says a dedicated lift system buys, and the weight charge is exactly what it says the buyer pays: the charge survives the credit. But that contrast changes three things at once (dedicated lift group, powertrain, and whether a cruise wing exists at all), so it supports a weaker proposition than the prediction as stated: that adding a wing and a lift group together still costs mass.
 
 ### S5. The landing transition: working for Section 3
 
-> *Provenance and changes:* for P09: "… the landing transition is not the take-off transition run backwards, and no figure in this paper describes it (Supplement S5)". src: paper/v8/supplement.md, "Section 5 as it stood before the length pass", paragraph "Neither has the landing transition." (L1630-L1636). Changes: the lead "Neither has the landing transition." dropped (the heading carries it); bold removed; the closing clause shortened, since the body already says no figure describes it. No number.
 
 The forward rotation and the reverse are not symmetric and must not be assumed to be. Going out, the rotation builds dynamic pressure while it turns, so lift arrives to replace the vertical component of thrust as that component falls. Coming back, the race runs backwards: dynamic pressure is falling while the aircraft is being turned, so lift is leaving at the moment the thrust vector has not yet returned to vertical. A model built for the first case cannot be read for the second by changing a sign, and no figure in this paper describes the second.
 
@@ -250,10 +244,38 @@ The forward rotation and the reverse are not symmetric and must not be assumed t
 
 #### The blade families
 
-> *Provenance and changes:* for P11: "Which blade a designer would choose also turns on structural loads, acoustics, the motor operating point, rotor inertia and manufacture, none of which is modelled in this work (Supplement S6)". src: paper/v8/supplement.md, "Section 6 as it stood before the length pass" (L1830-L1833 and L1856-L1861). Protected S6 row (E13) carried verbatim. Added (working under the body's "four nose-blade families", Section 6.1): the family definitions and each family's efficiency, from aero/nose-propeller-crossing.txt (aero/nose_propeller_crossing.py, rerun this round: identical output; hover figures of merit 0.591 to 0.603 against the target 0.599, the pitch found by a seven-step search). "Section 10 is where …" -> Section 6.1.
 
 The four nose-blade families are two and three blades per rotor, each designed at two target section lift coefficients, 0.55 and 0.70, and each solved at its hover and its cruise condition by blade-element momentum theory. Their cruise propeller efficiencies are 0.648 and 0.683 with two blades and 0.632 and 0.643 with three, at the lower and the higher section lift coefficient respectively. Whether 0.683 is the blade a designer would actually choose is not settled here. It is the best of the four on cruise efficiency under the hover figure-of-merit constraint. Blade count and section loading also govern structural loads, acoustics, the motor operating point, rotor inertia and manufacture, and none of those is modelled in this work. Section 6.1 is where one blade is carried into a closed sizing loop.
 
 #### The compared vehicles
 
-> *Provenance and changes:* for P12: "The compared vehicles are larger than both designs studied here, which are of order 50 kg and 1 000 kg (Supplement S6)". src: paper/v8/supplement.md L1906-L1908 (protected S6 row E13 carried verbatim: "The compared vehicles are 1 660 to 3 275 kg"). Checked this round against Johnson & Silva [16], Table 3, p. 70: rotorcraft design gross weights QSMR 3,951 / 5,980 lb, side-by-side 3,665 / 5,547 lb, quadrotor 3,678 / 7,221 lb; 3,665 lb = 1,662 kg, 7,221 lb = 3,275 kg. Closed masses 52.3 and 57.5 kg: body Section 6.1 table. Change: "across the same bracket" -> "across its four closures" (52.3 kg is closure D, 57.5 kg closure A; they differ in blade as well as drag).
+
+The compared vehicles are 1 660 to 3 275 kg: the six rotorcraft entries of the NASA sizing set [16] have design gross weights from 3 665 lb (the turboshaft side-by-side helicopter) to 7 221 lb (the all-electric quadrotor). The designs here are of order 50 kg and 1 000 kg, and Section 6.1 closes the 50 kg design between 52.3 and 57.5 kg across its four closures.
+
+### S8. The strip and the fairing: working for Section 5.2
+
+#### The strip's geometry
+
+
+The reaction-torque channel is declined: every pair is operated torque-balanced, so no reaction torque is spent on control. What declining it costs is not counted in this work. The strip lies on the lower surface, inclined at 45° in planform, and runs outboard from the centreline over a spanwise extent of 120 percent of the root chord (1.164 m against a root chord of 0.97 m), so that it reaches 67 percent of the 1.726 m semi-span. Fully extended it stands 2 cm proud of the surface at its inboard end and 6 cm at its outboard end; extension scales that height.
+
+#### The fairing chord
+
+
+The planform alone supplies no directional stability: a vortex-lattice solution of the planform without the frames returns a directional-stability derivative of zero, as a planar surface with nothing standing out of its plane should. The fairing on the tip frames therefore supplies all of it. The criterion is the value recommended for conventional airplanes, which the tailless literature applies to tailless ones: a directional-stability parameter *"usually greater than 0.001 per degree"* [24], 0.0573 per radian. With the frames' mid-chord 0.879 m aft of the centre of gravity, the side area required is C_nβ S b/(a_f l_f), where S and b are the reference area and span, l_f the arm and a_f the lateral lift-curve slope of the faired frame. Taken over the combined frame length of 2.84 m (two frames, each projecting 0.71 m on both sides of the planform), that area is a chord of 39 mm at an assumed a_f of 4.0 per radian, and 52 mm and 31 mm at 3.0 and 5.0. A 20 mm thick faired strut is taken to have a chord of 50 to 70 mm, a fineness ratio of 2.5 to 3.5 assumed here rather than sourced. The same report qualifies the criterion in two ways. Models were flown in the Langley free-flight tunnel with one-third of that value, though the best flying qualities came above it; and when fins stand at the wing tips, the moment arm of their drag is half the span, so that *"the drag characteristics as well as the lift characteristics of the tip fins exert an influence on the directional stability"* [24]. The chord derived here counts the frames' side force only.
+
+### S10. The sizing loop and the transition: working for Section 6.1
+
+#### The loop
+
+
+The closure statement is
+
+    MTOW = m_payload / (1 − f_empty − f_fuel)
+
+with the fuel fraction fixed at 0.16. The empty fraction contains a propulsion term, f_prop = 0.108 + P_engine / (p_s · MTOW), in which the engine rating P_engine is 1.53 times the cruise electrical power at the take-off mass and p_s, 1.0 kW per kilogram, is the specific power assumed for the engine and generator. The take-off mass is found by iteration as the fixed point of that loop: mass sets the cruise power, cruise power the engine rating, the engine rating the propulsion mass, and the propulsion mass the take-off mass. The rest of the propulsion mass, the fixed 0.108, is a fraction back-solved from the reference design's own budget. Hover power, W^1.5/(FM √(2ρA)) with the disc area A set by the fixed disc loading, is computed at the closed mass and reported, and it does not size the engine. Because the disc loading is fixed, hover power is itself proportional to take-off mass, so any mass that scales with hover power scales as a fixed fraction does; the loop computes no hover-rated mass of its own. The buffer that supplies the hover deficit is a fixed 3.6 percent of take-off mass. If no fixed point exists, the declared sizing package does not close. That is a statement about that package rather than about whether some other package could, and the calculation then returns no number.
+
+#### What the loop holds fixed
+
+
+The reference design's assumed zero-lift value of 0.0248 is not used: the build-up of Section 6.2 places it below both ends of the bracket, outside the supported range. Propeller efficiency enters the loop twice, in the range expression and in the cruise power that sizes the engine, and both entries move together with the blade family in every closure; scaling one without the other would size the engine on one propeller and compute the range on another.

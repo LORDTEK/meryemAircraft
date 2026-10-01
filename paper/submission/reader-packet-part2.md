@@ -1,4 +1,13 @@
-> **Reader packet, part 2 of 4** (commit `0076354`). Read all parts before answering; the round text says what to judge.
+> **Reader packet, part 2 of 4** (commit `73b68ec`). Read all parts before answering; the round text says what to judge.
+
+What it does not meet is the second half of both missions. Wildfire observation and response,
+and cargo delivery to places without a runway, each require the aircraft to **cover distance
+after it has left the unprepared site**, and a vehicle with no wing buys every second of that
+distance with installed power. The consequence has been stated independently: surveying the
+field, one study concludes that multirotors are efficient in hover and suited to short-range
+missions, while vectored-thrust aircraft are efficient in cruise and suited to long-range ones.
+
+### What the configuration does instead
 
 **Cruise lift is carried by the airframe itself.** At
 the cruise condition the lift coefficient follows from `C_L = W/(qS)`, the drag from
@@ -272,7 +281,7 @@ would gain a class.
 
 This section prices the arrangement of Sections 5.1 and 5.2 on a declared package; it does not bear on the count of mechanism classes, which rests on the inventory of those sections alone. **Closing a sizing loop mathematically is not the same thing as closing an aircraft physically.** This section does the first: what it produces is a set of consistent numbers on a declared set of assumptions.
 
-Installed power sets the propulsion mass, propulsion mass the take-off mass, and take-off mass the hover power that sizes the installed power; the take-off mass is found by iteration as the fixed point of that circle (Supplement S10).
+Take-off mass sets the cruise power, cruise power the engine rating, engine rating the propulsion mass, and propulsion mass the take-off mass; the take-off mass is found by iteration as the fixed point of that loop (Supplement S10).
 
 #### The inputs, and why there are four closures rather than one
 
@@ -353,7 +362,7 @@ Section 6.1's closures run at a cruise propeller efficiency of 0.632 to 0.683: *
 
 #### Bill 3 — released from the engine, and not from the electrical path
 
-The engine is sized by cruise, **3.54 to 5.17 kW** of shaft rating, against a hover requirement of **11.4 to 12.5 kW** at the rotor shaft: a ratio of installed hardware of **2.4 to 3.2**, which is not the buffer's burden (Section 7 computes that). **But the full hover power passes through the electrical path, and that path is sized by it.** **Bill 3 is removed from the engine and left standing on the electrical system** (the propulsion-mass split is in Supplement S11).
+The engine is sized by cruise, **3.54 to 5.17 kW** of shaft rating, against a hover requirement of **11.4 to 12.5 kW** at the rotor shaft: a ratio of installed hardware of **2.4 to 3.2**, which is not the buffer's burden (Section 7 computes that). **But the full hover power passes through the electrical path, and that path is sized by it.** **Bill 3 is removed from the engine and left standing on the electrical system** (the propulsion-mass split is in Supplement S11). The sizing loop computes no hover-rated mass for the electrical path.
 
 #### What the closure does not contain
 
@@ -403,10 +412,3 @@ architecture-specific hardware is a kilogram of fuel not carried. **These are th
 answer**, and this paper has no mission that would decide among them.
 
 #### What is compared, and on what basis
-
-Three architectures fly the same mission, 13 kg of payload at 30 m s⁻¹, with the same wing loading, disc loading and aspect ratio,
-the same airframe and avionics fractions, and the same energy chain apart from the propeller. **The competitors are therefore this
-planform with two add-ons, not independently designed aircraft of their families.** All three carry the same buffered series-hybrid
-power system, so Bill 3 is held common and the comparison measures mass and cruise drag. **Holding Bill 3 common is a choice of
-question, and it has a direction.** **The choice runs against this configuration**: without the buffer, and with engines rated to the
-hover demand, the lift-plus-cruise layout does not close under a fixed fuel fraction or a fixed take-off mass (Supplement S13).
