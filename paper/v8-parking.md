@@ -17,3 +17,5 @@ soru listesine giremez (ChatGPT, A-3 oyda). Önceden kabul edilmiş denetimler a
 **Aşama sonrasına, park değil, gönderim öncesi listesinde:** H-2 atıf haritasının kurulması (F-2) — `paper/deferred-decisions.md`.
 
 **Tur 205 (Claude, F-1 altında park; gövde kusuru değil):** `aero/roll.py` şeridin alanını **açıklık boyunca** (`ys` 0 → 1,164 m) integre ediyor; şerit planformda 45° eğik, kendi boyu daha uzun. Normal kuvvete cos²(45°) uygulanıyor. Hangi uzunluğun doğru olduğu yeniden hesaplanmadı. Gövdede şerit kuvveti ya da yatış momenti sayısı yok; ekin S8'i yalnız açıklık boyunu (1,164 m, yarı açıklığın %67'si) veriyor.
+
+**Tur 214 (DeepSeek, gönderim sonrası öneri):** Bölüm 2.1'in *f_energy*'si ile Ek S10'un *f_fuel*'u için tek ad. DeepSeek ve Claude: kusur değil, özelleştirme.

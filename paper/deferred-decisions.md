@@ -1411,3 +1411,8 @@ NeuralFoil makale künyesi doğrulanmadı. Okuyuculardan künye alanları (bağl
 - **Kapandı (dördü + Claude):** P22 R1; S14'ün yedi işaretçisi R1; dört işaretli değişiklik kabul. **34 işaretçinin hepsi R1.**
 - 18–22° ve 1,78 kg/m²: Grok "betik varsa koş, yoksa etiket kalsın"; ötekiler gerek yok. Betik bulunamadı → etiket kaynak notunda kalır.
 - **Tur 214 (mekanik):** gövde üretecinde ek etiketleri S1–S11; `paper/build/supplement_build.py` (14 sayfa, korunan 30 satır denetimi, `--sina`); `paper/submission/receipt-table.md`; okuyucu paketi `--yalin` (kaynak notsuz, 4 parça). Son bütün-gövde denetimi Tur 214'te (kontrol noktası; paket gider).
+
+## Tur 214 cevapları — son bütün-gövde denetimi
+- Grok, Qwen: kusur yok. DeepSeek: kusur adayı B2 (S13 beşinci duyarlılık satırı, bloke etmiyor) + gönderim sonrası öneri (f_energy/f_fuel → park). ChatGPT: B1 (S13'ün eğik kanat cümlesi, §8'in korunan menzil cümlesiyle; R4).
+- Dördü: üç onarım her yerde taşınmış; dört eksende iddialar tutuyor; hakem ilk okumada takılmaz.
+- **Tur 215:** B1 (Claude: S13 cümlesi silinsin ya da çerçeve eklensin), B2 (Claude: satır kalsın). Sonra paket yazara.

@@ -215,7 +215,7 @@ closes.** Readers answer one another, not only Claude.
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 214.** All four readers started new conversations with Round 209 where the author chose to renew them (the author, Round 209). Files are
+**Round 215.** All four readers started new conversations with Round 209 where the author chose to renew them (the author, Round 209). Files are
 not re-sent each round; each round text carries what it asks you to judge.
 text ends by naming what goes to the author.
 
@@ -248,7 +248,8 @@ text ends by naming what goes to the author.
 | Closed (Round 212) | P22: the body adds *"The sizing loop computes no hover-rated mass for the electrical path."* after the protected Bill 3 sentence (all five); S12's rotation-time subsection kept with its figures (all five); S13 P26–P30 R1 |
 | Closed (Round 213) | P22 R1; S14 P08, P10, P23, P31–P34 R1; **all 34 pointers R1** (receipt table `paper/submission/receipt-table.md`) |
 | Done (Round 214) | renumbering S2–S14 → S1–S11 in both generators; `paper/build/supplement_build.py` (supplement PDF, 14 pages; checks: 30 protected supplement rows, every pointer's section, self-test) |
-| **Open (Round 214)** | the final whole-body check against the complete supplement (packet re-sent; defects only); then the package goes to the author |
+| Closed (Round 214) | final whole-body check: the three repairs carried everywhere, the claims hold on the four axes, nothing stops a first reading (all four) |
+| **Open (Round 215)** | B1: S13's tilting sentence without the bound's frame (ChatGPT R4; Claude: delete or add the frame); B2: S13's fifth sensitivity row (DeepSeek: remove; Claude: keep); then the package goes to the author |
 | **How the journal supplement is composed** (Rounds 203–208) | only what the 34 body pointers (P01–P34) promise; each passage taken from the latest archive snapshot, brought up to the current body and checked against the code and sources, with a provenance note; protected supplement rows carried verbatim; ChatGPT's rule (Round 204); each pointer's receipt graded R1 faithful / R2 differently qualified / R3 no content / R4 the body says more than the supplement establishes. Done: S2–S6, S8, S10, S11 (P22 open); S12, S13; S14 drafted (Round 213). All 34 pointers have a passage |
 | Done in the submission stage | numbered references (26); the generator `paper/build/submission_build.py` (LaTeX, AIAA class, Roman-numeral sections, *Sec.*, American spelling, no dashes); Fig. 1; the Acknowledgments AI-use sentence |
 | Still to do | the supplement generator (LaTeX, S1–S11); the receipt table for all 34 pointers; the final whole-body check with the completed supplement |
