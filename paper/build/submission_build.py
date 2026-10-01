@@ -25,7 +25,7 @@ REPORT = os.path.join(KOK, 'paper/submission/build-report.md')
 
 RAPOR = collections.OrderedDict((k, []) for k in [
     'citations', 'e1', 'table_refs', 'pointers', 'spelling', 'numbers', 'percent', 'headings',
-    'warnings', 'dashes', 'above_below', 'italics'])
+    'warnings', 'style', 'dashes', 'above_below', 'italics'])
 
 # ---------------------------------------------------------------- 1. on madde ve sabit metinler
 TITLE = "meryemAircraft: Tail-Sitting Blended-Wing Body for Vertical Takeoff Without Propulsor Reorientation"
@@ -108,6 +108,127 @@ TABLE_REFS = [
     ('On these assumptions all four converge', 'On these assumptions all four converge (Table 5)'),
     ("this paper's alternatives differ from axis to axis.", "this paper's alternatives differ from axis to axis (Table 6)."),
 ]
+# Sekil (yazar, Tur 202: "En azindan bir tane resim olmali ... kuyrugunun ustune otururken ust caprazdan")
+FIG_REF = ('in its own storage attitude', 'in its own storage attitude (Fig. 1)')
+FIG_FILE = 'v8-f1-standing.png'     # figures/build/mkfig_v8_stand.py
+FIG_CAPTION = ("The 50 kg reference design standing on its tail: nose pair uppermost, tip frames and keel on the ground, "
+               "strip on the lower surface; blades schematic")
+# Uslup gecisi (Tur 201 C: dort okuyucu + Claude "simdi"; kurallar: cift tire -> yalniz niteleyiciyse parantez, degilse virgul;
+# tek tire -> aciklama/yeniden soyleyisse iki nokta, bagimsiz cumleyse noktali virgul; konum bildiren above/below -> preceding/following;
+# vurgu italigi kaldirilir). Her satir rapora once/sonra gider; okuyucu teyidine (Tur 202).
+STYLE = [
+ ('D01', 'this work is aimed at sit — wildfire', 'this work is aimed at sit: wildfire'),
+ ('D02', 'torque-balanced pair — so that reaction torque and net angular momentum are given up along with the reorientation mechanism — carrying',
+         'torque-balanced pair (so that reaction torque and net angular momentum are given up along with the reorientation mechanism), carrying'),
+ ('D03', 'on the order of a minute — roughly two percent', 'on the order of a minute, roughly two percent'),
+ ('D04', '#### Bill 1 — mass', '#### Bill 1: mass'),
+ ('D05', 'Mass growth feeds itself — MTOW = m_payload / (1 − f_empty − f_energy) puts additional empty mass through a multiplier that grows as the denominator shrinks — and in',
+         'Mass growth feeds itself (MTOW = m_payload / (1 − f_empty − f_energy) puts additional empty mass through a multiplier that grows as the denominator shrinks), and in'),
+ ('D06', '#### Bill 2 — drag', '#### Bill 2: drag'),
+ ('D07', 'charged mainly by the motors — hardware that cannot', 'charged mainly by the motors: hardware that cannot'),
+ ('D08', 'per unit time in cruise — so it grows', 'per unit time in cruise, so it grows'),
+ ('D09', '#### Bill 3 — power system sizing', '#### Bill 3: power system sizing'),
+ ('D10', 'or both — and whichever is chosen', 'or both, and whichever is chosen'),
+ ('D11', 'smaller than the reduction — measured in the same currency', 'smaller than the reduction, measured in the same currency'),
+ ('D12', 'when the sizing rule changes — toward the lighter arrangement as the rule weights mass more — and will reverse',
+         'when the sizing rule changes (toward the lighter arrangement as the rule weights mass more) and will reverse'),
+ ('D13', 'while changing flight regime — by rotating the whole body, or otherwise — is not in the inversion',
+         'while changing flight regime (by rotating the whole body, or otherwise) is not in the inversion'),
+ ('D14', 'only in part — for instance in its primary propulsor while a secondary set fails them — in which case',
+         'only in part (for instance in its primary propulsor while a secondary set fails them), in which case'),
+ ('D15', 'this paper does not settle — the condition is a definition', 'this paper does not settle; the condition is a definition'),
+ ('D16', 'five VTOL architecture families — nine designs in all — against', 'five VTOL architecture families (nine designs in all) against'),
+ ('D17', 'a dedicated lift group — eight lift motors', 'a dedicated lift group: eight lift motors'),
+ ('D18', 'in every other respect — one stops its lift rotors in the airstream and drives a separate pusher, the other reorients its proprotors on a tilting wing — but the difference',
+         'in every other respect (one stops its lift rotors in the airstream and drives a separate pusher, the other reorients its proprotors on a tilting wing), but the difference'),
+ ('D19', 'transfer property of Section 2.1 — the mechanism giving part of the structural saving back — inside a breakdown',
+         'transfer property of Section 2.1 (the mechanism giving part of the structural saving back) inside a breakdown'),
+ ('D20', 'each fail that test — including', 'each fail that test, including'),
+ ('D21', 'charged to the mass budget once — Section 5.2 gives', 'charged to the mass budget once; Section 5.2 gives'),
+ ('D22', 'or the control architecture — and because', 'or the control architecture, and because'),
+ ('D23', 'The second half — cruise carried on a wing rather than on rotors — is the subject', 'The second half (cruise carried on a wing rather than on rotors) is the subject'),
+ ('D24', 'the alternative is the rotorcraft — multirotor and helicopter alike — and as in', 'the alternative is the rotorcraft (multirotor and helicopter alike), and as in'),
+ ('D25', 'is left with one job — producing the thrust', 'is left with one job: producing the thrust'),
+ ('D26', 'continuous power supply of its own — the power the aircraft spends', 'continuous power supply of its own; the power the aircraft spends'),
+ ('D27', 'the drag outcome and the blade — a measurable advantage', 'the drag outcome and the blade: a measurable advantage'),
+ ('D28', 'not an available option — cruising there leaves too little margin above the stall — so this fixes',
+         'not an available option (cruising there leaves too little margin above the stall), so this fixes'),
+ ('D29', 'in the literature and in hardware — Section 1 says where', 'in the literature and in hardware; Section 1 says where'),
+ ('D30', 'The principle behind the third element — a continuous plant sized for cruise, with the vertical or take-off peak drawn from a store — has been applied',
+         'The principle behind the third element (a continuous plant sized for cruise, with the vertical or take-off peak drawn from a store) has been applied'),
+ ('D31', "the body's longitudinal axis — the roll axis in body terms — in both regimes", "the body's longitudinal axis (the roll axis in body terms) in both regimes"),
+ ('D32', 'relative to the earth — it stands vertical', 'relative to the earth: it stands vertical'),
+ ('D33', 'at the semi-span, 1.726 m — 2.43 times the pitch arm', 'at the semi-span, 1.726 m: 2.43 times the pitch arm'),
+ ('D34', 'Extension is the control variable — the strip is modulated, not switched — and deploying it',
+         'Extension is the control variable (the strip is modulated, not switched), and deploying it'),
+ ('D35', 'deployable in two halves — one side alone', 'deployable in two halves: one side alone'),
+ ('D36', 'produced by something — motor holding torque, an electrical brake, a mechanical lock — and a stopped',
+         'produced by something (motor holding torque, an electrical brake, a mechanical lock), and a stopped'),
+ ('D37', 'for the 50 kg design — the only one carried', 'for the 50 kg design, the only one carried'),
+ ('D38', 'still best after it — a result of the closure', 'still best after it: a result of the closure'),
+ ('D39', '#### Bill 2 — the drag of hover hardware', '#### Bill 2: the drag of hover hardware'),
+ ('D40', 'exposed by the vertical-phase layout — the tip frames and the free-wheeling tip-pair rotors — is 69 percent',
+         'exposed by the vertical-phase layout (the tip frames and the free-wheeling tip-pair rotors) is 69 percent'),
+ ('D41', '#### Bill 1 — carried mass', '#### Bill 1: carried mass'),
+ ('D42', '#### Bill 3 — released from the engine', '#### Bill 3: released from the engine'),
+ ('D43', 'the light one is therefore the less certain — and it is the one', 'the light one is therefore the less certain, and it is the one'),
+ ('D44', "cruise penalties — nacelle drag, pivot fairing, hover-sized rotors flown as cruise propellers — would have to fill",
+         "cruise penalties (nacelle drag, pivot fairing, hover-sized rotors flown as cruise propellers) would have to fill"),
+ ('D45', 'assumed more optimistically — in propeller efficiency', 'assumed more optimistically: in propeller efficiency'),
+ ('D46', 'inside the envelope, change sign — so the ordering', 'inside the envelope, change sign, so the ordering'),
+ ('D47', 'It is stated in that order — first the obstacle', 'It is stated in that order: first the obstacle'),
+ ('D48', 'can exceed continuous ones — by more than a factor of two in one commercial module it cites — a pack',
+         'can exceed continuous ones (by more than a factor of two in one commercial module it cites), a pack'),
+ ('D49', 'times the bench rate — the highest figure obtained from a measurement — and 6.2', 'times the bench rate (the highest figure obtained from a measurement) and 6.2'),
+ ('D50', 'The architecture claim — that the configuration is arranged to change regime with no mechanism that reorients a propulsor — is a count',
+         'The architecture claim, that the configuration is arranged to change regime with no mechanism that reorients a propulsor, is a count'),
+ ('D51', 'or the transition aerodynamics — but it does depend', 'or the transition aerodynamics, but it does depend'),
+ ('D52', 'the range result or the energy store — nor on the transition', 'the range result or the energy store, nor on the transition'),
+ ('D53', 'What that refusal costs — in thrust asymmetry, in propulsive efficiency, and in response time set by rotor inertia — is not computed',
+         'What that refusal costs (in thrust asymmetry, in propulsive efficiency, and in response time set by rotor inertia) is not computed'),
+ ('D54', 'a *class of mechanism* — the one that', 'a class of mechanism: the one that'),
+ ('D55', 'and the accounting — which is what Sections 5.1 and 5.2 describe', 'and the accounting; that is what Sections 5.1 and 5.2 describe'),
+ ('D56', 'and — while the tip pairs free-wheel or are held by motor torque — no rotor stowing', 'and (while the tip pairs free-wheel or are held by motor torque) no rotor stowing'),
+ # tablolar
+ ('T1h', 'What it creates — a bill by its number, any other cost in words', 'What it creates (a bill by its number, any other cost in words)'),
+ ('T1a', '| 3 — the cruise engine no longer sizes to hover | 1 and 2 — many rotors', '| 3: the cruise engine no longer sizes to hover | 1 and 2: many rotors'),
+ ('T1b', '| 2 — the exposed rotor is removed from cruise | 1 — mechanism,', '| 2: the exposed rotor is removed from cruise | 1: mechanism,'),
+ ('T1c', '| 1 — one propulsion group serves both regimes | kilograms, not Bill 1 — the pivot', '| 1: one propulsion group serves both regimes | kilograms, not Bill 1: the pivot'),
+ ('T1d', 'supplies its hover peak — with no store, the power plant is sized by the hover peak; and', 'supplies its hover peak (with no store, the power plant is sized by the hover peak); and'),
+ ('T1e', '| 1 and 3 — one propulsor is retrimmed', '| 1 and 3: one propulsor is retrimmed'),
+ ('T1f', 'kilograms, not Bill 1 — pitch hub and actuation', 'kilograms, not Bill 1: pitch hub and actuation'),
+ ('T1g', '| 1 and 2 — smaller, lighter, cleaner rotors | 3 — hover power rises', '| 1 and 2: smaller, lighter, cleaner rotors | 3: hover power rises'),
+ ('T1i', '| 3 — hover power falls | 1 and 2 — larger structure', '| 3: hover power falls | 1 and 2: larger structure'),
+ ('T4a', '| Pivot or tilting joint | Tilting architectures | — |', '| Pivot or tilting joint | Tilting architectures | None |'),
+ ('T4b', '| Nacelle or rotor-group actuator | Tilting architectures | — |', '| Nacelle or rotor-group actuator | Tilting architectures | None |'),
+ ('T4c', 'or feather a rotor unused in one regime | — |', 'or feather a rotor unused in one regime | None |'),
+ ('T4d', '| Dedicated lift rotors | Lift-plus-cruise architectures | — |', '| Dedicated lift rotors | Lift-plus-cruise architectures | None |'),
+ ('T4e', 'from the cruise flow by such means | — (see note) |', 'from the cruise flow by such means | None (see note) |'),
+ ('T6a', "This is the paper's contribution — a count of mechanism classes", "This is the paper's contribution: a count of mechanism classes"),
+ ('T6b', '| Other hybrids — lift-plus-cruise, tilt |', '| Other hybrids (lift-plus-cruise, tilt) |'),
+ # konum bildiren above / below
+ ('A01', 'the gap below is not a historical one', 'the gap set out in Section 1.5 is not a historical one'),
+ ('A02', 'the origin of all three charges below', 'the origin of all three charges that follow'),
+ ('A04', 'they are the first failure mode below', 'they are the first failure mode that follows'),
+ ('A05', 'The mission used below is short', 'The mission used here is short'),
+ ('A07', 'The qualifications below apply to them too', 'The qualifications that follow apply to them too'),
+ ('A10', 'it does not touch the cruise numbers above', 'it does not touch the preceding cruise numbers'),
+ ('A12', 'is a control surface, of a different class, and is named below', 'is a control surface, of a different class, and is named next'),
+ ('A13', 'that cancellation is no longer exact (below)', 'that cancellation is no longer exact (discussed later in this section)'),
+ ('A14', '(body axes, as fixed above)', '(body axes, as fixed earlier in this section)'),
+ ('A15', 'The sizing above says nothing', 'The preceding sizing says nothing'),
+ ('A16', 'would most change the numbers above', 'would most change the preceding numbers'),
+ ('A18', 'the boundary below is about claims', 'the boundary that follows is about claims'),
+ # vurgu italigi
+ ('I1', 'in which *every* propulsor', 'in which every propulsor'),
+ ('I2', 'only *one orientation relative to the airframe*', 'only one orientation relative to the airframe'),
+ ('I3', '*Cruise thrust in this paper means the thrust that balances cruise drag.*', 'Cruise thrust in this paper means the thrust that balances cruise drag.'),
+ ('I4', '*Note.* The stopping class', 'Note: The stopping class'),
+ ('I5', '*(This paper fixes body-axis naming throughout.', '(This paper fixes body-axis naming throughout.'),
+ ('I6', 'The two conventions are not mixed here.)*', 'The two conventions are not mixed here.)'),
+ ('I7', 'The *size* of the resulting advantage', 'The size of the resulting advantage'),
+ ('I8', 'The design *sizes* vertical operation', 'The design sizes vertical operation'),
+]
 CAPTIONS = [
     "Known partial remedies and the charges they move",
     "Effective lift-to-drag ratio at the corners of the drag and propeller-efficiency brackets",
@@ -184,6 +305,11 @@ for a, b in E1:
     raw = replace_once(raw, a, b, 'e1')
 for a, b in TABLE_REFS:
     raw = replace_once(raw, a, b, 'table_refs')
+raw = replace_once(raw, FIG_REF[0], FIG_REF[1] + '⟦FIG⟧', 'table_refs')
+for k, a_, b_ in STYLE:
+    raw = replace_once(raw, a_, b_, 'style')
+    RAPOR['style'][-1] = '**%s** ' % k + RAPOR['style'][-1]
+raw = re.sub(r'^\*\*(\d)\. ', lambda m: (RAPOR['style'].append('**L%s** `%s. ` → `%s) `' % (m.group(1), m.group(1), m.group(1))) or '**' + m.group(1) + ') '), raw, flags=re.M)
 
 # ---------------------------------------------------------------- 4. bolum haritasi
 HEAD = {}          # "2" -> "II", "2.1" -> "II.A"
@@ -381,7 +507,13 @@ while i < len(lines):
         buf.append(lines[i]); i += 1
     if not buf:
         raise SystemExit('ayristirilamayan satir: %r' % L)
-    body.append(conv_inline(para_text(buf)))
+    txt = para_text(buf)
+    fig_here = '⟦FIG⟧' in txt
+    body.append(conv_inline(txt.replace('⟦FIG⟧', '')))
+    if fig_here:
+        body.append('\\begin{figure}[htbp]\n\\centering\n\\includegraphics[width=0.75\\linewidth]{%s}\n\\caption{%s}\n\\label{fig:1}\n\\end{figure}'
+                    % (FIG_FILE, conv_inline(FIG_CAPTION)))
+        counts['figure'] += 1
 
 # ---------------------------------------------------------------- 7. uyarilar ve uslup listeleri
 for k, v in child.items():
@@ -436,22 +568,24 @@ PRE = r"""%% Uretildi: paper/build/submission_build.py -- elle duzenlemeyin; kay
   \titleformat{\subsubsection}[block]{\itshape}{\thesubsubsection.}{0.5em}{}
   \renewcommand\Authfont{\normalsize}
   \renewcommand\Affilfont{\itshape\small}
+  \usepackage{cite}
 }
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{amsmath}
 \usepackage{tabularx}
-\usepackage[shortlabels]{enumitem}
-\usepackage{cite}
+\usepackage{enumitem}
 \usepackage{url}
 \usepackage{textcomp}
+\usepackage{graphicx}
+\graphicspath{{../../../figures/output/}}
+\makeatletter\@ifpackageloaded{hyperref}{\hypersetup{hidelinks}}{}\makeatother
 """
 
 def build():
-    auth = []
-    for n, c in AUTHORS:
-        fn = ('Independent Researcher; corresponding author, \\protect\\url{%s}.' % EMAIL) if c else 'Independent Researcher.'
-        auth.append(r'\author{%s\thanks{%s}}' % (n, fn))
+    names = [n + ('\\footnote{Independent Researcher; corresponding author, \\protect\\url{%s}.}' % EMAIL if c else '\\footnote{Independent Researcher.}')
+             for n, c in AUTHORS]
+    auth = [r'\author{%s, %s, and %s}' % tuple(names)]
     doc = [PRE, r'\title{%s}' % TITLE] + auth + [r'\affil{%s}' % AFFIL, r'\date{}', r'\begin{document}', r'\maketitle',
            r'\begin{abstract}', ABSTRACT.replace('%', r'\%'), r'\end{abstract}', '']
     doc += body
@@ -484,6 +618,7 @@ def norm_tex(t):
     t = t.split(r'\end{abstract}', 1)[1]
     t = re.sub(r'\\caption\{[^}]*\}', '', t)
     t = re.sub(r'\\label\{[^}]*\}', '', t)
+    t = re.sub(r'\\includegraphics(\[[^\]]*\])?\{[^}]*\}', '', t)
     t = re.sub(r'~?\\cite\{[^}]*\}', '', t)
     t = re.sub(r'\\(begin|end)\{[^}]*\}(\{[^}]*\})*(\[[^\]]*\])?(\{[^}]*\})*', ' ', t)
     t = re.sub(r'\b(Secs?\.|Sections?) [IVX]+(?:\.[A-H])?(?: and [IVX]+(?:\.[A-H])?)?', ' SECREF ', t)
@@ -513,7 +648,7 @@ with open(REPORT, 'w', encoding='utf-8') as f:
     titles = {'citations': 'Citation markers inserted', 'e1': 'E1 tool names (Round 195)', 'table_refs': 'Table references (for reader check)',
               'pointers': 'Section pointers', 'spelling': 'American spelling', 'numbers': 'Number format', 'percent': 'Percent spacing',
               'headings': 'Headings (title case)', 'warnings': 'Warnings', 'dashes': 'Dashes left in the text (style pass: reader round)',
-              'above_below': '"above" / "below" left in the text (style pass: reader round)', 'italics': 'Italic (non-quotation) kept'}
+              'above_below': '"above" / "below" left in the text (style pass: reader round)', 'italics': 'Italic (non-quotation) kept', 'style': 'Style pass (Round 202; for reader check)'}
     for k, v in RAPOR.items():
         f.write('\n## %s (%d)\n\n' % (titles[k], len(v)))
         for x in v: f.write('- %s\n' % x)

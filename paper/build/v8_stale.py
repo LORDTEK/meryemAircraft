@@ -239,7 +239,7 @@ def yalniz_tara(adlar_metinler):
 # sekil betiklerine uzanir. Taranan: betigin dize sabitleri (ast), modul belge dizesi HARIC -- belge dizesi eski
 # etiketi bilerek alintilar. Bir v7 sekli v8'e girecekse once v8 kopyasi buraya eklenir.
 SEKILLER = ["figures/build/mkfig_v8_f1.py", "figures/build/mkfig_v8_f2a.py", "figures/build/mkfig_v8_f2b.py",
-            "figures/build/mkfig_v8_f3.py"]
+            "figures/build/mkfig_v8_f3.py", "figures/build/mkfig_v8_stand.py"]
 
 
 def etiketler(kaynak):

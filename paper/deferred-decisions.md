@@ -1328,3 +1328,10 @@ NeuralFoil makale künyesi doğrulanmadı. Okuyuculardan künye alanları (bağl
 - **Q1 şablon:** dördü aynı Overleaf şablonu (kimlik mqqbqqvyhtwm): https://www.overleaf.com/latex/templates/preparation-of-papers-for-aiaa-technical-journals/mqqbqqvyhtwm — Open as Template → Menu → Download → Source → zip'ten `new-aiaa.cls`; `\documentclass[journal]{new-aiaa}`.
 - **Q2 çeyrek:** **SJR 2025: Q2, Aerospace Engineering, 0,585** (Grok, ChatGPT, DeepSeek SCImago sayfasından; Qwen Q2). Geçmiş ayrışık: Grok "2010'ların ortasına dek Q1", DeepSeek "2021–2024 Q1". JCR birincil sayfasını kimse açamadı (DeepSeek ikincillerden Q2). → **Yazara: JoA SJR 2025'te Q1 değil.**
 - **Q3 kısaltma:** evet (ChatGPT: önce VI, sonra II, sonra VIII; DeepSeek: 6.1, 6.3, 2.3 ayrıntısı, 4.6 → 900–1 350 kelime; Qwen: 1.4 ayrıntıları, 2.1 fatura türetmeleri), hayır (Grok: E25 karar verdi; editör isterse önce VI). → E25'i yeniden açar, yazara.
+
+## E32 — dergi, uzunluk, şekil · **YAZAR (2026-10-01):** *"Makalede resim neden yok? … En azından bir tane resim olmalı. Kuyruğunun üstüne otururken üst çaprazdan bir resim olabilir belki. Kısaltma yapmayalım, JoA'dan devam. zip dosyayı yükledim …"*
+
+- JoA kalır (SJR 2025 Q2 kayıtta). Kısaltma yok (E25 durur). AIAA zip'i `references/`'e taşındı; `new-aiaa.cls` ve `.bst` `paper/submission/latex/`'te; derleme resmî sınıfla, 33 s.
+- **Şekil 1:** `figures/build/mkfig_v8_stand.py` → `figures/output/v8-f1-standing.png` (depo 3B modeli, dik duruş kipi, 50 kg tasarım, kamera ≈31°, etiketsiz ve ölçeksiz; pala sayısı hesap koduyla aynı, iki). III'te ilk duruş cümlesine *"(Fig. 1)"*. `v8_stale.py` SEKILLER listesine girdi; `v8_figures.py` temiz.
+- **Üslup geçişi uygulandı (üreteçte, 100 satır):** düzyazıda tire kalmadı; konum bildiren above/below düzeltildi (A11 belirsiz, bırakıldı); vurgu italikleri kalktı; VIII.D maddeleri 1). Okuyucu teyidine (Tur 202).
+- **Yazara (Tur 202 H):** (1) korunan cümlelerde yalnız biçim değişikliği (noktalama, Amerikan yazımı, italik) serbest mi; (2) A02: korunan tanım *"… charges below"* → *"… that follow"*.
