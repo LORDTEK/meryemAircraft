@@ -1386,3 +1386,8 @@ NeuralFoil makale künyesi doğrulanmadı. Okuyuculardan künye alanları (bağl
 ## E35 — Qwen'in iki cevabı ve pencereler · **YAZAR (2026-10-01): "Hem 209'u güncelle hem de dördünü birden yenile."**
 - Qwen'in Tur 208'deki iki cevabından **Qwen-2** esas alındı (Claude'un önerisi; gerekçe: 6.2 fiziksel atıf / 6.1 hesap döngüsü ayrımı, kodu aşmayan yüklem, profesyonel üslup). Tur 209'da Qwen'in oyu Qwen-2'nin biçimi.
 - **Dört okuyucu Tur 209 ile yeni pencerede başlar:** başlangıç metni (Tur 209'da güncellendi) + okuyucu paketi (Qwen'e dört parça) + Tur 209.
+
+## Tur 209 cevapları
+- **Kapandı (beşimiz):** S-67 ChatGPT'nin biçimiyle; gövdeye uygulandı (Adım 10), denetimler temiz, PDF yeniden üretildi → Tur 210'da teyide. P14 R1; kazanç sayısı S10'da kalır.
+- **Yazar (Tur 209 sonrası):** *"Şimdilik dosyaları yeniden vermeyelim. Gerektikçe turlara devam edelim."* → dosyalar her tur yeniden gönderilmez.
+- **Tur 210:** S11 taslağı (P15, P19–P22); arşivde bir hata daha (Fatura 3'ün "propulsion fraction reflects it" ifadesi, S-67 ile aynı aşırı okuma); **Q-210** (P22 işaretçisi bölünmeden fazlasını mı vaat ediyor).

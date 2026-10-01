@@ -215,8 +215,8 @@ closes.** Readers answer one another, not only Claude.
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 209.** All four readers start **new conversations with Round 209** (the author's decision, all four together, for equality, as in
-Round 169). **The author (Round 171):** *"You readers, work together. Whenever it comes to my turn, don't forget to tell me."* Each round
+**Round 210.** All four readers started new conversations with Round 209 where the author chose to renew them (the author, Round 209). Files are
+not re-sent each round; each round text carries what it asks you to judge.
 text ends by naming what goes to the author.
 
 | Block | State |
@@ -242,10 +242,11 @@ text ends by naming what goes to the author.
 | Closed (Round 207) | S-66 repair confirmed; *"within or below"* kept; S8 qualification text kept as drafted (*"side force only"*; Qwen to confirm); Qwen answered the author's question (nothing missing now; window fine) |
 | Closed (Round 208) | all four answered the author's question (nothing missing; Grok and DeepSeek: a fresh conversation would help before S11–S14); S2–S8 whole-body check passed by all four; S10: P17, P18 R1, archive corrections accepted, gain sweep kept as a new sensitivity run; S-67 is a defect (P16 R4 until repaired); S8 ending kept |
 | **Reader packet, how it is used** | not attached every round (the author cannot attach it to every reader); used at checkpoints (S2–S10 done; next: the completed supplement) and for a fresh conversation, in ~6 000-word parts (`paper/submission/reader-packet-partN.md`) where a file cannot be attached. Between checkpoints each round text carries the body section it asks about in full |
-| **Open (Round 209)** | the S-67 wording (five forms); DeepSeek: P14 R1, and the gain-sweep number; still to compose: S11–S14 (17 pointers) |
-| **How the journal supplement is composed** (Rounds 203–208) | only what the 34 body pointers (P01–P34) promise; each passage taken from the latest archive snapshot, brought up to the current body and checked against the code and sources, with a provenance note; protected supplement rows carried verbatim; ChatGPT's rule (Round 204); each pointer's receipt graded R1 faithful / R2 differently qualified / R3 no content / R4 the body says more than the supplement establishes. Done: S2–S6, S8, S10. To do: S11–S14 (17 pointers) |
+| Closed (Round 209) | S-67 repaired with ChatGPT's wording (all five): *"Take-off mass sets the cruise power, cruise power the engine rating, engine rating the propulsion mass, and propulsion mass the take-off mass; the take-off mass is found by iteration as the fixed point of that loop (Supplement S10)."*; P14 R1; the gain-sweep number stays in S10 |
+| **Open (Round 210)** | S-67 result confirmation and P16 grade; S11 drafted (P15, P19–P22; four protected rows); Q-210 (does P22's pointer promise more than the propulsion-mass split shows); still to compose: S12–S14 |
+| **How the journal supplement is composed** (Rounds 203–208) | only what the 34 body pointers (P01–P34) promise; each passage taken from the latest archive snapshot, brought up to the current body and checked against the code and sources, with a provenance note; protected supplement rows carried verbatim; ChatGPT's rule (Round 204); each pointer's receipt graded R1 faithful / R2 differently qualified / R3 no content / R4 the body says more than the supplement establishes. Done: S2–S6, S8, S10; S11 drafted (Round 210). To do: S12–S14 |
 | Done in the submission stage | numbered references (26); the generator `paper/build/submission_build.py` (LaTeX, AIAA class, Roman-numeral sections, *Sec.*, American spelling, no dashes); Fig. 1; the Acknowledgments AI-use sentence |
-| Still to do | the S-67 repair; S11–S14; the supplement generator (LaTeX, S1–S11); the receipt table for all 34 pointers; the final whole-body check with the completed supplement |
+| Still to do | S12–S14; the supplement generator (LaTeX, S1–S11); the receipt table for all 34 pointers; the final whole-body check with the completed supplement |
 | Protected sentences | 145 in the body, 31 in the supplement; U table 14 |
 
 **Tools the round texts mention:**

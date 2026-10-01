@@ -187,8 +187,8 @@ The planform alone supplies no directional stability: a vortex-lattice solution 
 
 ### The loop
 
-<!-- for P16: "Installed power sets the propulsion mass, propulsion mass the take-off mass, and take-off mass the hover power that sizes the installed power;
-     the take-off mass is found by iteration as the fixed point of that circle (Supplement S10)".
+<!-- for P16: "Take-off mass sets the cruise power, cruise power the engine rating, engine rating the propulsion mass, and propulsion mass the take-off mass;
+     the take-off mass is found by iteration as the fixed point of that loop (Supplement S10)" (S-67 repaired, Round 210; ChatGPT's wording, all four and Claude).
      src: paper/v8/supplement.md, "Section 10 as it stood before recomposition into result sentences", "Why the loop has to be iterative" (L3099-L3111).
      Protected S10 row (E15) carried: "If no fixed point exists, the declared sizing package does not close."
      WRITTEN AGAINST THE CODE, not the archive (aero/baseline.py boyutlandir() and mimariler(); aero/closure.py rerun this round, output identical
@@ -256,3 +256,85 @@ The 50 kg design is rotated in a three-degree-of-freedom model: the body angle f
      ("These ranges are carried forward as closed-loop values, not as a ranking … (Section 6.4)"); fuel fraction 0.16 from aero/baseline.py ORTAK. -->
 
 The ranges of the four closures are closed-loop values at a fuel fraction fixed at 0.16, not a ranking. Because the comparative result depends on the sizing contract, no comparison in this paper should be quoted without the contract it was computed under.
+
+## S11. The ledger: working for Sections 5.2 and 6.2
+
+### The tip discs stopped: an estimate outside the closure
+
+<!-- for P15 (Section 5.2): "… so the stopped-state drag estimates (Supplement S11) should be read as estimates for an assumed azimuth …" and
+     P20 (Section 6.2): "… the eight tip discs stopped edge-on are estimated at ΔC_D0 = 0.0008 (Supplement S11) …".
+     src: paper/v8/supplement.md S11, "The other cruise state of the tip discs" (L3381-L3390), carried there from v7 §3.3 Table 3 under S-53
+     (closed Round 132, four readers + Claude). No script: an area-and-coefficient estimate (the archive's own qualification, carried verbatim
+     in substance). The free-wheeling 0.0154 is the blade-element line of the build-up below (aero/ledger.py, rerun this round, output identical).
+     ORDER CHANGED: this subsection now comes BEFORE the protected "Every cost named below is already inside the closure", so that sentence does
+     not cover estimates that are outside the closure. -->
+
+In the closure the tip pairs cruise free-wheeling at zero shaft torque. For the other admissible state, stopped, the eight tip discs of the 50 kg reference design are estimated as follows; neither stopped figure is part of the closure of Section 6.1.
+
+| Tip discs in cruise | ΔC_D0 |
+|---|---:|
+| Free-wheeling at zero shaft torque (blade-element result, in the closure; favourable end) | 0.0154 |
+| Stopped edge-on, azimuth controlled (estimate) | 0.0008 |
+| Stopped broadside, azimuth uncontrolled (estimate) | 0.015 to 0.018 |
+
+The stopped figures are an area-and-coefficient estimate with assumed solidity and section drag coefficients, not a propeller calculation; what is robust is the ratio between the states, not the values. The edge-on figure assumes an azimuth that something holds.
+
+### The line items of the drag bracket
+
+<!-- for P19 (Section 6.2): "In the drag build-up behind the bracket (line items in Supplement S11), the hardware exposed by the vertical-phase layout …
+     is 69 percent of the zero-lift drag at the favourable end and 57 percent at the adverse one".
+     src: archive S11 table (L3372-L3379) and "Section 11 as it stood before recomposition", "What this section does" and "Bill 2" (L3475-L3520);
+     "Section 11's paragraphs as they stood before the Round 170 shortening" for the protected Bill 2 sentence.
+     Protected S11 rows carried: "Every cost named below is already inside the closure of Section 10." (E15; Section 10 -> Section 6.1, renumbering
+     only); "No new physical cost term is introduced here." (E15); "No line item at the adverse end is an independent measurement, and they should
+     not be subtracted from one another as if they were." (E9); "Bill 2 therefore occupies a larger share where the clean-body drag is lower" (E15).
+     Figures from aero/ledger.py, rerun this round (output identical to aero/ledger-result.txt): 0.0073/0.0142, 0.0015/0.0022, 0.0043/0.0047,
+     0.0154/0.0169, 0.0285/0.0381; hover hardware 69 / 57 percent; clean body 20.55 / 15.24; retained 52.6 / 57.7 percent. The ten percent margin:
+     aero/closure.py kapat(), pay = 1.1 at C_D0 0.0381 (0.0043 x 1.1 = 0.0047; 0.0154 x 1.1 = 0.0169).
+     Not carried: the archive's absolute hover-hardware counts "0.0197 … 0.0216"; the script prints 0.0217 for the adverse end (unrounded sum),
+     and the body does not use the counts. -->
+
+Every cost named below is already inside the closure of Section 6.1. No new physical cost term is introduced here.
+
+| Zero-lift drag build-up | favourable end | adverse end |
+|---|---:|---:|
+| Clean wetted surface | 0.0073 | 0.0142 |
+| Hub and small items | 0.0015 | 0.0022 |
+| Tip frames | 0.0043 | 0.0047 |
+| Tip-pair rotors, free-wheeling | 0.0154 | 0.0169 |
+| Total | 0.0285 | 0.0381 |
+
+The two ends differ for two separate reasons. The clean surface and the hub are where the drag bracket itself lives, so their base values differ between the ends; on top of that, the adverse end carries a ten percent margin applied to the whole build-up, so the frames and rotors, which have the same base value at both ends, differ only by that margin. No line item at the adverse end is an independent measurement, and they should not be subtracted from one another as if they were.
+
+The tip frames and the free-wheeling rotors together are 69 percent of the zero-lift drag at the favourable end and 57 percent at the adverse one. Removing the hub and small items, the tip frames and the free-wheeling rotors gives a clean-body lift-to-drag ratio of 20.55 at the favourable end and 15.24 at the adverse one, against the aircraft's 10.82 and 8.79: the configuration retains 52.6 and 57.7 percent. Bill 2 therefore occupies a larger share where the clean-body drag is lower, because a near-constant charge is set against a smaller total. That is a statement about position within the drag bracket at one scale, not about size (Section 6.3).
+
+### The buffer against the deficit it covers
+
+<!-- for P21 (Section 6.2): "The deficit per kilogram of take-off mass that the buffer covers, taken at the electrical bus, spreads by 12 percent across
+     the four closures while the fraction is held at 3.6 percent (Supplement S11)".
+     src: archive "Section 11 as it stood before recomposition", "Bill 1" (L3575-L3586). Figures from aero/buffer.py and aero/ledger.py, rerun this
+     round: bus deficit 9.68 / 9.74 / 9.82 / 9.86 kW; per kilogram 0.1683 / 0.1744 / 0.1835 / 0.1884 kW; spread 11.9 percent; buffer 2.07 / 2.01 /
+     1.93 / 1.88 kg. Efficiencies: machine 0.92, power electronics 0.95, generator 0.90 (aero/baseline.py, Mimari docstring; aero/buffer.py). -->
+
+The buffer fraction is an input to the loop and is not re-derived from the hover energy the four closures need. What the buffer supplies is the hover demand less what the engine can deliver, taken at the electrical bus where the buffer sits: the rotor shaft power divided by the machine and power-electronics efficiencies (0.92 and 0.95), less the engine's shaft power times the generator efficiency (0.90).
+
+| Closure | Deficit at the bus | Per kilogram of take-off mass | Buffer at 3.6 percent |
+|---|---:|---:|---:|
+| A | 9.68 kW | 0.1683 kW/kg | 2.07 kg |
+| B | 9.74 kW | 0.1744 kW/kg | 2.01 kg |
+| C | 9.82 kW | 0.1835 kW/kg | 1.93 kg |
+| D | 9.86 kW | 0.1884 kW/kg | 1.88 kg |
+
+The deficit per kilogram spreads by 12 percent across the four closures, and the closure that needs the most per kilogram, D, carries the smallest buffer.
+
+### The propulsion-mass split
+
+<!-- for P22 (Section 6.2): "Bill 3 is removed from the engine and left standing on the electrical system (the propulsion-mass split is in Supplement S11)".
+     src: archive "Bill 3" (L3591-L3606) and the empty-mass paragraph (L3588-L3590). Figures from aero/ledger.py, rerun this round: propulsion
+     0.198 (A) = 0.108 + 0.090, 0.176 (D) = 0.108 + 0.068; engine 5.17 / 3.54 kW; airframe 0.300, avionics 0.080 (aero/baseline.py ORTAK).
+     CORRECTED against the code: the archive said "the propulsion mass fraction reflects it" (the electrical path sized by hover power) and called
+     the variable part the part that "scales with installed power". The variable part is the ENGINE rating over 1.0 kW/kg (cruise-sized); no term
+     of the loop scales with hover power. Same finding as S-67 (Round 208). Whether the body's P22 sentence promises more than this split shows is
+     put to the readers in Round 210. -->
+
+The propulsion fraction of the empty mass is 0.176 to 0.198 across the four closures, in two parts. A fixed 0.108 is back-solved from the reference design's own budget (the code's comment lists propeller, shaft, mount and wiring). The engine term is the engine rating divided by an assumed specific power of 1.0 kW per kilogram: 0.068 at closure D to 0.090 at closure A, following the cruise-sized rating of 3.54 to 5.17 kW. The hover power, 11.4 to 12.5 kW at the rotor shaft, passes through the electrical path whatever the engine is rated at, but the loop computes no hover-rated mass for that path; whatever of it lies in the fixed 0.108 scales with take-off mass, which at fixed disc loading is how hover power scales. The airframe (0.300) and avionics (0.080) fractions are construction constants held common across the three architectures of Section 6.4; they are not results of the ledger.

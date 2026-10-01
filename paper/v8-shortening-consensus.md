@@ -920,3 +920,4 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Tur 208: S-67 kusur mu | evet | evet | evet | evet | evet | **kapandı; sözcük Tur 209** |
 | Tur 208: S10 P17, P18 | R1 | R1 | R1 | R1 | R1 | **kapandı** |
 | Tur 208: kazanç taraması ekte | evet | evet (yeni koşu etiketi) | evet (ya da nitel) | evet | evet | **kapandı; DeepSeek'e sayı soruldu** |
+| Tur 209: S-67 sözcüğü | ChatGPT'nin | ChatGPT'nin | ChatGPT'nin (kendini geri çekti) | ChatGPT'nin (kendini geri çekti) | ChatGPT'nin | **uygulandı; teyide (Tur 210)** |
