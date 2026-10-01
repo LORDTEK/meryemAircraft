@@ -1396,3 +1396,9 @@ NeuralFoil makale künyesi doğrulanmadı. Okuyuculardan künye alanları (bağl
 - **Kapandı (dördü + Claude):** S-67 sonucu teyit, P16 R1; S11 P15, P19, P20, P21 R1; S11'in üç işaretli değişikliği kabul.
 - **Q-210 (P22) ayrışık:** Grok R4 (yalnız işaretçi değişsin), ChatGPT R1 (değişiklik yok), DeepSeek R4 (iki onarım), Qwen R4 (cümleyi yeniden yazma). **Claude'un hatası:** Tur 210'da "cümle korunan değil" yazdım; **korunan** (`v8-caveats.md`, Adım 11 satırı). Tur 211'de düzeltildi; korunan sözcükleri değiştiren biçimler ancak yazara gider.
 - **Tur 211:** S12 taslağı (P24, P25); arşivin 220/13 kW geçiş güçleri yeniden üretilemedi (betik yok) → `aero/rotation.py` çıktısıyla değiştirildi; dönüş süresi alt bölümünün gövde işaretçisi yok (yalnız E15 korunan satırı için) → okuyuculara.
+
+## Tur 211 cevapları
+- **Kapandı:** S12 P24, P25 R1; üç işaretli değişiklik kabul. DeepSeek ve Qwen korunan cümleyi değiştiren önerilerini geri çekti.
+- **B1 (P22):** ek cümle — Grok, ChatGPT, Qwen, Claude evet; DeepSeek "değişiklik gerekmez" → Tur 212'de kabul edilebilir mi diye soruldu.
+- **B2 (S12 dönüş süresi):** Grok, DeepSeek, Claude sayılarla kalsın; ChatGPT yalnız korunan cümle; Qwen alt bölüm çıksın (korunan satırı çıkarmak yazarın kararı) → Tur 212; yakınsamazsa yazara üç seçenekle.
+- **Tur 212:** S13 taslağı (P26–P30), `aero/contracts.py` yeniden koşuldu, aynı.

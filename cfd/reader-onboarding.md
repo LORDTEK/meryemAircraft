@@ -215,7 +215,7 @@ closes.** Readers answer one another, not only Claude.
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 211.** All four readers started new conversations with Round 209 where the author chose to renew them (the author, Round 209). Files are
+**Round 212.** All four readers started new conversations with Round 209 where the author chose to renew them (the author, Round 209). Files are
 not re-sent each round; each round text carries what it asks you to judge.
 text ends by naming what goes to the author.
 
@@ -244,10 +244,11 @@ text ends by naming what goes to the author.
 | **Reader packet, how it is used** | not attached every round (the author cannot attach it to every reader); used at checkpoints (S2–S10 done; next: the completed supplement) and for a fresh conversation, in ~6 000-word parts (`paper/submission/reader-packet-partN.md`) where a file cannot be attached. Between checkpoints each round text carries the body section it asks about in full |
 | Closed (Round 209) | S-67 repaired with ChatGPT's wording (all five): *"Take-off mass sets the cruise power, cruise power the engine rating, engine rating the propulsion mass, and propulsion mass the take-off mass; the take-off mass is found by iteration as the fixed point of that loop (Supplement S10)."*; P14 R1; the gain-sweep number stays in S10 |
 | Closed (Round 210) | S-67 result confirmed (P16 R1); S11 P15, P19, P20, P21 R1; S11's reordering, archive correction and omitted counts accepted |
-| **Open (Round 211)** | Q-210: P22, the Bill 3 pointer (the Bill 3 sentence is **protected**; Claude wrongly said it was not); S12 drafted (P24, P25; five protected rows; the rotation-time subsection has no body pointer); still to compose: S13, S14 |
-| **How the journal supplement is composed** (Rounds 203–208) | only what the 34 body pointers (P01–P34) promise; each passage taken from the latest archive snapshot, brought up to the current body and checked against the code and sources, with a provenance note; protected supplement rows carried verbatim; ChatGPT's rule (Round 204); each pointer's receipt graded R1 faithful / R2 differently qualified / R3 no content / R4 the body says more than the supplement establishes. Done: S2–S6, S8, S10, S11 (P22 open); S12 drafted (Round 211). To do: S13, S14 |
+| Closed (Round 211) | S12: P24, P25 R1; its arithmetic, named candidates and omitted transition powers accepted |
+| **Open (Round 212)** | B1: P22, add *"The sizing loop computes no hover-rated mass for the electrical path."* after the protected Bill 3 sentence (four for, DeepSeek for no change); B2: S12's rotation-time subsection (keep with figures / sentence alone / author withdraws the row); S13 drafted (P26–P30, two protected rows); still to compose: S14 |
+| **How the journal supplement is composed** (Rounds 203–208) | only what the 34 body pointers (P01–P34) promise; each passage taken from the latest archive snapshot, brought up to the current body and checked against the code and sources, with a provenance note; protected supplement rows carried verbatim; ChatGPT's rule (Round 204); each pointer's receipt graded R1 faithful / R2 differently qualified / R3 no content / R4 the body says more than the supplement establishes. Done: S2–S6, S8, S10, S11 (P22 open); S12 (B2 open); S13 drafted (Round 212). To do: S14 |
 | Done in the submission stage | numbered references (26); the generator `paper/build/submission_build.py` (LaTeX, AIAA class, Roman-numeral sections, *Sec.*, American spelling, no dashes); Fig. 1; the Acknowledgments AI-use sentence |
-| Still to do | S13, S14; the supplement generator (LaTeX, S1–S11); the receipt table for all 34 pointers; the final whole-body check with the completed supplement |
+| Still to do | S14; the supplement generator (LaTeX, S1–S11); the receipt table for all 34 pointers; the final whole-body check with the completed supplement |
 | Protected sentences | 145 in the body, 31 in the supplement; U table 14 |
 
 **Tools the round texts mention:**

@@ -390,3 +390,61 @@ Both buffer figures are inputs: 0.036 of take-off mass in the light closures and
      heavy design's 5.1 s. Put to the readers in Round 211: whether this subsection stays (it carries a protected row the body does not point to). -->
 
 The transition is where the square–cube relation is paid. The heavy design's pitch inertia is 255 times the light design's and its available control moment 41 times, so to keep the light design's moment margin it must rotate in about 5 s rather than 2 s (4.96 s computed; the heavy design uses 5.1 s). A larger aircraft of this type turns more slowly, and must.
+
+## S13. Contracts: working for Section 6.4
+
+### The three contracts
+
+<!-- for P26 (Section 6.4): "Range in the sizing loop is proportional to L/D, to the energy chain and to the fuel fraction, and the three contracts differ only in
+     the last (Supplement S13) …". src: archive "Section 13's paragraphs as they stood before compression", "Three contracts, and what each holds equal".
+     Checked against the code this round: aero/baseline.py menzil_ver() (R = f_fuel E* eta_chain L/D / g), sabit_yakit(), sabit_MTOW(); aero/contracts.py,
+     rerun this round, output identical to aero/contracts-result.txt (fuel 9.20 / 8.94 / 8.56 / 8.37 kg at closures A-D). -->
+
+Range in the sizing loop is R = f_fuel E* η_chain (L/D)/g, with E* the fuel's specific energy and η_chain the energy chain from fuel to thrust. The three architectures share E* and the chain apart from the propeller efficiency, which enters η_chain, and they differ in L/D. The three contracts differ only in the fuel fraction f_fuel:
+
+1) fixed fuel fraction: every architecture carries 0.16 of its own take-off mass as fuel, so take-off mass cancels from range;
+2) fixed fuel mass: every architecture carries the fuel this configuration carries at that closure, 9.20, 8.94, 8.56 and 8.37 kg at closures A to D, as a fraction of its own take-off mass;
+3) fixed take-off mass and payload: every architecture is held at this configuration's take-off mass with the same 13 kg payload, and its fuel is what remains after its empty mass, so every kilogram of architecture-specific hardware is a kilogram of fuel not carried.
+
+### The per-closure numbers
+
+<!-- for P28 (Section 6.4): "The per-closure numbers are in Supplement S13." src: archive S13 first table (L4126-L4132); figures from aero/contracts.py, rerun this
+     round. Added from the same output: the mass ratio under the first contract and the shift. -->
+
+Range of the lift-plus-cruise layout relative to this configuration (positive: lift-plus-cruise ahead), and the mass ratio under the first contract:
+
+| Closure | Fixed fuel fraction | Fixed fuel mass | Fixed take-off mass | Shift, first to third | Lift-plus-cruise mass / this configuration's, first contract |
+|---|---:|---:|---:|---:|---:|
+| A | +67.8 % | +40.2 % | +1.1 % | 66.8 points | 1.392 |
+| B | +55.3 % | +27.5 % | −13.0 % | 68.3 points | 1.433 |
+| C | +83.9 % | +53.5 % | +7.3 % | 76.6 points | 1.378 |
+| D | +70.2 % | +40.1 % | −6.5 % | 76.7 points | 1.409 |
+
+The tilting layout, credited with no cruise penalty, is 93 to 141 percent ahead under every contract at every closure.
+
+### Without the common buffer
+
+<!-- for P27 (Section 6.4): "… without the buffer, and with engines rated to the hover demand, the lift-plus-cruise layout does not close under a fixed fuel fraction
+     or a fixed take-off mass (Supplement S13)". src: aero/contracts.py case (d), rerun this round: lift-plus-cruise "KAPANMADI" (does not close) under
+     contracts 1 and 3 at every closure; under contract 2, -46.6 to -38.4 percent. Not used in Section 6.4's comparison. -->
+
+If the competitors carry no buffer and rate their engines to the hover demand, the lift-plus-cruise layout does not close at any of the four closures under a fixed fuel fraction or a fixed take-off mass; under a fixed fuel mass it is 38 to 47 percent behind this configuration. This case is not used in Section 6.4's comparison; it shows only the direction of the choice to hold Bill 3 common.
+
+### Sensitivity
+
+<!-- for P29 (Section 6.4): "… across the sensitivity cases the competitor's lift-group mass and the propeller basis (Supplement S13)" and P30: "… with a common propeller
+     efficiency the lift-plus-cruise lead under the first contract falls from 55–84 to 33–45 percent (Supplement S13)". src: archive S13 second table (L4136-L4144) and
+     "Section 13's paragraphs as they stood before the Round 172 shortening" (L4417 version). Protected S13 rows carried: "With a lighter lift group … a reversal
+     appears at every closure." (E15) and "The sign under a fixed take-off mass is not a result about the architectures; it is a result about those quantities."
+     (E14; the archive's lead-in "Put plainly," is not part of the register text and is not carried). Figures from aero/contracts.py cases (a), (b) 5 % and 15 %,
+     (c), rerun this round: every range and shift matches the archive table. The antecedent sentence for "those quantities" restates the body's Section 6.4. -->
+
+| Case | Fixed fuel fraction | Fixed fuel mass | Fixed take-off mass | Shift, first to third |
+|---|---:|---:|---:|---:|
+| As declared (lift group 10 % of take-off mass, competitors' propeller efficiency 0.80) | +55 to +84 % | +28 to +54 % | −13 to +7 % | 67 to 77 points |
+| Lift group 5 % of take-off mass | +55 to +84 % | +47 to +76 % | +36 to +65 % | 14 to 24 points |
+| Lift group 15 % of take-off mass | +55 to +84 % | +8 to +31 % | −62 to −50 % | 117 to 134 points |
+| All three at this configuration's propeller efficiency | +33 to +45 % | +6 to +17 % | −33 to −25 % | 65 to 72 points |
+| Lift-plus-cruise drag as a fixed increment, not a ratio | +59 to +75 % | +31 to +45 % | −13 to +5 % | 67 to 75 points |
+
+With a lighter lift group the lift-plus-cruise layout leads under all three contracts at every closure; with a heavier one this configuration leads under a fixed take-off mass at every closure; with a common propeller efficiency a reversal appears at every closure. The quantities that decide the sign are assumed for the competitor rather than measured: its lift-group mass fraction and its propeller efficiency. The sign under a fixed take-off mass is not a result about the architectures; it is a result about those quantities.

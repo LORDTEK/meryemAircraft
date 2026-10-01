@@ -923,3 +923,6 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Tur 209: S-67 sözcüğü | ChatGPT'nin | ChatGPT'nin | ChatGPT'nin (kendini geri çekti) | ChatGPT'nin (kendini geri çekti) | ChatGPT'nin | **uygulandı; teyide (Tur 210)** |
 | Tur 210: S11 P15, P19–P21 | R1 | R1 | R1 | R1 | R1 | **kapandı** |
 | Tur 210: Q-210 (P22) | R4, işaretçi | R1, değişiklik yok | R4, iki onarım | R4, yeniden yazma | R2, ek cümle (Tur 211) | **ayrışık; Tur 211** |
+| Tur 211: S12 P24, P25 | R1 | R1 | R1 | R1 | R1 | **kapandı** |
+| Tur 211: P22 ek cümle | evet | evet | değişiklik yok | evet | evet | **Tur 212'de DeepSeek'e** |
+| Tur 211: S12 dönüş süresi | sayılarla | yalnız cümle | sayılarla | çıksın | sayılarla | **Tur 212; olası yazar** |
