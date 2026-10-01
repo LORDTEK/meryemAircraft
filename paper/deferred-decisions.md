@@ -1376,3 +1376,9 @@ NeuralFoil makale künyesi doğrulanmadı. Okuyuculardan künye alanları (bağl
 - **Kapandı:** S-66 sonucu dördünce teyit; *"within or below"* kaldı (ChatGPT geçti); S8 son cümlesi taslaktaki gibi (*"side force only"*; DeepSeek önerisini geri çekti, ChatGPT taslak, Grok ikisi de, Qwen eki tercih etti → Tur 208'de Qwen'e soruldu).
 - **Yazarın sorusu:** yalnız Qwen cevapladı (eksik yok; S10–S14 için arşiv metni gerekecek; pencere şimdilik iyi). Grok, ChatGPT, DeepSeek cevaplamadı → Tur 208'de yeniden.
 - **Tur 208:** S10 taslağı (sayılar kod yeniden koşturularak); aday **S-67** (6.1'in döngü cümlesi "askı gücü kurulu gücü boyutlar" ↔ 6.2 "motor seyre göre" ↔ kod); arşivde iki hata (MTOW^1.5; %7). Kazanç taraması betiği depoya girdi (`aero/transition_gain_sweep.py`).
+
+## Tur 208 cevapları
+- **Kapandı (dördü + Claude):** yazarın sorusu dördünce cevaplandı (eksik yok; Grok ve DeepSeek: S11–S14'ten önce yeni pencere iyi olur); S2–S8 bütün gövde denetimi geçti; S10 P17, P18 R1; arşiv düzeltmeleri kabul; kazanç taraması ekte kalır (ChatGPT: yeni duyarlılık koşusu diye etiketlenir — uygulandı; Grok: 16,9 m gövdeye girmez); **S-67 kusur**, P16 onarılana dek R4; S8 sonu taslaktaki gibi (Qwen kabul).
+- **Açık (Tur 209):** S-67 sözcüğü — Grok / ChatGPT / DeepSeek / Qwen (iki biçim) / Claude (ChatGPT'ninki). DeepSeek: P14 R1 ve kazanç sayısı.
+- **Yazar (Tur 208):** *"Paketi her seferinde ek olarak veremem … Qwen zaten dosya olarak da alamadı."* → paket kontrol noktalarında ve yeni pencerede; parçalı sürüm (`reader-packet-partN.md`, ~6 000 sözcük). CLAUDE.md'ye işlendi.
+- **Yazara soru (Tur 209):** S11–S14'ten önce pencereler yenilensin mi; dördü birden mi, yalnız isteyenler mi.

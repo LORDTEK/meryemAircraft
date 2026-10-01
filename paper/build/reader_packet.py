@@ -37,3 +37,20 @@ out = f"""# meryemAircraft — reader packet: the current body and the journal s
 """
 (K / "paper/submission/reader-packet.md").write_text(out)
 print("reader-packet.md:", n_g, "+", n_e, "words, commit", h)
+
+# Parcalar (yazar, Tur 208: Qwen dosya alamiyor, tek parca metin olarak da yapistirilamiyor).
+# Paket ~6 000 sozcukluk parcalara bolunur; her parca kendi basligini ve sirasini tasir.
+parcalar, simdiki, n = [], [], 0
+for para in out.split("\n\n"):
+    w = len(para.split())
+    if n + w > 6000 and simdiki:
+        parcalar.append("\n\n".join(simdiki)); simdiki, n = [], 0
+    simdiki.append(para); n += w
+if simdiki:
+    parcalar.append("\n\n".join(simdiki))
+for f in (K / "paper/submission").glob("reader-packet-part*.md"):
+    f.unlink()
+for i, t in enumerate(parcalar, 1):
+    bas = f"> **Reader packet, part {i} of {len(parcalar)}** (commit `{h}`). Read all parts before answering; the round text says what to judge.\n\n"
+    (K / f"paper/submission/reader-packet-part{i}.md").write_text(bas + t + "\n")
+print("parcalar:", [len(t.split()) for t in parcalar])

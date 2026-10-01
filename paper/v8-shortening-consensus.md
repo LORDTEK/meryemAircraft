@@ -917,3 +917,6 @@ değişmedi) ve Adım 12 taslağı (uygulanmadı; veto bekliyor).
 | Tur 207: S-66 sonucu teyit | evet | evet | evet | evet | evet | **kapandı** |
 | Tur 207: "within or below" / "compared with" | within | within (geçti) | within | within | within | **kapandı** |
 | Tur 207: S8 "only" / "and not their drag" | ikisi | only | only (geri çekti) | not their drag | only | **taslak kalır; Qwen'e soruldu** |
+| Tur 208: S-67 kusur mu | evet | evet | evet | evet | evet | **kapandı; sözcük Tur 209** |
+| Tur 208: S10 P17, P18 | R1 | R1 | R1 | R1 | R1 | **kapandı** |
+| Tur 208: kazanç taraması ekte | evet | evet (yeni koşu etiketi) | evet (ya da nitel) | evet | evet | **kapandı; DeepSeek'e sayı soruldu** |

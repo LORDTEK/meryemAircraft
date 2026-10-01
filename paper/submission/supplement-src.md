@@ -242,7 +242,8 @@ Run on the reference design's own assumed inputs (a zero-lift coefficient of 0.0
      the manoeuvre costs altitude."
      Rerun this round of aero/transition_dynamics.py kos() (HAFIF: 50 kg, S 1.979 m2, Iyy 9.81 kg m2; M 23.0 N m; t_r 2 s; 5 m/s entry climb; C_m zero):
      linear 5.43 m, smooth (3t^2-2t^3) 6.33 m, bang-bang 6.57 m, saturation time 0.0 s in all three. Drag: C_D0 0.0285 / 0.0381 with e 0.817 moves each
-     by at most 0.022 m. GAIN SWEEP: the archive's "reaching 17 m" has no script in the repository; reproduced this round by aero/transition_gain_sweep.py (a copy of kos()
+     by at most 0.022 m. GAIN SWEEP: the archive's "reaching 17 m" has no script in the repository. The figure here is a NEW sensitivity run, not a reconstruction of the
+     archived sweep (ChatGPT, Round 208); its design (Kd scaled as the square root of the Kp factor) was chosen this round. Script: aero/transition_gain_sweep.py (a copy of kos()
      with the PD gains as parameters; baseline Kp 25, Kd 10; output aero/transition-gain-sweep-result.txt): Kp x2, x4, x8, x16 with Kd x sqrt: 7.85, 8.71,
      16.32, 16.94 m, no saturation. -->
 

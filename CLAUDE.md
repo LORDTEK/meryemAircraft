@@ -402,6 +402,10 @@ dahil herkesin hemfikir olduğu kısaltmalar uygulansın."*
   bir bütüne karşı hüküm istenen her soruda (örn. *"gövdenin söylemediği bir iddia ekliyor mu"*) o bütün tur metniyle birlikte gider.
   `paper/build/reader_packet.py` → `paper/submission/reader-packet.md` (güncel gövde + dergi eki taslağı); gövde değişince yeniden üretilir.
   Yeni pencere açan okuyucuya başlangıç metni + güncel tur metni + paket. Okuyuculara düzenli olarak eksiklerini ve pencere durumlarını sor.
+  **Sınır (yazar, Tur 208):** *"Paketi her seferinde ek olarak veremem. Qwen'e yükleyemedim … Sonra sohbet doluyor."* → Paket **her tur gitmez**;
+  yalnız bütüne karşı hüküm gereken kontrol noktalarında (S2–S10 denetimi yapıldı; sonraki: dergi eki tamamlanınca son denetim) ve yeni pencerede.
+  Ara turlarda tam metin kuralı geçerli: hüküm istenen gövde bölümü tur metnine tam girer. Dosya alamayan okuyucu için paket ~6 000 sözcüklük
+  parçalara bölünür (`reader-packet-partN.md`), ardışık mesajlarla yapıştırılır.
 - **Ben de bir okuyucuyum, hakem değilim.** Her tur metninde her açık madde için **kendi görüşüm ve gerekçem**
   yazılır ve okuyuculardan **benim görüşümü de eleştirmeleri** istenir. Oylama tablosunda ben de bir sütunum.
 - **Uygulama eşiği: dört okuyucu + ben.** Biri bile karşıysa uygulanmaz, geri sorulur. Karar yine yazarındır;

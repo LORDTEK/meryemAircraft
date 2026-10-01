@@ -158,3 +158,5 @@ anlaşılamadıktan sonra haklı olmak önem kaybeder."*
 **KAPANDI:** W-2 Q3, L-3 satır 1, R-11; kapanış kapısı (dört okuyucu). **Uygulandı, teyide:** W-2 — *"What this paper contributes is the architecture that brings
 the three elements together; the condition shows what it satisfies, and the price shows what it costs."* (yazarın cümlesi; "the" ve "shows" yazarın seçimi).
 Teyitle birlikte **aşama kapanır**; bir sonraki aşamanın yöntemi (Öneri G, bölüm birleştirme) oyda.
+
+**Tur 208–209:** **S-67** — Bölüm 6.1 (Adım 10) döngü cümlesi (P16): *"take-off mass the hover power that sizes the installed power"*. Kod (`aero/baseline.py`, motor_hover=False): motor seyir elektrik gücünün 1,53 katı; askı gücü kapalı kütlede hesaplanıp raporlanıyor, hiçbir kütle terimine girmiyor. Bölüm 6.2: *"The engine is sized by cruise"*. Dördü + Claude: kusur (P16 R4). Onarım sözcüğü Tur 209'da. Köken: Tur 170–172 yeniden kurması (Claude). | S |
