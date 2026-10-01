@@ -406,6 +406,7 @@ dahil herkesin hemfikir olduğu kısaltmalar uygulansın."*
   yalnız bütüne karşı hüküm gereken kontrol noktalarında (S2–S10 denetimi yapıldı; sonraki: dergi eki tamamlanınca son denetim) ve yeni pencerede.
   Ara turlarda tam metin kuralı geçerli: hüküm istenen gövde bölümü tur metnine tam girer. Dosya alamayan okuyucu için paket ~6 000 sözcüklük
   parçalara bölünür (`reader-packet-partN.md`), ardışık mesajlarla yapıştırılır.
+- **Bir okuyucu iki cevap üretirse (yazar, Tur 220).** *"İki tane Qwen cevabı varsa mutlaka okur okumaz ilk önce hangisini seçeceğimi söyleyeceksin. Yoruldum yazmaktan."* → Yazara cevabın **ilk satırı** hangi sürümün seçileceğidir, gerekçesi tek cümle; yazarın sormasını beklemem. Tur metnine seçilen sürüm girer, ötekinin farkı bir satırla anılır.
 - **Ben de bir okuyucuyum, hakem değilim.** Her tur metninde her açık madde için **kendi görüşüm ve gerekçem**
   yazılır ve okuyuculardan **benim görüşümü de eleştirmeleri** istenir. Oylama tablosunda ben de bir sütunum.
 - **Uygulama eşiği: dört okuyucu + ben.** Biri bile karşıysa uygulanmaz, geri sorulur. Karar yine yazarındır;
