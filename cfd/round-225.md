@@ -2,7 +2,7 @@
 
 > **This is a task. Please answer it now, and begin with your name alone on the first line.**
 >
-> Commit **`@@C@@`**, tag **`jacft-2026-10-C039418-submitted`**, branch `claude/ecstatic-cori-6w30at` (for verification only). Everything you are asked to judge is in this text.
+> Commit **`59a57e5`**, tag **`jacft-2026-10-C039418-submitted`**, branch `claude/ecstatic-cori-6w30at` (for verification only). Everything you are asked to judge is in this text.
 
 ---
 
