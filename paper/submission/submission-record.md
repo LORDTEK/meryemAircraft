@@ -18,8 +18,8 @@
 | AIAA geçmişi | No |
 
 ## Gönderim sonrası yapılacaklar
-1. **Meryem ve Berke Gülmen** ScholarOne'un yazarlık onay e-postasını onaylar — gönderim bütün yazarlar onaylayana kadar tamamlanmış sayılmaz.
-2. **AIAA Journal'a açılmış gönderilmemiş taslak silinir** (2026-10-01'de yanlışlıkla açıldı; girişte AIAA Journal → Author → Unsubmitted Manuscripts → Delete). Gönderilmediği için AIAA geçmişi sorusunun cevabı No'dur.
+1. ~~Meryem ve Berke Gülmen yazarlık onayı~~ — **YAPILDI (2026-10-02):** ikisi de e-postayı onayladı ve ScholarOne hesaplarını oluşturdu.
+2. ~~AIAA Journal taslağı~~ — **SİLİNDİ (2026-10-02, yazar).** Kayıt için: (2026-10-01'de yanlışlıkla açıldı; girişte AIAA Journal → Author → Unsubmitted Manuscripts → Delete). Gönderilmediği için AIAA geçmişi sorusunun cevabı No'dur.
 3. Okuyuculara: E36 sonucunun teyidi; ChatGPT'ye "which I wrote" olgusu (Şekil 1 betiğini Claude yazdı, commit a0e0667); DeepSeek'e yeni pencere (`cfd/reader-onboarding.md` + güncel tur).
 4. Kabul gelirse: Zenodo ön baskılarının telif devrindeki durumu AIAA'ya sorulur (`paper/joa-compliance.md` §8).
 5. Park listesi: `paper/v8-parking.md`.
