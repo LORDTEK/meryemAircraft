@@ -215,7 +215,7 @@ closes.** Readers answer one another, not only Claude.
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 223. The paper is submitted:** *Journal of Aircraft*, Manuscript ID **2026-10-C039418**, 2 October 2026, Full Paper. The submitted text
+**Round 224. The paper is submitted:** *Journal of Aircraft*, Manuscript ID **2026-10-C039418**, 2 October 2026, Full Paper. The submitted text
 cannot change; anything found from here on is recorded for the revision stage. DeepSeek's window filled during Round 222; DeepSeek starts a new
 conversation with this file, the reader packet (regenerated in Round 223) and the Round 223 text. Files are not re-sent each round; each round
 text carries what it asks you to judge and ends by naming what goes to the author.
@@ -259,7 +259,8 @@ text carries what it asks you to judge and ends by naming what goes to the autho
 | Round 221 | the cover letter for ScholarOne Step 6 (`paper/submission/cover-letter.md`): one draft, every predicate sourced |
 | Round 222 | cover letter second pass (differences: 2b wording, MDPI mention, Qwen's closing sentence); the two AI-use explanations and the figure gap in the Acknowledgments |
 | **SUBMITTED** | *Journal of Aircraft*, Manuscript ID **2026-10-C039418**, 2 October 2026 (Full Paper). The cover letter and the two AI-use texts were used as agreed (E37); the Acknowledgments name the code that renders Figure 1 (E36). Open after submission: confirm E36; the Figure 1 fact for ChatGPT (the script was written by Claude); DeepSeek in a new window |
-| **Now (Round 223)** | confirm what was sent after Round 222 (the Acknowledgments sentence, E36; the cover letter, E37; the two AI-use texts); the Figure 1 fact for ChatGPT; what, if anything, to prepare while the paper is under review |
+| Closed (Round 223) | all five confirmed what was sent: the Acknowledgments sentence (E36), the cover letter (E37), the two AI-use texts; ChatGPT withdrew its Round 222 objection once the "I" was identified as Claude |
+| **Now (Round 224)** | what to prepare while the paper is under review: five positions side by side (snapshot, a ledger of parked items, a review-comment classification, no answers before reviews exist) |
 | **How the journal supplement is composed** (Rounds 203–208) | only what the 34 body pointers (P01–P34) promise; each passage taken from the latest archive snapshot, brought up to the current body and checked against the code and sources, with a provenance note; protected supplement rows carried verbatim; ChatGPT's rule (Round 204); each pointer's receipt graded R1 faithful / R2 differently qualified / R3 no content / R4 the body says more than the supplement establishes. Done: S2–S6, S8, S10, S11 (P22 open); S12, S13; S14 drafted (Round 213). All 34 pointers have a passage |
 | Done in the submission stage | numbered references (26); the generator `paper/build/submission_build.py` (LaTeX, AIAA class, Roman-numeral sections, *Sec.*, American spelling, no dashes); Fig. 1; the Acknowledgments AI-use sentence |
 | Still to do | the supplement generator (LaTeX, S1–S11); the receipt table for all 34 pointers; the final whole-body check with the completed supplement |
