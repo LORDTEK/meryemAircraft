@@ -1432,3 +1432,6 @@ ScholarOne Step 6 yapay zekâ sorusu *"creating figures"* diyor; AIAA *"writing 
 
 ## E37 — Kapak mektubu · **KARAR (2026-10-01, yazar):** *"Hayır, anılmasın. Çıkar çatışması yok. DeepSeek çalışmıyor. Pencere doldu."*
 MDPI (*Drones*/*Aerospace*) gönderimi mektupta anılmaz (Grok evet; ChatGPT, Qwen, Claude, DeepSeek R221 hayır). Yazarların çıkar çatışması yok → Qwen'in kapanış cümlesi girer. Tur 222'de yakınsananlar uygulandı: *"audited"* kalır, iddialar değişmez (özetin kelimeleri), uzunluk cümlesi ChatGPT'nin kısa biçimi, imzada sorumlu yazarın e-postası. **DeepSeek Tur 222'ye cevap veremedi (pencere doldu);** R221'de uzunluk cümlesinin kalmasını ve e-postanın eklenmesini kendisi önermişti; kısa biçim için oyu yok — yazarın kararıyla uygulandı. ChatGPT'nin Şekil 1 itirazı (c) "which I wrote"un yanlış okunmasına dayanıyordu (betiği Claude yazdı, commit a0e0667); E36 durur, olgu bir sonraki turda ChatGPT'ye gösterilir.
+
+## GÖNDERİM — 2026-10-02
+*Journal of Aircraft*, **Manuscript ID 2026-10-C039418**, Full Paper, 02-Oct-2026. Kayıt ve gönderim sonrası yapılacaklar: `paper/submission/submission-record.md`.
