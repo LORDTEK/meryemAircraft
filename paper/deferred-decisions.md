@@ -1435,3 +1435,12 @@ MDPI (*Drones*/*Aerospace*) gönderimi mektupta anılmaz (Grok evet; ChatGPT, Qw
 
 ## GÖNDERİM — 2026-10-02
 *Journal of Aircraft*, **Manuscript ID 2026-10-C039418**, Full Paper, 02-Oct-2026. Kayıt ve gönderim sonrası yapılacaklar: `paper/submission/submission-record.md`.
+
+## E38 — Bekleme dönemi planı (Tur 224, beşimiz yakınsadı) · **YAZARDA**
+Gönderilen metin dondurulmuş kalır; taslak düzeltme, önceden hakem cevabı, kaynak yeniden denetimi (Tur 195–198 durur; Qwen geri çekti), yuvarlanma betiği yeniden hesabı **yok**. Yapılacaklar (yazar onaylarsa):
+1. **Gönderim kaydı:** git etiketi + yüklenen üç dosyanın SHA-256'sı + ScholarOne alanlarının tam metni (`submission-record.md`, `scholarone-fields.md`, `cover-letter.md`).
+2. **Tek revizyon defteri:** park edilen dokuz öğe + küçük kusurlar; sütunlar: kimlik (cevap şablonuyla ortak, DeepSeek), dokunduğu cümle, park gerekçesi, kaynak tur, risk (korunan cümle/sayı/iddia/işaretçi, DeepSeek), tetikleyici (hangi hakem yorumu açar, DeepSeek). Düzeltme metni yazılmaz.
+3. **Hakem cevap şablonu (boş):** ChatGPT'nin yedi sınıfı bir sütun; konum, zaten cevaplı mı, önerilen eylem, korunan cümleye/sayıya dokunur mu, yazar kararı gerekir mi. Yalnız rapor gelince kullanılır.
+4. **Arama tablosu:** DeepSeek'in olası yedi hakem talebi → gönderilen metinde ilgili yer. Cevap metni yok, karar yok.
+5. **Sayı kaynak sayfası:** özet + kapak mektubu (Claude, ChatGPT, Qwen); DeepSeek sonuç bölümünü de ekler; Grok: yalnız yazar isterse.
+Var olanlar yeniden kurulmaz: alındı tablosu, korunan cümle kaydı, verify.py, Ek S11 açık sorular.
