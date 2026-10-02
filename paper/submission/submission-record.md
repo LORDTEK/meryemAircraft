@@ -19,7 +19,7 @@
 
 ## Gönderilen hâlin kaydı (E38, Tur 224; 2026-10-02)
 
-**Git etiketi:** `jacft-2026-10-C039418-submitted` — gönderilen dosyaları ve bu kaydı taşıyan commit. Yüklenen dosyalar `e4bf1f8`'den beri değişmedi.
+**Çapa commit:** `59a57e5` — gönderilen dosyaları ve bu kaydı taşıyor; yüklenen dosyalar `e4bf1f8`'den beri değişmedi. **Git etiketi** `jacft-2026-10-C039418-submitted` bu commit'te **yalnız yerelde** var: uzağa etiket gönderimi oturumun ağ politikasınca reddedildi (HTTP 403, 2026-10-02); etrafından dolaşılmadı. Yazar isterse etiketi GitHub arayüzünden (Releases → tag, commit 59a57e5) kendisi oluşturabilir. Asıl dayanak commit karması ve aşağıdaki SHA-256'lardır.
 
 | Dosya (ScholarOne türü) | SHA-256 |
 |---|---|

@@ -2,7 +2,7 @@
 
 > **This is a task. Please answer it now, and begin with your name alone on the first line.**
 >
-> Commit **`59a57e5`**, tag **`jacft-2026-10-C039418-submitted`**, branch `claude/ecstatic-cori-6w30at` (for verification only). Everything you are asked to judge is in this text.
+> Commit **`59a57e5`** (the snapshot commit), branch `claude/ecstatic-cori-6w30at` (for verification only). Everything you are asked to judge is in this text.
 
 ---
 
@@ -12,7 +12,7 @@ The author approved the plan the five of us converged on in Round 224. For the n
 
 **What was done:**
 - **The snapshot.**
-  - A git tag, `jacft-2026-10-C039418-submitted`.
+  - **The snapshot commit `59a57e5`.** A git tag was created on it, but the push of the tag to the repository was refused by this session's network policy, so the tag exists only locally. The commit hash and the file hashes are the anchor.
   - The SHA-256 of the three uploaded files, written into the submission record. The files have not changed since commit `e4bf1f8`.
   - The ScholarOne fields as submitted.
 - **Four files in `paper/submission/review/`,** given in full below:
