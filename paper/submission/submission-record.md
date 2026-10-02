@@ -17,6 +17,21 @@
 | Fon / çıkar çatışması | yok / yok |
 | AIAA geçmişi | No |
 
+## Gönderilen hâlin kaydı (E38, Tur 224; 2026-10-02)
+
+**Git etiketi:** `jacft-2026-10-C039418-submitted` — gönderilen dosyaları ve bu kaydı taşıyan commit. Yüklenen dosyalar `e4bf1f8`'den beri değişmedi.
+
+| Dosya (ScholarOne türü) | SHA-256 |
+|---|---|
+| GulmenJA.pdf (Main Document) | `f4a674152570806b75ad276773065170db98d0862e32dcefb2fc5739c7de12ab` |
+| GulmenJASupp.pdf (Supplemental Materials) | `0466b6d8ada7b6a0f1c15f39d5d48cb848f512d0663438f5e69e7b5ffa8c2e01` |
+| GulmenJAsource.zip (TeX/LaTeX Suppl File) | `3470ad9adaef8aa2a1834efc8db967f9bd6110f5848941c00bffa5ab1995a4b1` |
+
+**ScholarOne alanları, gönderildiği hâliyle:** başlık, özet, kapak mektubu, iki YZ açıklaması → `scholarone-fields.md` ve `cover-letter.md` (yazarın Step 7 ekranıyla harf harf karşılaştırıldı). Plain Language Summary boş; Virtual Collection seçilmedi.
+Önerilen hakemlerin e-postaları gönderildiği hâliyle: brian.german@aerospace.gatech.edu · dwz@oddjob.utias.utoronto.ca · p.laskaridis@cranfield.ac.uk · bo-yang.li@polyu.edu.hk (Zingg ve Laskaridis'inkini yazar kurum sayfalarından ekledi).
+
+**Bekleme dönemi dosyaları** (`paper/submission/review/`): `revision-ledger.md` · `review-response-template.md` · `review-lookup.md` · `number-provenance.md`.
+
 ## Gönderim sonrası yapılacaklar
 1. ~~Meryem ve Berke Gülmen yazarlık onayı~~ — **YAPILDI (2026-10-02):** ikisi de e-postayı onayladı ve ScholarOne hesaplarını oluşturdu.
 2. ~~AIAA Journal taslağı~~ — **SİLİNDİ (2026-10-02, yazar).** Kayıt için: (2026-10-01'de yanlışlıkla açıldı; girişte AIAA Journal → Author → Unsubmitted Manuscripts → Delete). Gönderilmediği için AIAA geçmişi sorusunun cevabı No'dur.
