@@ -1,12 +1,12 @@
-> **Reader packet, part 1 of 4** (commit `ddc3212`). Read all parts before answering; the round text says what to judge.
+> **Reader packet, part 1 of 4** (commit `84fb24e`). Read all parts before answering; the round text says what to judge.
 
 # meryemAircraft — reader packet: the current body and the journal supplement draft
 
-> Generated from the repository at commit `ddc3212` (branch `claude/ecstatic-cori-6w30at`). It is a reference for reading the round texts, not a task in itself.
+> Generated from the repository at commit `84fb24e` (branch `claude/ecstatic-cori-6w30at`). It is a reference for reading the round texts, not a task in itself.
 >
 > **Part 1** is the current body (14786 words) in the assembled numbering the round texts use (*"Section 5.2"*). The submission generator converts this to the journal's form (Roman-numeral sections, *Sec.*, numbered citations, American spelling, one figure); the wording is the same.
 >
-> **Part 2** is the journal supplement (7453 words), complete, without the provenance notes: the text as it will be submitted. The notes are in the repository, `paper/submission/supplement-src.md`. It keeps the archive labels (S2–S14) that the body's pointers use; the submission renumbers both to S1–S11.
+> **Part 2** is the journal supplement (7464 words), complete, without the provenance notes: the text as it will be submitted. The notes are in the repository, `paper/submission/supplement-src.md`. It keeps the archive labels (S2–S14) that the body's pointers use; the submission renumbers both to S1–S11.
 
 ---
 

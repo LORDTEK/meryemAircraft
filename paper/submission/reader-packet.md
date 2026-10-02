@@ -1,10 +1,10 @@
 # meryemAircraft — reader packet: the current body and the journal supplement draft
 
-> Generated from the repository at commit `ddc3212` (branch `claude/ecstatic-cori-6w30at`). It is a reference for reading the round texts, not a task in itself.
+> Generated from the repository at commit `84fb24e` (branch `claude/ecstatic-cori-6w30at`). It is a reference for reading the round texts, not a task in itself.
 >
 > **Part 1** is the current body (14786 words) in the assembled numbering the round texts use (*"Section 5.2"*). The submission generator converts this to the journal's form (Roman-numeral sections, *Sec.*, numbered citations, American spelling, one figure); the wording is the same.
 >
-> **Part 2** is the journal supplement (7453 words), complete, without the provenance notes: the text as it will be submitted. The notes are in the repository, `paper/submission/supplement-src.md`. It keeps the archive labels (S2–S14) that the body's pointers use; the submission renumbers both to S1–S11.
+> **Part 2** is the journal supplement (7464 words), complete, without the provenance notes: the text as it will be submitted. The notes are in the repository, `paper/submission/supplement-src.md`. It keeps the archive labels (S2–S14) that the body's pointers use; the submission renumbers both to S1–S11.
 
 ---
 
@@ -1175,7 +1175,7 @@ Range of the lift-plus-cruise layout relative to this configuration (positive: l
 | C | +83.9 % | +53.5 % | +7.3 % | 76.6 points | 1.378 |
 | D | +70.2 % | +40.1 % | −6.5 % | 76.7 points | 1.409 |
 
-The tilting layout, credited with no cruise penalty, is 93 to 141 percent ahead under every contract at every closure.
+The tilting layout, credited with no cruise penalty, is 93 to 141 percent ahead under every contract at every closure: the size of the bound of Section 6.4, not a ranking.
 
 #### Without the common buffer
 

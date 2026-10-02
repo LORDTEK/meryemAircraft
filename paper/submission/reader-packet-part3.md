@@ -1,4 +1,4 @@
-> **Reader packet, part 3 of 4** (commit `ddc3212`). Read all parts before answering; the round text says what to judge.
+> **Reader packet, part 3 of 4** (commit `84fb24e`). Read all parts before answering; the round text says what to judge.
 
 Three architectures fly the same mission, 13 kg of payload at 30 m s⁻¹, with the same wing loading, disc loading and aspect ratio,
 the same airframe and avionics fractions, and the same energy chain apart from the propeller. **The competitors are therefore this
