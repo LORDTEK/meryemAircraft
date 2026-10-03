@@ -1,5 +1,7 @@
 # Revision ledger — Journal of Aircraft 2026-10-C039418
 
+> **Confirmed by all four readers and Claude, Round 225.**
+
 Plan: Round 224 (all five), approved by the author (E38). **The submitted text is frozen.** This ledger records items for the revision stage.
 It contains **no drafted repair text**. An item is opened only when its trigger occurs, or when the author decides.
 
@@ -30,7 +32,7 @@ Columns:
 
 | ID | Issue | Where | Found | Risk | Trigger | Status |
 |---|---|---|---|---|---|---|
-| M-01 | **Two section lists in the submission mix the numberings.** (i) Body, Sec. VIII.A, Table 6, the runway row: *"Claimed as sized, not demonstrated (Secs. III, 7)"*. It should read *Secs. III, VII*. (ii) Supplement, the S11 heading: *"Working for Secs. III, 6.2 and 7"*. It should read *Secs. III, VI.B and VII*. Cause: in a list of section numbers, the generator converts only the first one (sources: `paper/v8/ASSEMBLED.md` *"(Sections 3, 7)"*; `supplement-src.md` line 454 *"Sections 3, 6.2 and 7"*). A full scan of both submitted LaTeX files (2026-10-02) found **no other** Arabic section number after *Sec./Section* | Sec. VIII.A, Table 6; Supplement S11 heading | Claude, while preparing this ledger, 2026-10-02 | R | any revision; or a reviewer notes it | open; fix the generator's list conversion and both places at revision |
+| M-01 | **Two section lists in the submission mix the numberings.** (i) Body, Sec. VIII.A, Table 6, the runway row: *"Claimed as sized, not demonstrated (Secs. III, 7)"*. It should read *Secs. III, VII*. (ii) Supplement, the S11 heading: *"Working for Secs. III, 6.2 and 7"*. It should read *Secs. III, VI.B and VII*. Cause: in a list of section numbers, the generator converts only the first one (sources: `paper/v8/ASSEMBLED.md` *"(Sections 3, 7)"*; `supplement-src.md` line 454 *"Sections 3, 6.2 and 7"*). A full scan of both submitted LaTeX files (2026-10-02) found **no other** Arabic section number after *Sec./Section* | Sec. VIII.A, Table 6; Supplement S11 heading | Claude, while preparing this ledger, 2026-10-02 | R | any revision; or a reviewer notes it | open; fix the generator's list conversion and both places at revision. **Round 225 additions:** fix at the generator first, rebuild, rerun the scan, check the rendered PDF (ChatGPT); add a build-time check that flags any Arabic number after *Sec./Section* in the output (DeepSeek proposal, to be voted at revision); the scan would not catch a bare section number outside *Sec./Section* (Grok), so the revision rescan also reads section lists by eye. **Finding confirmed by all four and Claude (Round 225)** |
 | M-02 | The cover letter says *"Full-Length Paper"*; the *Journal of Aircraft* ScholarOne type is *"Full Paper"* | cover letter (submitted) | Claude, 2026-10-02 | — | none | record only |
 | M-03 | ScholarOne shows Ömer Gülmen's affiliation as *", Independent Researcher,"*: an empty department field leaves a leading comma | ScholarOne metadata, not the manuscript | Claude, 2026-10-02 | — | none | record only; can be fixed in the account profile |
 

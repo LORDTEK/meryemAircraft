@@ -1444,3 +1444,5 @@ Gönderilen metin dondurulmuş kalır; taslak düzeltme, önceden hakem cevabı,
 4. **Arama tablosu:** DeepSeek'in olası yedi hakem talebi → gönderilen metinde ilgili yer. Cevap metni yok, karar yok.
 5. **Sayı kaynak sayfası:** özet + kapak mektubu (Claude, ChatGPT, Qwen); DeepSeek sonuç bölümünü de ekler; Grok: yalnız yazar isterse.
 Var olanlar yeniden kurulmaz: alındı tablosu, korunan cümle kaydı, verify.py, Ek S11 açık sorular.
+
+- **E38 uygulandı ve kapandı (Tur 225, beşimiz teyit):** dört bekleme dosyası `paper/submission/review/`; M-01 revizyon kalemi. Hakem raporlarına kadar iş yok.

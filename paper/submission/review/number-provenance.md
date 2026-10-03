@@ -1,5 +1,7 @@
 # Number provenance: abstract, cover letter, conclusions (Section VIII)
 
+> **Confirmed by all four readers and Claude, Round 225.**
+
 Plan: Round 224, option (b), the author's choice (E38). Each number is given with:
 - its exact submitted wording;
 - its body source;

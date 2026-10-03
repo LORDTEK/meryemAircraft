@@ -1,5 +1,7 @@
 # Lookup: likely reviewer asks → where the submitted text already speaks to them
 
+> **Confirmed by all four readers and Claude, Round 225.**
+
 Plan: Round 224 (all five), approved by the author (E38). **A lookup, not an answer.** No response text, no decision about what would be declined.
 Locations are in the submitted numbering (body Secs. I–VIII; supplement S1–S11).
 

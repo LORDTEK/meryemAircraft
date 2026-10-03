@@ -1,5 +1,7 @@
 # Review-response template — Journal of Aircraft 2026-10-C039418
 
+> **Confirmed by all four readers and Claude, Round 225.**
+
 Plan: Round 224 (all five), approved by the author (E38). **Blank until the reviews exist.** Nothing here is sent to the journal before the author decides.
 
 **How to use it**
