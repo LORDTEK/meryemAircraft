@@ -32,6 +32,12 @@
 
 **Bekleme dönemi dosyaları** (`paper/submission/review/`): `revision-ledger.md` · `review-response-template.md` · `review-lookup.md` · `number-provenance.md`.
 
+## Dergiden gelen yazışma
+
+| Tarih | Kimden | Konu | Gereken | Son tarih | Durum |
+|---|---|---|---|---|---|
+| 03-Oct-2026 | Journal of Aircraft Editorial Office (edasstJA@aiaa.org) | **Author Verification Form** | Her yazar kendi Author Center'ında formu doldurur; *"we will not proceed with review of your manuscript until all forms have been signed by all co-authors"*. ORCID doğrulama isteğe bağlı | **08-Oct-2026** (5 gün) | açık |
+
 ## Gönderim sonrası yapılacaklar
 1. ~~Meryem ve Berke Gülmen yazarlık onayı~~ — **YAPILDI (2026-10-02):** ikisi de e-postayı onayladı ve ScholarOne hesaplarını oluşturdu.
 2. ~~AIAA Journal taslağı~~ — **SİLİNDİ (2026-10-02, yazar).** Kayıt için: (2026-10-01'de yanlışlıkla açıldı; girişte AIAA Journal → Author → Unsubmitted Manuscripts → Delete). Gönderilmediği için AIAA geçmişi sorusunun cevabı No'dur.
