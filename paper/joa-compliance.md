@@ -233,3 +233,7 @@ kabul gelirse AIAA'ya sorulacak. Şimdi karar gerektirmiyor.
 | Ücretler | ⚠️ Teyit edilmedi |
 
 **Gönderimi durduran bir şey yok. Hepsi v8'in yapım listesi.**
+
+### 8a. Gönderimden SONRA ön baskı — 2026-10-03, doğrulanmadı, Zenodo v8 bekliyor
+
+Yazar Zenodo v8 istedi (gönderimden bir gün sonra). §8'deki alıntı yalnız **gönderimden önce** için. Bir arama motoru özeti (belge değildir, Tur 119) AIAA'nın Publication Policies sayfasında ayrıca şu maddeyi veriyor: *"Upon submission to an AIAA journal or conference, authors can post draft manuscripts on their own personal websites and on their employers' websites, archive their draft manuscript in institutional/funder websites as required, and post/share copies for the authors' own classroom use."* — listede **ön baskı sunucusu yok.** Sayfa (https://aiaa.org/publications/publish-with-aiaa/publication-policies/) bu oturumdan açılamadı (ağ politikası, 403). **v8, maddenin birebir metni okunmadan yüklenmez.** §8 yazılırken bu madde kayda geçmemişti — eksik okuma.
