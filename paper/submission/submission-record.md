@@ -36,7 +36,7 @@
 
 | Tarih | Kimden | Konu | Gereken | Son tarih | Durum |
 |---|---|---|---|---|---|
-| 03-Oct-2026 | Journal of Aircraft Editorial Office (edasstJA@aiaa.org) | **Author Verification Form** | Her yazar kendi Author Center'ında formu doldurur; *"we will not proceed with review of your manuscript until all forms have been signed by all co-authors"*. ORCID doğrulama isteğe bağlı | **08-Oct-2026** (5 gün) | açık |
+| 03-Oct-2026 | Journal of Aircraft Editorial Office (edasstJA@aiaa.org) | **Author Verification Form** | Her yazar kendi Author Center'ında formu doldurur; *"we will not proceed with review of your manuscript until all forms have been signed by all co-authors"*. ORCID doğrulama isteğe bağlı | **08-Oct-2026** (5 gün) | açık — 05-Oct ekranı: durum *"Awaiting Author Confirmation Forms Completion"*; yapıştırılan hesapta *"Author Confirmation Form Completion submitted (03-Oct-2026)"*; EIC: Kapania, Rakesh; AE atanmadı |
 
 ## Gönderim sonrası yapılacaklar
 1. ~~Meryem ve Berke Gülmen yazarlık onayı~~ — **YAPILDI (2026-10-02):** ikisi de e-postayı onayladı ve ScholarOne hesaplarını oluşturdu.
