@@ -234,6 +234,16 @@ kabul gelirse AIAA'ya sorulacak. Şimdi karar gerektirmiyor.
 
 **Gönderimi durduran bir şey yok. Hepsi v8'in yapım listesi.**
 
-### 8a. Gönderimden SONRA ön baskı — 2026-10-03, doğrulanmadı, Zenodo v8 bekliyor
+### 8a. Gönderimden SONRA ön baskı — AIAA metni, yazar yapıştırdı 2026-10-07 (Publication Policies, "How Can I Share my Research?")
 
-Yazar Zenodo v8 istedi (gönderimden bir gün sonra). §8'deki alıntı yalnız **gönderimden önce** için. Bir arama motoru özeti (belge değildir, Tur 119) AIAA'nın Publication Policies sayfasında ayrıca şu maddeyi veriyor: *"Upon submission to an AIAA journal or conference, authors can post draft manuscripts on their own personal websites and on their employers' websites, archive their draft manuscript in institutional/funder websites as required, and post/share copies for the authors' own classroom use."* — listede **ön baskı sunucusu yok.** Sayfa (https://aiaa.org/publications/publish-with-aiaa/publication-policies/) bu oturumdan açılamadı (ağ politikası, 403). **v8, maddenin birebir metni okunmadan yüklenmez.** §8 yazılırken bu madde kayda geçmemişti — eksik okuma.
+> *"Prior to submitting to an AIAA journal or a conference, authors can: Post draft manuscripts and research results anywhere, anytime, including pre-print servers"*
+>
+> *"Upon submission to an AIAA journal or conference, authors can: Post draft manuscripts on their own personal websites and on their employers' websites · Archive their draft manuscript in institutional/funder websites as required · Post/share copies for the authors' own classroom use"*
+>
+> *"Upon acceptance … authors should: Update manuscript versions to include the final, accepted manuscript … where posted on their own or their employers' websites, on institutional/funder websites, and on approved third-party, not-for-profit servers (e.g., ArXiv) · Include the appropriate copyright notice … · Remove manuscripts from all other third-party servers and scholarly collaboration networks when copyright ownership has been assigned to AIAA (e.g., ResearchGate)"*
+
+**Sonuçlar:**
+1. **Zenodo v8 inceleme sürerken yüklenmez.** Gönderim sonrası izin listesinde ön baskı sunucusu yok (kişisel site, işveren sitesi, kurumsal/fon deposu, ders kullanımı).
+2. **v1–v7 ve depodaki gönderilen PDF gönderimden önce yayımlandı** (PDF son değişiklik `e4bf1f8`, 2026-10-01 19:31 UTC; gönderim 02-Oct) → *"prior to submitting … anywhere"* kapsamında.
+3. **Depo herkese açık (GitHub, public).** İnceleme sürerken **yeni bir makale sürümü (revizyon taslağı) açık depoya konursa** gönderim sonrası listeye girmez — GitHub kişisel ya da işveren sitesi değil. Revizyon aşamasından önce yazar kararı: taslaklar ayrı özel bir yerde mi tutulur, depo özel mi yapılır. (Okuyucu turları, defter vb. makale sürümü değil.)
+4. **Kabul gelirse:** Zenodo *"approved third-party, not-for-profit server"* sayılıyor mu (güncellenir), yoksa *"other third-party servers"* mı (kaldırılır)? AIAA'ya sorulur. Zenodo DOI'leri silinemez; yalnız dosya erişimi kısıtlanabilir — soru buna göre sorulur.
