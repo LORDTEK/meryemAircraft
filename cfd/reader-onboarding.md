@@ -215,7 +215,7 @@ closes.** Readers answer one another, not only Claude.
 
 ## 6. Where the work stands — *updated every round*
 
-**Round 225. The paper is submitted:** *Journal of Aircraft*, Manuscript ID **2026-10-C039418**, 2 October 2026, Full Paper. The submitted text
+**Desk-rejected by the *Journal of Aircraft* (14 October 2026, Associate Editor, not sent to review): "The paper does not provide any developments that are of archival nature." Earlier state, for the record — Round 225. The paper is submitted:** *Journal of Aircraft*, Manuscript ID **2026-10-C039418**, 2 October 2026, Full Paper. The submitted text
 cannot change; anything found from here on is recorded for the revision stage. DeepSeek's window filled during Round 222; DeepSeek starts a new
 conversation with this file, the reader packet (regenerated in Round 223) and the Round 223 text. Files are not re-sent each round; each round
 text carries what it asks you to judge and ends by naming what goes to the author.

@@ -1,5 +1,7 @@
 # Journal of Aircraft — gönderim kaydı
 
+> **SONUÇ: 14-Oct-2026 masadan ret (Associate Editor), hakeme gitmedi.** Gerekçe: *"does not provide any developments that are of archival nature."* Makale artık AIAA'da değerlendirmede değil.
+
 | Alan | Değer |
 |---|---|
 | Dergi | **Journal of Aircraft** (AIAA) — ScholarOne, https://mc.manuscriptcentral.com/aiaa (girişte dergi seçilir) |
@@ -39,6 +41,7 @@
 | 03-Oct-2026 | Journal of Aircraft Editorial Office (edasstJA@aiaa.org) | **Author Verification Form** | Her yazar kendi Author Center'ında formu doldurur; *"we will not proceed with review of your manuscript until all forms have been signed by all co-authors"*. ORCID doğrulama isteğe bağlı | **08-Oct-2026** (5 gün) | **kapandı (06-Oct)** — 05-Oct ekranı: durum *"Awaiting Author Confirmation Forms Completion"*; üç hesapta da (Ömer, Meryem, Berke; yazara göre) *"Author Confirmation Form Completion submitted (03-Oct-2026)"* — "view" ile denetlendi (05-Oct): üç ayrı form, üç ayrı imzacı (Meryem, Berke, Ömer Gülmen), hepsi 03-Oct; büro işlemesi bekleniyor (03-Oct cumartesi); 08-Oct'a kadar değişmezse edasstJA@aiaa.org'a yazılır; EIC: Kapania, Rakesh; AE atanmadı |
 | 06-Oct-2026 | Journal of Aircraft Editorial Office (Anali North Martin) | Berke Gülmen's author confirmation form **rescinded** (doğum yılı): ya e-postayla yılın doğru olduğu teyit edilir ya da form doğru yılla yeniden gönderilir | Berke Gülmen cevap verdi (yıl doğru) | — | **kapandı:** büro formu onun adına yeniden gönderdi |
 | 06-Oct-2026 | Anali North Martin, Technica Editorial | *"passed the manuscript along to the EIC for initial content review and editor assignment"* | — | — | **makale EIC'de (Kapania), ilk içerik değerlendirmesi** |
+| 14-Oct-2026 | Associate Editor, Journal of Aircraft | **MASADAN RET (hakeme gitmedi):** *"The paper does not provide any developments that are of archival nature. Your manuscript was not found to be appropriate for our journal, and we must decline further consideration by the Journal of Aircraft."* | — | — | **kapandı: reddedildi** |
 
 ## Gönderim sonrası yapılacaklar
 1. ~~Meryem ve Berke Gülmen yazarlık onayı~~ — **YAPILDI (2026-10-02):** ikisi de e-postayı onayladı ve ScholarOne hesaplarını oluşturdu.

@@ -733,7 +733,7 @@ hatayı doğruladı.** DeepSeek'in bir fizik sorusu (*"sabit rotorda q sadeleşm
 - Geliştirme dalı: `claude/ecstatic-cori-6w30at`. `main` de güncel tutulur.
 - **Başka hiçbir repository'ye dokunulmaz.** Başkalarının uzun emeği var.
 - Yayın: Zenodo (kök DOI 10.5281/zenodo.22144194).
-- **GÖNDERİLDİ: *Journal of Aircraft*, Manuscript ID 2026-10-C039418, 02-Oct-2026** (kayıt: `paper/submission/submission-record.md`; gönderim sonrası yapılacaklar orada).
+- ***Journal of Aircraft*, Manuscript ID 2026-10-C039418: gönderildi 02-Oct-2026, 14-Oct-2026 MASADAN REDDEDİLDİ (Associate Editor; hakeme gitmedi):** *"The paper does not provide any developments that are of archival nature."* İkinci masa reddi (önce *Drones*/*Aerospace*: deneysel doğrulama şartı). Kayıt: `paper/submission/submission-record.md`. Sonraki hedef yazarın kararı.
 - **Hedef dergi: *Journal of Aircraft* (AIAA).** *Drones*'a gönderildi
   (`drones-4595522`, 2026-09-14), kapsam dışı bulunup *Aerospace*'e aktarıldı,
   orada da aynı gün masadan reddedildi. **Hakeme hiç gitmedi.** Kayıt:

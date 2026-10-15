@@ -247,3 +247,5 @@ kabul gelirse AIAA'ya sorulacak. Şimdi karar gerektirmiyor.
 2. **v1–v7 ve depodaki gönderilen PDF gönderimden önce yayımlandı** (PDF son değişiklik `e4bf1f8`, 2026-10-01 19:31 UTC; gönderim 02-Oct) → *"prior to submitting … anywhere"* kapsamında.
 3. **Depo herkese açık (GitHub, public).** İnceleme sürerken **yeni bir makale sürümü (revizyon taslağı) açık depoya konursa** gönderim sonrası listeye girmez — GitHub kişisel ya da işveren sitesi değil. Revizyon aşamasından önce yazar kararı: taslaklar ayrı özel bir yerde mi tutulur, depo özel mi yapılır. (Okuyucu turları, defter vb. makale sürümü değil.)
 4. **Kabul gelirse:** Zenodo *"approved third-party, not-for-profit server"* sayılıyor mu (güncellenir), yoksa *"other third-party servers"* mı (kaldırılır)? AIAA'ya sorulur. Zenodo DOI'leri silinemez; yalnız dosya erişimi kısıtlanabilir — soru buna göre sorulur.
+
+**14-Oct-2026: masadan ret.** Makale artık AIAA'da değerlendirmede değil; §8a'nın "upon submission" kısıtı bu gönderim için kalktı. Gelecekte bir AIAA dergisine yeniden gönderilirse kural yine "prior to submitting … anywhere" ile başlar.
