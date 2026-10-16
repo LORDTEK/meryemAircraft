@@ -343,13 +343,16 @@ def conv_pointers(t):
         pre = t[max(0, start - 3):start]
         sentence_start = start == 0 or re.search(r'(^|[.!?:]\s|[.!?]\*\*\s|\n)$', t[max(0, start - 4):start]) is not None
         plural = m.group(1) == 'Sections'
-        a, b = m.group(2), m.group(3)
-        tgt = one(a) + ((' and ' + one(b)) if b else '')
+        # M-01 (2026-10-16): listenin YALNIZ ilk numarasi cevriliyordu ("Sections 3, 6.2 and 7" -> "Secs. III, 6.2 and 7").
+        # Artik listedeki her numara cevrilir; ayiraclar (", ", " and ", ", and ") aynen korunur.
+        parts = re.split(r'(,\s*and\s+|,\s*|\s+and\s+)', m.group(2))
+        tgt = ''.join(x if i % 2 else one(x) for i, x in enumerate(parts))
         word = ('Sections' if plural else 'Section') if sentence_start else ('Secs.' if plural else 'Sec.')
         new = '%s %s' % (word, tgt)
         RAPOR['pointers'].append('`%s` → `%s`' % (m.group(0), new))
         return new
-    return re.sub(r'\b(Sections?) (\d+(?:\.\d+)?)(?:,? and (\d+(?:\.\d+)?))?(?!\.\d)', rep, t)
+    NUM = r'\d+(?:\.\d+)?'
+    return re.sub(r'\b(Sections?) (%s(?:(?:,\s*and\s+|,\s*|\s+and\s+)%s)*)(?!\.\d)' % (NUM, NUM), rep, t)
 
 # Dergi eki S2-S14 -> S1-S11 (Tur 204, dort okuyucu + Claude). Kaynak ve arsiv eski etiketleri tasir.
 SUPP_MAP = {'2': '1', '3': '2', '4': '3', '5': '4', '6': '5', '8': '6', '10': '7', '11': '8', '12': '9', '13': '10', '14': '11'}

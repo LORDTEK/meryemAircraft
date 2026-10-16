@@ -106,7 +106,7 @@ sekiz diskin ΔC_D0'ı hesaplandı (Tur 15, `aero/tip_propeller.py`) — 50 kg t
 konumlama mekanizması ister — Adım 7'nin saydığı sınıf; o karşı-olgu hesaplanmadı. Sıfır itkide motorla sürmek ayrı bir
 durumdur ve **hesaplanmadı**. v7 bu kararı yazıyordu, v8 yazmıyordu (S-57).
 
-**"Mekanik olarak daha basit" de denmez** — parça sayısı, kütle, arıza kipi,
+**[KALKTI — yazarın kararı, 2026-10-16, §0.9.]** ~~**"Mekanik olarak daha basit" de denmez**~~ — parça sayısı, kütle, arıza kipi,
 bakım hiçbiri ölçülmedi. Denen şey bir **sayımdır**, güvenilirlik iddiası değil.
 
 Bunu üç dış okuyucu bağımsız olarak yakaladı ve biri yanlış dosyayı okurken
@@ -248,11 +248,34 @@ Hesabın işareti hesaptan önce söylenmez.
 ve seste merkez mimaridir.
 
 **Ama ruh, yüklemi genişletmez.** §0.1–0.3'ün dar gücü aynen durur: *"arranged to"*, mekanizma sınıfı sayımı,
-basitlik iddiası yok, öncelik iddiası yalnız *"bulunamadı"* biçiminde (§2.2). Kavrayışı taşıyan şey
+basitlik iddiası yok *(kalktı, §0.9)*, öncelik iddiası yalnız *"bulunamadı"* biçiminde (§2.2). Kavrayışı taşıyan şey
 **yerleşim, sıra ve ses**tir; daha güçlü bir cümle değil. Daha güçlü cümle, Tur 46'da daraltılan boşluk
 iddiasını yeniden açar ve bizi masadan attırır. **Açık gerilim (yazara soruldu, Tur 61):** Adım 1'in
 *"not a claim that the route was waiting to be found"* ifadesi ile yazarın *"görülememişi görmüş olmak"*
 duruşu.
+
+### 0.9 Ret sonrası yön. Yazar, 2026-10-16. Öncekilerle çelişirse bu geçerlidir.
+
+JoA masa reddinden sonra (14-Oct: *"The paper does not provide any developments that are of archival nature."*) yazar:
+
+> *"Sana çok defa dedim hep ne olmadığını ve ne yapmadığını anlatıyorsun bu çok saçma dedim ama dinletemedim. … Olmuyor
+> diyor yapmıyor diyor hakem de olmuyor ve yapmıyor diyor. … kaç defa dedim ne yaptığını anlat. doğrulama gerekiyorsa
+> doğrulama yap diye o kadar söyledim."*
+
+1. **Makale ne yaptığını anlatır.** Odak *"getirmiş olduğu eşsiz yenilik"*. Gövde bir olumsuzluk ve sınırlama listesi değildir.
+   Yanlış bir şey yazılmaz (§0.2 durur); ama metnin ağırlığı yapılana verilir.
+2. **12 000 kelime sert sınırdır.** *"12K kelime de 12K kelime."* Gönderilen PDF ~15 700 sözcüktü (pdftotext, kaynakça dahil).
+3. **Basitlik iddiası yazılır.** *"Sistem basit diyorum tilt gibi hareketli sistemden basit diyemiyor makalede … hareketli eleman
+   her zaman sabit sistemden daha karmaşıktır ve diğeri daha basittir."* §0.1'in *"Mekanik olarak daha basit de denmez"* kuralı ve
+   §0.8'in *"basitlik iddiası yok"* ifadesi bu kararla kalktı.
+   Yeniden yazımda kaldırılacak korumalar: `v8_stale.py` satır 209 (*"mechanically simpler"*), `v8-caveats.md` satır 53, 98, 170.
+4. **Doğrulama gereken yerde doğrulama yapılır;** "çok önemli değil" diye geçilmez.
+5. **Zayıflık baştan söylenir.** *"Red geldikten sonra yazıyor 'dürüst olarak söylemek gerekirse...' … başta diyeydin."* Bir risk
+   görüyorsam gönderimden önce, açıkça söylerim.
+6. **Anlamadığımı sorarım.** *"Anlamadığın neyse soraydın ya."* Yeniliği başkasına anlatmadan önce ben kavrarım.
+7. **Refleksle okuyucu turu önerilmez.** *"Durum ayan beyan ortadayken sen hemen 'yeni turlar düzenleyelim' derdindesin."*
+8. **Sıra:** v8 = gönderilen metin + M-01 (`paper/zenodo-v8/`, `paper/zenodo-v8-upload.md`); yazar dönünce Zenodo'ya. Sonra
+   yeniliğe odaklanan yeniden yazım. Yazar dönmeden yeni aşama başlatılmaz.
 
 ## 1. Yazışma ve üslup
 
