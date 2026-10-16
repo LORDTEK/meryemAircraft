@@ -29,6 +29,7 @@ Each row is a place where the output's words differ from the source. Every row s
 | insert |  | 1 |
 | insert |  | 5 |
 | insert |  | 1 |
+| replace | 7 | vii |
 
 ## Citation markers inserted (36)
 
@@ -195,7 +196,7 @@ Each row is a place where the output's words differ from the source. Every row s
 - `Section 7` → `Sec. VII`
 - `Section 7` → `Sec. VII`
 - `Section 4` → `Sec. IV`
-- `Sections 3` → `Secs. III`
+- `Sections 3, 7` → `Secs. III, VII`
 - `Section 5.1` → `Sec. V.A`
 - `Section 6.4` → `Sec. VI.D`
 - `Section 7` → `Sec. VII`
