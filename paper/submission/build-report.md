@@ -2,7 +2,7 @@
 
 Source `paper/v8/ASSEMBLED.md`; output `paper/submission/latex/meryemaircraft.tex`. **The step sources are not changed.**
 
-- Body words (text and table cells, excluding abstract, references and acknowledgments): **14474**
+- Body words (text and table cells, excluding abstract, references and acknowledgments): **14437**
 - Tables: 6 · numbered equations: 2 · lists: 3
 
 ## Output check: word-sequence differences other than the listed mechanical changes
@@ -88,7 +88,7 @@ Each row is a place where the output's words differ from the source. Every row s
 - `this paper's alternatives differ from axis to axis.` → `this paper's alternatives differ from axis to axis (Table 6).`
 - `in its own storage attitude` → `in its own storage attitude (Fig. 1)⟦FIG⟧`
 
-## Section pointers (122)
+## Section pointers (121)
 
 - `Section 5.1` → `Sec. V.A`
 - `Sections 5.1 and 5.2` → `Secs. V.A and V.B`
@@ -204,7 +204,6 @@ Each row is a place where the output's words differ from the source. Every row s
 - `Sections 5.1 and 5.2` → `Secs. V.A and V.B`
 - `Section 5.1` → `Sec. V.A`
 - `Section 5.2` → `Sec. V.B`
-- `Section 5.1` → `Sec. V.A`
 - `Section 2.2` → `Section II.B`
 - `Section 7` → `Section VII`
 - `Section 1` → `Section I`
@@ -383,13 +382,13 @@ Each row is a place where the output's words differ from the source. Every row s
 - ### The claims are made on four axes, against four different opponents → The Claims Are Made on Four Axes, Against Four Different Opponents
 - ### What each claim does not depend on → What Each Claim Does Not Depend On
 - ### One cost of the contribution that is named and not priced → One Cost of the Contribution That Is Named and Not Priced
-- ### Eight things this paper does not claim → Eight Things This Paper Does Not Claim
+- ### Seven things this paper does not claim → Seven Things This Paper Does Not Claim
 - ### What the claims that remain amount to → What the Claims That Remain Amount To
 
 ## Warnings (0)
 
 
-## Style pass (Round 202; for reader check) (101)
+## Style pass (Round 202; for reader check) (100)
 
 - **D01** `this work is aimed at sit — wildfire` → `this work is aimed at sit: wildfire`
 - **D02** `torque-balanced pair — so that reaction torque and net angular momentum are given up along with the reorientation mechanism — carrying` → `torque-balanced pair (so that reaction torque and net angular momentum are given up along with the reorientation mechanism), carrying`
@@ -461,7 +460,7 @@ Each row is a place where the output's words differ from the source. Every row s
 - **T4c** `or feather a rotor unused in one regime | — |` → `or feather a rotor unused in one regime | None |`
 - **T4d** `| Dedicated lift rotors | Lift-plus-cruise architectures | — |` → `| Dedicated lift rotors | Lift-plus-cruise architectures | None |`
 - **T4e** `from the cruise flow by such means | — (see note) |` → `from the cruise flow by such means | None (see note) |`
-- **T6a** `This is the paper's contribution — a count of mechanism classes` → `This is the paper's contribution: a count of mechanism classes`
+- **T6a** `This is the paper's contribution — the mechanism classes` → `This is the paper's contribution: the mechanism classes`
 - **T6b** `| Other hybrids — lift-plus-cruise, tilt |` → `| Other hybrids (lift-plus-cruise, tilt) |`
 - **A01** `the gap below is not a historical one` → `the gap set out in Section 1.5 is not a historical one`
 - **A02** `the origin of all three charges below` → `the origin of all three charges that follow`
@@ -491,7 +490,6 @@ Each row is a place where the output's words differ from the source. Every row s
 - **L5** `5. ` → `5) `
 - **L6** `6. ` → `6) `
 - **L7** `7. ` → `7) `
-- **L8** `8. ` → `8) `
 
 ## Dashes left in the text (style pass: reader round) (0)
 

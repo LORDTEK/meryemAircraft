@@ -11,13 +11,19 @@ Zenodo'ya ben giremiyorum; aşağısı el ile yapılacak işin tamamı, sırayla
 
 | Dosya | Ne | SHA-256 (ilk 12) |
 |---|---|---|
-| `meryemAircraft-v8.pdf` | makale (33 sayfa) | `cfef04389de3` |
-| `meryemAircraft-v8-supplement.pdf` | ek (S1–S11, 14 sayfa) | `5280cc7edc44` |
-| `meryemAircraft-v8-source.zip` | iki belgenin LaTeX kaynağı, sınıf dosyası, Şekil 1 | `c22f2c2b71cb` |
+| `meryemAircraft-v8.pdf` | makale (33 sayfa) | `45e5ed5585fc` |
+| `meryemAircraft-v8-supplement.pdf` | ek (S1–S11, 14 sayfa) | `5d33e4041878` |
+| `meryemAircraft-v8-source.zip` | iki belgenin LaTeX kaynağı, sınıf dosyası, Şekil 1 | `0a6931ad5015` |
 
-Bunlar Journal of Aircraft'a gönderilen metnin **M-01 düzeltilmiş** hâlidir:
-gövde Tablo 6 *"(Secs. III, VII)"*, ek S11 başlığı *"Working for Secs. III, VI.B and VII"*.
-Başka hiçbir fark yok (metin karşılaştırması: yalnız bu iki satır).
+Gönderilen metinden iki fark var, başka yok (sözcük düzeyinde metin karşılaştırması):
+1. **M-01:** gövde Tablo 6 *"(Secs. III, VII)"*, ek S11 başlığı *"Working for Secs. III, VI.B and VII"*.
+2. **Basitlik iddiası (yazarın kararı, 2026-10-17, seçenek b):** dört yerde değişti.
+   - V.A: *"The arrangement is therefore mechanically simpler than a tilting architecture: a moving mechanism is more complex than a fixed structure, and the mechanism classes a tilting architecture needs to change regime are absent here; …"*
+   - Tablo 6: *"… are absent (Sec. V.A), so the arrangement is mechanically simpler."*
+   - VIII.D: *"It does not claim mechanical simplicity"* maddesi çıktı; başlık *"Seven Things …"*.
+   - VIII.E: *"The aircraft is therefore mechanically simpler than a tilting architecture, though not one in which nothing moves."*
+
+   Güvenilirlik iddiası eklenmedi.
 
 ## 3. Alanlar
 
