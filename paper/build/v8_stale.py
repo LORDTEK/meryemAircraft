@@ -206,7 +206,7 @@ EMEKLI = {
     "the published comparison is mixed": "Tur 140: N5 -- karsilastirma bizim, yayimlanmis sayilara karsi",
     "at the cost of an extra motor and the": "Tur 143: E-1 -- bedel birincilin sozcukleriyle (Escareno 2008 s. 262)",
     "states the same purpose in the same terms": "Tur 144: E-1' -- terimler artik ayni degil",
-    "mechanically simpler": "Tur 144: Q-P1b -- basitlik iddiasi yok (Adim 9 madde 4); karmasiklik yalniz kaynak sozu",
+    # "mechanically simpler" listeden cikti: yazarin karari 2026-10-16 (CLAUDE.md §0.9) -- basitlik iddiasi yazilir.
     "more reliable": "Tur 144: Q-P1b -- guvenilirlik olculmedi",
 }
 

@@ -50,7 +50,7 @@ boşluğa duyarsız. `G` = Grok, `D` = DeepSeek, `C` = ChatGPT, `Q` = Qwen, `K` 
 | 7 | The instantiation is therefore partial. | G |
 | 7 | The three elements, taken together, meet the escape condition of Section 3 in the propulsor that carries the aircraft, and they meet it with no mechanism that reorients a propulsor. | G+C+D+Q+K |
 | 7 | This is not a configuration in which nothing moves. | G |
-| 7 | Nor is this a claim of mechanical simplicity. | G |
+| 7 | The arrangement is therefore mechanically simpler than a tilting architecture | Y |
 | 7 | Whether this aircraft can actually perform the change is a separate question and is not settled anywhere in this paper. | G |
 | 7 | The mechanism claim is about hardware and survives that limit. The transition claim is not made. | G |
 | 8 | The free-wheeling state is physically determinate: the rotor settles where net shaft torque is zero. The stopped state is not. | G |
@@ -95,7 +95,7 @@ boşluğa duyarsız. `G` = Grok, `D` = DeepSeek, `C` = ChatGPT, `Q` = Qwen, `K` 
 | 14 | for the first item the answer is no | D |
 | 14 | The comparison is between unlike ratings | D |
 | 14 | The gap is real on every one of them; the factor quoted is peak demand against bench average. | D |
-| 15 | This is a count of mechanism classes, not a claim that nothing moves, and not a claim of mechanical simplicity or reliability | D |
+| 15 | The aircraft is therefore mechanically simpler than a tilting architecture, though not one in which nothing moves. | Y |
 | 15 | Whether this aircraft completes the rotation is a separate question, and it is not settled here | D |
 | 1 | What is not established is the combination taken together with its price. | G |
 | 7 | What this paper contributes is the architecture that brings the three elements together; the condition shows what it satisfies, and the price shows what it costs. | G |
@@ -167,7 +167,6 @@ kaybolmasına (CLAUDE.md §0.8). Aynı denetimle sınanır.
 | 15 | It does not claim range against fixed-wing aircraft. | G+C+D+Q+K |
 | 15 | It does not claim vertical capability against rotorcraft. | G+C+D+Q+K |
 | 15 | It does not claim that the aircraft has no moving parts. | G+D+Q+K |
-| 15 | It does not claim mechanical simplicity. | G+D+Q+K |
 
 **Yazar kararıyla eke taşınan korunan cümleler (kural (iii), CLAUDE.md §2.4; `v8_caveats.py` ekte durduğunu sınar):**
 

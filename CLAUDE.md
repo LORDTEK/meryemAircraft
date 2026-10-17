@@ -268,7 +268,8 @@ JoA masa reddinden sonra (14-Oct: *"The paper does not provide any developments 
 3. **Basitlik iddiası yazılır.** *"Sistem basit diyorum tilt gibi hareketli sistemden basit diyemiyor makalede … hareketli eleman
    her zaman sabit sistemden daha karmaşıktır ve diğeri daha basittir."* §0.1'in *"Mekanik olarak daha basit de denmez"* kuralı ve
    §0.8'in *"basitlik iddiası yok"* ifadesi bu kararla kalktı.
-   Yeniden yazımda kaldırılacak korumalar: `v8_stale.py` satır 209 (*"mechanically simpler"*), `v8-caveats.md` satır 53, 98, 170.
+   **Uygulandı v8'de (yazar 2026-10-17, seçenek b):** V.A, Tablo 6, VIII.D (madde 4 çıktı → *Seven things*), VIII.E; korumalar güncellendi
+   (`v8_stale.py` girdisi çıktı, `v8-caveats.md` satırları `Y` = yazarın kararı). Güvenilirlik iddiası eklenmedi.
 4. **Doğrulama gereken yerde doğrulama yapılır;** "çok önemli değil" diye geçilmez.
 5. **Zayıflık baştan söylenir.** *"Red geldikten sonra yazıyor 'dürüst olarak söylemek gerekirse...' … başta diyeydin."* Bir risk
    görüyorsam gönderimden önce, açıkça söylerim.

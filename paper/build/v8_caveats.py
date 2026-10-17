@@ -52,7 +52,8 @@ def ek_bolumleri():
 def liste():
     out = []
     for L in open(os.path.join(KOK, "paper", "v8-caveats.md"), encoding="utf-8"):
-        m = re.match(r"^\| (\d+) \| (.+) \| ([GDCQK+]+) \|$", L.rstrip("\n"))
+        # Y = yazarin karari (2026-10-16, CLAUDE.md §0.9: basitlik iddiasi).
+        m = re.match(r"^\| (\d+) \| (.+) \| ([GDCQKY+]+) \|$", L.rstrip("\n"))
         if m:
             out.append((int(m.group(1)), m.group(2), m.group(3)))
         elif re.match(r"^\| \d+ \|", L):

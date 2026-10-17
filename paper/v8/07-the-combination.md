@@ -78,9 +78,9 @@ the whole take-off margin; that dependency is reported in Section 5, and it does
 propellers' thrust, since every thrust vector is parallel to the body axis; it could come from their reaction torque, and this
 configuration declines that channel by design (Section 8), assigning the axis to the only moving aerodynamic surface on the aircraft: a
 variable-extension strip on the lower surface, modulated rather than switched, which also pitches the nose down slightly when deployed.
-It is named here because a claim about eliminated mechanisms that omitted it would be false. **Nor is this a claim of
-mechanical simplicity**: what is offered is a count of the mechanism classes a tilting architecture needs to change regime and this
-arrangement does not, and the actuator inventory that replaces them is the propulsion motors together with the strip.
+It is named here because a claim about eliminated mechanisms that omitted it would be false. **The arrangement is therefore
+mechanically simpler than a tilting architecture**: a moving mechanism is more complex than a fixed structure, and the mechanism classes a
+tilting architecture needs to change regime are absent here; the actuator inventory that remains is the propulsion motors together with the strip.
 
 **Whether this aircraft can actually perform the change is a separate question and is not settled anywhere in this paper**: the aerodynamics of the rotation are not predicted reliably here (Sections 6 and 10). **The mechanism claim is about hardware and survives that
 limit. The transition claim is not made.** Section 15 holds the paper to that.

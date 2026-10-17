@@ -205,7 +205,7 @@ STYLE = [
  ('T4c', 'or feather a rotor unused in one regime | — |', 'or feather a rotor unused in one regime | None |'),
  ('T4d', '| Dedicated lift rotors | Lift-plus-cruise architectures | — |', '| Dedicated lift rotors | Lift-plus-cruise architectures | None |'),
  ('T4e', 'from the cruise flow by such means | — (see note) |', 'from the cruise flow by such means | None (see note) |'),
- ('T6a', "This is the paper's contribution — a count of mechanism classes", "This is the paper's contribution: a count of mechanism classes"),
+ ('T6a', "This is the paper's contribution — the mechanism classes", "This is the paper's contribution: the mechanism classes"),
  ('T6b', '| Other hybrids — lift-plus-cruise, tilt |', '| Other hybrids (lift-plus-cruise, tilt) |'),
  # konum bildiren above / below
  ('A01', 'the gap below is not a historical one', 'the gap set out in Section 1.5 is not a historical one'),
