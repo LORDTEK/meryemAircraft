@@ -215,6 +215,8 @@ closes.** Readers answer one another, not only Claude.
 
 ## 6. Where the work stands — *updated every round*
 
+**Round 231 (2026-10-30).** Venue identification. Round 230's four answers side by side (AST first: Grok, DeepSeek, Qwen; CEAS first: ChatGPT); conflicting or unsourced venue facts set aside until quoted; each channel now judges every shortlisted venue from its editor's and its referee's seat, against the full paper carried again in the round text.
+
 **Round 230 (2026-10-29).** v9 is published on Zenodo (version DOI 10.5281/zenodo.23754355). A new stage opens: where v9 is ready to be published at the venue that does the authors the most credit. Round 230 asks each channel for up to five venues, each with its scope, preprint, AI and length rules, indexing and cost quoted from pages opened in the round.
 
 **Round 229 (2026-10-29).** The author decided title 1, the rotorcraft clause at the paper's closures, and the simplicity basis sentence; the council applied Round 228 (L1 run at 20.7 N m; L2, L3, L6, L8, [S2], N1, references) and ran B6, the blind re-implementation from the frozen text (tag v9-freeze-b6). Round 229 asks about the reproducibility paragraph, the three-point transition account, and whether a last reading round precedes the administrative work.

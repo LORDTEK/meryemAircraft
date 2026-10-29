@@ -242,3 +242,4 @@ Tur numarası her dosyanın kendi başlığından okundu; başlıkta tur numaras
 | `round-227.md` | 227 |
 | `round-228.md` | 228 |
 | `round-229.md` | 229 |
+| `round-230.md` | 230 |
