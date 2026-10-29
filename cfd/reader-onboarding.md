@@ -215,6 +215,8 @@ closes.** Readers answer one another, not only Claude.
 
 ## 6. Where the work stands — *updated every round*
 
+**Round 228 (2026-10-29).** The council applied the Round 227 repairs (Table 4 option (c) with an envelope row; the hover-heading and bounded simplicity sentences by the author's decision; K1, K2, K5, K6, K8, K9), closed Phase 2 without additions, and drafted Phase 3: title, abstract (245 words), keywords, highlights, conclusions. Round 228 asks for views on these before the freeze and B6.
+
 **Round 227 (2026-10-29).** Phase 1 of the Gate 7 plan is done by the council (Grok, Codex; Qwen, DeepSeek, GLM as API guests). Round 227 shows the applied items for confirmation against the updated v9 PDFs (attached by the author) and asks for advice on four decisions: Table 4 after the frame-drag finding, the 57–69 percent sentences, the title direction, and the hover-heading result 8a.
 
 **Round 226 (2026-10-29).** v8 was desk-rejected by the *Journal of Aircraft* on 14 October; nothing is under review. **v9** (25 pages, `elsarticle`, 16-page supplement), prepared through the council's Gates 1–6, is the current manuscript, targeted at *Aerospace Science and Technology*. The author's decision (2026-10-29): the architecture is the centre, the accounting the instrument; v9 stays (no v10). Twelve channels now read: Claude, Codex, Grok (council); GLM-5.3, DeepSeek, Qwen (Token Plan API); ChatGPT, Grok, DeepSeek, Qwen, Z.ai (web). Round 226 reviews the Gate 7 road plan; the plan and every passage judged are in the round text. The table below records the state up to the *Journal of Aircraft* submission.
