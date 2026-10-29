@@ -167,3 +167,14 @@ Okuyucular: Qwen ve DeepSeek (A); ChatGPT: kaynak bulunmadan elverişli olan se�
 ## Yazara
 
 - **M1: (A) mı (B) mi?** (B) bütün sayıları değiştirir.
+
+## Ek: 200 sözcüklük özet önerisi (Claude, yazarın isteğiyle; Konsey ve okuyucular değerlendirsin)
+
+> Hybrid vertical-takeoff aircraft change between hover and cruise by carrying two propulsor sets or reorienting one. meryemAircraft, a 50 kg tail-sitting blended-wing body for a 13 kg payload, does neither: its fixed-pitch coaxial pairs keep one body-relative orientation while the whole airframe rotates, so it carries none of the mechanism classes a tilting architecture uses to change regime. It is priced in three costs of hover: carried hover mass, exposed cruise drag and continuous power sized to the hover peak. On a buffered series hybrid, the nose pair, which supplies hover and cruise thrust, incurs none of them; the attitude-control tip pairs and frames stay in the cruise flow, taking 50 to 80 percent of zero-lift drag across the drag sources examined. With the assumed frame drag the sizing loop closes at 52.3 to 57.5 kg, at an effective lift-to-drag ratio 13 to 51 percent above a published turboshaft quadrotor's; across those sources the envelope, not a confidence interval, is 50.7 to 66.1 kg and 699 to 1,401 km. Against a lift-plus-cruise layout the range ranking depends on the sizing contract. No store reported as built delivers the required specific power; hover heading authority, the transition and landing remain open.
+
+**200 sözcük (wc).** 248'lik sürümle fark:
+- **Çıkan:** "67 to 77 percentage points" ve "changes sign … under a fixed takeoff mass". Sözleşme bağımlılığı kalıyor (Grok bunun düşmemesini istemişti), sayısı gövdede (4.5).
+- **Eklenen:** M7'nin "published" sözcüğü.
+- **Birleşen:** son cümledeki dört açık kalem, Qwen1'in gruplama önerisiyle.
+- **Değişmeyen:** her sayı ve her kapsam ifadesi ("with the assumed frame drag", "across the drag sources examined", "not a confidence interval") 248'lik metinden ve gövdeden; yeni yüklem yok.
+- **Uyarı:** "the transition … remain open" M1 (A) ya da (B) için de doğru; (B) seçilirse sayılar değişir ve özet yeniden yazılır.
