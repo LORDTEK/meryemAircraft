@@ -121,3 +121,49 @@ Sec. 4.1'in "turboşaft quadrotora karşı her köşede %13–51 önde" sonucu *
 ## Açık (kaynak)
 
 [27] DOI, [S1] (1 743 motorluk regresyon, Denk. 6), [S3] sayfaları: **hiçbir okuyucu açmadı.** Kaynakları açan Konsey kanalı sayfa ve bağlantıyı versin. AST özet sınırı ve öne çıkan kuralı yazar rehberinden okunmadı; L4 yan cümlesi 245 sözcüğü aşırır.
+
+---
+
+# Round 229 sonucu (2026-10-29) — B6 ve son adım
+
+Cevap veren: Qwen, DeepSeek, ChatGPT, Grok + Claude. **Yeni tur yok; Konsey'e gider.** (Patent: yazar kendisi bakıyor.)
+
+## M1 — kaynak bulundu; tek nokta seçmekle çözülmüyor
+
+Depoda (commit `880e6e2` itibarıyla):
+- **Burun çifti, boyutlandırma:** `aero/baseline.py:118` — `P_hover = W**1.5 / (eta_hover · sqrt(2ρA))`, eta_hover = 0,599, **tek disk alanı, eşeksenli kayıp YOK.**
+- **Uç çiftleri, geçiş:** `aero/rotation.py:205` — `itki_gucten(P, D, FoM=0.599, es_eksenli_verim=0.85)`: aynı 0,599 **artı %15 itki kaybı** (*"Eş eksenli çift tek disk gibi çalışmaz; girişim kaybı çarpanla"*).
+- **%15'in kaynağı:** v5–v7 eki (`paper/paper-v7-supp.md` 1306–1312): *"the pair is charged a single disc and an interference penalty"*; %15'in kendisi için kaynak verilmiyor.
+- **Bıçakların 0,599'u tutturduğunu gösteren hesap:** `aero/nose_propeller.py:169–181` — çift **tek disk üzerinde 2B palalı eşdeğer rotor** olarak modelleniyor; ne karşıt dönüşün girdap geri kazanımı ne de alt rotorun üst rotor izinde çalışmasından gelen kayıp sayılıyor.
+
+→ **Model aynı 0,599'u iki farklı anlamla kullanıyor:** burun çiftinde girişim dahil (ya da yok sayılmış) bir çift değeri, uç çiftlerinde girişimsiz bir değer. Tutarlı iki seçenek var, **ikisi de beş çiftin hepsine uygulanmalı:**
+
+| | (A) 0,599 çiftin sistem değeri (tek disk, girişim içinde) | (B) 0,599 girişimsiz; %15 her çifte |
+|---|---|---|
+| Uç çiftleri | %15 iki kez sayılmış; uçağın noktası **20,7 N·m: geçiş tamamlanır** (0,57 s doyum) | 17,6 N·m: **takla** |
+| Burun çifti / boyutlandırma | Değişmez | Sabit itkide güç ×0,85^−1,5 = **+%27,6**: askı gücü, tampon, kütle, menzil, Tablo 4–6, S4a, B6 hepsi yeniden |
+| S7'deki "computed on the area of one disc" | Bununla tutarlı | Bununla çelişir |
+
+Okuyucular: Qwen ve DeepSeek (A); ChatGPT: kaynak bulunmadan elverişli olan seçilmez, bulunamazsa "çözülmedi" yazılır; Grok: yazarın kararı. **Claude:** depodaki tanım (A)'yı destekliyor (S7 ve `fm_makale_yontemi` tek disk + çift şaft gücü); ama 0,599'un bu çift için ulaşılabilir olduğunu gösteren hesap girişimi saymıyor. Dürüst yazım: (A) seçilir, tanım S7 ve S2a'da yazılır, 17,6 N·m noktası "0,599 girişimsiz bir değer olsaydı" diye etiketlenir ve **o okumada burun çiftinin boyutlandırmasının da değişeceği** aynı yerde söylenir.
+
+## Konsey'in uygulayacağı (beşimiz hemfikir)
+
+| # | Ne |
+|---|---|
+| 1 | **M3:** "No input of Table S2a was back-solved"; istisna aynı cümlede: Tablo 6'nın tezgâh deposu özgül gücü iki kütleden geri çözüldü, o iki değer sayılmadı. Uygulayıcılar gövdede adsız kalır (şimdiki gibi) |
+| 2 | **M4:** 58 değerin listesi (tablo/hücre, tolerans, sınama/kalibrasyon durumu, koşudan önce yazıldığı tarih) yeniden uygulama dosyalarıyla yatırılır; paragraf listeye işaret eder |
+| 3 | **M5:** Zenodo'da donmuş metin (`v9-freeze-b6` + SHA-256) ve son metin, ikisi arasındaki iki düzeltmenin değişiklik kaydıyla |
+| 4 | **M2:** 23,0 ve 20,7 N·m'deki iki 12,2 m, çıktıdan daha çok basamakla denetlenir; aynıysa bir yan cümle nedenini söyler, değilse düzeltilir |
+| 5 | **M7:** özette "a **published** turboshaft quadrotor's" (249 sözcük) |
+| 6 | **M6:** S0 satır 2 gövdenin önermesini adlandırır ("a fixed structure is less complex than a moving mechanism; mechanism-class count"), yanlışlayıcı "As row 1"; "in that sense only" gövdeyle aynı kapsama getirilir. (ChatGPT önermeyi daraltmak istiyor; Codex'in itirazının yanına kayda) |
+
+## Sıra (dördü de)
+
+1. **M1** (yukarıdaki A/B kararı ve gerekiyorsa yeniden koşu) →
+2. **AST yazar rehberi baştan sona, madde madde** (özet sınırı, öne çıkanlar, uzunluk, kaynak biçimi, beyanlar, CRediT, YZ beyanı, özgeçmiş/foto, grafik özet var mı — Qwen'in "grafik özet sık istenir" sözü rehberden doğrulanır) →
+3. **Tek son okuma turu: gövde + ekin tamamı**, rehber elde, yalnız tutarlılık ve gönderime hazırlık (yeniden tasarım değil) →
+4. **İdari işler** (kapak mektubu, beyanlar, CRediT, özgeçmiş/foto, Zenodo: Qwen'in klasör düzeni önerisi — submission / b6-frozen / b6-outputs + README).
+
+## Yazara
+
+- **M1: (A) mı (B) mi?** (B) bütün sayıları değiştirir.
