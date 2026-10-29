@@ -215,6 +215,8 @@ closes.** Readers answer one another, not only Claude.
 
 ## 6. Where the work stands — *updated every round*
 
+**Round 229 (2026-10-29).** The author decided title 1, the rotorcraft clause at the paper's closures, and the simplicity basis sentence; the council applied Round 228 (L1 run at 20.7 N m; L2, L3, L6, L8, [S2], N1, references) and ran B6, the blind re-implementation from the frozen text (tag v9-freeze-b6). Round 229 asks about the reproducibility paragraph, the three-point transition account, and whether a last reading round precedes the administrative work.
+
 **Round 228 (2026-10-29).** The council applied the Round 227 repairs (Table 4 option (c) with an envelope row; the hover-heading and bounded simplicity sentences by the author's decision; K1, K2, K5, K6, K8, K9), closed Phase 2 without additions, and drafted Phase 3: title, abstract (245 words), keywords, highlights, conclusions. Round 228 asks for views on these before the freeze and B6.
 
 **Round 227 (2026-10-29).** Phase 1 of the Gate 7 plan is done by the council (Grok, Codex; Qwen, DeepSeek, GLM as API guests). Round 227 shows the applied items for confirmation against the updated v9 PDFs (attached by the author) and asks for advice on four decisions: Table 4 after the frame-drag finding, the 57–69 percent sentences, the title direction, and the hover-heading result 8a.
