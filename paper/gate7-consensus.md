@@ -77,3 +77,47 @@ v7 Supplement S2.1 (`paper/paper-v7-supp.md` 396–400): *"2.73 kg of electric m
 - 1.3 cümlesi: "şeridin askı yön yetkisi burada kurulmadı" (Grok, DeepSeek, ChatGPT, Claude) / "uygulamada çiftlerin tepki torkunu bilerek dengesizleştirmekle desteklenir" (Qwen — bu mimari değişikliği: reddedilen kanal kullanılır).
 - K9 dayanak cümlesi: geri gelir (Grok, DeepSeek, Qwen) / sınırlı biçim (ChatGPT: evrensel önerme diye).
 - Qwen'in patent önerisi makale işi değil.
+
+---
+
+# Round 228 sonucu (2026-10-29) — Faz 3 taslağı
+
+Cevap veren: Grok, ChatGPT, DeepSeek, Qwen (iki cevap; **Qwen1 seçildi** — Qwen2 açmadığı üç kaynağa "Verified" yazdı) + Claude. **Yeni tur yok; Konsey'e gider.**
+
+## Konsey'in uygulayacağı (beşimiz hemfikir)
+
+| # | Ne |
+|---|---|
+| 1 | **L1 — dondurmadan önce.** 335 W'de FM 0,599 → 14,6 N, 20,7 N·m (momentum kuramı; 12,4 N için ~263 W gerekir). 17,6 N·m "boyutlandırma FM'indeki moment" diye yazılmaz. 20,7 N·m noktası mevcut 3-DOF koduyla koşulur (DeepSeek, ChatGPT, Qwen; Grok: koşulup koşulmaması yazarın kararı) ya da metin "boyutlandırma FM'indeki nokta koşulmadı, denenmiş iki noktanın arasında" der. 16,2 N / 335 W "referans tasarımın varsayılmış değeri" diye etiketlenir; FM'in tek disk alanıyla hesaplandığı yazılır. Bill 2, S7, S8a birlikte |
+| 2 | **L2.** Gövde cümlesi iki eşiği iki sayıyla verir: %10 tork dengesizliğinde 2,5–2,7, %30'da 7,5–8,2 N·m — **betiğin çıktısı** (2,8 / 8,3 değil). Tork dengesizliği, devir değil |
+| 3 | **L3.** "50 to 69 percent with the second rotor source" → "across the two rotor sources with the frame at 0.15" |
+| 4 | **L6.** Öne çıkan 5 B6'dan önce betimleme olur: "Table S2a lists every input of the sizing loop and its provenance" (DeepSeek/ChatGPT); yeniden üretim iddiası B6'dan sonra |
+| 5 | **L8.** S9 satır 5 → S8a'ya işaret; açık kalan yalnız yedek ve yeniden dolum profili |
+| 6 | **L4 — özete ve sonuca döner kanatlıya karşı kazanç geri gelir, tek yan cümle** (dördü de). Ama bkz. N1 |
+| 7 | **[S2].** INV-60V-120A adı 7,2 kW gösteriyor, metin "6 kW" diyor (dördü de): veri sayfasının sürekli değeri yazılır |
+| 8 | Dilbilgisi: "…and no general claim about the complexity of moving parts **is made**" |
+| 9 | Özet: "changes sign at two of four closures under one" → sözleşme adıyla (DeepSeek: fixed-takeoff-mass) |
+
+## N1 — Claude'un yeni bulgusu (L4'ün yazımını belirler)
+
+Sec. 4.1'in "turboşaft quadrotora karşı her köşede %13–51 önde" sonucu **yalnız 0,15 çerçeveyle** geçerli. Tablo S4a'nın on iki köşesinde (L/D × η_p):
+
+| | NeuralFoil | Sheldahl–Klimas |
+|---|---|---|
+| çerçeve 0,15 | 7,39 / 5,56 | 8,40 / 6,23 |
+| çerçeve 0,42 | 6,23 / **4,77** | 6,93 / 5,25 |
+| çerçeve 0,68 | 5,41 / **4,19** | 5,93 / **4,56** |
+
+(uygun / olumsuz uç). Turboşaft quadrotor 4,9: **üç köşe altında** (−3, −7, −14 %); zarf boyunca −14 % ile +71 % arası. Elektrikli quadrotor 5,8: zarf boyunca −28 % ile +45 % arası.
+→ Özete dönecek yan cümle iki biçimden biri olmalı: (a) "makalenin kapanışlarında" (0,15 çerçeve) %13–51 önde, zarfta değil; (b) zarfla birlikte: "−14 ile +71 %". **Aynı özette "her köşede önde" ile zarf birlikte duramaz.** Sec. 4.1 de bu notu taşımalı. Grok'un "sayısız yan cümle" önerisi bu riski görüyordu.
+
+## Yazara
+
+- **Başlık:** 1 (Grok, ChatGPT, DeepSeek; yazarın eğilimi) / 2 ya da melez (Qwen: "tail-sitting" ve "blended-wing body" başlıkta olmalı, AST dizini için).
+- **L4 biçimi:** N1'deki (a) ya da (b).
+- **L1:** 20,7 N·m noktası koşulsun mu (bir koşu, mevcut kod).
+- **L5:** sınırlı biçim kalır, dayanağınız kayıtta (DeepSeek) / dayanak sınırlı biçimin içine (Qwen1: "as a fixed structure carrying a load is inherently less complex than a moving mechanism").
+
+## Açık (kaynak)
+
+[27] DOI, [S1] (1 743 motorluk regresyon, Denk. 6), [S3] sayfaları: **hiçbir okuyucu açmadı.** Kaynakları açan Konsey kanalı sayfa ve bağlantıyı versin. AST özet sınırı ve öne çıkan kuralı yazar rehberinden okunmadı; L4 yan cümlesi 245 sözcüğü aşırır.
