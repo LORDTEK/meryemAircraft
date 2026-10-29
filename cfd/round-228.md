@@ -288,7 +288,7 @@ Ranking sign & Competitor lift-group mass and propeller efficiency as stated & B
 \end{table}
 ```
 
-**Table S9** (the open-items table, with each item's bearing and what would settle it). Its rows, verbatim in content, in the order they appear:
+**Table S9** (the open-items table, with each item's bearing and what would settle it). It is long and mostly carried over, so its rows are summarized here, in order, with the passages this round asks about quoted (the council's message carries it in full):
 1. The pitching moment through the transition (three methods diverge above about ten degrees; the rotation peaks near 18–22°).
 2. Section drag at low Reynolds number (the rotor term 0.0154, carried as 0.0169 at the adverse end).
 3. The tip pairs' other cruise state (*"in axial flow none of them is lower-drag without feathering"*).
