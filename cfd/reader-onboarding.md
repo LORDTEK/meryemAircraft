@@ -215,6 +215,8 @@ closes.** Readers answer one another, not only Claude.
 
 ## 6. Where the work stands — *updated every round*
 
+**Round 226 (2026-10-29).** v8 was desk-rejected by the *Journal of Aircraft* on 14 October; nothing is under review. **v9** (25 pages, `elsarticle`, 16-page supplement), prepared through the council's Gates 1–6, is the current manuscript, targeted at *Aerospace Science and Technology*. The author's decision (2026-10-29): the architecture is the centre, the accounting the instrument; v9 stays (no v10). Twelve channels now read: Claude, Codex, Grok (council); GLM-5.3, DeepSeek, Qwen (Token Plan API); ChatGPT, Grok, DeepSeek, Qwen, Z.ai (web). Round 226 reviews the Gate 7 road plan; the plan and every passage judged are in the round text. The table below records the state up to the *Journal of Aircraft* submission.
+
 **Desk-rejected by the *Journal of Aircraft* (14 October 2026, Associate Editor, not sent to review): "The paper does not provide any developments that are of archival nature." Earlier state, for the record — Round 225. The paper is submitted:** *Journal of Aircraft*, Manuscript ID **2026-10-C039418**, 2 October 2026, Full Paper. The submitted text
 cannot change; anything found from here on is recorded for the revision stage. DeepSeek's window filled during Round 222; DeepSeek starts a new
 conversation with this file, the reader packet (regenerated in Round 223) and the Round 223 text. Files are not re-sent each round; each round
