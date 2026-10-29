@@ -215,6 +215,8 @@ closes.** Readers answer one another, not only Claude.
 
 ## 6. Where the work stands — *updated every round*
 
+**Round 230 (2026-10-29).** v9 is published on Zenodo (version DOI 10.5281/zenodo.23754355). A new stage opens: where v9 is ready to be published at the venue that does the authors the most credit. Round 230 asks each channel for up to five venues, each with its scope, preprint, AI and length rules, indexing and cost quoted from pages opened in the round.
+
 **Round 229 (2026-10-29).** The author decided title 1, the rotorcraft clause at the paper's closures, and the simplicity basis sentence; the council applied Round 228 (L1 run at 20.7 N m; L2, L3, L6, L8, [S2], N1, references) and ran B6, the blind re-implementation from the frozen text (tag v9-freeze-b6). Round 229 asks about the reproducibility paragraph, the three-point transition account, and whether a last reading round precedes the administrative work.
 
 **Round 228 (2026-10-29).** The council applied the Round 227 repairs (Table 4 option (c) with an envelope row; the hover-heading and bounded simplicity sentences by the author's decision; K1, K2, K5, K6, K8, K9), closed Phase 2 without additions, and drafted Phase 3: title, abstract (245 words), keywords, highlights, conclusions. Round 228 asks for views on these before the freeze and B6.
