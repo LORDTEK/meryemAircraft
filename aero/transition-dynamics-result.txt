@@ -1,0 +1,36 @@
+GECIS + DONME DINAMIGI -- oduncu C_m uzerinde DUYARLILIK
+Bu bir tahmin degil. Sorulan: nokta kutle sonucu her makul
+C_m altinda ayakta mi?
+
+HAFIF 50 kg, t_r = 2 s, M = 23,0 N.m   (giris tirmanisi 5 m/s)
+--------------------------------------------------------------
+C_m modeli                irtifa m    90 dr?   doyma s theta son
+sifir                        -6.57      evet      0.00      90.0
+dogrusal (VLM)              -12.19      evet      0.00      94.9
+duz levha                    -5.13      evet      5.02     -34.8
+sabit +0.05                 -14.95     HAYIR      1.65     180.0
+sabit -0.05                   0.00     HAYIR      4.46      82.8
+sabit +0.10                  -3.75     HAYIR      1.30     180.0
+sabit -0.10                 -48.25     HAYIR      5.16    -561.6
+
+HAFIF, muhafazakar itki, M = 17,6 N.m   (giris tirmanisi 5 m/s)
+---------------------------------------------------------------
+C_m modeli                irtifa m    90 dr?   doyma s theta son
+sifir                        -6.57      evet      0.00      90.0
+dogrusal (VLM)               -6.34     HAYIR      1.54     180.0
+duz levha                   -21.16      evet      5.20      82.3
+sabit +0.05                 -10.99     HAYIR      1.60     180.0
+sabit -0.05                   0.00     HAYIR      4.82     -37.0
+sabit +0.10                  -3.26     HAYIR      1.92     180.0
+sabit -0.10                 -38.14     HAYIR      5.31    -640.7
+
+AGIR 1000 kg, t_r = 5,1 s, M = 952 N.m   (giris tirmanisi 5 m/s)
+----------------------------------------------------------------
+C_m modeli                irtifa m    90 dr?   doyma s theta son
+sifir                       -32.06      evet      0.00      90.0
+dogrusal (VLM)              -24.72     HAYIR      2.78     180.0
+duz levha                  -148.29     HAYIR     11.26     180.0
+sabit +0.05                 -23.77     HAYIR      3.37     180.0
+sabit -0.05                -212.28     HAYIR     14.99   -1197.4
+sabit +0.10                  -3.47     HAYIR      2.80     180.0
+sabit -0.10                -239.92     HAYIR     15.60   -2409.9

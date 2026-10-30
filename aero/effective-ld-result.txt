@@ -64,5 +64,5 @@ Yani YZ-B hakli: en iyi noktamizda ucsaydik L/De ARTARDI.
 Cekince bizim ALEYHIMIZE calisiyor, ve pay yine de pozitif.
 
 AMA yon bu kadar; BUYUKLUK iddia edilmiyor. En iyi L/D noktasi
-stall'in 1,26 kati (§2.12) ve orada ucmak marj birakmiyor --
-o yuzden o sayi bir SECENEK degil, yalniz bir yon gostergesi.
+stall'in 1.14-1.23 kati (C_L,maks = 1,0; ek S5) ve orada ucmak marj
+birakmiyor -- o yuzden o sayi bir SECENEK degil, yalniz bir yon gostergesi.

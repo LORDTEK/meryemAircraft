@@ -1,0 +1,33 @@
+rho(6000 ft, ISA) = 1.0239 kg/m3
+design                       x=sqrt(DL/2rho)LDe/V  NASA P_inst/P_cr
+QSMR turboshaft                             1.015             2.147
+QSMR electric                               1.256             2.117
+Side-by-side turboshaft                     1.204             2.384
+Side-by-side electric                       1.521             2.224
+Quadrotor turboshaft                        0.769             2.279
+Quadrotor electric                          1.038             2.082
+Lift+cruise turbo-electric                  3.359             4.741
+Lift+cruise electric                        3.476             4.946
+Tiltwing turbo-electric                     2.443             5.614
+
+fit y = k x : k = 1.654 (effective 1/FM incl. margins -> FM_eff = 0.604), R^2 = 0.687
+  QSMR turboshaft              predicted   1.68  NASA   2.15  error  -21.8%
+  QSMR electric                predicted   2.08  NASA   2.12  error   -1.9%
+  Side-by-side turboshaft      predicted   1.99  NASA   2.38  error  -16.4%
+  Side-by-side electric        predicted   2.52  NASA   2.22  error  +13.1%
+  Quadrotor turboshaft         predicted   1.27  NASA   2.28  error  -44.2%
+  Quadrotor electric           predicted   1.72  NASA   2.08  error  -17.6%
+  Lift+cruise turbo-electric   predicted   5.56  NASA   4.74  error  +17.2%
+  Lift+cruise electric         predicted   5.75  NASA   4.95  error  +16.3%
+  Tiltwing turbo-electric      predicted   4.04  NASA   5.61  error  -28.0%
+
+hover-only check: FM_eff = W*sqrt(DL/2rho) / P_installed  (0.6-0.8 would mean hover-governed)
+  QSMR turboshaft              FM_eff 0.473
+  QSMR electric                FM_eff 0.593
+  Side-by-side turboshaft      FM_eff 0.505
+  Side-by-side electric        FM_eff 0.684
+  Quadrotor turboshaft         FM_eff 0.338
+  Quadrotor electric           FM_eff 0.498
+  Lift+cruise turbo-electric   FM_eff 0.709
+  Lift+cruise electric         FM_eff 0.703
+  Tiltwing turbo-electric      FM_eff 0.435

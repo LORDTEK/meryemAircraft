@@ -1,0 +1,4 @@
+A r=1.678 s1 meas 1.6785 pred 1.6785 s2 meas 1.4018 pred 1.4018 s3 meas 1.0108 pred 1.0108  df_e(s3)=0.0636 shift_pred=66.8 shift_meas=66.8 break_even_r=1.661
+B r=1.553 s1 meas 1.5531 pred 1.5531 s2 meas 1.2749 pred 1.2749 s3 meas 0.8701 pred 0.8701  df_e(s3)=0.0704 shift_pred=68.3 shift_meas=68.3 break_even_r=1.785
+C r=1.839 s1 meas 1.8390 pred 1.8390 s2 meas 1.5347 pred 1.5347 s3 meas 1.0728 pred 1.0728  df_e(s3)=0.0667 shift_pred=76.6 shift_meas=76.6 break_even_r=1.714
+D r=1.702 s1 meas 1.7017 pred 1.7017 s2 meas 1.4012 pred 1.4012 s3 meas 0.9346 pred 0.9346  df_e(s3)=0.0721 shift_pred=76.7 shift_meas=76.7 break_even_r=1.821

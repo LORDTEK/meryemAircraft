@@ -156,6 +156,8 @@ AR_HAFIF = 6.03          # §2.8, satir 752
 # verimiyle uretildi, varsayilan 0,85 ile DEGIL. Dolayisiyla L/D_max'i 0,85 ile
 # hesaplayip Tablo 9'a karsi koymak elmayla armut karsilastirmaktir. Tek e: 0,817.
 E_HESAP = 0.817          # aero/drag_sweep.py:40 ile ayni
+# Seyir noktasi stall'in 1,49 kati: C_L,maks = 0,450 x 1,49^2 = 1,0 (ek S5, "The Cruise Point").
+CL_MAKS = 1.0
 
 CD0_BRAKET = {"elverisli": 0.0285, "olumsuz": 0.0381}   # §3.6 Tablo 9
 LD_SEYIR = {"elverisli": 10.81908, "olumsuz": 8.79024}
@@ -187,9 +189,13 @@ def hiz_yonu():
         print("Yani YZ-B hakli: en iyi noktamizda ucsaydik L/De ARTARDI.")
         print("Cekince bizim ALEYHIMIZE calisiyor, ve pay yine de pozitif.")
         print()
+        # en iyi L/D: C_L* = sqrt(pi AR e C_D0); hiz orani V*/V_stall = sqrt(C_L,maks / C_L*)
+        oran = [(CL_MAKS / math.sqrt(math.pi * AR_HAFIF * E_HESAP * CD0_BRAKET[k])) ** 0.5
+                for k in ("elverisli", "olumsuz")]
         print("AMA yon bu kadar; BUYUKLUK iddia edilmiyor. En iyi L/D noktasi")
-        print("stall'in 1,26 kati (§2.12) ve orada ucmak marj birakmiyor --")
-        print("o yuzden o sayi bir SECENEK degil, yalniz bir yon gostergesi.")
+        print("stall'in %.2f-%.2f kati (C_L,maks = 1,0; ek S5) ve orada ucmak marj"
+              % (min(oran), max(oran)))
+        print("birakmiyor -- o yuzden o sayi bir SECENEK degil, yalniz bir yon gostergesi.")
 
 
 if __name__ == "__main__":
