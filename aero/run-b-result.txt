@@ -1,0 +1,4 @@
+Run A (NeuralFoil):     omega 2623 rad/s  axial -2.094 N  dCD0(8 discs) 0.01535
+  alpha range -8.0 .. 1.4 deg
+Run B (Sheldahl 8e4):   omega 2549 rad/s  axial -1.414 N  dCD0(8 discs) 0.01037
+  alpha range -9.1 .. 1.3 deg; stations beyond 16 deg: 0

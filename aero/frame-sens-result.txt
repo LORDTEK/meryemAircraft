@@ -1,0 +1,13 @@
+case                       end    eta     CD0    L/D   MTOW   range   tip%
+paper (Cd 0.15, NF rotor)  fav  0.683  0.0285  10.82   52.3    1233    69%
+paper (Cd 0.15, NF rotor)  adv  0.632  0.0381   8.80   57.5     927    57%
+Hoerner Cd 0.42, NF rotor  fav  0.683  0.0363   9.12   55.1    1039    76%
+Hoerner Cd 0.42, NF rotor  adv  0.632  0.0466   7.54   61.6     795    65%
+Hoerner Cd 0.68, NF rotor  fav  0.683  0.0437   7.92   58.1     902    80%
+Hoerner Cd 0.68, NF rotor  adv  0.632  0.0548   6.63   66.1     699    70%
+Cd 0.15, Sheldahl rotor    fav  0.683  0.0235  12.30   50.7    1401    63%
+Cd 0.15, Sheldahl rotor    adv  0.632  0.0326   9.86   55.1    1039    50%
+Hoerner 0.42, Sheldahl     fav  0.683  0.0313  10.15   53.3    1156    72%
+Hoerner 0.42, Sheldahl     adv  0.632  0.0411   8.30   58.9     876    60%
+Hoerner 0.68, Sheldahl     fav  0.683  0.0387   8.68   56.1     990    77%
+Hoerner 0.68, Sheldahl     adv  0.632  0.0493   7.21   63.0     760    67%

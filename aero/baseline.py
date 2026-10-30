@@ -63,7 +63,13 @@ ORTAK = dict(f_govde=0.30, f_aviyonik=0.08, f_yakit=0.16)
 #
 #   m_tahrik = f_tahrik_sabit * MTOW  +  P_kurulu / OZGUL_GUC
 #
-# f_tahrik_sabit: pervane, mil, montaj, kablolama -- guce zayif bagli.
+# f_tahrik_sabit: motor + jenerator disindaki tahrik kutlesi -- hover
+# tepesine boyutlanan burun makineleri (4 kW/kg), uc motorlari, guc
+# elektronigi (20 kW/kg), pervaneler, es eksenli gobekler, motor montaji
+# ve kablolama (ek S8, "The Propulsion-Mass Split"). Disk yuku sabit
+# oldugundan hover gucu MTOW ile orantilidir; bu kisim da MTOW'un sabit
+# kesri alinir. 50 kg'da geri cozulen sabit kisim 5,40 kg, butcenin ayni
+# kalemleri 5,00 kg; aradaki 0,40 kg'i butce aciklamiyor.
 # OZGUL_GUC: bu sinifta ice tepmeli motor + jeneratorun ozgul gucu.
 # 6.2'nin butcesinden geri cozuldu: A'nin toplam tahrik kesri 0,16 ve
 # motoru 2,6 kW; ozgul guc 1,0 kW/kg alinirsa sabit kismi 0,108 kalir.
