@@ -21,7 +21,7 @@ DIKKAT: L/D sutununa AERODINAMIK oran girer (8,80 / 10,82),
         Adim 6'nin cok rotorlu karsilastirmasinin birimidir;
         boyutlandirma dongusunun girdisi degildir.
 
-DeepSeek'in iki sorusunun yaniti:
+YZ-B'in iki sorusunun yaniti:
   1) eta_p bir GIRDI, dongu degiskeni degil -- baseline.py pervane
      boyutlandirmiyor, verimi GOREV sozlugunden aliyor.
   2) Motor boyutu dort kapanista DEGISIR, cunku P_seyir eta_seyir'e

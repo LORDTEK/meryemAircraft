@@ -214,7 +214,7 @@ def aile(rot, cl_h, om_tasarim, d_theta_deg):
     ucta 7 derece -- ve 30 m/s'de o palet ancak uc Mach 0,96'da net itki
     veriyor. Seyir icin tasarlanan palet ise tersi. Yani soru "H mi C mi"
     degil; soru, ikisinin ARASINDA makalenin iki sayisini birden veren bir
-    palet olup olmadigi. Qwen bunu onceden soyledi.
+    palet olup olmadigi. YZ-D bunu onceden soyledi.
 
     Aile: veter askı itkisinden sabitlenir, burulmaya duzgun bir kayma
     eklenir. Kayma sifirda helikopter rotoru, buyukte pervane. Tek parametre,

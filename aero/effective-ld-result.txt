@@ -60,7 +60,7 @@ Iki sutun da e = 0,817 ile: ayni polar, tek fark hiz noktasi.
 
 L/D_max her kosede seyir L/D'sinin USTUNDE mi? EVET
 
-Yani DeepSeek hakli: en iyi noktamizda ucsaydik L/De ARTARDI.
+Yani YZ-B hakli: en iyi noktamizda ucsaydik L/De ARTARDI.
 Cekince bizim ALEYHIMIZE calisiyor, ve pay yine de pozitif.
 
 AMA yon bu kadar; BUYUKLUK iddia edilmiyor. En iyi L/D noktasi

@@ -53,7 +53,7 @@ FATURA 3 motordan kaldirildi ama ELEKTRIK YOLUNDAN kaldirilmadi:
     A: sabit 0.108 + guce bagli 0.090 = 0.198
     D: sabit 0.108 + guce bagli 0.068 = 0.176
 
-TAMPON DENETIMI -- Grok: '3,6 % hala MTOW'un kesri mi?'
+TAMPON DENETIMI -- YZ-C: '3,6 % hala MTOW'un kesri mi?'
   Kod: f_tampon MIMARI alani, dongude MTOW'un kesri olarak
   uygulanyor. Ama HICBIR YERDE aski enerjisinden turetilmiyor.
   Boyutsal olarak tutarli: sabit disk yuklemesinde A ~ W, yani

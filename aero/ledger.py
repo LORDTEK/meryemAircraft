@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """ADIM 11 -- DEFTER. ATIF, EKLEME DEGIL.
 
-Grok ve DeepSeek ayni sarti koydu ve kabul edildi:
+YZ-C ve YZ-B ayni sarti koydu ve kabul edildi:
 
     Adim 10'un sayilari zaten iceriyor:
       * uc cerceveleri ve serbest donen rotorlar  -> C_D0 braketinin icinde
@@ -14,7 +14,7 @@ Grok ve DeepSeek ayni sarti koydu ve kabul edildi:
 Bu betik hicbir sey EKLEMEZ. Kapanisin kendi sayilarini bilesenlerine
 AYIRIR, ve ayrilamayan terimleri ADLANDIRIR.
 
-DeepSeek'in ayrimi korunuyor:
+YZ-B'in ayrimi korunuyor:
     AYRISTIRILABILIR  -- C_D0 kalemleri, kutle kesirleri (hesaplandilar)
     AYRISTIRILAMAZ    -- eta_p acigi (0,80 -> 0,632-0,683) kaynak basina
                          bolunmedi; C_D0'daki girisim terimi modellenmedi
@@ -136,8 +136,8 @@ def main():
               % (k, BL.F_TAHRIK_SABIT, guc_payi, r["f_tahrik"]))
     print()
 
-    # ---- TAMPON: bir GIRDI, bir sonuc degil (Grok, Tur 53) ---------------
-    print("TAMPON DENETIMI -- Grok: '3,6 % hala MTOW'un kesri mi?'")
+    # ---- TAMPON: bir GIRDI, bir sonuc degil (YZ-C, Tur 53) ---------------
+    print("TAMPON DENETIMI -- YZ-C: '3,6 % hala MTOW'un kesri mi?'")
     print("  Kod: f_tampon MIMARI alani, dongude MTOW'un kesri olarak")
     print("  uygulanyor. Ama HICBIR YERDE aski enerjisinden turetilmiyor.")
     print("  Boyutsal olarak tutarli: sabit disk yuklemesinde A ~ W, yani")

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Askida tepki torku -- birakilan kontrol kanalinin buyuklugu.
 
-NEDEN: ChatGPT (Tur 47) makalenin "roll cannot be produced by propellers at
+NEDEN: YZ-A (Tur 47) makalenin "roll cannot be produced by propellers at
 all" cumlesinin TEPKI TORKUNU atladigini gosterdi. §2.9 her rotorun kendi
 elektrik makinesinde oldugunu soyluyor; iki karsit rotor farkli devirlerde
 dondurulurse torklari birbirini goturmez ve net tork govde ekseni (X_b)

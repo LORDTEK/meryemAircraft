@@ -4,7 +4,7 @@
 NEDEN BU DOSYA VAR. Tur 54 metninde Adim 10'un planini soyle yazdim:
     "L/De matrisinin dort kosesi, L/D'yi girdi alan baseline.py'ye
      dort girdi olarak tasinir."
-ChatGPT ve Grok bagimsiz olarak bunun CIFT SAYIM olacagini soyledi.
+YZ-A ve YZ-C bagimsiz olarak bunun CIFT SAYIM olacagini soyledi.
 Kod denetlendi; HAKLILAR. Bu betik dogru girdiyi sabitler.
 
 TUZAK 1 -- L/De'yi L/D yuvasina koymak.
@@ -83,7 +83,7 @@ def main():
     print("        Adim 6'nin cok rotorlu karsilastirmasinin birimidir;")
     print("        boyutlandirma dongusunun girdisi degildir.")
     print()
-    print("DeepSeek'in iki sorusunun yaniti:")
+    print("YZ-B'in iki sorusunun yaniti:")
     print("  1) eta_p bir GIRDI, dongu degiskeni degil -- baseline.py pervane")
     print("     boyutlandirmiyor, verimi GOREV sozlugunden aliyor.")
     print("  2) Motor boyutu dort kapanista DEGISIR, cunku P_seyir eta_seyir'e")

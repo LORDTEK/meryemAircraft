@@ -142,7 +142,7 @@ if __name__ == "__main__":
 
 
 # ---------------------------------------------------------------------------
-# Tur 49 eki: DeepSeek'in "hiz uyusmazliginin YONU" iddiasi.
+# Tur 49 eki: YZ-B'in "hiz uyusmazliginin YONU" iddiasi.
 #
 # Iddia: karsilastirma NASA'ya EN IYI MENZIL HIZINI veriyor, bize ise
 # secilmis seyir noktamizi (1,49 x stall), ki §2.12 bunun en iyi L/D
@@ -184,7 +184,7 @@ def hiz_yonu():
     print("L/D_max her kosede seyir L/D'sinin USTUNDE mi? %s" % ("EVET" if tum else "HAYIR"))
     print()
     if tum:
-        print("Yani DeepSeek hakli: en iyi noktamizda ucsaydik L/De ARTARDI.")
+        print("Yani YZ-B hakli: en iyi noktamizda ucsaydik L/De ARTARDI.")
         print("Cekince bizim ALEYHIMIZE calisiyor, ve pay yine de pozitif.")
         print()
         print("AMA yon bu kadar; BUYUKLUK iddia edilmiyor. En iyi L/D noktasi")

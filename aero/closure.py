@@ -10,7 +10,7 @@ Yayimlanan 0,0248 KULLANILMAZ: drag_sweep.py onu tutarli braketin IKI
 UCUNUN DA ALTINA koydu. Dort dis okuyucu da braket uzerinde kapanmayi
 soyledi.
 
-GIRDI YUVASI -- Tur 51'de ChatGPT ve Grok bir cift sayim yakaladi, ve
+GIRDI YUVASI -- Tur 51'de YZ-A ve YZ-C bir cift sayim yakaladi, ve
 kod denetlendi, haklilardi. Ayrintisi aero/closure_inputs.py'de:
   * L/D yuvasina AERODINAMIK oran girer, L/De DEGIL.
   * eta_p IKI terimi birden olcekler: eta_zincir (menzil) ve eta_seyir
@@ -137,7 +137,7 @@ def main():
     for i, (ad2, bir) in enumerate((("alan", "m2"), ("aciklik", "m"), ("burun diski", "m"))):
         v = [g[i] for g in geo.values()]
         print("  %-12s %6.3f - %6.3f %s" % (ad2, min(v), max(v), bir))
-    # Tur 60 (Grok): cerceve ve rotor surukleme terimleri S_REF = 1,979 m2
+    # Tur 60 (YZ-C): cerceve ve rotor surukleme terimleri S_REF = 1,979 m2
     # uzerinde katsayidir ve kapanislarda DEGISMEDEN tasinir -- bu, uc
     # donanimini kanatla birlikte buyutmek demektir. Donanim referans
     # boyutunda kalsaydi terim S_REF/S ile kuculurdu. Kapanis bunu ALMIYOR.

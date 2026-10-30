@@ -3273,7 +3273,7 @@ veriyor.
 
 # Tur 16 — dort dis okuma; ikisi kendi sayimi curuttu, biri ucuncu kez hayal gordu
 
-## Qwen, ust uste UCUNCU tur, yine getirmedigi dosya hakkinda
+## YZ-D, ust uste UCUNCU tur, yine getirmedigi dosya hakkinda
 
 "IMRaD yeniden yapilandirmasi canli `paper-v5.md`'de YOK, dosya hala dokuz
 numarali bolum tasiyor ve ikinci bolum hala *Background: seventy years of
@@ -3286,10 +3286,10 @@ gordu.
 Ama hatanin TOHUMU bizdendi ve bulundu: Giris'in sonunda IMRaD tasimasindan
 kalma olu bir yol haritasi duruyordu — *"The remainder of the paper is organised
 as follows. Section 1 reviews seventy years of attempts..."* Kendini isaret eden,
-yanlis bir cumle. Qwen muhtemelen onu okuyup etrafina bir bolum yapisi uydurdu.
+yanlis bir cumle. YZ-D muhtemelen onu okuyup etrafina bir bolum yapisi uydurdu.
 Cumle silindi (tarihsel inceleme zaten §1'in govdesinde, satir 134).
 
-## DeepSeek 1.4 — turun en degerli bulgusu, ve bizim aleyhimize
+## YZ-B 1.4 — turun en degerli bulgusu, ve bizim aleyhimize
 
 Manset serbest donme direnci 0,0085'ti ve **FM = 0,27** olan tasarimdan
 geliyordu. Oysa makale hover gucunu her yerde **FM = 0,599** uzerinden kuruyor.
@@ -3316,7 +3316,7 @@ ve hepsi **dC_D0 ≥ 0,0153** veriyor.
 
 Manset 0,0085 → **0,0153**. Uc cercevelerinin (0,0043) uc buçuk kati.
 
-## Ve bunun zinciri kopardigi yer — DeepSeek 1.3
+## Ve bunun zinciri kopardigi yer — YZ-B 1.3
 
 S1'in surukleme kurulusunda **rotor satiri hic yoktu**. Eklenince:
 
@@ -3332,10 +3332,10 @@ Seyir L/D, 3.8'in menzilleri ve 3.6'nin mimari karsilastirmasi hepsi 0,0248
 uzerine kurulu ve **hicbiri yeniden turetilmedi**. Makalenin en buyuk acik isi
 artik bu ve oyle yazildi.
 
-## DeepSeek 1.5 — iki tarafsiz nokta, ve pesinden cikan daha kotu sey
+## YZ-B 1.5 — iki tarafsiz nokta, ve pesinden cikan daha kotu sey
 
 Makale iki yerde 0,859 m diyordu, benim yeni duyarlilik tabanim 0,8668 m. Fark
-gercekti ama sebebi DeepSeek'in dedigi degil: 0,859 **burulmasiz** planform,
+gercekti ama sebebi YZ-B'in dedigi degil: 0,859 **burulmasiz** planform,
 0,867 ise **trime burulmus** — ucagin ucacagi geometri.
 
 Pesine dusunce daha kotusu cikti. Hepsi savunulabilir sekiz cozucu secimi
@@ -3354,9 +3354,9 @@ derecelik yeniden dagilima denk. Duyarlilik tablosunun tarafsiz nokta sutunu
 **yontemin kendi gurultu tabaninin icinde**. Denge burulmasinda boyle bir sorun
 yok: her sekilde 1e-6 artikla cozuluyor.
 
-## Grok 1.1 — sayi dogru cikti ama itiraz hakliydi
+## YZ-C 1.1 — sayi dogru cikti ama itiraz hakliydi
 
-Grok 50 kg sutununun 9,2 kg'ini curutmeye calisti: tampon 7,78 kg, fazlasi 5,98
+YZ-C 50 kg sutununun 9,2 kg'ini curutmeye calisti: tampon 7,78 kg, fazlasi 5,98
 kg, 13 − 5,98 = 7,0 kg dedi. Tampon hesabi **birebir dogru**. Ama bütce faydali
 yukun USTUNDE 2,2 kg dagitilmamis pay birakiyor (kalan 15,2 kg); tampon once onu
 yiyor, sonra yuku. 15,2 − 5,98 = 9,2. Sayi duruyor.
@@ -3462,7 +3462,7 @@ hizi gormuyor ve Re kirpildigi icin W geri cikarilamiyor; yama, kirpilan
 seritlerde sessizce yanlis Mach kullanirdi. Ikiz once duzeltme kapaliyken
 ozgun sonucu BIREBIR uretti.
 
-Grok'un "isaret bir ciktidir" uyarisi hakliydi: Prandtl-Glauert kaldirma
+YZ-C'un "isaret bir ciktidir" uyarisi hakliydi: Prandtl-Glauert kaldirma
 egimini dikleştirdigi icin ayni itki daha DUSUK devirde uretiliyor
 (25 046 -> 24 958) ve profil suruklemesi duserek dalga terimini kismen
 dengeliyor. **Ama asil sebep daha temiz: serbest donen palet neredeyse
@@ -3538,9 +3538,9 @@ kusuruydu. Istasyon sayisi artik vakadan aliniyor.
 
 # Tur 19 — dis okuma bir MEKANIZMA hatasi gosterdi, pesi bir KOD hatasina cikti
 
-## Qwen'in itirazi ve nerede durdugu
+## YZ-D'in itirazi ve nerede durdugu
 
-Qwen, 3.9'un "Fatura 2 olcekle kuculuyor cunku uc diskleri kendilerinden
+YZ-D, 3.9'un "Fatura 2 olcekle kuculuyor cunku uc diskleri kendilerinden
 hizli buyuyen bir kanat alanina referansli" cumlesinin YANLIS oldugunu
 soyledi. Dogruladim, hakli:
 
@@ -3549,7 +3549,7 @@ soyledi. Dogruladim, hakli:
 
 Oran **birebir ayni**. Mekanizma o degil.
 
-Qwen'in yerine koydugu ("buyuk rotorlar daha yavas doner") de tam degil:
+YZ-D'in yerine koydugu ("buyuk rotorlar daha yavas doner") de tam degil:
 devir dususe de UC HIZLARI neredeyse esit (262 karsi 269 m/s).
 
 ## Pesine dusunce cikan sey cok daha kotu
@@ -3596,7 +3596,7 @@ dolgunluk 0,075 -> 0,044 (1,73 kat) ve seyir dinamik basinci 1,78 kat.
 Carpim 3,08; olculen oran 3,04. Fatura 2 hala olcekle kuculuyor ama
 sebep kanadin diski gecmesi degil.
 
-## Ve bir apples-to-oranges daha -- Grok yakaladi
+## Ve bir apples-to-oranges daha -- YZ-C yakaladi
 
 Kutle avantaji "%37" diye yaziliydi: A rotorlu (54,5 kg) karsi B
 ROTORSUZ (86,0 kg). Iki farkli aerodinamik taban. Ikisini de braketin
@@ -3613,7 +3613,7 @@ S2 duzeltildi.
 - 2,6 derece artik "esik" degil, oldugu sey: birim cevrimi. Uc okuma da
   ayni seyi soyledi -- esik deyip asmak, kapiyi kendin koyup sonra
   onemsiz ilan etmek gibi okunuyor.
-- Ucdaki uyusmazligin INTEGRAL niceliklere etkisi sinirlandi (Qwen):
+- Ucdaki uyusmazligin INTEGRAL niceliklere etkisi sinirlandi (YZ-D):
   uc yukun onda birini tasiyor, yerel uyusmazlik dortte bir, yani
   aciklik verimi / yatis sonumu / tarafsiz nokta ~%2,5 tasiyor.
 - Ozet 195 kelime (dergi "about 200" diyor; 214'ten indi).
@@ -3628,24 +3628,24 @@ S2 duzeltildi.
 
     paper-v5.md (yatirilan surum):  0.547 yok, 0.0033 yok, 1649 yok, 12.37 yok
 
-Hepsi yalniz v6'da vardi ve v6 yatirilmadi. Grok ve ChatGPT olgularda
-hakli; Qwen'in "yatirilmis bir surumde vardi" oncülü YANLIS. Bunun
+Hepsi yalniz v6'da vardi ve v6 yatirilmadi. YZ-C ve YZ-A olgularda
+hakli; YZ-D'in "yatirilmis bir surumde vardi" oncülü YANLIS. Bunun
 sonucu var: geri cekme paragrafi kisaltildi. Hic kamuya gitmemis bir
 sayinin otopsisi makalede yer kaplamamali -- kirpma hatasi buraya ve
 Zenodo surum notuna, makaleye duzeltilmis sayi.
 
 ## Oylama ve ne yapildi
 
-**Q1 etiket:** ChatGPT (c), Grok (c), DeepSeek (c), Qwen (b). **3-1 (c)**.
+**Q1 etiket:** YZ-A (c), YZ-C (c), YZ-B (c), YZ-D (b). **3-1 (c)**.
 Ama DORDU DE ayni sarti kostu: kapanma kosulu EKTEN 3.8'in ICINE tasinsin.
 Mevcut hal -- basliкta "reference design", kapanmama altmis sayfa oteде --
-dordune gore savunulamaz. Tasindi. Ustelik DeepSeek'in ve Qwen'in
+dordune gore savunulamaz. Tasindi. Ustelik YZ-B'in ve YZ-D'in
 isaret ettigi TUR farki da yazildi: hafif tasarimin ONCULU ve PAYI var
 (1,5 varsayim, 1,78 basabas, 2,2 kg pay), agirinkinin varsayimi bile yok
 -- yalniz olculmemis bir usste basabas. "Kosullu kapaniyor" ile "kapanmasi
 belirsiz" ayni sey degil.
 
-**Q2 -- turun en keskin fikri, yalniz Grok soyledi:** 3.9'u IKIYE AYIR.
+**Q2 -- turun en keskin fikri, yalniz YZ-C soyledi:** 3.9'u IKIYE AYIR.
 Fatura 2'nin olceklemesi HESAPLANMIS (iki palet-elemani cozumu, dolgunluk
 ve dinamik basinc; kabuk ussunu HIC kullanmiyor) -- agir govde kapanmasa
 bile sonuc kalir. Fatura 1'inki ise olculmemis ussun TA KENDISI, yani
@@ -3655,22 +3655,22 @@ Ayrildi.
 **Q3:** hafif tasarim yeniden etiketlenmiyor; kosulu ZATEN 3.7'de yerinde
 (satir 512). Asimetri agir taraftaydi, o giderildi.
 
-**Q4 -- Qwen DeepSeek'i duzeltti ve hakli:**
+**Q4 -- YZ-D YZ-B'i duzeltti ve hakli:**
 
     braket ALT (elverisli surukleme)  A 51,1  B 75,5  -> %32,3
     braket UST (ters surukleme)       A 53,9  B 83,9  -> %35,8
 
 Avantaj TERS ucta DAHA BUYUK, cunku B'nin kutlesi surukleme ile daha hizli
-buyuyor. Yani muhafazakar tek sayi %32 (elverisli uc), %36 degil. DeepSeek
+buyuyor. Yani muhafazakar tek sayi %32 (elverisli uc), %36 degil. YZ-B
 "adverse end alone (32%)" diyerek iki ucu karistirmisti. Sezgiye aykiri
 oldugu icin makaleye acikca yazildi.
 
-**Q6 -- Qwen'in yakaladigi bayat sayi:** ikili kullanim beyani hala
+**Q6 -- YZ-D'in yakaladigi bayat sayi:** ikili kullanim beyani hala
 "computed range near 1800 km" diyordu; agir menzil artik 1571 km.
 Duzeltildi. Benim taramam bunu kacirmisti cunku metin degil beyan
 bolumundeydi.
 
-## ChatGPT benim METNIMDE bir tutarsizlik yakaladi
+## YZ-A benim METNIMDE bir tutarsizlik yakaladi
 
 Tur 20 metninde dolgunlugu iki kez verdim: "0,0754 karsi 0,0215" (kusurlu
 deger, kesif anlatilirken) ve "0,075 -> 0,044" (duzeltilmis, mekanizma
@@ -3689,7 +3689,7 @@ sormamisti. Bu turun iki en degerli bulgusu BUTUN okumadan geldi.
 
 ## BLOKER — surukleme braketi UC yerde bayatti
 
-Qwen ve DeepSeek ayni turda, birbirinden bagimsiz yakaladi. Qwen'in
+YZ-D ve YZ-B ayni turda, birbirinden bagimsiz yakaladi. YZ-D'in
 teshisi ARITMETIK OLARAK TAM:
 
     0,0285 - 0,0216 = 0,0069
@@ -3707,19 +3707,19 @@ celisiyordu: tablo 0,0285-0,0381, altindaki metin 0,0216-0,0380.
 "0,0248 braketin ICINDE" ile "IKI UCUNUN DA ALTINDA" birbirini dislar.
 Uc yer de duzeltildi.
 
-**Bu ayni hata sinifinin UCUNCU tekrari.** DeepSeek'in ifadesi: "bir
+**Bu ayni hata sinifinin UCUNCU tekrari.** YZ-B'in ifadesi: "bir
 duzeltme bir bolumde uygulandi, otekilerde uygulanmadi."
 
 ## DOGRULA.PY'YE BAYAT SAYI DENETIMI EKLENDI
 
-Qwen'in onerisi. Sekiz eski deger (0.0216, 0.0380, 0.0153, 0.0033,
+YZ-D'in onerisi. Sekiz eski deger (0.0216, 0.0380, 0.0153, 0.0033,
 0.547, "1 649", 12.37, "1800 km") on iki kaynak dosyada aranir; biri
 bile gecerse uretim DURUR. Uc turdur ayni sinifta hata yapiyoruz;
 denetim artik makinanin.
 
 ## Ikinci dikis — Giris, Fatura 2'nin DOGMADIGINI soyluyordu
 
-Yalniz Qwen buldu, ve yalniz butun okumayla bulunabilirdi.
+Yalniz YZ-D buldu, ve yalniz butun okumayla bulunabilirdi.
 
     Giris:  "uc ucretin ikisi DOGMUYOR, biri yariya iniyor"
     3.3  :  "Fatura 2 YOK DEGIL" (baslik: azaltilmis, ve varsayilandan buyuk)
@@ -3729,9 +3729,9 @@ Giris -> 3.3 okuyan bir okuyucu dogrudan celiskiye carpiyordu. Sayim
 duzeltildi: **biri dogmuyor (kutle), biri yariya iniyor (guc), biri
 azaltiliyor ama kalkmiyor (surukleme).**
 
-## OMURGA CUMLESI — Grok'un Q3'u, Qwen'in bulgusuyla ayni yere ciktri
+## OMURGA CUMLESI — YZ-C'un Q3'u, YZ-D'in bulgusuyla ayni yere ciktri
 
-Grok: "Makale hem 'kacis kosulunu saglar' hem '3.5'in en buyuk kalemi
+YZ-C: "Makale hem 'kacis kosulunu saglar' hem '3.5'in en buyuk kalemi
 Fatura 2' diyorsa, tek bir cumle olmadan bunlar zimbalanmis iki
 makaledir." Ve: "temiz bir onay olarak 'kacis kosulunu saglar' bir
 sonraki %42'dir."
@@ -3740,7 +3740,7 @@ sonraki %42'dir."
 da saglar; tutum sistemi surukleme faturasini yeniden acar. Somutlama
 KISMIDIR ve kisminin ne odedigini raporlamak 3. bolumun buyuk kismidir.**
 
-## DeepSeek'in uc maddesi
+## YZ-B'in uc maddesi
 
 - "does not close" (1., 5., S2) karsi "closure undetermined" (3.8) --
   tur 20'de israrla ayirdigimiz ayrim tutarli tasinmamisti. Uc yer de
@@ -3758,4 +3758,4 @@ Dortten UCU ayni yere: karsilastirmanin model simetrisizligi. A bilesen
 bazli kutle kurulusu + hesaplanmis surukleme + hesaplanmis rotor
 suruklemesi; B ve C yayinlanmis kesirler. Makale bunu zaten kabul
 ediyor. Savunma: ana sonuc A > B degil, SIRALAMANIN SOZLESMEYE BAGLI
-oldugu. Qwen ise braket tutarsizligini isaret etti -- ve o giderildi.
+oldugu. YZ-D ise braket tutarsizligini isaret etti -- ve o giderildi.

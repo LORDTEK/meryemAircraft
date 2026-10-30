@@ -13,7 +13,7 @@ UC AYRI SURUKLEME DEGERI DOLASIYORDU -- burada TEKE indiriliyor:
 
 VE S1'IN BRAKETI KENDI ICINDE TUTARSIZDI. Alt ucu 0,0085'lik rotoru
 kullaniyordu -- yani 3.3'un "ucagin hover butcesi bu pervaneyi
-kullanamaz" diye elediği tasarimi. DeepSeek'in yakaladigi hatanin
+kullanamaz" diye elediği tasarimi. YZ-B'in yakaladigi hatanin
 aynisini oteki sutunda yapmisim. Rotor terimi iki ucta da ayni olmali
 ve hover sartini saglayan degerdir: 0,0154.
 
@@ -53,7 +53,7 @@ def ld(cd0):
 def zincir(cd0_toplam, rotorlu=True, pay=1.0):
     """Verilen toplam C_D0 -> (temiz govde L/D, A'nin carpani).
 
-    DUZELTME, Tur 53. Grok ve DeepSeek bagimsiz olarak ayni hatayi buldu:
+    DUZELTME, Tur 53. YZ-C ve YZ-B bagimsiz olarak ayni hatayi buldu:
     olumsuz uctaki toplam ZATEN x1,1 marj tasiyor, ama bu fonksiyon cerceve
     ve rotoru MARJSIZ degerleriyle cikariyordu. Az cikarinca temiz govde
     fazla kirli goruluyor ve clean L/D dusuk cikiyordu (14,29; dogrusu 15,26).
