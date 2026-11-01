@@ -1,0 +1,13 @@
+conditions: planform.py (span 3.453 m, area 1.9785 m2, root t/c 0.25, tip t/c 0.12); wetted area 4.12 m2
+  closed masses (the paper): A 57.5 kg, B 55.8 kg, C 53.5 kg, D 52.3 kg
+
+1. bending material (spar caps, 500 MPa allowable):
+   limit 3.8 g, ultimate 5.70 g: 0.059 kg at 57.5 kg
+   limit 5.0 g, ultimate 7.50 g: 0.078 kg at 57.5 kg
+
+2. skin 1.89-3.85 kg (0.46-0.94 kg/m2 sandwich); spars, ribs, bulkheads 0.57-1.93 kg
+3. nose mount, internal mounts, tip frames, landing feet: 1.70-3.80 kg
+4. low : primary 4.22 kg x assembly 1.20 = 5.06 kg -> fraction A 0.088, B 0.091, C 0.095, D 0.097
+4. high: primary 9.66 kg x assembly 1.54 = 14.87 kg -> fraction A 0.259, B 0.267, C 0.278, D 0.284
+
+the paper holds 0.300; reported in-class values 0.28-0.44 (revision note R-5); one production tail-sitter, 0.30

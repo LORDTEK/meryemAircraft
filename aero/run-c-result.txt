@@ -1,0 +1,5 @@
+conditions: V 30.0 m/s; frozen blade of the paper's design (c_l 0.68); 8 discs
+Run A (NeuralFoil):          omega 2623 rad/s  axial -2.094 N  dCD0(8 discs) 0.01535
+  alpha range -8.0 .. 1.4 deg
+Run C (Ohtake, measured):    omega 2524 rad/s  axial -1.982 N  dCD0(8 discs) 0.01454
+  alpha range -9.1 .. 1.2 deg; stations beyond 16 deg: 0

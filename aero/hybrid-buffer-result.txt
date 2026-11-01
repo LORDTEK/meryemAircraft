@@ -1,0 +1,108 @@
+self-test: power-only sizing reproduces buffer.kapat_ozgul; the bound returns every measured point
+negative test: a duration limit and a capacitor both change the buffer mass
+
+conditions: the paper's four closures (buffer.KAPANISLAR), fuel fraction 0.16 fixed (range unchanged),
+  sea level (rho 1.2250 kg/m3); vertical event = hover plateau for t s plus the takeoff increment
+  (tip pairs at full thrust, 0.1229 x hover) for the first 5 s; the buffer mass replaces the paper's
+  3.6 percent buffer. Paper closures: A 57.5 kg, B 55.8 kg, C 53.5 kg, D 52.3 kg
+  battery: lower bound from measured points (module docstring); pack factor 0.65 on cell data
+    Yu et al. 2026 pack, bench average, as in the paper                    249 s at 1.49 kW/kg
+    Bare hobby LiPo pack (Bardwell 2018, RDQ 4S 1300)                      44 s at 4.90 kW/kg
+    Amprius 50Q cell x 0.65 (Batemo, two points)                           28.8 s at 5.81, 44.9 s at 4.86 kW/kg (cell)
+    V4Smart UHP-3X A-sample cell x 0.65 (Batemo)                           120 s at 5.22 kW/kg (cell)
+    EVE 30PL production cell x 0.65 (Batemo)                               125 s at 4.72 kW/kg (cell)
+    Design-study assumption 4 kW/kg, any duration (Barrett et al. 2023)    any s at 4.00 kW/kg
+  capacitor LIC module, 95 % efficiency: 0.35 kW/kg at the bank, 15.5 Wh/kg stored, usable 0.665, converter 15 kW/kg at 0.97
+  capacitor LIC module, current limit: 2.00 kW/kg at the bank, 15.5 Wh/kg stored, usable 0.665, converter 15 kW/kg at 0.97
+
+held specific power (pack level, kW/kg) for 5, 30 and 60 s:
+  Yu et al. 2026 pack, bench average, as in the paper                     1.49  1.49  1.49
+  Bare hobby LiPo pack (Bardwell 2018, RDQ 4S 1300)                       4.90  4.90  3.59
+  Amprius 50Q cell x 0.65 (Batemo, two points)                            3.78  3.63  2.36
+  V4Smart UHP-3X A-sample cell x 0.65 (Batemo)                            3.39  3.39  3.39
+  EVE 30PL production cell x 0.65 (Batemo)                                3.07  3.07  3.07
+  Design-study assumption 4 kW/kg, any duration (Barrett et al. 2023)     4.00  4.00  4.00
+
+== event 30 s (battery alone)
+  Yu et al. 2026 pack, bench average, as in the paper
+      A 101.2 kg (buffer 13.51 kg, +76%) | B 99.1 kg (buffer 13.64 kg, +77%) | C 96.2 kg (buffer 13.82 kg, +80%) | D 94.6 kg (buffer 13.92 kg, +81%)
+  Bare hobby LiPo pack (Bardwell 2018, RDQ 4S 1300)
+      A 58.7 kg (buffer 2.38 kg, +2%) | B 57.3 kg (buffer 2.40 kg, +3%) | C 55.3 kg (buffer 2.42 kg, +3%) | D 54.2 kg (buffer 2.43 kg, +4%)
+  Amprius 50Q cell x 0.65 (Batemo, two points)
+      A 62.1 kg (buffer 3.27 kg, +8%) | B 60.6 kg (buffer 3.29 kg, +9%) | C 58.5 kg (buffer 3.32 kg, +9%) | D 57.4 kg (buffer 3.33 kg, +10%)
+  V4Smart UHP-3X A-sample cell x 0.65 (Batemo)
+      A 63.9 kg (buffer 3.75 kg, +11%) | B 62.4 kg (buffer 3.77 kg, +12%) | C 60.2 kg (buffer 3.80 kg, +13%) | D 59.1 kg (buffer 3.82 kg, +13%)
+  EVE 30PL production cell x 0.65 (Batemo)
+      A 65.9 kg (buffer 4.28 kg, +15%) | B 64.4 kg (buffer 4.30 kg, +15%) | C 62.2 kg (buffer 4.34 kg, +16%) | D 61.0 kg (buffer 4.36 kg, +17%)
+  Design-study assumption 4 kW/kg, any duration (Barrett et al. 2023)
+      A 61.2 kg (buffer 3.05 kg, +6%) | B 59.8 kg (buffer 3.06 kg, +7%) | C 57.7 kg (buffer 3.09 kg, +8%) | D 56.6 kg (buffer 3.10 kg, +8%)
+  + LIC module, 95 % efficiency carrying the takeoff increment: never lighter than the battery alone
+  + LIC module, current limit carrying the takeoff increment: Yu et al. 2026 pack, bench average, as in the paper (1.8-2.1 kg lighter)
+
+== event 60 s (battery alone)
+  Yu et al. 2026 pack, bench average, as in the paper
+      A 101.2 kg (buffer 13.51 kg, +76%) | B 99.1 kg (buffer 13.64 kg, +77%) | C 96.2 kg (buffer 13.82 kg, +80%) | D 94.6 kg (buffer 13.92 kg, +81%)
+  Bare hobby LiPo pack (Bardwell 2018, RDQ 4S 1300)
+      A 60.6 kg (buffer 2.88 kg, +5%) | B 59.2 kg (buffer 2.92 kg, +6%) | C 57.2 kg (buffer 2.96 kg, +7%) | D 56.2 kg (buffer 2.99 kg, +7%)
+  Amprius 50Q cell x 0.65 (Batemo, two points)
+      A 68.5 kg (buffer 4.95 kg, +19%) | B 67.0 kg (buffer 5.02 kg, +20%) | C 64.9 kg (buffer 5.11 kg, +21%) | D 63.9 kg (buffer 5.16 kg, +22%)
+  V4Smart UHP-3X A-sample cell x 0.65 (Batemo)
+      A 63.9 kg (buffer 3.75 kg, +11%) | B 62.4 kg (buffer 3.77 kg, +12%) | C 60.2 kg (buffer 3.80 kg, +13%) | D 59.1 kg (buffer 3.82 kg, +13%)
+  EVE 30PL production cell x 0.65 (Batemo)
+      A 65.9 kg (buffer 4.28 kg, +15%) | B 64.4 kg (buffer 4.30 kg, +15%) | C 62.2 kg (buffer 4.34 kg, +16%) | D 61.0 kg (buffer 4.36 kg, +17%)
+  Design-study assumption 4 kW/kg, any duration (Barrett et al. 2023)
+      A 61.2 kg (buffer 3.05 kg, +6%) | B 59.8 kg (buffer 3.06 kg, +7%) | C 57.7 kg (buffer 3.09 kg, +8%) | D 56.6 kg (buffer 3.10 kg, +8%)
+  + LIC module, 95 % efficiency carrying the takeoff increment: never lighter than the battery alone
+  + LIC module, current limit carrying the takeoff increment: Yu et al. 2026 pack, bench average, as in the paper (1.8-2.1 kg lighter)
+
+== takeoff mass against event duration (battery alone; range across the four closures)
+  Yu et al. 2026 pack, bench average, as in the paper
+         15 s: 94.6-101.2 kg (+76 to +81 %)
+         30 s: 94.6-101.2 kg (+76 to +81 %)
+         45 s: 94.6-101.2 kg (+76 to +81 %)
+         60 s: 94.6-101.2 kg (+76 to +81 %)
+         90 s: 94.6-101.2 kg (+76 to +81 %)
+        120 s: 94.6-101.2 kg (+76 to +81 %)
+  Bare hobby LiPo pack (Bardwell 2018, RDQ 4S 1300)
+         15 s: 54.2-58.7 kg (+2 to +4 %)
+         30 s: 54.2-58.7 kg (+2 to +4 %)
+         45 s: 54.2-58.7 kg (+2 to +4 %)
+         60 s: 56.2-60.6 kg (+5 to +7 %)
+         90 s: 63.4-68.0 kg (+18 to +21 %)
+        120 s: 72.7-77.5 kg (+35 to +39 %)
+  Amprius 50Q cell x 0.65 (Batemo, two points)
+         15 s: 57.4-62.1 kg (+8 to +10 %)
+         30 s: 57.4-62.1 kg (+8 to +10 %)
+         45 s: 58.2-62.6 kg (+9 to +11 %)
+         60 s: 63.9-68.5 kg (+19 to +22 %)
+         90 s: 79.4-84.3 kg (+47 to +52 %)
+        120 s: 104.9-109.6 kg (+91 to +100 %)
+  V4Smart UHP-3X A-sample cell x 0.65 (Batemo)
+         15 s: 59.1-63.9 kg (+11 to +13 %)
+         30 s: 59.1-63.9 kg (+11 to +13 %)
+         45 s: 59.1-63.9 kg (+11 to +13 %)
+         60 s: 59.1-63.9 kg (+11 to +13 %)
+         90 s: 59.1-63.9 kg (+11 to +13 %)
+        120 s: 59.1-63.9 kg (+11 to +13 %)
+  EVE 30PL production cell x 0.65 (Batemo)
+         15 s: 61.0-65.9 kg (+15 to +17 %)
+         30 s: 61.0-65.9 kg (+15 to +17 %)
+         45 s: 61.0-65.9 kg (+15 to +17 %)
+         60 s: 61.0-65.9 kg (+15 to +17 %)
+         90 s: 61.0-65.9 kg (+15 to +17 %)
+        120 s: 61.0-65.9 kg (+15 to +17 %)
+  Design-study assumption 4 kW/kg, any duration (Barrett et al. 2023)
+         15 s: 56.6-61.2 kg (+6 to +8 %)
+         30 s: 56.6-61.2 kg (+6 to +8 %)
+         45 s: 56.6-61.2 kg (+6 to +8 %)
+         60 s: 56.6-61.2 kg (+6 to +8 %)
+         90 s: 56.6-61.2 kg (+6 to +8 %)
+        120 s: 56.6-61.2 kg (+6 to +8 %)
+
+== cell-to-pack factor 0.60 / 0.65 / 0.70 (battery alone)
+  Amprius 50Q cell x 0.65                           30 s: 58.7-63.4 kg (+10 to +12 %) / 57.4-62.1 kg (+8 to +10 %) / 56.4-61.0 kg (+6 to +8 %)
+  Amprius 50Q cell x 0.65                           60 s: 66.0-70.7 kg (+23 to +26 %) / 63.9-68.5 kg (+19 to +22 %) / 62.1-66.7 kg (+16 to +19 %)
+  V4Smart UHP-3X A-sample cell x 0.65               30 s: 60.6-65.5 kg (+14 to +16 %) / 59.1-63.9 kg (+11 to +13 %) / 57.9-62.6 kg (+9 to +11 %)
+  V4Smart UHP-3X A-sample cell x 0.65               60 s: 60.6-65.5 kg (+14 to +16 %) / 59.1-63.9 kg (+11 to +13 %) / 57.9-62.6 kg (+9 to +11 %)
+  EVE 30PL production cell x 0.65                   30 s: 62.8-67.8 kg (+18 to +20 %) / 61.0-65.9 kg (+15 to +17 %) / 59.6-64.4 kg (+12 to +14 %)
+  EVE 30PL production cell x 0.65                   60 s: 62.8-67.8 kg (+18 to +20 %) / 61.0-65.9 kg (+15 to +17 %) / 59.6-64.4 kg (+12 to +14 %)

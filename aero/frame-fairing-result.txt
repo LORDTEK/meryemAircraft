@@ -1,0 +1,24 @@
+self-test: the paper's closures reproduced; the frame term moves the closure
+conditions: V 30.0 m/s, nu 1.46e-05 m2/s, frames 0.020 m thick, 2.84 m in all, S_ref 1.9785 m2 (frontal/S_ref 0.02871);
+  rotor term 0.0154 (NeuralFoil, the paper's closures); ends fav (eta_p 0.683) and adv (0.632) as frame_sens.py;
+  extra fairing mass 0.30 kg/m2 x twice the chord increment over 31 mm x 2.84 m
+
+fairing                            chord mm    Re_c      C_D front   end      CD0    L/D   MTOW  range  tip%
+paper assumption                     31-52     6.4e+04-1.1e+05 0.150       fav   0.0285  10.82   52.3   1233   69%
+paper assumption                     31-52     6.4e+04-1.1e+05 0.150       adv   0.0381   8.80   57.5    927   57%
+    source: assumed in the paper
+paper fairing, t/c 0.38-0.65         31-52     6.4e+04-1.1e+05 0.360       fav   0.0345   9.45   54.5   1077   75%
+paper fairing, t/c 0.38-0.65         31-52     6.4e+04-1.1e+05 0.360       adv   0.0447   7.79   60.6    821   63%
+paper fairing, t/c 0.38-0.65         31-52     6.4e+04-1.1e+05 0.600       fav   0.0414   8.25   57.2    940   79%
+paper fairing, t/c 0.38-0.65         31-52     6.4e+04-1.1e+05 0.600       adv   0.0523   6.88   64.6    726   69%
+    source: ellipses: t/c 0.40 at Re 7.8e4, 0.357 (Zahm, Smith & Louden 1929, NACA Rep. 289, Tab. VIII; NTRS OCR text); 2:1 ellipse at Re 1e5, 0.6 (Delany & Sorensen 1953, NACA TN 3038, Tab. I) [S]
+streamline strut, t/c 0.29-0.33      60-70     1.2e+05-1.4e+05 0.130       fav   0.0279  10.97   52.4   1250   68%
+streamline strut, t/c 0.29-0.33      60-70     1.2e+05-1.4e+05 0.130       adv   0.0374   8.91   57.5    939   56%
+streamline strut, t/c 0.29-0.33      60-70     1.2e+05-1.4e+05 0.150       fav   0.0285  10.82   52.6   1233   69%
+streamline strut, t/c 0.29-0.33      60-70     1.2e+05-1.4e+05 0.150       adv   0.0381   8.80   57.8    927   57%
+    source: Warner 1923, NACA TN 167: strut 76-1, t/c 0.286, 0.13 at 30 mph, free ends (p. 2) [S]; strut 76-2, t/c 0.333, 0.153 at Re 6e4 (Fig. 4) [R]; extra mass 0.07 kg
+streamline strut, t/c 0.25           80-80     1.6e+05-1.6e+05 0.069       fav   0.0262  11.46   51.9   1306   66%
+streamline strut, t/c 0.25           80-80     1.6e+05-1.6e+05 0.069       adv   0.0355   9.26   56.7    976   54%
+streamline strut, t/c 0.25           80-80     1.6e+05-1.6e+05 0.087       fav   0.0267  11.31   52.1   1289   67%
+streamline strut, t/c 0.25           80-80     1.6e+05-1.6e+05 0.087       adv   0.0361   9.15   57.0    965   55%
+    source: Zahm, Smith & Hill 1923, NACA Rep. 137, Tab. V: Navy No. 3 (3 x 12 in), 1/32-in gap, 20 mph, C = 0.0347, C_D = 2C = 0.069, Re_c 1.8e5 [S->D]; upper end +25 %, the gap between Rep. 137 and Smith 1929, NACA Rep. 311, Tab. VII on the Navy No. 2 strut (0.094 against 0.073) [D]; extra mass 0.08 kg
