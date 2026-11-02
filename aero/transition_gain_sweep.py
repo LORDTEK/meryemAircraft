@@ -35,7 +35,7 @@ def one(job):
 
 def cell(r):
     return "loss %5.2f m  fall %5.2f m  sat %4.2f s  alpha %4.1f" % (-r["kayip"], r["dusus"], r["doyma"], r["al_max"]) + (
-        "  TUMBLES" if r["firladi"] else "")
+        "  TUMBLES" if r["firladi"] else ("  settled" if r["oturdu"] else "  NOT settled"))
 
 
 if __name__ == "__main__":
