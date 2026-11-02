@@ -1,15 +1,29 @@
-KOSULLAR: 50 kg (HAFIF), M = 23,0 N m, t_r = 2 s, giris tirmanisi 5 m/s, C_m = 0; CD0 0,0248, e 0,85
-PROFILLER (Kp 25, Kd 10)
-  dogrusal             kayip   5.43 m   doyma 0.000 s
-  yumusak 3t^2-2t^3    kayip   6.33 m   doyma 0.000 s
-  bang-bang            kayip   6.57 m   doyma 0.000 s
-KAZANC TARAMASI (bang-bang; Kp x k, Kd x sqrt(k))
-  k =  1   kayip   6.57 m   doyma 0.000 s
-  k =  2   kayip   7.85 m   doyma 0.000 s
-  k =  4   kayip   8.71 m   doyma 0.000 s
-  k =  8   kayip  16.32 m   doyma 0.000 s
-  k = 16   kayip  16.94 m   doyma 0.000 s
-SURUKLEME (e 0,817): kayip farki, m
-  dogrusal  CD0 0,0285: -0.007   CD0 0,0381: -0.022
-  duz       CD0 0,0285: -0.007   CD0 0,0381: -0.019
-  bang      CD0 0,0285: -0.007   CD0 0,0381: -0.019
+CONDITIONS: 50 kg (HAFIF), M = 23.0 N m, t_r = 2 s, entry climb 5 m/s, C_m = 0; CD0 0.0248, e 0.85
+PROFILES (Kp 25, Kd 10)
+  linear            break 12 deg: loss -0.00 m  fall  1.95 m  sat 0.00 s  alpha 11.7
+  linear            break 14 deg: loss -0.00 m  fall  1.95 m  sat 0.00 s  alpha 11.7
+  cubic 3t^2-2t^3   break 12 deg: loss  1.28 m  fall 11.48 m  sat 0.00 s  alpha 16.8
+  cubic 3t^2-2t^3   break 14 deg: loss -0.00 m  fall  2.55 m  sat 0.00 s  alpha 13.1
+  bang-bang         break 12 deg: loss  1.74 m  fall 11.88 m  sat 0.00 s  alpha 17.3
+  bang-bang         break 14 deg: loss -0.00 m  fall  2.72 m  sat 0.00 s  alpha 13.5
+GAINS (bang-bang; Kp x k, Kd x sqrt(k))
+  k =  1  break 12 deg: loss  1.74 m  fall 11.88 m  sat 0.00 s  alpha 17.3
+  k =  1  break 14 deg: loss -0.00 m  fall  2.72 m  sat 0.00 s  alpha 13.5
+  k =  2  break 12 deg: loss  3.01 m  fall 12.40 m  sat 0.00 s  alpha 18.0
+  k =  2  break 14 deg: loss -0.00 m  fall  6.54 m  sat 0.00 s  alpha 16.9
+  k =  4  break 12 deg: loss  3.81 m  fall 12.71 m  sat 0.00 s  alpha 18.4
+  k =  4  break 14 deg: loss -0.00 m  fall  7.38 m  sat 0.00 s  alpha 17.7
+  k =  8  break 12 deg: loss  4.33 m  fall 12.87 m  sat 0.00 s  alpha 18.7
+  k =  8  break 14 deg: loss -0.00 m  fall  7.72 m  sat 0.00 s  alpha 18.1
+  k = 16  break 12 deg: loss  4.67 m  fall 12.96 m  sat 0.00 s  alpha 18.8
+  k = 16  break 14 deg: loss -0.00 m  fall  7.90 m  sat 0.00 s  alpha 18.2
+DRAG (e 0.817 with CD0 0.0285 and 0.0381; first row of each profile: CD0 0.0248, e 0.817), break 12 deg
+  linear            CD0 0.0248: loss -0.00 m  fall  1.95 m  sat 0.00 s  alpha 11.8
+  linear            CD0 0.0285: loss -0.00 m  fall  1.96 m  sat 0.00 s  alpha 11.8
+  linear            CD0 0.0381: loss -0.00 m  fall  1.99 m  sat 0.00 s  alpha 11.8
+  cubic 3t^2-2t^3   CD0 0.0248: loss  1.28 m  fall 11.48 m  sat 0.00 s  alpha 16.8
+  cubic 3t^2-2t^3   CD0 0.0285: loss  1.24 m  fall 11.44 m  sat 0.00 s  alpha 16.8
+  cubic 3t^2-2t^3   CD0 0.0381: loss  1.16 m  fall 11.34 m  sat 0.00 s  alpha 16.9
+  bang-bang         CD0 0.0248: loss  1.74 m  fall 11.88 m  sat 0.00 s  alpha 17.3
+  bang-bang         CD0 0.0285: loss  1.71 m  fall 11.84 m  sat 0.00 s  alpha 17.4
+  bang-bang         CD0 0.0381: loss  1.63 m  fall 11.74 m  sat 0.00 s  alpha 17.4

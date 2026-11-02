@@ -1,36 +1,37 @@
-GECIS + DONME DINAMIGI -- oduncu C_m uzerinde DUYARLILIK
-Bu bir tahmin degil. Sorulan: nokta kutle sonucu her makul
-C_m altinda ayakta mi?
+TRANSITION WITH ROTATIONAL DYNAMICS -- sensitivity to the borrowed C_m (corrected model, see REVISION)
+Not a prediction. Entry climb 5 m/s; PD Kp 25, Kd 10 with the moment limit; run 40 s after the profile.
+loss = lowest altitude below entry; fall = largest fall from an earlier high point;
+end = settled (within 2 deg of the trim attitude, pitch rate below 1 deg/s, not sinking) or TUMBLES.
 
-HAFIF 50 kg, t_r = 2 s, M = 23,0 N.m   (giris tirmanisi 5 m/s)
---------------------------------------------------------------
-C_m modeli                irtifa m    90 dr?   doyma s theta son
-sifir                        -6.57      evet      0.00      90.0
-dogrusal (VLM)              -12.19      evet      0.00      94.9
-duz levha                    -5.13      evet      5.02     -34.8
-sabit +0.05                 -14.95     HAYIR      1.65     180.0
-sabit -0.05                   0.00     HAYIR      4.46      82.8
-sabit +0.10                  -3.75     HAYIR      1.30     180.0
-sabit -0.10                 -48.25     HAYIR      5.16    -561.6
-
-HAFIF, muhafazakar itki, M = 17,6 N.m   (giris tirmanisi 5 m/s)
----------------------------------------------------------------
-C_m modeli                irtifa m    90 dr?   doyma s theta son
-sifir                        -6.57      evet      0.00      90.0
-dogrusal (VLM)               -6.34     HAYIR      1.54     180.0
-duz levha                   -21.16      evet      5.20      82.3
-sabit +0.05                 -10.99     HAYIR      1.60     180.0
-sabit -0.05                   0.00     HAYIR      4.82     -37.0
-sabit +0.10                  -3.26     HAYIR      1.92     180.0
-sabit -0.10                 -38.14     HAYIR      5.31    -640.7
-
-AGIR 1000 kg, t_r = 5,1 s, M = 952 N.m   (giris tirmanisi 5 m/s)
+light 50 kg, t_r = 2 s, M = 23.0 N m   (trim attitude 83.34 deg)
 ----------------------------------------------------------------
-C_m modeli                irtifa m    90 dr?   doyma s theta son
-sifir                       -32.06      evet      0.00      90.0
-dogrusal (VLM)              -24.72     HAYIR      2.78     180.0
-duz levha                  -148.29     HAYIR     11.26     180.0
-sabit +0.05                 -23.77     HAYIR      3.37     180.0
-sabit -0.05                -212.28     HAYIR     14.99   -1197.4
-sabit +0.10                  -3.47     HAYIR      2.80     180.0
-sabit -0.10                -239.92     HAYIR     15.60   -2409.9
+C_m model            loss m   fall m    sat s alpha max    theta  end
+zero                   1.74    11.88     0.00      17.3     83.3  settled
+linear (VLM)          -0.00     9.92     0.80      14.9     83.2  settled
+flat plate          3656.56  3666.74    39.22      11.7    143.6  NOT settled (vh -140.20 m/s at the end)
+constant +0.05        -0.00    16.97    33.13     102.7     50.8  NOT settled (vh +2.71 m/s at the end)
+constant -0.05        11.19    21.28     1.69      38.3    180.0  TUMBLES at 5.13 s
+constant +0.10        -0.00     2.84     2.08     166.5    -90.0  TUMBLES at 4.97 s
+constant -0.10         0.68    10.73     1.34      47.5    180.0  TUMBLES at 4.11 s
+
+light 50 kg, conservative thrust, M = 17.6 N m   (trim attitude 83.34 deg)
+--------------------------------------------------------------------------
+C_m model            loss m   fall m    sat s alpha max    theta  end
+zero                   1.74    11.88     0.00      17.3     83.3  settled
+linear (VLM)           0.11    10.34     0.99      14.9     83.2  settled
+flat plate          4297.85  4308.03    39.44      11.6    152.4  NOT settled (vh -157.71 m/s at the end)
+constant +0.05        -0.00     4.35     2.68     144.0    -90.0  TUMBLES at 5.91 s
+constant -0.05         7.91    18.00     1.64      41.1    180.0  TUMBLES at 4.81 s
+constant +0.10        -0.00     2.52     2.01     169.6    -90.0  TUMBLES at 4.73 s
+constant -0.10         0.43    10.48     2.01      45.6    180.0  TUMBLES at 3.91 s
+
+heavy 1000 kg, t_r = 5.1 s, M = 952 N m   (trim attitude 83.33 deg)
+-------------------------------------------------------------------
+C_m model            loss m   fall m    sat s alpha max    theta  end
+zero                  -0.00     2.08     0.00      11.9     83.3  settled
+linear (VLM)          -0.00     3.57     1.67      11.8     83.3  settled
+flat plate          5583.41  5605.51    41.44      11.6    156.2  NOT settled (vh -216.92 m/s at the end)
+constant +0.05        -0.00     1.19     4.11     122.8    -90.0  TUMBLES at 9.56 s
+constant -0.05        15.92    38.09     3.51      32.7    180.0  TUMBLES at 7.69 s
+constant +0.10        -0.00     3.87     3.14     157.7    -90.0  TUMBLES at 7.96 s
+constant -0.10        -0.00    21.61     2.88      39.7    180.0  TUMBLES at 6.51 s

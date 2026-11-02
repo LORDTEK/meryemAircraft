@@ -3183,6 +3183,24 @@ değişimi yoksa **çözüm yoktur**, çözücü yorgunluğu değil.
 
 `aero/transition_dynamics.py`
 
+> **DÜZELTME (2026-11, revizyon R-20; dal `revision-local`).** Bu bölümün sayıları, `kos()`'un moment teriminin
+> ters işaretiyle elde edildi ve geçersizdir. θ burun-aşağı pozitif, C_m burun-yukarı pozitif; eski
+> `q += (M + M_aero)/Iyy` kararlı doğrusal yasayı kararsız yapıyordu (30 m/s'de 33,1 s⁻² negatif katılık,
+> PD'nin 25 s⁻²'sinden büyük) ve 8 s'lik koşu sonu bunu gizliyordu. `kos()` beş yerde düzeltildi (betiğin
+> REVISION bölümü): işaret; kiriş = MAC 0,6514 m; kaldırma eğimi 3,866/rad (VLM, doğrusal yasanın kendi eğimi);
+> profil sonu = seyir trim tutumu (83,34°); koşu profilden 40 s sonrasına kadar, geriye devrilme de sayılır.
+> Düzeltilmiş modelde (`transition-*-result.txt`):
+> - Sıfır momentte 2 s'lik dönüş, giriş tırmanışıyla önce ~10 m çıkıp sonra düşüyor: kaba kaldırma modelinin 12°
+>   stall kırılmasını geçince 9–13 m düşüş, girişin en çok 1,7 m altına (16 kat kazançta 4,7 m); kırılma 14°'deyse
+>   2–8 m düşüş, girişin altına inmiyor.
+> - Doğrusal yasayla 17,6–23,0 N·m'nin her değerinde dönüş takla atmadan oturuyor (0,8–1,0 s doyma).
+> - Projedeki yedi doğrusal moment yasasıyla 168 koşunun hiçbirinde takla yok (`transition_robustness.py`).
+> - 3–6 s'lik dönüş seyir hızına girişin 12–30 m üstünde, en çok 12 N·m ile, |α| ≤ 12° ve en çok 3,2 m düşüşle
+>   ulaşıyor.
+> - Düz levha ve sabit ±0,05/±0,10 ofsetler seyirde trimlenemiyor (23 N·m'yi aşan moment ister): bunlar dönüş
+>   sonucu değil, trim başarısızlığıdır.
+> Aşağıdaki 5,4–6,6 m, "hiç doymuyor" ve kazanç cümleleri eski modelindir; tarihsel kayıt olarak duruyor.
+
 §3.15 gövde açısını *kinematik sürüyor*: uçak dönmüyor, döndürülüyor, ve dönmeyi
 üreten moment denklemde yok. §3.17 momentin yetip yetmediğine ayrıca bakıyor. İkisi
 hiç buluşmamıştı.
