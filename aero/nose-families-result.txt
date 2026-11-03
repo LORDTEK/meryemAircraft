@@ -1,0 +1,23 @@
+R-25: THE FOUR NOSE-BLADE FAMILIES (Supplement S5), RE-DERIVED
+modules: tip_propeller.py, nose_propeller.py and nose_propeller_crossing.py of this folder (SHA-256 asserted)
+nose: D 1.20 m, hover thrust W 491.5 N (MTOW 50.1 kg), cruise 30 m/s at T 40.96 N (L/D 12.0)
+
+0. Cross-check of the general engine against tip_propeller.py (nose_propeller.capraz_denetim)
+---------------------------------------------------------------------------------------------
+nose_propeller engine: omega 2179 rad/s, T 8.10 N, pair 257 W
+tip_propeller.py:      omega 2179 rad/s, T 8.10 N, pair 257 W
+power deviation 0.00 %
+
+1. The fixed-pitch blade of each family (FM 0.599 in hover), and its cruise efficiency
+--------------------------------------------------------------------------------------
+B     c_l      d_th      FM     eta       J  om_h r/s    P_h kW  om_c r/s     P_c W Q_rotor Nm
+2     0.55    13.67   0.603   0.648    0.86     197.3     10.85     183.5    1897.3      27.49
+2     0.70    10.55   0.598   0.683    0.80     219.3     10.94     197.0    1799.2      24.95
+3     0.55    11.64   0.598   0.632    0.80     201.8     10.95     196.8    1944.8      27.15
+3     0.70     8.67   0.591   0.643    0.76     220.3     11.08     206.2    1912.2      25.15
+regression against nose-propeller-crossing.txt and reaction-torque-result.txt: OK (to their printed digits)
+
+written: nose-families.json
+hover check: W^1.5/sqrt(2 rho A) / 0.599 = 10928 W (the paper's 10.9 kW)
+
+run time 828 s

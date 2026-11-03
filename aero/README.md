@@ -3200,6 +3200,8 @@ değişimi yoksa **çözüm yoktur**, çözücü yorgunluğu değil.
 >   ulaşıyor.
 > - Düz levha ve sabit ±0,05/±0,10 ofsetler seyirde trimlenemiyor (23 N·m'yi aşan moment ister): bunlar dönüş
 >   sonucu değil, trim başarısızlığıdır.
+> - Bu sayılar moment sınırını ve itkiyi her hızda askı değerinde tutar. İkisi hızla hesaplanınca dönüş yine
+>   tamamlanıyor, ama uç makinelerinde devir payı gerekiyor ve irtifa kaybı büyüyor: §3a.
 > Aşağıdaki 5,4–6,6 m, "hiç doymuyor" ve kazanç cümleleri eski modelindir; tarihsel kayıt olarak duruyor.
 
 §3.15 gövde açısını *kinematik sürüyor*: uçak dönmüyor, döndürülüyor, ve dönmeyi
@@ -3224,6 +3226,81 @@ uçtuğu yörünge**.
 Ödünç momentli satırlar raporlanmıyor, yalnız yayılım olarak veriliyor: modelde
 aerodinamik yunuslama sönümü yok (C_m_q de ölçülmemiş) ve kontrolcü ayarlanmış
 değil. İkisi de tek başına o satırları tahmin olmaktan çıkarır.
+
+## 3a. Geçiş, uç momenti ve itki hızla düşerken (R-22 ve devamı, 2026-11-03; dal `revision-local`)
+
+`aero/tipthrust_model.py`, `tipthrust.py`, `tipthrust_mach.py`, `tipthrust_rpmcap.py`, `tipthrust_rpmcap_brake.py`,
+`nose_families.py`, `nose_thrust_lapse.py`, `transition_at_speed.py`
+
+§3'ün düzeltilmiş `kos()`'u iki askı değerini her hızda sabit tutar: kontrol momenti sınırı 23,0 N·m (iki uç
+çiftinin 2 × 16,2 N'u, 0,71 m kolda) ve itki 1,066 W (burun çiftinin W'si ile uç çiftlerinin 32,4 N'u). Bu betikler
+ikisini de deponun kendi pala-elemanı modelleriyle hıza karşı hesaplar ve geçişi bu düşüşlerle yeniden koşturur.
+
+| Betik | Ne hesaplar | Çıktı |
+|---|---|---|
+| `tipthrust_model.py` | Ortak uç çifti modeli: `tip_propeller.py` (SHA-256 denetlenir) ve donmuş c_l 0,68 palası; çift tek eşdeğer rotor (bir 0,20 m disk, 2 × 2 pala); eksenel akış; M = 2 L (T_sürülen − T_serbest), L = 0,71 m | — |
+| `tipthrust.py` | Uç çifti itkisi ve momenti, 0–35 m/s: hat a (335 W, devir serbest) ve hat b (askı devri); askı yoklaması, sayısal yoklamalar, eş-eksen kaybı ve kesit kutbu duyarlılığı | `tipthrust-result.txt` |
+| `tipthrust_mach.py` | Aynı hatlar, AeroSandbox'ın istasyon Mach düzeltmesiyle | `tipthrust-mach-result.txt` |
+| `tipthrust_rpmcap.py` | Sürülen çiftlerde devir tavanı c × askı devri (c 1,00–1,25), karşı çiftler serbest dönüyor | `tipthrust-rpmcap-result.txt`, `tipthrust-rpmcap-moments.txt` |
+| `tipthrust_rpmcap_brake.py` | Aynısı, karşı çiftler serbest dönüş devrinin 0,75'ine frenli (c 1,00–1,15) | `tipthrust-rpmcap-brake-result.txt`, `tipthrust-rpmcap-brake-moments.txt` |
+| `nose_families.py` | S5'in dört burun pala ailesi, depo kodundan yeniden türetilir (askıda FM 0,599) | `nose-families-result.txt`, `nose-families.json` |
+| `nose_thrust_lapse.py` | Burun çiftinin askı gücünde, devir serbest, hıza karşı itkisi; üstüne hat a'da iki uç çifti; T_mevcut / (1,066 W) | `nose-thrust-lapse-result.txt`, `nose-thrust-lapse.txt` |
+| `transition_at_speed.py` | `kos()`'u denetlenen iki düzenlemeyle yeniden kurar (sınır × f(V), itki × g(V)) ve metnin koşu kümesini (sıfır moment ve yedi doğrusal yasa, hat başına 656 koşu) dört kipte koşturur | `transition-at-speed-result.txt`, `transition-at-speed-caps-result.txt`, `transition-at-speed-lapse-result.txt`, `transition-at-speed-lapsecap-result.txt` |
+
+Koşturma, `aero/` içinden (ilk beşi birbirinden bağımsız; paketler: NeuralFoil 0.3.3, AeroSandbox 4.2.10, numpy, scipy):
+
+    python3 -B nose_families.py > nose-families-result.txt
+    python3 -B tipthrust.py > tipthrust-result.txt
+    python3 -B tipthrust_mach.py > tipthrust-mach-result.txt
+    python3 -B -I tipthrust_rpmcap.py > tipthrust-rpmcap-result.txt
+    python3 -B -I tipthrust_rpmcap_brake.py > tipthrust-rpmcap-brake-result.txt
+    python3 -B nose_thrust_lapse.py > nose-thrust-lapse-result.txt
+    TMV_MODE=lapsecap python3 -B transition_at_speed.py > transition-at-speed-lapsecap-result.txt
+    TMV_MODE=lapse python3 -B transition_at_speed.py > transition-at-speed-lapse-result.txt
+    python3 -B transition_at_speed.py > transition-at-speed-result.txt
+    TMV_MODE=caps python3 -B transition_at_speed.py > transition-at-speed-caps-result.txt
+
+Süreler, bu makinede başka işlerle paylaşılan işlemcide: `tipthrust.py` 2 674 s, `tipthrust_mach.py` 612 s,
+`tipthrust_rpmcap.py` 595 s, `tipthrust_rpmcap_brake.py` 591 s, `nose_families.py` 828 s, `nose_thrust_lapse.py`
+yaklaşık 260 s (her biri tek çekirdek); `transition_at_speed.py` dört süreçle lapsecap 50 dk, lapse 14 dk, kipsiz
+18 dk, caps 22 dk.
+
+**Sonuçlar.**
+- **Uç momenti.** Hat a'da (335 W, devir serbest) askıda 22,83 N·m; 10 m/s'de 19,0, 22–26 m/s'de 14,9–13,8,
+  seyirde (30 m/s) 12,8 N·m, yani ΔC_m 0,018 (askı değeri tutulunca 0,032). Rotorlar seyirde askı devrinin 1,29
+  katında, helisel uç Mach sayısı 0,89; istasyon Mach düzeltmesiyle ΔC_m 0,012. Hat b'de (askı devri) 22 m/s'de
+  8,2, 26 m/s'de 0,9 N·m; 26,4 m/s'den sonra moment kalmıyor.
+- **İtki.** Burun çifti askı gücünde (dört ailenin en düşüğü) ve hat a'da iki uç çifti birlikte 1,066 W'nin
+  10 m/s'de 0,96'sını, 20'de 0,75'ini, 26'da 0,64'ünü, 30'da 0,56'sını veriyor; burun rotoru 30 m/s'de askı devrinin
+  1,13–1,19 katında dönüyor.
+- **Geçiş** (her hat 656 koşu). Askı değerleri tutulunca §3'ün sonucu birebir çıkıyor: takla yok, hepsi oturuyor.
+  İkisi birden hızla düşünce dönüş yine tamamlanıyor, ama uç makinelerinde devir payı gerekiyor:
+  karşı çiftler frenliyse askı devrinin %10 üstü yetiyor (tavan 1,10 ve 1,15: takla yok, hepsi oturuyor;
+  1,05'te 3, 1,00'da 151 koşu oturmuyor), serbest dönüyorlarsa %20 üstü (1,20 ve 1,25: takla yok, hepsi oturuyor;
+  1,05, 1,10 ve 1,15'te 560, 544 ve 325 koşu oturmuyor). İtki askı değerinde tutulup yalnız moment düşünce eşik
+  yine %20: serbest dönen 1,05, 1,10 ve 1,15 tavanlarında 455, 427 ve 147 koşu takla atıyor (147, 101 ve 109'u da
+  oturmuyor), 1,20 ve 1,25'te hiçbiri;
+  askı devrinde (hat b) 507 koşu takla atıyor, 107'si oturmuyor. Hat a'da (devir serbest, seyirde askı devrinin
+  1,29 katı) itki düşüşüyle de takla yok, hepsi oturuyor.
+- **İrtifa.** 2 s'lik hızlı dönüşün girişin altına en derin inişi, askı değerleriyle 3,15 m iken, itki düşüşüyle
+  hat a'da 15,5 m, yeterli tavanlarda 17,6–23,2 m (14° kırılmada 8,2 ve 8,4–15,3 m); sıfır momentle 5,8 m. Uç çiftleri bu
+  dönüşte 25,5 s'ye kadar sınırda kalıyor. 3–6 s'lik dönüşler sıfır ve VLM yasasıyla en çok 13,4 m düşüyor ve girişin
+  altına inmiyor; öteki altı yasayla en çok 19,5 m düşüş ve girişin en çok 5,6 m altı. Bu dönüşler seyir hızının
+  %95'ine sıfır ve VLM yasasıyla 5,0–6,7 s'de, girişin 7,6–27,2 m üstünde varıyor (askı değerleriyle bu koşu
+  kümesinde 4,4–6,0 s ve 11,9–28,9 m). Doruk hücum açısı (12° kırılmada): 2 s'lik dönüşte 14,5–19,5°; 3–6 s'lik
+  dönüşte yedi doğrusal yasayla en çok 11,8°, sıfır momentle 3 s'de 16,8° (kırılmayı geçiyor; 14° kırılmada 12,5°).
+
+**Sınırlar.** `kos()`'ta aerodinamik yunuslama sönümü yok; düşük tavanlardaki taklaların bir kısmı bundandır.
+Modeller sıkıştırılamaz akışla kurulu (Mach hattı dışında). Motor ve rotor dinamiği modellenmedi; uç ve burun
+itkisi moment talebinden bağımsız alındı. f ve g toplam hızda uygulanıyor (ikisi de hızla düştüğü için temkinli);
+burun devri serbest; BEMT'nin 2–8 m/s'deki statik değer üstü itkisi sayılmadı. Akış eksenel; düzlem içi bileşen
+ihmal edildi (ilerleme oranı 0,02'nin altında). Eş-eksen çifti tek eşdeğer rotor olarak alındı; girişim modellenmedi,
+duyarlılığı `tipthrust.py` §8'de.
+
+**Yoklamalar.** `tipthrust_model.bemt(B = 2)` `tip_propeller.bemt_sabit`'e bit bit eşit; `nose_families.py`
+`nose-propeller-crossing.txt` ile `reaction-torque-result.txt`'yi basılı hanelerine kadar yeniden üretiyor;
+`transition_at_speed.py` iki düzenleme kapalıyken `kos()`'a birebir eşit (kipsiz koşuda askı hattının her
+koşusunda, itki kiplerinde 32 koşuda denetlenir).
 
 ## 4. RANS'a karşı VLM — YAPILMADI; yerine konan hesap yine de bir cümle çürüttü
 

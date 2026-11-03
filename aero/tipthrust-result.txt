@@ -1,0 +1,186 @@
+R-22: TIP-PAIR THRUST AND PITCHING MOMENT AGAINST AIRSPEED
+model: tip_propeller.py of this folder, SHA-256 25ffea25dd372d71..., unchanged
+NeuralFoil 0.3.3, AeroSandbox 4.2.10, numpy 2.5.4
+rotor D 0.20 m, hub 0.15 R, 24 strips, section naca0012; pitch arm L = 0.71 m; S 1.979 m2, MAC 0.6514 m
+check: 2 x 16.2 N x 0.71 m = 23.00 N m (the transition limit 23.0)
+paper's hover readings at 335 W: 16.20 N (0.702 rating), 14.58 N (momentum theory, FM 0.599 on one disc),
+  12.39 N (0.85 x that, 15 % coaxial loss); moments 23.00, 20.70, 17.60 N m
+check: 23.0 / qSc(30) = 23.0 / 710.6 = 0.0324 (the text's 0.032)
+
+Blade: tip_propeller.hover_tasarla(cl_hedef=0.68), every third station
+----------------------------------------------------------------------
+     r/R   chord mm        c/R  theta deg
+   0.168      40.00     0.4000      26.26
+   0.274      33.67     0.3367      20.56
+   0.380      17.81     0.1781      15.10
+   0.486      10.94     0.1094      12.33
+   0.593       7.38     0.0738      10.71
+   0.699       5.31     0.0531       9.66
+   0.805       4.00     0.0400       8.93
+   0.911       4.00     0.0400       8.78
+(the chord is clipped at 0.40 R inboard and 0.04 R outboard by the design routine)
+
+0. Regression against the committed model and outputs
+-----------------------------------------------------
+bemt(B=2) equals tip_propeller.bemt_sabit bit for bit at 4 points (V 0 to 30 m/s, 2117 to 3000 rad/s): OK
+free-wheel, one isolated disc, V 30: omega 2623 rad/s, axial -2.094 N, dCD0 (8 discs) 0.01535
+   committed run-c-result.txt (Run A):  omega 2623 rad/s, axial -2.094 N, dCD0 0.01535
+
+1. Hover (V = 1e-3 m/s, as tip_propeller.py)
+--------------------------------------------
+reading, operating point            om rad/s      rpm  tip m/s     T N      P W  FM 1 disc FM 2 discs
+two isolated discs, at 16.2 N         2117.2    20217    211.7   16.20    262.6      0.895      0.633
+two isolated discs, at 335 W          2305.9    22020    230.6   19.22    335.0      0.906      0.641
+                                   alpha 4.95 to 6.03 deg, Re 5.0e+04 to 1.5e+05 at 335 W
+equivalent single rotor, at 16.2 N    2332.1    22270    233.2   16.20    338.6      0.694      0.491
+equivalent single rotor, at 335 W     2323.4    22187    232.3   16.08    335.0      0.694      0.491
+                                   alpha 2.87 to 5.02 deg, Re 5.1e+04 to 1.5e+05 at 335 W
+paper: 16.2 N at 335 W, FM 0.702 on one disc (the reference design's rating); 14.6 N at FM 0.599
+HOVER CHECK (equivalent single rotor): 16.08 N at 335 W, -0.7 % from 16.2 N; 16.2 N needs 338.6 W, +1.1 %;
+  FM 0.694 against 0.702. The isolated-disc reading gives 19.22 N at 335 W (+18.6 %), FM 0.906 on one disc.
+hover rpm (the rpm limit of line b): 2323.4 rad/s = 22187 rpm, tip speed 232.3 m/s, tip Mach 0.683
+
+2. Numerics: iteration count and swirl factor (equivalent single rotor)
+-----------------------------------------------------------------------
+point                            T(150) N   T(600) N   P(150) W   P(600) W    resid m/s
+hover, 335 W                      16.0792    16.0792     335.00     335.00      2.1e-15
+25 m/s, 335 W                      6.7755     6.7752     335.00     334.99      8.2e-02
+30 m/s, free-wheel                -4.2409    -4.2409      -0.00      -0.00      1.1e-15
+swirl: the repo's momentum balance takes the swirl at the disc as dQt / (2 disk (V+v)); the textbook balance
+  has dQt / (disk (V+v)). With the textbook factor: hover T at 335 W 15.927 N (repo 16.079), T at 25 m/s and 335 W
+  6.771 N (repo 6.776), free-wheel T at 30 m/s -4.240 N (repo -4.241)
+
+3. Thrust and moment against axial speed (equivalent single rotor, NeuralFoil)
+------------------------------------------------------------------------------
+line a: driven pairs at 335 W, rpm free; line b: driven pairs at the hover rpm 2323 rad/s; opposite pairs
+free-wheeling. M = 2 x 0.71 x (T_driven - T_fw), per side of two pairs; dCm = M / (q S MAC).
+ V_ax |   T_b N   P_b W |   om_fw  T_fw N |    om_a om_a/h   Mtip   T_a N |  M_a Nm  M_b Nm |   dCm_a   dCm_b
+  0.0 |   16.08   335.0 |       0   0.000 |    2323  1.000  0.683  16.079 |   22.83   22.83 |     nan     nan
+  2.0 |   15.44   334.5 |     143  -0.021 |    2325  1.001  0.683  15.456 |   21.98   21.95 |     nan     nan
+  4.0 |   14.77   333.7 |     286  -0.083 |    2327  1.001  0.684  14.814 |   21.15   21.09 |     nan     nan
+  6.0 |   14.08   332.4 |     455  -0.193 |    2330  1.003  0.685  14.160 |   20.38   20.27 |  0.7170  0.7130
+  8.0 |   13.33   330.1 |     631  -0.352 |    2335  1.005  0.687  13.486 |   19.65   19.43 |  0.3889  0.3845
+ 10.0 |   12.62   327.6 |     807  -0.555 |    2341  1.008  0.689  12.848 |   19.03   18.71 |  0.2410  0.2370
+ 12.0 |   11.70   320.3 |    1000  -0.794 |    2358  1.015  0.694  12.145 |   18.37   17.74 |  0.1616  0.1560
+ 14.0 |   10.23   300.8 |    1188  -1.069 |    2387  1.027  0.703  11.396 |   17.70   16.04 |  0.1144  0.1037
+ 16.0 |    8.63   275.8 |    1376  -1.383 |    2442  1.051  0.719  10.462 |   16.82   14.22 |  0.0832  0.0703
+ 18.0 |    6.97   246.6 |    1563  -1.731 |    2501  1.077  0.737   9.615 |   16.11   12.35 |  0.0630  0.0483
+ 20.0 |    5.32   215.3 |    1748  -2.106 |    2556  1.100  0.754   8.888 |   15.61   10.54 |  0.0494  0.0334
+ 21.0 |    4.19   191.5 |    1839  -2.302 |    2595  1.117  0.765   8.432 |   15.24    9.22 |  0.0438  0.0265
+ 22.0 |    3.25   171.1 |    1930  -2.502 |    2638  1.135  0.778   7.971 |   14.87    8.17 |  0.0389  0.0214
+ 23.0 |    2.16   146.1 |    2020  -2.707 |    2670  1.149  0.788   7.614 |   14.66    6.92 |  0.0351  0.0166
+ 24.0 |    0.92   116.3 |    2109  -2.916 |    2713  1.168  0.800   7.191 |   14.35    5.45 |  0.0316  0.0120
+ 25.0 |   -0.95    68.8 |    2198  -3.129 |    2758  1.187  0.814   6.776 |   14.06    3.09 |  0.0285  0.0063
+ 26.0 |   -2.73    20.2 |    2286  -3.345 |    2804  1.207  0.827   6.371 |   13.80    0.87 |  0.0258  0.0016
+ 27.0 |   -4.33   -26.5 |    2373  -3.564 |    2852  1.228  0.842   5.958 |   13.52    0.00 |  0.0235  0.0000
+ 28.0 |   -5.79   -72.0 |    2460  -3.787 |    2902  1.249  0.857   5.553 |   13.26    0.00 |  0.0214  0.0000
+ 30.0 |   -8.42  -161.6 |    2632  -4.241 |    3005  1.293  0.887   4.766 |   12.79    0.00 |  0.0180  0.0000
+ 32.0 |  -10.67  -244.1 |    2803  -4.706 |    3119  1.342  0.921   3.952 |   12.29    0.00 |  0.0152  0.0000
+ 35.0 |  -14.45  -397.7 |    3058  -5.423 |    3322  1.430  0.982   2.627 |   11.43    0.00 |  0.0118  0.0000
+(dCm not printed below 5 m/s; a negative P_b means the rotor would be braked below its free-wheel speed)
+
+station incidence on line a and free-wheeling, deg, and the largest residual on line a:
+  V    0: line a 2.9 to 5.0 (Re 5.1e+04 to 1.5e+05); free-wheel -
+  V   10: line a 1.2 to 3.7 (Re 5.1e+04 to 1.6e+05); free-wheel -10.2 to 1.3
+  V   20: line a 0.3 to 2.4 (Re 5.6e+04 to 1.7e+05); free-wheel -8.0 to 1.5
+  V   25: line a -2.1 to 1.9 (Re 6.1e+04 to 1.9e+05); free-wheel -7.9 to 1.4
+  V   30: line a -4.5 to 1.6 (Re 6.6e+04 to 2.1e+05); free-wheel -7.9 to 1.2
+  V   35: line a -5.9 to 1.3 (Re 7.3e+04 to 2.3e+05); free-wheel -8.1 to 1.1
+  largest last-step change of the axial induction on line a: 2.0e+00 m/s
+
+numerics along line a: the same states (V, omega) solved with 150 (as above), 600 and 2,000 iterations
+  largest thrust difference 0.090 N (at 20 m/s), largest power difference 1.90 W
+  (the unsettled station is the root, r/R 0.17 to 0.20, alternating between positive and negative thrust;
+  the model sets no induction on negative-thrust stations, so the fixed-point iteration has a two-cycle there)
+
+4. Speeds at which the moment falls below the demands (axial speed)
+-------------------------------------------------------------------
+line a, 335 W, rpm free    below 11.7 N m at  34.0 m/s (grid interpolation  34.0)
+line a, 335 W, rpm free    below 20.0 N m at   7.0 m/s (grid interpolation   7.0)
+line b, hover rpm          below 11.7 N m at  18.6 m/s (grid interpolation  18.5)
+line b, hover rpm          below 20.0 N m at   6.7 m/s (grid interpolation   6.7)
+line b reaches zero at  26.4 m/s; the free-wheel speed passes the hover rpm at  26.4 m/s (the same point)
+line a: helical tip Mach passes 0.75 at  19.5 m/s and 0.80 at  24.0 m/s
+
+5. At the transition's peak-demand points (R-21's peak-demand check, 23.0 N m held; points copied)
+--------------------------------------------------------------------------------------------------
+case                                  V  alpha   V_ax   demand      M_a      M_b     a / b
+paper law, 3 s, PD                 22.2    9.9  21.87     11.7    14.91     8.17  yes / NO
+paper law, 3 s, hold ki 50         23.7    9.5  23.37     12.4    14.57     6.47  yes / NO
+raw RANS line, 3 s, PD             23.6    8.9  23.32     20.7    14.59     6.51   NO / NO
+paper law, 6 s, PD                 15.8    9.0  15.61      5.7    16.96    14.97 yes / yes
+raw RANS line, 6 s, PD             17.4    8.2  17.22     10.3    16.24    13.18 yes / yes
+raw RANS line, 6 s, hold ki 50     30.2    6.8  29.99     12.5    12.79     0.00  yes / NO
+(V in m/s, alpha in deg, moments in N m; 'a / b': does the line cover the demand)
+
+6. What the driven pairs need for the demands (axial speed)
+-----------------------------------------------------------
+ V_ax    T_fw |  om 11.7 om/om_h   Mtip      P W |    om 20 om/om_h   Mtip      P W
+ 20.0  -2.106 |     2401   1.034  0.708      245 |     2763   1.189  0.814      452
+ 22.0  -2.502 |     2492   1.073  0.735      255 |     2848   1.226  0.840      471
+ 24.0  -2.916 |     2608   1.123  0.770      267 |     2931   1.262  0.864      487
+ 26.0  -3.345 |     2719   1.170  0.803      279 |     3044   1.310  0.898      511
+ 30.0  -4.241 |     2964   1.276  0.875      303 |     3258   1.402  0.962      552
+(power per driven pair; 335 W is the hover rating)
+
+7. Cruise, 30 m/s axial
+-----------------------
+q S MAC = 710.6 N m. Held hover rating 23.0 N m -> dCm 0.0324.
+line a: T 4.77 N driven, -4.24 N free-wheeling -> M 12.79 N m, dCm 0.0180 (56 % of the held value)
+        at omega 3005 rad/s (1.29 x hover rpm), helical tip Mach 0.887
+line b: T -8.42 N at the hover rpm, below free-wheeling -> M 0.00 N m, dCm 0.0000
+free-wheel share of line a's moment: 47 %
+R-21's cruise moments against line a's 0.0180: raw RANS -0.016 uses 89 %; offset removed -0.003 to +0.006
+  uses 17 to 33 %; the VLM -0.0013 7 %.
+
+8. Sensitivity: the coaxial loss (the paper's own bracket, 23.0 / 20.7 / 17.6 N m)
+----------------------------------------------------------------------------------
+The equivalent single rotor gives each blade the pair's mean induction and no extra interference. The paper's
+two lower hover readings (14.58 N, FM 0.599 as the pair's value; 12.39 N, a further 15 % coaxial loss) are
+entered two ways:
+  (i) as an induced loss: the momentum area of every station multiplied by kA, tuned so that the pair gives the
+      reading's thrust at 335 W in hover, and the whole model rerun (its loss then varies with speed);
+  (ii) as a constant thrust factor on the driven pairs, f = reading / 16.08 N, the free-wheel thrust unchanged.
+
+line a (335 W, rpm free)
+reading                               T0 N    om_h |     M0    M22    M26    M30 |   dCm30 |  <20 at <11.7 at
+equivalent single rotor (main)       16.08    2323 |  22.83  14.87  13.80  12.79 |  0.0180 |     7.0    34.0
+(i) 14.58 N: kA 0.7301               14.58    2337 |  20.70  14.11  13.31  12.41 |  0.0175 |     1.9    33.4
+(i) 12.39 N: kA 0.4839               12.39    2400 |  17.60  13.16  12.14  11.92 |  0.0168 |     0.0    31.4
+(ii) 14.58 N: f 0.907                14.58    2323 |  20.70  13.82  12.95  12.16 |  0.0171 |     1.8    32.3
+(ii) 12.39 N: f 0.771                12.39    2323 |  17.60  12.28  11.72  11.24 |  0.0158 |     0.0    26.2
+
+line b (the reading's own hover rpm)
+reading                               T0 N    om_h |     M0    M22    M26    M30 |   dCm30 |  <20 at <11.7 at
+equivalent single rotor (main)       16.08    2323 |  22.83   8.17   0.87   0.00 |  0.0000 |     6.7    18.5
+(i) 14.58 N: kA 0.7301               14.58    2337 |  20.70   7.55   1.03   0.00 |  0.0000 |     1.8    18.0
+(i) 12.39 N: kA 0.4839               12.39    2400 |  17.60   6.95   2.38   0.00 |  0.0000 |     0.0    16.4
+(ii) 14.58 N: f 0.907                14.58    2323 |  20.70   7.74   1.23   0.00 |  0.0000 |     1.8    17.6
+(ii) 12.39 N: f 0.771                12.39    2323 |  17.60   7.11   1.76   0.00 |  0.0000 |     0.0    15.6
+(M in N m at 0, 22, 26 and 30 m/s axial; crossings by grid interpolation, 0.0 = already below at hover;
+ om_h in rad/s)
+(i) 14.58 N: kA 0.7301: line a at 30 m/s needs omega 3043 rad/s (1.30 x its hover rpm), tip Mach 0.898
+(i) 12.39 N: kA 0.4839: line a at 30 m/s needs omega 3096 rad/s (1.29 x its hover rpm), tip Mach 0.914
+
+9. Check: the section source (R-4's polars, the same blade, the main model otherwise)
+-------------------------------------------------------------------------------------
+Not the paper's moment bracket; run because at speed the free-wheel drag is part of the moment.
+(each polar with its own hover rpm at 335 W; crossings by grid interpolation, 0.0 = already below at hover)
+polar                                 T0 N    om_h |   Ma22   Ma26   Ma30 |   Mb22   Mb26   Mb30 |   a<20 a<11.7   b<20 b<11.7
+NeuralFoil (main)                    16.08    2323 |  14.87  13.80  12.79 |   8.17   0.87   0.00 |    7.0   34.0    6.7   18.5
+Sheldahl-Klimas 8e4 (run_b.py)       11.07    2477 |  14.23  13.03  11.92 |   8.98   4.61   0.00 |    0.0   30.9    0.0   18.6
+                                   T_fw at 30 m/s -2.861 N per pair (NeuralFoil -4.241); line a T at 30 m/s 5.535 N (NeuralFoil 4.766)
+Ohtake, measured (run_c.py)          14.83    2387 |  13.88  12.78  11.76 |   9.14   4.00   0.00 |    2.9   30.2    2.6   18.7
+                                   T_fw at 30 m/s -4.013 N per pair (NeuralFoil -4.241); line a T at 30 m/s 4.268 N (NeuralFoil 4.766)
+
+10. Side reading: the transition model's thrust
+-----------------------------------------------
+The model's thrust of 1.066 W (522.9 N) counts 2 x 16.2 = 32.4 N from two tip pairs at the hover rating.
+  V_ax 15 m/s: two pairs at 335 W give 21.7 N, 10.7 N (2.2 % of W) less than 32.4 N
+  V_ax 20 m/s: two pairs at 335 W give 17.8 N, 14.6 N (3.0 % of W) less than 32.4 N
+  V_ax 22 m/s: two pairs at 335 W give 15.9 N, 16.5 N (3.4 % of W) less than 32.4 N
+  V_ax 24 m/s: two pairs at 335 W give 14.4 N, 18.0 N (3.7 % of W) less than 32.4 N
+  V_ax 26 m/s: two pairs at 335 W give 12.7 N, 19.7 N (4.0 % of W) less than 32.4 N
+  V_ax 30 m/s: two pairs at 335 W give 9.5 N, 22.9 N (4.7 % of W) less than 32.4 N
+
+run time 2674 s

@@ -1,0 +1,565 @@
+Transition with the tip pairs' moment against airspeed (R-22 follow-up). Model kos() 06c46d0 + M_limit(V).
+Regression: with the hover rating held, the rebuilt function equals kos() on every run of that block (asserted).
+f(V) = M(V)/M(0): 0:1.00/1.00/0.92 5:0.91/0.91/0.86 10:0.83/0.82/0.83 15:0.76/0.66/0.75 20:0.68/0.46/0.66 22:0.65/0.36/0.63 24:0.63/0.24/0.57 26:0.60/0.04/0.52 30:0.56/0.00/0.38 (line a / line b / line a station Mach)
+columns: dip = lowest altitude below entry (m); fall = largest fall from an earlier high point (m); sat = time over the limit (s); Mdem = largest demand (N m)
+
+=== hover rating held (as the text)
+  C_m = 0 (0.0000, 0.0000)
+    t_r 2.0 break 12 | dip  1.74  fall 11.88-11.88  sat  0.00  Mdem  13.7 | 0 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.92- 3.92 s | h_cr   5.20-  5.20 m | alpha_max 17.33-17.33 deg
+    t_r 2.0 break 14 | dip -0.00  fall  2.72- 2.72  sat  0.00  Mdem  13.7 | 0 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.95- 3.95 s | h_cr   7.62-  7.62 m | alpha_max 13.52-13.52 deg
+    t_r 3.0 break 12 | dip -0.00  fall  1.62- 1.62  sat  0.00  Mdem   6.3 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.43- 4.43 s | h_cr  12.30- 12.30 m | alpha_max 11.12-11.12 deg
+    t_r 3.0 break 14 | dip -0.00  fall  1.62- 1.62  sat  0.00  Mdem   6.3 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.43- 4.43 s | h_cr  12.30- 12.30 m | alpha_max 11.12-11.12 deg
+    t_r 4.0 break 12 | dip -0.00  fall  0.53- 0.53  sat  0.00  Mdem   3.6 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.94- 4.94 s | h_cr  17.44- 17.44 m | alpha_max  9.17- 9.17 deg
+    t_r 4.0 break 14 | dip -0.00  fall  0.53- 0.53  sat  0.00  Mdem   3.6 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.94- 4.94 s | h_cr  17.44- 17.44 m | alpha_max  9.17- 9.17 deg
+    t_r 6.0 break 12 | dip -0.00  fall  0.00- 0.00  sat  0.00  Mdem   1.6 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.98- 5.98 s | h_cr  28.87- 28.87 m | alpha_max 10.06-10.06 deg
+    t_r 6.0 break 14 | dip -0.00  fall  0.00- 0.00  sat  0.00  Mdem   1.6 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.98- 5.98 s | h_cr  28.87- 28.87 m | alpha_max 10.06-10.06 deg
+  paper law (0.0560, -0.4800)
+    t_r 2.0 break 12 | dip  0.11  fall  9.92-10.34  sat  0.99  Mdem  65.1 | 0 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.87- 3.88 s | h_cr   4.99-  5.01 m | alpha_max 14.85-14.89 deg
+    t_r 2.0 break 14 | dip -0.00  fall  4.86- 4.86  sat  0.00  Mdem  16.7 | 0 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.92- 3.92 s | h_cr   7.05-  7.05 m | alpha_max 12.56-12.56 deg
+    t_r 3.0 break 12 | dip -0.00  fall  3.24- 3.24  sat  0.00  Mdem  11.7 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.42- 4.42 s | h_cr  11.88- 11.88 m | alpha_max 10.45-10.45 deg
+    t_r 3.0 break 14 | dip -0.00  fall  3.24- 3.24  sat  0.00  Mdem  11.7 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.42- 4.42 s | h_cr  11.88- 11.88 m | alpha_max 10.45-10.45 deg
+    t_r 4.0 break 12 | dip -0.00  fall  1.51- 1.51  sat  0.00  Mdem   8.6 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.93- 4.93 s | h_cr  17.10- 17.10 m | alpha_max  8.88- 8.88 deg
+    t_r 4.0 break 14 | dip -0.00  fall  1.51- 1.51  sat  0.00  Mdem   8.6 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.93- 4.93 s | h_cr  17.10- 17.10 m | alpha_max  8.88- 8.88 deg
+    t_r 6.0 break 12 | dip -0.00  fall  0.00- 0.00  sat  0.00  Mdem   5.7 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.97- 5.97 s | h_cr  28.48- 28.48 m | alpha_max  9.79- 9.79 deg
+    t_r 6.0 break 14 | dip -0.00  fall  0.00- 0.00  sat  0.00  Mdem   5.7 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.97- 5.97 s | h_cr  28.48- 28.48 m | alpha_max  9.79- 9.79 deg
+  untwisted VLM fit (0.0578, -0.4953)
+    t_r 2.0 break 12 | dip  0.16  fall  9.96-10.39  sat  0.99  Mdem  66.3 | 0 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.87- 3.88 s | h_cr   4.99-  5.02 m | alpha_max 14.78-14.83 deg
+    t_r 2.0 break 14 | dip -0.00  fall  4.92- 4.92  sat  0.00  Mdem  16.8 | 0 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.92- 3.92 s | h_cr   7.03-  7.03 m | alpha_max 12.53-12.53 deg
+    t_r 3.0 break 12 | dip -0.00  fall  3.28- 3.28  sat  0.00  Mdem  12.0 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.42- 4.42 s | h_cr  11.87- 11.87 m | alpha_max 10.43-10.43 deg
+    t_r 3.0 break 14 | dip -0.00  fall  3.28- 3.28  sat  0.00  Mdem  12.0 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.42- 4.42 s | h_cr  11.87- 11.87 m | alpha_max 10.43-10.43 deg
+    t_r 4.0 break 12 | dip -0.00  fall  1.54- 1.54  sat  0.00  Mdem   8.8 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.93- 4.93 s | h_cr  17.09- 17.09 m | alpha_max  8.87- 8.87 deg
+    t_r 4.0 break 14 | dip -0.00  fall  1.54- 1.54  sat  0.00  Mdem   8.8 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.93- 4.93 s | h_cr  17.09- 17.09 m | alpha_max  8.87- 8.87 deg
+    t_r 6.0 break 12 | dip -0.00  fall  0.00- 0.00  sat  0.00  Mdem   5.8 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.97- 5.97 s | h_cr  28.47- 28.47 m | alpha_max  9.78- 9.78 deg
+    t_r 6.0 break 14 | dip -0.00  fall  0.00- 0.00  sat  0.00  Mdem   5.8 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.97- 5.97 s | h_cr  28.47- 28.47 m | alpha_max  9.78- 9.78 deg
+  -9 deg washout VLM line (0.0621, -0.5512)
+    t_r 2.0 break 12 | dip  0.80  fall 10.46-11.04  sat  1.02  Mdem  72.0 | 0 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.87- 3.87 s | h_cr   4.95-  5.02 m | alpha_max 14.45-14.55 deg
+    t_r 2.0 break 14 | dip -0.00  fall  5.55- 5.55  sat  0.00  Mdem  17.4 | 0 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.92- 3.92 s | h_cr   6.95-  6.95 m | alpha_max 12.41-12.41 deg
+    t_r 3.0 break 12 | dip -0.00  fall  3.85- 3.85  sat  0.00  Mdem  13.7 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.42- 4.42 s | h_cr  11.80- 11.80 m | alpha_max 10.33-10.33 deg
+    t_r 3.0 break 14 | dip -0.00  fall  3.85- 3.85  sat  0.00  Mdem  13.7 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.42- 4.42 s | h_cr  11.80- 11.80 m | alpha_max 10.33-10.33 deg
+    t_r 4.0 break 12 | dip -0.00  fall  2.07- 2.07  sat  0.00  Mdem   9.9 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.93- 4.93 s | h_cr  17.02- 17.02 m | alpha_max  8.82- 8.82 deg
+    t_r 4.0 break 14 | dip -0.00  fall  2.07- 2.07  sat  0.00  Mdem   9.9 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.93- 4.93 s | h_cr  17.02- 17.02 m | alpha_max  8.82- 8.82 deg
+    t_r 6.0 break 12 | dip -0.00  fall  0.98- 0.98  sat  0.00  Mdem   6.6 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.97- 5.97 s | h_cr  28.37- 28.37 m | alpha_max  9.74- 9.74 deg
+    t_r 6.0 break 14 | dip -0.00  fall  0.98- 0.98  sat  0.00  Mdem   6.6 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.97- 5.97 s | h_cr  28.37- 28.37 m | alpha_max  9.74- 9.74 deg
+  NP 0.869 m line (0.0630, -0.5380)
+    t_r 2.0 break 12 | dip  0.25  fall 10.02-10.49  sat  0.99  Mdem  69.0 | 0 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.87- 3.87 s | h_cr   4.98-  5.03 m | alpha_max 14.59-14.67 deg
+    t_r 2.0 break 14 | dip -0.00  fall  5.07- 5.07  sat  0.00  Mdem  17.1 | 0 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.92- 3.92 s | h_cr   7.00-  7.00 m | alpha_max 12.46-12.46 deg
+    t_r 3.0 break 12 | dip -0.00  fall  3.39- 3.39  sat  0.00  Mdem  12.7 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.42- 4.42 s | h_cr  11.85- 11.85 m | alpha_max 10.39-10.39 deg
+    t_r 3.0 break 14 | dip -0.00  fall  3.39- 3.39  sat  0.00  Mdem  12.7 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.42- 4.42 s | h_cr  11.85- 11.85 m | alpha_max 10.39-10.39 deg
+    t_r 4.0 break 12 | dip -0.00  fall  1.60- 1.60  sat  0.00  Mdem   9.1 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.93- 4.93 s | h_cr  17.07- 17.07 m | alpha_max  8.85- 8.85 deg
+    t_r 4.0 break 14 | dip -0.00  fall  1.60- 1.60  sat  0.00  Mdem   9.1 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.93- 4.93 s | h_cr  17.07- 17.07 m | alpha_max  8.85- 8.85 deg
+    t_r 6.0 break 12 | dip -0.00  fall  0.00- 0.00  sat  0.00  Mdem   6.1 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.97- 5.97 s | h_cr  28.44- 28.44 m | alpha_max  9.76- 9.76 deg
+    t_r 6.0 break 14 | dip -0.00  fall  0.00- 0.00  sat  0.00  Mdem   6.1 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.97- 5.97 s | h_cr  28.44- 28.44 m | alpha_max  9.76- 9.76 deg
+  NP 0.888 m line (0.0760, -0.6870)
+    t_r 2.0 break 12 | dip  1.74  fall 11.08-12.01  sat  1.67  Mdem  78.1 | 0 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.87- 3.87 s | h_cr   4.94-  5.07 m | alpha_max 13.74-13.94 deg
+    t_r 2.0 break 14 | dip -0.00  fall  6.48- 7.24  sat  0.99  Mdem  31.7 | 0 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.90- 3.91 s | h_cr   6.60-  6.81 m | alpha_max 12.17-12.17 deg
+    t_r 3.0 break 12 | dip -0.00  fall  4.66- 4.66  sat  0.00  Mdem  16.6 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.41- 4.41 s | h_cr  11.68- 11.68 m | alpha_max 10.16-10.16 deg
+    t_r 3.0 break 14 | dip -0.00  fall  4.66- 4.66  sat  0.00  Mdem  16.6 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.41- 4.41 s | h_cr  11.68- 11.68 m | alpha_max 10.16-10.16 deg
+    t_r 4.0 break 12 | dip -0.00  fall  2.86- 2.86  sat  0.00  Mdem  11.6 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.92- 4.92 s | h_cr  16.91- 16.91 m | alpha_max  8.73- 8.73 deg
+    t_r 4.0 break 14 | dip -0.00  fall  2.86- 2.86  sat  0.00  Mdem  11.6 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.92- 4.92 s | h_cr  16.91- 16.91 m | alpha_max  8.73- 8.73 deg
+    t_r 6.0 break 12 | dip -0.00  fall  1.65- 1.65  sat  0.00  Mdem   7.9 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.96- 5.96 s | h_cr  28.22- 28.22 m | alpha_max  9.66- 9.66 deg
+    t_r 6.0 break 14 | dip -0.00  fall  1.65- 1.65  sat  0.00  Mdem   7.9 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.96- 5.96 s | h_cr  28.22- 28.22 m | alpha_max  9.66- 9.66 deg
+  NP 0.855 m line (0.0530, -0.4720)
+    t_r 2.0 break 12 | dip  0.52  fall 10.24-10.75  sat  1.01  Mdem  66.7 | 0 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.87- 3.88 s | h_cr   4.97-  5.00 m | alpha_max 14.82-14.86 deg
+    t_r 2.0 break 14 | dip -0.00  fall  5.19- 5.19  sat  0.00  Mdem  16.6 | 0 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.92- 3.92 s | h_cr   7.02-  7.02 m | alpha_max 12.54-12.54 deg
+    t_r 3.0 break 12 | dip -0.00  fall  3.57- 3.57  sat  0.00  Mdem  12.3 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.42- 4.42 s | h_cr  11.85- 11.85 m | alpha_max 10.43-10.43 deg
+    t_r 3.0 break 14 | dip -0.00  fall  3.57- 3.57  sat  0.00  Mdem  12.3 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.42- 4.42 s | h_cr  11.85- 11.85 m | alpha_max 10.43-10.43 deg
+    t_r 4.0 break 12 | dip -0.00  fall  2.03- 2.03  sat  0.00  Mdem   9.1 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.93- 4.93 s | h_cr  17.06- 17.06 m | alpha_max  8.86- 8.86 deg
+    t_r 4.0 break 14 | dip -0.00  fall  2.03- 2.03  sat  0.00  Mdem   9.1 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.93- 4.93 s | h_cr  17.06- 17.06 m | alpha_max  8.86- 8.86 deg
+    t_r 6.0 break 12 | dip -0.00  fall  1.01- 1.01  sat  0.00  Mdem   6.0 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.97- 5.97 s | h_cr  28.43- 28.43 m | alpha_max  9.79- 9.79 deg
+    t_r 6.0 break 14 | dip -0.00  fall  1.01- 1.01  sat  0.00  Mdem   6.0 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.97- 5.97 s | h_cr  28.43- 28.43 m | alpha_max  9.79- 9.79 deg
+  NP 0.831 m line (0.0370, -0.3160)
+    t_r 2.0 break 12 | dip  3.15  fall  9.53-13.34  sat  0.90  Mdem  43.2 | 0 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.89- 3.90 s | h_cr   4.89-  4.95 m | alpha_max 15.59-15.59 deg
+    t_r 2.0 break 14 | dip -0.00  fall  4.12- 4.12  sat  0.00  Mdem  15.7 | 0 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.93- 3.93 s | h_cr   7.21-  7.21 m | alpha_max 12.85-12.85 deg
+    t_r 3.0 break 12 | dip -0.00  fall  2.67- 2.67  sat  0.00  Mdem   8.4 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.42- 4.42 s | h_cr  12.00- 12.00 m | alpha_max 10.66-10.66 deg
+    t_r 3.0 break 14 | dip -0.00  fall  2.67- 2.67  sat  0.00  Mdem   8.4 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.42- 4.42 s | h_cr  12.00- 12.00 m | alpha_max 10.66-10.66 deg
+    t_r 4.0 break 12 | dip -0.00  fall  1.15- 1.15  sat  0.00  Mdem   7.0 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.93- 4.93 s | h_cr  17.20- 17.20 m | alpha_max  8.97- 8.97 deg
+    t_r 4.0 break 14 | dip -0.00  fall  1.15- 1.15  sat  0.00  Mdem   7.0 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.93- 4.93 s | h_cr  17.20- 17.20 m | alpha_max  8.97- 8.97 deg
+    t_r 6.0 break 12 | dip -0.00  fall  0.00- 0.00  sat  0.00  Mdem   4.3 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.97- 5.97 s | h_cr  28.61- 28.61 m | alpha_max  9.88- 9.88 deg
+    t_r 6.0 break 14 | dip -0.00  fall  0.00- 0.00  sat  0.00  Mdem   4.3 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.97- 5.97 s | h_cr  28.61- 28.61 m | alpha_max  9.88- 9.88 deg
+
+=== line a (335 W, rpm free)
+  C_m = 0 (0.0000, 0.0000)
+    t_r 2.0 break 12 | dip  1.74  fall 11.88-11.88  sat  0.00  Mdem  13.7 | 0 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.92- 3.92 s | h_cr   5.20-  5.20 m | alpha_max 17.33-17.33 deg
+    t_r 2.0 break 14 | dip -0.00  fall  2.72- 2.72  sat  0.00  Mdem  13.7 | 0 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.95- 3.95 s | h_cr   7.62-  7.62 m | alpha_max 13.52-13.52 deg
+    t_r 3.0 break 12 | dip -0.00  fall  1.62- 1.62  sat  0.00  Mdem   6.3 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.43- 4.43 s | h_cr  12.30- 12.30 m | alpha_max 11.12-11.12 deg
+    t_r 3.0 break 14 | dip -0.00  fall  1.62- 1.62  sat  0.00  Mdem   6.3 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.43- 4.43 s | h_cr  12.30- 12.30 m | alpha_max 11.12-11.12 deg
+    t_r 4.0 break 12 | dip -0.00  fall  0.53- 0.53  sat  0.00  Mdem   3.6 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.94- 4.94 s | h_cr  17.44- 17.44 m | alpha_max  9.17- 9.17 deg
+    t_r 4.0 break 14 | dip -0.00  fall  0.53- 0.53  sat  0.00  Mdem   3.6 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.94- 4.94 s | h_cr  17.44- 17.44 m | alpha_max  9.17- 9.17 deg
+    t_r 6.0 break 12 | dip -0.00  fall  0.00- 0.00  sat  0.00  Mdem   1.6 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.98- 5.98 s | h_cr  28.87- 28.87 m | alpha_max 10.06-10.06 deg
+    t_r 6.0 break 14 | dip -0.00  fall  0.00- 0.00  sat  0.00  Mdem   1.6 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.98- 5.98 s | h_cr  28.87- 28.87 m | alpha_max 10.06-10.06 deg
+  paper law (0.0560, -0.4800)
+    t_r 2.0 break 12 | dip  2.51  fall 11.12-12.74  sat  2.37  Mdem  82.2 | 0 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.87- 3.87 s | h_cr   4.76-  4.92 m | alpha_max 14.58-14.81 deg
+    t_r 2.0 break 14 | dip -0.00  fall  4.86- 6.09  sat  1.34  Mdem  29.5 | 0 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.91- 3.92 s | h_cr   6.78-  7.05 m | alpha_max 12.56-12.56 deg
+    t_r 3.0 break 12 | dip -0.00  fall  3.24- 3.27  sat  0.44  Mdem  12.2 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.42- 4.42 s | h_cr  11.87- 11.88 m | alpha_max 10.45-10.45 deg
+    t_r 3.0 break 14 | dip -0.00  fall  3.24- 3.27  sat  0.44  Mdem  12.2 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.42- 4.42 s | h_cr  11.87- 11.88 m | alpha_max 10.45-10.45 deg
+    t_r 4.0 break 12 | dip -0.00  fall  1.51- 1.51  sat  0.00  Mdem   8.6 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.93- 4.93 s | h_cr  17.10- 17.10 m | alpha_max  8.88- 8.88 deg
+    t_r 4.0 break 14 | dip -0.00  fall  1.51- 1.51  sat  0.00  Mdem   8.6 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.93- 4.93 s | h_cr  17.10- 17.10 m | alpha_max  8.88- 8.88 deg
+    t_r 6.0 break 12 | dip -0.00  fall  0.00- 0.00  sat  0.00  Mdem   5.7 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.97- 5.97 s | h_cr  28.48- 28.48 m | alpha_max  9.79- 9.79 deg
+    t_r 6.0 break 14 | dip -0.00  fall  0.00- 0.00  sat  0.00  Mdem   5.7 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.97- 5.97 s | h_cr  28.48- 28.48 m | alpha_max  9.79- 9.79 deg
+  untwisted VLM fit (0.0578, -0.4953)
+    t_r 2.0 break 12 | dip  2.65  fall 11.21-12.89  sat  2.40  Mdem  82.9 | 0 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.87- 3.87 s | h_cr   4.74-  4.91 m | alpha_max 14.50-14.73 deg
+    t_r 2.0 break 14 | dip -0.00  fall  4.94- 6.31  sat  1.39  Mdem  31.4 | 0 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.91- 3.92 s | h_cr   6.72-  7.03 m | alpha_max 12.53-12.53 deg
+    t_r 3.0 break 12 | dip -0.00  fall  3.28- 3.37  sat  0.56  Mdem  13.3 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.42- 4.42 s | h_cr  11.85- 11.87 m | alpha_max 10.43-10.43 deg
+    t_r 3.0 break 14 | dip -0.00  fall  3.28- 3.37  sat  0.56  Mdem  13.3 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.42- 4.42 s | h_cr  11.85- 11.87 m | alpha_max 10.43-10.43 deg
+    t_r 4.0 break 12 | dip -0.00  fall  1.54- 1.54  sat  0.00  Mdem   8.8 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.93- 4.93 s | h_cr  17.09- 17.09 m | alpha_max  8.87- 8.87 deg
+    t_r 4.0 break 14 | dip -0.00  fall  1.54- 1.54  sat  0.00  Mdem   8.8 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.93- 4.93 s | h_cr  17.09- 17.09 m | alpha_max  8.87- 8.87 deg
+    t_r 6.0 break 12 | dip -0.00  fall  0.00- 0.00  sat  0.00  Mdem   5.8 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.97- 5.97 s | h_cr  28.47- 28.47 m | alpha_max  9.78- 9.78 deg
+    t_r 6.0 break 14 | dip -0.00  fall  0.00- 0.00  sat  0.00  Mdem   5.8 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.97- 5.97 s | h_cr  28.47- 28.47 m | alpha_max  9.78- 9.78 deg
+  -9 deg washout VLM line (0.0621, -0.5512)
+    t_r 2.0 break 12 | dip  4.27  fall 12.40-14.53  sat  2.94  Mdem  87.0 | 0 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.87- 3.87 s | h_cr   4.66-  4.84 m | alpha_max 14.11-14.39 deg
+    t_r 2.0 break 14 | dip -0.00  fall  6.11- 7.96  sat  2.19  Mdem  41.8 | 0 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.90- 3.91 s | h_cr   6.43-  6.82 m | alpha_max 12.40-12.41 deg
+    t_r 3.0 break 12 | dip -0.00  fall  3.85- 4.48  sat  0.96  Mdem  22.0 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.41- 4.42 s | h_cr  11.68- 11.80 m | alpha_max 10.33-10.33 deg
+    t_r 3.0 break 14 | dip -0.00  fall  3.85- 4.48  sat  0.96  Mdem  22.0 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.41- 4.42 s | h_cr  11.68- 11.80 m | alpha_max 10.33-10.33 deg
+    t_r 4.0 break 12 | dip -0.00  fall  2.07- 2.07  sat  0.00  Mdem   9.9 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.93- 4.93 s | h_cr  17.02- 17.02 m | alpha_max  8.82- 8.82 deg
+    t_r 4.0 break 14 | dip -0.00  fall  2.07- 2.07  sat  0.00  Mdem   9.9 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.93- 4.93 s | h_cr  17.02- 17.02 m | alpha_max  8.82- 8.82 deg
+    t_r 6.0 break 12 | dip -0.00  fall  0.98- 0.98  sat  0.00  Mdem   6.6 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.97- 5.97 s | h_cr  28.37- 28.37 m | alpha_max  9.74- 9.74 deg
+    t_r 6.0 break 14 | dip -0.00  fall  0.98- 0.98  sat  0.00  Mdem   6.6 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.97- 5.97 s | h_cr  28.37- 28.37 m | alpha_max  9.74- 9.74 deg
+  NP 0.869 m line (0.0630, -0.5380)
+    t_r 2.0 break 12 | dip  2.90  fall 11.42-13.15  sat  2.46  Mdem  84.4 | 0 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.87- 3.87 s | h_cr   4.73-  4.89 m | alpha_max 14.28-14.54 deg
+    t_r 2.0 break 14 | dip -0.00  fall  5.27- 6.83  sat  1.51  Mdem  36.1 | 0 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.90- 3.92 s | h_cr   6.60-  6.95 m | alpha_max 12.46-12.46 deg
+    t_r 3.0 break 12 | dip -0.00  fall  3.39- 3.65  sat  0.75  Mdem  16.6 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.42- 4.42 s | h_cr  11.80- 11.85 m | alpha_max 10.39-10.39 deg
+    t_r 3.0 break 14 | dip -0.00  fall  3.39- 3.65  sat  0.75  Mdem  16.6 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.42- 4.42 s | h_cr  11.80- 11.85 m | alpha_max 10.39-10.39 deg
+    t_r 4.0 break 12 | dip -0.00  fall  1.60- 1.60  sat  0.00  Mdem   9.1 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.93- 4.93 s | h_cr  17.07- 17.07 m | alpha_max  8.85- 8.85 deg
+    t_r 4.0 break 14 | dip -0.00  fall  1.60- 1.60  sat  0.00  Mdem   9.1 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.93- 4.93 s | h_cr  17.07- 17.07 m | alpha_max  8.85- 8.85 deg
+    t_r 6.0 break 12 | dip -0.00  fall  0.00- 0.00  sat  0.00  Mdem   6.1 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.97- 5.97 s | h_cr  28.44- 28.44 m | alpha_max  9.76- 9.76 deg
+    t_r 6.0 break 14 | dip -0.00  fall  0.00- 0.00  sat  0.00  Mdem   6.1 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.97- 5.97 s | h_cr  28.44- 28.44 m | alpha_max  9.76- 9.76 deg
+  NP 0.888 m line (0.0760, -0.6870)
+    t_r 2.0 break 12 | dip  6.16  fall 13.97-16.45  sat  3.48  Mdem  89.3 | 0 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.87- 3.87 s | h_cr   4.68-  4.82 m | alpha_max 13.29-13.67 deg
+    t_r 2.0 break 14 | dip  1.07  fall  8.27-11.37  sat  3.12  Mdem  55.5 | 0 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.89- 3.90 s | h_cr   5.96-  6.40 m | alpha_max 12.12-12.17 deg
+    t_r 3.0 break 12 | dip -0.00  fall  4.98- 6.38  sat  1.89  Mdem  34.0 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.40- 4.41 s | h_cr  11.34- 11.63 m | alpha_max 10.12-10.16 deg
+    t_r 3.0 break 14 | dip -0.00  fall  4.98- 6.38  sat  1.89  Mdem  34.0 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.40- 4.41 s | h_cr  11.34- 11.63 m | alpha_max 10.12-10.16 deg
+    t_r 4.0 break 12 | dip -0.00  fall  2.86- 2.87  sat  0.52  Mdem  12.1 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.92- 4.92 s | h_cr  16.90- 16.91 m | alpha_max  8.73- 8.73 deg
+    t_r 4.0 break 14 | dip -0.00  fall  2.86- 2.87  sat  0.52  Mdem  12.1 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.92- 4.92 s | h_cr  16.90- 16.91 m | alpha_max  8.73- 8.73 deg
+    t_r 6.0 break 12 | dip -0.00  fall  1.65- 1.65  sat  0.00  Mdem   7.9 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.96- 5.96 s | h_cr  28.22- 28.22 m | alpha_max  9.66- 9.66 deg
+    t_r 6.0 break 14 | dip -0.00  fall  1.65- 1.65  sat  0.00  Mdem   7.9 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.96- 5.96 s | h_cr  28.22- 28.22 m | alpha_max  9.66- 9.66 deg
+  NP 0.855 m line (0.0530, -0.4720)
+    t_r 2.0 break 12 | dip  3.55  fall 11.73-13.78  sat  2.48  Mdem  84.1 | 0 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.87- 3.87 s | h_cr   4.71-  4.88 m | alpha_max 14.53-14.77 deg
+    t_r 2.0 break 14 | dip -0.00  fall  5.22- 6.72  sat  1.41  Mdem  32.6 | 0 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.91- 3.92 s | h_cr   6.70-  7.01 m | alpha_max 12.54-12.54 deg
+    t_r 3.0 break 12 | dip -0.00  fall  3.57- 3.74  sat  0.68  Mdem  14.7 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.42- 4.42 s | h_cr  11.82- 11.85 m | alpha_max 10.43-10.43 deg
+    t_r 3.0 break 14 | dip -0.00  fall  3.57- 3.74  sat  0.68  Mdem  14.7 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.42- 4.42 s | h_cr  11.82- 11.85 m | alpha_max 10.43-10.43 deg
+    t_r 4.0 break 12 | dip -0.00  fall  2.03- 2.03  sat  0.00  Mdem   9.1 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.93- 4.93 s | h_cr  17.06- 17.06 m | alpha_max  8.86- 8.86 deg
+    t_r 4.0 break 14 | dip -0.00  fall  2.03- 2.03  sat  0.00  Mdem   9.1 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.93- 4.93 s | h_cr  17.06- 17.06 m | alpha_max  8.86- 8.86 deg
+    t_r 6.0 break 12 | dip -0.00  fall  1.01- 1.01  sat  0.00  Mdem   6.0 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.97- 5.97 s | h_cr  28.43- 28.43 m | alpha_max  9.79- 9.79 deg
+    t_r 6.0 break 14 | dip -0.00  fall  1.01- 1.01  sat  0.00  Mdem   6.0 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.97- 5.97 s | h_cr  28.43- 28.43 m | alpha_max  9.79- 9.79 deg
+  NP 0.831 m line (0.0370, -0.3160)
+    t_r 2.0 break 12 | dip  0.90  fall 10.23-11.10  sat  1.30  Mdem  68.1 | 0 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.88- 3.88 s | h_cr   4.97-  5.01 m | alpha_max 15.52-15.59 deg
+    t_r 2.0 break 14 | dip -0.00  fall  4.12- 4.12  sat  0.00  Mdem  15.7 | 0 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.93- 3.93 s | h_cr   7.21-  7.21 m | alpha_max 12.85-12.85 deg
+    t_r 3.0 break 12 | dip -0.00  fall  2.67- 2.67  sat  0.00  Mdem   8.4 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.42- 4.42 s | h_cr  12.00- 12.00 m | alpha_max 10.66-10.66 deg
+    t_r 3.0 break 14 | dip -0.00  fall  2.67- 2.67  sat  0.00  Mdem   8.4 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.42- 4.42 s | h_cr  12.00- 12.00 m | alpha_max 10.66-10.66 deg
+    t_r 4.0 break 12 | dip -0.00  fall  1.15- 1.15  sat  0.00  Mdem   7.0 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.93- 4.93 s | h_cr  17.20- 17.20 m | alpha_max  8.97- 8.97 deg
+    t_r 4.0 break 14 | dip -0.00  fall  1.15- 1.15  sat  0.00  Mdem   7.0 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.93- 4.93 s | h_cr  17.20- 17.20 m | alpha_max  8.97- 8.97 deg
+    t_r 6.0 break 12 | dip -0.00  fall  0.00- 0.00  sat  0.00  Mdem   4.3 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.97- 5.97 s | h_cr  28.61- 28.61 m | alpha_max  9.88- 9.88 deg
+    t_r 6.0 break 14 | dip -0.00  fall  0.00- 0.00  sat  0.00  Mdem   4.3 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.97- 5.97 s | h_cr  28.61- 28.61 m | alpha_max  9.88- 9.88 deg
+
+=== line b (hover rpm)
+  C_m = 0 (0.0000, 0.0000)
+    t_r 2.0 break 12 | dip  1.71  fall 11.84-11.84  sat 38.26  Mdem  13.7 | 0 tumble, 29 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.92- 3.92 s | h_cr   5.20-  5.20 m | alpha_max 17.33-17.33 deg
+    t_r 2.0 break 14 | dip -0.00  fall  6.92- 6.93  sat 38.21  Mdem  13.7 | 0 tumble, 29 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.95- 3.95 s | h_cr   7.62-  7.62 m | alpha_max 13.52-13.52 deg
+    t_r 3.0 break 12 | dip 12.12  fall 25.68-25.88  sat 38.74  Mdem  17.9 | 0 tumble, 4 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.43- 4.43 s | h_cr  12.30- 12.30 m | alpha_max 11.12-11.12 deg
+    t_r 3.0 break 14 | dip 12.12  fall 25.68-25.88  sat 38.74  Mdem  17.9 | 0 tumble, 4 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.43- 4.43 s | h_cr  12.30- 12.30 m | alpha_max 11.12-11.12 deg
+    t_r 4.0 break 12 | dip 279.71  fall 278.37-297.61  sat 39.29  Mdem  96.2 | 0 tumble, 4 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.94- 4.94 s | h_cr  17.44- 17.44 m | alpha_max  9.17- 9.17 deg
+    t_r 4.0 break 14 | dip 279.71  fall 278.37-297.61  sat 39.29  Mdem  96.2 | 0 tumble, 4 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.94- 4.94 s | h_cr  17.44- 17.44 m | alpha_max  9.17- 9.17 deg
+    t_r 6.0 break 12 | dip 713.95  fall 716.26-743.12  sat 16.07  Mdem 424.6 | 4 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.98- 5.98 s | h_cr  28.86- 28.86 m | alpha_max 10.06-10.06 deg
+    t_r 6.0 break 14 | dip 713.95  fall 716.26-743.12  sat 16.07  Mdem 424.6 | 4 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.98- 5.98 s | h_cr  28.86- 28.86 m | alpha_max 10.06-10.06 deg
+  paper law (0.0560, -0.4800)
+    t_r 2.0 break 12 | dip 13.85  fall 23.43-24.09  sat 18.94  Mdem 812.6 | 29 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.88- 3.88 s | h_cr   4.30-  4.46 m | alpha_max 14.35-14.62 deg
+    t_r 2.0 break 14 | dip  5.56  fall 13.83-15.80  sat 24.54  Mdem 812.6 | 29 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.90- 3.90 s | h_cr   6.19-  6.53 m | alpha_max 12.55-12.56 deg
+    t_r 3.0 break 12 | dip -0.00  fall  9.01-10.39  sat 28.21  Mdem 812.6 | 4 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.40- 4.41 s | h_cr  11.46- 11.66 m | alpha_max 10.43-10.45 deg
+    t_r 3.0 break 14 | dip -0.00  fall  9.01-10.39  sat 28.21  Mdem 812.6 | 4 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.40- 4.41 s | h_cr  11.46- 11.66 m | alpha_max 10.43-10.45 deg
+    t_r 4.0 break 12 | dip -0.00  fall  4.24- 4.98  sat 33.52  Mdem 812.6 | 4 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.92- 4.92 s | h_cr  16.96- 17.05 m | alpha_max  8.88- 8.88 deg
+    t_r 4.0 break 14 | dip -0.00  fall  4.24- 4.98  sat 33.52  Mdem 812.6 | 4 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.92- 4.92 s | h_cr  16.96- 17.05 m | alpha_max  8.88- 8.88 deg
+    t_r 6.0 break 12 | dip -0.00  fall  0.00- 0.00  sat 29.77  Mdem 812.6 | 4 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.97- 5.97 s | h_cr  28.48- 28.48 m | alpha_max  9.79- 9.79 deg
+    t_r 6.0 break 14 | dip -0.00  fall  0.00- 0.00  sat 29.77  Mdem 812.6 | 4 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.97- 5.97 s | h_cr  28.48- 28.48 m | alpha_max  9.79- 9.79 deg
+  untwisted VLM fit (0.0578, -0.4953)
+    t_r 2.0 break 12 | dip 13.80  fall 23.39-24.04  sat 18.98  Mdem 812.6 | 29 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.88- 3.88 s | h_cr   4.29-  4.45 m | alpha_max 14.27-14.54 deg
+    t_r 2.0 break 14 | dip  5.78  fall 14.06-16.02  sat 24.32  Mdem 812.6 | 29 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.90- 3.90 s | h_cr   6.14-  6.49 m | alpha_max 12.52-12.53 deg
+    t_r 3.0 break 12 | dip -0.00  fall  9.16-10.55  sat 27.98  Mdem 812.6 | 4 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.40- 4.41 s | h_cr  11.42- 11.64 m | alpha_max 10.40-10.43 deg
+    t_r 3.0 break 14 | dip -0.00  fall  9.16-10.55  sat 27.98  Mdem 812.6 | 4 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.40- 4.41 s | h_cr  11.42- 11.64 m | alpha_max 10.40-10.43 deg
+    t_r 4.0 break 12 | dip -0.00  fall  4.30- 5.07  sat 33.28  Mdem 812.6 | 4 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.92- 4.92 s | h_cr  16.94- 17.03 m | alpha_max  8.87- 8.87 deg
+    t_r 4.0 break 14 | dip -0.00  fall  4.30- 5.07  sat 33.28  Mdem 812.6 | 4 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.92- 4.92 s | h_cr  16.94- 17.03 m | alpha_max  8.87- 8.87 deg
+    t_r 6.0 break 12 | dip -0.00  fall  0.00- 0.00  sat 29.59  Mdem 812.6 | 4 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.97- 5.97 s | h_cr  28.47- 28.47 m | alpha_max  9.78- 9.78 deg
+    t_r 6.0 break 14 | dip -0.00  fall  0.00- 0.00  sat 29.59  Mdem 812.6 | 4 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.97- 5.97 s | h_cr  28.47- 28.47 m | alpha_max  9.78- 9.78 deg
+  -9 deg washout VLM line (0.0621, -0.5512)
+    t_r 2.0 break 12 | dip 16.41  fall 26.00-26.67  sat 21.41  Mdem 811.2 | 29 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.88- 3.88 s | h_cr   4.20-  4.34 m | alpha_max 13.87-14.18 deg
+    t_r 2.0 break 14 | dip  9.58  fall 17.81-19.84  sat 31.93  Mdem 811.2 | 29 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.89- 3.90 s | h_cr   5.83-  6.20 m | alpha_max 12.36-12.41 deg
+    t_r 3.0 break 12 | dip  0.21  fall 12.51-14.08  sat 39.79  Mdem 373.3 | 0 tumble, 4 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.40- 4.40 s | h_cr  11.18- 11.45 m | alpha_max 10.24-10.33 deg
+    t_r 3.0 break 14 | dip  0.21  fall 12.51-14.08  sat 39.79  Mdem 373.3 | 0 tumble, 4 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.40- 4.40 s | h_cr  11.18- 11.45 m | alpha_max 10.24-10.33 deg
+    t_r 4.0 break 12 | dip -0.00  fall  7.23- 8.19  sat 40.09  Mdem  32.1 | 0 tumble, 3 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.91- 4.92 s | h_cr  16.77- 16.91 m | alpha_max  8.82- 8.82 deg
+    t_r 4.0 break 14 | dip -0.00  fall  7.23- 8.19  sat 40.09  Mdem  32.1 | 0 tumble, 3 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.91- 4.92 s | h_cr  16.77- 16.91 m | alpha_max  8.82- 8.82 deg
+    t_r 6.0 break 12 | dip -0.00  fall  2.43- 2.44  sat 40.33  Mdem  10.5 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.97- 5.97 s | h_cr  28.37- 28.37 m | alpha_max  9.74- 9.74 deg
+    t_r 6.0 break 14 | dip -0.00  fall  2.43- 2.44  sat 40.33  Mdem  10.5 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.97- 5.97 s | h_cr  28.37- 28.37 m | alpha_max  9.74- 9.74 deg
+  NP 0.869 m line (0.0630, -0.5380)
+    t_r 2.0 break 12 | dip 13.43  fall 23.06-23.68  sat 18.94  Mdem 812.8 | 29 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.88- 3.88 s | h_cr   4.29-  4.43 m | alpha_max 14.05-14.34 deg
+    t_r 2.0 break 14 | dip  6.12  fall 14.44-16.38  sat 23.42  Mdem 812.8 | 29 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.89- 3.90 s | h_cr   6.01-  6.37 m | alpha_max 12.44-12.46 deg
+    t_r 3.0 break 12 | dip -0.00  fall  9.35-10.76  sat 26.78  Mdem 812.8 | 4 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.40- 4.41 s | h_cr  11.34- 11.57 m | alpha_max 10.34-10.39 deg
+    t_r 3.0 break 14 | dip -0.00  fall  9.35-10.76  sat 26.78  Mdem 812.8 | 4 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.40- 4.41 s | h_cr  11.34- 11.57 m | alpha_max 10.34-10.39 deg
+    t_r 4.0 break 12 | dip -0.00  fall  4.32- 5.11  sat 31.44  Mdem 812.8 | 4 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.92- 4.92 s | h_cr  16.90- 17.00 m | alpha_max  8.85- 8.85 deg
+    t_r 4.0 break 14 | dip -0.00  fall  4.32- 5.11  sat 31.44  Mdem 812.8 | 4 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.92- 4.92 s | h_cr  16.90- 17.00 m | alpha_max  8.85- 8.85 deg
+    t_r 6.0 break 12 | dip -0.00  fall  0.00- 0.00  sat 27.57  Mdem 812.8 | 4 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.97- 5.97 s | h_cr  28.44- 28.44 m | alpha_max  9.76- 9.76 deg
+    t_r 6.0 break 14 | dip -0.00  fall  0.00- 0.00  sat 27.57  Mdem 812.8 | 4 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.97- 5.97 s | h_cr  28.44- 28.44 m | alpha_max  9.76- 9.76 deg
+  NP 0.888 m line (0.0760, -0.6870)
+    t_r 2.0 break 12 | dip 17.17  fall 27.06-27.46  sat 24.31  Mdem 810.5 | 29 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.87- 3.88 s | h_cr   4.28-  4.35 m | alpha_max 12.95-13.44 deg
+    t_r 2.0 break 14 | dip 12.83  fall 21.20-23.13  sat 39.32  Mdem 810.5 | 26 tumble, 3 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.89- 3.89 s | h_cr   5.38-  5.76 m | alpha_max 12.05-12.16 deg
+    t_r 3.0 break 12 | dip  3.15  fall 15.41-17.04  sat 39.90  Mdem  53.2 | 0 tumble, 1 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.39- 4.40 s | h_cr  10.82- 11.14 m | alpha_max  9.94-10.14 deg
+    t_r 3.0 break 14 | dip  3.15  fall 15.41-17.04  sat 39.90  Mdem  53.2 | 0 tumble, 1 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.39- 4.40 s | h_cr  10.82- 11.14 m | alpha_max  9.94-10.14 deg
+    t_r 4.0 break 12 | dip -0.00  fall  9.64-10.69  sat 40.20  Mdem  34.8 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.91- 4.91 s | h_cr  16.52- 16.71 m | alpha_max  8.73- 8.73 deg
+    t_r 4.0 break 14 | dip -0.00  fall  9.64-10.69  sat 40.20  Mdem  34.8 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.91- 4.91 s | h_cr  16.52- 16.71 m | alpha_max  8.73- 8.73 deg
+    t_r 6.0 break 12 | dip -0.00  fall  4.12- 4.12  sat 40.43  Mdem   8.7 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.96- 5.96 s | h_cr  28.22- 28.22 m | alpha_max  9.66- 9.66 deg
+    t_r 6.0 break 14 | dip -0.00  fall  4.12- 4.12  sat 40.43  Mdem   8.7 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.96- 5.96 s | h_cr  28.22- 28.22 m | alpha_max  9.66- 9.66 deg
+  NP 0.855 m line (0.0530, -0.4720)
+    t_r 2.0 break 12 | dip 16.88  fall 26.39-27.11  sat 21.47  Mdem 811.1 | 29 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.88- 3.88 s | h_cr   4.23-  4.40 m | alpha_max 14.30-14.58 deg
+    t_r 2.0 break 14 | dip  8.66  fall 16.83-18.89  sat 37.82  Mdem 811.1 | 29 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.90- 3.90 s | h_cr   6.10-  6.45 m | alpha_max 12.53-12.54 deg
+    t_r 3.0 break 12 | dip -0.00  fall 11.91-13.42  sat 39.71  Mdem  47.8 | 0 tumble, 3 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.40- 4.41 s | h_cr  11.36- 11.59 m | alpha_max 10.39-10.43 deg
+    t_r 3.0 break 14 | dip -0.00  fall 11.91-13.42  sat 39.71  Mdem  47.8 | 0 tumble, 3 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.40- 4.41 s | h_cr  11.36- 11.59 m | alpha_max 10.39-10.43 deg
+    t_r 4.0 break 12 | dip -0.00  fall  7.00- 7.90  sat 40.03  Mdem  31.4 | 0 tumble, 4 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.92- 4.92 s | h_cr  16.88- 16.99 m | alpha_max  8.86- 8.86 deg
+    t_r 4.0 break 14 | dip -0.00  fall  7.00- 7.90  sat 40.03  Mdem  31.4 | 0 tumble, 4 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.92- 4.92 s | h_cr  16.88- 16.99 m | alpha_max  8.86- 8.86 deg
+    t_r 6.0 break 12 | dip -0.00  fall  2.69- 2.69  sat 40.33  Mdem   9.8 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.97- 5.97 s | h_cr  28.43- 28.43 m | alpha_max  9.79- 9.79 deg
+    t_r 6.0 break 14 | dip -0.00  fall  2.69- 2.69  sat 40.33  Mdem   9.8 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.97- 5.97 s | h_cr  28.43- 28.43 m | alpha_max  9.79- 9.79 deg
+  NP 0.831 m line (0.0370, -0.3160)
+    t_r 2.0 break 12 | dip 13.83  fall 23.38-24.03  sat 18.39  Mdem 812.7 | 29 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.88- 3.88 s | h_cr   4.63-  4.77 m | alpha_max 15.32-15.50 deg
+    t_r 2.0 break 14 | dip  1.96  fall 10.48-12.16  sat 26.39  Mdem 812.7 | 29 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.91- 3.92 s | h_cr   6.85-  7.05 m | alpha_max 12.85-12.85 deg
+    t_r 3.0 break 12 | dip -0.00  fall  6.88- 7.85  sat 29.16  Mdem 812.7 | 4 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.41- 4.42 s | h_cr  11.85- 11.94 m | alpha_max 10.66-10.66 deg
+    t_r 3.0 break 14 | dip -0.00  fall  6.88- 7.85  sat 29.16  Mdem 812.7 | 4 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.41- 4.42 s | h_cr  11.85- 11.94 m | alpha_max 10.66-10.66 deg
+    t_r 4.0 break 12 | dip -0.00  fall  3.20- 3.56  sat 32.81  Mdem 812.7 | 4 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.93- 4.93 s | h_cr  17.16- 17.19 m | alpha_max  8.97- 8.97 deg
+    t_r 4.0 break 14 | dip -0.00  fall  3.20- 3.56  sat 32.81  Mdem 812.7 | 4 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.93- 4.93 s | h_cr  17.16- 17.19 m | alpha_max  8.97- 8.97 deg
+    t_r 6.0 break 12 | dip -0.00  fall  0.00- 0.00  sat 28.16  Mdem 812.7 | 4 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.97- 5.97 s | h_cr  28.61- 28.61 m | alpha_max  9.88- 9.88 deg
+    t_r 6.0 break 14 | dip -0.00  fall  0.00- 0.00  sat 28.16  Mdem 812.7 | 4 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.97- 5.97 s | h_cr  28.61- 28.61 m | alpha_max  9.88- 9.88 deg
+
+=== line a with station Mach (AeroSandbox)
+  C_m = 0 (0.0000, 0.0000)
+    t_r 2.0 break 12 | dip  1.74  fall 11.88-11.88  sat  0.00  Mdem  13.7 | 0 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.92- 3.92 s | h_cr   5.20-  5.20 m | alpha_max 17.33-17.33 deg
+    t_r 2.0 break 14 | dip -0.00  fall  2.72- 2.72  sat  0.00  Mdem  13.7 | 0 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.95- 3.95 s | h_cr   7.62-  7.62 m | alpha_max 13.52-13.52 deg
+    t_r 3.0 break 12 | dip -0.00  fall  1.62- 1.62  sat  0.00  Mdem   6.3 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.43- 4.43 s | h_cr  12.30- 12.30 m | alpha_max 11.12-11.12 deg
+    t_r 3.0 break 14 | dip -0.00  fall  1.62- 1.62  sat  0.00  Mdem   6.3 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.43- 4.43 s | h_cr  12.30- 12.30 m | alpha_max 11.12-11.12 deg
+    t_r 4.0 break 12 | dip -0.00  fall  0.53- 0.53  sat  0.00  Mdem   3.6 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.94- 4.94 s | h_cr  17.44- 17.44 m | alpha_max  9.17- 9.17 deg
+    t_r 4.0 break 14 | dip -0.00  fall  0.53- 0.53  sat  0.00  Mdem   3.6 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.94- 4.94 s | h_cr  17.44- 17.44 m | alpha_max  9.17- 9.17 deg
+    t_r 6.0 break 12 | dip -0.00  fall  0.00- 0.00  sat  0.00  Mdem   1.6 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.98- 5.98 s | h_cr  28.87- 28.87 m | alpha_max 10.06-10.06 deg
+    t_r 6.0 break 14 | dip -0.00  fall  0.00- 0.00  sat  0.00  Mdem   1.6 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.98- 5.98 s | h_cr  28.87- 28.87 m | alpha_max 10.06-10.06 deg
+  paper law (0.0560, -0.4800)
+    t_r 2.0 break 12 | dip  4.24  fall 12.59-14.49  sat  3.03  Mdem  84.5 | 0 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.87- 3.87 s | h_cr   4.73-  4.87 m | alpha_max 14.57-14.80 deg
+    t_r 2.0 break 14 | dip -0.00  fall  5.02- 6.61  sat  1.78  Mdem  32.4 | 0 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.91- 3.92 s | h_cr   6.74-  7.02 m | alpha_max 12.56-12.56 deg
+    t_r 3.0 break 12 | dip -0.00  fall  3.24- 3.52  sat  0.82  Mdem  15.0 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.42- 4.42 s | h_cr  11.84- 11.88 m | alpha_max 10.45-10.45 deg
+    t_r 3.0 break 14 | dip -0.00  fall  3.24- 3.52  sat  0.82  Mdem  15.0 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.42- 4.42 s | h_cr  11.84- 11.88 m | alpha_max 10.45-10.45 deg
+    t_r 4.0 break 12 | dip -0.00  fall  1.51- 1.51  sat  0.00  Mdem   8.6 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.93- 4.93 s | h_cr  17.10- 17.10 m | alpha_max  8.88- 8.88 deg
+    t_r 4.0 break 14 | dip -0.00  fall  1.51- 1.51  sat  0.00  Mdem   8.6 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.93- 4.93 s | h_cr  17.10- 17.10 m | alpha_max  8.88- 8.88 deg
+    t_r 6.0 break 12 | dip -0.00  fall  0.00- 0.00  sat  0.00  Mdem   5.7 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.97- 5.97 s | h_cr  28.48- 28.48 m | alpha_max  9.79- 9.79 deg
+    t_r 6.0 break 14 | dip -0.00  fall  0.00- 0.00  sat  0.00  Mdem   5.7 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.97- 5.97 s | h_cr  28.48- 28.48 m | alpha_max  9.79- 9.79 deg
+  untwisted VLM fit (0.0578, -0.4953)
+    t_r 2.0 break 12 | dip  4.38  fall 12.72-14.64  sat  3.14  Mdem  85.1 | 0 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.87- 3.87 s | h_cr   4.71-  4.86 m | alpha_max 14.49-14.73 deg
+    t_r 2.0 break 14 | dip -0.00  fall  5.19- 6.87  sat  2.22  Mdem  34.2 | 0 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.91- 3.92 s | h_cr   6.69-  6.99 m | alpha_max 12.53-12.53 deg
+    t_r 3.0 break 12 | dip -0.00  fall  3.28- 3.65  sat  0.88  Mdem  16.4 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.42- 4.42 s | h_cr  11.82- 11.87 m | alpha_max 10.43-10.43 deg
+    t_r 3.0 break 14 | dip -0.00  fall  3.28- 3.65  sat  0.88  Mdem  16.4 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.42- 4.42 s | h_cr  11.82- 11.87 m | alpha_max 10.43-10.43 deg
+    t_r 4.0 break 12 | dip -0.00  fall  1.54- 1.54  sat  0.00  Mdem   8.8 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.93- 4.93 s | h_cr  17.09- 17.09 m | alpha_max  8.87- 8.87 deg
+    t_r 4.0 break 14 | dip -0.00  fall  1.54- 1.54  sat  0.00  Mdem   8.8 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.93- 4.93 s | h_cr  17.09- 17.09 m | alpha_max  8.87- 8.87 deg
+    t_r 6.0 break 12 | dip -0.00  fall  0.00- 0.00  sat  0.00  Mdem   5.8 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.97- 5.97 s | h_cr  28.47- 28.47 m | alpha_max  9.78- 9.78 deg
+    t_r 6.0 break 14 | dip -0.00  fall  0.00- 0.00  sat  0.00  Mdem   5.8 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.97- 5.97 s | h_cr  28.47- 28.47 m | alpha_max  9.78- 9.78 deg
+  -9 deg washout VLM line (0.0621, -0.5512)
+    t_r 2.0 break 12 | dip  6.48  fall 14.32-16.75  sat  4.28  Mdem  88.8 | 0 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.87- 3.87 s | h_cr   4.63-  4.79 m | alpha_max 14.10-14.38 deg
+    t_r 2.0 break 14 | dip -0.00  fall  6.62- 9.35  sat  2.87  Mdem  44.1 | 0 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.90- 3.91 s | h_cr   6.40-  6.77 m | alpha_max 12.40-12.41 deg
+    t_r 3.0 break 12 | dip -0.00  fall  3.88- 4.93  sat  1.28  Mdem  25.2 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.41- 4.42 s | h_cr  11.63- 11.79 m | alpha_max 10.33-10.33 deg
+    t_r 3.0 break 14 | dip -0.00  fall  3.88- 4.93  sat  1.28  Mdem  25.2 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.41- 4.42 s | h_cr  11.63- 11.79 m | alpha_max 10.33-10.33 deg
+    t_r 4.0 break 12 | dip -0.00  fall  2.07- 2.07  sat  0.00  Mdem   9.9 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.93- 4.93 s | h_cr  17.02- 17.02 m | alpha_max  8.82- 8.82 deg
+    t_r 4.0 break 14 | dip -0.00  fall  2.07- 2.07  sat  0.00  Mdem   9.9 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.93- 4.93 s | h_cr  17.02- 17.02 m | alpha_max  8.82- 8.82 deg
+    t_r 6.0 break 12 | dip -0.00  fall  0.98- 0.98  sat  0.00  Mdem   6.6 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.97- 5.97 s | h_cr  28.37- 28.37 m | alpha_max  9.74- 9.74 deg
+    t_r 6.0 break 14 | dip -0.00  fall  0.98- 0.98  sat  0.00  Mdem   6.6 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.97- 5.97 s | h_cr  28.37- 28.37 m | alpha_max  9.74- 9.74 deg
+  NP 0.869 m line (0.0630, -0.5380)
+    t_r 2.0 break 12 | dip  4.62  fall 12.95-14.90  sat  5.04  Mdem  86.3 | 0 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.87- 3.87 s | h_cr   4.70-  4.84 m | alpha_max 14.28-14.53 deg
+    t_r 2.0 break 14 | dip -0.00  fall  5.64- 7.61  sat  2.47  Mdem  38.4 | 0 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.90- 3.91 s | h_cr   6.57-  6.90 m | alpha_max 12.46-12.46 deg
+    t_r 3.0 break 12 | dip -0.00  fall  3.39- 3.98  sat  0.99  Mdem  19.7 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.41- 4.42 s | h_cr  11.76- 11.85 m | alpha_max 10.39-10.39 deg
+    t_r 3.0 break 14 | dip -0.00  fall  3.39- 3.98  sat  0.99  Mdem  19.7 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.41- 4.42 s | h_cr  11.76- 11.85 m | alpha_max 10.39-10.39 deg
+    t_r 4.0 break 12 | dip -0.00  fall  1.60- 1.60  sat  0.00  Mdem   9.1 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.93- 4.93 s | h_cr  17.07- 17.07 m | alpha_max  8.85- 8.85 deg
+    t_r 4.0 break 14 | dip -0.00  fall  1.60- 1.60  sat  0.00  Mdem   9.1 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.93- 4.93 s | h_cr  17.07- 17.07 m | alpha_max  8.85- 8.85 deg
+    t_r 6.0 break 12 | dip -0.00  fall  0.00- 0.00  sat  0.00  Mdem   6.1 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.97- 5.97 s | h_cr  28.44- 28.44 m | alpha_max  9.76- 9.76 deg
+    t_r 6.0 break 14 | dip -0.00  fall  0.00- 0.00  sat  0.00  Mdem   6.1 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.97- 5.97 s | h_cr  28.44- 28.44 m | alpha_max  9.76- 9.76 deg
+  NP 0.888 m line (0.0760, -0.6870)
+    t_r 2.0 break 12 | dip  8.32  fall 16.24-18.66  sat  8.02  Mdem  90.4 | 0 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.87- 3.88 s | h_cr   4.66-  4.77 m | alpha_max 13.28-13.67 deg
+    t_r 2.0 break 14 | dip  2.96  fall  9.68-13.29  sat  3.89  Mdem  56.9 | 0 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.89- 3.90 s | h_cr   5.95-  6.35 m | alpha_max 12.12-12.17 deg
+    t_r 3.0 break 12 | dip -0.00  fall  5.40- 7.63  sat  2.68  Mdem  36.2 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.40- 4.41 s | h_cr  11.30- 11.58 m | alpha_max 10.12-10.16 deg
+    t_r 3.0 break 14 | dip -0.00  fall  5.40- 7.63  sat  2.68  Mdem  36.2 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.40- 4.41 s | h_cr  11.30- 11.58 m | alpha_max 10.12-10.16 deg
+    t_r 4.0 break 12 | dip -0.00  fall  2.86- 3.02  sat  0.93  Mdem  15.3 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.92- 4.92 s | h_cr  16.88- 16.91 m | alpha_max  8.73- 8.73 deg
+    t_r 4.0 break 14 | dip -0.00  fall  2.86- 3.02  sat  0.93  Mdem  15.3 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.92- 4.92 s | h_cr  16.88- 16.91 m | alpha_max  8.73- 8.73 deg
+    t_r 6.0 break 12 | dip -0.00  fall  1.65- 1.65  sat  0.00  Mdem   7.9 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.96- 5.96 s | h_cr  28.22- 28.22 m | alpha_max  9.66- 9.66 deg
+    t_r 6.0 break 14 | dip -0.00  fall  1.65- 1.65  sat  0.00  Mdem   7.9 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.96- 5.96 s | h_cr  28.22- 28.22 m | alpha_max  9.66- 9.66 deg
+  NP 0.855 m line (0.0530, -0.4720)
+    t_r 2.0 break 12 | dip  5.73  fall 13.61-15.97  sat  3.35  Mdem  86.5 | 0 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.87- 3.87 s | h_cr   4.67-  4.84 m | alpha_max 14.53-14.77 deg
+    t_r 2.0 break 14 | dip -0.00  fall  5.56- 7.60  sat  2.44  Mdem  35.7 | 0 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.91- 3.92 s | h_cr   6.66-  6.97 m | alpha_max 12.54-12.54 deg
+    t_r 3.0 break 12 | dip -0.00  fall  3.57- 4.12  sat  1.00  Mdem  18.4 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.41- 4.42 s | h_cr  11.78- 11.85 m | alpha_max 10.43-10.43 deg
+    t_r 3.0 break 14 | dip -0.00  fall  3.57- 4.12  sat  1.00  Mdem  18.4 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.41- 4.42 s | h_cr  11.78- 11.85 m | alpha_max 10.43-10.43 deg
+    t_r 4.0 break 12 | dip -0.00  fall  2.03- 2.03  sat  0.00  Mdem   9.1 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.93- 4.93 s | h_cr  17.06- 17.06 m | alpha_max  8.86- 8.86 deg
+    t_r 4.0 break 14 | dip -0.00  fall  2.03- 2.03  sat  0.00  Mdem   9.1 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.93- 4.93 s | h_cr  17.06- 17.06 m | alpha_max  8.86- 8.86 deg
+    t_r 6.0 break 12 | dip -0.00  fall  1.01- 1.01  sat  0.00  Mdem   6.0 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.97- 5.97 s | h_cr  28.43- 28.43 m | alpha_max  9.79- 9.79 deg
+    t_r 6.0 break 14 | dip -0.00  fall  1.01- 1.01  sat  0.00  Mdem   6.0 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.97- 5.97 s | h_cr  28.43- 28.43 m | alpha_max  9.79- 9.79 deg
+  NP 0.831 m line (0.0370, -0.3160)
+    t_r 2.0 break 12 | dip  2.07  fall 11.10-12.27  sat  2.36  Mdem  72.8 | 0 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.88- 3.88 s | h_cr   4.95-  5.01 m | alpha_max 15.51-15.59 deg
+    t_r 2.0 break 14 | dip -0.00  fall  4.12- 4.12  sat  0.19  Mdem  16.2 | 0 tumble, 0 not settled
+      95 % of cruise speed in 29 of 29 runs | t_cr  3.93- 3.93 s | h_cr   7.21-  7.21 m | alpha_max 12.85-12.85 deg
+    t_r 3.0 break 12 | dip -0.00  fall  2.67- 2.67  sat  0.00  Mdem   8.4 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.42- 4.42 s | h_cr  12.00- 12.00 m | alpha_max 10.66-10.66 deg
+    t_r 3.0 break 14 | dip -0.00  fall  2.67- 2.67  sat  0.00  Mdem   8.4 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.42- 4.42 s | h_cr  12.00- 12.00 m | alpha_max 10.66-10.66 deg
+    t_r 4.0 break 12 | dip -0.00  fall  1.15- 1.15  sat  0.00  Mdem   7.0 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.93- 4.93 s | h_cr  17.20- 17.20 m | alpha_max  8.97- 8.97 deg
+    t_r 4.0 break 14 | dip -0.00  fall  1.15- 1.15  sat  0.00  Mdem   7.0 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  4.93- 4.93 s | h_cr  17.20- 17.20 m | alpha_max  8.97- 8.97 deg
+    t_r 6.0 break 12 | dip -0.00  fall  0.00- 0.00  sat  0.00  Mdem   4.3 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.97- 5.97 s | h_cr  28.61- 28.61 m | alpha_max  9.88- 9.88 deg
+    t_r 6.0 break 14 | dip -0.00  fall  0.00- 0.00  sat  0.00  Mdem   4.3 | 0 tumble, 0 not settled
+      95 % of cruise speed in 4 of 4 runs | t_cr  5.97- 5.97 s | h_cr  28.61- 28.61 m | alpha_max  9.88- 9.88 deg
+
+hover rating held (as the text)    numerically diverged (counted as tumbles): 0
+line a (335 W, rpm free)           numerically diverged (counted as tumbles): 0
+line b (hover rpm)                 numerically diverged (counted as tumbles): 0
+line a with station Mach (AeroSandbox) numerically diverged (counted as tumbles): 0
+hover rating held (as the text)    runs 656; tumbling 0; not settled 0
+line a (335 W, rpm free)           runs 656; tumbling 0; not settled 0
+line b (hover rpm)                 runs 656; tumbling 507; not settled 107
+line a with station Mach (AeroSandbox) runs 656; tumbling 0; not settled 0

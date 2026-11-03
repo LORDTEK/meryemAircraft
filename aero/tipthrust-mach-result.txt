@@ -1,0 +1,53 @@
+R-22: COMPRESSIBILITY CHECK ON THE TIP-PAIR THRUST AND MOMENT
+bemt(B=2) equals tip_propeller.bemt_sabit bit for bit at 4 points: OK
+models: NeuralFoil as tip_propeller.kesit_kuvvet (the main model); NeuralFoil through AeroSandbox at Mach 0;
+        the same at the station Mach number. Equivalent single rotor, the frozen c_l 0.68 blade, as tipthrust.py.
+
+1. Hover at 335 W per pair
+--------------------------
+model                                 om rad/s  tip m/s  tipMach      T N      FM   M0 N m
+NeuralFoil, as tip_propeller.py         2323.4    232.3    0.683   16.079   0.694    22.83
+AeroSandbox wrapper, Mach 0             2326.0    232.6    0.684   16.066   0.693    22.81
+AeroSandbox wrapper, station Mach       2237.5    223.7    0.657   14.760   0.610    20.96
+
+stations at the AeroSandbox Mach-0 hover point (2326 rad/s): Mach, incidence, critical Mach
+     r/R     Mach    alpha   M_crit
+   0.168    0.113     2.89    0.557
+   0.274    0.186     3.24    0.544
+   0.380    0.259     3.84    0.516
+   0.486    0.332     4.31    0.498
+   0.593    0.404     4.63    0.489
+   0.699    0.477     4.85    0.485
+   0.805    0.550     4.99    0.484
+   0.911    0.622     5.01    0.480
+stations above their critical Mach: 8 of 24
+
+2. Lines a (335 W, rpm free) and b (each model's own hover rpm), opposite pairs free-wheeling
+---------------------------------------------------------------------------------------------
+ V_ax |   M_a NF   M_a M0   Mtip | M_a Mach    ratio |  M_b M0 M_b Mach |  Tfw M0 Tfw Mach
+  0.0 |    22.83    22.81  0.684 |    20.96    0.919 |   22.81   20.96 |   0.000   0.000
+  5.0 |    20.76    20.74  0.685 |    19.65    0.947 |   20.66   19.46 |  -0.131  -0.131
+ 10.0 |    19.03    19.02  0.689 |    18.89    0.993 |   18.70   18.37 |  -0.554  -0.554
+ 15.0 |    17.17    17.17  0.712 |    17.18    1.001 |   15.24   14.55 |  -1.220  -1.221
+ 20.0 |    15.61    15.61  0.754 |    15.17    0.972 |   10.56    8.92 |  -2.103  -2.105
+ 22.0 |    14.87    14.88  0.778 |    14.30    0.961 |    8.21    6.63 |  -2.499  -2.501
+ 24.0 |    14.35    14.31  0.802 |    12.93    0.903 |    5.52    3.12 |  -2.913  -2.917
+ 26.0 |    13.80    13.79  0.828 |    11.86    0.860 |    0.95    0.00 |  -3.341  -3.349
+ 28.0 |    13.26    13.26  0.857 |    10.56    0.797 |    0.00    0.00 |  -3.783  -3.800
+ 30.0 |    12.79    12.78  0.887 |     8.72    0.682 |    0.00    0.00 |  -4.236  -4.377
+(M in N m; 'ratio' = line a with station Mach over line a at Mach 0; Mtip = helical tip Mach on line a)
+V_ax 22.0: line a with station Mach: T 7.57 N at 2572 rad/s, tip Mach 0.758; at Mach 0: T 7.98 N at 2638
+V_ax 26.0: line a with station Mach: T 5.00 N at 2714 rad/s, tip Mach 0.801; at Mach 0: T 6.37 N at 2804
+V_ax 30.0: line a with station Mach: T 1.76 N at 2871 rad/s, tip Mach 0.848; at Mach 0: T 4.77 N at 3005
+
+crossings (axial speed, linear interpolation on this grid; 0.0 = already below at hover):
+  line a below 11.7 N m: NeuralFoil  >35, Mach 0  >35, station Mach  26.2 m/s
+  line a below 20.0 N m: NeuralFoil   7.2, Mach 0   7.2, station Mach   3.7 m/s
+  line b below 11.7 N m: NeuralFoil  18.8, Mach 0  18.8, station Mach  17.5 m/s
+  line b below 20.0 N m: NeuralFoil   6.7, Mach 0   6.7, station Mach   3.2 m/s
+
+dCm at 30 m/s, line a: NeuralFoil 0.0180, Mach 0 0.0180, station Mach 0.0123 (held hover rating 0.0324)
+R-21's cruise moments against it: raw RANS -0.016 uses 130 %, offset removed -0.003 to +0.006 24 to 49 %,
+  the VLM -0.0013 11 %
+
+run time 612 s
