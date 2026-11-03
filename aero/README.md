@@ -3194,7 +3194,8 @@ değişimi yoksa **çözüm yoktur**, çözücü yorgunluğu değil.
 >   stall kırılmasını geçince 9–13 m düşüş, girişin en çok 1,7 m altına (16 kat kazançta 4,7 m); kırılma 14°'deyse
 >   2–8 m düşüş, girişin altına inmiyor.
 > - Doğrusal yasayla 17,6–23,0 N·m'nin her değerinde dönüş takla atmadan oturuyor (0,8–1,0 s doyma).
-> - Projedeki yedi doğrusal moment yasasıyla 168 koşunun hiçbirinde takla yok (`transition_robustness.py`).
+> - Projedeki yedi doğrusal moment yasasıyla 574 koşunun hiçbirinde takla yok, hepsi oturuyor; en derin iniş girişin
+>   3,15 m altı (`transition_robustness.py`).
 > - 3–6 s'lik dönüş seyir hızına girişin 12–30 m üstünde, en çok 12 N·m ile, |α| ≤ 12° ve en çok 3,2 m düşüşle
 >   ulaşıyor.
 > - Düz levha ve sabit ±0,05/±0,10 ofsetler seyirde trimlenemiyor (23 N·m'yi aşan moment ister): bunlar dönüş
