@@ -113,10 +113,8 @@ figures/        The twelve figures
   source/         Parametric geometry model
   build/          Scripts that produce the figures and the transition simulation
   output/         Publication-ready png / svg
-cfd/            OpenFOAM setups, the validation record, the current external-review round and the reader onboarding text
-  arsiv-dis-gorus/  Every earlier external-review round
+cfd/            OpenFOAM setups and the validation record
 patent/         Texts and drawings of the Turkish patent application (in Turkish)
-design/         Design record — every decision with the reasoning held at the time
 references/     Record of the literature read
 presentation/   Presentation material
 video/          Visualisation
@@ -130,7 +128,6 @@ Every number and every figure in the paper can be regenerated from the scripts h
 |---|---|
 | `paper/build/mkpaper.py` | Compiles sections, figures and bibliography into one PDF |
 | `paper/build/verify.py` | **Recomputes every headline number in the paper from the paper's own equations and compares it with the text** |
-| `paper/build/links.py` | Connective-tissue guard: checks that every cross-reference resolves, and to the right place |
 | `aero/planform.py` | Rebuilds the planform from the sweep laws; checks it against the design record |
 | `aero/baseline.py` | Closed-loop sizing of three architectures under three contracts |
 | `aero/mass.py` | Component-level mass budget, shell-density break-even, buffer check |
@@ -160,8 +157,7 @@ Chromium lives elsewhere, point to it with `CHROME_PATH`.
 ## External review record
 
 Before submission the paper was read round by round by **four mutually independent
-language models**, and the text of every round is kept under
-[`cfd/arsiv-dis-gorus/`](cfd/arsiv-dis-gorus/) (the current round is in [`cfd/`](cfd/)). This is not a validation; it is a **bug hunt**, and the
+language models**. This is not a validation; it is a **bug hunt**, and the
 hunt is on the record — what was found was not only corrected but written down, with what
 was wrong and why, in `aero/README.md`. Claims that collapsed during the process include:
 that the pitching moment was 2TL rather than 4TL; that placing the centre of gravity by
