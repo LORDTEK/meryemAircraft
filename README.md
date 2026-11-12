@@ -42,9 +42,10 @@ rules that fix what a comparison holds equal.
 | Computations | `meryemAircraft-v10-computations.zip`: scripts, inputs and outputs of the closures, the takeoff, hover and landing model, the sizing contracts and the sensitivities, with the RANS cases, their configurations, logs and convergence histories |
 | RANS surface solutions | `meryemAircraft-v10-rans-surfaces.zip` |
 
-**Status: not peer reviewed.** Version 10 is a preprint and is under consideration at a
-journal. Earlier versions were declined by editors without peer review (Drones and
-Aerospace, September 2026; Journal of Aircraft, October 2026).
+**Status: not peer reviewed.** Version 10 is a preprint; the manuscript was submitted to
+*The Aeronautical Journal* (Royal Aeronautical Society) on 12 November 2026 and is under
+consideration there. Earlier versions were declined by editors without peer review (Drones
+and Aerospace, September 2026; Journal of Aircraft, October 2026).
 
 ### Headline results
 
