@@ -1,216 +1,180 @@
 # meryemAircraft
 
-**An uncrewed tail-sitting blended-wing-body configuration with no control surfaces —
-and the cost framework built on it.** This repository holds the design record, the
-paper produced from it, and the scripts that reproduce every number in that paper.
+**A tail-sitting blended-wing body that changes between hover and cruise by rotating the
+whole airframe, with fixed-pitch coaxial propulsors that keep one orientation relative to
+the body.** This repository holds the analysis code of the paper, the design record and
+the earlier versions. The current paper, its supplement and every computation behind it
+are deposited on Zenodo.
 
-All propulsive thrust comes from **a single coaxial contra-rotating pair at the nose**;
-four small pairs at the wing tips produce attitude moments only; a deployable **strip**
-on the lower surface is assigned the roll moment that thrust vectors parallel to the
-body axis cannot produce. There are no elevons, no rudder, no tilting mechanism, no
-retraction mechanism, and no dedicated lift system.
+Five stations carry ten rotors, each station a coaxial contra-rotating pair. **One pair at
+the nose** produces all propulsive thrust in both regimes and carries the whole takeoff
+margin; **four small pairs at the wing tips** are for control, not lift. Every rotor has
+fixed pitch and its own electric machine. Pitch and yaw come from differential thrust of
+the tip pairs; roll is assigned to **a single modulated strip** on the lower surface. The
+power plant is a series hybrid: the engine is sized by cruise, and a battery buffer
+supplies the difference in the vertical phases. There is no pivot or tilting joint, no
+nacelle actuator, no variable-pitch hub, no dedicated lift rotor and no rotor stowing or
+stopping mechanism.
 
 ---
 
-> **Status, 12 November 2026.** The current version of the paper is **version 10**
-> ([10.5281/zenodo.24169404](https://doi.org/10.5281/zenodo.24169404)), titled
-> *meryemAircraft: A Blended-Wing-Body Tail-Sitter with Body-Fixed Coaxial Propulsors*.
-> It is deposited on Zenodo with its supplement, its sources, the analysis code of
-> [`aero/`](aero/) at commit `628b027`, the computations and the files of the RANS runs.
-> Version 10 corrects the transition model of version 9, in which the aerodynamic pitching
-> moment entered the pitch equation with the wrong sign, and revises the design on that
-> correction: the nose pair alone carries the takeoff margin (static thrust-to-weight ratio
-> 1.25), the tip pairs serve control only, cruise is at 24 m/s, and the sizing loop closes
-> at a takeoff mass of 58.3 to 59.8 kg.
->
-> **The rest of this README and the files under [`paper/`](paper/) describe version 7 and
-> have not yet been brought up to date. Where they differ from version 10, version 10 holds.**
-
 ## The paper
 
-**The Architectural Cost of Hybrid VTOL: meryemAircraft, a Propeller-Driven
-Tail-Sitting Blended-Wing-Body Without a Dedicated Lift System**
-Meryem Gülmen, Berke Gülmen, Ömer Gülmen · 2026
+**meryemAircraft: A Blended-Wing-Body Tail-Sitter with Body-Fixed Coaxial Propulsors**
+Meryem Gülmen, Berke Gülmen, Ömer Gülmen · version 10, 12 November 2026
 
-Hybrid VTOL aircraft combine runway independence with wing-borne cruise and pay for it
-in cruise efficiency. The paper treats that cost not as an implementation defect but as
-**architectural**, and builds it as an accounting framework: the cost falls due in three
-coupled currencies — the **mass** of hover hardware carried through cruise, the **drag**
-of that hardware when exposed, and a **power system** sized by a condition that holds for
-about two percent of the flight. Every remedy surveyed reduces one by raising another.
-Expressing the cost this way exposes the condition for escaping it. A second result is
-methodological: architectural comparisons depend on the **sizing contract** chosen, and a
-fixed fuel fraction erases the mass bill from the range column entirely — which is why
-three contracts are reported rather than one. meryemAircraft is the **case study** that
-meets the escape condition.
+Hybrid vertical-takeoff aircraft change between hover and cruise by carrying two
+propulsor sets or by reorienting one. meryemAircraft does neither, so it carries none of
+the mechanism classes a tilting architecture uses to change regime. Doing without them is
+paid for in exposed drag and in installed power, and the paper prices that payment. It
+divides the price of hover into three accounts (carried hover mass, exposed cruise drag,
+and continuous power sized to the hover peak), closes the design on a buffered series
+hybrid, and compares it with a lift-plus-cruise layout under three sizing contracts, the
+rules that fix what a comparison holds equal.
+
+| | |
+|---|---|
+| DOI, always the latest version | [10.5281/zenodo.22144194](https://doi.org/10.5281/zenodo.22144194) |
+| Version 10 (current) | [10.5281/zenodo.24169404](https://doi.org/10.5281/zenodo.24169404) |
+| Paper and supplement | `meryemAircraft-v10.pdf` (30 pages), `meryemAircraft-v10-supplement.pdf` (34 pages), in the deposit |
+| Sources | `meryemAircraft-v10-source.zip`: the LaTeX sources and `numbers.tex`, which holds every number of the paper as a macro labelled with the file it is read from |
+| Analysis code | `meryemAircraft-v10-code.zip`: [`aero/`](aero/) of this repository at commit `628b027` |
+| Computations | `meryemAircraft-v10-computations.zip`: scripts, inputs and outputs of the closures, the takeoff, hover and landing model, the sizing contracts and the sensitivities, with the RANS cases, their configurations, logs and convergence histories |
+| RANS surface solutions | `meryemAircraft-v10-rans-surfaces.zip` |
+
+**Status: not peer reviewed.** Version 10 is a preprint and is under consideration at a
+journal. Earlier versions were declined by editors without peer review (Drones and
+Aerospace, September 2026; Journal of Aircraft, October 2026).
+
+### Headline results
+
+All of these are computed; none is measured or flown.
+
+- **Sizing.** For a 13 kg payload, sized from a 50 kg reference design (span 3.453 m, wing
+  area 1.979 m², aspect ratio 6.03) at a cruise speed of 24 m/s with a nose-only static
+  thrust-to-weight ratio of 1.25, the loop closes at a takeoff mass of **58.3 to 59.8 kg**
+  at the model's hover figure of merit, and at 66.3 to 68.4 kg at a figure of merit of
+  0.70. Across the rotor-section and frame-drag data sources examined the closures span
+  57.7 to 61.8 kg.
+- **Range.** The closures carry the payload 1,096 to 1,378 km, 12.7 to 16.0 h, on a fuel
+  fraction of 0.16 with no reserve; 879 to 1,519 km across the drag-data sources, at a
+  thermal efficiency the paper calls optimistic.
+- **Cruise efficiency.** The aerodynamic lift-to-drag ratio is 10.40 to 12.10 with the
+  tip frames and the driven tip rotors charged; with the computed propeller efficiency of
+  0.632 to 0.683 the effective lift-to-drag ratio is **6.57 to 8.26**.
+- **Where it pays.** The attitude-control tip pairs and the frames that carry them stay
+  in the cruise flow and take **47 to 79 percent of the zero-lift drag** across the
+  drag-data sources. That is where the configuration should be improved.
+- **Rankings depend on the contract.** The range margin of a lift-plus-cruise layout over
+  this aircraft shifts by **75 to 82 percentage points** across three sizing contracts
+  and changes sign between them at every closure, for the competitor assumed.
+- **Takeoff, hover and landing.** On a moment law from steady RANS at high incidence, a
+  three-degree-of-freedom model settles the takeoff up to a 10 m/s steady headwind at a
+  tip rating of 23.0 N·m and lands by a climbing flare that rises 32 to 53 m.
 
 ### What is claimed, and against whom
 
-The contribution is architectural. The four axes have four different opponents and are
+The contribution is the architecture. The comparisons have different opponents and are
 not interchangeable.
 
 | Axis | Opponent | Claim |
 |---|---|---|
-| Range and cruise efficiency | Multirotors | **Claimed.** |
-| Runway independence, vertical take-off and landing | Fixed-wing | **Claimed**, by construction. |
-| **Absence of a propulsor-reorientation mechanism** | Tilting architectures | **The actual contribution.** |
-| Range against the other hybrids | Lift-plus-cruise, tilt | **Not claimed** — it reverses with the sizing contract. |
+| Regime change without a propulsor-reorienting mechanism | Tilting architectures | **The contribution.** None of the five mechanism classes counted in the paper is present. In that sense the aircraft is mechanically simpler, though not one in which nothing moves; part count, mass and reliability are not compared. |
+| Cruise efficiency | Rotorcraft | **Claimed where the evidence carries it.** Against a published NASA sizing set, the effective lift-to-drag ratio is 34 to 69 percent above a turboshaft quadrotor's (4.9) and 13 to 42 percent above an all-electric quadrotor's (5.8); against the helicopters of that set (5.4 to 7.2) it is higher except against the electric side-by-side. Independent analyses in a common definition, not a controlled comparison. |
+| Cruise efficiency | Winged hybrid concepts | **Not claimed.** It is 3 to 24 percent below the winged pair of the same set (8.5 and 8.6). |
+| Range | Lift-plus-cruise | **Not claimed.** The sign of the range margin changes with the sizing contract. |
 
-The third claim is narrow and stated narrowly. What is eliminated against tilting
-architectures is the *class of mechanism that reorients a propulsor* — no pivot, no
-nacelle actuator, no variable-pitch hub, no gyroscopic moment from a rotating mass. It is
-**not** a claim that nothing on the aircraft moves: roll cannot be produced by coaxial
-torque-balanced pairs at all, and comes from the strip, which the paper calls the only
-moving aerodynamic surface on the aircraft. Nor is it a claim of mechanical simplicity —
-part count, mass, failure modes and maintenance were never measured. The claim is a
-**count of eliminated mechanism classes**, not a reliability result.
-
-| | |
-|---|---|
-| DOI (always the latest version) | [10.5281/zenodo.22144194](https://doi.org/10.5281/zenodo.22144194) — currently **v10** |
-| v10 version DOI | [10.5281/zenodo.24169404](https://doi.org/10.5281/zenodo.24169404) |
-| v7 version DOI | [10.5281/zenodo.22745666](https://doi.org/10.5281/zenodo.22745666) |
-| First release (v1, immutable) | [10.5281/zenodo.22144195](https://doi.org/10.5281/zenodo.22144195) |
-| PDF | [`paper/pdf/meryemAircraft-paper.pdf`](paper/pdf/meryemAircraft-paper.pdf) — 79 pages, 12 figures, 22 tables |
-| Single-file source | [`paper/paper-v7.md`](paper/paper-v7.md) |
-| Supplementary | [`paper/paper-v7-supp.md`](paper/paper-v7-supp.md) |
-| Section by section | [`paper/sections/`](paper/sections/) |
-| Bibliography | [`paper/bibliography-en.md`](paper/bibliography-en.md) |
-
-### Submission status — not peer reviewed
-
-Submitted to **Drones** (MDPI) on 14 September 2026. Returned from the editorial desk the
-next day as out of scope and transferred to **Aerospace** (MDPI), which rejected it the
-same day. **Neither rejection reached a referee**, and neither carries any technical
-comment, so neither says anything about the content — for it or against it. The record,
-including the two errors in the submission that were ours, is in
-[`paper/drones-submission.md`](paper/drones-submission.md) §10; what is being corrected for
-the next version is in [`paper/revision-list.md`](paper/revision-list.md).
+What is eliminated against tilting architectures is the *class of mechanism that
+reorients a propulsor or removes a rotor from one regime's flow*. It is not a claim that
+nothing on the aircraft moves: beyond the rotation of the rotors, the strip changes
+configuration, deployable in two halves, and the actuator inventory is the propulsion
+machines plus the strip.
 
 ---
 
 ## What is shown and what is not
 
-This is the most important section of the repository. The paper is a **configuration
-study**. There is **no wind-tunnel and no flight data**. The distinction below is held
-everywhere in the paper and is held here.
+No aircraft has been built or flown, and no wind-tunnel test has been made on this
+geometry. The paper sets each headline claim against its evidence and against what would
+refute it (Supplement Table S0); the list below follows that table and the paper's
+limitations.
 
-| | status |
+| | Status |
 |---|---|
-| The three-bill framework and the escape condition | **established**; its falsifiable prediction is tested against an independent published sizing set |
-| Three sizing contracts | **computed**; shows why rankings drawn from a single contract mislead |
-| Static pitch stability | **shown** — vortex-lattice, neutral point at 34.4 % MAC, margin +12.5 % |
-| Cruise trim | **not shown** — the camber moment required is *quantified* at 0.056; the camber/reflex distribution is undefined |
-| Roll authority | **not shown** — inertia (25.0 kg·m²) and damping (\|C_l_p\| = 0.358) computed for this planform; 27.1 N·m needed for 20°/s, of which the strip's own force gives about a third, the rest being a *requirement* of ΔC_L ≈ 0.12 borrowed from published fence and Gurney data |
-| Yaw authority | **comfortable** — 2.43 times the pitch case, the arm being the semi-span (55.9 N·m against 23.0) |
-| Directional stability | **not shown** — the planform gives C_n_β = 0; it must come from a tip-frame fairing, chord required 39 mm at a chord Reynolds number near 80 000 where thin symmetric sections are measured to be nonlinear |
-| Transition controllability | **open** — the tip propellers rotate the inertia; that they rotate the aerodynamic moment is not shown. The largest open item in the study |
-| Free-wheeling rotor drag | **computed, not measured** — C_D0 = 0.0154 at 50 kg, 62 % of the assumed zero-lift drag, against 0.0008 for the same propeller stopped edge-on |
-| Mass budget, 50 kg | **closes conditionally** — 2.2 kg of margin if shell areal density stays ≤ 1.78 kg/m²; 1.5 kg/m² is a target, not a measurement |
-| Mass budget, 1000 kg | **does not close** — the heavy point is a scale extension, not a second design point |
-| Power budget | **does not close on measured cells** — it needs 3.8 times the highest specific power yet measured on a flown pack, and re-closes 38 % heavier at that measured rate |
-| Loading shape | **bounded, not replaced** — the RANS study converges to *K_L* = 0.796 across a three-level grid refinement |
+| Regime change with none of the counted mechanism classes | **Inventory of the design.** A brake or lock for the tip rotors, if found necessary, would add one class. |
+| Closure at 58.3 to 59.8 kg | **Computed.** It establishes that the configuration is arithmetically self-consistent on the declared package; it does not establish that the package exists. |
+| Hover figure of merit | **Model value, not measured.** At 0.70 the closures are 66.3 to 68.4 kg; at 0.65, 72.0 to 74.5 kg. |
+| Tip hardware as the largest drag item | **Computed** from two section-data sources in one solver, against a threshold stated before the second run; not measured. |
+| Engine sized by cruise, not by the hover peak | **Computed.** |
+| Ranking against lift-plus-cruise depends on the contract | **Computed**, in closed form and in the loop, under stated competitor assumptions. |
+| Takeoff, hover in wind, landing | **Computed, not flown.** Three degrees of freedom; the pitching-moment law is steady RANS that is not validated, with no data beyond 40.9 degrees; no dynamic stall, slipstream, ground effect, gusts or lateral axes. |
+| Energy store | **Rated on cell data, not measured on a whole pack.** At the cited bench average the closures are 55 to 56 percent heavier. |
+| Hover heading authority of the strip | **Not established.** The strip's own force is below both of the paper's screens; more rests on a circulation increment that is assumed. |
+| Attitude control | **Sized, not designed as a control loop.** The hover torque residual and gust rejection are not analysed. |
+| Airframe mass | **A construction constant** (fraction 0.30), not a structural sizing; heat rejection and engine installation are not sized. |
+| Altitude and cold | **Limitations.** Ranges are modelled at sea level and the store is rated on cell data at 25 °C; at 2,000 m a 60 s hover lasts 33 to 36 s at the takeoff mass and holds at the landing mass; at −10 °C the pack needs pre-heating. |
 
-In short: **attitude control is sized in every axis and closed in none.** The paper says
-so in those words.
+The missions considered are observation and small cargo, water by hose included; the
+design is not sized for fire suppression.
 
 ---
 
 ## What is here
 
 ```
-paper/          The paper: sections, single-file source, PDF, bibliography, roadmap
-  build/          Compiler and verification scripts
-  sections/       Section-by-section source
-  supplement/     Supplementary material
-aero/           Independent calculations — each states its own reasoning and its limit
-figures/        The twelve figures
-  source/         Parametric geometry model
-  build/          Scripts that produce the figures and the transition simulation
-  output/         Publication-ready png / svg
-cfd/            OpenFOAM setups and the validation record
+aero/           Analysis code of the paper (the part archived with version 10): sizing loop,
+                contracts, drag build-up, propellers, buffer, stability, transition checks
+paper/          Earlier versions of the paper (to version 8), their working record and build scripts
+figures/        Figures and the parametric geometry model of the earlier versions
+cfd/            Earlier CFD setups and their validation record
 patent/         Texts and drawings of the Turkish patent application (in Turkish)
 references/     Record of the literature read
 presentation/   Presentation material
 video/          Visualisation
 ```
 
-## Reproducibility
+The text of version 10, the scripts that produce its tables and the RANS work are **not
+in this repository**; they are in the Zenodo deposit listed above.
 
-Every number and every figure in the paper can be regenerated from the scripts here.
+## Reproducing the numbers of version 10
 
-| Script | What it does |
-|---|---|
-| `paper/build/mkpaper.py` | Compiles sections, figures and bibliography into one PDF |
-| `paper/build/verify.py` | **Recomputes every headline number in the paper from the paper's own equations and compares it with the text** |
-| `aero/planform.py` | Rebuilds the planform from the sweep laws; checks it against the design record |
-| `aero/baseline.py` | Closed-loop sizing of three architectures under three contracts |
-| `aero/mass.py` | Component-level mass budget, shell-density break-even, buffer check |
-| `aero/vlm.py` · `aero/cd0.py` | Vortex-lattice solution and the `C_D0` build-up |
-| `aero/stability.py` | Neutral point, static margin, trim requirement, **convention audit** |
-| `aero/rotation.py` · `aero/envelope.py` | Transition rotation dynamics and the design envelope |
-| `aero/roll.py` · `aero/yaw.py` | Roll and yaw inertia, damping, authority requirement |
-| `aero/tip_propeller.py` | Free-wheeling drag of the tip propellers at zero shaft torque |
-| `figures/build/transition2.py` | Transition simulation — two-degree-of-freedom point mass |
-| `figures/build/mkfig*.py` · `mkconcept.py` | Generators for the twelve figures |
-| `figures/build/figlib.py` | Opens the 3-D model in headless Chromium, drives the camera, captures |
+Every number of the paper and the supplement is a macro of `numbers.tex` (in the source
+archive). The comment after each macro names where the value is read from: a file of the
+computations archive, a cited reference, a stated arithmetic, or a design decision of the
+authors. `README.txt` in the computations archive describes each folder and says which
+script produces which result; `MANIFEST.txt` lists every file with its SHA-256. The
+analysis code those scripts import is [`aero/`](aero/) at commit `628b027`.
 
-`verify.py` currently runs **43 checks** plus **68 cells** of the transition tables, with
-no deviation, and screens twelve files against a list of forbidden stale values. It has
-caught, among other things, two tables left stale during a build and one place where a
-moment had been confused with a thrust.
+The deposit also carries the record of two re-implementations of the sizing closures of
+version 9 from its frozen text, made without access to the code. That is a
+reproducibility check of version 9, not a validation.
 
-**Dependencies:** `python3`, `matplotlib`, `pillow`, `markdown`, `playwright` (headless
-Chromium, for the three-dimensional figures and the PDF); `aero/` additionally needs
-`aerosandbox` and `neuralfoil`.
+## Earlier versions in this repository
 
-Scripts run from where they sit and need no path outside the repository. The
-three-dimensional figures are produced from `figures/source/body-study.html`: `figlib.py`
-injects a render hook into a **copy** of the model and never modifies the source file. If
-Chromium lives elsewhere, point to it with `CHROME_PATH`.
-
-## External review record
-
-Before submission the paper was read round by round by **four mutually independent
-language models**. This is not a validation; it is a **bug hunt**, and the
-hunt is on the record — what was found was not only corrected but written down, with what
-was wrong and why, in `aero/README.md`. Claims that collapsed during the process include:
-that the pitching moment was 2TL rather than 4TL; that placing the centre of gravity by
-hand gave an absurd static margin; that the static margin and the trim requirement had
-been written with **two different reference chords**; and that §4.4's 46 N·m rolling
-moment **could not** come from the strip's own force.
-
-Errors made while *summarising* the paper are recorded with equal weight, because that
-turned out to be the highest-error activity in the project: a claim that no general
-architectural superiority was asserted, which denied the paper's own earned claims; a
-claim that nothing on the aircraft moves, contradicted by the strip; and a claim that the
-strip produces no pitching moment, contradicted by the same section.
-
-## Use of sources
-
-Every numerical and historical claim rests on a source **read first-hand**; no number is
-attached to a source that was not read. The distinction is written out in §8 of the paper.
-`paper/references.md` records how far each source was verified, and how **three wrong
-numbers** taken from search-engine summaries were caught by first-hand reading.
+[`paper/`](paper/) and [`figures/`](figures/) hold the paper as it stood in versions 5 to
+7 (*The Architectural Cost of Hybrid VTOL*; single-file sources `paper/paper-v7.md` and
+its supplement), the working record of version 8, and their build and verification
+scripts; [`paper/VERSIONS.md`](paper/VERSIONS.md) records the file-name translation of
+16 September 2026. Those texts describe an earlier design basis (a 50 kg closure,
+free-wheeling tip rotors, another transition model). **Where they differ from
+version 10, version 10 holds.**
 
 ## Version history
 
-Published versions are **immutable**; each remains reachable at its own DOI. File *names*
-in this repository were translated to English on 16 September 2026, but the contents of
-published versions were not touched — see [`paper/VERSIONS.md`](paper/VERSIONS.md) for the
-path translation table.
+Published versions are immutable; each remains reachable at its own DOI.
 
 | Version | Date | Substance |
 |---|---|---|
-| **v10** | 2026-11-12 | Transition model corrected (moment sign) and the design revised on it: nose-only takeoff margin at thrust-to-weight 1.25, cruise at 24 m/s self-trimmed by washout, buffer sized on power-cell data, takeoff, hover and landing in one three-degree-of-freedom model on a RANS moment law; 58.3 to 59.8 kg. See the Zenodo record. |
-| v8, v9 | 2026-10 | Rewritten as a journal article under the present title; see their Zenodo records. |
-| v7 | 2026-09-13 | Submitted version. Claim structure rebuilt onto four axes with four different opponents; the mechanism claim narrowed to the propulsor-reorientation class; figure order and numbering corrected to first mention; heavy-rotor charge reported as an interval. |
+| **v10** | 2026-11-12 | Transition model corrected (the aerodynamic pitching moment had entered the pitch equation with the wrong sign) and the design revised on it: the nose pair alone carries the takeoff margin at a thrust-to-weight ratio of 1.25, the tip pairs serve control only, cruise is at 24 m/s self-trimmed by washout, the buffer is sized on power-cell data, and takeoff, hover and landing are computed in one three-degree-of-freedom model on a RANS moment law. 58.3 to 59.8 kg. [10.5281/zenodo.24169404](https://doi.org/10.5281/zenodo.24169404) |
+| v9 | 2026-10-29 | First version under the present title, written as a journal article; closures at 52.3 to 57.5 kg. Its transition results are withdrawn by version 10. [10.5281/zenodo.23754355](https://doi.org/10.5281/zenodo.23754355) |
+| v8 | 2026-10-17 | Rewritten around the architecture, under the title *meryemAircraft: Tail-Sitting Blended-Wing Body for Vertical Takeoff Without Propulsor Reorientation*. [10.5281/zenodo.23437041](https://doi.org/10.5281/zenodo.23437041) |
+| v7 | 2026-09-13 | Claim structure rebuilt onto four axes with four different opponents; the mechanism claim narrowed to the propulsor-reorientation class. [10.5281/zenodo.22745666](https://doi.org/10.5281/zenodo.22745666) |
 | v6 | 2026-09-11 | Figure and table production defects closed; all 22 tables numbered, captioned and cited. |
 | v5 | 2026-09-10 | Supplementary material separated; sizing contracts consolidated. |
 | v4 | 2026-09-08 | Framework-centred restructuring; capability sentences rewritten as requirements. Three control axes audited. |
-| v3 | 2026-09-05 | Three-dimensional solution for the centre body. §8.1 became "No experimental validation". |
-| v2 | 2026-08-29 | Range method corrected (cruise-point polar instead of maximum L/D): 1 695 → **1 598 km**. |
-| v1 | 2026-08 | First release. |
+| v3 | 2026-09-05 | Three-dimensional solution for the centre body. |
+| v2 | 2026-08-29 | Range method corrected (cruise-point polar instead of maximum L/D). |
+| v1 | 2026-08 | First release. [10.5281/zenodo.22144195](https://doi.org/10.5281/zenodo.22144195) |
 
 ## Patent
 
@@ -220,11 +184,12 @@ Turkish**, as filed. They were not prepared by a patent attorney.
 
 ## Licence
 
-Text, figures and scripts: **AGPL-3.0** — see [LICENSE](LICENSE).
-The Zenodo version of the paper is published under **CC BY 4.0**.
+Text, figures and scripts of this repository: **AGPL-3.0**, see [LICENSE](LICENSE).
+The Zenodo versions of the paper are published under **CC BY 4.0**.
 
 ---
 
-*Artificial-intelligence tools were used in preparing this work for literature search,
-numerical checking and language correction. All design decisions, engineering judgements
-and claims belong to the authors.*
+*The concept, architecture, design and solution approach of this work are the authors'
+own. Generative AI tools were used in its preparation: to draft and revise text, to search
+and check the literature, to review the manuscript, and to write and check analysis code.
+The authors reviewed and edited that content and take full responsibility for it.*
