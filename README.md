@@ -12,6 +12,20 @@ retraction mechanism, and no dedicated lift system.
 
 ---
 
+> **Status, 12 November 2026.** The current version of the paper is **version 10**
+> ([10.5281/zenodo.24169404](https://doi.org/10.5281/zenodo.24169404)), titled
+> *meryemAircraft: A Blended-Wing-Body Tail-Sitter with Body-Fixed Coaxial Propulsors*.
+> It is deposited on Zenodo with its supplement, its sources, the analysis code of
+> [`aero/`](aero/) at commit `628b027`, the computations and the files of the RANS runs.
+> Version 10 corrects the transition model of version 9, in which the aerodynamic pitching
+> moment entered the pitch equation with the wrong sign, and revises the design on that
+> correction: the nose pair alone carries the takeoff margin (static thrust-to-weight ratio
+> 1.25), the tip pairs serve control only, cruise is at 24 m/s, and the sizing loop closes
+> at a takeoff mass of 58.3 to 59.8 kg.
+>
+> **The rest of this README and the files under [`paper/`](paper/) describe version 7 and
+> have not yet been brought up to date. Where they differ from version 10, version 10 holds.**
+
 ## The paper
 
 **The Architectural Cost of Hybrid VTOL: meryemAircraft, a Propeller-Driven
@@ -53,7 +67,8 @@ part count, mass, failure modes and maintenance were never measured. The claim i
 
 | | |
 |---|---|
-| DOI (always the latest version) | [10.5281/zenodo.22144194](https://doi.org/10.5281/zenodo.22144194) — currently **v7** |
+| DOI (always the latest version) | [10.5281/zenodo.22144194](https://doi.org/10.5281/zenodo.22144194) — currently **v10** |
+| v10 version DOI | [10.5281/zenodo.24169404](https://doi.org/10.5281/zenodo.24169404) |
 | v7 version DOI | [10.5281/zenodo.22745666](https://doi.org/10.5281/zenodo.22745666) |
 | First release (v1, immutable) | [10.5281/zenodo.22144195](https://doi.org/10.5281/zenodo.22144195) |
 | PDF | [`paper/pdf/meryemAircraft-paper.pdf`](paper/pdf/meryemAircraft-paper.pdf) — 79 pages, 12 figures, 22 tables |
@@ -187,7 +202,9 @@ path translation table.
 
 | Version | Date | Substance |
 |---|---|---|
-| **v7** | 2026-09-13 | Submitted version. Claim structure rebuilt onto four axes with four different opponents; the mechanism claim narrowed to the propulsor-reorientation class; figure order and numbering corrected to first mention; heavy-rotor charge reported as an interval. |
+| **v10** | 2026-11-12 | Transition model corrected (moment sign) and the design revised on it: nose-only takeoff margin at thrust-to-weight 1.25, cruise at 24 m/s self-trimmed by washout, buffer sized on power-cell data, takeoff, hover and landing in one three-degree-of-freedom model on a RANS moment law; 58.3 to 59.8 kg. See the Zenodo record. |
+| v8, v9 | 2026-10 | Rewritten as a journal article under the present title; see their Zenodo records. |
+| v7 | 2026-09-13 | Submitted version. Claim structure rebuilt onto four axes with four different opponents; the mechanism claim narrowed to the propulsor-reorientation class; figure order and numbering corrected to first mention; heavy-rotor charge reported as an interval. |
 | v6 | 2026-09-11 | Figure and table production defects closed; all 22 tables numbered, captioned and cited. |
 | v5 | 2026-09-10 | Supplementary material separated; sizing contracts consolidated. |
 | v4 | 2026-09-08 | Framework-centred restructuring; capability sentences rewritten as requirements. Three control axes audited. |
