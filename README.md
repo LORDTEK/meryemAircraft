@@ -43,8 +43,8 @@ rules that fix what a comparison holds equal.
 | RANS surface solutions | `meryemAircraft-v10-rans-surfaces.zip` |
 
 **Status: not peer reviewed.** Version 10 is a preprint; the manuscript was submitted to
-*The Aeronautical Journal* (Royal Aeronautical Society) on 12 November 2026 and is under
-consideration there. Earlier versions were declined by editors without peer review (Drones
+*The Aeronautical Journal* (Royal Aeronautical Society) on 12 November 2026 (manuscript number
+AeroJ-2026-0494) and is under consideration there. Earlier versions were declined by editors without peer review (Drones
 and Aerospace, September 2026; Journal of Aircraft, October 2026).
 
 ### Headline results
